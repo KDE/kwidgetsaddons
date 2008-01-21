@@ -639,7 +639,7 @@ def writeTranslationDummy(out, data):
 */\n\n""")
     for group in data:
         for entry in group[1]:
-            out.write("i18nc(\""+group[0]+"\", \""+entry+"\");\n")
+            out.write("I18N_NOOP2(\""+group[0]+"\", \""+entry+"\");\n")
 
 out = open("kcharselect-data", "wb")
 outTranslationDummy = open("kcharselect-translation.cpp", "wb")
