@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding: iso-8859-1 -*-
+# -*- coding: utf-8 -*-
 #
 # This script generates a data file containing all Unicode information needed by KCharSelect.
 #
@@ -25,7 +25,7 @@
 # The current directory must contain the following files that can be found at
 # http://www.unicode.org/Public/UNIDATA/:
 # - UnicodeData.txt
-# - Unihan.txt (you need to uncompress it from Unihan.zip)
+# - Unihan_Readings.txt (you need to uncompress it from Unihan.zip)
 # - NamesList.txt
 # - Blocks.txt
 #
@@ -96,6 +96,7 @@ import sys
 import re
 import StringIO
 
+# based on http://www.unicode.org/charts/
 sectiondata = '''
 SECTION European Alphabets
 Basic Latin
@@ -110,6 +111,8 @@ Armenian
 Coptic
 Cyrillic
 Cyrillic Supplement
+Cyrillic Extended-A
+Cyrillic Extended-B
 Georgian
 Georgian Supplement
 Greek and Coptic
@@ -121,6 +124,8 @@ Ethiopic Supplement
 Ethiopic Extended
 NKo
 Tifinagh
+Vai
+Bamum
 
 SECTION Middle Eastern Scripts
 Arabic
@@ -130,8 +135,9 @@ Arabic Presentation Forms-B
 Hebrew
 Syriac
 Thaana
+Samaritan
 
-SECTION Indic Scripts
+SECTION South Asian Scripts
 Bengali
 Devanagari
 Gujarati
@@ -144,6 +150,13 @@ Sinhala
 Syloti Nagri
 Tamil
 Telugu
+Lepcha
+Ol Chiki
+Vedic Extensions
+Common Indic Number Forms
+Saurashtra
+Devanagari Extended
+Meetei Mayek
 
 SECTION Philippine Scripts
 Buhid
@@ -158,9 +171,17 @@ Khmer
 Khmer Symbols
 Lao
 Myanmar
+Myanmar Extended-A
 New Tai Lue
 Tai Le
 Thai
+Tai Tham
+Sundanese
+Kayah Li
+Rejang
+Javanese
+Cham
+Tai Viet
 
 SECTION East Asian Scripts
 CJK Unified Ideographs
@@ -182,8 +203,11 @@ Katakana
 Hangul Syllables
 Hangul Jamo
 Hangul Compatibility Jamo
+Hangul Jamo Extended-A
+Hangul Jamo Extended-B
 Yi Syllables
 Yi Radicals
+Lisu
 
 SECTION Central Asian Scripts
 Mongolian
@@ -196,6 +220,7 @@ Ogham
 Runic
 Cherokee
 Unified Canadian Aboriginal Syllabics
+Unified Canadian Aboriginal Syllabics Extended
 
 SECTION Symbols
 General Punctuation
@@ -418,9 +443,15 @@ class SectionsBlocks:
         for block in self.blocks:
             out.write(block[2] + "\0")
             size = len(block[2]) + 1
+            found = False
             for section in self.sections:
                 if section[1] == block[2]:
+                    print "found", section
                     section[1] = index
+                    found = True
+            if not found:
+                print "Error: Did not find any category for block \""+block[2]+"\""
+                sys.exit(1)
             block[2] = index
             pos += size
             index += 1
@@ -648,7 +679,7 @@ inUnicodeData = open("UnicodeData.txt", "r")
 inNamesList = open("NamesList.txt", "r")
 inBlocks = open("Blocks.txt", "r")
 inSections = StringIO.StringIO(sectiondata)
-inUnihan = open("Unihan.txt", "r")
+inUnihan = open("Unihan_Readings.txt", "r")
 
 if calcsize('=H') != 2 or calcsize('=I') != 4:
     print "Error: Sizes of ushort and uint are not 16 and 32 bit as expected"
