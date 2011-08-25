@@ -62,6 +62,10 @@
 # 16bit: unicode
 # 32bit: offset to name in names_strings
 #
+# names_strings:
+# the first byte is the category (same values as QChar::Category),
+# directly followed by the character name (terminated by 0x00)
+#
 # nameslist_offsets:
 # char, alias, alias_count, note, note_count, approxEquiv, approxEquiv_coutn, equiv, equiv_count, seeAlso, seeAlso_count
 # 16    32     8            32    8           32           8                  32     8            32       8
@@ -282,12 +286,46 @@ Variation Selectors
 '''
 # TODO: rename "Other Scripts" to "American Scripts"
 
+categoryMap = { # same values as QChar::Category
+    "Mn": 1,
+    "Mc": 2,
+    "Me": 3,
+    "Nd": 4,
+    "Nl": 5,
+    "No": 6,
+    "Zs": 7,
+    "Zl": 8,
+    "Zp": 9,
+    "Cc": 10,
+    "Cf": 11,
+    "Cs": 12,
+    "Co": 13,
+    "Cn": 14,
+    "Lu":  15,
+    "Ll":  16,
+    "Lt":  17,
+    "Lm":  18,
+    "Lo":  19,
+    "Pc":  20,
+    "Pd":  21,
+    "Ps":  22,
+    "Pe":  23,
+    "Pi":  24,
+    "Pf":  25,
+    "Po":  26,
+    "Sm":  27,
+    "Sc":  28,
+    "Sk":  29,
+    "So":  30
+}
+
+
 class Names:
     def __init__(self):
         self.names = []
         self.controlpos = -1
-    def addName(self, uni, name):
-        self.names.append([uni, name])
+    def addName(self, uni, name, category):
+        self.names.append([uni, name, category])
 
     def calculateStringSize(self):
         size = 0
@@ -295,10 +333,10 @@ class Names:
         for entry in self.names:
             if entry[1] == "<control>":
                 if not hadcontrol:
-                    size += len(entry[1]) + 1
+                    size += len(entry[1]) + 2
                     hadcontrol = True
             else:
-                size += len(entry[1]) + 1
+                size += len(entry[1]) + 2
         return size
 
     def calculateOffsetSize(self):
@@ -309,8 +347,9 @@ class Names:
         for entry in self.names:
             if entry[1] == "<control>":
                 if not hadcontrol:
+                    out.write(pack("=b", entry[2]))
                     out.write(entry[1] + "\0")
-                    size = len(entry[1]) + 1
+                    size = len(entry[1]) + 2
                     entry[1] = pos
                     self.controlpos = pos
                     pos += size
@@ -318,8 +357,9 @@ class Names:
                 else:
                     entry[1] = self.controlpos
             else:
+                out.write(pack("=b", entry[2]))
                 out.write(entry[1] + "\0")
-                size = len(entry[1]) + 1
+                size = len(entry[1]) + 2
                 entry[1] = pos
                 pos += size
         return pos
@@ -556,7 +596,7 @@ class Unihan:
 
 class Parser:
     def parseUnicodeData(self, inUnicodeData, names):
-        regexp = re.compile(r'^([^;]+);([^;]+)')
+        regexp = re.compile(r'^([^;]+);([^;]+);([^;]+)')
         for line in inUnicodeData:
             line = line[:-1]
             m = regexp.match(line)
@@ -564,9 +604,10 @@ class Parser:
                 continue
             uni = m.group(1)
             name = m.group(2)
+            category = m.group(3)
             if len(uni) > 4:
                 continue
-            names.addName(uni, name)
+            names.addName(uni, name, categoryMap[category])
 
     def parseDetails(self, inNamesList, details):
         invalidRegexp = re.compile(r'^@')
