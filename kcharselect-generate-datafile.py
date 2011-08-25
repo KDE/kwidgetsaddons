@@ -103,10 +103,9 @@ Basic Latin
 Latin-1 Supplement
 Latin Extended-A
 Latin Extended-B
-Latin Extended Additional
 Latin Extended-C
 Latin Extended-D
-Small Form Variants
+Latin Extended Additional
 Armenian
 Coptic
 Cyrillic
@@ -115,17 +114,21 @@ Cyrillic Extended-A
 Cyrillic Extended-B
 Georgian
 Georgian Supplement
+Glagolitic
 Greek and Coptic
 Greek Extended
+Ogham
+Runic
 
 SECTION African Scripts
+Bamum
 Ethiopic
 Ethiopic Supplement
 Ethiopic Extended
+Ethiopic Extended-A
 NKo
 Tifinagh
 Vai
-Bamum
 
 SECTION Middle Eastern Scripts
 Arabic
@@ -133,81 +136,85 @@ Arabic Supplement
 Arabic Presentation Forms-A
 Arabic Presentation Forms-B
 Hebrew
-Syriac
-Thaana
+Mandaic
 Samaritan
+Syriac
 
 SECTION South Asian Scripts
 Bengali
+Common Indic Number Forms
 Devanagari
+Devanagari Extended
 Gujarati
 Gurmukhi
 Kannada
+Lepcha
 Limbu
 Malayalam
+Meetei Mayek
+Ol Chiki
 Oriya
+Saurashtra
 Sinhala
 Syloti Nagri
 Tamil
 Telugu
-Lepcha
-Ol Chiki
+Thaana
 Vedic Extensions
-Common Indic Number Forms
-Saurashtra
-Devanagari Extended
-Meetei Mayek
 
 SECTION Philippine Scripts
 Buhid
-Tagalog
 Hanunoo
+Tagalog
 Tagbanwa
 
+
 SECTION South East Asian Scripts
-Buginese
 Balinese
+Batak
+Buginese
+Cham
+Javanese
+Kayah Li
 Khmer
 Khmer Symbols
 Lao
 Myanmar
 Myanmar Extended-A
 New Tai Lue
-Tai Le
-Thai
-Tai Tham
-Sundanese
-Kayah Li
 Rejang
-Javanese
-Cham
+Sundanese
+Tai Le
+Tai Tham
 Tai Viet
+Thai
 
 SECTION East Asian Scripts
-CJK Unified Ideographs
-CJK Unified Ideographs Extension A
-CJK Compatibility Ideographs
-CJK Symbols and Punctuation
-Enclosed CJK Letters and Months
-CJK Compatibility
-CJK Compatibility Forms
-Kanbun
-CJK Radicals Supplement
-Kangxi Radicals
-CJK Strokes
-Ideographic Description Characters
 Bopomofo
 Bopomofo Extended
-Hiragana
-Katakana
-Hangul Syllables
+CJK Unified Ideographs
+CJK Unified Ideographs Extension A
+CJK Compatibility
+CJK Compatibility Ideographs
+CJK Compatibility Forms
+CJK Radicals Supplement
+CJK Strokes
+CJK Symbols and Punctuation
+Enclosed CJK Letters and Months
 Hangul Jamo
-Hangul Compatibility Jamo
 Hangul Jamo Extended-A
 Hangul Jamo Extended-B
-Yi Syllables
-Yi Radicals
+Hangul Compatibility Jamo
+Hangul Syllables
+Hiragana
+Ideographic Description Characters
+Kanbun
+Kangxi Radicals
+Katakana
+Katakana Phonetic Extensions
 Lisu
+Yi Radicals
+Yi Syllables
 
 SECTION Central Asian Scripts
 Mongolian
@@ -215,67 +222,65 @@ Phags-pa
 Tibetan
 
 SECTION Other Scripts
-Glagolitic
-Ogham
-Runic
 Cherokee
 Unified Canadian Aboriginal Syllabics
 Unified Canadian Aboriginal Syllabics Extended
 
 SECTION Symbols
-General Punctuation
-Yijing Hexagram Symbols
-Supplemental Punctuation
-Currency Symbols
-Enclosed Alphanumerics
-Miscellaneous Symbols
-Dingbats
 Braille Patterns
+Control Pictures
+Currency Symbols
+Dingbats
+Enclosed Alphanumerics
+General Punctuation
+Miscellaneous Symbols
+Miscellaneous Technical
+Optical Character Recognition
+Small Form Variants
+Supplemental Punctuation
+Vertical Forms
+Yijing Hexagram Symbols
 
 SECTION Mathematical Symbols
-Number Forms
-Superscripts and Subscripts
-Letterlike Symbols
 Arrows
+Block Elements
+Box Drawing
+Supplemental Arrows-A
+Supplemental Arrows-B
+Geometric Shapes
+Letterlike Symbols
 Mathematical Operators
 Supplemental Mathematical Operators
 Miscellaneous Mathematical Symbols-A
 Miscellaneous Mathematical Symbols-B
-Supplemental Arrows-A
-Supplemental Arrows-B
 Miscellaneous Symbols and Arrows
-Geometric Shapes
-Box Drawing
-Block Elements
-Control Pictures
-Miscellaneous Technical
-Optical Character Recognition
+Number Forms
+Superscripts and Subscripts
 
 SECTION Phonetic Symbols
 IPA Extensions
-Katakana Phonetic Extensions
+Modifier Tone Letters
 Phonetic Extensions
 Phonetic Extensions Supplement
 Spacing Modifier Letters
-Modifier Tone Letters
 
 SECTION Combining Diacritical Marks
 Combining Diacritical Marks
 Combining Diacritical Marks Supplement
-Combining Half Marks
 Combining Diacritical Marks for Symbols
+Combining Half Marks
 
 SECTION Other
 Alphabetic Presentation Forms
-High Surrogates
+Halfwidth and Fullwidth Forms
 High Private Use Surrogates
+High Surrogates
 Low Surrogates
 Private Use Area
-Variation Selectors
-Vertical Forms
 Specials
-Halfwidth and Fullwidth Forms
+Variation Selectors
 '''
+# TODO: rename "Other Scripts" to "American Scripts"
 
 class Names:
     def __init__(self):
