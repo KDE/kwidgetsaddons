@@ -68,23 +68,23 @@ class QCursor;
  */
 class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
 {
-  Q_OBJECT
-  Q_PROPERTY(QString url READ url WRITE setUrl)
-  Q_PROPERTY(QString tipText READ tipText WRITE setTipText )
-  Q_PROPERTY(QPixmap alternatePixmap READ alternatePixmap WRITE setAlternatePixmap )
-  Q_PROPERTY(bool glowEnabled READ isGlowEnabled WRITE setGlowEnabled )
-  Q_PROPERTY(bool floatEnabled READ isFloatEnabled WRITE setFloatEnabled )
-  Q_PROPERTY(bool useTips READ useTips WRITE setUseTips )
-  Q_PROPERTY(bool useCursor READ useCursor WRITE setUseCursor )
+    Q_OBJECT
+    Q_PROPERTY(QString url READ url WRITE setUrl)
+    Q_PROPERTY(QString tipText READ tipText WRITE setTipText)
+    Q_PROPERTY(QPixmap alternatePixmap READ alternatePixmap WRITE setAlternatePixmap)
+    Q_PROPERTY(bool glowEnabled READ isGlowEnabled WRITE setGlowEnabled)
+    Q_PROPERTY(bool floatEnabled READ isFloatEnabled WRITE setFloatEnabled)
+    Q_PROPERTY(bool useTips READ useTips WRITE setUseTips)
+    Q_PROPERTY(bool useCursor READ useCursor WRITE setUseCursor)
 
-  public:
+public:
     /**
      * Default constructor.
      *
      * Use setUrl() and setText() or QListView::setPixmap()
      * to set the resp. properties.
      */
-    explicit KUrlLabel( QWidget* parent = 0L );
+    explicit KUrlLabel(QWidget *parent = 0L);
 
     /**
      * Convenience constructor.
@@ -97,8 +97,8 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * @p parent and @p name are passed to QLabel, which in turn passes
      * them further down
      */
-    explicit KUrlLabel( const QString& url, const QString& text = QString(),
-               QWidget* parent = 0L );
+    explicit KUrlLabel(const QString &url, const QString &text = QString(),
+                       QWidget *parent = 0L);
 
     /**
      * Destructs the label.
@@ -148,28 +148,28 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
     /**
      * @return the alternate pixmap (may be 0L if none was set).
      */
-    const QPixmap* alternatePixmap() const;
+    const QPixmap *alternatePixmap() const;
 
-  public Q_SLOTS:
+public Q_SLOTS:
     /**
      * Turns on or off the underlining.
      *
      *  When this is on, the
      * text will be underlined.  By default, it is @p true.
      */
-    void setUnderline( bool on = true );
+    void setUnderline(bool on = true);
 
     /**
      * Sets the URL for this label to @p url.
      *
      * @see url
      */
-    void setUrl( const QString& url );
+    void setUrl(const QString &url);
 
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void setFont( const QFont &font );
+    virtual void setFont(const QFont &font);
 
     /**
      * Turns on or off the tool tip feature.
@@ -178,7 +178,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * tooltip whenever the mouse passes passes over it.
      * By default, it is @p false.
      */
-    void setUseTips ( bool on = true );
+    void setUseTips(bool on = true);
 
     /**
      * Specifies what text to display when tooltips are turned on.
@@ -187,7 +187,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      *
      * @see setUseTips()
      */
-    void setTipText( const QString& tip );
+    void setTipText(const QString &tip);
 
     /**
      * Sets the highlight color.
@@ -195,14 +195,14 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * This is the default foreground
      * color (non-selected).  By default, it is @p blue.
      */
-    void setHighlightedColor( const QColor& highcolor );
+    void setHighlightedColor(const QColor &highcolor);
 
     /**
      * This is an overloaded version for convenience.
      *
      * @see setHighlightedColor()
      */
-    void setHighlightedColor( const QString& highcolor );
+    void setHighlightedColor(const QString &highcolor);
 
     /**
      * Sets the selected color.
@@ -211,14 +211,14 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * to when either a mouse passes over it and "glow" mode is on or
      * when it is selected (clicked).  By default, it is @p red.
      */
-    void setSelectedColor( const QColor& color );
+    void setSelectedColor(const QColor &color);
 
     /**
      * This is an overloaded version for convenience.
      *
      * @see setSelectedColor()
      */
-    void setSelectedColor( const QString& color );
+    void setSelectedColor(const QString &color);
 
     /**
      * Turns the custom cursor feature on or off.
@@ -230,7 +230,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * @param on whether a custom cursor should be displayed.
      * @param cursor is the custom cursor. @p 0L indicates the default "hand cursor".
      */
-    void setUseCursor( bool on, QCursor* cursor = 0L );
+    void setUseCursor(bool on, QCursor *cursor = 0L);
 
     /**
      * Turns on or off the "glow" feature.
@@ -239,7 +239,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * selected color whenever the mouse
      * passes over it. By default, it is @p true.
      */
-    void setGlowEnabled( bool glow = true );
+    void setGlowEnabled(bool glow = true);
 
     /**
      * Turns on or off the "float" feature.
@@ -252,7 +252,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      * on, this feature will have no visible effect.
      * By default, it is @p false.
      */
-    void setFloatEnabled( bool do_float = true );
+    void setFloatEnabled(bool do_float = true);
 
     /**
      * Sets the "alt" pixmap.
@@ -263,16 +263,16 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      *
      * @see alternatePixmap()
      */
-    void setAlternatePixmap( const QPixmap& pixmap );
+    void setAlternatePixmap(const QPixmap &pixmap);
 
-  Q_SIGNALS:
+Q_SIGNALS:
 
     /**
      * Emitted when the mouse has passed over the label.
      *
      * @param url The URL for this label.
      */
-    void enteredUrl( const QString& url );
+    void enteredUrl(const QString &url);
 
     /**
      * Emitted when the mouse has passed over the label.
@@ -284,7 +284,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      *
      * @param url The URL for this label.
      */
-    void leftUrl( const QString& url );
+    void leftUrl(const QString &url);
 
     /**
      * Emitted when the mouse is no longer over the label.
@@ -296,7 +296,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      *
      * @param url The URL for this label.
      */
-    void leftClickedUrl( const QString& url );
+    void leftClickedUrl(const QString &url);
 
     /**
      * Emitted when the user clicked the left mouse button on this label.
@@ -308,7 +308,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      *
      * @param url The URL for this label.
      */
-    void rightClickedUrl( const QString& url );
+    void rightClickedUrl(const QString &url);
 
     /**
      * Emitted when the user clicked the right mouse button on this label.
@@ -320,39 +320,39 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
      *
      * @param url The URL for this label.
      */
-    void middleClickedUrl( const QString& url );
+    void middleClickedUrl(const QString &url);
 
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
     void middleClickedUrl();
 
-  protected:
+protected:
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void mouseReleaseEvent( QMouseEvent* );
+    virtual void mouseReleaseEvent(QMouseEvent *);
 
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void enterEvent( QEvent* );
+    virtual void enterEvent(QEvent *);
 
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void leaveEvent( QEvent* );
+    virtual void leaveEvent(QEvent *);
 
     /**
      * Catch parent palette changes
      */
-    virtual bool event( QEvent* );
+    virtual bool event(QEvent *);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void updateColor() )
+    Q_PRIVATE_SLOT(d, void updateColor())
 };
 
 #endif

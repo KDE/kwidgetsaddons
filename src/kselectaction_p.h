@@ -39,70 +39,70 @@ class KSelectActionPrivate
     Q_DECLARE_PUBLIC(KSelectAction)
 
 public:
-  KSelectActionPrivate()
-    : q_ptr(0)
-  {
-    m_edit = false;
-    m_menuAccelsEnabled = true;
-    m_comboWidth = -1;
-    m_maxComboViewCount = -1;
+    KSelectActionPrivate()
+        : q_ptr(0)
+    {
+        m_edit = false;
+        m_menuAccelsEnabled = true;
+        m_comboWidth = -1;
+        m_maxComboViewCount = -1;
 
-    m_toolBarMode = KSelectAction::ComboBoxMode;
-    m_toolButtonPopupMode = QToolButton::InstantPopup; //InstantPopup by default because there is no default action
+        m_toolBarMode = KSelectAction::ComboBoxMode;
+        m_toolButtonPopupMode = QToolButton::InstantPopup; //InstantPopup by default because there is no default action
 
-    m_actionGroup = new QActionGroup(0L);
-  }
+        m_actionGroup = new QActionGroup(0L);
+    }
 
-  virtual ~KSelectActionPrivate()
-  {
-    // unhook the event filter, as the deletion of the actiongroup
-    // will trigger it
-    Q_FOREACH( QComboBox* box, m_comboBoxes )
-        box->removeEventFilter( q_ptr );
-    Q_FOREACH( QToolButton* button, m_buttons )
-        button->removeEventFilter( q_ptr );
-    delete m_actionGroup;
-  }
+    virtual ~KSelectActionPrivate()
+    {
+        // unhook the event filter, as the deletion of the actiongroup
+        // will trigger it
+        Q_FOREACH (QComboBox *box, m_comboBoxes) {
+            box->removeEventFilter(q_ptr);
+        }
+        Q_FOREACH (QToolButton *button, m_buttons) {
+            button->removeEventFilter(q_ptr);
+        }
+        delete m_actionGroup;
+    }
 
-  void _k_comboBoxDeleted(QObject*);
-  void _k_comboBoxCurrentIndexChanged(int);
+    void _k_comboBoxDeleted(QObject *);
+    void _k_comboBoxCurrentIndexChanged(int);
 
-  void init(KSelectAction*);
+    void init(KSelectAction *);
 
-  bool m_edit : 1;
-  bool m_menuAccelsEnabled : 1;
-  int m_comboWidth;
-  int m_maxComboViewCount;
+    bool m_edit : 1;
+    bool m_menuAccelsEnabled : 1;
+    int m_comboWidth;
+    int m_maxComboViewCount;
 
-  KSelectAction::ToolBarMode m_toolBarMode;
-  QToolButton::ToolButtonPopupMode m_toolButtonPopupMode;
+    KSelectAction::ToolBarMode m_toolBarMode;
+    QToolButton::ToolButtonPopupMode m_toolButtonPopupMode;
 
-  QActionGroup* m_actionGroup;
+    QActionGroup *m_actionGroup;
 
-  QList<QToolButton*> m_buttons;
-  QList<QComboBox*> m_comboBoxes;
+    QList<QToolButton *> m_buttons;
+    QList<QComboBox *> m_comboBoxes;
 
-  QString makeMenuText( const QString &_text )
-  {
-      if ( m_menuAccelsEnabled )
-        return _text;
-      QString text = _text;
-      int i = 0;
-      while ( i < text.length() ) {
-          if ( text[ i ] == QLatin1Char('&') ) {
-              text.insert( i, QLatin1Char('&') );
-              i += 2;
-          }
-          else
-              ++i;
-      }
-      return text;
-  }
+    QString makeMenuText(const QString &_text)
+    {
+        if (m_menuAccelsEnabled) {
+            return _text;
+        }
+        QString text = _text;
+        int i = 0;
+        while (i < text.length()) {
+            if (text[ i ] == QLatin1Char('&')) {
+                text.insert(i, QLatin1Char('&'));
+                i += 2;
+            } else {
+                ++i;
+            }
+        }
+        return text;
+    }
 
-  KSelectAction *q_ptr;
+    KSelectAction *q_ptr;
 };
-
-/* vim: et sw=2 ts=2
- */
 
 #endif // KSELECTACTION_P_H

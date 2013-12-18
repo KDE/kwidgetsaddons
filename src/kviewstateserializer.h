@@ -137,7 +137,6 @@ class KViewStateSerializerPrivate;
     };
   @endcode
 
-
   Note that a single instance of this class should be used with only one widget. That is don't do this:
 
   @code
@@ -166,99 +165,99 @@ class KViewStateSerializerPrivate;
 */
 class KWIDGETSADDONS_EXPORT KViewStateSerializer : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  /**
-    Constructor
-  */
-  explicit KViewStateSerializer(QObject *parent = 0);
+    /**
+      Constructor
+    */
+    explicit KViewStateSerializer(QObject *parent = 0);
 
-  /**
-    Destructor
-  */
-  ~KViewStateSerializer();
+    /**
+      Destructor
+    */
+    ~KViewStateSerializer();
 
-  /**
-   * The view whose state is persisted.
-   */
-  QAbstractItemView* view() const;
+    /**
+     * The view whose state is persisted.
+     */
+    QAbstractItemView *view() const;
 
-  /**
-   * Sets the view whose state is persisted.
-   */
-  void setView(QAbstractItemView *view);
+    /**
+     * Sets the view whose state is persisted.
+     */
+    void setView(QAbstractItemView *view);
 
-  /**
-    The QItemSelectionModel whose state is persisted.
-  */
-  QItemSelectionModel* selectionModel() const;
+    /**
+      The QItemSelectionModel whose state is persisted.
+    */
+    QItemSelectionModel *selectionModel() const;
 
-  /**
-    Sets the QItemSelectionModel whose state is persisted.
-  */
-  void setSelectionModel( QItemSelectionModel *selectionModel );
+    /**
+      Sets the QItemSelectionModel whose state is persisted.
+    */
+    void setSelectionModel(QItemSelectionModel *selectionModel);
 
-  /**
-   * Returns a QStringList describing the selection in the selectionModel.
-   */
-  QStringList selectionKeys() const;
+    /**
+     * Returns a QStringList describing the selection in the selectionModel.
+     */
+    QStringList selectionKeys() const;
 
-  /**
-   * Returns a QStringList representing the expanded indexes in the QTreeView.
-   */
-  QStringList expansionKeys() const;
+    /**
+     * Returns a QStringList representing the expanded indexes in the QTreeView.
+     */
+    QStringList expansionKeys() const;
 
-  /**
-   * Returns a QString describing the current index in the selection model.
-   */
-  QString currentIndexKey() const;
+    /**
+     * Returns a QString describing the current index in the selection model.
+     */
+    QString currentIndexKey() const;
 
-  /**
-   * Returns the vertical and horizontal scroll of the QAbstractScrollArea.
-   */
-  QPair<int, int> scrollState() const;
+    /**
+     * Returns the vertical and horizontal scroll of the QAbstractScrollArea.
+     */
+    QPair<int, int> scrollState() const;
 
-  /**
-   * Select the indexes described by @p indexStrings
-   */
-  void restoreSelection( const QStringList &indexStrings );
+    /**
+     * Select the indexes described by @p indexStrings
+     */
+    void restoreSelection(const QStringList &indexStrings);
 
-  /**
-   * Make the index described by @p indexString the currentIndex in the selectionModel.
-   */
-  void restoreCurrentItem( const QString &indexString );
+    /**
+     * Make the index described by @p indexString the currentIndex in the selectionModel.
+     */
+    void restoreCurrentItem(const QString &indexString);
 
-  /**
-   * Expand the indexes described by @p indexStrings in the QTreeView.
-   */
-  void restoreExpanded( const QStringList &indexStrings );
+    /**
+     * Expand the indexes described by @p indexStrings in the QTreeView.
+     */
+    void restoreExpanded(const QStringList &indexStrings);
 
-  /**
-   * Restores the scroll state of the QAbstractScrollArea to the @p verticalScoll
-   * and @p horizontalScroll
-   */
-  void restoreScrollState( int verticalScoll, int horizontalScroll );
+    /**
+     * Restores the scroll state of the QAbstractScrollArea to the @p verticalScoll
+     * and @p horizontalScroll
+     */
+    void restoreScrollState(int verticalScoll, int horizontalScroll);
 
 protected:
-  /**
-    Reimplement to return an index in the @p model described by the unique key @p key
-  */
-  virtual QModelIndex indexFromConfigString(const QAbstractItemModel *model, const QString &key) const = 0;
+    /**
+      Reimplement to return an index in the @p model described by the unique key @p key
+    */
+    virtual QModelIndex indexFromConfigString(const QAbstractItemModel *model, const QString &key) const = 0;
 
-  /**
-    Reimplement to return a unique string for the @p index.
-  */
-  virtual QString indexToConfigString(const QModelIndex &index) const = 0;
+    /**
+      Reimplement to return a unique string for the @p index.
+    */
+    virtual QString indexToConfigString(const QModelIndex &index) const = 0;
 
-  void restoreState();
+    void restoreState();
 
 private:
-  //@cond PRIVATE
-  Q_DECLARE_PRIVATE(KViewStateSerializer)
-  KViewStateSerializerPrivate * const d_ptr;
-  Q_PRIVATE_SLOT( d_func(), void rowsInserted( const QModelIndex&, int, int ) )
-  Q_PRIVATE_SLOT( d_func(), void restoreScrollBarState() )
-  //@endcond
+    //@cond PRIVATE
+    Q_DECLARE_PRIVATE(KViewStateSerializer)
+    KViewStateSerializerPrivate *const d_ptr;
+    Q_PRIVATE_SLOT(d_func(), void rowsInserted(const QModelIndex &, int, int))
+    Q_PRIVATE_SLOT(d_func(), void restoreScrollBarState())
+    //@endcond
 };
 
 #endif

@@ -50,9 +50,9 @@
  */
 class KWIDGETSADDONS_EXPORT KToolBarLabelAction : public QWidgetAction
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a toolbar label.
      *
@@ -81,34 +81,34 @@ class KWIDGETSADDONS_EXPORT KToolBarLabelAction : public QWidgetAction
      *
      * See QLabel#setBuddy() for details.
      */
-    void setBuddy( QAction *buddy );
+    void setBuddy(QAction *buddy);
 
     /**
      * Returns the label's buddy or 0 if no buddy is currently set.
      *
      * See QLabel#buddy() and QLabel#setBuddy() for more information.
      */
-    QAction* buddy() const;
+    QAction *buddy() const;
 
     /**
      * Reimplemented from @see QActionWidgetFactory.
      */
-    virtual QWidget* createWidget( QWidget* parent );
+    virtual QWidget *createWidget(QWidget *parent);
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emmitted whenever the text of this action
      * is changed.
      */
-    void textChanged( const QString &newText );
+    void textChanged(const QString &newText);
 
-  protected:
-    virtual bool event( QEvent* );
-    virtual bool eventFilter( QObject *watched, QEvent *event );
+protected:
+    virtual bool event(QEvent *);
+    virtual bool eventFilter(QObject *watched, QEvent *event);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif

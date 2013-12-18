@@ -71,14 +71,14 @@ bool KDragWidgetDecoratorBase::eventFilter(QObject *watched, QEvent *event)
     }
 
     if (event->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *e = static_cast<QMouseEvent*>(event);
+        QMouseEvent *e = static_cast<QMouseEvent *>(event);
         d->startPos = e->pos();
 
     } else if (event->type() == QEvent::MouseMove) {
-        QMouseEvent *e = static_cast<QMouseEvent*>(event);
+        QMouseEvent *e = static_cast<QMouseEvent *>(event);
         if ((e->buttons() & Qt::LeftButton) &&
-            (e->pos() - d->startPos).manhattanLength() >
-            QApplication::startDragDistance()) {
+                (e->pos() - d->startPos).manhattanLength() >
+                QApplication::startDragDistance()) {
             startDrag();
             d->decoratedWidget->setProperty("down", false);
             return true;

@@ -31,7 +31,7 @@
 class KTitleWidget::Private
 {
 public:
-    Private(KTitleWidget* parent)
+    Private(KTitleWidget *parent)
         : q(parent),
           autoHideTimeout(0),
           messageType(InfoMessage)
@@ -47,23 +47,23 @@ public:
     {
         QString styleSheet;
         switch (messageType) {
-            //FIXME: we need the usability color styles to implement different
-            //       yet palette appropriate colours for the different use cases!
-            //       also .. should we include an icon here,
-            //       perhaps using the imageLabel?
-            case InfoMessage:
-            case WarningMessage:
-            case ErrorMessage:
-                styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }").arg(q->palette().color(QPalette::HighlightedText).name()).arg(q->palette().color(QPalette::Highlight).name());
-                break;
-            case PlainMessage:
-            default:
-                break;
+        //FIXME: we need the usability color styles to implement different
+        //       yet palette appropriate colours for the different use cases!
+        //       also .. should we include an icon here,
+        //       perhaps using the imageLabel?
+        case InfoMessage:
+        case WarningMessage:
+        case ErrorMessage:
+            styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }").arg(q->palette().color(QPalette::HighlightedText).name()).arg(q->palette().color(QPalette::Highlight).name());
+            break;
+        case PlainMessage:
+        default:
+            break;
         }
         return styleSheet;
     }
 
-    KTitleWidget* q;
+    KTitleWidget *q;
     QGridLayout *headerLayout;
     QLabel *imageLabel;
     QLabel *textLabel;
@@ -87,25 +87,25 @@ public:
 QString KTitleWidget::Private::iconTypeToIconName(KTitleWidget::MessageType type)
 {
     switch (type) {
-        case KTitleWidget::InfoMessage:
-            return QLatin1String("dialog-information");
-            break;
-        case KTitleWidget::ErrorMessage:
-            return QLatin1String("dialog-error");
-            break;
-        case KTitleWidget::WarningMessage:
-            return QLatin1String("dialog-warning");
-            break;
-        case KTitleWidget::PlainMessage:
-            break;
+    case KTitleWidget::InfoMessage:
+        return QLatin1String("dialog-information");
+        break;
+    case KTitleWidget::ErrorMessage:
+        return QLatin1String("dialog-error");
+        break;
+    case KTitleWidget::WarningMessage:
+        return QLatin1String("dialog-warning");
+        break;
+    case KTitleWidget::PlainMessage:
+        break;
     }
 
     return QString();
 }
 
 KTitleWidget::KTitleWidget(QWidget *parent)
-  : QWidget(parent),
-    d(new Private(this))
+    : QWidget(parent),
+      d(new Private(this))
 {
     QFrame *titleFrame = new QFrame(this);
     titleFrame->setAutoFillBackground(true);
@@ -152,8 +152,8 @@ bool KTitleWidget::eventFilter(QObject *object, QEvent *event)
 {
     // Hide message label on click
     if (d->autoHideTimeout > 0 &&
-        event->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *mouseEvent = static_cast<QMouseEvent*>(event);
+            event->type() == QEvent::MouseButtonPress) {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
         if (mouseEvent && mouseEvent->button() == Qt::LeftButton) {
             setVisible(false);
             return true;
@@ -253,13 +253,12 @@ void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
     d->imageLabel->setPixmap(pixmap);
 }
 
-
 void KTitleWidget::setPixmap(const QString &icon, ImageAlignment alignment)
 {
     setPixmap(QIcon::fromTheme(icon), alignment);
 }
 
-void KTitleWidget::setPixmap(const QIcon& icon, ImageAlignment alignment)
+void KTitleWidget::setPixmap(const QIcon &icon, ImageAlignment alignment)
 {
     setPixmap(icon.pixmap(style()->pixelMetric(QStyle::PM_MessageBoxIconSize)), alignment);
 }

@@ -49,12 +49,12 @@ void KColorButtonTest::testChangeAndCancel()
     colorButton.show();
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
-    QColorDialog *dialog = colorButton.findChild<QColorDialog*>();
+    QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
     QVERIFY(dialog != NULL);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
 #if 0
-    KColorCells *cells = dialog->findChild<KColorCells*>();
+    KColorCells *cells = dialog->findChild<KColorCells *>();
     QVERIFY(cells != NULL);
     QTest::mouseClick(cells->viewport(), Qt::LeftButton, 0, QPoint(1, 1));
     QCOMPARE(dialog->color(), black40Colors);
@@ -69,12 +69,12 @@ void KColorButtonTest::testDoubleClickChange()
     colorButton.show();
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
-    QColorDialog *dialog = colorButton.findChild<QColorDialog*>();
+    QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
     QVERIFY(dialog != NULL);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
 #if 0
-    KColorCells *cells = dialog->findChild<KColorCells*>();
+    KColorCells *cells = dialog->findChild<KColorCells *>();
     QVERIFY(cells != NULL);
     QTest::mouseDClick(cells->viewport(), Qt::LeftButton, 0, QPoint(1, 1));
     QCOMPARE(colorButton.color(), black40Colors);
@@ -87,20 +87,20 @@ void KColorButtonTest::testOkChange()
     colorButton.show();
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
-    QColorDialog *dialog = colorButton.findChild<QColorDialog*>();
+    QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
     QVERIFY(dialog != NULL);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
 #if 0
-    KColorCells *cells = dialog->findChild<KColorCells*>();
+    KColorCells *cells = dialog->findChild<KColorCells *>();
     QVERIFY(cells != NULL);
     QTest::mouseClick(cells->viewport(), Qt::LeftButton, 0, QPoint(1, 1));
     QCOMPARE(dialog->color(), black40Colors);
 
     QSignalSpy okClickedSpy(dialog, SIGNAL(okClicked()));
-    const QDialogButtonBox *buttonBox = dialog->findChild<QDialogButtonBox*>();
+    const QDialogButtonBox *buttonBox = dialog->findChild<QDialogButtonBox *>();
     const QList<QAbstractButton *> buttons = buttonBox->buttons();
-    foreach(QAbstractButton *button, buttons) {
+    foreach (QAbstractButton *button, buttons) {
         if (buttonBox->buttonRole(button) == QDialogButtonBox::AcceptRole) {
             QTest::mouseClick(button, Qt::LeftButton);
             break;
@@ -118,18 +118,18 @@ void KColorButtonTest::testRecentColorsPick()
     colorButton.show();
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
-    QColorDialog *dialog = colorButton.findChild<QColorDialog*>();
+    QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
     QVERIFY(dialog != NULL);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 
 #pragma message("port to QColorDialog")
 #if 0
-    QComboBox *combo = dialog->findChild<QComboBox*>();
+    QComboBox *combo = dialog->findChild<QComboBox *>();
     combo->setFocus();
     QTest::keyPress(combo, Qt::Key_Up);
     QTest::keyPress(combo, Qt::Key_Up);
 
-    KColorCells *cells = dialog->findChild<KColorCells*>();
+    KColorCells *cells = dialog->findChild<KColorCells *>();
     QVERIFY(cells != NULL);
     QTest::mouseMove(cells->viewport(), QPoint(1, 1));
     QTest::mouseClick(cells->viewport(), Qt::LeftButton, 0, QPoint(30, 1));

@@ -27,7 +27,6 @@
 
 QTEST_MAIN(KDateComboBoxTest)
 
-
 void KDateComboBoxTest::testDefaults()
 {
     m_combo = new KDateComboBox(0);

@@ -30,39 +30,39 @@ class Receiver : public QObject
 {
     Q_OBJECT
 public:
-    Receiver(QObject* parent) : QObject(parent)
+    Receiver(QObject *parent) : QObject(parent)
     {}
     virtual ~Receiver() {}
 
 public Q_SLOTS:
-    void showWhatsThis(const QString& text)
+    void showWhatsThis(const QString &text)
     {
         QWhatsThis::showText(QCursor::pos(), text);
     }
 };
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    QWidget* mainWindow = new QWidget();
+    QWidget *mainWindow = new QWidget();
 
-    QVBoxLayout* l = new QVBoxLayout(mainWindow);
+    QVBoxLayout *l = new QVBoxLayout(mainWindow);
 
-    KMessageWidget* mw = new KMessageWidget(mainWindow);
+    KMessageWidget *mw = new KMessageWidget(mainWindow);
     mw->setWordWrap(true);
     mw->setText(
         QLatin1String("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default.")
     );
     // A frame to materialize the end of the KMessageWidget
-    QFrame* frame = new QFrame(mainWindow);
+    QFrame *frame = new QFrame(mainWindow);
     frame->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
     frame->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-    QCheckBox* wordWrapCb = new QCheckBox(QLatin1String("wordWrap"), mainWindow);
+    QCheckBox *wordWrapCb = new QCheckBox(QLatin1String("wordWrap"), mainWindow);
     wordWrapCb->setChecked(true);
     QObject::connect(wordWrapCb, SIGNAL(toggled(bool)), mw, SLOT(setWordWrap(bool)));
 
-    QCheckBox* closeButtonCb = new QCheckBox(QLatin1String("closeButton"), mainWindow);
+    QCheckBox *closeButtonCb = new QCheckBox(QLatin1String("closeButton"), mainWindow);
     closeButtonCb->setChecked(true);
     QObject::connect(closeButtonCb, SIGNAL(toggled(bool)), mw, SLOT(setCloseButtonVisible(bool)));
 
@@ -75,7 +75,7 @@ int main(int argc, char* argv[])
     mainWindow->show();
 
     // demonstrate linkActivated
-    Receiver* info = new Receiver(mw);
+    Receiver *info = new Receiver(mw);
     QObject::connect(mw, SIGNAL(linkActivated(QString)), info, SLOT(showWhatsThis(QString)));
 
     return app.exec();

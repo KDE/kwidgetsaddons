@@ -23,7 +23,8 @@
 #include <QPluginLoader>
 #include <QVariant>
 
-namespace KMessageBox {
+namespace KMessageBox
+{
 
 class KMessageBoxDontAskAgainMemoryStorage : public KMessageBoxDontAskAgainInterface
 {
@@ -31,7 +32,8 @@ public:
     KMessageBoxDontAskAgainMemoryStorage() {}
     virtual ~KMessageBoxDontAskAgainMemoryStorage() {}
 
-    virtual bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) {
+    virtual bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result)
+    {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::ButtonCode(0));
         if (code == KMessageBox::Yes || code == KMessageBox::No) {
             result = code;
@@ -39,20 +41,25 @@ public:
         }
         return true;
     }
-    virtual bool shouldBeShownContinue(const QString &dontShowAgainName) {
+    virtual bool shouldBeShownContinue(const QString &dontShowAgainName)
+    {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::Yes);
         return code == KMessageBox::Yes;
     }
-    virtual void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result) {
+    virtual void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result)
+    {
         m_saved[dontShowAgainName] = result;
     }
-    virtual void saveDontShowAgainContinue(const QString &dontShowAgainName) {
+    virtual void saveDontShowAgainContinue(const QString &dontShowAgainName)
+    {
         m_saved[dontShowAgainName] = KMessageBox::No;
     }
-    virtual void enableAllMessages() {
+    virtual void enableAllMessages()
+    {
         m_saved.clear();
     }
-    virtual void enableMessage(const QString& dontShowAgainName) {
+    virtual void enableMessage(const QString &dontShowAgainName)
+    {
         m_saved.remove(dontShowAgainName);
     }
     virtual void setConfig(KConfig *) {}
@@ -70,8 +77,8 @@ public:
 Q_GLOBAL_STATIC(KMessageBoxDontAskAgainMemoryStorage, s_defaultDontAskAgainInterface);
 Q_GLOBAL_STATIC(KMessageBoxNotifyDummy, s_defaultNotifyInterface);
 
-static KMessageBoxDontAskAgainInterface* s_dontAskAgainInterface = 0;
-static KMessageBoxNotifyInterface* s_notifyInterface = 0;
+static KMessageBoxDontAskAgainInterface *s_dontAskAgainInterface = 0;
+static KMessageBoxNotifyInterface *s_notifyInterface = 0;
 
 static void loadKMessageBoxPlugin()
 {
@@ -110,7 +117,7 @@ KMessageBoxNotifyInterface *notifyInterface()
     return s_notifyInterface;
 }
 
-void setDontShowAgainInterface(KMessageBoxDontAskAgainInterface* dontAskAgainInterface)
+void setDontShowAgainInterface(KMessageBoxDontAskAgainInterface *dontAskAgainInterface)
 {
     Q_ASSERT(dontAskAgainInterface != 0);
     s_dontAskAgainInterface = dontAskAgainInterface;

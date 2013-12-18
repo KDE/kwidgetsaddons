@@ -37,20 +37,20 @@ protected:
     /**
      * Catch key press events.
      */
-    virtual void keyPressEvent( QKeyEvent *e );
+    virtual void keyPressEvent(QKeyEvent *e);
 
 public Q_SLOTS:
     /**
      * Close the popup window. This is called from the main widget, usually.
      * @p r is the result returned from exec().
      */
-    void close( int r );
+    void close(int r);
 
 public:
     /**
      * The contructor. Creates a dialog without buttons.
      */
-    KPopupFrame( QWidget *parent = 0 );
+    KPopupFrame(QWidget *parent = 0);
 
     /**
      * The destructor
@@ -64,28 +64,28 @@ public:
      * set the main widgets correct size before setting it as the main
      * widget.
      */
-    void setMainWidget( QWidget* m );
+    void setMainWidget(QWidget *m);
 
     /**
      * The resize event. Simply resizes the main widget to the whole
      * widgets client size.
      */
-    virtual void resizeEvent( QResizeEvent *resize );
+    virtual void resizeEvent(QResizeEvent *resize);
 
     /**
      * Open the popup window at position pos.
      */
-    void popup( const QPoint &pos );
+    void popup(const QPoint &pos);
 
     /**
      * Execute the popup window.
      */
-    int exec( const QPoint &p );
+    int exec(const QPoint &p);
 
     /**
      * Execute the popup window.
      */
-    int exec( int x, int y );
+    int exec(int x, int y);
 
 Q_SIGNALS:
     void leaveModality();
@@ -93,9 +93,9 @@ Q_SIGNALS:
 private:
     class KPopupFramePrivate;
     friend class KPopupFramePrivate;
-    KPopupFramePrivate * const d;
+    KPopupFramePrivate *const d;
 
-    Q_DISABLE_COPY( KPopupFrame )
+    Q_DISABLE_COPY(KPopupFrame)
 };
 
 #endif // KPOPUPFRAME_H

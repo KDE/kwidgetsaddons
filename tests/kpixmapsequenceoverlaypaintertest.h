@@ -16,19 +16,19 @@ public:
     TestWidget();
     ~TestWidget();
 
-    bool eventFilter(QObject*, QEvent*);
+    bool eventFilter(QObject *, QEvent *);
 
 private Q_SLOTS:
     void alignementChanged(int);
     void offsetChanged();
 
 private:
-    KPixmapSequenceOverlayPainter* m_painter;
+    KPixmapSequenceOverlayPainter *m_painter;
 
-    QWidget* m_widget;
-    QComboBox* m_alignment;
-    QSpinBox* m_offsetX;
-    QSpinBox* m_offsetY;
+    QWidget *m_widget;
+    QComboBox *m_alignment;
+    QSpinBox *m_offsetX;
+    QSpinBox *m_offsetY;
 
     bool m_draggingLeft;
     bool m_draggingRight;

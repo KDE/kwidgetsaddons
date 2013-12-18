@@ -28,13 +28,13 @@
 
 class KPageWidgetTest : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    KPageWidgetTest( QWidget *parent = 0 );
+public:
+    KPageWidgetTest(QWidget *parent = 0);
     ~KPageWidgetTest();
 
-  private Q_SLOTS:
+private Q_SLOTS:
     void setAutoFace();
     void setPlainFace();
     void setListFace();
@@ -46,10 +46,10 @@ class KPageWidgetTest : public QWidget
     void insertPage();
     void deletePage();
 
-    void currentPageChanged( KPageWidgetItem*, KPageWidgetItem* );
-    void pageToggled( KPageWidgetItem*, bool );
+    void currentPageChanged(KPageWidgetItem *, KPageWidgetItem *);
+    void pageToggled(KPageWidgetItem *, bool);
 
-  private:
+private:
     KPageWidget *mWidget;
 };
 

@@ -26,19 +26,19 @@ class KDateComboBox;
 
 class KDateComboBoxTest : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
 private Q_SLOTS:
-  void testDefaults();
-  void testValidNull();
-  void testDateRange();
-  void testDateList();
-  void testOptions();
-  void testDisplayFormat();
+    void testDefaults();
+    void testValidNull();
+    void testDateRange();
+    void testDateList();
+    void testOptions();
+    void testDisplayFormat();
 
 private:
 
-  KDateComboBox* m_combo;
+    KDateComboBox *m_combo;
 };
 
 #endif // KDATECOMBOBOXTEST_H

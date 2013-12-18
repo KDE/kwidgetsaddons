@@ -29,12 +29,12 @@ class SelectActionTest : public QMainWindow
     Q_OBJECT
 
 public:
-    SelectActionTest(QWidget* parent = 0);
+    SelectActionTest(QWidget *parent = 0);
 
 public Q_SLOTS:
-    void triggered(QAction* action);
+    void triggered(QAction *action);
     void triggered(int index);
-    void triggered(const QString& text);
+    void triggered(const QString &text);
 
     void slotActionTriggered(bool state);
 
@@ -42,8 +42,8 @@ public Q_SLOTS:
     void removeAction();
 
 private:
-    KSelectAction* m_comboSelect;
-    KSelectAction* m_buttonSelect;
+    KSelectAction *m_comboSelect;
+    KSelectAction *m_buttonSelect;
 };
 
 #endif

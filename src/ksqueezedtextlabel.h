@@ -44,80 +44,81 @@ class KSqueezedTextLabelPrivate;
 /*
  * QLabel
  */
-class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel {
-  Q_OBJECT
-  Q_PROPERTY( Qt::TextElideMode textElideMode READ textElideMode WRITE setTextElideMode )
+class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel
+{
+    Q_OBJECT
+    Q_PROPERTY(Qt::TextElideMode textElideMode READ textElideMode WRITE setTextElideMode)
 
 public:
-  /**
-   * Default constructor.
-   */
-  explicit KSqueezedTextLabel( QWidget *parent = 0 );
-  explicit KSqueezedTextLabel( const QString &text, QWidget *parent = 0 );
+    /**
+     * Default constructor.
+     */
+    explicit KSqueezedTextLabel(QWidget *parent = 0);
+    explicit KSqueezedTextLabel(const QString &text, QWidget *parent = 0);
 
-  virtual ~KSqueezedTextLabel();
+    virtual ~KSqueezedTextLabel();
 
-  virtual QSize minimumSizeHint() const;
-  virtual QSize sizeHint() const;
-  /**
-   * Overridden for internal reasons; the API remains unaffected.
-   */
-  virtual void setAlignment( Qt::Alignment );
+    virtual QSize minimumSizeHint() const;
+    virtual QSize sizeHint() const;
+    /**
+     * Overridden for internal reasons; the API remains unaffected.
+     */
+    virtual void setAlignment(Qt::Alignment);
 
-  /**
-   *  Returns the text elide mode.
-   */
-  Qt::TextElideMode textElideMode() const;
+    /**
+     *  Returns the text elide mode.
+     */
+    Qt::TextElideMode textElideMode() const;
 
-  /**
-   * Sets the text elide mode.
-   * @param mode The text elide mode.
-   */
-  void setTextElideMode( Qt::TextElideMode mode );
+    /**
+     * Sets the text elide mode.
+     * @param mode The text elide mode.
+     */
+    void setTextElideMode(Qt::TextElideMode mode);
 
-  /**
-   * Get the full text set via setText.
-   *
-   * @since 4.4
-   */
-  QString fullText() const;
+    /**
+     * Get the full text set via setText.
+     *
+     * @since 4.4
+     */
+    QString fullText() const;
 
 public Q_SLOTS:
-  /**
-   * Sets the text. Note that this is not technically a reimplementation of QLabel::setText(),
-   * which is not virtual (in Qt 4.3). Therefore, you may need to cast the object to
-   * KSqueezedTextLabel in some situations:
-   * \Example
-   * \code
-   * KSqueezedTextLabel* squeezed = new KSqueezedTextLabel("text", parent);
-   * QLabel* label = squeezed;
-   * label->setText("new text");	// this will not work
-   * squeezed->setText("new text");	// works as expected
-   * static_cast<KSqueezedTextLabel*>(label)->setText("new text");	// works as expected
-   * \endcode
-   * @param mode The new text.
-   */
-  void setText( const QString &text );
-  /**
-   * Clears the text. Same remark as above.
-   *
-   */
-  void clear();
+    /**
+     * Sets the text. Note that this is not technically a reimplementation of QLabel::setText(),
+     * which is not virtual (in Qt 4.3). Therefore, you may need to cast the object to
+     * KSqueezedTextLabel in some situations:
+     * \Example
+     * \code
+     * KSqueezedTextLabel* squeezed = new KSqueezedTextLabel("text", parent);
+     * QLabel* label = squeezed;
+     * label->setText("new text");    // this will not work
+     * squeezed->setText("new text"); // works as expected
+     * static_cast<KSqueezedTextLabel*>(label)->setText("new text");  // works as expected
+     * \endcode
+     * @param mode The new text.
+     */
+    void setText(const QString &text);
+    /**
+     * Clears the text. Same remark as above.
+     *
+     */
+    void clear();
 
 protected:
     /**
      * \reimp
      */
-    void mouseReleaseEvent(QMouseEvent*);
-    
+    void mouseReleaseEvent(QMouseEvent *);
+
     /**
      * Called when widget is resized
      */
-    void resizeEvent( QResizeEvent * );
+    void resizeEvent(QResizeEvent *);
     /**
      * \reimp
      */
-    void contextMenuEvent(QContextMenuEvent* );
+    void contextMenuEvent(QContextMenuEvent *);
     /**
      * does the dirty work
      */
@@ -125,7 +126,7 @@ protected:
 
 private:
     Q_PRIVATE_SLOT(d, void _k_copyFullText())
-  KSqueezedTextLabelPrivate * const d;
+    KSqueezedTextLabelPrivate *const d;
 };
 
 #endif // KSQUEEZEDTEXTLABEL_H

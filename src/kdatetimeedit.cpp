@@ -72,7 +72,7 @@ public:
 };
 
 KDateTimeEditPrivate::KDateTimeEditPrivate(KDateTimeEdit *q)
-                     :q(q)
+    : q(q)
 {
     m_options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate |
                 KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime |
@@ -114,7 +114,7 @@ void KDateTimeEditPrivate::initWidgets()
 void KDateTimeEditPrivate::initDateWidget()
 {
     ui.m_dateCombo->blockSignals(true);
-    ui.m_dateCombo->setVisible((m_options &KDateTimeEdit::ShowDate) == KDateTimeEdit::ShowDate);
+    ui.m_dateCombo->setVisible((m_options & KDateTimeEdit::ShowDate) == KDateTimeEdit::ShowDate);
     KDateComboBox::Options options;
     if ((m_options & KDateTimeEdit::EditDate) == KDateTimeEdit::EditDate) {
         options = options | KDateComboBox::EditDate;
@@ -135,15 +135,15 @@ void KDateTimeEditPrivate::initDateWidget()
 void KDateTimeEditPrivate::initTimeWidget()
 {
     ui.m_timeCombo->blockSignals(true);
-    ui.m_timeCombo->setVisible((m_options &KDateTimeEdit::ShowTime) == KDateTimeEdit::ShowTime);
+    ui.m_timeCombo->setVisible((m_options & KDateTimeEdit::ShowTime) == KDateTimeEdit::ShowTime);
     KTimeComboBox::Options options;
-    if ((m_options &KDateTimeEdit::EditTime) == KDateTimeEdit::EditTime) {
+    if ((m_options & KDateTimeEdit::EditTime) == KDateTimeEdit::EditTime) {
         options = options | KTimeComboBox::EditTime;
     }
-    if ((m_options &KDateTimeEdit::SelectTime) == KDateTimeEdit::SelectTime) {
+    if ((m_options & KDateTimeEdit::SelectTime) == KDateTimeEdit::SelectTime) {
         options = options | KTimeComboBox::SelectTime;
     }
-    if ((m_options &KDateTimeEdit::ForceTime) == KDateTimeEdit::ForceTime) {
+    if ((m_options & KDateTimeEdit::ForceTime) == KDateTimeEdit::ForceTime) {
         options = options | KTimeComboBox::ForceTime;
     }
     ui.m_timeCombo->setOptions(options);
@@ -158,8 +158,8 @@ void KDateTimeEditPrivate::initCalendarWidget()
         ui.m_calendarCombo->addItem(calendarLocale.name(), calendarLocale);
     }
     ui.m_calendarCombo->setCurrentIndex(ui.m_calendarCombo->findData(q->locale()));
-    ui.m_calendarCombo->setVisible((m_options &KDateTimeEdit::ShowCalendar) == KDateTimeEdit::ShowCalendar);
-    ui.m_calendarCombo->setEnabled((m_options &KDateTimeEdit::SelectCalendar) == KDateTimeEdit::SelectCalendar);
+    ui.m_calendarCombo->setVisible((m_options & KDateTimeEdit::ShowCalendar) == KDateTimeEdit::ShowCalendar);
+    ui.m_calendarCombo->setEnabled((m_options & KDateTimeEdit::SelectCalendar) == KDateTimeEdit::SelectCalendar);
     ui.m_calendarCombo->setEditable(false);
     ui.m_calendarCombo->blockSignals(false);
 }
@@ -191,8 +191,8 @@ void KDateTimeEditPrivate::initTimeZoneWidget()
     foreach (const QTimeZone &zone, m_zones) {
         ui.m_timeZoneCombo->addItem(QString::fromUtf8(zone.id()), zone.id());
     }
-    ui.m_timeZoneCombo->setVisible((m_options &KDateTimeEdit::ShowTimeZone) == KDateTimeEdit::ShowTimeZone);
-    ui.m_timeZoneCombo->setEnabled((m_options &KDateTimeEdit::SelectTimeZone) == KDateTimeEdit::SelectTimeZone);
+    ui.m_timeZoneCombo->setVisible((m_options & KDateTimeEdit::ShowTimeZone) == KDateTimeEdit::ShowTimeZone);
+    ui.m_timeZoneCombo->setEnabled((m_options & KDateTimeEdit::SelectTimeZone) == KDateTimeEdit::SelectTimeZone);
     ui.m_timeZoneCombo->setEditable(false);
     ui.m_timeZoneCombo->blockSignals(false);
 }
@@ -218,7 +218,7 @@ void KDateTimeEditPrivate::enterTimeZone(const QByteArray &zoneId)
 void KDateTimeEditPrivate::warnDateTime()
 {
     if (!q->isValid() &&
-        (m_options &KDateTimeEdit::WarnOnInvalid) == KDateTimeEdit::WarnOnInvalid) {
+            (m_options & KDateTimeEdit::WarnOnInvalid) == KDateTimeEdit::WarnOnInvalid) {
         QString warnMsg;
         if (!m_dateTime.isValid()) {
             //TODO Add missing string
@@ -247,10 +247,9 @@ void KDateTimeEditPrivate::warnDateTime()
     }
 }
 
-
 KDateTimeEdit::KDateTimeEdit(QWidget *parent)
-              :QWidget(parent),
-               d(new KDateTimeEditPrivate(this))
+    : QWidget(parent),
+      d(new KDateTimeEditPrivate(this))
 {
     d->ui.setupUi(this);
     //Need to do the min/max defaults here and not in private init as need to wait for ui to init
@@ -263,10 +262,10 @@ KDateTimeEdit::KDateTimeEdit(QWidget *parent)
     d->ui.m_timeZoneCombo->installEventFilter(this);
     d->initWidgets();
 
-    connect( d->ui.m_calendarCombo, SIGNAL(activated(int)),
-             this,                      SLOT(selectCalendar(int)));
-    connect( d->ui.m_timeZoneCombo, SIGNAL(activated(int)),
-             this,                      SLOT(selectTimeZone(int)));
+    connect(d->ui.m_calendarCombo, SIGNAL(activated(int)),
+            this,                      SLOT(selectCalendar(int)));
+    connect(d->ui.m_timeZoneCombo, SIGNAL(activated(int)),
+            this,                      SLOT(selectTimeZone(int)));
 }
 
 KDateTimeEdit::~KDateTimeEdit()
@@ -439,8 +438,8 @@ void KDateTimeEdit::setDateTimeRange(const QDateTime &minDateTime,
                                      const QString &maxErrorMsg)
 {
     if (minDateTime.isValid() &&
-        maxDateTime.isValid() &&
-        minDateTime <= maxDateTime) {
+            maxDateTime.isValid() &&
+            minDateTime <= maxDateTime) {
 
         d->m_minDateTime = minDateTime;
         d->m_minWarnMsg = minErrorMsg;
@@ -509,8 +508,8 @@ int KDateTimeEdit::timeListInterval() const
 }
 
 void KDateTimeEdit::setTimeList(QList<QTime> timeList,
-                 const QString &minWarnMsg,
-                 const QString &maxWarnMsg)
+                                const QString &minWarnMsg,
+                                const QString &maxWarnMsg)
 {
     d->ui.m_timeCombo->setTimeList(timeList, minWarnMsg, maxWarnMsg);
 }

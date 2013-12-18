@@ -48,28 +48,28 @@ class QMenu;
  */
 class KWIDGETSADDONS_EXPORT KActionMenu : public QWidgetAction
 {
-  Q_OBJECT
-  Q_PROPERTY( bool delayed READ delayed WRITE setDelayed )
-  Q_PROPERTY( bool stickyMenu READ stickyMenu WRITE setStickyMenu )
+    Q_OBJECT
+    Q_PROPERTY(bool delayed READ delayed WRITE setDelayed)
+    Q_PROPERTY(bool stickyMenu READ stickyMenu WRITE setStickyMenu)
 
 public:
     explicit KActionMenu(QObject *parent);
-    KActionMenu(const QString& text, QObject *parent);
-    KActionMenu(const QIcon& icon, const QString& text, QObject *parent);
+    KActionMenu(const QString &text, QObject *parent);
+    KActionMenu(const QIcon &icon, const QString &text, QObject *parent);
     virtual ~KActionMenu();
 
     /**
      * @deprecated
      */
 #ifndef KDE_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED void remove( QAction* );
+    KWIDGETSADDONS_DEPRECATED void remove(QAction *);
 #endif
 
-    void addAction(QAction* action);
-    QAction* addSeparator();
-    void insertAction(QAction* before, QAction* action);
-    QAction* insertSeparator(QAction* before);
-    void removeAction(QAction* action);
+    void addAction(QAction *action);
+    QAction *addSeparator();
+    void insertAction(QAction *before, QAction *action);
+    QAction *insertSeparator(QAction *before);
+    void removeAction(QAction *action);
 
     /**
      * Returns this action's menu as a KMenu, if it is one.
@@ -77,7 +77,10 @@ public:
      * @deprecated use menu() instead.
      */
 #ifndef KDE_NO_DEPRECATED
-    inline KWIDGETSADDONS_DEPRECATED QMenu* popupMenu() { return menu(); }
+    inline KWIDGETSADDONS_DEPRECATED QMenu *popupMenu()
+    {
+        return menu();
+    }
 #endif
 
     /**
@@ -117,10 +120,10 @@ public:
      */
     void setStickyMenu(bool sticky);
 
-    virtual QWidget* createWidget(QWidget* parent);
+    virtual QWidget *createWidget(QWidget *parent);
 
 private:
-    class KActionMenuPrivate* const d;
+    class KActionMenuPrivate *const d;
 };
 
 #endif

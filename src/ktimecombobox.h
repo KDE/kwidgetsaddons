@@ -325,8 +325,8 @@ private:
     KTimeComboBoxPrivate *const d;
 
     Q_PRIVATE_SLOT(d, void selectTime(int index))
-    Q_PRIVATE_SLOT(d, void editTime(const QString&))
-    Q_PRIVATE_SLOT(d, void enterTime(const QTime&))
+    Q_PRIVATE_SLOT(d, void editTime(const QString &))
+    Q_PRIVATE_SLOT(d, void enterTime(const QTime &))
     Q_PRIVATE_SLOT(d, void parseTime())
 
 };

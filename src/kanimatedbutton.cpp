@@ -44,29 +44,29 @@ public:
     KAnimatedButton *q;
     QMovie *movie;
 
-  int                    frames;
-  int                    current_frame;
-  QPixmap                pixmap;
-  QTimer                 timer;
-  QString                icon_path;
-  QVector<QPixmap*>      framesCache; // We keep copies of each frame so that
-                                      // the icon code can properly cache them in QPixmapCache,
-                                      // and not fill it up with dead copies
+    int                    frames;
+    int                    current_frame;
+    QPixmap                pixmap;
+    QTimer                 timer;
+    QString                icon_path;
+    QVector<QPixmap *>      framesCache; // We keep copies of each frame so that
+    // the icon code can properly cache them in QPixmapCache,
+    // and not fill it up with dead copies
 };
 
-KAnimatedButton::KAnimatedButton( QWidget *parent )
+KAnimatedButton::KAnimatedButton(QWidget *parent)
     : QToolButton(parent), d(new KAnimatedButtonPrivate(this))
 {
-  connect( &d->timer, SIGNAL(timeout()), this, SLOT(_k_timerUpdate()));
+    connect(&d->timer, SIGNAL(timeout()), this, SLOT(_k_timerUpdate()));
 }
 
 KAnimatedButton::~KAnimatedButton()
 {
-  d->timer.stop();
-  qDeleteAll(d->framesCache);
-  delete d->movie;
+    d->timer.stop();
+    qDeleteAll(d->framesCache);
+    delete d->movie;
 
-  delete d;
+    delete d;
 }
 
 void KAnimatedButton::start()
@@ -86,60 +86,63 @@ void KAnimatedButton::stop()
         d->movie->jumpToFrame(0);
         d->_k_movieFrameChanged(0);
     } else {
-       d->current_frame = 0;
-       d->timer.stop();
-       d->updateCurrentIcon();
+        d->current_frame = 0;
+        d->timer.stop();
+        d->updateCurrentIcon();
     }
 }
 
 void KAnimatedButton::setAnimationPath(const QString &path)
 {
-  if ( d->icon_path == path )
-    return;
+    if (d->icon_path == path) {
+        return;
+    }
 
-  d->timer.stop();
-  d->icon_path = path;
-  d->updateIcons();
+    d->timer.stop();
+    d->icon_path = path;
+    d->updateIcons();
 }
 
 QString KAnimatedButton::animationPath() const
 {
-   return d->icon_path;
+    return d->icon_path;
 }
 
 void KAnimatedButtonPrivate::_k_timerUpdate()
 {
-  if(!q->isVisible())
-    return;
+    if (!q->isVisible()) {
+        return;
+    }
 
-  current_frame++;
-  if (current_frame == frames)
-     current_frame = 0;
+    current_frame++;
+    if (current_frame == frames) {
+        current_frame = 0;
+    }
 
-  updateCurrentIcon();
+    updateCurrentIcon();
 }
 
 void KAnimatedButtonPrivate::updateCurrentIcon()
 {
-  if (pixmap.isNull())
-    return;
+    if (pixmap.isNull()) {
+        return;
+    }
 
-  QPixmap* frame = framesCache[current_frame];
-  if (!frame)
-  {
+    QPixmap *frame = framesCache[current_frame];
+    if (!frame) {
         const int icon_size = qMin(pixmap.width(), pixmap.height());
         const int row_size = pixmap.width() / icon_size;
         const int row = current_frame / row_size;
         const int column = current_frame % row_size;
         frame = new QPixmap(icon_size, icon_size);
-    frame->fill(Qt::transparent);
-    QPainter p(frame);
+        frame->fill(Qt::transparent);
+        QPainter p(frame);
         p.drawPixmap(QPoint(0, 0), pixmap, QRect(column * icon_size, row * icon_size, icon_size, icon_size));
-    p.end();
-    framesCache[current_frame] = frame;
-  }
+        p.end();
+        framesCache[current_frame] = frame;
+    }
 
-  q->setIcon(QIcon(*frame));
+    q->setIcon(QIcon(*frame));
 }
 
 void KAnimatedButtonPrivate::_k_movieFrameChanged(int number)
@@ -169,12 +172,14 @@ void KAnimatedButtonPrivate::updateIcons()
         QObject::connect(newMovie, SIGNAL(finished()), q, SLOT(_k_movieFinished()));
     } else {
         const QPixmap pix(icon_path);
-        if (pix.isNull())
+        if (pix.isNull()) {
             return;
+        }
 
         const int icon_size = qMin(pix.width(), pix.height());
-        if ((pix.height() % icon_size != 0) || (pix.width() % icon_size != 0))
+        if ((pix.height() % icon_size != 0) || (pix.width() % icon_size != 0)) {
             return;
+        }
 
         frames = (pix.height() / icon_size) * (pix.width() / icon_size);
         pixmap = pix;

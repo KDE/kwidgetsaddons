@@ -50,21 +50,21 @@ class KWIDGETSADDONS_EXPORT KToggleFullScreenAction : public KToggleAction
 {
     Q_OBJECT
 
-  public:
+public:
     /**
      * Create a KToggleFullScreenAction. Call setWindow() to associate this
      * action with a window.
      *
      *  @param parent This action's parent object.
      */
-    explicit KToggleFullScreenAction( QObject *parent );
+    explicit KToggleFullScreenAction(QObject *parent);
 
     /**
      * Create a KToggleFullScreenAction
      *  @param window the window that will switch to/from full screen mode
      *  @param parent This action's parent object.
      */
-    KToggleFullScreenAction( QWidget *window, QObject *parent );
+    KToggleFullScreenAction(QWidget *window, QObject *parent);
 
     /**
      * Destroys the toggle fullscreen action.
@@ -74,24 +74,24 @@ class KWIDGETSADDONS_EXPORT KToggleFullScreenAction : public KToggleAction
     /**
      * Sets the window that will be related to this action.
      */
-    void setWindow( QWidget* window );
+    void setWindow(QWidget *window);
 
     /**
      * Helper function to set or reset the fullscreen state of a window.
      * Use this function rather than showFullScreen()/showNormal() QWidget functions.
      * @since 4.0.3
      */
-    static void setFullScreen( QWidget* window, bool set );
+    static void setFullScreen(QWidget *window, bool set);
 
-  protected:
-    bool eventFilter( QObject* object, QEvent* event );
+protected:
+    bool eventFilter(QObject *object, QEvent *event);
 
-  private Q_SLOTS:
-    virtual void slotToggled( bool checked );
+private Q_SLOTS:
+    virtual void slotToggled(bool checked);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif

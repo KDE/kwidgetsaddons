@@ -17,7 +17,6 @@
  *
  */
 
-
 #include <QApplication>
 #include <QLayout>
 #include <QWidget>
@@ -25,26 +24,22 @@
 
 #include "kseparator.h"
 
-
 int main(int argc, char **argv)
 {
-   QApplication app(argc, argv);
-   
-   QWidget toplevel;
-   QBoxLayout *mainbox = new QBoxLayout(QBoxLayout::TopToBottom,&toplevel);
-   mainbox->setMargin(10);
-   
-   KSeparator *sep1 = new KSeparator( Qt::Vertical, &toplevel );
-   mainbox->addWidget(sep1);
-   
-   KSeparator *sep2 = new KSeparator( Qt::Horizontal, &toplevel );
-   mainbox->addWidget(sep2);
-   mainbox->activate();
-   
-   toplevel.show();
-   return app.exec();
+    QApplication app(argc, argv);
+
+    QWidget toplevel;
+    QBoxLayout *mainbox = new QBoxLayout(QBoxLayout::TopToBottom, &toplevel);
+    mainbox->setMargin(10);
+
+    KSeparator *sep1 = new KSeparator(Qt::Vertical, &toplevel);
+    mainbox->addWidget(sep1);
+
+    KSeparator *sep2 = new KSeparator(Qt::Horizontal, &toplevel);
+    mainbox->addWidget(sep2);
+    mainbox->activate();
+
+    toplevel.show();
+    return app.exec();
 }
-
-
-
 

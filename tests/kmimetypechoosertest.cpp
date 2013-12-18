@@ -21,16 +21,17 @@
 #include <kmimetypechooser.h>
 #include <QDebug>
 
-int main( int argc, char** argv ) {
-    QApplication app( argc, argv );
+int main(int argc, char **argv)
+{
+    QApplication app(argc, argv);
 
     QString text = QStringLiteral("Select the MimeTypes you want for this file type.");
     QStringList list;
     list << QStringLiteral("inode/directory") << QStringLiteral("text/plain");
-    KMimeTypeChooserDialog dlg( QStringLiteral("Select Mime Types"), text, list, QStringLiteral("text"), QStringList(),
-                                KMimeTypeChooser::Comments|KMimeTypeChooser::Patterns|KMimeTypeChooser::EditButton,
-                                (QWidget*)0 );
-    if ( dlg.exec() == QDialog::Accepted ) {
+    KMimeTypeChooserDialog dlg(QStringLiteral("Select Mime Types"), text, list, QStringLiteral("text"), QStringList(),
+                               KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
+                               (QWidget *)0);
+    if (dlg.exec() == QDialog::Accepted) {
         qDebug() << dlg.chooser()->patterns();
         qDebug() << dlg.chooser()->mimeTypes().join(QLatin1Char(';'));
     }

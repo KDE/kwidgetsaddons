@@ -52,20 +52,20 @@ class KDateTable;
 class KWIDGETSADDONS_EXPORT KDatePicker: public QFrame
 {
     Q_OBJECT
-    Q_PROPERTY( QDate date READ date WRITE setDate NOTIFY dateChanged USER true )
-    Q_PROPERTY( bool closeButton READ hasCloseButton WRITE setCloseButton )
-    Q_PROPERTY( int fontSize READ fontSize WRITE setFontSize )
+    Q_PROPERTY(QDate date READ date WRITE setDate NOTIFY dateChanged USER true)
+    Q_PROPERTY(bool closeButton READ hasCloseButton WRITE setCloseButton)
+    Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize)
 
 public:
     /**
      * The constructor. The current date will be displayed initially.
      **/
-    explicit KDatePicker( QWidget *parent = 0 );
+    explicit KDatePicker(QWidget *parent = 0);
 
     /**
      * The constructor. The given date will be displayed initially.
      **/
-    explicit KDatePicker( const QDate &dt, QWidget *parent = 0 );
+    explicit KDatePicker(const QDate &dt, QWidget *parent = 0);
 
     /**
      * The destructor.
@@ -85,7 +85,7 @@ public:
      *
      *  @returns @p false and does not change anything if the date given is invalid.
      **/
-    bool setDate( const QDate& date );
+    bool setDate(const QDate &date);
 
     /**
      * @returns the selected date.
@@ -95,7 +95,7 @@ public:
     /**
      * Enables or disables the widget.
      **/
-    void setEnabled( bool enable );
+    void setEnabled(bool enable);
 
     /**
      * @returns the KDateTable widget child of this KDatePicker
@@ -106,7 +106,7 @@ public:
     /**
      * Sets the font size of the widgets elements.
      **/
-    void setFontSize( int );
+    void setFontSize(int);
 
     /**
      * Returns the font size of the widget elements.
@@ -121,7 +121,7 @@ public:
      * without a window manager decoration.
      * @see hasCloseButton
      */
-    void setCloseButton( bool enable );
+    void setCloseButton(bool enable);
 
     /**
      * @returns true if a KDatePicker shows a close-button.
@@ -131,12 +131,12 @@ public:
 
 protected:
     /// to catch move keyEvents when QLineEdit has keyFocus
-    virtual bool eventFilter( QObject *o, QEvent *e );
+    virtual bool eventFilter(QObject *o, QEvent *e);
     /// the resize event
-    virtual void resizeEvent( QResizeEvent* );
+    virtual void resizeEvent(QResizeEvent *);
 
 protected Q_SLOTS:
-    void dateChangedSlot( const QDate& date );
+    void dateChangedSlot(const QDate &date);
     void tableClickedSlot();
     void monthForwardClicked();
     void monthBackwardClicked();
@@ -147,7 +147,7 @@ protected Q_SLOTS:
     void uncheckYearSelector();
     void lineEnterPressed();
     void todayButtonClicked();
-    void weekSelected( int );
+    void weekSelected(int);
 
 Q_SIGNALS:
     /** This signal is emitted each time the selected date is changed.
@@ -156,21 +156,21 @@ Q_SIGNALS:
      *  selected.
      *  @see dateSelected
      */
-    void dateChanged( const QDate &date );
+    void dateChanged(const QDate &date);
 
     /** This signal is emitted each time a day has been selected by
      *  clicking on the table (hitting a day in the current month). It
      *  has the same meaning as dateSelected() in older versions of
      *  KDatePicker.
      */
-    void dateSelected( const QDate &date );
+    void dateSelected(const QDate &date);
 
     /** This signal is emitted when enter is pressed and a VALID date
      *  has been entered before into the line edit. Connect to both
      *  dateEntered() and dateSelected() to receive all events where the
      *  user really enters a date.
      */
-    void dateEntered( const QDate &date );
+    void dateEntered(const QDate &date);
 
     /** This signal is emitted when the day has been selected by
      *  clicking on it in the table.
@@ -178,7 +178,7 @@ Q_SIGNALS:
     void tableClicked();
 
 private:
-    void initWidget( const QDate &date );
+    void initWidget(const QDate &date);
     class KDatePickerPrivate;
     friend class KDatePickerPrivate;
     KDatePickerPrivate *const d;

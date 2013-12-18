@@ -19,8 +19,8 @@
 #include "ktoolbarspaceraction.h"
 
 KToolBarSpacerAction::KToolBarSpacerAction(QObject *parent)
-  : QWidgetAction(parent)
-  , d( 0 )
+    : QWidgetAction(parent)
+    , d(0)
 {
 }
 
@@ -28,12 +28,13 @@ KToolBarSpacerAction::~KToolBarSpacerAction()
 {
 }
 
-QWidget * KToolBarSpacerAction::createWidget( QWidget * parent )
+QWidget *KToolBarSpacerAction::createWidget(QWidget *parent)
 {
-  if (!parent)
-    return QWidgetAction::createWidget(parent);
+    if (!parent) {
+        return QWidgetAction::createWidget(parent);
+    }
 
-  QWidget* spacer = new QWidget( parent );
-  spacer->setSizePolicy( QSizePolicy::MinimumExpanding, QSizePolicy::Fixed );
-  return spacer;
+    QWidget *spacer = new QWidget(parent);
+    spacer->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
+    return spacer;
 }

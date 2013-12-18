@@ -36,15 +36,15 @@ class KDatePickerPrivateYearSelector : public QLineEdit
     Q_OBJECT
 
 public:
-    KDatePickerPrivateYearSelector( const QDate &currentDate, QWidget *parent = 0 );
+    KDatePickerPrivateYearSelector(const QDate &currentDate, QWidget *parent = 0);
     int year();
-    void setYear( int year );
+    void setYear(int year);
 
 public Q_SLOTS:
     void yearEnteredSlot();
 
 Q_SIGNALS:
-    void closeMe( int );
+    void closeMe(int);
 
 protected:
     QIntValidator *val;
@@ -53,8 +53,7 @@ protected:
 private:
     QDate oldDate;
 
-    Q_DISABLE_COPY( KDatePickerPrivateYearSelector )
+    Q_DISABLE_COPY(KDatePickerPrivateYearSelector)
 };
-
 
 #endif // KDATEPICKER_P_H

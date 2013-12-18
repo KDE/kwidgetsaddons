@@ -53,9 +53,9 @@ class KWIDGETSADDONS_EXPORT KCapacityBar
     Q_PROPERTY(bool continuous READ continuous WRITE setContinuous)
     Q_PROPERTY(int barHeight READ barHeight WRITE setBarHeight)
     Q_PROPERTY(Qt::Alignment horizontalTextAlignment READ horizontalTextAlignment
-                                                     WRITE setHorizontalTextAlignment)
+               WRITE setHorizontalTextAlignment)
     Q_ENUMS(DrawTextMode)
-    
+
 public:
     enum DrawTextMode {
         DrawTextInline = 0,     ///< If any text set, draw it into the capacity bar
@@ -199,7 +199,7 @@ public:
      * The way text is drawn, inside the capacity bar or outside of it
      */
     DrawTextMode drawTextMode() const;
-    
+
     /**
       * This method allows you to draw the widget, directly, for example on
       * item delegates. You only need the painter object and the rect where

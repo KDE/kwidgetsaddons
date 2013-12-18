@@ -33,26 +33,26 @@ class KViewStateMaintainerBasePrivate;
 
 class KWIDGETSADDONS_EXPORT KViewStateMaintainerBase : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  KViewStateMaintainerBase(QObject* parent = 0);
-  ~KViewStateMaintainerBase();
+    KViewStateMaintainerBase(QObject *parent = 0);
+    ~KViewStateMaintainerBase();
 
-  void setSelectionModel(QItemSelectionModel *selectionModel);
-  QItemSelectionModel *selectionModel() const;
+    void setSelectionModel(QItemSelectionModel *selectionModel);
+    QItemSelectionModel *selectionModel() const;
 
-  void setView(QAbstractItemView *view);
-  QAbstractItemView *view() const;
+    void setView(QAbstractItemView *view);
+    QAbstractItemView *view() const;
 
-  virtual void saveState() = 0;
-  virtual void restoreState() = 0;
+    virtual void saveState() = 0;
+    virtual void restoreState() = 0;
 
 private:
-  Q_DECLARE_PRIVATE(KViewStateMaintainerBase)
-  KViewStateMaintainerBasePrivate * const d_ptr;
+    Q_DECLARE_PRIVATE(KViewStateMaintainerBase)
+    KViewStateMaintainerBasePrivate *const d_ptr;
 
-  Q_PRIVATE_SLOT( d_func(), void _k_modelAboutToBeReset() )
-  Q_PRIVATE_SLOT( d_func(), void _k_modelReset() )
+    Q_PRIVATE_SLOT(d_func(), void _k_modelAboutToBeReset())
+    Q_PRIVATE_SLOT(d_func(), void _k_modelReset())
 };
 
 #endif

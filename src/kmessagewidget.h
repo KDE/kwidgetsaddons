@@ -173,7 +173,7 @@ Q_SIGNALS:
      * @see QLabel::linkActivated()
      * @since 4.10
      */
-    void linkActivated(const QString& contents);
+    void linkActivated(const QString &contents);
 
     /**
      * This signal is emitted when the user hovers over a link in the text label.
@@ -182,7 +182,7 @@ Q_SIGNALS:
      * @see QLabel::linkHovered()
      * @since 4.11
      */
-    void linkHovered(const QString& contents);
+    void linkHovered(const QString &contents);
 
 protected:
     void paintEvent(QPaintEvent *event);

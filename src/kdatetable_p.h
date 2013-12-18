@@ -7,12 +7,12 @@
     modify it under the terms of the GNU Library General Public
     License as published by the Free Software Foundation; either
     version 2 of the License, or (at your option) any later version.
- 
+
     This library is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
     Library General Public License for more details.
- 
+
     You should have received a copy of the GNU Library General Public License
     along with this library; see the file COPYING.LIB.  If not, write to
     the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
@@ -44,19 +44,19 @@ class QMenu;
 class KDateTable : public QWidget
 {
     Q_OBJECT
-    Q_PROPERTY( QDate date READ date WRITE setDate )
-    Q_PROPERTY( bool popupMenu READ popupMenuEnabled WRITE setPopupMenuEnabled )
+    Q_PROPERTY(QDate date READ date WRITE setDate)
+    Q_PROPERTY(bool popupMenu READ popupMenuEnabled WRITE setPopupMenuEnabled)
 
 public:
     /**
      * The constructor.
      */
-    explicit KDateTable( QWidget* parent = 0 );
+    explicit KDateTable(QWidget *parent = 0);
 
     /**
      * The constructor.
      */
-    explicit KDateTable( const QDate&, QWidget *parent = 0 );
+    explicit KDateTable(const QDate &, QWidget *parent = 0);
 
     /**
      * The destructor.
@@ -75,12 +75,12 @@ public:
     /**
      * Set the font size of the date table.
      */
-    void setFontSize( int size );
+    void setFontSize(int size);
 
     /**
      * Select and display this date.
      */
-    bool setDate( const QDate &date );
+    bool setDate(const QDate &date);
 
     // KDE5 remove the const & from the returned QDate
     /**
@@ -94,7 +94,7 @@ public:
      * When it's enabled, this object emits a aboutToShowContextMenu signal
      * where you can fill in the menu items.
      */
-    void setPopupMenuEnabled( bool enable );
+    void setPopupMenuEnabled(bool enable);
 
     /**
      * Returns if the popup menu is enabled or not
@@ -107,37 +107,37 @@ public:
      * Makes a given date be painted with a given foregroundColor, and background
      * (a rectangle, or a circle/ellipse) in a given color.
      */
-    void setCustomDatePainting( const QDate &date, const QColor &fgColor, 
-                                BackgroundMode bgMode = NoBgMode, const QColor &bgColor = QColor() );
+    void setCustomDatePainting(const QDate &date, const QColor &fgColor,
+                               BackgroundMode bgMode = NoBgMode, const QColor &bgColor = QColor());
 
     /**
      * Unsets the custom painting of a date so that the date is painted as usual.
      */
-    void unsetCustomDatePainting( const QDate &date );
+    void unsetCustomDatePainting(const QDate &date);
 
 protected:
     /**
      * calculate the position of the cell in the matrix for the given date.
      * The result is the 0-based index.
      */
-    virtual int posFromDate( const QDate &date );
+    virtual int posFromDate(const QDate &date);
 
     /**
      * calculate the date that is displayed at a given cell in the matrix. pos is the
      * 0-based index in the matrix. Inverse function to posForDate().
      */
-    virtual QDate dateFromPos( int pos );
+    virtual QDate dateFromPos(int pos);
 
-    virtual void paintEvent( QPaintEvent *e );
+    virtual void paintEvent(QPaintEvent *e);
 
     /**
      * React on mouse clicks that select a date.
      */
-    virtual void mousePressEvent( QMouseEvent *e );
-    virtual void wheelEvent( QWheelEvent *e );
-    virtual void keyPressEvent( QKeyEvent *e );
-    virtual void focusInEvent( QFocusEvent *e );
-    virtual void focusOutEvent( QFocusEvent *e );
+    virtual void mousePressEvent(QMouseEvent *e);
+    virtual void wheelEvent(QWheelEvent *e);
+    virtual void keyPressEvent(QKeyEvent *e);
+    virtual void focusInEvent(QFocusEvent *e);
+    virtual void focusOutEvent(QFocusEvent *e);
 
     /**
      * Cell highlight on mouse hovering
@@ -148,7 +148,7 @@ Q_SIGNALS:
     /**
      * The selected date changed.
      */
-    void dateChanged( const QDate &date );
+    void dateChanged(const QDate &date);
 
     /**
      * This function behaves essentially like the one above.
@@ -156,7 +156,7 @@ Q_SIGNALS:
      * @param cur The current date
      * @param old The date before the date was changed
      */
-    void dateChanged( const QDate &cur, const QDate &old );
+    void dateChanged(const QDate &cur, const QDate &old);
 
     /**
      * A date has been selected by clicking on the table.
@@ -168,26 +168,26 @@ Q_SIGNALS:
      * right clicks on that date and the popup menu is enabled). Connect
      * the slot where you fill the menu to this signal.
      */
-    void aboutToShowContextMenu( QMenu *menu, const QDate &date );
+    void aboutToShowContextMenu(QMenu *menu, const QDate &date);
 
 private:
-    Q_PRIVATE_SLOT( d, void nextMonth() )
-    Q_PRIVATE_SLOT( d, void previousMonth() )
-    Q_PRIVATE_SLOT( d, void beginningOfMonth() )
-    Q_PRIVATE_SLOT( d, void endOfMonth() )
-    Q_PRIVATE_SLOT( d, void beginningOfWeek() )
-    Q_PRIVATE_SLOT( d, void endOfWeek() )
+    Q_PRIVATE_SLOT(d, void nextMonth())
+    Q_PRIVATE_SLOT(d, void previousMonth())
+    Q_PRIVATE_SLOT(d, void beginningOfMonth())
+    Q_PRIVATE_SLOT(d, void endOfMonth())
+    Q_PRIVATE_SLOT(d, void beginningOfWeek())
+    Q_PRIVATE_SLOT(d, void endOfWeek())
 
 private:
     class KDateTablePrivate;
     friend class KDateTablePrivate;
-    KDateTablePrivate * const d;
+    KDateTablePrivate *const d;
 
-    void initWidget( const QDate &date );
+    void initWidget(const QDate &date);
     void initAccels();
-    void paintCell( QPainter *painter, int row, int col );
+    void paintCell(QPainter *painter, int row, int col);
 
-    Q_DISABLE_COPY( KDateTable )
+    Q_DISABLE_COPY(KDateTable)
 };
 
 #endif // KDATETABLE_H

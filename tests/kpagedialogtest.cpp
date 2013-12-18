@@ -25,42 +25,42 @@
 
 #include "kpagedialogtest.h"
 
-KPageDialogTest::KPageDialogTest( QWidget *parent )
-  : KPageDialog( parent )
+KPageDialogTest::KPageDialogTest(QWidget *parent)
+    : KPageDialog(parent)
 {
-  setFaceType( Tabbed );
+    setFaceType(Tabbed);
 
-  QWidget *page = new QWidget( this );
-  QHBoxLayout *layout = new QHBoxLayout( page );
+    QWidget *page = new QWidget(this);
+    QHBoxLayout *layout = new QHBoxLayout(page);
 
-  QLabel *label = new QLabel( QStringLiteral("first page") );
-  layout->addWidget( label );
+    QLabel *label = new QLabel(QStringLiteral("first page"));
+    layout->addWidget(label);
 
-  addPage( page, QStringLiteral("First") );
+    addPage(page, QStringLiteral("First"));
 
-  page = new QWidget( this );
-  layout = new QHBoxLayout( page );
+    page = new QWidget(this);
+    layout = new QHBoxLayout(page);
 
-  label = new QLabel( QStringLiteral("second page") );
-  label->setMinimumSize( 300, 200 );
-  layout->addWidget( label );
+    label = new QLabel(QStringLiteral("second page"));
+    label->setMinimumSize(300, 200);
+    layout->addWidget(label);
 
-  addPage( page, QStringLiteral("Second") );
+    addPage(page, QStringLiteral("Second"));
 }
 
 KPageDialogTest::~KPageDialogTest()
 {
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
-  QApplication::setApplicationName(QStringLiteral("KPageDialogTest"));
+    QApplication::setApplicationName(QStringLiteral("KPageDialogTest"));
 
-  QApplication app(argc, argv);
+    QApplication app(argc, argv);
 
-  KPageDialogTest testDialog( 0 );
-  testDialog.exec();
+    KPageDialogTest testDialog(0);
+    testDialog.exec();
 
-  return 0;
+    return 0;
 }
 

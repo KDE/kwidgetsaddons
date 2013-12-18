@@ -18,7 +18,6 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 #include <QApplication>
 #include <QMainWindow>
 #include <QVBoxLayout>
@@ -42,48 +41,48 @@ private Q_SLOTS:
 public:
     MainWindow()
     {
-        QWidget* mainWidget = new QWidget( this );
-        setCentralWidget( mainWidget );
+        QWidget *mainWidget = new QWidget(this);
+        setCentralWidget(mainWidget);
 
-        QVBoxLayout* layout = new QVBoxLayout( mainWidget );
+        QVBoxLayout *layout = new QVBoxLayout(mainWidget);
         layout->setMargin(0);
         layout->setSpacing(0);
-        QToolBar* toolBar = addToolBar(QStringLiteral("Toolbar"));
+        QToolBar *toolBar = addToolBar(QStringLiteral("Toolbar"));
 
         labelText = new QLineEdit();
-        QPushButton* validateButton = new QPushButton(QStringLiteral("Update label"));
+        QPushButton *validateButton = new QPushButton(QStringLiteral("Update label"));
 
         layout->addWidget(labelText);
         layout->addWidget(validateButton);
-        connect(validateButton, SIGNAL(clicked()), this,SLOT(updateLabel1()));
+        connect(validateButton, SIGNAL(clicked()), this, SLOT(updateLabel1()));
 
-        QWidgetAction* lineEditAction2 = new QWidgetAction( toolBar );
-        QLineEdit* lineEdit2 = new QLineEdit;
+        QWidgetAction *lineEditAction2 = new QWidgetAction(toolBar);
+        QLineEdit *lineEdit2 = new QLineEdit;
         lineEditAction2->setDefaultWidget(lineEdit2);
         label1 = new KToolBarLabelAction(QStringLiteral("&Label 1"), toolBar);
         label2 = new KToolBarLabelAction(lineEditAction2, QStringLiteral("&Second label"), toolBar);
-        QWidgetAction* lineEditAction = new QWidgetAction( toolBar );
-        QLineEdit* lineEdit = new QLineEdit;
+        QWidgetAction *lineEditAction = new QWidgetAction(toolBar);
+        QLineEdit *lineEdit = new QLineEdit;
         lineEditAction->setDefaultWidget(lineEdit);
         // set buddy for label1
-        label1->setBuddy( lineEditAction );
+        label1->setBuddy(lineEditAction);
         toolBar->addAction(label1);
         toolBar->addAction(lineEditAction);
         toolBar->addAction(label2);
         toolBar->addAction(lineEditAction2);
     }
 
-    QLineEdit* labelText;
-    KToolBarLabelAction* label1;
-    KToolBarLabelAction* label2;
+    QLineEdit *labelText;
+    KToolBarLabelAction *label1;
+    KToolBarLabelAction *label2;
 };
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("Test KToolBarLabelAction"));
     QApplication app(argc, argv);
 
-    MainWindow* window = new MainWindow;
+    MainWindow *window = new MainWindow;
     window->show();
 
     return app.exec();

@@ -18,9 +18,9 @@ private Q_SLOTS:
     void quitApp();
 
 protected:
-    KColorCombo* mStandard;
-    KColorCombo* mCustom;
-    QPushButton* mExit;
+    KColorCombo *mStandard;
+    KColorCombo *mCustom;
+    QPushButton *mExit;
 };
 
 #endif

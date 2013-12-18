@@ -33,17 +33,20 @@ class KMultiTabBarInternal: public QFrame
 public:
     KMultiTabBarInternal(QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos);
     virtual ~KMultiTabBarInternal();
-    int appendTab(const QPixmap &,int=-1,const QString& =QString());
+    int appendTab(const QPixmap &, int = -1, const QString & = QString());
     KMultiTabBarTab *tab(int) const;
     void removeTab(int);
     void setPosition(enum KMultiTabBar::KMultiTabBarPosition pos);
     void setStyle(enum KMultiTabBar::KMultiTabBarStyle style);
     void showActiveTabTexts(bool show);
-    QList<KMultiTabBarTab*>* tabs(){return &m_tabs;}
+    QList<KMultiTabBarTab *> *tabs()
+    {
+        return &m_tabs;
+    }
 private:
     friend class KMultiTabBar;
     QBoxLayout *mainLayout;
-    QList<KMultiTabBarTab*> m_tabs;
+    QList<KMultiTabBarTab *> m_tabs;
     enum KMultiTabBar::KMultiTabBarPosition m_position;
     enum KMultiTabBar::KMultiTabBarStyle m_style;
 protected:

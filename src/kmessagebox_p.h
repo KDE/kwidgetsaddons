@@ -23,7 +23,8 @@
 #include <kmessageboxdontaskagaininterface.h>
 #include <kmessageboxnotifyinterface.h>
 
-namespace KMessageBox {
+namespace KMessageBox
+{
 
 KMessageBoxDontAskAgainInterface *dontAskAgainInterface();
 

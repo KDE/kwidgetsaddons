@@ -68,9 +68,9 @@ public:
      *   - VSNET - Visual Studio .Net like, always shows icon, only show the text of active tabs
      *   - KDEV3ICON - Kdevelop 3 like, always shows the text and icons
      */
-    enum KMultiTabBarStyle{VSNET=0, KDEV3ICON=2,STYLELAST=0xffff};
+    enum KMultiTabBarStyle {VSNET = 0, KDEV3ICON = 2, STYLELAST = 0xffff};
 
-    explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent=0 );
+    explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = 0);
     virtual ~KMultiTabBar();
 
     /**
@@ -78,11 +78,11 @@ public:
      * eg for connecting signals to it
      * @param pic a pixmap for the button
      * @param id an arbitraty ID value. It will be emitted in the clicked signal for identifying the button
-     *	if more than one button is connected to a signals.
+     *  if more than one button is connected to a signals.
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
      */
-    int appendButton(const QPixmap &pic,int id=-1,QMenu* popup=0,const QString& not_used_yet=QString());
+    int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = 0, const QString &not_used_yet = QString());
     /**
      * remove a button with the given ID
      */
@@ -93,7 +93,7 @@ public:
      * @param id an arbitrary ID which can be used later on to identify the tab
      * @param text if a mode with text is used it will be the tab text, otherwise a mouse over hint
      */
-    int appendTab(const QPixmap &pic,int id=-1,const QString& text=QString());
+    int appendTab(const QPixmap &pic, int id = -1, const QString &text = QString());
     /**
      * remove a tab with a given ID
      */
@@ -103,7 +103,7 @@ public:
      * @param id The ID of the tab to manipulate
      * @param state true == activated/raised, false == not active
      */
-    void setTab(int id ,bool state);
+    void setTab(int id, bool state);
     /**
      * return the state of a tab, identified by its ID
      */
@@ -143,10 +143,10 @@ public:
 
 protected:
     friend class KMultiTabBarButton;
-    virtual void fontChange( const QFont& );
+    virtual void fontChange(const QFont &);
     void updateSeparator();
 private:
-    KMultiTabBarPrivate * const d;
+    KMultiTabBarPrivate *const d;
 };
 
 /**
@@ -172,18 +172,18 @@ protected Q_SLOTS:
     virtual void slotClicked();
 
 protected:
-    virtual void hideEvent( class QHideEvent*);
-    virtual void showEvent( class QShowEvent*);
-    virtual void paintEvent( class QPaintEvent*);
+    virtual void hideEvent(class QHideEvent *);
+    virtual void showEvent(class QShowEvent *);
+    virtual void paintEvent(class QPaintEvent *);
 
     /** Should not be created directly. Use KMultiTabBar::appendButton
     */
-    KMultiTabBarButton(const QPixmap& pic, const QString&, int id, QWidget *parent);
+    KMultiTabBarButton(const QPixmap &pic, const QString &, int id, QWidget *parent);
 private:
     friend class KMultiTabBar;
 
     int m_id;
-    KMultiTabBarButtonPrivate * const d;
+    KMultiTabBarButtonPrivate *const d;
 };
 
 /**
@@ -216,30 +216,29 @@ public Q_SLOTS:
      */
     void setState(bool state);
 
-    void setIcon(const QString&);
-    void setIcon(const QPixmap&);
+    void setIcon(const QString &);
+    void setIcon(const QPixmap &);
 protected:
     virtual void paintEvent(QPaintEvent *);
 private:
     KMultiTabBar::KMultiTabBarPosition m_position;
     KMultiTabBar::KMultiTabBarStyle m_style;
-    
-    void  computeMargins (int* hMargin, int* vMargin) const;
+
+    void  computeMargins(int *hMargin, int *vMargin) const;
     QSize computeSizeHint(bool withText) const;
     bool shouldDrawText() const;
     bool isVertical()     const;
     QPixmap iconPixmap()  const;
-    
-    void initStyleOption(QStyleOptionToolButton* opt) const;
+
+    void initStyleOption(QStyleOptionToolButton *opt) const;
 
     friend class KMultiTabBarInternal;
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
-    KMultiTabBarTab(const QPixmap& pic, const QString&, int id, QWidget *parent,
+    KMultiTabBarTab(const QPixmap &pic, const QString &, int id, QWidget *parent,
                     KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
-    KMultiTabBarTabPrivate * const d;
+    KMultiTabBarTabPrivate *const d;
 };
 
 #endif
-// kate: indent-width 4; replace-tabs on; tab-width 4; space-indent on;

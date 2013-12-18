@@ -34,9 +34,9 @@
  */
 class KWIDGETSADDONS_EXPORT KToolBarSpacerAction : public QWidgetAction
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Creates a new toolbar spacer action.
      *
@@ -49,11 +49,11 @@ class KWIDGETSADDONS_EXPORT KToolBarSpacerAction : public QWidgetAction
     /**
      * Reimplemented from @see QActionWidget.
      */
-    QWidget* createWidget( QWidget* parent ) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif

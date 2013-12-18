@@ -33,7 +33,7 @@ class KDualActionTest : public QObject
 private Q_SLOTS:
     void initTestCase()
     {
-        qRegisterMetaType<QAction*>("QAction*");
+        qRegisterMetaType<QAction *>("QAction*");
     }
 
     void testSetGuiItem()

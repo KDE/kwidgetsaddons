@@ -26,10 +26,10 @@
 
 class KPageDialogTest : public KPageDialog
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
-    KPageDialogTest( QWidget *parent = 0 );
+public:
+    KPageDialogTest(QWidget *parent = 0);
     ~KPageDialogTest();
 };
 

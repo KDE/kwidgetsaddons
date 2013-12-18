@@ -49,11 +49,11 @@ class QMenu;
  */
 class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
 {
-  Q_OBJECT
-  Q_PROPERTY( bool delayed READ delayed WRITE setDelayed )
-  Q_PROPERTY( bool stickyMenu READ stickyMenu WRITE setStickyMenu )
+    Q_OBJECT
+    Q_PROPERTY(bool delayed READ delayed WRITE setDelayed)
+    Q_PROPERTY(bool stickyMenu READ stickyMenu WRITE setStickyMenu)
 
-  public:
+public:
     //Not all constructors - because we need an icon, since this action only makes
     // sense when being plugged at least in a toolbar.
     /**
@@ -64,7 +64,7 @@ class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
      * @param text The text that will be displayed.
      * @param parent This action's parent.
      */
-    KToolBarPopupAction(const QIcon& icon, const QString& text, QObject *parent);
+    KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent);
 
     /**
      * Destroys the toolbar popup action.
@@ -115,11 +115,11 @@ class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
     /**
      * Reimplemented from @see QActionWidgetFactory.
      */
-    virtual QWidget* createWidget(QWidget* parent);
+    virtual QWidget *createWidget(QWidget *parent);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif

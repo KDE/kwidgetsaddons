@@ -18,7 +18,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef KCHARSELECT_P_H
 #define KCHARSELECT_P_H
 
@@ -87,7 +86,7 @@ public:
     /**
      * Reimplemented.
      */
-    virtual void scrollTo(const QModelIndex & index, ScrollHint hint = EnsureVisible);
+    virtual void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible);
 
 protected:
     /**
@@ -99,16 +98,16 @@ Q_SIGNALS:
     /** Emitted to indicate that character @p c is activated (such as by double-clicking it). */
     void activated(const QChar &c);
     void focusItemChanged(const QChar &c);
-    void showCharRequested(const QChar& c);
+    void showCharRequested(const QChar &c);
 
 private:
-    Q_PRIVATE_SLOT(d, void _k_slotSelectionChanged(const QItemSelection & selected, const QItemSelection & deselected))
+    Q_PRIVATE_SLOT(d, void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected))
     Q_PRIVATE_SLOT(d, void _k_resizeCells())
-    Q_PRIVATE_SLOT(d, void _k_doubleClicked(const QModelIndex & index))
+    Q_PRIVATE_SLOT(d, void _k_doubleClicked(const QModelIndex &index))
 
 private:
     friend class KCharSelectTablePrivate;
-    KCharSelectTablePrivate* const d;
+    KCharSelectTablePrivate *const d;
 
     Q_DISABLE_COPY(KCharSelectTable)
 };
@@ -119,9 +118,9 @@ class KCharSelectItemModel: public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    KCharSelectItemModel(QList<QChar> chars, const QFont& font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
+    KCharSelectItemModel(QList<QChar> chars, const QFont &font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
     {
-        if(chars.count()) {
+        if (chars.count()) {
             m_columns = chars.count();
         } else {
             m_columns = 1;
@@ -129,19 +128,20 @@ public:
     }
 
     enum internalRoles {CharacterRole = Qt::UserRole};
-    int rowCount(const QModelIndex&) const
+    int rowCount(const QModelIndex &) const
     {
-        if (m_chars.count() % m_columns == 0)
+        if (m_chars.count() % m_columns == 0) {
             return m_chars.count() / m_columns;
-        else
+        } else {
             return m_chars.count() / m_columns + 1;
+        }
     }
-    int columnCount(const QModelIndex&) const
+    int columnCount(const QModelIndex &) const
     {
         return m_columns;
     }
 
-    void setFont(const QFont& font)
+    void setFont(const QFont &font)
     {
         beginResetModel();
         m_font = font;
@@ -156,7 +156,7 @@ public:
         return (Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsSelectable | Qt::ItemIsEnabled);
     }
     QVariant data(const QModelIndex &index, int role) const;
-    QMimeData *mimeData(const QModelIndexList & indexes) const
+    QMimeData *mimeData(const QModelIndexList &indexes) const
     {
         if (indexes.size() != 1) {
             return 0;
@@ -203,7 +203,7 @@ public:
         emit layoutAboutToBeChanged();
         QFontMetrics fm(m_font);
         int maxChar = fm.maxWidth();
-        if (maxChar < 2*fm.xHeight()) {
+        if (maxChar < 2 * fm.xHeight()) {
             maxChar = 2 * fm.xHeight();
         }
         if (maxChar < 5) {
@@ -222,7 +222,7 @@ private:
     int m_columns;
 
 Q_SIGNALS:
-    void showCharRequested(const QChar& c);
+    void showCharRequested(const QChar &c);
 
 };
 #endif // KCHARSELECT_P_H

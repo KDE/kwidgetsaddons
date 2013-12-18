@@ -27,10 +27,10 @@
 
 class KLed::Private
 {
-  public:
+public:
     Private()
-      : darkFactor( 300 ),
-        state( On ), look( Raised ), shape( Circular )
+        : darkFactor(300),
+          state(On), look(Raised), shape(Circular)
     {
     }
 
@@ -45,65 +45,62 @@ class KLed::Private
     QStyle::ControlElement ce_indicatorLedRectangular;
 };
 
-
-
-KLed::KLed( QWidget *parent )
-  : QWidget( parent ),
-    d( new Private )
+KLed::KLed(QWidget *parent)
+    : QWidget(parent),
+      d(new Private)
 {
-  setColor( Qt::green );
+    setColor(Qt::green);
 }
 
-
-KLed::KLed( const QColor& color, QWidget *parent )
-  : QWidget( parent ),
-    d( new Private )
+KLed::KLed(const QColor &color, QWidget *parent)
+    : QWidget(parent),
+      d(new Private)
 {
-  setColor( color );
+    setColor(color);
 }
 
-KLed::KLed( const QColor& color, State state, Look look, Shape shape,
-            QWidget *parent )
-  : QWidget( parent ),
-    d( new Private )
+KLed::KLed(const QColor &color, State state, Look look, Shape shape,
+           QWidget *parent)
+    : QWidget(parent),
+      d(new Private)
 {
-  d->state = (state == Off ? Off : On);
-  d->look = look;
-  d->shape = shape;
+    d->state = (state == Off ? Off : On);
+    d->look = look;
+    d->shape = shape;
 
-  setColor( color );
+    setColor(color);
 }
 
 KLed::~KLed()
 {
-  delete d;
+    delete d;
 }
 
-void KLed::paintEvent( QPaintEvent* )
+void KLed::paintEvent(QPaintEvent *)
 {
-    switch( d->shape ) {
-      case Rectangular:
-        switch ( d->look ) {
-          case Sunken:
-            paintRectFrame( false );
+    switch (d->shape) {
+    case Rectangular:
+        switch (d->look) {
+        case Sunken:
+            paintRectFrame(false);
             break;
-          case Raised:
-            paintRectFrame( true );
+        case Raised:
+            paintRectFrame(true);
             break;
-          case Flat:
+        case Flat:
             paintRect();
             break;
         }
         break;
-      case Circular:
-        switch ( d->look ) {
-          case Flat:
+    case Circular:
+        switch (d->look) {
+        case Flat:
             paintFlat();
             break;
-          case Raised:
+        case Raised:
             paintRaised();
             break;
-          case Sunken:
+        case Sunken:
             paintSunken();
             break;
         }
@@ -113,13 +110,13 @@ void KLed::paintEvent( QPaintEvent* )
 
 int KLed::ledWidth() const
 {
-  // Make sure the LED is round!
-  int size = qMin(width(), height());
+    // Make sure the LED is round!
+    int size = qMin(width(), height());
 
-  // leave one pixel border
-  size -= 2;
+    // leave one pixel border
+    size -= 2;
 
-  return qMax(0, size);
+    return qMax(0, size);
 }
 
 bool KLed::paintCachedPixmap()
@@ -152,98 +149,103 @@ void KLed::paintRect()
     paintLed(Rectangular, Flat);
 }
 
-void KLed::paintRectFrame( bool raised )
+void KLed::paintRectFrame(bool raised)
 {
     paintLed(Rectangular, raised ? Raised : Sunken);
 }
 
 KLed::State KLed::state() const
 {
-  return d->state;
+    return d->state;
 }
 
 KLed::Shape KLed::shape() const
 {
-  return d->shape;
+    return d->shape;
 }
 
 QColor KLed::color() const
 {
-  return d->color;
+    return d->color;
 }
 
 KLed::Look KLed::look() const
 {
-  return d->look;
+    return d->look;
 }
 
-void KLed::setState( State state )
+void KLed::setState(State state)
 {
-  if ( d->state == state)
-    return;
+    if (d->state == state) {
+        return;
+    }
 
-  d->state = (state == Off ? Off : On);
-  updateCachedPixmap();
+    d->state = (state == Off ? Off : On);
+    updateCachedPixmap();
 }
 
-void KLed::setShape( Shape shape )
+void KLed::setShape(Shape shape)
 {
-  if ( d->shape == shape )
-    return;
+    if (d->shape == shape) {
+        return;
+    }
 
-  d->shape = shape;
-  updateCachedPixmap();
+    d->shape = shape;
+    updateCachedPixmap();
 }
 
-void KLed::setColor( const QColor &color )
+void KLed::setColor(const QColor &color)
 {
-  if ( d->color == color )
-    return;
+    if (d->color == color) {
+        return;
+    }
 
-  d->color = color;
-  updateCachedPixmap();
+    d->color = color;
+    updateCachedPixmap();
 }
 
-void KLed::setDarkFactor( int darkFactor )
+void KLed::setDarkFactor(int darkFactor)
 {
-  if ( d->darkFactor == darkFactor )
-    return;
+    if (d->darkFactor == darkFactor) {
+        return;
+    }
 
-  d->darkFactor = darkFactor;
-  updateCachedPixmap();
+    d->darkFactor = darkFactor;
+    updateCachedPixmap();
 }
 
 int KLed::darkFactor() const
 {
-  return d->darkFactor;
+    return d->darkFactor;
 }
 
-void KLed::setLook( Look look )
+void KLed::setLook(Look look)
 {
-  if ( d->look == look)
-    return;
+    if (d->look == look) {
+        return;
+    }
 
-  d->look = look;
-  updateCachedPixmap();
+    d->look = look;
+    updateCachedPixmap();
 }
 
 void KLed::toggle()
 {
-  d->state = (d->state == On ? Off : On);
-  updateCachedPixmap();
+    d->state = (d->state == On ? Off : On);
+    updateCachedPixmap();
 }
 
 void KLed::on()
 {
-  setState( On );
+    setState(On);
 }
 
 void KLed::off()
 {
-  setState( Off );
+    setState(Off);
 }
 
-void KLed::resizeEvent( QResizeEvent * )
+void KLed::resizeEvent(QResizeEvent *)
 {
     updateCachedPixmap();
 }
@@ -253,12 +255,12 @@ QSize KLed::sizeHint() const
     QStyleOption option;
     option.initFrom(this);
     int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, &option, this);
-    return QSize( iconSize,  iconSize );
+    return QSize(iconSize,  iconSize);
 }
 
 QSize KLed::minimumSizeHint() const
 {
-  return QSize( 16, 16 );
+    return QSize(16, 16);
 }
 
 void KLed::updateCachedPixmap()

@@ -46,12 +46,12 @@ class KEditListWidgetPrivate;
  */
 class KWIDGETSADDONS_EXPORT KEditListWidget : public QWidget
 {
-   Q_OBJECT
+    Q_OBJECT
 
-   Q_FLAGS( Buttons )
-   Q_PROPERTY( Buttons buttons READ buttons WRITE setButtons )
-   Q_PROPERTY( QStringList items READ items WRITE setItems NOTIFY changed USER true )
-   Q_PROPERTY( bool checkAtEntering READ checkAtEntering WRITE setCheckAtEntering )
+    Q_FLAGS(Buttons)
+    Q_PROPERTY(Buttons buttons READ buttons WRITE setButtons)
+    Q_PROPERTY(QStringList items READ items WRITE setItems NOTIFY changed USER true)
+    Q_PROPERTY(bool checkAtEntering READ checkAtEntering WRITE setCheckAtEntering)
 
 public:
     class CustomEditorPrivate;
@@ -63,12 +63,12 @@ public:
     {
     public:
         CustomEditor();
-        CustomEditor( QWidget *repWidget, QLineEdit *edit );
-        CustomEditor( QComboBox *combo );
+        CustomEditor(QWidget *repWidget, QLineEdit *edit);
+        CustomEditor(QComboBox *combo);
         virtual ~CustomEditor();
 
-        void setRepresentationWidget( QWidget *repWidget );
-        void setLineEdit( QLineEdit *edit );
+        void setRepresentationWidget(QWidget *repWidget);
+        void setLineEdit(QLineEdit *edit);
 
         virtual QWidget *representationWidget() const;
         virtual QLineEdit *lineEdit() const;
@@ -80,189 +80,189 @@ public:
         Q_DISABLE_COPY(CustomEditor)
     };
 
-   public:
+public:
 
-      /**
-       * Enumeration of the buttons, the listbox offers. Specify them in the
-       * constructor in the buttons parameter, or in setButtons.
-       */
-      enum Button {
+    /**
+     * Enumeration of the buttons, the listbox offers. Specify them in the
+     * constructor in the buttons parameter, or in setButtons.
+     */
+    enum Button {
         Add = 0x0001,
         Remove = 0x0002,
         UpDown = 0x0004,
         All = Add | Remove | UpDown
-      };
+    };
 
-      Q_DECLARE_FLAGS( Buttons, Button )
+    Q_DECLARE_FLAGS(Buttons, Button)
 
-      /**
-       * Create an editable listbox.
-       */
-      explicit KEditListWidget(QWidget *parent = 0);
+    /**
+     * Create an editable listbox.
+     */
+    explicit KEditListWidget(QWidget *parent = 0);
 
-      /**
-       * Constructor which allows to use a custom editing widget
-       * instead of the standard QLineEdit widget. E.g. you can use a
-       * KUrlRequester or a QComboBox as input widget. The custom
-       * editor must consist of a lineedit and optionally another widget that
-       * is used as representation. A QComboBox or a KUrlRequester have a
-       * QLineEdit as child-widget for example, so the QComboBox is used as
-       * the representation widget.
-       *
-       * @see KUrlRequester::customEditor(), setCustomEditor
-       */
-      KEditListWidget( const CustomEditor &customEditor,
-                       QWidget *parent = 0,
-                       bool checkAtEntering = false,
-                       Buttons buttons = All );
+    /**
+     * Constructor which allows to use a custom editing widget
+     * instead of the standard QLineEdit widget. E.g. you can use a
+     * KUrlRequester or a QComboBox as input widget. The custom
+     * editor must consist of a lineedit and optionally another widget that
+     * is used as representation. A QComboBox or a KUrlRequester have a
+     * QLineEdit as child-widget for example, so the QComboBox is used as
+     * the representation widget.
+     *
+     * @see KUrlRequester::customEditor(), setCustomEditor
+     */
+    KEditListWidget(const CustomEditor &customEditor,
+                    QWidget *parent = 0,
+                    bool checkAtEntering = false,
+                    Buttons buttons = All);
 
-      virtual ~KEditListWidget();
+    virtual ~KEditListWidget();
 
-      /**
-       * @returns a pointer to the embedded QListView.
-       */
-      QListView* listView() const;
-      /**
-       * @returns a pointer to the embedded QLineEdit.
-       */
-      QLineEdit* lineEdit() const;
-      /**
-       * @returns a pointer to the Add button
-       */
-      QPushButton* addButton() const;
-      /**
-       * @returns a pointer to the Remove button
-       */
-      QPushButton* removeButton() const;
-      /**
-       * @returns a pointer to the Up button
-       */
-      QPushButton* upButton() const;
-      /**
-       * @returns a pointer to the Down button
-       */
-      QPushButton* downButton() const;
+    /**
+     * @returns a pointer to the embedded QListView.
+     */
+    QListView *listView() const;
+    /**
+     * @returns a pointer to the embedded QLineEdit.
+     */
+    QLineEdit *lineEdit() const;
+    /**
+     * @returns a pointer to the Add button
+     */
+    QPushButton *addButton() const;
+    /**
+     * @returns a pointer to the Remove button
+     */
+    QPushButton *removeButton() const;
+    /**
+     * @returns a pointer to the Up button
+     */
+    QPushButton *upButton() const;
+    /**
+     * @returns a pointer to the Down button
+     */
+    QPushButton *downButton() const;
 
-      /**
-       * @returns the count of elements in the list
-       */
-      int count() const;
+    /**
+     * @returns the count of elements in the list
+     */
+    int count() const;
 
-      /**
-       * Inserts a @p list of elements from the @p index element
-       * If @p index is negative, the elements will be appended
-       */
-      void insertStringList(const QStringList& list, int index=-1);
+    /**
+     * Inserts a @p list of elements from the @p index element
+     * If @p index is negative, the elements will be appended
+     */
+    void insertStringList(const QStringList &list, int index = -1);
 
-      /**
-       * Inserts a @p text element at the @p index position
-       * If @p index is negative, the element will be appended
-       */
-      void insertItem(const QString& text, int index=-1);
+    /**
+     * Inserts a @p text element at the @p index position
+     * If @p index is negative, the element will be appended
+     */
+    void insertItem(const QString &text, int index = -1);
 
-      /**
-       * Clears both the listbox and the line edit.
-       */
-      void clear();
+    /**
+     * Clears both the listbox and the line edit.
+     */
+    void clear();
 
-      /**
-       * @returns the text at the @p index position
-       */
-      QString text(int index) const;
+    /**
+     * @returns the text at the @p index position
+     */
+    QString text(int index) const;
 
-      /**
-       * @returns the currently selected item
-       */
-      int currentItem() const;
-      
-      /**
-       * @returns the currently selected item's text
-       */
-      QString currentText() const;
+    /**
+     * @returns the currently selected item
+     */
+    int currentItem() const;
 
-      /**
-       * @returns a list with the text of all items in the listbox
-       */
-      QStringList items() const;
+    /**
+     * @returns the currently selected item's text
+     */
+    QString currentText() const;
 
-      /**
-       * Clears the listbox and sets the contents to @p items
-       */
-      void setItems(const QStringList& items);
+    /**
+     * @returns a list with the text of all items in the listbox
+     */
+    QStringList items() const;
 
-      /**
-       * @returns which buttons are visible
-       */
-      Buttons buttons() const;
+    /**
+     * Clears the listbox and sets the contents to @p items
+     */
+    void setItems(const QStringList &items);
 
-      /**
-       * Specifies which @p buttons are visible
-       */
-      void setButtons( Buttons buttons );
+    /**
+     * @returns which buttons are visible
+     */
+    Buttons buttons() const;
 
-      /**
-       * If @p check is true, after every character you type
-       * in the line edit KEditListWidget will enable or disable
-       * the Add-button, depending whether the current content of the
-       * line edit is already in the listbox. Maybe this can become a
-       * performance hit with large lists on slow machines.
-       * If @p check is false,
-       * it will be checked if you press the Add-button. It is not
-       * possible to enter items twice into the listbox.
-       * Default is false.
-       */
-      void setCheckAtEntering(bool check);
+    /**
+     * Specifies which @p buttons are visible
+     */
+    void setButtons(Buttons buttons);
 
-      /**
-       * @returns true if check at entering is enabled.
-       */
-      bool checkAtEntering();
+    /**
+     * If @p check is true, after every character you type
+     * in the line edit KEditListWidget will enable or disable
+     * the Add-button, depending whether the current content of the
+     * line edit is already in the listbox. Maybe this can become a
+     * performance hit with large lists on slow machines.
+     * If @p check is false,
+     * it will be checked if you press the Add-button. It is not
+     * possible to enter items twice into the listbox.
+     * Default is false.
+     */
+    void setCheckAtEntering(bool check);
 
-      /**
-       * Allows to use a custom editing widget
-       * instead of the standard QLineEdit widget. E.g. you can use a
-       * KUrlRequester or a QComboBox as input widget. The custom
-       * editor must consist of a lineedit and optionally another widget that
-       * is used as representation. A QComboBox or a KUrlRequester have a
-       * QLineEdit as child-widget for example, so the QComboBox is used as
-       * the representation widget.
-       */
-      void setCustomEditor( const CustomEditor& editor );
+    /**
+     * @returns true if check at entering is enabled.
+     */
+    bool checkAtEntering();
 
-      /**
-       * Reimplented for interal reasons. The API is not affected.
-       */
-      bool eventFilter( QObject* o, QEvent* e );
+    /**
+     * Allows to use a custom editing widget
+     * instead of the standard QLineEdit widget. E.g. you can use a
+     * KUrlRequester or a QComboBox as input widget. The custom
+     * editor must consist of a lineedit and optionally another widget that
+     * is used as representation. A QComboBox or a KUrlRequester have a
+     * QLineEdit as child-widget for example, so the QComboBox is used as
+     * the representation widget.
+     */
+    void setCustomEditor(const CustomEditor &editor);
 
-   Q_SIGNALS:
-      void changed();
+    /**
+     * Reimplented for interal reasons. The API is not affected.
+     */
+    bool eventFilter(QObject *o, QEvent *e);
 
-      /**
-       * This signal is emitted when the user adds a new string to the list,
-       * the parameter is the added string.
-       */
-      void added( const QString & text );
+Q_SIGNALS:
+    void changed();
 
-      /**
-       * This signal is emitted when the user removes a string from the list,
-       * the parameter is the removed string.
-       */
-      void removed( const QString & text );
+    /**
+     * This signal is emitted when the user adds a new string to the list,
+     * the parameter is the added string.
+     */
+    void added(const QString &text);
 
-   private Q_SLOTS:
-      void moveItemUp();
-      void moveItemDown();
-      void addItem();
-      void removeItem();
-      void enableMoveButtons(const QModelIndex&, const QModelIndex&);
-      void typedSomething(const QString& text);
-      void slotSelectionChanged( const QItemSelection& selected, const QItemSelection& deselected );
+    /**
+     * This signal is emitted when the user removes a string from the list,
+     * the parameter is the removed string.
+     */
+    void removed(const QString &text);
 
-   private:
-      friend class KEditListWidgetPrivate;
-      KEditListWidgetPrivate* const d;
+private Q_SLOTS:
+    void moveItemUp();
+    void moveItemDown();
+    void addItem();
+    void removeItem();
+    void enableMoveButtons(const QModelIndex &, const QModelIndex &);
+    void typedSomething(const QString &text);
+    void slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
-      Q_DISABLE_COPY(KEditListWidget)
+private:
+    friend class KEditListWidgetPrivate;
+    KEditListWidgetPrivate *const d;
+
+    Q_DISABLE_COPY(KEditListWidget)
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KEditListWidget::Buttons)

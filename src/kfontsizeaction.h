@@ -36,7 +36,7 @@
 class KWIDGETSADDONS_EXPORT KFontSizeAction : public KSelectAction
 {
     Q_OBJECT
-    Q_PROPERTY( int fontSize READ fontSize WRITE setFontSize )
+    Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize)
 
 public:
     explicit KFontSizeAction(QObject *parent);
@@ -47,20 +47,20 @@ public:
 
     int fontSize() const;
 
-    void setFontSize( int size );
+    void setFontSize(int size);
 
 Q_SIGNALS:
-    void fontSizeChanged( int );
+    void fontSizeChanged(int);
 
 protected Q_SLOTS:
     /**
      * This function is called whenever an action from the selections is triggered.
      */
-    virtual void actionTriggered(QAction* action);
+    virtual void actionTriggered(QAction *action);
 
 private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif

@@ -27,13 +27,15 @@ class KPageWidgetModel;
 class KPageWidgetPrivate : public KPageViewPrivate
 {
     Q_DECLARE_PUBLIC(KPageWidget)
-    protected:
-        KPageWidgetPrivate(KPageWidget *q);
+protected:
+    KPageWidgetPrivate(KPageWidget *q);
 
-        KPageWidgetModel *model() const { return static_cast<KPageWidgetModel *>(KPageViewPrivate::model); }
+    KPageWidgetModel *model() const
+    {
+        return static_cast<KPageWidgetModel *>(KPageViewPrivate::model);
+    }
 
-        void _k_slotCurrentPageChanged(const QModelIndex &, const QModelIndex &);
+    void _k_slotCurrentPageChanged(const QModelIndex &, const QModelIndex &);
 };
 
 #endif // KPAGEWIDGET_P_H
-// vim: sw=4 sts=4 et tw=100

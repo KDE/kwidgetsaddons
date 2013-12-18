@@ -43,13 +43,13 @@ class KWIDGETSADDONS_EXPORT KToggleAction : public QAction
 {
     Q_OBJECT
 
-  public:
+public:
     /**
      * Constructs an action with the specified parent.
      *
      * @param parent The action's parent object.
      */
-    explicit KToggleAction( QObject *parent );
+    explicit KToggleAction(QObject *parent);
 
     /**
      * Constructs an action with text; a shortcut may be specified by
@@ -63,7 +63,7 @@ class KWIDGETSADDONS_EXPORT KToggleAction : public QAction
      * @param text The text that will be displayed.
      * @param parent The action's parent object.
      */
-    KToggleAction( const QString& text, QObject *parent );
+    KToggleAction(const QString &text, QObject *parent);
 
     /**
      * Constructs an action with text and an icon; a shortcut may be specified by
@@ -76,7 +76,7 @@ class KWIDGETSADDONS_EXPORT KToggleAction : public QAction
      * @param text The text that will be displayed.
      * @param parent The action's parent object.
      */
-    KToggleAction( const QIcon& icon, const QString& text, QObject *parent );
+    KToggleAction(const QIcon &icon, const QString &text, QObject *parent);
 
     /**
      * Destructor
@@ -93,14 +93,14 @@ class KWIDGETSADDONS_EXPORT KToggleAction : public QAction
      * If hasIcon(), the icon is kept for the 'checked state', unless
      * @p checkedItem defines an icon explicitly. Same thing for tooltip and whatsthis.
      */
-    void setCheckedState( const KGuiItem& checkedItem );
+    void setCheckedState(const KGuiItem &checkedItem);
 
-  protected Q_SLOTS:
-    virtual void slotToggled( bool checked );
+protected Q_SLOTS:
+    virtual void slotToggled(bool checked);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 #endif

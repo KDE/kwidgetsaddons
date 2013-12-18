@@ -112,8 +112,8 @@ public:
      * @since 4.2
      */
     explicit KCharSelect(
-            QWidget *parent,
-            const Controls controls = AllGuiElements);
+        QWidget *parent,
+        const Controls controls = AllGuiElements);
 
     /**
      * Constructor. @p controls can be used to show a custom set of widgets.
@@ -134,9 +134,9 @@ public:
      * @since 4.2
      */
     explicit KCharSelect(
-            QWidget *parent,
-            QObject *actionParent,
-            const Controls controls = AllGuiElements);
+        QWidget *parent,
+        QObject *actionParent,
+        const Controls controls = AllGuiElements);
 
     ~KCharSelect();
 
@@ -213,7 +213,7 @@ private:
     Q_PRIVATE_SLOT(d, void _k_linkClicked(QUrl))
 
     class KCharSelectPrivate;
-    KCharSelectPrivate* const d;
+    KCharSelectPrivate *const d;
 
     void initWidget(const Controls, QObject *);
 };

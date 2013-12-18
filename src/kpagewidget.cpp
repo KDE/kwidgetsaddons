@@ -31,13 +31,15 @@ KPageWidgetPrivate::KPageWidgetPrivate(KPageWidget *q)
 
 void KPageWidgetPrivate::_k_slotCurrentPageChanged(const QModelIndex &current, const QModelIndex &before)
 {
-  KPageWidgetItem *currentItem = 0;
-  if ( current.isValid() )
-    currentItem = model()->item( current );
+    KPageWidgetItem *currentItem = 0;
+    if (current.isValid()) {
+        currentItem = model()->item(current);
+    }
 
-  KPageWidgetItem *beforeItem = 0;
-  if ( before.isValid() )
-    beforeItem = model()->item( before );
+    KPageWidgetItem *beforeItem = 0;
+    if (before.isValid()) {
+        beforeItem = model()->item(before);
+    }
 
     Q_Q(KPageWidget);
     emit q->currentPageChanged(currentItem, beforeItem);
@@ -60,7 +62,7 @@ KPageWidget::KPageWidget(KPageWidgetPrivate &dd, QWidget *parent)
             this, SIGNAL(pageToggled(KPageWidgetItem*,bool)));
 }
 
-KPageWidget::KPageWidget( QWidget *parent )
+KPageWidget::KPageWidget(QWidget *parent)
     : KPageView(*new KPageWidgetPrivate(this), parent)
 {
     Q_D(KPageWidget);
@@ -77,57 +79,59 @@ KPageWidget::~KPageWidget()
 {
 }
 
-KPageWidgetItem* KPageWidget::addPage( QWidget *widget, const QString &name )
+KPageWidgetItem *KPageWidget::addPage(QWidget *widget, const QString &name)
 {
     return d_func()->model()->addPage(widget, name);
 }
 
-void KPageWidget::addPage( KPageWidgetItem *item )
+void KPageWidget::addPage(KPageWidgetItem *item)
 {
     d_func()->model()->addPage(item);
 }
 
-KPageWidgetItem* KPageWidget::insertPage( KPageWidgetItem *before, QWidget *widget, const QString &name )
+KPageWidgetItem *KPageWidget::insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name)
 {
     return d_func()->model()->insertPage(before, widget, name);
 }
 
-void KPageWidget::insertPage( KPageWidgetItem *before, KPageWidgetItem *item )
+void KPageWidget::insertPage(KPageWidgetItem *before, KPageWidgetItem *item)
 {
     d_func()->model()->insertPage(before, item);
 }
 
-KPageWidgetItem* KPageWidget::addSubPage( KPageWidgetItem *parent, QWidget *widget, const QString &name )
+KPageWidgetItem *KPageWidget::addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name)
 {
     return d_func()->model()->addSubPage(parent, widget, name);
 }
 
-void KPageWidget::addSubPage( KPageWidgetItem *parent, KPageWidgetItem *item )
+void KPageWidget::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item)
 {
     d_func()->model()->addSubPage(parent, item);
 }
 
-void KPageWidget::removePage( KPageWidgetItem *item )
+void KPageWidget::removePage(KPageWidgetItem *item)
 {
     emit pageRemoved(item); // Q_EMIT signal before we remove it, because the item will be deleted in the model
     d_func()->model()->removePage(item);
 }
 
-void KPageWidget::setCurrentPage( KPageWidgetItem *item )
+void KPageWidget::setCurrentPage(KPageWidgetItem *item)
 {
     const QModelIndex index = d_func()->model()->index(item);
-  if ( !index.isValid() )
-    return;
+    if (!index.isValid()) {
+        return;
+    }
 
-  KPageView::setCurrentPage( index );
+    KPageView::setCurrentPage(index);
 }
 
-KPageWidgetItem* KPageWidget::currentPage() const
+KPageWidgetItem *KPageWidget::currentPage() const
 {
-  const QModelIndex index = KPageView::currentPage();
+    const QModelIndex index = KPageView::currentPage();
 
-  if ( !index.isValid() )
-    return 0;
+    if (!index.isValid()) {
+        return 0;
+    }
 
     return d_func()->model()->item(index);
 }

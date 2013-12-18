@@ -34,109 +34,107 @@
 
 class KFontSizeAction::Private
 {
-    public:
-        Private(KFontSizeAction *parent)
-            : q(parent)
-        {
-        }
+public:
+    Private(KFontSizeAction *parent)
+        : q(parent)
+    {
+    }
 
-        void init();
+    void init();
 
-        KFontSizeAction *q;
+    KFontSizeAction *q;
 };
 
 // BEGIN KFontSizeAction
 KFontSizeAction::KFontSizeAction(QObject *parent)
-  : KSelectAction(parent),
-    d(new Private(this))
+    : KSelectAction(parent),
+      d(new Private(this))
 {
-  d->init();
+    d->init();
 }
 
 KFontSizeAction::KFontSizeAction(const QString &text, QObject *parent)
-  : KSelectAction(text, parent),
-    d(new Private(this))
+    : KSelectAction(text, parent),
+      d(new Private(this))
 {
-  d->init();
+    d->init();
 }
 
 KFontSizeAction::KFontSizeAction(const QIcon &icon, const QString &text, QObject *parent)
-  : KSelectAction(icon, text, parent),
-    d(new Private(this))
+    : KSelectAction(icon, text, parent),
+      d(new Private(this))
 {
-  d->init();
+    d->init();
 }
 
 KFontSizeAction::~KFontSizeAction()
 {
-  delete d;
+    delete d;
 }
 
 void KFontSizeAction::Private::init()
 {
-    q->setEditable( true );
+    q->setEditable(true);
     QFontDatabase fontDB;
     const QList<int> sizes = fontDB.standardSizes();
     QStringList lst;
-    for ( QList<int>::ConstIterator it = sizes.begin(); it != sizes.end(); ++it )
-        lst.append( QString::number( *it ) );
+    for (QList<int>::ConstIterator it = sizes.begin(); it != sizes.end(); ++it) {
+        lst.append(QString::number(*it));
+    }
 
-    q->setItems( lst );
+    q->setItems(lst);
 }
 
-void KFontSizeAction::setFontSize( int size )
+void KFontSizeAction::setFontSize(int size)
 {
-    if ( size == fontSize() ) {
-        const QString test = QString::number( size );
-        Q_FOREACH(QAction* action, actions())
-        {
-          if (action->text() == test)
-          {
-              setCurrentAction(action);
-              return;
-          }
+    if (size == fontSize()) {
+        const QString test = QString::number(size);
+        Q_FOREACH (QAction *action, actions()) {
+            if (action->text() == test) {
+                setCurrentAction(action);
+                return;
+            }
         }
     }
 
-    if ( size < 1 ) {
+    if (size < 1) {
         qWarning() << "KFontSizeAction: Size " << size << " is out of range";
         return;
     }
 
-    QAction* a = action( QString::number( size ) );
-    if ( !a ) {
+    QAction *a = action(QString::number(size));
+    if (!a) {
         // Insert at the correct position in the list (to keep sorting)
         QList<int> lst;
         // Convert to list of ints
-        QStringListIterator itemsIt( items() );
-        while ( itemsIt.hasNext() )
-            lst.append( itemsIt.next().toInt() );
+        QStringListIterator itemsIt(items());
+        while (itemsIt.hasNext()) {
+            lst.append(itemsIt.next().toInt());
+        }
         // New size
-        lst.append( size );
+        lst.append(size);
         // Sort the list
-        qSort( lst );
-        Q_FOREACH( int it, lst ) {
-            QAction* const action = addAction( QString::number(it) );
-            if (it == size)
-              setCurrentAction(action);
+        qSort(lst);
+        Q_FOREACH (int it, lst) {
+            QAction *const action = addAction(QString::number(it));
+            if (it == size) {
+                setCurrentAction(action);
+            }
         }
 
     } else {
-        setCurrentAction( a );
+        setCurrentAction(a);
     }
 }
 
 int KFontSizeAction::fontSize() const
 {
-  return currentText().toInt();
+    return currentText().toInt();
 }
 
-void KFontSizeAction::actionTriggered( QAction* action )
+void KFontSizeAction::actionTriggered(QAction *action)
 {
-    emit fontSizeChanged( action->text().toInt() );
-    KSelectAction::actionTriggered( action );
+    emit fontSizeChanged(action->text().toInt());
+    KSelectAction::actionTriggered(action);
 }
-
-/* vim: et sw=2 ts=2
- */
 

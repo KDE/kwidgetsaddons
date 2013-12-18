@@ -27,7 +27,6 @@
 
 QTEST_MAIN(KTimeComboBoxTest)
 
-
 void KTimeComboBoxTest::testDefaults()
 {
     m_combo = new KTimeComboBox();

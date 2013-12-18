@@ -25,17 +25,17 @@
 
 class KColorButtonTest : public QObject
 {
-  Q_OBJECT
+    Q_OBJECT
 
 private Q_SLOTS:
-  void initTestCase();
-  void testChangeAndCancel();
-  void testDoubleClickChange();
-  void testOkChange();
-  void testRecentColorsPick();
+    void initTestCase();
+    void testChangeAndCancel();
+    void testDoubleClickChange();
+    void testOkChange();
+    void testRecentColorsPick();
 
 private:
-  QColor black40Colors;
+    QColor black40Colors;
 };
 
 #endif

@@ -29,7 +29,7 @@
 class KPopupFrame::KPopupFramePrivate
 {
 public:
-    KPopupFramePrivate( KPopupFrame *q );
+    KPopupFramePrivate(KPopupFrame *q);
     ~KPopupFramePrivate();
 
     KPopupFrame *q;
@@ -48,7 +48,6 @@ public:
     class OutsideClickCatcher;
     OutsideClickCatcher *outsideClickCatcher;
 };
-
 
 class KPopupFrame::KPopupFramePrivate::OutsideClickCatcher
     : public QObject
@@ -81,11 +80,10 @@ public:
     }
 };
 
-
-KPopupFrame::KPopupFramePrivate::KPopupFramePrivate( KPopupFrame *q ):
-    q( q ),
-    result( 0 ), // rejected
-    main( 0 ),
+KPopupFrame::KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q):
+    q(q),
+    result(0),   // rejected
+    main(0),
     outsideClickCatcher(new OutsideClickCatcher)
 {
     outsideClickCatcher->setPopupFrame(q);
@@ -96,11 +94,11 @@ KPopupFrame::KPopupFramePrivate::~KPopupFramePrivate()
     delete outsideClickCatcher;
 }
 
-KPopupFrame::KPopupFrame( QWidget* parent )
-            : QFrame( parent, Qt::Popup ), d( new KPopupFramePrivate( this ) )
+KPopupFrame::KPopupFrame(QWidget *parent)
+    : QFrame(parent, Qt::Popup), d(new KPopupFramePrivate(this))
 {
-    setFrameStyle( QFrame::Box | QFrame::Raised );
-    setMidLineWidth( 2 );
+    setFrameStyle(QFrame::Box | QFrame::Raised);
+    setMidLineWidth(2);
 }
 
 KPopupFrame::~KPopupFrame()
@@ -108,83 +106,83 @@ KPopupFrame::~KPopupFrame()
     delete d;
 }
 
-void KPopupFrame::keyPressEvent( QKeyEvent* e )
+void KPopupFrame::keyPressEvent(QKeyEvent *e)
 {
-    if( e->key() == Qt::Key_Escape ) {
+    if (e->key() == Qt::Key_Escape) {
         d->result = 0; // rejected
         emit leaveModality();
         //qApp->exit_loop();
     }
 }
 
-void KPopupFrame::close( int r )
+void KPopupFrame::close(int r)
 {
     d->result = r;
     emit leaveModality();
     //qApp->exit_loop();
 }
 
-void KPopupFrame::setMainWidget( QWidget *m )
+void KPopupFrame::setMainWidget(QWidget *m)
 {
     d->main = m;
-    if( d->main ) {
-        resize( d->main->width() + 2 * frameWidth(), d->main->height() + 2 * frameWidth() );
+    if (d->main) {
+        resize(d->main->width() + 2 * frameWidth(), d->main->height() + 2 * frameWidth());
     }
 }
 
-void KPopupFrame::resizeEvent( QResizeEvent *e )
+void KPopupFrame::resizeEvent(QResizeEvent *e)
 {
-    Q_UNUSED( e );
+    Q_UNUSED(e);
 
-    if( d->main ) {
-        d->main->setGeometry( frameWidth(), frameWidth(),
-                              width() - 2 * frameWidth(), height() - 2 * frameWidth() );
+    if (d->main) {
+        d->main->setGeometry(frameWidth(), frameWidth(),
+                             width() - 2 * frameWidth(), height() - 2 * frameWidth());
     }
 }
 
-void KPopupFrame::popup( const QPoint &pos )
+void KPopupFrame::popup(const QPoint &pos)
 {
     // Make sure the whole popup is visible.
-    QRect desktopGeometry = QApplication::desktop()->screenGeometry( pos );
+    QRect desktopGeometry = QApplication::desktop()->screenGeometry(pos);
 
     int x = pos.x();
     int y = pos.y();
     int w = width();
     int h = height();
-    if ( x + w > desktopGeometry.x() + desktopGeometry.width() ) {
+    if (x + w > desktopGeometry.x() + desktopGeometry.width()) {
         x = desktopGeometry.width() - w;
     }
-    if ( y + h > desktopGeometry.y() + desktopGeometry.height() ) {
+    if (y + h > desktopGeometry.y() + desktopGeometry.height()) {
         y = desktopGeometry.height() - h;
     }
-    if ( x < desktopGeometry.x() ) {
+    if (x < desktopGeometry.x()) {
         x = 0;
     }
-    if ( y < desktopGeometry.y() ) {
+    if (y < desktopGeometry.y()) {
         y = 0;
     }
 
     // Pop the thingy up.
-    move( x, y );
+    move(x, y);
     show();
     d->main->setFocus();
 }
 
-int KPopupFrame::exec( const QPoint &pos )
+int KPopupFrame::exec(const QPoint &pos)
 {
-    popup( pos );
+    popup(pos);
     repaint();
     d->result = 0; // rejected
     QEventLoop eventLoop;
-    connect( this, SIGNAL(leaveModality()),
-             &eventLoop, SLOT(quit()) );
+    connect(this, SIGNAL(leaveModality()),
+            &eventLoop, SLOT(quit()));
     eventLoop.exec();
 
     hide();
     return d->result;
 }
 
-int KPopupFrame::exec( int x, int y )
+int KPopupFrame::exec(int x, int y)
 {
-    return exec( QPoint( x, y ) );
+    return exec(QPoint(x, y));
 }

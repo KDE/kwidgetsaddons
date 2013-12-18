@@ -40,7 +40,7 @@ public:
     virtual ~LineEditUrlDropEventFilter();
 
 private:
-    virtual bool eventFilter(QObject* obj, QEvent* ev);
+    virtual bool eventFilter(QObject *obj, QEvent *ev);
 };
 
 #endif

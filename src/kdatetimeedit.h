@@ -590,9 +590,9 @@ private:
     KDateTimeEditPrivate *const d;
 
     Q_PRIVATE_SLOT(d, void selectCalendar(int))
-    Q_PRIVATE_SLOT(d, void enterCalendar(const QLocale&))
+    Q_PRIVATE_SLOT(d, void enterCalendar(const QLocale &))
     Q_PRIVATE_SLOT(d, void selectTimeZone(int))
-    Q_PRIVATE_SLOT(d, void enterTimeZone(const QByteArray&))
+    Q_PRIVATE_SLOT(d, void enterTimeZone(const QByteArray &))
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KDateTimeEdit::Options)

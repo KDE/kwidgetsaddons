@@ -28,7 +28,6 @@
 
 class QWidget;
 
-
 /**
  * @short A password input dialog.
  *
@@ -75,7 +74,7 @@ public:
      *
      * @param parent Passed to lower level constructor.
      */
-    explicit KNewPasswordDialog(QWidget *parent=0);
+    explicit KNewPasswordDialog(QWidget *parent = 0);
 
     /**
      * Destructs the password dialog.
@@ -97,7 +96,7 @@ public:
      *
      * the recommended size is KIconLoader::SizeHuge
      */
-    void setPixmap(const QPixmap&);
+    void setPixmap(const QPixmap &);
 
     /**
      * Returns the pixmap that appears next to the prompt in the dialog
@@ -196,7 +195,7 @@ protected:
      * checking in derived classes. It should return @p true if the
      * password is valid, @p false otherwise.
      */
-    virtual bool checkPassword(const QString &) ;
+    virtual bool checkPassword(const QString &);
 
     /**
      * Checks input password.
@@ -214,14 +213,12 @@ Q_SIGNALS:
      */
     void newPassword(const QString &password);
 
-
 private:
     class KNewPasswordDialogPrivate;
-    KNewPasswordDialogPrivate* const d;
+    KNewPasswordDialogPrivate *const d;
 
-    Q_PRIVATE_SLOT( d, void _k_textChanged() )
+    Q_PRIVATE_SLOT(d, void _k_textChanged())
 };
 
 #endif // KNEWPASSWORDDIALOG_H
 
-// kate: space-indent on; indent-width 4; encoding utf-8; replace-tabs on;

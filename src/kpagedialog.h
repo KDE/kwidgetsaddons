@@ -65,10 +65,10 @@ class KPageDialogPrivate;
  */
 class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
 {
-  Q_OBJECT
+    Q_OBJECT
     Q_DECLARE_PRIVATE(KPageDialog)
 
-  public:
+public:
 
     /**
      *  @li @p Auto   - A dialog with a face based on the structure of the
@@ -85,20 +85,19 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      *  @li @p Tabbed - A dialog with a tab bar above the representation
      *                  of the contents.
      */
-    enum FaceType
-    {
-      Auto   = KPageView::Auto,
-      Plain  = KPageView::Plain,
-      List   = KPageView::List,
-      Tree   = KPageView::Tree,
-      Tabbed = KPageView::Tabbed
+    enum FaceType {
+        Auto   = KPageView::Auto,
+        Plain  = KPageView::Plain,
+        List   = KPageView::List,
+        Tree   = KPageView::Tree,
+        Tabbed = KPageView::Tabbed
     };
 
-  public:
+public:
     /**
      * Creates a new page dialog.
      */
-    explicit KPageDialog( QWidget *parent = 0, Qt::WindowFlags flags = 0 );
+    explicit KPageDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0);
 
     /**
      * Destroys the page dialog.
@@ -108,7 +107,7 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
     /**
      * Sets the face type of the dialog.
      */
-    void setFaceType( FaceType faceType );
+    void setFaceType(FaceType faceType);
 
     /**
      * Adds a new top level page to the dialog.
@@ -118,14 +117,14 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* addPage( QWidget *widget, const QString &name );
+    KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
     /**
      * Adds a new top level page to the dialog.
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void addPage( KPageWidgetItem *item );
+    void addPage(KPageWidgetItem *item);
 
     /**
      * Inserts a new page in the dialog.
@@ -137,7 +136,7 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* insertPage( KPageWidgetItem *before, QWidget *widget, const QString &name );
+    KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new page in the dialog.
@@ -147,7 +146,7 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void insertPage( KPageWidgetItem *before, KPageWidgetItem *item );
+    void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /**
      * Inserts a new sub page in the dialog.
@@ -158,7 +157,7 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* addSubPage( KPageWidgetItem *parent, QWidget *widget, const QString &name );
+    KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new sub page in the dialog.
@@ -167,24 +166,24 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void addSubPage( KPageWidgetItem *parent, KPageWidgetItem *item );
+    void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
     /**
      * Removes the page associated with the given @see KPageWidgetItem.
      */
-    void removePage( KPageWidgetItem *item );
+    void removePage(KPageWidgetItem *item);
 
     /**
      * Sets the page which is associated with the given @see KPageWidgetItem to
      * be the current page and emits the currentPageChanged() signal.
      */
-    void setCurrentPage( KPageWidgetItem *item );
+    void setCurrentPage(KPageWidgetItem *item);
 
     /**
      * Returns the @see KPageWidgetItem for the current page or 0 if there is no
      * current page.
      */
-    KPageWidgetItem* currentPage() const;
+    KPageWidgetItem *currentPage() const;
 
     /**
      * Sets the collection of standard buttons displayed by this dialog.
@@ -197,22 +196,22 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      */
     QPushButton *button(QDialogButtonBox::StandardButton which) const;
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page has changed.
      *
      * @param item The new current page or 0 if no current page is available.
      */
-    void currentPageChanged( KPageWidgetItem *current, KPageWidgetItem *before );
+    void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
     /**
      * This signal is emitted whenever a page has been removed.
      *
      * @param page The page which has been removed
      **/
-    void pageRemoved( KPageWidgetItem *page );
+    void pageRemoved(KPageWidgetItem *page);
 
-  protected:
+protected:
     /**
      * This constructor can be used by subclasses to provide a custom page widget.
      *
@@ -234,7 +233,7 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
 
     /**
      * Set the page widget of the dialog.
-     * 
+     *
      * @note the previous pageWidget will be deleted.
      *
      * @param widget The KPageWidget object will be reparented to this object, so you can create
@@ -262,8 +261,8 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
      */
     void setButtonBox(QDialogButtonBox *box);
 
-  protected:
-    KPageDialogPrivate * const d_ptr;
+protected:
+    KPageDialogPrivate *const d_ptr;
 };
 
 #endif

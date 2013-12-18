@@ -30,23 +30,22 @@ class KPixmapSequence::Private : public QSharedData
 public:
     QVector<QPixmap> mFrames;
 
-    void loadSequence(const QPixmap& bigPixmap, const QSize &frameSize);
+    void loadSequence(const QPixmap &bigPixmap, const QSize &frameSize);
 };
 
-
-void KPixmapSequence::Private::loadSequence(const QPixmap& bigPixmap, const QSize &frameSize)
+void KPixmapSequence::Private::loadSequence(const QPixmap &bigPixmap, const QSize &frameSize)
 {
-    if(bigPixmap.isNull()) {
+    if (bigPixmap.isNull()) {
         qWarning() << "Invalid pixmap specified.";
         return;
     }
 
     QSize size(frameSize);
-    if(!size.isValid()) {
+    if (!size.isValid()) {
         size = QSize(bigPixmap.width(), bigPixmap.width());
     }
-    if(bigPixmap.width() % size.width() ||
-       bigPixmap.height() % size.height()) {
+    if (bigPixmap.width() % size.width() ||
+            bigPixmap.height() % size.height()) {
         qWarning() << "Invalid framesize.";
         return;
     }
@@ -64,56 +63,47 @@ void KPixmapSequence::Private::loadSequence(const QPixmap& bigPixmap, const QSiz
     }
 }
 
-
 KPixmapSequence::KPixmapSequence()
-        : d(new Private)
+    : d(new Private)
 {
 }
-
 
 KPixmapSequence::KPixmapSequence(const KPixmapSequence &other)
 {
     d = other.d;
 }
 
-
 KPixmapSequence::KPixmapSequence(const QPixmap &bigPixmap, const QSize &frameSize)
-        : d(new Private)
+    : d(new Private)
 {
     d->loadSequence(bigPixmap, frameSize);
 }
 
-
 KPixmapSequence::KPixmapSequence(const QString &fullPath, int size)
-        : d(new Private)
+    : d(new Private)
 {
     d->loadSequence(QPixmap(fullPath), QSize(size, size));
 }
-
 
 KPixmapSequence::~KPixmapSequence()
 {
 }
 
-
-KPixmapSequence &KPixmapSequence::operator=(const KPixmapSequence & other)
+KPixmapSequence &KPixmapSequence::operator=(const KPixmapSequence &other)
 {
     d = other.d;
     return *this;
 }
-
 
 bool KPixmapSequence::isValid() const
 {
     return !isEmpty();
 }
 
-
 bool KPixmapSequence::isEmpty() const
 {
     return d->mFrames.isEmpty();
 }
-
 
 QSize KPixmapSequence::frameSize() const
 {
@@ -124,12 +114,10 @@ QSize KPixmapSequence::frameSize() const
     return d->mFrames[0].size();
 }
 
-
 int KPixmapSequence::frameCount() const
 {
     return d->mFrames.size();
 }
-
 
 QPixmap KPixmapSequence::frameAt(int index) const
 {

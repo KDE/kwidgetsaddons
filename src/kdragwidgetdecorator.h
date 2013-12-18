@@ -28,7 +28,6 @@
 class QDrag;
 class KDragWidgetDecoratorBasePrivate;
 
-
 /**
  * @brief A decorator which adds drag-support to widgets
  *
@@ -90,7 +89,7 @@ protected:
     virtual void startDrag();
 
 private:
-    KDragWidgetDecoratorBasePrivate * const d;
+    KDragWidgetDecoratorBasePrivate *const d;
 };
 
 /**
@@ -106,7 +105,7 @@ template<class Widget>
 class KDragWidgetDecorator : public KDragWidgetDecoratorBase
 {
 public:
-    typedef QDrag *(*DragObjectFactory)(Widget*);
+    typedef QDrag *(*DragObjectFactory)(Widget *);
 
     KDragWidgetDecorator(Widget *parent = 0)
         : KDragWidgetDecoratorBase(parent), m_factory(0) {}
@@ -136,7 +135,7 @@ private:
     virtual QDrag *dragObject()
     {
         if (m_factory) {
-            Widget *w = static_cast<Widget*>(decoratedWidget());
+            Widget *w = static_cast<Widget *>(decoratedWidget());
             return m_factory(w);
         } else {
             return KDragWidgetDecoratorBase::dragObject();

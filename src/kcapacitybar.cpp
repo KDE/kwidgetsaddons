@@ -171,8 +171,7 @@ KCapacityBar::DrawTextMode KCapacityBar::drawTextMode() const
 
 void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
 {
-    if (d->ce_capacityBar)
-    {
+    if (d->ce_capacityBar) {
         QStyleOptionProgressBar opt;
         opt.initFrom(this);
         opt.rect = rect;
@@ -233,19 +232,19 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
 
     if (d->continuous || !d->fillFullBlocks) {
         int start = (layoutDirection() == Qt::LeftToRight) ? -1
-                                                           : (drawRect.width() + 2) - (drawRect.width() + 2) * (d->value / 100.0);
+                    : (drawRect.width() + 2) - (drawRect.width() + 2) * (d->value / 100.0);
 
         p->setClipRect(QRect(start, 0, (drawRect.width() + 2) * (d->value / 100.0), drawRect.height()), Qt::IntersectClip);
     }
 
     int left = (layoutDirection() == Qt::LeftToRight) ? 0
-                                                      : drawRect.width();
+               : drawRect.width();
 
     int right = (layoutDirection() == Qt::LeftToRight) ? drawRect.width()
-                                                       : 0;
+                : 0;
 
     int roundMargin = (layoutDirection() == Qt::LeftToRight) ? ROUND_MARGIN
-                                                             : -ROUND_MARGIN;
+                      : -ROUND_MARGIN;
 
     int spacing = 2;
     int verticalSpacing = VERTICAL_SPACING;
@@ -274,7 +273,7 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
         int stopSlot = floor((numSlots + 2) * (d->value / 100.0));
 
         int plusOffset = d->fillFullBlocks ? ((drawRect.width() - ROUND_MARGIN - ((slotWidth + spacing) * 2)) - (numSlots * (slotWidth + spacing))) / 2.0
-                                           : 0;
+                         : 0;
 
         if (!d->fillFullBlocks || stopSlot) {
             QPainterPath firstSlot;

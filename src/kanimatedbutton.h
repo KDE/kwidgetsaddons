@@ -35,53 +35,53 @@
  */
 class KWIDGETSADDONS_EXPORT KAnimatedButton : public QToolButton
 {
-  Q_OBJECT
-  Q_PROPERTY(QString animationPath READ animationPath WRITE setAnimationPath)
+    Q_OBJECT
+    Q_PROPERTY(QString animationPath READ animationPath WRITE setAnimationPath)
 
 public:
-  /**
-   * Construct an animated tool button.
-   *
-   * @param parent The parent widget
-   */
-  explicit KAnimatedButton(QWidget *parent = 0);
+    /**
+     * Construct an animated tool button.
+     *
+     * @param parent The parent widget
+     */
+    explicit KAnimatedButton(QWidget *parent = 0);
 
-  /**
-   * Destructor
-   */
-  virtual ~KAnimatedButton();
+    /**
+     * Destructor
+     */
+    virtual ~KAnimatedButton();
 
-  /**
-  * Returns the path used to load the animation
-  */
-  QString animationPath() const;
+    /**
+    * Returns the path used to load the animation
+    */
+    QString animationPath() const;
 
-  /**
-   * Sets the path to the file which contains the animation to load.
-   *
-   * @param path The path of the file containing the animation
-   */
-  void setAnimationPath(const QString &path);
+    /**
+     * Sets the path to the file which contains the animation to load.
+     *
+     * @param path The path of the file containing the animation
+     */
+    void setAnimationPath(const QString &path);
 
 public Q_SLOTS:
-  /**
-   * Starts the animation from frame 1
-   */
-  void start();
+    /**
+     * Starts the animation from frame 1
+     */
+    void start();
 
-  /**
-   * Stops the animation.  This will also reset the widget to frame 1.
-   */
-  void stop();
+    /**
+     * Stops the animation.  This will also reset the widget to frame 1.
+     */
+    void stop();
 
 private:
-  class KAnimatedButtonPrivate *const d;
+    class KAnimatedButtonPrivate *const d;
 
-  Q_PRIVATE_SLOT(d, void _k_movieFrameChanged(int))
-  Q_PRIVATE_SLOT(d, void _k_movieFinished())
-  Q_PRIVATE_SLOT(d, void _k_timerUpdate())
+    Q_PRIVATE_SLOT(d, void _k_movieFrameChanged(int))
+    Q_PRIVATE_SLOT(d, void _k_movieFinished())
+    Q_PRIVATE_SLOT(d, void _k_timerUpdate())
 
-  Q_DISABLE_COPY(KAnimatedButton)
+    Q_DISABLE_COPY(KAnimatedButton)
 };
 
 #endif //  KANIMATEDBUTTON_H

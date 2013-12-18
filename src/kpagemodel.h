@@ -55,44 +55,44 @@ class KPageModelPrivate;
  */
 class KWIDGETSADDONS_EXPORT KPageModel : public QAbstractItemModel
 {
-  Q_OBJECT
+    Q_OBJECT
     Q_DECLARE_PRIVATE(KPageModel)
 
-  public:
+public:
+    /**
+     * Additional roles that KPageView uses.
+     */
+    enum Role {
         /**
-         * Additional roles that KPageView uses.
+         * A string to be rendered as page header.
          */
-        enum Role {
-            /**
-             * A string to be rendered as page header.
-             */
-            HeaderRole = Qt::UserRole + 1,
-            /**
-             * A pointer to the page widget. This is the widget that is shown when the item is
-             * selected.
-             *
-             * You can make QVariant take a QWidget using
-             * \code
-             * QWidget *myWidget = new QWidget;
-             * QVariant v = QVariant::fromValue(myWidget);
-             * \endcode
-             */
-            WidgetRole
-        };
+        HeaderRole = Qt::UserRole + 1,
+        /**
+         * A pointer to the page widget. This is the widget that is shown when the item is
+         * selected.
+         *
+         * You can make QVariant take a QWidget using
+         * \code
+         * QWidget *myWidget = new QWidget;
+         * QVariant v = QVariant::fromValue(myWidget);
+         * \endcode
+         */
+        WidgetRole
+    };
 
     /**
      * Constructs a page model with the given parent.
      */
-    explicit KPageModel( QObject *parent = 0 );
+    explicit KPageModel(QObject *parent = 0);
 
     /**
      * Destroys the page model.
      */
     virtual ~KPageModel();
 
-    protected:
-        KPageModel(KPageModelPrivate &dd, QObject *parent);
-        KPageModelPrivate *const d_ptr;
+protected:
+    KPageModel(KPageModelPrivate &dd, QObject *parent);
+    KPageModelPrivate *const d_ptr;
 };
 
 #endif

@@ -17,7 +17,6 @@
     Boston, MA 02110-1301, USA.
 */
 
-
 #include "kanimatedbuttontest.h"
 
 #include "kanimatedbutton.h"
@@ -48,7 +47,6 @@ AnimationGroup::AnimationGroup(const QString &path, int size, QWidget *parent)
     connect(stop, SIGNAL(clicked()), m_animButton, SLOT(stop()));
 }
 
-
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent)
 {
@@ -73,7 +71,6 @@ void MainWindow::slotAddNew()
     AnimationGroup *group = new AnimationGroup(m_path->text(), m_size->value(), this);
     layout()->addWidget(group);
 }
-
 
 int main(int argc, char **argv)
 {

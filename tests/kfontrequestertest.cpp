@@ -21,12 +21,11 @@
 
 #include <kfontrequester.h>
 
-
 class KFontRequesterTest : public QWidget
 {
 public:
     KFontRequesterTest(QWidget *parent = 0)
-     : QWidget(parent)
+        : QWidget(parent)
     {
         QVBoxLayout *mainLayout = new QVBoxLayout(this);
 

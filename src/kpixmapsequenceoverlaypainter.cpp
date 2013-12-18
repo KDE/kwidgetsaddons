@@ -29,7 +29,6 @@
 #include <QtCore/QPointer>
 #include <QtCore/QCoreApplication>
 
-
 class KPixmapSequenceOverlayPainter::Private
 {
 public:
@@ -37,7 +36,7 @@ public:
     void _k_timeout();
     void paintFrame();
 
-    KPixmapSequence& sequence();
+    KPixmapSequence &sequence();
 
     QRect pixmapRect();
 
@@ -55,8 +54,7 @@ public:
     KPixmapSequenceOverlayPainter *q;
 };
 
-
-void KPixmapSequenceOverlayPainter::Private::init(KPixmapSequenceOverlayPainter* p)
+void KPixmapSequenceOverlayPainter::Private::init(KPixmapSequenceOverlayPainter *p)
 {
     q = p;
     m_widget = 0;
@@ -73,10 +71,10 @@ void KPixmapSequenceOverlayPainter::Private::_k_timeout()
     }
     ++m_counter;
     m_counter %= sequence().frameCount();
-    if (m_widget)
+    if (m_widget) {
         m_widget->update(pixmapRect());
+    }
 }
-
 
 void KPixmapSequenceOverlayPainter::Private::paintFrame()
 {
@@ -87,50 +85,50 @@ void KPixmapSequenceOverlayPainter::Private::paintFrame()
     p.drawPixmap(pixmapRect(), sequence().frameAt(m_counter), QRect(QPoint(0, 0), sequence().frameSize()));
 }
 
-
-KPixmapSequence& KPixmapSequenceOverlayPainter::Private::sequence()
+KPixmapSequence &KPixmapSequenceOverlayPainter::Private::sequence()
 {
     return m_sequence;
 }
 
-
 QRect KPixmapSequenceOverlayPainter::Private::pixmapRect()
 {
     QRect rect(m_rect);
-    if(!rect.isValid())
+    if (!rect.isValid()) {
         rect = m_widget->rect();
+    }
 
     QPoint pos(rect.topLeft());
-    if (m_alignment & Qt::AlignHCenter)
+    if (m_alignment & Qt::AlignHCenter) {
         pos.setX(rect.center().x() - (sequence().frameSize().width() / 2));
-    else if (m_alignment & Qt::AlignRight)
+    } else if (m_alignment & Qt::AlignRight) {
         pos.setX(rect.right() - sequence().frameSize().width());
+    }
 
-    if (m_alignment & Qt::AlignVCenter)
+    if (m_alignment & Qt::AlignVCenter) {
         pos.setY(rect.center().y() - (sequence().frameSize().height() / 2));
-    else if (m_alignment & Qt::AlignBottom)
+    } else if (m_alignment & Qt::AlignBottom) {
         pos.setY(rect.bottom() - sequence().frameSize().height());
+    }
 
     pos += m_offset;
 
-    return QRect( pos, sequence().frameSize());
+    return QRect(pos, sequence().frameSize());
 }
 
 KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(QObject *parent)
-        : QObject(parent),
-        d(new Private)
+    : QObject(parent),
+      d(new Private)
 {
     d->init(this);
 }
 
 KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent)
-        : QObject(parent),
-        d(new Private)
+    : QObject(parent),
+      d(new Private)
 {
     d->init(this);
     d->m_sequence = seq;
 }
-
 
 KPixmapSequenceOverlayPainter::~KPixmapSequenceOverlayPainter()
 {
@@ -138,59 +136,51 @@ KPixmapSequenceOverlayPainter::~KPixmapSequenceOverlayPainter()
     delete d;
 }
 
-
 KPixmapSequence KPixmapSequenceOverlayPainter::sequence() const
 {
     return d->sequence();
 }
-
 
 int KPixmapSequenceOverlayPainter::interval() const
 {
     return d->m_timer.interval();
 }
 
-
 QRect KPixmapSequenceOverlayPainter::rect() const
 {
-    if(d->m_rect.isValid()) {
+    if (d->m_rect.isValid()) {
         return d->m_rect;
-    }
-    else if(d->m_widget) {
+    } else if (d->m_widget) {
         return d->m_widget->rect();
-    }
-    else {
+    } else {
         return QRect();
     }
 }
-
 
 Qt::Alignment KPixmapSequenceOverlayPainter::alignment() const
 {
     return d->m_alignment;
 }
 
-
 QPoint KPixmapSequenceOverlayPainter::offset() const
 {
     return d->m_offset;
 }
-
 
 void KPixmapSequenceOverlayPainter::setSequence(const KPixmapSequence &seq)
 {
     bool restart = d->m_started;
     stop();
     d->m_sequence = seq;
-    if(restart) start();
+    if (restart) {
+        start();
+    }
 }
-
 
 void KPixmapSequenceOverlayPainter::setInterval(int msecs)
 {
     d->m_timer.setInterval(msecs);
 }
-
 
 void KPixmapSequenceOverlayPainter::setWidget(QWidget *w)
 {
@@ -198,33 +188,35 @@ void KPixmapSequenceOverlayPainter::setWidget(QWidget *w)
     d->m_widget = w;
 }
 
-
 void KPixmapSequenceOverlayPainter::setRect(const QRect &rect)
 {
     bool restart = d->m_started;
     stop();
     d->m_rect = rect;
-    if(restart) start();
+    if (restart) {
+        start();
+    }
 }
-
 
 void KPixmapSequenceOverlayPainter::setAlignment(Qt::Alignment align)
 {
     bool restart = d->m_started;
     stop();
     d->m_alignment = align;
-    if(restart) start();
+    if (restart) {
+        start();
+    }
 }
-
 
 void KPixmapSequenceOverlayPainter::setOffset(const QPoint &offset)
 {
     bool restart = d->m_started;
     stop();
     d->m_offset = offset;
-    if(restart) start();
+    if (restart) {
+        start();
+    }
 }
-
 
 void KPixmapSequenceOverlayPainter::start()
 {
@@ -234,13 +226,12 @@ void KPixmapSequenceOverlayPainter::start()
         d->m_counter = 0;
         d->m_started = true;
         d->m_widget->installEventFilter(this);
-        if(d->m_widget->isVisible()) {
+        if (d->m_widget->isVisible()) {
             d->m_timer.start();
             d->m_widget->update(d->pixmapRect());
         }
     }
 }
-
 
 void KPixmapSequenceOverlayPainter::stop()
 {
@@ -252,10 +243,9 @@ void KPixmapSequenceOverlayPainter::stop()
     }
 }
 
-
 bool KPixmapSequenceOverlayPainter::eventFilter(QObject *obj, QEvent *event)
 {
-    if (obj == d->m_widget ) {
+    if (obj == d->m_widget) {
         switch (event->type()) {
         case QEvent::Paint:
             // make sure we paint after everyone else including other event filters
@@ -264,18 +254,18 @@ bool KPixmapSequenceOverlayPainter::eventFilter(QObject *obj, QEvent *event)
             d->paintFrame();
             obj->installEventFilter(this); // catch on...
             return true;
-        break;
+            break;
         case QEvent::Hide:
             d->m_timer.stop();
-        break;
+            break;
         case QEvent::Show:
-            if(d->m_started) {
+            if (d->m_started) {
                 d->m_timer.start();
                 d->m_widget->update(d->pixmapRect());
             }
-        break;
+            break;
         default:
-        break;
+            break;
         }
     }
 

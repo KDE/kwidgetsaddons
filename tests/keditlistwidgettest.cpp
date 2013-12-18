@@ -6,19 +6,19 @@
 #include <keditlistwidget.h>
 #include <QDebug>
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
 #if 0
-    KEditListWidget::CustomEditor editor( new KComboBox( true, 0 ) );
-    KEditListWidget *box = new KEditListWidget( editor );
+    KEditListWidget::CustomEditor editor(new KComboBox(true, 0));
+    KEditListWidget *box = new KEditListWidget(editor);
 
-    box->insertItem( QStringLiteral("Test") );
-    box->insertItem( QStringLiteral("for") );
-    box->insertItem( QStringLiteral("this") );
-    box->insertItem( QStringLiteral("KEditListWidget") );
-    box->insertItem( QStringLiteral("Widget") );
+    box->insertItem(QStringLiteral("Test"));
+    box->insertItem(QStringLiteral("for"));
+    box->insertItem(QStringLiteral("this"));
+    box->insertItem(QStringLiteral("KEditListWidget"));
+    box->insertItem(QStringLiteral("Widget"));
     box->show();
 
 #else

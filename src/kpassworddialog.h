@@ -31,9 +31,9 @@
  * A dialog for requesting a password and optionaly a login from the end user.
  *
  * \section usage Usage Example
- * 
+ *
  * Requesting a simple password, assynchronous
- * 
+ *
  * \code
  *  KPasswordDialog *dlg = new KPasswordDialog( parent );
  *  dlg->setPrompt(i18n("Enter a password"));
@@ -41,9 +41,9 @@
  *  connect( dlg, SIGNAL( rejected() )  , this, SLOT( slotCancel() ) );
  *  dlg->show();
  * \endcode
- * 
+ *
  * Requesting a login and a password, synchronous
- * 
+ *
  * \code
  *  KPasswordDialog dlg(parent, KPasswordDialog::ShowUsernameLine);
  *  dlg.setPrompt(i18n("Enter a login and a password"));
@@ -61,9 +61,8 @@ class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
     Q_OBJECT
 
 public:
-    
-    enum KPasswordDialogFlag
-    {
+
+    enum KPasswordDialogFlag {
         NoFlags = 0x00,
         /**
          * If this flag is set, the "keep this password" checkbox will been shown,
@@ -97,15 +96,14 @@ public:
     };
     Q_DECLARE_FLAGS(KPasswordDialogFlags, KPasswordDialogFlag)
 
-    enum ErrorType
-    {
+    enum ErrorType {
         UnknownError = 0,
 
         /**
          * A problem with the user name as entered
          **/
         UsernameError,
-        
+
         /**
          * Incorrect password
          */
@@ -115,22 +113,22 @@ public:
          * Error preventing further attempts, will result in disabling most of the interface
          */
         FatalError,
-        
+
         /**
          * A problem with the domain as entered
          * @since 4.1
          **/
-        DomainError        
+        DomainError
     };
 
     /**
-     * create a password dialog 
+     * create a password dialog
      *
      * @param parent the parent widget (default:NULL).
      * @param flags a set of KPasswordDialogFlag flags
      */
     explicit KPasswordDialog(QWidget *parent = 0L,
-                             const KPasswordDialogFlags& flags = 0);
+                             const KPasswordDialogFlags &flags = 0);
 
     /**
      * Destructor
@@ -141,7 +139,7 @@ public:
      * Sets the prompt to show to the user.
      * @param prompt        instructional text to be shown.
      */
-    void setPrompt( const QString& prompt );
+    void setPrompt(const QString &prompt);
 
     /**
      * Returns the prompt
@@ -151,9 +149,9 @@ public:
     /**
      * set an image that appears next to the prompt.
      */
-    void setPixmap(const QPixmap&);
+    void setPixmap(const QPixmap &);
     /**
-     * 
+     *
      */
     QPixmap pixmap() const;
 
@@ -167,14 +165,14 @@ public:
      * @param label       label for comment (ex:"Command:")
      * @param comment     the actual comment text.
      */
-    void addCommentLine( const QString& label, const QString& comment );
+    void addCommentLine(const QString &label, const QString &comment);
 
     /**
      * Shows an error message in the dialog box. Prevents having to show a dialog-on-a-dialog.
      *
      * @param message the error message to show
      */
-    void showErrorMessage( const QString& message, const ErrorType type = PasswordError );
+    void showErrorMessage(const QString &message, const ErrorType type = PasswordError);
 
     /**
      * Returns the password entered by the user.
@@ -185,7 +183,7 @@ public:
     /**
      * set the default username.
      */
-    void setUsername(const QString&);
+    void setUsername(const QString &);
 
     /**
      * Returns the username entered by the user.
@@ -197,7 +195,7 @@ public:
      * set the default domain.
      * @since 4.1
      */
-    void setDomain(const QString&);
+    void setDomain(const QString &);
 
     /**
      * Returns the domain entered by the user.
@@ -205,7 +203,7 @@ public:
      * @since 4.1
      */
     QString domain() const;
-    
+
     /**
      * set anonymous mode (all other fields will be grayed out)
      * @since 4.1
@@ -216,15 +214,15 @@ public:
      * @return anonymous mode has been selected.
      * @since 4.1
      */
-    bool anonymousMode() const;    
-    
+    bool anonymousMode() const;
+
     /**
      * Determines whether supplied authorization should
      * persist even after the application has been closed.
-     * 
+     *
      * this is set with the check password checkbox is the ShowKeepCheckBox flag
      * is set in the constructor, if it is not set, this function return false
-     * 
+     *
      * @return true to keep the password
      */
     bool keepPassword() const;
@@ -234,26 +232,26 @@ public:
      * This can be used to check it before showing the dialog, to tell
      * the user that the password is stored already (e.g. in the wallet).
      * enableKeep must have been set to true in the constructor.
-     * 
+     *
      * has only effect if ShowKeepCheckBox is set in the constructor
      */
-    void setKeepPassword( bool b );
+    void setKeepPassword(bool b);
 
     /**
      * Sets the username field read-only and sets the
      * focus to the password field.
-     * 
+     *
      * this can also be set by passing UsernameReadOnly as flag in the constructor
      *
      * @param readOnly true to set the user field to read-only
      */
-    void setUsernameReadOnly( bool readOnly );
+    void setUsernameReadOnly(bool readOnly);
 
     /**
      * Presets the password.
      * @param password the password to set
      */
-    void setPassword( const QString& password );
+    void setPassword(const QString &password);
 
     /**
      * Presets a number of login+password pairs that the user can choose from.
@@ -262,7 +260,7 @@ public:
      * This require the flag ShowUnernameLine to be set in the constructoe, and not the flag UsernameReadOnly
      * @param knownLogins map of known logins: the keys are usernames, the values are passwords.
      */
-    void setKnownLogins( const QMap<QString, QString>& knownLogins );
+    void setKnownLogins(const QMap<QString, QString> &knownLogins);
 
     /**
      * @internal
@@ -275,7 +273,7 @@ Q_SIGNALS:
      * @param password  the entered password
      * @param keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
      */
-    void gotPassword( const QString& password , bool keep );
+    void gotPassword(const QString &password, bool keep);
 
     /**
      * emitted when the dialog has been accepted, and ShowUsernameLine was set on the constructor
@@ -283,7 +281,7 @@ Q_SIGNALS:
      * @param password  the entered password
      * @param keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
      */
-    void gotUsernameAndPassword( const QString& username, const QString& password , bool keep );
+    void gotUsernameAndPassword(const QString &username, const QString &password, bool keep);
 
 protected:
     /**
@@ -293,17 +291,16 @@ protected:
      */
     virtual bool checkPassword();
 
-
 private:
     Q_PRIVATE_SLOT(d, void actuallyAccept())
-    Q_PRIVATE_SLOT(d, void activated( const QString& userName ))
+    Q_PRIVATE_SLOT(d, void activated(const QString &userName))
     Q_PRIVATE_SLOT(d, void updateFields())
 
 private:
     class KPasswordDialogPrivate;
     friend class KPasswordDialogPrivate;
-    KPasswordDialogPrivate* const d;
-    
+    KPasswordDialogPrivate *const d;
+
     Q_DISABLE_COPY(KPasswordDialog)
 };
 

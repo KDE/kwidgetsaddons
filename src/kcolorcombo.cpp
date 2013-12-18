@@ -131,7 +131,6 @@ QSize KColorComboDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
     return QSize(100, option.fontMetrics.height() + 2 * FrameMargin);
 }
 
-
 static const uchar standardPalette[][4] = {
     { 255, 255, 255 }, // white
     { 192, 192, 192 }, // light gray
@@ -219,8 +218,7 @@ void KColorComboPrivate::setCustomColor(const QColor &color, bool lookupInPreset
     q->setItemData(0, customColor, KColorComboDelegate::ColorRole);
 }
 
-
-KColorCombo::KColorCombo( QWidget *parent )
+KColorCombo::KColorCombo(QWidget *parent)
     : QComboBox(parent), d(new KColorComboPrivate(this))
 {
     setItemDelegate(new KColorComboDelegate(this));
@@ -232,17 +230,16 @@ KColorCombo::KColorCombo( QWidget *parent )
     // select the white color
     setCurrentIndex(1);
     d->_k_slotActivated(1);
-    
+
     setMaxVisibleItems(13);
 }
-
 
 KColorCombo::~KColorCombo()
 {
     delete d;
 }
 
-void KColorCombo::setColors( const QList<QColor> &colors )
+void KColorCombo::setColors(const QList<QColor> &colors)
 {
     clear();
     d->colorList = colors;
@@ -255,14 +252,14 @@ QList<QColor> KColorCombo::colors() const
         QList<QColor> list;
         for (int i = 0; i < STANDARD_PALETTE_SIZE; ++i) {
             list += standardColor(i);
-    }
+        }
         return list;
     } else {
         return d->colorList;
     }
 }
 
-void KColorCombo::setColor( const QColor &col )
+void KColorCombo::setColor(const QColor &col)
 {
     if (!col.isValid()) {
         return;
@@ -277,7 +274,7 @@ void KColorCombo::setColor( const QColor &col )
 
 QColor KColorCombo::color() const
 {
-  return d->internalcolor;
+    return d->internalcolor;
 }
 
 bool KColorCombo::isCustomColor() const

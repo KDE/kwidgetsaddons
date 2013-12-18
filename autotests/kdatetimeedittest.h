@@ -26,24 +26,24 @@ class KDateTimeEdit;
 
 class KDateTimeEditTest : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
 private Q_SLOTS:
-  void testDefaults();
-  void testValidNull();
-  void testDateTimeRange();
-  void testOptions();
-  void testDateDisplayFormat();
-  void testDateList();
-  void testTimeListInterval();
-  void testTimeList();
-  void testTimeDisplayFormat();
-  void testCalendarSystem();
-  void testTimeSpec();
+    void testDefaults();
+    void testValidNull();
+    void testDateTimeRange();
+    void testOptions();
+    void testDateDisplayFormat();
+    void testDateList();
+    void testTimeListInterval();
+    void testTimeList();
+    void testTimeDisplayFormat();
+    void testCalendarSystem();
+    void testTimeSpec();
 
 private:
 
-  KDateTimeEdit* m_edit;
+    KDateTimeEdit *m_edit;
 };
 
 #endif // KDATECOMBOBOXTEST_H

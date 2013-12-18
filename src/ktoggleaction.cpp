@@ -31,81 +31,79 @@
 
 class KToggleAction::Private
 {
-  public:
-    Private( KToggleAction *_parent )
-      : parent( _parent ), checkedGuiItem( 0L )
+public:
+    Private(KToggleAction *_parent)
+        : parent(_parent), checkedGuiItem(0L)
     {
     }
 
     ~Private()
     {
-      delete checkedGuiItem;
+        delete checkedGuiItem;
     }
 
     void init()
     {
-      parent->setCheckable( true );
-      connect( parent, SIGNAL(toggled(bool)),
-               parent, SLOT(slotToggled(bool)) );
+        parent->setCheckable(true);
+        connect(parent, SIGNAL(toggled(bool)),
+                parent, SLOT(slotToggled(bool)));
     }
 
-    KToggleAction* parent;
-    KGuiItem* checkedGuiItem;
+    KToggleAction *parent;
+    KGuiItem *checkedGuiItem;
 };
 
-
-KToggleAction::KToggleAction( QObject *parent )
-  : QAction( parent ),
-    d( new Private( this ) )
+KToggleAction::KToggleAction(QObject *parent)
+    : QAction(parent),
+      d(new Private(this))
 {
-  d->init();
+    d->init();
 }
 
-KToggleAction::KToggleAction( const QString & text, QObject *parent )
-  : QAction(parent),
-    d( new Private( this ) )
+KToggleAction::KToggleAction(const QString &text, QObject *parent)
+    : QAction(parent),
+      d(new Private(this))
 {
-  setText(text);
-  d->init();
+    setText(text);
+    d->init();
 }
 
-KToggleAction::KToggleAction( const QIcon & icon, const QString & text, QObject *parent )
-  : QAction(parent),
-    d( new Private( this ) )
+KToggleAction::KToggleAction(const QIcon &icon, const QString &text, QObject *parent)
+    : QAction(parent),
+      d(new Private(this))
 {
-  setIcon(icon);
-  setText(text);
-  d->init();
+    setIcon(icon);
+    setText(text);
+    d->init();
 }
 
 KToggleAction::~KToggleAction()
 {
-  delete d;
+    delete d;
 }
 
-
-void KToggleAction::setCheckedState( const KGuiItem& checkedItem )
+void KToggleAction::setCheckedState(const KGuiItem &checkedItem)
 {
-  delete d->checkedGuiItem;
-  d->checkedGuiItem = new KGuiItem( checkedItem );
+    delete d->checkedGuiItem;
+    d->checkedGuiItem = new KGuiItem(checkedItem);
 }
 
-void KToggleAction::slotToggled( bool )
+void KToggleAction::slotToggled(bool)
 {
-  if ( d->checkedGuiItem ) {
-    QString string = d->checkedGuiItem->text();
-    d->checkedGuiItem->setText( text() );
-    setText( string );
+    if (d->checkedGuiItem) {
+        QString string = d->checkedGuiItem->text();
+        d->checkedGuiItem->setText(text());
+        setText(string);
 
-    string = d->checkedGuiItem->toolTip();
-    d->checkedGuiItem->setToolTip( toolTip() );
-    setToolTip( string );
+        string = d->checkedGuiItem->toolTip();
+        d->checkedGuiItem->setToolTip(toolTip());
+        setToolTip(string);
 
-    if ( d->checkedGuiItem->hasIcon() ) {
-      QIcon icon = d->checkedGuiItem->icon();
-      d->checkedGuiItem->setIcon(this->icon());
-      QAction::setIcon( icon );
+        if (d->checkedGuiItem->hasIcon()) {
+            QIcon icon = d->checkedGuiItem->icon();
+            d->checkedGuiItem->setIcon(this->icon());
+            QAction::setIcon(icon);
+        }
     }
-  }
 }
 

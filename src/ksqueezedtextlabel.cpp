@@ -30,7 +30,8 @@ class KSqueezedTextLabelPrivate
 {
 public:
 
-    void _k_copyFullText() {
+    void _k_copyFullText()
+    {
         QApplication::clipboard()->setText(fullText);
     }
 
@@ -38,114 +39,114 @@ public:
     Qt::TextElideMode elideMode;
 };
 
-KSqueezedTextLabel::KSqueezedTextLabel(const QString &text , QWidget *parent)
- : QLabel (parent),
-  d(new KSqueezedTextLabelPrivate)
+KSqueezedTextLabel::KSqueezedTextLabel(const QString &text, QWidget *parent)
+    : QLabel(parent),
+      d(new KSqueezedTextLabelPrivate)
 {
-  setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
-  d->fullText = text;
-  d->elideMode = Qt::ElideMiddle;
-  squeezeTextToLabel();
+    setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
+    d->fullText = text;
+    d->elideMode = Qt::ElideMiddle;
+    squeezeTextToLabel();
 }
 
 KSqueezedTextLabel::KSqueezedTextLabel(QWidget *parent)
- : QLabel (parent),
-  d(new KSqueezedTextLabelPrivate)
+    : QLabel(parent),
+      d(new KSqueezedTextLabelPrivate)
 {
-  setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
-  d->elideMode = Qt::ElideMiddle;
+    setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
+    d->elideMode = Qt::ElideMiddle;
 }
 
 KSqueezedTextLabel::~KSqueezedTextLabel()
 {
-  delete d;
+    delete d;
 }
 
 void KSqueezedTextLabel::resizeEvent(QResizeEvent *)
 {
-  squeezeTextToLabel();
+    squeezeTextToLabel();
 }
 
 QSize KSqueezedTextLabel::minimumSizeHint() const
 {
-  QSize sh = QLabel::minimumSizeHint();
-  sh.setWidth(-1);
-  return sh;
+    QSize sh = QLabel::minimumSizeHint();
+    sh.setWidth(-1);
+    return sh;
 }
 
 QSize KSqueezedTextLabel::sizeHint() const
 {
-  int maxWidth = QApplication::desktop()->screenGeometry(this).width() * 3 / 4;
-  QFontMetrics fm(fontMetrics());
-  int textWidth = fm.width(d->fullText);
-  if (textWidth > maxWidth) {
-    textWidth = maxWidth;
-  }
-  return QSize(textWidth, QLabel::sizeHint().height());
+    int maxWidth = QApplication::desktop()->screenGeometry(this).width() * 3 / 4;
+    QFontMetrics fm(fontMetrics());
+    int textWidth = fm.width(d->fullText);
+    if (textWidth > maxWidth) {
+        textWidth = maxWidth;
+    }
+    return QSize(textWidth, QLabel::sizeHint().height());
 }
 
 void KSqueezedTextLabel::setText(const QString &text)
 {
-  d->fullText = text;
-  squeezeTextToLabel();
+    d->fullText = text;
+    squeezeTextToLabel();
 }
 
 void KSqueezedTextLabel::clear()
 {
-  d->fullText.clear();
-  QLabel::clear();
+    d->fullText.clear();
+    QLabel::clear();
 }
 
 void KSqueezedTextLabel::squeezeTextToLabel()
 {
-  QFontMetrics fm(fontMetrics());
-  int labelWidth = size().width();
-  QStringList squeezedLines;
-  bool squeezed = false;
-  Q_FOREACH(const QString& line, d->fullText.split(QLatin1Char('\n'))) {
-    int lineWidth = fm.width(line);
-    if (lineWidth > labelWidth) {
-      squeezed = true;
-      squeezedLines << fm.elidedText(line, d->elideMode, labelWidth);
-    } else {
-      squeezedLines << line;
+    QFontMetrics fm(fontMetrics());
+    int labelWidth = size().width();
+    QStringList squeezedLines;
+    bool squeezed = false;
+    Q_FOREACH (const QString &line, d->fullText.split(QLatin1Char('\n'))) {
+        int lineWidth = fm.width(line);
+        if (lineWidth > labelWidth) {
+            squeezed = true;
+            squeezedLines << fm.elidedText(line, d->elideMode, labelWidth);
+        } else {
+            squeezedLines << line;
+        }
     }
-  }
 
-  if (squeezed) {
-    QLabel::setText(squeezedLines.join(QStringLiteral("\n")));
-    setToolTip(d->fullText);
-  } else {
-    QLabel::setText(d->fullText);
-    setToolTip(QString());
-  }
+    if (squeezed) {
+        QLabel::setText(squeezedLines.join(QStringLiteral("\n")));
+        setToolTip(d->fullText);
+    } else {
+        QLabel::setText(d->fullText);
+        setToolTip(QString());
+    }
 }
 
 void KSqueezedTextLabel::setAlignment(Qt::Alignment alignment)
 {
-  // save fullText and restore it
-  QString tmpFull(d->fullText);
-  QLabel::setAlignment(alignment);
-  d->fullText = tmpFull;
+    // save fullText and restore it
+    QString tmpFull(d->fullText);
+    QLabel::setAlignment(alignment);
+    d->fullText = tmpFull;
 }
 
 Qt::TextElideMode KSqueezedTextLabel::textElideMode() const
 {
-  return d->elideMode;
+    return d->elideMode;
 }
 
 void KSqueezedTextLabel::setTextElideMode(Qt::TextElideMode mode)
 {
-  d->elideMode = mode;
-  squeezeTextToLabel();
+    d->elideMode = mode;
+    squeezeTextToLabel();
 }
 
 QString KSqueezedTextLabel::fullText() const
 {
-  return d->fullText;
+    return d->fullText;
 }
 
-void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent* ev)
+void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
 {
     // We want to reimplement "Copy" to include the elided text.
     // But this means reimplementing the full popup menu, so no more
@@ -161,7 +162,7 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent* ev)
     if (showCustomPopup) {
         QMenu menu(this);
 
-        QAction* act = new QAction(tr("&Copy Full Text"), &menu);
+        QAction *act = new QAction(tr("&Copy Full Text"), &menu);
         connect(act, SIGNAL(triggered()), this, SLOT(_k_copyFullText()));
         menu.addAction(act);
 
@@ -172,14 +173,14 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent* ev)
     }
 }
 
-void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent* ev)
+void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent *ev)
 {
 #if QT_VERSION >= 0x040700
     if (QApplication::clipboard()->supportsSelection() &&
-        textInteractionFlags() != Qt::NoTextInteraction &&
-        ev->button() == Qt::LeftButton &&
-        !d->fullText.isEmpty() &&
-        hasSelectedText()) {
+            textInteractionFlags() != Qt::NoTextInteraction &&
+            ev->button() == Qt::LeftButton &&
+            !d->fullText.isEmpty() &&
+            hasSelectedText()) {
         // Expand "..." when selecting with the mouse
         QString txt = selectedText();
         const QChar ellipsisChar(0x2026); // from qtextengine.cpp
@@ -194,7 +195,7 @@ void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent* ev)
             txt = d->fullText;
             // Strip markup tags
             if (textFormat() == Qt::RichText
-                || (textFormat() == Qt::AutoText && Qt::mightBeRichText(txt))) {
+                    || (textFormat() == Qt::AutoText && Qt::mightBeRichText(txt))) {
                 txt.replace(QRegExp(QStringLiteral("<[^>]*>")), QStringLiteral(""));
                 // account for stripped characters
                 charsAfterSelection -= d->fullText.length() - txt.length();

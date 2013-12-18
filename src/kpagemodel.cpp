@@ -26,7 +26,7 @@ KPageModelPrivate::~KPageModelPrivate()
 {
 }
 
-KPageModel::KPageModel( QObject *parent )
+KPageModel::KPageModel(QObject *parent)
     : QAbstractItemModel(parent), d_ptr(0)
 {
 }

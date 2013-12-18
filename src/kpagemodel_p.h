@@ -25,12 +25,11 @@
 class KPageModelPrivate
 {
     Q_DECLARE_PUBLIC(KPageModel)
-    public:
-        virtual ~KPageModelPrivate();
+public:
+    virtual ~KPageModelPrivate();
 
-    protected:
-        KPageModel *q_ptr;
+protected:
+    KPageModel *q_ptr;
 };
 
 #endif // KPAGEMODEL_P_H
-// vim: sw=4 sts=4 et tw=100

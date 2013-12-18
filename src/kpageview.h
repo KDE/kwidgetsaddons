@@ -59,12 +59,12 @@ class QAbstractItemModel;
  */
 class KWIDGETSADDONS_EXPORT KPageView : public QWidget
 {
-  Q_OBJECT
-  Q_ENUMS( FaceType )
-  Q_PROPERTY( FaceType faceType READ faceType WRITE setFaceType )
+    Q_OBJECT
+    Q_ENUMS(FaceType)
+    Q_PROPERTY(FaceType faceType READ faceType WRITE setFaceType)
     Q_DECLARE_PRIVATE(KPageView)
 
-  public:
+public:
     /**
      * This enum is used to decide which type of navigation view
      * shall be used in the page view.
@@ -82,19 +82,18 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
      *
      * @li Tabbed - A tab widget is used as navigation view.
      */
-    enum FaceType
-    {
-      Auto,
-      Plain,
-      List,
-      Tree,
-      Tabbed
+    enum FaceType {
+        Auto,
+        Plain,
+        List,
+        Tree,
+        Tabbed
     };
 
     /**
      * Creates a page view with given parent.
      */
-    explicit KPageView( QWidget *parent = 0 );
+    explicit KPageView(QWidget *parent = 0);
 
     /**
      * Destroys the page view.
@@ -111,12 +110,12 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
     /**
      * Returns the model of the page view.
      */
-    QAbstractItemModel* model() const;
+    QAbstractItemModel *model() const;
 
     /**
      * Sets the face type of the page view.
      */
-    void setFaceType( FaceType faceType );
+    void setFaceType(FaceType faceType);
 
     /**
      * Returns the face type of the page view.
@@ -127,7 +126,7 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
      * Sets the page with @param index to be the current page and emits
      * the @see currentPageChanged signal.
      */
-    void setCurrentPage( const QModelIndex &index );
+    void setCurrentPage(const QModelIndex &index);
 
     /**
      * Returns the index for the current page or an invalid index
@@ -139,27 +138,27 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
      * Sets the item @param delegate which can be used customize
      * the page view.
      */
-    void setItemDelegate( QAbstractItemDelegate *delegate );
+    void setItemDelegate(QAbstractItemDelegate *delegate);
 
     /**
      * Returns the item delegate of the page view.
      */
-    QAbstractItemDelegate* itemDelegate() const;
+    QAbstractItemDelegate *itemDelegate() const;
 
     /**
      * Sets the @p widget which will be shown when a page is selected
      * that has no own widget set.
      */
-    void setDefaultWidget( QWidget *widget );
+    void setDefaultWidget(QWidget *widget);
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page changes.
      * The previous page index is replaced by the current index.
      */
-    void currentPageChanged( const QModelIndex &current, const QModelIndex &previous );
+    void currentPageChanged(const QModelIndex &current, const QModelIndex &previous);
 
-  protected:
+protected:
     /**
      * Returns the navigation view, depending on the current
      * face type.
@@ -167,7 +166,7 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
      * This method can be reimplemented to provide custom
      * navigation views.
      */
-    virtual QAbstractItemView* createView();
+    virtual QAbstractItemView *createView();
 
     /**
      * Returns whether the page header should be visible.
@@ -186,14 +185,14 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
      */
     virtual Qt::Alignment viewPosition() const;
 
-        KPageView(KPageViewPrivate &dd, QWidget *parent);
-        KPageViewPrivate *const d_ptr;
+    KPageView(KPageViewPrivate &dd, QWidget *parent);
+    KPageViewPrivate *const d_ptr;
 
-    private:
-        Q_PRIVATE_SLOT(d_func(), void _k_rebuildGui())
-        Q_PRIVATE_SLOT(d_func(), void _k_modelChanged())
-        Q_PRIVATE_SLOT(d_func(), void _k_pageSelected(const QItemSelection &, const QItemSelection &))
-        Q_PRIVATE_SLOT(d_func(), void _k_dataChanged(const QModelIndex &, const QModelIndex &))
+private:
+    Q_PRIVATE_SLOT(d_func(), void _k_rebuildGui())
+    Q_PRIVATE_SLOT(d_func(), void _k_modelChanged())
+    Q_PRIVATE_SLOT(d_func(), void _k_pageSelected(const QItemSelection &, const QItemSelection &))
+    Q_PRIVATE_SLOT(d_func(), void _k_dataChanged(const QModelIndex &, const QModelIndex &))
 };
 
 #endif

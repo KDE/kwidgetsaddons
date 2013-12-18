@@ -36,19 +36,19 @@
 class KMessageWidgetPrivate
 {
 public:
-    void init(KMessageWidget*);
+    void init(KMessageWidget *);
 
-    KMessageWidget* q;
-    QFrame* content;
-    QLabel* iconLabel;
-    QLabel* textLabel;
-    QToolButton* closeButton;
-    QTimeLine* timeLine;
+    KMessageWidget *q;
+    QFrame *content;
+    QLabel *iconLabel;
+    QLabel *textLabel;
+    QToolButton *closeButton;
+    QTimeLine *timeLine;
     QIcon icon;
 
     KMessageWidget::MessageType messageType;
     bool wordWrap;
-    QList<QToolButton*> buttons;
+    QList<QToolButton *> buttons;
     QPixmap contentSnapShot;
 
     void createLayout();
@@ -85,7 +85,7 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     QObject::connect(textLabel, SIGNAL(linkActivated(QString)), q, SIGNAL(linkActivated(QString)));
     QObject::connect(textLabel, SIGNAL(linkHovered(QString)), q, SIGNAL(linkHovered(QString)));
 
-    QAction* closeAction = new QAction(q);
+    QAction *closeAction = new QAction(q);
     closeAction->setText(q->tr("&Close"));
     closeAction->setToolTip(q->tr("Close message"));
     closeAction->setIcon(q->style()->standardIcon(QStyle::SP_DialogCloseButton));
@@ -108,8 +108,8 @@ void KMessageWidgetPrivate::createLayout()
     qDeleteAll(buttons);
     buttons.clear();
 
-    Q_FOREACH(QAction* action, q->actions()) {
-        QToolButton* button = new QToolButton(content);
+    Q_FOREACH (QAction *action, q->actions()) {
+        QToolButton *button = new QToolButton(content);
         button->setDefaultAction(action);
         button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         buttons.append(button);
@@ -121,14 +121,14 @@ void KMessageWidgetPrivate::createLayout()
     closeButton->setAutoRaise(buttons.isEmpty());
 
     if (wordWrap) {
-        QGridLayout* layout = new QGridLayout(content);
+        QGridLayout *layout = new QGridLayout(content);
         // Set alignment to make sure icon does not move down if text wraps
         layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
         layout->addWidget(textLabel, 0, 1);
 
-        QHBoxLayout* buttonLayout = new QHBoxLayout;
+        QHBoxLayout *buttonLayout = new QHBoxLayout;
         buttonLayout->addStretch();
-        Q_FOREACH(QToolButton* button, buttons) {
+        Q_FOREACH (QToolButton *button, buttons) {
             // For some reason, calling show() is necessary if wordwrap is true,
             // otherwise the buttons do not show up. It is not needed if
             // wordwrap is false.
@@ -138,11 +138,11 @@ void KMessageWidgetPrivate::createLayout()
         buttonLayout->addWidget(closeButton);
         layout->addItem(buttonLayout, 1, 0, 1, 2);
     } else {
-        QHBoxLayout* layout = new QHBoxLayout(content);
+        QHBoxLayout *layout = new QHBoxLayout(content);
         layout->addWidget(iconLabel);
         layout->addWidget(textLabel);
 
-        Q_FOREACH(QToolButton* button, buttons) {
+        Q_FOREACH (QToolButton *button, buttons) {
             layout->addWidget(button);
         }
 
@@ -201,18 +201,17 @@ int KMessageWidgetPrivate::bestContentHeight() const
     return height;
 }
 
-
 //---------------------------------------------------------------------
 // KMessageWidget
 //---------------------------------------------------------------------
-KMessageWidget::KMessageWidget(QWidget* parent)
+KMessageWidget::KMessageWidget(QWidget *parent)
     : QFrame(parent)
     , d(new KMessageWidgetPrivate)
 {
     d->init(this);
 }
 
-KMessageWidget::KMessageWidget(const QString& text, QWidget* parent)
+KMessageWidget::KMessageWidget(const QString &text, QWidget *parent)
     : QFrame(parent)
     , d(new KMessageWidgetPrivate)
 {
@@ -230,7 +229,7 @@ QString KMessageWidget::text() const
     return d->textLabel->text();
 }
 
-void KMessageWidget::setText(const QString& text)
+void KMessageWidget::setText(const QString &text)
 {
     d->textLabel->setText(text);
     updateGeometry();
@@ -246,9 +245,9 @@ static QColor darkShade(QColor c)
     qreal contrast = 0.7; // taken from kcolorscheme for the dark shade
 
     qreal darkAmount;
-    if (c.lightnessF() < 0.006) /* too dark */ {
+    if (c.lightnessF() < 0.006) { /* too dark */
         darkAmount = 0.02 + 0.40 * contrast;
-    } else if (c.lightnessF() > 0.93) /* too bright */ {
+    } else if (c.lightnessF() > 0.93) { /* too bright */
         darkAmount = -0.06 - 0.60 * contrast;
     } else {
         darkAmount = (-c.lightnessF()) * (0.55 + contrast * 0.35);
@@ -287,24 +286,24 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
 
     d->content->setStyleSheet(
         QString(QLatin1String(".QFrame {"
-            "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,"
-            "    stop: 0 %1,"
-            "    stop: 0.1 %2,"
-            "    stop: 1.0 %3);"
-            "border-radius: 5px;"
-            "border: 1px solid %4;"
-            "margin: %5px;"
-            "}"
-            ".QLabel { color: %6; }"
-            ))
+                              "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,"
+                              "    stop: 0 %1,"
+                              "    stop: 0.1 %2,"
+                              "    stop: 1.0 %3);"
+                              "border-radius: 5px;"
+                              "border: 1px solid %4;"
+                              "margin: %5px;"
+                              "}"
+                              ".QLabel { color: %6; }"
+                             ))
         .arg(bg0.name())
         .arg(bg1.name())
         .arg(bg2.name())
         .arg(border.name())
         // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
-        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, this) -1)
+        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, this) - 1)
         .arg(fg.name())
-        );
+    );
 }
 
 QSize KMessageWidget::sizeHint() const
@@ -319,7 +318,7 @@ QSize KMessageWidget::minimumSizeHint() const
     return d->content->minimumSizeHint();
 }
 
-bool KMessageWidget::event(QEvent* event)
+bool KMessageWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::Polish && !d->content->layout()) {
         d->createLayout();
@@ -327,7 +326,7 @@ bool KMessageWidget::event(QEvent* event)
     return QFrame::event(event);
 }
 
-void KMessageWidget::resizeEvent(QResizeEvent* event)
+void KMessageWidget::resizeEvent(QResizeEvent *event)
 {
     QFrame::resizeEvent(event);
 
@@ -342,7 +341,7 @@ int KMessageWidget::heightForWidth(int width) const
     return d->content->heightForWidth(width);
 }
 
-void KMessageWidget::paintEvent(QPaintEvent* event)
+void KMessageWidget::paintEvent(QPaintEvent *event)
 {
     QFrame::paintEvent(event);
     if (d->timeLine->state() == QTimeLine::Running) {
@@ -384,13 +383,13 @@ void KMessageWidget::setCloseButtonVisible(bool show)
     updateGeometry();
 }
 
-void KMessageWidget::addAction(QAction* action)
+void KMessageWidget::addAction(QAction *action)
 {
     QFrame::addAction(action);
     d->updateLayout();
 }
 
-void KMessageWidget::removeAction(QAction* action)
+void KMessageWidget::removeAction(QAction *action)
 {
     QFrame::removeAction(action);
     d->updateLayout();
@@ -402,7 +401,6 @@ void KMessageWidget::animatedShow()
         show();
         return;
     }
-
 
     if (isVisible()) {
         return;
@@ -446,7 +444,7 @@ QIcon KMessageWidget::icon() const
     return d->icon;
 }
 
-void KMessageWidget::setIcon(const QIcon& icon)
+void KMessageWidget::setIcon(const QIcon &icon)
 {
     d->icon = icon;
     if (d->icon.isNull()) {

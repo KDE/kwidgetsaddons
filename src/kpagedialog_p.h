@@ -27,47 +27,46 @@
 class KPageDialogPrivate
 {
     Q_DECLARE_PUBLIC(KPageDialog)
-    protected:
-        KPageDialogPrivate(KPageDialog *parent)
-            : q_ptr(parent),
-              mPageWidget(0),
-              mButtonBox(0)
-        {
+protected:
+    KPageDialogPrivate(KPageDialog *parent)
+        : q_ptr(parent),
+          mPageWidget(0),
+          mButtonBox(0)
+    {
+    }
+
+    virtual ~KPageDialogPrivate()
+    {
+    }
+
+    KPageDialog *const q_ptr;
+    KPageWidget *mPageWidget;
+    QDialogButtonBox *mButtonBox;
+
+    void init()
+    {
+        Q_Q(KPageDialog);
+        delete q->layout();
+
+        QVBoxLayout *layout = new QVBoxLayout;
+        q->setLayout(layout);
+
+        if (mPageWidget) {
+            q->connect(mPageWidget, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)),
+                       q, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)));
+            q->connect(mPageWidget, SIGNAL(pageRemoved(KPageWidgetItem *)),
+                       q, SIGNAL(pageRemoved(KPageWidgetItem *)));
+            layout->addWidget(mPageWidget);
+        } else {
+            layout->addStretch();
         }
 
-        virtual ~KPageDialogPrivate()
-        {
+        if (mButtonBox) {
+            q->connect(mButtonBox, SIGNAL(accepted()), q, SLOT(accept()));
+            q->connect(mButtonBox, SIGNAL(rejected()), q, SLOT(reject()));
+            layout->addWidget(mButtonBox);
         }
-
-        KPageDialog * const q_ptr;
-        KPageWidget *mPageWidget;
-        QDialogButtonBox *mButtonBox;
-
-        void init()
-        {
-            Q_Q(KPageDialog);
-            delete q->layout();
-
-            QVBoxLayout *layout = new QVBoxLayout;
-            q->setLayout(layout);
-
-            if (mPageWidget) {
-                q->connect(mPageWidget, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)),
-                        q, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)));
-                q->connect(mPageWidget, SIGNAL(pageRemoved(KPageWidgetItem *)), 
-                        q, SIGNAL(pageRemoved(KPageWidgetItem *)));
-                layout->addWidget(mPageWidget);
-            } else {
-                layout->addStretch();
-            }
-
-            if (mButtonBox) {
-                q->connect(mButtonBox, SIGNAL(accepted()), q, SLOT(accept()));
-                q->connect(mButtonBox, SIGNAL(rejected()), q, SLOT(reject()));
-                layout->addWidget(mButtonBox);
-            }
-        }
+    }
 };
 
 #endif // PAGED_KPAGEDIALOG_P_H
-// vim: sw=4 sts=4 et tw=100

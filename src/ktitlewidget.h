@@ -177,7 +177,7 @@ public Q_SLOTS:
      * @param alignment can be used to display it also left.
      * @see pixmap()
      */
-    void setPixmap(const QIcon& icon, ImageAlignment alignment = ImageRight);
+    void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
     /**
      * @param pixmap the icon to display in the header. The pixmap is by default right, but
@@ -200,7 +200,7 @@ protected:
 
 private:
     class Private;
-    Private* const d;
+    Private *const d;
 
     Q_PRIVATE_SLOT(d, void _k_timeoutFinished())
     Q_DISABLE_COPY(KTitleWidget)

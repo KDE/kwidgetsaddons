@@ -39,7 +39,7 @@ public:
     virtual void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result) = 0;
     virtual void saveDontShowAgainContinue(const QString &dontShowAgainName) = 0;
     virtual void enableAllMessages() = 0;
-    virtual void enableMessage(const QString& dontShowAgainName) = 0;
+    virtual void enableMessage(const QString &dontShowAgainName) = 0;
     virtual void setConfig(KConfig *) = 0;
 };
 

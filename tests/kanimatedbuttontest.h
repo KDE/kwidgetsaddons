@@ -28,7 +28,7 @@ class KAnimatedButton;
 
 class AnimationGroup : public QGroupBox
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     AnimationGroup(const QString &name, int size, QWidget *parent = 0);
@@ -39,7 +39,7 @@ private:
 
 class MainWindow : public QWidget
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
     MainWindow(QWidget *parent = 0);

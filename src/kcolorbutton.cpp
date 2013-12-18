@@ -50,7 +50,7 @@ public:
 
     QPointer<QColorDialog> dialogPtr;
 
-    void initStyleOption(QStyleOptionButton* opt) const;    
+    void initStyleOption(QStyleOptionButton *opt) const;
 };
 
 /////////////////////////////////////////////////////////////////////
@@ -64,25 +64,28 @@ void _k_populateMimeData(QMimeData *mimeData, const QColor &color)
 
 bool _k_canDecode(const QMimeData *mimeData)
 {
-    if (mimeData->hasColor())
+    if (mimeData->hasColor()) {
         return true;
+    }
     if (mimeData->hasText()) {
-        const QString colorName=mimeData->text();
-        if ((colorName.length() >= 4) && (colorName[0] == QLatin1Char('#')))
+        const QString colorName = mimeData->text();
+        if ((colorName.length() >= 4) && (colorName[0] == QLatin1Char('#'))) {
             return true;
+        }
     }
     return false;
 }
 
 QColor _k_fromMimeData(const QMimeData *mimeData)
 {
-    if (mimeData->hasColor())
+    if (mimeData->hasColor()) {
         return mimeData->colorData().value<QColor>();
-    if (_k_canDecode(mimeData))
+    }
+    if (_k_canDecode(mimeData)) {
         return QColor(mimeData->text());
+    }
     return QColor();
 }
-
 
 QDrag *_k_createDrag(const QColor &color, QObject *dragsource)
 {
@@ -90,70 +93,69 @@ QDrag *_k_createDrag(const QColor &color, QObject *dragsource)
     QMimeData *mime = new QMimeData;
     _k_populateMimeData(mime, color);
     drag->setMimeData(mime);
-    QPixmap colorpix( 25, 20 );
-    colorpix.fill( color );
-    QPainter p( &colorpix );
-    p.setPen( Qt::black );
-    p.drawRect(0,0,24,19);
+    QPixmap colorpix(25, 20);
+    colorpix.fill(color);
+    QPainter p(&colorpix);
+    p.setPen(Qt::black);
+    p.drawRect(0, 0, 24, 19);
     p.end();
     drag->setPixmap(colorpix);
-    drag->setHotSpot(QPoint(-5,-7));
+    drag->setHotSpot(QPoint(-5, -7));
     return drag;
 }
 /////////////////////////////////////////////////////////////////////
 
-
 KColorButton::KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
     : q(q)
 {
-  m_bdefaultColor = false;
-  m_alphaChannel = false;
-  q->setAcceptDrops(true);
+    m_bdefaultColor = false;
+    m_alphaChannel = false;
+    q->setAcceptDrops(true);
 
-  connect(q, SIGNAL(clicked()), q, SLOT(_k_chooseColor()));
+    connect(q, SIGNAL(clicked()), q, SLOT(_k_chooseColor()));
 }
 
-KColorButton::KColorButton( QWidget *parent )
-  : QPushButton( parent )
-  , d( new KColorButtonPrivate(this) )
+KColorButton::KColorButton(QWidget *parent)
+    : QPushButton(parent)
+    , d(new KColorButtonPrivate(this))
 {
 }
 
-KColorButton::KColorButton( const QColor &c, QWidget *parent )
-  : QPushButton( parent )
-  , d( new KColorButtonPrivate(this) )
+KColorButton::KColorButton(const QColor &c, QWidget *parent)
+    : QPushButton(parent)
+    , d(new KColorButtonPrivate(this))
 {
-  d->col = c;
+    d->col = c;
 }
 
-KColorButton::KColorButton( const QColor &c, const QColor &defaultColor, QWidget *parent )
-  : QPushButton( parent )
-  , d( new KColorButtonPrivate(this) )
+KColorButton::KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent)
+    : QPushButton(parent)
+    , d(new KColorButtonPrivate(this))
 {
-  d->col = c;
-  setDefaultColor(defaultColor);
+    d->col = c;
+    setDefaultColor(defaultColor);
 }
 
 KColorButton::~KColorButton()
 {
-  delete d;
+    delete d;
 }
 
 QColor KColorButton::color() const
 {
-  return d->col;
+    return d->col;
 }
 
-void KColorButton::setColor( const QColor &c )
+void KColorButton::setColor(const QColor &c)
 {
-  if ( d->col != c ) {
-    d->col = c;
-    update();
-    emit changed( d->col );
-  }
+    if (d->col != c) {
+        d->col = c;
+        update();
+        emit changed(d->col);
+    }
 }
 
-void KColorButton::setAlphaChannelEnabled( bool alpha )
+void KColorButton::setAlphaChannelEnabled(bool alpha)
 {
     d->m_alphaChannel = alpha;
 }
@@ -165,75 +167,76 @@ bool KColorButton::isAlphaChannelEnabled() const
 
 QColor KColorButton::defaultColor() const
 {
-  return d->m_defaultColor;
+    return d->m_defaultColor;
 }
 
-void KColorButton::setDefaultColor( const QColor &c )
+void KColorButton::setDefaultColor(const QColor &c)
 {
-  d->m_bdefaultColor = c.isValid();
-  d->m_defaultColor = c;
+    d->m_bdefaultColor = c.isValid();
+    d->m_defaultColor = c;
 }
 
-void KColorButton::KColorButtonPrivate::initStyleOption(QStyleOptionButton* opt) const
+void KColorButton::KColorButtonPrivate::initStyleOption(QStyleOptionButton *opt) const
 {
     opt->initFrom(q);
     opt->state |= q->isDown() ? QStyle::State_Sunken : QStyle::State_Raised;
     opt->features = QStyleOptionButton::None;
-    if (q->isDefault())
-      opt->features |= QStyleOptionButton::DefaultButton;
+    if (q->isDefault()) {
+        opt->features |= QStyleOptionButton::DefaultButton;
+    }
     opt->text.clear();
     opt->icon = QIcon();
 }
 
-void KColorButton::paintEvent( QPaintEvent* )
+void KColorButton::paintEvent(QPaintEvent *)
 {
-  QPainter painter(this);
-  QStyle *style = QWidget::style();
+    QPainter painter(this);
+    QStyle *style = QWidget::style();
 
-  //First, we need to draw the bevel.
-  QStyleOptionButton butOpt;
-  d->initStyleOption(&butOpt);
-  style->drawControl( QStyle::CE_PushButtonBevel, &butOpt, &painter, this );
+    //First, we need to draw the bevel.
+    QStyleOptionButton butOpt;
+    d->initStyleOption(&butOpt);
+    style->drawControl(QStyle::CE_PushButtonBevel, &butOpt, &painter, this);
 
-  //OK, now we can muck around with drawing out pretty little color box
-  //First, sort out where it goes
-  QRect labelRect = style->subElementRect( QStyle::SE_PushButtonContents,
-      &butOpt, this );
-  int shift = style->pixelMetric( QStyle::PM_ButtonMargin, &butOpt, this ) / 2;
-  labelRect.adjust(shift, shift, -shift, -shift);
-  int x, y, w, h;
-  labelRect.getRect(&x, &y, &w, &h);
+    //OK, now we can muck around with drawing out pretty little color box
+    //First, sort out where it goes
+    QRect labelRect = style->subElementRect(QStyle::SE_PushButtonContents,
+                                            &butOpt, this);
+    int shift = style->pixelMetric(QStyle::PM_ButtonMargin, &butOpt, this) / 2;
+    labelRect.adjust(shift, shift, -shift, -shift);
+    int x, y, w, h;
+    labelRect.getRect(&x, &y, &w, &h);
 
-  if (isChecked() || isDown()) {
-    x += style->pixelMetric( QStyle::PM_ButtonShiftHorizontal, &butOpt, this );
-    y += style->pixelMetric( QStyle::PM_ButtonShiftVertical, &butOpt, this );
-  }
-
-  QColor fillCol = isEnabled() ? d->col : palette().color(backgroundRole());
-  qDrawShadePanel( &painter, x, y, w, h, palette(), true, 1, NULL);
-  if ( fillCol.isValid() ) {
-    const QRect rect(x+1, y+1, w-2, h-2);
-    if (fillCol.alpha() < 255) {
-        QPixmap chessboardPattern(16, 16);
-        QPainter patternPainter(&chessboardPattern);
-        patternPainter.fillRect(0, 0, 8, 8, Qt::black);
-        patternPainter.fillRect(8, 8, 8, 8, Qt::black);
-        patternPainter.fillRect(0, 8, 8, 8, Qt::white);
-        patternPainter.fillRect(8, 0, 8, 8, Qt::white);
-        patternPainter.end();
-        painter.fillRect(rect, QBrush(chessboardPattern));
+    if (isChecked() || isDown()) {
+        x += style->pixelMetric(QStyle::PM_ButtonShiftHorizontal, &butOpt, this);
+        y += style->pixelMetric(QStyle::PM_ButtonShiftVertical, &butOpt, this);
     }
-    painter.fillRect(rect, fillCol);
-  }
 
-  if ( hasFocus() ) {
-    QRect focusRect = style->subElementRect( QStyle::SE_PushButtonFocusRect, &butOpt, this );
-    QStyleOptionFocusRect focusOpt;
-    focusOpt.init(this);
-    focusOpt.rect            = focusRect;
-    focusOpt.backgroundColor = palette().background().color();
-    style->drawPrimitive( QStyle::PE_FrameFocusRect, &focusOpt, &painter, this );
-  }
+    QColor fillCol = isEnabled() ? d->col : palette().color(backgroundRole());
+    qDrawShadePanel(&painter, x, y, w, h, palette(), true, 1, NULL);
+    if (fillCol.isValid()) {
+        const QRect rect(x + 1, y + 1, w - 2, h - 2);
+        if (fillCol.alpha() < 255) {
+            QPixmap chessboardPattern(16, 16);
+            QPainter patternPainter(&chessboardPattern);
+            patternPainter.fillRect(0, 0, 8, 8, Qt::black);
+            patternPainter.fillRect(8, 8, 8, 8, Qt::black);
+            patternPainter.fillRect(0, 8, 8, 8, Qt::white);
+            patternPainter.fillRect(8, 0, 8, 8, Qt::white);
+            patternPainter.end();
+            painter.fillRect(rect, QBrush(chessboardPattern));
+        }
+        painter.fillRect(rect, fillCol);
+    }
+
+    if (hasFocus()) {
+        QRect focusRect = style->subElementRect(QStyle::SE_PushButtonFocusRect, &butOpt, this);
+        QStyleOptionFocusRect focusOpt;
+        focusOpt.init(this);
+        focusOpt.rect            = focusRect;
+        focusOpt.backgroundColor = palette().background().color();
+        style->drawPrimitive(QStyle::PE_FrameFocusRect, &focusOpt, &painter, this);
+    }
 }
 
 QSize KColorButton::sizeHint() const
@@ -241,7 +244,7 @@ QSize KColorButton::sizeHint() const
     QStyleOptionButton opt;
     d->initStyleOption(&opt);
     return style()->sizeFromContents(QStyle::CT_PushButton, &opt, QSize(40, 15), this).
-	  	expandedTo(QApplication::globalStrut());
+           expandedTo(QApplication::globalStrut());
 }
 
 QSize KColorButton::minimumSizeHint() const
@@ -249,52 +252,51 @@ QSize KColorButton::minimumSizeHint() const
     QStyleOptionButton opt;
     d->initStyleOption(&opt);
     return style()->sizeFromContents(QStyle::CT_PushButton, &opt, QSize(3, 3), this).
-	  	expandedTo(QApplication::globalStrut());
+           expandedTo(QApplication::globalStrut());
 }
 
-void KColorButton::dragEnterEvent( QDragEnterEvent *event)
+void KColorButton::dragEnterEvent(QDragEnterEvent *event)
 {
-  event->setAccepted(_k_canDecode(event->mimeData()) && isEnabled());
+    event->setAccepted(_k_canDecode(event->mimeData()) && isEnabled());
 }
 
-void KColorButton::dropEvent( QDropEvent *event)
+void KColorButton::dropEvent(QDropEvent *event)
 {
-  QColor c = _k_fromMimeData(event->mimeData());
-  if (c.isValid()) {
-    setColor(c);
-  }
+    QColor c = _k_fromMimeData(event->mimeData());
+    if (c.isValid()) {
+        setColor(c);
+    }
 }
 
-void KColorButton::keyPressEvent( QKeyEvent *e )
+void KColorButton::keyPressEvent(QKeyEvent *e)
 {
-  int key = e->key() | e->modifiers();
+    int key = e->key() | e->modifiers();
 
-  if (QKeySequence::keyBindings(QKeySequence::Copy).contains(key)) {
-    QMimeData *mime=new QMimeData;
-    _k_populateMimeData(mime, color());
-    QApplication::clipboard()->setMimeData( mime, QClipboard::Clipboard );
-  } else if (QKeySequence::keyBindings(QKeySequence::Paste).contains(key)) {
-    QColor color = _k_fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
-    setColor( color );
-  }
-  else
-    QPushButton::keyPressEvent( e );
+    if (QKeySequence::keyBindings(QKeySequence::Copy).contains(key)) {
+        QMimeData *mime = new QMimeData;
+        _k_populateMimeData(mime, color());
+        QApplication::clipboard()->setMimeData(mime, QClipboard::Clipboard);
+    } else if (QKeySequence::keyBindings(QKeySequence::Paste).contains(key)) {
+        QColor color = _k_fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
+        setColor(color);
+    } else {
+        QPushButton::keyPressEvent(e);
+    }
 }
 
-void KColorButton::mousePressEvent( QMouseEvent *e)
+void KColorButton::mousePressEvent(QMouseEvent *e)
 {
-  d->mPos = e->pos();
-  QPushButton::mousePressEvent(e);
+    d->mPos = e->pos();
+    QPushButton::mousePressEvent(e);
 }
 
-void KColorButton::mouseMoveEvent( QMouseEvent *e)
+void KColorButton::mouseMoveEvent(QMouseEvent *e)
 {
-  if( (e->buttons() & Qt::LeftButton) &&
-    (e->pos()-d->mPos).manhattanLength() > QApplication::startDragDistance() )
-  {
-    _k_createDrag(color(), this)->start();
-    setDown(false);
-  }
+    if ((e->buttons() & Qt::LeftButton) &&
+            (e->pos() - d->mPos).manhattanLength() > QApplication::startDragDistance()) {
+        _k_createDrag(color(), this)->start();
+        setDown(false);
+    }
 }
 
 void KColorButton::KColorButtonPrivate::_k_chooseColor()

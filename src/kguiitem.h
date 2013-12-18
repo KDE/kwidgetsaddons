@@ -45,24 +45,24 @@ public:
     // icon name, tooltip and whatsthis text get changed behind your back if
     // you do 'setButtonFoo( "Bar" );' It gives the wrong impression that you
     // just change the text.
-    explicit KGuiItem( const QString &text,
-                       const QString &iconName  = QString(),
-                       const QString &toolTip   = QString(),
-                       const QString &whatsThis = QString() );
+    explicit KGuiItem(const QString &text,
+                      const QString &iconName  = QString(),
+                      const QString &toolTip   = QString(),
+                      const QString &whatsThis = QString());
 
-    KGuiItem( const QString &text, const QIcon &icon,
-              const QString &toolTip   = QString(),
-              const QString &whatsThis = QString() );
+    KGuiItem(const QString &text, const QIcon &icon,
+             const QString &toolTip   = QString(),
+             const QString &whatsThis = QString());
 
-    KGuiItem( const KGuiItem &rhs );
-    KGuiItem &operator=( const KGuiItem &rhs );
+    KGuiItem(const KGuiItem &rhs);
+    KGuiItem &operator=(const KGuiItem &rhs);
 
     ~KGuiItem();
 
     QString text() const;
     QString plainText() const;
 
-    QIcon icon( ) const;
+    QIcon icon() const;
 
     QString iconName() const;
     QString toolTip() const;
@@ -70,21 +70,18 @@ public:
     bool isEnabled() const;
     bool hasIcon() const;
 
-    void setText( const QString &text );
-    void setIcon( const QIcon &iconset );
-    void setIconName( const QString &iconName );
-    void setToolTip( const QString &tooltip );
-    void setWhatsThis( const QString &whatsThis );
-    void setEnabled( bool enable );
+    void setText(const QString &text);
+    void setIcon(const QIcon &iconset);
+    void setIconName(const QString &iconName);
+    void setToolTip(const QString &tooltip);
+    void setWhatsThis(const QString &whatsThis);
+    void setEnabled(bool enable);
 
     static void assign(QPushButton *button, const KGuiItem &item);
 private:
     class KGuiItemPrivate;
     KGuiItemPrivate *d; //krazy:exclude=dpointer (implicitly shared)
 };
-
-/* vim: et sw=4
- */
 
 #endif
 

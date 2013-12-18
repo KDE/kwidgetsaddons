@@ -26,7 +26,6 @@
 
 QTEST_MAIN(KDateTimeEditTest)
 
-
 void KDateTimeEditTest::testDefaults()
 {
     m_edit = new KDateTimeEdit(0);

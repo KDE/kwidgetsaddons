@@ -44,14 +44,14 @@ class QColor;
 class KWIDGETSADDONS_EXPORT KLed : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS( State Shape Look )
-    Q_PROPERTY( State state READ state WRITE setState )
-    Q_PROPERTY( Shape shape READ shape WRITE setShape )
-    Q_PROPERTY( Look look READ look WRITE setLook )
-    Q_PROPERTY( QColor color READ color WRITE setColor )
-    Q_PROPERTY( int darkFactor READ darkFactor WRITE setDarkFactor )
+    Q_ENUMS(State Shape Look)
+    Q_PROPERTY(State state READ state WRITE setState)
+    Q_PROPERTY(Shape shape READ shape WRITE setShape)
+    Q_PROPERTY(Look look READ look WRITE setLook)
+    Q_PROPERTY(QColor color READ color WRITE setColor)
+    Q_PROPERTY(int darkFactor READ darkFactor WRITE setDarkFactor)
 
-  public:
+public:
 
     /**
      * Status of the light is on/off.
@@ -93,7 +93,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      *
      * @param parent The parent widget.
      */
-    explicit KLed( QWidget *parent = 0 );
+    explicit KLed(QWidget *parent = 0);
 
     /**
      * Constructs a round LED widget with the supplied color which will
@@ -103,7 +103,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param parent The parent widget.
      * @short Constructor
      */
-    explicit KLed( const QColor &color, QWidget *parent = 0 );
+    explicit KLed(const QColor &color, QWidget *parent = 0);
 
     /**
      * Constructor with the color, state and look.
@@ -117,8 +117,8 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param parent The parent widget.
      * @short Constructor
      */
-    KLed( const QColor& color, KLed::State state, KLed::Look look, KLed::Shape shape,
-          QWidget *parent = 0 );
+    KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape,
+         QWidget *parent = 0);
 
     /**
      * Destroys the LED widget.
@@ -181,7 +181,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param color New color of the LED.
      * @short Sets the LED color.
      */
-    void setColor( const QColor& color );
+    void setColor(const QColor &color);
 
     /**
      * Sets the state of the widget to On or Off.
@@ -192,7 +192,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param state The LED state: on or off.
      * @short Set LED state.
      */
-    void setState( State state );
+    void setState(State state);
 
     /**
      * Sets the look of the widget.
@@ -207,7 +207,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param look New look of the LED.
      * @short Sets LED look.
      */
-    void setLook( Look look );
+    void setLook(Look look);
 
     /**
      * Set the shape of the LED.
@@ -215,7 +215,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param shape The LED shape.
      * @short Set LED shape.
      */
-    void setShape( Shape shape );
+    void setShape(Shape shape);
 
     /**
      * Sets the factor to darken the LED in KLed::Off state.
@@ -230,12 +230,12 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * @param darkFactor Sets the factor to darken the LED.
      * @short Sets the factor to darken the LED.
      */
-    void setDarkFactor( int darkFactor );
+    void setDarkFactor(int darkFactor);
 
     virtual QSize sizeHint() const;
     virtual QSize minimumSizeHint() const;
 
-  public Q_SLOTS:
+public Q_SLOTS:
 
     /**
      * Toggles the state of the led from Off to On or vice versa.
@@ -260,7 +260,7 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      */
     void off();
 
-  protected:
+protected:
     /**
      * Returns the width of the led.
      */
@@ -290,10 +290,10 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      * Paints a rectangular LED, either raised or
      * sunken, depending on its argument.
      */
-    virtual void paintRectFrame( bool raised );
+    virtual void paintRectFrame(bool raised);
 
-    void paintEvent( QPaintEvent* );
-    void resizeEvent( QResizeEvent* );
+    void paintEvent(QPaintEvent *);
+    void resizeEvent(QResizeEvent *);
 
     /**
      * Paint the cached antialiased pixmap corresponding to the state if any
@@ -312,9 +312,9 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
      */
     void paintLed(Shape shape, Look look);
 
-  private:
+private:
     class Private;
-    Private * const d;
+    Private *const d;
 };
 
 #endif

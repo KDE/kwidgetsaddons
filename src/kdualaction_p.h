@@ -33,7 +33,10 @@ public:
 
     void init(KDualAction *q_ptr);
     void updateFromCurrentState();
-    KGuiItem& item(bool active) { return active ? items[1] : items[0]; }
+    KGuiItem &item(bool active)
+    {
+        return active ? items[1] : items[0];
+    }
     void slotTriggered();
 
     void updatedItem(bool active)

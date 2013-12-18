@@ -35,16 +35,16 @@ class QTreeWidgetItem;
  */
 class KWIDGETSADDONS_EXPORT KMimeTypeChooser : public QWidget
 {
-  Q_OBJECT
+    Q_OBJECT
 
-  public:
+public:
     /**
      * Buttons and data for display.
      */
     enum Visuals {
-      Comments=1,   ///< Show the Mimetypes Comment field in a column ("HTML Document").
-      Patterns=2,   ///< Show the Mimetypes Patterns field in a column ("*.html;*.htm").
-      EditButton=4  ///< Show the "Edit" button, allowing to edit the selected type.
+        Comments = 1, ///< Show the Mimetypes Comment field in a column ("HTML Document").
+        Patterns = 2, ///< Show the Mimetypes Patterns field in a column ("*.html;*.htm").
+        EditButton = 4 ///< Show the "Edit" button, allowing to edit the selected type.
     };
     /**
      * Create a new KMimeTypeChooser.
@@ -61,12 +61,12 @@ class KWIDGETSADDONS_EXPORT KMimeTypeChooser : public QWidget
      * @param parent The parent widget to use
      */
     explicit
-    KMimeTypeChooser( const QString& text=QString(),
-                      const QStringList &selectedMimeTypes=QStringList(),
-                      const QString &defaultGroup=QString(),
-                      const QStringList &groupsToShow=QStringList(),
-                      int visuals=Comments|Patterns|EditButton,
-                      QWidget *parent=0 );
+    KMimeTypeChooser(const QString &text = QString(),
+                     const QStringList &selectedMimeTypes = QStringList(),
+                     const QString &defaultGroup = QString(),
+                     const QStringList &groupsToShow = QStringList(),
+                     int visuals = Comments | Patterns | EditButton,
+                     QWidget *parent = 0);
     ~KMimeTypeChooser();
 
     /**
@@ -78,12 +78,12 @@ class KWIDGETSADDONS_EXPORT KMimeTypeChooser : public QWidget
      */
     QStringList patterns() const;
 
-  private:
+private:
     class KMimeTypeChooserPrivate *d;
 
-    Q_PRIVATE_SLOT( d, void _k_editMimeType() )
-    Q_PRIVATE_SLOT( d, void _k_slotCurrentChanged(QTreeWidgetItem*) )
-    Q_PRIVATE_SLOT( d, void _k_slotSycocaDatabaseChanged(QStringList) )
+    Q_PRIVATE_SLOT(d, void _k_editMimeType())
+    Q_PRIVATE_SLOT(d, void _k_slotCurrentChanged(QTreeWidgetItem *))
+    Q_PRIVATE_SLOT(d, void _k_slotSycocaDatabaseChanged(QStringList))
 };
 
 /**
@@ -110,7 +110,7 @@ class KWIDGETSADDONS_EXPORT KMimeTypeChooser : public QWidget
   */
 class KWIDGETSADDONS_EXPORT KMimeTypeChooserDialog : public QDialog
 {
-  public:
+public:
     /**
      * Create a KMimeTypeChooser dialog.
      *
@@ -129,33 +129,32 @@ class KWIDGETSADDONS_EXPORT KMimeTypeChooserDialog : public QDialog
      * @param parent The parent widget to use
      */
     explicit
-    KMimeTypeChooserDialog( const QString &caption=QString(),
-                         const QString& text=QString(),
-                         const QStringList &selectedMimeTypes=QStringList(),
-                         const QString &defaultGroup=QString(),
-                         const QStringList &groupsToShow=QStringList(),
-                         int visuals=KMimeTypeChooser::Comments|KMimeTypeChooser::Patterns|KMimeTypeChooser::EditButton,
-                         QWidget *parent=0 );
+    KMimeTypeChooserDialog(const QString &caption = QString(),
+                           const QString &text = QString(),
+                           const QStringList &selectedMimeTypes = QStringList(),
+                           const QString &defaultGroup = QString(),
+                           const QStringList &groupsToShow = QStringList(),
+                           int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
+                           QWidget *parent = 0);
 
     /**
      * @overload
      */
-    KMimeTypeChooserDialog( const QString &caption,
-                         const QString& text,
-                         const QStringList &selectedMimeTypes,
-                         const QString &defaultGroup,
-                         QWidget *parent=0 );
+    KMimeTypeChooserDialog(const QString &caption,
+                           const QString &text,
+                           const QStringList &selectedMimeTypes,
+                           const QString &defaultGroup,
+                           QWidget *parent = 0);
 
     ~KMimeTypeChooserDialog();
 
     /**
      * @return a pointer to the KMimeTypeChooser widget
      */
-    KMimeTypeChooser* chooser();
+    KMimeTypeChooser *chooser();
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 #endif // _KMIMETYPE_CHOOSER_H_
-// kate: space-indent on; indent-width 2; replace-tabs on;

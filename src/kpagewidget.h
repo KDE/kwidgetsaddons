@@ -35,16 +35,16 @@ class KPageWidgetPrivate;
  */
 class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
 {
-  Q_OBJECT
+    Q_OBJECT
     Q_DECLARE_PRIVATE(KPageWidget)
 
-  public:
+public:
     /**
      * Creates a new page widget.
      *
      * @param parent The parent widget.
      */
-    explicit KPageWidget( QWidget *parent = 0 );
+    explicit KPageWidget(QWidget *parent = 0);
 
     /**
      * Destroys the page widget.
@@ -59,14 +59,14 @@ class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* addPage( QWidget *widget, const QString &name );
+    KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
     /**
      * Adds a new top level page to the widget.
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void addPage( KPageWidgetItem *item );
+    void addPage(KPageWidgetItem *item);
 
     /**
      * Inserts a new page in the widget.
@@ -78,7 +78,7 @@ class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* insertPage( KPageWidgetItem *before, QWidget *widget, const QString &name );
+    KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new page in the widget.
@@ -88,7 +88,7 @@ class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void insertPage( KPageWidgetItem *before, KPageWidgetItem *item );
+    void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /**
      * Inserts a new sub page in the widget.
@@ -99,7 +99,7 @@ class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* addSubPage( KPageWidgetItem *parent, QWidget *widget, const QString &name );
+    KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new sub page in the widget.
@@ -108,50 +108,50 @@ class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void addSubPage( KPageWidgetItem *parent, KPageWidgetItem *item );
+    void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
     /**
      * Removes the page associated with the given @see KPageWidgetItem.
      */
-    void removePage( KPageWidgetItem *item );
+    void removePage(KPageWidgetItem *item);
 
     /**
      * Sets the page which is associated with the given @see KPageWidgetItem to
      * be the current page and emits the currentPageChanged() signal.
      */
-    void setCurrentPage( KPageWidgetItem *item );
+    void setCurrentPage(KPageWidgetItem *item);
 
     /**
      * Returns the @see KPageWidgetItem for the current page or 0 if there is no
      * current page.
      */
-    KPageWidgetItem* currentPage() const;
+    KPageWidgetItem *currentPage() const;
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page has changed.
      *
      * @param item The new current page or 0 if no current page is available.
      */
-    void currentPageChanged( KPageWidgetItem *current, KPageWidgetItem *before );
+    void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
     /**
      * This signal is emitted whenever a checkable page changes its state. @param checked is true
      * when the @param page is checked, or false if the @param page is unchecked.
      */
-    void pageToggled( KPageWidgetItem *page, bool checked );
-    
+    void pageToggled(KPageWidgetItem *page, bool checked);
+
     /**
      * This signal is emitted when a page is removed.
      * @param page The page which is removed
      * */
-    void pageRemoved( KPageWidgetItem *page );
+    void pageRemoved(KPageWidgetItem *page);
 
-    protected:
-        KPageWidget(KPageWidgetPrivate &dd, QWidget *parent);
+protected:
+    KPageWidget(KPageWidgetPrivate &dd, QWidget *parent);
 
-    private:
-        Q_PRIVATE_SLOT(d_func(), void _k_slotCurrentPageChanged(const QModelIndex &, const QModelIndex &))
+private:
+    Q_PRIVATE_SLOT(d_func(), void _k_slotCurrentPageChanged(const QModelIndex &, const QModelIndex &))
 };
 
 #endif

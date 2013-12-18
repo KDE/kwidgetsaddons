@@ -11,11 +11,11 @@
 class ExampleWidget : public QLabel
 {
 public:
-    ExampleWidget( QWidget *parent = 0 );
+    ExampleWidget(QWidget *parent = 0);
 };
 
-ExampleWidget::ExampleWidget( QWidget *parent )
-    : QLabel(parent )
+ExampleWidget::ExampleWidget(QWidget *parent)
+    : QLabel(parent)
 {
     // Make the top-level layout; a vertical box to contain all widgets
     // and sub-layouts.
@@ -38,7 +38,7 @@ ExampleWidget::ExampleWidget( QWidget *parent )
 void showResult(int test, int i)
 {
     printf("Test %d. returned %d ", test, i);
-    switch( i) {
+    switch (i) {
     case KMessageBox::Ok : printf("(%s)\n", "Ok"); break;
     case KMessageBox::Cancel : printf("(%s)\n", "Cancel"); break;
     case KMessageBox::Yes : printf("(%s)\n", "Yes"); break;
@@ -53,21 +53,19 @@ bool testMessageBox(int test)
     QStringList list; list.append("Hello"); list.append("World");
 
     int i;
-    switch(test)
-    {
-    case 1:
-    {
+    switch (test) {
+    case 1: {
         ExampleWidget *w = new ExampleWidget();
         w->show();
 
         i = KMessageBox::warningContinueCancel(w,
                                                "You are about to <Print>.\n"
                                                "Are you sure?",
-                                               "Print", KGuiItem( QLatin1String("&Print") ), KStandardGuiItem::cancel(), "dontask");
+                                               "Print", KGuiItem(QLatin1String("&Print")), KStandardGuiItem::cancel(), "dontask");
         i = KMessageBox::warningContinueCancel(0,
                                                "You are about to <Print>.\n"
                                                "Are you sure?",
-                                               "Print", KGuiItem( QLatin1String("&Print") ), KStandardGuiItem::cancel(), "dontask", KMessageBox::AllowLink);
+                                               "Print", KGuiItem(QLatin1String("&Print")), KStandardGuiItem::cancel(), "dontask", KMessageBox::AllowLink);
         i = KMessageBox::questionYesNo(0, "<p>Do you have a printer? thisisaverylongdkldhklghklghklashgkllasghkdlsghkldfghklsabla bla bbla bla. It also has <a href=http://www.kde.org>this URL</a>.</p>",
                                        QString("Bla"), KGuiItem(QString("Yes")), KGuiItem(QString("No")), "bla", KMessageBox::AllowLink);
         break;
@@ -80,7 +78,7 @@ bool testMessageBox(int test)
     case 3:
         i = KMessageBox::questionYesNo(0,
                                        "Does your printer support color or only black and white?",
-                                       "Printer setup", KGuiItem( QLatin1String("&Color") ), KGuiItem(QString::fromLatin1("&Black & White")));
+                                       "Printer setup", KGuiItem(QLatin1String("&Color")), KGuiItem(QString::fromLatin1("&Black & White")));
         break;
 
     case 4:
@@ -93,9 +91,8 @@ bool testMessageBox(int test)
                                       "TeX distribution which includes the 'dvipdfm' program.\n"
                                       "Hint to the perplexed system administrator: KDVI uses the shell's PATH variable "
                                       "when looking for programs."
-            );
+                                     );
         break;
-
 
     case 5:
         i = KMessageBox::warningYesNo(0, "Your printer has been added.\n"
@@ -107,17 +104,17 @@ bool testMessageBox(int test)
         i = KMessageBox::warningContinueCancel(0,
                                                "You are about to print.\n"
                                                "Are you sure?",
-                                               "Print", KGuiItem( QLatin1String("&Print") ) );
+                                               "Print", KGuiItem(QLatin1String("&Print")));
         break;
     case 7:
         i = KMessageBox::warningContinueCancel(0,
                                                "You are about to <Print>.\n"
                                                "Are you sure?",
-                                               "Print", KGuiItem( QLatin1String("&Print") ), KStandardGuiItem::cancel(), "dontask");
+                                               "Print", KGuiItem(QLatin1String("&Print")), KStandardGuiItem::cancel(), "dontask");
         i = KMessageBox::warningContinueCancel(0,
                                                "You are about to <Print>.\n"
                                                "Are you sure?",
-                                               "Print", KGuiItem( QLatin1String("&Print") ), KStandardGuiItem::cancel(), "dontask");
+                                               "Print", KGuiItem(QLatin1String("&Print")), KStandardGuiItem::cancel(), "dontask");
         break;
 
     case 8:
@@ -137,7 +134,7 @@ bool testMessageBox(int test)
         i = KMessageBox::warningYesNoCancel(0,
                                             "Your document contains unsaved changes.\n"
                                             "Do you want to save or discard your changes?\n",
-                                            "Close", KGuiItem( QLatin1String("&Save") ), KGuiItem( QLatin1String("&Discard") ) );
+                                            "Close", KGuiItem(QLatin1String("&Save")), KGuiItem(QLatin1String("&Discard")));
         break;
 
     case 11:
@@ -147,7 +144,7 @@ bool testMessageBox(int test)
 
     case 12:
         i = KMessageBox::Ok;
-        KMessageBox::detailedError(0, "Oops, Your harddisk is unreadable." , "We don't know more yet.", "Uh ooh");
+        KMessageBox::detailedError(0, "Oops, Your harddisk is unreadable.", "We don't know more yet.", "Uh ooh");
         break;
 
     case 13:
@@ -186,28 +183,28 @@ bool testMessageBox(int test)
         i = KMessageBox::Ok;
         KMessageBox::information(0, "Return of the annoying popup message.", QString(), "Enable_Menubar");
         break;
-    case 20:
-    {
+    case 20: {
         QStringList strlist;
         strlist << "/dev/hda" << "/etc/inittab" << "/usr/somefile" << "/some/really/"
-            "long/file/name/which/is/in/a/really/deep/directory/in/a/really/large/"
-            "hard/disk/of/your/system" << "/and/another/one" ;
-        i = KMessageBox::questionYesNoList(0, "Do you want to delete the following files?",strlist);
+                "long/file/name/which/is/in/a/really/deep/directory/in/a/really/large/"
+                "hard/disk/of/your/system" << "/and/another/one";
+        i = KMessageBox::questionYesNoList(0, "Do you want to delete the following files?", strlist);
     }
     break;
-    case 21:
-    {
+    case 21: {
         QStringList strlist;
         printf("Filling StringList...\n");
-        for (int j=1;j<=6000;j++) strlist.append(QString("/tmp/tmp.%1").arg(j));
+        for (int j = 1; j <= 6000; j++) {
+            strlist.append(QString("/tmp/tmp.%1").arg(j));
+        }
         printf("Completed...\n");
-        i = KMessageBox::questionYesNoList(0, "Do you want to delete the following files?",strlist);
+        i = KMessageBox::questionYesNoList(0, "Do you want to delete the following files?", strlist);
     }
     break;
 
     case 22:
         i = KMessageBox::Ok;
-        KMessageBox::informationList(0, "The following words have been found:",list);
+        KMessageBox::informationList(0, "The following words have been found:", list);
         break;
 
     case 23:
@@ -238,8 +235,7 @@ bool testMessageBox(int test)
     return true;
 }
 
-
-int main( int argc, char *argv[] )
+int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     app.setApplicationName("kmessageboxtest");
@@ -253,126 +249,123 @@ int main( int argc, char *argv[] )
     // No argument specified, run all tests
     int test = 1;
     while (++test) {
-        if (!testMessageBox(test))
+        if (!testMessageBox(test)) {
             break;
+        }
     }
     return 0;
 }
 
-
-
-
-
 #if 0
 //this is my sequence for testing messagebox layout:
 
-    KMessageBox::questionYesNoCancel(
+KMessageBox::questionYesNoCancel(
     0, "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd", "long",
-        KStandardGuiItem::saveAs(), KGuiItem("dsdddddd"), KStandardGuiItem::cancel()
-        );
-    KMessageBox::questionYesNoCancel(
+    KStandardGuiItem::saveAs(), KGuiItem("dsdddddd"), KStandardGuiItem::cancel()
+);
+KMessageBox::questionYesNoCancel(
     0, "ddddddddddddddddddddd ddddddddddddddddddddd dddddddddd dddddddddd ddddddddddddddddddd dddddddddddd ddddddddd", "long wrap",
-        KStandardGuiItem::saveAs(), KGuiItem("dsdddddd"), KStandardGuiItem::cancel()
-        );
+    KStandardGuiItem::saveAs(), KGuiItem("dsdddddd"), KStandardGuiItem::cancel()
+);
 
-    KMessageBox::questionYesNoCancel(
+KMessageBox::questionYesNoCancel(
     0, "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd", "height",
-        KStandardGuiItem::saveAs(), KGuiItem("dsdddddd"), KStandardGuiItem::cancel()
-        );
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd", "height",
+    KStandardGuiItem::saveAs(), KGuiItem("dsdddddd"), KStandardGuiItem::cancel()
+);
 
-    QStringList strlist;
-    strlist<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfgh\nghghgfhgf"<<"f\ngfg\nhg\nhghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf"<<"fgfghghghgfhgf";
-   KMessageBox::errorList(0,
-		"short\n",
-		strlist,"short");
-   KMessageBox::errorList(0,
-		"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-		strlist,"short");
-   KMessageBox::errorList(0,
-		"ddddddddddddddddddddd ddddddddddddddddddddd dddddddddd dddddddddd ddddddddddddddddddd dddddddddddd ddddddddd",
-		strlist,"short");
-   KMessageBox::errorList(0,
-		"dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd",
-		strlist,"short");
+QStringList strlist;
+strlist << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfgh\nghghgfhgf" << "f\ngfg\nhg\nhghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf" << "fgfghghghgfhgf";
+KMessageBox::errorList(0,
+                       "short\n",
+                       strlist, "short");
+KMessageBox::errorList(0,
+                       "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+                       strlist, "short");
+KMessageBox::errorList(0,
+                       "ddddddddddddddddddddd ddddddddddddddddddddd dddddddddd dddddddddd ddddddddddddddddddd dddddddddddd ddddddddd",
+                       strlist, "short");
+KMessageBox::errorList(0,
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                       "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd",
+                       strlist, "short");
 
-  KMessageBox::detailedError(0,
-                    "sss",
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                   );
-  KMessageBox::detailedError(0,
-                    "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                   );
-  KMessageBox::detailedError(0,
-                    "ddddddddddddddddddddd ddddddddddddddddddddd dddddddddd dddddddddd ddddddddddddddddddd dddddddddddd ddddddddd",
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                   );
-  KMessageBox::detailedError(0,
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd",
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-            "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                    "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
-                   );
+KMessageBox::detailedError(0,
+                           "sss",
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                          );
+KMessageBox::detailedError(0,
+                           "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                          );
+KMessageBox::detailedError(0,
+                           "ddddddddddddddddddddd ddddddddddddddddddddd dddddddddd dddddddddd ddddddddddddddddddd dddddddddddd ddddddddd",
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                          );
+KMessageBox::detailedError(0,
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd",
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                           "dddddd\ndddddd\nddddddddd ddddd\ndddd\ndddddddddddd \ndddddddddd dddddddddd dd\nddddddddddd\ndd\ndddd dddd\ndddddddd ddd\ndd\ndddd"
+                          );
 
 #endif

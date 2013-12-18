@@ -36,26 +36,26 @@
 class KWIDGETSADDONS_EXPORT KFontAction : public KSelectAction
 {
     Q_OBJECT
-    Q_PROPERTY( QString font READ font WRITE setFont )
+    Q_PROPERTY(QString font READ font WRITE setFont)
 
 public:
     KFontAction(uint fontListCriteria, QObject *parent);
     explicit KFontAction(QObject *parent);
-    KFontAction(const QString& text, QObject *parent);
+    KFontAction(const QString &text, QObject *parent);
     KFontAction(const QIcon &icon, const QString &text, QObject *parent);
     virtual ~KFontAction();
 
     QString font() const;
 
-    void setFont( const QString &family );
+    void setFont(const QString &family);
 
-    virtual QWidget* createWidget(QWidget* parent);
+    virtual QWidget *createWidget(QWidget *parent);
 
 private:
     class KFontActionPrivate;
-    KFontActionPrivate * const d;
+    KFontActionPrivate *const d;
 
-    Q_PRIVATE_SLOT( d, void _k_slotFontChanged(const QFont&) )
+    Q_PRIVATE_SLOT(d, void _k_slotFontChanged(const QFont &))
 };
 
 #endif

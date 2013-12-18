@@ -26,8 +26,6 @@
 
 class QWidget;
 
-
-
 /**
  * KPageWidgetItem is used by @ref KPageWidget and represents
  * a page.
@@ -49,12 +47,12 @@ class QWidget;
  */
 class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
 {
-  Q_OBJECT
-  Q_PROPERTY( QString name READ name WRITE setName )
-  Q_PROPERTY( QString header READ header WRITE setHeader )
-  Q_PROPERTY( QIcon icon READ icon WRITE setIcon )
-  Q_PROPERTY( bool checkable READ isCheckable WRITE setCheckable )
-  Q_PROPERTY( bool checked READ isChecked WRITE setChecked )
+    Q_OBJECT
+    Q_PROPERTY(QString name READ name WRITE setName)
+    Q_PROPERTY(QString header READ header WRITE setHeader)
+    Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
+    Q_PROPERTY(bool checkable READ isCheckable WRITE setCheckable)
+    Q_PROPERTY(bool checked READ isChecked WRITE setChecked)
     /**
      * This property holds whether the item is enabled.
      *
@@ -62,13 +60,13 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      */
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
 
-  public:
+public:
     /**
      * Creates a new page widget item.
      *
      * @param widget The widget that is shown as page in the KPageWidget.
      */
-    KPageWidgetItem( QWidget *widget );
+    KPageWidgetItem(QWidget *widget);
 
     /**
      * Creates a new page widget item.
@@ -77,7 +75,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      * @param name The localized string that is show in the navigation view
      *             of the KPageWidget.
      */
-    KPageWidgetItem( QWidget *widget, const QString &name );
+    KPageWidgetItem(QWidget *widget, const QString &name);
 
     /**
      * Destroys the page widget item.
@@ -87,13 +85,13 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
     /**
      * Returns the widget of the page widget item.
      */
-    QWidget* widget() const;
+    QWidget *widget() const;
 
     /**
      * Sets the name of the item as shown in the navigation view of the page
      * widget.
      */
-    void setName( const QString &name );
+    void setName(const QString &name);
 
     /**
      * Returns the name of the page widget item.
@@ -110,7 +108,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      *
      * @param header Header of the page widget item.
      */
-    void setHeader( const QString &header );
+    void setHeader(const QString &header);
 
     /**
      * Returns the header of the page widget item.
@@ -121,7 +119,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      * Sets the icon of the page widget item.
      * @param icon Icon of the page widget item.
      */
-    void setIcon( const QIcon &icon );
+    void setIcon(const QIcon &icon);
 
     /**
      * Returns the icon of the page widget item.
@@ -133,7 +131,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      * @param checkable True if the page widget is checkable,
      *                  otherwise false.
      */
-    void setCheckable( bool checkable );
+    void setCheckable(bool checkable);
 
     /**
      * Returns whether the page widget item is checkable.
@@ -150,18 +148,18 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      */
     bool isEnabled() const;
 
-    public Q_SLOTS:
-        /**
-         * Sets whether the page widget item is enabled.
-         */
-        void setEnabled(bool);
+public Q_SLOTS:
+    /**
+     * Sets whether the page widget item is enabled.
+     */
+    void setEnabled(bool);
 
-        /**
-         * Sets whether the page widget item is checked.
-         */
-        void setChecked( bool checked );
+    /**
+     * Sets whether the page widget item is checked.
+     */
+    void setChecked(bool checked);
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever the icon or header
      * is changed.
@@ -172,11 +170,11 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      * This signal is emitted whenever the user checks or
      * unchecks the item of @see setChecked() is called.
      */
-    void toggled( bool checked );
+    void toggled(bool checked);
 
-  private:
+private:
     class Private;
-    Private* const d;
+    Private *const d;
 };
 
 class KPageWidgetModelPrivate;
@@ -187,16 +185,16 @@ class KPageWidgetModelPrivate;
  */
 class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
 {
-  Q_OBJECT
+    Q_OBJECT
     Q_DECLARE_PRIVATE(KPageWidgetModel)
 
-  public:
+public:
     /**
      * Creates a new page widget model.
      *
      * @param parent The parent object.
      */
-    explicit KPageWidgetModel( QObject *parent = 0 );
+    explicit KPageWidgetModel(QObject *parent = 0);
 
     /**
      * Destroys the page widget model.
@@ -211,14 +209,14 @@ class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* addPage( QWidget *widget, const QString &name );
+    KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
     /**
      * Adds a new top level page to the model.
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void addPage( KPageWidgetItem *item );
+    void addPage(KPageWidgetItem *item);
 
     /**
      * Inserts a new page in the model.
@@ -230,7 +228,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* insertPage( KPageWidgetItem *before, QWidget *widget, const QString &name );
+    KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new page in the model.
@@ -240,7 +238,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void insertPage( KPageWidgetItem *before, KPageWidgetItem *item );
+    void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /**
      * Inserts a new sub page in the model.
@@ -251,7 +249,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
      *
      * @returns The associated @see KPageWidgetItem.
      */
-    KPageWidgetItem* addSubPage( KPageWidgetItem *parent, QWidget *widget, const QString &name );
+    KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new sub page in the model.
@@ -260,23 +258,23 @@ class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
      *
      * @param item The @see KPageWidgetItem which describes the page.
      */
-    void addSubPage( KPageWidgetItem *parent, KPageWidgetItem *item );
+    void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
     /**
      * Removes the page associated with the given @see KPageWidgetItem.
      */
-    void removePage( KPageWidgetItem *item );
+    void removePage(KPageWidgetItem *item);
 
     /**
      * These methods are reimplemented from QAbstractItemModel.
      */
-    virtual int columnCount( const QModelIndex &parent = QModelIndex() ) const;
-    virtual QVariant data( const QModelIndex &index, int role = Qt::DisplayRole ) const;
-    virtual bool setData( const QModelIndex &index, const QVariant &value, int role = Qt::EditRole );
-    virtual Qt::ItemFlags flags( const QModelIndex &index ) const;
-    virtual QModelIndex index( int row, int column, const QModelIndex &parent = QModelIndex() ) const;
-    virtual QModelIndex parent( const QModelIndex &index ) const;
-    virtual int rowCount( const QModelIndex &parent = QModelIndex() ) const;
+    virtual int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    virtual bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
+    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
+    virtual QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const;
+    virtual QModelIndex parent(const QModelIndex &index) const;
+    virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
 
     /**
      * Returns the @see KPageWidgetItem for a given index or 0 if the index is invalid.
@@ -287,18 +285,18 @@ class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
      * Returns the index for a given @see KPageWidgetItem. The index is invalid if the
      * item can't be found in the model.
      */
-    QModelIndex index( const KPageWidgetItem *item ) const;
+    QModelIndex index(const KPageWidgetItem *item) const;
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * This signal is emitted whenever a checkable page changes its state. @param checked is true
      * when the @param page is checked, or false if the @param page is unchecked.
      */
-    void toggled( KPageWidgetItem *page, bool checked );
+    void toggled(KPageWidgetItem *page, bool checked);
 
-  private:
-        Q_PRIVATE_SLOT(d_func(), void _k_itemChanged())
-        Q_PRIVATE_SLOT(d_func(), void _k_itemToggled(bool))
+private:
+    Q_PRIVATE_SLOT(d_func(), void _k_itemChanged())
+    Q_PRIVATE_SLOT(d_func(), void _k_itemToggled(bool))
 };
 
 #endif
