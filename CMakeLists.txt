@@ -10,7 +10,7 @@ include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 set(REQUIRED_QT_VERSION 5.2.0)
-find_package(Qt5Widgets ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
 include(FeatureSummary)
 include(CMakePackageConfigHelpers)
