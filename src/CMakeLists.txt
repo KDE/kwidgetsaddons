@@ -80,82 +80,84 @@ add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
 
 target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
 
-if(IS_ABSOLUTE "${INCLUDE_INSTALL_DIR}")
-  target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}>" )
-else()
-  target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/${INCLUDE_INSTALL_DIR}>" )
-endif()
+target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/kwidgetsaddons>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KWidgetsAddons>")
 
 set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION_STRING}
                                                   SOVERSION ${KWIDGETSADDONS_SOVERSION}
                                                   EXPORT_NAME WidgetsAddons
 )
 
+ecm_generate_headers(
+  KAcceleratorManager
+  KAnimatedButton
+  KCharSelect
+  KColorButton
+  KDateComboBox
+  KDatePicker
+  KDateTimeEdit
+  KDragWidgetDecorator
+  KDualAction
+  KFontAction
+  KFontChooser
+  KFontSizeAction
+  KGuiItem
+  KLed
+  KMessageBox
+  KMessageBoxDontAskAgainInterface
+  KMultiTabBar
+  KPopupFrame
+  KSelectAction
+  KStandardGuiItem
+  KTimeComboBox
+  KUrlLabel
+  KCapacityBar
+  KFontRequester
+  KPasswordDialog
+  KRuler
+  KSelector
+  KTitleWidget
+  KXYSelector
+  KSeparator
+  KSqueezedTextLabel
+  KToggleAction
+  KToggleFullScreenAction
+  KViewStateSerializer
+  KViewStateMaintainerBase
+  KEditListWidget
+  KCursor
+  KRatingPainter
+  KRatingWidget
+  KActionSelector
+  KColorCombo
+  KActionMenu
+  KToolBarLabelAction
+  KToolBarPopupAction
+  KToolBarSpacerAction
+  KPageDialog
+  KPageModel
+  KPageView
+  KPageWidget
+  KPageWidgetModel
+  KAssistantDialog
+  KMessageWidget
+  KNewPasswordDialog
+  LineEditUrlDropEventFilter
+  KPixmapSequence
+  KPixmapSequenceOverlayPainter
+  KPixmapSequenceWidget
+  KPixmapRegionSelectorWidget
+  KMimeTypeChooser
+  KMessageBoxNotifyInterface
+  REQUIRED_HEADERS KWidgetsAddons_HEADERS
+)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KWidgetsAddons DESTINATION  ${INCLUDE_INSTALL_DIR} COMPONENT Devel )
+
 install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
-  kacceleratormanager.h
-  kanimatedbutton.h
-  kcharselect.h
-  kcolorbutton.h
-  kdatecombobox.h
-  kdatepicker.h
-  kdatetimeedit.h
-  kdragwidgetdecorator.h
-  kdualaction.h
-  kfontaction.h
-  kfontchooser.h
-  kfontsizeaction.h
-  kguiitem.h
-  kled.h
-  kmessagebox.h
-  kmessageboxdontaskagaininterface.h
-  kmultitabbar.h
-  kpopupframe.h
-  kselectaction.h
-  kstandardguiitem.h
-  ktimecombobox.h
-  kurllabel.h
-  kcapacitybar.h
-  kfontrequester.h
-  kpassworddialog.h
-  kruler.h
-  kselector.h
-  ktitlewidget.h
-  kxyselector.h
-  kseparator.h
-  ksqueezedtextlabel.h
-  ktoggleaction.h
-  ktogglefullscreenaction.h
-  kviewstateserializer.h
-  kviewstatemaintainerbase.h
-  keditlistwidget.h
-  kcursor.h
-  kratingpainter.h
-  kratingwidget.h
-  kactionselector.h
-  kcolorcombo.h
-  kactionmenu.h
-  ktoolbarlabelaction.h
-  ktoolbarpopupaction.h
-  ktoolbarspaceraction.h
-  kpagedialog.h
-  kpagemodel.h
-  kpageview.h
-  kpagewidget.h
-  kpagewidgetmodel.h
-  kassistantdialog.h
-  kmessagewidget.h
-  knewpassworddialog.h
-  lineediturldropeventfilter.h
-  kpixmapsequence.h
-  kpixmapsequenceoverlaypainter.h
-  kpixmapsequencewidget.h
-  kpixmapregionselectorwidget.h
-  kmimetypechooser.h
-  kmessageboxnotifyinterface.h
+  ${KWidgetsAddons_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_export.h
-  DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+  DESTINATION ${INCLUDE_INSTALL_DIR}/kwidgetsaddons COMPONENT Devel
 )
 
 install(FILES kcharselect-data  DESTINATION  ${DATA_INSTALL_DIR}/kcharselect)
