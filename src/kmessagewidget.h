@@ -34,7 +34,7 @@ class KMessageWidgetPrivate;
  * feedback, or to implement opportunistic interactions.
  *
  * As a feedback widget, KMessageWidget provides a less intrusive alternative
- * to "OK Only" message boxes. If you do not need the modalness of KMessageBox,
+ * to "OK Only" message boxes. If you do not need the modeless of KMessageBox,
  * consider using KMessageWidget instead.
  *
  * <b>Negative feedback</b>
@@ -101,6 +101,11 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
     Q_PROPERTY(MessageType messageType READ messageType WRITE setMessageType)
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
 public:
+
+    /**
+     * Available message types.
+     * The background colors are chosen depending on the message type.
+     */
     enum MessageType {
         Positive,
         Information,
@@ -109,30 +114,85 @@ public:
     };
 
     /**
-     * Constructs a KMessageWidget with the specified parent.
+     * Constructs a KMessageWidget with the specified @p parent.
      */
     explicit KMessageWidget(QWidget *parent = 0);
 
+    /**
+     * Constructs a KMessageWidget with the specified @p parent and
+     * contents @p text.
+     */
     explicit KMessageWidget(const QString &text, QWidget *parent = 0);
 
+    /**
+     * Destructor.
+     */
     ~KMessageWidget();
 
+    /**
+     * Get the text of this message widget.
+     * @see setText()
+     */
     QString text() const;
 
+    /**
+     * Check whether word wrap is enabled.
+     *
+     * If word wrap is enabled, the message widget wraps the displayed text
+     * as required to the available width of the widget. This is useful to
+     * avoid breaking widget layouts.
+     *
+     * @see setWordWrap()
+     */
     bool wordWrap() const;
 
+    /**
+     * Check whether the close button is visible.
+     *
+     * @see setCloseButtonVisible()
+     */
     bool isCloseButtonVisible() const;
 
+    /**
+     * Get the type of this message.
+     * By default, the type is set to KMessageWidget::Information.
+     *
+     * @see KMessageWidget::MessageType, setMessageType()
+     */
     MessageType messageType() const;
 
+    /**
+     * Add @p action to the message widget.
+     * For each action a button is added to the message widget in the
+     * order the actions were added.
+     *
+     * @param action the action to add
+     * @see removeAction(), QWidget::actions()
+     */
     void addAction(QAction *action);
 
+    /**
+     * Remove @p action from the message widget.
+     *
+     * @param action the action to remove
+     * @see KMessageWidget::MessageType, addAction(), setMessageType()
+     */
     void removeAction(QAction *action);
 
+    /**
+     * Returns the preferred size of the message widget.
+     */
     QSize sizeHint() const;
 
+    /**
+     * Returns the minimum size of the message widget.
+     */
     QSize minimumSizeHint() const;
 
+    /**
+     * Returns the required height for @p width.
+     * @param width the width in pixels
+     */
     int heightForWidth(int width) const;
 
     /**
@@ -162,12 +222,40 @@ public:
     bool isShowAnimationRunning() const;
 
 public Q_SLOTS:
+    /**
+     * Set the text of the message widget to @p text.
+     * If the message widget is already visible, the text changes on the fly.
+     *
+     * @param text the text to display, rich text is allowed
+     * @see text()
+     */
     void setText(const QString &text);
 
+    /**
+     * Set word wrap to @p wordWrap. If word wrap is enabled, the text()
+     * of the message widget is wrapped to fit the available width.
+     * If word wrap is disabled, the message widget's minimum size is
+     * such that the entire text fits.
+     *
+     * @param wordWrap disable/enable word wrap
+     * @see wordWrap()
+     */
     void setWordWrap(bool wordWrap);
 
+    /**
+     * Set the visibility of the close button. If @p visible is @e true,
+     * a close button is shown that calls animatedHide() if clicked.
+     *
+     * @see closeButtonVisible(), animatedHide()
+     */
     void setCloseButtonVisible(bool visible);
 
+    /**
+     * Set the message type to @p type.
+     * By default, the message type is set to KMessageWidget::Information.
+     *
+     * @see messageType(), KMessageWidget::MessageType
+     */
     void setMessageType(KMessageWidget::MessageType type);
 
     /**
