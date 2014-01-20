@@ -1,6 +1,7 @@
 /* This file is part of the KDE libraries
  *
  * Copyright (c) 2011 Aurélien Gâteau <agateau@kde.org>
+ * Copyright (c) 2014 Dominik Haumann <dhaumann@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -186,9 +187,13 @@ void KMessageWidgetPrivate::slotTimeLineFinished()
         // We set the whole geometry here, because it may be wrong if a
         // KMessageWidget is shown right when the toplevel window is created.
         content->setGeometry(0, 0, q->width(), bestContentHeight());
+
+        // notify about finished animation
+        emit q->showAnimationFinished();
     } else {
-        // Hide
+        // hide and notify about finished animation
         q->hide();
+        emit q->hideAnimationFinished();
     }
 }
 
@@ -399,6 +404,7 @@ void KMessageWidget::animatedShow()
 {
     if (!style()->styleHint(QStyle::SH_Widget_Animate, 0, this)) {
         show();
+        emit showAnimationFinished();
         return;
     }
 
@@ -423,6 +429,7 @@ void KMessageWidget::animatedHide()
 {
     if (!style()->styleHint(QStyle::SH_Widget_Animate, 0, this)) {
         hide();
+        emit hideAnimationFinished();
         return;
     }
 
@@ -437,6 +444,18 @@ void KMessageWidget::animatedHide()
     if (d->timeLine->state() == QTimeLine::NotRunning) {
         d->timeLine->start();
     }
+}
+
+bool KMessageWidget::isHideAnimationRunning() const
+{
+    return (d->timeLine->direction() == QTimeLine::Backward)
+        && (d->timeLine->state() == QTimeLine::Running);
+}
+
+bool KMessageWidget::isShowAnimationRunning() const
+{
+    return (d->timeLine->direction() == QTimeLine::Forward)
+        && (d->timeLine->state() == QTimeLine::Running);
 }
 
 QIcon KMessageWidget::icon() const

@@ -1,6 +1,7 @@
 /* This file is part of the KDE libraries
  *
  * Copyright (c) 2011 Aurélien Gâteau <agateau@kde.org>
+ * Copyright (c) 2014 Dominik Haumann <dhaumann@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -69,7 +70,7 @@ class KMessageWidgetPrivate;
  * @li Confirm success of "critical" transactions
  * @li Indicate completion of background tasks
  *
- * Example of inadapted uses:
+ * Example of unadapted uses:
  *
  * @li Indicate successful saving of a file
  * @li Indicate a file has been successfully removed
@@ -140,6 +141,26 @@ public:
      */
     QIcon icon() const;
 
+    /**
+     * Check whether the hide animation started by calling animatedHide()
+     * is still running. If animations are disabled, this function always
+     * returns @e false.
+     *
+     * @see animatedHide(), hideAnimationFinished()
+     * @since 5.0
+     */
+    bool isHideAnimationRunning() const;
+
+    /**
+     * Check whether the show animation started by calling animatedShow()
+     * is still running. If animations are disabled, this function always
+     * returns @e false.
+     *
+     * @see animatedShow(), showAnimationFinished()
+     * @since 5.0
+     */
+    bool isShowAnimationRunning() const;
+
 public Q_SLOTS:
     void setText(const QString &text);
 
@@ -183,6 +204,34 @@ Q_SIGNALS:
      * @since 4.11
      */
     void linkHovered(const QString &contents);
+
+    /**
+     * This signal is emitted when the hide animation is finished, started by
+     * calling animatedHide(). If animations are disabled, this signal is
+     * emitted immediately after the message widget got hidden.
+     *
+     * @note This signal is @e not emitted if the widget was hidden by
+     *       calling hide(), so this signal is only useful in conjunction
+     *       with animatedHide().
+     *
+     * @see animatedHide()
+     * @since 5.0
+     */
+    void hideAnimationFinished();
+
+    /**
+     * This signal is emitted when the show animation is finished, started by
+     * calling animatedShow(). If animations are disabled, this signal is
+     * emitted immediately after the message widget got shown.
+     *
+     * @note This signal is @e not emitted if the widget was shown by
+     *       calling show(), so this signal is only useful in conjunction
+     *       with animatedShow().
+     *
+     * @see animatedShow()
+     * @since 5.0
+     */
+    void showAnimationFinished();
 
 protected:
     void paintEvent(QPaintEvent *event);

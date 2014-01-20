@@ -19,4 +19,5 @@ kwidgetsaddons_unit_tests(
   kdualactiontest
   kselectaction_unittest
   ktimecomboboxtest
+  kmessagewidgetautotest
 )
