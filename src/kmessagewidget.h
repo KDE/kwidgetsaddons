@@ -34,8 +34,13 @@ class KMessageWidgetPrivate;
  * feedback, or to implement opportunistic interactions.
  *
  * As a feedback widget, KMessageWidget provides a less intrusive alternative
- * to "OK Only" message boxes. If you do not need a modal KMessageBox,
+ * to "OK Only" message boxes. If you want to avoid a modal KMessageBox,
  * consider using KMessageWidget instead.
+ *
+ * Examples of KMessageWidget look as follows, all of them having an icon set
+ * with setIcon(), and the first three show a close button:
+ *
+ * \image html kmessagewidget.png "KMessageWidget with different message types"
  *
  * <b>Negative feedback</b>
  *
