@@ -161,3 +161,7 @@ install(FILES
 )
 
 install(FILES kcharselect-data  DESTINATION  ${DATA_INSTALL_DIR}/kcharselect)
+
+include(ECMGeneratePriFile)
+ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME)
+install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
