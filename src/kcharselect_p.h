@@ -217,7 +217,6 @@ public:
     }
 private:
     QList<QChar> m_chars;
-    int m_tableNum;
     QFont m_font;
     int m_columns;
 
