@@ -87,7 +87,8 @@ set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VER
                                                   EXPORT_NAME WidgetsAddons
 )
 
-ecm_generate_headers(
+ecm_generate_headers(KWidgetsAddons_HEADERS
+  HEADER_NAMES
   KAcceleratorManager
   KAnimatedButton
   KCharSelect
@@ -150,7 +151,6 @@ ecm_generate_headers(
   KMessageBoxNotifyInterface
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KWidgetsAddons DESTINATION  ${INCLUDE_INSTALL_DIR} COMPONENT Devel )
 
 install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
