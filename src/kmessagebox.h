@@ -785,6 +785,13 @@ KWIDGETSADDONS_EXPORT void saveDontShowAgainContinue(const QString &dontShowAgai
  */
 KWIDGETSADDONS_EXPORT void setDontShowAgainConfig(KConfig *cfg);
 
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
+/**
+ * @deprecated use setDontShowAgainConfig()
+ */
+KWIDGETSADDONS_DEPRECATED_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg) { setDontShowAgainConfig(cfg); }
+#endif
+
 /**
  * Use @p dontAskAgainInterface for all settings related to the donShowAgain feature.
  * This method does not take ownership of @p dontAskAgainInterface.
