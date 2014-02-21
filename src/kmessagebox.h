@@ -787,7 +787,7 @@ KWIDGETSADDONS_EXPORT void setDontShowAgainConfig(KConfig *cfg);
 
 #ifndef KWIDGETSADDONS_NO_DEPRECATED
 /**
- * @deprecated use setDontShowAgainConfig()
+ * @deprecated since 5.0, use setDontShowAgainConfig()
  */
 KWIDGETSADDONS_DEPRECATED_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg) { setDontShowAgainConfig(cfg); }
 #endif
