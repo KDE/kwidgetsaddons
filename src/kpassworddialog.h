@@ -267,6 +267,16 @@ public:
      */
     void accept();
 
+    /**
+     * Returns the button box used in the dialog.
+     * This can be used to add new buttons.
+     *
+     * @return the button box
+     *
+     * @since 5.0
+     */
+    QDialogButtonBox *buttonBox() const;
+
 Q_SIGNALS:
     /**
      * emitted when the dialog has been accepted

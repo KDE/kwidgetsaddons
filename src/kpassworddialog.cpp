@@ -401,4 +401,9 @@ bool KPasswordDialog::checkPassword()
     return true;
 }
 
+QDialogButtonBox *KPasswordDialog::buttonBox() const
+{
+    return d->ui.buttonBox;
+}
+
 #include "moc_kpassworddialog.cpp"
