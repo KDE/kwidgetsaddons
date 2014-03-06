@@ -18,7 +18,7 @@ a full list, please see <https://projects.kde.org/projects/frameworks/>
 
 ## Links
 
-- Home page: <https://projects.kde.org/projects/frameworks/kwidgetsaddon>
+- Home page: <https://projects.kde.org/projects/frameworks/kwidgetsaddons>
 - Mailing list: <https://mail.kde.org/mailman/listinfo/kde-frameworks-devel>
 - IRC channel: #kde-devel on Freenode
 - Git repository: <https://projects.kde.org/projects/frameworks/kwidgetsaddons/repository>
