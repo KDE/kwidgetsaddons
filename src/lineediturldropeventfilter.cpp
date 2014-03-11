@@ -25,7 +25,7 @@
 #include <qmimedata.h>
 #include <QDropEvent>
 
-static const char s_kdeUriListMime[] = "application/x-kde4-urilist";
+static const char s_kdeUriListMime[] = "application/x-kde4-urilist"; // keep this name "kde4" for compat.
 
 LineEditUrlDropEventFilter::LineEditUrlDropEventFilter(QObject *parent)
     : QObject(parent)
