@@ -34,15 +34,15 @@
  *
  * \code
  *
- * KHistoryCombo* findCombo = new KHistoryCombo( true, this );
+ * KHistoryComboBox *findCombo = new KHistoryComboBox(true, this);
  *
- * KWidgetAction* action = new KWidgetAction( findCombo, i18n("Find Combo"),
- *                                            Qt::Key_F6, this, SLOT( slotFocus() ),
+ * KWidgetAction *action = new KWidgetAction(findCombo, i18n("Find Combo"),
+ *                                            Qt::Key_F6, this, SLOT( slotFocus()),
  *                                            actionCollection(), "find_combo");
  *
- * QAction *action = new KToolBarLabelAction( action, i18n( "Find "), "find_label" );
- * action->setShortcut( Qt::Key_F6 );
- * connect( action, SIGNAL( triggered() ), this, SLOT( slotFocus() ) );
+ * QAction *action = new KToolBarLabelAction(action, i18n("Find "), "find_label");
+ * action->setShortcut(Qt::Key_F6);
+ * connect(action, SIGNAL(triggered()), this, SLOT(slotFocus()));
  *
  * \endcode
  *
