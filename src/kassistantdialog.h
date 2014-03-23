@@ -26,10 +26,6 @@
 /**
  * This class provides a framework for assistant dialogs.
  *
- * The use of this class is the same as KWizard in KDE3.
- * You should use the word "assistant" instead of "wizard" both in the source
- * and translatable strings.
- *
  * An assistant dialog consists of a sequence of pages.
  * Its purpose is to guide the user (assist) through a process step by step.
  * Assistant dialogs are useful for complex or infrequently occurring tasks

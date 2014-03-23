@@ -296,12 +296,19 @@ public:
     void setMaxComboViewCount(int n);
 
     /**
-     * Clears up all the items in this action.
-     * \warning The actions will be deleted for backwards compatibility with KDE3.
-     *          If you just want to remove all actions, use removeAllActions()
+     * Remove and delete all the items in this action.
+     *
+     * @see removeAllActions()
      */
     void clear();
 
+    /**
+     * Remove all the items in this action.
+     *
+     * Unlike clear(), this will not delete the actions.
+     *
+     * @see clear()
+     */
     void removeAllActions();
 
     /**
