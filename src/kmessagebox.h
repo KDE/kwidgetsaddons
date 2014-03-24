@@ -48,19 +48,6 @@ class KConfig;
  * be plaintext or richtext. If the text is plaintext, a newline-character
  * may be used to indicate the end of a paragraph.
  *
- * @port4 Where applicable, the functions now take an additional
- *        argument to specify the cancel button. Since a default argument is
- *        provided, this will affect your code only, if you specified
- *        dontAskAgainName and/or options. In those cases, adding an additional
- *        parameter KStandardGuiItem::cancel() leads to the old behavior. The
- *        following functions are affected (omitting function arguments in the
- *        list): questionYesNoCancel(), questionYesNoCancelWId(),
- *        warningContinueCancel(), warningContinueCancelWId(),
- *        warningContinueCancelList(), warningContinueCancelListWId(),
- *        warningYesNoCancel(), warningYesNoCancelWId(),
- *        warningYesNoCancelList(), warningYesNoCancelListWId(), messageBox(),
- *        messageBoxWId().
- *
  * \image html kmessagebox.png "KDE Message Box (using questionYesNo())"
  *
  * @author Waldo Bastian (bastian@kde.org)
