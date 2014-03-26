@@ -156,7 +156,7 @@ KFontChooser::KFontChooser(QWidget *parent,
       d(new KFontChooser::Private(this))
 {
     d->usingFixed = flags & FixedFontsOnly;
-    setWhatsThis(tr("Here you can choose the font to be used.", "@info:whatsthis"));
+    setWhatsThis(KFontChooser::tr("Here you can choose the font to be used.", "@info:whatsthis"));
 
     // The top layout is divided vertically into a splitter with font
     // attribute widgets and preview on the top, and XLFD data at the bottom.
@@ -178,7 +178,7 @@ KFontChooser::KFontChooser(QWidget *parent,
     QGridLayout *gridLayout;
     int row = 0;
     if (flags & DisplayFrame) {
-        page = new QGroupBox(tr("Requested Font"), this);
+        page = new QGroupBox(KFontChooser::tr("Requested Font"), this);
         splitter->addWidget(page);
         gridLayout = new QGridLayout(page);
         row = 1;
@@ -195,32 +195,32 @@ KFontChooser::KFontChooser(QWidget *parent,
     QHBoxLayout *familyLayout = new QHBoxLayout();
     familyLayout->addSpacing(checkBoxGap);
     if (flags & ShowDifferences) {
-        d->familyCheckbox = new QCheckBox(tr("Font", "@option:check"), page);
+        d->familyCheckbox = new QCheckBox(KFontChooser::tr("Font", "@option:check"), page);
         connect(d->familyCheckbox, SIGNAL(toggled(bool)),
                 this, SLOT(_k_toggled_checkbox()));
         familyLayout->addWidget(d->familyCheckbox, 0, Qt::AlignLeft);
-        d->familyCheckbox->setWhatsThis(tr("Enable this checkbox to change the font family settings.", "@info:whatsthis"));
-        d->familyCheckbox->setToolTip(tr("Change font family?", "@info:tooltip"));
+        d->familyCheckbox->setWhatsThis(KFontChooser::tr("Enable this checkbox to change the font family settings.", "@info:whatsthis"));
+        d->familyCheckbox->setToolTip(KFontChooser::tr("Change font family?", "@info:tooltip"));
         d->familyLabel = 0;
     } else {
         d->familyCheckbox = 0;
-        d->familyLabel = new QLabel(tr("Font:", "@label"), page);
+        d->familyLabel = new QLabel(KFontChooser::tr("Font:", "@label"), page);
         familyLayout->addWidget(d->familyLabel, 1, Qt::AlignLeft);
     }
     gridLayout->addLayout(familyLayout, row, 0);
 
     QHBoxLayout *styleLayout = new QHBoxLayout();
     if (flags & ShowDifferences) {
-        d->styleCheckbox = new QCheckBox(tr("Font style", "@option:check"), page);
+        d->styleCheckbox = new QCheckBox(KFontChooser::tr("Font style", "@option:check"), page);
         connect(d->styleCheckbox, SIGNAL(toggled(bool)),
                 this, SLOT(_k_toggled_checkbox()));
         styleLayout->addWidget(d->styleCheckbox, 0, Qt::AlignLeft);
-        d->styleCheckbox->setWhatsThis(tr("Enable this checkbox to change the font style settings.", "@info:whatsthis"));
-        d->styleCheckbox->setToolTip(tr("Change font style?", "@info:tooltip"));
+        d->styleCheckbox->setWhatsThis(KFontChooser::tr("Enable this checkbox to change the font style settings.", "@info:whatsthis"));
+        d->styleCheckbox->setToolTip(KFontChooser::tr("Change font style?", "@info:tooltip"));
         d->styleLabel = 0;
     } else {
         d->styleCheckbox = 0;
-        d->styleLabel = new QLabel(tr("Font style:"), page);
+        d->styleLabel = new QLabel(KFontChooser::tr("Font style:"), page);
         styleLayout->addWidget(d->styleLabel, 1, Qt::AlignLeft);
     }
     styleLayout->addSpacing(checkBoxGap);
@@ -228,16 +228,16 @@ KFontChooser::KFontChooser(QWidget *parent,
 
     QHBoxLayout *sizeLayout = new QHBoxLayout();
     if (flags & ShowDifferences) {
-        d->sizeCheckbox = new QCheckBox(tr("Size", "@option:check"), page);
+        d->sizeCheckbox = new QCheckBox(KFontChooser::tr("Size", "@option:check"), page);
         connect(d->sizeCheckbox, SIGNAL(toggled(bool)),
                 this, SLOT(_k_toggled_checkbox()));
         sizeLayout->addWidget(d->sizeCheckbox, 0, Qt::AlignLeft);
-        d->sizeCheckbox->setWhatsThis(tr("Enable this checkbox to change the font size settings.", "@info:whatsthis"));
-        d->sizeCheckbox->setToolTip(tr("Change font size?", "@info:tooltip"));
+        d->sizeCheckbox->setWhatsThis(KFontChooser::tr("Enable this checkbox to change the font size settings.", "@info:whatsthis"));
+        d->sizeCheckbox->setToolTip(KFontChooser::tr("Change font size?", "@info:tooltip"));
         d->sizeLabel = 0;
     } else {
         d->sizeCheckbox = 0;
-        d->sizeLabel = new QLabel(tr("Size:", "@label:listbox Font size"), page);
+        d->sizeLabel = new QLabel(KFontChooser::tr("Size:", "@label:listbox Font size"), page);
         sizeLayout->addWidget(d->sizeLabel, 1, Qt::AlignLeft);
     }
     sizeLayout->addSpacing(checkBoxGap);
@@ -253,7 +253,7 @@ KFontChooser::KFontChooser(QWidget *parent,
     d->familyListBox->setEnabled(flags ^ ShowDifferences);
     gridLayout->addWidget(d->familyListBox, row, 0);
     QString fontFamilyWhatsThisText(
-        tr("Here you can choose the font family to be used.", "@info:whatsthis"));
+        KFontChooser::tr("Here you can choose the font family to be used.", "@info:whatsthis"));
     d->familyListBox->setWhatsThis(fontFamilyWhatsThisText);
 
     if (flags & ShowDifferences) {
@@ -277,7 +277,7 @@ KFontChooser::KFontChooser(QWidget *parent,
     d->styleListBox = new QListWidget(page);
     d->styleListBox->setEnabled(flags ^ ShowDifferences);
     gridLayout->addWidget(d->styleListBox, row, 1);
-    d->styleListBox->setWhatsThis(tr("Here you can choose the font style to be used.", "@info:whatsthis"));
+    d->styleListBox->setWhatsThis(KFontChooser::tr("Here you can choose the font style to be used.", "@info:whatsthis"));
     if (flags & ShowDifferences) {
         ((QWidget *)d->styleCheckbox)->setWhatsThis(fontFamilyWhatsThisText);
     } else {
@@ -285,11 +285,11 @@ KFontChooser::KFontChooser(QWidget *parent,
     }
     // Populate usual styles, to determine minimum list width;
     // will be replaced later with correct styles.
-    d->styleListBox->addItem(TR_NOX("Normal", "QFontDatabase"));
-    d->styleListBox->addItem(tr("Italic", "@item font"));
-    d->styleListBox->addItem(tr("Oblique", "@item font"));
-    d->styleListBox->addItem(tr("Bold", "@item font"));
-    d->styleListBox->addItem(tr("Bold Italic", "@item font"));
+    d->styleListBox->addItem(KFontChooser::tr("Normal", "QFontDatabase"));
+    d->styleListBox->addItem(KFontChooser::tr("Italic", "@item font"));
+    d->styleListBox->addItem(KFontChooser::tr("Oblique", "@item font"));
+    d->styleListBox->addItem(KFontChooser::tr("Bold", "@item font"));
+    d->styleListBox->addItem(KFontChooser::tr("Bold Italic", "@item font"));
     d->styleListBox->setMinimumWidth(minimumListWidth(d->styleListBox));
     d->styleListBox->setMinimumHeight(
         minimumListHeight(d->styleListBox, visibleListSize));
@@ -308,11 +308,11 @@ KFontChooser::KFontChooser(QWidget *parent,
     d->sizeOfFont->setEnabled(flags ^ ShowDifferences);
     if (sizeIsRelativeState) {
         QString sizeIsRelativeCBText =
-            tr("Relative", "@item font size");
+            KFontChooser::tr("Relative", "@item font size");
         QString sizeIsRelativeCBToolTipText =
-            tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment");
+            KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment");
         QString sizeIsRelativeCBWhatsThisText =
-            tr("Here you can switch between fixed font size and font size "
+            KFontChooser::tr("Here you can switch between fixed font size and font size "
                "to be calculated dynamically and adjusted to changing "
                "environment (e.g. widget dimensions, paper size).");
         d->sizeIsRelativeCheckBox = new QCheckBox(sizeIsRelativeCBText,
@@ -336,7 +336,7 @@ KFontChooser::KFontChooser(QWidget *parent,
         sizeLayout2->addWidget(d->sizeListBox, 1, 0);
     }
     QString fontSizeWhatsThisText =
-        tr("Here you can choose the font size to be used.");
+        KFontChooser::tr("Here you can choose the font size to be used.");
     d->sizeListBox->setWhatsThis(fontSizeWhatsThisText);
 
     if (flags & ShowDifferences) {
@@ -374,10 +374,10 @@ KFontChooser::KFontChooser(QWidget *parent,
     // Replace it with a sample text in your language, such that it is
     // representative of language's writing system.
     // If you wish, you can input several lines of text separated by \n.
-    setSampleText(tr("The Quick Brown Fox Jumps Over The Lazy Dog"));
+    setSampleText(KFontChooser::tr("The Quick Brown Fox Jumps Over The Lazy Dog"));
     d->sampleEdit->setTextCursor(QTextCursor(d->sampleEdit->document()));
     QString sampleEditWhatsThisText =
-        tr("This sample text illustrates the current settings. "
+        KFontChooser::tr("This sample text illustrates the current settings. "
            "You may edit it to test special characters.");
     d->sampleEdit->setWhatsThis(sampleEditWhatsThisText);
 

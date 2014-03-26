@@ -87,8 +87,8 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     QObject::connect(textLabel, SIGNAL(linkHovered(QString)), q, SIGNAL(linkHovered(QString)));
 
     QAction *closeAction = new QAction(q);
-    closeAction->setText(q->tr("&Close"));
-    closeAction->setToolTip(q->tr("Close message"));
+    closeAction->setText(KMessageWidget::tr("&Close"));
+    closeAction->setToolTip(KMessageWidget::tr("Close message"));
     closeAction->setIcon(q->style()->standardIcon(QStyle::SP_DialogCloseButton));
 
     QObject::connect(closeAction, SIGNAL(triggered(bool)), q, SLOT(animatedHide()));

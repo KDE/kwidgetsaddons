@@ -161,17 +161,18 @@ void KDateComboBoxPrivate::initDateWidget()
 
         if ((m_options & KDateComboBox::DateKeywords) == KDateComboBox::DateKeywords) {
             if (m_dateMap.isEmpty()) {
-                addMenuAction(q->tr("Next Year",  "@option next year"), m_date.addYears(1));
-                addMenuAction(q->tr("Next Month", "@option next month"), m_date.addMonths(1));
-                addMenuAction(q->tr("Next Week",  "@option next week"), m_date.addDays(7));
-                addMenuAction(q->tr("Tomorrow",   "@option tomorrow"), m_date.addDays(1));
-                addMenuAction(q->tr("Today",      "@option today"), m_date);
-                addMenuAction(q->tr("Yesterday",  "@option yesterday"), m_date.addDays(-1));
-                addMenuAction(q->tr("Last Week",  "@option last week"), m_date.addDays(-7));
-                addMenuAction(q->tr("Last Month", "@option last month"), m_date.addMonths(-1));
-                addMenuAction(q->tr("Last Year",  "@option last year"), m_date.addYears(-1));
+                addMenuAction(KDateComboBox::tr("Next Year",  "@option next year"), m_date.addYears(1));
+                addMenuAction(KDateComboBox::tr("Next Month", "@option next month"), m_date.addMonths(1));
+                addMenuAction(KDateComboBox::tr("Next Week",  "@option next week"), m_date.addDays(7));
+                addMenuAction(KDateComboBox::tr("Tomorrow",   "@option tomorrow"), m_date.addDays(1));
+                addMenuAction(KDateComboBox::tr("Today",      "@option today"), m_date);
+                addMenuAction(KDateComboBox::tr("Yesterday",  "@option yesterday"), m_date.addDays(-1));
+                addMenuAction(KDateComboBox::tr("Last Week",  "@option last week"), m_date.addDays(-7));
+                addMenuAction(KDateComboBox::tr("Last Month", "@option last month"), m_date.addMonths(-1));
+                addMenuAction(KDateComboBox::tr("Last Year",  "@option last year"), m_date.addYears(-1));
                 m_dateMenu->addSeparator();
-                addMenuAction(q->tr("No Date", "@option do not specify a date"), QDate());
+                addMenuAction(KDateComboBox::tr("No Date", "@option do not specify a date"), QDate());
+
             } else {
                 QMapIterator<QDate, QString> i(m_dateMap);
                 while (i.hasNext()) {
@@ -268,17 +269,17 @@ void KDateComboBoxPrivate::warnDate()
             (m_options & KDateComboBox::WarnOnInvalid) == KDateComboBox::WarnOnInvalid) {
         QString warnMsg;
         if (!m_date.isValid()) {
-            warnMsg = q->tr("The date you entered is invalid", "@info");
+            warnMsg = KDateComboBox::tr("The date you entered is invalid", "@info");
         } else if (m_minDate.isValid() && m_date < m_minDate) {
             if (m_minWarnMsg.isEmpty()) {
-                warnMsg = q->tr("Date cannot be earlier than %1", "@info").arg(formatDate(m_minDate));
+                warnMsg = KDateComboBox::tr("Date cannot be earlier than %1", "@info").arg(formatDate(m_minDate));
             } else {
                 warnMsg = m_minWarnMsg;
                 warnMsg.replace(QStringLiteral("%1"), formatDate(m_minDate));
             }
         } else if (m_maxDate.isValid() && m_date > m_maxDate) {
             if (m_maxWarnMsg.isEmpty()) {
-                warnMsg = q->tr("Date cannot be later than %1", "@info").arg(formatDate(m_maxDate));
+                warnMsg = KDateComboBox::tr("Date cannot be later than %1", "@info").arg(formatDate(m_maxDate));
             } else {
                 warnMsg = m_maxWarnMsg;
                 warnMsg.replace(QStringLiteral("%1"), formatDate(m_maxDate));

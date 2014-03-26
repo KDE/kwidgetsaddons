@@ -186,8 +186,8 @@ void KDateTimeEditPrivate::initTimeZoneWidget()
 {
     ui.m_timeZoneCombo->blockSignals(true);
     ui.m_timeZoneCombo->clear();
-    ui.m_timeZoneCombo->addItem(q->tr("UTC", "UTC time zone"), QByteArray("UTC"));
-    ui.m_timeZoneCombo->addItem(q->tr("Floating", "No specific time zone"), QByteArray());
+    ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("UTC", "UTC time zone"), QByteArray("UTC"));
+    ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("Floating", "No specific time zone"), QByteArray());
     foreach (const QTimeZone &zone, m_zones) {
         ui.m_timeZoneCombo->addItem(QString::fromUtf8(zone.id()), zone.id());
     }
@@ -227,7 +227,7 @@ void KDateTimeEditPrivate::warnDateTime()
             if (m_minWarnMsg.isEmpty()) {
                 //TODO Add datetime to string
                 //warnMsg = q->tr("Date and time cannot be earlier than %1", "@info").arg(formatDate(m_minDate));
-                warnMsg = q->tr("The entered date and time is before the minimum allowed date and time.", "@info");
+                warnMsg = KDateTimeEdit::tr("The entered date and time is before the minimum allowed date and time.", "@info");
             } else {
                 warnMsg = m_minWarnMsg;
                 //TODO localize properly
@@ -237,7 +237,7 @@ void KDateTimeEditPrivate::warnDateTime()
             if (m_maxWarnMsg.isEmpty()) {
                 //TODO Add datetime to string
                 //warnMsg = q->tr("Date cannot be later than %1", "@info").arg(formatDate(m_maxDate));
-                warnMsg = q->tr("The entered date and time is after the maximum allowed date and time.", "@info");
+                warnMsg = KDateTimeEdit::tr("The entered date and time is after the maximum allowed date and time.", "@info");
             } else {
                 warnMsg = m_maxWarnMsg;
                 warnMsg.replace(QStringLiteral("%1"), q->locale().toString(m_maxDateTime));
