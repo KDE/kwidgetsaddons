@@ -41,8 +41,6 @@ public:
     Shape shape;
 
     QPixmap cachedPixmap[2]; // for both states
-    QStyle::ControlElement ce_indicatorLedCircular;
-    QStyle::ControlElement ce_indicatorLedRectangular;
 };
 
 KLed::KLed(QWidget *parent)
@@ -74,84 +72,6 @@ KLed::KLed(const QColor &color, State state, Look look, Shape shape,
 KLed::~KLed()
 {
     delete d;
-}
-
-void KLed::paintEvent(QPaintEvent *)
-{
-    switch (d->shape) {
-    case Rectangular:
-        switch (d->look) {
-        case Sunken:
-            paintRectFrame(false);
-            break;
-        case Raised:
-            paintRectFrame(true);
-            break;
-        case Flat:
-            paintRect();
-            break;
-        }
-        break;
-    case Circular:
-        switch (d->look) {
-        case Flat:
-            paintFlat();
-            break;
-        case Raised:
-            paintRaised();
-            break;
-        case Sunken:
-            paintSunken();
-            break;
-        }
-        break;
-    }
-}
-
-int KLed::ledWidth() const
-{
-    // Make sure the LED is round!
-    int size = qMin(width(), height());
-
-    // leave one pixel border
-    size -= 2;
-
-    return qMax(0, size);
-}
-
-bool KLed::paintCachedPixmap()
-{
-    if (d->cachedPixmap[d->state].isNull()) {
-        return false;
-    }
-    QPainter painter(this);
-    painter.drawPixmap(1, 1, d->cachedPixmap[d->state]);
-    return true;
-}
-
-void KLed::paintFlat()
-{
-    paintLed(Circular, Flat);
-}
-
-void KLed::paintRaised()
-{
-    paintLed(Circular, Raised);
-}
-
-void KLed::paintSunken()
-{
-    paintLed(Circular, Sunken);
-}
-
-void KLed::paintRect()
-{
-    paintLed(Rectangular, Flat);
-}
-
-void KLed::paintRectFrame(bool raised)
-{
-    paintLed(Rectangular, raised ? Raised : Sunken);
 }
 
 KLed::State KLed::state() const
@@ -270,16 +190,19 @@ void KLed::updateCachedPixmap()
     update();
 }
 
-void KLed::paintLed(Shape shape, Look look)
+void KLed::paintEvent(QPaintEvent *)
 {
-    if (paintCachedPixmap()) {
+    if (!d->cachedPixmap[d->state].isNull()) {
+        QPainter painter(this);
+        painter.drawPixmap(1, 1, d->cachedPixmap[d->state]);
         return;
     }
 
     QSize size(width() - 2, height() - 2);
-    if (shape == Circular) {
-        const int width = ledWidth();
-        size = QSize(width, width);
+    if (d->shape == Circular) {
+        // Make sure the LED is round
+        const int dim = qMin(width(), height()) - 2;
+        size = QSize(dim, dim);
     }
     QPointF center(size.width() / 2.0, size.height() / 2.0);
     const int smallestSize = qMin(size.width(), size.height());
@@ -294,7 +217,7 @@ void KLed::paintLed(Shape shape, Look look)
     fillGradient.setColorAt(0.5, fillColor.light(130));
     fillGradient.setColorAt(1.0, fillColor);
 
-    QConicalGradient borderGradient(center, look == Sunken ? 90 : -90);
+    QConicalGradient borderGradient(center, d->look == Sunken ? 90 : -90);
     QColor borderColor = palette().color(QPalette::Dark);
     if (d->state == On) {
         QColor glowOverlay = fillColor;
@@ -319,12 +242,12 @@ void KLed::paintLed(Shape shape, Look look)
 
     painter.begin(&image);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setBrush(look == Flat ? QBrush(fillColor) : QBrush(fillGradient));
-    const QBrush penBrush = (look == Flat) ? QBrush(borderColor) : QBrush(borderGradient);
+    painter.setBrush(d->look == Flat ? QBrush(fillColor) : QBrush(fillGradient));
+    const QBrush penBrush = (d->look == Flat) ? QBrush(borderColor) : QBrush(borderGradient);
     const qreal penWidth = smallestSize / 8.0;
     painter.setPen(QPen(penBrush, penWidth));
     QRectF r(penWidth / 2.0, penWidth / 2.0, size.width() - penWidth, size.height() - penWidth);
-    if (shape == Rectangular) {
+    if (d->shape == Rectangular) {
         painter.drawRect(r);
     } else {
         painter.drawEllipse(r);

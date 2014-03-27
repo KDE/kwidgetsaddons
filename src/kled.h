@@ -261,56 +261,14 @@ public Q_SLOTS:
     void off();
 
 protected:
-    /**
-     * Returns the width of the led.
-     */
-    virtual int ledWidth() const;
-
-    /**
-     * Paints a circular, flat LED.
-     */
-    virtual void paintFlat();
-
-    /**
-     * Paints a circular, raised LED.
-     */
-    virtual void paintRaised();
-
-    /**
-     * Paints a circular, sunken LED.
-     */
-    virtual void paintSunken();
-
-    /**
-     * Paints a rectangular, flat LED.
-     */
-    virtual void paintRect();
-
-    /**
-     * Paints a rectangular LED, either raised or
-     * sunken, depending on its argument.
-     */
-    virtual void paintRectFrame(bool raised);
-
     void paintEvent(QPaintEvent *);
     void resizeEvent(QResizeEvent *);
-
-    /**
-     * Paint the cached antialiased pixmap corresponding to the state if any
-     * @return true if the pixmap was painted, false if it hasn't been created yet
-     */
-    bool paintCachedPixmap();
 
     /**
      * @internal
      * invalidates caches after property changes and calls update()
      */
     void updateCachedPixmap();
-
-    /**
-     * @internal
-     */
-    void paintLed(Shape shape, Look look);
 
 private:
     class Private;
