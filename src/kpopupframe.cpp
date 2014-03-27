@@ -115,6 +115,11 @@ void KPopupFrame::keyPressEvent(QKeyEvent *e)
     }
 }
 
+void KPopupFrame::hideEvent(QHideEvent *e)
+{
+    QFrame::hideEvent(e);
+}
+
 void KPopupFrame::close(int r)
 {
     d->result = r;

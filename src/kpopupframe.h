@@ -39,6 +39,11 @@ protected:
      */
     virtual void keyPressEvent(QKeyEvent *e);
 
+    /**
+     * Catch hide events.
+     */
+    virtual void hideEvent(QHideEvent *e);
+
 public Q_SLOTS:
     /**
      * Close the popup window. This is called from the main widget, usually.
