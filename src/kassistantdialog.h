@@ -32,12 +32,6 @@
  * that people may find difficult to learn or do.
  * Sometimes a task requires too many input fields to fit them on a single dialog.
  *
- * KAssistantDialog provides page titles and displays Next, Back, Finish, Cancel,
- * and Help push buttons, as appropriate to the current position in the page sequence.
- * The Finish Button has the code KDialog::User1, The Next button is KDialog::User2
- * and the Back button is KDialog::User3.
- * The help button may be hidden using showButton(KDialog::Help, false)
- *
  * Create and populate dialog pages that inherit from QWidget and add them
  * to the assistant dialog using addPage().
  *
@@ -101,6 +95,21 @@ public:
      * @return true if @p page is appropriate, false if it is not
      */
     bool isAppropriate(KPageWidgetItem *page) const;
+
+    /**
+     * @returns the next button
+     */
+    QPushButton* nextButton() const;
+
+    /**
+     * @returns the finish button
+     */
+    QPushButton* backButton() const;
+
+    /**
+     * @returns the finish button
+     */
+    QPushButton* finishButton() const;
 
 public Q_SLOTS:
     /**

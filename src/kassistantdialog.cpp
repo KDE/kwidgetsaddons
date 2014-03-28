@@ -188,4 +188,19 @@ bool KAssistantDialog::isAppropriate(KPageWidgetItem *page) const
     return d->appropriate.value(page, true);
 }
 
+QPushButton* KAssistantDialog::backButton() const
+{
+    return d->backButton;
+}
+
+QPushButton* KAssistantDialog::nextButton() const
+{
+    return d->nextButton;
+}
+
+QPushButton* KAssistantDialog::finishButton() const
+{
+    return d->finishButton;
+}
+
 #include "moc_kassistantdialog.cpp"
