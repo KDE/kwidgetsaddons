@@ -158,7 +158,7 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::_k_textChanged()
     } else {
         if (ui.linePassword->text().length() < minPasswordLength) {
             ui.labelMatch->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-error")));
-            ui.labelMatch->setText(tr("Password must be at least %1 character(s) long").arg(minimumPasswordLength));
+            ui.labelMatch->setText(tr("Password must be at least %n character(s) long", "", minimumPasswordLength));
         } else {
             ui.labelMatch->setPixmap(match ? QIcon::fromTheme(QStringLiteral("dialog-ok")) : QIcon::fromTheme(QStringLiteral("dialog-error")));
             ui.labelMatch->setText(match ? tr("Passwords match")
