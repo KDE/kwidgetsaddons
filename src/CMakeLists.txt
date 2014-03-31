@@ -64,6 +64,7 @@ set(kwidgetsaddons_SRCS
   kpixmapsequenceoverlaypainter.cpp
   kpixmapsequencewidget.cpp
   kmimetypechooser.cpp
+  ${kwidgetsaddons_QM_LOADER}
 )
 
 set(kwidgetsaddon_UI
