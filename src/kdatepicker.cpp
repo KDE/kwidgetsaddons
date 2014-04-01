@@ -529,22 +529,13 @@ void KDatePicker::uncheckYearSelector()
     d->selectYear->update();
 }
 
-// ####### KDE4: setEnabled isn't virtual anymore, so this isn't polymorphic.
-// Better reimplement changeEvent() instead.
-void KDatePicker::setEnabled(bool enable)
+void KDatePicker::changeEvent(QEvent *event)
 {
-    QWidget *const widgets[] = {
-        d->yearForward, d->yearBackward, d->monthForward, d->monthBackward,
-        d->selectMonth, d->selectYear,
-        d->line, d->table, d->selectWeek, d->todayButton
-    };
-    const int Size = sizeof(widgets) / sizeof(widgets[0]);
-    int count;
-
-    for (count = 0; count < Size; ++count) {
-        widgets[count]->setEnabled(enable);
+    if (event && event->type() == QEvent::EnabledChange) {
+        if (isEnabled()) {
+            d->table->setFocus();
+        }
     }
-    d->table->setFocus();
 }
 
 KDateTable *KDatePicker::dateTable() const

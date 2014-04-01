@@ -93,11 +93,6 @@ public:
     const QDate &date() const;
 
     /**
-     * Enables or disables the widget.
-     **/
-    void setEnabled(bool enable);
-
-    /**
      * @returns the KDateTable widget child of this KDatePicker
      * widget.
      */
@@ -134,6 +129,7 @@ protected:
     virtual bool eventFilter(QObject *o, QEvent *e);
     /// the resize event
     virtual void resizeEvent(QResizeEvent *);
+    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     void dateChangedSlot(const QDate &date);
