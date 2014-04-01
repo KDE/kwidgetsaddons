@@ -854,7 +854,6 @@ qreal KFontChooser::Private::setupSizeListBox(const QString &family, const QStri
     if (!selectedSizeList.isEmpty()) {
         sizeListBox->setCurrentItem(selectedSizeList.first());
     }
-    //TODO - KDE4 : sizeListBox->scrollTo(sizeListBox->currentItem());
 
     return bestFitSize;
 }
