@@ -227,10 +227,6 @@ QStringList KCharSelectData::sectionList()
     QStringList list;
     quint32 i = stringBegin;
     while (i < stringEnd) {
-        // FIXME: Is the content of data already marked as translatable,
-        // using "KCharSelectData" as context and "KCharSelct section name" as
-        // disambiguation string?
-        // If it is not then QCoreApplication::translate() will return it as is.
         list.append(QCoreApplication::translate("KCharSelectData", data + 1, "KCharSelect section name"));
         i += strlen(data + i) + 1;
     }
