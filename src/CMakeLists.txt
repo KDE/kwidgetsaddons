@@ -147,6 +147,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPixmapSequence
   KPixmapSequenceOverlayPainter
   KPixmapSequenceWidget
+  KPixmapRegionSelectorDialog
   KPixmapRegionSelectorWidget
   KMimeTypeChooser
   KMessageBoxNotifyInterface
