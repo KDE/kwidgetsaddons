@@ -97,6 +97,7 @@ void KAssistantDialog::Private::init()
 {
     QDialogButtonBox *buttonBox = q->buttonBox();
 
+    buttonBox->setStandardButtons(0);
     backButton = new QPushButton;
 
     const QString iconBack = QApplication::isRightToLeft() ? QStringLiteral("go-next") : QStringLiteral("go-previous");
