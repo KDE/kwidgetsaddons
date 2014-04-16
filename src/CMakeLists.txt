@@ -1,4 +1,6 @@
 
+ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5)
+
 set(kwidgetsaddons_SRCS
   kacceleratormanager.cpp
   kanimatedbutton.cpp
