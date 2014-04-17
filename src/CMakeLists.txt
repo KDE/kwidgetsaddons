@@ -1,5 +1,5 @@
 
-ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5)
+ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5_qt)
 
 set(kwidgetsaddons_SRCS
   kacceleratormanager.cpp
