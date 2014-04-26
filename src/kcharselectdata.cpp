@@ -93,7 +93,7 @@ bool KCharSelectData::openDataFile()
     if (!dataFile.isEmpty()) {
         return true;
     } else {
-        QFile file(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kcharselect/kcharselect-data")));
+        QFile file(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/kcharselect/kcharselect-data")));
         if (!file.open(QIODevice::ReadOnly)) {
             return false;
         }

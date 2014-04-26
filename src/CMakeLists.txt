@@ -164,7 +164,7 @@ install(FILES
   DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KWidgetsAddons COMPONENT Devel
 )
 
-install(FILES kcharselect-data  DESTINATION  ${DATA_INSTALL_DIR}/kcharselect)
+install(FILES kcharselect-data  DESTINATION  ${KF5_DATA_INSTALL_DIR}/kcharselect)
 
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME)
