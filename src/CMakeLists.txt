@@ -83,7 +83,7 @@ add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
 
 target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
 
-target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KWidgetsAddons>")
+target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KWidgetsAddons>")
 
 set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION_STRING}
                                                   SOVERSION ${KWIDGETSADDONS_SOVERSION}
@@ -156,12 +156,12 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
-install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${KWidgetsAddons_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_export.h
-  DESTINATION ${INCLUDE_INSTALL_DIR}/KWidgetsAddons COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KWidgetsAddons COMPONENT Devel
 )
 
 install(FILES kcharselect-data  DESTINATION  ${DATA_INSTALL_DIR}/kcharselect)
