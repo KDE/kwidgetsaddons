@@ -18,7 +18,7 @@ include(ECMPackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 
-include(ECMCreateQmFromPoFiles)
+include(ECMPoQmTools)
 
 set(KF5_VERSION "4.99.0") # handled by release scripts
 
@@ -27,9 +27,8 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KWIDGETSADDONS
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5WidgetsAddonsConfigVersion.cmake"
                         SOVERSION 5)
 
-file(GLOB PO_FILES "po/*.po")
-if (PO_FILES)
-  ecm_create_qm_from_po_files(PO_FILES ${PO_FILES} CATALOG_NAME kwidgetsaddons5_qt)
+if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+    ecm_install_po_files_as_qm(po)
 endif()
 
 add_subdirectory(src)
