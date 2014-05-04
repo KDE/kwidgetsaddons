@@ -1,0 +1,2362 @@
+# Translation of kwidgetsaddons5.po to Catalan
+# Copyright (C) 1998-2014 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006.
+# Antoni Bella Pérez <antonibella5@orange.es>, 2003, 2006, 2011, 2012, 2013.
+# Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2007.
+# Sebastia Pla Sanz <sebastia.pla@clarcat.com>, 2006, 2007.
+# Josep Ma. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Robert Millan <rmh@aybabtu.com>, 2009.
+# Orestes Mas <orestes@tsc.upc.edu>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kwidgetsaddons5\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2014-04-06 18:07+0200\n"
+"Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/fonthelpers.cpp:81
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/fonthelpers.cpp:85
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 - [%2]"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kactionselector.cpp:100
+msgctxt "KActionSelector|"
+msgid "&Available:"
+msgstr "&Disponible:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kactionselector.cpp:117
+msgctxt "KActionSelector|"
+msgid "&Selected:"
+msgstr "&Seleccionat:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kassistantdialog.cpp:105
+msgctxt "KAssistantDialog|go back"
+msgid "&Back"
+msgstr "E&nrere"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kassistantdialog.cpp:107
+msgctxt "KAssistantDialog|"
+msgid "Go back one step"
+msgstr "Un pas arrere"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kassistantdialog.cpp:112
+msgctxt "KAssistantDialog|Opposite to Back"
+msgid "Next"
+msgstr "Següent"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kassistantdialog.cpp:119
+msgctxt "KAssistantDialog|"
+msgid "Finish"
+msgstr "Acaba"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:23
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "European Alphabets"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Alphabets"
+msgstr "Alfabets europeus"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:24
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Escriptures africanes"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:25
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Middle Eastern Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Escriptures d'Orient Mitjà"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:26
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "South Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Escriptures del sud d'Àsia"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:27
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Philippine Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Philippine Scripts"
+msgstr "Escriptures de les Filipines"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:28
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South East Asian Scripts"
+msgstr "Escriptures del sud-est asiàtic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:29
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Escriptures de l'est d'Àsia"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:30
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Central Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Escriptures de l'Àsia central"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:31
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Other Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other Scripts"
+msgstr "Altres escriptures"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:32
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Símbols"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:33
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Símbols matemàtics"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:34
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Phonetic Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Símbols fonètics"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:35
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:647
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritical Marks"
+msgstr "Marques diacrítiques de combinació"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:36
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Altres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:37
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Llatí bàsic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:38
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Llatí-1 suplementari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:39
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Llatí ampliat-A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:40
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Latin Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Llatí ampliat-B"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:41
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "IPA Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "Extensions IPA"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:42
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Spacing Modifier Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Lletres de modificació d'espaiat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:43
+#, fuzzy
+#| msgctxt "KSharSelect|KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Marques diacrítiques de combinació"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:44
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Greek and Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Grec i copte"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:45
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Ciríl·lic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:46
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Ciríl·lic suplementari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:47
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armeni"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:48
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Hebreu"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:49
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Àrab"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:50
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Syriac"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Siríac"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:51
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Arabic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Àrab suplementari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:52
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Thaana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:53
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "NKo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "NKo"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:54
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Samaritan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samarità"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:55
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Mandaic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandaic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:56
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:57
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Bengali"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengalí"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:58
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Gurmukhi"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:59
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Gujarati"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Oriya"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Oriya"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:61
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tamil"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tàmil"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:62
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Telugu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:63
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kanarés"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:64
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Malayalam"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malaiàlam"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Sinhala"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Singalés"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:66
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Tai"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:67
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Lao"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Laosià"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:68
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tibetan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetà"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:69
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Myanmar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:70
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Georgian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Georgià"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:71
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hangul Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:72
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiòpic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:73
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Etiòpic suplementari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:74
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Cherokee"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:75
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Sil·labaris aborígens del Canadà unificats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:76
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ogham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogham"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:77
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Runic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Rúnic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:78
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tagalog"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagal"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:79
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hanunoo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:80
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Buhid"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhid"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:81
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tagbanwa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Khmer"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmer"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Mongolian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongol"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Sil·labaris ampliats aborígens unificats del Canadà"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:85
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Limbu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:86
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tai Le"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:87
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "New Tai Lue"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Tai Lue nou"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:88
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Símbols Khmer"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:89
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Buginese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Bugui"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:90
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tai Tham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:91
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Balinese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Balinés"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:92
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Sundanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sundanés"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:93
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Batak"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batak"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:94
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Lepcha"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcha"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:95
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ol Chiki"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:96
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Vedic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Extensions vèdiques"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Extensions fonètiques"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:98
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Phonetic Extensions Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Extensions fonètiques suplementàries"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:99
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Marques diacrítiques de combinació suplementàries"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:100
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Latin Extended Additional"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Llatí ampliat addicional"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Greek Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Grec ampliat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:102
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "General Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Puntuació general"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:103
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Superscripts and Subscripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Superíndexs i subíndexs"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:104
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Símbols de moneda"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:105
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks for Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Marques diacrítiques de combinació per símbols"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:106
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Letterlike Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Símbols semblants a lletres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:107
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Formes de nombres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:108
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Fletxes"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:109
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Operadors matemàtics"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:110
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Miscellaneous Technical"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Tècnics variats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:111
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Control Pictures"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Imatges de control"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:112
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Optical Character Recognition"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Reconeixement òptic de caràcters"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:113
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Alfanumèrics delimitats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:114
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Box Drawing"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Dibuixos de quadres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:115
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Block Elements"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Elements de blocs"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Figures geomètriques"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:117
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Símbols variats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:118
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Dingbats"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:119
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Símbols-A matemàtics variats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:120
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Fletxes-A suplementàries"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:121
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Plantilles Braille"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:122
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Supplemental Arrows-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Fletxes-B suplementàries"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:123
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Símbols-B matemàtics variats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:124
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Supplemental Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Operadors matemàtics suplementaris"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:125
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Símbols i fletxes variats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:126
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Glagolitic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Glagolític"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:127
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Latin Extended-C"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Llatí ampliat-C"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:128
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Copte"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:129
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Georgian Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Georgià suplementari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:130
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tifinagh"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:131
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiòpic ampliat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:132
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Ciríl·lic ampliat-A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:133
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Supplemental Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Puntuació suplementària"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:134
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Radicals Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "Radicals CJK suplementaris"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:135
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Kangxi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Radicals Kangxi"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:136
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ideographic Description Characters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Caràcters de descripció ideogràfica"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:137
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Symbols and Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "Símbols i puntuació CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:138
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:139
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:140
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:141
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hangul Compatibility Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul compatible amb el Jamo"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:142
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Kanbun"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:143
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Bopomofo Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo ampliat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:144
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Strokes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "Traços CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:145
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Katakana Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Extensions fonètiques Katakana"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:146
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Enclosed CJK Letters and Months"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Lletres i mesos CJK delimitats"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:147
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Compatibility"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "Compatibilitat CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:148
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs Extension A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "Ideogrames unificats del CJK ampliació A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:149
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Yijing Hexagram Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Símbols d'hexagrams Yijing"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:150
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "Ideogrames unificats del CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:151
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Yi Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Sil·labari Yi"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:152
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Yi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Radicals Yi"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:153
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Lisu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Vai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vai"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:155
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Cyrillic Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Ciríl·lic ampliat-B"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:156
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Bamum"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:157
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Modifier Tone Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Lletres de modificació de to"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:158
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Latin Extended-D"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Llatí ampliat-D"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:159
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Syloti Nagri"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:160
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Common Indic Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Formes de nombres comuns de l'Índic"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:161
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Phags-pa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:162
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Saurashtra"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:163
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Devanagari Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari ampliat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:164
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Kayah Li"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:165
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Rejang"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:166
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul Jamo ampliat-A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:167
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Javanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Javanés"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:168
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Cham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Txam"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:169
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Myanmar ampliat-A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:170
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Tai Viet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Viet"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:171
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Ethiopic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiòpic ampliat-A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:172
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:173
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hangul Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Síl·labes Hangul"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:174
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul Jamo ampliat-B"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:175
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "High Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Substitucions altes"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:176
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "High Private Use Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Substitucions altes d'ús privat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:177
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Low Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Substitucions baixes"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:178
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Private Use Area"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Àrea d'ús privat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Compatibility Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "Ideogrames de compatibilitats CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:180
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Alphabetic Presentation Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Formes de presentació alfabètiques"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Formes de presentació de l'àrab-A"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:182
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Variation Selectors"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Selectors de variació"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:183
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Vertical Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Formes verticals"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:184
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Combining Half Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Mitges marques de combinació"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:185
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "CJK Compatibility Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "Formes de compatibilitat CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:186
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Small Form Variants"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Variants de formes petites"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:187
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Formes de presentació de l'àrab-B"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:188
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Halfwidth and Fullwidth Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Formes d'amplada mitja i sencera"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect-translation.cpp:189
+#, fuzzy
+#| msgctxt "KSharSelect|KCharselect unicode block name"
+#| msgid "Specials"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Especials"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:355
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:357
+msgctxt "KCharSelect|"
+msgid "Enter a search term or character here"
+msgstr "Introduïu ací un terme de cerca o un caràcter"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:362
+msgctxt "KCharSelect|"
+msgid "&Find..."
+msgstr "&Cerca..."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:383
+msgctxt "KCharSelect|Goes to previous character"
+msgid "Previous in History"
+msgstr "Anterior a l'historial"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:385
+msgctxt "KCharSelect|"
+msgid "Previous Character in History"
+msgstr "Caràcter anterior a l'historial"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:390
+msgctxt "KCharSelect|Goes to next character"
+msgid "Next in History"
+msgstr "Següent a l'historial"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:392
+msgctxt "KCharSelect|"
+msgid "Next Character in History"
+msgstr "Caràcter següent a l'historial"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:397
+msgctxt "KCharSelect|go back"
+msgid "&Back"
+msgstr "E&nrere"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:405
+msgctxt "KCharSelect|go forward"
+msgid "&Forward"
+msgstr "Avan&t"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:420
+msgctxt "KCharSelect|"
+msgid "Select a category"
+msgstr "Seleccioneu una categoria"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:423
+msgctxt "KCharSelect|"
+msgid "Select a block to be displayed"
+msgstr "Cadena un bloc a mostrar"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:436
+msgctxt "KCharSelect|"
+msgid "Set font"
+msgstr "Establir el tipus de lletra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:443
+msgctxt "KCharSelect|"
+msgid "Set font size"
+msgstr "Establir la mida del tipus de lletra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:675
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Caràcter:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:681
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Nom: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:689
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Anotacions i referències creuades"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:693
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Nom d'àlies:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:701
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Notes:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:709
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Vegeu també:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:721
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Equivalències:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:729
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Equivalències aproximades:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:738
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "Informació ideogràfica CJK"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:741
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Definició en anglés: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:748
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Pronunciació en mandarí: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:755
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Pronunciació en cantonés: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:762
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Pronunciació en japonés On: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:769
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Pronunciació en japonés Kun: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:776
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Pronunciació en tang: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:783
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Pronunciació en coreà: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:789
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Propietats generals dels caràcters"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:790
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Bloc: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:791
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Categoria d'Unicode: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:795
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Vàries representacions útils"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:796
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:800
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:801
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "UTF-8 escapat octal C: "
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:805
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "Entitat decimal XML:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:933
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Punt de codi Unicode:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselect.cpp:934
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "En decimal:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:274
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Ús no privat, suplència alta>"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:276
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Ús privat, suplència alta>"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:278
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Suplència baixa>"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:280
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Ús privat>"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:311
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<sense assignar>"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:656
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "No imprimible"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:689
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Altres, control"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:690
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Altres, format"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:691
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Altres, sense assignar"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:692
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Altres, ús privat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:693
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Altres, suplència"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:694
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Lletra, minúscula"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:695
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Lletra, modificador"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:696
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Lletra, altres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:697
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Lletra, majúscula de títol"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:698
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Lletra, majúscula"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:699
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Marca, combinació d'espaiat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:700
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Marca, tancament"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:701
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Marca, no espaiat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:702
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Nombre, dígit decimal"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:703
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Nombre, lletra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:704
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Nombre, altres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:705
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Puntuació, connector"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:706
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Puntuació, guió"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:707
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Puntuació, final"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:708
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Puntuació, cometes finals"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:709
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Puntuació, cometes inicials"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:710
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Puntuació, altres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:711
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Puntuació, obert"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:712
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Símbol, moneda"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:713
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Símbol, modificador"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:714
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Símbol, matemàtiques"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:715
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Símbol, altres"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:716
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Separador, línia"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:717
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Separador, paràgraf"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:718
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Separador, espai"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcharselectdata.cpp:719
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Desconegut"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kcolorcombo.cpp:339
+msgctxt "KColorCombo|Custom color"
+msgid "Custom..."
+msgstr "Personalitzat..."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:164
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Any següent"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:165
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Mes següent"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:166
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Setmana següent"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:167
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Demà"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:168
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Hui"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:169
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Ahir"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:170
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Darrera setmana"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:171
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Darrer mes"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:172
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Darrer any"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:174
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Sense data"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:272
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "La data que heu introduït no és vàlida"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:275
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "La data no pot ser anterior a %1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatecombobox.cpp:282
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "La data no pot ser posterior a %1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:189
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Setmana %1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:295
+msgctxt "KDatePicker|"
+msgid "Next year"
+msgstr "Any següent"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:296
+msgctxt "KDatePicker|"
+msgid "Previous year"
+msgstr "Any anterior"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:297
+msgctxt "KDatePicker|"
+msgid "Next month"
+msgstr "Mes següent"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:298
+msgctxt "KDatePicker|"
+msgid "Previous month"
+msgstr "Mes anterior"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:299
+msgctxt "KDatePicker|"
+msgid "Select a week"
+msgstr "Seleccioneu una setmana"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:300
+msgctxt "KDatePicker|"
+msgid "Select a month"
+msgstr "Seleccioneu un mes"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:301
+msgctxt "KDatePicker|"
+msgid "Select a year"
+msgstr "Seleccioneu un any"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:302
+msgctxt "KDatePicker|"
+msgid "Select the current day"
+msgstr "Seleccioneu el dia actual"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatepicker.cpp:643
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Tanca"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatetimeedit.cpp:189
+msgctxt "KDateTimeEdit|UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatetimeedit.cpp:190
+msgctxt "KDateTimeEdit|No specific time zone"
+msgid "Floating"
+msgstr "Per decidir"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatetimeedit.cpp:230
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+"La data i hora introduïdes són anteriors a la data i hora mínimes acceptades."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kdatetimeedit.cpp:240
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+"La data i hora introduïdes són posteriors a la data i hora màximes "
+"acceptades."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/keditlistwidget.cpp:298
+msgctxt "KEditListWidget|"
+msgid "&Add"
+msgstr "&Afig"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/keditlistwidget.cpp:310
+msgctxt "KEditListWidget|"
+msgid "&Remove"
+msgstr "&Elimina"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/keditlistwidget.cpp:322
+msgctxt "KEditListWidget|"
+msgid "Move &Up"
+msgstr "Am&unt"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/keditlistwidget.cpp:327
+msgctxt "KEditListWidget|"
+msgid "Move &Down"
+msgstr "A&vall"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:159
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font to be used."
+msgstr "Ací podeu seleccionar el tipus de lletra que s'usarà."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:181
+msgctxt "KFontChooser|"
+msgid "Requested Font"
+msgstr "Tipus de lletra requerit"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:198
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Tipus de lletra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:202
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font family settings."
+msgstr ""
+"Marqueu esta casella de selecció per canviar l'arranjament de la família del "
+"tipus de lletra."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:203
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font family?"
+msgstr "Canvio la família del tipus de lletra?"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:207
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Tipus de lletra:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:214
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Estil de tipus de lletra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:218
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font style settings."
+msgstr ""
+"Marqueu esta casella de selecció per canviar l'arranjament de l'estil del "
+"tipus de lletra."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:219
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font style?"
+msgstr "Canvio l'estil del tipus de lletra?"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:223
+msgctxt "KFontChooser|"
+msgid "Font style:"
+msgstr "Estil del tipus de lletra:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:231
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Mida"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:235
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font size settings."
+msgstr ""
+"Marqueu esta casella de selecció per canviar l'arranjament de la mida del "
+"tipus de lletra."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:236
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font size?"
+msgstr "Canvio la mida del tipus de lletra?"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:240
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Mida:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:256
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font family to be used."
+msgstr "Ací podeu seleccionar la família del tipus de lletra que s'usarà."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:280
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font style to be used."
+msgstr "Ací podeu seleccionar l'estil del tipus de lletra que s'usarà."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:288
+msgctxt "KFontChooser|QFontDatabase"
+msgid "Normal"
+msgstr "Normal"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:289
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:601
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Cursiva"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:290
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:602
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Obliqua"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:291
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Negreta"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:292
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Negreta cursiva"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:311
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Relativa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:313
+msgctxt "KFontChooser|"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"Mida del tipus de lletra d'amplada<br /><i>fixa</i> o <i>relativa</i><br />a "
+"l'entorn"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:315
+msgctxt "KFontChooser|"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Ací podeu canviar entre mida del tipus de lletra d'amplada fixa i mida del "
+"tipus de lletra calculable dinàmicament i ajustable a l'entorn canviant (p. "
+"ex. dimensions d'estri, mida de paper)."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:339
+msgctxt "KFontChooser|"
+msgid "Here you can choose the font size to be used."
+msgstr "Ací podeu seleccionar la mida del tipus de lletra que s'usarà."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:377
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "Zel de grum: quètxup, whisky, cafè, bon vi; ja!"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:380
+msgctxt "KFontChooser|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Este text d'exemple il·lustra l'arranjament actual. Podeu editar-lo per a "
+"provar els caràcters especials."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontchooser.cpp:586
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontrequester.cpp:111
+msgctxt "KFontRequester|"
+msgid "Choose..."
+msgstr "Seleccioneu..."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontrequester.cpp:216
+msgctxt "KFontRequester|"
+msgid "Click to select a font"
+msgstr "Cliqueu per a seleccionar un tipus de lletra"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontrequester.cpp:222
+msgctxt "KFontRequester|"
+msgid "Preview of the selected font"
+msgstr "Vista prèvia del tipus de lletra seleccionat"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontrequester.cpp:223
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Això és una vista prèvia del tipus de lletra seleccionat. Podeu canviar-lo "
+"clicant el botó «Seleccioneu...»."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontrequester.cpp:226
+#, qt-format
+msgctxt "KFontRequester|"
+msgid "Preview of the \"%1\" font"
+msgstr "Vista prèvia del tipus de lletra «%1»"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kfontrequester.cpp:227
+#, qt-format
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Això és una vista prèvia del tipus de lletra «%1». Podeu canviar-lo clicant "
+"el botó «Seleccioneu...»."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kmessagewidget.cpp:90
+msgctxt "KMessageWidget|"
+msgid "&Close"
+msgstr "&Tanca"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kmessagewidget.cpp:91
+msgctxt "KMessageWidget|"
+msgid "Close message"
+msgstr "Tanca el missatge"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:69
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered.  To improve the strength of the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols, such as #, as well as letters."
+msgstr ""
+"La mesura de fermesa de contrasenya dóna una indicació de la seguretat de la "
+"contrasenya que heu introduït. Per a millorar la fermesa de la contrasenya, "
+"proveu:\n"
+" - l'ús d'una contrasenya més llarga;\n"
+" - l'ús d'una barreja de lletres majúscules i minúscules;\n"
+" - l'ús de números i símbols, com ara #, junt amb lletres."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:157
+msgctxt "KNewPasswordDialog|"
+msgid "Password is empty"
+msgstr "La contrasenya és buida"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:163
+#, qt-format
+msgctxt "KNewPasswordDialog|"
+msgid "Password must be at least %n character(s) long"
+msgid_plural "Password must be at least %n character(s) long"
+msgstr[0] "La contrasenya ha de tindre al menys %n caràcter de longitud"
+msgstr[1] "La contrasenya ha de tindre al menys %n caràcters de longitud"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:166
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords match"
+msgstr "Les contrasenyes coincideixen"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:167
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.ui:112
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords do not match"
+msgstr "Les contrasenyes no coincideixen"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:222
+msgctxt "KNewPasswordDialog|"
+msgid "You entered two different passwords. Please try again."
+msgstr "Heu introduït dues contrasenyes diferents. Torneu a provar-ho."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:232
+msgctxt "KNewPasswordDialog|"
+msgid "Low Password Strength"
+msgstr "Contrasenya de fermesa baixa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.cpp:233
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"La contrasenya que heu introduït té una fermesa baixa. Per a millorar la "
+"fermesa de la contrasenya, proveu:\n"
+" - l'ús d'una contrasenya més llarga;\n"
+" - l'ús d'una barreja de lletres majúscules i minúscules;\n"
+" - l'ús de números i símbols, com ara #, junt amb lletres.\n"
+"\n"
+"Voleu usar esta contrasenya igualment?"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.ui:52
+msgctxt "KNewPasswordDialog|"
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.ui:62
+msgctxt "KNewPasswordDialog|"
+msgid "&Verify:"
+msgstr "&Verifica:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/knewpassworddialog.ui:90
+msgctxt "KNewPasswordDialog|"
+msgid "Password strength meter:"
+msgstr "Mesura de la fermesa de contrasenya:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.cpp:64
+msgctxt "KPasswordDialog|"
+msgid "Password"
+msgstr "Contrasenya"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:25
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "A sota, introduïu un nom d'usuari i una contrasenya."
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:62
+msgctxt "KPasswordDialog|"
+msgid "No password, use anonymous (or guest) login"
+msgstr "Sense contrasenya, usa un inici de sessió anònim (o convidat)"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:69
+msgctxt "KPasswordDialog|"
+msgid "Use this password:"
+msgstr "Usa esta contrasenya:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:85
+msgctxt "KPasswordDialog|"
+msgid "Username:"
+msgstr "Nom d'usuari:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:99
+msgctxt "KPasswordDialog|"
+msgid "Domain:"
+msgstr "Domini:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:113
+msgctxt "KPasswordDialog|"
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpassworddialog.ui:130
+msgctxt "KPasswordDialog|"
+msgid "Remember password"
+msgstr "Recorda la contrasenya"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpixmapregionselectordialog.cpp:64
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Select Region of Image"
+msgstr "Selecció de regió d'imatge"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpixmapregionselectordialog.cpp:68
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr ""
+"Cliqueu i arrossegueu a la imatge per a seleccionar la regió d'interés:"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpixmapregionselectorwidget.cpp:191
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Image Operations"
+msgstr "Operacions d'imatge"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpixmapregionselectorwidget.cpp:193
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "&Rotate Clockwise"
+msgstr "&Gir horari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/kpixmapregionselectorwidget.cpp:195
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Rotate &Counterclockwise"
+msgstr "Gir &antihorari"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ksqueezedtextlabel.cpp:165
+msgctxt "KSqueezedTextLabel|"
+msgid "&Copy Full Text"
+msgstr "&Copia tot el text"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktimecombobox.cpp:252
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "L'hora que heu introduït no és vàlida"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktimecombobox.cpp:255
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "L'hora no pot ser anterior a %1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktimecombobox.cpp:262
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "L'hora no pot ser posterior a %1"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktogglefullscreenaction.cpp:44
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Ix del &mode de pantalla completa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktogglefullscreenaction.cpp:45
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Ix de pantalla completa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Ix del mode de pantalla completa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktogglefullscreenaction.cpp:49
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "&Mode de pantalla completa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktogglefullscreenaction.cpp:50
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Pantalla completa"
+
+#: ../../home/scripty/prod/git-unstable/frameworks_kwidgetsaddons/src/ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Mostra la finestra en pantalla completa"
+
+#~ msgctxt "KSharSelect|KCharselect unicode block name"
+#~ msgid "Combining Diacritical Marks"
+#~ msgstr "Marques diacrítiques de combinació"
