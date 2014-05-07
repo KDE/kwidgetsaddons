@@ -1,23 +1,16 @@
 
-include(ECMMarkAsTest)
+include(ECMAddTests)
 
 find_package(Qt5 5.2.0 CONFIG REQUIRED Test)
 
-macro(kwidgetsaddons_unit_tests)
-  foreach(_testname ${ARGN})
-    add_executable(${_testname} ${_testname}.cpp)
-    target_link_libraries(${_testname} Qt5::Test KF5::WidgetsAddons)
-    add_test(kwidgetsaddons-${_testname} ${_testname})
-    ecm_mark_as_test(${_testname})
-  endforeach(_testname)
-endmacro()
-
-kwidgetsaddons_unit_tests(
-  kcolorbuttontest
-  kdatecomboboxtest
-  kdatetimeedittest
-  kdualactiontest
-  kselectaction_unittest
-  ktimecomboboxtest
-  kmessagewidgetautotest
+ecm_add_tests(
+  kcolorbuttontest.cpp
+  kdatecomboboxtest.cpp
+  kdatetimeedittest.cpp
+  kdualactiontest.cpp
+  kselectaction_unittest.cpp
+  ktimecomboboxtest.cpp
+  kmessagewidgetautotest.cpp
+  NAME_PREFIX "kwidgetsaddons-"
+  LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
 )
