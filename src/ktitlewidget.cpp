@@ -193,7 +193,8 @@ void KTitleWidget::setBuddy(QWidget *buddy)
 void KTitleWidget::changeEvent(QEvent *e)
 {
     QWidget::changeEvent(e);
-    if (e->type() == QEvent::PaletteChange) {
+    if (e->type() == QEvent::PaletteChange || e->type() == QEvent::FontChange
+                                           || e->type() == QEvent::ApplicationFontChange) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
         d->commentLabel->setStyleSheet(d->commentStyleSheet());
     }
