@@ -41,7 +41,7 @@ public:
 
     QString textStyleSheet() const
     {
-        const int fontSize = qRound(QApplication::font().pointSize() * 1.3);
+        const int fontSize = qRound(QApplication::font().pointSize() * 1.4);
         return QStringLiteral("QLabel { font-size: %1pt; color: %2 }").arg(QString::number(fontSize), q->palette().color(QPalette::WindowText).name());
     }
 
