@@ -24,20 +24,23 @@
 #include <QWidget>
 
 /**
- * @short Standard title widget with a white background and round border.
+ * @short Standard title widget.
  *
  * This class provides a widget often used for dialog titles.
  * \image html ktitlewidget.png "KTitleWidget with title and icon"
+ *
+ * KTitleWidget uses the general application font at 1.4 times its size to
+ * style the text. This is a visual change from 4.x.
  *
  * @section Usage
  * KTitleWidget is very simple to use. You can either use its default text
  * (and pixmap) properties or display your own widgets in the title widget.
  *
- * A title text with a left aligned pixmap:
+ * A title text with a right-aligned pixmap:
  * @code
 KTitleWidget *titleWidget = new KTitleWidget(this);
 titleWidget->setText(i18n("Title"));
-titleWidget->setPixmap(QIcon::fromTheme("screen").pixmap(22, 22), KTitleWidget::ImageLeft);
+titleWidget->setPixmap(QIcon::fromTheme("screen").pixmap(22, 22));
  * @endcode
  *
  * Use it with an own widget:
