@@ -252,7 +252,8 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
     if (qobject_cast<QComboBox *>(w) || qobject_cast<QLineEdit *>(w) ||
             w->inherits("Q3TextEdit") ||
             qobject_cast<QTextEdit *>(w) ||
-            qobject_cast<QAbstractSpinBox *>(w) || w->inherits("KMultiTabBar")) {
+            qobject_cast<QAbstractSpinBox *>(w) || w->inherits("KMultiTabBar") ||
+            w->inherits("qdesigner_internal::TextPropertyEditor")) {
         return;
     }
 
