@@ -122,8 +122,8 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
     QRect desktop = QApplication::desktop()->screenGeometry(q->topLevelWidget());
     q->setMinimumWidth(qMin(1000, qMax(q->sizeHint().width(), desktop.width() / 4)));
     QStyleOption option;
-    option.initFrom(this);
-    const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this);
+    option.initFrom(q);
+    const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
     q->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize));
 }
 
