@@ -86,7 +86,7 @@ public:
 protected:
     bool eventFilter(QObject *object, QEvent *event);
 
-private Q_SLOTS:
+protected Q_SLOTS:
     virtual void slotToggled(bool checked);
 
 private:
