@@ -24,6 +24,7 @@
 #include <QLayout>
 #include <QDesktopWidget>
 #include <QPushButton>
+#include <QStyleOption>
 #include <QTextDocument>
 #include <QTimer>
 
@@ -120,7 +121,10 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
 
     QRect desktop = QApplication::desktop()->screenGeometry(q->topLevelWidget());
     q->setMinimumWidth(qMin(1000, qMax(q->sizeHint().width(), desktop.width() / 4)));
-    q->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(128));
+    QStyleOption option;
+    option.initFrom(q);
+    const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
+    q->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize));
 }
 
 void KPasswordDialog::setPixmap(const QPixmap &pixmap)

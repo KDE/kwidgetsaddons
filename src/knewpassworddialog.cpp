@@ -28,6 +28,7 @@
 #include <QRegExp>
 #include <QSize>
 #include <QString>
+#include <QStyleOption>
 #include <QLineEdit>
 #include <QMessageBox>
 
@@ -63,7 +64,10 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::init()
 {
     ui.setupUi(q);
 
-    ui.labelIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(96, 96));
+    QStyleOption option;
+    option.initFrom(q);
+    const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
+    ui.labelIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize, iconSize));
     ui.labelMatch->setHidden(true);
 
     const QString strengthBarWhatsThis(tr("The password strength meter gives an indication of the security "
