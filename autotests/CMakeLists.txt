@@ -11,6 +11,5 @@ ecm_add_tests(
   kselectaction_unittest.cpp
   ktimecomboboxtest.cpp
   kmessagewidgetautotest.cpp
-  NAME_PREFIX "kwidgetsaddons-"
   LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
 )
