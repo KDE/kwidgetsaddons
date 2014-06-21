@@ -149,10 +149,11 @@ public Q_SLOTS:
      * Stop drawing the overlay.
      */
     void stop();
-
-private:
+    
+protected:
     bool eventFilter(QObject *obj, QEvent *event);
 
+private:
     class Private;
     Private *const d;
 

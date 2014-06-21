@@ -152,9 +152,9 @@ protected:
      */
     virtual QMenu *createPopupMenu();
 
-private:
     bool eventFilter(QObject *obj, QEvent *ev);
 
+private:
     class Private;
     friend class Private;
     Private *const d;
