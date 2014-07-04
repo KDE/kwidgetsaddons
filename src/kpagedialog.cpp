@@ -35,6 +35,7 @@ KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
     Q_D(KPageDialog);
     d->mPageWidget = new KPageWidget(this);
     d->mButtonBox = new QDialogButtonBox(this);
+    d->mButtonBox->setObjectName(QLatin1String("buttonbox"));
     d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     d->init();
@@ -49,6 +50,7 @@ KPageDialog::KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags f
     widget->setParent(this);
     d->mPageWidget = widget;
     d->mButtonBox = new QDialogButtonBox(this);
+    d->mButtonBox->setObjectName(QLatin1String("buttonbox"));
     d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     d->init();
@@ -66,6 +68,7 @@ KPageDialog::KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *p
         d->mPageWidget = new KPageWidget(this);
     }
     d->mButtonBox = new QDialogButtonBox(this);
+    d->mButtonBox->setObjectName(QLatin1String("buttonbox"));
     d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     d->init();
 }
@@ -132,6 +135,11 @@ void KPageDialog::setStandardButtons(QDialogButtonBox::StandardButtons buttons)
 QPushButton *KPageDialog::button(QDialogButtonBox::StandardButton which) const
 {
     return d_func()->mButtonBox->button(which);
+}
+
+void KPageDialog::addActionButton(QAbstractButton *button)
+{
+    d_func()->mButtonBox->addButton(button, QDialogButtonBox::ActionRole);
 }
 
 KPageWidget *KPageDialog::pageWidget()

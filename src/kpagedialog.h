@@ -196,6 +196,11 @@ public:
      */
     QPushButton *button(QDialogButtonBox::StandardButton which) const;
 
+    /**
+      * Set an action button.
+      */
+    void addActionButton(QAbstractButton *button);
+
 Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page has changed.
