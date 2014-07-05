@@ -26,6 +26,7 @@
 #include <QLayout>
 #include <QProcess>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTreeWidget>
 
 static const QString i18n(const char *a)
@@ -60,6 +61,8 @@ public:
 };
 //END
 
+static const char s_keditfiletypeExecutable[] = "keditfiletype5";
+
 //BEGIN KMimeTypeChooser
 KMimeTypeChooser::KMimeTypeChooser(const QString &text,
                                    const QStringList &selMimeTypes,
@@ -72,6 +75,11 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
 {
     d->defaultgroup = defaultGroup;
     d->groups = groupsToShow;
+    if (visuals & EditButton) {
+        if (QStandardPaths::findExecutable(QString::fromLatin1(s_keditfiletypeExecutable)).isEmpty()) {
+            visuals &= ~EditButton;
+        }
+    }
     d->visuals = visuals;
 
     QVBoxLayout *vboxLayout = new QVBoxLayout(this);
@@ -225,7 +233,7 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
     args << QStringLiteral("--caption") << QGuiApplication::applicationDisplayName();
     args << mt;
 
-    QProcess::startDetached(QStringLiteral("keditfiletype"), args);
+    QProcess::startDetached(QString::fromLatin1(s_keditfiletypeExecutable), args);
 }
 
 void KMimeTypeChooserPrivate::_k_slotCurrentChanged(QTreeWidgetItem *item)
