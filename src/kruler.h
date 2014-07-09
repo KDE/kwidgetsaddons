@@ -159,14 +159,14 @@ public:
      * to the main event loop.
      *
      **/
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void setMinValue(int);
 #endif
 
     /**
      * Returns the minimal value of the ruler pointer.
      **/
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED int minValue() const;
 #endif
 
@@ -176,14 +176,14 @@ public:
      * This method calls update() so that the widget is painted after leaving
      * to the main event loop.
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void setMaxValue(int);
 #endif
 
     /**
      * Returns the maximal value of the ruler pointer.
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED int maxValue() const;
 #endif
 

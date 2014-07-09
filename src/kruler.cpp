@@ -182,7 +182,7 @@ KRuler::~KRuler()
     delete d;
 }
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
 void
 KRuler::setMinValue(int value)
 {
@@ -190,7 +190,7 @@ KRuler::setMinValue(int value)
 }
 #endif
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
 int
 KRuler::minValue() const
 {
@@ -198,7 +198,7 @@ KRuler::minValue() const
 }
 #endif
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
 void
 KRuler::setMaxValue(int value)
 {
@@ -206,7 +206,7 @@ KRuler::setMaxValue(int value)
 }
 #endif
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
 int
 KRuler::maxValue() const
 {

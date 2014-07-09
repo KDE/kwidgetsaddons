@@ -78,7 +78,7 @@ public:
      *
      * \deprecated use menu() instead
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED QMenu *popupMenu() const;
 #endif
 

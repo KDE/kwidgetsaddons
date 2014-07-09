@@ -311,7 +311,7 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
 /* Class: KCharSelect                                             */
 /******************************************************************/
 
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
 KCharSelect::KCharSelect(QWidget *parent, const Controls controls)
     : QWidget(parent), d(new KCharSelectPrivate(this))
 {

@@ -61,7 +61,7 @@ public:
     /**
      * @deprecated
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void remove(QAction *);
 #endif
 
@@ -76,7 +76,7 @@ public:
      * If none exists, one will be created.
      * @deprecated use menu() instead.
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     inline KWIDGETSADDONS_DEPRECATED QMenu *popupMenu()
     {
         return menu();

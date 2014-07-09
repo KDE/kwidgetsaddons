@@ -127,7 +127,7 @@ public Q_SLOTS:
     /**
      * \deprecated use setRating( int rating )
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void setRating(unsigned int rating);
 #endif
 
@@ -141,7 +141,7 @@ public Q_SLOTS:
     /**
      * \deprecated use setMaxRating( int max )
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void setMaxRating(unsigned int max);
 #endif
 
@@ -154,7 +154,7 @@ public Q_SLOTS:
     /**
      * \deprecated Use setHalfStepsEnabled
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void setOnlyPaintFullSteps(bool);
 #endif
 
@@ -190,7 +190,7 @@ public Q_SLOTS:
      *
      * \deprecated use setCustomPixmap
      */
-#ifndef KDE_NO_DEPRECATED
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
     KWIDGETSADDONS_DEPRECATED void setPixmap(const QPixmap &);
 #endif
 
