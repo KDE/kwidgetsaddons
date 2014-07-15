@@ -374,7 +374,7 @@ void KDatePicker::resizeEvent(QResizeEvent *e)
 void KDatePicker::dateChangedSlot(const QDate &date_)
 {
     d->line->setText(locale().toString(date_, QLocale::ShortFormat));
-    d->selectMonth->setText(locale().monthName(date_.month(), QLocale::LongFormat));
+    d->selectMonth->setText(locale().standaloneMonthName(date_.month(), QLocale::LongFormat));
     d->fillWeeksCombo();
 
     // calculate the item num in the week combo box; normalize selected day so as if 1.1. is the first day of the week
@@ -459,7 +459,7 @@ void KDatePicker::selectMonthClicked()
     // JPL do we need to do somethng here for months that fall outside valid range?
     const int monthsInYear = QDate(thisDate.year() + 1, 1, 1).addDays(-1).month();
     for (int m = 1; m <= monthsInYear; m++) {
-        popup.addAction(locale().monthName(m))->setData(m);
+        popup.addAction(locale().standaloneMonthName(m))->setData(m);
     }
 
     QAction *item = popup.actions()[ thisDate.month() - 1 ];
@@ -590,7 +590,7 @@ void KDatePicker::setFontSize(int s)
     QString longestMonth;
 
     for (int i = 1;; ++i) {
-        QString str = locale().monthName(i, QLocale::LongFormat);
+        QString str = locale().standaloneMonthName(i, QLocale::LongFormat);
         if (str.isNull()) {
             break;
         }
