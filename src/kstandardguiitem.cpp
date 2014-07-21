@@ -22,15 +22,6 @@
 
 #include <kguiitem.h>
 
-static const QString i18n(const char *a)
-{
-    return QApplication::translate("KStandardGuiItem", a);
-}
-static const QString i18nc(const char *comment, const char *a)
-{
-    return QApplication::translate("KStandardGuiItem", a, comment);
-}
-
 namespace KStandardGuiItem
 {
 
@@ -114,52 +105,52 @@ QString standardItem(StandardItem ui_enum)
 
 KGuiItem ok()
 {
-    return KGuiItem(i18n("&OK"), QStringLiteral("dialog-ok"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&OK"), QStringLiteral("dialog-ok"));
 }
 
 KGuiItem cancel()
 {
-    return KGuiItem(i18n("&Cancel"), QStringLiteral("dialog-cancel"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Cancel"), QStringLiteral("dialog-cancel"));
 }
 
 KGuiItem yes()
 {
-    return KGuiItem(i18n("&Yes"), QStringLiteral("dialog-ok"), i18n("Yes"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Yes"), QStringLiteral("dialog-ok"), QApplication::translate("KStandardGuiItem", "Yes"));
 }
 
 KGuiItem no()
 {
-    return KGuiItem(i18n("&No"), QStringLiteral("process-stop"), i18n("No"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&No"), QStringLiteral("process-stop"), QApplication::translate("KStandardGuiItem", "No"));
 }
 
 KGuiItem discard()
 {
-    return KGuiItem(i18n("&Discard"), QStringLiteral("edit-clear"), i18n("Discard changes"),
-                    i18n("Pressing this button will discard all recent "
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Discard"), QStringLiteral("edit-clear"), QApplication::translate("KStandardGuiItem", "Discard changes"),
+                    QApplication::translate("KStandardGuiItem", "Pressing this button will discard all recent "
                          "changes made in this dialog."));
 }
 
 KGuiItem save()
 {
-    return KGuiItem(i18n("&Save"), QStringLiteral("document-save"), i18n("Save data"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Save"), QStringLiteral("document-save"), QApplication::translate("KStandardGuiItem", "Save data"));
 }
 
 KGuiItem dontSave()
 {
-    return KGuiItem(i18n("&Do Not Save"), QStringLiteral(""),
-                    i18n("Do not save data"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Do Not Save"), QStringLiteral(""),
+                    QApplication::translate("KStandardGuiItem", "Do not save data"));
 }
 
 KGuiItem saveAs()
 {
-    return KGuiItem(i18n("Save &As..."), QStringLiteral("document-save-as"),
-                    i18n("Save file with another name"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Save &As..."), QStringLiteral("document-save-as"),
+                    QApplication::translate("KStandardGuiItem", "Save file with another name"));
 }
 
 KGuiItem apply()
 {
-    return KGuiItem(i18n("&Apply"), QStringLiteral("dialog-ok-apply"), i18n("Apply changes"),
-                    i18n("When you click <b>Apply</b>, the settings will be "
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Apply"), QStringLiteral("dialog-ok-apply"), QApplication::translate("KStandardGuiItem", "Apply changes"),
+                    QApplication::translate("KStandardGuiItem", "When you click <b>Apply</b>, the settings will be "
                          "handed over to the program, but the dialog "
                          "will not be closed.\n"
                          "Use this to try different settings."));
@@ -167,63 +158,63 @@ KGuiItem apply()
 
 KGuiItem adminMode()
 {
-    return KGuiItem(i18n("Administrator &Mode..."), QStringLiteral(""), i18n("Enter Administrator Mode"),
-                    i18n("When you click <b>Administrator Mode</b> you will be prompted "
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Administrator &Mode..."), QStringLiteral(""), QApplication::translate("KStandardGuiItem", "Enter Administrator Mode"),
+                    QApplication::translate("KStandardGuiItem", "When you click <b>Administrator Mode</b> you will be prompted "
                          "for the administrator (root) password in order to make changes "
                          "which require root privileges."));
 }
 
 KGuiItem clear()
 {
-    return KGuiItem(i18n("C&lear"), QStringLiteral("edit-clear"),
-                    i18n("Clear input"),
-                    i18n("Clear the input in the edit field"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "C&lear"), QStringLiteral("edit-clear"),
+                    QApplication::translate("KStandardGuiItem", "Clear input"),
+                    QApplication::translate("KStandardGuiItem", "Clear the input in the edit field"));
 }
 
 KGuiItem help()
 {
-    return KGuiItem(i18nc("show help", "&Help"), QStringLiteral("help-contents"),
-                    i18n("Show help"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Help", "show help"), QStringLiteral("help-contents"),
+                    QApplication::translate("KStandardGuiItem", "Show help"));
 }
 
 KGuiItem close()
 {
-    return KGuiItem(i18n("&Close"), QStringLiteral("window-close"),
-                    i18n("Close the current window or document"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Close"), QStringLiteral("window-close"),
+                    QApplication::translate("KStandardGuiItem", "Close the current window or document"));
 }
 
 KGuiItem closeWindow()
 {
-    return KGuiItem(i18n("&Close Window"), QStringLiteral("window-close"),
-                    i18n("Close the current window."));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Close Window"), QStringLiteral("window-close"),
+                    QApplication::translate("KStandardGuiItem", "Close the current window."));
 }
 
 KGuiItem closeDocument()
 {
-    return KGuiItem(i18n("&Close Document"), QStringLiteral("document-close"),
-                    i18n("Close the current document."));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Close Document"), QStringLiteral("document-close"),
+                    QApplication::translate("KStandardGuiItem", "Close the current document."));
 }
 
 KGuiItem defaults()
 {
-    return KGuiItem(i18n("&Defaults"), QStringLiteral("document-revert"),
-                    i18n("Reset all items to their default values"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Defaults"), QStringLiteral("document-revert"),
+                    QApplication::translate("KStandardGuiItem", "Reset all items to their default values"));
 }
 
 KGuiItem back(BidiMode useBidi)
 {
     QString icon = (useBidi == UseRTL && QApplication::isRightToLeft())
                    ? QStringLiteral("go-next") : QStringLiteral("go-previous");
-    return KGuiItem(i18nc("go back", "&Back"), icon,
-                    i18n("Go back one step"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Back", "go back"), icon,
+                    QApplication::translate("KStandardGuiItem", "Go back one step"));
 }
 
 KGuiItem forward(BidiMode useBidi)
 {
     QString icon = (useBidi == UseRTL && QApplication::isRightToLeft())
                    ? QStringLiteral("go-previous") : QStringLiteral("go-next");
-    return KGuiItem(i18nc("go forward", "&Forward"), icon,
-                    i18n("Go forward one step"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Forward", "go forward"), icon,
+                    QApplication::translate("KStandardGuiItem", "Go forward one step"));
 }
 
 QPair<KGuiItem, KGuiItem> backAndForward()
@@ -233,84 +224,84 @@ QPair<KGuiItem, KGuiItem> backAndForward()
 
 KGuiItem print()
 {
-    return KGuiItem(i18n("&Print..."), QStringLiteral("document-print"),
-                    i18n("Opens the print dialog to print "
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Print..."), QStringLiteral("document-print"),
+                    QApplication::translate("KStandardGuiItem", "Opens the print dialog to print "
                          "the current document"));
 }
 
 KGuiItem cont()
 {
-    return KGuiItem(i18n("C&ontinue"), QStringLiteral("arrow-right"),
-                    i18n("Continue operation"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "C&ontinue"), QStringLiteral("arrow-right"),
+                    QApplication::translate("KStandardGuiItem", "Continue operation"));
 }
 
 KGuiItem del()
 {
-    return KGuiItem(i18n("&Delete"), QStringLiteral("edit-delete"),
-                    i18n("Delete item(s)"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Delete"), QStringLiteral("edit-delete"),
+                    QApplication::translate("KStandardGuiItem", "Delete item(s)"));
 }
 
 KGuiItem open()
 {
-    return KGuiItem(i18n("&Open..."), QStringLiteral("document-open"),
-                    i18n("Open file"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Open..."), QStringLiteral("document-open"),
+                    QApplication::translate("KStandardGuiItem", "Open file"));
 }
 
 KGuiItem quit()
 {
-    return KGuiItem(i18n("&Quit"), QStringLiteral("application-exit"),
-                    i18n("Quit application"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Quit"), QStringLiteral("application-exit"),
+                    QApplication::translate("KStandardGuiItem", "Quit application"));
 }
 
 KGuiItem reset()
 {
-    return KGuiItem(i18n("&Reset"), QStringLiteral("edit-undo"),
-                    i18n("Reset configuration"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Reset"), QStringLiteral("edit-undo"),
+                    QApplication::translate("KStandardGuiItem", "Reset configuration"));
 }
 
 KGuiItem insert()
 {
-    return KGuiItem(i18nc("Verb", "&Insert"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Insert", "Verb"));
 }
 
 KGuiItem configure()
 {
-    return KGuiItem(i18n("Confi&gure..."), QStringLiteral("configure"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Confi&gure..."), QStringLiteral("configure"));
 }
 
 KGuiItem find()
 {
-    return KGuiItem(i18n("&Find"), QStringLiteral("edit-find"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Find"), QStringLiteral("edit-find"));
 }
 
 KGuiItem stop()
 {
-    return KGuiItem(i18n("Stop"), QStringLiteral("process-stop"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Stop"), QStringLiteral("process-stop"));
 }
 
 KGuiItem add()
 {
-    return KGuiItem(i18n("Add"), QStringLiteral("list-add"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Add"), QStringLiteral("list-add"));
 }
 
 KGuiItem remove()
 {
-    return KGuiItem(i18n("Remove"), QStringLiteral("list-remove"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Remove"), QStringLiteral("list-remove"));
 }
 
 KGuiItem test()
 {
-    return KGuiItem(i18n("Test"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Test"));
 }
 
 KGuiItem properties()
 {
-    return KGuiItem(i18n("Properties"), QStringLiteral("document-properties"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Properties"), QStringLiteral("document-properties"));
 }
 
 KGuiItem overwrite()
 {
-    return KGuiItem(i18n("&Overwrite"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Overwrite"));
 }
 
 void assign(QPushButton *button, StandardItem item)
