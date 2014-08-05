@@ -7,6 +7,7 @@ set(kwidgetsaddons_SRCS
   kcharselect.cpp
   kcharselectdata.cpp
   kcolorbutton.cpp
+  kcolumnresizer.cpp
   kdatecombobox.cpp
   kdatepicker.cpp
   kdatetable.cpp
@@ -96,6 +97,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KAnimatedButton
   KCharSelect
   KColorButton
+  KColumnResizer
   KDateComboBox
   KDatePicker
   KDateTimeEdit

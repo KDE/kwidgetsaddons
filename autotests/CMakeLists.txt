@@ -1,7 +1,7 @@
 
 include(ECMAddTests)
 
-find_package(Qt5 5.2.0 CONFIG REQUIRED Test)
+find_package(Qt5 5.2.0 CONFIG REQUIRED Test UiTools)
 
 ecm_add_tests(
   kcolorbuttontest.cpp
@@ -13,4 +13,10 @@ ecm_add_tests(
   kmessagewidgetautotest.cpp
   kpagedialogautotest.cpp
   LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
+)
+
+ecm_add_tests(
+  kcolumnresizertest.cpp
+  NAME_PREFIX "kwidgetsaddons-"
+  LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons Qt5::UiTools
 )
