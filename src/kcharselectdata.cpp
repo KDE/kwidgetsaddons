@@ -227,7 +227,7 @@ QStringList KCharSelectData::sectionList()
     QStringList list;
     quint32 i = stringBegin;
     while (i < stringEnd) {
-        list.append(QCoreApplication::translate("KCharSelectData", data + 1, "KCharSelect section name"));
+        list.append(QCoreApplication::translate("KCharSelectData", data + i, "KCharSelect section name"));
         i += strlen(data + i) + 1;
     }
 
