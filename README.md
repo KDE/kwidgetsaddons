@@ -16,9 +16,3 @@ dialogs for configuration pages, message boxes, and password requests.
 Further widgets and classes can be found in other KDE frameworks. For
 a full list, please see <https://projects.kde.org/projects/frameworks/>
 
-## Links
-
-- Home page: <https://projects.kde.org/projects/frameworks/kwidgetsaddons>
-- Mailing list: <https://mail.kde.org/mailman/listinfo/kde-frameworks-devel>
-- IRC channel: #kde-devel on Freenode
-- Git repository: <https://projects.kde.org/projects/frameworks/kwidgetsaddons/repository>
