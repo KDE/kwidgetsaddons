@@ -48,6 +48,7 @@ public:
         , continuous(true)
         , barHeight(12)
         , horizontalTextAlignment(Qt::AlignCenter)
+        , ce_capacityBar(QStyle::ControlElement(0))
         , drawTextMode(drawTextMode) {}
 
     ~Private() {}
