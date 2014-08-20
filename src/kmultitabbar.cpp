@@ -256,8 +256,9 @@ void KMultiTabBarTab::initStyleOption(QStyleOptionToolButton *opt) const
         opt->text = text();
     }
 
+    opt->state |= QStyle::State_AutoRaise;
     if (underMouse()) {
-        opt->state |= QStyle::State_AutoRaise | QStyle::State_MouseOver | QStyle::State_Raised;
+        opt->state |= QStyle::State_MouseOver | QStyle::State_Raised;
     }
 
     if (isChecked()) {
