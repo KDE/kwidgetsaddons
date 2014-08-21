@@ -473,8 +473,10 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
         painter.setTransform(tr);
     }
 
-    style()->drawItemText(&painter, labelPaintArea, Qt::AlignLeading | Qt::AlignVCenter,
-                          palette(), true, t, QPalette::ButtonText);
+    opt.text = t;
+    opt.icon = QIcon();
+    opt.rect = labelPaintArea;
+    style()->drawControl(QStyle::CE_ToolButtonLabel, &opt, &painter, this);
 }
 
 // KMultiTabBar
