@@ -405,8 +405,8 @@ void KPageListViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
     const QPixmap pixmap = icon.pixmap(iconSize, iconSize);
 
     QFontMetrics fm = painter->fontMetrics();
-    int wp = pixmap.width();
-    int hp = pixmap.height();
+    int wp = pixmap.width() / pixmap.devicePixelRatio();
+    int hp = pixmap.height() / pixmap.devicePixelRatio();
 
     QTextLayout iconTextLayout(text, option.font);
     QTextOption textOption(Qt::AlignHCenter);
@@ -455,8 +455,8 @@ QSize KPageListViewDelegate::sizeHint(const QStyleOptionViewItem &option, const 
 
     QFontMetrics fm = option.fontMetrics;
     int gap = fm.height();
-    int wp = pixmap.width();
-    int hp = pixmap.height();
+    int wp = pixmap.width() / pixmap.devicePixelRatio();
+    int hp = pixmap.height() / pixmap.devicePixelRatio();
 
     if (hp == 0) {
         /**
