@@ -872,7 +872,7 @@ void KFontChooser::Private::setupDisplay()
 
     // Direct family match.
     numEntries = familyListBox->count();
-    for (i = 0; i < numEntries; i++) {
+    for (i = 0; i < numEntries; ++i) {
         if (family == qtFamilies[familyListBox->item(i)->text()].toLower()) {
             familyListBox->setCurrentRow(i);
             break;
@@ -883,7 +883,7 @@ void KFontChooser::Private::setupDisplay()
     if (i == numEntries) {
         if (family.contains(QLatin1Char('['))) {
             family = family.left(family.indexOf(QLatin1Char('['))).trimmed();
-            for (i = 0; i < numEntries; i++) {
+            for (i = 0; i < numEntries; ++i) {
                 if (family == qtFamilies[familyListBox->item(i)->text()].toLower()) {
                     familyListBox->setCurrentRow(i);
                     break;
@@ -895,7 +895,7 @@ void KFontChooser::Private::setupDisplay()
     // 2nd family fallback.
     if (i == numEntries) {
         QString fallback = family + QStringLiteral(" [");
-        for (i = 0; i < numEntries; i++) {
+        for (i = 0; i < numEntries; ++i) {
             if (qtFamilies[familyListBox->item(i)->text()].toLower().startsWith(fallback)) {
                 familyListBox->setCurrentRow(i);
                 break;
@@ -905,7 +905,7 @@ void KFontChooser::Private::setupDisplay()
 
     // 3rd family fallback.
     if (i == numEntries) {
-        for (i = 0; i < numEntries; i++) {
+        for (i = 0; i < numEntries; ++i) {
             if (qtFamilies[familyListBox->item(i)->text()].toLower().startsWith(family)) {
                 familyListBox->setCurrentRow(i);
                 break;
@@ -924,7 +924,7 @@ void KFontChooser::Private::setupDisplay()
 
     // Set current style in the listbox.
     numEntries = styleListBox->count();
-    for (i = 0; i < numEntries; i++) {
+    for (i = 0; i < numEntries; ++i) {
         if (styleID == styleIDs[styleListBox->item(i)->text()]) {
             styleListBox->setCurrentRow(i);
             break;

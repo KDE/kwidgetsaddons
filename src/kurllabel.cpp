@@ -1,4 +1,4 @@
-// Copyright (C) 2000 Peter Putzer
+// Copyright (C) 2000 Peter Putzer <putzer@kde.org>
 
 // This library is free software; you can redistribute it and/or
 // modify it under the terms of the GNU Lesser General Public

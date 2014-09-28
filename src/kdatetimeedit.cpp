@@ -154,7 +154,7 @@ void KDateTimeEditPrivate::initCalendarWidget()
 {
     ui.m_calendarCombo->blockSignals(true);
     ui.m_calendarCombo->clear();
-    foreach (const QLocale calendarLocale, m_calendarLocales) {
+    foreach (const QLocale &calendarLocale, m_calendarLocales) {
         ui.m_calendarCombo->addItem(calendarLocale.name(), calendarLocale);
     }
     ui.m_calendarCombo->setCurrentIndex(ui.m_calendarCombo->findData(q->locale()));
