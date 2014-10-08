@@ -230,7 +230,6 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
 #ifndef Q_OS_WIN
     args << QStringLiteral("--parent") << QString::number((ulong)q->topLevelWidget()->winId());
 #endif
-    args << QStringLiteral("--caption") << QGuiApplication::applicationDisplayName();
     args << mt;
 
     QProcess::startDetached(QString::fromLatin1(s_keditfiletypeExecutable), args);
