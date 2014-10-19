@@ -223,8 +223,7 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
     //q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
     //            q, SLOT(_k_slotSycocaDatabaseChanged(QStringList)) );
 #pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a mimetype")
-
-    // TODO: Move this class to the kwidgets framework, no more kio dependency.
+    // or a better idea: a QMimeDatabaseWatcher class in Qt itself
 
     QStringList args;
 #ifndef Q_OS_WIN
