@@ -18,13 +18,13 @@
 
 #include "kmimetypechooser.h"
 
+#include "kmimetypeeditor.h"
 #include <qmimedatabase.h>
 
 #include <QApplication>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QLayout>
-#include <QProcess>
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QTreeWidget>
@@ -225,13 +225,7 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
 #pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a mimetype")
     // or a better idea: a QMimeDatabaseWatcher class in Qt itself
 
-    QStringList args;
-#ifndef Q_OS_WIN
-    args << QStringLiteral("--parent") << QString::number((ulong)q->topLevelWidget()->winId());
-#endif
-    args << mt;
-
-    QProcess::startDetached(QString::fromLatin1(s_keditfiletypeExecutable), args);
+    KMimeTypeEditor::editMimeType(mt, q);
 }
 
 void KMimeTypeChooserPrivate::_k_slotCurrentChanged(QTreeWidgetItem *item)
