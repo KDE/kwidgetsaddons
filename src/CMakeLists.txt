@@ -155,6 +155,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPixmapRegionSelectorDialog
   KPixmapRegionSelectorWidget
   KMimeTypeChooser
+  KMimeTypeEditor
   KMessageBoxNotifyInterface
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
