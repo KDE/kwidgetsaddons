@@ -68,21 +68,6 @@ public:
     /**
      * Displays a flat, round or sunken LED.
      *
-     * Displaying the LED flat is less time and color consuming,
-     * but not so nice to see.
-     *
-     * The sunken LED itself is (certainly) smaller than the round LED
-     * because of the 3 shading circles and is
-     * most time consuming. Makes sense for LED > 15x15 pixels.
-     *
-     * \b Timings: \n
-     * ( AMD K5/133, Diamond Stealth 64 PCI Graphics, widgetsize 29x29 )
-     *  @li flat Approximately 0.7 msec per paint
-     *  @li round Approximately 2.9 msec per paint
-     *  @li sunken Approximately 3.3 msec per paint
-     *
-     * The widget will be updated on the next repaining event.
-     *
      * @short LED look.
      */
     enum Look  { Flat, Raised, Sunken };
@@ -186,7 +171,6 @@ public:
     /**
      * Sets the state of the widget to On or Off.
      *
-     * The widget will be painted immediately.
      * @see on() off() toggle()
      *
      * @param state The LED state: on or off.
@@ -239,15 +223,12 @@ public Q_SLOTS:
 
     /**
      * Toggles the state of the led from Off to On or vice versa.
-     *
-     * The widget repaints itself immediately.
      */
     void toggle();
 
     /**
      * Sets the state of the widget to On.
      *
-     * The widget will be painted immediately.
      * @see off() toggle()  setState()
      */
     void on();
@@ -255,7 +236,6 @@ public Q_SLOTS:
     /**
      * Sets the state of the widget to Off.
      *
-     * The widget will be painted immediately.
      * @see on() toggle()  setState()
      */
     void off();
