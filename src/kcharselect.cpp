@@ -328,7 +328,7 @@ KCharSelect::KCharSelect(
     initWidget(controls, actionParent);
 }
 
-void attachToActionParent(QAction *action, QObject *actionParent)
+void attachToActionParent(QAction *action, QObject *actionParent, const QList<QKeySequence> &shortcuts)
 {
     if (!action || !actionParent) {
         return;
@@ -338,6 +338,9 @@ void attachToActionParent(QAction *action, QObject *actionParent)
 
     if (actionParent->inherits("KActionCollection")) {
         QMetaObject::invokeMethod(actionParent, "addAction", Q_ARG(QString, action->objectName()), Q_ARG(QAction *, action));
+        QMetaObject::invokeMethod(actionParent, "setDefaultShortcuts", Q_ARG(QAction *, action), Q_ARG(QList<QKeySequence>, shortcuts));
+    } else {
+        action->setShortcuts(shortcuts);
     }
 }
 
@@ -361,8 +364,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         findAction->setObjectName(QStringLiteral("edit_find"));
         findAction->setText(tr("&Find..."));
         findAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
-        findAction->setShortcuts(QKeySequence::keyBindings(QKeySequence::Find));
-        attachToActionParent(findAction, actionParent);
+        attachToActionParent(findAction, actionParent, QKeySequence::keyBindings(QKeySequence::Find));
 
         connect(d->searchLine, SIGNAL(textChanged(QString)), this, SLOT(_k_searchEditChanged()));
         connect(d->searchLine, SIGNAL(returnPressed()), this, SLOT(_k_search()));
@@ -396,16 +398,14 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     backAction->setObjectName(QStringLiteral("go_back"));
     backAction->setText(tr("&Back", "go back"));
     backAction->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
-    backAction->setShortcuts(QKeySequence::keyBindings(QKeySequence::Back));
-    attachToActionParent(backAction, actionParent);
+    attachToActionParent(backAction, actionParent, QKeySequence::keyBindings(QKeySequence::Back));
 
     QAction *forwardAction = new QAction(this);
     connect(forwardAction, SIGNAL(triggered(bool)), d->forwardButton, SLOT(animateClick()));
     forwardAction->setObjectName(QStringLiteral("go_forward"));
     forwardAction->setText(tr("&Forward", "go forward"));
     forwardAction->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
-    forwardAction->setShortcuts(QKeySequence::keyBindings(QKeySequence::Forward));
-    attachToActionParent(forwardAction, actionParent);
+    attachToActionParent(forwardAction, actionParent, QKeySequence::keyBindings(QKeySequence::Forward));
 
     if (QApplication::isRightToLeft()) { // swap the back/forward icons
         QIcon tmp = backAction->icon();
