@@ -234,7 +234,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         hoverPix = QPixmap::fromImage(disabledRatingImage);
     }
 
-    if (d->alignment & Qt::AlignJustify) {
+    if (d->alignment & Qt::AlignJustify && numUsedStars > 1) {
         int w = rect.width();
         w -= numUsedStars * ratingPix.width();
         usedSpacing = w / (numUsedStars - 1);
