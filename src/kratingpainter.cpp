@@ -40,7 +40,7 @@ public:
     {
     }
 
-    QPixmap getPixmap(int size);
+    QPixmap getPixmap(int size, QIcon::State state = QIcon::On);
 
     int maxRating;
     QIcon icon;
@@ -52,17 +52,36 @@ public:
     int spacing;
 };
 
-QPixmap KRatingPainter::Private::getPixmap(int size)
+static void _k_imageToGrayScale(QImage &img, float value);
+
+QPixmap KRatingPainter::Private::getPixmap(int size, QIcon::State state)
 {
+    bool toGray = (state == QIcon::Off);
+    QPixmap p;
+
     if (!customPixmap.isNull()) {
-        return customPixmap.scaled(QSize(size, size));
+        p = customPixmap.scaled(QSize(size, size));
     } else {
         QIcon _icon(icon);
         if (_icon.isNull()) {
-            _icon = QIcon::fromTheme(QLatin1String("rating"));
+            if (state == QIcon::Off
+                && QIcon::hasThemeIcon(QLatin1String("rating-unrated"))) {
+                _icon = QIcon::fromTheme(QLatin1String("rating-unrated"));
+                // our theme provided a separate icon, no need to desaturate
+                toGray = false;
+            } else {
+                _icon = QIcon::fromTheme(QLatin1String("rating"));
+            }
         }
-        return _icon.pixmap(size);
+        p = _icon.pixmap(size);
     }
+
+    if (toGray) {
+        QImage img = p.toImage().convertToFormat(QImage::Format_ARGB32);
+        _k_imageToGrayScale(img, 1.0);
+        return QPixmap::fromImage(img);
+    }
+    return p;
 }
 
 KRatingPainter::KRatingPainter()
@@ -155,7 +174,7 @@ void KRatingPainter::setSpacing(int s)
     d->spacing = qMax(0, s);
 }
 
-void _k_imageToGrayScale(QImage &img, float value)
+static void _k_imageToGrayScale(QImage &img, float value)
 {
     QRgb *data = (QRgb *) img.bits();
     QRgb *end = data + img.width() * img.height();
@@ -172,7 +191,7 @@ void _k_imageToGrayScale(QImage &img, float value)
     }
 }
 
-void _k_imageToSemiTransparent(QImage &img)
+static void _k_imageToSemiTransparent(QImage &img)
 {
     QRgb *data = (QRgb *) img.bits();
     QRgb *end = data + img.width() * img.height();
@@ -203,12 +222,10 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
 
     // get the rating pixmaps
     int maxHSizeOnePix = (rect.width() - (numUsedStars - 1) * usedSpacing) / numUsedStars;
-    QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix));
+    QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), QIcon::On);
 
-    QImage disabledRatingImage = ratingPix.toImage().convertToFormat(QImage::Format_ARGB32);
-    _k_imageToGrayScale(disabledRatingImage, 1.0);
-
-    QPixmap disabledRatingPix = QPixmap::fromImage(disabledRatingImage);
+    QPixmap disabledRatingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), QIcon::Off);
+    QImage disabledRatingImage = disabledRatingPix.toImage().convertToFormat(QImage::Format_ARGB32);
     QPixmap hoverPix;
 
     // if we are disabled we become gray and more transparent
