@@ -68,6 +68,7 @@ set(kwidgetsaddons_SRCS
   kpixmapsequencewidget.cpp
   kmimetypechooser.cpp
   kmimetypeeditor.cpp
+  ksplittercollapserbutton.cpp
   ${kwidgetsaddons_QM_LOADER}
 )
 
@@ -157,6 +158,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KMimeTypeChooser
   KMimeTypeEditor
   KMessageBoxNotifyInterface
+  KSplitterCollapserButton
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 

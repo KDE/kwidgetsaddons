@@ -1,0 +1,291 @@
+/*
+  Copyright (c) 2014 Montel Laurent <montel@kde.org>
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2.1 of the License, or (at your option) version 3, or any
+  later version accepted by the membership of KDE e.V. (or its
+  successor approved by the membership of KDE e.V.), which shall
+  act as a proxy defined in Section 6 of version 3 of the license.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+#include "ksplittercollapserbuttontest.h"
+#include "ksplittercollapserbutton.h"
+#include <QHBoxLayout>
+#include <QSplitter>
+#include <QTextEdit>
+#include <qtest.h>
+#include <qtestmouse.h>
+
+Q_DECLARE_METATYPE(Qt::Orientation)
+
+TestSplitter::TestSplitter(QWidget *parent)
+    : QWidget(parent)
+{
+    QHBoxLayout *lay = new QHBoxLayout;
+    setLayout(lay);
+    splitter = new QSplitter;
+    lay->addWidget(splitter);
+    splitter->setObjectName(QLatin1String("splitter"));
+    edit1 = new QTextEdit;
+    edit1->setObjectName(QLatin1String("edit1"));
+    splitter->addWidget(edit1);
+
+    edit2 = new QTextEdit;
+    edit2->setObjectName(QLatin1String("edit2"));
+    splitter->addWidget(edit2);
+}
+
+KSplitterCollapserButtonTest::KSplitterCollapserButtonTest(QObject *parent)
+    : QObject(parent)
+{
+
+}
+
+KSplitterCollapserButtonTest::~KSplitterCollapserButtonTest()
+{
+
+}
+
+void KSplitterCollapserButtonTest::shouldHaveDefaultValue()
+{
+    TestSplitter testSplitter;
+
+    KSplitterCollapserButton *collapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
+
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    QVERIFY(!collapser->isWidgetCollapsed());
+
+    QTextEdit *edit1 = testSplitter.findChild<QTextEdit *>(QLatin1String("edit1"));
+    QVERIFY(edit1);
+    QTextEdit *edit2 = testSplitter.findChild<QTextEdit *>(QLatin1String("edit2"));
+    QVERIFY(edit2);
+
+    QSplitter *splitter = testSplitter.findChild<QSplitter *>(QLatin1String("splitter"));
+    QVERIFY(splitter);
+}
+
+void KSplitterCollapserButtonTest::shouldCollapseWhenClickOnButton()
+{
+    TestSplitter testSplitter;
+    KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
+
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(splitterCollapser->isWidgetCollapsed());
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+}
+
+void KSplitterCollapserButtonTest::shouldRestoreCorrectPosition()
+{
+    TestSplitter testSplitter;
+
+    KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
+
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+
+    QTextEdit *edit2 = testSplitter.findChild<QTextEdit *>(QLatin1String("edit2"));
+
+    int size = edit2->width();
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit2->width(), 0);
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit2->width(), size);
+
+}
+
+void KSplitterCollapserButtonTest::shouldRestoreCorrectPositionForFirstWidget()
+{
+    TestSplitter testSplitter;
+
+    KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit1, testSplitter.splitter);
+
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+
+    QTextEdit *edit1 = testSplitter.findChild<QTextEdit *>(QLatin1String("edit1"));
+
+    int size = edit1->width();
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit1->width(), 0);
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit1->width(), size);
+}
+
+void KSplitterCollapserButtonTest::shouldTestVerticalSplitterFirstWidget()
+{
+    TestSplitter testSplitter;
+    testSplitter.splitter->setOrientation(Qt::Vertical);
+    KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit1, testSplitter.splitter);
+
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+
+    QTextEdit *edit1 = testSplitter.findChild<QTextEdit *>(QLatin1String("edit1"));
+
+    int size = edit1->height();
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit1->height(), 0);
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit1->height(), size);
+
+}
+
+void KSplitterCollapserButtonTest::shouldTestVerticalSplitterSecondWidget()
+{
+    TestSplitter testSplitter;
+    testSplitter.splitter->setOrientation(Qt::Vertical);
+    KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
+
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+
+    QTextEdit *edit2 = testSplitter.findChild<QTextEdit *>(QLatin1String("edit2"));
+
+    int size = edit2->height();
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit2->height(), 0);
+
+    QTest::mouseClick(splitterCollapser, Qt::LeftButton);
+    QVERIFY(!splitterCollapser->isWidgetCollapsed());
+    QCOMPARE(edit2->height(), size);
+
+}
+
+void KSplitterCollapserButtonTest::shouldBeVisible_data()
+{
+    QTest::addColumn<Qt::Orientation>("splitterOrientation");
+    QTest::addColumn<int>("widgetPosition");
+
+    QTest::newRow("Horizontal, first widget") << Qt::Horizontal << 0 /*first widget*/;
+    QTest::newRow("Horizontal, second widget") << Qt::Horizontal << 1 /*second widget*/;
+    QTest::newRow("Vertical, first widget") << Qt::Vertical << 0 /*first widget*/;
+    QTest::newRow("Vertical, first widget") << Qt::Vertical << 1 /*second widget*/;
+}
+
+void KSplitterCollapserButtonTest::shouldBeVisible()
+{
+    QFETCH(Qt::Orientation, splitterOrientation);
+    QFETCH(int, widgetPosition);
+
+    // GIVEN a splitter with two widgets and a collapser button (Horizontal splitter, and apply collapser on first widget)
+    TestSplitter testSplitter;
+    testSplitter.splitter->setOrientation(splitterOrientation);
+    QWidget *widget = (widgetPosition == 0) ? testSplitter.edit1 : testSplitter.edit2;
+    KSplitterCollapserButton *collapser = new KSplitterCollapserButton(widget, testSplitter.splitter);
+
+    // WHEN showing the splitter
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    // THEN the button should be visible
+    QVERIFY(collapser->isVisible());
+    QVERIFY(collapser->x() > 0);
+    QVERIFY(collapser->y() > 0);
+}
+
+void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle_data()
+{
+    QTest::addColumn<QList<int> >("splitterPosition");
+    QTest::addColumn<bool>("expectedVisibility");
+    QTest::addColumn<Qt::Orientation>("splitterOrientation");
+    QTest::addColumn<int>("widgetPosition");
+
+
+    QTest::newRow("(Horizontal first widget) middle") << (QList<int>() << 1 << 1) << true << Qt::Horizontal << 0;
+    QTest::newRow("(Horizontal first widget) 1/3") << (QList<int>() << 1 << 3) << true << Qt::Horizontal << 0;
+    QTest::newRow("(Horizontal first widget) editor collapsed") << (QList<int>() << 0 << 1) << false << Qt::Horizontal << 0;
+    QTest::newRow("(Horizontal first widget) second editor collapsed") << (QList<int>() << 1 << 0) << true << Qt::Horizontal << 0;
+
+    QTest::newRow("(Horizontal second widget) middle") << (QList<int>() << 1 << 1) << true << Qt::Horizontal << 1;
+    QTest::newRow("(Horizontal second widget) 1/3") << (QList<int>() << 1 << 3) << true << Qt::Horizontal << 1;
+    QTest::newRow("(Horizontal second widget) editor collapsed") << (QList<int>() << 1 << 0) << true << Qt::Horizontal << 1;
+    QTest::newRow("(Horizontal second widget) first editor collapsed") << (QList<int>() << 0 << 1) << true << Qt::Horizontal << 1;
+
+    QTest::newRow("(Vertical first widget) middle") << (QList<int>() << 1 << 1) << true << Qt::Vertical << 0;
+    QTest::newRow("(Vertical first widget) 1/3") << (QList<int>() << 1 << 3) << true << Qt::Vertical << 0;
+    QTest::newRow("(Vertical first widget) editor collapsed") << (QList<int>() << 0 << 1) << true << Qt::Vertical << 0;
+    QTest::newRow("(Vertical first widget) second editor collapsed") << (QList<int>() << 1 << 0) << true << Qt::Vertical << 0;
+
+    QTest::newRow("(Vertical second widget) middle") << (QList<int>() << 1 << 1) << true << Qt::Vertical << 1;
+    QTest::newRow("(Vertical second widget) 1/3") << (QList<int>() << 1 << 3) << true << Qt::Vertical << 1;
+    QTest::newRow("(Vertical second widget) editor collapsed") << (QList<int>() << 1 << 0) << true << Qt::Vertical << 1;
+    QTest::newRow("(Vertical second widget) first editor collapsed") << (QList<int>() << 0 << 1) << false << Qt::Vertical << 1;
+
+}
+
+void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle()
+{
+    QFETCH(QList<int>, splitterPosition);
+    QFETCH(bool, expectedVisibility);
+    QFETCH(Qt::Orientation, splitterOrientation);
+    QFETCH(int, widgetPosition);
+
+    // GIVEN a splitter with two widgets and a collapser button (Horizontal splitter, and apply collapser on first widget)
+    TestSplitter testSplitter;
+    testSplitter.splitter->setOrientation(splitterOrientation);
+    QWidget *widget = (widgetPosition == 0) ? testSplitter.edit1 : testSplitter.edit2;
+
+    KSplitterCollapserButton *collapser = new KSplitterCollapserButton(widget, testSplitter.splitter);
+
+    // WHEN showing the splitter
+    testSplitter.show();
+    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(testSplitter.isVisible());
+
+    testSplitter.splitter->setSizes(splitterPosition);
+    // THEN the button should be visible
+    QVERIFY(collapser->isVisible());
+    if (widgetPosition == 0) {
+        QCOMPARE(collapser->x() > 0, expectedVisibility);
+    } else {
+        QCOMPARE(collapser->y() > 0, expectedVisibility);
+    }
+}
+
+QTEST_MAIN(KSplitterCollapserButtonTest)
