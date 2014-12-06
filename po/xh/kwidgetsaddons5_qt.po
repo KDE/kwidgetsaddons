@@ -1,0 +1,2779 @@
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to Xhosa
+# K Desktop Environment - kdelibs
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+# Thelma Lungcuzo <thelma@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2002-12-13 17:20SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Qt-Contexts: true\n"
+
+#: fonthelpers.cpp:81
+#, fuzzy, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:85
+#, fuzzy, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 - [%2]"
+
+#: kactionselector.cpp:100
+#, fuzzy
+msgctxt "KActionSelector|"
+msgid "&Available:"
+msgstr "&Iintshukumo ezikhoyo:"
+
+#: kactionselector.cpp:117
+#, fuzzy
+msgctxt "KActionSelector|"
+msgid "&Selected:"
+msgstr "Ikhethiwe:"
+
+#: kassistantdialog.cpp:105
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KAssistantDialog|go back"
+msgid "&Back"
+msgstr "&Umva"
+
+#: kassistantdialog.cpp:107
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KAssistantDialog|"
+msgid "Go back one step"
+msgstr "Buya umva inyathelo elinye"
+
+#: kassistantdialog.cpp:112
+#, fuzzy
+msgctxt "KAssistantDialog|Opposite to Back"
+msgid "Next"
+msgstr "Elandelayo"
+
+#: kassistantdialog.cpp:119
+#, fuzzy
+msgctxt "KAssistantDialog|"
+msgid "Finish"
+msgstr "&Gqiba"
+
+#: kcharselect-translation.cpp:23
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Alphabets"
+msgstr ""
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Oku&shicilelweyo"
+
+#: kcharselect-translation.cpp:25
+#, fuzzy
+#| msgid "KDE Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Amagama ashicilelwe phantsi e KDE"
+
+#: kcharselect-translation.cpp:26
+#, fuzzy
+#| msgid "KDE Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Amagama ashicilelwe phantsi e KDE"
+
+#: kcharselect-translation.cpp:27
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Philippine Scripts"
+msgstr "Oku&shicilelweyo"
+
+#: kcharselect-translation.cpp:28
+#, fuzzy
+#| msgid "KDE Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South East Asian Scripts"
+msgstr "Amagama ashicilelwe phantsi e KDE"
+
+#: kcharselect-translation.cpp:29
+#, fuzzy
+#| msgid "KDE Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Amagama ashicilelwe phantsi e KDE"
+
+#: kcharselect-translation.cpp:30
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Oku&shicilelweyo"
+
+#: kcharselect-translation.cpp:31
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other Scripts"
+msgstr "Oku&shicilelweyo"
+
+#: kcharselect-translation.cpp:32
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Uphawu Lwangoku"
+
+#: kcharselect-translation.cpp:33
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Abalawuli Bokubalwayo"
+
+#: kcharselect-translation.cpp:34
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:35 kcharselectdata.cpp:647
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritical Marks"
+msgstr "Armenian"
+
+#: kcharselect-translation.cpp:36
+#, fuzzy
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Enye"
+
+#: kcharselect-translation.cpp:37
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Latin"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Latin"
+
+#: kcharselect-translation.cpp:38
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "llayisha i Applet"
+
+#: kcharselect-translation.cpp:39
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:40
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:41
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:42
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Ikhowudi enye"
+
+#: kcharselect-translation.cpp:43
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Armenian"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr ""
+
+#: kcharselect-translation.cpp:45
+#, fuzzy
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Cyrillic"
+
+#: kcharselect-translation.cpp:46
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "llayisha i Applet"
+
+#: kcharselect-translation.cpp:47
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armenian"
+
+#: kcharselect-translation.cpp:48
+#, fuzzy
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Hebrew"
+
+#: kcharselect-translation.cpp:49
+#, fuzzy
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arabic"
+
+#: kcharselect-translation.cpp:50
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Syriac"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Syriac"
+
+#: kcharselect-translation.cpp:51
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "llayisha i Applet"
+
+#: kcharselect-translation.cpp:52
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Thaana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:53
+#, fuzzy
+#| msgid "No"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "Hayi"
+
+#: kcharselect-translation.cpp:54
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Isiroma"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr ""
+
+#: kcharselect-translation.cpp:56
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Bengali"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengali"
+
+#: kcharselect-translation.cpp:58
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Gurmukhi"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: kcharselect-translation.cpp:59
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Gujarati"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Oriya"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Oriya"
+
+#: kcharselect-translation.cpp:61
+#, fuzzy
+#| msgid "Tamil"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamil"
+
+#: kcharselect-translation.cpp:62
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Telugu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: kcharselect-translation.cpp:63
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannada"
+
+#: kcharselect-translation.cpp:64
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Malayalam"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Sinhala"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: kcharselect-translation.cpp:66
+#, fuzzy
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:67
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Lao"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Lao"
+
+#: kcharselect-translation.cpp:68
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Tibetan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetan"
+
+#: kcharselect-translation.cpp:69
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Myanmar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: kcharselect-translation.cpp:70
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Georgian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Georgian"
+
+#: kcharselect-translation.cpp:71
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Hangul"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul"
+
+#: kcharselect-translation.cpp:72
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Ethiopic"
+
+#: kcharselect-translation.cpp:73
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "llayisha i Applet"
+
+#: kcharselect-translation.cpp:74
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Cherokee"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: kcharselect-translation.cpp:75
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Canadian Aboriginal"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Canadian Aboriginal"
+
+#: kcharselect-translation.cpp:76
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Ogham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogham"
+
+#: kcharselect-translation.cpp:77
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Runic"
+
+#: kcharselect-translation.cpp:78
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tamil"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Han"
+
+#: kcharselect-translation.cpp:80
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Khmer"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmer"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Mongolian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongolian"
+
+#: kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Canadian Aboriginal"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Canadian Aboriginal"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr ""
+
+#: kcharselect-translation.cpp:86
+#, fuzzy
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:88
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgid "Business Phone"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Ifowuni Yeshishini"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr ""
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+#| msgid "Business Phone"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Ifowuni Yeshishini"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+#| msgid "Sunday"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Cawe"
+
+#: kcharselect-translation.cpp:93
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr ""
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr ""
+
+#: kcharselect-translation.cpp:96
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:98
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:99
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Armenian"
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:102
+#, fuzzy
+#| msgid "General Settings"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Izicwangciso Ngokubanzi"
+
+#: kcharselect-translation.cpp:103
+#, fuzzy
+#| msgid "KDE Scripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Amagama ashicilelwe phantsi e KDE"
+
+#: kcharselect-translation.cpp:104
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Uphawu Lwangoku"
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Armenian"
+
+#: kcharselect-translation.cpp:106
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Letterlike Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Iimpawu Ezifana nonobumba"
+
+#: kcharselect-translation.cpp:107
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Inani Lweefomu"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr ""
+
+#: kcharselect-translation.cpp:109
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Abalawuli Bokubalwayo"
+
+#: kcharselect-translation.cpp:110
+#, fuzzy
+#| msgid "Miscellaneous"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Umxhube wezinto"
+
+#: kcharselect-translation.cpp:111
+#, fuzzy
+#| msgctxt "QAccel"
+#| msgid "Control"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Lawula"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr ""
+
+#: kcharselect-translation.cpp:113
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Enclosed and Square"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Evaliweyo Nesiskweri"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr ""
+
+#: kcharselect-translation.cpp:115
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Gcina Uxwebhu?"
+
+#: kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:117
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Iinketho Ezixutyiweyo"
+
+#: kcharselect-translation.cpp:118
+#, fuzzy
+#| msgid "Digit"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Inani ngalinye"
+
+#: kcharselect-translation.cpp:119
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Iinketho Ezixutyiweyo"
+
+#: kcharselect-translation.cpp:120
+#, fuzzy
+#| msgid "General Settings"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Izicwangciso Ngokubanzi"
+
+#: kcharselect-translation.cpp:121
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Braille"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braille"
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+#| msgid "General Settings"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Izicwangciso Ngokubanzi"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Iinketho Ezixutyiweyo"
+
+#: kcharselect-translation.cpp:124
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Abalawuli Bokubalwayo"
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Iinketho Ezixutyiweyo"
+
+#: kcharselect-translation.cpp:126
+#, fuzzy
+#| msgid "Baltic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Baltic"
+
+#: kcharselect-translation.cpp:127
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+#| msgid "Copy"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Khuphela"
+
+#: kcharselect-translation.cpp:129
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "llayisha i Applet"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr ""
+
+#: kcharselect-translation.cpp:131
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Ethiopic"
+
+#: kcharselect-translation.cpp:132
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:133
+#, fuzzy
+#| msgid "General Settings"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Izicwangciso Ngokubanzi"
+
+#: kcharselect-translation.cpp:134
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "llayisha i Applet"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr ""
+
+#: kcharselect-translation.cpp:136
+#, fuzzy
+#| msgid "Geographic Position"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Indawo Yobuzwe"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr ""
+
+#: kcharselect-translation.cpp:138
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:139
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:140
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:141
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Hangul"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul"
+
+#: kcharselect-translation.cpp:142
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kannada"
+
+#: kcharselect-translation.cpp:143
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr ""
+
+#: kcharselect-translation.cpp:145
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Geometric Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Iimphawu ze Geometric"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr ""
+
+#: kcharselect-translation.cpp:147
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Hangul"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "Hangul"
+
+#: kcharselect-translation.cpp:148
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "Ulwazi Lwesakhelo"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:150
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "Ulwazi Lwesakhelo"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr ""
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr ""
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr ""
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "of March"
+#| msgid "of Mar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "ka Mat"
+
+#: kcharselect-translation.cpp:155
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:156
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Tamil"
+
+#: kcharselect-translation.cpp:157
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Ikhowudi enye"
+
+#: kcharselect-translation.cpp:158
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr ""
+
+#: kcharselect-translation.cpp:160
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Inani Lweefomu"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr ""
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr ""
+
+#: kcharselect-translation.cpp:163
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr ""
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+#| msgid "Rank"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Udidi"
+
+#: kcharselect-translation.cpp:166
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:167
+#, fuzzy
+#| msgid "Japanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Japanese"
+
+#: kcharselect-translation.cpp:168
+#, fuzzy
+#| msgid "Chain:"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Ikhonkco:"
+
+#: kcharselect-translation.cpp:169
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:170
+#, fuzzy
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:171
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Ethiopic"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr ""
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr ""
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgid "Extended Address Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Ulwazi Lwedilesi Olongeziweyo"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Ikhusi"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Ikhusi"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Ikhusi"
+
+#: kcharselect-translation.cpp:178
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Ikhusi"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Hangul"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "Hangul"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr ""
+
+#: kcharselect-translation.cpp:181
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr ""
+
+#: kcharselect-translation.cpp:183
+#, fuzzy
+#| msgid "Vertical"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Nkqo"
+
+#: kcharselect-translation.cpp:184
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Armenian"
+
+#: kcharselect-translation.cpp:185
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Hangul"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "Hangul"
+
+#: kcharselect-translation.cpp:186
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Iintshukumo"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:188
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr ""
+
+#: kcharselect.cpp:358 kcharselect.cpp:360
+msgctxt "KCharSelect|"
+msgid "Enter a search term or character here"
+msgstr ""
+
+#: kcharselect.cpp:365
+#, fuzzy
+#| msgid "&Find..."
+msgctxt "KCharSelect|"
+msgid "&Find..."
+msgstr "&Fumana..."
+
+#: kcharselect.cpp:385
+#, fuzzy
+#| msgid "Previous Item in List"
+msgctxt "KCharSelect|Goes to previous character"
+msgid "Previous in History"
+msgstr "Into Edlulileyo Kudweliso"
+
+#: kcharselect.cpp:387
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KCharSelect|"
+msgid "Previous Character in History"
+msgstr "Unyaka odlulileyo"
+
+#: kcharselect.cpp:392
+#, fuzzy
+#| msgid "Next Item in List"
+msgctxt "KCharSelect|Goes to next character"
+msgid "Next in History"
+msgstr "Umba Olandelayo Kudweliso"
+
+#: kcharselect.cpp:394
+#, fuzzy
+#| msgid "Set of Characters"
+msgctxt "KCharSelect|"
+msgid "Next Character in History"
+msgstr "Iqela Lophawu"
+
+#: kcharselect.cpp:399
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KCharSelect|go back"
+msgid "&Back"
+msgstr "&Umva"
+
+#: kcharselect.cpp:406
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KCharSelect|go forward"
+msgid "&Forward"
+msgstr "&Ngaphambili"
+
+#: kcharselect.cpp:420
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KCharSelect|"
+msgid "Select a category"
+msgstr "Khetha unyaka"
+
+#: kcharselect.cpp:423
+#, fuzzy
+#| msgid "Message string to be displayed"
+msgctxt "KCharSelect|"
+msgid "Select a block to be displayed"
+msgstr "Umyalezo weqela lamagama azakuboniswa"
+
+#: kcharselect.cpp:436
+#, fuzzy
+#| msgid "Select Font"
+msgctxt "KCharSelect|"
+msgid "Set font"
+msgstr "Khetha Uhlobo lwegama"
+
+#: kcharselect.cpp:443
+#, fuzzy
+#| msgid "Change font size?"
+msgctxt "KCharSelect|"
+msgid "Set font size"
+msgstr "Tshintsha ubungakanani bamagama?"
+
+#: kcharselect.cpp:675
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Noluphi na Uphawu"
+
+#: kcharselect.cpp:681
+#, fuzzy
+#| msgid "Name:"
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Igama:"
+
+#: kcharselect.cpp:689
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr ""
+
+#: kcharselect.cpp:693
+#, fuzzy
+#| msgid "Please enter name:"
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Nceda ngenisa igama:"
+
+#: kcharselect.cpp:701
+#, fuzzy
+#| msgid "Note"
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Qaphela"
+
+#: kcharselect.cpp:709
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr ""
+
+#: kcharselect.cpp:721
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr ""
+
+#: kcharselect.cpp:729
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr ""
+
+#: kcharselect.cpp:738
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "Ulwazi Lwesakhelo"
+
+#: kcharselect.cpp:741
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr ""
+
+#: kcharselect.cpp:748
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:755
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:762
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:769
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:776
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:783
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:789
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr ""
+
+#: kcharselect.cpp:790
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr ""
+
+#: kcharselect.cpp:791
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr ""
+
+#: kcharselect.cpp:795
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr ""
+
+#: kcharselect.cpp:796
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr ""
+
+#: kcharselect.cpp:800
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr ""
+
+#: kcharselect.cpp:801
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr ""
+
+#: kcharselect.cpp:805
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr ""
+
+#: kcharselect.cpp:933
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr ""
+
+#: kcharselect.cpp:934
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr ""
+
+#: kcharselectdata.cpp:274
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "Ikhusi"
+
+#: kcharselectdata.cpp:276
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "Ikhusi"
+
+#: kcharselectdata.cpp:278
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr ""
+
+#: kcharselectdata.cpp:280
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "Ikhusi"
+
+#: kcharselectdata.cpp:311
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr ""
+
+#: kcharselectdata.cpp:656
+#, fuzzy
+#| msgid "Horizontal"
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Tye"
+
+#: kcharselectdata.cpp:689
+#, fuzzy
+#| msgid "Other Contributors:"
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Abanye Abanikeli:"
+
+#: kcharselectdata.cpp:690
+#, fuzzy
+#| msgid "vCard Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Ifomati ye vCard"
+
+#: kcharselectdata.cpp:691
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr ""
+
+#: kcharselectdata.cpp:692
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Ikhusi"
+
+#: kcharselectdata.cpp:693
+#, fuzzy
+#| msgid "vCard Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Ifomati ye vCard"
+
+#: kcharselectdata.cpp:694
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Uguqulo kancinci lokugqibela:"
+
+#: kcharselectdata.cpp:695
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Uguqulo kancinci lokugqibela:"
+
+#: kcharselectdata.cpp:696
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Inani Lweefomu"
+
+#: kcharselectdata.cpp:697
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Uguqulo kancinci lokugqibela:"
+
+#: kcharselectdata.cpp:698
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Uguqulo kancinci lokugqibela:"
+
+#: kcharselectdata.cpp:699
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr ""
+
+#: kcharselectdata.cpp:700
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr ""
+
+#: kcharselectdata.cpp:701
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr ""
+
+#: kcharselectdata.cpp:702
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr ""
+
+#: kcharselectdata.cpp:703
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "NumLock"
+
+#: kcharselectdata.cpp:704
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Inani Lweefomu"
+
+#: kcharselectdata.cpp:705
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr ""
+
+#: kcharselectdata.cpp:706
+#, fuzzy
+#| msgid "General Settings"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Izicwangciso Ngokubanzi"
+
+#: kcharselectdata.cpp:707
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr ""
+
+#: kcharselectdata.cpp:708
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr ""
+
+#: kcharselectdata.cpp:709
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr ""
+
+#: kcharselectdata.cpp:710
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr ""
+
+#: kcharselectdata.cpp:711
+#, fuzzy
+#| msgid "General Settings"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Izicwangciso Ngokubanzi"
+
+#: kcharselectdata.cpp:712
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr ""
+
+#: kcharselectdata.cpp:713
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Uguqulo kancinci lokugqibela:"
+
+#: kcharselectdata.cpp:714
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Uphawu Lwangoku"
+
+#: kcharselectdata.cpp:715
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Inani Lweefomu"
+
+#: kcharselectdata.cpp:716
+#, fuzzy
+#| msgid "Start of Line"
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Qala Kumgca"
+
+#: kcharselectdata.cpp:717
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "&Unikezelo lusekubuyiselweni"
+
+#: kcharselectdata.cpp:718
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "&Unikezelo lusekubuyiselweni"
+
+#: kcharselectdata.cpp:719
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Engaziwayo"
+
+#: kcolorcombo.cpp:339
+#, fuzzy
+#| msgid "Custom..."
+msgctxt "KColorCombo|Custom color"
+msgid "Custom..."
+msgstr "Isiko..."
+
+#: kdatecombobox.cpp:164
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Unyaka olandelayo"
+
+#: kdatecombobox.cpp:165
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Inyanga elandelayo"
+
+#: kdatecombobox.cpp:166
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Unyaka olandelayo"
+
+#: kdatecombobox.cpp:167
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kdatecombobox.cpp:168
+#, fuzzy
+#| msgid "Monday"
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Mvulo"
+
+#: kdatecombobox.cpp:169
+#, fuzzy
+#| msgid "Tuesday"
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Lwesibini"
+
+#: kdatecombobox.cpp:170
+#, fuzzy
+#| msgid "Last Name"
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Igama Lokugqibela"
+
+#: kdatecombobox.cpp:171
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Inyanga elandelayo"
+
+#: kdatecombobox.cpp:172
+#, fuzzy
+#| msgid "Last Name"
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Igama Lokugqibela"
+
+#: kdatecombobox.cpp:174
+#, fuzzy
+#| msgid "Dates"
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Imihla"
+
+#: kdatecombobox.cpp:272
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr ""
+
+#: kdatecombobox.cpp:275
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr ""
+
+#: kdatecombobox.cpp:282
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr ""
+
+#: kdatepicker.cpp:189
+#, fuzzy, qt-format
+#| msgid "Week %1"
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Iveki %1"
+
+#: kdatepicker.cpp:295
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDatePicker|"
+msgid "Next year"
+msgstr "Unyaka olandelayo"
+
+#: kdatepicker.cpp:296
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KDatePicker|"
+msgid "Previous year"
+msgstr "Unyaka odlulileyo"
+
+#: kdatepicker.cpp:297
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDatePicker|"
+msgid "Next month"
+msgstr "Inyanga elandelayo"
+
+#: kdatepicker.cpp:298
+#, fuzzy
+#| msgid "Previous month"
+msgctxt "KDatePicker|"
+msgid "Previous month"
+msgstr "Inyanga edlulileyo"
+
+#: kdatepicker.cpp:299
+#, fuzzy
+#| msgid "Select a week"
+msgctxt "KDatePicker|"
+msgid "Select a week"
+msgstr "Khetha iveki"
+
+#: kdatepicker.cpp:300
+#, fuzzy
+#| msgid "Select a month"
+msgctxt "KDatePicker|"
+msgid "Select a month"
+msgstr "Khetha inyanga"
+
+#: kdatepicker.cpp:301
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KDatePicker|"
+msgid "Select a year"
+msgstr "Khetha unyaka"
+
+#: kdatepicker.cpp:302
+#, fuzzy
+msgctxt "KDatePicker|"
+msgid "Select the current day"
+msgstr "Khetha icebo lokucoca ulwelo ukudibanisa"
+
+#: kdatepicker.cpp:643
+#, fuzzy
+#| msgid "Close"
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Vala"
+
+#: kdatetimeedit.cpp:189
+msgctxt "KDateTimeEdit|UTC time zone"
+msgid "UTC"
+msgstr ""
+
+#: kdatetimeedit.cpp:190
+#, fuzzy
+msgctxt "KDateTimeEdit|No specific time zone"
+msgid "Floating"
+msgstr "Iyenza"
+
+#: kdatetimeedit.cpp:230
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+
+#: kdatetimeedit.cpp:240
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+
+#: keditlistwidget.cpp:298
+#, fuzzy
+#| msgid "&Add"
+msgctxt "KEditListWidget|"
+msgid "&Add"
+msgstr "&Yongeza"
+
+#: keditlistwidget.cpp:310
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "KEditListWidget|"
+msgid "&Remove"
+msgstr "&Susa"
+
+#: keditlistwidget.cpp:322
+#, fuzzy
+#| msgid "Move &Up"
+msgctxt "KEditListWidget|"
+msgid "Move &Up"
+msgstr "Nyukela &Ngasentla"
+
+#: keditlistwidget.cpp:327
+#, fuzzy
+#| msgid "Move &Down"
+msgctxt "KEditListWidget|"
+msgid "Move &Down"
+msgstr "Yehlela &Ezantsi"
+
+#: kfontchooser.cpp:159
+#, fuzzy
+#| msgid "Here you can choose the font to be used."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font to be used."
+msgstr "Apha ungakhetha uhlobo lwegama elizakusebenziswa."
+
+#: kfontchooser.cpp:181
+#, fuzzy
+#| msgid "Requested Font"
+msgctxt "KFontChooser|"
+msgid "Requested Font"
+msgstr "Uhlobo lwegama Olukhethiweyo"
+
+#: kfontchooser.cpp:198
+#, fuzzy
+#| msgid "Font"
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Uhlobo lwamagama"
+
+#: kfontchooser.cpp:202
+#, fuzzy
+#| msgid "Enable this checkbox to change the font family settings."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font family settings."
+msgstr ""
+"Yenza lebhokisi yokhangelo itshintshe izicwangciso zosapho lohobo lwamgama."
+
+#: kfontchooser.cpp:203
+#, fuzzy
+#| msgid "Change font family?"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font family?"
+msgstr "Tshintsha usapho lohlobo lwegama?"
+
+#: kfontchooser.cpp:207
+#, fuzzy
+#| msgid "Font:"
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Uhlobo lwegama:"
+
+#: kfontchooser.cpp:214
+#, fuzzy
+#| msgid "Font style"
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Uhlobo lobungakanani begama"
+
+#: kfontchooser.cpp:218
+#, fuzzy
+#| msgid "Enable this checkbox to change the font style settings."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font style settings."
+msgstr ""
+"Yenza lebhokisi yokhangelo ukutshintsha izicwangciso zohlobo lobungakanani "
+"begama."
+
+#: kfontchooser.cpp:219
+#, fuzzy
+#| msgid "Change font style?"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font style?"
+msgstr "Tshintsha uhlobo lobungakanani bamagama?"
+
+#: kfontchooser.cpp:223
+#, fuzzy
+#| msgid "Font style:"
+msgctxt "KFontChooser|"
+msgid "Font style:"
+msgstr "Uhlobo lobungakanani begama:"
+
+#: kfontchooser.cpp:231
+#, fuzzy
+#| msgid "Size"
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Ubungakanani"
+
+#: kfontchooser.cpp:235
+#, fuzzy
+#| msgid "Enable this checkbox to change the font size settings."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font size settings."
+msgstr ""
+"Yenza lebhokisi yokhangelo ukutshintsha izicwangciso zobungakanani bamagama."
+
+#: kfontchooser.cpp:236
+#, fuzzy
+#| msgid "Change font size?"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font size?"
+msgstr "Tshintsha ubungakanani bamagama?"
+
+#: kfontchooser.cpp:240
+#, fuzzy
+#| msgid "Size:"
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Ubungakanani:"
+
+#: kfontchooser.cpp:256
+#, fuzzy
+#| msgid "Here you can choose the font family to be used."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font family to be used."
+msgstr "Apha uyakwazi ukukheta usapho lohlobo lwamagama azakusebenziswa."
+
+#: kfontchooser.cpp:280
+#, fuzzy
+#| msgid "Here you can choose the font style to be used."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font style to be used."
+msgstr "Apha uyakwazi ukukhetha uhlobo lwamagama azakusebenziswa."
+
+#: kfontchooser.cpp:288
+#, fuzzy
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "KFontChooser|QFontDatabase"
+msgid "Normal"
+msgstr "Isiqhelo"
+
+#: kfontchooser.cpp:289 kfontchooser.cpp:601
+#, fuzzy
+#| msgid "Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Amagama akekeleyo"
+
+#: kfontchooser.cpp:290 kfontchooser.cpp:602
+#, fuzzy
+#| msgctxt "font style"
+#| msgid "Oblique"
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Oblique"
+
+#: kfontchooser.cpp:291
+#, fuzzy
+#| msgid "Bold"
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Amagama amakhulu"
+
+#: kfontchooser.cpp:292
+#, fuzzy
+#| msgid "Bold Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Amagama amakhulu Akekeleyo"
+
+#: kfontchooser.cpp:311
+#, fuzzy
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "yadalwa"
+
+#: kfontchooser.cpp:313
+#, fuzzy
+#| msgid "Font size<br><i>fixed</i> or <i>relative</i><br>to environment"
+msgctxt "KFontChooser|"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"Ubungakanani bamagama<br><i>abakiweyo</i> okanye <i>ehlobene</i><br>kwimeko-"
+"bume"
+
+#: kfontchooser.cpp:315
+#, fuzzy
+#| msgid ""
+#| "Here you can switch between fixed font size and font size to be "
+#| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#| "dimensions, paper size)."
+msgctxt "KFontChooser|"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Apha uyakwazi ukukheta phakati kobungakanani ezizokubalwa dynamically "
+"nokutshintswa kwe meko (umzekelo, iwidget dimensions nobukhulu bepepha)."
+
+#: kfontchooser.cpp:339
+#, fuzzy
+#| msgid "Here you can choose the font size to be used."
+msgctxt "KFontChooser|"
+msgid "Here you can choose the font size to be used."
+msgstr "Apha ungakheta ubungakanani bamagama okuzakusebenziswa."
+
+#: kfontchooser.cpp:377
+#, fuzzy
+#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "Impungutye Ekhawulezayo Emdaka Ixhuma Phezu Kwenja Eyonqenayo"
+
+#: kfontchooser.cpp:380
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Lomzekelo wokubhaliweyo ubonisa izicwangciso zangoku. Uyakwazi ukuyihlela "
+"ukuvavanya iimphawu ezithile."
+
+#: kfontchooser.cpp:586
+#, fuzzy, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontrequester.cpp:111
+#, fuzzy
+msgctxt "KFontRequester|"
+msgid "Choose..."
+msgstr "Tshintsha..."
+
+#: kfontrequester.cpp:216
+#, fuzzy
+msgctxt "KFontRequester|"
+msgid "Click to select a font"
+msgstr "Khetha inyanga"
+
+#: kfontrequester.cpp:222
+#, fuzzy
+msgctxt "KFontRequester|"
+msgid "Preview of the selected font"
+msgstr "Ukhetho lomfanekiso lomshicileli"
+
+#: kfontrequester.cpp:223
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+
+#: kfontrequester.cpp:226
+#, fuzzy, qt-format
+msgctxt "KFontRequester|"
+msgid "Preview of the \"%1\" font"
+msgstr "Ukhetho lomfanekiso lomshicileli"
+
+#: kfontrequester.cpp:227
+#, qt-format
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+
+#: kmessagewidget.cpp:90
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KMessageWidget|"
+msgid "&Close"
+msgstr "&Vala"
+
+#: kmessagewidget.cpp:91
+#, fuzzy
+msgctxt "KMessageWidget|"
+msgid "Close message"
+msgstr "Vala umyalezo"
+
+#: knewpassworddialog.cpp:73
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered.  To improve the strength of the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols, such as #, as well as letters."
+msgstr ""
+
+#: knewpassworddialog.cpp:161
+#, fuzzy
+msgctxt "KNewPasswordDialog|"
+msgid "Password is empty"
+msgstr "Igama eligqithisiweyo"
+
+#: knewpassworddialog.cpp:167
+#, qt-format
+msgctxt "KNewPasswordDialog|"
+msgid "Password must be at least %n character(s) long"
+msgid_plural "Password must be at least %n character(s) long"
+msgstr[0] ""
+msgstr[1] ""
+
+#: knewpassworddialog.cpp:170
+#, fuzzy
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords match"
+msgstr "Igama eligqithisiweyo"
+
+#: knewpassworddialog.cpp:171 knewpassworddialog.ui:112
+#, fuzzy
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords do not match"
+msgstr "Igama eligqithisiweyo"
+
+#: knewpassworddialog.cpp:226
+#, fuzzy
+#| msgid "You entered two different passwords. Please try again."
+msgctxt "KNewPasswordDialog|"
+msgid "You entered two different passwords. Please try again."
+msgstr "Ufake amagama amabini okugqitha. Nceda zama kwakhona."
+
+#: knewpassworddialog.cpp:236
+#, fuzzy
+msgctxt "KNewPasswordDialog|"
+msgid "Low Password Strength"
+msgstr "Igama eligqithisiweyo"
+
+#: knewpassworddialog.cpp:237
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+
+#: knewpassworddialog.ui:52
+#, fuzzy
+msgctxt "KNewPasswordDialog|"
+msgid "Password:"
+msgstr "Igama &lokugqitha:"
+
+#: knewpassworddialog.ui:62
+#, fuzzy
+#| msgid "&Verify:"
+msgctxt "KNewPasswordDialog|"
+msgid "&Verify:"
+msgstr "&Qinisekisa:"
+
+#: knewpassworddialog.ui:90
+#, fuzzy
+msgctxt "KNewPasswordDialog|"
+msgid "Password strength meter:"
+msgstr "Igama eligqithisiweyo"
+
+#: kpassworddialog.cpp:65
+#, fuzzy
+msgctxt "KPasswordDialog|"
+msgid "Password"
+msgstr "Igama &lokugqitha:"
+
+#: kpassworddialog.ui:25
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr ""
+
+#: kpassworddialog.ui:62
+msgctxt "KPasswordDialog|"
+msgid "No password, use anonymous (or guest) login"
+msgstr ""
+
+#: kpassworddialog.ui:69
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|"
+msgid "Use this password:"
+msgstr "&Gcina igama lokugqitha"
+
+#: kpassworddialog.ui:85
+#, fuzzy
+msgctxt "KPasswordDialog|"
+msgid "Username:"
+msgstr "Umsebenzisi:"
+
+#: kpassworddialog.ui:99
+#, fuzzy
+#| msgid "Chain:"
+msgctxt "KPasswordDialog|"
+msgid "Domain:"
+msgstr "Ikhonkco:"
+
+#: kpassworddialog.ui:113
+#, fuzzy
+msgctxt "KPasswordDialog|"
+msgid "Password:"
+msgstr "Igama &lokugqitha:"
+
+#: kpassworddialog.ui:130
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|"
+msgid "Remember password"
+msgstr "&Gcina igama lokugqitha"
+
+#: kpixmapregionselectordialog.cpp:64
+#, fuzzy
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Select Region of Image"
+msgstr "Khetha inyanga"
+
+#: kpixmapregionselectordialog.cpp:68
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr ""
+
+#: kpixmapregionselectorwidget.cpp:191
+#, fuzzy
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Image Operations"
+msgstr "Umsebenzi"
+
+#: kpixmapregionselectorwidget.cpp:193
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "&Rotate Clockwise"
+msgstr ""
+
+#: kpixmapregionselectorwidget.cpp:195
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Rotate &Counterclockwise"
+msgstr ""
+
+#: ksqueezedtextlabel.cpp:165
+#, fuzzy
+msgctxt "KSqueezedTextLabel|"
+msgid "&Copy Full Text"
+msgstr "&Khuphela"
+
+#: kstandardguiitem.cpp:108
+#, fuzzy
+#| msgid "&OK"
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&Kulungile"
+
+#: kstandardguiitem.cpp:113
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Rhoxisa"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "&Yes"
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Ewe"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "Yes"
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Ewe"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "&No"
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Hayi"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "No"
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Hayi"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "&Discard"
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Lahla"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "Discard changes"
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Lahla utshintsho"
+
+#: kstandardguiitem.cpp:129
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Ukucinezela eli qhosha kuzakulahla lonke utshintsho olusandukubakho "
+"olwenziweyo kule ncoko yababini"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "&Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Gcina"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "Save data"
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Gcina i data"
+
+#: kstandardguiitem.cpp:140
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Sukugcina"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Sukugcina i data"
+
+#: kstandardguiitem.cpp:146
+#, fuzzy
+#| msgid "Save &As..."
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Gcina &Njenge..."
+
+#: kstandardguiitem.cpp:147
+#, fuzzy
+#| msgid "Save file with another name"
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Gcina ifayile ngelinye igama"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "&Apply"
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Faka"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "Apply changes"
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Yenza utshintsho"
+
+#: kstandardguiitem.cpp:153
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Xa unqakraza <b>Faka</b> , izicwangciso zizaku nikezelwa kudweliso "
+"lwenkqubo, kodwa incoko yababiniayizukuvalwa\n"
+"Sebenzisa oku ukuzama izicwangciso ezintsha."
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr ""
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr ""
+
+#: kstandardguiitem.cpp:162
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+
+#: kstandardguiitem.cpp:169
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "C&ima"
+
+#: kstandardguiitem.cpp:170
+#, fuzzy
+#| msgid "Clear input"
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Cima igalelo"
+
+#: kstandardguiitem.cpp:171
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Cacisa ingalelo kumhlaba wohlelo"
+
+#: kstandardguiitem.cpp:176
+#, fuzzy
+#| msgid "&Help"
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Uncedo"
+
+#: kstandardguiitem.cpp:177
+#, fuzzy
+#| msgid "Show help"
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Bonisa uncedo"
+
+#: kstandardguiitem.cpp:182
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Vala"
+
+#: kstandardguiitem.cpp:183
+#, fuzzy
+#| msgid "Close the current window or document"
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Vala uxwebhu okanye i window yangoku"
+
+#: kstandardguiitem.cpp:188
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "Vala i window? "
+
+#: kstandardguiitem.cpp:189
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Vala uxwebhu okanye i window yangoku"
+
+#: kstandardguiitem.cpp:194
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "Gcina Uxwebhu?"
+
+#: kstandardguiitem.cpp:195
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Vala uxwebhu okanye i window yangoku"
+
+#: kstandardguiitem.cpp:200
+#, fuzzy
+#| msgid "&Defaults"
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Ezokwendalo"
+
+#: kstandardguiitem.cpp:201
+#, fuzzy
+#| msgid "Reset all items to their default values"
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Cwangcisa yonke imiba kumaxabiso awo okwendalo"
+
+#: kstandardguiitem.cpp:208
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&Umva"
+
+#: kstandardguiitem.cpp:209
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Buya umva inyathelo elinye"
+
+#: kstandardguiitem.cpp:216
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&Ngaphambili"
+
+#: kstandardguiitem.cpp:217
+#, fuzzy
+#| msgid "Go forward one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Yiya phambili inyathelo elinye"
+
+#: kstandardguiitem.cpp:227
+#, fuzzy
+#| msgid "&Print..."
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Shicilela..."
+
+#: kstandardguiitem.cpp:228
+#, fuzzy
+#| msgid "Opens the print dialog to print the current document"
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Ivula incoko yababini yoshicilelo yokushicilela uxwebhu lwangoku"
+
+#: kstandardguiitem.cpp:234
+#, fuzzy
+#| msgid "C&ontinue"
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&Qhubekeka"
+
+#: kstandardguiitem.cpp:235
+#, fuzzy
+#| msgid "Continue operation"
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Qhubeka nomsebenzi"
+
+#: kstandardguiitem.cpp:240
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Cima"
+
+#: kstandardguiitem.cpp:241
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Cima Umba"
+
+#: kstandardguiitem.cpp:246
+#, fuzzy
+#| msgid "&Open..."
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Vula..."
+
+#: kstandardguiitem.cpp:247
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Vula ifayile"
+
+#: kstandardguiitem.cpp:252
+#, fuzzy
+#| msgid "&Quit"
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Shiya"
+
+#: kstandardguiitem.cpp:253
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Izicelo"
+
+#: kstandardguiitem.cpp:258
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "Cwangcisa kwakhona"
+
+#: kstandardguiitem.cpp:259
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Icebo Loqwalaselo"
+
+#: kstandardguiitem.cpp:264
+#, fuzzy
+#| msgid "&Insert"
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "F&aka"
+
+#: kstandardguiitem.cpp:269
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&Qwalasela..."
+
+#: kstandardguiitem.cpp:274
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Fumana"
+
+#: kstandardguiitem.cpp:279
+#, fuzzy
+#| msgid "Stop"
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Yima"
+
+#: kstandardguiitem.cpp:284
+#, fuzzy
+#| msgid "Add"
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Dibanisa"
+
+#: kstandardguiitem.cpp:289
+#, fuzzy
+#| msgid "Remove"
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Susa"
+
+#: kstandardguiitem.cpp:294
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "&Uvavanyo"
+
+#: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgid "Properties"
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Iimpahla"
+
+#: kstandardguiitem.cpp:304
+#, fuzzy
+#| msgid "&Overwrite"
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Bhala ngaphezulu"
+
+#: ktimecombobox.cpp:252
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr ""
+
+#: ktimecombobox.cpp:255
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr ""
+
+#: ktimecombobox.cpp:262
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr ""
+
+#: ktogglefullscreenaction.cpp:44
+#, fuzzy
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Indlela &Yekhusi elipheleleyo"
+
+#: ktogglefullscreenaction.cpp:45
+#, fuzzy
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Indlela &Yekhusi elipheleleyo"
+
+#: ktogglefullscreenaction.cpp:46
+#, fuzzy
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Indlela &Yekhusi elipheleleyo"
+
+#: ktogglefullscreenaction.cpp:49
+#, fuzzy
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Indlela &Yekhusi elipheleleyo"
+
+#: ktogglefullscreenaction.cpp:50
+#, fuzzy
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Indlela &Yekhusi elipheleleyo"
+
+#: ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr ""
