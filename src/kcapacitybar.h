@@ -214,6 +214,9 @@ protected:
     // Reimplemented from QWidget
     virtual void paintEvent(QPaintEvent *event);
 
+    // Reimplemented from QWidget
+    virtual void changeEvent(QEvent *event);
+
 private:
     /**
       * @internal

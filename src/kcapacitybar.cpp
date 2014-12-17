@@ -19,6 +19,7 @@
  */
 
 #include "kcapacitybar.h"
+#include "kstyleextensions.h"
 
 #include <math.h>
 
@@ -68,6 +69,7 @@ KCapacityBar::KCapacityBar(KCapacityBar::DrawTextMode drawTextMode, QWidget *par
     : QWidget(parent)
     , d(new Private(drawTextMode))
 {
+    d->ce_capacityBar = KStyleExtensions::customControlElement(QStringLiteral("CE_CapacityBar"), this);
 }
 
 KCapacityBar::~KCapacityBar()
@@ -368,3 +370,10 @@ void KCapacityBar::paintEvent(QPaintEvent *event)
     p.end();
 }
 
+void KCapacityBar::changeEvent(QEvent* event)
+{
+    QWidget::changeEvent(event);
+    if (event->type() == QEvent::StyleChange) {
+        d->ce_capacityBar = KStyleExtensions::customControlElement(QStringLiteral("CE_CapacityBar"), this);
+    }
+}
