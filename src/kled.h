@@ -253,6 +253,8 @@ protected:
 private:
     class Private;
     Private *const d;
+
+    void updateAccessibleName();
 };
 
 #endif

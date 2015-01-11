@@ -20,6 +20,7 @@
 
 #include "kled.h"
 
+#include <QApplication>
 #include <QPainter>
 #include <QImage>
 #include <QStyle>
@@ -48,6 +49,7 @@ KLed::KLed(QWidget *parent)
       d(new Private)
 {
     setColor(Qt::green);
+    updateAccessibleName();
 }
 
 KLed::KLed(const QColor &color, QWidget *parent)
@@ -55,6 +57,7 @@ KLed::KLed(const QColor &color, QWidget *parent)
       d(new Private)
 {
     setColor(color);
+    updateAccessibleName();
 }
 
 KLed::KLed(const QColor &color, State state, Look look, Shape shape,
@@ -67,6 +70,7 @@ KLed::KLed(const QColor &color, State state, Look look, Shape shape,
     d->shape = shape;
 
     setColor(color);
+    updateAccessibleName();
 }
 
 KLed::~KLed()
@@ -102,6 +106,7 @@ void KLed::setState(State state)
 
     d->state = (state == Off ? Off : On);
     updateCachedPixmap();
+    updateAccessibleName();
 }
 
 void KLed::setShape(Shape shape)
@@ -153,6 +158,7 @@ void KLed::toggle()
 {
     d->state = (d->state == On ? Off : On);
     updateCachedPixmap();
+    updateAccessibleName();
 }
 
 void KLed::on()
@@ -181,6 +187,21 @@ QSize KLed::sizeHint() const
 QSize KLed::minimumSizeHint() const
 {
     return QSize(16, 16);
+}
+
+void KLed::updateAccessibleName()
+{
+#ifndef QT_NO_ACCESSIBILITY
+    QString onName = tr("LED on", "Accessible name of a Led whose state is on");
+    QString offName = tr("LED off", "Accessible name of a Led whose state is off");
+    QString lastName = accessibleName();
+
+    if (lastName.isEmpty() || lastName == onName || lastName == offName) {
+        //Accessible name has not been manually set.
+
+        setAccessibleName(d->state == On ? onName : offName);
+    }
+#endif
 }
 
 void KLed::updateCachedPixmap()
