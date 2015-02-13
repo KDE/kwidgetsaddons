@@ -59,7 +59,7 @@ public:
         return f;
     }
 
-    void run()
+    void run() Q_DECL_OVERRIDE
     {
         Index index = m_data->createIndex(m_dataFile);
         reportResult(index);

@@ -300,15 +300,15 @@ public Q_SLOTS:
 
 protected:
 
-    virtual bool eventFilter(QObject *object, QEvent *event);
-    virtual void showPopup();
-    virtual void hidePopup();
-    virtual void mousePressEvent(QMouseEvent *event);
-    virtual void wheelEvent(QWheelEvent *event);
-    virtual void keyPressEvent(QKeyEvent *event);
-    virtual void focusInEvent(QFocusEvent *event);
-    virtual void focusOutEvent(QFocusEvent *event);
-    virtual void resizeEvent(QResizeEvent *event);
+    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
+    void showPopup() Q_DECL_OVERRIDE;
+    void hidePopup() Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void wheelEvent(QWheelEvent *event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    void focusInEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Assign the time for the widget.

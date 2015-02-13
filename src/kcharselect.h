@@ -143,7 +143,7 @@ public:
     /**
      * Reimplemented.
      */
-    virtual QSize sizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
     /**
      * Returns the currently selected character.

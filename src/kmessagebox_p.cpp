@@ -32,7 +32,7 @@ public:
     KMessageBoxDontAskAgainMemoryStorage() {}
     virtual ~KMessageBoxDontAskAgainMemoryStorage() {}
 
-    virtual bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result)
+    bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) Q_DECL_OVERRIDE
     {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::ButtonCode(0));
         if (code == KMessageBox::Yes || code == KMessageBox::No) {
@@ -41,28 +41,28 @@ public:
         }
         return true;
     }
-    virtual bool shouldBeShownContinue(const QString &dontShowAgainName)
+    bool shouldBeShownContinue(const QString &dontShowAgainName) Q_DECL_OVERRIDE
     {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::Yes);
         return code == KMessageBox::Yes;
     }
-    virtual void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result)
+    void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result) Q_DECL_OVERRIDE
     {
         m_saved[dontShowAgainName] = result;
     }
-    virtual void saveDontShowAgainContinue(const QString &dontShowAgainName)
+    void saveDontShowAgainContinue(const QString &dontShowAgainName) Q_DECL_OVERRIDE
     {
         m_saved[dontShowAgainName] = KMessageBox::No;
     }
-    virtual void enableAllMessages()
+    void enableAllMessages() Q_DECL_OVERRIDE
     {
         m_saved.clear();
     }
-    virtual void enableMessage(const QString &dontShowAgainName)
+    void enableMessage(const QString &dontShowAgainName) Q_DECL_OVERRIDE
     {
         m_saved.remove(dontShowAgainName);
     }
-    virtual void setConfig(KConfig *) {}
+    void setConfig(KConfig *) Q_DECL_OVERRIDE {}
 
 private:
     QHash<QString, KMessageBox::ButtonCode> m_saved;
@@ -71,7 +71,7 @@ private:
 class KMessageBoxNotifyDummy : public KMessageBoxNotifyInterface
 {
 public:
-    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget */*parent*/) {}
+    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget */*parent*/) Q_DECL_OVERRIDE {}
 };
 
 Q_GLOBAL_STATIC(KMessageBoxDontAskAgainMemoryStorage, s_defaultDontAskAgainInterface);

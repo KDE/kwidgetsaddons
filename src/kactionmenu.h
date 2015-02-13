@@ -120,7 +120,7 @@ public:
      */
     void setStickyMenu(bool sticky);
 
-    virtual QWidget *createWidget(QWidget *parent);
+    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
 private:
     class KActionMenuPrivate *const d;

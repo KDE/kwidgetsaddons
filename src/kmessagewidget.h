@@ -187,18 +187,18 @@ public:
     /**
      * Returns the preferred size of the message widget.
      */
-    QSize sizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
     /**
      * Returns the minimum size of the message widget.
      */
-    QSize minimumSizeHint() const;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
     /**
      * Returns the required height for @p width.
      * @param width the width in pixels
      */
-    int heightForWidth(int width) const;
+    int heightForWidth(int width) const Q_DECL_OVERRIDE;
 
     /**
      * The icon shown on the left of the text. By default, no icon is shown.
@@ -327,11 +327,11 @@ Q_SIGNALS:
     void showAnimationFinished();
 
 protected:
-    void paintEvent(QPaintEvent *event);
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
-    bool event(QEvent *event);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
-    void resizeEvent(QResizeEvent *event);
+    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
 
 private:
     KMessageWidgetPrivate *const d;

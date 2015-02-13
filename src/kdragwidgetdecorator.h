@@ -81,7 +81,7 @@ protected:
     /**
      * Reimplemented to add drag-support
      */
-    virtual bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Starts a drag (Copy by default) using dragObject()
@@ -132,7 +132,7 @@ private:
     /**
      * Reimplemented to use the QDrag factory
      */
-    virtual QDrag *dragObject()
+    QDrag *dragObject() Q_DECL_OVERRIDE
     {
         if (m_factory) {
             Widget *w = static_cast<Widget *>(decoratedWidget());

@@ -216,8 +216,8 @@ public:
      */
     void setDarkFactor(int darkFactor);
 
-    virtual QSize sizeHint() const;
-    virtual QSize minimumSizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
 
@@ -241,8 +241,8 @@ public Q_SLOTS:
     void off();
 
 protected:
-    void paintEvent(QPaintEvent *);
-    void resizeEvent(QResizeEvent *);
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
 
     /**
      * @internal

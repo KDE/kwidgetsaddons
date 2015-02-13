@@ -91,7 +91,7 @@ public:
      */
     int spacing() const;
 
-    QSize sizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
     /**
      * If half steps are enabled one star equals to 2 rating
@@ -202,11 +202,11 @@ public Q_SLOTS:
     void setPixmapSize(int size);
 
 protected:
-    void mousePressEvent(QMouseEvent *e);
-    void mouseMoveEvent(QMouseEvent *e);
-    void leaveEvent(QEvent *e);
-    void paintEvent(QPaintEvent *e);
-    void resizeEvent(QResizeEvent *e);
+    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
+    void leaveEvent(QEvent *e) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *e) Q_DECL_OVERRIDE;
 
 private:
     class Private;

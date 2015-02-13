@@ -84,10 +84,10 @@ public:
     static void setFullScreen(QWidget *window, bool set);
 
 protected:
-    bool eventFilter(QObject *object, QEvent *event);
+    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
-    virtual void slotToggled(bool checked);
+    void slotToggled(bool checked) Q_DECL_OVERRIDE;
 
 private:
     class Private;

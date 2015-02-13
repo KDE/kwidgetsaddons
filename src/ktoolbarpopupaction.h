@@ -115,7 +115,7 @@ public:
     /**
      * Reimplemented from @see QActionWidgetFactory.
      */
-    virtual QWidget *createWidget(QWidget *parent);
+    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
 private:
     class Private;

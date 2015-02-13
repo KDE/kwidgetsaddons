@@ -37,12 +37,12 @@ protected:
     /**
      * Catch key press events.
      */
-    virtual void keyPressEvent(QKeyEvent *e);
+    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
 
     /**
      * Catch hide events.
      */
-    virtual void hideEvent(QHideEvent *e);
+    void hideEvent(QHideEvent *e) Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     /**
@@ -75,7 +75,7 @@ public:
      * The resize event. Simply resizes the main widget to the whole
      * widgets client size.
      */
-    virtual void resizeEvent(QResizeEvent *resize);
+    void resizeEvent(QResizeEvent *resize) Q_DECL_OVERRIDE;
 
     /**
      * Open the popup window at position pos.

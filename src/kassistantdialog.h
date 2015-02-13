@@ -140,7 +140,7 @@ protected:
      */
     explicit KAssistantDialog(KPageWidget *widget, QWidget *parent = 0, Qt::WindowFlags flags = 0);
 
-    virtual void showEvent(QShowEvent *event);
+    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
 
 private:
     class Private;

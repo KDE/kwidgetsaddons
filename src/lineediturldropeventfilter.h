@@ -38,7 +38,7 @@ class KWIDGETSADDONS_EXPORT LineEditUrlDropEventFilter
 public:
     LineEditUrlDropEventFilter(QObject *parent = 0);
     virtual ~LineEditUrlDropEventFilter();
-    virtual bool eventFilter(QObject *obj, QEvent *ev);
+    bool eventFilter(QObject *obj, QEvent *ev) Q_DECL_OVERRIDE;
 };
 
 #endif

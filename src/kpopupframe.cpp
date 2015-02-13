@@ -65,7 +65,7 @@ public:
 
     KPopupFrame *m_popup;
 
-    bool eventFilter(QObject *object, QEvent *event)
+    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE
     {
         Q_UNUSED(object);
 

@@ -70,7 +70,7 @@ public:
      * to be done there anyway. The size is stored in maxCell. The
      * sizeHint() simply returns a multiple of maxCell.
      */
-    virtual QSize sizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
     /**
      * Set the font size of the date table.
@@ -128,21 +128,21 @@ protected:
      */
     virtual QDate dateFromPos(int pos);
 
-    virtual void paintEvent(QPaintEvent *e);
+    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
 
     /**
      * React on mouse clicks that select a date.
      */
-    virtual void mousePressEvent(QMouseEvent *e);
-    virtual void wheelEvent(QWheelEvent *e);
-    virtual void keyPressEvent(QKeyEvent *e);
-    virtual void focusInEvent(QFocusEvent *e);
-    virtual void focusOutEvent(QFocusEvent *e);
+    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
+    void wheelEvent(QWheelEvent *e) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
+    void focusInEvent(QFocusEvent *e) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *e) Q_DECL_OVERRIDE;
 
     /**
      * Cell highlight on mouse hovering
      */
-    virtual bool event(QEvent *e);
+    bool event(QEvent *e) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /**

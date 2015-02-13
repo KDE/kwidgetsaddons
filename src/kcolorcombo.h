@@ -100,7 +100,7 @@ Q_SIGNALS:
     void highlighted(const QColor &col);
 
 protected:
-    virtual void paintEvent(QPaintEvent *event);
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
 private:
     friend class KColorComboPrivate;

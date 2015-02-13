@@ -101,7 +101,7 @@ public:
     /**
      * Reimplemented to give the widget a minimum size
      */
-    virtual QSize minimumSizeHint() const;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /**
@@ -125,10 +125,10 @@ protected:
      */
     virtual void drawMarker(QPainter *p, int xp, int yp);
 
-    virtual void paintEvent(QPaintEvent *e);
-    virtual void mousePressEvent(QMouseEvent *e);
-    virtual void mouseMoveEvent(QMouseEvent *e);
-    virtual void wheelEvent(QWheelEvent *);
+    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
+    void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
+    void wheelEvent(QWheelEvent *) Q_DECL_OVERRIDE;
 
     /**
      * Converts a pixel position to its corresponding values.

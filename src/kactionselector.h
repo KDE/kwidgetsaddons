@@ -301,12 +301,12 @@ protected:
     /**
       Reimplemented for internal reasons.
     */
-    void keyPressEvent(QKeyEvent *);
+    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
 
     /**
       Reimplemented for internal reasons.
     */
-    bool eventFilter(QObject *, QEvent *);
+    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
 
 private:
     /**

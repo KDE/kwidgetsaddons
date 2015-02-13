@@ -539,10 +539,10 @@ public Q_SLOTS:
 
 protected:
 
-    virtual bool eventFilter(QObject *object, QEvent *event);
-    virtual void focusInEvent(QFocusEvent *event);
-    virtual void focusOutEvent(QFocusEvent *event);
-    virtual void resizeEvent(QResizeEvent *event);
+    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
+    void focusInEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
+    void focusOutEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * Assign the date, time and time zone for the widget.

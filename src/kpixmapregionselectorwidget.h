@@ -152,7 +152,7 @@ protected:
      */
     virtual QMenu *createPopupMenu();
 
-    bool eventFilter(QObject *obj, QEvent *ev);
+    bool eventFilter(QObject *obj, QEvent *ev) Q_DECL_OVERRIDE;
 
 private:
     class Private;

@@ -208,14 +208,14 @@ public:
     void drawCapacityBar(QPainter *p, const QRect &rect) const;
 
     // Reimplemented from QWidget
-    virtual QSize minimumSizeHint() const;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
 protected:
     // Reimplemented from QWidget
-    virtual void paintEvent(QPaintEvent *event);
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
     // Reimplemented from QWidget
-    virtual void changeEvent(QEvent *event);
+    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
 
 private:
     /**

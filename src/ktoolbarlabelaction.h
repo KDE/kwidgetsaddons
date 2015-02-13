@@ -93,7 +93,7 @@ public:
     /**
      * Reimplemented from @see QActionWidgetFactory.
      */
-    virtual QWidget *createWidget(QWidget *parent);
+    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /**
@@ -103,8 +103,8 @@ Q_SIGNALS:
     void textChanged(const QString &newText);
 
 protected:
-    virtual bool event(QEvent *);
-    virtual bool eventFilter(QObject *watched, QEvent *event);
+    bool event(QEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
 private:
     class Private;

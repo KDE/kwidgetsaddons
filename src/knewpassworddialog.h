@@ -186,7 +186,7 @@ public:
     /**
      * @internal
      */
-    virtual void accept();
+    void accept() Q_DECL_OVERRIDE;
 
 protected:
 

@@ -244,7 +244,7 @@ public:
     /**
      * Reimplemented for internal reasons.
      */
-    virtual QSize sizeHint(void) const;
+    QSize sizeHint(void) const Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /**

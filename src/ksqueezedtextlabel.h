@@ -58,8 +58,8 @@ public:
 
     virtual ~KSqueezedTextLabel();
 
-    virtual QSize minimumSizeHint() const;
-    virtual QSize sizeHint() const;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
@@ -109,16 +109,16 @@ protected:
     /**
      * \reimp
      */
-    void mouseReleaseEvent(QMouseEvent *);
+    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 
     /**
      * Called when widget is resized
      */
-    void resizeEvent(QResizeEvent *);
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
     /**
      * \reimp
      */
-    void contextMenuEvent(QContextMenuEvent *);
+    void contextMenuEvent(QContextMenuEvent *) Q_DECL_OVERRIDE;
     /**
      * does the dirty work
      */

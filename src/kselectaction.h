@@ -368,16 +368,16 @@ protected:
     /**
      * Reimplemented from @see QWidgetAction.
      */
-    virtual QWidget *createWidget(QWidget *parent);
+    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
     /**
      * Reimplemented from @see QWidgetAction.
      */
-    virtual void deleteWidget(QWidget *widget);
+    void deleteWidget(QWidget *widget) Q_DECL_OVERRIDE;
 
-    virtual bool event(QEvent *event);
+    bool event(QEvent *event) Q_DECL_OVERRIDE;
 
-    virtual bool eventFilter(QObject *watched, QEvent *event);
+    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
 
     /**
      * @internal

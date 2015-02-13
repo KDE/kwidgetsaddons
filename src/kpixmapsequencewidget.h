@@ -74,7 +74,7 @@ public:
     /**
      * \reimpl
      */
-    QSize sizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     /**

@@ -16,7 +16,7 @@ public:
     TestWidget();
     ~TestWidget();
 
-    bool eventFilter(QObject *, QEvent *);
+    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void alignementChanged(int);
