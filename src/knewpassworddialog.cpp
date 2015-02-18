@@ -4,7 +4,7 @@
    Copyright (C) 1999,2000 Geert Jansen <jansen@kde.org>
    Copyright (C) 2004,2005 Andrew Coles <andrew_coles@yahoo.co.uk>
    Copyright (C) 2007 Michaël Larouche <larouche@kde.org>
-   Copyright (C) 2009 Christoph Feck <christoph@maxiom.de>
+   Copyright (C) 2009 Christoph Feck <cfeck@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
