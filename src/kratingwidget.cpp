@@ -249,7 +249,7 @@ QSize KRatingWidget::sizeHint() const
 
     QSize pixSize(d->pixSize, d->pixSize);
     if (!d->ratingPainter.customPixmap().isNull()) {
-        pixSize = d->ratingPainter.customPixmap().size();
+        pixSize = d->ratingPainter.customPixmap().size() / d->ratingPainter.customPixmap().devicePixelRatio();
     }
 
     return QSize(pixSize.width() * numPix + spacing() * (numPix - 1) + frameWidth() * 2,

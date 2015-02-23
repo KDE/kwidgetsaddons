@@ -223,6 +223,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
     // get the rating pixmaps
     int maxHSizeOnePix = (rect.width() - (numUsedStars - 1) * usedSpacing) / numUsedStars;
     QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), QIcon::On);
+    QSize ratingPixSize = ratingPix.size() / ratingPix.devicePixelRatio();
 
     QPixmap disabledRatingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), QIcon::Off);
     QImage disabledRatingImage = disabledRatingPix.toImage().convertToFormat(QImage::Format_ARGB32);
@@ -253,11 +254,12 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
 
     if (d->alignment & Qt::AlignJustify && numUsedStars > 1) {
         int w = rect.width();
-        w -= numUsedStars * ratingPix.width();
+        w -= numUsedStars * ratingPixSize.width();
         usedSpacing = w / (numUsedStars - 1);
     }
 
-    int ratingAreaWidth = ratingPix.width() * numUsedStars + usedSpacing * (numUsedStars - 1);
+    int ratingAreaWidth = ratingPixSize.width() * numUsedStars + usedSpacing * (numUsedStars - 1);
+
 
     int i = 0;
     int x = rect.x();
@@ -267,26 +269,26 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         x += (rect.width() - ratingAreaWidth) / 2;
     }
 
-    int xInc = ratingPix.width() + usedSpacing;
+    int xInc = ratingPixSize.width() + usedSpacing;
     if (d->direction == Qt::RightToLeft) {
-        x = rect.width() - ratingPix.width() - x;
+        x = rect.width() - ratingPixSize.width() - x;
         xInc = -xInc;
     }
 
     int y = rect.y();
     if (d->alignment & Qt::AlignVCenter) {
-        y += (rect.height() / 2 - ratingPix.height() / 2);
+        y += (rect.height() / 2 - ratingPixSize.height() / 2);
     } else if (d->alignment & Qt::AlignBottom) {
-        y += (rect.height() - ratingPix.height());
+        y += (rect.height() - ratingPixSize.height());
     }
     for (; i < numRatingStars; ++i) {
         painter->drawPixmap(x, y, ratingPix);
         x += xInc;
     }
     if (half) {
-        painter->drawPixmap(x, y, ratingPix.width() / 2, ratingPix.height(),
+        painter->drawPixmap(x, y, ratingPixSize.width() / 2, ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? (numHoverStars > 0 ? hoverPix : disabledRatingPix) : ratingPix,
-                            0, 0, ratingPix.width() / 2, ratingPix.height());
+                            0, 0, ratingPix.width() / 2, ratingPix.height());  //source sizes are deliberately not device independent
         painter->drawPixmap(x + ratingPix.width() / 2, y, ratingPix.width() / 2, ratingPix.height(),
                             d->direction == Qt::RightToLeft ? ratingPix : (numHoverStars > 0 ? hoverPix : disabledRatingPix),
                             ratingPix.width() / 2, 0, ratingPix.width() / 2, ratingPix.height());
@@ -298,10 +300,10 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         x += xInc;
     }
     if (halfHover) {
-        painter->drawPixmap(x, y, ratingPix.width() / 2, ratingPix.height(),
+        painter->drawPixmap(x, y, ratingPixSize.width() / 2, ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? disabledRatingPix : hoverPix,
                             0, 0, ratingPix.width() / 2, ratingPix.height());
-        painter->drawPixmap(x + ratingPix.width() / 2, y, ratingPix.width() / 2, ratingPix.height(),
+        painter->drawPixmap(x + ratingPixSize.width() / 2, y, ratingPixSize.width() / 2, ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? hoverPix : disabledRatingPix,
                             ratingPix.width() / 2, 0, ratingPix.width() / 2, ratingPix.height());
         x += xInc;
@@ -319,8 +321,9 @@ int KRatingPainter::ratingFromPosition(const QRect &rect, const QPoint &pos) con
     int numUsedStars = d->bHalfSteps ? d->maxRating / 2 : d->maxRating;
     int maxHSizeOnePix = (rect.width() - (numUsedStars - 1) * usedSpacing) / numUsedStars;
     QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix));
+    QSize ratingPixSize = ratingPix.size() / ratingPix.devicePixelRatio();
 
-    int ratingAreaWidth = ratingPix.width() * numUsedStars + usedSpacing * (numUsedStars - 1);
+    int ratingAreaWidth = ratingPixSize.width() * numUsedStars + usedSpacing * (numUsedStars - 1);
 
     QRect usedRect(rect);
     if (d->alignment & Qt::AlignRight) {
@@ -334,13 +337,13 @@ int KRatingPainter::ratingFromPosition(const QRect &rect, const QPoint &pos) con
     }
 
     if (d->alignment & Qt::AlignBottom) {
-        usedRect.setTop(rect.bottom() - ratingPix.height() + 1);
+        usedRect.setTop(rect.bottom() - ratingPixSize.height() + 1);
     } else if (d->alignment & Qt::AlignVCenter) {
-        int x = (rect.height() - ratingPix.height()) / 2;
+        int x = (rect.height() - ratingPixSize.height()) / 2;
         usedRect.setTop(rect.top() + x);
         usedRect.setBottom(rect.bottom() - x);
     } else { // d->alignment & Qt::AlignTop
-        usedRect.setBottom(rect.top() + ratingPix.height() - 1);
+        usedRect.setBottom(rect.top() + ratingPixSize.height() - 1);
     }
 
     if (usedRect.contains(pos)) {
