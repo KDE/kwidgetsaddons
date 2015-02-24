@@ -202,6 +202,7 @@ int main(int argc, char **argv)
     QApplication::setApplicationName(QStringLiteral("KPageWidgetTest"));
 
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KPageWidgetTest testWidget(0);
     testWidget.show();

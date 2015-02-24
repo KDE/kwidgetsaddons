@@ -84,6 +84,8 @@ bool TestWidget::eventFilter(QObject *o, QEvent *e)
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QLatin1Literal("test"));
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     TestWidget   *window;
 
     QApplication testapp(argc, argv);

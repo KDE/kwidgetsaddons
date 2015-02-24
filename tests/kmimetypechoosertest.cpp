@@ -24,6 +24,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QString text = QStringLiteral("Select the MimeTypes you want for this file type.");
     QStringList list;

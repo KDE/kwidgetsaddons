@@ -56,6 +56,8 @@ void Window::updateAdjustableLabel()
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     Window window;
     window.show();
     return app.exec();

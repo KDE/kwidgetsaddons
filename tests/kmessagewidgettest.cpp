@@ -44,6 +44,8 @@ public Q_SLOTS:
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     QWidget *mainWindow = new QWidget();
 
     QVBoxLayout *l = new QVBoxLayout(mainWindow);

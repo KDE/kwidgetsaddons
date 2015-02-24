@@ -44,7 +44,7 @@ public:
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("kfontrequestertest"));
-
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
     KFontRequesterTest *mainWidget = new KFontRequesterTest;

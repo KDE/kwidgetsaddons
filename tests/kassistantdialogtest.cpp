@@ -29,6 +29,8 @@ int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("test"));
     QApplication a(argc, argv);
+    a.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
+
     KAssistantDialog *dlg = new KAssistantDialog();
     QObject::connect(dlg, SIGNAL(finished(int)),  &a, SLOT(quit()));
     for (int i = 1; i < 11; i++) {

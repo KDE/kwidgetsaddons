@@ -54,6 +54,7 @@ KSplitterCollapserButtonGui_test::~KSplitterCollapserButtonGui_test()
 
 int main(int argc, char **argv)
 {
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
     QCommandLineParser parser;
     parser.addVersionOption();

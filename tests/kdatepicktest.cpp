@@ -53,7 +53,7 @@ private:
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QLatin1String("KDatePickertest"));
-
+    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
     Manager mgr;

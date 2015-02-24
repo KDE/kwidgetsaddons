@@ -57,6 +57,7 @@ int main(int argc, char **argv)
     QApplication::setApplicationName(QStringLiteral("KPageDialogTest"));
 
     QApplication app(argc, argv);
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KPageDialogTest testDialog(0);
     testDialog.exec();
