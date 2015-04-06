@@ -27,15 +27,15 @@
 #ifdef NEVERDEFINE // never true
 // Font names up for translation, listed for extraction.
 
-// i18n: Generic sans serif font presented in font choosers. When selected,
-// the system will choose a real font, mandated by distro settings.
-I18N_NOOP2("@item Font name", "Sans Serif")
-// i18n: Generic serif font presented in font choosers. When selected,
-// the system will choose a real font, mandated by distro settings.
-I18N_NOOP2("@item Font name", "Serif")
-// i18n: Generic monospace font presented in font choosers. When selected,
-// the system will choose a real font, mandated by distro settings.
-I18N_NOOP2("@item Font name", "Monospace")
+//: Generic sans serif font presented in font choosers. When selected,
+//: the system will choose a real font, mandated by distro settings.
+QT_TRANSLATE_NOOP3("FontHelpers", "Sans Serif", "@item Font name");
+//: Generic serif font presented in font choosers. When selected,
+//: the system will choose a real font, mandated by distro settings.
+QT_TRANSLATE_NOOP3("FontHelpers", "Serif", "@item Font name");
+//: Generic monospace font presented in font choosers. When selected,
+//: the system will choose a real font, mandated by distro settings.
+QT_TRANSLATE_NOOP3("FontHelpers", "Monospace", "@item Font name");
 
 #endif
 

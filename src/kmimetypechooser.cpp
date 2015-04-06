@@ -29,11 +29,6 @@
 #include <QStandardPaths>
 #include <QTreeWidget>
 
-static const QString i18n(const char *a)
-{
-    return QApplication::translate("KMimeTypeChooser", a);
-}
-
 //BEGIN KMimeTypeChooserPrivate
 class KMimeTypeChooserPrivate
 {
@@ -91,13 +86,13 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     d->mimeTypeTree = new QTreeWidget(this);
     vboxLayout->addWidget(d->mimeTypeTree);
     QStringList headerLabels;
-    headerLabels.append(i18n("Mime Type"));
+    headerLabels.append(tr("Mime Type"));
 
     if (visuals & Comments) {
-        headerLabels.append(i18n("Comment"));
+        headerLabels.append(tr("Comment"));
     }
     if (visuals & Patterns) {
-        headerLabels.append(i18n("Patterns"));
+        headerLabels.append(tr("Patterns"));
     }
 
     d->mimeTypeTree->setColumnCount(headerLabels.count());
@@ -110,7 +105,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     if (visuals & EditButton) {
         QHBoxLayout *buttonLayout = new QHBoxLayout();
         buttonLayout->addStretch(1);
-        d->btnEditMimeType = new QPushButton(i18n("&Edit..."), this);
+        d->btnEditMimeType = new QPushButton(tr("&Edit..."), this);
         buttonLayout->addWidget(d->btnEditMimeType);
 
         connect(d->btnEditMimeType, SIGNAL(clicked()), this, SLOT(_k_editMimeType()));
@@ -120,8 +115,8 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
         connect(d->mimeTypeTree, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
                 this, SLOT(_k_slotCurrentChanged(QTreeWidgetItem*)));
 
-        d->btnEditMimeType->setWhatsThis(i18n(
-                                             "Click this button to display the familiar KDE mime type editor."));
+        d->btnEditMimeType->setWhatsThis(tr(
+                                            "Click this button to display the familiar KDE mime type editor."));
 
         vboxLayout->addLayout(buttonLayout);
     }

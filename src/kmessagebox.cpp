@@ -44,46 +44,37 @@
 #endif
 #include <ksqueezedtextlabel.h>
 
-static const QString i18n(const char *a)
-{
-    return QApplication::translate("KMessageBox", a);
-}
-static const QString i18nc(const char *comment, const char *a)
-{
-    return QApplication::translate("KMessageBox", a, comment);
-}
-
 // Some i18n filters, that standard button texts are piped through
 // (the new KGuiItem object with filtered text is created from the old one).
 
-// i18n: Filter for the Yes-button text in standard message dialogs,
-// after the message caption/text have been translated.
+//: Filter for the Yes-button text in standard message dialogs,
+//: after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_YES(src, dst) \
     KGuiItem dst(src); \
-    dst.setText( i18nc( "@action:button filter-yes", src.text().toUtf8().constData() ) );
+    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-yes" ) );
 
-// i18n: Filter for the No-button text in standard message dialogs,
-// after the message caption/text have been translated.
+//: Filter for the No-button text in standard message dialogs,
+//: after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_NO(src, dst) \
     KGuiItem dst(src); \
-    dst.setText( i18nc( "@action:button filter-no", src.text().toUtf8().constData() ) );
+    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-no" ) );
 
-// i18n: Filter for the Continue-button text in standard message dialogs,
-// after the message caption/text have been translated.
+//: Filter for the Continue-button text in standard message dialogs,
+//: after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_CONTINUE(src, dst) \
     KGuiItem dst(src); \
-    dst.setText( i18nc( "@action:button filter-continue", src.text().toUtf8().constData() ) );
+    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-continue" ) );
 
-// i18n: Filter for the Cancel-button text in standard message dialogs,
-// after the message caption/text have been translated.
+//: Filter for the Cancel-button text in standard message dialogs,
+//: after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_CANCEL(src, dst) \
     KGuiItem dst(src); \
-    dst.setText( i18nc( "@action:button filter-cancel", src.text().toUtf8().constData() ) );
+    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-cancel" ) );
 
-// i18n: Called after the button texts in standard message dialogs
-// have been filtered by the messages above. Not visible to user.
+//: Called after the button texts in standard message dialogs
+//: have been filtered by the messages above. Not visible to user.
 #define I18N_POST_BUTTON_FILTER \
-    i18nc( "@action:button post-filter", "." );
+    QApplication::translate( "KMessageBox", ".", "@action:button post-filter" );
 
 namespace KMessageBox
 {
@@ -186,7 +177,7 @@ public Q_SLOTS:
         if (code != QDialogButtonBox::NoButton) {
             m_dialog->done(code);
         } else if (m_details && (button->objectName() == QStringLiteral("detailsButton"))) {
-            button->setText(i18n("&Details") + (m_details->isVisible() ? QStringLiteral(" >>") : QStringLiteral(" <<")));
+            button->setText(QApplication::translate("KMessageBox", "&Details") + (m_details->isVisible() ? QStringLiteral(" >>") : QStringLiteral(" <<")));
             m_details->setVisible(!m_details->isVisible());
         }
     }
@@ -323,7 +314,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
     topLayout->addWidget(mainWidget);
 
     if (!details.isEmpty()) {
-        QGroupBox *detailsGroup = new QGroupBox(i18n("Details"));
+        QGroupBox *detailsGroup = new QGroupBox(QApplication::translate("KMessageBox", "Details"));
         QVBoxLayout *detailsLayout = new QVBoxLayout(detailsGroup);
         if (details.length() < 512) {
             QLabel *detailsLabel = new QLabel(details);
@@ -486,7 +477,7 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog, const QString &text
     I18N_FILTER_BUTTON_NO(buttonNo_, buttonNo)
     I18N_POST_BUTTON_FILTER
 
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Question") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Question") : caption);
     dialog->setObjectName(QStringLiteral("questionYesNo"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -498,7 +489,7 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog, const QString &text
 
     bool checkboxResult = false;
     const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Information, text, strlist,
-                                         dontAskAgainName.isEmpty() ? QString() : i18n("Do not ask again"),
+                                         dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
     res = (result == QDialogButtonBox::Yes ? Yes : No);
 
@@ -540,7 +531,7 @@ static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
     I18N_FILTER_BUTTON_CANCEL(buttonCancel_, buttonCancel)
     I18N_POST_BUTTON_FILTER
 
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Question") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Question") : caption);
     dialog->setObjectName(QStringLiteral("questionYesNoCancel"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -554,7 +545,7 @@ static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
     bool checkboxResult = false;
     const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Information,
                                          text, QStringList(),
-                                         dontAskAgainName.isEmpty() ? QString() : i18n("Do not ask again"),
+                                         dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
 
     if (result == QDialogButtonBox::Yes) {
@@ -613,7 +604,7 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog, const QString &text,
     I18N_FILTER_BUTTON_NO(buttonNo_, buttonNo)
     I18N_POST_BUTTON_FILTER
 
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Warning") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Warning") : caption);
     dialog->setObjectName(QStringLiteral("warningYesNoList"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -625,7 +616,7 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog, const QString &text,
 
     bool checkboxResult = false;
     const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
-                                         dontAskAgainName.isEmpty() ? QString() : i18n("Do not ask again"),
+                                         dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
     res = (result == QDialogButtonBox::Yes ? Yes : No);
 
@@ -676,7 +667,7 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QStri
     I18N_FILTER_BUTTON_CANCEL(buttonCancel_, buttonCancel)
     I18N_POST_BUTTON_FILTER
 
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Warning") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Warning") : caption);
     dialog->setObjectName(QStringLiteral("warningYesNo"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -688,7 +679,7 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QStri
 
     bool checkboxResult = false;
     const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
-                                         dontAskAgainName.isEmpty() ? QString() : i18n("Do not ask again"),
+                                         dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
 
     if (result != QDialogButtonBox::Yes) {
@@ -744,7 +735,7 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog, const QString 
     I18N_FILTER_BUTTON_CANCEL(buttonCancel_, buttonCancel)
     I18N_POST_BUTTON_FILTER
 
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Warning") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Warning") : caption);
     dialog->setObjectName(QStringLiteral("warningYesNoCancel"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -757,7 +748,7 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog, const QString 
 
     bool checkboxResult = false;
     const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
-                                         dontAskAgainName.isEmpty() ? QString() : i18n("Do not ask again"),
+                                         dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
 
     if (result == QDialogButtonBox::Yes) {
@@ -796,7 +787,7 @@ void error(QWidget *parent,  const QString &text,
 static void errorListInternal(QDialog *dialog, const QString &text, const QStringList &strlist,
                               const QString &caption, Options options)
 {
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Error") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Error") : caption);
     dialog->setObjectName(QStringLiteral("error"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -817,12 +808,12 @@ static void detailedErrorInternal(QDialog *dialog, const QString &text,
                                   const QString &details,
                                   const QString &caption, Options options)
 {
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Error") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Error") : caption);
     dialog->setObjectName(QStringLiteral("error"));
 
     QPushButton *detailsButton = new QPushButton;
     detailsButton->setObjectName(QStringLiteral("detailsButton"));
-    detailsButton->setText(i18n("&Details") + QStringLiteral(" >>"));
+    detailsButton->setText(QApplication::translate("KMessageBox", "&Details") + QStringLiteral(" >>"));
     detailsButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -845,7 +836,7 @@ void detailedError(QWidget *parent, const QString &text,
 static void sorryInternal(QDialog *dialog, const QString &text,
                           const QString &caption, Options options)
 {
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Sorry") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : caption);
     dialog->setObjectName(QStringLiteral("sorry"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -866,12 +857,12 @@ static void detailedSorryInternal(QDialog *dialog, const QString &text,
                                   const QString &details,
                                   const QString &caption, Options options)
 {
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Sorry") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : caption);
     dialog->setObjectName(QStringLiteral("sorry"));
 
     QPushButton *detailsButton = new QPushButton;
     detailsButton->setObjectName(QStringLiteral("detailsButton"));
-    detailsButton->setText(i18n("&Details") + QStringLiteral(" >>"));
+    detailsButton->setText(QApplication::translate("KMessageBox", "&Details") + QStringLiteral(" >>"));
     detailsButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -905,7 +896,7 @@ static void informationListInternal(QDialog *dialog, const QString &text, const 
         return;
     }
 
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Information") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Information") : caption);
     dialog->setObjectName(QStringLiteral("information"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
@@ -916,7 +907,7 @@ static void informationListInternal(QDialog *dialog, const QString &text, const 
     bool checkboxResult = false;
 
     createKMessageBox(dialog, buttonBox, QMessageBox::Information, text, strlist,
-                      dontShowAgainName.isEmpty() ? QString() : i18n("Do not show this message again"),
+                      dontShowAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not show this message again"),
                       &checkboxResult, options);
 
     if (checkboxResult) {
@@ -1129,7 +1120,7 @@ void sorryWId(WId parent_id, const QString &text,
 {
     QWidget *parent = QWidget::find(parent_id);
     QDialog *dialog = new QDialog(parent, Qt::Dialog);
-    dialog->setWindowTitle(caption.isEmpty() ? i18n("Sorry") : caption);
+    dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : caption);
     dialog->setObjectName(QStringLiteral("sorry"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);

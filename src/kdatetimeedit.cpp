@@ -222,7 +222,7 @@ void KDateTimeEditPrivate::warnDateTime()
         QString warnMsg;
         if (!m_dateTime.isValid()) {
             //TODO Add missing string
-            //warnMsg = i18n("The date or time you entered is invalid");
+            //warnMsg = tr("The date or time you entered is invalid");
         } else if (m_minDateTime.isValid() && m_dateTime < m_minDateTime) {
             if (m_minWarnMsg.isEmpty()) {
                 //TODO Add datetime to string
