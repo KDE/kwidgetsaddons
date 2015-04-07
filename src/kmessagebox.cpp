@@ -47,32 +47,32 @@
 // Some i18n filters, that standard button texts are piped through
 // (the new KGuiItem object with filtered text is created from the old one).
 
-//: Filter for the Yes-button text in standard message dialogs,
-//: after the message caption/text have been translated.
+// Filter for the Yes-button text in standard message dialogs,
+// after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_YES(src, dst) \
     KGuiItem dst(src); \
     dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-yes" ) );
 
-//: Filter for the No-button text in standard message dialogs,
-//: after the message caption/text have been translated.
+// Filter for the No-button text in standard message dialogs,
+// after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_NO(src, dst) \
     KGuiItem dst(src); \
     dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-no" ) );
 
-//: Filter for the Continue-button text in standard message dialogs,
-//: after the message caption/text have been translated.
+// Filter for the Continue-button text in standard message dialogs,
+// after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_CONTINUE(src, dst) \
     KGuiItem dst(src); \
     dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-continue" ) );
 
-//: Filter for the Cancel-button text in standard message dialogs,
-//: after the message caption/text have been translated.
+// Filter for the Cancel-button text in standard message dialogs,
+// after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_CANCEL(src, dst) \
     KGuiItem dst(src); \
     dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-cancel" ) );
 
-//: Called after the button texts in standard message dialogs
-//: have been filtered by the messages above. Not visible to user.
+// Called after the button texts in standard message dialogs
+// have been filtered by the messages above. Not visible to user.
 #define I18N_POST_BUTTON_FILTER \
     QApplication::translate( "KMessageBox", ".", "@action:button post-filter" );
 
