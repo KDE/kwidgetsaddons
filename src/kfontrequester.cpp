@@ -180,12 +180,12 @@ void KFontRequester::setTitle(const QString &title)
 
 void KFontRequester::KFontRequesterPrivate::_k_buttonClicked()
 {
-    KFontChooser::DisplayFlags flags = KFontChooser::NoDisplayFlags;
+    QFontDialog::FontDialogOptions flags = 0;
     if (m_onlyFixed) {
-        flags |= KFontChooser::FixedFontsOnly;
+        flags = QFontDialog::MonospacedFonts;
     }
     bool ok = false;
-    QFont font = QFontDialog::getFont(&ok, m_selFont, q->parentWidget());
+    QFont font = QFontDialog::getFont(&ok, m_selFont, q->parentWidget(), QString(), flags);
 
     if (ok) {
         m_selFont = font;
