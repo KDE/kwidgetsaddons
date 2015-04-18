@@ -58,11 +58,6 @@ public:
     KDateTable *q;
 
     /**
-    * The font size of the displayed text.
-    */
-    int fontsize;
-
-    /**
     * The currently selected date.
     */
     QDate m_date;
@@ -91,6 +86,11 @@ public:
      * How many day columns we are to draw, i.e. days in a week.
      */
     int m_numDayColumns;
+
+    /**
+     * The font size of the displayed text.
+     */
+    int fontsize;
 
     bool m_popupMenuEnabled;
     bool m_useCustomColors;

@@ -32,8 +32,8 @@ class FormLayoutWidgetItem : public QWidgetItem
 public:
     FormLayoutWidgetItem(QWidget *widget, QFormLayout *formLayout, QFormLayout::ItemRole itemRole)
         : QWidgetItem(widget)
-        , m_width(-1)
         , m_formLayout(formLayout)
+        , m_width(-1)
         , m_itemRole(itemRole)
     {}
 
@@ -88,8 +88,8 @@ public:
     }
 
 private:
-    int m_width;
     QFormLayout *m_formLayout;
+    int m_width;
     QFormLayout::ItemRole m_itemRole;
 };
 

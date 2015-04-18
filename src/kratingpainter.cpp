@@ -32,24 +32,24 @@ class KRatingPainter::Private
 public:
     Private()
         : maxRating(10),
+          spacing(0),
           isEnabled(true),
           bHalfSteps(true),
           alignment(Qt::AlignCenter),
-          direction(Qt::LeftToRight),
-          spacing(0)
+          direction(Qt::LeftToRight)
     {
     }
 
     QPixmap getPixmap(int size, QIcon::State state = QIcon::On);
 
     int maxRating;
+    int spacing;
     QIcon icon;
     bool isEnabled;
     bool bHalfSteps;
     Qt::Alignment alignment;
     Qt::LayoutDirection direction;
     QPixmap customPixmap;
-    int spacing;
 };
 
 static void _k_imageToGrayScale(QImage &img, float value);

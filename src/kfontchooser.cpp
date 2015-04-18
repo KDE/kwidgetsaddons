@@ -112,9 +112,6 @@ public:
     KFontChooser *q;
 
     QPalette m_palette;
-    bool signalsAllowed: 1;
-
-    bool usingFixed: 1;
 
     QDoubleSpinBox *sizeOfFont;
 
@@ -136,8 +133,12 @@ public:
     QString      selectedStyle;
     qreal        selectedSize;
 
-    int          customSizeRow;
     QString      standardSizeAtCustom;
+    int          customSizeRow;
+
+    bool signalsAllowed: 1;
+
+    bool usingFixed: 1;
 
     // Mappings of translated to Qt originated family and style strings.
     QHash<QString, QString> qtFamilies;

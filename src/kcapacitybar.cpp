@@ -54,8 +54,8 @@ public:
 
     ~Private() {}
 
-    int value;
     QString text;
+    int value;
     bool fillFullBlocks;
     bool continuous;
     int barHeight;

@@ -50,11 +50,11 @@ public:
     void init();
 
     KPasswordDialog *q;
-    KPasswordDialogFlags m_flags;
     Ui_KPasswordDialog ui;
     QMap<QString, QString> knownLogins;
     QComboBox *userEditCombo;
     QLabel *pixmapLabel;
+    KPasswordDialogFlags m_flags;
     unsigned int commentRow;
 };
 
