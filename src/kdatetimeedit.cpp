@@ -262,6 +262,10 @@ KDateTimeEdit::KDateTimeEdit(QWidget *parent)
     d->ui.m_timeZoneCombo->installEventFilter(this);
     d->initWidgets();
 
+    connect(d->ui.m_dateCombo, SIGNAL(dateChanged(QDate)),
+            this,                  SLOT(setDate(QDate)));
+    connect(d->ui.m_timeCombo, SIGNAL(timeChanged(QTime)),
+            this,                  SLOT(setTime(QTime)));
     connect(d->ui.m_calendarCombo, SIGNAL(activated(int)),
             this,                      SLOT(selectCalendar(int)));
     connect(d->ui.m_timeZoneCombo, SIGNAL(activated(int)),
