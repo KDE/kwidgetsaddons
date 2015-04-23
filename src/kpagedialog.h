@@ -257,7 +257,7 @@ protected:
     const QDialogButtonBox *buttonBox() const;
 
     /**
-     * Set the button box of the dia.log
+     * Set the button box of the dialog
      *
      * @note the previous buttonBox will be deleted.
      *
