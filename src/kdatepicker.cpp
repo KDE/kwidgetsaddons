@@ -217,8 +217,7 @@ QDate KDatePicker::KDatePickerPrivate::validDateInYearMonth(int year, int month)
     if (QDate(year, month, 1).isValid()) {
         newDate = QDate(year, month, 1);
     } else if (QDate(year, month + 1, 1).isValid()) {
-        newDate = QDate(year, month, 1);
-        newDate.addDays(-1);
+        newDate = QDate(year, month + 1, 1).addDays(-1);
     } else {
         newDate = QDate::fromJulianDay(0);
     }
