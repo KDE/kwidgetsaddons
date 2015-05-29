@@ -97,7 +97,7 @@ void KAssistantDialog::Private::init()
 {
     QDialogButtonBox *buttonBox = q->buttonBox();
 
-    buttonBox->setStandardButtons(0);
+    buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Help);
     backButton = new QPushButton;
 
     const QString iconBack = QApplication::isRightToLeft() ? QStringLiteral("go-next") : QStringLiteral("go-previous");
@@ -119,8 +119,6 @@ void KAssistantDialog::Private::init()
     finishButton->setText(tr("Finish"));
     finishButton->setIcon(QIcon::fromTheme(QStringLiteral("dialog-ok-apply")));
     buttonBox->addButton(finishButton, QDialogButtonBox::AcceptRole);
-
-    buttonBox->addButton(QDialogButtonBox::Cancel);
 
     q->setFaceType(KPageDialog::Plain);
 
