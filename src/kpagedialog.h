@@ -261,7 +261,7 @@ protected:
      *
      * @note the previous buttonBox will be deleted.
      *
-     * @param box The QDialogButtonBox object will be reparented to this objectm so you can create
+     * @param box The QDialogButtonBox object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
      */
     void setButtonBox(QDialogButtonBox *box);
