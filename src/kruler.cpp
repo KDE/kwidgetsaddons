@@ -364,13 +364,12 @@ KRuler::showPointer() const
     return d->showpointer;
 }
 
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
 void
 KRuler::setFrameStyle(int)
 {
-#ifdef __GNUC__
-#warning implement me (jowenn)
-#endif
 }
+#endif
 
 void
 KRuler::setShowEndLabel(bool show)

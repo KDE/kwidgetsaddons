@@ -52,18 +52,7 @@
  * There are tiny marks, little marks, medium marks, and big marks along the
  *  ruler.
  *
- * To receive mouse clicks or mouse moves,
- * the class has to be overloaded.
- *
- * For performance reasons, the public methods don't call QWidget::repaint().
- * (Slots do, see documentation below.)
- * All the changed settings will be painted once after leaving
- * to the main event loop.
- * For performance painting the slot methods should be used,
- * they do a fast QWidget::repaint() call after changing the values.
- * For setting multiple values like minValue(), maxValue(), offset() etc.
- * using the public methods is recommended
- * so the widget will be painted only once when entering the main event loop.
+ * To receive mouse clicks or mouse moves, the class has to be overloaded.
  *
  * \image html kruler.png "KDE Ruler Widget"
  *
@@ -92,25 +81,10 @@ class KWIDGETSADDONS_EXPORT KRuler : public QAbstractSlider
     Q_PROPERTY(int endOffset READ endOffset)
 
 public:
-
-    /*
-    #define KRULER_ROTATE_TEST KRULER_ROTATE_TEST
-    #undef KRULER_ROTATE_TEST
-    #ifdef KRULER_ROTATE_TEST
-      double xtrans, ytrans, rotate;
-    # warning tmporaer variablen eingeschaltet
-    #endif
-    */
-
     /**
      * The types of units used.
      **/
     enum MetricStyle { Custom = 0, Pixel, Inch, Millimetres, Centimetres, Metres };
-
-    /**
-     * The style (or look) of the ruler.
-     **/
-    //  enum PaintStyle { Flat, Raised, Sunken };
 
     /**
      * Constructs a horizontal ruler.
@@ -261,28 +235,9 @@ public:
     void setShowPointer(bool);
     bool showPointer() const;
 
-    void setFrameStyle(int);
-
-    /**
-     * Show/hide number values of the little marks.
-     *
-     * Default is @p false.
-     **/
-    //  void setShowLittleMarkLabel(bool);
-
-    /**
-     * Show/hide number values of the medium marks.
-     *
-     * Default is @p false.
-     **/
-    //  void setShowMediumMarkLabel(bool);
-
-    /**
-     * Show/hide number values of the big marks.
-     *
-     * Default is @p false.
-     **/
-    //  void showBigMarkLabel(bool);
+#ifndef KWIDGETSADDONS_NO_DEPRECATED
+    KWIDGETSADDONS_DEPRECATED void setFrameStyle(int);
+#endif
 
     /**
      * Show/hide number values of the end marks.
