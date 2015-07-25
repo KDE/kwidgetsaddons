@@ -73,6 +73,7 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
                                  QSizePolicy::Preferred));
 
     mainLayout = new QVBoxLayout(q);
+    mainLayout->setMargin(0);
 
     QHBoxLayout *subLayout = new QHBoxLayout;
     btnsLayout = new QVBoxLayout;
