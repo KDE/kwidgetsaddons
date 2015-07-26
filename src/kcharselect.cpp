@@ -272,6 +272,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
         hv->resizeSection(i, new_h);
     }
 
+    q->resizeColumnsToContents();    // Account for Non-Latin characters with bigger width
     q->setUpdatesEnabled(true);
     q->setChar(oldChar);
 }
