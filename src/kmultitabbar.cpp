@@ -288,7 +288,7 @@ void KMultiTabBarTab::computeMargins(int *hMargin, int *vMargin) const
     initStyleOption(&opt);
 
     QPixmap iconPix = iconPixmap();
-    QSize trialSize = iconPix.size();
+    QSize trialSize = iconPix.size() / iconPix.devicePixelRatio();
     QSize expandSize = style()->sizeFromContents(QStyle::CT_ToolButton, &opt, trialSize, this);
 
     *hMargin = (expandSize.width()  - trialSize.width()) / 2;
@@ -306,7 +306,7 @@ QSize KMultiTabBarTab::computeSizeHint(bool withText) const
 
     // Compute interior size, starting from pixmap..
     QPixmap iconPix = iconPixmap();
-    QSize size = iconPix.size();
+    QSize size = iconPix.size() / iconPix.devicePixelRatio();
 
     // Always include text height in computation, to avoid resizing the minor direction
     // when expanding text..
@@ -389,10 +389,10 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
     QString t;
     if (shouldDrawText()) {
         if (isVertical()) {
-            iconRoom = icon.height() + 2 * vMargin;
+            iconRoom = icon.height() / icon.devicePixelRatio() + 2 * vMargin;
             textRoom = height() - iconRoom - vMargin;
         } else {
-            iconRoom = icon.width() + 2 * hMargin;
+            iconRoom = icon.width() / icon.devicePixelRatio() + 2 * hMargin;
             textRoom = width() - iconRoom - hMargin;
         }
 
