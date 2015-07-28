@@ -63,15 +63,15 @@ public:
     virtual void resizeEvent(QResizeEvent *);
 
     /** Set the font to be displayed to @p _font . */
-    virtual void setFont(const QFont &_font);
+    void setFont(const QFont &_font);
 
     /** Set the highlighted character to @p c . */
-    virtual void setChar(const QChar &c);
+    void setChar(const QChar &c);
     /** Set the contents of the table to @p chars . */
-    void setContents(QList<QChar> chars);
+    void setContents(const QList<QChar>& chars);
 
     /** @return Currently highlighted character. */
-    virtual QChar chr();
+    QChar chr();
 
     /**
      * Returns the currently displayed font.
@@ -86,19 +86,19 @@ public:
     /**
      * Reimplemented.
      */
-    virtual void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible);
+    virtual void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) Q_DECL_OVERRIDE;
 
 protected:
     /**
      * Reimplemented.
      */
-    virtual void keyPressEvent(QKeyEvent *e);
+    virtual void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /** Emitted to indicate that character @p c is activated (such as by double-clicking it). */
-    void activated(const QChar &c);
-    void focusItemChanged(const QChar &c);
-    void showCharRequested(const QChar &c);
+    void activated(QChar c);
+    void focusItemChanged(QChar c);
+    void showCharRequested(QChar c);
 
 private:
     Q_PRIVATE_SLOT(d, void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected))
@@ -128,7 +128,7 @@ public:
     }
 
     enum internalRoles {CharacterRole = Qt::UserRole};
-    int rowCount(const QModelIndex &) const
+    int rowCount(const QModelIndex & = QModelIndex()) const
     {
         if (m_chars.count() % m_columns == 0) {
             return m_chars.count() / m_columns;
@@ -136,7 +136,7 @@ public:
             return m_chars.count() / m_columns + 1;
         }
     }
-    int columnCount(const QModelIndex &) const
+    int columnCount(const QModelIndex & = QModelIndex()) const
     {
         return m_columns;
     }
@@ -155,7 +155,7 @@ public:
         }
         return (Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsSelectable | Qt::ItemIsEnabled);
     }
-    QVariant data(const QModelIndex &index, int role) const;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
     QMimeData *mimeData(const QModelIndexList &indexes) const
     {
         if (indexes.size() != 1) {
@@ -175,46 +175,11 @@ public:
         types << QStringLiteral("text/plain");
         return types;
     }
-    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent)
-    {
-        Q_UNUSED(row)
-        Q_UNUSED(parent)
-        if (action == Qt::IgnoreAction) {
-            return true;
-        }
+    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent);
 
-        if (!data->hasText()) {
-            return false;
-        }
+    void setColumnCount(int columns);
 
-        if (column > 0) {
-            return false;
-        }
-        QString text = data->text();
-        if (text.isEmpty()) {
-            return false;
-        }
-        emit showCharRequested(text[0]);
-        return true;
-    }
-
-    void updateColumnCount(int maxWidth)
-    {
-        emit layoutAboutToBeChanged();
-        QFontMetrics fm(m_font);
-        int maxChar = fm.maxWidth();
-        if (maxChar < 2 * fm.xHeight()) {
-            maxChar = 2 * fm.xHeight();
-        }
-        if (maxChar < 5) {
-            maxChar = qMax(5, fm.height());
-        }
-        m_columns  = maxWidth / maxChar;
-        if (m_columns <= 0) {
-            m_columns = 1;
-        }
-        emit layoutChanged();
-    }
+    QList<QChar> chars() const { return m_chars; }
 private:
     QList<QChar> m_chars;
     QFont m_font;
