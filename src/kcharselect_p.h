@@ -66,9 +66,9 @@ public:
     void setFont(const QFont &_font);
 
     /** Set the highlighted character to @p c . */
-    void setChar(const QChar &c);
+    void setChar(QChar c);
     /** Set the contents of the table to @p chars . */
-    void setContents(const QList<QChar>& chars);
+    void setContents(const QVector<QChar>& chars);
 
     /** @return Currently highlighted character. */
     QChar chr();
@@ -81,7 +81,7 @@ public:
     /**
      * Returns a list of currently displayed characters.
      */
-    QList<QChar> displayedChars() const;
+    QVector<QChar> displayedChars() const;
 
     /**
      * Reimplemented.
@@ -118,7 +118,7 @@ class KCharSelectItemModel: public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    KCharSelectItemModel(QList<QChar> chars, const QFont &font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
+    KCharSelectItemModel(QVector<QChar> chars, const QFont &font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
     {
         if (chars.count()) {
             m_columns = chars.count();
@@ -179,14 +179,14 @@ public:
 
     void setColumnCount(int columns);
 
-    QList<QChar> chars() const { return m_chars; }
+    QVector<QChar> chars() const { return m_chars; }
 private:
-    QList<QChar> m_chars;
+    QVector<QChar> m_chars;
     QFont m_font;
     int m_columns;
 
 Q_SIGNALS:
-    void showCharRequested(const QChar &c);
+    void showCharRequested(QChar c);
 
 };
 #endif // KCHARSELECT_P_H

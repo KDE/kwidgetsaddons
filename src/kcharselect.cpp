@@ -49,7 +49,7 @@ public:
 
     QFont font;
     KCharSelectItemModel *model;
-    QList<QChar> chars;
+    QVector<QChar> chars;
     QChar chr;
 
     void _k_resizeCells();
@@ -102,15 +102,15 @@ public:
     QObject *actionParent;
 
     QString createLinks(QString s);
-    void historyAdd(const QChar &c, bool fromSearch, const QString &searchString);
+    void historyAdd(QChar c, bool fromSearch, const QString &searchString);
     void showFromHistory(int index);
     void updateBackForwardButtons();
     void _k_activateSearchLine();
     void _k_back();
     void _k_forward();
     void _k_fontSelected();
-    void _k_updateCurrentChar(const QChar &c);
-    void _k_slotUpdateUnicode(const QChar &c);
+    void _k_updateCurrentChar(QChar c);
+    void _k_slotUpdateUnicode(QChar c);
     void _k_sectionSelected(int index);
     void _k_blockSelected(int index);
     void _k_searchEditChanged();
@@ -173,12 +173,12 @@ QFont KCharSelectTable::font() const
     return d->font;
 }
 
-QList<QChar> KCharSelectTable::displayedChars() const
+QVector<QChar> KCharSelectTable::displayedChars() const
 {
     return d->chars;
 }
 
-void KCharSelectTable::setChar(const QChar &c)
+void KCharSelectTable::setChar(QChar c)
 {
     int pos = d->chars.indexOf(c);
     if (pos != -1) {
@@ -186,7 +186,7 @@ void KCharSelectTable::setChar(const QChar &c)
     }
 }
 
-void KCharSelectTable::setContents(const QList<QChar> &chars)
+void KCharSelectTable::setContents(const QVector<QChar> &chars)
 {
     d->chars = chars;
 
@@ -249,7 +249,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     // fontMetrics.maxWidth() doesn't help because of font fallbacks
     // (testcase: Malayalam characters)
     int maxCharWidth = 0;
-    const QList<QChar> chars = model->chars();
+    const QVector<QChar> chars = model->chars();
     for (int i = 0 ; i < chars.size(); ++i) {
         maxCharWidth = qMax(maxCharWidth, fontMetrics.width(chars.at(i)));
     }
@@ -559,7 +559,7 @@ QFont KCharSelect::currentFont() const
 
 QList<QChar> KCharSelect::displayedChars() const
 {
-    return d->charTable->displayedChars();
+    return d->charTable->displayedChars().toList();
 }
 
 void KCharSelect::setCurrentChar(const QChar &c)
@@ -577,7 +577,7 @@ void KCharSelect::setCurrentChar(const QChar &c)
     d->charTable->setChar(c);
 }
 
-void KCharSelect::KCharSelectPrivate::historyAdd(const QChar &c, bool fromSearch, const QString &searchString)
+void KCharSelect::KCharSelectPrivate::historyAdd(QChar c, bool fromSearch, const QString &searchString)
 {
     //qDebug() << "about to add char" << c << "fromSearch" << fromSearch << "searchString" << searchString;
 
@@ -669,7 +669,7 @@ void KCharSelect::KCharSelectPrivate::_k_fontSelected()
     emit q->currentFontChanged(font);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_updateCurrentChar(const QChar &c)
+void KCharSelect::KCharSelectPrivate::_k_updateCurrentChar(QChar c)
 {
     if (searchMode) {
         //we are in search mode. make the two comboboxes show the section & block for this character.
@@ -690,7 +690,7 @@ void KCharSelect::KCharSelectPrivate::_k_updateCurrentChar(const QChar &c)
     _k_slotUpdateUnicode(c);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(const QChar &c)
+void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(QChar c)
 {
     QString html = QStringLiteral("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ') +
                    s_data()->formatCode(c.unicode())  + QStringLiteral("<br />");
@@ -702,7 +702,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(const QChar &c)
     }
     QStringList aliases = s_data()->aliases(c);
     QStringList notes = s_data()->notes(c);
-    QList<QChar> seeAlso = s_data()->seeAlso(c);
+    QVector<QChar> seeAlso = s_data()->seeAlso(c);
     QStringList equivalents = s_data()->equivalents(c);
     QStringList approxEquivalents = s_data()->approximateEquivalents(c);
     if (!(aliases.isEmpty() && notes.isEmpty() && seeAlso.isEmpty() && equivalents.isEmpty() && approxEquivalents.isEmpty())) {
@@ -856,7 +856,7 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
 void KCharSelect::KCharSelectPrivate::_k_sectionSelected(int index)
 {
     blockCombo->clear();
-    QList<int> blocks = s_data()->sectionContents(index);
+    QVector<int> blocks = s_data()->sectionContents(index);
     foreach (int block, blocks) {
         blockCombo->addItem(s_data()->blockName(block), QVariant(block));
     }
@@ -875,7 +875,7 @@ void KCharSelect::KCharSelectPrivate::_k_blockSelected(int index)
     }
 
     int block = blockCombo->itemData(index).toInt();
-    const QList<QChar> contents = s_data()->blockContents(block);
+    const QVector<QChar> contents = s_data()->blockContents(block);
     if (contents.count() <= index) {
         return;
     }
@@ -915,7 +915,7 @@ void KCharSelect::KCharSelectPrivate::_k_search()
         return;
     }
     searchMode = true;
-    const QList<QChar> contents = s_data()->find(searchLine->text());
+    const QVector<QChar> contents = s_data()->find(searchLine->text());
     charTable->setContents(contents);
     emit q->displayedCharsChanged();
     if (!contents.isEmpty()) {

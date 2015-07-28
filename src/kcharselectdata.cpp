@@ -104,7 +104,7 @@ bool KCharSelectData::openDataFile()
     }
 }
 
-quint32 KCharSelectData::getDetailIndex(const QChar &c) const
+quint32 KCharSelectData::getDetailIndex(QChar c) const
 {
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
     // Convert from little-endian, so that this code works on PPC too.
@@ -155,10 +155,10 @@ QString KCharSelectData::formatCode(ushort code, int length, const QString &pref
     return s;
 }
 
-QList<QChar> KCharSelectData::blockContents(int block)
+QVector<QChar> KCharSelectData::blockContents(int block)
 {
     if (!openDataFile()) {
-        return QList<QChar>();
+        return QVector<QChar>();
     }
 
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
@@ -167,7 +167,7 @@ QList<QChar> KCharSelectData::blockContents(int block)
 
     int max = ((offsetEnd - offsetBegin) / 4) - 1;
 
-    QList<QChar> res;
+    QVector<QChar> res;
 
     if (block > max) {
         return res;
@@ -185,10 +185,10 @@ QList<QChar> KCharSelectData::blockContents(int block)
     return res;
 }
 
-QList<int> KCharSelectData::sectionContents(int section)
+QVector<int> KCharSelectData::sectionContents(int section)
 {
     if (!openDataFile()) {
-        return QList<int>();
+        return QVector<int>();
     }
 
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
@@ -197,7 +197,7 @@ QList<int> KCharSelectData::sectionContents(int section)
 
     int max = ((offsetEnd - offsetBegin) / 4) - 1;
 
-    QList<int> res;
+    QVector<int> res;
 
     if (section > max) {
         return res;
@@ -234,17 +234,17 @@ QStringList KCharSelectData::sectionList()
     return list;
 }
 
-QString KCharSelectData::block(const QChar &c)
+QString KCharSelectData::block(QChar c)
 {
     return blockName(blockIndex(c));
 }
 
-QString KCharSelectData::section(const QChar &c)
+QString KCharSelectData::section(QChar c)
 {
     return sectionName(sectionIndex(blockIndex(c)));
 }
 
-QString KCharSelectData::name(const QChar &c)
+QString KCharSelectData::name(QChar c)
 {
     if (!openDataFile()) {
         return QString();
@@ -315,7 +315,7 @@ QString KCharSelectData::name(const QChar &c)
     }
 }
 
-int KCharSelectData::blockIndex(const QChar &c)
+int KCharSelectData::blockIndex(QChar c)
 {
     if (!openDataFile()) {
         return 0;
@@ -402,7 +402,7 @@ QString KCharSelectData::sectionName(int index)
     return QCoreApplication::translate("KCharSelectData", data + i, "KCharselect unicode section name");
 }
 
-QStringList KCharSelectData::aliases(const QChar &c)
+QStringList KCharSelectData::aliases(QChar c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -426,7 +426,7 @@ QStringList KCharSelectData::aliases(const QChar &c)
     return aliases;
 }
 
-QStringList KCharSelectData::notes(const QChar &c)
+QStringList KCharSelectData::notes(QChar c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -451,21 +451,21 @@ QStringList KCharSelectData::notes(const QChar &c)
     return notes;
 }
 
-QList<QChar> KCharSelectData::seeAlso(const QChar &c)
+QVector<QChar> KCharSelectData::seeAlso(QChar c)
 {
     if (!openDataFile()) {
-        return QList<QChar>();
+        return QVector<QChar>();
     }
     const int detailIndex = getDetailIndex(c);
     if (detailIndex == 0) {
-        return QList<QChar>();
+        return QVector<QChar>();
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
     const quint8 count = * (quint8 *)(udata + detailIndex + 26);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 22);
 
-    QList<QChar> seeAlso;
+    QVector<QChar> seeAlso;
 
     for (int i = 0;  i < count;  i++) {
         seeAlso.append(qFromLittleEndian<quint16> (udata + offset));
@@ -475,7 +475,7 @@ QList<QChar> KCharSelectData::seeAlso(const QChar &c)
     return seeAlso;
 }
 
-QStringList KCharSelectData::equivalents(const QChar &c)
+QStringList KCharSelectData::equivalents(QChar c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -500,7 +500,7 @@ QStringList KCharSelectData::equivalents(const QChar &c)
     return equivalents;
 }
 
-QStringList KCharSelectData::approximateEquivalents(const QChar &c)
+QStringList KCharSelectData::approximateEquivalents(QChar c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -525,7 +525,7 @@ QStringList KCharSelectData::approximateEquivalents(const QChar &c)
     return approxEquivalents;
 }
 
-QStringList KCharSelectData::unihanInfo(const QChar &c)
+QStringList KCharSelectData::unihanInfo(QChar c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -565,7 +565,7 @@ QStringList KCharSelectData::unihanInfo(const QChar &c)
     return QStringList();
 }
 
-QChar::Category KCharSelectData::category(const QChar &c)
+QChar::Category KCharSelectData::category(QChar c)
 {
     if (!openDataFile()) {
         return c.category();
@@ -599,13 +599,13 @@ QChar::Category KCharSelectData::category(const QChar &c)
     return c.category();
 }
 
-bool KCharSelectData::isPrint(const QChar &c)
+bool KCharSelectData::isPrint(QChar c)
 {
     QChar::Category cat = category(c);
     return !(cat == QChar::Other_Control || cat == QChar::Other_NotAssigned);
 }
 
-bool KCharSelectData::isDisplayable(const QChar &c)
+bool KCharSelectData::isDisplayable(QChar c)
 {
     // Qt internally uses U+FDD0 and U+FDD1 to mark the beginning and the end of frames.
     // They should be seen as non-printable characters, as trying to display them leads
@@ -617,7 +617,7 @@ bool KCharSelectData::isDisplayable(const QChar &c)
     return !isIgnorable(c) && isPrint(c);
 }
 
-bool KCharSelectData::isIgnorable(const QChar &c)
+bool KCharSelectData::isIgnorable(QChar c)
 {
     /*
      * According to the Unicode standard, Default Ignorable Code Points
@@ -642,7 +642,7 @@ bool KCharSelectData::isIgnorable(const QChar &c)
            (c >= 0xFFF0 && c <= 0xFFF8);
 }
 
-bool KCharSelectData::isCombining(const QChar &c)
+bool KCharSelectData::isCombining(QChar c)
 {
     return section(c) == QCoreApplication::translate("KCharSelectData", "Combining Diacritical Marks", "KCharSelect section name");
     //FIXME: this is an imperfect test. There are many combining characters
@@ -650,7 +650,7 @@ bool KCharSelectData::isCombining(const QChar &c)
     //       http://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt
 }
 
-QString KCharSelectData::display(const QChar &c, const QFont &font)
+QString KCharSelectData::display(QChar c, const QFont &font)
 {
     if (!isDisplayable(c)) {
         return QStringLiteral("<b>") + QCoreApplication::translate("KCharSelectData", "Non-printable") + QStringLiteral("</b>");
@@ -666,7 +666,7 @@ QString KCharSelectData::display(const QChar &c, const QFont &font)
     }
 }
 
-QString KCharSelectData::displayCombining(const QChar &c)
+QString KCharSelectData::displayCombining(QChar c)
 {
     /*
      * The purpose of this is to make it easier to see how a combining
@@ -720,11 +720,11 @@ QString KCharSelectData::categoryText(QChar::Category category)
     }
 }
 
-QList<QChar> KCharSelectData::find(const QString &needle)
+QVector<QChar> KCharSelectData::find(const QString &needle)
 {
-    QSet<quint16> result;
+    QSet<QChar> result;
 
-    QList<QChar> returnRes;
+    QVector<QChar> returnRes;
     QString simplified = needle.simplified();
     QStringList searchStrings = splitString(needle.simplified());
 
@@ -756,7 +756,7 @@ QList<QChar> KCharSelectData::find(const QString &needle)
 
     bool firstSubString = true;
     foreach (const QString &s, searchStrings) {
-        QSet<quint16> partResult = getMatchingChars(s.toLower());
+        QSet<QChar> partResult = getMatchingChars(s.toLower());
         if (firstSubString) {
             result = partResult;
             firstSubString = false;
@@ -767,29 +767,32 @@ QList<QChar> KCharSelectData::find(const QString &needle)
 
     // remove results found by matching the code point to prevent duplicate results
     // while letting these characters stay at the beginning
-    foreach (const QChar &c, returnRes) {
+    foreach (QChar c, returnRes) {
         result.remove(c.unicode());
     }
 
-    QList<quint16> sortedResult = result.toList();
+    QVector<QChar> sortedResult;
+    sortedResult.reserve(result.count());
+    QSet<QChar>::const_iterator it = result.begin();
+    const QSet<QChar>::const_iterator end = result.end();
+    for ( ; it != end ; ++it ) {
+        sortedResult.append(*it);
+    }
     qSort(sortedResult);
 
-    foreach (const quint16 &c, sortedResult) {
-        returnRes.append(c);
-    }
-
+    returnRes += sortedResult;
     return returnRes;
 }
 
-QSet<quint16> KCharSelectData::getMatchingChars(const QString &s)
+QSet<QChar> KCharSelectData::getMatchingChars(const QString &s)
 {
     futureIndex.waitForFinished();
     const Index index = futureIndex;
     Index::const_iterator pos = index.lowerBound(s);
-    QSet<quint16> result;
+    QSet<QChar> result;
 
     while (pos != index.constEnd() && pos.key().startsWith(s)) {
-        foreach (const quint16 &c, pos.value()) {
+        foreach (QChar c, pos.value()) {
             result.insert(c);
         }
         ++pos;

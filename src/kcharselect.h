@@ -157,6 +157,7 @@ public:
 
     /**
      * Returns a list of currently displayed characters.
+     * Warning: this method can be a bit slow
      */
     QList<QChar> displayedChars() const;
 
