@@ -251,7 +251,10 @@ void KCharSelectTablePrivate::_k_resizeCells()
     int maxCharWidth = 0;
     const QVector<QChar> chars = model->chars();
     for (int i = 0 ; i < chars.size(); ++i) {
-        maxCharWidth = qMax(maxCharWidth, fontMetrics.width(chars.at(i)));
+        QChar thisChar = chars.at(i);
+        if(s_data()->isPrint(thisChar)) {
+            maxCharWidth = qMax(maxCharWidth, fontMetrics.boundingRect(QString(thisChar)).width());
+        }
     }
     // Avoid too narrow cells
     maxCharWidth = qMax(maxCharWidth, 2 * fontMetrics.xHeight());

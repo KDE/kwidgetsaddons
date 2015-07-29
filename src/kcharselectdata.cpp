@@ -591,7 +591,10 @@ QChar::Category KCharSelectData::category(QChar c)
             max = mid - 1;
         } else {
             quint32 offset = qFromLittleEndian<quint32>(data + offsetBegin + mid * 6 + 2);
-            const quint8 categoryCode = * (quint8 *)(data + offset);
+            uchar categoryCode = *(data + offset);
+            Q_ASSERT(categoryCode > 0);
+            categoryCode--;  /* Qt5 changed QChar::Category enum to start from 0 instead of 1
+                                See QtBase commit d17c76feee9eece4 */
             return QChar::Category(categoryCode);
         }
     }
