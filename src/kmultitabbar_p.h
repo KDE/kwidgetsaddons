@@ -33,6 +33,7 @@ class KMultiTabBarInternal: public QFrame
 public:
     KMultiTabBarInternal(QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos);
     virtual ~KMultiTabBarInternal();
+    int appendTab(const QIcon &, int = -1, const QString & = QString());
     int appendTab(const QPixmap &, int = -1, const QString & = QString());
     KMultiTabBarTab *tab(int) const;
     void removeTab(int);

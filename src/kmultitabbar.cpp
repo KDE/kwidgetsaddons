@@ -106,15 +106,21 @@ KMultiTabBarTab *KMultiTabBarInternal::tab(int id) const
     return 0;
 }
 
-int KMultiTabBarInternal::appendTab(const QPixmap &pic, int id, const QString &text)
+int KMultiTabBarInternal::appendTab(const QIcon &icon, int id, const QString &text)
 {
     KMultiTabBarTab  *tab;
-    m_tabs.append(tab = new KMultiTabBarTab(pic, text, id, this, m_position, m_style));
+    m_tabs.append(tab = new KMultiTabBarTab(icon, text, id, this, m_position, m_style));
 
     // Insert before the stretch..
     mainLayout->insertWidget(m_tabs.size() - 1, tab);
     tab->show();
     return 0;
+}
+
+int KMultiTabBarInternal::appendTab(const QPixmap &pic, int id, const QString &text)
+{
+    // reuse icon variant
+    return appendTab(QIcon(pic), id, text);
 }
 
 void KMultiTabBarInternal::removeTab(int id)
@@ -139,6 +145,19 @@ void KMultiTabBarInternal::setPosition(enum KMultiTabBar::KMultiTabBarPosition p
 
 // KMultiTabBarButton
 ///////////////////////////////////////////////////////////////////////////////
+
+KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
+                                       int id, QWidget *parent)
+    : QPushButton(icon, text, parent), m_id(id), d(0)
+{
+    connect(this, SIGNAL(clicked()), this, SLOT(slotClicked()));
+
+    // we can't see the focus, so don't take focus. #45557
+    // If keyboard navigation is wanted, then only the bar should take focus,
+    // and arrows could change the focused button; but generally, tabbars don't take focus anyway.
+    setFocusPolicy(Qt::NoFocus);
+    Q_UNUSED(d);
+}
 
 KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
                                        int id, QWidget *parent)
@@ -206,6 +225,19 @@ void KMultiTabBarButton::paintEvent(QPaintEvent *)
 // KMultiTabBarTab
 ///////////////////////////////////////////////////////////////////////////////
 
+KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon, const QString &text,
+                                 int id, QWidget *parent,
+                                 KMultiTabBar::KMultiTabBarPosition pos,
+                                 KMultiTabBar::KMultiTabBarStyle style)
+    : KMultiTabBarButton(icon, text, id, parent), m_style(style), d(0)
+{
+    m_position = pos;
+    setToolTip(text);
+    setCheckable(true);
+    // shrink down to icon only, but prefer to show text if it's there
+    setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+}
+
 KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic, const QString &text,
                                  int id, QWidget *parent,
                                  KMultiTabBar::KMultiTabBarPosition pos,
@@ -215,8 +247,8 @@ KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic, const QString &text,
     m_position = pos;
     setToolTip(text);
     setCheckable(true);
-    setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     // shrink down to icon only, but prefer to show text if it's there
+    setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 }
 
 KMultiTabBarTab::~KMultiTabBarTab()
@@ -516,9 +548,9 @@ KMultiTabBar::~KMultiTabBar()
     delete d;
 }
 
-int KMultiTabBar::appendButton(const QPixmap &pic, int id, QMenu *popup, const QString &)
+int KMultiTabBar::appendButton(const QIcon &icon, int id, QMenu *popup, const QString &)
 {
-    KMultiTabBarButton *btn = new KMultiTabBarButton(pic, QString(), id, this);
+    KMultiTabBarButton *btn = new KMultiTabBarButton(icon, QString(), id, this);
     // a button with a QMenu can have another size. Make sure the button has always the same size.
     btn->setFixedWidth(btn->height());
     btn->setMenu(popup);
@@ -527,6 +559,12 @@ int KMultiTabBar::appendButton(const QPixmap &pic, int id, QMenu *popup, const Q
     btn->show();
     d->m_btnTabSep->show();
     return 0;
+}
+
+int KMultiTabBar::appendButton(const QPixmap &pic, int id, QMenu *popup, const QString &x)
+{
+    // reuse icon variant
+    return appendButton(QIcon(pic), id, popup, x);
 }
 
 void KMultiTabBar::updateSeparator()
@@ -544,6 +582,12 @@ void KMultiTabBar::updateSeparator()
     } else {
         d->m_btnTabSep->show();
     }
+}
+
+int KMultiTabBar::appendTab(const QIcon &icon, int id, const QString &text)
+{
+    d->m_internal->appendTab(icon, id, text);
+    return 0;
 }
 
 int KMultiTabBar::appendTab(const QPixmap &pic, int id, const QString &text)
