@@ -1,7 +1,7 @@
 
 include(ECMAddTests)
 
-find_package(Qt5 5.2.0 CONFIG REQUIRED Test UiTools)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test UiTools)
 
 ecm_add_tests(
   kcolorbuttontest.cpp

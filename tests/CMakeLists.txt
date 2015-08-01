@@ -1,7 +1,7 @@
 
 include(ECMMarkAsTest)
 
-find_package(Qt5 5.2.0 CONFIG REQUIRED Test)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 macro(kwidgetsaddons_executable_tests)
   foreach(_testname ${ARGN})
