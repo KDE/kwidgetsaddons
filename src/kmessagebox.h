@@ -799,6 +799,7 @@ KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notify
  * Create content and layout of a standard dialog
  *
  * @param dialog  The parent dialog base
+ * @param buttons a QDialogButtonBox instance. This function will take care of connecting to it.
  * @param icon    Which predefined icon the message box shall show.
  * @param text    Message string.
  * @param strlist List of strings to be written in the listbox.
@@ -829,6 +830,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  * Create content and layout of a standard dialog
  *
  * @param dialog  The parent dialog base
+ * @param buttons a QDialogButtonBox instance. This function will take care of connecting to it.
  * @param icon    A QPixmap containing the icon to be displayed in the
  *                dialog next to the text.
  * @param text    Message string.
