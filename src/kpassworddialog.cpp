@@ -40,7 +40,8 @@ public:
         : q(q),
           userEditCombo(0),
           pixmapLabel(0),
-          commentRow(0)
+          commentRow(0),
+          isToggleEchoModeAvailable(true)
     {}
 
     void actuallyAccept();
@@ -49,6 +50,9 @@ public:
     void updateFields();
     void init();
 
+    void toggleEchoMode();
+    void showToggleEchoModeAction(const QString &text);
+
     KPasswordDialog *q;
     Ui_KPasswordDialog ui;
     QMap<QString, QString> knownLogins;
@@ -56,6 +60,8 @@ public:
     QLabel *pixmapLabel;
     KPasswordDialogFlags m_flags;
     unsigned int commentRow;
+    QAction *toggleEchoModeAction;
+    bool isToggleEchoModeAvailable;
 };
 
 KPasswordDialog::KPasswordDialog(QWidget *parent,
@@ -119,12 +125,36 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
 
     updateFields();
 
+    QIcon visibilityIcon = QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg")));
+    toggleEchoModeAction = ui.passEdit->addAction(visibilityIcon, QLineEdit::TrailingPosition);
+    toggleEchoModeAction->setVisible(false);
+    toggleEchoModeAction->setToolTip(tr("Change the visibility of the password"));
+    connect(toggleEchoModeAction, SIGNAL(triggered(bool)), q, SLOT(toggleEchoMode()));
+    connect(ui.passEdit, SIGNAL(textChanged(QString)), q, SLOT(showToggleEchoModeAction(QString)));
+
     QRect desktop = QApplication::desktop()->screenGeometry(q->topLevelWidget());
     q->setMinimumWidth(qMin(1000, qMax(q->sizeHint().width(), desktop.width() / 4)));
     QStyleOption option;
     option.initFrom(q);
     const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
     q->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize));
+}
+
+void KPasswordDialog::KPasswordDialogPrivate::toggleEchoMode()
+{
+    if (ui.passEdit->echoMode() == QLineEdit::Password) {
+        ui.passEdit->setEchoMode(QLineEdit::Normal);
+        toggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("hint"), QIcon(QStringLiteral(":/icons/hint.svg"))));
+    }
+    else if (ui.passEdit->echoMode() == QLineEdit::Normal) {
+        ui.passEdit->setEchoMode(QLineEdit::Password);
+        toggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg"))));
+    }
+}
+
+void KPasswordDialog::KPasswordDialogPrivate::showToggleEchoModeAction(const QString &text)
+{
+    toggleEchoModeAction->setVisible(isToggleEchoModeAvailable && !text.isEmpty());
 }
 
 void KPasswordDialog::setPixmap(const QPixmap &pixmap)
@@ -305,6 +335,7 @@ QString KPasswordDialog::prompt() const
 
 void KPasswordDialog::setPassword(const QString &p)
 {
+    d->isToggleEchoModeAvailable = p.isEmpty();
     d->ui.passEdit->setText(p);
 }
 

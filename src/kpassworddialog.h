@@ -249,6 +249,7 @@ public:
 
     /**
      * Presets the password.
+     * If the password is not empty, the ability to show the password will not be available.
      * @param password the password to set
      */
     void setPassword(const QString &password);
@@ -305,6 +306,8 @@ private:
     Q_PRIVATE_SLOT(d, void actuallyAccept())
     Q_PRIVATE_SLOT(d, void activated(const QString &userName))
     Q_PRIVATE_SLOT(d, void updateFields())
+    Q_PRIVATE_SLOT(d, void toggleEchoMode())
+    Q_PRIVATE_SLOT(d, void showToggleEchoModeAction(const QString &text))
 
 private:
     class KPasswordDialogPrivate;
