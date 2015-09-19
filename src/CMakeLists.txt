@@ -8,6 +8,7 @@ set(kwidgetsaddons_SRCS
   kanimatedbutton.cpp
   kcharselect.cpp
   kcharselectdata.cpp
+  kcollapsiblegroupbox.cpp
   kcolorbutton.cpp
   kcolumnresizer.cpp
   kdatecombobox.cpp
@@ -104,6 +105,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KAcceleratorManager
   KAnimatedButton
   KCharSelect
+  KCollapsibleGroupBox
   KColorButton
   KColumnResizer
   KDateComboBox

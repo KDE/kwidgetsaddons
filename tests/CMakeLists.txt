@@ -14,6 +14,7 @@ endmacro()
 kwidgetsaddons_executable_tests(
   kanimatedbuttontest
   kcharselecttest
+  kcollapsiblegroupboxtest
   kdatepicktest
   kdatetimeedittestapp
   kledtest
