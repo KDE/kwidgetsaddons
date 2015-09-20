@@ -71,7 +71,7 @@ private:
 class KMessageBoxNotifyDummy : public KMessageBoxNotifyInterface
 {
 public:
-    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget */*parent*/) Q_DECL_OVERRIDE {}
+    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget * /*parent*/) Q_DECL_OVERRIDE {}
 };
 
 Q_GLOBAL_STATIC(KMessageBoxDontAskAgainMemoryStorage, s_defaultDontAskAgainInterface);
