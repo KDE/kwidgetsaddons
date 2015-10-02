@@ -38,6 +38,6 @@ namespace KMimeTypeEditor
      * @since 5.4
      */
     KWIDGETSADDONS_EXPORT void editMimeType(const QString &mimeType, QWidget *widget);
-};
+}
 
 #endif

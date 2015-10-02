@@ -74,8 +74,8 @@ public:
     void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget * /*parent*/) Q_DECL_OVERRIDE {}
 };
 
-Q_GLOBAL_STATIC(KMessageBoxDontAskAgainMemoryStorage, s_defaultDontAskAgainInterface);
-Q_GLOBAL_STATIC(KMessageBoxNotifyDummy, s_defaultNotifyInterface);
+Q_GLOBAL_STATIC(KMessageBoxDontAskAgainMemoryStorage, s_defaultDontAskAgainInterface)
+Q_GLOBAL_STATIC(KMessageBoxNotifyDummy, s_defaultNotifyInterface)
 
 static KMessageBoxDontAskAgainInterface *s_dontAskAgainInterface = 0;
 static KMessageBoxNotifyInterface *s_notifyInterface = 0;
