@@ -15,6 +15,7 @@ set(kwidgetsaddons_SRCS
   kdatetable.cpp
   kdatetimeedit.cpp
   kfontaction.cpp
+  knewpasswordwidget.cpp
   fonthelpers.cpp
   kfontsizeaction.cpp
   kpopupframe.cpp
@@ -79,6 +80,7 @@ set(kwidgetsaddons_SRCS
 set(kwidgetsaddon_UI
    kdatetimeedit.ui
    knewpassworddialog.ui
+   knewpasswordwidget.ui
    kpassworddialog.ui
 )
 
@@ -117,6 +119,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KMessageBox
   KMessageBoxDontAskAgainInterface
   KMultiTabBar
+  KNewPasswordWidget
   KPopupFrame
   KSelectAction
   KStandardGuiItem
