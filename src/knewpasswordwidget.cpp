@@ -82,6 +82,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
     connect(ui.lineVerifyPassword, SIGNAL(textChanged(QString)), q, SLOT(_k_textChanged()));
 
     defaultBackgroundColor = q->palette().color(QPalette::Base);
+    backgroundWarningColor = defaultBackgroundColor;
 
     _k_textChanged();
 }
