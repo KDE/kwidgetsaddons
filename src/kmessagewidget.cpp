@@ -83,15 +83,15 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     textLabel = new QLabel(content);
     textLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
     textLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
-    QObject::connect(textLabel, SIGNAL(linkActivated(QString)), q, SIGNAL(linkActivated(QString)));
-    QObject::connect(textLabel, SIGNAL(linkHovered(QString)), q, SIGNAL(linkHovered(QString)));
+    QObject::connect(textLabel, &QLabel::linkActivated, q, &KMessageWidget::linkActivated);
+    QObject::connect(textLabel, &QLabel::linkHovered, q, &KMessageWidget::linkHovered);
 
     QAction *closeAction = new QAction(q);
     closeAction->setText(KMessageWidget::tr("&Close"));
     closeAction->setToolTip(KMessageWidget::tr("Close message"));
     closeAction->setIcon(q->style()->standardIcon(QStyle::SP_DialogCloseButton));
 
-    QObject::connect(closeAction, SIGNAL(triggered(bool)), q, SLOT(animatedHide()));
+    QObject::connect(closeAction, &QAction::triggered, q, &KMessageWidget::animatedHide);
 
     closeButton = new QToolButton(content);
     closeButton->setAutoRaise(true);
@@ -291,7 +291,7 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
     border = darkShade(bg1);
 
     d->content->setStyleSheet(
-        QString(QLatin1String(".QFrame {"
+        QStringLiteral(".QFrame {"
                               "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,"
                               "    stop: 0 %1,"
                               "    stop: 0.1 %2,"
@@ -301,7 +301,7 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
                               "margin: %5px;"
                               "}"
                               ".QLabel { color: %6; }"
-                             ))
+                             )
         .arg(bg0.name())
         .arg(bg1.name())
         .arg(bg2.name())

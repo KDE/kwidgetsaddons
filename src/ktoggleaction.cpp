@@ -45,8 +45,8 @@ public:
     void init()
     {
         parent->setCheckable(true);
-        connect(parent, SIGNAL(toggled(bool)),
-                parent, SLOT(slotToggled(bool)));
+        connect(parent, &QAction::toggled,
+                parent, &KToggleAction::slotToggled);
     }
 
     KToggleAction *parent;

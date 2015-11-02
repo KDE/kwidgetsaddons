@@ -38,8 +38,8 @@ int main(int argc, char **argv)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(&dialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QObject::connect(buttonBox, SIGNAL(accepted()), &dialog, SLOT(accept()));
-    QObject::connect(buttonBox, SIGNAL(rejected()), &dialog, SLOT(reject()));
+    QObject::connect(buttonBox, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+    QObject::connect(buttonBox, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
     QVBoxLayout *layout = new QVBoxLayout;
     layout->addWidget(edit);

@@ -104,8 +104,8 @@ KSelectAction::~KSelectAction()
 void KSelectActionPrivate::init(KSelectAction *q)
 {
     q_ptr = q;
-    QObject::connect(q_ptr->selectableActionGroup(), SIGNAL(triggered(QAction*)), q_ptr, SLOT(actionTriggered(QAction*)));
-    QObject::connect(q_ptr, SIGNAL(toggled(bool)), q_ptr, SLOT(slotToggled(bool)));
+    QObject::connect(q_ptr->selectableActionGroup(), &QActionGroup::triggered, q_ptr, &KSelectAction::actionTriggered);
+    QObject::connect(q_ptr, &QAction::toggled, q_ptr, &KSelectAction::slotToggled);
     q_ptr->setMenu(new QMenu());
     q_ptr->setEnabled(false);
 }
@@ -554,12 +554,12 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
         button->setFocusPolicy(Qt::NoFocus);
         button->setIconSize(toolBar->iconSize());
         button->setToolButtonStyle(toolBar->toolButtonStyle());
-        QObject::connect(toolBar, SIGNAL(iconSizeChanged(QSize)),
-                         button, SLOT(setIconSize(QSize)));
-        QObject::connect(toolBar, SIGNAL(toolButtonStyleChanged(Qt::ToolButtonStyle)),
-                         button, SLOT(setToolButtonStyle(Qt::ToolButtonStyle)));
+        QObject::connect(toolBar, &QToolBar::iconSizeChanged,
+                         button, &QAbstractButton::setIconSize);
+        QObject::connect(toolBar, &QToolBar::toolButtonStyleChanged,
+                         button, &QToolButton::setToolButtonStyle);
         button->setDefaultAction(this);
-        QObject::connect(button, SIGNAL(triggered(QAction*)), toolBar, SIGNAL(actionTriggered(QAction*)));
+        QObject::connect(button, &QToolButton::triggered, toolBar, &QToolBar::actionTriggered);
 
         button->setPopupMode(toolButtonPopupMode());
 

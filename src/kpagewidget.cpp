@@ -58,8 +58,8 @@ KPageWidget::KPageWidget(KPageWidgetPrivate &dd, QWidget *parent)
         Q_ASSERT(qobject_cast<KPageWidgetModel *>(d->KPageViewPrivate::model));
     }
 
-    connect(d->model(), SIGNAL(toggled(KPageWidgetItem*,bool)),
-            this, SIGNAL(pageToggled(KPageWidgetItem*,bool)));
+    connect(d->model(), &KPageWidgetModel::toggled,
+            this, &KPageWidget::pageToggled);
 }
 
 KPageWidget::KPageWidget(QWidget *parent)
@@ -71,8 +71,8 @@ KPageWidget::KPageWidget(QWidget *parent)
 
     setModel(new KPageWidgetModel(this));
 
-    connect(d->model(), SIGNAL(toggled(KPageWidgetItem*,bool)),
-            this, SIGNAL(pageToggled(KPageWidgetItem*,bool)));
+    connect(d->model(), &KPageWidgetModel::toggled,
+            this, &KPageWidget::pageToggled);
 }
 
 KPageWidget::~KPageWidget()

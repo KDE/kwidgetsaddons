@@ -37,7 +37,7 @@ KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
     d->mPageWidget->layout()->setMargin(0);
 
     d->mButtonBox = new QDialogButtonBox(this);
-    d->mButtonBox->setObjectName(QLatin1String("buttonbox"));
+    d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));
     d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     d->init();
@@ -52,7 +52,7 @@ KPageDialog::KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags f
     widget->setParent(this);
     d->mPageWidget = widget;
     d->mButtonBox = new QDialogButtonBox(this);
-    d->mButtonBox->setObjectName(QLatin1String("buttonbox"));
+    d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));
     d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     d->init();
@@ -70,7 +70,7 @@ KPageDialog::KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *p
         d->mPageWidget = new KPageWidget(this);
     }
     d->mButtonBox = new QDialogButtonBox(this);
-    d->mButtonBox->setObjectName(QLatin1String("buttonbox"));
+    d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));
     d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     d->init();
 }

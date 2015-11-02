@@ -86,8 +86,8 @@ KActionSelector::KActionSelector(QWidget *parent)
     d->keyboardEnabled = true;
     d->addIcon = QLatin1String(QApplication::isRightToLeft() ? "go-previous" : "go-next");
     d->removeIcon = QLatin1String(QApplication::isRightToLeft() ? "go-next" : "go-previous");
-    d->upIcon = QLatin1String("go-up");
-    d->downIcon = QLatin1String("go-down");
+    d->upIcon = QStringLiteral("go-up");
+    d->downIcon = QStringLiteral("go-down");
     d->availableInsertionPolicy = Sorted;
     d->selectedInsertionPolicy = BelowCurrent;
     d->showUpDownButtons = true;
@@ -141,8 +141,8 @@ KActionSelector::KActionSelector(QWidget *parent)
             this, SLOT(itemDoubleClicked(QListWidgetItem*)));
     connect(d->selectedListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
             this, SLOT(itemDoubleClicked(QListWidgetItem*)));
-    connect(d->availableListWidget, SIGNAL(itemSelectionChanged()), this, SLOT(setButtonsEnabled()));
-    connect(d->selectedListWidget, SIGNAL(itemSelectionChanged()), this, SLOT(setButtonsEnabled()));
+    connect(d->availableListWidget, &QListWidget::itemSelectionChanged, this, &KActionSelector::setButtonsEnabled);
+    connect(d->selectedListWidget, &QListWidget::itemSelectionChanged, this, &KActionSelector::setButtonsEnabled);
 
     d->availableListWidget->installEventFilter(this);
     d->selectedListWidget->installEventFilter(this);

@@ -53,20 +53,20 @@ int main(int argc, char *argv[])
     KMessageWidget *mw = new KMessageWidget(mainWindow);
     mw->setWordWrap(true);
     mw->setText(
-        QLatin1String("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default.")
+        QStringLiteral("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default.")
     );
     // A frame to materialize the end of the KMessageWidget
     QFrame *frame = new QFrame(mainWindow);
     frame->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
     frame->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
-    QCheckBox *wordWrapCb = new QCheckBox(QLatin1String("wordWrap"), mainWindow);
+    QCheckBox *wordWrapCb = new QCheckBox(QStringLiteral("wordWrap"), mainWindow);
     wordWrapCb->setChecked(true);
-    QObject::connect(wordWrapCb, SIGNAL(toggled(bool)), mw, SLOT(setWordWrap(bool)));
+    QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw, &KMessageWidget::setWordWrap);
 
-    QCheckBox *closeButtonCb = new QCheckBox(QLatin1String("closeButton"), mainWindow);
+    QCheckBox *closeButtonCb = new QCheckBox(QStringLiteral("closeButton"), mainWindow);
     closeButtonCb->setChecked(true);
-    QObject::connect(closeButtonCb, SIGNAL(toggled(bool)), mw, SLOT(setCloseButtonVisible(bool)));
+    QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw, &KMessageWidget::setCloseButtonVisible);
 
     l->addWidget(wordWrapCb);
     l->addWidget(closeButtonCb);
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 
     // demonstrate linkActivated
     Receiver *info = new Receiver(mw);
-    QObject::connect(mw, SIGNAL(linkActivated(QString)), info, SLOT(showWhatsThis(QString)));
+    QObject::connect(mw, &KMessageWidget::linkActivated, info, &Receiver::showWhatsThis);
 
     return app.exec();
     delete mainWindow;

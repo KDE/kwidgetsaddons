@@ -4,7 +4,7 @@
 
 int main(int argc, char **argv)
 {
-    QApplication::setApplicationName(QLatin1String("test"));
+    QApplication::setApplicationName(QStringLiteral("test"));
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 

@@ -54,16 +54,16 @@ protected:
         if (mPageWidget) {
             q->connect(mPageWidget, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)),
                        q, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)));
-            q->connect(mPageWidget, SIGNAL(pageRemoved(KPageWidgetItem *)),
-                       q, SIGNAL(pageRemoved(KPageWidgetItem *)));
+            q->connect(mPageWidget, &KPageWidget::pageRemoved,
+                       q, &KPageDialog::pageRemoved);
             layout->addWidget(mPageWidget);
         } else {
             layout->addStretch();
         }
 
         if (mButtonBox) {
-            q->connect(mButtonBox, SIGNAL(accepted()), q, SLOT(accept()));
-            q->connect(mButtonBox, SIGNAL(rejected()), q, SLOT(reject()));
+            q->connect(mButtonBox, &QDialogButtonBox::accepted, q, &QDialog::accept);
+            q->connect(mButtonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
             layout->addWidget(mButtonBox);
         }
     }

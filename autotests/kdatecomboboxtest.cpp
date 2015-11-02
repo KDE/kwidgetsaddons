@@ -108,10 +108,10 @@ void KDateComboBoxTest::testDateList()
 
     // Test basic map
     map.clear();
-    map.insert(QDate(2000, 1, 1), QLatin1String("New Years Day"));
+    map.insert(QDate(2000, 1, 1), QStringLiteral("New Years Day"));
     map.insert(QDate(2000, 1, 2), QString());
-    map.insert(QDate(2000, 1, 3), QLatin1String("separator"));
-    map.insert(QDate(), QLatin1String("No Date"));
+    map.insert(QDate(2000, 1, 3), QStringLiteral("separator"));
+    map.insert(QDate(), QStringLiteral("No Date"));
     m_combo->setDateMap(map);
     QCOMPARE(m_combo->dateMap(), map);
 

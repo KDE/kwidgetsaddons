@@ -199,7 +199,7 @@ KSplitterCollapserButton::KSplitterCollapserButton(QWidget *childWidget, QSplitt
     : QToolButton(),
       d(new Private(this))
 {
-    setObjectName(QLatin1String("splittercollapser"));
+    setObjectName(QStringLiteral("splittercollapser"));
     // We do not want our collapser to be added as a regular widget in the
     // splitter!
     setAttribute(Qt::WA_NoChildEventsForParent);

@@ -161,8 +161,8 @@ public:
           m_buttons(buttons),
           m_details(0)
     {
-        connect(m_buttons, SIGNAL(clicked(QAbstractButton*)),
-                this, SLOT(onButtonClicked(QAbstractButton*)));
+        connect(m_buttons, &QDialogButtonBox::clicked,
+                this, &DialogButtonsHelper::onButtonClicked);
     }
 
     void setDetailsWidget(QWidget *widget)

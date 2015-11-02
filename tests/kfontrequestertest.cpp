@@ -33,9 +33,9 @@ public:
         mainLayout->addWidget(test1);
 
         KFontRequester *test2 = new KFontRequester(this);
-        test2->setSampleText(QLatin1String("This is different sample text"));
-        test2->setTitle(QLatin1String("A different title"));
-        test2->setFont(QFont(QLatin1String("comic-sans"), 12, 1));
+        test2->setSampleText(QStringLiteral("This is different sample text"));
+        test2->setTitle(QStringLiteral("A different title"));
+        test2->setFont(QFont(QStringLiteral("comic-sans"), 12, 1));
 
         mainLayout->addWidget(test2);
     }

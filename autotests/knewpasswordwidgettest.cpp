@@ -51,13 +51,13 @@ void KNewPasswordWidgetTest::testPasswordTooShort()
     KNewPasswordWidget pwdWidget;
 
     pwdWidget.setMinimumPasswordLength(5);
-    auto linePassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("linePassword"));
-    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("lineVerifyPassword"));
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
 
     QVERIFY(linePassword);
     QVERIFY(lineVerifyPassword);
 
-    const QString password = QLatin1String("1234");
+    const QString password = QStringLiteral("1234");
     linePassword->setText(password);
     lineVerifyPassword->setText(password);
 
@@ -68,13 +68,13 @@ void KNewPasswordWidgetTest::testPasswordMatch()
 {
     KNewPasswordWidget pwdWidget;
 
-    auto linePassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("linePassword"));
-    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("lineVerifyPassword"));
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
 
     QVERIFY(linePassword);
     QVERIFY(lineVerifyPassword);
 
-    const QString password = QLatin1String("1234");
+    const QString password = QStringLiteral("1234");
     linePassword->setText(password);
     lineVerifyPassword->setText(password);
 
@@ -86,11 +86,11 @@ void KNewPasswordWidgetTest::testPasswordNotVerified()
 {
     KNewPasswordWidget pwdWidget;
 
-    auto linePassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("linePassword"));
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
 
     QVERIFY(linePassword);
 
-    const QString password = QLatin1String("1234");
+    const QString password = QStringLiteral("1234");
     linePassword->setText(password);
 
     QCOMPARE(pwdWidget.passwordStatus(), KNewPasswordWidget::PasswordNotVerified);
@@ -101,13 +101,13 @@ void KNewPasswordWidgetTest::testWeakPassword()
     KNewPasswordWidget pwdWidget;
 
     pwdWidget.setPasswordStrengthWarningLevel(30 );
-    auto linePassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("linePassword"));
-    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("lineVerifyPassword"));
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
 
     QVERIFY(linePassword);
     QVERIFY(lineVerifyPassword);
 
-    const QString password = QLatin1String("1234");
+    const QString password = QStringLiteral("1234");
     linePassword->setText(password);
     lineVerifyPassword->setText(password);
 
@@ -119,8 +119,8 @@ void KNewPasswordWidgetTest::testStrongPassword()
     KNewPasswordWidget pwdWidget;
 
     pwdWidget.setPasswordStrengthWarningLevel(99);
-    auto linePassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("linePassword"));
-    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QLatin1String("lineVerifyPassword"));
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
 
     QVERIFY(linePassword);
     QVERIFY(lineVerifyPassword);

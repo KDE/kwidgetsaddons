@@ -101,7 +101,7 @@ int KNewPasswordDialog::KNewPasswordDialogPrivate::effectivePasswordLength(const
 
     for (int i = 0; i < password.length(); ++i) {
         QChar currentChar = password.at(i);
-        if (!password.left(i).contains(currentChar)) {
+        if (!password.leftRef(i).contains(currentChar)) {
             Category currentCategory;
             switch (currentChar.category()) {
             case QChar::Letter_Uppercase:

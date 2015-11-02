@@ -33,7 +33,7 @@ KPageDialogAutoTest::KPageDialogAutoTest()
 void KPageDialogAutoTest::shouldHaveDefaultValuesOnCreation()
 {
     KPageDialog page;
-    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QLatin1String("buttonbox"));
+    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(dialogbuttonbox);
     QDialogButtonBox::StandardButtons standardButton = dialogbuttonbox->standardButtons();
     QDialogButtonBox::StandardButtons defaultButton = QDialogButtonBox::Ok | QDialogButtonBox::Cancel;
@@ -43,8 +43,8 @@ void KPageDialogAutoTest::shouldHaveDefaultValuesOnCreation()
 void KPageDialogAutoTest::shouldAddAnActionButton()
 {
     KPageDialog page;
-    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QLatin1String("buttonbox"));
-    QPushButton *actionButton = new QPushButton(QLatin1String("Action1"));
+    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QPushButton *actionButton = new QPushButton(QStringLiteral("Action1"));
     page.addActionButton(actionButton);
     QCOMPARE(dialogbuttonbox->buttons().count(), 3);
     QVERIFY(dialogbuttonbox->buttons().contains(actionButton));
@@ -53,11 +53,11 @@ void KPageDialogAutoTest::shouldAddAnActionButton()
 void KPageDialogAutoTest::shouldAddTwoActionButton()
 {
     KPageDialog page;
-    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QLatin1String("buttonbox"));
-    QPushButton *actionButton = new QPushButton(QLatin1String("Action1"));
+    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QPushButton *actionButton = new QPushButton(QStringLiteral("Action1"));
     page.addActionButton(actionButton);
 
-    QPushButton *actionButton2 = new QPushButton(QLatin1String("Action2"));
+    QPushButton *actionButton2 = new QPushButton(QStringLiteral("Action2"));
     page.addActionButton(actionButton2);
 
     QCOMPARE(dialogbuttonbox->buttons().count(), 4);
@@ -66,8 +66,8 @@ void KPageDialogAutoTest::shouldAddTwoActionButton()
 void KPageDialogAutoTest::shouldNotAddTwoSameActionButton()
 {
     KPageDialog page;
-    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QLatin1String("buttonbox"));
-    QPushButton *actionButton = new QPushButton(QLatin1String("Action1"));
+    QDialogButtonBox *dialogbuttonbox = page.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QPushButton *actionButton = new QPushButton(QStringLiteral("Action1"));
     page.addActionButton(actionButton);
 
     page.addActionButton(actionButton);

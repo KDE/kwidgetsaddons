@@ -46,7 +46,7 @@ static QFont nearestExistingFont(const QFont &font)
     const QStringList families = dbase.families();
     if (!families.contains(family)) {
         // Chose another family.
-        family = families.count() ? families[0] : QLatin1String("fixed");
+        family = families.count() ? families[0] : QStringLiteral("fixed");
         // TODO: Try to find nearest match?
     }
 
@@ -205,7 +205,7 @@ void KFontRequester::KFontRequesterPrivate::displaySampleText()
 
     if (m_sampleText.isEmpty()) {
         QString family = translateFontName(m_selFont.family());
-        m_sampleLabel->setText(QString::fromUtf8("%1 %2").arg(family).arg(size));
+        m_sampleLabel->setText(QStringLiteral("%1 %2").arg(family).arg(size));
     } else {
         m_sampleLabel->setText(m_sampleText);
     }

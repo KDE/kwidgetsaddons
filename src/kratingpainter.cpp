@@ -65,12 +65,12 @@ QPixmap KRatingPainter::Private::getPixmap(int size, QIcon::State state)
         QIcon _icon(icon);
         if (_icon.isNull()) {
             if (state == QIcon::Off
-                && QIcon::hasThemeIcon(QLatin1String("rating-unrated"))) {
-                _icon = QIcon::fromTheme(QLatin1String("rating-unrated"));
+                && QIcon::hasThemeIcon(QStringLiteral("rating-unrated"))) {
+                _icon = QIcon::fromTheme(QStringLiteral("rating-unrated"));
                 // our theme provided a separate icon, no need to desaturate
                 toGray = false;
             } else {
-                _icon = QIcon::fromTheme(QLatin1String("rating"));
+                _icon = QIcon::fromTheme(QStringLiteral("rating"));
             }
         }
         p = _icon.pixmap(size);

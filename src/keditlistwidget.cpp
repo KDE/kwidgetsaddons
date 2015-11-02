@@ -93,8 +93,8 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
     buttons = 0;
     q->setButtons(newButtons);
 
-    q->connect(listView->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-               SLOT(slotSelectionChanged(QItemSelection,QItemSelection)));
+    q->connect(listView->selectionModel(), &QItemSelectionModel::selectionChanged,
+               q, &KEditListWidget::slotSelectionChanged);
 }
 
 void KEditListWidgetPrivate::setEditor(QLineEdit *newLineEdit, QWidget *representationWidget)
@@ -118,8 +118,8 @@ void KEditListWidgetPrivate::setEditor(QLineEdit *newLineEdit, QWidget *represen
 
     lineEdit->installEventFilter(q);
 
-    q->connect(lineEdit, SIGNAL(textChanged(QString)), SLOT(typedSomething(QString)));
-    q->connect(lineEdit, SIGNAL(returnPressed()), SLOT(addItem()));
+    q->connect(lineEdit, &QLineEdit::textChanged, q, &KEditListWidget::typedSomething);
+    q->connect(lineEdit, &QLineEdit::returnPressed, q, &KEditListWidget::addItem);
 
     // maybe supplied lineedit has some text already
     q->typedSomething(lineEdit->text());
@@ -299,7 +299,7 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->servNewButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), tr("&Add"), this);
         d->servNewButton->setEnabled(false);
         d->servNewButton->show();
-        connect(d->servNewButton, SIGNAL(clicked()), SLOT(addItem()));
+        connect(d->servNewButton, &QAbstractButton::clicked, this, &KEditListWidget::addItem);
 
         d->btnsLayout->insertWidget(0, d->servNewButton);
     } else if ((buttons & Add) == 0 && d->servNewButton) {
@@ -311,7 +311,7 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->servRemoveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), tr("&Remove"), this);
         d->servRemoveButton->setEnabled(false);
         d->servRemoveButton->show();
-        connect(d->servRemoveButton, SIGNAL(clicked()), SLOT(removeItem()));
+        connect(d->servRemoveButton, &QAbstractButton::clicked, this, &KEditListWidget::removeItem);
 
         d->btnsLayout->insertWidget(1, d->servRemoveButton);
     } else if ((buttons & Remove) == 0 && d->servRemoveButton) {
@@ -323,12 +323,12 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->servUpButton = new QPushButton(QIcon::fromTheme(QStringLiteral("arrow-up")), tr("Move &Up"), this);
         d->servUpButton->setEnabled(false);
         d->servUpButton->show();
-        connect(d->servUpButton, SIGNAL(clicked()), SLOT(moveItemUp()));
+        connect(d->servUpButton, &QAbstractButton::clicked, this, &KEditListWidget::moveItemUp);
 
         d->servDownButton = new QPushButton(QIcon::fromTheme(QStringLiteral("arrow-down")), tr("Move &Down"), this);
         d->servDownButton->setEnabled(false);
         d->servDownButton->show();
-        connect(d->servDownButton, SIGNAL(clicked()), SLOT(moveItemDown()));
+        connect(d->servDownButton, &QAbstractButton::clicked, this, &KEditListWidget::moveItemDown);
 
         d->btnsLayout->insertWidget(2, d->servUpButton);
         d->btnsLayout->insertWidget(3, d->servDownButton);

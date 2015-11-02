@@ -141,37 +141,37 @@ void KDateTable::initWidget(const QDate &date)
 void KDateTable::initAccels()
 {
     QAction *next = new QAction(this);
-    next->setObjectName(QLatin1String("next"));
+    next->setObjectName(QStringLiteral("next"));
     next->setShortcuts(QKeySequence::keyBindings(QKeySequence::Forward));
     next->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(next, SIGNAL(triggered(bool)), SLOT(nextMonth()));
 
     QAction *prior = new QAction(this);
-    prior->setObjectName(QLatin1String("prior"));
+    prior->setObjectName(QStringLiteral("prior"));
     prior->setShortcuts(QKeySequence::keyBindings(QKeySequence::Back));
     prior->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(prior, SIGNAL(triggered(bool)), SLOT(previousMonth()));
 
     QAction *beginMonth = new QAction(this);
-    beginMonth->setObjectName(QLatin1String("beginMonth"));
+    beginMonth->setObjectName(QStringLiteral("beginMonth"));
     beginMonth->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToStartOfDocument));
     beginMonth->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(beginMonth, SIGNAL(triggered(bool)), SLOT(beginningOfMonth()));
 
     QAction *endMonth = new QAction(this);
-    endMonth->setObjectName(QLatin1String("endMonth"));
+    endMonth->setObjectName(QStringLiteral("endMonth"));
     endMonth->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToEndOfDocument));
     endMonth->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(endMonth, SIGNAL(triggered(bool)), SLOT(endOfMonth()));
 
     QAction *beginWeek = new QAction(this);
-    beginWeek->setObjectName(QLatin1String("beginWeek"));
+    beginWeek->setObjectName(QStringLiteral("beginWeek"));
     beginWeek->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToStartOfLine));
     beginWeek->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(beginWeek, SIGNAL(triggered(bool)), SLOT(beginningOfWeek()));
 
     QAction *endWeek = new QAction(this);
-    endWeek->setObjectName(QLatin1String("endWeek"));
+    endWeek->setObjectName(QStringLiteral("endWeek"));
     endWeek->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToEndOfLine));
     endWeek->setShortcutContext(Qt::WidgetWithChildrenShortcut);
     connect(endWeek, SIGNAL(triggered(bool)), SLOT(endOfWeek()));
@@ -517,7 +517,7 @@ void KDateTable::setFontSize(int size)
         d->m_maxCell.setHeight(qMax(d->m_maxCell.height(), rect.height()));
     }
     // ----- compare with a real wide number and add some space:
-    rect = metrics.boundingRect(QLatin1String("88"));
+    rect = metrics.boundingRect(QStringLiteral("88"));
     d->m_maxCell.setWidth(qMax(d->m_maxCell.width() + 2, rect.width()));
     d->m_maxCell.setHeight(qMax(d->m_maxCell.height() + 4, rect.height()));
 }

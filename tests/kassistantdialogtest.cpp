@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     a.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KAssistantDialog *dlg = new KAssistantDialog();
-    QObject::connect(dlg, SIGNAL(finished(int)),  &a, SLOT(quit()));
+    QObject::connect(dlg, &QDialog::finished,  &a, &QCoreApplication::quit);
     for (int i = 1; i < 11; i++) {
         QWidget *p = new QWidget;
         QString msg = QStringLiteral("This is page %1 out of 10").arg(i);

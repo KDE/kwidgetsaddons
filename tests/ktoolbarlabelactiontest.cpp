@@ -54,7 +54,7 @@ public:
 
         layout->addWidget(labelText);
         layout->addWidget(validateButton);
-        connect(validateButton, SIGNAL(clicked()), this, SLOT(updateLabel1()));
+        connect(validateButton, &QAbstractButton::clicked, this, &MainWindow::updateLabel1);
 
         QWidgetAction *lineEditAction2 = new QWidgetAction(toolBar);
         QLineEdit *lineEdit2 = new QLineEdit;

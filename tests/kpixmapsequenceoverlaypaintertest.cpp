@@ -31,15 +31,15 @@ TestWidget::TestWidget()
     layout->addWidget(m_offsetX, 2, 0, 1, 1);
     layout->addWidget(m_offsetY, 2, 1, 1, 1);
 
-    m_alignment->addItem(QLatin1Literal("Center"), QVariant::fromValue(Qt::Alignment(Qt::AlignCenter)));
-    m_alignment->addItem(QLatin1Literal("Top-left"), QVariant::fromValue(Qt::Alignment(Qt::AlignTop | Qt::AlignLeft)));
-    m_alignment->addItem(QLatin1Literal("Top"), QVariant::fromValue(Qt::Alignment(Qt::AlignTop | Qt::AlignHCenter)));
-    m_alignment->addItem(QLatin1Literal("Top-right"), QVariant::fromValue(Qt::Alignment(Qt::AlignTop | Qt::AlignRight)));
-    m_alignment->addItem(QLatin1Literal("Right"), QVariant::fromValue(Qt::Alignment(Qt::AlignRight | Qt::AlignVCenter)));
-    m_alignment->addItem(QLatin1Literal("Bottom-right"), QVariant::fromValue(Qt::Alignment(Qt::AlignRight | Qt::AlignBottom)));
-    m_alignment->addItem(QLatin1Literal("Bottom"), QVariant::fromValue(Qt::Alignment(Qt::AlignHCenter | Qt::AlignBottom)));
-    m_alignment->addItem(QLatin1Literal("Bottom-left"), QVariant::fromValue(Qt::Alignment(Qt::AlignLeft | Qt::AlignBottom)));
-    m_alignment->addItem(QLatin1Literal("Left"), QVariant::fromValue(Qt::Alignment(Qt::AlignLeft | Qt::AlignVCenter)));
+    m_alignment->addItem(QStringLiteral("Center"), QVariant::fromValue(Qt::Alignment(Qt::AlignCenter)));
+    m_alignment->addItem(QStringLiteral("Top-left"), QVariant::fromValue(Qt::Alignment(Qt::AlignTop | Qt::AlignLeft)));
+    m_alignment->addItem(QStringLiteral("Top"), QVariant::fromValue(Qt::Alignment(Qt::AlignTop | Qt::AlignHCenter)));
+    m_alignment->addItem(QStringLiteral("Top-right"), QVariant::fromValue(Qt::Alignment(Qt::AlignTop | Qt::AlignRight)));
+    m_alignment->addItem(QStringLiteral("Right"), QVariant::fromValue(Qt::Alignment(Qt::AlignRight | Qt::AlignVCenter)));
+    m_alignment->addItem(QStringLiteral("Bottom-right"), QVariant::fromValue(Qt::Alignment(Qt::AlignRight | Qt::AlignBottom)));
+    m_alignment->addItem(QStringLiteral("Bottom"), QVariant::fromValue(Qt::Alignment(Qt::AlignHCenter | Qt::AlignBottom)));
+    m_alignment->addItem(QStringLiteral("Bottom-left"), QVariant::fromValue(Qt::Alignment(Qt::AlignLeft | Qt::AlignBottom)));
+    m_alignment->addItem(QStringLiteral("Left"), QVariant::fromValue(Qt::Alignment(Qt::AlignLeft | Qt::AlignVCenter)));
 
     connect(m_alignment, SIGNAL(activated(int)), this, SLOT(alignementChanged(int)));
     connect(m_offsetX, SIGNAL(valueChanged(int)), this, SLOT(offsetChanged()));
@@ -83,7 +83,7 @@ bool TestWidget::eventFilter(QObject *o, QEvent *e)
 /* --- MAIN -----------------------*/
 int main(int argc, char **argv)
 {
-    QApplication::setApplicationName(QLatin1Literal("test"));
+    QApplication::setApplicationName(QStringLiteral("test"));
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     TestWidget   *window;

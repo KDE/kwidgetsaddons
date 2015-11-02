@@ -199,7 +199,7 @@ void KCharSelectTable::setContents(const QVector<QChar> &chars)
     setSelectionBehavior(QAbstractItemView::SelectItems);
     setSelectionMode(QAbstractItemView::SingleSelection);
     connect(selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(_k_slotSelectionChanged(QItemSelection,QItemSelection)));
-    connect(d->model, SIGNAL(showCharRequested(QChar)), this, SIGNAL(showCharRequested(QChar)));
+    connect(d->model, &KCharSelectItemModel::showCharRequested, this, &KCharSelectTable::showCharRequested);
     delete m; // this should hopefully delete aold selection models too, since it is the parent of them (didn't track, if there are setParent calls somewhere. Check that (jowenn)
 }
 
@@ -417,14 +417,14 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->forwardButton->setToolTip(tr("Next Character in History"));
 
     QAction *backAction = new QAction(this);
-    connect(backAction, SIGNAL(triggered(bool)), d->backButton, SLOT(animateClick()));
+    connect(backAction, &QAction::triggered, d->backButton, &QAbstractButton::animateClick);
     backAction->setObjectName(QStringLiteral("go_back"));
     backAction->setText(tr("&Back", "go back"));
     backAction->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
     attachToActionParent(backAction, actionParent, QKeySequence::keyBindings(QKeySequence::Back));
 
     QAction *forwardAction = new QAction(this);
-    connect(forwardAction, SIGNAL(triggered(bool)), d->forwardButton, SLOT(animateClick()));
+    connect(forwardAction, &QAction::triggered, d->forwardButton, &QAbstractButton::animateClick);
     forwardAction->setObjectName(QStringLiteral("go_forward"));
     forwardAction->setText(tr("&Forward", "go forward"));
     forwardAction->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));

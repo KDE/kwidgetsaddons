@@ -105,14 +105,14 @@ void KAssistantDialog::Private::init()
     backButton->setText(tr("&Back", "go back"));
     backButton->setIcon(QIcon::fromTheme(iconBack));
     backButton->setToolTip(tr("Go back one step"));
-    q->connect(backButton, SIGNAL(clicked()), q, SLOT(back()));
+    q->connect(backButton, &QAbstractButton::clicked, q, &KAssistantDialog::back);
     buttonBox->addButton(backButton, QDialogButtonBox::ActionRole);
 
     nextButton = new QPushButton;
     nextButton->setText(tr("Next", "Opposite to Back"));
     nextButton->setIcon(QIcon::fromTheme(iconNext));
     nextButton->setDefault(true);
-    q->connect(nextButton, SIGNAL(clicked()), q, SLOT(next()));
+    q->connect(nextButton, &QAbstractButton::clicked, q, &KAssistantDialog::next);
     buttonBox->addButton(nextButton, QDialogButtonBox::ActionRole);
 
     finishButton = new QPushButton;

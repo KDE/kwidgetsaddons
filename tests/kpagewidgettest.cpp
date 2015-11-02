@@ -38,53 +38,53 @@ KPageWidgetTest::KPageWidgetTest(QWidget *parent)
 
     connect(mWidget, SIGNAL(currentPageChanged(KPageWidgetItem*,KPageWidgetItem*)),
             this, SLOT(currentPageChanged(KPageWidgetItem*,KPageWidgetItem*)));
-    connect(mWidget, SIGNAL(pageToggled(KPageWidgetItem*,bool)),
-            this, SLOT(pageToggled(KPageWidgetItem*,bool)));
+    connect(mWidget, &KPageWidget::pageToggled,
+            this, &KPageWidgetTest::pageToggled);
 
     int rowCount = 0;
     QPushButton *button = new QPushButton(QStringLiteral("Auto"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(setAutoFace()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setAutoFace);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Plain"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(setPlainFace()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setPlainFace);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("List"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(setListFace()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setListFace);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Tree"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(setTreeFace()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setTreeFace);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Tabbed"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(setTabbedFace()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setTabbedFace);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Add Page"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(addPage()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::addPage);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Add Sub Page"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(addSubPage()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::addSubPage);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Insert Page"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(insertPage()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::insertPage);
     rowCount++;
 
     button = new QPushButton(QStringLiteral("Delete Page"), this);
     layout->addWidget(button, rowCount, 1);
-    connect(button, SIGNAL(clicked()), this, SLOT(deletePage()));
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::deletePage);
     rowCount++;
 
     KPageWidgetItem *item = mWidget->addPage(new QPushButton(QStringLiteral("folder")), QStringLiteral("folder"));

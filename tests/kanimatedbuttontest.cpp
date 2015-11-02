@@ -43,8 +43,8 @@ AnimationGroup::AnimationGroup(const QString &path, int size, QWidget *parent)
     m_animButton->setIconSize(QSize(size, size));
     m_animButton->setAnimationPath(path);
 
-    connect(start, SIGNAL(clicked()), m_animButton, SLOT(start()));
-    connect(stop, SIGNAL(clicked()), m_animButton, SLOT(stop()));
+    connect(start, &QAbstractButton::clicked, m_animButton, &KAnimatedButton::start);
+    connect(stop, &QAbstractButton::clicked, m_animButton, &KAnimatedButton::stop);
 }
 
 MainWindow::MainWindow(QWidget *parent)
@@ -63,7 +63,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     m_size->setValue(22);
 
-    connect(m_path, SIGNAL(returnPressed()), this, SLOT(slotAddNew()));
+    connect(m_path, &QLineEdit::returnPressed, this, &MainWindow::slotAddNew);
 }
 
 void MainWindow::slotAddNew()

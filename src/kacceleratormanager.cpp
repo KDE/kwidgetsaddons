@@ -701,7 +701,7 @@ KPopupAccelManager::KPopupAccelManager(QMenu *popup)
     : QObject(popup), m_popup(popup), m_count(-1)
 {
     aboutToShow(); // do one check and then connect to show
-    connect(popup, SIGNAL(aboutToShow()), SLOT(aboutToShow()));
+    connect(popup, &QMenu::aboutToShow, this, &KPopupAccelManager::aboutToShow);
 }
 
 void KPopupAccelManager::aboutToShow()
@@ -798,7 +798,7 @@ QWidgetStackAccelManager::QWidgetStackAccelManager(QStackedWidget *stack)
     : QObject(stack), m_stack(stack)
 {
     currentChanged(stack->currentIndex()); // do one check and then connect to show
-    connect(stack, SIGNAL(currentChanged(int)), SLOT(currentChanged(int)));
+    connect(stack, &QStackedWidget::currentChanged, this, &QWidgetStackAccelManager::currentChanged);
 }
 
 bool QWidgetStackAccelManager::eventFilter(QObject *watched, QEvent *e)

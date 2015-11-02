@@ -90,7 +90,7 @@ KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *q)
     //m_minDate = defaultMinDate();
     //m_maxDate = defaultMaxDate();
     m_datePicker->setCloseButton(false);
-    m_datePickerAction->setObjectName(QLatin1String("DatePicker"));
+    m_datePickerAction->setObjectName(QStringLiteral("DatePicker"));
     m_datePickerAction->setDefaultWidget(m_datePicker);
 }
 

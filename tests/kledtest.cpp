@@ -40,9 +40,9 @@ KLedTest::KLedTest(QWidget *parent)
         t_color.start(3500);
         t_look.setSingleShot(false);
         t_look.start(3500);
-        QObject::connect(&t_toggle, SIGNAL(timeout()), l, SLOT(toggle()));
-        QObject::connect(&t_color, SIGNAL(timeout()), this, SLOT(nextColor()));
-        QObject::connect(&t_look, SIGNAL(timeout()), this, SLOT(nextLook()));
+        QObject::connect(&t_toggle, &QTimer::timeout, l, &KLed::toggle);
+        QObject::connect(&t_color, &QTimer::timeout, this, &KLedTest::nextColor);
+        QObject::connect(&t_look, &QTimer::timeout, this, &KLedTest::nextLook);
         l->show();
         resize(240, 140);
     } else {
@@ -62,7 +62,7 @@ KLedTest::KLedTest(QWidget *parent)
             y += Grid + LedHeight;
         }
         setFixedSize(x + Grid, y + Grid);
-        connect(&timer, SIGNAL(timeout()), SLOT(timeout()));
+        connect(&timer, &QTimer::timeout, this, &KLedTest::timeout);
         timer.start(500);
     }
 }
@@ -93,7 +93,7 @@ KLedTest::nextColor()
 void
 KLedTest::nextLook()
 {
-    register int tmp;
+    int tmp;
     if (kled_round) {
         tmp = (static_cast<int>(ledlook) + 1) % 3;
     } else {

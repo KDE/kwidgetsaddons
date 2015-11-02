@@ -32,10 +32,10 @@ void KMessageWidgetTest::initTestCase()
 
 void KMessageWidgetTest::testAnimationSignals()
 {
-    KMessageWidget w(QLatin1String("Hello world"));
+    KMessageWidget w(QStringLiteral("Hello world"));
 
-    connect(&w, SIGNAL(showAnimationFinished()), this, SLOT(showAnimationFinished()));
-    connect(&w, SIGNAL(hideAnimationFinished()), this, SLOT(hideAnimationFinished()));
+    connect(&w, &KMessageWidget::showAnimationFinished, this, &KMessageWidgetTest::showAnimationFinished);
+    connect(&w, &KMessageWidget::hideAnimationFinished, this, &KMessageWidgetTest::hideAnimationFinished);
 
     QCOMPARE(m_showSignals, 0);
 

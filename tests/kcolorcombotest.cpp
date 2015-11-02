@@ -37,13 +37,13 @@ KColorComboTest::KColorComboTest(QWidget *widget)
     QHBoxLayout *hboxLayout = new QHBoxLayout(this);
 
     // Standard color list
-    QLabel *lbl = new QLabel(QLatin1Literal("&Standard colors:"), this);
+    QLabel *lbl = new QLabel(QStringLiteral("&Standard colors:"), this);
     lbl->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
 
     mStandard = new KColorCombo(this);
-    mStandard->setObjectName(QLatin1Literal("StandardColors"));
+    mStandard->setObjectName(QStringLiteral("StandardColors"));
     lbl->setBuddy(mStandard);
-    QLabel *lblPreset = new QLabel(QLatin1Literal("Preset to green (0,255,0)"), this);
+    QLabel *lblPreset = new QLabel(QStringLiteral("Preset to green (0,255,0)"), this);
 
     // add to box layout
     hboxLayout->addWidget(lbl);
@@ -54,13 +54,13 @@ KColorComboTest::KColorComboTest(QWidget *widget)
     hboxLayout = new QHBoxLayout(this);
 
     // Custom color list
-    lbl = new QLabel(QLatin1Literal("&Reds, greens, blues:"), this);
+    lbl = new QLabel(QStringLiteral("&Reds, greens, blues:"), this);
     lbl->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
 
     mCustom = new KColorCombo(this);
-    mCustom->setObjectName(QLatin1Literal("CustomColors"));
+    mCustom->setObjectName(QStringLiteral("CustomColors"));
     lbl->setBuddy(mCustom);
-    lblPreset = new QLabel(QLatin1Literal("Preset to green (0,192,0)"), this);
+    lblPreset = new QLabel(QStringLiteral("Preset to green (0,192,0)"), this);
 
     // add to box layout
     hboxLayout->addWidget(lbl);
@@ -69,8 +69,8 @@ KColorComboTest::KColorComboTest(QWidget *widget)
     vbox->addLayout(hboxLayout);
 
     // Create an exit button
-    mExit = new QPushButton(QLatin1Literal("E&xit"), this);
-    QObject::connect(mExit, SIGNAL(clicked()), SLOT(quitApp()));
+    mExit = new QPushButton(QStringLiteral("E&xit"), this);
+    QObject::connect(mExit, &QAbstractButton::clicked, this, &KColorComboTest::quitApp);
 
     vbox->addWidget(mExit);
 

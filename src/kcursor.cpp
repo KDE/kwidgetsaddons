@@ -56,8 +56,8 @@ KCursorPrivateAutoHideEventFilter::KCursorPrivateAutoHideEventFilter(QWidget *wi
     , m_isOwnCursor(false)
 {
     mouseWidget()->setMouseTracking(true);
-    connect(&m_autoHideTimer, SIGNAL(timeout()),
-            this, SLOT(hideCursor()));
+    connect(&m_autoHideTimer, &QTimer::timeout,
+            this, &KCursorPrivateAutoHideEventFilter::hideCursor);
 }
 
 KCursorPrivateAutoHideEventFilter::~KCursorPrivateAutoHideEventFilter()
@@ -213,7 +213,7 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
         m_eventFilters.insert(w, filter);
         if (viewport) {
             m_eventFilters.insert(viewport, filter);
-            connect(viewport, SIGNAL(destroyed(QObject*)), this, SLOT(slotViewportDestroyed(QObject*)));
+            connect(viewport, &QObject::destroyed, this, &KCursorPrivate::slotViewportDestroyed);
         }
         if (!customEventFilter) {
             w->installEventFilter(filter);   // for key events
@@ -221,8 +221,8 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
                 viewport->installEventFilter(filter);    // for mouse events
             }
         }
-        connect(w, SIGNAL(destroyed(QObject*)),
-                this, SLOT(slotWidgetDestroyed(QObject*)));
+        connect(w, &QObject::destroyed,
+                this, &KCursorPrivate::slotWidgetDestroyed);
     } else {
         KCursorPrivateAutoHideEventFilter *filter = m_eventFilters.take(w);
         if (filter == 0) {
@@ -231,12 +231,12 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
         w->removeEventFilter(filter);
         if (viewport) {
             m_eventFilters.remove(viewport);
-            disconnect(viewport, SIGNAL(destroyed(QObject*)), this, SLOT(slotViewportDestroyed(QObject*)));
+            disconnect(viewport, &QObject::destroyed, this, &KCursorPrivate::slotViewportDestroyed);
             viewport->removeEventFilter(filter);
         }
         delete filter;
-        disconnect(w, SIGNAL(destroyed(QObject*)),
-                   this, SLOT(slotWidgetDestroyed(QObject*)));
+        disconnect(w, &QObject::destroyed,
+                   this, &KCursorPrivate::slotWidgetDestroyed);
     }
 }
 

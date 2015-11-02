@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KActionSelector actionSelector(0);
-    actionSelector.availableListWidget()->addItems(QStringList() << QLatin1String("A") << QLatin1String("B") << QLatin1String("C") << QLatin1String("D") << QLatin1String("E"));
-    actionSelector.selectedListWidget()->addItems(QStringList() << QLatin1String("1") << QLatin1String("2"));
+    actionSelector.availableListWidget()->addItems(QStringList() << QStringLiteral("A") << QStringLiteral("B") << QStringLiteral("C") << QStringLiteral("D") << QStringLiteral("E"));
+    actionSelector.selectedListWidget()->addItems(QStringList() << QStringLiteral("1") << QStringLiteral("2"));
     actionSelector.show();
 
     return app.exec();

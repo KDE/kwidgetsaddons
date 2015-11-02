@@ -116,7 +116,7 @@ void KPageListView::setModel(QAbstractItemModel *model)
 
       connect( model, SIGNAL(layoutChanged()), proxy, SLOT(rebuildMap()) );
     */
-    connect(model, SIGNAL(layoutChanged()), this, SLOT(updateWidth()));
+    connect(model, &QAbstractItemModel::layoutChanged, this, &KPageListView::updateWidth);
 
 //  QListView::setModel( proxy );
     QListView::setModel(model);
@@ -155,7 +155,7 @@ KPageTreeView::KPageTreeView(QWidget *parent)
 
 void KPageTreeView::setModel(QAbstractItemModel *model)
 {
-    connect(model, SIGNAL(layoutChanged()), this, SLOT(updateWidth()));
+    connect(model, &QAbstractItemModel::layoutChanged, this, &KPageTreeView::updateWidth);
 
     QTreeView::setModel(model);
 
@@ -213,7 +213,7 @@ KPageTabbedView::KPageTabbedView(QWidget *parent)
     layout->setMargin(0);
 
     mTabWidget = new QTabWidget(this);
-    connect(mTabWidget, SIGNAL(currentChanged(int)), this, SLOT(currentPageChanged(int)));
+    connect(mTabWidget, &QTabWidget::currentChanged, this, &KPageTabbedView::currentPageChanged);
 
     layout->addWidget(mTabWidget);
 }
@@ -236,7 +236,7 @@ void KPageTabbedView::setModel(QAbstractItemModel *model)
 {
     QAbstractItemView::setModel(model);
 
-    connect(model, SIGNAL(layoutChanged()), this, SLOT(layoutChanged()));
+    connect(model, &QAbstractItemModel::layoutChanged, this, &KPageTabbedView::layoutChanged);
 
     layoutChanged();
 }

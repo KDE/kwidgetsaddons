@@ -47,9 +47,9 @@ SelectActionTest::SelectActionTest(QWidget *parent)
 {
     for (int i = 0; i < 7; ++i) {
         QAction *action = m_comboSelect->addAction(QStringLiteral("Combo Action %1").arg(i));
-        connect(action, SIGNAL(triggered(bool)), SLOT(slotActionTriggered(bool)));
+        connect(action, &QAction::triggered, this, &SelectActionTest::slotActionTriggered);
         action = m_buttonSelect->addAction(QStringLiteral("Action %1").arg(i));
-        connect(action, SIGNAL(triggered(bool)), SLOT(slotActionTriggered(bool)));
+        connect(action, &QAction::triggered, this, &SelectActionTest::slotActionTriggered);
     }
 
     m_comboSelect->setToolBarMode(KSelectAction::ComboBoxMode);
@@ -92,9 +92,9 @@ void SelectActionTest::triggered(const QString &text)
 void SelectActionTest::addAction()
 {
     QAction *action = m_comboSelect->addAction(QStringLiteral("Combo Action %1").arg(m_comboSelect->actions().count()));
-    connect(action, SIGNAL(triggered(bool)), SLOT(slotActionTriggered(bool)));
+    connect(action, &QAction::triggered, this, &SelectActionTest::slotActionTriggered);
     action = m_buttonSelect->addAction(QStringLiteral("Action %1").arg(m_buttonSelect->actions().count()));
-    connect(action, SIGNAL(triggered(bool)), SLOT(slotActionTriggered(bool)));
+    connect(action, &QAction::triggered, this, &SelectActionTest::slotActionTriggered);
 }
 
 void SelectActionTest::removeAction()

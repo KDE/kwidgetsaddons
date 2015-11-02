@@ -31,8 +31,8 @@ public:
     Manager()
     {
         picker.show();
-        QTimer::singleShot(1000, this, SLOT(timeout1()));
-        QTimer::singleShot(5000, this, SLOT(timeout2()));
+        QTimer::singleShot(1000, this, &Manager::timeout1);
+        QTimer::singleShot(5000, this, &Manager::timeout2);
     }
 
 private Q_SLOTS:
@@ -52,7 +52,7 @@ private:
 
 int main(int argc, char **argv)
 {
-    QApplication::setApplicationName(QLatin1String("KDatePickertest"));
+    QApplication::setApplicationName(QStringLiteral("KDatePickertest"));
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 

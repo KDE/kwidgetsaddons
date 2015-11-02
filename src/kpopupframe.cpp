@@ -179,8 +179,8 @@ int KPopupFrame::exec(const QPoint &pos)
     repaint();
     d->result = 0; // rejected
     QEventLoop eventLoop;
-    connect(this, SIGNAL(leaveModality()),
-            &eventLoop, SLOT(quit()));
+    connect(this, &KPopupFrame::leaveModality,
+            &eventLoop, &QEventLoop::quit);
     eventLoop.exec();
 
     hide();

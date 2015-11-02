@@ -90,12 +90,12 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     button->setFocusPolicy(Qt::NoFocus);
     button->setIconSize(parent->iconSize());
     button->setToolButtonStyle(parent->toolButtonStyle());
-    QObject::connect(parent, SIGNAL(iconSizeChanged(QSize)),
-                     button, SLOT(setIconSize(QSize)));
-    QObject::connect(parent, SIGNAL(toolButtonStyleChanged(Qt::ToolButtonStyle)),
-                     button, SLOT(setToolButtonStyle(Qt::ToolButtonStyle)));
+    QObject::connect(parent, &QToolBar::iconSizeChanged,
+                     button, &QAbstractButton::setIconSize);
+    QObject::connect(parent, &QToolBar::toolButtonStyleChanged,
+                     button, &QToolButton::setToolButtonStyle);
     button->setDefaultAction(this);
-    QObject::connect(button, SIGNAL(triggered(QAction*)), parent, SIGNAL(actionTriggered(QAction*)));
+    QObject::connect(button, &QToolButton::triggered, parent, &QToolBar::actionTriggered);
 
     if (delayed()) {
         button->setPopupMode(QToolButton::DelayedPopup);
