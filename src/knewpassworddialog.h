@@ -176,6 +176,21 @@ public:
     int passwordStrengthWarningLevel() const;
 
     /**
+     * When the verification password does not match, the background color
+     * of the verification field is set to @p color. As soon as the passwords match,
+     * the original color of the verification field is restored.
+     *
+     * Default: the background color from the current theme.
+     * @since 5.17
+     */
+    void setBackgroundWarningColor(const QColor &color);
+
+    /**
+     * The color used as warning for the verification password field's background.
+     */
+    QColor backgroundWarningColor() const;
+
+    /**
      * Returns the password entered.
      * @note Only has meaningful data after accept has been called
      *       if you want to access the password from a subclass use
@@ -217,7 +232,7 @@ private:
     class KNewPasswordDialogPrivate;
     KNewPasswordDialogPrivate *const d;
 
-    Q_PRIVATE_SLOT(d, void _k_textChanged())
+    Q_PRIVATE_SLOT(d, void _k_passwordStatusChanged())
 };
 
 #endif // KNEWPASSWORDDIALOG_H
