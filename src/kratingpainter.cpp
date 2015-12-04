@@ -212,7 +212,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
 
     int numUsedStars = d->bHalfSteps ? d->maxRating / 2 : d->maxRating;
 
-    if (hoverRating > 0 && hoverRating < rating) {
+    if (hoverRating >= 0 && hoverRating < rating) {
         int tmp = hoverRating;
         hoverRating = rating;
         rating = tmp;
@@ -242,7 +242,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
 
     int numHoverStars = 0;
     bool halfHover = false;
-    if (hoverRating > 0 && rating != hoverRating && d->isEnabled) {
+    if (hoverRating >= 0 && rating != hoverRating && d->isEnabled) {
         numHoverStars = d->bHalfSteps ? hoverRating / 2 : hoverRating;
         halfHover = d->bHalfSteps && hoverRating % 2;
 

@@ -178,27 +178,41 @@ void KRatingWidget::setOnlyPaintFullSteps(bool fs)
 }
 #endif
 
+static inline int adjustedHoverRating(bool halfStep, int hoverRating, int rating)
+{
+    // intentionally skip zero, or half step is disabled.
+    if (!halfStep || hoverRating == 0) {
+        return hoverRating;
+    }
+
+    // See bug 171343, if we click on a star we want it to be full star, click again
+    // make it half, click third time make it clear.
+
+    // round up hoverRating to next full star rating
+    const int hoveredFullStarRating = hoverRating + (hoverRating % 2);
+    // Check if the star under mouse is the last half or whole star of the rating.
+    if (hoveredFullStarRating == rating || hoveredFullStarRating == rating + 1) {
+        // If current pointed star is not empty, next rating will be rating - 1
+        // if we point at 4th star and rating is 8 (4 star), next click will make it 7
+        // if we point at 4th star and rating is 7 (3.5 star), next click will make it 6
+        hoverRating = rating - 1;
+    } else {
+        // otherwise make it a full star rating
+        hoverRating = hoveredFullStarRating;
+    }
+    return hoverRating;
+}
+
 void KRatingWidget::mousePressEvent(QMouseEvent *e)
 {
     if (e->button() == Qt::LeftButton) {
-        const int prevRating = d->rating;
-        d->hoverRating = d->ratingPainter.ratingFromPosition(contentsRect(), e->pos());
-        if (!(d->hoverRating % 2)) {
-            if (d->hoverRating == prevRating + 1) {
-                setRating(d->hoverRating - 2);
-            } else if (d->hoverRating == prevRating) {
-                setRating(d->hoverRating - 1);
-            } else {
-                setRating(d->hoverRating);
-            }
-        } else {
-            if (d->hoverRating == prevRating - 1) {
-                setRating(d->hoverRating);
-            } else if (d->hoverRating == prevRating) {
-                setRating(d->hoverRating - 1);
-            } else {
-                setRating(d->hoverRating + 1);
-            }
+        d->hoverRating = adjustedHoverRating(halfStepsEnabled(),
+                                             d->ratingPainter.ratingFromPosition(contentsRect(), e->pos()),
+                                             d->rating);
+        // avoid set a rating to something less than zero, it may happen if widget is scaled and
+        // mouse is clicked outside the star region.
+        if (d->hoverRating >= 0) {
+            setRating(d->hoverRating);
         }
     }
 }
@@ -207,20 +221,9 @@ void KRatingWidget::mouseMoveEvent(QMouseEvent *e)
 {
     // when moving the mouse we show the user what the result of clicking will be
     const int prevHoverRating = d->hoverRating;
-    d->hoverRating = d->ratingPainter.ratingFromPosition(contentsRect(), e->pos());
-    if (!(d->hoverRating % 2)) {
-        if (d->hoverRating == prevHoverRating + 1) {
-            d->hoverRating -= 2;
-        } else if (d->hoverRating == prevHoverRating) {
-            d->hoverRating -= 1;
-        }
-    } else {
-        if (d->hoverRating == prevHoverRating) {
-            d->hoverRating -= 1;
-        } else {
-            d->hoverRating += 1;
-        }
-    }
+    d->hoverRating = adjustedHoverRating(halfStepsEnabled(),
+                                         d->ratingPainter.ratingFromPosition(contentsRect(), e->pos()),
+                                         d->rating);
     if (d->hoverRating != prevHoverRating) {
         update();
     }
