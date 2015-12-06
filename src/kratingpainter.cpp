@@ -289,7 +289,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         painter->drawPixmap(x, y, ratingPixSize.width() / 2, ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? (numHoverStars > 0 ? hoverPix : disabledRatingPix) : ratingPix,
                             0, 0, ratingPix.width() / 2, ratingPix.height());  //source sizes are deliberately not device independent
-        painter->drawPixmap(x + ratingPix.width() / 2, y, ratingPix.width() / 2, ratingPix.height(),
+        painter->drawPixmap(x + ratingPixSize.width() / 2, y, ratingPixSize.width() / 2, ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? ratingPix : (numHoverStars > 0 ? hoverPix : disabledRatingPix),
                             ratingPix.width() / 2, 0, ratingPix.width() / 2, ratingPix.height());
         x += xInc;
