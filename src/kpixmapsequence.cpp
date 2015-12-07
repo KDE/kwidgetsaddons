@@ -121,7 +121,7 @@ int KPixmapSequence::frameCount() const
 
 QPixmap KPixmapSequence::frameAt(int index) const
 {
-    if (isEmpty()) {
+    if (isEmpty() || index > frameCount()-1 ) {
         qWarning() << "No frame loaded";
         return QPixmap();
     }
