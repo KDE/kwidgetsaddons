@@ -291,7 +291,7 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
     border = darkShade(bg1);
 
     d->content->setStyleSheet(
-        QStringLiteral(".QFrame {"
+        QString::fromLatin1(".QFrame {"
                               "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,"
                               "    stop: 0 %1,"
                               "    stop: 0.1 %2,"

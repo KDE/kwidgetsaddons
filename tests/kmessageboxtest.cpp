@@ -59,11 +59,11 @@ bool testMessageBox(int test)
         w->show();
 
         i = KMessageBox::warningContinueCancel(w,
-                                               QStringLiteral("You are about to <Print>.\n"
+                                               QString::fromLatin1("You are about to <Print>.\n"
                                                "Are you sure?"),
                                                QStringLiteral("Print"), KGuiItem(QStringLiteral("&Print")), KStandardGuiItem::cancel(), QStringLiteral("dontask"));
         i = KMessageBox::warningContinueCancel(0,
-                                               QStringLiteral("You are about to <Print>.\n"
+                                               QString::fromLatin1("You are about to <Print>.\n"
                                                "Are you sure?"),
                                                QStringLiteral("Print"), KGuiItem(QStringLiteral("&Print")), KStandardGuiItem::cancel(), QStringLiteral("dontask"), KMessageBox::AllowLink);
         i = KMessageBox::questionYesNo(0, QStringLiteral("<p>Do you have a printer? thisisaverylongdkldhklghklghklashgkllasghkdlsghkldfghklsabla bla bbla bla. It also has <a href=http://www.kde.org>this URL</a>.</p>"),
@@ -83,7 +83,7 @@ bool testMessageBox(int test)
 
     case 4:
         i = KMessageBox::warningYesNo(0,
-                                      QStringLiteral("KDVI could not locate the program 'dvipdfm' on your computer. That program is "
+                                      QString::fromLatin1("KDVI could not locate the program 'dvipdfm' on your computer. That program is "
                                       "absolutely needed by the export function. You can, however, convert "
                                       "the DVI-file to PDF using the print function of KDVI, but that will often "
                                       "produce files which print ok, but are of inferior quality if viewed in the "
@@ -95,44 +95,44 @@ bool testMessageBox(int test)
         break;
 
     case 5:
-        i = KMessageBox::warningYesNo(0, QStringLiteral("Your printer has been added.\n"
+        i = KMessageBox::warningYesNo(0, QString::fromLatin1("Your printer has been added.\n"
                                       "Do you want to update your configuration?"),
                                       QStringLiteral("Printer Setup"));
         break;
 
     case 6:
         i = KMessageBox::warningContinueCancel(0,
-                                               QStringLiteral("You are about to print.\n"
+                                               QString::fromLatin1("You are about to print.\n"
                                                "Are you sure?"),
                                                QStringLiteral("Print"), KGuiItem(QStringLiteral("&Print")));
         break;
     case 7:
         i = KMessageBox::warningContinueCancel(0,
-                                               QStringLiteral("You are about to <Print>.\n"
+                                               QString::fromLatin1("You are about to <Print>.\n"
                                                "Are you sure?"),
                                                QStringLiteral("Print"), KGuiItem(QStringLiteral("&Print")), KStandardGuiItem::cancel(), QStringLiteral("dontask"));
         i = KMessageBox::warningContinueCancel(0,
-                                               QStringLiteral("You are about to <Print>.\n"
+                                               QString::fromLatin1("You are about to <Print>.\n"
                                                "Are you sure?"),
                                                QStringLiteral("Print"), KGuiItem(QStringLiteral("&Print")), KStandardGuiItem::cancel(), QStringLiteral("dontask"));
         break;
 
     case 8:
         i = KMessageBox::warningYesNoCancel(0,
-                                            QStringLiteral("Your document contains unsaved changes.\n"
+                                            QString::fromLatin1("Your document contains unsaved changes.\n"
                                             "Do you want to save your changes?\n"));
         break;
 
     case 9:
         i = KMessageBox::warningYesNoCancel(0,
-                                            QStringLiteral("Your document contains unsaved changes.\n"
+                                            QString::fromLatin1("Your document contains unsaved changes.\n"
                                             "Do you want to save your changes?\n"),
                                             QStringLiteral("Close"));
         break;
 
     case 10:
         i = KMessageBox::warningYesNoCancel(0,
-                                            QStringLiteral("Your document contains unsaved changes.\n"
+                                            QString::fromLatin1("Your document contains unsaved changes.\n"
                                             "Do you want to save or discard your changes?\n"),
                                             QStringLiteral("Close"), KGuiItem(QStringLiteral("&Save")), KGuiItem(QStringLiteral("&Discard")));
         break;
@@ -159,13 +159,13 @@ bool testMessageBox(int test)
 
     case 15:
         i = KMessageBox::Ok;
-        KMessageBox::information(0, QStringLiteral("You can enable the menubar again "
+        KMessageBox::information(0, QString::fromLatin1("You can enable the menubar again "
                                  "with the right mouse button menu."));
         break;
 
     case 16:
         i = KMessageBox::Ok;
-        KMessageBox::information(0, QStringLiteral("You can enable the menubar again "
+        KMessageBox::information(0, QString::fromLatin1("You can enable the menubar again "
                                  "with the right mouse button menu."), QStringLiteral("Menubar Info"));
         break;
 
@@ -185,7 +185,7 @@ bool testMessageBox(int test)
         break;
     case 20: {
         QStringList strlist;
-        strlist << QStringLiteral("/dev/hda") << QStringLiteral("/etc/inittab") << QStringLiteral("/usr/somefile") << QStringLiteral("/some/really/"
+        strlist << QStringLiteral("/dev/hda") << QStringLiteral("/etc/inittab") << QStringLiteral("/usr/somefile") << QString::fromLatin1("/some/really/"
                 "long/file/name/which/is/in/a/really/deep/directory/in/a/really/large/"
                 "hard/disk/of/your/system") << QStringLiteral("/and/another/one");
         i = KMessageBox::questionYesNoList(0, QStringLiteral("Do you want to delete the following files?"), strlist);
