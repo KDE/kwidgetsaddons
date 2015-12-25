@@ -77,6 +77,7 @@ KPageDialog::KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *p
 
 KPageDialog::~KPageDialog()
 {
+    delete d_ptr;
 }
 
 void KPageDialog::setFaceType(FaceType faceType)
