@@ -37,6 +37,9 @@ private Q_SLOTS:
     void testStrongPassword();
     void testReasonablePasswordLength();
     void testPasswordStrengthWarningLevel();
+    void testNoWarningColorBeforeMismatch();
+    void testWarningColorIfMismatch();
+    void testWarningColorPostMatch();
 };
 
 #endif

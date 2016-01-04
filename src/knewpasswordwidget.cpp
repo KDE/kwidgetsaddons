@@ -89,11 +89,14 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
 
 void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_textChanged()
 {
-    const bool match = ui.linePassword->text() == ui.lineVerifyPassword->text();
+    const QString password = ui.linePassword->text();
+    const QString verification = ui.lineVerifyPassword->text();
+    const bool match = (password == verification);
+    const bool partialMatch = password.startsWith(verification);
     const int minPasswordLength = q->minimumPasswordLength();
 
     QPalette palette = q->palette();
-    palette.setColor(QPalette::Base, match ? defaultBackgroundColor : backgroundWarningColor);
+    palette.setColor(QPalette::Base, (match || partialMatch) ? defaultBackgroundColor : backgroundWarningColor);
     ui.lineVerifyPassword->setPalette(palette);
 
     // Password strength calculator

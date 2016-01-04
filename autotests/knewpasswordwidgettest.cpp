@@ -159,3 +159,70 @@ void KNewPasswordWidgetTest::testPasswordStrengthWarningLevel()
     pwdWidget.setPasswordStrengthWarningLevel(100);
     QCOMPARE(pwdWidget.passwordStrengthWarningLevel(), 99);
 }
+
+void KNewPasswordWidgetTest::testNoWarningColorBeforeMismatch()
+{
+    KNewPasswordWidget pwdWidget;
+    QColor defaultColor = pwdWidget.palette().color(QPalette::Base);
+    QColor warningColor(Qt::red);
+
+    pwdWidget.setBackgroundWarningColor(warningColor);
+
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
+
+    QVERIFY(linePassword);
+    QVERIFY(lineVerifyPassword);
+
+    linePassword->setText(QStringLiteral("1234"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), defaultColor);
+
+    lineVerifyPassword->setText(QStringLiteral("12"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), defaultColor);
+}
+
+void KNewPasswordWidgetTest::testWarningColorIfMismatch()
+{
+    KNewPasswordWidget pwdWidget;
+    QColor defaultColor = pwdWidget.palette().color(QPalette::Base);
+    QColor warningColor(Qt::red);
+
+    pwdWidget.setBackgroundWarningColor(warningColor);
+
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
+
+    QVERIFY(linePassword);
+    QVERIFY(lineVerifyPassword);
+
+    linePassword->setText(QStringLiteral("1234"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), defaultColor);
+
+    lineVerifyPassword->setText(QStringLiteral("122"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), warningColor);
+
+    lineVerifyPassword->setText(QStringLiteral("1224"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), warningColor);
+}
+
+void KNewPasswordWidgetTest::testWarningColorPostMatch()
+{
+    KNewPasswordWidget pwdWidget;
+    QColor defaultColor = pwdWidget.palette().color(QPalette::Base);
+    QColor warningColor(Qt::red);
+
+    pwdWidget.setBackgroundWarningColor(warningColor);
+
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
+
+    QVERIFY(linePassword);
+    QVERIFY(lineVerifyPassword);
+
+    linePassword->setText(QStringLiteral("1234"));
+    lineVerifyPassword->setText(QStringLiteral("1234"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), defaultColor);
+
+    lineVerifyPassword->setText(QStringLiteral("12345"));
+    QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), warningColor);
+}
