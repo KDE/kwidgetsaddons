@@ -31,7 +31,7 @@ static void workaround()
 {
     // Workaround for Qt-5.1 bug, which assumes GTK if there's no running desktop.
     // (and apparently QTest::qWaitForWindowExposed doesn't work for GTK native dialogs)
-    qputenv("KDE_FULL_SESSION", "1");
+    qputenv("XDG_CURRENT_DESKTOP", "KDE");
 
     // TODO: it means this test will always fail with native dialogs, though.
     // But we can't set QColorDialog::DontUseNativeDialog from here...
@@ -70,6 +70,9 @@ void KColorButtonTest::testDoubleClickChange()
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
     QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
+    if (!dialog) {
+        qWarning() << "No QColorDialog was found! topLevelWidgets=" << QApplication::topLevelWidgets() << "children of colorbutton=" << colorButton.children();
+    }
     QVERIFY(dialog != NULL);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
