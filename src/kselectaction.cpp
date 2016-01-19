@@ -97,8 +97,8 @@ KSelectAction::KSelectAction(KSelectActionPrivate &dd, QObject *parent)
 
 KSelectAction::~KSelectAction()
 {
+    menu()->deleteLater();
     delete d_ptr;
-    delete menu();
 }
 
 void KSelectActionPrivate::init(KSelectAction *q)
