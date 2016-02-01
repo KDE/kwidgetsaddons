@@ -112,6 +112,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
 
     d->m_sampleLabel->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
     setFocusProxy(d->m_button);
+    setFocusPolicy(d->m_button->focusPolicy());
 
     layout->addWidget(d->m_sampleLabel, 1);
     layout->addWidget(d->m_button);
