@@ -44,6 +44,7 @@ public:
 
     void init();
     void _k_passwordStatusChanged();
+    void showMessageWidget(const QString &message, KMessageWidget::MessageType type);
 
     KNewPasswordDialog *q;
 
@@ -60,7 +61,7 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::init()
     option.initFrom(q);
     const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
     ui.labelIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize, iconSize));
-    ui.labelMatch->setHidden(true);
+    ui.statusMsgWidget->hide();
 
     connect(ui.pwdWidget, SIGNAL(passwordStatusChanged()), q, SLOT(_k_passwordStatusChanged()));
 }
@@ -70,28 +71,31 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::_k_passwordStatusChanged()
     switch (ui.pwdWidget->passwordStatus()) {
     case KNewPasswordWidget::PasswordTooShort:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        ui.labelMatch->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-error")));
         //~ singular Password must be at least %n character long
         //~ plural Password must be at least %n characters long
-        ui.labelMatch->setText(tr("Password must be at least %n character(s) long", "", ui.pwdWidget->minimumPasswordLength()));
+        showMessageWidget(tr("Password must be at least %n character(s) long", "", ui.pwdWidget->minimumPasswordLength()), KMessageWidget::Error);
         break;
     case KNewPasswordWidget::EmptyPasswordNotAllowed:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        ui.labelMatch->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-error")));
-        ui.labelMatch->setText(tr("Password is empty"));
+        showMessageWidget(tr("Password is empty"), KMessageWidget::Warning);
         break;
     case KNewPasswordWidget::PasswordNotVerified:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        ui.labelMatch->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-error")));
-        ui.labelMatch->setText(tr("Passwords do not match"));
+        showMessageWidget(tr("Passwords do not match"), KMessageWidget::Warning);
         break;
     case KNewPasswordWidget::WeakPassword:
     case KNewPasswordWidget::StrongPassword:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
-        ui.labelMatch->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-ok")));
-        ui.labelMatch->setText(tr("Passwords match"));
+        showMessageWidget(tr("Passwords match"), KMessageWidget::Positive);
         break;
     }
+}
+
+void KNewPasswordDialog::KNewPasswordDialogPrivate::showMessageWidget(const QString &message, KMessageWidget::MessageType type)
+{
+    ui.statusMsgWidget->setText(message);
+    ui.statusMsgWidget->setMessageType(type);
+    ui.statusMsgWidget->animatedShow();
 }
 
 /*
