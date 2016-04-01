@@ -312,7 +312,9 @@ void KCollapsibleGroupBoxPrivate::updateChildrenVisibility(bool visible)
 QSize KCollapsibleGroupBoxPrivate::contentSize() const
 {
     if (q->layout()) {
-        return q->layout()->sizeHint();
+        const QMargins margins = q->contentsMargins();
+        const QSize marginSize(margins.left() + margins.right(), margins.top() + margins.bottom());
+        return q->layout()->sizeHint() + marginSize;
     }
     return QSize(0,0);
 }
@@ -320,7 +322,9 @@ QSize KCollapsibleGroupBoxPrivate::contentSize() const
 QSize KCollapsibleGroupBoxPrivate::contentMinimumSize() const
 {
     if (q->layout()) {
-        return q->layout()->minimumSize();
+        const QMargins margins = q->contentsMargins();
+        const QSize marginSize(margins.left() + margins.right(), margins.top() + margins.bottom());
+        return q->layout()->minimumSize() + marginSize;
     }
     return QSize(0,0);
 }

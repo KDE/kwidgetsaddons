@@ -48,6 +48,9 @@ int main(int argc, char *argv[])
             auto checkBox = new QCheckBox(QStringLiteral("Some text"));
             innerLayout->addWidget(checkBox);
         }
+        auto checkBox = new QCheckBox(QStringLiteral("Some really long text that goes on and on and on for ever and ever"));
+        innerLayout->addWidget(checkBox);
+
         groupBox->setLayout(innerLayout);
         mainWindowLayout.addWidget(groupBox);
     }
