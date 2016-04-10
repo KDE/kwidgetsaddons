@@ -37,6 +37,7 @@ kwidgetsaddons_executable_tests(
   kassistantdialogtest
   kmessagewidgettest
   knewpassworddialogtest
+  knewpasswordwidget_test
   kpixmapsequenceoverlaypaintertest
   kmimetypechoosertest
   ksplittercollapserbuttongui_test
