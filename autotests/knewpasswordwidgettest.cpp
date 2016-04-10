@@ -226,3 +226,42 @@ void KNewPasswordWidgetTest::testWarningColorPostMatch()
     lineVerifyPassword->setText(QStringLiteral("12345"));
     QCOMPARE(lineVerifyPassword->palette().color(QPalette::Base), warningColor);
 }
+
+void KNewPasswordWidgetTest::disablingWidgetShouldUseDisabledPalette()
+{
+    KNewPasswordWidget pwdWidget;
+
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
+
+    QVERIFY(linePassword && linePassword->isEnabled());
+    QVERIFY(lineVerifyPassword && lineVerifyPassword->isEnabled());
+
+    pwdWidget.setEnabled(false);
+
+    QVERIFY(!linePassword->isEnabled());
+    QVERIFY(!lineVerifyPassword->isEnabled());
+
+    QCOMPARE(linePassword->palette(), pwdWidget.palette());
+    QCOMPARE(lineVerifyPassword->palette(), pwdWidget.palette());
+}
+
+void KNewPasswordWidgetTest::disablingParentShouldUseDisabledPalette()
+{
+    auto widget = new QWidget();
+    widget->setEnabled(false);
+
+    auto pwdWidget = new KNewPasswordWidget(widget);
+    QVERIFY(!pwdWidget->isEnabled());
+
+    auto linePassword = pwdWidget->findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget->findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
+
+    QVERIFY(linePassword && !linePassword->isEnabled());
+    QVERIFY(lineVerifyPassword && !lineVerifyPassword->isEnabled());
+
+    QCOMPARE(linePassword->palette(), widget->palette());
+    QCOMPARE(lineVerifyPassword->palette(), widget->palette());
+
+    delete widget;
+}

@@ -40,6 +40,8 @@ private Q_SLOTS:
     void testNoWarningColorBeforeMismatch();
     void testWarningColorIfMismatch();
     void testWarningColorPostMatch();
+    void disablingWidgetShouldUseDisabledPalette();
+    void disablingParentShouldUseDisabledPalette();
 };
 
 #endif

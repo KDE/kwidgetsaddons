@@ -81,7 +81,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
     connect(ui.linePassword, SIGNAL(textChanged(QString)), q, SLOT(_k_textChanged()));
     connect(ui.lineVerifyPassword, SIGNAL(textChanged(QString)), q, SLOT(_k_textChanged()));
 
-    defaultBackgroundColor = q->palette().color(QPalette::Base);
+    defaultBackgroundColor = q->palette().color(QPalette::Active, QPalette::Base);
     backgroundWarningColor = defaultBackgroundColor;
 
     _k_textChanged();
@@ -96,7 +96,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_textChanged()
     const int minPasswordLength = q->minimumPasswordLength();
 
     QPalette palette = q->palette();
-    palette.setColor(QPalette::Base, (match || partialMatch) ? defaultBackgroundColor : backgroundWarningColor);
+    palette.setColor(QPalette::Active, QPalette::Base, (match || partialMatch) ? defaultBackgroundColor : backgroundWarningColor);
     ui.lineVerifyPassword->setPalette(palette);
 
     // Password strength calculator
