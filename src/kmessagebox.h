@@ -541,7 +541,7 @@ KWIDGETSADDONS_EXPORT void detailedError(QWidget *parent,
         Options options = Notify);
 
 /**
- * Display an "Sorry" dialog.
+ * Display a "Sorry" dialog.
  *
  * @param parent  Parent widget.
  * @param text    Message string.
