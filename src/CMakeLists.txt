@@ -174,6 +174,87 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
+find_package(PythonModuleGeneration)
+
+if (PythonModuleGeneration_FOUND)
+  ecm_generate_python_binding(
+    TARGET KF5::WidgetsAddons
+    PYTHONNAMESPACE PyKF5
+    MODULENAME KWidgetsAddons
+    RULES_FILE "${CMAKE_SOURCE_DIR}/cmake/rules_PyKF5.py"
+    SIP_DEPENDS
+      QtWidgets/QtWidgetsmod.sip
+    HEADERS
+      kacceleratormanager.h
+      kanimatedbutton.h
+      kcharselect.h
+      kcollapsiblegroupbox.h
+      kcolorbutton.h
+      kcolumnresizer.h
+      kdatecombobox.h
+      kdatepicker.h
+      kdatetimeedit.h
+      kdragwidgetdecorator.h
+      kdualaction.h
+      kfontaction.h
+      kfontchooser.h
+      kfontsizeaction.h
+      kguiitem.h
+      kled.h
+      kmessagebox.h
+      kmessageboxdontaskagaininterface.h
+      kmultitabbar.h
+      knewpasswordwidget.h
+      kpopupframe.h
+      kselectaction.h
+      kstandardguiitem.h
+      ktimecombobox.h
+      kurllabel.h
+      kcapacitybar.h
+      kfontrequester.h
+      kpassworddialog.h
+      kruler.h
+      kselector.h
+      ktitlewidget.h
+      kxyselector.h
+      kseparator.h
+      ksqueezedtextlabel.h
+      ktoggleaction.h
+      ktogglefullscreenaction.h
+      kviewstateserializer.h
+      kviewstatemaintainerbase.h
+      keditlistwidget.h
+      kcursor.h
+      kratingpainter.h
+      kratingwidget.h
+      kactionselector.h
+      kcolorcombo.h
+      kactionmenu.h
+      ktoolbarlabelaction.h
+      ktoolbarpopupaction.h
+      ktoolbarspaceraction.h
+      kpagedialog.h
+      kpagemodel.h
+      kpageview.h
+      kpagewidget.h
+      kpagewidgetmodel.h
+      kassistantdialog.h
+      kmessagewidget.h
+      knewpassworddialog.h
+      lineediturldropeventfilter.h
+      kpixmapsequence.h
+      kpixmapsequenceoverlaypainter.h
+      kpixmapsequencewidget.h
+      kpixmapregionselectordialog.h
+      kpixmapregionselectorwidget.h
+      kmimetypechooser.h
+      kmimetypeeditor.h
+      kmessageboxnotifyinterface.h
+      ksplittercollapserbutton.h
+      kstyleextensions.h
+  )
+endif()
+
 install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
