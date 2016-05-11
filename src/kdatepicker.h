@@ -96,7 +96,6 @@ public:
      * @returns the KDateTable widget child of this KDatePicker
      * widget.
      */
-    KDateTable *dateTable() const;
 
     /**
      * Sets the font size of the widgets elements.
@@ -174,6 +173,7 @@ Q_SIGNALS:
     void tableClicked();
 
 private:
+    KDateTable *dateTable() const;
     void initWidget(const QDate &date);
     class KDatePickerPrivate;
     friend class KDatePickerPrivate;
