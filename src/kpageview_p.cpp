@@ -399,10 +399,11 @@ void KPageListViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
     opt.showDecorationSelected = true;
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
 
+    const QIcon::Mode iconMode = (option.state & QStyle::State_Selected) && (option.state & QStyle::State_Active) ? QIcon::Selected : QIcon::Normal;
     int iconSize = style->pixelMetric(QStyle::PM_IconViewIconSize);
     const QString text = index.model()->data(index, Qt::DisplayRole).toString();
     const QIcon icon = index.model()->data(index, Qt::DecorationRole).value<QIcon>();
-    const QPixmap pixmap = icon.pixmap(iconSize, iconSize);
+    const QPixmap pixmap = icon.pixmap(iconSize, iconSize, iconMode);
 
     QFontMetrics fm = painter->fontMetrics();
     int wp = pixmap.width() / pixmap.devicePixelRatio();
