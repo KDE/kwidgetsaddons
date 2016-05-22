@@ -11,3 +11,7 @@ libraries:
  - qmake: KWidgetsAddons
    cmake: "KF5::WidgetsAddons"
 cmakename: KF5WidgetsAddons
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 1
