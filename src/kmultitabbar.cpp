@@ -156,6 +156,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
     // If keyboard navigation is wanted, then only the bar should take focus,
     // and arrows could change the focused button; but generally, tabbars don't take focus anyway.
     setFocusPolicy(Qt::NoFocus);
+    setAttribute(Qt::WA_LayoutUsesWidgetRect);
     Q_UNUSED(d);
 }
 
@@ -169,6 +170,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
     // If keyboard navigation is wanted, then only the bar should take focus,
     // and arrows could change the focused button; but generally, tabbars don't take focus anyway.
     setFocusPolicy(Qt::NoFocus);
+    setAttribute(Qt::WA_LayoutUsesWidgetRect);
     Q_UNUSED(d);
 }
 
