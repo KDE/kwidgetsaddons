@@ -395,7 +395,7 @@ void KPageListViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
         return;
     }
 
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     opt.showDecorationSelected = true;
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
 
@@ -445,7 +445,7 @@ QSize KPageListViewDelegate::sizeHint(const QStyleOptionViewItem &option, const 
         return QSize(0, 0);
     }
 
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     opt.showDecorationSelected = true;
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
 

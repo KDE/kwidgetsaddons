@@ -77,7 +77,7 @@ void KColorComboDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
         innercolor = option.palette.color(QPalette::Base);
     }
     // highlight selected item
-    QStyleOptionViewItemV4 opt(option);
+    QStyleOptionViewItem opt(option);
     opt.showDecorationSelected = true;
     QStyle *style = opt.widget ? opt.widget->style() : QApplication::style();
     style->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, opt.widget);
