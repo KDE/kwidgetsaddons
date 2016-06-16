@@ -65,6 +65,11 @@ public:
     KCapacityBar::DrawTextMode drawTextMode;
 };
 
+KCapacityBar::KCapacityBar(QWidget *parent)
+    : KCapacityBar(DrawTextOutline, parent)
+{
+}
+
 KCapacityBar::KCapacityBar(KCapacityBar::DrawTextMode drawTextMode, QWidget *parent)
     : QWidget(parent)
     , d(new Private(drawTextMode))

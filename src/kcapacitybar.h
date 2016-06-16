@@ -62,6 +62,14 @@ public:
         DrawTextOutline         ///< If any text set, draw it out of the capacity bar
     };
 
+
+    /**
+     * Constructs a capacity bar with DrawTextOutline as draw text mode.
+     * @param parent The parent of the widget.
+     * @since 5.24
+     */
+    explicit KCapacityBar(QWidget *parent = Q_NULLPTR);
+
     /**
       * Capacity bar constructor.
       *

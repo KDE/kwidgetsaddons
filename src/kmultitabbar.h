@@ -70,6 +70,13 @@ public:
      */
     enum KMultiTabBarStyle {VSNET = 0, KDEV3ICON = 2, STYLELAST = 0xffff};
 
+    /**
+     * Create a KMultiTabBar with Left as KMultiTabBar position.
+     * @param parent The parent of the widget.
+     * @since 5.24
+     */
+    explicit KMultiTabBar(QWidget *parent = Q_NULLPTR);
+
     explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = 0);
     virtual ~KMultiTabBar();
 

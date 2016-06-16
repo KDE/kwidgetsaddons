@@ -516,6 +516,11 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
 // KMultiTabBar
 ///////////////////////////////////////////////////////////////////////////////
 
+KMultiTabBar::KMultiTabBar(QWidget *parent)
+    : KMultiTabBar(Left, parent)
+{
+}
+
 KMultiTabBar::KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent)
     : QWidget(parent),
       d(new KMultiTabBarPrivate)
