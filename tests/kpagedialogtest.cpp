@@ -31,9 +31,12 @@ KPageDialogTest::KPageDialogTest(QWidget *parent)
     setFaceType(Tabbed);
 
     QWidget *page = new QWidget(this);
-    QHBoxLayout *layout = new QHBoxLayout(page);
+    QBoxLayout *layout = new QVBoxLayout(page);
 
     QLabel *label = new QLabel(QStringLiteral("first page"));
+    layout->addWidget(label);
+
+    label = new QLabel(QStringLiteral("This is a very long text that is contained in a single string within a single label"));
     layout->addWidget(label);
 
     addPage(page, QStringLiteral("First"));
