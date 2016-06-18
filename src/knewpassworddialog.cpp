@@ -116,6 +116,7 @@ KNewPasswordDialog::~KNewPasswordDialog()
 void KNewPasswordDialog::setPrompt(const QString &prompt)
 {
     d->ui.labelPrompt->setText(prompt);
+    d->ui.labelPrompt->setMinimumSize(d->ui.labelPrompt->sizeHint());
 }
 
 QString KNewPasswordDialog::prompt() const
