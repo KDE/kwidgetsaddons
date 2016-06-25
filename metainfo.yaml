@@ -18,3 +18,4 @@ cmakename: KF5WidgetsAddons
 public_lib: true
 group: Frameworks
 subgroup: Tier 1
+public_example_dir: tests/

@@ -17,38 +17,85 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "knewpasswordwidget_test.h"
+
 #include <QApplication>
 #include <QCheckBox>
+#include <QDebug>
+#include <QDialogButtonBox>
+#include <QPushButton>
 #include <QVBoxLayout>
 
-#include <kcollapsiblegroupbox.h>
-#include <knewpasswordwidget.h>
+#include <KNewPasswordWidget>
+#include <KMessageBox>
 
+// Doxygen will generate code snippets from this file.
+// We can't use i18n() here, but we want it to show up in the apidox.
+#define i18n QStringLiteral
+
+MyPasswordDialog::MyPasswordDialog(QWidget *parent)
+    : QDialog(parent)
+{
+    m_passwordWidget = new KNewPasswordWidget(this);
+    m_buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+
+    m_passwordWidget->setMinimumPasswordLength(6);
+
+    auto layout = new QVBoxLayout(this);
+    layout->addWidget(m_passwordWidget);
+    layout->addWidget(new QCheckBox(QStringLiteral("A checkbox"), this));
+    layout->addWidget(m_buttonBox);
+
+    connect(m_buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(m_buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+}
+
+//! [accept_custom_dialog]
+void MyPasswordDialog::accept()
+{
+    switch (m_passwordWidget->passwordStatus()) {
+    case KNewPasswordWidget::WeakPassword:
+    case KNewPasswordWidget::StrongPassword:
+        QDialog::accept();
+        break;
+    case KNewPasswordWidget::PasswordNotVerified:
+        KMessageBox::error(Q_NULLPTR, i18n("The chosen password does not match the given verification password."));
+        break;
+    case KNewPasswordWidget::EmptyPasswordNotAllowed:
+        KMessageBox::error(Q_NULLPTR, i18n("The chosen password cannot be empty."));
+        break;
+    case KNewPasswordWidget::PasswordTooShort:
+        KMessageBox::error(Q_NULLPTR, i18n("The chosen password is too short."));
+        break;
+    }
+}
+//! [accept_custom_dialog]
+
+//! [update_custom_dialog]
+void MyPasswordDialog::slotPasswordStatusChanged()
+{
+    // You may want to extend this switch with more cases,
+    // in order to warn the user about all the possible password issues.
+    switch (m_passwordWidget->passwordStatus()) {
+    case KNewPasswordWidget::WeakPassword:
+    case KNewPasswordWidget::StrongPassword:
+        m_buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
+        break;
+    default:
+        m_buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
+        break;
+    }
+}
+//! [update_custom_dialog]
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    QWidget mainWindow;
-    QVBoxLayout mainWindowLayout(&mainWindow);
-
-    KCollapsibleGroupBox collapsible(&mainWindow);
-    collapsible.setExpanded(true);
-    collapsible.setTitle(QStringLiteral("A collapsible groupbox"));
-
-    KNewPasswordWidget pwdWidget(&collapsible);
-    pwdWidget.setPasswordStrengthMeterVisible(false);
-
-    QCheckBox checkbox(QStringLiteral("A checkbox"), &collapsible);
-
-    QVBoxLayout *layout = new QVBoxLayout(&collapsible);
-    layout->addWidget(&pwdWidget);
-    layout->addWidget(&checkbox);
-
-    mainWindowLayout.addWidget(&collapsible);
-    mainWindow.setLayout(&mainWindowLayout);
-    mainWindow.show();
+    MyPasswordDialog dialog;
+    QObject::connect(&dialog, &QDialog::finished, &app, &QCoreApplication::quit);
+    dialog.show();
 
     return app.exec();
 }

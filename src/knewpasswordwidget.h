@@ -54,47 +54,13 @@
  *  ...
  * \endcode
  *
- * \subsection Update
+ * \subsection update Update your custom dialog
  *
- * \code
- * void MyCustomDialog::slotPasswordStatusChanged()
- * {
- *     // You may want to extend this switch with more cases,
- *     // in order to warn the user about all the possible password issues.
- *     switch (m_passwordWidget->passwordStatus()) {
- *     case KNewPasswordWidget::WeakPassword:
- *     case KNewPasswordWidget::StrongPassword:
- *         m_buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
- *         break;
- *     default:
- *         m_buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
- *         break;
- *     }
- * }
- * \endcode
+ * @snippet knewpasswordwidget_test.cpp update_custom_dialog
  *
- * \subsection Check
+ * \subsection accept Accept your custom dialog
  *
- * \code
- * void MyCustomDialog::accept()
- * {
- *     switch (m_passwordWidget->passwordStatus()) {
- *     case KNewPasswordWidget::WeakPassword:
- *     case KNewPasswordWidget::StrongPassword:
- *         QDialog::accept();
- *         break;
- *     case KNewPasswordWidget::PasswordNotVerified:
- *         KMessageBox::error(Q_NULLPTR, i18n("The chosen password does not match the given verification password."));
- *         break;
- *     case KNewPasswordWidget::EmptyPasswordNotAllowed:
- *         KMessageBox::error(Q_NULLPTR, i18n("The chosen password cannot be empty."));
- *         break;
- *     case KNewPasswordWidget::PasswordTooShort:
- *         KMessageBox::error(Q_NULLPTR, i18n("The chosen password is too short"));
- *         break;
- *     }
- * }
- * \endcode
+ * @snippet knewpasswordwidget_test.cpp accept_custom_dialog
  *
  * @author Geert Jansen <jansen@kde.org>
  * @author Olivier Goffart <ogoffart@kde.org>
