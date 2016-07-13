@@ -271,21 +271,24 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
     QColor bg0, bg1, bg2, border, fg;
     switch (type) {
     case Positive:
-        bg1.setRgb(0, 110,  40); // values taken from kcolorscheme.cpp (Positive)
+        bg1.setRgb(39, 174,  96); // values taken from kcolorscheme.cpp (Positive)
+        fg.setRgb(239, 240, 241);
         break;
     case Information:
         bg1 = palette().highlight().color();
+        fg = palette().highlightedText().color();
         break;
     case Warning:
-        bg1.setRgb(176, 128, 0); // values taken from kcolorscheme.cpp (Neutral)
+        bg1.setRgb(246, 116, 0); // values taken from kcolorscheme.cpp (Neutral)
+        fg.setRgb(239, 240, 241);
         break;
     case Error:
-        bg1.setRgb(191, 3, 3); // values taken from kcolorscheme.cpp (Negative)
+        bg1.setRgb(218, 68, 83); // values taken from kcolorscheme.cpp (Negative)
+        fg.setRgb(239, 240, 241);
         break;
     }
 
     // Colors
-    fg = palette().highlightedText().color();
     bg0 = bg1.lighter(110);
     bg2 = bg1.darker(110);
     border = darkShade(bg1);
