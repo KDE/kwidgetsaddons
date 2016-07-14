@@ -1,26 +1,28 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# This script generates a data file containing all Unicode information needed by KCharSelect.
+# This script generates a data file containing all Unicode information needed
+# by KCharSelect.
 #
-#############################################################################
+##############################################################################
 # Copyright (C) 2007 Daniel Laidig <d.laidig@gmx.de>
+# Copyright (C) 2016 John Zaitseff <J.Zaitseff@zap.org.au>
 #
-# This script is free software; you can redistribute it and/or
-# modify it under the terms of the GNU Library General Public
-# License as published by the Free Software Foundation; either
-# version 2 of the License, or (at your option) any later version.
+# This script is free software; you can redistribute it and/or modify it under
+# the terms of the GNU Library General Public License as published by the Free
+# Software Foundation; either version 2 of the License, or (at your option)
+# any later version.
 #
-# This script is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# Library General Public License for more details.
+# This script is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+# FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Library General Public
+# License for more details.
 #
 # You should have received a copy of the GNU Library General Public License
-# along with this library; see the file COPYING.LIB.  If not, write to
-# the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-# Boston, MA 02110-1301, USA.
-#############################################################################
+# along with this library; see the file COPYING.LIB.  If not, write to the
+# Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+# 02110-1301, USA.
+##############################################################################
 #
 # The current directory must contain the following files that can be found at
 # http://www.unicode.org/Public/UNIDATA/:
@@ -29,14 +31,15 @@
 # - NamesList.txt
 # - Blocks.txt
 #
-# The generated file is named "kcharselect-data" and has to be put in kdelibs/kdeui/widgets/.
-# Additionally a translation dummy named "kcharselect-translation.cpp" is generated and has
-# to be placed in the same directory.
+# The generated file is named "kcharselect-data" and has to be put in
+# kwidgetsaddons/src.  Additionally a translation dummy named
+# "kcharselect-translation.cpp" is generated and has to be placed in the same
+# directory.
 #
 # FILE STRUCTURE
 #
-# The generated file is a binary file. The first 40 bytes are the header
-# and contain the position of each part of the file. Each entry is uint32.
+# The generated file is a binary file. The first 40 bytes are the header and
+# contain the position of each part of the file. Each entry is uint32.
 #
 # pos   content
 # 0     names strings begin
@@ -50,12 +53,14 @@
 # 32    unihan strings begin
 # 36    unihan offsets begin
 #
-# The string parts always contain all strings in a row, followed by a 0x00 byte.
-# There is one exception: The data for seeAlso in details is only 2 bytes (as is always is _one_
-# unicode character) and _not_ followed by a 0x00 byte.
+# The string parts always contain all strings in a row, followed by a 0x00
+# byte.  There is one exception: The data for seeAlso in details is only 2
+# bytes (as is always is _one_ unicode character) and _not_ followed by a 0x00
+# byte.
 #
-# The offset parts contain entries with a fixed length. Unicode characters are always uint16 and offsets uint32.
-# Offsets are positions in the data file.
+# The offset parts contain entries with a fixed length.  Unicode characters
+# are always uint16 and offsets uint32.  Offsets are positions in the data
+# file.
 #
 # names_offsets:
 # each entry 6 bytes
@@ -100,15 +105,16 @@ import sys
 import re
 import StringIO
 
-# based on http://www.unicode.org/charts/
+# Based on http://www.unicode.org/charts/, updated for Unicode 9.0
 sectiondata = '''
-SECTION European Alphabets
+SECTION European Scripts
 Basic Latin
 Latin-1 Supplement
 Latin Extended-A
 Latin Extended-B
 Latin Extended-C
 Latin Extended-D
+Latin Extended-E
 Latin Extended Additional
 Armenian
 Coptic
@@ -116,6 +122,7 @@ Cyrillic
 Cyrillic Supplement
 Cyrillic Extended-A
 Cyrillic Extended-B
+Cyrillic Extended-C
 Georgian
 Georgian Supplement
 Glagolitic
@@ -137,12 +144,18 @@ Vai
 SECTION Middle Eastern Scripts
 Arabic
 Arabic Supplement
+Arabic Extended-A
 Arabic Presentation Forms-A
 Arabic Presentation Forms-B
 Hebrew
 Mandaic
 Samaritan
 Syriac
+
+SECTION Central Asian Scripts
+Mongolian
+Phags-pa
+Tibetan
 
 SECTION South Asian Scripts
 Bengali
@@ -156,6 +169,7 @@ Lepcha
 Limbu
 Malayalam
 Meetei Mayek
+Meetei Mayek Extensions
 Ol Chiki
 Oriya
 Saurashtra
@@ -166,32 +180,33 @@ Telugu
 Thaana
 Vedic Extensions
 
-SECTION Philippine Scripts
-Buhid
-Hanunoo
-Tagalog
-Tagbanwa
-
-
-SECTION South East Asian Scripts
-Balinese
-Batak
-Buginese
+SECTION Southeast Asian Scripts
 Cham
-Javanese
 Kayah Li
 Khmer
 Khmer Symbols
 Lao
 Myanmar
 Myanmar Extended-A
+Myanmar Extended-B
 New Tai Lue
-Rejang
-Sundanese
 Tai Le
 Tai Tham
 Tai Viet
 Thai
+
+SECTION Indonesia and Oceania Scripts
+Balinese
+Batak
+Buginese
+Buhid
+Hanunoo
+Javanese
+Rejang
+Sundanese
+Sundanese Supplement
+Tagalog
+Tagbanwa
 
 SECTION East Asian Scripts
 Bopomofo
@@ -220,23 +235,19 @@ Lisu
 Yi Radicals
 Yi Syllables
 
-SECTION Central Asian Scripts
-Mongolian
-Phags-pa
-Tibetan
-
-SECTION Other Scripts
+SECTION American Scripts
 Cherokee
+Cherokee Supplement
 Unified Canadian Aboriginal Syllabics
 Unified Canadian Aboriginal Syllabics Extended
 
 SECTION Symbols
+General Punctuation
 Braille Patterns
 Control Pictures
 Currency Symbols
 Dingbats
 Enclosed Alphanumerics
-General Punctuation
 Miscellaneous Symbols
 Miscellaneous Technical
 Optical Character Recognition
@@ -249,17 +260,17 @@ SECTION Mathematical Symbols
 Arrows
 Block Elements
 Box Drawing
-Supplemental Arrows-A
-Supplemental Arrows-B
 Geometric Shapes
 Letterlike Symbols
 Mathematical Operators
-Supplemental Mathematical Operators
 Miscellaneous Mathematical Symbols-A
 Miscellaneous Mathematical Symbols-B
 Miscellaneous Symbols and Arrows
 Number Forms
 Superscripts and Subscripts
+Supplemental Arrows-A
+Supplemental Arrows-B
+Supplemental Mathematical Operators
 
 SECTION Phonetic Symbols
 IPA Extensions
@@ -268,8 +279,9 @@ Phonetic Extensions
 Phonetic Extensions Supplement
 Spacing Modifier Letters
 
-SECTION Combining Diacritical Marks
+SECTION Combining Diacritics
 Combining Diacritical Marks
+Combining Diacritical Marks Extended
 Combining Diacritical Marks Supplement
 Combining Diacritical Marks for Symbols
 Combining Half Marks
@@ -284,7 +296,6 @@ Private Use Area
 Specials
 Variation Selectors
 '''
-# TODO: rename "Other Scripts" to "American Scripts"
 
 categoryMap = { # same values as QChar::Category
     "Mn": 1,
@@ -533,7 +544,7 @@ class SectionsBlocks:
 
     def getBlockList(self):
         return self.blockList
-    
+
     def getSectionList(self):
         return self.sectionList
 
@@ -696,27 +707,28 @@ def writeTranslationDummy(out, data):
     out.write("""/* This file is part of the KDE libraries
 
    Copyright (C) 2007 Daniel Laidig <d.laidig@gmx.de>
+   Copyright (C) 2016 John Zaitseff <J.Zaitseff@zap.org.au>
 
-   This library is free software; you can redistribute it and/or
-   modify it under the terms of the GNU Library General Public
-   License as published by the Free Software Foundation; either
-   version 2 of the License, or (at your option) any later version.
+   This library is free software; you can redistribute it and/or modify it
+   under the terms of the GNU Library General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or (at your
+   option) any later version.
 
-   This library is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-   Library General Public License for more details.
+   This library is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+   FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Library General Public
+   License for more details.
 
    You should have received a copy of the GNU Library General Public License
-   along with this library; see the file COPYING.LIB.  If not, write to
-   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
-   Boston, MA 02110-1301, USA.
+   along with this library; see the file COPYING.LIB.  If not, write to the
+   Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
 
-   This file is autogenerated by kdeutils/kcharselect/kcharselect-generate-datafile.py
+   This file is autogenerated by kcharselect/kcharselect-generate-datafile.py
 */\n\n""")
     for group in data:
         for entry in group[1]:
-            out.write("I18N_NOOP2(\""+group[0]+"\", \""+entry+"\");\n")
+            out.write("QT_TRANSLATE_NOOP3(\"KCharSelectData\", \""+entry+"\", \""+group[0]+"\");\n")
 
 out = open("kcharselect-data", "wb")
 outTranslationDummy = open("kcharselect-translation.cpp", "wb")
