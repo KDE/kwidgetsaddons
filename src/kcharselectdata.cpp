@@ -647,7 +647,7 @@ bool KCharSelectData::isIgnorable(QChar c)
 
 bool KCharSelectData::isCombining(QChar c)
 {
-    return section(c) == QCoreApplication::translate("KCharSelectData", "Combining Diacritical Marks", "KCharSelect section name");
+    return section(c) == QCoreApplication::translate("KCharSelectData", "Combining Diacritics", "KCharSelect section name");
     //FIXME: this is an imperfect test. There are many combining characters
     //       that are outside of this section. See Grapheme_Extend in
     //       http://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt
