@@ -24,18 +24,16 @@
 
 #include <QAction>
 #include <QActionEvent>
+#include <QBoxLayout>
 #include <QComboBox>
 #include <QDebug>
 #include <QDoubleSpinBox>
+#include <QFontComboBox>
 #include <QHeaderView>
 #include <QLineEdit>
-#include <QBoxLayout>
-#include <QShortcut>
 #include <QSplitter>
-#include <QPushButton>
 #include <QToolButton>
 #include <QTextBrowser>
-#include <QFontComboBox>
 
 Q_GLOBAL_STATIC(KCharSelectData, s_data)
 
@@ -250,7 +248,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     // (testcase: Malayalam characters)
     int maxCharWidth = 0;
     const QVector<QChar> chars = model->chars();
-    for (int i = 0 ; i < chars.size(); ++i) {
+    for (int i = 0; i < chars.size(); ++i) {
         QChar thisChar = chars.at(i);
         if(s_data()->isPrint(thisChar)) {
             maxCharWidth = qMax(maxCharWidth, fontMetrics.boundingRect(QString(thisChar)).width());
@@ -273,7 +271,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     q->setUpdatesEnabled(false);
     QHeaderView *hHeader = q->horizontalHeader();
     const int spaceLeft = viewportWidth - new_w * columns;
-    for (int i = 0 ; i <= columns; i++ ) {
+    for (int i = 0; i <= columns; i++) {
         if (i < spaceLeft) {
             hHeader->resizeSection(i, new_w + 1);
         } else {
@@ -291,7 +289,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     if (new_h < 5 || new_h < 4 + fontHeight) {
         new_h = qMax(5, 4 + fontHeight);
     }
-    for (int i = 0;i < rows;i++) {
+    for (int i = 0; i < rows; ++i) {
         vHeader->resizeSection(i, new_h);
     }
 
@@ -309,13 +307,13 @@ void KCharSelectTablePrivate::_k_doubleClicked(const QModelIndex &index)
 
 void KCharSelectTable::keyPressEvent(QKeyEvent *e)
 {
-    if (d->model)
+    if (d->model) {
         switch (e->key()) {
         case Qt::Key_Space:
             emit activated(QLatin1Char(' '));
             return;
-            break;
-        case Qt::Key_Enter: case Qt::Key_Return: {
+        case Qt::Key_Enter:
+        case Qt::Key_Return: {
             if (!currentIndex().isValid()) {
                 return;
             }
@@ -323,10 +321,12 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
             if (s_data()->isPrint(c)) {
                 emit activated(c);
             }
+            return;
         }
-        return;
-        break;
+        default:
+            break;
         }
+    }
     QTableView::keyPressEvent(e);
 }
 
