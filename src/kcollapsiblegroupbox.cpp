@@ -78,6 +78,9 @@ KCollapsibleGroupBox::KCollapsibleGroupBox(QWidget* parent):
 
 KCollapsibleGroupBox::~KCollapsibleGroupBox()
 {
+    if (d->animation->state() == QTimeLine::Running) {
+        d->animation->stop();
+    }
     delete d;
 }
 

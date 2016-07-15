@@ -4,6 +4,7 @@ include(ECMAddTests)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test UiTools)
 
 ecm_add_tests(
+  kcollapsiblegroupbox_test.cpp
   kcolorbuttontest.cpp
   kdatecomboboxtest.cpp
   kdatetimeedittest.cpp
