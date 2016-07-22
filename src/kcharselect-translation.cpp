@@ -196,3 +196,17 @@ QT_TRANSLATE_NOOP3("KCharSelectData", "Small Form Variants", "KCharselect unicod
 QT_TRANSLATE_NOOP3("KCharSelectData", "Arabic Presentation Forms-B", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Halfwidth and Fullwidth Forms", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Specials", "KCharselect unicode block name");
+// initial support for SMP blocks
+QT_TRANSLATE_NOOP3("KCharSelectData", "Mahjong Tiles", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Domino Tiles", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Playing Cards", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Enclosed Alphanumeric Supplement", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Enclosed Ideographic Supplement", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Miscellaneous Symbols and Pictographs", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Emoticons", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Ornamental Dingbats", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Transport and Map Symbols", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Alchemical Symbols", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Geometric Shapes Extended", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Supplemental Arrows-C", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Supplemental Symbols and Pictographs", "KCharselect unicode block name");
