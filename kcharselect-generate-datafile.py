@@ -625,7 +625,8 @@ class Parser:
         unicodeRegexp = re.compile(r'^([0-9A-F]+)')
 
         aliasRegexp = re.compile(r'^\s+=\s+(.+)$') #equal
-        seeAlsoRegexp = re.compile(r'^\s+x\s+.*([0-9A-F]{4,6})\)$') #ex
+        seeAlsoRegexp1 = re.compile(r'^\s+x\s+.*\s([0-9A-F]{4,6})\)$') #ex
+        seeAlsoRegexp2 = re.compile(r'^\s+x\s+([0-9A-F]{4,6})$') #ex
         noteRegexp = re.compile(r'^\s+\*\s+(.+)$') #star
         approxEquivalentRegexp = re.compile(r'^\s+#\s+(.+)$') #pound
         equivalentRegexp = re.compile(r'^\s+:\s+(.+)$') #colon
@@ -640,7 +641,8 @@ class Parser:
             m3 = noteRegexp.match(line)
             m4 = approxEquivalentRegexp.match(line)
             m5 = equivalentRegexp.match(line)
-            m6 = seeAlsoRegexp.match(line)
+            m6 = seeAlsoRegexp1.match(line)
+            m7 = seeAlsoRegexp2.match(line)
             if invalidRegexp.match(line):
                 continue
             elif m1:
@@ -664,7 +666,12 @@ class Parser:
                 details.addEntry(currChar, "equiv", value)
             elif m6:
                 value = int(m6.group(1), 16)
-                details.addEntry(currChar, "seeAlso", value)
+                if value < 0x10000:
+                    details.addEntry(currChar, "seeAlso", value)
+            elif m7:
+                value = int(m7.group(1), 16)
+                if value < 0x10000:
+                    details.addEntry(currChar, "seeAlso", value)
     def parseBlocks(self, inBlocks, sectionsBlocks):
         regexp = re.compile(r'^([0-9A-F]+)\.\.([0-9A-F]+); (.+)$')
         for line in inBlocks:
@@ -680,7 +687,7 @@ class Parser:
         for line in inSections:
             line = line[:-1]
             if len(line) == 0:
-                continue;
+                continue
             temp = line.split(" ")
             if temp[0] == "SECTION":
                 currSection = line[8:]
