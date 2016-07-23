@@ -98,13 +98,50 @@ bool KCharSelectData::openDataFile()
             return false;
         }
         dataFile = file.readAll();
+        // TODO detect if data file is remapped
+        remapType = 0;
         file.close();
         futureIndex = (new RunIndexCreation(this, dataFile))->start();
         return true;
     }
 }
 
-quint32 KCharSelectData::getDetailIndex(QChar c) const
+// Temporary remapping code points <-> 16 bit database codes
+// See kcharselect-generate-datafile.py for details
+
+quint16 KCharSelectData::mapCodePointToDataBase(uint code) const
+{
+    if (remapType == 0) {
+        if (code >= 0xE000 && code <= 0xEFFF) {
+            return 0xFFFF;
+        }
+        if (code >= 0xF000 && code <= 0xFFFF) {
+            return code - 0x1000;
+        }
+        if (code >= 0x1F000 && code <= 0x1FFFF) {
+            return code - 0x10000;
+        }
+    }
+    if (code >= 0x10000) {
+        return 0xFFFF;
+    }
+    return code;
+}
+
+uint KCharSelectData::mapDataBaseToCodePoint(quint16 code) const
+{
+    if (remapType == 0) {
+        if (code >= 0xE000 && code <= 0xEFFF) {
+            return code + 0x1000;
+        }
+        if (code >= 0xF000 && code <= 0xFFFF) {
+            return code + 0x10000;
+        }
+    }
+    return code;
+}
+
+quint32 KCharSelectData::getDetailIndex(uint c) const
 {
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
     // Convert from little-endian, so that this code works on PPC too.
@@ -116,7 +153,10 @@ quint32 KCharSelectData::getDetailIndex(QChar c) const
     int mid;
     int max = ((offsetEnd - offsetBegin) / 27) - 1;
 
-    quint16 unicode = c.unicode();
+    quint16 unicode = mapCodePointToDataBase(c);
+    if (unicode == 0xFFFF) {
+        return 0;
+    }
 
     static quint16 most_recent_searched;
     static quint32 most_recent_result;
@@ -145,7 +185,7 @@ quint32 KCharSelectData::getDetailIndex(QChar c) const
     return 0;
 }
 
-QString KCharSelectData::formatCode(ushort code, int length, const QString &prefix, int base)
+QString KCharSelectData::formatCode(uint code, int length, const QString &prefix, int base)
 {
     QString s = QString::number(code, base).toUpper();
     while (s.size() < length) {
@@ -155,10 +195,10 @@ QString KCharSelectData::formatCode(ushort code, int length, const QString &pref
     return s;
 }
 
-QVector<QChar> KCharSelectData::blockContents(int block)
+QVector<uint> KCharSelectData::blockContents(int block)
 {
     if (!openDataFile()) {
-        return QVector<QChar>();
+        return QVector<uint>();
     }
 
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
@@ -167,7 +207,7 @@ QVector<QChar> KCharSelectData::blockContents(int block)
 
     int max = ((offsetEnd - offsetBegin) / 4) - 1;
 
-    QVector<QChar> res;
+    QVector<uint> res;
 
     if (block > max) {
         return res;
@@ -177,10 +217,10 @@ QVector<QChar> KCharSelectData::blockContents(int block)
     quint16 unicodeEnd = qFromLittleEndian<quint16>(data + offsetBegin + block * 4 + 2);
 
     while (unicodeBegin < unicodeEnd) {
-        res.append(unicodeBegin);
+        res.append(mapDataBaseToCodePoint(unicodeBegin));
         unicodeBegin++;
     }
-    res.append(unicodeBegin); // Be carefull when unicodeEnd==0xffff
+    res.append(mapDataBaseToCodePoint(unicodeBegin)); // Be carefull when unicodeEnd==0xffff
 
     return res;
 }
@@ -234,30 +274,31 @@ QStringList KCharSelectData::sectionList()
     return list;
 }
 
-QString KCharSelectData::block(QChar c)
+QString KCharSelectData::block(uint c)
 {
     return blockName(blockIndex(c));
 }
 
-QString KCharSelectData::section(QChar c)
+QString KCharSelectData::section(uint c)
 {
     return sectionName(sectionIndex(blockIndex(c)));
 }
 
-QString KCharSelectData::name(QChar c)
+QString KCharSelectData::name(uint c)
 {
     if (!openDataFile()) {
         return QString();
     }
 
-    ushort unicode = c.unicode();
-    if ((unicode >= 0x3400 && unicode <= 0x4DB5)
-            || (unicode >= 0x4e00 && unicode <= 0x9fa5)) {
-        // || (unicode >= 0x20000 && unicode <= 0x2A6D6) // useless, since limited to 16 bit
-        return QStringLiteral("CJK UNIFIED IDEOGRAPH-") + QString::number(unicode, 16);
-    } else if (c >= 0xac00 && c <= 0xd7af) {
+    if ((c & 0xFFFE) == 0xFFFE || (c >= 0xFDD0 && c <= 0xFDEF)) {
+        return QCoreApplication::translate("KCharSelectData", "<noncharacter>");
+    } else if ((c >= 0x3400 && c <= 0x4DBF)
+            || (c >= 0x4E00 && c <= 0x9FFF)
+            || (c >= 0x20000 && c <= 0x2F7FF)) {
+        return QStringLiteral("CJK UNIFIED IDEOGRAPH-") + formatCode(c, 4, QString());
+    } else if (c >= 0xAC00 && c <= 0xD7AF) {
         /* compute hangul syllable name as per UAX #15 */
-        int SIndex = c.unicode() - SBase;
+        int SIndex = c - SBase;
         int LIndex, VIndex, TIndex;
 
         if (SIndex < 0 || SIndex >= SCount) {
@@ -270,20 +311,22 @@ QString KCharSelectData::name(QChar c)
 
         return QLatin1String("HANGUL SYLLABLE ") + QLatin1String(JAMO_L_TABLE[LIndex])
                + QLatin1String(JAMO_V_TABLE[VIndex]) + QLatin1String(JAMO_T_TABLE[TIndex]);
-    } else if (unicode >= 0xD800 && unicode <= 0xDB7F) {
+    } else if (c >= 0xD800 && c <= 0xDB7F) {
         return QCoreApplication::translate("KCharSelectData", "<Non Private Use High Surrogate>");
-    } else if (unicode >= 0xDB80 && unicode <= 0xDBFF) {
+    } else if (c >= 0xDB80 && c <= 0xDBFF) {
         return QCoreApplication::translate("KCharSelectData", "<Private Use High Surrogate>");
-    } else if (unicode >= 0xDC00 && unicode <= 0xDFFF) {
+    } else if (c >= 0xDC00 && c <= 0xDFFF) {
         return QCoreApplication::translate("KCharSelectData", "<Low Surrogate>");
-    } else if (unicode >= 0xE000 && unicode <= 0xF8FF) {
+    } else if ((c >= 0xE000 && c <= 0xF8FF) || c >= 0xF0000) {
         return QCoreApplication::translate("KCharSelectData", "<Private Use>");
+    } else if ((c >= 0xF900 && c <= 0xFAFF) || (c >= 0x2F800 && c <= 0x2FFFF)) {
+        // TODO handle the 12 unified ideographs in U+FAxx
+        return QStringLiteral("CJK COMPATIBILITY IDEOGRAPH-") + formatCode(c, 4, QString());
     }
-//  else if (unicode >= 0xF0000 && unicode <= 0xFFFFD) // 16 bit!
-//   return tr("<Plane 15 Private Use>");
-//  else if (unicode >= 0x100000 && unicode <= 0x10FFFD)
-//   return tr("<Plane 16 Private Use>");
-    else {
+    quint16 unicode = mapCodePointToDataBase(c);
+    if (unicode == 0xFFFF) {
+        return QStringLiteral("NON-BMP-CHARACTER-") + formatCode(c, 4, QString());
+    } else {
         const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
         const quint32 offsetBegin = qFromLittleEndian<quint32>(data + 4);
         const quint32 offsetEnd = qFromLittleEndian<quint32>(data + 8);
@@ -315,7 +358,7 @@ QString KCharSelectData::name(QChar c)
     }
 }
 
-int KCharSelectData::blockIndex(QChar c)
+int KCharSelectData::blockIndex(uint c)
 {
     if (!openDataFile()) {
         return 0;
@@ -324,7 +367,10 @@ int KCharSelectData::blockIndex(QChar c)
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
     const quint32 offsetBegin = qFromLittleEndian<quint32>(data + 20);
     const quint32 offsetEnd = qFromLittleEndian<quint32>(data + 24);
-    const quint16 unicode = c.unicode();
+    const quint16 unicode = mapCodePointToDataBase(c);
+    if (unicode == 0xFFFF) {
+        return 0;
+    }
 
     int max = ((offsetEnd - offsetBegin) / 4) - 1;
 
@@ -402,7 +448,7 @@ QString KCharSelectData::sectionName(int index)
     return QCoreApplication::translate("KCharSelectData", data + i, "KCharselect unicode section name");
 }
 
-QStringList KCharSelectData::aliases(QChar c)
+QStringList KCharSelectData::aliases(uint c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -426,7 +472,7 @@ QStringList KCharSelectData::aliases(QChar c)
     return aliases;
 }
 
-QStringList KCharSelectData::notes(QChar c)
+QStringList KCharSelectData::notes(uint c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -451,31 +497,31 @@ QStringList KCharSelectData::notes(QChar c)
     return notes;
 }
 
-QVector<QChar> KCharSelectData::seeAlso(QChar c)
+QVector<uint> KCharSelectData::seeAlso(uint c)
 {
     if (!openDataFile()) {
-        return QVector<QChar>();
+        return QVector<uint>();
     }
     const int detailIndex = getDetailIndex(c);
     if (detailIndex == 0) {
-        return QVector<QChar>();
+        return QVector<uint>();
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
     const quint8 count = * (quint8 *)(udata + detailIndex + 26);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 22);
 
-    QVector<QChar> seeAlso;
+    QVector<uint> seeAlso;
 
     for (int i = 0;  i < count;  i++) {
-        seeAlso.append(qFromLittleEndian<quint16> (udata + offset));
+        seeAlso.append(mapDataBaseToCodePoint(qFromLittleEndian<quint16> (udata + offset)));
         offset += 2;
     }
 
     return seeAlso;
 }
 
-QStringList KCharSelectData::equivalents(QChar c)
+QStringList KCharSelectData::equivalents(uint c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -500,7 +546,7 @@ QStringList KCharSelectData::equivalents(QChar c)
     return equivalents;
 }
 
-QStringList KCharSelectData::approximateEquivalents(QChar c)
+QStringList KCharSelectData::approximateEquivalents(uint c)
 {
     if (!openDataFile()) {
         return QStringList();
@@ -525,9 +571,14 @@ QStringList KCharSelectData::approximateEquivalents(QChar c)
     return approxEquivalents;
 }
 
-QStringList KCharSelectData::unihanInfo(QChar c)
+QStringList KCharSelectData::unihanInfo(uint c)
 {
     if (!openDataFile()) {
+        return QStringList();
+    }
+
+    quint16 unicode = mapCodePointToDataBase(c);
+    if (unicode == 0xFFFF) {
         return QStringList();
     }
 
@@ -539,7 +590,6 @@ QStringList KCharSelectData::unihanInfo(QChar c)
     int min = 0;
     int mid;
     int max = ((offsetEnd - offsetBegin) / 30) - 1;
-    quint16 unicode = c.unicode();
 
     while (max >= min) {
         mid = (min + max) / 2;
@@ -565,13 +615,16 @@ QStringList KCharSelectData::unihanInfo(QChar c)
     return QStringList();
 }
 
-QChar::Category KCharSelectData::category(QChar c)
+QChar::Category KCharSelectData::category(uint c)
 {
     if (!openDataFile()) {
-        return c.category();
+        return QChar::category(c);
     }
 
-    ushort unicode = c.unicode();
+    ushort unicode = mapCodePointToDataBase(c);
+    if (unicode == 0xFFFF) {
+        return QChar::category(c);
+    }
 
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
     const quint32 offsetBegin = qFromLittleEndian<quint32>(data + 4);
@@ -599,16 +652,16 @@ QChar::Category KCharSelectData::category(QChar c)
         }
     }
 
-    return c.category();
+    return QChar::category(c);
 }
 
-bool KCharSelectData::isPrint(QChar c)
+bool KCharSelectData::isPrint(uint c)
 {
     QChar::Category cat = category(c);
     return !(cat == QChar::Other_Control || cat == QChar::Other_NotAssigned);
 }
 
-bool KCharSelectData::isDisplayable(QChar c)
+bool KCharSelectData::isDisplayable(uint c)
 {
     // Qt internally uses U+FDD0 and U+FDD1 to mark the beginning and the end of frames.
     // They should be seen as non-printable characters, as trying to display them leads
@@ -620,7 +673,7 @@ bool KCharSelectData::isDisplayable(QChar c)
     return !isIgnorable(c) && isPrint(c);
 }
 
-bool KCharSelectData::isIgnorable(QChar c)
+bool KCharSelectData::isIgnorable(uint c)
 {
     /*
      * According to the Unicode standard, Default Ignorable Code Points
@@ -645,7 +698,7 @@ bool KCharSelectData::isIgnorable(QChar c)
            (c >= 0xFFF0 && c <= 0xFFF8);
 }
 
-bool KCharSelectData::isCombining(QChar c)
+bool KCharSelectData::isCombining(uint c)
 {
     return section(c) == QCoreApplication::translate("KCharSelectData", "Combining Diacritics", "KCharSelect section name");
     //FIXME: this is an imperfect test. There are many combining characters
@@ -653,7 +706,7 @@ bool KCharSelectData::isCombining(QChar c)
     //       http://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt
 }
 
-QString KCharSelectData::display(QChar c, const QFont &font)
+QString KCharSelectData::display(uint c, const QFont &font)
 {
     if (!isDisplayable(c)) {
         return QStringLiteral("<b>") + QCoreApplication::translate("KCharSelectData", "Non-printable") + QStringLiteral("</b>");
@@ -662,14 +715,14 @@ QString KCharSelectData::display(QChar c, const QFont &font)
         if (isCombining(c)) {
             s += displayCombining(c);
         } else {
-            s += QStringLiteral("&#") + QString::number(c.unicode()) + QLatin1Char(';');
+            s += QStringLiteral("&#") + QString::number(c) + QLatin1Char(';');
         }
         s += QStringLiteral("</font>");
         return s;
     }
 }
 
-QString KCharSelectData::displayCombining(QChar c)
+QString KCharSelectData::displayCombining(uint c)
 {
     /*
      * The purpose of this is to make it easier to see how a combining
@@ -681,8 +734,8 @@ QString KCharSelectData::displayCombining(QChar c)
      * Eventually, it would be nice to determine whether the character
      * combines to the left or to the right, etc.
      */
-    QString s = QStringLiteral("&nbsp;&#") + QString::number(c.unicode()) + QStringLiteral(";&nbsp;") +
-                QStringLiteral(" (ab&#") + QString::number(c.unicode()) + QStringLiteral(";c)");
+    QString s = QStringLiteral("&nbsp;&#") + QString::number(c) + QStringLiteral(";&nbsp;") +
+                QStringLiteral(" (ab&#") + QString::number(c) + QStringLiteral(";c)");
     return s;
 }
 
@@ -723,43 +776,46 @@ QString KCharSelectData::categoryText(QChar::Category category)
     }
 }
 
-QVector<QChar> KCharSelectData::find(const QString &needle)
+QVector<uint> KCharSelectData::find(const QString &needle)
 {
-    QSet<QChar> result;
+    QSet<uint> result;
 
-    QVector<QChar> returnRes;
+    QVector<uint> returnRes;
     QString simplified = needle.simplified();
     QStringList searchStrings = splitString(needle.simplified());
 
-    if (simplified.length() == 1) {
-        // search for hex representation of the character
-        searchStrings = QStringList(formatCode(simplified.at(0).unicode()));
+    if (simplified.length() <= 2) {
+        QVector<uint> ucs4 = simplified.toUcs4();
+        if (ucs4.size() == 1) {
+            // search for hex representation of the character
+            searchStrings = QStringList(formatCode(ucs4.at(0)));
+        }
     }
 
     if (searchStrings.count() == 0) {
         return returnRes;
     }
 
-    QRegExp regExp(QStringLiteral("^(|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4})$"));
+    QRegExp regExp(QStringLiteral("^(|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4,5})$"));
     foreach (const QString &s, searchStrings) {
         if (regExp.exactMatch(s)) {
             returnRes.append(regExp.cap(2).toInt(0, 16));
             // search for "1234" instead of "0x1234"
-            if (s.length() == 6) {
+            if (s.length() == 6 || s.length() == 7) {
                 searchStrings[searchStrings.indexOf(s)] = regExp.cap(2);
             }
         }
         // try to parse string as decimal number
         bool ok;
         int unicode = s.toInt(&ok);
-        if (ok && unicode >= 0 && unicode <= 0xFFFF) {
+        if (ok && unicode >= 0 && unicode <= QChar::LastValidCodePoint) {
             returnRes.append(unicode);
         }
     }
 
     bool firstSubString = true;
     foreach (const QString &s, searchStrings) {
-        QSet<QChar> partResult = getMatchingChars(s.toLower());
+        QSet<uint> partResult = getMatchingChars(s.toLower());
         if (firstSubString) {
             result = partResult;
             firstSubString = false;
@@ -770,14 +826,14 @@ QVector<QChar> KCharSelectData::find(const QString &needle)
 
     // remove results found by matching the code point to prevent duplicate results
     // while letting these characters stay at the beginning
-    foreach (QChar c, returnRes) {
-        result.remove(c.unicode());
+    foreach (uint c, returnRes) {
+        result.remove(c);
     }
 
-    QVector<QChar> sortedResult;
+    QVector<uint> sortedResult;
     sortedResult.reserve(result.count());
-    QSet<QChar>::const_iterator it = result.begin();
-    const QSet<QChar>::const_iterator end = result.end();
+    QSet<uint>::const_iterator it = result.begin();
+    const QSet<uint>::const_iterator end = result.end();
     for ( ; it != end ; ++it ) {
         sortedResult.append(*it);
     }
@@ -787,16 +843,16 @@ QVector<QChar> KCharSelectData::find(const QString &needle)
     return returnRes;
 }
 
-QSet<QChar> KCharSelectData::getMatchingChars(const QString &s)
+QSet<uint> KCharSelectData::getMatchingChars(const QString &s)
 {
     futureIndex.waitForFinished();
     const Index index = futureIndex;
     Index::const_iterator pos = index.lowerBound(s);
-    QSet<QChar> result;
+    QSet<uint> result;
 
     while (pos != index.constEnd() && pos.key().startsWith(s)) {
-        foreach (QChar c, pos.value()) {
-            result.insert(c);
+        foreach (quint16 c, pos.value()) {
+            result.insert(mapDataBaseToCodePoint(c));
         }
         ++pos;
     }

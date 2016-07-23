@@ -35,54 +35,58 @@ typedef QMap<QString, QVector<quint16> > Index;
 class KCharSelectData
 {
 public:
-    QString formatCode(ushort code, int length = 4, const QString &prefix = QStringLiteral("U+"), int base = 16);
+    QString formatCode(uint code, int length = 4, const QString &prefix = QStringLiteral("U+"), int base = 16);
 
-    QVector<QChar> blockContents(int block);
+    QVector<uint> blockContents(int block);
     QVector<int> sectionContents(int section);
 
     QStringList sectionList();
 
-    QString block(QChar c);
-    QString section(QChar c);
-    QString name(QChar c);
+    QString block(uint c);
+    QString section(uint c);
+    QString name(uint c);
 
-    int blockIndex(QChar c);
+    int blockIndex(uint c);
     int sectionIndex(int block);
 
     QString blockName(int index);
     QString sectionName(int index);
 
-    QStringList aliases(QChar c);
-    QStringList notes(QChar c);
-    QVector<QChar> seeAlso(QChar c);
-    QStringList equivalents(QChar c);
-    QStringList approximateEquivalents(QChar c);
+    QStringList aliases(uint c);
+    QStringList notes(uint c);
+    QVector<uint> seeAlso(uint c);
+    QStringList equivalents(uint c);
+    QStringList approximateEquivalents(uint c);
 
-    QStringList unihanInfo(QChar c);
+    QStringList unihanInfo(uint c);
 
-    QChar::Category category(QChar c);
-    bool isPrint(QChar c);
-    bool isDisplayable(QChar c);
-    bool isIgnorable(QChar c);
-    bool isCombining(QChar c);
-    QString display(QChar c, const QFont &font);
-    QString displayCombining(QChar c);
+    QChar::Category category(uint c);
+    bool isPrint(uint c);
+    bool isDisplayable(uint c);
+    bool isIgnorable(uint c);
+    bool isCombining(uint c);
+    QString display(uint c, const QFont &font);
+    QString displayCombining(uint c);
 
     QString categoryText(QChar::Category category);
 
-    QVector<QChar> find(const QString &s);
+    QVector<uint> find(const QString &s);
 
 private:
     bool openDataFile();
-    quint32 getDetailIndex(QChar c) const;
-    QSet<QChar> getMatchingChars(const QString &s);
+    quint32 getDetailIndex(uint c) const;
+    QSet<uint> getMatchingChars(const QString &s);
 
     QStringList splitString(const QString &s);
     void appendToIndex(Index *index, quint16 unicode, const QString &s);
     Index createIndex(const QByteArray &dataFile);
 
+    quint16 mapCodePointToDataBase(uint code) const;
+    uint mapDataBaseToCodePoint(quint16 code) const;
+
     QByteArray dataFile;
     QFuture<Index> futureIndex;
+    int remapType;
     friend class RunIndexCreation;
 };
 

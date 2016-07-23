@@ -47,9 +47,24 @@ class QUrl;
  * including cross references, are displayed. Additionally, there is a search
  * to find characters.
  *
+ * By default, KCharSelect is restricted to Basic Multilingual Plane (BMP)
+ * characters that QChar supports, i.e. characters with code points that
+ * fit into a quint16 (U+0000..U+FFFF). API methods that have a QChar
+ * argument can only be used for this default mode:
+ *
  * To get the current selected character, use the currentChar()
  * method. You can set the character which should be displayed with
  * setCurrentChar().
+ *
+ * If you want the user to select and search characters from all planes,
+ * i.e. characters U+0000..U+10FFFF, use setAllPlanesEnabled(true)
+ * and use the @c uint based methods currentCodePoint() and
+ * setCurrentCodePoint() instead.
+ *
+ * Since QString does not allow @c uint code points, you either must
+ * use QString::fromUcs4() and QString::ToUcs4() to convert between
+ * strings and code points, or manually do the surrogate pair handling
+ * using QChar::requiresSurrogates() and friends.
  *
  * @author Reginald Stadlbauer <reggie@kde.org>
  * @author Daniel Laidig <d.laidig@gmx.de>
@@ -60,7 +75,10 @@ class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
     Q_OBJECT
     Q_PROPERTY(QFont currentFont READ currentFont WRITE setCurrentFont)
     Q_PROPERTY(QChar currentChar READ currentChar WRITE setCurrentChar)
+    Q_PROPERTY(uint currentCodePoint READ currentCodePoint WRITE setCurrentCodePoint NOTIFY currentCodePointChanged)
     Q_PROPERTY(QList<QChar> displayedChars READ displayedChars)
+    Q_PROPERTY(QVector<uint> displayedCodePoints READ displayedCodePoints)
+    Q_PROPERTY(bool allPlanesEnabled READ allPlanesEnabled WRITE setAllPlanesEnabled DESIGNABLE true)
 
 public:
     /**
@@ -146,9 +164,42 @@ public:
     QSize sizeHint() const Q_DECL_OVERRIDE;
 
     /**
-     * Returns the currently selected character.
+     * Sets the allowed Unicode code planes. If @p all is @c false, then
+     * only characters from the Basic Multilingual Plane (BMP) can be
+     * selected, otherwise characters from all planes are allowed.
+     *
+     * For compatibility reasons, the default is @c false.
+     *
+     * If you enable support for all planes, you must use the functions
+     * handling @c uint code points instead of @c QChar characters.
+     * @since 5.25
+     */
+    void setAllPlanesEnabled(bool all);
+
+    /**
+     * @returns @c true, if characters from all Unicode code planes
+     * can be selected.
+     * @since 5.25
+     */
+    bool allPlanesEnabled() const;
+
+    /**
+     * Returns the currently selected character. If characters outside the
+     * Basic Multilingual Plane (BMP) can be selected, use currentCodePoint
+     * instead.
+     * @sa currentCodePoint
      */
     QChar currentChar() const;
+
+    /**
+     * Returns the Unicode code point of the currently selected character.
+     * @warning If you enabled support for all Unicode planes, you must use
+     * QChar::requiresSurrogates() to check if the code point requires
+     * conversion to a UTF-16 surrogate pair before converting it to QString.
+     * You cannot convert a code point to a QChar.
+     * @since 5.25
+     */
+    uint currentCodePoint() const;
 
     /**
      * Returns the currently displayed font.
@@ -156,10 +207,19 @@ public:
     QFont currentFont() const;
 
     /**
-     * Returns a list of currently displayed characters.
+     * Returns a list of currently displayed characters. If characters outside the
+     * Basic Multilingual Plane (BMP) can be selected, use displayedCodePoints
+     * instead.
      * Warning: this method can be a bit slow
+     * @sa displayedCodePoints
      */
     QList<QChar> displayedChars() const;
+
+    /**
+     * Returns a list of Unicode code points of the currently displayed characters.
+     * @since 5.25
+     */
+    QVector<uint> displayedCodePoints() const;
 
 public Q_SLOTS:
     /**
@@ -168,6 +228,18 @@ public Q_SLOTS:
      * @param c the character to highlight
      */
     void setCurrentChar(const QChar &c);
+
+    /**
+     * Highlights the character with the specified @p codePoint. If the character is
+     * outside the Basic Multilingual Plane (BMP), then you must enable support
+     * for all planes for this to work.
+     *
+     * @param codePoint the Unicode code point of the character to highlight
+     *
+     * @sa allPlanesEnabled
+     * @since 5.25
+     */
+    void setCurrentCodePoint(uint codePoint);
 
     /**
      * Sets the font which is displayed to @p font
@@ -190,6 +262,13 @@ Q_SIGNALS:
      */
     void currentCharChanged(const QChar &c);
     /**
+     * The current character is changed.
+     *
+     * @param codePoint the Unicode code point of the new character
+     * @since 5.25
+     */
+    void currentCodePointChanged(uint codePoint);
+    /**
      * The currently displayed characters are changed (search results or block).
      */
     void displayedCharsChanged();
@@ -199,14 +278,22 @@ Q_SIGNALS:
      * @param c the selected character
      */
     void charSelected(const QChar &c);
+    /**
+     * A character is selected to be inserted somewhere.
+     *
+     * @param codePoint the Unicode code point of the selected character
+     * @since 5.25
+     */
+    void codePointSelected(uint codePoint);
 
 private:
     Q_PRIVATE_SLOT(d, void _k_activateSearchLine())
     Q_PRIVATE_SLOT(d, void _k_back())
     Q_PRIVATE_SLOT(d, void _k_forward())
     Q_PRIVATE_SLOT(d, void _k_fontSelected())
-    Q_PRIVATE_SLOT(d, void _k_updateCurrentChar(const QChar &c))
-    Q_PRIVATE_SLOT(d, void _k_slotUpdateUnicode(const QChar &c))
+    Q_PRIVATE_SLOT(d, void _k_charSelected(uint c))
+    Q_PRIVATE_SLOT(d, void _k_updateCurrentChar(uint c))
+    Q_PRIVATE_SLOT(d, void _k_slotUpdateUnicode(uint c))
     Q_PRIVATE_SLOT(d, void _k_sectionSelected(int index))
     Q_PRIVATE_SLOT(d, void _k_blockSelected(int index))
     Q_PRIVATE_SLOT(d, void _k_searchEditChanged())

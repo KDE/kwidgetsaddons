@@ -66,12 +66,12 @@ public:
     void setFont(const QFont &_font);
 
     /** Set the highlighted character to @p c . */
-    void setChar(QChar c);
+    void setChar(uint c);
     /** Set the contents of the table to @p chars . */
-    void setContents(const QVector<QChar>& chars);
+    void setContents(const QVector<uint> &chars);
 
     /** @return Currently highlighted character. */
-    QChar chr();
+    uint chr();
 
     /**
      * Returns the currently displayed font.
@@ -81,7 +81,7 @@ public:
     /**
      * Returns a list of currently displayed characters.
      */
-    QVector<QChar> displayedChars() const;
+    QVector<uint> displayedChars() const;
 
     /**
      * Reimplemented.
@@ -96,9 +96,9 @@ protected:
 
 Q_SIGNALS:
     /** Emitted to indicate that character @p c is activated (such as by double-clicking it). */
-    void activated(QChar c);
-    void focusItemChanged(QChar c);
-    void showCharRequested(QChar c);
+    void activated(uint c);
+    void focusItemChanged(uint c);
+    void showCharRequested(uint c);
 
 private:
     Q_PRIVATE_SLOT(d, void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected))
@@ -118,7 +118,7 @@ class KCharSelectItemModel: public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    KCharSelectItemModel(QVector<QChar> chars, const QFont &font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
+    KCharSelectItemModel(QVector<uint> chars, const QFont &font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
     {
         if (chars.count()) {
             m_columns = chars.count();
@@ -179,14 +179,14 @@ public:
 
     void setColumnCount(int columns);
 
-    QVector<QChar> chars() const { return m_chars; }
+    QVector<uint> chars() const { return m_chars; }
 private:
-    QVector<QChar> m_chars;
+    QVector<uint> m_chars;
     QFont m_font;
     int m_columns;
 
 Q_SIGNALS:
-    void showCharRequested(QChar c);
+    void showCharRequested(uint c);
 
 };
 #endif // KCHARSELECT_P_H
