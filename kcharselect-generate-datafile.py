@@ -243,16 +243,27 @@ Unified Canadian Aboriginal Syllabics Extended
 
 SECTION Symbols
 General Punctuation
+Alchemical Symbols
 Braille Patterns
 Control Pictures
 Currency Symbols
 Dingbats
+Domino Tiles
+Emoticons
 Enclosed Alphanumerics
+Enclosed Alphanumeric Supplement
+Enclosed Ideographic Supplement
+Mahjong Tiles
 Miscellaneous Symbols
+Miscellaneous Symbols and Pictographs
 Miscellaneous Technical
 Optical Character Recognition
+Ornamental Dingbats
+Playing Cards
 Small Form Variants
 Supplemental Punctuation
+Supplemental Symbols and Pictographs
+Transport and Map Symbols
 Vertical Forms
 Yijing Hexagram Symbols
 
@@ -261,6 +272,7 @@ Arrows
 Block Elements
 Box Drawing
 Geometric Shapes
+Geometric Shapes Extended
 Letterlike Symbols
 Mathematical Operators
 Miscellaneous Mathematical Symbols-A
@@ -270,6 +282,7 @@ Number Forms
 Superscripts and Subscripts
 Supplemental Arrows-A
 Supplemental Arrows-B
+Supplemental Arrows-C
 Supplemental Mathematical Operators
 
 SECTION Phonetic Symbols
@@ -330,6 +343,21 @@ categoryMap = { # same values as QChar::Category
     "So":  30
 }
 
+
+# Temporary code point remapping
+#
+# Initial SMP support without needing a new data file format
+# - BMP U+Fxxx are remapped to U+Exxx
+# - SMP symbols U+1Fxxx are remapped to U+Fxxx
+# - Private Use Area is limited to U+F000 ... U+F8FF
+
+def remap(char):
+    cp = int(char, 16)
+    if cp >= 0xE000 and cp <= 0xFFFF:
+        return "E"+char[1:]
+    if cp >= 0x1F000 and cp <= 0x1FFFF:
+        return char[1:]
+    return char
 
 class Names:
     def __init__(self):
@@ -613,7 +641,7 @@ class Parser:
             m = regexp.match(line)
             if not m:
                 continue
-            uni = m.group(1)
+            uni = remap(m.group(1))
             name = m.group(2)
             category = m.group(3)
             if len(uni) > 4:
@@ -646,8 +674,9 @@ class Parser:
             if invalidRegexp.match(line):
                 continue
             elif m1:
-                currChar = int(m1.group(1), 16)
-                if len(m1.group(1)) > 4: #limit to 16bit
+                mg1 = remap(m1.group(1))
+                currChar = int(mg1, 16)
+                if len(mg1) > 4:
                     drop = 1
                     continue
             elif drop == 1:
@@ -665,11 +694,11 @@ class Parser:
                 value = m5.group(1)
                 details.addEntry(currChar, "equiv", value)
             elif m6:
-                value = int(m6.group(1), 16)
+                value = int(remap(m6.group(1)), 16)
                 if value < 0x10000:
                     details.addEntry(currChar, "seeAlso", value)
             elif m7:
-                value = int(m7.group(1), 16)
+                value = int(remap(m7.group(1)), 16)
                 if value < 0x10000:
                     details.addEntry(currChar, "seeAlso", value)
     def parseBlocks(self, inBlocks, sectionsBlocks):
@@ -679,9 +708,11 @@ class Parser:
             m = regexp.match(line)
             if not m:
                 continue
-            if len(m.group(1)) > 4:
+            m1 = remap(m.group(1))
+            m2 = remap(m.group(2))
+            if len(m1) > 4:
                 continue
-            sectionsBlocks.addBlock(m.group(1), m.group(2), m.group(3))
+            sectionsBlocks.addBlock(m1, m2, m.group(3))
     def parseSections(self, inSections, sectionsBlocks):
         currSection = ""
         for line in inSections:
@@ -707,8 +738,8 @@ class Parser:
             m = regexp.match(line)
             if not m:
                 continue
-            if len(m.group(1)) <= 4:
-                unihan.addUnihan(m.group(1), m.group(2), m.group(3))
+            if len(remap(m.group(1))) <= 4:
+                unihan.addUnihan(remap(m.group(1)), m.group(2), m.group(3))
 
 def writeTranslationDummy(out, data):
     out.write("""/* This file is part of the KDE libraries
