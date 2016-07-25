@@ -925,6 +925,12 @@ void KCharSelect::KCharSelectPrivate::_k_sectionSelected(int index)
     blockCombo->clear();
     QVector<int> blocks = s_data()->sectionContents(index);
     foreach (int block, blocks) {
+        if (!allPlanesEnabled) {
+            const QVector<uint> contents = s_data()->blockContents(block);
+            if (!contents.isEmpty() && QChar::requiresSurrogates(contents.at(0))) {
+                continue;
+            }
+        }
         blockCombo->addItem(s_data()->blockName(block), QVariant(block));
     }
     blockCombo->setCurrentIndex(0);
