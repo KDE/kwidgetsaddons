@@ -881,8 +881,14 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     foreach (unsigned char c, utf8) {
         html += QLatin1Char(' ') + s_data()->formatCode(c, 2, QStringLiteral("0x"));
     }
-    html += QStringLiteral("<br>") + tr("UTF-16: ") + s_data()->formatCode(c, 4, QStringLiteral("0x")) + QStringLiteral("<br>");
-    html += tr("C octal escaped UTF-8: ");
+    html += QStringLiteral("<br>") + tr("UTF-16: ");
+    if (QChar::requiresSurrogates(c)) {
+        html += s_data()->formatCode(QChar::highSurrogate(c), 4, QStringLiteral("0x"));
+        html += QLatin1Char(' ') + s_data->formatCode(QChar::lowSurrogate(c), 4, QStringLiteral("0x"));
+    } else {
+        html += s_data()->formatCode(c, 4, QStringLiteral("0x"));
+    }
+    html += QStringLiteral("<br>") + tr("C octal escaped UTF-8: ");
     foreach (unsigned char c, utf8) {
         html += s_data()->formatCode(c, 3, QStringLiteral("\\"), 8);
     }
