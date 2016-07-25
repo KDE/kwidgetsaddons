@@ -320,7 +320,6 @@ QString KCharSelectData::name(uint c)
     } else if ((c >= 0xE000 && c <= 0xF8FF) || c >= 0xF0000) {
         return QCoreApplication::translate("KCharSelectData", "<Private Use>");
     } else if ((c >= 0xF900 && c <= 0xFAFF) || (c >= 0x2F800 && c <= 0x2FFFF)) {
-        // TODO handle the 12 unified ideographs in U+FAxx
         return QStringLiteral("CJK COMPATIBILITY IDEOGRAPH-") + formatCode(c, 4, QString());
     }
     quint16 unicode = mapCodePointToDataBase(c);
