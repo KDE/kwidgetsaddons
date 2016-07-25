@@ -943,9 +943,6 @@ void KCharSelect::KCharSelectPrivate::_k_blockSelected(int index)
 
     int block = blockCombo->itemData(index).toInt();
     const QVector<uint> contents = s_data()->blockContents(block);
-    if (contents.count() <= index) {
-        return;
-    }
     charTable->setContents(contents);
     emit q->displayedCharsChanged();
     charTable->setChar(contents[0]);
