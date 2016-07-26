@@ -98,9 +98,26 @@ bool KCharSelectData::openDataFile()
             return false;
         }
         dataFile = file.readAll();
-        // TODO detect if data file is remapped
-        remapType = 0;
         file.close();
+        if (dataFile.size() < 40) {
+            dataFile.clear();
+            return false;
+        }
+        const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
+        const quint32 offsetBegin = qFromLittleEndian<quint32>(data + 20);
+        const quint32 offsetEnd = qFromLittleEndian<quint32>(data + 24);
+        uint blocks = (offsetEnd - offsetBegin) / 4;
+        if (blocks <= 167) { // maximum possible number of blocks in BMP
+            // no remapping
+            remapType = -1;
+        } else if (blocks == 174) {
+            // remapping introduced in 5.25
+            remapType = 0;
+        } else {
+            // unknown remapping, abort
+            dataFile.clear();
+            return false;
+        }
         futureIndex = (new RunIndexCreation(this, dataFile))->start();
         return true;
     }
