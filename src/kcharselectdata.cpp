@@ -844,6 +844,9 @@ QVector<uint> KCharSelectData::find(const QString &needle)
 
 QSet<uint> KCharSelectData::getMatchingChars(const QString &s)
 {
+    if (dataFile.isEmpty()) {
+        return QSet<uint>();
+    }
     futureIndex.waitForFinished();
     const Index index = futureIndex;
     Index::const_iterator pos = index.lowerBound(s);
