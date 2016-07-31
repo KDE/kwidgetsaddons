@@ -162,7 +162,8 @@ public:
             return 0;
         }
         QMimeData *mimeData = new QMimeData();
-        mimeData->setText(data(indexes[0], CharacterRole).toString());
+        uint character = data(indexes[0], CharacterRole).toUInt();
+        mimeData->setText(QString::fromUcs4(&character, 1));
         return mimeData;
     }
     Qt::DropActions supportedDropActions() const
