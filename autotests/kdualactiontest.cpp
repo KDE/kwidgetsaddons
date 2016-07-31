@@ -48,7 +48,8 @@ private Q_SLOTS:
 
     void testSetIconForStates()
     {
-        QIcon icon = QIcon::fromTheme(QStringLiteral("kde"));
+        QIcon icon(QPixmap(16, 16));
+        QVERIFY(!icon.isNull());
         KDualAction action(0);
         QVERIFY(action.inactiveIcon().isNull());
         QVERIFY(action.activeIcon().isNull());
