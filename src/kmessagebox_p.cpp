@@ -20,17 +20,35 @@
  */
 #include "kmessagebox_p.h"
 
+#include <QCoreApplication>
+#include <QDebug>
 #include <QPluginLoader>
+#include <QSettings>
+#include <QStandardPaths>
 #include <QVariant>
 
 namespace KMessageBox
 {
 
-class KMessageBoxDontAskAgainMemoryStorage : public KMessageBoxDontAskAgainInterface
+class KMessageBoxDontAskAgainQSettingsStorage : public KMessageBoxDontAskAgainInterface
 {
 public:
-    KMessageBoxDontAskAgainMemoryStorage() {}
-    virtual ~KMessageBoxDontAskAgainMemoryStorage() {}
+    KMessageBoxDontAskAgainQSettingsStorage()
+    {
+        m_filePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + QCoreApplication::instance()->applicationName() + QStringLiteral(".kmessagebox");
+        QSettings s(m_filePath, QSettings::IniFormat);
+        foreach (const QString &key, s.allKeys()) {
+            m_saved.insert(key, static_cast<KMessageBox::ButtonCode>(s.value(key).toInt()));
+        }
+    }
+
+    virtual ~KMessageBoxDontAskAgainQSettingsStorage()
+    {
+        QSettings s(m_filePath, QSettings::IniFormat);
+        for (auto it = m_saved.constBegin(); it != m_saved.constEnd(); ++it) {
+            s.setValue(it.key(), static_cast<int>(it.value()));
+        }
+    }
 
     bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) Q_DECL_OVERRIDE
     {
@@ -62,9 +80,13 @@ public:
     {
         m_saved.remove(dontShowAgainName);
     }
-    void setConfig(KConfig *) Q_DECL_OVERRIDE {}
+    void setConfig(KConfig *) Q_DECL_OVERRIDE
+    {
+        qWarning() << "Using QSettings based KMessageBoxDontAskAgainInterface. KMessageBox::setDontShowAgainConfig ignored";
+    }
 
 private:
+    QString m_filePath;
     QHash<QString, KMessageBox::ButtonCode> m_saved;
 };
 
@@ -74,7 +96,7 @@ public:
     void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget * /*parent*/) Q_DECL_OVERRIDE {}
 };
 
-Q_GLOBAL_STATIC(KMessageBoxDontAskAgainMemoryStorage, s_defaultDontAskAgainInterface)
+Q_GLOBAL_STATIC(KMessageBoxDontAskAgainQSettingsStorage, s_defaultDontAskAgainInterface)
 Q_GLOBAL_STATIC(KMessageBoxNotifyDummy, s_defaultNotifyInterface)
 
 static KMessageBoxDontAskAgainInterface *s_dontAskAgainInterface = 0;
