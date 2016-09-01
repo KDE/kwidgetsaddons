@@ -1051,7 +1051,7 @@ QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
         return QVariant();
     } else if (role == Qt::BackgroundColorRole) {
         QFontMetrics fm = QFontMetrics(m_font);
-        if (fm.inFont(c) && s_data()->isPrint(c)) {
+        if (fm.inFontUcs4(c) && s_data()->isPrint(c)) {
             return QVariant(qApp->palette().color(QPalette::Base));
         } else {
             return QVariant(qApp->palette().color(QPalette::Button));
