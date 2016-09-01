@@ -21,6 +21,7 @@
 #include "kcharselectdata_p.h"
 
 #include <QCoreApplication>
+#include <QRegularExpression>
 #include <QStringList>
 #include <QFile>
 #include <qendian.h>
@@ -798,7 +799,27 @@ QVector<uint> KCharSelectData::find(const QString &needle)
 
     QVector<uint> returnRes;
     QString simplified = needle.simplified();
-    QStringList searchStrings = splitString(needle.simplified());
+    QStringList searchStrings;
+
+    QRegularExpression octalExp(QStringLiteral("^\\\\[0-7][0-7\\\\]*$"));
+    QRegularExpressionMatch match = octalExp.match(simplified);
+    if (match.hasMatch()) {
+        // search for C octal escaped UTF-8
+        QByteArray utf8;
+        int byte = -1;
+        for (int i = 0; i <= simplified.length(); ++i) {
+            int c = simplified.at(i).unicode();
+            if (c >= '0' && c <= '7') {
+                byte = 8 * byte + c - '0';
+            } else if (byte == -1) {
+                byte = 0;
+            } else if (byte >= 0x00 && byte <= 0xFF) {
+                utf8.append((char) byte);
+                byte = 0;
+            }
+        }
+        simplified = QString::fromUtf8(utf8);
+    }
 
     if (simplified.length() <= 2) {
         QVector<uint> ucs4 = simplified.toUcs4();
@@ -806,19 +827,22 @@ QVector<uint> KCharSelectData::find(const QString &needle)
             // search for hex representation of the character
             searchStrings = QStringList(formatCode(ucs4.at(0)));
         }
+    } else {
+        searchStrings = splitString(simplified);
     }
 
     if (searchStrings.count() == 0) {
         return returnRes;
     }
 
-    QRegExp regExp(QStringLiteral("^(|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4,5})$"));
+    QRegularExpression hexExp(QStringLiteral("^(|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4,5})$"));
     foreach (const QString &s, searchStrings) {
-        if (regExp.exactMatch(s)) {
-            returnRes.append(regExp.cap(2).toInt(0, 16));
+        QRegularExpressionMatch match = hexExp.match(s);
+        if (match.hasMatch()) {
+            returnRes.append(match.captured(2).toInt(0, 16));
             // search for "1234" instead of "0x1234"
             if (s.length() == 6 || s.length() == 7) {
-                searchStrings[searchStrings.indexOf(s)] = regExp.cap(2);
+                searchStrings[searchStrings.indexOf(s)] = match.captured(2);
             }
         }
         // try to parse string as decimal number
