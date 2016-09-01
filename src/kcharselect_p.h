@@ -22,10 +22,7 @@
 #define KCHARSELECT_P_H
 
 #include <QAbstractTableModel>
-#include <QAbstractItemView>
-#include <QTextDocument>
 #include <QFont>
-#include <QApplication>
 #include <QMimeData>
 #include <QTableView>
 

@@ -24,6 +24,7 @@
 
 #include <QAction>
 #include <QActionEvent>
+#include <QApplication>
 #include <QBoxLayout>
 #include <QComboBox>
 #include <QDebug>
