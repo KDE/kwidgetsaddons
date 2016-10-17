@@ -54,10 +54,7 @@ public:
 
     ~KCharSelectTable();
 
-    /**
-     * Reimplemented.
-     */
-    virtual void resizeEvent(QResizeEvent *);
+    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
 
     /** Set the font to be displayed to @p _font . */
     void setFont(const QFont &_font);
