@@ -1,6 +1,7 @@
 /* This file is part of the KDE libraries
 
    Copyright (C) 2007 Daniel Laidig <d.laidig@gmx.de>
+   Copyright (c) 2016 DaeHyun Sung  <sungdh86@gmail.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -606,19 +607,19 @@ QStringList KCharSelectData::unihanInfo(uint c)
 
     int min = 0;
     int mid;
-    int max = ((offsetEnd - offsetBegin) / 30) - 1;
+    int max = ((offsetEnd - offsetBegin) / 38) - 1;
 
     while (max >= min) {
         mid = (min + max) / 2;
-        const quint16 midUnicode = qFromLittleEndian<quint16>(udata + offsetBegin + mid * 30);
+        const quint16 midUnicode = qFromLittleEndian<quint16>(udata + offsetBegin + mid * 38);
         if (unicode > midUnicode) {
             min = mid + 1;
         } else if (unicode < midUnicode) {
             max = mid - 1;
         } else {
             QStringList res;
-            for (int i = 0; i < 7; i++) {
-                quint32 offset = qFromLittleEndian<quint32>(udata + offsetBegin + mid * 30 + 2 + i * 4);
+            for (int i = 0; i < 9; i++) {
+                quint32 offset = qFromLittleEndian<quint32>(udata + offsetBegin + mid * 38 + 2 + i * 4);
                 if (offset != 0) {
                     res.append(QString::fromUtf8(data + offset));
                 } else {
