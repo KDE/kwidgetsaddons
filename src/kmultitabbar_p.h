@@ -58,7 +58,7 @@ protected:
      * parent can handle them.
      */
     virtual void contentsMousePressEvent(QMouseEvent *);
-    virtual void mousePressEvent(QMouseEvent *);
+    void mousePressEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 };
 
 #endif

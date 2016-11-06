@@ -122,7 +122,7 @@ public:
     }
 
     enum internalRoles {CharacterRole = Qt::UserRole};
-    int rowCount(const QModelIndex & = QModelIndex()) const
+    int rowCount(const QModelIndex & = QModelIndex()) const Q_DECL_OVERRIDE
     {
         if (m_chars.count() % m_columns == 0) {
             return m_chars.count() / m_columns;
@@ -130,7 +130,7 @@ public:
             return m_chars.count() / m_columns + 1;
         }
     }
-    int columnCount(const QModelIndex & = QModelIndex()) const
+    int columnCount(const QModelIndex & = QModelIndex()) const Q_DECL_OVERRIDE
     {
         return m_columns;
     }
@@ -141,7 +141,7 @@ public:
         m_font = font;
         endResetModel();
     }
-    Qt::ItemFlags flags(const QModelIndex &index) const
+    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE
     {
         int pos = m_columns * (index.row()) + index.column();
         if (pos >= m_chars.size() || index.row() < 0 || index.column() < 0) {
@@ -149,8 +149,8 @@ public:
         }
         return (Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsSelectable | Qt::ItemIsEnabled);
     }
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
-    QMimeData *mimeData(const QModelIndexList &indexes) const
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+    QMimeData *mimeData(const QModelIndexList &indexes) const Q_DECL_OVERRIDE
     {
         if (indexes.size() != 1) {
             return 0;
@@ -160,17 +160,18 @@ public:
         mimeData->setText(QString::fromUcs4(&character, 1));
         return mimeData;
     }
-    Qt::DropActions supportedDropActions() const
+    Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE
     {
         return Qt::CopyAction;
     }
-    QStringList mimeTypes() const
+    QStringList mimeTypes() const Q_DECL_OVERRIDE
     {
         QStringList types;
         types << QStringLiteral("text/plain");
         return types;
     }
-    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent);
+    bool dropMimeData(const QMimeData *data, Qt::DropAction action,
+                      int row, int column, const QModelIndex &parent) Q_DECL_OVERRIDE;
 
     void setColumnCount(int columns);
 

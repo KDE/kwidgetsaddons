@@ -331,22 +331,22 @@ protected:
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void mouseReleaseEvent(QMouseEvent *);
+    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
 
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void enterEvent(QEvent *);
+    void enterEvent(QEvent *) Q_DECL_OVERRIDE;
 
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    virtual void leaveEvent(QEvent *);
+    void leaveEvent(QEvent *) Q_DECL_OVERRIDE;
 
     /**
      * Catch parent palette changes
      */
-    virtual bool event(QEvent *);
+    bool event(QEvent *) Q_DECL_OVERRIDE;
 
 private:
     class Private;

@@ -211,9 +211,9 @@ protected Q_SLOTS:
     virtual void slotClicked();
 
 protected:
-    virtual void hideEvent(class QHideEvent *);
-    virtual void showEvent(class QShowEvent *);
-    virtual void paintEvent(class QPaintEvent *);
+    void hideEvent(class QHideEvent *) Q_DECL_OVERRIDE;
+    void showEvent(class QShowEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(class QPaintEvent *) Q_DECL_OVERRIDE;
 
     /** Should not be created directly. Use KMultiTabBar::appendButton
     */
@@ -237,8 +237,8 @@ class KWIDGETSADDONS_EXPORT KMultiTabBarTab: public KMultiTabBarButton
     Q_OBJECT
 public:
     virtual ~KMultiTabBarTab();
-    virtual QSize sizeHint() const;
-    virtual QSize minimumSizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     /**
@@ -262,7 +262,7 @@ public Q_SLOTS:
     void setIcon(const QString &);
     void setIcon(const QPixmap &);
 protected:
-    virtual void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
 private:
     KMultiTabBar::KMultiTabBarPosition m_position;
     KMultiTabBar::KMultiTabBarStyle m_style;
