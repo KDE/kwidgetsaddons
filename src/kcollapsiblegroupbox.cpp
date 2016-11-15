@@ -32,7 +32,7 @@
 class KCollapsibleGroupBoxPrivate {
 public:
     KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *q);
-    void updateChildrenVisibility(bool visible);
+    void updateChildrenFocus(bool expanded);
     void recalculateHeaderSize();
     QSize contentSize() const;
     QSize contentMinimumSize() const;
@@ -44,7 +44,7 @@ public:
     bool headerContainsMouse;
     QSize headerSize;
     int shortcutId;
-
+    QMap<QWidget*, Qt::FocusPolicy> focusMap;    // Used to restore focus policy of widgets.
 };
 
 KCollapsibleGroupBoxPrivate::KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox* q):
@@ -66,8 +66,7 @@ KCollapsibleGroupBox::KCollapsibleGroupBox(QWidget* parent):
     });
     connect(d->animation, &QTimeLine::stateChanged, this, [this](QTimeLine::State state) {
         if (state == QTimeLine::NotRunning) {
-            //when collapsed hide contents to save resources and more importantly get it out the focus chain
-            d->updateChildrenVisibility(d->isExpanded);
+            d->updateChildrenFocus(d->isExpanded);
         }
     });
 
@@ -117,7 +116,7 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
     d->isExpanded = expanded;
     emit expandedChanged();
 
-    d->updateChildrenVisibility(true);
+    d->updateChildrenFocus(expanded);
 
     d->animation->setDirection(expanded ? QTimeLine::Forward : QTimeLine::Backward);
     d->animation->start();
@@ -217,7 +216,13 @@ bool KCollapsibleGroupBox::event(QEvent *event)
         {
             QChildEvent *ce = static_cast<QChildEvent*>(event);
             if (ce->child()->isWidgetType()) {
-                static_cast<QWidget*>(ce->child())->setVisible(d->isExpanded);
+                auto widget = static_cast<QWidget*>(ce->child());
+                // Store old focus policy.
+                d->focusMap.insert(widget, widget->focusPolicy());
+                if (!d->isExpanded) {
+                    // Prevent tab focus if not expanded.
+                    widget->setFocusPolicy(Qt::NoFocus);
+                }
             }
             break;
         }
@@ -302,12 +307,18 @@ void KCollapsibleGroupBoxPrivate::recalculateHeaderSize()
     q->setContentsMargins(q->style()->pixelMetric(QStyle::PM_IndicatorWidth), headerSize.height(), 0, 0);
 }
 
-void KCollapsibleGroupBoxPrivate::updateChildrenVisibility(bool visible)
+void KCollapsibleGroupBoxPrivate::updateChildrenFocus(bool expanded)
 {
     foreach (QObject *child, q->children()) {
         QWidget *widget = qobject_cast<QWidget*>(child);
-        if (widget) {
-            widget->setVisible(visible);
+        if (!widget) {
+            continue;
+        }
+        // Restore old focus policy if expanded, remove from focus chain otherwise.
+        if (expanded) {
+            widget->setFocusPolicy(focusMap.value(widget));
+        } else {
+            widget->setFocusPolicy(Qt::NoFocus);
         }
     }
 }

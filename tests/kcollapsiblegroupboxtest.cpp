@@ -50,6 +50,9 @@ int main(int argc, char *argv[])
         }
         auto checkBox = new QCheckBox(QStringLiteral("Some really long text that goes on and on and on for ever and ever"));
         innerLayout->addWidget(checkBox);
+        auto hiddenCheckBox = new QCheckBox(QStringLiteral("This will be always hidden"));
+        innerLayout->addWidget(hiddenCheckBox);
+        hiddenCheckBox->hide();
 
         groupBox->setLayout(innerLayout);
         mainWindowLayout.addWidget(groupBox);
