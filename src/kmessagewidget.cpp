@@ -127,17 +127,23 @@ void KMessageWidgetPrivate::createLayout()
         layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
         layout->addWidget(textLabel, 0, 1);
 
-        QHBoxLayout *buttonLayout = new QHBoxLayout;
-        buttonLayout->addStretch();
-        Q_FOREACH (QToolButton *button, buttons) {
-            // For some reason, calling show() is necessary if wordwrap is true,
-            // otherwise the buttons do not show up. It is not needed if
-            // wordwrap is false.
-            button->show();
-            buttonLayout->addWidget(button);
+        if (buttons.isEmpty()) {
+            // Use top-vertical alignment like the icon does.
+            layout->addWidget(closeButton, 0, 2, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
+        } else {
+            // Use an additional layout in row 1 for the buttons.
+            QHBoxLayout *buttonLayout = new QHBoxLayout;
+            buttonLayout->addStretch();
+            Q_FOREACH (QToolButton *button, buttons) {
+                // For some reason, calling show() is necessary if wordwrap is true,
+                // otherwise the buttons do not show up. It is not needed if
+                // wordwrap is false.
+                button->show();
+                buttonLayout->addWidget(button);
+            }
+            buttonLayout->addWidget(closeButton);
+            layout->addItem(buttonLayout, 1, 0, 1, 2);
         }
-        buttonLayout->addWidget(closeButton);
-        layout->addItem(buttonLayout, 1, 0, 1, 2);
     } else {
         QHBoxLayout *layout = new QHBoxLayout(content);
         layout->addWidget(iconLabel);
