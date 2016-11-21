@@ -126,6 +126,11 @@ static void applyOptions(QDialog *dialog, KMessageBox::Options options)
 // This method has been copied from KWindowSystem to avoid depending on it
 static void setMainWindow(QWidget *subWidget, WId mainWindowId)
 {
+#ifdef Q_OS_OSX
+    if (!QWidget::find(mainWindowId)) {
+        return;
+    }
+#endif
     // Set the WA_NativeWindow attribute to force the creation of the QWindow.
     // Without this QWidget::windowHandle() returns 0.
     subWidget->setAttribute(Qt::WA_NativeWindow, true);
