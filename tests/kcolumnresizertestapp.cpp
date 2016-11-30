@@ -20,8 +20,6 @@
 #include <QApplication>
 #include <kcolumnresizer.h>
 
-#include <QtGui>
-
 #include <kcolumnresizertestapp.h>
 
 #include <ui_kcolumnresizertestapp.h>
