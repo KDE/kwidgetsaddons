@@ -4,7 +4,7 @@
    Copyright (C) 1999,2000 Geert Jansen <jansen@kde.org>
    Copyright (C) 2004,2005 Andrew Coles <andrew_coles@yahoo.co.uk>
    Copyright (C) 2006,2007 Olivier Goffart  <ogoffart @ kde.org>
-   Copyright (C) 2015 Elvis Angelaccio <elvis.angelaccio@kdemail.net>
+   Copyright (C) 2015 Elvis Angelaccio <elvis.angelaccio@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -64,7 +64,7 @@
  *
  * @author Geert Jansen <jansen@kde.org>
  * @author Olivier Goffart <ogoffart@kde.org>
- * @author Elvis Angelaccio <elvis.angelaccio@kdemail.net>
+ * @author Elvis Angelaccio <elvis.angelaccio@kde.org>
  * @since 5.16
  */
 
