@@ -227,7 +227,9 @@ public Q_SLOTS:
     void setMinimumDate(const QDate &minTime, const QString &minWarnMsg = QString());
 
     /**
-     * Reset the minimum date to the default
+     * Reset the minimum date to the default.
+     *
+     * The default is to have no minimum date.
      */
     void resetMinimumDate();
 
@@ -248,6 +250,8 @@ public Q_SLOTS:
 
     /**
      * Reset the maximum date to the default
+     *
+     * The default is to have no maximum date.
      */
     void resetMaximumDate();
 

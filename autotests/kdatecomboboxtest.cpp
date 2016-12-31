@@ -95,6 +95,28 @@ void KDateComboBoxTest::testDateRange()
     QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
     QCOMPARE(m_combo->maximumDate(), QDate(2003, 1, 1));
 
+    m_combo->resetDateRange();
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QVERIFY(!m_combo->maximumDate().isValid());
+
+    // Check functioning when the minimum or maximum date is not already set
+
+    m_combo->setMinimumDate(QDate(2000, 1, 1));
+    QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
+    QVERIFY(!m_combo->maximumDate().isValid());
+
+    m_combo->resetMinimumDate();
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QVERIFY(!m_combo->maximumDate().isValid());
+
+    m_combo->setMaximumDate(QDate(2003, 1, 1));
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QCOMPARE(m_combo->maximumDate(), QDate(2003, 1, 1));
+
+    m_combo->resetMaximumDate();
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QVERIFY(!m_combo->maximumDate().isValid());
+
     delete m_combo;
 }
 
