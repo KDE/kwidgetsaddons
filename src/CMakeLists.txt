@@ -74,6 +74,7 @@ set(kwidgetsaddons_SRCS
   kmimetypeeditor.cpp
   ksplittercollapserbutton.cpp
   kstyleextensions.cpp
+  ktooltipwidget.cpp
   ${kwidgetsaddons_QM_LOADER}
   ${kwidgetsaddons_ICON_SRCS}
 )
@@ -169,6 +170,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KMessageBoxNotifyInterface
   KSplitterCollapserButton
   KStyleExtensions
+  KToolTipWidget
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 

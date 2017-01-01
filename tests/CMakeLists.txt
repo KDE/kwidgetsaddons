@@ -41,6 +41,7 @@ kwidgetsaddons_executable_tests(
   kpixmapsequenceoverlaypaintertest
   kmimetypechoosertest
   ksplittercollapserbuttongui_test
+  ktooltipwidget_test
 )
 
 add_executable(kdatetabletest kdatetabletest.cpp ../src/kdatetable.cpp)
