@@ -75,7 +75,6 @@ class KWIDGETSADDONS_EXPORT KRuler : public QAbstractSlider
     Q_PROPERTY(double pixelPerMark READ pixelPerMark WRITE setPixelPerMark)
     Q_PROPERTY(bool lengthFixed READ lengthFixed WRITE setLengthFixed)
     Q_PROPERTY(QString endLabel READ endLabel WRITE setEndLabel)
-    Q_ENUMS(MetricStyle)
     Q_PROPERTY(int length READ length WRITE setLength)
     Q_PROPERTY(int offset READ offset)
     Q_PROPERTY(int endOffset READ endOffset)
@@ -85,6 +84,7 @@ public:
      * The types of units used.
      **/
     enum MetricStyle { Custom = 0, Pixel, Inch, Millimetres, Centimetres, Metres };
+    Q_ENUM(MetricStyle)
 
     /**
      * Constructs a horizontal ruler.

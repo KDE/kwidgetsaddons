@@ -54,13 +54,13 @@ class KWIDGETSADDONS_EXPORT KCapacityBar
     Q_PROPERTY(int barHeight READ barHeight WRITE setBarHeight)
     Q_PROPERTY(Qt::Alignment horizontalTextAlignment READ horizontalTextAlignment
                WRITE setHorizontalTextAlignment)
-    Q_ENUMS(DrawTextMode)
 
 public:
     enum DrawTextMode {
         DrawTextInline = 0,     ///< If any text set, draw it into the capacity bar
         DrawTextOutline         ///< If any text set, draw it out of the capacity bar
     };
+    Q_ENUM(DrawTextMode)
 
 
     /**

@@ -44,7 +44,6 @@ class QColor;
 class KWIDGETSADDONS_EXPORT KLed : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(State Shape Look)
     Q_PROPERTY(State state READ state WRITE setState)
     Q_PROPERTY(Shape shape READ shape WRITE setShape)
     Q_PROPERTY(Look look READ look WRITE setLook)
@@ -58,12 +57,14 @@ public:
      * @short LED on/off.
      */
     enum State { Off, On };
+    Q_ENUM(State)
 
     /**
      * Shades of the lamp.
      * @short LED shape
      */
     enum Shape { Rectangular, Circular };
+    Q_ENUM(Shape)
 
     /**
      * Displays a flat, round or sunken LED.
@@ -71,6 +72,7 @@ public:
      * @short LED look.
      */
     enum Look  { Flat, Raised, Sunken };
+    Q_ENUM(Look)
 
     /**
      * Constructs a green, round LED widget which will initially

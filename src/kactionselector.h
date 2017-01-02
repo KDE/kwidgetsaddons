@@ -80,7 +80,6 @@ class KActionSelectorPrivate;
 class KWIDGETSADDONS_EXPORT KActionSelector : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(InsertionPolicy MoveButton)
     Q_PROPERTY(bool moveOnDoubleClick READ moveOnDoubleClick WRITE setMoveOnDoubleClick)
     Q_PROPERTY(bool keyboardEnabled READ keyboardEnabled WRITE setKeyboardEnabled)
     Q_PROPERTY(QString availableLabel READ availableLabel WRITE setAvailableLabel)
@@ -112,6 +111,7 @@ public:
         ButtonUp,
         ButtonDown
     };
+    Q_ENUM(MoveButton)
 
     /**
       This enum defines policies for where to insert moved items in a listbox.
@@ -131,6 +131,7 @@ public:
         AtTop,
         AtBottom
     };
+    Q_ENUM(InsertionPolicy)
 
     /**
       @return Whether moveOnDoubleClcik is enabled.

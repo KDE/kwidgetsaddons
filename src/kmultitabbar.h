@@ -57,11 +57,11 @@ class KMultiTabBarInternal;
 class KWIDGETSADDONS_EXPORT KMultiTabBar: public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(KMultiTabBarPosition KMultiTabBarStyle)
     Q_PROPERTY(KMultiTabBarPosition position READ position WRITE setPosition)
     Q_PROPERTY(KMultiTabBarStyle tabStyle READ tabStyle WRITE setStyle)
 public:
     enum KMultiTabBarPosition { Left, Right, Top, Bottom };
+    Q_ENUM(KMultiTabBarPosition)
 
     /**
      * The list of available styles for KMultiTabBar
@@ -69,6 +69,7 @@ public:
      *   - KDEV3ICON - Kdevelop 3 like, always shows the text and icons
      */
     enum KMultiTabBarStyle {VSNET = 0, KDEV3ICON = 2, STYLELAST = 0xffff};
+    Q_ENUM(KMultiTabBarStyle)
 
     /**
      * Create a KMultiTabBar with Left as KMultiTabBar position.

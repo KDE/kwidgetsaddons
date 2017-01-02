@@ -35,7 +35,6 @@ class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
     Q_PROPERTY(QDate minimumDate READ minimumDate WRITE setMinimumDate RESET resetMinimumDate)
     Q_PROPERTY(QDate maximumDate READ maximumDate WRITE setMaximumDate RESET resetMaximumDate)
     Q_PROPERTY(Options options READ options WRITE setOptions)
-    Q_FLAGS(Options)
 
 public:
 
@@ -52,6 +51,7 @@ public:
         WarnOnInvalid    = 0x0010   /**< Show a warning on focus out if the date is invalid */
     };
     Q_DECLARE_FLAGS(Options, Option)
+    Q_FLAG(Options)
 
     /**
      * Create a new KDateComboBox widget

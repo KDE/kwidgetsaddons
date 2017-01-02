@@ -71,7 +71,6 @@
 class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(PasswordStatus)
     Q_PROPERTY(PasswordStatus passwordStatus READ passwordStatus)
     Q_PROPERTY(bool allowEmptyPasswords READ allowEmptyPasswords WRITE setAllowEmptyPasswords)
     Q_PROPERTY(int minimumPasswordLength READ minimumPasswordLength WRITE setMinimumPasswordLength)
@@ -94,6 +93,7 @@ public:
         WeakPassword,               /**< Passwords match but the strength level is not enough. */
         StrongPassword,             /**< Passwords match and the strength level is good. */
     };
+    Q_ENUM(PasswordStatus)
 
     /**
      * Constructs a password widget.
