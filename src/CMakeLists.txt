@@ -1,4 +1,4 @@
-
+include(ECMPoQmTools)
 ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5_qt)
 
 qt5_add_resources(kwidgetsaddons_ICON_SRCS icons.qrc)
