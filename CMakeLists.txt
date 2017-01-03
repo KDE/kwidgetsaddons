@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(KWidgetsAddons)
+set(KF5_VERSION "5.30.0") # handled by release scripts
+project(KWidgetsAddons VERSION ${KF5_VERSION})
 
 include(FeatureSummary)
 find_package(ECM 5.29.0  NO_MODULE)
@@ -22,11 +23,8 @@ include(ECMPackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 
-include(ECMPoQmTools)
 
-set(KF5_VERSION "5.30.0") # handled by release scripts
-
-ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KWIDGETSADDONS
+ecm_setup_version(PROJECT VARIABLE_PREFIX KWIDGETSADDONS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5WidgetsAddonsConfigVersion.cmake"
                         SOVERSION 5)
@@ -38,6 +36,8 @@ endif()
 add_subdirectory(src)
 add_subdirectory(autotests)
 add_subdirectory(tests)
+
+include(ECMPoQmTools)
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5WidgetsAddons")
