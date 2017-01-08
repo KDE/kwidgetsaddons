@@ -22,7 +22,7 @@ include(GenerateExportHeader)
 include(CMakePackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
-
+include(ECMPoQmTools)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KWIDGETSADDONS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h"
@@ -36,8 +36,6 @@ endif()
 add_subdirectory(src)
 add_subdirectory(autotests)
 add_subdirectory(tests)
-
-include(ECMPoQmTools)
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5WidgetsAddons")
