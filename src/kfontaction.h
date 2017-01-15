@@ -30,6 +30,8 @@
 #include <kselectaction.h>
 
 /**
+ * @class KFontAction kfontaction.h KFontAction
+ *
  * An action to select a font family.
  * On a toolbar this will show a combobox with all the fonts on the system.
  */

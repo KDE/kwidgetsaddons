@@ -39,6 +39,8 @@
 class KSelectActionPrivate;
 
 /**
+ *  @class KSelectAction kselectaction.h KSelectAction
+ *
  *  @short Action for selecting one of several items
  *
  *  Action for selecting one of several items.

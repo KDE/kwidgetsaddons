@@ -24,6 +24,8 @@
 #include <QWidget>
 
 /**
+ * @class KToolTipWidget ktooltipwidget.h KToolTipWidget
+ *
  * @brief A tooltip that contains a QWidget.
  *
  * This widget allows to show a tooltip that contains another widget.

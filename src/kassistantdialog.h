@@ -24,6 +24,8 @@
 #include <kwidgetsaddons_export.h>
 
 /**
+ * @class KAssistantDialog kassistantdialog.h KAssistantDialog
+ *
  * This class provides a framework for assistant dialogs.
  *
  * An assistant dialog consists of a sequence of pages.
@@ -38,7 +40,7 @@
  * The functions next() and back() are virtual and may be reimplemented to
  * override the default actions of the next and back buttons.
  *
- * \image html kassistantdialog.png "KDE Assistant Dialog"
+ * \image html kassistantdialog.png "KAssistantDialog"
  *
  * @author Olivier Goffart <ogoffart at kde.org>
  */

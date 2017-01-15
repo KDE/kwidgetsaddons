@@ -37,6 +37,8 @@ class QStringList;
 class KViewStateSerializerPrivate;
 
 /**
+  @class KViewStateSerializer kviewstateserializer.h KViewStateSerializer
+
   @brief Object for saving and restoring state in QTreeViews and QItemSelectionModels
 
   Implement the indexFromConfigString and indexToConfigString methods to

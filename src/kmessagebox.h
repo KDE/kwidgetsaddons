@@ -48,7 +48,7 @@ class KConfig;
  * be plaintext or richtext. If the text is plaintext, a newline-character
  * may be used to indicate the end of a paragraph.
  *
- * \image html kmessagebox.png "KDE Message Box (using questionYesNo())"
+ * \image html kmessagebox.png "KMessageBox (using questionYesNo())"
  *
  * @author Waldo Bastian (bastian@kde.org)
  */

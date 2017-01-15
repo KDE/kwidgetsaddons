@@ -30,6 +30,8 @@
 #include <ktoggleaction.h>
 
 /**
+ * @class KToggleFullScreenAction ktogglefullscreenaction.h KToggleFullScreenAction
+ *
  * An action for switching between to/from full screen mode. Note that
  * QWidget::isFullScreen() may reflect the new or the old state
  * depending on how the action was triggered (by the application or

@@ -32,6 +32,8 @@
 class KPageDialogPrivate;
 
 /**
+ * @class KPageDialog kpagedialog.h KPageDialog
+ *
  * @short A dialog base class which can handle multiple pages.
  *
  * This class provides a dialog base class which handles multiple

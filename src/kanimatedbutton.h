@@ -23,6 +23,8 @@
 #include <QToolButton>
 
 /**
+ * @class KAnimatedButton kanimatedbutton.h KAnimatedButton
+ *
  * @short An extended version of QToolButton which can display an animation.
  *
  * This widget extends QToolButton with the ability to display an animation.

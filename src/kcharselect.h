@@ -30,12 +30,14 @@ class QFont;
 class QUrl;
 
 /**
+ * @class KCharSelect kcharselect.h KCharSelect
+ *
  * @short Character selection widget
  *
  * This widget allows the user to select a character of a
  * specified font and to browse Unicode information
  *
- * \image html kcharselect.png "Character Selection Widget"
+ * \image html kcharselect.png "KCharSelect Widget"
  *
  * You can specify the font whose characters should be displayed via
  * setCurrentFont(). Using the Controls argument in the contructor

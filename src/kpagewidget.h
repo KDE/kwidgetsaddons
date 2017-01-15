@@ -28,6 +28,8 @@
 
 class KPageWidgetPrivate;
 /**
+ * @class KPageWidget kpagewidget.h KPageWidget
+ *
  * @short Page widget with many layouts (faces).
  * @see KPageView with hierarchical page model.
  *

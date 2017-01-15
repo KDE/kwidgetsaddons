@@ -33,6 +33,8 @@ class QWidget;
 class KColumnResizerPrivate;
 
 /**
+ * @class KColumnResizer kcolumnresizer.h KColumnResizer
+ *
  * @short Maintains consistent column sizes across layouts
  *
  * KColumnResizer is a helper class which can force columns of different layouts

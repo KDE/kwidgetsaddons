@@ -27,6 +27,9 @@
 
 class KDateComboBoxPrivate;
 
+/**
+ * @class KDateComboBox kdatecombobox.h KDateComboBox
+ */
 class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
 {
     Q_OBJECT

@@ -27,6 +27,8 @@
 class QColor;
 
 /**
+ * @class KLed kled.h KLed
+ *
  * @short An LED widget.
  *
  * Displays a round or rectangular light emitting diode.
@@ -37,7 +39,7 @@ class QColor;
  * It may display itself in a performant flat view, a round view with
  * light spot or a round view sunken in the screen.
  *
- * \image html kled.png "KDE LED Widget"
+ * \image html kled.png "KLed Widget"
  *
  * @author Joerg Habenicht, Richard J. Moore (rich@kde.org) 1998, 1999
  */

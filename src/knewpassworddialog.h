@@ -29,6 +29,8 @@
 class QWidget;
 
 /**
+ * @class KNewPasswordDialog knewpassworddialog.h KNewPasswordDialog
+ *
  * @short A password input dialog.
  *
  * This dialog asks the user to enter a new password.
@@ -57,7 +59,7 @@ class QWidget;
  *      setPassword( dlg.password() );
  * \endcode
  *
- * \image html knewpassworddialog.png "KDE New Password Dialog"
+ * \image html knewpassworddialog.png "KNewPasswordDialog"
  *
  * @author Geert Jansen <jansen@kde.org>
  * @author Olivier Goffart <ogoffart@kde.org>

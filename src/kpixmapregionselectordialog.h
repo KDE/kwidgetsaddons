@@ -29,6 +29,8 @@ class KPixmapRegionSelectorWidget;
 class QImage;
 
 /**
+ * @class KPixmapRegionSelectorDialog kpixmapregionselectordialog.h KPixmapRegionSelectorDialog
+ *
  * A dialog that uses a KPixmapRegionSelectorWidget to allow the user
  * to select a region of an image. If you want to use special features
  * like forcing the selected area to have a fixed aspect ratio, you can use
@@ -39,7 +41,7 @@ class QImage;
  * for the user to select a region of an image, and just care about the selected
  * image.
  *
- * \image html kpixmapregionselectordialog.png "KDE Pixmap Region Selector Dialog"
+ * \image html kpixmapregionselectordialog.png "KPixmapRegionSelectorDialog"
  *
  * @author Antonio Larrosa <larrosa@kde.org>
  */

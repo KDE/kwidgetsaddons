@@ -27,6 +27,8 @@
 #include <QFrame>
 
 /**
+ * @class KPopupFrame kpopupframe.h KPopupFrame
+ *
  * Frame with popup menu behavior.
  * @author Tim Gilman, Mirko Boehm
  */

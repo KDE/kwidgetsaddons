@@ -26,6 +26,8 @@
 #include <QPixmap>
 
 /**
+ * @class KXYSelector kxyselector.h KXYSelector
+ *
  * KXYSelector is the base class for other widgets which
  * provides the ability to choose from a two-dimensional
  * range of values. The currently chosen value is indicated

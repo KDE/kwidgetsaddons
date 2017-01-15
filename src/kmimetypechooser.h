@@ -26,6 +26,8 @@
 class QTreeWidgetItem;
 
 /**
+ * @class KMimeTypeChooser kmimetypechooser.h KMimeTypeChooser
+ *
  * This widget provides a checkable list of all available mimetypes,
  * and a list of selected ones, as well as a corresponding list of file
  * extensions, an optional text and an optional edit button (not working yet).
@@ -87,6 +89,8 @@ private:
 };
 
 /**
+  * @class KMimeTypeChooserDialog kmimetypechooser.h KMimeTypeChooserDialog
+  *
   * @short A Dialog to choose some mimetypes.
   * Provides a checkable tree list of mimetypes, with icons and optinally
   * comments and patterns, and an (optional) button to display the KDE mimetype

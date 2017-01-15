@@ -26,6 +26,8 @@
 #include <QObject>
 
 /**
+ * @class LineEditUrlDropEventFilter lineediturldropeventfilter.h LineEditUrlDropEventFilter
+ *
  * This class provides an event filter that can be installed on a QLineEdit
  * or a subclass of it (KLineEdit) to make it handle url drop events so
  * when a url is dropped it replaces the existing content.

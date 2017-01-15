@@ -24,6 +24,8 @@
 #include <kwidgetsaddons_export.h>
 
 /**
+ * @class KToolBarLabelAction ktoolbarlabelaction.h KToolBarLabelAction
+ *
  * @short Class to display a label in a toolbar.
  *
  * KToolBarLabelAction is a convenience class for displaying a label in a

@@ -26,7 +26,7 @@
 #include <kwidgetsaddons_export.h>
 
 /**
- * \class KRatingWidget kratingwidget.h KDE/KRatingWidget
+ * \class KRatingWidget kratingwidget.h KRatingWidget
  *
  * \brief Displays a rating value as a row of pixmaps.
  *

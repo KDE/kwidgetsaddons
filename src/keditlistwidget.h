@@ -33,6 +33,8 @@ class QItemSelection;
 
 class KEditListWidgetPrivate;
 /**
+ * @class KEditListWidget keditlistwidget.h KEditListWidget
+ *
  * An editable listbox
  *
  * This class provides an editable listbox, this means
@@ -40,7 +42,7 @@ class KEditListWidgetPrivate;
  * items into the listbox and pushbuttons to add and remove
  * items from the listbox and two buttons to move items up and down.
  *
- * \image html keditlistbox.png "KDE Edit List Box Widget"
+ * \image html keditlistbox.png "KEditListWidget"
  *
  * @since 4.6
  */

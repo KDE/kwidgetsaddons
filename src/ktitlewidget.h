@@ -24,6 +24,8 @@
 #include <QWidget>
 
 /**
+ * @class KTitleWidget ktitlewidget.h KTitleWidget
+ *
  * @short Standard title widget.
  *
  * This class provides a widget often used for dialog titles.

@@ -28,6 +28,8 @@
 class QPaintEvent;
 
 /**
+  * @class KCapacityBar kcapacitybar.h KCapacityBar
+  *
   * @brief This widget shows a bar which is filled to show the level of usage of
   *        a certain device.
   *
@@ -37,7 +39,7 @@ class QPaintEvent;
   *
   * @since 4.2
   *
-  * \image html kcapacitybar.png "KDE Capacity Bar"
+  * \image html kcapacitybar.png "KCapacityBar Widget"
   *
   * @author Rafael Fernández López <ereslibre@kde.org>
   */

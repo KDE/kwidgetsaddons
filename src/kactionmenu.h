@@ -34,6 +34,8 @@
 class QMenu;
 
 /**
+ * @class KActionMenu kactionmenu.h KActionMenu
+ *
  * A KActionMenu is an action that has several properties specific to holding a
  * sub-menu of other actions.
  *

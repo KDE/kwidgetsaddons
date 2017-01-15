@@ -28,6 +28,8 @@
 #include <kwidgetsaddons_export.h>
 
 /**
+ * @class KPasswordDialog kpassworddialog.h KPasswordDialog
+ *
  * A dialog for requesting a password and optionaly a login from the end user.
  *
  * \section usage Usage Example
@@ -52,7 +54,7 @@
  *  use( dlg.username() , dlg.password() );
  * \endcode
  *
- * \image html kpassworddialog.png "KDE Password Dialog"
+ * \image html kpassworddialog.png "KPasswordDialog"
  *
  * @short dialog for requesting login and password from the end user
  */

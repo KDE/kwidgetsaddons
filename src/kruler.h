@@ -26,6 +26,8 @@
 #include <QAbstractSlider>
 
 /**
+ * @class KRuler kruler.h KRuler
+ *
  * A ruler widget.
  *
  * The vertical ruler looks similar to this:
@@ -54,7 +56,7 @@
  *
  * To receive mouse clicks or mouse moves, the class has to be overloaded.
  *
- * \image html kruler.png "KDE Ruler Widget"
+ * \image html kruler.png "KRuler Widget"
  *
  * @short A ruler widget.
  * @author Jörg Habenicht

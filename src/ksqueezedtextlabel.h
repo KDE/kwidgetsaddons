@@ -25,6 +25,8 @@
 class KSqueezedTextLabelPrivate;
 
 /**
+ * @class KSqueezedTextLabel ksqueezedtextlabel.h KSqueezedTextLabel
+ *
  * @short A replacement for QLabel that squeezes its text
  *
  * A label class that squeezes its text into the label

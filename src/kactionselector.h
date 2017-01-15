@@ -31,6 +31,8 @@ class QIcon;
 class KActionSelectorPrivate;
 
 /**
+    @class KActionSelector kactionselector.h KActionSelector
+
     @short A widget for selecting and arranging actions/objects
 
     This widget allows the user to select from a set of objects and arrange
@@ -72,7 +74,7 @@ class KActionSelectorPrivate;
     users actions if you need to. See addedToSelection(), removedFromSelection(),
     movedUp() and movedDown()
 
-    \image html kactionselector.png "KDE Action Selector"
+    \image html kactionselector.png "KActionSelector Widget"
 
     @author Anders Lund <anders@alweb.dk>
 */

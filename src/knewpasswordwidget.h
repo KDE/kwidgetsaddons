@@ -28,6 +28,8 @@
 #include <kwidgetsaddons_export.h>
 
 /**
+ * @class KNewPasswordWidget knewpasswordwidget.h KNewPasswordWidget
+ *
  * @short A password input widget.
  *
  * This widget allows the user to enter a new password.

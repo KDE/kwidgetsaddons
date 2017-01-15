@@ -28,6 +28,9 @@
 
 class KDateTimeEditPrivate;
 
+/**
+ * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
+ */
 class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
 {
     Q_OBJECT

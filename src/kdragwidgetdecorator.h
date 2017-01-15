@@ -93,6 +93,8 @@ private:
 };
 
 /**
+ * @class KDragWidgetDecorator kdragwidgetdecorator.h KDragWidgetDecorator
+ *
  * @brief A decorator which adds drag-support to widgets
  *
  * This is a decorator using an event filter to implement drag-support

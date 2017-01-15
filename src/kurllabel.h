@@ -30,6 +30,8 @@
 class QCursor;
 
 /**
+ * @class KUrlLabel kurllabel.h KUrlLabel
+ *
  * @short A drop-in replacement for QLabel that displays hyperlinks.
  *
  * KUrlLabel is a drop-in replacement for QLabel that handles text
@@ -61,7 +63,7 @@ class QCursor;
  * signal leftClickedUrl() would be emitted with "http://www.home.com/~me"
  * as its argument.
  *
- * \image html kurllabel.png "KDE URL Label"
+ * \image html kurllabel.png "KUrlLabel Widget"
  *
  * @author Kurt Granroth <granroth@kde.org> (Interface)
  * @author Peter Putzer <putzer@kde.org> (Rewrite)

@@ -43,6 +43,8 @@ class KMultiTabBarButtonPrivate;
 class KMultiTabBarInternal;
 
 /**
+ * @class KMultiTabBar kmultitabbar.h KMultiTabBar
+ *
  * A Widget for horizontal and vertical tabs.
  * (Note that in Qt4, QTabBar can be vertical as well)
  *
@@ -50,7 +52,7 @@ class KMultiTabBarInternal;
  * The handling if only one tab at a time or multiple tabs
  * should be raisable is left to the "user".
  *
- * \image html kmultitabbar.png "KDE Multi Tab Bar Widget"
+ * \image html kmultitabbar.png "KMultiTabBar Widget"
  *
  * @author Joseph Wenninger
  */
@@ -190,6 +192,8 @@ private:
 };
 
 /**
+ * @class KMultiTabBarButton kmultitabbar.h KMultiTabBarButton
+ *
  * Use KMultiTabBar::appendButton to append a button, which creates a KMultiTabBarButton instance
  */
 class KWIDGETSADDONS_EXPORT KMultiTabBarButton: public QPushButton
@@ -231,6 +235,8 @@ private:
 };
 
 /**
+ * @class KMultiTabBarTab kmultitabbar.h KMultiTabBarTab
+ *
  * Use KMultiTabBar::appendTab to append a tab, which creates a KMultiTabBarTab instance
  */
 class KWIDGETSADDONS_EXPORT KMultiTabBarTab: public KMultiTabBarButton
