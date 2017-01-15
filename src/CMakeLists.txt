@@ -129,7 +129,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KLed
   KMessageBox
   KMessageBoxDontAskAgainInterface
-  KMultiTabBar
+  KMultiTabBar,KMultiTabBarButton,KMultiTabBarTab
   KNewPasswordWidget
   KPopupFrame
   KSelectAction
@@ -140,7 +140,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KFontRequester
   KPasswordDialog
   KRuler
-  KSelector
+  KSelector,KGradientSelector
   KTitleWidget
   KXYSelector
   KSeparator
@@ -163,7 +163,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPageModel
   KPageView
   KPageWidget
-  KPageWidgetModel
+  KPageWidgetModel,KPageWidgetItem
   KAssistantDialog
   KMessageWidget
   KNewPasswordDialog
@@ -173,7 +173,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPixmapSequenceWidget
   KPixmapRegionSelectorDialog
   KPixmapRegionSelectorWidget
-  KMimeTypeChooser
+  KMimeTypeChooser,KMimeTypeChooserDialog
   KMimeTypeEditor
   KMessageBoxNotifyInterface
   KSplitterCollapserButton
