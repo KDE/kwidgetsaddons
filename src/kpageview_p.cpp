@@ -29,6 +29,7 @@
 #include <QVBoxLayout>
 
 #include "kpagemodel.h"
+#include "loggingcategory.h"
 
 using namespace KDEPrivate;
 
@@ -586,7 +587,7 @@ void KPageListViewProxy::rebuildMap()
     }
 
     for (int i = 0; i < mList.count(); ++i) {
-        qDebug("%d:0 -> %d:%d", i, mList[ i ].row(), mList[ i ].column());
+        qCDebug(KWidgetsAddonsLog, "%d:0 -> %d:%d", i, mList[ i ].row(), mList[ i ].column());
     }
 
     emit layoutChanged();

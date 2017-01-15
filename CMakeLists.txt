@@ -23,6 +23,7 @@ include(CMakePackageConfigHelpers)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMPoQmTools)
+include(ECMQtDeclareLoggingCategory)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KWIDGETSADDONS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h"

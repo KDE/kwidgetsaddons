@@ -19,6 +19,8 @@
  */
 #include <kcolumnresizer.h>
 
+#include "loggingcategory.h"
+
 #include <QDebug>
 #include <QEvent>
 #include <QFormLayout>
@@ -221,7 +223,7 @@ void KColumnResizer::addWidgetsFromLayout(QLayout *layout, int column)
 {
     Q_ASSERT(column >= 0);
     if (column < 0) {
-        qWarning() << "column must be >= 0";
+        qCWarning(KWidgetsAddonsLog) << "column must be >= 0";
         return;
     }
     QGridLayout *gridLayout = qobject_cast<QGridLayout *>(layout);
@@ -233,13 +235,13 @@ void KColumnResizer::addWidgetsFromLayout(QLayout *layout, int column)
     if (formLayout) {
         Q_ASSERT(column <= QFormLayout::SpanningRole);
         if (column > QFormLayout::SpanningRole) {
-            qWarning() << "column should not be more than" << QFormLayout::SpanningRole << "for QFormLayout";
+            qCWarning(KWidgetsAddonsLog) << "column should not be more than" << QFormLayout::SpanningRole << "for QFormLayout";
             return;
         }
         QFormLayout::ItemRole role = static_cast<QFormLayout::ItemRole>(column);
         d->addWidgetsFromFormLayout(formLayout, role);
     } else {
-        qWarning() << "Don't know how to handle layout" << layout;
+        qCWarning(KWidgetsAddonsLog) << "Don't know how to handle layout" << layout;
         Q_ASSERT(0);
     }
 }

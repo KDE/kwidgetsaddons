@@ -22,6 +22,8 @@
 #include "kpagewidgetmodel.h"
 #include "kpagewidgetmodel_p.h"
 
+#include "loggingcategory.h"
+
 #include <QPointer>
 #include <QWidget>
 
@@ -252,7 +254,7 @@ void PageItem::dump(int indent)
     }
 
     const QString name = (mPageWidgetItem ? mPageWidgetItem->name() : QStringLiteral("root"));
-    qDebug("%s (%p)", qPrintable(QString(QStringLiteral("%1%2")).arg(prefix, name)), (void *)this);
+    qCDebug(KWidgetsAddonsLog, "%s (%p)", qPrintable(QString(QStringLiteral("%1%2")).arg(prefix, name)), (void *)this);
     for (int i = 0; i < mChildItems.count(); ++i) {
         mChildItems[ i ]->dump(indent + 2);
     }
@@ -436,7 +438,7 @@ void KPageWidgetModel::insertPage(KPageWidgetItem *before, KPageWidgetItem *item
 {
     PageItem *beforePageItem = d_func()->rootItem->findChild(before);
     if (!beforePageItem) {
-        qDebug("Invalid KPageWidgetItem passed!");
+        qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
     }
 
@@ -477,7 +479,7 @@ void KPageWidgetModel::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item
 {
     PageItem *parentPageItem = d_func()->rootItem->findChild(parent);
     if (!parentPageItem) {
-        qDebug("Invalid KPageWidgetItem passed!");
+        qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
     }
 
@@ -514,7 +516,7 @@ void KPageWidgetModel::removePage(KPageWidgetItem *item)
 
     PageItem *pageItem = d->rootItem->findChild(item);
     if (!pageItem) {
-        qDebug("Invalid KPageWidgetItem passed!");
+        qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
     }
 

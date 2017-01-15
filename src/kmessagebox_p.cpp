@@ -20,6 +20,8 @@
  */
 #include "kmessagebox_p.h"
 
+#include "loggingcategory.h"
+
 #include <QCoreApplication>
 #include <QDebug>
 #include <QPluginLoader>
@@ -82,7 +84,7 @@ public:
     }
     void setConfig(KConfig *) Q_DECL_OVERRIDE
     {
-        qWarning() << "Using QSettings based KMessageBoxDontAskAgainInterface. KMessageBox::setDontShowAgainConfig ignored";
+        qCWarning(KWidgetsAddonsLog) << "Using QSettings based KMessageBoxDontAskAgainInterface. KMessageBox::setDontShowAgainConfig ignored";
     }
 
 private:

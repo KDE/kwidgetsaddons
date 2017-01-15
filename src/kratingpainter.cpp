@@ -356,7 +356,7 @@ int KRatingPainter::ratingFromPosition(const QRect &rect, const QPoint &pos) con
 
         double one = (double)usedRect.width() / (double)d->maxRating;
 
-//        qDebug() << "rating:" << ( int )( ( double )x/one + 0.5 );
+//        qCDebug(KWidgetsAddonsLog) << "rating:" << ( int )( ( double )x/one + 0.5 );
 
         return (int)((double)x / one + 0.5);
     } else {

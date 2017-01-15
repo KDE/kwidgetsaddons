@@ -88,6 +88,14 @@ set(kwidgetsaddon_UI
 
 qt5_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
 
+ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
+    HEADER loggingcategory.h
+    IDENTIFIER KWidgetsAddonsLog
+    CATEGORY_NAME kf5.kwidgetsaddons
+    DEFAULT_SEVERITY Warning
+)
+
+
 add_library(KF5WidgetsAddons ${kwidgetsaddons_SRCS})
 generate_export_header(KF5WidgetsAddons BASE_NAME KWidgetsAddons)
 add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)

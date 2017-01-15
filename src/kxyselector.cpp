@@ -19,6 +19,8 @@
 
 #include "kxyselector.h"
 
+#include "loggingcategory.h"
+
 #include <QStyle>
 #include <QPainter>
 #include <QStyleOptionFrame>
@@ -83,11 +85,11 @@ int KXYSelector::yValue() const
 void KXYSelector::setRange(int _minX, int _minY, int _maxX, int _maxY)
 {
     if (_maxX == _minX) {
-        qWarning() << "KXYSelector::setRange invalid range: " << _maxX << " == " << _minX << " (for X) ";
+        qCWarning(KWidgetsAddonsLog) << "KXYSelector::setRange invalid range: " << _maxX << " == " << _minX << " (for X) ";
         return;
     }
     if (_maxY == _minY) {
-        qWarning() << "KXYSelector::setRange invalid range: " << _maxY << " == " << _minY << " (for Y) ";
+        qCWarning(KWidgetsAddonsLog) << "KXYSelector::setRange invalid range: " << _maxY << " == " << _minY << " (for Y) ";
         return;
     }
 

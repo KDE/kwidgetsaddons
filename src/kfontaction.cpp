@@ -46,7 +46,7 @@ public:
 
     void _k_slotFontChanged(const QFont &font)
     {
-//        qDebug() << "QFontComboBox - slotFontChanged("
+//        qCDebug(KWidgetsAddonsLog) << "QFontComboBox - slotFontChanged("
 //                 << font.family() << ") settingFont=" << settingFont;
         if (settingFont) {
             return;
@@ -55,7 +55,7 @@ public:
         q->setFont(font.family());
         q->triggered(font.family());
 
-//        qDebug() << "\tslotFontChanged done";
+//        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }
 
     KFontAction *q;
@@ -142,7 +142,7 @@ QString KFontAction::font() const
 
 QWidget *KFontAction::createWidget(QWidget *parent)
 {
-//    qDebug() << "KFontAction::createWidget()";
+//    qCDebug(KWidgetsAddonsLog) << "KFontAction::createWidget()";
 #ifdef __GNUC__
 #warning FIXME: items need to be converted
 #endif
@@ -152,10 +152,10 @@ QWidget *KFontAction::createWidget(QWidget *parent)
     QFontComboBox *cb = new QFontComboBox(parent);
     cb->setFontFilters(d->fontFilters);
 
-//    qDebug() << "\tset=" << font();
+//    qCDebug(KWidgetsAddonsLog) << "\tset=" << font();
     // Do this before connecting the signal so that nothing will fire.
     cb->setCurrentFont(QFont(font().toLower()));
-//    qDebug() << "\tspit back=" << cb->currentFont().family();
+//    qCDebug(KWidgetsAddonsLog) << "\tspit back=" << cb->currentFont().family();
 
     connect(cb, SIGNAL(currentFontChanged(QFont)), SLOT(_k_slotFontChanged(QFont)));
     cb->setMinimumWidth(cb->sizeHint().width());
@@ -167,26 +167,26 @@ QWidget *KFontAction::createWidget(QWidget *parent)
  */
 void KFontAction::setFont(const QString &family)
 {
-//    qDebug() << "KFontAction::setFont(" << family << ")";
+//    qCDebug(KWidgetsAddonsLog) << "KFontAction::setFont(" << family << ")";
 
     // Suppress triggered(QString) signal and prevent recursive call to ourself.
     d->settingFont++;
 
     foreach (QWidget *w, createdWidgets()) {
         QFontComboBox *cb = qobject_cast<QFontComboBox *>(w);
-//        qDebug() << "\tw=" << w << "cb=" << cb;
+//        qCDebug(KWidgetsAddonsLog) << "\tw=" << w << "cb=" << cb;
 
         if (!cb) {
             continue;
         }
 
         cb->setCurrentFont(QFont(family.toLower()));
-//        qDebug() << "\t\tw spit back=" << cb->currentFont().family();
+//        qCDebug(KWidgetsAddonsLog) << "\t\tw spit back=" << cb->currentFont().family();
     }
 
     d->settingFont--;
 
-//    qDebug() << "\tcalling setCurrentAction()";
+//    qCDebug(KWidgetsAddonsLog) << "\tcalling setCurrentAction()";
 
     QString lowerName = family.toLower();
     if (setCurrentAction(lowerName, Qt::CaseInsensitive)) {
@@ -209,7 +209,7 @@ void KFontAction::setFont(const QString &family)
 
     // TODO: Inconsistent state if QFontComboBox::setCurrentFont() succeeded
     //       but setCurrentAction() did not and vice-versa.
-//    qDebug() << "Font not found " << family.toLower();
+//    qCDebug(KWidgetsAddonsLog) << "Font not found " << family.toLower();
 }
 
 #include "moc_kfontaction.cpp"

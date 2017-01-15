@@ -19,8 +19,9 @@
 */
 
 #include "kcharselect.h"
-
 #include "kcharselect_p.h"
+
+#include "loggingcategory.h"
 
 #include <QAction>
 #include <QActionEvent>
@@ -611,7 +612,7 @@ void KCharSelect::setCurrentCodePoint(uint c)
         c = QChar::ReplacementCharacter;
     }
     if (c > QChar::LastValidCodePoint) {
-        qWarning("Code point outside Unicode range");
+        qCWarning(KWidgetsAddonsLog, "Code point outside Unicode range");
         c = QChar::LastValidCodePoint;
     }
     bool oldHistoryEnabled = d->historyEnabled;
@@ -629,7 +630,7 @@ void KCharSelect::setCurrentCodePoint(uint c)
 
 void KCharSelect::KCharSelectPrivate::historyAdd(uint c, bool fromSearch, const QString &searchString)
 {
-    //qDebug() << "about to add char" << c << "fromSearch" << fromSearch << "searchString" << searchString;
+    //qCDebug(KWidgetsAddonsLog) << "about to add char" << c << "fromSearch" << fromSearch << "searchString" << searchString;
 
     if (!historyEnabled) {
         return;
@@ -668,7 +669,7 @@ void KCharSelect::KCharSelectPrivate::showFromHistory(int index)
     updateBackForwardButtons();
 
     const HistoryItem &item = history[index];
-    //qDebug() << "index" << index << "char" << item.c << "fromSearch" << item.fromSearch
+    //qCDebug(KWidgetsAddonsLog) << "index" << index << "char" << item.c << "fromSearch" << item.fromSearch
     //    << "searchString" << item.searchString;
 
     //avoid adding an item from history into history again

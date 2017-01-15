@@ -272,7 +272,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
 {
     if (ev->type() == QEvent::MouseButtonPress) {
         QMouseEvent *mev = (QMouseEvent *)(ev);
-        //qDebug() << QString("click at  %1,%2").arg( mev->x() ).arg( mev->y() );
+        //qCDebug(KWidgetsAddonsLog) << QString("click at  %1,%2").arg( mev->x() ).arg( mev->y() );
 
         if (mev->button() == Qt::RightButton) {
             QMenu *popup = createPopupMenu();
@@ -302,7 +302,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
     if (ev->type() == QEvent::MouseMove) {
         QMouseEvent *mev = (QMouseEvent *)(ev);
 
-        //qDebug() << QString("move to  %1,%2").arg( mev->x() ).arg( mev->y() );
+        //qCDebug(KWidgetsAddonsLog) << QString("move to  %1,%2").arg( mev->x() ).arg( mev->y() );
 
         if (d->m_state == Private::Resizing) {
             setSelectedRegion(
@@ -479,8 +479,8 @@ void KPixmapRegionSelectorWidget::setMaximumWidgetSize(int width, int height)
     }
     d->m_originalPixmap = d->m_unzoomedPixmap;
 
-    //   qDebug() << QString(" original Pixmap :") << d->m_originalPixmap.rect();
-    //   qDebug() << QString(" unzoomed Pixmap : %1 x %2 ").arg(d->m_unzoomedPixmap.width()).arg(d->m_unzoomedPixmap.height());
+    //   qCDebug(KWidgetsAddonsLog) << QString(" original Pixmap :") << d->m_originalPixmap.rect();
+    //   qCDebug(KWidgetsAddonsLog) << QString(" unzoomed Pixmap : %1 x %2 ").arg(d->m_unzoomedPixmap.width()).arg(d->m_unzoomedPixmap.height());
 
     if (!d->m_originalPixmap.isNull() &&
             (d->m_originalPixmap.width() > d->m_maxWidth ||

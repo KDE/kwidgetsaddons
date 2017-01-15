@@ -24,6 +24,7 @@
 #include "kpageview_p.h"
 
 #include "kpagemodel.h"
+#include "loggingcategory.h"
 
 #include <ktitlewidget.h>
 
