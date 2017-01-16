@@ -76,7 +76,7 @@ public:
      * @param parent The parent of the widget.
      * @since 5.24
      */
-    explicit KMultiTabBar(QWidget *parent = Q_NULLPTR);
+    explicit KMultiTabBar(QWidget *parent = nullptr);
 
     explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = nullptr);
     virtual ~KMultiTabBar();

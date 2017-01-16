@@ -68,7 +68,7 @@ public:
      * @param parent The parent of the widget.
      * @since 5.24
      */
-    explicit KCapacityBar(QWidget *parent = Q_NULLPTR);
+    explicit KCapacityBar(QWidget *parent = nullptr);
 
     /**
       * Capacity bar constructor.

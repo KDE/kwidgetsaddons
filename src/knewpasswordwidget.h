@@ -100,7 +100,7 @@ public:
      *
      * @param parent Passed to lower level constructor.
      */
-    explicit KNewPasswordWidget(QWidget *parent = Q_NULLPTR);
+    explicit KNewPasswordWidget(QWidget *parent = nullptr);
 
     /**
      * Destructs the password widget.

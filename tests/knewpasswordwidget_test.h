@@ -31,7 +31,7 @@ class MyPasswordDialog : public QDialog
     Q_OBJECT
 
 public:
-    MyPasswordDialog(QWidget *parent = Q_NULLPTR);
+    MyPasswordDialog(QWidget *parent = nullptr);
 
     void accept() Q_DECL_OVERRIDE;
 

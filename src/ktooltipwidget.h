@@ -45,7 +45,7 @@ class KWIDGETSADDONS_EXPORT KToolTipWidget : public QWidget
     Q_PROPERTY(int hideDelay READ hideDelay WRITE setHideDelay)
 
 public:
-    explicit KToolTipWidget(QWidget *parent = Q_NULLPTR);
+    explicit KToolTipWidget(QWidget *parent = nullptr);
     virtual ~KToolTipWidget();
 
     /**

@@ -34,7 +34,7 @@ public:
           minimumPasswordLength(0),
           passwordStrengthWarningLevel(1),
           reasonablePasswordLength(8),
-          toggleEchoModeAction(Q_NULLPTR)
+          toggleEchoModeAction(nullptr)
     {}
 
     void init();

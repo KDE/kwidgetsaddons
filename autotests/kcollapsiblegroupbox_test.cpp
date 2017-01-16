@@ -37,7 +37,7 @@ void KCollapsibleGroupBoxTest::testDestructorCrash()
     int i = 0;
     while(i != 2) {
 
-        QDialog *dlg = new QDialog(Q_NULLPTR);
+        QDialog *dlg = new QDialog(nullptr);
 
         QVBoxLayout *mainvlayout = new QVBoxLayout(dlg);
         KCollapsibleGroupBox *collapsible = new KCollapsibleGroupBox(dlg);

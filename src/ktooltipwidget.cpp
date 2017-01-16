@@ -35,8 +35,8 @@ class KToolTipWidget::KToolTipWidgetPrivate
 public:
     KToolTipWidgetPrivate(KToolTipWidget *parent)
         : q(parent),
-          layout(Q_NULLPTR),
-          content(Q_NULLPTR)
+          layout(nullptr),
+          content(nullptr)
     {}
 
     void init();
