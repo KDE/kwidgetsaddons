@@ -11,7 +11,7 @@ class KColorComboTest : public QWidget
     Q_OBJECT
 
 public:
-    KColorComboTest(QWidget *parent = 0);
+    KColorComboTest(QWidget *parent = nullptr);
     ~KColorComboTest();
 
 private Q_SLOTS:

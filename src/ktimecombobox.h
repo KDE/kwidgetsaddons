@@ -56,7 +56,7 @@ public:
     /**
      * Create a new KTimeComboBox widget
      */
-    explicit KTimeComboBox(QWidget *parent = 0);
+    explicit KTimeComboBox(QWidget *parent = nullptr);
 
     /**
      * Destroy the widget

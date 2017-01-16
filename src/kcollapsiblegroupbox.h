@@ -44,7 +44,7 @@ class KWIDGETSADDONS_EXPORT KCollapsibleGroupBox : public QWidget
     Q_PROPERTY(bool expanded READ isExpanded WRITE setExpanded NOTIFY expandedChanged)
 
 public:
-    explicit KCollapsibleGroupBox(QWidget *parent = 0);
+    explicit KCollapsibleGroupBox(QWidget *parent = nullptr);
     virtual ~KCollapsibleGroupBox();
 
     /**

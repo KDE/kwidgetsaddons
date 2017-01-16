@@ -47,7 +47,7 @@ public:
     /**
      * Default constructor.
      */
-    explicit KDragWidgetDecoratorBase(QWidget *parent = 0);
+    explicit KDragWidgetDecoratorBase(QWidget *parent = nullptr);
 
     /**
      * Destructs the decorator.

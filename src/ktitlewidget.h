@@ -95,7 +95,7 @@ public:
     /**
      * Constructs a title widget with the given @param parent.
      */
-    explicit KTitleWidget(QWidget *parent = 0);
+    explicit KTitleWidget(QWidget *parent = nullptr);
 
     virtual ~KTitleWidget();
 

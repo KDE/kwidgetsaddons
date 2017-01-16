@@ -167,7 +167,7 @@ void KPixmapRegionSelectorWidget::Private::updatePixmap()
 
     m_label->setPixmap(pixmap);
 
-    qApp->sendPostedEvents(0, QEvent::LayoutRequest);
+    qApp->sendPostedEvents(nullptr, QEvent::LayoutRequest);
 
     if (m_selectedRegion == m_originalPixmap.rect()) {//d->m_label->rect()) //### CHECK!
         m_rubberBand->hide();

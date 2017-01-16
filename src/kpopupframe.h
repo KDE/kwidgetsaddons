@@ -55,7 +55,7 @@ public:
     /**
      * The contructor. Creates a dialog without buttons.
      */
-    KPopupFrame(QWidget *parent = 0);
+    KPopupFrame(QWidget *parent = nullptr);
 
     /**
      * The destructor

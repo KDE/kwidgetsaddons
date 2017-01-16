@@ -289,8 +289,8 @@ void KPageViewPrivate::_k_dataChanged(const QModelIndex &, const QModelIndex &)
 }
 
 KPageViewPrivate::KPageViewPrivate(KPageView *_parent)
-    : q_ptr(_parent), model(0), faceType(KPageView::Auto),
-      layout(0), stack(0), titleWidget(0), view(0)
+    : q_ptr(_parent), model(nullptr), faceType(KPageView::Auto),
+      layout(nullptr), stack(nullptr), titleWidget(nullptr), view(nullptr)
 {
 }
 
@@ -412,7 +412,7 @@ QAbstractItemDelegate *KPageView::itemDelegate() const
     if (d->view) {
         return d->view->itemDelegate();
     } else {
-        return 0;
+        return nullptr;
     }
 }
 
@@ -450,7 +450,7 @@ QAbstractItemView *KPageView::createView()
         } else if (faceType == Tree) {
             return new KDEPrivate::KPageTreeView(this);
         } else { // should never happen
-            return 0;
+            return nullptr;
         }
     } else if (d->faceType == Plain) {
         return new KDEPrivate::KPagePlainView(this);
@@ -461,7 +461,7 @@ QAbstractItemView *KPageView::createView()
     } else if (d->faceType == Tabbed) {
         return new KDEPrivate::KPageTabbedView(this);
     } else {
-        return 0;
+        return nullptr;
     }
 }
 

@@ -58,7 +58,7 @@ public:
     /**
      * Constructor for a KPixmapRegionSelectorWidget.
      */
-    explicit KPixmapRegionSelectorWidget(QWidget *parent = 0);
+    explicit KPixmapRegionSelectorWidget(QWidget *parent = nullptr);
 
     /**
      * Destructor for a KPixmapRegionSelectorWidget

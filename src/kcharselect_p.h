@@ -153,7 +153,7 @@ public:
     QMimeData *mimeData(const QModelIndexList &indexes) const Q_DECL_OVERRIDE
     {
         if (indexes.size() != 1) {
-            return 0;
+            return nullptr;
         }
         QMimeData *mimeData = new QMimeData();
         uint character = data(indexes[0], CharacterRole).toUInt();

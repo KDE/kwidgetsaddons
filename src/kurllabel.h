@@ -84,7 +84,7 @@ public:
      * Use setUrl() and setText() or QListView::setPixmap()
      * to set the resp. properties.
      */
-    explicit KUrlLabel(QWidget *parent = 0L);
+    explicit KUrlLabel(QWidget *parent = nullptr);
 
     /**
      * Convenience constructor.
@@ -98,7 +98,7 @@ public:
      * them further down
      */
     explicit KUrlLabel(const QString &url, const QString &text = QString(),
-                       QWidget *parent = 0L);
+                       QWidget *parent = nullptr);
 
     /**
      * Destructs the label.
@@ -230,7 +230,7 @@ public Q_SLOTS:
      * @param on whether a custom cursor should be displayed.
      * @param cursor is the custom cursor. @p 0L indicates the default "hand cursor".
      */
-    void setUseCursor(bool on, QCursor *cursor = 0L);
+    void setUseCursor(bool on, QCursor *cursor = nullptr);
 
     /**
      * Turns on or off the "glow" feature.

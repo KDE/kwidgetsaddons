@@ -60,12 +60,12 @@ public:
     /**
      * The constructor. The current date will be displayed initially.
      **/
-    explicit KDatePicker(QWidget *parent = 0);
+    explicit KDatePicker(QWidget *parent = nullptr);
 
     /**
      * The constructor. The given date will be displayed initially.
      **/
-    explicit KDatePicker(const QDate &dt, QWidget *parent = 0);
+    explicit KDatePicker(const QDate &dt, QWidget *parent = nullptr);
 
     /**
      * The destructor.

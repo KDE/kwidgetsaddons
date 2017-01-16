@@ -34,7 +34,7 @@ class KToggleFullScreenAction::Private
 public:
     Private(KToggleFullScreenAction *action)
         : q(action)
-        , window(0)
+        , window(nullptr)
     {
     }
 

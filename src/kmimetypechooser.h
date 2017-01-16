@@ -66,7 +66,7 @@ public:
                      const QString &defaultGroup = QString(),
                      const QStringList &groupsToShow = QStringList(),
                      int visuals = Comments | Patterns | EditButton,
-                     QWidget *parent = 0);
+                     QWidget *parent = nullptr);
     ~KMimeTypeChooser();
 
     /**
@@ -135,7 +135,7 @@ public:
                            const QString &defaultGroup = QString(),
                            const QStringList &groupsToShow = QStringList(),
                            int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
-                           QWidget *parent = 0);
+                           QWidget *parent = nullptr);
 
     /**
      * @overload
@@ -144,7 +144,7 @@ public:
                            const QString &text,
                            const QStringList &selectedMimeTypes,
                            const QString &defaultGroup,
-                           QWidget *parent = 0);
+                           QWidget *parent = nullptr);
 
     ~KMimeTypeChooserDialog();
 

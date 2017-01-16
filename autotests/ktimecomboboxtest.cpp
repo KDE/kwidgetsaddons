@@ -42,7 +42,7 @@ void KTimeComboBoxTest::testDefaults()
 
 void KTimeComboBoxTest::testValidNull()
 {
-    m_combo = new KTimeComboBox(0);
+    m_combo = new KTimeComboBox(nullptr);
     QCOMPARE(m_combo->isValid(), true);
     QCOMPARE(m_combo->isNull(), false);
     m_combo->setTime(QTime());

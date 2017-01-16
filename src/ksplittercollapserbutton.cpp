@@ -83,9 +83,9 @@ public:
 
 KSplitterCollapserButton::Private::Private(KSplitterCollapserButton *qq)
     : q(qq),
-      splitter(0),
-      childWidget(0),
-      opacityTimeLine(0)
+      splitter(nullptr),
+      childWidget(nullptr),
+      opacityTimeLine(nullptr)
 {
 
 }

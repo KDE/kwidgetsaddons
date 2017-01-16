@@ -31,7 +31,7 @@ int main(int argc, char **argv)
     list << QStringLiteral("inode/directory") << QStringLiteral("text/plain");
     KMimeTypeChooserDialog dlg(QStringLiteral("Select Mime Types"), text, list, QStringLiteral("text"), QStringList(),
                                KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
-                               (QWidget *)0);
+                               (QWidget *)nullptr);
     if (dlg.exec() == QDialog::Accepted) {
         qDebug() << dlg.chooser()->patterns();
         qDebug() << dlg.chooser()->mimeTypes().join(QLatin1Char(';'));

@@ -31,12 +31,12 @@ KPageWidgetPrivate::KPageWidgetPrivate(KPageWidget *q)
 
 void KPageWidgetPrivate::_k_slotCurrentPageChanged(const QModelIndex &current, const QModelIndex &before)
 {
-    KPageWidgetItem *currentItem = 0;
+    KPageWidgetItem *currentItem = nullptr;
     if (current.isValid()) {
         currentItem = model()->item(current);
     }
 
-    KPageWidgetItem *beforeItem = 0;
+    KPageWidgetItem *beforeItem = nullptr;
     if (before.isValid()) {
         beforeItem = model()->item(before);
     }
@@ -135,7 +135,7 @@ KPageWidgetItem *KPageWidget::currentPage() const
     const QModelIndex index = KPageView::currentPage();
 
     if (!index.isValid()) {
-        return 0;
+        return nullptr;
     }
 
     return d_func()->model()->item(index);

@@ -38,7 +38,7 @@
   * @param foundry the storage for foundry name
   */
 void splitFontString(const QString &name,
-                     QString *family, QString *foundry = NULL);
+                     QString *family, QString *foundry = nullptr);
 
 /**
   * @internal
@@ -63,6 +63,6 @@ QString translateFontName(const QString &name);
   * @return sorted list of translated font names
   */
 QStringList translateFontNameList(const QStringList &names,
-                                  QHash<QString, QString> *trToRawNames = NULL);
+                                  QHash<QString, QString> *trToRawNames = nullptr);
 
 # endif

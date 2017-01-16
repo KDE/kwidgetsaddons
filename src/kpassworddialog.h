@@ -127,8 +127,8 @@ public:
      * @param parent the parent widget (default:NULL).
      * @param flags a set of KPasswordDialogFlag flags
      */
-    explicit KPasswordDialog(QWidget *parent = 0L,
-                             const KPasswordDialogFlags &flags = 0);
+    explicit KPasswordDialog(QWidget *parent = nullptr,
+                             const KPasswordDialogFlags &flags = nullptr);
 
     /**
      * Destructor

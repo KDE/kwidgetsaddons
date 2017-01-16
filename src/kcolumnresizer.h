@@ -80,7 +80,7 @@ public:
     /**
      * Constructs a KColumnResizer.
      */
-    explicit KColumnResizer(QObject *parent = 0);
+    explicit KColumnResizer(QObject *parent = nullptr);
 
     ~KColumnResizer();
 

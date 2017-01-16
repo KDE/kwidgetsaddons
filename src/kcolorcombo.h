@@ -51,7 +51,7 @@ public:
     /**
      * Constructs a color combo box.
      */
-    explicit KColorCombo(QWidget *parent = 0);
+    explicit KColorCombo(QWidget *parent = nullptr);
     ~KColorCombo();
 
     /**

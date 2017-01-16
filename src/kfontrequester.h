@@ -58,7 +58,7 @@ public:
      * @param onlyFixed Only display fonts which have fixed-width character
      *        sizes.
      */
-    explicit KFontRequester(QWidget *parent = 0L, bool onlyFixed = false);
+    explicit KFontRequester(QWidget *parent = nullptr, bool onlyFixed = false);
 
     ~KFontRequester();
 

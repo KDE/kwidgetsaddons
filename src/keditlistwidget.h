@@ -98,7 +98,7 @@ public:
     /**
      * Create an editable listbox.
      */
-    explicit KEditListWidget(QWidget *parent = 0);
+    explicit KEditListWidget(QWidget *parent = nullptr);
 
     /**
      * Constructor which allows to use a custom editing widget
@@ -112,7 +112,7 @@ public:
      * @see KUrlRequester::customEditor(), setCustomEditor
      */
     KEditListWidget(const CustomEditor &customEditor,
-                    QWidget *parent = 0,
+                    QWidget *parent = nullptr,
                     bool checkAtEntering = false,
                     Buttons buttons = All);
 

@@ -57,7 +57,7 @@ public:
 void KPixmapSequenceOverlayPainter::Private::init(KPixmapSequenceOverlayPainter *p)
 {
     q = p;
-    m_widget = 0;
+    m_widget = nullptr;
     m_alignment = Qt::AlignCenter;
     m_started = false;
     q->setInterval(200);

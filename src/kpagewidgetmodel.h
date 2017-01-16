@@ -194,7 +194,7 @@ public:
      *
      * @param parent The parent object.
      */
-    explicit KPageWidgetModel(QObject *parent = 0);
+    explicit KPageWidgetModel(QObject *parent = nullptr);
 
     /**
      * Destroys the page widget model.

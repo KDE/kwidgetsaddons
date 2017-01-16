@@ -83,7 +83,7 @@ public:
     /**
      * Constructs a page model with the given parent.
      */
-    explicit KPageModel(QObject *parent = 0);
+    explicit KPageModel(QObject *parent = nullptr);
 
     /**
      * Destroys the page model.

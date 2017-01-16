@@ -227,7 +227,7 @@ KPageTabbedView::~KPageTabbedView()
 
             if (page) {
                 page->setVisible(false);
-                page->setParent(0); // reparent our children before they are deleted
+                page->setParent(nullptr); // reparent our children before they are deleted
             }
         }
     }

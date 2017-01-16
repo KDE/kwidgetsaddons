@@ -101,8 +101,8 @@ public:
 Q_GLOBAL_STATIC(KMessageBoxDontAskAgainQSettingsStorage, s_defaultDontAskAgainInterface)
 Q_GLOBAL_STATIC(KMessageBoxNotifyDummy, s_defaultNotifyInterface)
 
-static KMessageBoxDontAskAgainInterface *s_dontAskAgainInterface = 0;
-static KMessageBoxNotifyInterface *s_notifyInterface = 0;
+static KMessageBoxDontAskAgainInterface *s_dontAskAgainInterface = nullptr;
+static KMessageBoxNotifyInterface *s_notifyInterface = nullptr;
 
 static void loadKMessageBoxPlugin()
 {
@@ -143,13 +143,13 @@ KMessageBoxNotifyInterface *notifyInterface()
 
 void setDontShowAgainInterface(KMessageBoxDontAskAgainInterface *dontAskAgainInterface)
 {
-    Q_ASSERT(dontAskAgainInterface != 0);
+    Q_ASSERT(dontAskAgainInterface != nullptr);
     s_dontAskAgainInterface = dontAskAgainInterface;
 }
 
 void setNotifyInterface(KMessageBoxNotifyInterface *notifyInterface)
 {
-    Q_ASSERT(notifyInterface != 0);
+    Q_ASSERT(notifyInterface != nullptr);
     s_notifyInterface = notifyInterface;
 }
 

@@ -51,12 +51,12 @@ public:
     /**
      * The constructor.
      */
-    explicit KDateTable(QWidget *parent = 0);
+    explicit KDateTable(QWidget *parent = nullptr);
 
     /**
      * The constructor.
      */
-    explicit KDateTable(const QDate &, QWidget *parent = 0);
+    explicit KDateTable(const QDate &, QWidget *parent = nullptr);
 
     /**
      * The destructor.

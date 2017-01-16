@@ -31,7 +31,7 @@ class KPixmapRegionSelectorDialog::Private
 {
 public:
     Private(KPixmapRegionSelectorDialog *parent)
-        : pixmapSelectorWidget(0), q(parent)
+        : pixmapSelectorWidget(nullptr), q(parent)
     {
     }
 

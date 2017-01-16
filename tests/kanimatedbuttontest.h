@@ -31,7 +31,7 @@ class AnimationGroup : public QGroupBox
     Q_OBJECT
 
 public:
-    AnimationGroup(const QString &name, int size, QWidget *parent = 0);
+    AnimationGroup(const QString &name, int size, QWidget *parent = nullptr);
 
 private:
     KAnimatedButton *m_animButton;
@@ -42,7 +42,7 @@ class MainWindow : public QWidget
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = 0);
+    MainWindow(QWidget *parent = nullptr);
 
 private Q_SLOTS:
     void slotAddNew();

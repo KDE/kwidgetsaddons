@@ -197,7 +197,7 @@ void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item)
             continue;
         }
 
-        if (!w->isVisibleTo(widget) || (w->isTopLevel() && qobject_cast<QMenu *>(w) == NULL)) {
+        if (!w->isVisibleTo(widget) || (w->isTopLevel() && qobject_cast<QMenu *>(w) == nullptr)) {
             continue;
         }
 
@@ -783,14 +783,14 @@ void KPopupAccelManager::setMenuEntries(const KAccelStringList &list)
 void KPopupAccelManager::manage(QMenu *popup)
 {
     // don't add more than one manager to a popup
-    if (popup->findChild<KPopupAccelManager *>(QString()) == 0) {
+    if (popup->findChild<KPopupAccelManager *>(QString()) == nullptr) {
         new KPopupAccelManager(popup);
     }
 }
 
 void QWidgetStackAccelManager::manage(QStackedWidget *stack)
 {
-    if (stack->findChild<QWidgetStackAccelManager *>(QString()) == 0) {
+    if (stack->findChild<QWidgetStackAccelManager *>(QString()) == nullptr) {
         new QWidgetStackAccelManager(stack);
     }
 }

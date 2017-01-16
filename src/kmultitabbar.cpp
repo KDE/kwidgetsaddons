@@ -103,7 +103,7 @@ KMultiTabBarTab *KMultiTabBarInternal::tab(int id) const
             return tab;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 int KMultiTabBarInternal::appendTab(const QIcon &icon, int id, const QString &text)
@@ -148,7 +148,7 @@ void KMultiTabBarInternal::setPosition(enum KMultiTabBar::KMultiTabBarPosition p
 
 KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
                                        int id, QWidget *parent)
-    : QPushButton(icon, text, parent), m_id(id), d(0)
+    : QPushButton(icon, text, parent), m_id(id), d(nullptr)
 {
     connect(this, SIGNAL(clicked()), this, SLOT(slotClicked()));
 
@@ -162,7 +162,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
 
 KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
                                        int id, QWidget *parent)
-    : QPushButton(QIcon(pic), text, parent), m_id(id), d(0)
+    : QPushButton(QIcon(pic), text, parent), m_id(id), d(nullptr)
 {
     connect(this, SIGNAL(clicked()), this, SLOT(slotClicked()));
 
@@ -231,7 +231,7 @@ KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon, const QString &text,
                                  int id, QWidget *parent,
                                  KMultiTabBar::KMultiTabBarPosition pos,
                                  KMultiTabBar::KMultiTabBarStyle style)
-    : KMultiTabBarButton(icon, text, id, parent), m_style(style), d(0)
+    : KMultiTabBarButton(icon, text, id, parent), m_style(style), d(nullptr)
 {
     m_position = pos;
     setToolTip(text);
@@ -244,7 +244,7 @@ KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic, const QString &text,
                                  int id, QWidget *parent,
                                  KMultiTabBar::KMultiTabBarPosition pos,
                                  KMultiTabBar::KMultiTabBarStyle style)
-    : KMultiTabBarButton(pic, text, id, parent), m_style(style), d(0)
+    : KMultiTabBarButton(pic, text, id, parent), m_style(style), d(nullptr)
 {
     m_position = pos;
     setToolTip(text);
@@ -271,7 +271,7 @@ void KMultiTabBarTab::setStyle(KMultiTabBar::KMultiTabBarStyle style)
 
 QPixmap KMultiTabBarTab::iconPixmap() const
 {
-    int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, 0, this);
+    int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, nullptr, this);
     return icon().pixmap(iconSize);
 }
 
@@ -377,7 +377,7 @@ void KMultiTabBarTab::setState(bool newState)
 void KMultiTabBarTab::setIcon(const QString &icon)
 {
     const QIcon i = QIcon::fromTheme(icon);
-    const int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, 0, this);
+    const int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, nullptr, this);
     setIcon(i.pixmap(iconSize));
 }
 
@@ -617,7 +617,7 @@ KMultiTabBarButton *KMultiTabBar::button(int id) const
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 KMultiTabBarTab *KMultiTabBar::tab(int id) const

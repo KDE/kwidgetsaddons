@@ -51,12 +51,12 @@ public:
     /**
      * Constructs a horizontal one-dimensional selection widget.
      */
-    explicit KSelector(QWidget *parent = 0);
+    explicit KSelector(QWidget *parent = nullptr);
     /**
      * Constructs a one-dimensional selection widget with
      * a given orientation.
      */
-    explicit KSelector(Qt::Orientation o, QWidget *parent = 0);
+    explicit KSelector(Qt::Orientation o, QWidget *parent = nullptr);
     /*
      * Destructs the widget.
      */
@@ -142,12 +142,12 @@ public:
      * Constructs a horizontal color selector which
      * contains a gradient between white and black.
      */
-    explicit KGradientSelector(QWidget *parent = 0);
+    explicit KGradientSelector(QWidget *parent = nullptr);
     /**
      * Constructs a colors selector with orientation o which
      * contains a gradient between white and black.
      */
-    explicit KGradientSelector(Qt::Orientation o, QWidget *parent = 0);
+    explicit KGradientSelector(Qt::Orientation o, QWidget *parent = nullptr);
     /**
      * Destructs the widget.
      */

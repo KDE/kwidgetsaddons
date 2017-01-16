@@ -53,8 +53,8 @@ class KPopupFrame::KPopupFramePrivate::OutsideClickCatcher
     : public QObject
 {
 public:
-    OutsideClickCatcher(QObject *parent = 0)
-        : QObject(parent), m_popup(0) { }
+    OutsideClickCatcher(QObject *parent = nullptr)
+        : QObject(parent), m_popup(nullptr) { }
     ~OutsideClickCatcher() { }
 
     void setPopupFrame(KPopupFrame *popup)
@@ -83,7 +83,7 @@ public:
 KPopupFrame::KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q):
     q(q),
     result(0),   // rejected
-    main(0),
+    main(nullptr),
     outsideClickCatcher(new OutsideClickCatcher)
 {
     outsideClickCatcher->setPopupFrame(q);

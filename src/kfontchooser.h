@@ -115,11 +115,11 @@ public:
      *        *sizeIsRelativeState, user choice may be retrieved by
      *        calling sizeIsRelative().
      */
-    explicit KFontChooser(QWidget *parent = 0L,
+    explicit KFontChooser(QWidget *parent = nullptr,
                           const DisplayFlags &flags = DisplayFrame,
                           const QStringList &fontList = QStringList(),
                           int visibleListSize = 8,
-                          Qt::CheckState *sizeIsRelativeState = 0L);
+                          Qt::CheckState *sizeIsRelativeState = nullptr);
 
     /**
      * Destructs the font chooser.

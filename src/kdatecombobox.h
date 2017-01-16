@@ -60,7 +60,7 @@ public:
      * are enabled, the ShortDate format is used and the date is set to the
      * current date.
      */
-    explicit KDateComboBox(QWidget *parent = 0);
+    explicit KDateComboBox(QWidget *parent = nullptr);
 
     /**
      * Destroy the widget

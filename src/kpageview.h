@@ -93,7 +93,7 @@ public:
     /**
      * Creates a page view with given parent.
      */
-    explicit KPageView(QWidget *parent = 0);
+    explicit KPageView(QWidget *parent = nullptr);
 
     /**
      * Destroys the page view.

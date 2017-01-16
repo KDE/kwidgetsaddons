@@ -31,7 +31,7 @@ public:
           tipText(url),
           linkColor(_parent->palette().color(QPalette::Active, QPalette::Link)),
           highlightedLinkColor(_parent->palette().color(QPalette::Active, QPalette::BrightText)),
-          cursor(0),
+          cursor(nullptr),
           textUnderlined(true),
           realUnderlined(true),
           useTips(false),

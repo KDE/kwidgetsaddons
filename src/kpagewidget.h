@@ -44,7 +44,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit KPageWidget(QWidget *parent = 0);
+    explicit KPageWidget(QWidget *parent = nullptr);
 
     /**
      * Destroys the page widget.

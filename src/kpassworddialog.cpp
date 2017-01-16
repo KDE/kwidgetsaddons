@@ -38,8 +38,8 @@ class KPasswordDialog::KPasswordDialogPrivate
 public:
     KPasswordDialogPrivate(KPasswordDialog *q)
         : q(q),
-          userEditCombo(0),
-          pixmapLabel(0),
+          userEditCombo(nullptr),
+          pixmapLabel(nullptr),
           commentRow(0),
           isToggleEchoModeAvailable(true)
     {}
@@ -248,7 +248,7 @@ void KPasswordDialog::addCommentLine(const QString &label,
     int spacing = d->ui.formLayout->horizontalSpacing();
     if (spacing < 0) {
         // same inter-column spacing for all rows, see comment in qformlayout.cpp
-        spacing = style()->combinedLayoutSpacing(QSizePolicy::Label, QSizePolicy::LineEdit, Qt::Horizontal, 0, this);
+        spacing = style()->combinedLayoutSpacing(QSizePolicy::Label, QSizePolicy::LineEdit, Qt::Horizontal, nullptr, this);
     }
 
     QLabel *c = new QLabel(comment, this);

@@ -181,7 +181,7 @@ QAction *KSelectAction::action(int index) const
         return selectableActionGroup()->actions().at(index);
     }
 
-    return 0L;
+    return nullptr;
 }
 
 QAction *KSelectAction::action(const QString &text, Qt::CaseSensitivity cs) const
@@ -207,7 +207,7 @@ QAction *KSelectAction::action(const QString &text, Qt::CaseSensitivity cs) cons
         }
     }
 
-    return 0L;
+    return nullptr;
 }
 
 bool KSelectAction::setCurrentAction(const QString &text, Qt::CaseSensitivity cs)
@@ -251,7 +251,7 @@ void KSelectAction::setMaxComboViewCount(int n)
 
 void KSelectAction::addAction(QAction *action)
 {
-    insertAction(0, action);
+    insertAction(nullptr, action);
 }
 
 QAction *KSelectAction::addAction(const QString &text)
@@ -539,12 +539,12 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
     Q_D(KSelectAction);
     QMenu *menu = qobject_cast<QMenu *>(parent);
     if (menu) { // If used in a menu want to return 0 and use only the text, not a widget
-        return 0;
+        return nullptr;
     }
     ToolBarMode mode = toolBarMode();
     QToolBar *toolBar = qobject_cast<QToolBar *>(parent);
     if (!toolBar && mode != ComboBoxMode) { // we can return a combobox just fine.
-        return 0;
+        return nullptr;
     }
     switch (mode) {
     case MenuMode: {
@@ -604,7 +604,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
     }
     }
 
-    return 0L;
+    return nullptr;
 }
 
 void KSelectAction::deleteWidget(QWidget *widget)

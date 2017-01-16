@@ -78,7 +78,7 @@ public:
      */
     explicit KMultiTabBar(QWidget *parent = Q_NULLPTR);
 
-    explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = 0);
+    explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = nullptr);
     virtual ~KMultiTabBar();
 
     /**
@@ -90,7 +90,7 @@ public:
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
      */
-    int appendButton(const QIcon &icon, int id = -1, QMenu *popup = 0, const QString &not_used_yet = QString());
+    int appendButton(const QIcon &icon, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 
 #ifndef KWIDGETSADDONS_NO_DEPRECATED
     /**
@@ -105,7 +105,7 @@ public:
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
      */
-    KWIDGETSADDONS_DEPRECATED int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = 0, const QString &not_used_yet = QString());
+    KWIDGETSADDONS_DEPRECATED int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 #endif
 
     /**

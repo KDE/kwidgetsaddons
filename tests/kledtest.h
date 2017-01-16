@@ -31,7 +31,7 @@ protected:
 
 public:
 
-    KLedTest(QWidget *parent = 0);
+    KLedTest(QWidget *parent = nullptr);
     ~KLedTest();
 
     bool kled_round;

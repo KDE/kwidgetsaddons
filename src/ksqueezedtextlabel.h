@@ -53,8 +53,8 @@ public:
     /**
      * Default constructor.
      */
-    explicit KSqueezedTextLabel(QWidget *parent = 0);
-    explicit KSqueezedTextLabel(const QString &text, QWidget *parent = 0);
+    explicit KSqueezedTextLabel(QWidget *parent = nullptr);
+    explicit KSqueezedTextLabel(const QString &text, QWidget *parent = nullptr);
 
     virtual ~KSqueezedTextLabel();
 

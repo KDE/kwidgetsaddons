@@ -74,7 +74,7 @@ public:
      *
      * @param parent Passed to lower level constructor.
      */
-    explicit KNewPasswordDialog(QWidget *parent = 0);
+    explicit KNewPasswordDialog(QWidget *parent = nullptr);
 
     /**
      * Destructs the password dialog.

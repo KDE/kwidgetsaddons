@@ -37,7 +37,7 @@ public:
         FrameMargin = 3
     };
 
-    KColorComboDelegate(QObject *parent = 0);
+    KColorComboDelegate(QObject *parent = nullptr);
     virtual ~KColorComboDelegate();
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;

@@ -49,8 +49,8 @@ public:
     /**
      * Constructor
      */
-    KPixmapSequenceWidget(QWidget *parent = 0);
-    KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent = 0);
+    KPixmapSequenceWidget(QWidget *parent = nullptr);
+    KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent = nullptr);
 
     /**
      * Destructor

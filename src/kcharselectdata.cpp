@@ -839,7 +839,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     foreach (const QString &s, searchStrings) {
         QRegularExpressionMatch match = hexExp.match(s);
         if (match.hasMatch()) {
-            returnRes.append(match.captured(2).toInt(0, 16));
+            returnRes.append(match.captured(2).toInt(nullptr, 16));
             // search for "1234" instead of "0x1234"
             if (s.length() == 6 || s.length() == 7) {
                 searchStrings[searchStrings.indexOf(s)] = match.captured(2);

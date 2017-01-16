@@ -318,7 +318,7 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
         .arg(bg2.name())
         .arg(border.name())
         // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
-        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, this) - 1)
+        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this) - 1)
         .arg(fg.name())
     );
 }
@@ -414,7 +414,7 @@ void KMessageWidget::removeAction(QAction *action)
 
 void KMessageWidget::animatedShow()
 {
-    if (!style()->styleHint(QStyle::SH_Widget_Animate, 0, this)) {
+    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
         show();
         emit showAnimationFinished();
         return;
@@ -439,7 +439,7 @@ void KMessageWidget::animatedShow()
 
 void KMessageWidget::animatedHide()
 {
-    if (!style()->styleHint(QStyle::SH_Widget_Animate, 0, this)) {
+    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
         hide();
         emit hideAnimationFinished();
         return;

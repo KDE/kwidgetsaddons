@@ -89,7 +89,7 @@ class KWIDGETSADDONS_EXPORT KActionSelector : public QWidget
     Q_PROPERTY(bool showUpDownButtons READ showUpDownButtons WRITE setShowUpDownButtons)
 
 public:
-    explicit KActionSelector(QWidget *parent = 0);
+    explicit KActionSelector(QWidget *parent = nullptr);
     ~KActionSelector();
 
     /**

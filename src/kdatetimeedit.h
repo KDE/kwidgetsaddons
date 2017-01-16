@@ -68,7 +68,7 @@ public:
     /**
      * Create a new KDateTimeEdit widget
      */
-    explicit KDateTimeEdit(QWidget *parent = 0);
+    explicit KDateTimeEdit(QWidget *parent = nullptr);
 
     /**
      * Destroy the widget

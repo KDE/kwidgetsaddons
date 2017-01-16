@@ -40,7 +40,7 @@ public:
     ~Private()
     {
         delete widget;
-        widget = 0;
+        widget = nullptr;
     }
 
     QString name;
@@ -53,7 +53,7 @@ public:
 };
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget)
-    : QObject(0), d(new Private)
+    : QObject(nullptr), d(new Private)
 {
     d->widget = widget;
 
@@ -68,7 +68,7 @@ KPageWidgetItem::KPageWidgetItem(QWidget *widget)
 }
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget, const QString &name)
-    : QObject(0), d(new Private)
+    : QObject(nullptr), d(new Private)
 {
     d->widget = widget;
     d->name = name;
@@ -176,7 +176,7 @@ PageItem::PageItem(KPageWidgetItem *pageWidgetItem, PageItem *parent)
 PageItem::~PageItem()
 {
     delete mPageWidgetItem;
-    mPageWidgetItem = 0;
+    mPageWidgetItem = nullptr;
 
     qDeleteAll(mChildItems);
 }
@@ -243,7 +243,7 @@ PageItem *PageItem::findChild(const KPageWidgetItem *item)
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 void PageItem::dump(int indent)
@@ -332,7 +332,7 @@ bool KPageWidgetModel::setData(const QModelIndex &index, const QVariant &value, 
 Qt::ItemFlags KPageWidgetModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return 0;
+        return nullptr;
     }
 
     Qt::ItemFlags flags = Qt::ItemIsSelectable;
@@ -546,12 +546,12 @@ void KPageWidgetModel::removePage(KPageWidgetItem *item)
 KPageWidgetItem *KPageWidgetModel::item(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return 0;
+        return nullptr;
     }
 
     PageItem *item = static_cast<PageItem *>(index.internalPointer());
     if (!item) {
-        return 0;
+        return nullptr;
     }
 
     return item->pageWidgetItem();

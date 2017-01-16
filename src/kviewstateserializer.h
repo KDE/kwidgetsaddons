@@ -170,7 +170,7 @@ public:
     /**
       Constructor
     */
-    explicit KViewStateSerializer(QObject *parent = 0);
+    explicit KViewStateSerializer(QObject *parent = nullptr);
 
     /**
       Destructor

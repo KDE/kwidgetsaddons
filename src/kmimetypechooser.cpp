@@ -35,8 +35,8 @@ class KMimeTypeChooserPrivate
 public:
     KMimeTypeChooserPrivate(KMimeTypeChooser *parent)
         : q(parent),
-          mimeTypeTree(0),
-          btnEditMimeType(0)
+          mimeTypeTree(nullptr),
+          btnEditMimeType(nullptr)
     {
     }
 
@@ -145,8 +145,8 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
     const QList<QMimeType> mimetypes = db.allMimeTypes();
 
     bool agroupisopen = false;
-    QTreeWidgetItem *idefault = 0; //open this, if all other fails
-    QTreeWidgetItem *firstChecked = 0; // make this one visible after the loop
+    QTreeWidgetItem *idefault = nullptr; //open this, if all other fails
+    QTreeWidgetItem *firstChecked = nullptr; // make this one visible after the loop
 
     foreach (const QMimeType &mt, mimetypes) {
         const QString mimetype = mt.name();

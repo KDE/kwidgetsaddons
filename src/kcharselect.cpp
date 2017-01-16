@@ -42,7 +42,7 @@ Q_GLOBAL_STATIC(KCharSelectData, s_data)
 class KCharSelectTablePrivate
 {
 public:
-    KCharSelectTablePrivate(KCharSelectTable *q): q(q), model(0)
+    KCharSelectTablePrivate(KCharSelectTable *q): q(q), model(nullptr)
     {}
 
     KCharSelectTable *q;
@@ -70,12 +70,12 @@ public:
 
     KCharSelectPrivate(KCharSelect *q)
         : q(q)
-        , searchLine(0)
+        , searchLine(nullptr)
         , searchMode(false)
         , historyEnabled(false)
         , allPlanesEnabled(false)
         , inHistory(0)
-        , actionParent(0)
+        , actionParent(nullptr)
     {
     }
 
@@ -263,7 +263,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     maxCharWidth = qMax(maxCharWidth, 2 * fontMetrics.xHeight());
     maxCharWidth = qMax(maxCharWidth, fontMetrics.height());
     // Add the necessary padding, trying to match the delegate
-    const int textMargin = q->style()->pixelMetric(QStyle::PM_FocusFrameHMargin, 0, q) + 1;
+    const int textMargin = q->style()->pixelMetric(QStyle::PM_FocusFrameHMargin, nullptr, q) + 1;
     maxCharWidth += 2 * textMargin;
 
     const int columns = qMax(1, viewportWidth / maxCharWidth);
@@ -343,7 +343,7 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
 KCharSelect::KCharSelect(QWidget *parent, const Controls controls)
     : QWidget(parent), d(new KCharSelectPrivate(this))
 {
-    initWidget(controls, NULL);
+    initWidget(controls, nullptr);
 }
 #endif
 
@@ -913,7 +913,7 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
 
     QSet<QString> chars2 = QSet<QString>::fromList(chars);
     foreach (const QString &c, chars2) {
-        int unicode = c.toInt(0, 16);
+        int unicode = c.toInt(nullptr, 16);
         if (!allPlanesEnabled && QChar::requiresSurrogates(unicode)) {
             continue;
         }
@@ -1017,7 +1017,7 @@ void  KCharSelect::KCharSelectPrivate::_k_linkClicked(QUrl url)
     if (hex.size() > 6) {
         return;
     }
-    int unicode = hex.toInt(0, 16);
+    int unicode = hex.toInt(nullptr, 16);
     if (unicode > QChar::LastValidCodePoint) {
         return;
     }

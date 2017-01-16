@@ -33,7 +33,7 @@ class KToggleAction::Private
 {
 public:
     Private(KToggleAction *_parent)
-        : parent(_parent), checkedGuiItem(0L)
+        : parent(_parent), checkedGuiItem(nullptr)
     {
     }
 

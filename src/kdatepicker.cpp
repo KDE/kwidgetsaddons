@@ -122,7 +122,7 @@ class KDatePicker::KDatePickerPrivate
 {
 public:
     KDatePickerPrivate(KDatePicker *q) :
-        q(q), closeButton(0L), selectWeek(0L), todayButton(0), navigationLayout(0)
+        q(q), closeButton(nullptr), selectWeek(nullptr), todayButton(nullptr), navigationLayout(nullptr)
     {
     }
 
@@ -468,7 +468,7 @@ void KDatePicker::selectMonthClicked()
     }
 
     // cancelled
-    if ((item = popup.exec(d->selectMonth->mapToGlobal(QPoint(0, 0)), item)) == 0) {
+    if ((item = popup.exec(d->selectMonth->mapToGlobal(QPoint(0, 0)), item)) == nullptr) {
         return;
     }
 
@@ -629,7 +629,7 @@ int KDatePicker::fontSize() const
 
 void KDatePicker::setCloseButton(bool enable)
 {
-    if (enable == (d->closeButton != 0L)) {
+    if (enable == (d->closeButton != nullptr)) {
         return;
     }
 
@@ -645,7 +645,7 @@ void KDatePicker::setCloseButton(bool enable)
                 topLevelWidget(), &QWidget::close);
     } else {
         delete d->closeButton;
-        d->closeButton = 0L;
+        d->closeButton = nullptr;
     }
 
     updateGeometry();

@@ -47,7 +47,7 @@ public:
      * Constructs a two-dimensional selector widget which
      * has a value range of [0..100] in both directions.
      */
-    explicit KXYSelector(QWidget *parent = 0);
+    explicit KXYSelector(QWidget *parent = nullptr);
     /**
      * Destructs the widget.
      */

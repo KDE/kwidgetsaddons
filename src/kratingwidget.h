@@ -51,7 +51,7 @@ public:
     /**
      * Creates a new rating widget.
      */
-    KRatingWidget(QWidget *parent = 0);
+    KRatingWidget(QWidget *parent = nullptr);
 
     /**
      * Destructor
