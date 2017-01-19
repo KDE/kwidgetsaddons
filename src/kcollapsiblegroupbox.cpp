@@ -342,6 +342,3 @@ QSize KCollapsibleGroupBoxPrivate::contentMinimumSize() const
     }
     return QSize(0,0);
 }
-
-
-#include "kcollapsiblegroupbox.moc"
