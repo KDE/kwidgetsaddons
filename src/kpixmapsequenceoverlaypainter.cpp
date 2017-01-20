@@ -236,7 +236,7 @@ void KPixmapSequenceOverlayPainter::start()
 void KPixmapSequenceOverlayPainter::stop()
 {
     d->m_timer.stop();
-    if (d->m_widget) {
+    if (d->m_widget && d->m_started) {
         d->m_started = false;
         d->m_widget->removeEventFilter(this);
         d->m_widget->update(d->pixmapRect());
