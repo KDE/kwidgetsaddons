@@ -27,16 +27,18 @@ class KMessageWidgetTest : public QObject
     Q_OBJECT
 
 private Q_SLOTS:
-    void initTestCase();
     void testAnimationSignals();
-
-public Q_SLOTS:
-    void hideAnimationFinished();
-    void showAnimationFinished();
-
-private:
-    int m_hideSignals;
-    int m_showSignals;
+    void testShowOnVisible();
+    void testHideOnInvisible();
+    void testOverlappingShowAndHide_data();
+    void testOverlappingShowAndHide();
+    void testOverlappingHideAndShow_data();
+    void testOverlappingHideAndShow();
+    void testOverlappingDoubleShow_data();
+    void testOverlappingDoubleShow();
+    void testOverlappingDoubleHide_data();
+    void testOverlappingDoubleHide();
+    void testHideWithNotYetShownParent();
 };
 
 #endif

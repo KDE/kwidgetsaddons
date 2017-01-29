@@ -67,6 +67,7 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
 
     q->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Fixed);
 
+    // Note: when changing the value 500, also update KMessageWidgetTest
     timeLine = new QTimeLine(500, q);
     QObject::connect(timeLine, SIGNAL(valueChanged(qreal)), q, SLOT(slotTimeLineChanged(qreal)));
     QObject::connect(timeLine, SIGNAL(finished()), q, SLOT(slotTimeLineFinished()));
@@ -414,13 +415,20 @@ void KMessageWidget::removeAction(QAction *action)
 
 void KMessageWidget::animatedShow()
 {
+    // Test before styleHint, as there might have been a style change while animation was running
+    if (isHideAnimationRunning()) {
+        d->timeLine->stop();
+        emit hideAnimationFinished();
+    }
+
     if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
         show();
         emit showAnimationFinished();
         return;
     }
 
-    if (isVisible()) {
+    if (isVisible() && (d->timeLine->state() == QTimeLine::NotRunning)) {
+        emit showAnimationFinished();
         return;
     }
 
@@ -439,6 +447,14 @@ void KMessageWidget::animatedShow()
 
 void KMessageWidget::animatedHide()
 {
+    // test this before isVisible, as animatedShow might have been called directly before,
+    // so the first timeline event is not yet done and the widget is still hidden
+    // And before styleHint, as there might have been a style change while animation was running
+    if (isShowAnimationRunning()) {
+        d->timeLine->stop();
+        emit showAnimationFinished();
+    }
+
     if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
         hide();
         emit hideAnimationFinished();
@@ -446,6 +462,9 @@ void KMessageWidget::animatedHide()
     }
 
     if (!isVisible()) {
+        // explicitely hide it, so it stays hidden in case it is only not visible due to the parents
+        hide();
+        emit hideAnimationFinished();
         return;
     }
 
