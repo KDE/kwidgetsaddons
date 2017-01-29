@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 
     //step 1  simple password
     {
-        KPasswordDialog dlg(0, KPasswordDialog::ShowKeepPassword);
+        KPasswordDialog dlg(nullptr, KPasswordDialog::ShowKeepPassword);
         dlg.setPrompt(i18n("This is a long prompt line. It is important it to be long so we can test the dialog does not get broken because of multiline labels. Please enter a password:"));
         dlg.addCommentLine(i18n("This is a rather large left comment line"), i18n("Right part of the comment line has to be long too so be test the layouting works really ok. Please visit http://www.kde.org"));
 
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
     //step 2 readonly username
     {
-        KPasswordDialog dlg(0, KPasswordDialog::ShowUsernameLine | KPasswordDialog::UsernameReadOnly);
+        KPasswordDialog dlg(nullptr, KPasswordDialog::ShowUsernameLine | KPasswordDialog::UsernameReadOnly);
         dlg.setPrompt(i18n("Enter a password for the test"));
         dlg.setUsername(QStringLiteral("konqui"));
         dlg.addCommentLine(i18n("Site"), i18n("http://www.kde.org"));
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 
     //step 3 with some username preset
     {
-        KPasswordDialog dlg(0, KPasswordDialog::ShowUsernameLine);
+        KPasswordDialog dlg(nullptr, KPasswordDialog::ShowUsernameLine);
         dlg.setPrompt(i18n("Enter a password for the test"));
         QMap<QString, QString> logins;
         logins.insert(QStringLiteral("konqui"), QStringLiteral("foo"));

@@ -32,6 +32,8 @@
 class KPageDialogPrivate;
 
 /**
+ * @class KPageDialog kpagedialog.h KPageDialog
+ *
  * @short A dialog base class which can handle multiple pages.
  *
  * This class provides a dialog base class which handles multiple
@@ -97,7 +99,7 @@ public:
     /**
      * Creates a new page dialog.
      */
-    explicit KPageDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0);
+    explicit KPageDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
 
     /**
      * Destroys the page dialog.
@@ -223,8 +225,8 @@ protected:
      * \param widget The KPageWidget object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
      */
-    KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = 0);
-    KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = 0);
+    KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = nullptr);
+    KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = nullptr);
 
     /**
      * Returns the page widget of the dialog or 0 if no page widget is set.

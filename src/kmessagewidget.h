@@ -28,6 +28,8 @@
 class KMessageWidgetPrivate;
 
 /**
+ * @class KMessageWidget kmessagewidget.h KMessageWidget
+ *
  * @short A widget to provide feedback or propose opportunistic interactions.
  *
  * KMessageWidget can be used to provide inline positive or negative
@@ -98,7 +100,6 @@ class KMessageWidgetPrivate;
 class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
 {
     Q_OBJECT
-    Q_ENUMS(MessageType)
 
     Q_PROPERTY(QString text READ text WRITE setText)
     Q_PROPERTY(bool wordWrap READ wordWrap WRITE setWordWrap)
@@ -117,17 +118,18 @@ public:
         Warning,
         Error
     };
+    Q_ENUM(MessageType)
 
     /**
      * Constructs a KMessageWidget with the specified @p parent.
      */
-    explicit KMessageWidget(QWidget *parent = 0);
+    explicit KMessageWidget(QWidget *parent = nullptr);
 
     /**
      * Constructs a KMessageWidget with the specified @p parent and
      * contents @p text.
      */
-    explicit KMessageWidget(const QString &text, QWidget *parent = 0);
+    explicit KMessageWidget(const QString &text, QWidget *parent = nullptr);
 
     /**
      * Destructor.

@@ -204,7 +204,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    KPageWidgetTest testWidget(0);
+    KPageWidgetTest testWidget(nullptr);
     testWidget.show();
 
     return app.exec();

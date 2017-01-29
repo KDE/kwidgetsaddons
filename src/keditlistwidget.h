@@ -33,6 +33,8 @@ class QItemSelection;
 
 class KEditListWidgetPrivate;
 /**
+ * @class KEditListWidget keditlistwidget.h KEditListWidget
+ *
  * An editable listbox
  *
  * This class provides an editable listbox, this means
@@ -40,7 +42,7 @@ class KEditListWidgetPrivate;
  * items into the listbox and pushbuttons to add and remove
  * items from the listbox and two buttons to move items up and down.
  *
- * \image html keditlistbox.png "KDE Edit List Box Widget"
+ * \image html keditlistbox.png "KEditListWidget"
  *
  * @since 4.6
  */
@@ -48,7 +50,6 @@ class KWIDGETSADDONS_EXPORT KEditListWidget : public QWidget
 {
     Q_OBJECT
 
-    Q_FLAGS(Buttons)
     Q_PROPERTY(Buttons buttons READ buttons WRITE setButtons)
     Q_PROPERTY(QStringList items READ items WRITE setItems NOTIFY changed USER true)
     Q_PROPERTY(bool checkAtEntering READ checkAtEntering WRITE setCheckAtEntering)
@@ -94,11 +95,12 @@ public:
     };
 
     Q_DECLARE_FLAGS(Buttons, Button)
+    Q_FLAG(Buttons)
 
     /**
      * Create an editable listbox.
      */
-    explicit KEditListWidget(QWidget *parent = 0);
+    explicit KEditListWidget(QWidget *parent = nullptr);
 
     /**
      * Constructor which allows to use a custom editing widget
@@ -112,7 +114,7 @@ public:
      * @see KUrlRequester::customEditor(), setCustomEditor
      */
     KEditListWidget(const CustomEditor &customEditor,
-                    QWidget *parent = 0,
+                    QWidget *parent = nullptr,
                     bool checkAtEntering = false,
                     Buttons buttons = All);
 

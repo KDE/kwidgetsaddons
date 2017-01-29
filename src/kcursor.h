@@ -27,6 +27,8 @@ class QObject;
 class QWidget;
 
 /**
+ * @class KCursor kcursor.h KCursor
+ *
  * The KCursor class provides a set of static
  * convenience methods for auto-hiding cursors on widgets.
  */

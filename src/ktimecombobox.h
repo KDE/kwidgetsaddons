@@ -27,6 +27,9 @@
 
 class KTimeComboBoxPrivate;
 
+/**
+ * @class KTimeComboBox ktimecombobox.h KTimeComboBox
+ */
 class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
 {
     Q_OBJECT
@@ -36,7 +39,6 @@ class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
     Q_PROPERTY(QTime maximumTime READ maximumTime WRITE setMaximumTime RESET resetMaximumTime)
     Q_PROPERTY(int timeListInterval READ timeListInterval WRITE setTimeListInterval)
     Q_PROPERTY(Options options READ options WRITE setOptions)
-    Q_FLAGS(Options)
 
 public:
 
@@ -52,11 +54,12 @@ public:
         WarnOnInvalid    = 0x0008   /**< Show a warning box on focus out if the user enters an invalid time */
     };
     Q_DECLARE_FLAGS(Options, Option)
+    Q_FLAG(Options)
 
     /**
      * Create a new KTimeComboBox widget
      */
-    explicit KTimeComboBox(QWidget *parent = 0);
+    explicit KTimeComboBox(QWidget *parent = nullptr);
 
     /**
      * Destroy the widget

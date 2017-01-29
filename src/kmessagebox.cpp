@@ -83,7 +83,7 @@ namespace KMessageBox
  * this static is used by the createKMessageBox function to enqueue dialogs
  * FIXME what should we do about this static?
  */
-QDialogButtonBox::StandardButton KWIDGETSADDONS_EXPORT(*KMessageBox_exec_hook)(QDialog *) = 0;
+QDialogButtonBox::StandardButton KWIDGETSADDONS_EXPORT(*KMessageBox_exec_hook)(QDialog *) = nullptr;
 
 static QIcon themedMessageBoxIcon(QMessageBox::Icon icon)
 {
@@ -126,6 +126,11 @@ static void applyOptions(QDialog *dialog, KMessageBox::Options options)
 // This method has been copied from KWindowSystem to avoid depending on it
 static void setMainWindow(QWidget *subWidget, WId mainWindowId)
 {
+#ifdef Q_OS_OSX
+    if (!QWidget::find(mainWindowId)) {
+        return;
+    }
+#endif
     // Set the WA_NativeWindow attribute to force the creation of the QWindow.
     // Without this QWidget::windowHandle() returns 0.
     subWidget->setAttribute(Qt::WA_NativeWindow, true);
@@ -159,7 +164,7 @@ public:
         : QObject(dialog),
           m_dialog(dialog),
           m_buttons(buttons),
-          m_details(0)
+          m_details(nullptr)
     {
         connect(m_buttons, &QDialogButtonBox::clicked,
                 this, &DialogButtonsHelper::onButtonClicked);
@@ -300,7 +305,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         mainLayout->addStretch(15);
     }
 
-    QPointer<QCheckBox> checkbox = 0;
+    QPointer<QCheckBox> checkbox = nullptr;
     if (!ask.isEmpty()) {
         checkbox = new QCheckBox(ask, mainWidget);
         mainLayout->addWidget(checkbox);
@@ -795,7 +800,7 @@ static void errorListInternal(QDialog *dialog, const QString &text, const QStrin
 
     applyOptions(dialog, options);
 
-    createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, strlist, QString(), 0, options);
+    createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, strlist, QString(), nullptr, options);
 }
 
 void errorList(QWidget *parent, const QString &text, const QStringList &strlist,
@@ -823,7 +828,7 @@ static void detailedErrorInternal(QDialog *dialog, const QString &text,
 
     applyOptions(dialog, options);
 
-    createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, QStringList(), QString(), 0, options, details);
+    createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, QStringList(), QString(), nullptr, options, details);
 }
 
 void detailedError(QWidget *parent, const QString &text,
@@ -844,7 +849,7 @@ static void sorryInternal(QDialog *dialog, const QString &text,
 
     applyOptions(dialog, options);
 
-    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), 0, options);
+    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
 }
 
 void sorry(QWidget *parent, const QString &text,
@@ -872,7 +877,7 @@ static void detailedSorryInternal(QDialog *dialog, const QString &text,
 
     applyOptions(dialog, options);
 
-    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), 0, options, details);
+    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options, details);
 }
 
 void detailedSorry(QWidget *parent, const QString &text,
@@ -940,7 +945,7 @@ void about(QWidget *parent, const QString &text,
         dialog->setWindowIcon(ret);
     }
 
-    createKMessageBox(dialog, buttonBox, qApp->windowIcon(), text, QStringList(), QString(), 0, options);
+    createKMessageBox(dialog, buttonBox, qApp->windowIcon(), text, QStringList(), QString(), nullptr, options);
 }
 
 static ButtonCode messageBoxInternal(QDialog *dialog, DialogType type, const QString &text,
@@ -1127,11 +1132,11 @@ void sorryWId(WId parent_id, const QString &text,
     buttonBox->setStandardButtons(QDialogButtonBox::Ok);
 
     applyOptions(dialog, options);
-    if (parent == NULL && parent_id) {
+    if (parent == nullptr && parent_id) {
         setMainWindow(dialog, parent_id);
     }
 
-    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), 0, options);
+    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
 }
 
 void detailedSorryWId(WId parent_id, const QString &text,

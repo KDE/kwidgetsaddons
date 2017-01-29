@@ -29,7 +29,7 @@ QTEST_MAIN(KDateComboBoxTest)
 
 void KDateComboBoxTest::testDefaults()
 {
-    m_combo = new KDateComboBox(0);
+    m_combo = new KDateComboBox(nullptr);
     QCOMPARE(m_combo->date(), QDate::currentDate());
     // Missing support in QLocale;
     //QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
@@ -43,7 +43,7 @@ void KDateComboBoxTest::testDefaults()
 
 void KDateComboBoxTest::testValidNull()
 {
-    m_combo = new KDateComboBox(0);
+    m_combo = new KDateComboBox(nullptr);
     QCOMPARE(m_combo->isValid(), true);
     QCOMPARE(m_combo->isNull(), false);
     m_combo->setDate(QDate());
@@ -58,7 +58,7 @@ void KDateComboBoxTest::testValidNull()
 
 void KDateComboBoxTest::testDateRange()
 {
-    m_combo = new KDateComboBox(0);
+    m_combo = new KDateComboBox(nullptr);
     m_combo->setDate(QDate(2000, 1, 1));
     // Missing support in QLocale;
     //QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
@@ -95,12 +95,34 @@ void KDateComboBoxTest::testDateRange()
     QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
     QCOMPARE(m_combo->maximumDate(), QDate(2003, 1, 1));
 
+    m_combo->resetDateRange();
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QVERIFY(!m_combo->maximumDate().isValid());
+
+    // Check functioning when the minimum or maximum date is not already set
+
+    m_combo->setMinimumDate(QDate(2000, 1, 1));
+    QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
+    QVERIFY(!m_combo->maximumDate().isValid());
+
+    m_combo->resetMinimumDate();
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QVERIFY(!m_combo->maximumDate().isValid());
+
+    m_combo->setMaximumDate(QDate(2003, 1, 1));
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QCOMPARE(m_combo->maximumDate(), QDate(2003, 1, 1));
+
+    m_combo->resetMaximumDate();
+    QVERIFY(!m_combo->minimumDate().isValid());
+    QVERIFY(!m_combo->maximumDate().isValid());
+
     delete m_combo;
 }
 
 void KDateComboBoxTest::testDateList()
 {
-    m_combo = new KDateComboBox(0);
+    m_combo = new KDateComboBox(nullptr);
     QMap<QDate, QString> map;
 
     // Test default map
@@ -120,7 +142,7 @@ void KDateComboBoxTest::testDateList()
 
 void KDateComboBoxTest::testOptions()
 {
-    m_combo = new KDateComboBox(0);
+    m_combo = new KDateComboBox(nullptr);
     KDateComboBox::Options options = KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords;
     QCOMPARE(m_combo->options(), options);
     options = KDateComboBox::EditDate | KDateComboBox::WarnOnInvalid;
@@ -131,7 +153,7 @@ void KDateComboBoxTest::testOptions()
 
 void KDateComboBoxTest::testDisplayFormat()
 {
-    m_combo = new KDateComboBox(0);
+    m_combo = new KDateComboBox(nullptr);
     QLocale::FormatType format = QLocale::ShortFormat;
     QCOMPARE(m_combo->displayFormat(), format);
     format = QLocale::NarrowFormat;

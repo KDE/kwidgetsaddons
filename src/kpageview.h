@@ -35,6 +35,8 @@ class KPageViewPrivate;
 class QAbstractItemModel;
 
 /**
+ * @class KPageView kpageview.h KPageView
+ *
  * @short A base class which can handle multiple pages.
  *
  * This class provides a widget base class which handles multiple
@@ -60,7 +62,6 @@ class QAbstractItemModel;
 class KWIDGETSADDONS_EXPORT KPageView : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(FaceType)
     Q_PROPERTY(FaceType faceType READ faceType WRITE setFaceType)
     Q_DECLARE_PRIVATE(KPageView)
 
@@ -89,11 +90,12 @@ public:
         Tree,
         Tabbed
     };
+    Q_ENUM(FaceType)
 
     /**
      * Creates a page view with given parent.
      */
-    explicit KPageView(QWidget *parent = 0);
+    explicit KPageView(QWidget *parent = nullptr);
 
     /**
      * Destroys the page view.

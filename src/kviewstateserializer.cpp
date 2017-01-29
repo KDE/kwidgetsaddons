@@ -31,10 +31,10 @@ class KViewStateSerializerPrivate
 public:
     KViewStateSerializerPrivate(KViewStateSerializer *qq)
         : q_ptr(qq),
-          m_treeView(0),
-          m_view(0),
-          m_selectionModel(0),
-          m_scrollArea(0),
+          m_treeView(nullptr),
+          m_view(nullptr),
+          m_selectionModel(nullptr),
+          m_scrollArea(nullptr),
           m_horizontalScrollBarValue(-1),
           m_verticalScrollBarValue(-1)
     {
@@ -77,7 +77,7 @@ public:
         } else if (m_view && m_view->model()) {
             return m_view->model();
         }
-        return 0;
+        return nullptr;
     }
 
     void rowsInserted(const QModelIndex &/*index*/, int /*start*/, int /*end*/)
@@ -105,7 +105,7 @@ public:
 };
 
 KViewStateSerializer::KViewStateSerializer(QObject *parent)
-    : QObject(0), d_ptr(new KViewStateSerializerPrivate(this))
+    : QObject(nullptr), d_ptr(new KViewStateSerializerPrivate(this))
 {
     Q_UNUSED(parent);
     qRegisterMetaType<QModelIndex>("QModelIndex");
@@ -124,8 +124,8 @@ void KViewStateSerializer::setView(QAbstractItemView *view)
         d->m_selectionModel = view->selectionModel();
         d->m_treeView = qobject_cast<QTreeView *>(view);
     } else {
-        d->m_selectionModel = 0;
-        d->m_treeView = 0;
+        d->m_selectionModel = nullptr;
+        d->m_treeView = nullptr;
     }
     d->m_view = view;
 }

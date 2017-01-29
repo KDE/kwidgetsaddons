@@ -29,7 +29,7 @@ class KPageDialogTest : public KPageDialog
     Q_OBJECT
 
 public:
-    KPageDialogTest(QWidget *parent = 0);
+    KPageDialogTest(QWidget *parent = nullptr);
     ~KPageDialogTest();
 };
 

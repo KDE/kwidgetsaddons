@@ -1,4 +1,4 @@
-
+include(ECMPoQmTools)
 ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5_qt)
 
 qt5_add_resources(kwidgetsaddons_ICON_SRCS icons.qrc)
@@ -74,6 +74,7 @@ set(kwidgetsaddons_SRCS
   kmimetypeeditor.cpp
   ksplittercollapserbutton.cpp
   kstyleextensions.cpp
+  ktooltipwidget.cpp
   ${kwidgetsaddons_QM_LOADER}
   ${kwidgetsaddons_ICON_SRCS}
 )
@@ -86,6 +87,14 @@ set(kwidgetsaddon_UI
 )
 
 qt5_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
+
+ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
+    HEADER loggingcategory.h
+    IDENTIFIER KWidgetsAddonsLog
+    CATEGORY_NAME kf5.kwidgetsaddons
+    DEFAULT_SEVERITY Warning
+)
+
 
 add_library(KF5WidgetsAddons ${kwidgetsaddons_SRCS})
 generate_export_header(KF5WidgetsAddons BASE_NAME KWidgetsAddons)
@@ -120,7 +129,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KLed
   KMessageBox
   KMessageBoxDontAskAgainInterface
-  KMultiTabBar
+  KMultiTabBar,KMultiTabBarButton,KMultiTabBarTab
   KNewPasswordWidget
   KPopupFrame
   KSelectAction
@@ -131,7 +140,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KFontRequester
   KPasswordDialog
   KRuler
-  KSelector
+  KSelector,KGradientSelector
   KTitleWidget
   KXYSelector
   KSeparator
@@ -154,7 +163,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPageModel
   KPageView
   KPageWidget
-  KPageWidgetModel
+  KPageWidgetModel,KPageWidgetItem
   KAssistantDialog
   KMessageWidget
   KNewPasswordDialog
@@ -164,13 +173,96 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPixmapSequenceWidget
   KPixmapRegionSelectorDialog
   KPixmapRegionSelectorWidget
-  KMimeTypeChooser
+  KMimeTypeChooser,KMimeTypeChooserDialog
   KMimeTypeEditor
   KMessageBoxNotifyInterface
   KSplitterCollapserButton
   KStyleExtensions
+  KToolTipWidget
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
+
+find_package(PythonModuleGeneration)
+
+if (PythonModuleGeneration_FOUND)
+  ecm_generate_python_binding(
+    TARGET KF5::WidgetsAddons
+    PYTHONNAMESPACE PyKF5
+    MODULENAME KWidgetsAddons
+    RULES_FILE "${CMAKE_SOURCE_DIR}/cmake/rules_PyKF5.py"
+    INSTALL_DIR_SUFFIX ${KDE_INSTALL_PYTHONBINDINGSDIR}
+    SIP_DEPENDS
+      QtWidgets/QtWidgetsmod.sip
+    HEADERS
+      kacceleratormanager.h
+      kanimatedbutton.h
+      kcharselect.h
+      kcollapsiblegroupbox.h
+      kcolorbutton.h
+      kcolumnresizer.h
+      kdatecombobox.h
+      kdatepicker.h
+      kdatetimeedit.h
+      kdragwidgetdecorator.h
+      kdualaction.h
+      kfontaction.h
+      kfontchooser.h
+      kfontsizeaction.h
+      kguiitem.h
+      kled.h
+      kmessagebox.h
+      kmessageboxdontaskagaininterface.h
+      kmultitabbar.h
+      knewpasswordwidget.h
+      kpopupframe.h
+      kselectaction.h
+      kstandardguiitem.h
+      ktimecombobox.h
+      kurllabel.h
+      kcapacitybar.h
+      kfontrequester.h
+      kpassworddialog.h
+      kruler.h
+      kselector.h
+      ktitlewidget.h
+      kxyselector.h
+      kseparator.h
+      ksqueezedtextlabel.h
+      ktoggleaction.h
+      ktogglefullscreenaction.h
+      kviewstateserializer.h
+      kviewstatemaintainerbase.h
+      keditlistwidget.h
+      kcursor.h
+      kratingpainter.h
+      kratingwidget.h
+      kactionselector.h
+      kcolorcombo.h
+      kactionmenu.h
+      ktoolbarlabelaction.h
+      ktoolbarpopupaction.h
+      ktoolbarspaceraction.h
+      kpagedialog.h
+      kpagemodel.h
+      kpageview.h
+      kpagewidget.h
+      kpagewidgetmodel.h
+      kassistantdialog.h
+      kmessagewidget.h
+      knewpassworddialog.h
+      lineediturldropeventfilter.h
+      kpixmapsequence.h
+      kpixmapsequenceoverlaypainter.h
+      kpixmapsequencewidget.h
+      kpixmapregionselectordialog.h
+      kpixmapregionselectorwidget.h
+      kmimetypechooser.h
+      kmimetypeeditor.h
+      kmessageboxnotifyinterface.h
+      ksplittercollapserbutton.h
+      kstyleextensions.h
+  )
+endif()
 
 install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 

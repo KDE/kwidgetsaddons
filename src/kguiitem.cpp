@@ -86,7 +86,7 @@ KGuiItem::KGuiItem(const QString &text,    const QIcon &icon,
 }
 
 KGuiItem::KGuiItem(const KGuiItem &rhs)
-    : d(0)
+    : d(nullptr)
 {
     (*this) = rhs;
 }

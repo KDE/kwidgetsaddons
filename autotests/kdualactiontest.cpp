@@ -38,7 +38,7 @@ private Q_SLOTS:
 
     void testSetGuiItem()
     {
-        KDualAction action(0);
+        KDualAction action(nullptr);
         action.setInactiveGuiItem(KGuiItem(INACTIVE_TEXT));
         action.setActiveGuiItem(KGuiItem(ACTIVE_TEXT));
         QCOMPARE(action.inactiveText(), INACTIVE_TEXT);
@@ -50,7 +50,7 @@ private Q_SLOTS:
     {
         QIcon icon(QPixmap(16, 16));
         QVERIFY(!icon.isNull());
-        KDualAction action(0);
+        KDualAction action(nullptr);
         QVERIFY(action.inactiveIcon().isNull());
         QVERIFY(action.activeIcon().isNull());
         action.setIconForStates(icon);
@@ -60,7 +60,7 @@ private Q_SLOTS:
 
     void testSetActive()
     {
-        KDualAction action(INACTIVE_TEXT, ACTIVE_TEXT, 0);
+        KDualAction action(INACTIVE_TEXT, ACTIVE_TEXT, nullptr);
         QVERIFY(!action.isActive());
         QCOMPARE(action.text(), INACTIVE_TEXT);
         QSignalSpy activeChangedSpy(&action, SIGNAL(activeChanged(bool)));
@@ -83,7 +83,7 @@ private Q_SLOTS:
 
     void testTrigger()
     {
-        KDualAction action(INACTIVE_TEXT, ACTIVE_TEXT, 0);
+        KDualAction action(INACTIVE_TEXT, ACTIVE_TEXT, nullptr);
         QVERIFY(!action.isActive());
         QCOMPARE(action.text(), INACTIVE_TEXT);
         QSignalSpy activeChangedSpy(&action, SIGNAL(activeChanged(bool)));

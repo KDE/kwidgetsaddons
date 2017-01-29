@@ -37,7 +37,7 @@
 class KPageStackedWidget : public QStackedWidget
 {
 public:
-    KPageStackedWidget(QWidget *parent = 0)
+    KPageStackedWidget(QWidget *parent = nullptr)
         : QStackedWidget(parent)
     {
     }
@@ -102,7 +102,7 @@ class KPageListViewProxy;
 class KPagePlainView : public QAbstractItemView
 {
 public:
-    KPagePlainView(QWidget *parent = 0);
+    KPagePlainView(QWidget *parent = nullptr);
 
     QModelIndex indexAt(const QPoint &point) const Q_DECL_OVERRIDE;
     void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) Q_DECL_OVERRIDE;
@@ -122,7 +122,7 @@ class KPageListView : public QListView
     Q_OBJECT
 
 public:
-    KPageListView(QWidget *parent = 0);
+    KPageListView(QWidget *parent = nullptr);
     virtual ~KPageListView();
 
     void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
@@ -136,7 +136,7 @@ class KPageTreeView : public QTreeView
     Q_OBJECT
 
 public:
-    KPageTreeView(QWidget *parent = 0);
+    KPageTreeView(QWidget *parent = nullptr);
 
     void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
 
@@ -152,7 +152,7 @@ class KPageTabbedView : public QAbstractItemView
     Q_OBJECT
 
 public:
-    KPageTabbedView(QWidget *parent = 0);
+    KPageTabbedView(QWidget *parent = nullptr);
     virtual ~KPageTabbedView();
 
     void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
@@ -185,7 +185,7 @@ class KPageListViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 
 public:
-    KPageListViewDelegate(QObject *parent = 0);
+    KPageListViewDelegate(QObject *parent = nullptr);
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
@@ -203,7 +203,7 @@ class KPageListViewProxy : public QAbstractProxyModel
     Q_OBJECT
 
 public:
-    KPageListViewProxy(QObject *parent = 0);
+    KPageListViewProxy(QObject *parent = nullptr);
     virtual ~KPageListViewProxy();
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;

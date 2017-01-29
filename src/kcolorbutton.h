@@ -26,13 +26,15 @@
 
 class KColorButtonPrivate;
 /**
+* @class KColorButton kcolorbutton.h KColorButton
+*
 * @short A pushbutton to display or allow user selection of a color.
 *
 * This widget can be used to display or allow user selection of a color.
 *
 * @see QColorDialog
 *
-* \image html kcolorbutton.png "KDE Color Button"
+* \image html kcolorbutton.png "KColorButton Widget"
 */
 class KWIDGETSADDONS_EXPORT KColorButton : public QPushButton
 {
@@ -45,17 +47,17 @@ public:
     /**
      * Creates a color button.
      */
-    explicit KColorButton(QWidget *parent = 0);
+    explicit KColorButton(QWidget *parent = nullptr);
 
     /**
      * Creates a color button with an initial color @p c.
      */
-    explicit KColorButton(const QColor &c, QWidget *parent = 0);
+    explicit KColorButton(const QColor &c, QWidget *parent = nullptr);
 
     /**
      * Creates a color button with an initial color @p c and default color @p defaultColor.
      */
-    KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent = 0);
+    KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent = nullptr);
 
     virtual ~KColorButton();
 

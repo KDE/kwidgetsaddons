@@ -29,7 +29,7 @@ class SelectActionTest : public QMainWindow
     Q_OBJECT
 
 public:
-    SelectActionTest(QWidget *parent = 0);
+    SelectActionTest(QWidget *parent = nullptr);
 
 public Q_SLOTS:
     void triggered(QAction *action);

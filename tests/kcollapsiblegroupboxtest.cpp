@@ -18,6 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include <QApplication>
+#include <QLineEdit>
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QFrame>
@@ -44,12 +45,19 @@ int main(int argc, char *argv[])
         groupBox->setTitle(QStringLiteral("&Advanced Options"));
 
         auto innerLayout = new QVBoxLayout;
-        for (int i =0; i<7;i++) {
+        for (int i =0; i<6;i++) {
             auto checkBox = new QCheckBox(QStringLiteral("Some text"));
             innerLayout->addWidget(checkBox);
         }
         auto checkBox = new QCheckBox(QStringLiteral("Some really long text that goes on and on and on for ever and ever"));
         innerLayout->addWidget(checkBox);
+
+        auto lineEdit = new QLineEdit(groupBox);
+        innerLayout->addWidget(lineEdit);
+
+        auto hiddenCheckBox = new QCheckBox(QStringLiteral("This will be always hidden"));
+        innerLayout->addWidget(hiddenCheckBox);
+        hiddenCheckBox->hide();
 
         groupBox->setLayout(innerLayout);
         mainWindowLayout.addWidget(groupBox);

@@ -35,7 +35,7 @@ KToolBarLabelAction::KToolBarLabelAction(const QString &text, QObject *parent)
       d(new Private)
 {
     setText(text);
-    d->label = 0;
+    d->label = nullptr;
 }
 
 KToolBarLabelAction::KToolBarLabelAction(QAction *buddy, const QString &text, QObject *parent)
@@ -45,7 +45,7 @@ KToolBarLabelAction::KToolBarLabelAction(QAction *buddy, const QString &text, QO
     setBuddy(buddy);
     setText(text);
 
-    d->label = 0;
+    d->label = nullptr;
 }
 
 KToolBarLabelAction::~KToolBarLabelAction()

@@ -29,6 +29,8 @@ class KPixmapRegionSelectorWidget;
 class QImage;
 
 /**
+ * @class KPixmapRegionSelectorDialog kpixmapregionselectordialog.h KPixmapRegionSelectorDialog
+ *
  * A dialog that uses a KPixmapRegionSelectorWidget to allow the user
  * to select a region of an image. If you want to use special features
  * like forcing the selected area to have a fixed aspect ratio, you can use
@@ -39,7 +41,7 @@ class QImage;
  * for the user to select a region of an image, and just care about the selected
  * image.
  *
- * \image html kpixmapregionselectordialog.png "KDE Pixmap Region Selector Dialog"
+ * \image html kpixmapregionselectordialog.png "KPixmapRegionSelectorDialog"
  *
  * @author Antonio Larrosa <larrosa@kde.org>
  */
@@ -53,7 +55,7 @@ public:
      * later the setPixmap method of the KPixmapRegionSelectorWidget widget of
      * the new object.
      */
-    explicit KPixmapRegionSelectorDialog(QWidget *parent = 0);
+    explicit KPixmapRegionSelectorDialog(QWidget *parent = nullptr);
 
     /**
      * The destructor of the dialog
@@ -73,7 +75,7 @@ public:
      * @returns the selected rectangle, or an invalid rectangle if the user
      * pressed the Cancel button.
      */
-    static QRect getSelectedRegion(const QPixmap &pixmap, QWidget *parent = 0L);
+    static QRect getSelectedRegion(const QPixmap &pixmap, QWidget *parent = nullptr);
 
     /**
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
@@ -84,7 +86,7 @@ public:
      * pressed the Cancel button.
      */
     static QRect getSelectedRegion(const QPixmap &pixmap, int aspectRatioWidth,
-                                   int aspectRatioHeight, QWidget *parent = 0L);
+                                   int aspectRatioHeight, QWidget *parent = nullptr);
 
     /**
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
@@ -93,7 +95,7 @@ public:
      * @returns the selected image, or an invalid image if the user
      * pressed the Cancel button.
      */
-    static QImage getSelectedImage(const QPixmap &pixmap, QWidget *parent = 0L);
+    static QImage getSelectedImage(const QPixmap &pixmap, QWidget *parent = nullptr);
 
     /**
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
@@ -104,7 +106,7 @@ public:
      * pressed the Cancel button.
      */
     static QImage getSelectedImage(const QPixmap &pixmap, int aspectRatioWidth,
-                                   int aspectRatioHeight, QWidget *parent = 0L);
+                                   int aspectRatioHeight, QWidget *parent = nullptr);
 
     /**
      * @since 4.4.3

@@ -31,7 +31,7 @@ class KAnimatedButtonPrivate
 {
 public:
     KAnimatedButtonPrivate(KAnimatedButton *qq)
-        : q(qq), movie(0)
+        : q(qq), movie(nullptr)
     {
     }
 
@@ -162,7 +162,7 @@ void KAnimatedButtonPrivate::_k_movieFinished()
 void KAnimatedButtonPrivate::updateIcons()
 {
     pixmap = QPixmap();
-    QMovie *newMovie = 0;
+    QMovie *newMovie = nullptr;
     QImageReader reader(icon_path);
     if (QMovie::supportedFormats().contains(reader.format())) {
         newMovie = new QMovie(icon_path);
@@ -187,7 +187,7 @@ void KAnimatedButtonPrivate::updateIcons()
 
     current_frame = 0;
     qDeleteAll(framesCache);
-    framesCache.fill(0);
+    framesCache.fill(nullptr);
     framesCache.resize(frames);
     delete movie;
     movie = newMovie;

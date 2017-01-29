@@ -27,6 +27,9 @@
 
 class KDateComboBoxPrivate;
 
+/**
+ * @class KDateComboBox kdatecombobox.h KDateComboBox
+ */
 class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
 {
     Q_OBJECT
@@ -35,7 +38,6 @@ class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
     Q_PROPERTY(QDate minimumDate READ minimumDate WRITE setMinimumDate RESET resetMinimumDate)
     Q_PROPERTY(QDate maximumDate READ maximumDate WRITE setMaximumDate RESET resetMaximumDate)
     Q_PROPERTY(Options options READ options WRITE setOptions)
-    Q_FLAGS(Options)
 
 public:
 
@@ -52,6 +54,7 @@ public:
         WarnOnInvalid    = 0x0010   /**< Show a warning on focus out if the date is invalid */
     };
     Q_DECLARE_FLAGS(Options, Option)
+    Q_FLAG(Options)
 
     /**
      * Create a new KDateComboBox widget
@@ -60,7 +63,7 @@ public:
      * are enabled, the ShortDate format is used and the date is set to the
      * current date.
      */
-    explicit KDateComboBox(QWidget *parent = 0);
+    explicit KDateComboBox(QWidget *parent = nullptr);
 
     /**
      * Destroy the widget
@@ -227,7 +230,9 @@ public Q_SLOTS:
     void setMinimumDate(const QDate &minTime, const QString &minWarnMsg = QString());
 
     /**
-     * Reset the minimum date to the default
+     * Reset the minimum date to the default.
+     *
+     * The default is to have no minimum date.
      */
     void resetMinimumDate();
 
@@ -248,6 +253,8 @@ public Q_SLOTS:
 
     /**
      * Reset the maximum date to the default
+     *
+     * The default is to have no maximum date.
      */
     void resetMaximumDate();
 

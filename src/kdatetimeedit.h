@@ -28,6 +28,9 @@
 
 class KDateTimeEditPrivate;
 
+/**
+ * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
+ */
 class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
 {
     Q_OBJECT
@@ -36,7 +39,6 @@ class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
     Q_PROPERTY(QTime time READ time WRITE setTime NOTIFY timeChanged USER true)
     Q_PROPERTY(int timeListInterval READ timeListInterval WRITE setTimeListInterval)
     Q_PROPERTY(Options options READ options WRITE setOptions)
-    Q_FLAGS(Options)
 
 public:
 
@@ -64,11 +66,12 @@ public:
         WarnOnInvalid    = 0x08000   /**< Show a warning on focus out if the date or time is invalid */
     };
     Q_DECLARE_FLAGS(Options, Option)
+    Q_FLAG(Options)
 
     /**
      * Create a new KDateTimeEdit widget
      */
-    explicit KDateTimeEdit(QWidget *parent = 0);
+    explicit KDateTimeEdit(QWidget *parent = nullptr);
 
     /**
      * Destroy the widget

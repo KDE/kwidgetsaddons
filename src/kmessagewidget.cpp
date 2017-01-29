@@ -127,17 +127,23 @@ void KMessageWidgetPrivate::createLayout()
         layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
         layout->addWidget(textLabel, 0, 1);
 
-        QHBoxLayout *buttonLayout = new QHBoxLayout;
-        buttonLayout->addStretch();
-        Q_FOREACH (QToolButton *button, buttons) {
-            // For some reason, calling show() is necessary if wordwrap is true,
-            // otherwise the buttons do not show up. It is not needed if
-            // wordwrap is false.
-            button->show();
-            buttonLayout->addWidget(button);
+        if (buttons.isEmpty()) {
+            // Use top-vertical alignment like the icon does.
+            layout->addWidget(closeButton, 0, 2, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
+        } else {
+            // Use an additional layout in row 1 for the buttons.
+            QHBoxLayout *buttonLayout = new QHBoxLayout;
+            buttonLayout->addStretch();
+            Q_FOREACH (QToolButton *button, buttons) {
+                // For some reason, calling show() is necessary if wordwrap is true,
+                // otherwise the buttons do not show up. It is not needed if
+                // wordwrap is false.
+                button->show();
+                buttonLayout->addWidget(button);
+            }
+            buttonLayout->addWidget(closeButton);
+            layout->addItem(buttonLayout, 1, 0, 1, 2);
         }
-        buttonLayout->addWidget(closeButton);
-        layout->addItem(buttonLayout, 1, 0, 1, 2);
     } else {
         QHBoxLayout *layout = new QHBoxLayout(content);
         layout->addWidget(iconLabel);
@@ -284,6 +290,8 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
         break;
     case Error:
         bg1.setRgb(218, 68, 83); // values taken from kcolorscheme.cpp (Negative)
+        // #357210: use darker color to improve the visibility of close button.
+        bg1 = bg1.darker(110);
         fg.setRgb(239, 240, 241);
         break;
     }
@@ -310,7 +318,7 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
         .arg(bg2.name())
         .arg(border.name())
         // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
-        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, 0, this) - 1)
+        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this) - 1)
         .arg(fg.name())
     );
 }
@@ -406,7 +414,7 @@ void KMessageWidget::removeAction(QAction *action)
 
 void KMessageWidget::animatedShow()
 {
-    if (!style()->styleHint(QStyle::SH_Widget_Animate, 0, this)) {
+    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
         show();
         emit showAnimationFinished();
         return;
@@ -431,7 +439,7 @@ void KMessageWidget::animatedShow()
 
 void KMessageWidget::animatedHide()
 {
-    if (!style()->styleHint(QStyle::SH_Widget_Animate, 0, this)) {
+    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
         hide();
         emit hideAnimationFinished();
         return;

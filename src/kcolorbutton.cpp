@@ -213,7 +213,7 @@ void KColorButton::paintEvent(QPaintEvent *)
     }
 
     QColor fillCol = isEnabled() ? d->col : palette().color(backgroundRole());
-    qDrawShadePanel(&painter, x, y, w, h, palette(), true, 1, NULL);
+    qDrawShadePanel(&painter, x, y, w, h, palette(), true, 1, nullptr);
     if (fillCol.isValid()) {
         const QRect rect(x + 1, y + 1, w - 2, h - 2);
         if (fillCol.alpha() < 255) {

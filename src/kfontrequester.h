@@ -30,13 +30,15 @@ class QLabel;
 class QPushButton;
 
 /**
+ * @class KFontRequester kfontrequester.h KFontRequester
+ *
  * This class provides a widget with a lineedit and a button, which invokes
  * a font dialog (QFontDialog).
  *
  * The lineedit provides a preview of the selected font. The preview text can
  * be customized. You can also have the font dialog show only the fixed fonts.
  *
- * \image html kfontrequester.png "KDE Font Requester"
+ * \image html kfontrequester.png "KFontRequester"
  *
  * @author Nadeem Hasan <nhasan@kde.org>
  *
@@ -58,7 +60,7 @@ public:
      * @param onlyFixed Only display fonts which have fixed-width character
      *        sizes.
      */
-    explicit KFontRequester(QWidget *parent = 0L, bool onlyFixed = false);
+    explicit KFontRequester(QWidget *parent = nullptr, bool onlyFixed = false);
 
     ~KFontRequester();
 

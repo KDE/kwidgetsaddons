@@ -34,12 +34,14 @@
 class KColorComboPrivate;
 
 /**
+ * @class KColorCombo kcolorcombo.h KColorCombo
+ *
  * Combobox for colors.
  *
  * The combobox provides some preset colors to be selected, and an entry to
  * select a custom color using a color dialog.
  *
- * \image html kcolorcombo.png "KDE Color Combo Box"
+ * \image html kcolorcombo.png "KColorCombo Widget"
  */
 class KWIDGETSADDONS_EXPORT KColorCombo : public QComboBox
 {
@@ -51,7 +53,7 @@ public:
     /**
      * Constructs a color combo box.
      */
-    explicit KColorCombo(QWidget *parent = 0);
+    explicit KColorCombo(QWidget *parent = nullptr);
     ~KColorCombo();
 
     /**

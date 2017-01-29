@@ -32,7 +32,7 @@ QTEST_MAIN(KDateTimeEditTest)
 
 void KDateTimeEditTest::testDefaults()
 {
-    m_edit = new KDateTimeEdit(0);
+    m_edit = new KDateTimeEdit(nullptr);
     QCOMPARE(m_edit->dateTime(), QDateTime(QDate::currentDate(), QTime(0, 0, 0)));
     QCOMPARE(m_edit->date(), QDate::currentDate());
     QCOMPARE(m_edit->time(), QTime(0, 0, 0));
@@ -50,7 +50,7 @@ void KDateTimeEditTest::testDefaults()
 
 void KDateTimeEditTest::testValidNull()
 {
-    m_edit = new KDateTimeEdit(0);
+    m_edit = new KDateTimeEdit(nullptr);
     QCOMPARE(m_edit->isValid(), true);
     QCOMPARE(m_edit->isNull(), false);
     m_edit->setDateTime(QDateTime());
@@ -61,7 +61,7 @@ void KDateTimeEditTest::testValidNull()
 
 void KDateTimeEditTest::testDateTimeRange()
 {
-    m_edit = new KDateTimeEdit(0);
+    m_edit = new KDateTimeEdit(nullptr);
     m_edit->setDateTime(QDateTime(QDate(2000, 1, 1), QTime(12, 0, 0)));
     // Missing support in QLocale
     //QCOMPARE(m_edit->minimumDateTime(), KDateTime(KLocale::global()->calendar()->earliestValidDate(), QTime(0, 0, 0)));
@@ -101,7 +101,7 @@ void KDateTimeEditTest::testDateTimeRange()
 
 void KDateTimeEditTest::testDateList()
 {
-    m_edit = new KDateTimeEdit(0);
+    m_edit = new KDateTimeEdit(nullptr);
     QMap<QDate, QString> map;
 
     // KDateTimeEditTest default map
@@ -121,7 +121,7 @@ void KDateTimeEditTest::testDateList()
 
 void KDateTimeEditTest::testOptions()
 {
-    m_edit = new KDateTimeEdit(0);
+    m_edit = new KDateTimeEdit(nullptr);
     KDateTimeEdit::Options options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime;
     QCOMPARE(m_edit->options(), options);
     options = KDateTimeEdit::EditDate | KDateTimeEdit::WarnOnInvalid;
@@ -132,7 +132,7 @@ void KDateTimeEditTest::testOptions()
 
 void KDateTimeEditTest::testDateDisplayFormat()
 {
-    m_edit = new KDateTimeEdit(0);
+    m_edit = new KDateTimeEdit(nullptr);
     QLocale::FormatType format = QLocale::ShortFormat;
     QCOMPARE(m_edit->dateDisplayFormat(), format);
     format = QLocale::NarrowFormat;
@@ -234,7 +234,7 @@ static T findVisibleChild(QWidget *parent)
             return child;
         }
     }
-    return 0;
+    return nullptr;
 }
 
 void KDateTimeEditTest::testDateMenu()

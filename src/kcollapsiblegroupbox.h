@@ -28,7 +28,7 @@
 class KCollapsibleGroupBoxPrivate;
 
 /**
- * @class KCollapsibleGroupBox
+ * @class KCollapsibleGroupBox kcollapsiblegroupbox.h KCollapsibleGroupBox
  *
  * A groupbox featuring a clickable header and arrow indicator that can be
  * expanded and collapsed to reveal the contents.
@@ -44,7 +44,7 @@ class KWIDGETSADDONS_EXPORT KCollapsibleGroupBox : public QWidget
     Q_PROPERTY(bool expanded READ isExpanded WRITE setExpanded NOTIFY expandedChanged)
 
 public:
-    explicit KCollapsibleGroupBox(QWidget *parent = 0);
+    explicit KCollapsibleGroupBox(QWidget *parent = nullptr);
     virtual ~KCollapsibleGroupBox();
 
     /**

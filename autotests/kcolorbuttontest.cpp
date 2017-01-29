@@ -50,7 +50,7 @@ void KColorButtonTest::testChangeAndCancel()
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
     QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
-    QVERIFY(dialog != NULL);
+    QVERIFY(dialog != nullptr);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
 #if 0
@@ -73,7 +73,7 @@ void KColorButtonTest::testDoubleClickChange()
     if (!dialog) {
         qWarning() << "No QColorDialog was found! topLevelWidgets=" << QApplication::topLevelWidgets() << "children of colorbutton=" << colorButton.children();
     }
-    QVERIFY(dialog != NULL);
+    QVERIFY(dialog != nullptr);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
 #if 0
@@ -91,7 +91,7 @@ void KColorButtonTest::testOkChange()
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
     QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
-    QVERIFY(dialog != NULL);
+    QVERIFY(dialog != nullptr);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 #pragma message("port to QColorDialog")
 #if 0
@@ -122,7 +122,7 @@ void KColorButtonTest::testRecentColorsPick()
     QVERIFY(QTest::qWaitForWindowExposed(&colorButton));
     QTest::mouseClick(&colorButton, Qt::LeftButton);
     QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
-    QVERIFY(dialog != NULL);
+    QVERIFY(dialog != nullptr);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
 
 #pragma message("port to QColorDialog")

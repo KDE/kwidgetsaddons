@@ -42,6 +42,7 @@
 #include <QDebug>
 
 #include "kacceleratormanager_p.h"
+#include "loggingcategory.h"
 
 /*********************************************************************
 
@@ -91,7 +92,7 @@ void KAcceleratorManagerPrivate::Item::addChild(Item *item)
 void KAcceleratorManagerPrivate::manage(QWidget *widget)
 {
     if (!widget) {
-        qDebug() << "null pointer given to manage";
+        qCDebug(KWidgetsAddonsLog) << "null pointer given to manage";
         return;
     }
 
@@ -196,7 +197,7 @@ void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item)
             continue;
         }
 
-        if (!w->isVisibleTo(widget) || (w->isTopLevel() && qobject_cast<QMenu *>(w) == NULL)) {
+        if (!w->isVisibleTo(widget) || (w->isTopLevel() && qobject_cast<QMenu *>(w) == nullptr)) {
             continue;
         }
 
@@ -550,7 +551,7 @@ void KAccelString::calculateWeights(int initialWeight)
         // try to preserve the wanted accelarators
         if ((int)pos == accel()) {
             weight += KAccelManagerAlgorithm::WANTED_ACCEL_EXTRA_WEIGHT;
-            // qDebug() << "wanted " << m_pureText << " " << KAcceleratorManagerPrivate::standardName(m_origText);
+            // qCDebug(KWidgetsAddonsLog) << "wanted " << m_pureText << " " << KAcceleratorManagerPrivate::standardName(m_origText);
             if (KAcceleratorManagerPrivate::standardName(m_origText))  {
                 weight += KAccelManagerAlgorithm::STANDARD_ACCEL;
             }
@@ -615,7 +616,7 @@ void KAccelString::dump()
     for (int i = 0; i < m_weight.count(); ++i) {
         s += QStringLiteral("%1(%2) ").arg(pure()[i]).arg(m_weight[i]);
     }
-    qDebug() << "s " << s;
+    qCDebug(KWidgetsAddonsLog) << "s " << s;
 }
 
 /*********************************************************************
@@ -782,14 +783,14 @@ void KPopupAccelManager::setMenuEntries(const KAccelStringList &list)
 void KPopupAccelManager::manage(QMenu *popup)
 {
     // don't add more than one manager to a popup
-    if (popup->findChild<KPopupAccelManager *>(QString()) == 0) {
+    if (popup->findChild<KPopupAccelManager *>(QString()) == nullptr) {
         new KPopupAccelManager(popup);
     }
 }
 
 void QWidgetStackAccelManager::manage(QStackedWidget *stack)
 {
-    if (stack->findChild<QWidgetStackAccelManager *>(QString()) == 0) {
+    if (stack->findChild<QWidgetStackAccelManager *>(QString()) == nullptr) {
         new QWidgetStackAccelManager(stack);
     }
 }

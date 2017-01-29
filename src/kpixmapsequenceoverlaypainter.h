@@ -51,8 +51,8 @@ public:
     /**
      * Constructor
      */
-    KPixmapSequenceOverlayPainter(QObject *parent = 0);
-    KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent = 0);
+    KPixmapSequenceOverlayPainter(QObject *parent = nullptr);
+    KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent = nullptr);
 
     /**
      * Destructor

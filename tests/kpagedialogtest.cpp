@@ -62,7 +62,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    KPageDialogTest testDialog(0);
+    KPageDialogTest testDialog(nullptr);
     testDialog.exec();
 
     return 0;

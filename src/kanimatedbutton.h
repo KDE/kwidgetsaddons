@@ -23,6 +23,8 @@
 #include <QToolButton>
 
 /**
+ * @class KAnimatedButton kanimatedbutton.h KAnimatedButton
+ *
  * @short An extended version of QToolButton which can display an animation.
  *
  * This widget extends QToolButton with the ability to display an animation.
@@ -44,7 +46,7 @@ public:
      *
      * @param parent The parent widget
      */
-    explicit KAnimatedButton(QWidget *parent = 0);
+    explicit KAnimatedButton(QWidget *parent = nullptr);
 
     /**
      * Destructor

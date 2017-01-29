@@ -30,6 +30,8 @@
 #include <QWidget>
 
 /**
+ * @class KSelector kselector.h KSelector
+ *
  * KSelector is the base class for other widgets which
  * provides the ability to choose from a one-dimensional
  * range of values. An example is the KGradientSelector
@@ -51,12 +53,12 @@ public:
     /**
      * Constructs a horizontal one-dimensional selection widget.
      */
-    explicit KSelector(QWidget *parent = 0);
+    explicit KSelector(QWidget *parent = nullptr);
     /**
      * Constructs a one-dimensional selection widget with
      * a given orientation.
      */
-    explicit KSelector(Qt::Orientation o, QWidget *parent = 0);
+    explicit KSelector(Qt::Orientation o, QWidget *parent = nullptr);
     /*
      * Destructs the widget.
      */
@@ -121,11 +123,13 @@ private:
 };
 
 /**
+ * @class KGradientSelector kselector.h KGradientSelector
+ *
  * The KGradientSelector widget allows the user to choose
  * from a one-dimensional range of colors which is given as a
  * gradient between two colors provided by the programmer.
  *
- * \image html kgradientselector.png "KDE Gradient Selector Widget"
+ * \image html kgradientselector.png "KGradientSelector Widget"
  *
  **/
 class KWIDGETSADDONS_EXPORT KGradientSelector : public KSelector
@@ -142,12 +146,12 @@ public:
      * Constructs a horizontal color selector which
      * contains a gradient between white and black.
      */
-    explicit KGradientSelector(QWidget *parent = 0);
+    explicit KGradientSelector(QWidget *parent = nullptr);
     /**
      * Constructs a colors selector with orientation o which
      * contains a gradient between white and black.
      */
-    explicit KGradientSelector(Qt::Orientation o, QWidget *parent = 0);
+    explicit KGradientSelector(Qt::Orientation o, QWidget *parent = nullptr);
     /**
      * Destructs the widget.
      */

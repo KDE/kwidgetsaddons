@@ -24,10 +24,12 @@
 #include <QFrame>
 
 /**
+ * @class KSeparator kseparator.h KSeparator
+ *
  * Standard horizontal or vertical separator.
  *
- * \image html kseparator-horizontal.png "KDE Separator with horizontal orientation"
- * \image html kseparator-vertical.png "KDE Separator with vertical orientation"
+ * \image html kseparator-horizontal.png "KSeparator Widget with horizontal orientation"
+ * \image html kseparator-vertical.png "KSeparator Widget with vertical orientation"
  *
  * @author Michael Roth <mroth@wirlweb.de>
  */
@@ -42,7 +44,7 @@ public:
      * @param parent parent object.
      * @param f extra QWidget flags.
      **/
-    explicit KSeparator(QWidget *parent = 0, Qt::WindowFlags f = 0);
+    explicit KSeparator(QWidget *parent = nullptr, Qt::WindowFlags f = nullptr);
 
     /**
      * Constructor.
@@ -51,7 +53,7 @@ public:
      * @param parent parent object.
      * @param f extra QWidget flags.
      **/
-    explicit KSeparator(Qt::Orientation orientation, QWidget *parent = 0, Qt::WindowFlags f = 0);
+    explicit KSeparator(Qt::Orientation orientation, QWidget *parent = nullptr, Qt::WindowFlags f = nullptr);
 
     /**
      * Returns the orientation of the separator.

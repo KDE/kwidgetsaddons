@@ -5,7 +5,7 @@
    Copyright (C) 2004,2005 Andrew Coles <andrew_coles@yahoo.co.uk>
    Copyright (C) 2007 Michaël Larouche <larouche@kde.org>
    Copyright (C) 2009 Christoph Feck <cfeck@kde.org>
-   Copyright (C) 2015 Elvis Angelaccio <elvis.angelaccio@kdemail.net>
+   Copyright (C) 2015 Elvis Angelaccio <elvis.angelaccio@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ public:
           minimumPasswordLength(0),
           passwordStrengthWarningLevel(1),
           reasonablePasswordLength(8),
-          toggleEchoModeAction(Q_NULLPTR)
+          toggleEchoModeAction(nullptr)
     {}
 
     void init();

@@ -34,6 +34,8 @@
 class QMenu;
 
 /**
+ * @class KToolBarPopupAction ktoolbarpopupaction.h KToolBarPopupAction
+ *
  * This action is a normal action everywhere, except in a toolbar
  * where it also has a popupmenu (optionally delayed). This action is designed
  * for history actions (back/forward, undo/redo) and for any other action

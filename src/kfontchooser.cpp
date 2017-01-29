@@ -202,9 +202,9 @@ KFontChooser::KFontChooser(QWidget *parent,
         familyLayout->addWidget(d->familyCheckbox, 0, Qt::AlignLeft);
         d->familyCheckbox->setWhatsThis(KFontChooser::tr("Enable this checkbox to change the font family settings.", "@info:whatsthis"));
         d->familyCheckbox->setToolTip(KFontChooser::tr("Change font family?", "@info:tooltip"));
-        d->familyLabel = 0;
+        d->familyLabel = nullptr;
     } else {
-        d->familyCheckbox = 0;
+        d->familyCheckbox = nullptr;
         d->familyLabel = new QLabel(KFontChooser::tr("Font:", "@label"), page);
         familyLayout->addWidget(d->familyLabel, 1, Qt::AlignLeft);
     }
@@ -218,9 +218,9 @@ KFontChooser::KFontChooser(QWidget *parent,
         styleLayout->addWidget(d->styleCheckbox, 0, Qt::AlignLeft);
         d->styleCheckbox->setWhatsThis(KFontChooser::tr("Enable this checkbox to change the font style settings.", "@info:whatsthis"));
         d->styleCheckbox->setToolTip(KFontChooser::tr("Change font style?", "@info:tooltip"));
-        d->styleLabel = 0;
+        d->styleLabel = nullptr;
     } else {
-        d->styleCheckbox = 0;
+        d->styleCheckbox = nullptr;
         d->styleLabel = new QLabel(KFontChooser::tr("Font style:"), page);
         styleLayout->addWidget(d->styleLabel, 1, Qt::AlignLeft);
     }
@@ -235,9 +235,9 @@ KFontChooser::KFontChooser(QWidget *parent,
         sizeLayout->addWidget(d->sizeCheckbox, 0, Qt::AlignLeft);
         d->sizeCheckbox->setWhatsThis(KFontChooser::tr("Enable this checkbox to change the font size settings.", "@info:whatsthis"));
         d->sizeCheckbox->setToolTip(KFontChooser::tr("Change font size?", "@info:tooltip"));
-        d->sizeLabel = 0;
+        d->sizeLabel = nullptr;
     } else {
-        d->sizeCheckbox = 0;
+        d->sizeCheckbox = nullptr;
         d->sizeLabel = new QLabel(KFontChooser::tr("Size:", "@label:listbox Font size"), page);
         sizeLayout->addWidget(d->sizeLabel, 1, Qt::AlignLeft);
     }
@@ -329,7 +329,7 @@ KFontChooser::KFontChooser(QWidget *parent,
         d->sizeIsRelativeCheckBox->setWhatsThis(sizeIsRelativeCBWhatsThisText);
         d->sizeIsRelativeCheckBox->setToolTip(sizeIsRelativeCBToolTipText);
     } else {
-        d->sizeIsRelativeCheckBox = 0L;
+        d->sizeIsRelativeCheckBox = nullptr;
         QGridLayout *sizeLayout2 = new QGridLayout();
         sizeLayout2->setSpacing(spacingHint / 2);
         gridLayout->addLayout(sizeLayout2, row, 2);
@@ -760,8 +760,8 @@ void KFontChooser::Private::_k_displaySample(const QFont &font)
     //sampleEdit->setCursorPosition(0);
 
     //QFontInfo a = QFontInfo(font);
-    //qDebug() << "font: " << a.family () << ", " << a.pointSize ();
-    //qDebug() << "      (" << font.toString() << ")\n";
+    //qCDebug(KWidgetsAddonsLog) << "font: " << a.family () << ", " << a.pointSize ();
+    //qCDebug(KWidgetsAddonsLog) << "      (" << font.toString() << ")\n";
 }
 
 int KFontChooser::Private::nearestSizeRow(qreal val, bool customize)

@@ -31,6 +31,8 @@
 class QPushButton;
 
 /**
+ * @class KGuiItem kguiitem.h KGuiItem
+ *
  * @short An abstract class for GUI data such as ToolTip and Icon.
  *
  * @author Holger Freyther <freyher@yahoo.com>

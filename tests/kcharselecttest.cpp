@@ -10,7 +10,7 @@ int main(int argc, char **argv)
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
 
-    KCharSelect selector(0, 0);
+    KCharSelect selector(nullptr, nullptr);
     selector.resize(selector.sizeHint());
     selector.show();
     selector.setWindowTitle(QStringLiteral("KCharSelect Test"));

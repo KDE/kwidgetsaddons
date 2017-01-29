@@ -25,6 +25,8 @@
 class KSqueezedTextLabelPrivate;
 
 /**
+ * @class KSqueezedTextLabel ksqueezedtextlabel.h KSqueezedTextLabel
+ *
  * @short A replacement for QLabel that squeezes its text
  *
  * A label class that squeezes its text into the label
@@ -53,8 +55,8 @@ public:
     /**
      * Default constructor.
      */
-    explicit KSqueezedTextLabel(QWidget *parent = 0);
-    explicit KSqueezedTextLabel(const QString &text, QWidget *parent = 0);
+    explicit KSqueezedTextLabel(QWidget *parent = nullptr);
+    explicit KSqueezedTextLabel(const QString &text, QWidget *parent = nullptr);
 
     virtual ~KSqueezedTextLabel();
 

@@ -22,6 +22,8 @@
 #include "kpagewidgetmodel.h"
 #include "kpagewidgetmodel_p.h"
 
+#include "loggingcategory.h"
+
 #include <QPointer>
 #include <QWidget>
 
@@ -38,7 +40,7 @@ public:
     ~Private()
     {
         delete widget;
-        widget = 0;
+        widget = nullptr;
     }
 
     QString name;
@@ -51,7 +53,7 @@ public:
 };
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget)
-    : QObject(0), d(new Private)
+    : QObject(nullptr), d(new Private)
 {
     d->widget = widget;
 
@@ -66,7 +68,7 @@ KPageWidgetItem::KPageWidgetItem(QWidget *widget)
 }
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget, const QString &name)
-    : QObject(0), d(new Private)
+    : QObject(nullptr), d(new Private)
 {
     d->widget = widget;
     d->name = name;
@@ -174,7 +176,7 @@ PageItem::PageItem(KPageWidgetItem *pageWidgetItem, PageItem *parent)
 PageItem::~PageItem()
 {
     delete mPageWidgetItem;
-    mPageWidgetItem = 0;
+    mPageWidgetItem = nullptr;
 
     qDeleteAll(mChildItems);
 }
@@ -241,7 +243,7 @@ PageItem *PageItem::findChild(const KPageWidgetItem *item)
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 void PageItem::dump(int indent)
@@ -252,7 +254,7 @@ void PageItem::dump(int indent)
     }
 
     const QString name = (mPageWidgetItem ? mPageWidgetItem->name() : QStringLiteral("root"));
-    qDebug("%s (%p)", qPrintable(QString(QStringLiteral("%1%2")).arg(prefix, name)), (void *)this);
+    qCDebug(KWidgetsAddonsLog, "%s (%p)", qPrintable(QString(QStringLiteral("%1%2")).arg(prefix, name)), (void *)this);
     for (int i = 0; i < mChildItems.count(); ++i) {
         mChildItems[ i ]->dump(indent + 2);
     }
@@ -330,7 +332,7 @@ bool KPageWidgetModel::setData(const QModelIndex &index, const QVariant &value, 
 Qt::ItemFlags KPageWidgetModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return 0;
+        return nullptr;
     }
 
     Qt::ItemFlags flags = Qt::ItemIsSelectable;
@@ -436,7 +438,7 @@ void KPageWidgetModel::insertPage(KPageWidgetItem *before, KPageWidgetItem *item
 {
     PageItem *beforePageItem = d_func()->rootItem->findChild(before);
     if (!beforePageItem) {
-        qDebug("Invalid KPageWidgetItem passed!");
+        qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
     }
 
@@ -477,7 +479,7 @@ void KPageWidgetModel::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item
 {
     PageItem *parentPageItem = d_func()->rootItem->findChild(parent);
     if (!parentPageItem) {
-        qDebug("Invalid KPageWidgetItem passed!");
+        qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
     }
 
@@ -514,7 +516,7 @@ void KPageWidgetModel::removePage(KPageWidgetItem *item)
 
     PageItem *pageItem = d->rootItem->findChild(item);
     if (!pageItem) {
-        qDebug("Invalid KPageWidgetItem passed!");
+        qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
     }
 
@@ -544,12 +546,12 @@ void KPageWidgetModel::removePage(KPageWidgetItem *item)
 KPageWidgetItem *KPageWidgetModel::item(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return 0;
+        return nullptr;
     }
 
     PageItem *item = static_cast<PageItem *>(index.internalPointer());
     if (!item) {
-        return 0;
+        return nullptr;
     }
 
     return item->pageWidgetItem();

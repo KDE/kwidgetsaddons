@@ -30,6 +30,8 @@
 #include <kselectaction.h>
 
 /**
+ * @class KFontAction kfontaction.h KFontAction
+ *
  * An action to select a font family.
  * On a toolbar this will show a combobox with all the fonts on the system.
  */
@@ -49,7 +51,7 @@ public:
 
     void setFont(const QString &family);
 
-    virtual QWidget *createWidget(QWidget *parent);
+    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
 private:
     class KFontActionPrivate;

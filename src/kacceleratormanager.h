@@ -27,6 +27,8 @@ class QString;
 class QStringList;
 
 /**
+ * @class KAcceleratorManager kacceleratormanager.h KAcceleratorManager
+ *
  * KDE Accelerator manager.
  *
  * This class can be used to find a valid and working set of

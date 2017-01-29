@@ -26,7 +26,7 @@
 class PageItem
 {
 public:
-    explicit PageItem(KPageWidgetItem *pageItem, PageItem *parent = 0);
+    explicit PageItem(KPageWidgetItem *pageItem, PageItem *parent = nullptr);
     ~PageItem();
 
     void appendChild(PageItem *child);
@@ -57,14 +57,14 @@ class KPageWidgetModelPrivate : public KPageModelPrivate
     Q_DECLARE_PUBLIC(KPageWidgetModel)
 protected:
     KPageWidgetModelPrivate()
-        : rootItem(new PageItem(0, 0))
+        : rootItem(new PageItem(nullptr, nullptr))
     {
     }
 
     ~KPageWidgetModelPrivate()
     {
         delete rootItem;
-        rootItem = 0;
+        rootItem = nullptr;
     }
 
     PageItem *rootItem;

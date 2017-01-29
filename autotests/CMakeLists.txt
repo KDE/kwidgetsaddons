@@ -9,9 +9,11 @@ ecm_add_tests(
   kdatecomboboxtest.cpp
   kdatetimeedittest.cpp
   kdualactiontest.cpp
+  kpixmapsequencewidgettest.cpp
   knewpasswordwidgettest.cpp
   kselectaction_unittest.cpp
   ktimecomboboxtest.cpp
+  ktooltipwidgettest.cpp
   kmessagewidgetautotest.cpp
   kpagedialogautotest.cpp
   ksplittercollapserbuttontest.cpp

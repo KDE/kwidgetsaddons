@@ -32,6 +32,8 @@ class QPoint;
 class QRect;
 
 /**
+ * \class KRatingPainter kratingpainter.h KRatingPainter
+ *
  * \brief Utility class that draws a row of stars for a rating value.
  *
  * The KRatingPainter also allows to determine a rating value from

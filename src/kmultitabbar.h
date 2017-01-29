@@ -43,6 +43,8 @@ class KMultiTabBarButtonPrivate;
 class KMultiTabBarInternal;
 
 /**
+ * @class KMultiTabBar kmultitabbar.h KMultiTabBar
+ *
  * A Widget for horizontal and vertical tabs.
  * (Note that in Qt4, QTabBar can be vertical as well)
  *
@@ -50,18 +52,18 @@ class KMultiTabBarInternal;
  * The handling if only one tab at a time or multiple tabs
  * should be raisable is left to the "user".
  *
- * \image html kmultitabbar.png "KDE Multi Tab Bar Widget"
+ * \image html kmultitabbar.png "KMultiTabBar Widget"
  *
  * @author Joseph Wenninger
  */
 class KWIDGETSADDONS_EXPORT KMultiTabBar: public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(KMultiTabBarPosition KMultiTabBarStyle)
     Q_PROPERTY(KMultiTabBarPosition position READ position WRITE setPosition)
     Q_PROPERTY(KMultiTabBarStyle tabStyle READ tabStyle WRITE setStyle)
 public:
     enum KMultiTabBarPosition { Left, Right, Top, Bottom };
+    Q_ENUM(KMultiTabBarPosition)
 
     /**
      * The list of available styles for KMultiTabBar
@@ -69,15 +71,16 @@ public:
      *   - KDEV3ICON - Kdevelop 3 like, always shows the text and icons
      */
     enum KMultiTabBarStyle {VSNET = 0, KDEV3ICON = 2, STYLELAST = 0xffff};
+    Q_ENUM(KMultiTabBarStyle)
 
     /**
      * Create a KMultiTabBar with Left as KMultiTabBar position.
      * @param parent The parent of the widget.
      * @since 5.24
      */
-    explicit KMultiTabBar(QWidget *parent = Q_NULLPTR);
+    explicit KMultiTabBar(QWidget *parent = nullptr);
 
-    explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = 0);
+    explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = nullptr);
     virtual ~KMultiTabBar();
 
     /**
@@ -89,7 +92,7 @@ public:
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
      */
-    int appendButton(const QIcon &icon, int id = -1, QMenu *popup = 0, const QString &not_used_yet = QString());
+    int appendButton(const QIcon &icon, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 
 #ifndef KWIDGETSADDONS_NO_DEPRECATED
     /**
@@ -104,7 +107,7 @@ public:
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
      */
-    KWIDGETSADDONS_DEPRECATED int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = 0, const QString &not_used_yet = QString());
+    KWIDGETSADDONS_DEPRECATED int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 #endif
 
     /**
@@ -189,6 +192,8 @@ private:
 };
 
 /**
+ * @class KMultiTabBarButton kmultitabbar.h KMultiTabBarButton
+ *
  * Use KMultiTabBar::appendButton to append a button, which creates a KMultiTabBarButton instance
  */
 class KWIDGETSADDONS_EXPORT KMultiTabBarButton: public QPushButton
@@ -211,9 +216,9 @@ protected Q_SLOTS:
     virtual void slotClicked();
 
 protected:
-    virtual void hideEvent(class QHideEvent *);
-    virtual void showEvent(class QShowEvent *);
-    virtual void paintEvent(class QPaintEvent *);
+    void hideEvent(class QHideEvent *) Q_DECL_OVERRIDE;
+    void showEvent(class QShowEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(class QPaintEvent *) Q_DECL_OVERRIDE;
 
     /** Should not be created directly. Use KMultiTabBar::appendButton
     */
@@ -230,6 +235,8 @@ private:
 };
 
 /**
+ * @class KMultiTabBarTab kmultitabbar.h KMultiTabBarTab
+ *
  * Use KMultiTabBar::appendTab to append a tab, which creates a KMultiTabBarTab instance
  */
 class KWIDGETSADDONS_EXPORT KMultiTabBarTab: public KMultiTabBarButton
@@ -237,8 +244,8 @@ class KWIDGETSADDONS_EXPORT KMultiTabBarTab: public KMultiTabBarButton
     Q_OBJECT
 public:
     virtual ~KMultiTabBarTab();
-    virtual QSize sizeHint() const;
-    virtual QSize minimumSizeHint() const;
+    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     /**
@@ -262,7 +269,7 @@ public Q_SLOTS:
     void setIcon(const QString &);
     void setIcon(const QPixmap &);
 protected:
-    virtual void paintEvent(QPaintEvent *);
+    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
 private:
     KMultiTabBar::KMultiTabBarPosition m_position;
     KMultiTabBar::KMultiTabBarStyle m_style;

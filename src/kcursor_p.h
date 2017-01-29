@@ -43,7 +43,7 @@ public:
     KCursorPrivateAutoHideEventFilter(QWidget *widget);
     ~KCursorPrivateAutoHideEventFilter();
 
-    virtual bool eventFilter(QObject *o, QEvent *e);
+    bool eventFilter(QObject *o, QEvent *e) Q_DECL_OVERRIDE;
 
     void resetWidget();
 
@@ -76,7 +76,7 @@ public:
     static KCursorPrivate *self();
 
     void setAutoHideCursor(QWidget *w, bool enable, bool customEventFilter);
-    virtual bool eventFilter(QObject *o, QEvent *e);
+    bool eventFilter(QObject *o, QEvent *e) Q_DECL_OVERRIDE;
 
     int hideCursorDelay;
 

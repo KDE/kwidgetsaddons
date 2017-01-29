@@ -28,7 +28,7 @@ class KSplitterCollapserButtonGui_test : public QWidget
 {
     Q_OBJECT
 public:
-    explicit KSplitterCollapserButtonGui_test(int indexOfWidgetAssociateToSplitterCollapser, Qt::Orientation orientation, QWidget *parent = 0);
+    explicit KSplitterCollapserButtonGui_test(int indexOfWidgetAssociateToSplitterCollapser, Qt::Orientation orientation, QWidget *parent = nullptr);
     ~KSplitterCollapserButtonGui_test();
 };
 

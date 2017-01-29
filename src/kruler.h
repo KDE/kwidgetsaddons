@@ -26,6 +26,8 @@
 #include <QAbstractSlider>
 
 /**
+ * @class KRuler kruler.h KRuler
+ *
  * A ruler widget.
  *
  * The vertical ruler looks similar to this:
@@ -54,7 +56,7 @@
  *
  * To receive mouse clicks or mouse moves, the class has to be overloaded.
  *
- * \image html kruler.png "KDE Ruler Widget"
+ * \image html kruler.png "KRuler Widget"
  *
  * @short A ruler widget.
  * @author Jörg Habenicht
@@ -75,7 +77,6 @@ class KWIDGETSADDONS_EXPORT KRuler : public QAbstractSlider
     Q_PROPERTY(double pixelPerMark READ pixelPerMark WRITE setPixelPerMark)
     Q_PROPERTY(bool lengthFixed READ lengthFixed WRITE setLengthFixed)
     Q_PROPERTY(QString endLabel READ endLabel WRITE setEndLabel)
-    Q_ENUMS(MetricStyle)
     Q_PROPERTY(int length READ length WRITE setLength)
     Q_PROPERTY(int offset READ offset)
     Q_PROPERTY(int endOffset READ endOffset)
@@ -85,11 +86,12 @@ public:
      * The types of units used.
      **/
     enum MetricStyle { Custom = 0, Pixel, Inch, Millimetres, Centimetres, Metres };
+    Q_ENUM(MetricStyle)
 
     /**
      * Constructs a horizontal ruler.
      */
-    explicit KRuler(QWidget *parent = 0);
+    explicit KRuler(QWidget *parent = nullptr);
     /**
      * Constructs a ruler with orientation @p orient.
      *
@@ -102,7 +104,7 @@ public:
      * @param f          Will be handed over to QFrame.
      *
      **/
-    explicit KRuler(Qt::Orientation orient, QWidget *parent = 0, Qt::WindowFlags f = 0);
+    explicit KRuler(Qt::Orientation orient, QWidget *parent = nullptr, Qt::WindowFlags f = nullptr);
 
     /**
      * Constructs a ruler with orientation @p orient and initial width @p widgetWidth.
@@ -118,8 +120,8 @@ public:
      * @param f           Will be handed over to QFrame.
      *
      */
-    KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = 0,
-           Qt::WindowFlags f = 0);
+    KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = nullptr,
+           Qt::WindowFlags f = nullptr);
 
     /**
      * Destructor.

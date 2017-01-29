@@ -70,7 +70,7 @@ QItemSelectionModel *KViewStateMaintainerBase::selectionModel() const
 {
     Q_D(const KViewStateMaintainerBase);
     if (d->m_selectionModel.isNull()) {
-        return 0;
+        return nullptr;
     }
     return d->m_selectionModel.data();
 }
@@ -92,7 +92,7 @@ QAbstractItemView *KViewStateMaintainerBase::view() const
 {
     Q_D(const KViewStateMaintainerBase);
     if (d->m_view.isNull()) {
-        return 0;
+        return nullptr;
     }
     return d->m_view.data();
 }

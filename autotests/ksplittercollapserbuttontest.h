@@ -29,7 +29,7 @@ class TestSplitter : public QWidget
 {
     Q_OBJECT
 public:
-    explicit TestSplitter(QWidget *parent = 0);
+    explicit TestSplitter(QWidget *parent = nullptr);
     QSplitter *splitter;
     QTextEdit *edit1;
     QTextEdit *edit2;
@@ -39,7 +39,7 @@ class KSplitterCollapserButtonTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit KSplitterCollapserButtonTest(QObject *parent = 0);
+    explicit KSplitterCollapserButtonTest(QObject *parent = nullptr);
     ~KSplitterCollapserButtonTest();
 
 private Q_SLOTS:

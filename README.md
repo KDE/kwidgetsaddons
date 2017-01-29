@@ -12,7 +12,3 @@ Provided are action classes that can be added to toolbars or menus,
 a wide range of widgets for selecting characters, fonts, colors,
 actions, dates and times, or MIME types, as well as platform-aware
 dialogs for configuration pages, message boxes, and password requests.
-
-Further widgets and classes can be found in other KDE frameworks. For
-a full list, please see <https://projects.kde.org/projects/frameworks/>
-

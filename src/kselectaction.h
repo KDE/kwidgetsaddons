@@ -39,6 +39,8 @@
 class KSelectActionPrivate;
 
 /**
+ *  @class KSelectAction kselectaction.h KSelectAction
+ *
  *  @short Action for selecting one of several items
  *
  *  Action for selecting one of several items.
@@ -56,7 +58,6 @@ class KWIDGETSADDONS_EXPORT KSelectAction : public QWidgetAction
     Q_PROPERTY(bool editable READ isEditable WRITE setEditable)
     Q_PROPERTY(int comboWidth READ comboWidth WRITE setComboWidth)
     Q_PROPERTY(QString currentText READ currentText)
-    Q_ENUMS(ToolBarMode)
     Q_PROPERTY(ToolBarMode toolBarMode READ toolBarMode WRITE setToolBarMode)
     Q_PROPERTY(QToolButton::ToolButtonPopupMode toolButtonPopupMode READ toolButtonPopupMode WRITE setToolButtonPopupMode)
     Q_PROPERTY(int currentItem READ currentItem WRITE setCurrentItem)
@@ -110,6 +111,7 @@ public:
         /// This is the default.
         ComboBoxMode
     };
+    Q_ENUM(ToolBarMode)
 
     /**
      * Returns which type of widget (combo box or button with drop-down menu) will be inserted

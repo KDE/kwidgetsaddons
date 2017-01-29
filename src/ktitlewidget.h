@@ -24,6 +24,8 @@
 #include <QWidget>
 
 /**
+ * @class KTitleWidget ktitlewidget.h KTitleWidget
+ *
  * @short Standard title widget.
  *
  * This class provides a widget often used for dialog titles.
@@ -64,7 +66,6 @@ checkboxTitleWidget->setWidget(checkBoxTitleMainWidget);
 class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(ImageAlignment)
     Q_PROPERTY(QString text READ text WRITE setText)
     Q_PROPERTY(QString comment READ comment WRITE setComment)
     Q_PROPERTY(QPixmap pixmap READ pixmap WRITE setPixmap)
@@ -81,6 +82,7 @@ public:
         ImageLeft, /**< Display the pixmap on the left */
         ImageRight /**< Display the pixmap on the right */
     };
+    Q_ENUM(ImageAlignment)
 
     /**
      * Comment message types
@@ -95,7 +97,7 @@ public:
     /**
      * Constructs a title widget with the given @param parent.
      */
-    explicit KTitleWidget(QWidget *parent = 0);
+    explicit KTitleWidget(QWidget *parent = nullptr);
 
     virtual ~KTitleWidget();
 

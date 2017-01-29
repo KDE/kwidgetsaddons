@@ -22,6 +22,7 @@
 
 #include <KCollapsibleGroupBox>
 
+#include <QCheckBox>
 #include <QDialog>
 #include <QLabel>
 #include <QTest>
@@ -36,7 +37,7 @@ void KCollapsibleGroupBoxTest::testDestructorCrash()
     int i = 0;
     while(i != 2) {
 
-        QDialog *dlg = new QDialog(Q_NULLPTR);
+        QDialog *dlg = new QDialog(nullptr);
 
         QVBoxLayout *mainvlayout = new QVBoxLayout(dlg);
         KCollapsibleGroupBox *collapsible = new KCollapsibleGroupBox(dlg);
@@ -66,4 +67,29 @@ void KCollapsibleGroupBoxTest::testDestructorCrash()
 
         i++;
     }
+}
+
+void KCollapsibleGroupBoxTest::testOverrideFocus()
+{
+    KCollapsibleGroupBox collapsible;
+    QVBoxLayout layout(&collapsible);
+
+    QCheckBox checkBox;
+    QCOMPARE(checkBox.focusPolicy(), Qt::StrongFocus);
+
+    // Make sure focus policy is changed as soon as the widget is added as child.
+    layout.addWidget(&checkBox);
+    collapsible.show();
+    QVERIFY(checkBox.isVisible());
+    QCOMPARE(checkBox.focusPolicy(), Qt::NoFocus);
+
+    // Make sure focus policy is restored on expand event.
+    collapsible.expand();
+    QVERIFY(checkBox.isVisible());
+    QCOMPARE(checkBox.focusPolicy(), Qt::StrongFocus);
+
+    // Make sure focus policy is overridden again on next collapse.
+    collapsible.collapse();
+    QVERIFY(checkBox.isVisible());
+    QCOMPARE(checkBox.focusPolicy(), Qt::NoFocus);
 }

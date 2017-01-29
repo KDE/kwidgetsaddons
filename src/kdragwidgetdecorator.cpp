@@ -29,7 +29,7 @@ class KDragWidgetDecoratorBasePrivate
 public:
     KDragWidgetDecoratorBasePrivate()
         : dragEnabled(true),
-          decoratedWidget(0)
+          decoratedWidget(nullptr)
     {
     }
 
@@ -95,7 +95,7 @@ QWidget *KDragWidgetDecoratorBase::decoratedWidget() const
 
 QDrag *KDragWidgetDecoratorBase::dragObject()
 {
-    return 0;
+    return nullptr;
 }
 
 void KDragWidgetDecoratorBase::startDrag()

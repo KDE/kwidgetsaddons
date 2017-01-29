@@ -27,7 +27,7 @@
 class KTitleWidgetTestWidget : public QWidget
 {
 public:
-    KTitleWidgetTestWidget(QWidget *parent = 0)
+    KTitleWidgetTestWidget(QWidget *parent = nullptr)
         : QWidget(parent)
     {
         QVBoxLayout *mainLayout = new QVBoxLayout(this);

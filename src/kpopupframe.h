@@ -27,6 +27,8 @@
 #include <QFrame>
 
 /**
+ * @class KPopupFrame kpopupframe.h KPopupFrame
+ *
  * Frame with popup menu behavior.
  * @author Tim Gilman, Mirko Boehm
  */
@@ -55,7 +57,7 @@ public:
     /**
      * The contructor. Creates a dialog without buttons.
      */
-    KPopupFrame(QWidget *parent = 0);
+    KPopupFrame(QWidget *parent = nullptr);
 
     /**
      * The destructor

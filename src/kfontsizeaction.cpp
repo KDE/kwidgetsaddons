@@ -27,6 +27,8 @@
 
 #include "kfontsizeaction.h"
 
+#include "loggingcategory.h"
+
 #include <QDebug>
 #include <QFontDatabase>
 #include <QToolBar>
@@ -98,7 +100,7 @@ void KFontSizeAction::setFontSize(int size)
     }
 
     if (size < 1) {
-        qWarning() << "KFontSizeAction: Size " << size << " is out of range";
+        qCWarning(KWidgetsAddonsLog) << "KFontSizeAction: Size " << size << " is out of range";
         return;
     }
 

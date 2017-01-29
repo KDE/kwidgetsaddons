@@ -4,7 +4,7 @@
    Copyright (C) 1999,2000 Geert Jansen <jansen@kde.org>
    Copyright (C) 2004,2005 Andrew Coles <andrew_coles@yahoo.co.uk>
    Copyright (C) 2006,2007 Olivier Goffart  <ogoffart @ kde.org>
-   Copyright (C) 2015 Elvis Angelaccio <elvis.angelaccio@kdemail.net>
+   Copyright (C) 2015 Elvis Angelaccio <elvis.angelaccio@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -28,6 +28,8 @@
 #include <kwidgetsaddons_export.h>
 
 /**
+ * @class KNewPasswordWidget knewpasswordwidget.h KNewPasswordWidget
+ *
  * @short A password input widget.
  *
  * This widget allows the user to enter a new password.
@@ -64,14 +66,13 @@
  *
  * @author Geert Jansen <jansen@kde.org>
  * @author Olivier Goffart <ogoffart@kde.org>
- * @author Elvis Angelaccio <elvis.angelaccio@kdemail.net>
+ * @author Elvis Angelaccio <elvis.angelaccio@kde.org>
  * @since 5.16
  */
 
 class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(PasswordStatus)
     Q_PROPERTY(PasswordStatus passwordStatus READ passwordStatus)
     Q_PROPERTY(bool allowEmptyPasswords READ allowEmptyPasswords WRITE setAllowEmptyPasswords)
     Q_PROPERTY(int minimumPasswordLength READ minimumPasswordLength WRITE setMinimumPasswordLength)
@@ -94,13 +95,14 @@ public:
         WeakPassword,               /**< Passwords match but the strength level is not enough. */
         StrongPassword,             /**< Passwords match and the strength level is good. */
     };
+    Q_ENUM(PasswordStatus)
 
     /**
      * Constructs a password widget.
      *
      * @param parent Passed to lower level constructor.
      */
-    explicit KNewPasswordWidget(QWidget *parent = Q_NULLPTR);
+    explicit KNewPasswordWidget(QWidget *parent = nullptr);
 
     /**
      * Destructs the password widget.

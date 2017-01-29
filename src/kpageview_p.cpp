@@ -29,6 +29,7 @@
 #include <QVBoxLayout>
 
 #include "kpagemodel.h"
+#include "loggingcategory.h"
 
 using namespace KDEPrivate;
 
@@ -226,7 +227,7 @@ KPageTabbedView::~KPageTabbedView()
 
             if (page) {
                 page->setVisible(false);
-                page->setParent(0); // reparent our children before they are deleted
+                page->setParent(nullptr); // reparent our children before they are deleted
             }
         }
     }
@@ -586,7 +587,7 @@ void KPageListViewProxy::rebuildMap()
     }
 
     for (int i = 0; i < mList.count(); ++i) {
-        qDebug("%d:0 -> %d:%d", i, mList[ i ].row(), mList[ i ].column());
+        qCDebug(KWidgetsAddonsLog, "%d:0 -> %d:%d", i, mList[ i ].row(), mList[ i ].column());
     }
 
     emit layoutChanged();

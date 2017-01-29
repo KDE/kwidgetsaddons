@@ -35,7 +35,7 @@ class KWIDGETSADDONS_EXPORT KViewStateMaintainerBase : public QObject
 {
     Q_OBJECT
 public:
-    KViewStateMaintainerBase(QObject *parent = 0);
+    KViewStateMaintainerBase(QObject *parent = nullptr);
     ~KViewStateMaintainerBase();
 
     void setSelectionModel(QItemSelectionModel *selectionModel);

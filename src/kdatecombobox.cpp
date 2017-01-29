@@ -51,6 +51,11 @@ public:
     void addMenuAction(const QString &text, const QDate &date);
     void enableMenuDates();
     void updateDateWidget();
+    void setDateRange(const QDate &minDate,
+                      const QDate &maxDate,
+                      const QString &minWarnMsg,
+                      const QString &maxWarnMsg);
+    bool isInDateRange(const QDate &date) const;
 
 // Q_PRIVATE_SLOTs
     void clickDate();
@@ -134,7 +139,7 @@ void KDateComboBoxPrivate::initDateWidget()
     // If EditTime then set the line edit
     q->lineEdit()->setReadOnly((m_options & KDateComboBox::EditDate) != KDateComboBox::EditDate);
 
-    // If SelectTime then make list items visible
+    // If SelectDate then make list items visible
     if ((m_options & KDateComboBox::SelectDate) == KDateComboBox::SelectDate ||
             (m_options & KDateComboBox::DatePicker) == KDateComboBox::DatePicker ||
             (m_options & KDateComboBox::DatePicker) == KDateComboBox::DateKeywords) {
@@ -205,7 +210,7 @@ void KDateComboBoxPrivate::enableMenuDates()
     // Hide menu dates if they are outside the date range
     for (int i = 0; i < m_actions.count(); ++i) {
         QDate date = m_actions[i]->data().toDate();
-        m_actions[i]->setVisible(!date.isValid() || (date >= m_minDate && date <= m_maxDate));
+        m_actions[i]->setVisible(!date.isValid() || isInDateRange(date));
     }
 }
 
@@ -222,16 +227,48 @@ void KDateComboBoxPrivate::updateDateWidget()
     q->blockSignals(false);
 }
 
+void KDateComboBoxPrivate::setDateRange(const QDate &minDate,
+                                        const QDate &maxDate,
+                                        const QString &minWarnMsg,
+                                        const QString &maxWarnMsg)
+{
+    if (minDate.isValid() && maxDate.isValid() && minDate > maxDate) {
+        return;
+    }
+
+    if (minDate != m_minDate || maxDate != m_maxDate ||
+            minWarnMsg != m_minWarnMsg || maxWarnMsg != m_maxWarnMsg) {
+        m_minDate = minDate;
+        m_maxDate = maxDate;
+        m_minWarnMsg = minWarnMsg;
+        m_maxWarnMsg = maxWarnMsg;
+    }
+    enableMenuDates();
+}
+
+bool KDateComboBoxPrivate::isInDateRange(const QDate &date) const
+{
+    return date.isValid() &&
+           (!m_minDate.isValid() || date >= m_minDate) &&
+           (!m_maxDate.isValid() || date <= m_maxDate);
+}
+
 void KDateComboBoxPrivate::selectDate(QAction *action)
 {
     if (action->objectName() != QLatin1String("DatePicker")) {
-        enterDate(action->data().toDate());
+        QDate date = action->data().toDate();
+        if (isInDateRange(date)) {
+            enterDate(date);
+        }
     }
 }
 
 void KDateComboBoxPrivate::clickDate()
 {
-    enterDate(m_datePicker->date());
+    QDate date = m_datePicker->date();
+    if (isInDateRange(date)) {
+        enterDate(date);
+    }
 }
 
 void KDateComboBoxPrivate::editDate(const QString &text)
@@ -341,9 +378,7 @@ void KDateComboBox::assignDate(const QDate &date)
 bool KDateComboBox::isValid() const
 {
     d->parseDate();
-    return d->m_date.isValid() &&
-           (!d->m_minDate.isValid() || d->m_date >= d->m_minDate) &&
-           (!d->m_maxDate.isValid() || d->m_date <= d->m_maxDate);
+    return d->isInDateRange(d->m_date);
 }
 
 bool KDateComboBox::isNull() const
@@ -372,13 +407,14 @@ QDate KDateComboBox::minimumDate() const
 
 void KDateComboBox::setMinimumDate(const QDate &minDate, const QString &minWarnMsg)
 {
-    setDateRange(minDate, d->m_maxDate, minWarnMsg, d->m_maxWarnMsg);
+    if (minDate.isValid()) {
+        d->setDateRange(minDate, d->m_maxDate, minWarnMsg, d->m_maxWarnMsg);
+    }
 }
 
 void KDateComboBox::resetMinimumDate()
 {
-    //setDateRange(d->m_minDate, d->defaultMaxDate(), d->m_minWarnMsg, QString());
-    setDateRange(QDate(), d->m_maxDate, QString(), d->m_maxWarnMsg);
+    d->setDateRange(QDate(), d->m_maxDate, QString(), d->m_maxWarnMsg);
 }
 
 QDate KDateComboBox::maximumDate() const
@@ -388,13 +424,14 @@ QDate KDateComboBox::maximumDate() const
 
 void KDateComboBox::setMaximumDate(const QDate &maxDate, const QString &maxWarnMsg)
 {
-    setDateRange(d->m_minDate, maxDate, d->m_minWarnMsg, maxWarnMsg);
+    if (maxDate.isValid()) {
+        d->setDateRange(d->m_minDate, maxDate, d->m_minWarnMsg, maxWarnMsg);
+    }
 }
 
 void KDateComboBox::resetMaximumDate()
 {
-    //setDateRange(d->m_minDate, d->defaultMaxDate(), d->m_minWarnMsg, QString());
-    setDateRange(d->m_minDate, QDate(), d->m_minWarnMsg, QString());
+    d->setDateRange(d->m_minDate, QDate(), d->m_minWarnMsg, QString());
 }
 
 void KDateComboBox::setDateRange(const QDate &minDate,
@@ -402,24 +439,14 @@ void KDateComboBox::setDateRange(const QDate &minDate,
                                  const QString &minWarnMsg,
                                  const QString &maxWarnMsg)
 {
-    if (!minDate.isValid() || !maxDate.isValid() || minDate > maxDate) {
-        return;
+    if (minDate.isValid() && maxDate.isValid()) {
+        d->setDateRange(minDate, maxDate, minWarnMsg, maxWarnMsg);
     }
-
-    if (minDate != d->m_minDate || maxDate != d->m_maxDate ||
-            minWarnMsg != d->m_minWarnMsg || maxWarnMsg != d->m_maxWarnMsg) {
-        d->m_minDate = minDate;
-        d->m_maxDate = maxDate;
-        d->m_minWarnMsg = minWarnMsg;
-        d->m_maxWarnMsg = maxWarnMsg;
-    }
-    d->enableMenuDates();
 }
 
 void KDateComboBox::resetDateRange()
 {
-    //setDateRange(d->defaultMinDate(), d->defaultMaxDate(), QString(), QString());
-    setDateRange(QDate(), QDate(), QString(), QString());
+    d->setDateRange(QDate(), QDate(), QString(), QString());
 }
 
 QLocale::FormatType KDateComboBox::displayFormat() const
@@ -475,7 +502,7 @@ void KDateComboBox::keyPressEvent(QKeyEvent *keyEvent)
         QComboBox::keyPressEvent(keyEvent);
         return;
     }
-    if (temp.isValid() && temp >= d->m_minDate && temp <= d->m_maxDate) {
+    if (d->isInDateRange(temp)) {
         d->enterDate(temp);
     }
 }

@@ -24,6 +24,7 @@
 #include <QPushButton>
 #include <QLayout>
 #include <QFontDatabase>
+#include <QFontInfo>
 #include <QFontDialog>
 #include <QLocale>
 
@@ -46,8 +47,10 @@ static QFont nearestExistingFont(const QFont &font)
     const QStringList families = dbase.families();
     if (!families.contains(family)) {
         // Chose another family.
-        family = families.count() ? families[0] : QStringLiteral("fixed");
-        // TODO: Try to find nearest match?
+        family = QFontInfo(font).family(); // the nearest match
+        if (!families.contains(family)) {
+            family = families.count() ? families.at(0) : QStringLiteral("fixed");
+        }
     }
 
     // Check if the family has the requested style.
@@ -181,7 +184,7 @@ void KFontRequester::setTitle(const QString &title)
 
 void KFontRequester::KFontRequesterPrivate::_k_buttonClicked()
 {
-    QFontDialog::FontDialogOptions flags = 0;
+    QFontDialog::FontDialogOptions flags = nullptr;
     if (m_onlyFixed) {
         flags = QFontDialog::MonospacedFonts;
     }

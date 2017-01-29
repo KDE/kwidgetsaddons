@@ -28,6 +28,8 @@
 class QPaintEvent;
 
 /**
+  * @class KCapacityBar kcapacitybar.h KCapacityBar
+  *
   * @brief This widget shows a bar which is filled to show the level of usage of
   *        a certain device.
   *
@@ -37,7 +39,7 @@ class QPaintEvent;
   *
   * @since 4.2
   *
-  * \image html kcapacitybar.png "KDE Capacity Bar"
+  * \image html kcapacitybar.png "KCapacityBar Widget"
   *
   * @author Rafael Fernández López <ereslibre@kde.org>
   */
@@ -54,13 +56,13 @@ class KWIDGETSADDONS_EXPORT KCapacityBar
     Q_PROPERTY(int barHeight READ barHeight WRITE setBarHeight)
     Q_PROPERTY(Qt::Alignment horizontalTextAlignment READ horizontalTextAlignment
                WRITE setHorizontalTextAlignment)
-    Q_ENUMS(DrawTextMode)
 
 public:
     enum DrawTextMode {
         DrawTextInline = 0,     ///< If any text set, draw it into the capacity bar
         DrawTextOutline         ///< If any text set, draw it out of the capacity bar
     };
+    Q_ENUM(DrawTextMode)
 
 
     /**
@@ -68,7 +70,7 @@ public:
      * @param parent The parent of the widget.
      * @since 5.24
      */
-    explicit KCapacityBar(QWidget *parent = Q_NULLPTR);
+    explicit KCapacityBar(QWidget *parent = nullptr);
 
     /**
       * Capacity bar constructor.
@@ -77,7 +79,7 @@ public:
       *                     or not.
       * @param parent       The parent of the widget.
       */
-    explicit KCapacityBar(DrawTextMode drawTextMode, QWidget *parent = 0);
+    explicit KCapacityBar(DrawTextMode drawTextMode, QWidget *parent = nullptr);
     ~KCapacityBar();
 
     /**

@@ -34,6 +34,8 @@
 class KGuiItem;
 
 /**
+ *  @class KToggleAction ktoggleaction.h KToggleAction
+ *
  *  @short Checkbox like action.
  *
  *  This action provides two states: checked or not.

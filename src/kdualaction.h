@@ -28,6 +28,8 @@ class KDualActionPrivate;
 class KGuiItem;
 
 /**
+ * @class KDualAction kdualaction.h KDualAction
+ *
  * @short An action which can alternate between two texts/icons when triggered.
  *
  * KDualAction should be used when you want to create an action which alternate

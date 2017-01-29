@@ -62,14 +62,14 @@ KCursorPrivateAutoHideEventFilter::KCursorPrivateAutoHideEventFilter(QWidget *wi
 
 KCursorPrivateAutoHideEventFilter::~KCursorPrivateAutoHideEventFilter()
 {
-    if (m_widget != NULL) {
+    if (m_widget != nullptr) {
         mouseWidget()->setMouseTracking(m_wasMouseTracking);
     }
 }
 
 void KCursorPrivateAutoHideEventFilter::resetWidget()
 {
-    m_widget = NULL;
+    m_widget = nullptr;
 }
 
 void KCursorPrivateAutoHideEventFilter::hideCursor()
@@ -168,7 +168,7 @@ bool KCursorPrivateAutoHideEventFilter::eventFilter(QObject *o, QEvent *e)
     return false;
 }
 
-KCursorPrivate *KCursorPrivate::s_self = 0L;
+KCursorPrivate *KCursorPrivate::s_self = nullptr;
 
 KCursorPrivate *KCursorPrivate::self()
 {
@@ -199,7 +199,7 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
         return;
     }
 
-    QWidget *viewport = 0;
+    QWidget *viewport = nullptr;
     QAbstractScrollArea *sv = qobject_cast<QAbstractScrollArea *>(w);
     if (sv) {
         viewport = sv->viewport();
@@ -225,7 +225,7 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
                 this, &KCursorPrivate::slotWidgetDestroyed);
     } else {
         KCursorPrivateAutoHideEventFilter *filter = m_eventFilters.take(w);
-        if (filter == 0) {
+        if (filter == nullptr) {
             return;
         }
         w->removeEventFilter(filter);
@@ -248,8 +248,8 @@ bool KCursorPrivate::eventFilter(QObject *o, QEvent *e)
 
     KCursorPrivateAutoHideEventFilter *filter = m_eventFilters.value(o);
 
-    Q_ASSERT(filter != 0);
-    if (filter == 0) {
+    Q_ASSERT(filter != nullptr);
+    if (filter == nullptr) {
         return false;
     }
 
@@ -265,7 +265,7 @@ void KCursorPrivate::slotWidgetDestroyed(QObject *o)
 {
     KCursorPrivateAutoHideEventFilter *filter = m_eventFilters.take(o);
 
-    Q_ASSERT(filter != 0);
+    Q_ASSERT(filter != nullptr);
 
     filter->resetWidget(); // so that dtor doesn't access it
     delete filter;

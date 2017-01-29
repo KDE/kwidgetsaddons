@@ -20,6 +20,8 @@
 
 #include "kpixmapsequence.h"
 
+#include "loggingcategory.h"
+
 #include <QPixmap>
 #include <QPainter>
 #include <QtCore/QVector>
@@ -36,7 +38,7 @@ public:
 void KPixmapSequence::Private::loadSequence(const QPixmap &bigPixmap, const QSize &frameSize)
 {
     if (bigPixmap.isNull()) {
-        qWarning() << "Invalid pixmap specified.";
+        qCWarning(KWidgetsAddonsLog) << "Invalid pixmap specified.";
         return;
     }
 
@@ -46,7 +48,7 @@ void KPixmapSequence::Private::loadSequence(const QPixmap &bigPixmap, const QSiz
     }
     if (bigPixmap.width() % size.width() ||
             bigPixmap.height() % size.height()) {
-        qWarning() << "Invalid framesize.";
+        qCWarning(KWidgetsAddonsLog) << "Invalid framesize.";
         return;
     }
 
@@ -108,7 +110,7 @@ bool KPixmapSequence::isEmpty() const
 QSize KPixmapSequence::frameSize() const
 {
     if (isEmpty()) {
-        qWarning() << "No frame loaded";
+        qCWarning(KWidgetsAddonsLog) << "No frame loaded";
         return QSize();
     }
     return d->mFrames[0].size();
@@ -122,7 +124,7 @@ int KPixmapSequence::frameCount() const
 QPixmap KPixmapSequence::frameAt(int index) const
 {
     if (isEmpty() || index > frameCount()-1 ) {
-        qWarning() << "No frame loaded";
+        qCWarning(KWidgetsAddonsLog) << "No frame loaded";
         return QPixmap();
     }
     return d->mFrames.at(index);

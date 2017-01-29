@@ -27,6 +27,8 @@
 class QColor;
 
 /**
+ * @class KLed kled.h KLed
+ *
  * @short An LED widget.
  *
  * Displays a round or rectangular light emitting diode.
@@ -37,14 +39,13 @@ class QColor;
  * It may display itself in a performant flat view, a round view with
  * light spot or a round view sunken in the screen.
  *
- * \image html kled.png "KDE LED Widget"
+ * \image html kled.png "KLed Widget"
  *
  * @author Joerg Habenicht, Richard J. Moore (rich@kde.org) 1998, 1999
  */
 class KWIDGETSADDONS_EXPORT KLed : public QWidget
 {
     Q_OBJECT
-    Q_ENUMS(State Shape Look)
     Q_PROPERTY(State state READ state WRITE setState)
     Q_PROPERTY(Shape shape READ shape WRITE setShape)
     Q_PROPERTY(Look look READ look WRITE setLook)
@@ -58,12 +59,14 @@ public:
      * @short LED on/off.
      */
     enum State { Off, On };
+    Q_ENUM(State)
 
     /**
      * Shades of the lamp.
      * @short LED shape
      */
     enum Shape { Rectangular, Circular };
+    Q_ENUM(Shape)
 
     /**
      * Displays a flat, round or sunken LED.
@@ -71,6 +74,7 @@ public:
      * @short LED look.
      */
     enum Look  { Flat, Raised, Sunken };
+    Q_ENUM(Look)
 
     /**
      * Constructs a green, round LED widget which will initially
@@ -78,7 +82,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit KLed(QWidget *parent = 0);
+    explicit KLed(QWidget *parent = nullptr);
 
     /**
      * Constructs a round LED widget with the supplied color which will
@@ -88,7 +92,7 @@ public:
      * @param parent The parent widget.
      * @short Constructor
      */
-    explicit KLed(const QColor &color, QWidget *parent = 0);
+    explicit KLed(const QColor &color, QWidget *parent = nullptr);
 
     /**
      * Constructor with the color, state and look.
@@ -103,7 +107,7 @@ public:
      * @short Constructor
      */
     KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape,
-         QWidget *parent = 0);
+         QWidget *parent = nullptr);
 
     /**
      * Destroys the LED widget.

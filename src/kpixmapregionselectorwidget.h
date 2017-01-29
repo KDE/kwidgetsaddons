@@ -28,6 +28,8 @@
 class QMenu;
 
 /**
+ * @class KPixmapRegionSelectorWidget kpixmapregionselectorwidget.h KPixmapRegionSelectorWidget
+ *
  * KPixmapRegionSelectorWidget is a widget that shows a picture and provides the
  * user with a friendly way to select a rectangular subregion of the pixmap.
  *
@@ -36,7 +38,7 @@ class QMenu;
  * This is because kdepim has to remain backwards compatible.  Any changes
  * to either file should be made to the other.
  *
- * \image html kpixmapregionselectorwidget.png "KDE Pixmap Region Selector"
+ * \image html kpixmapregionselectorwidget.png "KPixmapRegionSelectorWidget"
  *
  * @author Antonio Larrosa <larrosa@kde.org>
  */
@@ -58,7 +60,7 @@ public:
     /**
      * Constructor for a KPixmapRegionSelectorWidget.
      */
-    explicit KPixmapRegionSelectorWidget(QWidget *parent = 0);
+    explicit KPixmapRegionSelectorWidget(QWidget *parent = nullptr);
 
     /**
      * Destructor for a KPixmapRegionSelectorWidget

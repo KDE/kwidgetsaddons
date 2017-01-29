@@ -36,8 +36,8 @@ class KEditListWidgetPrivate
 {
 public:
     KEditListWidgetPrivate(KEditListWidget *parent)
-        : lineEdit(0),
-          editingWidget(0),
+        : lineEdit(nullptr),
+          editingWidget(nullptr),
           q(parent)
     {
     }
@@ -54,8 +54,8 @@ public:
     KEditListWidget::Buttons buttons;
 
     void init(bool check = false, KEditListWidget::Buttons buttons = KEditListWidget::All,
-              QWidget *representationWidget = 0);
-    void setEditor(QLineEdit *lineEdit, QWidget *representationWidget = 0);
+              QWidget *representationWidget = nullptr);
+    void setEditor(QLineEdit *lineEdit, QWidget *representationWidget = nullptr);
     void updateButtonState();
     QModelIndex selectedIndex();
 
@@ -68,7 +68,7 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
 {
     checkAtEntering = check;
 
-    servNewButton = servRemoveButton = servUpButton = servDownButton = 0L;
+    servNewButton = servRemoveButton = servUpButton = servDownButton = nullptr;
     q->setSizePolicy(QSizePolicy(QSizePolicy::MinimumExpanding,
                                  QSizePolicy::Preferred));
 
@@ -90,7 +90,7 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
 
     setEditor(lineEdit, representationWidget);
 
-    buttons = 0;
+    buttons = nullptr;
     q->setButtons(newButtons);
 
     q->connect(listView->selectionModel(), &QItemSelectionModel::selectionChanged,
@@ -175,8 +175,8 @@ class KEditListWidget::CustomEditorPrivate
 public:
     CustomEditorPrivate(KEditListWidget::CustomEditor *q):
         q(q),
-        representationWidget(0),
-        lineEdit(0) {}
+        representationWidget(nullptr),
+        lineEdit(nullptr) {}
 
     KEditListWidget::CustomEditor *q;
     QWidget *representationWidget;
@@ -304,7 +304,7 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->btnsLayout->insertWidget(0, d->servNewButton);
     } else if ((buttons & Add) == 0 && d->servNewButton) {
         delete d->servNewButton;
-        d->servNewButton = 0;
+        d->servNewButton = nullptr;
     }
 
     if ((buttons & Remove) && !d->servRemoveButton) {
@@ -316,7 +316,7 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->btnsLayout->insertWidget(1, d->servRemoveButton);
     } else if ((buttons & Remove) == 0 && d->servRemoveButton) {
         delete d->servRemoveButton;
-        d->servRemoveButton = 0;
+        d->servRemoveButton = nullptr;
     }
 
     if ((buttons & UpDown) && !d->servUpButton) {
@@ -333,8 +333,8 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->btnsLayout->insertWidget(2, d->servUpButton);
         d->btnsLayout->insertWidget(3, d->servDownButton);
     } else if ((buttons & UpDown) == 0 && d->servUpButton) {
-        delete d->servUpButton; d->servUpButton = 0;
-        delete d->servDownButton; d->servDownButton = 0;
+        delete d->servUpButton; d->servUpButton = nullptr;
+        delete d->servDownButton; d->servDownButton = nullptr;
     }
 
     d->buttons = buttons;

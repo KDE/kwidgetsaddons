@@ -187,7 +187,7 @@ protected:
 private Q_SLOTS:
 
     void currentChanged(int child);
-    bool eventFilter(QObject *watched, QEvent *e);
+    bool eventFilter(QObject *watched, QEvent *e) Q_DECL_OVERRIDE;
 
 private:
 
@@ -258,7 +258,7 @@ private:
     {
     public:
 
-        Item() : m_widget(0), m_children(0), m_index(-1) {}
+        Item() : m_widget(nullptr), m_children(nullptr), m_index(-1) {}
         ~Item();
 
         void addChild(Item *item);

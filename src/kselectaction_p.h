@@ -40,7 +40,7 @@ class KSelectActionPrivate
 
 public:
     KSelectActionPrivate()
-        : q_ptr(0)
+        : q_ptr(nullptr)
     {
         m_edit = false;
         m_menuAccelsEnabled = true;
@@ -50,7 +50,7 @@ public:
         m_toolBarMode = KSelectAction::ComboBoxMode;
         m_toolButtonPopupMode = QToolButton::InstantPopup; //InstantPopup by default because there is no default action
 
-        m_actionGroup = new QActionGroup(0L);
+        m_actionGroup = new QActionGroup(nullptr);
     }
 
     virtual ~KSelectActionPrivate()

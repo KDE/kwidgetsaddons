@@ -17,6 +17,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+#include <QAction>
 #include <QApplication>
 #include <QWidget>
 #include <QVBoxLayout>
@@ -51,10 +53,27 @@ int main(int argc, char *argv[])
     QVBoxLayout *l = new QVBoxLayout(mainWindow);
 
     KMessageWidget *mw = new KMessageWidget(mainWindow);
+    mw->setMessageType(KMessageWidget::Positive);
     mw->setWordWrap(true);
     mw->setText(
         QStringLiteral("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default.")
     );
+    mw->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
+    KMessageWidget *mw2 = new KMessageWidget(mainWindow);
+    mw2->setWordWrap(true);
+    mw2->setText(QStringLiteral("A KMessageWidget with an icon and two additional buttons"));
+    mw2->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
+    mw2->addAction(new QAction(QStringLiteral("Foo"), mw2));
+    mw2->addAction(new QAction(QStringLiteral("Bar"), mw2));
+    KMessageWidget *mw3 = new KMessageWidget(mainWindow);
+    mw3->setMessageType(KMessageWidget::Warning);
+    mw3->setWordWrap(true);
+    mw3->setText(QStringLiteral("A KMessageWidget of Warning type."));
+    KMessageWidget *mw4 = new KMessageWidget(mainWindow);
+    mw4->setMessageType(KMessageWidget::Error);
+    mw4->setWordWrap(true);
+    mw4->setText(QStringLiteral("A KMessageWidget of Error type."));
+
     // A frame to materialize the end of the KMessageWidget
     QFrame *frame = new QFrame(mainWindow);
     frame->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
@@ -63,14 +82,23 @@ int main(int argc, char *argv[])
     QCheckBox *wordWrapCb = new QCheckBox(QStringLiteral("wordWrap"), mainWindow);
     wordWrapCb->setChecked(true);
     QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw, &KMessageWidget::setWordWrap);
+    QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw2, &KMessageWidget::setWordWrap);
+    QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw3, &KMessageWidget::setWordWrap);
+    QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw4, &KMessageWidget::setWordWrap);
 
     QCheckBox *closeButtonCb = new QCheckBox(QStringLiteral("closeButton"), mainWindow);
     closeButtonCb->setChecked(true);
     QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw, &KMessageWidget::setCloseButtonVisible);
+    QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw2, &KMessageWidget::setCloseButtonVisible);
+    QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw3, &KMessageWidget::setCloseButtonVisible);
+    QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw4, &KMessageWidget::setCloseButtonVisible);
 
     l->addWidget(wordWrapCb);
     l->addWidget(closeButtonCb);
     l->addWidget(mw);
+    l->addWidget(mw2);
+    l->addWidget(mw3);
+    l->addWidget(mw4);
     l->addWidget(frame);
 
     mainWindow->resize(400, 300);

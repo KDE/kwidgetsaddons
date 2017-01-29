@@ -27,6 +27,8 @@
 class QWidget;
 
 /**
+ * @class KPageWidgetItem kpagewidgetmodel.h KPageWidgetItem
+ *
  * KPageWidgetItem is used by @ref KPageWidget and represents
  * a page.
  *
@@ -180,6 +182,8 @@ private:
 class KPageWidgetModelPrivate;
 
 /**
+ * @class KPageWidgetModel kpagewidgetmodel.h KPageWidgetModel
+ *
  * This page model is used by @see KPageWidget to provide
  * a hierarchical layout of pages.
  */
@@ -194,7 +198,7 @@ public:
      *
      * @param parent The parent object.
      */
-    explicit KPageWidgetModel(QObject *parent = 0);
+    explicit KPageWidgetModel(QObject *parent = nullptr);
 
     /**
      * Destroys the page widget model.

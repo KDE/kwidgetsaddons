@@ -24,6 +24,8 @@
 #include <kwidgetsaddons_export.h>
 
 /**
+ * @class KAssistantDialog kassistantdialog.h KAssistantDialog
+ *
  * This class provides a framework for assistant dialogs.
  *
  * An assistant dialog consists of a sequence of pages.
@@ -38,7 +40,7 @@
  * The functions next() and back() are virtual and may be reimplemented to
  * override the default actions of the next and back buttons.
  *
- * \image html kassistantdialog.png "KDE Assistant Dialog"
+ * \image html kassistantdialog.png "KAssistantDialog"
  *
  * @author Olivier Goffart <ogoffart at kde.org>
  */
@@ -52,7 +54,7 @@ public:
      * @flags the window flags to give to the assistant dialog. The
      * default of zero is usually what you want.
      */
-    explicit KAssistantDialog(QWidget *parent = 0, Qt::WindowFlags flags = 0);
+    explicit KAssistantDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
     virtual ~KAssistantDialog();
 
     /**
@@ -138,7 +140,7 @@ protected:
      *
      * Calls the KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags) constructor
      */
-    explicit KAssistantDialog(KPageWidget *widget, QWidget *parent = 0, Qt::WindowFlags flags = 0);
+    explicit KAssistantDialog(KPageWidget *widget, QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
 
     void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
 

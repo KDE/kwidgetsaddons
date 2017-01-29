@@ -31,7 +31,7 @@ class KPageWidgetTest : public QWidget
     Q_OBJECT
 
 public:
-    KPageWidgetTest(QWidget *parent = 0);
+    KPageWidgetTest(QWidget *parent = nullptr);
     ~KPageWidgetTest();
 
 private Q_SLOTS:

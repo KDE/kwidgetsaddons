@@ -24,7 +24,7 @@
 class KFontRequesterTest : public QWidget
 {
 public:
-    KFontRequesterTest(QWidget *parent = 0)
+    KFontRequesterTest(QWidget *parent = nullptr)
         : QWidget(parent)
     {
         QVBoxLayout *mainLayout = new QVBoxLayout(this);

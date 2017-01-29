@@ -31,6 +31,8 @@ class QFont;
 class QStringList;
 
 /**
+ * @class KFontChooser kfontchooser.h KFontChooser
+ *
  * @short A font selection widget.
  *
  * While KFontChooser as an ordinary widget can be embedded in
@@ -38,7 +40,7 @@ class QStringList;
  * it is preferable to use the convenience functions in
  * QFontDialog.
  *
- * \image html kfontchooser.png "KDE Font Chooser Widget"
+ * \image html kfontchooser.png "KFontChooser Widget"
  *
  * @see KFontRequester
  *
@@ -115,11 +117,11 @@ public:
      *        *sizeIsRelativeState, user choice may be retrieved by
      *        calling sizeIsRelative().
      */
-    explicit KFontChooser(QWidget *parent = 0L,
+    explicit KFontChooser(QWidget *parent = nullptr,
                           const DisplayFlags &flags = DisplayFrame,
                           const QStringList &fontList = QStringList(),
                           int visibleListSize = 8,
-                          Qt::CheckState *sizeIsRelativeState = 0L);
+                          Qt::CheckState *sizeIsRelativeState = nullptr);
 
     /**
      * Destructs the font chooser.

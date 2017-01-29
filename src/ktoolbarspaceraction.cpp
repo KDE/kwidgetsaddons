@@ -20,7 +20,7 @@
 
 KToolBarSpacerAction::KToolBarSpacerAction(QObject *parent)
     : QWidgetAction(parent)
-    , d(0)
+    , d(nullptr)
 {
 }
 

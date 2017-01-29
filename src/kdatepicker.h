@@ -31,6 +31,8 @@ class QLineEdit;
 class KDateTable;
 
 /**
+ * @class KDatePicker kdatepicker.h KDatePicker
+ *
  * @short A date selection widget.
  *
  * Provides a widget for calendar date input.
@@ -44,7 +46,7 @@ class KDateTable;
  *     to select a date directly by entering numbers like 19990101
  *     or 990101.
  *
- * \image html kdatepicker.png "KDE Date Widget"
+ * \image html kdatepicker.png "KDatePicker Widget"
  *
  *     @author Tim Gilman, Mirko Boehm
  *
@@ -60,12 +62,12 @@ public:
     /**
      * The constructor. The current date will be displayed initially.
      **/
-    explicit KDatePicker(QWidget *parent = 0);
+    explicit KDatePicker(QWidget *parent = nullptr);
 
     /**
      * The constructor. The given date will be displayed initially.
      **/
-    explicit KDatePicker(const QDate &dt, QWidget *parent = 0);
+    explicit KDatePicker(const QDate &dt, QWidget *parent = nullptr);
 
     /**
      * The destructor.

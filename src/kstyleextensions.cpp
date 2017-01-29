@@ -76,7 +76,7 @@ static inline int customStyleElement(QStyle::StyleHint type, const QString &elem
 
     const QString originalName = widget->objectName();
     widget->setObjectName(element);
-    const int id = widget->style()->styleHint(type, 0, widget);
+    const int id = widget->style()->styleHint(type, nullptr, widget);
     widget->setObjectName(originalName);
     return id;
 }

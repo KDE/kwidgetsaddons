@@ -28,6 +28,8 @@
 
 class KPageWidgetPrivate;
 /**
+ * @class KPageWidget kpagewidget.h KPageWidget
+ *
  * @short Page widget with many layouts (faces).
  * @see KPageView with hierarchical page model.
  *
@@ -44,7 +46,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit KPageWidget(QWidget *parent = 0);
+    explicit KPageWidget(QWidget *parent = nullptr);
 
     /**
      * Destroys the page widget.
