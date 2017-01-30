@@ -189,6 +189,7 @@ public:
 
     /**
      * The color used as warning for the verification password field's background.
+     * @since 5.17
      */
     QColor backgroundWarningColor() const;
 
