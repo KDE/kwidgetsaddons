@@ -217,12 +217,10 @@ bool KCollapsibleGroupBox::event(QEvent *event)
             QChildEvent *ce = static_cast<QChildEvent*>(event);
             if (ce->child()->isWidgetType()) {
                 auto widget = static_cast<QWidget*>(ce->child());
-                // Store old focus policy.
-                d->focusMap.insert(widget, widget->focusPolicy());
-                if (!d->isExpanded) {
-                    // Prevent tab focus if not expanded.
-                    widget->setFocusPolicy(Qt::NoFocus);
-                }
+                // Needs to be called asynchronously because at this point the widget is likely a "real" QWidget,
+                // i.e. the QWidget base class whose constructor sets the focus policy to NoPolicy.
+                // But the constructor of the child class (not yet called) could set a different focus policy later.
+                QMetaObject::invokeMethod(this, "overrideFocusPolicyOf", Qt::QueuedConnection, Q_ARG(QWidget*, widget));
             }
             break;
         }
@@ -293,6 +291,16 @@ void KCollapsibleGroupBox::resizeEvent(QResizeEvent *event)
 
     Q_UNUSED(bottom)
     QWidget::resizeEvent(event);
+}
+
+void KCollapsibleGroupBox::overrideFocusPolicyOf(QWidget *widget)
+{
+    d->focusMap.insert(widget, widget->focusPolicy());
+
+    if (!isExpanded()) {
+        // Prevent tab focus if not expanded.
+        widget->setFocusPolicy(Qt::NoFocus);
+    }
 }
 
 void KCollapsibleGroupBoxPrivate::recalculateHeaderSize()

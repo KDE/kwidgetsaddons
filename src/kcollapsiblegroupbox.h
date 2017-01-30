@@ -111,6 +111,9 @@ protected:
     void keyPressEvent(QKeyEvent*) Q_DECL_OVERRIDE;
     void resizeEvent(QResizeEvent*) Q_DECL_OVERRIDE;
 
+private Q_SLOTS:
+    void overrideFocusPolicyOf(QWidget *widget);
+
 private:
     KCollapsibleGroupBoxPrivate *const d;
 

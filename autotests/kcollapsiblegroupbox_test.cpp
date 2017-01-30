@@ -25,6 +25,7 @@
 #include <QCheckBox>
 #include <QDialog>
 #include <QLabel>
+#include <QLineEdit>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -77,8 +78,10 @@ void KCollapsibleGroupBoxTest::testOverrideFocus()
     QCheckBox checkBox;
     QCOMPARE(checkBox.focusPolicy(), Qt::StrongFocus);
 
-    // Make sure focus policy is changed as soon as the widget is added as child.
     layout.addWidget(&checkBox);
+    // The ChildAdded event is processed asynchronously.
+    qApp->processEvents();
+    // Make sure focus policy has been overridden.
     collapsible.show();
     QVERIFY(checkBox.isVisible());
     QCOMPARE(checkBox.focusPolicy(), Qt::NoFocus);
@@ -92,4 +95,15 @@ void KCollapsibleGroupBoxTest::testOverrideFocus()
     collapsible.collapse();
     QVERIFY(checkBox.isVisible());
     QCOMPARE(checkBox.focusPolicy(), Qt::NoFocus);
+}
+
+void KCollapsibleGroupBoxTest::childShouldGetFocus()
+{
+    KCollapsibleGroupBox collapsible;
+    auto spinBox = new QLineEdit(&collapsible);
+    // The ChildAdded event is processed asynchronously.
+    // This also "simulates" user who manually expands.
+    qApp->processEvents();
+    collapsible.expand();
+    QCOMPARE(spinBox->focusPolicy(), Qt::StrongFocus);
 }

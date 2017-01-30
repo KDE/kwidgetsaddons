@@ -30,6 +30,7 @@ class KCollapsibleGroupBoxTest : public QObject
 private Q_SLOTS:
     void testDestructorCrash();
     void testOverrideFocus();
+    void childShouldGetFocus();
 };
 
 #endif /* KCOLLAPSIBLEGROUPBOXTEST_H */
