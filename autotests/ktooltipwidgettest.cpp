@@ -20,6 +20,7 @@
 #include <KToolTipWidget>
 
 #include <QLabel>
+#include <QLineEdit>
 #include <QSignalSpy>
 #include <QTest>
 
@@ -71,6 +72,18 @@ void KToolTipWidgetTest::setZeroDelayShouldHideImmediately()
     tooltip.hideLater();
     QVERIFY(tooltip.isHidden());
     QVERIFY(!label.isVisible());
+}
+
+void KToolTipWidgetTest::shouldHideImmediatelyIfContentDestroyed()
+{
+    KToolTipWidget tooltip;
+    auto lineEdit = new QLineEdit();
+
+    tooltip.showAt(QPoint(10, 10), lineEdit, nullptr);
+    QVERIFY(tooltip.isVisible());
+
+    delete lineEdit;
+    QVERIFY(tooltip.isHidden());
 }
 
 QTEST_MAIN(KToolTipWidgetTest)

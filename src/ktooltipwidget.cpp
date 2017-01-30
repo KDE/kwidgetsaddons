@@ -69,6 +69,7 @@ void KToolTipWidget::KToolTipWidgetPrivate::addWidget(QWidget *widget)
     removeWidget();
     content = widget;
     layout->addWidget(content);
+    connect(content, &QWidget::destroyed, q, &QWidget::hide);
 }
 
 void KToolTipWidget::KToolTipWidgetPrivate::removeWidget()

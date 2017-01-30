@@ -29,6 +29,7 @@ private Q_SLOTS:
     void showTooltipShouldShowContent();
     void hideLaterShouldHideAfterDelay();
     void setZeroDelayShouldHideImmediately();
+    void shouldHideImmediatelyIfContentDestroyed();
 };
 
 #endif
