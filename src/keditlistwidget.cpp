@@ -147,15 +147,19 @@ void KEditListWidgetPrivate::setEditor(QLineEdit *newLineEdit, QWidget *represen
 
 void KEditListWidgetPrivate::updateButtonState()
 {
-    QModelIndex index = selectedIndex();
-    if (servUpButton) {
-        servUpButton->setEnabled(index.isValid());
-    }
-    if (servDownButton) {
-        servDownButton->setEnabled(index.isValid());
-    }
-    if (servRemoveButton) {
-        servRemoveButton->setEnabled(index.isValid());
+    const bool hasSelectedItem = selectedIndex().isValid();
+
+    // TODO: merge with enableMoveButtons()
+    QPushButton * const buttons[3] = { servUpButton, servDownButton, servRemoveButton };
+
+    for (QPushButton *button : buttons) {
+        if (button) {
+            // keep focus in widget
+            if (!hasSelectedItem && button->hasFocus()) {
+                lineEdit->setFocus(Qt::OtherFocusReason);
+            }
+            button->setEnabled(hasSelectedItem);
+        }
     }
 }
 
@@ -469,6 +473,14 @@ void KEditListWidget::addItem()
         }
     }
     if (d->servNewButton) {
+        // prevent losing the focus by it being moved outside of this widget
+        // as well as support the user workflow a little by moving the focus
+        // to the lineedit. chances are that users will add some items consecutively,
+        // so this will save a manual focus change, and it is also consistent
+        // to what happens on the click on the Remove button
+        if (d->servNewButton->hasFocus()) {
+            d->lineEdit->setFocus(Qt::OtherFocusReason);
+        }
         d->servNewButton->setEnabled(false);
     }
 
@@ -515,6 +527,14 @@ void KEditListWidget::removeItem()
     }
 
     if (currentIndex.row() >= 0) {
+        // prevent losing the focus by it being moved outside of this widget
+        // as well as support the user workflow a little by moving the focus
+        // to the lineedit. chances are that users will add some item next,
+        // so this will save a manual focus change,
+        if (d->servRemoveButton && d->servRemoveButton->hasFocus()) {
+            d->lineEdit->setFocus(Qt::OtherFocusReason);
+        }
+
         QString removedText = d->model->data(currentIndex, Qt::DisplayRole).toString();
 
         d->model->removeRows(currentIndex.row(), 1);
