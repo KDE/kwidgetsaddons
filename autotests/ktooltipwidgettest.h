@@ -30,6 +30,7 @@ private Q_SLOTS:
     void hideLaterShouldHideAfterDelay();
     void setZeroDelayShouldHideImmediately();
     void shouldHideImmediatelyIfContentDestroyed();
+    void shouldNotTakeOwnershipOfContent();
 };
 
 #endif

@@ -86,6 +86,26 @@ void KToolTipWidgetTest::shouldHideImmediatelyIfContentDestroyed()
     QVERIFY(tooltip.isHidden());
 }
 
+void KToolTipWidgetTest::shouldNotTakeOwnershipOfContent()
+{
+    auto parent = new QWidget();
+    auto label = new QLabel(parent);
+    auto tooltip = new KToolTipWidget();
+
+    tooltip->showAt(QPoint(10, 10), label, nullptr);
+    QCOMPARE(label->parent(), tooltip);
+    QVERIFY(label->isVisible());
+
+    QSignalSpy spy(label, &QWidget::destroyed);
+    delete tooltip;
+    QVERIFY(!label->isVisible());
+    QCOMPARE(label->parent(), parent);
+    QCOMPARE(spy.count(), 0);
+
+    delete parent;
+    QCOMPARE(spy.count(), 1);
+}
+
 QTEST_MAIN(KToolTipWidgetTest)
 
 

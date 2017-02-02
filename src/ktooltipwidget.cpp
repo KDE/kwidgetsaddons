@@ -36,19 +36,23 @@ public:
     KToolTipWidgetPrivate(KToolTipWidget *parent)
         : q(parent),
           layout(nullptr),
-          content(nullptr)
+          content(nullptr),
+          contentParent(nullptr)
     {}
 
     void init();
     void addWidget(QWidget *widget);
     void removeWidget();
     void show(const QPoint &pos, QWindow *transientParent);
+    void storeParent();
+    void restoreParent();
     QPoint centerBelow(const QRect &rect, QScreen *screen) const;
 
     KToolTipWidget *q;
     QTimer hideTimer;
     QVBoxLayout *layout;
     QWidget *content;
+    QWidget *contentParent;
 };
 
 void KToolTipWidget::KToolTipWidgetPrivate::init()
@@ -68,6 +72,7 @@ void KToolTipWidget::KToolTipWidgetPrivate::addWidget(QWidget *widget)
 {
     removeWidget();
     content = widget;
+    storeParent();
     layout->addWidget(content);
     connect(content, &QWidget::destroyed, q, &QWidget::hide);
 }
@@ -75,6 +80,7 @@ void KToolTipWidget::KToolTipWidgetPrivate::addWidget(QWidget *widget)
 void KToolTipWidget::KToolTipWidgetPrivate::removeWidget()
 {
     layout->removeWidget(content);
+    restoreParent();
 }
 
 void KToolTipWidget::KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *transientParent)
@@ -86,6 +92,24 @@ void KToolTipWidget::KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *tra
     q->move(pos);
     q->windowHandle()->setTransientParent(transientParent);
     q->show();
+}
+
+void KToolTipWidget::KToolTipWidgetPrivate::storeParent()
+{
+    if (!content) {
+        return;
+    }
+
+    contentParent = qobject_cast<QWidget*>(content->parent());
+}
+
+void KToolTipWidget::KToolTipWidgetPrivate::restoreParent()
+{
+    if (!content || !contentParent) {
+        return;
+    }
+
+    content->setParent(contentParent);
 }
 
 QPoint KToolTipWidget::KToolTipWidgetPrivate::centerBelow(const QRect &rect, QScreen *screen) const
@@ -144,6 +168,7 @@ KToolTipWidget::KToolTipWidget(QWidget *parent)
 
 KToolTipWidget::~KToolTipWidget()
 {
+    d->restoreParent();
 }
 
 void KToolTipWidget::showAt(const QPoint &pos, QWidget *content, QWindow *transientParent)
