@@ -42,6 +42,7 @@ private Q_SLOTS:
     void testWarningColorPostMatch();
     void disablingWidgetShouldUseDisabledPalette();
     void disablingParentShouldUseDisabledPalette();
+    void disablingRevealPasswordShouldHideVisibilityAction();
 };
 
 #endif

@@ -19,6 +19,7 @@
 
 #include "knewpasswordwidgettest.h"
 
+#include <QAction>
 #include <QLineEdit>
 #include <QTest>
 
@@ -264,4 +265,23 @@ void KNewPasswordWidgetTest::disablingParentShouldUseDisabledPalette()
     QCOMPARE(lineVerifyPassword->palette(), widget->palette());
 
     delete widget;
+}
+
+void KNewPasswordWidgetTest::disablingRevealPasswordShouldHideVisibilityAction()
+{
+    KNewPasswordWidget pwdWidget;
+
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    QVERIFY(linePassword);
+
+    auto visibilityAction = linePassword->findChild<QAction*>(QStringLiteral("visibilityAction"));
+    QVERIFY(visibilityAction && !visibilityAction->isVisible());
+
+    linePassword->setText(QStringLiteral("1234"));
+    QVERIFY(visibilityAction->isVisible());
+    QCOMPARE(pwdWidget.isRevealPasswordAvailable(), visibilityAction->isVisible());
+
+    pwdWidget.setRevealPasswordAvailable(false);
+    QVERIFY(!visibilityAction->isVisible());
+    QCOMPARE(pwdWidget.isRevealPasswordAvailable(), visibilityAction->isVisible());
 }

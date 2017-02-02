@@ -242,6 +242,16 @@ QString KNewPasswordDialog::password() const
     return d->pass;
 }
 
+void KNewPasswordDialog::setRevealPasswordAvailable(bool reveal)
+{
+    d->ui.pwdWidget->setRevealPasswordAvailable(reveal);
+}
+
+bool KNewPasswordDialog::isRevealPasswordAvailable() const
+{
+    return d->ui.pwdWidget->isRevealPasswordAvailable();
+}
+
 bool KNewPasswordDialog::checkPassword(const QString &)
 {
     return true;

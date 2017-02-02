@@ -81,6 +81,11 @@ class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
     Q_PROPERTY(int passwordStrengthWarningLevel READ passwordStrengthWarningLevel WRITE setPasswordStrengthWarningLevel)
     Q_PROPERTY(QColor backgroundWarningColor READ backgroundWarningColor WRITE setBackgroundWarningColor)
     Q_PROPERTY(bool passwordStrengthMeterVisible READ isPasswordStrengthMeterVisible WRITE setPasswordStrengthMeterVisible)
+    /**
+     * @since 5.31
+     */
+    Q_PROPERTY(bool revealPasswordAvailable READ isRevealPasswordAvailable WRITE setRevealPasswordAvailable)
+
 
 public:
 
@@ -152,6 +157,12 @@ public:
     bool isPasswordStrengthMeterVisible() const;
 
     /**
+     * Whether the visibility trailing action in the line edit is visible.
+     * @since 5.31
+     */
+    bool isRevealPasswordAvailable() const;
+
+    /**
      * Returns the password entered.
      * @note Only returns meaningful data when passwordStatus
      *       is either WeakPassword or StrongPassword.
@@ -218,6 +229,17 @@ public Q_SLOTS:
      * Default is true.
      */
     void setPasswordStrengthMeterVisible(bool visible);
+
+    /**
+     * Whether to show the visibility trailing action in the line edit.
+     * Default is true. This can be used to honor the lineedit_reveal_password
+     * kiosk key, for example:
+     * \code
+     * passwordWidget.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+     * \endcode
+     * @since 5.31
+     */
+    void setRevealPasswordAvailable(bool reveal);
 
 Q_SIGNALS:
 

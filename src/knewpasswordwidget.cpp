@@ -34,6 +34,7 @@ public:
           minimumPasswordLength(0),
           passwordStrengthWarningLevel(1),
           reasonablePasswordLength(8),
+          revealPasswordAvailable(true),
           toggleEchoModeAction(nullptr)
     {}
 
@@ -50,6 +51,7 @@ public:
     int minimumPasswordLength;
     int passwordStrengthWarningLevel;
     int reasonablePasswordLength;
+    bool revealPasswordAvailable;
 
     QAction *toggleEchoModeAction;
     QColor backgroundWarningColor;
@@ -73,6 +75,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
 
     QIcon visibilityIcon = QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg")));
     toggleEchoModeAction = ui.linePassword->addAction(visibilityIcon, QLineEdit::TrailingPosition);
+    toggleEchoModeAction->setObjectName(QStringLiteral("visibilityAction"));
     toggleEchoModeAction->setVisible(false);
     toggleEchoModeAction->setToolTip(tr("Change the visibility of the password"));
     connect(toggleEchoModeAction, SIGNAL(triggered(bool)), q, SLOT(_k_toggleEchoMode()));
@@ -138,7 +141,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_toggleEchoMode()
 
 void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_showToggleEchoModeAction(const QString &text)
 {
-    toggleEchoModeAction->setVisible(!text.isEmpty());
+    toggleEchoModeAction->setVisible(revealPasswordAvailable && !text.isEmpty());
 }
 
 int KNewPasswordWidget::KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
@@ -261,6 +264,11 @@ bool KNewPasswordWidget::isPasswordStrengthMeterVisible() const
     return d->ui.labelStrengthMeter->isVisible() && d->ui.strengthBar->isVisible();
 }
 
+bool KNewPasswordWidget::isRevealPasswordAvailable() const
+{
+    return d->revealPasswordAvailable;
+}
+
 QString KNewPasswordWidget::password() const
 {
     return d->ui.linePassword->text();
@@ -310,6 +318,13 @@ void KNewPasswordWidget::setPasswordStrengthMeterVisible(bool visible)
 {
     d->ui.labelStrengthMeter->setVisible(visible);
     d->ui.strengthBar->setVisible(visible);
+}
+
+void KNewPasswordWidget::setRevealPasswordAvailable(bool reveal)
+{
+    d->revealPasswordAvailable = reveal;
+    // Force update, we might already have shown the action.
+    d->_k_showToggleEchoModeAction(password());
 }
 
 #include "moc_knewpasswordwidget.cpp"

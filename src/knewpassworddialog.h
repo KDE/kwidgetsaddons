@@ -202,6 +202,23 @@ public:
     QString password() const;
 
     /**
+     * Whether to show the visibility trailing action in the line edit.
+     * Default is true. This can be used to honor the lineedit_reveal_password
+     * kiosk key, for example:
+     * \code
+     * passwordDialog.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+     * \endcode
+     * @since 5.31
+     */
+    void setRevealPasswordAvailable(bool reveal);
+
+    /**
+     * Whether the visibility trailing action in the line edit is visible.
+     * @since 5.31
+     */
+    bool isRevealPasswordAvailable() const;
+
+    /**
      * @internal
      */
     void accept() Q_DECL_OVERRIDE;
