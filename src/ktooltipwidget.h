@@ -38,9 +38,10 @@
  *
  * You can use a single instance of this class to show as many tooltips as you want.
  *
- * The tooltip does not take ownership of the content widget. While the tooltip is set
- * as parent of the widget (by the layout), the old parent is restored when the widget
- * is replaced by another widget and also when the tooltip is deleted.
+ * The tooltip does not take ownership of the content widget if the latter already
+ * has a parent. While the tooltip is set as parent of the widget (by the layout),
+ * the old parent is restored when the widget is replaced by another widget
+ * and also when the tooltip is deleted.
  *
  * @since 5.30
  * @author Elvis Angelaccio <elvis.angelaccio@kde.org>
