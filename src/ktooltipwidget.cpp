@@ -208,8 +208,12 @@ void KToolTipWidget::setHideDelay(int delay)
 
 void KToolTipWidget::enterEvent(QEvent *)
 {
-    // If the mouse hovers the tooltip, leave it visible.
-    d->hideTimer.stop();
+    // Ignore hide delay and leave tooltip visible.
+    if (hideDelay() > 0) {
+        d->hideTimer.stop();
+    } else {
+        hide();
+    }
 }
 
 void KToolTipWidget::hideEvent(QHideEvent *)
