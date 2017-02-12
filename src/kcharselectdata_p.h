@@ -57,6 +57,7 @@ public:
     QVector<uint> seeAlso(uint c);
     QStringList equivalents(uint c);
     QStringList approximateEquivalents(uint c);
+    QVector<uint> decomposition(uint c);
 
     QStringList unihanInfo(uint c);
 

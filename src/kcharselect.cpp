@@ -768,7 +768,8 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     QVector<uint> seeAlso = s_data()->seeAlso(c);
     QStringList equivalents = s_data()->equivalents(c);
     QStringList approxEquivalents = s_data()->approximateEquivalents(c);
-    if (!(aliases.isEmpty() && notes.isEmpty() && seeAlso.isEmpty() && equivalents.isEmpty() && approxEquivalents.isEmpty())) {
+    QVector<uint> decomposition = s_data()->decomposition(c);
+    if (!(aliases.isEmpty() && notes.isEmpty() && seeAlso.isEmpty() && equivalents.isEmpty() && approxEquivalents.isEmpty() && decomposition.isEmpty())) {
         html += QStringLiteral("<p><b>") + tr("Annotations and Cross References") + QStringLiteral("</b></p>");
     }
 
@@ -815,6 +816,17 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
         html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") + tr("Approximate equivalents:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
         foreach (const QString &approxEquivalent, approxEquivalents) {
             html += QStringLiteral("<li>") + createLinks(approxEquivalent.toHtmlEscaped()) + QStringLiteral("</li>");
+        }
+        html += QStringLiteral("</ul>");
+    }
+
+    if (!decomposition.isEmpty()) {
+        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") +  tr("Decomposition:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        foreach (uint c2, decomposition) {
+            if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
+                continue;
+            }
+            html += QStringLiteral("<li>") + createLinks(s_data()->formatCode(c2, 4, QStringLiteral(""))) + QStringLiteral("</li>");
         }
         html += QStringLiteral("</ul>");
     }

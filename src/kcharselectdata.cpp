@@ -588,6 +588,25 @@ QStringList KCharSelectData::approximateEquivalents(uint c)
     return approxEquivalents;
 }
 
+QVector<uint> KCharSelectData::decomposition(uint c) {
+    // for now, only decompose Hangul Syllable into Hangul Jamo
+    uint SIndex = c - SBase;
+    if (SIndex >= SCount) {
+        return QVector<uint>();
+    }
+
+    uint L = LBase + SIndex / NCount;  // Choseong
+    uint V = VBase + (SIndex % NCount) / TCount; // Jungseong
+    uint T = TBase + SIndex % TCount; // Jongsung
+    QVector<uint> jamoList;
+    jamoList.append(L);
+    jamoList.append(V);
+    if (T != TBase) {
+        jamoList.append(T);
+    }
+    return jamoList;
+}
+
 QStringList KCharSelectData::unihanInfo(uint c)
 {
     if (!openDataFile()) {
