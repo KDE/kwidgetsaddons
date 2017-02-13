@@ -25,26 +25,28 @@
 #include <QFile>
 #include <QFormLayout>
 #include <QLabel>
-#include <QScopedPointer>
-#include <QUiLoader>
+#include "ui_kcolumnresizertest-forms.h"
+#include "ui_kcolumnresizertest-grids.h"
+#include "ui_kcolumnresizertest-grid-and-form.h"
 #include <QtTest>
 
 QTEST_MAIN(KColumnResizerTest)
 
-static QWidget *loadUi(const QString &name)
-{
-    QUiLoader loader;
-    QFile file(name);
-    file.open(QFile::ReadOnly);
-    return loader.load(&file);
-}
-
 void KColumnResizerTest::test_data()
 {
-    QTest::addColumn<QString>("uiFilePath");
-    QTest::newRow("forms") << QFINDTESTDATA("kcolumnresizertest-forms.ui");
-    QTest::newRow("grids") << QFINDTESTDATA("kcolumnresizertest-grids.ui");
-    QTest::newRow("grid-and-form") << QFINDTESTDATA("kcolumnresizertest-grid-and-form.ui");
+    QTest::addColumn<QWidget *>("parent");
+
+    QWidget *forms = new QWidget;
+    Ui::KColumnResizerTestForms().setupUi(forms);
+    QTest::newRow("forms") << forms;
+
+    QWidget *grids = new QWidget;
+    Ui::KColumnResizerTestGrids().setupUi(grids);
+    QTest::newRow("grids") << grids;
+
+    QWidget *gridAndForm = new QWidget;
+    Ui::KColumnResizerTestGridAndForms().setupUi(gridAndForm);
+    QTest::newRow("grid-and-form") << gridAndForm;
 }
 
 void KColumnResizerTest::test()
@@ -53,9 +55,8 @@ void KColumnResizerTest::test()
     // immediately after the resized column, rather than checking the width of
     // the resized column itself because checking the width of the column cannot
     // be done the same way for all layout types.
-    QFETCH(QString, uiFilePath);
-    QScopedPointer<QWidget> parent(loadUi(uiFilePath));
-    QVERIFY(parent.data());
+    QFETCH(QWidget *, parent);
+    QVERIFY(parent);
 
     auto layout1 = parent->findChild<QLayout *>(QStringLiteral("layout1"));
     auto layout2 = parent->findChild<QLayout *>(QStringLiteral("layout2"));
@@ -73,7 +74,7 @@ void KColumnResizerTest::test()
     int widget2x = widget2->x();
     QVERIFY(widget1x < widget2x);
 
-    auto resizer = new KColumnResizer(parent.data());
+    auto resizer = new KColumnResizer(parent);
     resizer->addWidgetsFromLayout(layout1);
     resizer->addWidgetsFromLayout(layout2);
 
@@ -84,4 +85,6 @@ void KColumnResizerTest::test()
 
     QCOMPARE(widget1->x(), widget2x);
     QCOMPARE(widget2->x(), widget2x);
+
+    delete parent;
 }

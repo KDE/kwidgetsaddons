@@ -1,7 +1,7 @@
 
 include(ECMAddTests)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test UiTools)
+find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 ecm_add_tests(
   kcollapsiblegroupbox_test.cpp
@@ -20,8 +20,13 @@ ecm_add_tests(
   LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
 )
 
-ecm_add_tests(
+set (CMAKE_AUTOUIC TRUE)
+ecm_add_test(
   kcolumnresizertest.cpp
+  kcolumnresizertest-forms.ui
+  kcolumnresizertest-grids.ui
+  kcolumnresizertest-grid-and-form.ui
+  TEST_NAME kcolumnresizertest
   NAME_PREFIX "kwidgetsaddons-"
-  LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons Qt5::UiTools
+  LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
 )
