@@ -286,7 +286,7 @@ QStringList KCharSelectData::sectionList()
     quint32 i = stringBegin;
     while (i < stringEnd) {
         list.append(QCoreApplication::translate("KCharSelectData", data + i, "KCharSelect section name"));
-        i += strlen(data + i) + 1;
+        i += qstrlen(data + i) + 1;
     }
 
     return list;
@@ -436,7 +436,7 @@ QString KCharSelectData::blockName(int index)
 
     const char *data = dataFile.constData();
     while (i < stringEnd && currIndex < index) {
-        i += strlen(data + i) + 1;
+        i += qstrlen(data + i) + 1;
         currIndex++;
     }
 
@@ -458,7 +458,7 @@ QString KCharSelectData::sectionName(int index)
 
     const char *data = dataFile.constData();
     while (i < stringEnd && currIndex < index) {
-        i += strlen(data + i) + 1;
+        i += qstrlen(data + i) + 1;
         currIndex++;
     }
 
@@ -484,7 +484,7 @@ QStringList KCharSelectData::aliases(uint c)
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
         aliases.append(QString::fromUtf8(data + offset));
-        offset += strlen(data + offset) + 1;
+        offset += qstrlen(data + offset) + 1;
     }
     return aliases;
 }
@@ -508,7 +508,7 @@ QStringList KCharSelectData::notes(uint c)
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
         notes.append(QString::fromUtf8(data + offset));
-        offset += strlen(data + offset) + 1;
+        offset += qstrlen(data + offset) + 1;
     }
 
     return notes;
@@ -557,7 +557,7 @@ QStringList KCharSelectData::equivalents(uint c)
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
         equivalents.append(QString::fromUtf8(data + offset));
-        offset += strlen(data + offset) + 1;
+        offset += qstrlen(data + offset) + 1;
     }
 
     return equivalents;
@@ -582,7 +582,7 @@ QStringList KCharSelectData::approximateEquivalents(uint c)
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
         approxEquivalents.append(QString::fromUtf8(data + offset));
-        offset += strlen(data + offset) + 1;
+        offset += qstrlen(data + offset) + 1;
     }
 
     return approxEquivalents;
@@ -985,7 +985,7 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
 
         for (int j = 0;  j < aliasCount;  j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + aliasOffset));
-            aliasOffset += strlen(data + aliasOffset) + 1;
+            aliasOffset += qstrlen(data + aliasOffset) + 1;
         }
 
         // notes
@@ -994,7 +994,7 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
 
         for (int j = 0;  j < notesCount;  j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + notesOffset));
-            notesOffset += strlen(data + notesOffset) + 1;
+            notesOffset += qstrlen(data + notesOffset) + 1;
         }
 
         // approximate equivalents
@@ -1003,7 +1003,7 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
 
         for (int j = 0;  j < apprCount;  j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + apprOffset));
-            apprOffset += strlen(data + apprOffset) + 1;
+            apprOffset += qstrlen(data + apprOffset) + 1;
         }
 
         // equivalents
@@ -1012,7 +1012,7 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
 
         for (int j = 0;  j < equivCount;  j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + equivOffset));
-            equivOffset += strlen(data + equivOffset) + 1;
+            equivOffset += qstrlen(data + equivOffset) + 1;
         }
 
         // see also - convert to string (hex)
@@ -1022,7 +1022,7 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
         for (int j = 0;  j < seeAlsoCount;  j++) {
             quint16 seeAlso = qFromLittleEndian<quint16> (udata + seeAlsoOffset);
             appendToIndex(&i, unicode, formatCode(seeAlso, 4, QString()));
-            equivOffset += strlen(data + equivOffset) + 1;
+            equivOffset += qstrlen(data + equivOffset) + 1;
         }
     }
 
