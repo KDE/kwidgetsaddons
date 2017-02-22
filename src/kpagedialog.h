@@ -207,7 +207,8 @@ Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page has changed.
      *
-     * @param item The new current page or 0 if no current page is available.
+     * @param current The new current page or 0 if no current page is available.
+     * @param before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 

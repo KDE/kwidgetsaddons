@@ -98,7 +98,7 @@ public Q_SLOTS:
      * squeezed->setText("new text"); // works as expected
      * static_cast<KSqueezedTextLabel*>(label)->setText("new text");  // works as expected
      * \endcode
-     * @param mode The new text.
+     * @param text The new text.
      */
     void setText(const QString &text);
     /**

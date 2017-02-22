@@ -200,7 +200,7 @@ public:
     /**
      * Set the way text is drawn if any is set
      *
-     * @param drawTextMode If any text set, whether to draw it into the capacity bar
+     * @param mode If any text set, whether to draw it into the capacity bar
      *                     or not.
      */
     void setDrawTextMode(DrawTextMode mode);

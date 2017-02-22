@@ -67,7 +67,7 @@ public:
     /**
      * Create a sequence from an icon name.
      *
-     * \param iconName The full path of the icon
+     * \param fullPath The full path of the icon
      * \param size The icon/frame size
      */
     KPixmapSequence(const QString &fullPath, int size);

@@ -34,7 +34,7 @@ namespace KMimeTypeEditor
     /**
      * Starts the file types editor for a given MIME type.
      * @param mimeType the mimetype to edit, e.g. "text/plain"
-     * @param the parent widget
+     * @param widget the parent widget
      * @since 5.4
      */
     KWIDGETSADDONS_EXPORT void editMimeType(const QString &mimeType, QWidget *widget);

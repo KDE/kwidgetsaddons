@@ -95,7 +95,7 @@ public:
     };
 
     /**
-     * Constructs a title widget with the given @param parent.
+     * Constructs a title widget.
      */
     explicit KTitleWidget(QWidget *parent = nullptr);
 
@@ -178,14 +178,14 @@ public Q_SLOTS:
     void setPixmap(const QString &icon, ImageAlignment alignment = ImageRight);
 
     /**
-     * @param pixmap the icon to display in the header. The pixmap is by default right, but
+     * @param icon the icon to display in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
      */
     void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
     /**
-     * @param pixmap the icon to display in the header. The pixmap is by default right, but
+     * @param type the type of message icon to display in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
      */

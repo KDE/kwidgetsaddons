@@ -133,13 +133,14 @@ Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page has changed.
      *
-     * @param item The new current page or 0 if no current page is available.
+     * @param current The new current page or 0 if no current page is available.
+     * @param before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
     /**
      * This signal is emitted whenever a checkable page changes its state. @param checked is true
-     * when the @param page is checked, or false if the @param page is unchecked.
+     * when the @p page is checked, or false if the @p page is unchecked.
      */
     void pageToggled(KPageWidgetItem *page, bool checked);
 

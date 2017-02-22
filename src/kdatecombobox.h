@@ -227,7 +227,7 @@ public Q_SLOTS:
      * @param minDate the minimum date
      * @param minWarnMsg the minimum warning message
      */
-    void setMinimumDate(const QDate &minTime, const QString &minWarnMsg = QString());
+    void setMinimumDate(const QDate &minDate, const QString &minWarnMsg = QString());
 
     /**
      * Reset the minimum date to the default.

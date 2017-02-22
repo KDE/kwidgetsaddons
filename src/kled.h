@@ -208,7 +208,7 @@ public:
     /**
      * Sets the factor to darken the LED in KLed::Off state.
      *
-     * The @param darkFactor should be greater than 100, otherwise the LED
+     * The @p darkFactor should be greater than 100, otherwise the LED
      * becomes lighter in KLed::Off state.
      *
      * Defaults to 300.

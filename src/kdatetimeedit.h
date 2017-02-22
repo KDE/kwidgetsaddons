@@ -114,9 +114,9 @@ public:
     QTimeZone timeZone() const;
 
     /**
-     * Returns the list of Calendar Systems displayed.
+     * Returns the list of Calendar Locales displayed.
      *
-     * @param calendars the list of calendar systems to display
+     * @return the list of calendar locales displayed
      */
     QList<QLocale> calendarLocalesList() const;
 
@@ -181,7 +181,7 @@ public:
     /**
      * Return the list of time zones able to be selected
      *
-     * @param zones the time zones to display
+     * @return the list of time zones displayed
      */
     QList<QTimeZone> timeZones() const;
 
@@ -342,7 +342,7 @@ Q_SIGNALS:
     /**
      * Signal if the time zone has been changed manually by the user.
      *
-     * @param timeZone the new time zone
+     * @param zone the new time zone
      */
     void timeZoneEntered(const QTimeZone &zone);
 
@@ -350,7 +350,7 @@ Q_SIGNALS:
      * Signal if the time zone has been changed either manually by the user
      * or programatically.
      *
-     * @param timeZone the new time zone
+     * @param zone the new time zone
      */
     void timeZoneChanged(const QTimeZone &zone);
 
@@ -421,8 +421,8 @@ public Q_SLOTS:
      *
      * @see setMaximumDateTime()
      * @see setDateRange()
-     * @param maxDate the minimum date
-     * @param maxWarnMsg the minimum warning message
+     * @param minDateTime the minimum date
+     * @param minWarnMsg the minimum warning message
      */
     void setMinimumDateTime(const QDateTime &minDateTime, const QString &minWarnMsg = QString());
 
@@ -439,7 +439,7 @@ public Q_SLOTS:
      *
      * @see setMinimumDateTime()
      * @see setDateRange()
-     * @param maxDate the maximum date
+     * @param maxDateTime the maximum date
      * @param maxWarnMsg the maximum warning message
      */
     void setMaximumDateTime(const QDateTime &maxDateTime, const QString &maxWarnMsg = QString());
@@ -489,12 +489,12 @@ public Q_SLOTS:
      *
      * @param format the time format to use
      */
-    void setTimeDisplayFormat(QLocale::FormatType formatOptions);
+    void setTimeDisplayFormat(QLocale::FormatType format);
 
     /**
      * Set the interval between times able to be selected from the drop-down.
      *
-     * The combo drop-down will be populated with times every @param minutes
+     * The combo drop-down will be populated with times every @p minutes
      * apart, starting from the minimumTime() and ending at maximumTime().
      *
      * If the ForceInterval option is set then any time manually typed into the
@@ -553,7 +553,7 @@ protected:
      * Virtual to allow sub-classes to apply extra validation rules,
      * but reimplementations must call the parent method at the end.
      *
-     * @param datetime the new date and time
+     * @param dateTime the new date and time
      */
     virtual void assignDateTime(const QDateTime &dateTime);
 

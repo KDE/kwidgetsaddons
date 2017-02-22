@@ -227,7 +227,7 @@ public Q_SLOTS:
      *
      * @param format the time format to use
      */
-    void setDisplayFormat(QLocale::FormatType formatOptions);
+    void setDisplayFormat(QLocale::FormatType format);
 
     /**
      * Set the minimum allowed time.
@@ -262,7 +262,7 @@ public Q_SLOTS:
     /**
      * Set the interval between times able to be selected from the drop-down.
      *
-     * The combo drop-down will be populated with times every @param minutes
+     * The combo drop-down will be populated with times every @p minutes
      * apart, starting from the minimumTime() and ending at maximumTime().
      *
      * If the ForceInterval option is set then any time manually typed into the
