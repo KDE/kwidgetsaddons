@@ -26,7 +26,7 @@
 /**
  * @class KToolBarSpacerAction ktoolbarspaceraction.h KToolBarSpacerAction
  *
- * An extension to KAction which allows for adding a spacer item into a
+ * An extension to QAction which allows for adding a spacer item into a
  * QToolBar / KToolBar.
  *
  * This is useful if you want to align at the right (or left if RTL) and

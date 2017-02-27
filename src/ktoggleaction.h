@@ -57,7 +57,7 @@ public:
      * Constructs an action with text; a shortcut may be specified by
      * the ampersand character (e.g. \"&amp;Option\" creates a shortcut with key \e O )
      *
-     * This is the most common KAction used when you do not have a
+     * This is the most common QAction used when you do not have a
      * corresponding icon (note that it won't appear in the current version
      * of the "Edit ToolBar" dialog, because an action needs an icon to be
      * plugged in a toolbar...).
@@ -71,7 +71,7 @@ public:
      * Constructs an action with text and an icon; a shortcut may be specified by
      * the ampersand character (e.g. \"&amp;Option\" creates a shortcut with key \e O )
      *
-     * This is the other common KAction used.  Use it when you
+     * This is the other common QAction used.  Use it when you
      * \e do have a corresponding icon.
      *
      * @param icon The icon to display.
