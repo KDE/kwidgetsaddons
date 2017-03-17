@@ -11,6 +11,7 @@ int main(int argc, char **argv)
 
 
     KCharSelect selector(nullptr, nullptr);
+    selector.setAllPlanesEnabled(true);
     selector.resize(selector.sizeHint());
     selector.show();
     selector.setWindowTitle(QStringLiteral("KCharSelect Test"));
