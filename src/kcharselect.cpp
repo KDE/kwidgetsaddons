@@ -145,6 +145,7 @@ KCharSelectTable::KCharSelectTable(QWidget *parent, const QFont &_font)
     setAcceptDrops(true);
     setDropIndicatorShown(false);
     setDragDropMode(QAbstractItemView::DragDrop);
+    setTextElideMode(Qt::ElideNone);
 
     connect(this, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(_k_doubleClicked(QModelIndex)));
 
