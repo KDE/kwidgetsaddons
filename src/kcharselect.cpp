@@ -1,6 +1,7 @@
 /* This file is part of the KDE libraries
 
    Copyright (C) 1999 Reginald Stadlbauer <reggie@kde.org>
+   Copyright (c) 2016 DaeHyun Sung  <sungdh86@gmail.com>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -833,7 +834,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     }
 
     QStringList unihan = s_data()->unihanInfo(c);
-    if (unihan.count() == 7) {
+    if (unihan.count() == 9) {
         html += QStringLiteral("<p><b>") + tr("CJK Ideograph Information") + QStringLiteral("</b></p><p>");
         bool newline = true;
         if (!unihan[0].isEmpty()) {
@@ -882,6 +883,22 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
             html += tr("Korean Pronunciation: ") + unihan[4];
             newline = false;
         }
+        if (!unihan[7].isEmpty()) {
+            if (!newline) {
+                html += QStringLiteral("<br>");
+            }
+            html += QStringLiteral("Korean Alphabet(Hangul): ") + unihan[7];
+            newline = false;
+        }
+        if (!unihan[8].isEmpty()) {
+            if (!newline) {
+                html += QStringLiteral("<br>");
+            }
+            html += QStringLiteral("Vietnamese Pronunciation: ") + unihan[8];
+            newline = false;
+        }
+
+
         html += QStringLiteral("</p>");
     }
 
