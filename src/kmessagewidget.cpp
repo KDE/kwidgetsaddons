@@ -421,7 +421,8 @@ void KMessageWidget::animatedShow()
         emit hideAnimationFinished();
     }
 
-    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)) {
+    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)
+     || (parentWidget() && !parentWidget()->isVisible())) {
         show();
         emit showAnimationFinished();
         return;
