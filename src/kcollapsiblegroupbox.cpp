@@ -97,7 +97,9 @@ void KCollapsibleGroupBox::setTitle(const QString& title)
 
     d->shortcutId = grabShortcut(QKeySequence::mnemonic(title));
 
+#ifndef QT_NO_ACCESSIBILITY
     setAccessibleName(title);
+#endif
 
     emit titleChanged();
 }
