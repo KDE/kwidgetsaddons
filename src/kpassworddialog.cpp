@@ -127,6 +127,7 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
 
     QIcon visibilityIcon = QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg")));
     toggleEchoModeAction = ui.passEdit->addAction(visibilityIcon, QLineEdit::TrailingPosition);
+    toggleEchoModeAction->setObjectName(QStringLiteral("visibilityAction"));
     toggleEchoModeAction->setVisible(false);
     toggleEchoModeAction->setToolTip(tr("Change the visibility of the password"));
     connect(toggleEchoModeAction, SIGNAL(triggered(bool)), q, SLOT(toggleEchoMode()));
@@ -154,7 +155,7 @@ void KPasswordDialog::KPasswordDialogPrivate::toggleEchoMode()
 
 void KPasswordDialog::KPasswordDialogPrivate::showToggleEchoModeAction(const QString &text)
 {
-    toggleEchoModeAction->setVisible(isToggleEchoModeAvailable && !text.isEmpty());
+    toggleEchoModeAction->setVisible(isToggleEchoModeAvailable && (ui.passEdit->echoMode() == QLineEdit::Normal || !text.isEmpty()));
 }
 
 void KPasswordDialog::setPixmap(const QPixmap &pixmap)
