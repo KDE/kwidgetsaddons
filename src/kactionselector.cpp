@@ -545,6 +545,9 @@ int KActionSelectorPrivate::insertionIndex(QListWidget *lb, KActionSelector::Ins
     case KActionSelector::AtTop:
         index = 0;
         break;
+    case KActionSelector::AtBottom:
+        index = lb->count();
+        break;
     default:
         index = -1;
     }
