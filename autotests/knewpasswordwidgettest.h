@@ -43,6 +43,7 @@ private Q_SLOTS:
     void disablingWidgetShouldUseDisabledPalette();
     void disablingParentShouldUseDisabledPalette();
     void disablingRevealPasswordShouldHideVisibilityAction();
+    void shouldNotHideVisibilityActionInPlaintextMode();
 };
 
 #endif

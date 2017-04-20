@@ -141,7 +141,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_toggleEchoMode()
 
 void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_showToggleEchoModeAction(const QString &text)
 {
-    toggleEchoModeAction->setVisible(revealPasswordAvailable && !text.isEmpty());
+    toggleEchoModeAction->setVisible(revealPasswordAvailable && (ui.linePassword->echoMode() == QLineEdit::Normal || !text.isEmpty()));
 }
 
 int KNewPasswordWidget::KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
