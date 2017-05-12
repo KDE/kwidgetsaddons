@@ -1,5 +1,5 @@
 /*  This file is part of the KDE project
-    Copyright (C) 2002 Matthias H�zer-Klpfel <mhk@kde.org>
+    Copyright (C) 2002 Matthias Hölzer-Klüpfel <mhk@kde.org>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Library General Public
@@ -37,7 +37,7 @@ class QDockWidget;
  * It keeps a list weights, telling how valuable each character
  * would be as an accelerator.
  *
- * @author Matthias H�zer-Klpfel <mhk@kde.org>
+ * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
 */
 
 class KAccelString
@@ -100,7 +100,7 @@ typedef QList<KAccelString> KAccelStringList;
  * This class encapsulates the algorithm finding the 'best'
  * distribution of accelerators in a hierarchy of widgets.
  *
- * @author Matthias H�zer-Klpfel <mhk@kde.org>
+ * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
 */
 
 class KAccelManagerAlgorithm
@@ -140,7 +140,7 @@ public:
  *
  * This is necessary for dynamic menus like for example in kicker.
  *
- * @author Matthias H�zer-Klpfel <mhk@kde.org>
+ * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
 */
 
 class KPopupAccelManager : public QObject
