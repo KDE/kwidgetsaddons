@@ -29,6 +29,8 @@ class KTimeComboBoxPrivate;
 
 /**
  * @class KTimeComboBox ktimecombobox.h KTimeComboBox
+ *
+ * @short A combobox for times.
  */
 class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
 {
