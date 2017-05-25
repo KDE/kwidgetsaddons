@@ -22,8 +22,6 @@
 #include <QStyle>
 #include <kwidgetsaddons_export.h>
 
-namespace KStyleExtensions
-{
 /**
  * Runtime style extensions
  * You can use this to have a supporting QStyle implementation paint your widget
@@ -44,6 +42,8 @@ namespace KStyleExtensions
  *  2) Try to avoid custom elements and use default ones (if possible) to get better style support and keep UI coherency
  *  3) If you cache this value (good idea, this requires a map lookup) do not forget to catch style changes in QWidget::changeEvent()!
  */
+namespace KStyleExtensions
+{
 
 /**
  * Resolve a dynamic QStyle::ControlElement for eg. QStyle::drawControl()
