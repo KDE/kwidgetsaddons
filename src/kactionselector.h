@@ -117,21 +117,15 @@ public:
 
     /**
       This enum defines policies for where to insert moved items in a listbox.
-      The following policies are currently defined:
-      @li BelowCurrent - The item is inserted below the listbox'
-          currentItem() or at the end if there is no current item.
-      @li Sorted - The listbox is sort()ed after one or more items are inserted.
-      @li AtTop - The item is inserted at index 0 in the listbox.
-      @li AtBottom - The item is inserted at the end of the listbox.
 
       @sa availableInsertionPolicy(), setAvailableInsertionPolicy(),
       selectedInsertionPolicy(), setSelectedInsertionPolicy().
     */
     enum InsertionPolicy {
-        BelowCurrent,
-        Sorted,
-        AtTop,
-        AtBottom
+        BelowCurrent, ///< The item is inserted below the listbox' currentItem() or at the end if there is no current item.
+        Sorted,       ///< The listbox is sort()ed after one or more items are inserted.
+        AtTop,        ///< The item is inserted at index 0 in the listbox.
+        AtBottom      ///< The item is inserted at the end of the listbox.
     };
     Q_ENUM(InsertionPolicy)
 

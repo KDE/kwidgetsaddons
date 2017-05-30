@@ -69,25 +69,31 @@ public:
     /**
      * This enum is used to decide which type of navigation view
      * shall be used in the page view.
-     *
-     * @li Auto   - Depending on the number of pages in the model,
-     *              the Plain (one page), the List (several pages)
-     *              or the Tree face (nested pages) will be used.
-     *              This is the default face type.
-     * @li Plain  - No navigation view will be visible and only the
-     *              first page of the model will be shown.
-     *
-     * @li List   - An icon list is used as navigation view.
-     *
-     * @li Tree   - A tree list is used as navigation view.
-     *
-     * @li Tabbed - A tab widget is used as navigation view.
      */
     enum FaceType {
+        /**
+         * Depending on the number of pages in the model,
+         * the @c Plain (one page), the @c List (several pages)
+         * or the @c Tree face (nested pages) will be used.
+         * This is the default face type.
+         */
         Auto,
+        /**
+         * No navigation view will be visible and only the
+         * first page of the model will be shown.
+         */
         Plain,
+        /**
+         * An icon list is used as navigation view
+         */
         List,
+        /**
+         * A tree list is used as navigation view
+         */
         Tree,
+        /**
+         * A tab widget is used as navigation view
+         */
         Tabbed
     };
     Q_ENUM(FaceType)

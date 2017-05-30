@@ -73,25 +73,34 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
 public:
 
     /**
-     *  @li @p Auto   - A dialog with a face based on the structure of the
-     *                  available pages.
-     *                  If only a single page is added, the dialog behaves like
-     *                  in @p Plain mode, with multiple pages without sub pages
-     *                  it behaves like in @p List mode and like in @p Tree mode
-     *                  otherwise.
-     *  @li @p Plain  - A normal dialog.
-     *  @li @p List   - A dialog with an icon list on the left side and a
-     *                  representation of the contents on the right side.
-     *  @li @p Tree   - A dialog with a tree on the left side and a
-     *                  representation of the contents on the right side.
-     *  @li @p Tabbed - A dialog with a tab bar above the representation
-     *                  of the contents.
+     * The face types supported.
      */
     enum FaceType {
+        /**
+         * A dialog with a face based on the structure of the available pages.
+         * If only a single page is added, the dialog behaves like
+         * in @c Plain mode, with multiple pages without sub pages
+         * it behaves like in @c List mode and like in @c Tree mode otherwise.
+         */
         Auto   = KPageView::Auto,
+        /**
+         * A normal dialog
+         */
         Plain  = KPageView::Plain,
+        /**
+         * A dialog with an icon list on the left side and a
+         * representation of the contents on the right side
+         */
         List   = KPageView::List,
+        /**
+         * A dialog with a tree on the left side and a
+         * representation of the contents on the right side
+         */
         Tree   = KPageView::Tree,
+        /**
+         * A dialog with a tab bar above the representation
+         * of the contents
+         */
         Tabbed = KPageView::Tabbed
     };
 

@@ -54,35 +54,35 @@ class KWIDGETSADDONS_EXPORT KFontChooser : public QWidget
 
 public:
     /**
-     *  @li @p FamilyList - Identifies the family (leftmost) list.
-     *  @li @p StyleList -  Identifies the style (center) list.
-     *  @li @p SizeList -   Identifies the size (rightmost) list.
+     * Displayed columns.
      */
-    enum FontColumn { FamilyList = 0x01, StyleList = 0x02, SizeList = 0x04};
+    enum FontColumn {
+        FamilyList = 0x01, ///< Identifies the family (leftmost) list.
+        StyleList = 0x02,  ///< Identifies the style (center) list.
+        SizeList = 0x04    ///< Identifies the size (rightmost) list.
+    };
 
     /**
-     *  @li @p FontDiffFamily - Identifies a requested change in the font family.
-     *  @li @p FontDiffStyle -  Identifies a requested change in the font style.
-     *  @li @p FontDiffSize -   Identifies a requested change in the font size.
+     * Flags for selecting which font attributes to change
      */
-    enum FontDiff { NoFontDiffFlags = 0,
-                    FontDiffFamily = 1,
-                    FontDiffStyle = 2,
-                    FontDiffSize = 4,
-                    AllFontDiffs = FontDiffFamily | FontDiffStyle | FontDiffSize
-                  };
+    enum FontDiff {
+        NoFontDiffFlags = 0,
+        FontDiffFamily = 1,  ///< Identifies a requested change in the font family.
+        FontDiffStyle = 2,   ///< Identifies a requested change in the font style.
+        FontDiffSize = 4,    ///< Identifies a requested change in the font size.
+        AllFontDiffs = FontDiffFamily | FontDiffStyle | FontDiffSize
+    };
     Q_DECLARE_FLAGS(FontDiffFlags, FontDiff)
 
     /**
-     * @li @p FixedFontsOnly only show fixed fonts, excluding proportional fonts
-     * @li @p DisplayFrame show a visual frame around the chooser
-     * @li @p ShowDifferences display the font differences interfaces
+     * Flags for selecting what is displayed in the widget.
      */
-    enum DisplayFlag { NoDisplayFlags = 0,
-                       FixedFontsOnly = 1,
-                       DisplayFrame = 2,
-                       ShowDifferences = 4
-                     };
+    enum DisplayFlag {
+        NoDisplayFlags = 0,
+        FixedFontsOnly = 1, ///< Only show fixed fonts, excluding proportional fonts
+        DisplayFrame = 2,   ///< Show a visual frame around the chooser
+        ShowDifferences = 4 ///< Display the font differences interfaces
+    };
     Q_DECLARE_FLAGS(DisplayFlags, DisplayFlag)
 
     /**
@@ -220,16 +220,26 @@ public:
 
     /**
      * The selection criteria for the font families shown in the dialog.
-     *  @li @p FixedWidthFont when included only fixed-width fonts are returned.
-     *        The fonts where the width of every character is equal.
-     *  @li @p ScalableFont when included only scalable fonts are returned;
-     *        certain configurations allow bitmap fonts to remain unscaled and
-     *        thus these fonts have limited number of sizes.
-     *  @li @p SmoothScalableFont when included only return smooth scalable fonts.
-     *        this will return only non-bitmap fonts which are scalable to any size requested.
-     *        Setting this option to true will mean the "scalable" flag is irrelavant.
      */
-    enum FontListCriteria { FixedWidthFonts = 0x01, ScalableFonts = 0x02, SmoothScalableFonts = 0x04 };
+    enum FontListCriteria {
+        /**
+         * When included only fixed-width fonts are returned.
+         * The fonts where the width of every character is equal.
+         */
+        FixedWidthFonts = 0x01,
+        /**
+         * When included only scalable fonts are returned;
+         * certain configurations allow bitmap fonts to remain unscaled and
+         * thus these fonts have limited number of sizes.
+         */
+        ScalableFonts = 0x02,
+        /**
+         * When included only return smooth scalable fonts.
+         * This will return only non-bitmap fonts which are scalable to any size requested.
+         * Setting this option to true will mean the "scalable" flag is irrelevant.
+         */
+        SmoothScalableFonts = 0x04
+    };
 
     /**
      * Creates a list of font strings.
