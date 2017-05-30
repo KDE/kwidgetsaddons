@@ -148,7 +148,7 @@ public:
     bool isFloatEnabled() const;
 
     /**
-     * @return the alternate pixmap (may be null pointer if none was set).
+     * @return the alternate pixmap (may be a null pointer if none was set)
      */
     const QPixmap *alternatePixmap() const;
 
@@ -230,7 +230,7 @@ public Q_SLOTS:
      * over the label. By default, it is on.
      *
      * @param on whether a custom cursor should be displayed.
-     * @param cursor is the custom cursor. a null pointer indicates the default "hand cursor".
+     * @param cursor the custom cursor. A null pointer indicates the default "hand cursor".
      */
     void setUseCursor(bool on, QCursor *cursor = nullptr);
 
