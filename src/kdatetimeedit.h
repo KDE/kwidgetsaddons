@@ -149,8 +149,9 @@ public:
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
      *
-     * @see setDateMap()
      * @return the select date map
+     *
+     * @see setDateMap()
      */
     QMap<QDate, QString> dateMap() const;
 
@@ -173,10 +174,11 @@ public:
     /**
      * Return the list of times able to be selected in the drop-down.
      *
+     * @return the select time list
+     *
      * @see setTimeList()
      * @see timeListInterval()
      * @see setTimeListInterval()
-     * @return the select time list
      */
     QList<QTime> timeList() const;
 
@@ -192,16 +194,18 @@ public:
      *
      * If the user input is null then it is not valid
      *
-     * @see isNull()
      * @return if the current user input is valid
+     *
+     * @see isNull()
      */
     bool isValid() const;
 
     /**
      * Return if the current user input is null
      *
-     * @see isValid()
      * @return if the current user input is null
+     *
+     * @see isValid()
      */
     bool isNull() const;
 
@@ -210,16 +214,18 @@ public:
      *
      * If the user input date is null then it is not valid
      *
-     * @see isNullDate()
      * @return if the current user input date is valid
+     *
+     * @see isNullDate()
      */
     bool isValidDate() const;
 
     /**
      * Return if the current user input date is null
      *
-     * @see isValidDate()
      * @return if the current user input date is null
+     *
+     * @see isValidDate()
      */
     bool isNullDate() const;
     /**
@@ -227,16 +233,18 @@ public:
      *
      * If the user input time is null then it is not valid
      *
-     * @see isNullTime()
      * @return if the current user input time is valid
+     *
+     * @see isNullTime()
      */
     bool isValidTime() const;
 
     /**
      * Return if the current user input time is null
      *
-     * @see isValidTime()
      * @return if the current user input time is null
+     *
+     * @see isValidTime()
      */
     bool isNullTime() const;
 
@@ -421,10 +429,11 @@ public Q_SLOTS:
      * If the date is invalid, or more than current maximum,
      * then the minimum will not be set.
      *
-     * @see setMaximumDateTime()
-     * @see setDateRange()
      * @param minDateTime the minimum date
      * @param minWarnMsg the minimum warning message
+     *
+     * @see setMaximumDateTime()
+     * @see setDateRange()
      */
     void setMinimumDateTime(const QDateTime &minDateTime, const QString &minWarnMsg = QString());
 
@@ -439,10 +448,11 @@ public Q_SLOTS:
      * If the date is invalid, or less than current minimum,
      * then the maximum will not be set.
      *
-     * @see setMinimumDateTime()
-     * @see setDateRange()
      * @param maxDateTime the maximum date
      * @param maxWarnMsg the maximum warning message
+     *
+     * @see setMinimumDateTime()
+     * @see setDateRange()
      */
     void setMaximumDateTime(const QDateTime &maxDateTime, const QString &maxWarnMsg = QString());
 
@@ -479,8 +489,9 @@ public Q_SLOTS:
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
      *
-     * @see dateMap()
      * @param dateMap the map of dates able to be selected
+     *
+     * @see dateMap()
      */
     void setDateMap(QMap<QDate, QString> dateMap);
 
@@ -509,8 +520,9 @@ public Q_SLOTS:
      * Setting the time list interval will override any time list previously set
      * via setTimeList().
      *
-     * @see timeListInterval()
      * @param minutes the time list interval to display
+     *
+     * @see timeListInterval()
      */
     void setTimeListInterval(int minutes);
 
@@ -526,10 +538,11 @@ public Q_SLOTS:
      * The minimum and maximum time will automatically be set to the earliest
      * and latest value in the list.
      *
-     * @see timeList()
      * @param timeList the list of times able to be selected
      * @param minWarnMsg the minimum warning message
      * @param maxWarnMsg the maximum warning message
+     *
+     * @see timeList()
      */
     void setTimeList(QList<QTime> timeList,
                      const QString &minWarnMsg = QString(),

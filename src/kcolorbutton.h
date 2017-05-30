@@ -32,9 +32,9 @@ class KColorButtonPrivate;
 *
 * This widget can be used to display or allow user selection of a color.
 *
-* @see QColorDialog
-*
 * \image html kcolorbutton.png "KColorButton Widget"
+*
+* @see QColorDialog
 */
 class KWIDGETSADDONS_EXPORT KColorButton : public QPushButton
 {

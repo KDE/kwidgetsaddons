@@ -118,67 +118,64 @@ public:
     /**
      * Returns the current color of the widget.
      *
-     * @see Color
-     * @short Returns LED color.
+     * @returns LED color
+     * @see setColor()
      */
     QColor color() const;
 
     /**
      * Returns the current state of the widget (on/off).
+     * @returns LED state
      *
      * @see State
-     * @short Returns LED state.
      */
     State state() const;
 
     /**
      * Returns the current look of the widget.
+     * @returns LED look
      *
      * @see Look
-     * @short Returns LED look.
      */
     Look look() const;
 
     /**
      * Returns the current shape of the widget.
+     * @returns LED shape
      *
      * @see Shape
-     * @short Returns LED shape.
      */
     Shape shape() const;
 
     /**
      * Returns the factor to darken the LED.
+     * @returns dark factor
      *
      * @see setDarkFactor()
-     * @short Returns dark factor.
      */
     int darkFactor() const;
 
     /**
      * Set the color of the widget.
      *
-     * The LED is shown with Color when in the KLed::On state
-     * or with the darken Color (@see setDarkFactor) in KLed::Off
-     * state.
+     * The LED is shown with @p color when in the KLed::On state
+     * or with the darken color in KLed::Off state.
      *
      * The widget calls the update() method, so it will
      * be updated when entering the main event loop.
      *
-     * @see Color
-     *
      * @param color New color of the LED.
-     * @short Sets the LED color.
+     *
+     * @see color() darkFactor()
      */
     void setColor(const QColor &color);
 
     /**
      * Sets the state of the widget to On or Off.
      *
-     * @see on() off() toggle()
-     *
      * @param state The LED state: on or off.
-     * @short Set LED state.
+     *
+     * @see on() off() toggle()
      */
     void setState(State state);
 
@@ -190,10 +187,9 @@ public:
      * The widget calls the update() method, so it will
      * be updated when entering the main event loop.
      *
-     * @see Look
-     *
      * @param look New look of the LED.
-     * @short Sets LED look.
+     *
+     * @see Look
      */
     void setLook(Look look);
 
@@ -213,10 +209,9 @@ public:
      *
      * Defaults to 300.
      *
-     * @see QColor
-     *
      * @param darkFactor Sets the factor to darken the LED.
-     * @short Sets the factor to darken the LED.
+     *
+     * @see setColor
      */
     void setDarkFactor(int darkFactor);
 

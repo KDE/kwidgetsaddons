@@ -80,16 +80,18 @@ public:
      *
      * If the user input is null then it is not valid
      *
-     * @see isNull()
      * @return if the current user input is valid
+     *
+     * @see isNull()
      */
     bool isValid() const;
 
     /**
      * Return if the current user input is null
      *
-     * @see isValid()
      * @return if the current user input is null
+     *
+     * @see isValid()
      */
     bool isNull() const;
 
@@ -158,18 +160,20 @@ public:
      *
      * Returns -1 if not set.
      *
-     * @see setTimeListInterval()
      * @return the select time list interval in minutes
+     *
+     * @see setTimeListInterval()
      */
     int timeListInterval() const;
 
     /**
      * Return the list of times able to be selected in the drop-down.
      *
+     * @return the select time list
+     *
      * @see setTimeList()
      * @see timeListInterval()
      * @see setTimeListInterval()
-     * @return the select time list
      */
     QList<QTime> timeList() const;
 
@@ -237,12 +241,13 @@ public Q_SLOTS:
      * If the time is invalid, or greater than current maximum,
      * then the minimum will not be set.
      *
+     * @param minTime the minimum time
+     * @param minWarnMsg the minimum warning message
+     *
      * @see minimumTime()
      * @see maximumTime()
      * @see setMaximumTime()
      * @see setTimeRange()
-     * @param minTime the minimum time
-     * @param minWarnMsg the minimum warning message
      */
     void setMinimumTime(const QTime &minTime, const QString &minWarnMsg = QString());
 
@@ -252,12 +257,13 @@ public Q_SLOTS:
      * If the time is invalid, or less than current minimum,
      * then the maximum will not be set.
      *
+     * @param maxTime the maximum time
+     * @param maxWarnMsg the maximum warning message
+     *
      * @see minimumTime()
      * @see maximumTime()
      * @see setMaximumTime()
      * @see setTimeRange()
-     * @param maxTime the maximum time
-     * @param maxWarnMsg the maximum warning message
      */
     void setMaximumTime(const QTime &maxTime, const QString &maxWarnMsg = QString());
 
@@ -277,8 +283,9 @@ public Q_SLOTS:
      * Setting the time list interval will override any time list previously set
      * via setTimeList().
      *
-     * @see timeListInterval()
      * @param minutes the time list interval to display
+     *
+     * @see timeListInterval()
      */
     void setTimeListInterval(int minutes);
 
@@ -294,10 +301,11 @@ public Q_SLOTS:
      * The minimum and maximum time will automatically be set to the earliest
      * and latest value in the list.
      *
-     * @see timeList()
      * @param timeList the list of times able to be selected
      * @param minWarnMsg the minimum warning message
      * @param maxWarnMsg the maximum warning message
+     *
+     * @see timeList()
      */
     void setTimeList(QList<QTime> timeList,
                      const QString &minWarnMsg = QString(),

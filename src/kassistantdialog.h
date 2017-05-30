@@ -70,8 +70,8 @@ public:
 
     /**
      * return if a page is valid
-     * @see setValid
      * @param page the page to check the validity of
+     * @see setValid()
      */
     bool isValid(KPageWidgetItem *page) const;
 

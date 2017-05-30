@@ -84,16 +84,18 @@ public:
      *
      * If the user input is null then it is not valid
      *
-     * @see isNull()
      * @return if the current user input is valid
+     *
+     * @see isNull()
      */
     bool isValid() const;
 
     /**
      * Return if the current user input is null
      *
-     * @see isValid()
      * @return if the current user input is null
+     *
+     * @see isValid()
      */
     bool isNull() const;
 
@@ -131,8 +133,9 @@ public:
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
      *
-     * @see setDateMap()
      * @return the select date map
+     *
+     * @see setDateMap()
      */
     QMap<QDate, QString> dateMap() const;
 
@@ -222,12 +225,13 @@ public Q_SLOTS:
      * If the date is invalid, or greater than current maximum,
      * then the minimum will not be set.
      *
+     * @param minDate the minimum date
+     * @param minWarnMsg the minimum warning message
+     *
      * @see minimumDate()
      * @see maximumDate()
      * @see setMaximumDate()
      * @see setDateRange()
-     * @param minDate the minimum date
-     * @param minWarnMsg the minimum warning message
      */
     void setMinimumDate(const QDate &minDate, const QString &minWarnMsg = QString());
 
@@ -244,12 +248,13 @@ public Q_SLOTS:
      * If the date is invalid, or less than current minimum,
      * then the maximum will not be set.
      *
+     * @param maxDate the maximum date
+     * @param maxWarnMsg the maximum warning message
+     *
      * @see minimumDate()
      * @see maximumDate()
      * @see setMaximumDate()
      * @see setDateRange()
-     * @param maxDate the maximum date
-     * @param maxWarnMsg the maximum warning message
      */
     void setMaximumDate(const QDate &maxDate, const QString &maxWarnMsg = QString());
 
@@ -272,8 +277,9 @@ public Q_SLOTS:
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
      *
-     * @see dateMap()
      * @param dateMap the map of dates able to be selected
+     *
+     * @see dateMap()
      */
     void setDateMap(QMap<QDate, QString> dateMap);
 
