@@ -44,7 +44,7 @@ class QAbstractItemModel;
  * different ways.
  *
  * Currently, @p Auto, @p Plain, @p List, @p Tree and @p Tabbed face
- * types are available. @see KPageWidget
+ * types are available (cmp. KPageWidget).
  *
  * <b>Example:</b>\n
  *
@@ -126,7 +126,7 @@ public:
 
     /**
      * Sets the page with @param index to be the current page and emits
-     * the @see currentPageChanged signal.
+     * the signal currentPageChanged.
      */
     void setCurrentPage(const QModelIndex &index);
 

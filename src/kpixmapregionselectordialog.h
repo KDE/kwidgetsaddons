@@ -34,7 +34,7 @@ class QImage;
  * A dialog that uses a KPixmapRegionSelectorWidget to allow the user
  * to select a region of an image. If you want to use special features
  * like forcing the selected area to have a fixed aspect ratio, you can use
- * @see pixmapRegionSelectorWidget() to get the pointer to the
+ * pixmapRegionSelectorWidget() to get the pointer to the
  * KPixmapRegionSelectorWidget object and set the desired options there.
  *
  * There are some convenience methods that allow to easily show a dialog

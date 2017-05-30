@@ -41,7 +41,7 @@ class KPageDialogPrivate;
  * different ways.
  *
  * Currently, @p Auto, @p Plain, @p List, @p Tree and @p Tabbed face
- * types are available (@see KPageView).
+ * types are available (cmp. KPageView).
  *
  * <b>Example:</b>\n
  *
@@ -117,72 +117,72 @@ public:
      * @param widget The widget of the page.
      * @param name The name which is displayed in the navigation view.
      *
-     * @returns The associated @see KPageWidgetItem.
+     * @returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
     /**
      * Adds a new top level page to the dialog.
      *
-     * @param item The @see KPageWidgetItem which describes the page.
+     * @param item The KPageWidgetItem which describes the page.
      */
     void addPage(KPageWidgetItem *item);
 
     /**
      * Inserts a new page in the dialog.
      *
-     * @param before The new page will be insert before this @see KPageWidgetItem
+     * @param before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      * @param widget The widget of the page.
      * @param name The name which is displayed in the navigation view.
      *
-     * @returns The associated @see KPageWidgetItem.
+     * @returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new page in the dialog.
      *
-     * @param before The new page will be insert before this @see KPageWidgetItem
+     * @param before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      *
-     * @param item The @see KPageWidgetItem which describes the page.
+     * @param item The KPageWidgetItem which describes the page.
      */
     void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /**
      * Inserts a new sub page in the dialog.
      *
-     * @param parent The new page will be insert as child of this @see KPageWidgetItem.
+     * @param parent The new page will be insert as child of this KPageWidgetItem.
      * @param widget The widget of the page.
      * @param name The name which is displayed in the navigation view.
      *
-     * @returns The associated @see KPageWidgetItem.
+     * @returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new sub page in the dialog.
      *
-     * @param parent The new page will be insert as child of this @see KPageWidgetItem.
+     * @param parent The new page will be insert as child of this KPageWidgetItem.
      *
-     * @param item The @see KPageWidgetItem which describes the page.
+     * @param item The KPageWidgetItem which describes the page.
      */
     void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
     /**
-     * Removes the page associated with the given @see KPageWidgetItem.
+     * Removes the page associated with the given KPageWidgetItem.
      */
     void removePage(KPageWidgetItem *item);
 
     /**
-     * Sets the page which is associated with the given @see KPageWidgetItem to
+     * Sets the page which is associated with the given KPageWidgetItem to
      * be the current page and emits the currentPageChanged() signal.
      */
     void setCurrentPage(KPageWidgetItem *item);
 
     /**
-     * Returns the @see KPageWidgetItem for the current page or 0 if there is no
+     * Returns the KPageWidgetItem for the current page or 0 if there is no
      * current page.
      */
     KPageWidgetItem *currentPage() const;

@@ -49,7 +49,7 @@ public:
     virtual ~KToolBarSpacerAction();
 
     /**
-     * Reimplemented from @see QActionWidget.
+     * Reimplemented from QWidgetAction.
      */
     QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 

@@ -115,7 +115,7 @@ public:
     void setStickyMenu(bool sticky);
 
     /**
-     * Reimplemented from @see QActionWidgetFactory.
+     * Reimplemented from QWidgetAction.
      */
     QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 

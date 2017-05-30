@@ -100,7 +100,7 @@ public:
      * The above creates a font chooser dialog with only SmoothScaleble fonts.
      *
      * @param parent The parent widget.
-     * @param flags Defines how the font chooser is displayed. @see DisplayFlags
+     * @param flags Defines how the font chooser is displayed.
      * @param fontList A list of fonts to display, in XLFD format.  If
      *        no list is formatted, the internal KDE font list is used.
      *        If that has not been created, X is queried, and all fonts
@@ -236,7 +236,7 @@ public:
      *
      * @param list The list is returned here.
      * @param fontListCriteria should contain all the restrictions for font selection as OR-ed values
-     *        @see KFontChooser::FontListCriteria for the individual values
+     *        from KFontChooser::FontListCriteria
      */
     static void getFontList(QStringList &list, uint fontListCriteria);
 

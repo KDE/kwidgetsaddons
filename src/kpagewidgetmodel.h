@@ -170,7 +170,7 @@ Q_SIGNALS:
 
     /**
      * This signal is emitted whenever the user checks or
-     * unchecks the item of @see setChecked() is called.
+     * unchecks the item of setChecked() is called.
      */
     void toggled(bool checked);
 
@@ -184,7 +184,7 @@ class KPageWidgetModelPrivate;
 /**
  * @class KPageWidgetModel kpagewidgetmodel.h KPageWidgetModel
  *
- * This page model is used by @see KPageWidget to provide
+ * This page model is used by KPageWidget to provide
  * a hierarchical layout of pages.
  */
 class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
@@ -211,61 +211,61 @@ public:
      * @param widget The widget of the page.
      * @param name The name which is displayed in the navigation view.
      *
-     * @returns The associated @see KPageWidgetItem.
+     * @returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
     /**
      * Adds a new top level page to the model.
      *
-     * @param item The @see KPageWidgetItem which describes the page.
+     * @param item The KPageWidgetItem which describes the page.
      */
     void addPage(KPageWidgetItem *item);
 
     /**
      * Inserts a new page in the model.
      *
-     * @param before The new page will be insert before this @see KPageWidgetItem
+     * @param before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      * @param widget The widget of the page.
      * @param name The name which is displayed in the navigation view.
      *
-     * @returns The associated @see KPageWidgetItem.
+     * @returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new page in the model.
      *
-     * @param before The new page will be insert before this @see KPageWidgetItem
+     * @param before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      *
-     * @param item The @see KPageWidgetItem which describes the page.
+     * @param item The KPageWidgetItem which describes the page.
      */
     void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /**
      * Inserts a new sub page in the model.
      *
-     * @param parent The new page will be insert as child of this @see KPageWidgetItem.
+     * @param parent The new page will be insert as child of this KPageWidgetItem.
      * @param widget The widget of the page.
      * @param name The name which is displayed in the navigation view.
      *
-     * @returns The associated @see KPageWidgetItem.
+     * @returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
     /**
      * Inserts a new sub page in the model.
      *
-     * @param parent The new page will be insert as child of this @see KPageWidgetItem.
+     * @param parent The new page will be insert as child of this KPageWidgetItem.
      *
-     * @param item The @see KPageWidgetItem which describes the page.
+     * @param item The KPageWidgetItem which describes the page.
      */
     void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
     /**
-     * Removes the page associated with the given @see KPageWidgetItem.
+     * Removes the page associated with the given KPageWidgetItem.
      */
     void removePage(KPageWidgetItem *item);
 
@@ -281,12 +281,12 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
     /**
-     * Returns the @see KPageWidgetItem for a given index or 0 if the index is invalid.
+     * Returns the KPageWidgetItem for a given index or 0 if the index is invalid.
      */
     KPageWidgetItem *item(const QModelIndex &index) const;
 
     /**
-     * Returns the index for a given @see KPageWidgetItem. The index is invalid if the
+     * Returns the index for a given KPageWidgetItem. The index is invalid if the
      * item can't be found in the model.
      */
     QModelIndex index(const KPageWidgetItem *item) const;

@@ -150,7 +150,7 @@ public Q_SLOTS:
     /**
      * @param text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
-     * @param type The sort of message it is; will also set the icon accordingly @see MessageType
+     * @param type The sort of message it is; will also set the icon accordingly
      * @see text()
      */
     void setText(const QString &text, MessageType type);
@@ -158,7 +158,7 @@ public Q_SLOTS:
     /**
      * @param comment Text displayed beneath the main title as a comment.
      *                It can either be plain text or rich text.
-     * @param type The sort of message it is. @see MessageType
+     * @param type The sort of message it is.
      * @see comment()
      */
     void setComment(const QString &comment, MessageType type = PlainMessage);

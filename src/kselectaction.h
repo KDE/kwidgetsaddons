@@ -368,12 +368,12 @@ protected Q_SLOTS:
 
 protected:
     /**
-     * Reimplemented from @see QWidgetAction.
+     * Reimplemented from QWidgetAction.
      */
     QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
 
     /**
-     * Reimplemented from @see QWidgetAction.
+     * Reimplemented from QWidgetAction.
      */
     void deleteWidget(QWidget *widget) Q_DECL_OVERRIDE;
 
