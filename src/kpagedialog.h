@@ -191,7 +191,7 @@ public:
     void setCurrentPage(KPageWidgetItem *item);
 
     /**
-     * Returns the KPageWidgetItem for the current page or 0 if there is no
+     * Returns the KPageWidgetItem for the current page or a null pointer if there is no
      * current page.
      */
     KPageWidgetItem *currentPage() const;
@@ -202,7 +202,7 @@ public:
     void setStandardButtons(QDialogButtonBox::StandardButtons buttons);
 
     /**
-     * Returns the QPushButton corresponding to the standard button which, or 0 if the standard
+     * Returns the QPushButton corresponding to the standard button which, or a null pointer if the standard
      * button doesn't exist in this dialog.
      */
     QPushButton *button(QDialogButtonBox::StandardButton which) const;
@@ -216,7 +216,7 @@ Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page has changed.
      *
-     * @param current The new current page or 0 if no current page is available.
+     * @param current The new current page or a null pointer if no current page is available.
      * @param before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
@@ -239,12 +239,12 @@ protected:
     KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = nullptr);
 
     /**
-     * Returns the page widget of the dialog or 0 if no page widget is set.
+     * Returns the page widget of the dialog or a null pointer if no page widget is set.
      */
     KPageWidget *pageWidget();
 
     /**
-     * Returns the page widget of the dialog or 0 if no page widget is set.
+     * Returns the page widget of the dialog or a null pointer if no page widget is set.
      */
     const KPageWidget *pageWidget() const;
 
@@ -259,12 +259,12 @@ protected:
     void setPageWidget(KPageWidget *widget);
 
     /**
-     * Returns the button box of the dialog or 0 if no button box is set.
+     * Returns the button box of the dialog or a null pointer if no button box is set.
      */
     QDialogButtonBox *buttonBox();
 
     /**
-     * Returns the button box of the dialog or 0 if no button box is set.
+     * Returns the button box of the dialog or a null pointer if no button box is set.
      */
     const QDialogButtonBox *buttonBox() const;
 

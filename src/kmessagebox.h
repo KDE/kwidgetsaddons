@@ -807,7 +807,7 @@ KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notify
  * @param ask     The text of the checkbox. If empty none will be shown.
  * @param checkboxReturn The result of the checkbox. If it's initially
  *                true then the checkbox will be checked by default.
- *                May be 0.
+ *                May be null pointer.
  * @param options  see Options
  * @param details Detailed message string.
  * @return A QDialogButtonBox::StandardButton button code, not a KMessageBox
@@ -839,7 +839,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  * @param ask     The text of the checkbox. If empty none will be shown.
  * @param checkboxReturn The result of the checkbox. If it's initially
  *                true then the checkbox will be checked by default.
- *                May be 0.
+ *                May be null pointer.
  * @param options  see Options
  * @param details Detailed message string.
  * @param notifyType The type of notification to send when this message

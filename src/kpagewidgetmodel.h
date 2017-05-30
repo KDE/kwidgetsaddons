@@ -281,7 +281,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
 
     /**
-     * Returns the KPageWidgetItem for a given index or 0 if the index is invalid.
+     * Returns the KPageWidgetItem for a given index or a null pointer if the index is invalid.
      */
     KPageWidgetItem *item(const QModelIndex &index) const;
 

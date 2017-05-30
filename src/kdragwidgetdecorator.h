@@ -74,7 +74,7 @@ protected:
      * Reimplement this and return the QDrag object that should be used
      * for the drag. Remember to give it "decoratedWidget()" as parent.
      *
-     * Default implementation returns 0, so that no drag is initiated.
+     * Default implementation returns a null pointer, so that no drag is initiated.
      */
     virtual QDrag *dragObject();
 
@@ -109,8 +109,8 @@ class KDragWidgetDecorator : public KDragWidgetDecoratorBase
 public:
     typedef QDrag *(*DragObjectFactory)(Widget *);
 
-    KDragWidgetDecorator(Widget *parent = 0)
-        : KDragWidgetDecoratorBase(parent), m_factory(0) {}
+    KDragWidgetDecorator(Widget *parent = nullptr)
+        : KDragWidgetDecoratorBase(parent), m_factory(nullptr) {}
 
     /**
      * @return the QDrag factory used by this decorator

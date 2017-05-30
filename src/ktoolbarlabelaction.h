@@ -86,7 +86,7 @@ public:
     void setBuddy(QAction *buddy);
 
     /**
-     * Returns the label's buddy or 0 if no buddy is currently set.
+     * Returns the label's buddy or a null pointer if no buddy is currently set.
      *
      * See QLabel#buddy() and QLabel#setBuddy() for more information.
      */
