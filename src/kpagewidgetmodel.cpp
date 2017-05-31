@@ -332,7 +332,7 @@ bool KPageWidgetModel::setData(const QModelIndex &index, const QVariant &value, 
 Qt::ItemFlags KPageWidgetModel::flags(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return nullptr;
+        return Qt::NoItemFlags;
     }
 
     Qt::ItemFlags flags = Qt::ItemIsSelectable;

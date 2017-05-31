@@ -104,7 +104,7 @@ public:
      * @param f          Will be handed over to QFrame.
      *
      **/
-    explicit KRuler(Qt::Orientation orient, QWidget *parent = nullptr, Qt::WindowFlags f = nullptr);
+    explicit KRuler(Qt::Orientation orient, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
      * Constructs a ruler with orientation @p orient and initial width @p widgetWidth.
@@ -121,7 +121,7 @@ public:
      *
      */
     KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = nullptr,
-           Qt::WindowFlags f = nullptr);
+           Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
      * Destructor.

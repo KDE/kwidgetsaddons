@@ -130,7 +130,7 @@ public:
      * @param flags a set of KPasswordDialogFlag flags
      */
     explicit KPasswordDialog(QWidget *parent = nullptr,
-                             const KPasswordDialogFlags &flags = nullptr);
+                             const KPasswordDialogFlags &flags = KPasswordDialog::NoFlags);
 
     /**
      * Destructor

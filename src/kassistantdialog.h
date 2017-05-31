@@ -54,7 +54,7 @@ public:
      * @flags the window flags to give to the assistant dialog. The
      * default of zero is usually what you want.
      */
-    explicit KAssistantDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
+    explicit KAssistantDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
     virtual ~KAssistantDialog();
 
     /**
@@ -140,7 +140,7 @@ protected:
      *
      * Calls the KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags) constructor
      */
-    explicit KAssistantDialog(KPageWidget *widget, QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
+    explicit KAssistantDialog(KPageWidget *widget, QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
     void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
 

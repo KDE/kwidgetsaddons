@@ -184,7 +184,7 @@ void KFontRequester::setTitle(const QString &title)
 
 void KFontRequester::KFontRequesterPrivate::_k_buttonClicked()
 {
-    QFontDialog::FontDialogOptions flags = nullptr;
+    QFontDialog::FontDialogOptions flags;
     if (m_onlyFixed) {
         flags = QFontDialog::MonospacedFonts;
     }

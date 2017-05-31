@@ -108,7 +108,7 @@ public:
     /**
      * Creates a new page dialog.
      */
-    explicit KPageDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
+    explicit KPageDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
      * Destroys the page dialog.
@@ -235,8 +235,8 @@ protected:
      * \param widget The KPageWidget object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
      */
-    KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = nullptr);
-    KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = nullptr);
+    KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = Qt::WindowFlags());
+    KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
      * Returns the page widget of the dialog or a null pointer if no page widget is set.
