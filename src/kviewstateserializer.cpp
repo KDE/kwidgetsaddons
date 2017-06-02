@@ -22,6 +22,7 @@
 #include "kviewstateserializer.h"
 
 #include <QAbstractScrollArea>
+#include <QPointer>
 #include <QScrollBar>
 #include <QTimer>
 #include <QTreeView>
@@ -51,6 +52,9 @@ public:
 
     inline void restoreScrollBarState()
     {
+        if (!m_scrollArea) {
+            return;
+        }
         if (m_horizontalScrollBarValue >= 0 && m_horizontalScrollBarValue <= m_scrollArea->horizontalScrollBar()->maximum()) {
             m_scrollArea->horizontalScrollBar()->setValue(m_horizontalScrollBarValue);
             m_horizontalScrollBarValue = -1;
@@ -95,7 +99,7 @@ public:
     QTreeView *m_treeView;
     QAbstractItemView *m_view;
     QItemSelectionModel *m_selectionModel;
-    QAbstractScrollArea *m_scrollArea;
+    QPointer<QAbstractScrollArea> m_scrollArea;
 
     int m_horizontalScrollBarValue;
     int m_verticalScrollBarValue;
