@@ -122,6 +122,7 @@ public:
      * @param icon a icon for the tab
      * @param id an arbitrary ID which can be used later on to identify the tab
      * @param text if a mode with text is used it will be the tab text, otherwise a mouse over hint
+     * @since 5.13
      */
     int appendTab(const QIcon &icon, int id = -1, const QString &text = QString());
 
