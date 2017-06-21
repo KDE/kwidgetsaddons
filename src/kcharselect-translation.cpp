@@ -54,6 +54,7 @@ QT_TRANSLATE_NOOP3("KCharSelectData", "Thaana", "KCharselect unicode block name"
 QT_TRANSLATE_NOOP3("KCharSelectData", "NKo", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Samaritan", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Mandaic", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Syriac Supplement", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Arabic Extended-A", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Devanagari", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Bengali", "KCharselect unicode block name");

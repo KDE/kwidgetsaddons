@@ -151,6 +151,7 @@ Hebrew
 Mandaic
 Samaritan
 Syriac
+Syriac Supplement
 
 SECTION Central Asian Scripts
 Mongolian
