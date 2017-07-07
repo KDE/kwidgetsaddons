@@ -495,7 +495,9 @@ void KPageListViewDelegate::drawFocus(QPainter *painter, const QStyleOptionViewI
                                   ? QPalette::Normal : QPalette::Disabled;
         o.backgroundColor = option.palette.color(cg, (option.state & QStyle::State_Selected)
                             ? QPalette::Highlight : QPalette::Background);
-        QApplication::style()->drawPrimitive(QStyle::PE_FrameFocusRect, &o, painter);
+
+        QStyle *style = option.widget ? option.widget->style() : QApplication::style();
+        style->drawPrimitive(QStyle::PE_FrameFocusRect, &o, painter, option.widget);
     }
 }
 
