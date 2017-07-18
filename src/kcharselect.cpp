@@ -133,7 +133,9 @@ KCharSelectTable::KCharSelectTable(QWidget *parent, const QFont &_font)
     d->font = _font;
 
     setTabKeyNavigation(false);
+    setSelectionBehavior(QAbstractItemView::SelectItems);
     setSelectionMode(QAbstractItemView::SingleSelection);
+
     QPalette _palette;
     _palette.setColor(backgroundRole(), palette().color(QPalette::Base));
     setPalette(_palette);
@@ -196,17 +198,17 @@ void KCharSelectTable::setContents(const QVector<uint> &chars)
 {
     d->chars = chars;
 
-    KCharSelectItemModel *m = d->model;
+    auto oldModel = d->model;
     d->model = new KCharSelectItemModel(chars, d->font, this);
     setModel(d->model);
     d->_k_resizeCells();
-    QItemSelectionModel *selectionModel = new QItemSelectionModel(d->model);
-    setSelectionModel(selectionModel);
-    setSelectionBehavior(QAbstractItemView::SelectItems);
-    setSelectionMode(QAbstractItemView::SingleSelection);
-    connect(selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)), this, SLOT(_k_slotSelectionChanged(QItemSelection,QItemSelection)));
+
+    // Setting a model changes the selectionModel. Make sure to always reconnect.
+    connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
+            this, SLOT(_k_slotSelectionChanged(QItemSelection,QItemSelection)));
     connect(d->model, &KCharSelectItemModel::showCharRequested, this, &KCharSelectTable::showCharRequested);
-    delete m; // this should hopefully delete aold selection models too, since it is the parent of them (didn't track, if there are setParent calls somewhere. Check that (jowenn)
+
+    delete oldModel; // The selection model is thrown away when the model gets destroyed().
 }
 
 void KCharSelectTable::scrollTo(const QModelIndex &index, ScrollHint hint)
