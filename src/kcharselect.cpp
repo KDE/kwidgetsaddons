@@ -1,6 +1,7 @@
 /* This file is part of the KDE libraries
 
    Copyright (C) 1999 Reginald Stadlbauer <reggie@kde.org>
+   Copyright (C) 2017 Harald Sitter <sitter@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -36,6 +37,7 @@
 #include <QSplitter>
 #include <QToolButton>
 #include <QTextBrowser>
+#include <QTimer>
 
 Q_GLOBAL_STATIC(KCharSelectData, s_data)
 
@@ -236,7 +238,21 @@ void KCharSelectTable::resizeEvent(QResizeEvent *e)
 {
     QTableView::resizeEvent(e);
     if (e->size().width() != e->oldSize().width()) {
-        d->_k_resizeCells();
+        // Resize our cells. But do so asynchronously through the event loop.
+        // Otherwise we can end up with an infinite loop as resizing the cells in turn results in
+        // a layout change which results in a resize event. More importantly doing this blockingly
+        // crashes QAccessible as the resize we potentially cause will discard objects which are
+        // still being used in the call chain leading to this event.
+        // https://bugs.kde.org/show_bug.cgi?id=374933
+        // https://bugreports.qt.io/browse/QTBUG-58153
+        // This can be removed once a fixed Qt version is the lowest requirement for Frameworks.
+        auto timer = new QTimer(this);
+        timer->setSingleShot(true);
+        connect(timer, &QTimer::timeout, [&,timer]() {
+            d->_k_resizeCells();
+            timer->deleteLater();
+        });
+        timer->start(0);
     }
 }
 
