@@ -1120,6 +1120,9 @@ bool KCharSelectItemModel::dropMimeData(const QMimeData *data, Qt::DropAction ac
 
 void KCharSelectItemModel::setColumnCount(int columns)
 {
+    if (columns == m_columns) {
+        return;
+    }
     emit layoutAboutToBeChanged();
     m_columns = columns;
     emit layoutChanged();
