@@ -252,9 +252,8 @@ private:
     class KNewPasswordWidgetPrivate;
     KNewPasswordWidgetPrivate *const d;
 
-    Q_PRIVATE_SLOT(d, void _k_textChanged())
+    Q_PRIVATE_SLOT(d, void _k_passwordChanged())
     Q_PRIVATE_SLOT(d, void _k_toggleEchoMode())
-    Q_PRIVATE_SLOT(d, void _k_showToggleEchoModeAction(const QString &text))
     Q_DISABLE_COPY(KNewPasswordWidget)
 };
 

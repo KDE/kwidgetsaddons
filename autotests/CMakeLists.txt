@@ -17,6 +17,7 @@ ecm_add_tests(
   kmessagewidgetautotest.cpp
   kpagedialogautotest.cpp
   kpassworddialogautotest.cpp
+  kpasswordlineedittest.cpp
   ksplittercollapserbuttontest.cpp
   LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
 )

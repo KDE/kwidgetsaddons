@@ -67,6 +67,7 @@ set(kwidgetsaddons_SRCS
   kmessagewidget.cpp
   knewpassworddialog.cpp
   lineediturldropeventfilter.cpp
+  kpasswordlineedit.cpp
   kpixmapsequence.cpp
   kpixmapsequenceoverlaypainter.cpp
   kpixmapsequencewidget.cpp
@@ -168,6 +169,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KMessageWidget
   KNewPasswordDialog
   LineEditUrlDropEventFilter
+  KPasswordLineEdit
   KPixmapSequence
   KPixmapSequenceOverlayPainter
   KPixmapSequenceWidget
@@ -251,6 +253,7 @@ if (PythonModuleGeneration_FOUND)
       kmessagewidget.h
       knewpassworddialog.h
       lineediturldropeventfilter.h
+      kpasswordlineedit.h
       kpixmapsequence.h
       kpixmapsequenceoverlaypainter.h
       kpixmapsequencewidget.h

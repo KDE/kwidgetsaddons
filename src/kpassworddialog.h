@@ -308,8 +308,6 @@ private:
     Q_PRIVATE_SLOT(d, void actuallyAccept())
     Q_PRIVATE_SLOT(d, void activated(const QString &userName))
     Q_PRIVATE_SLOT(d, void updateFields())
-    Q_PRIVATE_SLOT(d, void toggleEchoMode())
-    Q_PRIVATE_SLOT(d, void showToggleEchoModeAction(const QString &text))
 
 private:
     class KPasswordDialogPrivate;

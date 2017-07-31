@@ -42,6 +42,7 @@ kwidgetsaddons_executable_tests(
   kmimetypechoosertest
   ksplittercollapserbuttongui_test
   ktooltipwidget_test
+  kpasswordlineedit_test
 )
 
 add_executable(kdatetabletest kdatetabletest.cpp ../src/kdatetable.cpp)

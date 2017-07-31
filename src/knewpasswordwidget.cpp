@@ -34,14 +34,12 @@ public:
           minimumPasswordLength(0),
           passwordStrengthWarningLevel(1),
           reasonablePasswordLength(8),
-          revealPasswordAvailable(true),
           toggleEchoModeAction(nullptr)
     {}
 
     void init();
-    void _k_textChanged();
+    void _k_passwordChanged();
     void _k_toggleEchoMode();
-    void _k_showToggleEchoModeAction(const QString &text);
     int effectivePasswordLength(const QString &password);
     void updatePasswordStatus(PasswordStatus status);
 
@@ -51,7 +49,6 @@ public:
     int minimumPasswordLength;
     int passwordStrengthWarningLevel;
     int reasonablePasswordLength;
-    bool revealPasswordAvailable;
 
     QAction *toggleEchoModeAction;
     QColor backgroundWarningColor;
@@ -73,26 +70,20 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
     ui.labelStrengthMeter->setWhatsThis(strengthBarWhatsThis);
     ui.strengthBar->setWhatsThis(strengthBarWhatsThis);
 
-    QIcon visibilityIcon = QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg")));
-    toggleEchoModeAction = ui.linePassword->addAction(visibilityIcon, QLineEdit::TrailingPosition);
-    toggleEchoModeAction->setObjectName(QStringLiteral("visibilityAction"));
-    toggleEchoModeAction->setVisible(false);
-    toggleEchoModeAction->setToolTip(tr("Change the visibility of the password"));
-    connect(toggleEchoModeAction, SIGNAL(triggered(bool)), q, SLOT(_k_toggleEchoMode()));
+    connect(ui.linePassword, SIGNAL(echoModeChanged(QLineEdit::EchoMode)), q, SLOT(_k_toggleEchoMode()));
 
-    connect(ui.linePassword, SIGNAL(textChanged(QString)), q, SLOT(_k_showToggleEchoModeAction(QString)));
-    connect(ui.linePassword, SIGNAL(textChanged(QString)), q, SLOT(_k_textChanged()));
-    connect(ui.lineVerifyPassword, SIGNAL(textChanged(QString)), q, SLOT(_k_textChanged()));
+    connect(ui.linePassword, SIGNAL(passwordChanged(QString)), q, SLOT(_k_passwordChanged()));
+    connect(ui.lineVerifyPassword, SIGNAL(textChanged(QString)), q, SLOT(_k_passwordChanged()));
 
     defaultBackgroundColor = q->palette().color(QPalette::Active, QPalette::Base);
     backgroundWarningColor = defaultBackgroundColor;
 
-    _k_textChanged();
+    _k_passwordChanged();
 }
 
-void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_textChanged()
+void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_passwordChanged()
 {
-    const QString password = ui.linePassword->text();
+    const QString password = ui.linePassword->password();
     const QString verification = ui.lineVerifyPassword->text();
     const bool match = (password == verification);
     const bool partialMatch = password.startsWith(verification);
@@ -103,14 +94,14 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_textChanged()
     ui.lineVerifyPassword->setPalette(palette);
 
     // Password strength calculator
-    int pwstrength = (20 * ui.linePassword->text().length() + 80 * effectivePasswordLength(ui.linePassword->text())) / qMax(reasonablePasswordLength, 2);
+    int pwstrength = (20 * ui.linePassword->password().length() + 80 * effectivePasswordLength(ui.linePassword->password())) / qMax(reasonablePasswordLength, 2);
     ui.strengthBar->setValue(qBound(0, pwstrength, 100));
 
     // update the current password status
     if (match || ui.lineVerifyPassword->isHidden()) {
-        if (!q->allowEmptyPasswords() && ui.linePassword->text().isEmpty()) {
+        if (!q->allowEmptyPasswords() && ui.linePassword->password().isEmpty()) {
             updatePasswordStatus(EmptyPasswordNotAllowed);
-        } else if (ui.linePassword->text().length() < minPasswordLength) {
+        } else if (ui.linePassword->password().length() < minPasswordLength) {
             updatePasswordStatus(PasswordTooShort);
         } else if (ui.strengthBar && ui.strengthBar->value() < passwordStrengthWarningLevel) {
             updatePasswordStatus(WeakPassword);
@@ -124,24 +115,14 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_textChanged()
 
 void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_toggleEchoMode()
 {
-    if (ui.linePassword->echoMode() == QLineEdit::Password) {
-        ui.linePassword->setEchoMode(QLineEdit::Normal);
+    if (ui.linePassword->lineEdit()->echoMode() == QLineEdit::Normal) {
         ui.lineVerifyPassword->hide();
         ui.labelVerifyPassword->hide();
-        toggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("hint"), QIcon(QStringLiteral(":/icons/hint.svg"))));
-    } else if (ui.linePassword->echoMode() == QLineEdit::Normal) {
-        ui.linePassword->setEchoMode(QLineEdit::Password);
+    } else if (ui.linePassword->lineEdit()->echoMode() == QLineEdit::Password) {
         ui.lineVerifyPassword->show();
         ui.labelVerifyPassword->show();
-        toggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg"))));
     }
-
-    _k_textChanged();
-}
-
-void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_showToggleEchoModeAction(const QString &text)
-{
-    toggleEchoModeAction->setVisible(revealPasswordAvailable && (ui.linePassword->echoMode() == QLineEdit::Normal || !text.isEmpty()));
+    _k_passwordChanged();
 }
 
 int KNewPasswordWidget::KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
@@ -241,7 +222,7 @@ int KNewPasswordWidget::minimumPasswordLength() const
 
 int KNewPasswordWidget::maximumPasswordLength() const
 {
-    return d->ui.linePassword->maxLength();
+    return d->ui.linePassword->lineEdit()->maxLength();
 }
 
 int KNewPasswordWidget::reasonablePasswordLength() const
@@ -266,24 +247,24 @@ bool KNewPasswordWidget::isPasswordStrengthMeterVisible() const
 
 bool KNewPasswordWidget::isRevealPasswordAvailable() const
 {
-    return d->revealPasswordAvailable;
+    return d->ui.linePassword->isRevealPasswordAvailable();
 }
 
 QString KNewPasswordWidget::password() const
 {
-    return d->ui.linePassword->text();
+    return d->ui.linePassword->password();
 }
 
 void KNewPasswordWidget::setAllowEmptyPasswords(bool allowed)
 {
     setMinimumPasswordLength(allowed ? 0 : 1);
-    d->_k_textChanged();
+    d->_k_passwordChanged();
 }
 
 void KNewPasswordWidget::setMinimumPasswordLength(int minLength)
 {
     d->minimumPasswordLength = minLength;
-    d->_k_textChanged();
+    d->_k_passwordChanged();
 }
 
 void KNewPasswordWidget::setMaximumPasswordLength(int maxLength)
@@ -292,7 +273,7 @@ void KNewPasswordWidget::setMaximumPasswordLength(int maxLength)
         maxLength = minimumPasswordLength();
     }
 
-    d->ui.linePassword->setMaxLength(maxLength);
+    d->ui.linePassword->lineEdit()->setMaxLength(maxLength);
     d->ui.lineVerifyPassword->setMaxLength(maxLength);
 }
 
@@ -322,9 +303,7 @@ void KNewPasswordWidget::setPasswordStrengthMeterVisible(bool visible)
 
 void KNewPasswordWidget::setRevealPasswordAvailable(bool reveal)
 {
-    d->revealPasswordAvailable = reveal;
-    // Force update, we might already have shown the action.
-    d->_k_showToggleEchoModeAction(password());
+    d->ui.linePassword->setRevealPasswordAvailable(reveal);
 }
 
 #include "moc_knewpasswordwidget.cpp"
