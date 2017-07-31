@@ -44,6 +44,7 @@ private Q_SLOTS:
     void disablingParentShouldUseDisabledPalette();
     void disablingRevealPasswordShouldHideVisibilityAction();
     void shouldNotHideVisibilityActionInPlaintextMode();
+    void shouldHideVerificationLineEditInPlaintextMode();
 };
 
 #endif

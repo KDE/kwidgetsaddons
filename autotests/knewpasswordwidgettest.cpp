@@ -303,3 +303,21 @@ void KNewPasswordWidgetTest::shouldNotHideVisibilityActionInPlaintextMode()
     linePassword->clear();
     QVERIFY(visibilityAction->isVisible());
 }
+
+void KNewPasswordWidgetTest::shouldHideVerificationLineEditInPlaintextMode()
+{
+    KNewPasswordWidget pwdWidget;
+    pwdWidget.show();
+
+    auto linePassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("linePassword"));
+    auto lineVerifyPassword = pwdWidget.findChild<QLineEdit*>(QStringLiteral("lineVerifyPassword"));
+    QVERIFY(linePassword);
+    QVERIFY(lineVerifyPassword && lineVerifyPassword->isVisible());
+
+    auto visibilityAction = linePassword->findChild<QAction*>(QStringLiteral("visibilityAction"));
+    QVERIFY(visibilityAction);
+
+    linePassword->setText(QStringLiteral("1234"));
+    visibilityAction->trigger();
+    QVERIFY(!lineVerifyPassword->isVisible());
+}
