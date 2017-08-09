@@ -27,18 +27,34 @@ class KSqueezedTextLabelPrivate;
 /**
  * @class KSqueezedTextLabel ksqueezedtextlabel.h KSqueezedTextLabel
  *
- * @short A replacement for QLabel that squeezes its text
- *
- * A label class that squeezes its text into the label
+ * @short A replacement for QLabel that squeezes its text into the label
  *
  * If the text is too long to fit into the label it is divided into
  * remaining left and right parts which are separated by three dots.
+ * Hovering the mouse over the label shows the full text in a tooltip.
  *
  * Example:
  * http://www.kde.org/documentation/index.html could be squeezed to
  * http://www.kde...ion/index.html
  *
  * \image html ksqueezedtextlabel.png "KSqueezedTextLabel Widget"
+ *
+ * To change the position of the elision mark to the left or right end
+ * of the text, use setTextElideMode().
+ *
+ * @anchor non-virtual-warning
+ * @note Several functions of KSqueezedTextLabel (indicated by a warning
+ * in their description) reimplement non-virtual functions of QLabel.
+ * Therefore, you may need to cast the object to KSqueezedTextLabel in
+ * some situations:
+ * \Example
+ * \code
+ * KSqueezedTextLabel* squeezed = new KSqueezedTextLabel("text", parent);
+ * QLabel* label = squeezed;
+ * label->setText("new text");    // this will not work
+ * squeezed->setText("new text"); // works as expected
+ * static_cast<KSqueezedTextLabel*>(label)->setText("new text");  // works as expected
+ * \endcode
  *
  * @author Ronny Standtke <Ronny.Standtke@gmx.de>
  */
@@ -54,21 +70,38 @@ class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel
 public:
     /**
      * Default constructor.
+     * @param parent the label's parent object
      */
     explicit KSqueezedTextLabel(QWidget *parent = nullptr);
+
+    /**
+     * @param text the text that will be displayed
+     * @param parent the label's parent object
+     */
     explicit KSqueezedTextLabel(const QString &text, QWidget *parent = nullptr);
 
     virtual ~KSqueezedTextLabel();
 
+    /**
+     * @return the label's minimum size, where the horizontal component
+     * will be -1 to indicate the label's ability to shrink its width
+     * by squeezing the text
+     */
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+
+    /**
+     * @return the label's preferred size, which is wide enough
+     * to display the text without squeezing it
+     */
     QSize sizeHint() const Q_DECL_OVERRIDE;
+
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
     virtual void setAlignment(Qt::Alignment);
 
     /**
-     *  Returns the text elide mode.
+     *  @return the text elide mode
      */
     Qt::TextElideMode textElideMode() const;
 
@@ -79,7 +112,7 @@ public:
     void setTextElideMode(Qt::TextElideMode mode);
 
     /**
-     * Get the full text set via setText.
+     * @return the full text set via setText()
      *
      * @since 4.4
      */
@@ -87,23 +120,25 @@ public:
 
 public Q_SLOTS:
     /**
-     * Sets the text. Note that this is not technically a reimplementation of QLabel::setText(),
-     * which is not virtual (in Qt 4.3). Therefore, you may need to cast the object to
-     * KSqueezedTextLabel in some situations:
-     * \Example
-     * \code
-     * KSqueezedTextLabel* squeezed = new KSqueezedTextLabel("text", parent);
-     * QLabel* label = squeezed;
-     * label->setText("new text");    // this will not work
-     * squeezed->setText("new text"); // works as expected
-     * static_cast<KSqueezedTextLabel*>(label)->setText("new text");  // works as expected
-     * \endcode
+     * Sets the text.
      * @param text The new text.
+     *
+     * Reimplementation of QLabel::setText().
+     *
+     * @warning The corresponding function in the base class is not virtual.
+     * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
+     * as shown in the @ref non-virtual-warning "example in the class description".
      */
     void setText(const QString &text);
+
     /**
-     * Clears the text. Same remark as above.
+     * Clears the text.
      *
+     * Reimplementation of QLabel::clear().
+     *
+     * @warning The corresponding function in the base class is not virtual.
+     * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
+     * as shown in the @ref non-virtual-warning "example in the class description".
      */
     void clear();
 
@@ -117,10 +152,12 @@ protected:
      * Called when widget is resized
      */
     void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+
     /**
      * \reimp
      */
     void contextMenuEvent(QContextMenuEvent *) Q_DECL_OVERRIDE;
+
     /**
      * does the dirty work
      */
