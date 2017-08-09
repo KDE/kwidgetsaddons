@@ -118,6 +118,15 @@ public:
      */
     QString fullText() const;
 
+    /**
+     * @returns true if the text displayed is currently squeezed,
+     * i.e. the original text does not fit inside the space available
+     * and elide mode is set to a value other than Qt::ElideNone.
+     *
+     * @since 5.38
+     */
+    bool isSqueezed() const;
+
 public Q_SLOTS:
     /**
      * Sets the text.

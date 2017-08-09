@@ -146,6 +146,11 @@ QString KSqueezedTextLabel::fullText() const
     return d->fullText;
 }
 
+bool KSqueezedTextLabel::isSqueezed() const
+{
+    return d->fullText != text();
+}
+
 void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
 {
     // We want to reimplement "Copy" to include the elided text.
@@ -157,9 +162,7 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
     // For now I chose to show it when the text is squeezed; when it's not, the
     // standard popup menu can do the job (select all, copy).
 
-    const bool squeezed = text() != d->fullText;
-    const bool showCustomPopup = squeezed;
-    if (showCustomPopup) {
+    if (isSqueezed()) {
         QMenu menu(this);
 
         QAction *act = new QAction(tr("&Copy Full Text"), &menu);
