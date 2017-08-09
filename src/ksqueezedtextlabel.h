@@ -59,6 +59,11 @@ class KSqueezedTextLabelPrivate;
  * @author Ronny Standtke <Ronny.Standtke@gmx.de>
  */
 
+// TODO KF6:
+//   - make more functions virtual (to benefit subclasses of KSqueezedTextLabel)
+//   - try to eliminate need for non-virtual-warning (to benefit use as QLabel),
+//     see https://phabricator.kde.org/D7164 for some ideas/considerations
+
 /*
  * QLabel
  */
@@ -126,6 +131,19 @@ public:
      * @since 5.38
      */
     bool isSqueezed() const;
+
+    /**
+     * @return the rectangle to squeeze the text into
+     *
+     * Reimplementation of QLabel::contentsRect().
+     *
+     * @warning The corresponding function in the base class is not virtual.
+     * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
+     * as shown in the @ref non-virtual-warning "example in the class description".
+     *
+     * @since 5.39
+     */
+    QRect contentsRect() const;
 
 public Q_SLOTS:
     /**

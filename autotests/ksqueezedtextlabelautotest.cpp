@@ -175,7 +175,6 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     label->adjustSize();
 
     QVERIFY(!label->isSqueezed());
-    QEXPECT_FAIL("", "To fix: Respect chrome in sizeHint()", Abort);
     QCOMPARE(label->size().width(), labelWidth + indent);
     QCOMPARE(label->minimumSizeHint().width(), -1);
     QCOMPARE(label->sizeHint().width(), labelWidth + indent);
@@ -227,7 +226,6 @@ void KSqueezedTextLabelAutotest::testChrome()
     label->setProperty(attribute.toLatin1().data(), amount);
     QTest::qWaitForWindowExposed(label.data());
 
-    QEXPECT_FAIL("", "To fix: Respect chrome in squeezeTextToLabel()", Abort);
     QVERIFY(label->isSqueezed());
 
     label->adjustSize();
