@@ -12,6 +12,7 @@ ecm_add_tests(
   kpixmapsequencewidgettest.cpp
   knewpasswordwidgettest.cpp
   kselectaction_unittest.cpp
+  ksqueezedtextlabelautotest.cpp
   ktimecomboboxtest.cpp
   ktooltipwidgettest.cpp
   kmessagewidgetautotest.cpp
