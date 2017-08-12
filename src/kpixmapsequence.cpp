@@ -27,7 +27,7 @@
 #include <QtCore/QVector>
 #include <QtCore/QtDebug>
 
-class KPixmapSequence::Private : public QSharedData
+class Q_DECL_HIDDEN KPixmapSequence::Private : public QSharedData
 {
 public:
     QVector<QPixmap> mFrames;

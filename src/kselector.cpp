@@ -34,7 +34,7 @@
 
 #define ARROWSIZE 5
 
-class KSelector::Private
+class Q_DECL_HIDDEN KSelector::Private
 {
 public:
     Private()

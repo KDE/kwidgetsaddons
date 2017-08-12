@@ -29,7 +29,7 @@
 
 #include <QtCore/QEvent>
 
-class KToggleFullScreenAction::Private
+class Q_DECL_HIDDEN KToggleFullScreenAction::Private
 {
 public:
     Private(KToggleFullScreenAction *action)

@@ -54,7 +54,7 @@ static const struct {
     {Qt::DownArrow,  Qt::UpArrow}
 };
 
-class KSplitterCollapserButton::Private
+class Q_DECL_HIDDEN KSplitterCollapserButton::Private
 {
 public:
     Private(KSplitterCollapserButton *qq);

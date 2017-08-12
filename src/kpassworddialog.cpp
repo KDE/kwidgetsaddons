@@ -33,7 +33,7 @@
 #include "ui_kpassworddialog.h"
 
 /** @internal */
-class KPasswordDialog::KPasswordDialogPrivate
+class Q_DECL_HIDDEN KPasswordDialog::KPasswordDialogPrivate
 {
 public:
     KPasswordDialogPrivate(KPasswordDialog *q)

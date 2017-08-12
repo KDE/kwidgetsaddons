@@ -76,7 +76,7 @@ static QString formatFontSize(qreal size)
     return QLocale::system().toString(size, 'f', (size == floor(size)) ? 0 : 1);
 }
 
-class KFontChooser::Private
+class Q_DECL_HIDDEN KFontChooser::Private
 {
 public:
     Private(KFontChooser *qq)

@@ -29,7 +29,7 @@
 #include <QIcon>
 #include <QStyle>
 
-class KTitleWidget::Private
+class Q_DECL_HIDDEN KTitleWidget::Private
 {
 public:
     Private(KTitleWidget *parent)

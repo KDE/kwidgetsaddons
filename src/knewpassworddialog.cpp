@@ -35,7 +35,7 @@
 
 #include "ui_knewpassworddialog.h"
 
-class KNewPasswordDialog::KNewPasswordDialogPrivate
+class Q_DECL_HIDDEN KNewPasswordDialog::KNewPasswordDialogPrivate
 {
 public:
     KNewPasswordDialogPrivate(KNewPasswordDialog *parent)

@@ -26,7 +26,7 @@
 #include <QStyle>
 #include <QStyleOption>
 
-class KLed::Private
+class Q_DECL_HIDDEN KLed::Private
 {
 public:
     Private()

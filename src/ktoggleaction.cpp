@@ -29,7 +29,7 @@
 
 #include <kguiitem.h>
 
-class KToggleAction::Private
+class Q_DECL_HIDDEN KToggleAction::Private
 {
 public:
     Private(KToggleAction *_parent)

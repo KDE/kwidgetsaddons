@@ -118,7 +118,7 @@ void KDatePickerPrivateYearSelector::setYear(int year)
     setText(QString::number(year));
 }
 
-class KDatePicker::KDatePickerPrivate
+class Q_DECL_HIDDEN KDatePicker::KDatePickerPrivate
 {
 public:
     KDatePickerPrivate(KDatePicker *q) :

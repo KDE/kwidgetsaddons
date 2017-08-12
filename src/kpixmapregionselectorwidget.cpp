@@ -36,7 +36,7 @@
 #include <QApplication>
 #include <QMouseEvent>
 
-class KPixmapRegionSelectorWidget::Private
+class Q_DECL_HIDDEN KPixmapRegionSelectorWidget::Private
 {
 public:
     Private(KPixmapRegionSelectorWidget *q): q(q) {}

@@ -25,7 +25,7 @@
 #include "knewpasswordwidget.h"
 #include "ui_knewpasswordwidget.h"
 
-class KNewPasswordWidget::KNewPasswordWidgetPrivate
+class Q_DECL_HIDDEN KNewPasswordWidget::KNewPasswordWidgetPrivate
 {
 public:
     KNewPasswordWidgetPrivate(KNewPasswordWidget *parent)

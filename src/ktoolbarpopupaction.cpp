@@ -31,7 +31,7 @@
 #include <QToolBar>
 #include <QToolButton>
 
-class KToolBarPopupAction::Private
+class Q_DECL_HIDDEN KToolBarPopupAction::Private
 {
 public:
     Private()

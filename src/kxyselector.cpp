@@ -33,7 +33,7 @@
  * The contents of the selector are drawn by derived class.
  */
 
-class KXYSelector::Private
+class Q_DECL_HIDDEN KXYSelector::Private
 {
 public:
     Private(KXYSelector *q):

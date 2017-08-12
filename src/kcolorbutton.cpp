@@ -32,7 +32,7 @@
 #include <QMouseEvent>
 #include <QStyleOptionButton>
 
-class KColorButton::KColorButtonPrivate
+class Q_DECL_HIDDEN KColorButton::KColorButtonPrivate
 {
 public:
     KColorButtonPrivate(KColorButton *q);

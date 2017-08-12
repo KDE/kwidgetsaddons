@@ -27,7 +27,7 @@
 
 #include <kpixmapregionselectorwidget.h>
 
-class KPixmapRegionSelectorDialog::Private
+class Q_DECL_HIDDEN KPixmapRegionSelectorDialog::Private
 {
 public:
     Private(KPixmapRegionSelectorDialog *parent)

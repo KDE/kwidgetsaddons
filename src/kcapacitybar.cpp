@@ -40,7 +40,7 @@ static const int LightShade = 100;
 static const int MidShade = 200;
 static const int DarkShade = 300;
 
-class KCapacityBar::Private
+class Q_DECL_HIDDEN KCapacityBar::Private
 {
 public:
     Private(KCapacityBar::DrawTextMode drawTextMode)

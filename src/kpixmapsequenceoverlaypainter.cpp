@@ -29,7 +29,7 @@
 #include <QtCore/QPointer>
 #include <QtCore/QCoreApplication>
 
-class KPixmapSequenceOverlayPainter::Private
+class Q_DECL_HIDDEN KPixmapSequenceOverlayPainter::Private
 {
 public:
     void init(KPixmapSequenceOverlayPainter *p);

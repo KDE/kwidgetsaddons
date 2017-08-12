@@ -22,7 +22,7 @@
 #include <QMouseEvent>
 #include <QPalette>
 
-class KUrlLabel::Private
+class Q_DECL_HIDDEN KUrlLabel::Private
 {
 public:
     Private(const QString &_url, KUrlLabel *_parent)

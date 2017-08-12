@@ -25,7 +25,7 @@
 
 #include <QHash>
 
-class KAssistantDialog::Private
+class Q_DECL_HIDDEN KAssistantDialog::Private
 {
 public:
     Private(KAssistantDialog *q)

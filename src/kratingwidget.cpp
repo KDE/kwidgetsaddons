@@ -27,7 +27,7 @@
 #include <QImage>
 #include <QIcon>
 
-class KRatingWidget::Private
+class Q_DECL_HIDDEN KRatingWidget::Private
 {
 public:
     Private()

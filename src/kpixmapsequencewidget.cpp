@@ -21,7 +21,7 @@
 #include "kpixmapsequenceoverlaypainter.h"
 #include "kpixmapsequence.h"
 
-class KPixmapSequenceWidget::Private
+class Q_DECL_HIDDEN KPixmapSequenceWidget::Private
 {
 public:
     KPixmapSequenceOverlayPainter *m_painter;

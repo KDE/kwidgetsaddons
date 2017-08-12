@@ -34,7 +34,7 @@
 #include <QToolBar>
 #include <QToolButton>
 
-class KFontSizeAction::Private
+class Q_DECL_HIDDEN KFontSizeAction::Private
 {
 public:
     Private(KFontSizeAction *parent)

@@ -23,7 +23,7 @@
 #include <QLabel>
 #include <QToolBar>
 
-class KToolBarLabelAction::Private
+class Q_DECL_HIDDEN KToolBarLabelAction::Private
 {
 public:
     QPointer<QAction> buddy;

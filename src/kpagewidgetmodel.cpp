@@ -29,7 +29,7 @@
 
 #include <QIcon>
 
-class KPageWidgetItem::Private
+class Q_DECL_HIDDEN KPageWidgetItem::Private
 {
 public:
     Private()

@@ -288,7 +288,7 @@ QStringList KMimeTypeChooser::patterns() const
 
 //BEGIN KMimeTypeChooserDialog::Private
 
-class KMimeTypeChooserDialog::Private
+class Q_DECL_HIDDEN KMimeTypeChooserDialog::Private
 {
 public:
     Private(KMimeTypeChooserDialog *parent)

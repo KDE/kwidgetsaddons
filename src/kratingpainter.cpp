@@ -27,7 +27,7 @@
 #include <QtCore/QRect>
 #include <QtCore/QPoint>
 
-class KRatingPainter::Private
+class Q_DECL_HIDDEN KRatingPainter::Private
 {
 public:
     Private()

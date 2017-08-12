@@ -59,7 +59,7 @@ public:
     void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 };
 
-class KCharSelect::KCharSelectPrivate
+class Q_DECL_HIDDEN KCharSelect::KCharSelectPrivate
 {
 public:
     struct HistoryItem {

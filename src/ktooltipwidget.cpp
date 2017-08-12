@@ -30,7 +30,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
-class KToolTipWidget::KToolTipWidgetPrivate
+class Q_DECL_HIDDEN KToolTipWidget::KToolTipWidgetPrivate
 {
 public:
     KToolTipWidgetPrivate(KToolTipWidget *parent)

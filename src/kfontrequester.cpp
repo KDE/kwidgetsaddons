@@ -84,7 +84,7 @@ static QFont nearestExistingFont(const QFont &font)
     return result;
 }
 
-class KFontRequester::KFontRequesterPrivate
+class Q_DECL_HIDDEN KFontRequester::KFontRequesterPrivate
 {
 public:
     KFontRequesterPrivate(KFontRequester *q): q(q) {}

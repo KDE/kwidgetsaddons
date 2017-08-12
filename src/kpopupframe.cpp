@@ -26,7 +26,7 @@
 #include <QEventLoop>
 #include <QKeyEvent>
 
-class KPopupFrame::KPopupFramePrivate
+class Q_DECL_HIDDEN KPopupFrame::KPopupFramePrivate
 {
 public:
     KPopupFramePrivate(KPopupFrame *q);
