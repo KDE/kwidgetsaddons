@@ -47,7 +47,7 @@ public:
     QStyle::PrimitiveElement arrowPE;
 };
 
-class KGradientSelector::KGradientSelectorPrivate
+class Q_DECL_HIDDEN KGradientSelector::KGradientSelectorPrivate
 {
 public:
     KGradientSelectorPrivate(KGradientSelector *q): q(q) {}

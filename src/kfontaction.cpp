@@ -34,7 +34,7 @@
 
 #include <kfontchooser.h>
 
-class KFontAction::KFontActionPrivate
+class Q_DECL_HIDDEN KFontAction::KFontActionPrivate
 {
 public:
     KFontActionPrivate(KFontAction *parent)

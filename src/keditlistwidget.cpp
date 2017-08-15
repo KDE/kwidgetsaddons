@@ -174,7 +174,7 @@ QModelIndex KEditListWidgetPrivate::selectedIndex()
     }
 }
 
-class KEditListWidget::CustomEditorPrivate
+class Q_DECL_HIDDEN KEditListWidget::CustomEditorPrivate
 {
 public:
     CustomEditorPrivate(KEditListWidget::CustomEditor *q):

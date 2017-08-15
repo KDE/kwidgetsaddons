@@ -22,7 +22,7 @@
 
 #include <QPushButton>
 
-class KGuiItem::KGuiItemPrivate
+class Q_DECL_HIDDEN KGuiItem::KGuiItemPrivate
 {
 public:
     KGuiItemPrivate()
