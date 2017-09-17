@@ -102,6 +102,9 @@ static QIcon themedMessageBoxIcon(QMessageBox::Icon icon)
     case QMessageBox::Critical:
         icon_name = QStringLiteral("dialog-error");
         break;
+    case QMessageBox::Question:
+        icon_name = QStringLiteral("dialog-question");
+        break;
     default:
         break;
     }
@@ -493,7 +496,7 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog, const QString &text
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Information, text, strlist,
+    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Question, text, strlist,
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
     res = (result == QDialogButtonBox::Yes ? Yes : No);
@@ -548,7 +551,7 @@ static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Information,
+    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Question,
                                          text, QStringList(),
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
                                          &checkboxResult, options);
