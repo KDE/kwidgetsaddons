@@ -73,6 +73,7 @@ set(kwidgetsaddons_SRCS
   kpixmapsequencewidget.cpp
   kmimetypechooser.cpp
   kmimetypeeditor.cpp
+  common_helpers.cpp
   ksplittercollapserbutton.cpp
   kstyleextensions.cpp
   ktooltipwidget.cpp

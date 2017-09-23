@@ -24,7 +24,7 @@
 
 #define QSL QStringLiteral
 
-static QStringList extractActionTexts(QMenu &menu)
+static QStringList extractActionTexts(QMenu &menu, std::function<QString(const QAction*)> func)
 {
     menu.aboutToShow(); // signals are now public in Qt5, how convenient :-)
 
@@ -41,7 +41,7 @@ static QStringList extractActionTexts(QMenu &menu)
             if (action->menu()) {
                 ret.append(QStringLiteral("submenu"));
             } else {
-                const QString text = action->text();
+                const QString text = func(action);
                 ret.append(text);
             }
         }
@@ -58,7 +58,7 @@ private Q_SLOTS:
     {
     }
 
-    void testAccelerators_data()
+    void testActionTexts_data()
     {
         QTest::addColumn<QStringList>("initialTexts");
         QTest::addColumn<QStringList>("expectedTexts");
@@ -68,7 +68,7 @@ private Q_SLOTS:
         QTest::newRow("cjk") << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("Clone (&C)"), QSL("Quit (&Q)")} << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("C&lone (C)"), QSL("Quit (&Q)")};
     }
 
-    void testAccelerators()
+    void testActionTexts()
     {
         // GIVEN
         QFETCH(QStringList, initialTexts);
@@ -80,10 +80,35 @@ private Q_SLOTS:
         // WHEN
         KAcceleratorManager::manage(&menu);
         // THEN
-        const QStringList actions = extractActionTexts(menu);
-        QCOMPARE(actions, expectedTexts);
+        const QStringList texts = extractActionTexts(menu, &QAction::text);
+        QCOMPARE(texts, expectedTexts);
     }
 
+    void testActionIconTexts_data()
+    {
+        QTest::addColumn<QStringList>("initialTexts");
+        QTest::addColumn<QStringList>("expectedTexts");
+
+        QTest::newRow("basic") << QStringList{QSL("Open"), QSL("Close"), QSL("Quit")} << QStringList{QSL("Open"), QSL("Close"), QSL("Quit")};
+        QTest::newRow("same_first") << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")} << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")};
+        QTest::newRow("cjk") << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("Clone (&C)"), QSL("Quit (&Q)")} << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")};
+    }
+
+    void testActionIconTexts()
+    {
+        // GIVEN
+        QFETCH(QStringList, initialTexts);
+        QFETCH(QStringList, expectedTexts);
+        QMenu menu;
+        for (const QString &text : qAsConst(initialTexts)) {
+            menu.addAction(text);
+        }
+        // WHEN
+        KAcceleratorManager::manage(&menu);
+        // THEN
+        const QStringList iconTexts = extractActionTexts(menu, &QAction::iconText);
+        QCOMPARE(iconTexts, expectedTexts);
+    }
 };
 
 QTEST_MAIN(KAcceleratorManagerTest)
