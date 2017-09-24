@@ -53,7 +53,7 @@ public:
      * account, as well as the class of each widget. Hopefully, the result
      * is close to what you would assign manually.
      *
-     * QPopupMenu's are managed dynamically, so when you add or remove entries,
+     * QMenu's are managed dynamically, so when you add or remove entries,
      * the accelerators are reassigned. If you add or remove widgets to your
      * toplevel widget, you will have to call manage again to fix the
      * accelerators.

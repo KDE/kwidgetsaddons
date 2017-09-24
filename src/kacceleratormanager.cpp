@@ -694,7 +694,7 @@ void KAccelManagerAlgorithm::findAccelerators(KAccelStringList &result, QString 
 
 /*********************************************************************
 
- class KPopupAccelManager - managing QPopupMenu widgets dynamically
+ class KPopupAccelManager - managing QMenu widgets dynamically
 
  *********************************************************************/
 
