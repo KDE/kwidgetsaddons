@@ -565,7 +565,15 @@ void KDateComboBox::mousePressEvent(QMouseEvent *event)
 
 void KDateComboBox::wheelEvent(QWheelEvent *event)
 {
-    QComboBox::wheelEvent(event);
+    QDate temp;
+    if (event->delta() < 0) {
+        temp = d->m_date.addDays(-1);
+    } else {
+        temp = d->m_date.addDays(1);
+    }
+    if (d->isInDateRange(temp)) {
+        d->enterDate(temp);
+    }
 }
 
 void KDateComboBox::focusInEvent(QFocusEvent *event)
