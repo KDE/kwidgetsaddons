@@ -125,7 +125,7 @@ KGuiItem no()
 
 KGuiItem discard()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Discard"), QStringLiteral("edit-clear"), QApplication::translate("KStandardGuiItem", "Discard changes"),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Discard"), QStringLiteral("edit-delete"), QApplication::translate("KStandardGuiItem", "Discard changes"),
                     QApplication::translate("KStandardGuiItem", "Pressing this button will discard all recent "
                          "changes made in this dialog."));
 }
