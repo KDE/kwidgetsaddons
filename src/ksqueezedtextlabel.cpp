@@ -86,6 +86,18 @@ QSize KSqueezedTextLabel::sizeHint() const
     return QSize(textWidth + chromeWidth, QLabel::sizeHint().height());
 }
 
+void KSqueezedTextLabel::setIndent(int indent)
+{
+    QLabel::setIndent(indent);
+    squeezeTextToLabel();
+}
+
+void KSqueezedTextLabel::setMargin(int margin)
+{
+    QLabel::setMargin(margin);
+    squeezeTextToLabel();
+}
+
 void KSqueezedTextLabel::setText(const QString &text)
 {
     d->fullText = text;

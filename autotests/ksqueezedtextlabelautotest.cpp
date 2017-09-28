@@ -224,7 +224,6 @@ void KSqueezedTextLabelAutotest::testChrome()
     QVERIFY(!label->isSqueezed());
 
     label->setProperty(attribute.toLatin1().data(), amount);
-    QTest::qWaitForWindowExposed(label.data());
 
     QVERIFY(label->isSqueezed());
 

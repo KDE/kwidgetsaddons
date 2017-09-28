@@ -71,6 +71,8 @@ class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel
 {
     Q_OBJECT
     Q_PROPERTY(Qt::TextElideMode textElideMode READ textElideMode WRITE setTextElideMode)
+    Q_PROPERTY(int indent READ indent WRITE setIndent)
+    Q_PROPERTY(int margin READ margin WRITE setMargin)
 
 public:
     /**
@@ -99,6 +101,36 @@ public:
      * to display the text without squeezing it
      */
     QSize sizeHint() const Q_DECL_OVERRIDE;
+
+    /**
+     * Sets the indentation of the label.
+     *
+     * @param indent the amount of indentation in pixels
+     *
+     * Reimplementation of QLabel::setIndent().
+     *
+     * @warning The corresponding function in the base class is not virtual.
+     * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
+     * as shown in the @ref non-virtual-warning "example in the class description".
+     *
+     * @since 5.39
+     */
+    void setIndent(int indent);
+
+    /**
+     * Sets the margin of the label.
+     *
+     * @param margin the margin size in pixels
+     *
+     * Reimplementation of QLabel::setMargin().
+     *
+     * @warning The corresponding function in the base class is not virtual.
+     * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
+     * as shown in the @ref non-virtual-warning "example in the class description".
+     *
+     * @since 5.39
+     */
+    void setMargin(int margin);
 
     /**
      * Overridden for internal reasons; the API remains unaffected.
