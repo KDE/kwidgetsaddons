@@ -18,6 +18,7 @@
  * 02110-1301  USA
  */
 #include <kacceleratormanager.h>
+#include <functional>
 
 #include <QTest>
 #include <QMenu>
