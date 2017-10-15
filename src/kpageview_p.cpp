@@ -27,6 +27,7 @@
 #include <QPainter>
 #include <QTextLayout>
 #include <QVBoxLayout>
+#include <QScrollBar>
 
 #include "kpagemodel.h"
 #include "loggingcategory.h"
