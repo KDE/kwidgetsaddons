@@ -129,6 +129,15 @@ void KPageListView::setModel(QAbstractItemModel *model)
     updateWidth();
 }
 
+void KPageListView::changeEvent(QEvent *event)
+{
+    QListView::changeEvent(event);
+
+    if (event->type() == QEvent::FontChange) {
+        updateWidth();
+    }
+}
+
 void KPageListView::updateWidth()
 {
     if (!model()) {

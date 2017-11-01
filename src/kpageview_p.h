@@ -127,6 +127,9 @@ public:
 
     void setModel(QAbstractItemModel *model) Q_DECL_OVERRIDE;
 
+protected:
+    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
+
 private Q_SLOTS:
     void updateWidth();
 };
