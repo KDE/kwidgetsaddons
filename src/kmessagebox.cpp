@@ -217,6 +217,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
     const int spacingHint = mainWidget->style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
     mainLayout->setSpacing(spacingHint * 2); // provide extra spacing
     mainLayout->setMargin(0);
+    buttons->setParent(dialog);
 
     QHBoxLayout *hLayout = new QHBoxLayout();
     hLayout->setMargin(0);
@@ -349,7 +350,6 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         detailsGroup->hide();
     }
 
-    buttons->setParent(dialog);
     topLayout->addWidget(buttons);
 
     if (!usingListWidget && !usingScrollArea && !usingSqueezedTextLabel && details.isEmpty()) {
