@@ -35,10 +35,6 @@ private Q_SLOTS:
     void testDateList();
     void testOptions();
     void testDisplayFormat();
-
-private:
-
-    KDateComboBox *m_combo;
 };
 
 #endif // KDATECOMBOBOXTEST_H

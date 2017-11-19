@@ -29,104 +29,101 @@ QTEST_MAIN(KDateComboBoxTest)
 
 void KDateComboBoxTest::testDefaults()
 {
-    m_combo = new KDateComboBox(nullptr);
-    QCOMPARE(m_combo->date(), QDate::currentDate());
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
+    QCOMPARE(combo->date(), QDate::currentDate());
     // Missing support in QLocale;
     //QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
     //QCOMPARE(m_combo->maximumDate(), KLocale::global()->calendar()->latestValidDate());
-    QCOMPARE(m_combo->isValid(), true);
-    QCOMPARE(m_combo->isNull(), false);
-    QCOMPARE(m_combo->options(), KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords);
-    QCOMPARE(m_combo->displayFormat(), QLocale::ShortFormat);
-    delete m_combo;
+    QCOMPARE(combo->isValid(), true);
+    QCOMPARE(combo->isNull(), false);
+    QCOMPARE(combo->options(), KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords);
+    QCOMPARE(combo->displayFormat(), QLocale::ShortFormat);
 }
 
 void KDateComboBoxTest::testValidNull()
 {
-    m_combo = new KDateComboBox(nullptr);
-    QCOMPARE(m_combo->isValid(), true);
-    QCOMPARE(m_combo->isNull(), false);
-    m_combo->setDate(QDate());
-    QCOMPARE(m_combo->isValid(), false);
-    QCOMPARE(m_combo->isNull(), true);
-    m_combo->setDate(QDate(2000, 1, 1));
-    m_combo->lineEdit()->setText(QStringLiteral("invalid"));
-    QCOMPARE(m_combo->isValid(), false);
-    QCOMPARE(m_combo->isNull(), false);
-    delete m_combo;
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
+    QCOMPARE(combo->isValid(), true);
+    QCOMPARE(combo->isNull(), false);
+    combo->setDate(QDate());
+    QCOMPARE(combo->isValid(), false);
+    QCOMPARE(combo->isNull(), true);
+    combo->setDate(QDate(2000, 1, 1));
+    combo->lineEdit()->setText(QStringLiteral("invalid"));
+    QCOMPARE(combo->isValid(), false);
+    QCOMPARE(combo->isNull(), false);
 }
 
 void KDateComboBoxTest::testDateRange()
 {
-    m_combo = new KDateComboBox(nullptr);
-    m_combo->setDate(QDate(2000, 1, 1));
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
+    combo->setDate(QDate(2000, 1, 1));
     // Missing support in QLocale;
     //QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
     //QCOMPARE(m_combo->maximumDate(), KLocale::global()->calendar()->latestValidDate());
-    QCOMPARE(m_combo->isValid(), true);
+    QCOMPARE(combo->isValid(), true);
 
-    m_combo->setDateRange(QDate(2001, 1, 1), QDate(2002, 1, 1));
-    QCOMPARE(m_combo->minimumDate(), QDate(2001, 1, 1));
-    QCOMPARE(m_combo->maximumDate(), QDate(2002, 1, 1));
-    QCOMPARE(m_combo->isValid(), false);
+    combo->setDateRange(QDate(2001, 1, 1), QDate(2002, 1, 1));
+    QCOMPARE(combo->minimumDate(), QDate(2001, 1, 1));
+    QCOMPARE(combo->maximumDate(), QDate(2002, 1, 1));
+    QCOMPARE(combo->isValid(), false);
 
-    m_combo->setDate(QDate(2003, 1, 1));
-    QCOMPARE(m_combo->isValid(), false);
-    m_combo->setDate(QDate(2001, 6, 1));
-    QCOMPARE(m_combo->isValid(), true);
-    m_combo->setDate(QDate(2001, 1, 1));
-    QCOMPARE(m_combo->isValid(), true);
-    m_combo->setDate(QDate(2002, 1, 1));
-    QCOMPARE(m_combo->isValid(), true);
-    m_combo->setDate(QDate(2000, 12, 31));
-    QCOMPARE(m_combo->isValid(), false);
-    m_combo->setDate(QDate(2002, 1, 2));
-    QCOMPARE(m_combo->isValid(), false);
+    combo->setDate(QDate(2003, 1, 1));
+    QCOMPARE(combo->isValid(), false);
+    combo->setDate(QDate(2001, 6, 1));
+    QCOMPARE(combo->isValid(), true);
+    combo->setDate(QDate(2001, 1, 1));
+    QCOMPARE(combo->isValid(), true);
+    combo->setDate(QDate(2002, 1, 1));
+    QCOMPARE(combo->isValid(), true);
+    combo->setDate(QDate(2000, 12, 31));
+    QCOMPARE(combo->isValid(), false);
+    combo->setDate(QDate(2002, 1, 2));
+    QCOMPARE(combo->isValid(), false);
 
-    m_combo->setDateRange(QDate(1995, 1, 1), QDate(1990, 1, 1));
-    QCOMPARE(m_combo->minimumDate(), QDate(2001, 1, 1));
-    QCOMPARE(m_combo->maximumDate(), QDate(2002, 1, 1));
+    combo->setDateRange(QDate(1995, 1, 1), QDate(1990, 1, 1));
+    QCOMPARE(combo->minimumDate(), QDate(2001, 1, 1));
+    QCOMPARE(combo->maximumDate(), QDate(2002, 1, 1));
 
-    m_combo->setMinimumDate(QDate(2000, 1, 1));
-    QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
-    QCOMPARE(m_combo->maximumDate(), QDate(2002, 1, 1));
+    combo->setMinimumDate(QDate(2000, 1, 1));
+    QCOMPARE(combo->minimumDate(), QDate(2000, 1, 1));
+    QCOMPARE(combo->maximumDate(), QDate(2002, 1, 1));
 
-    m_combo->setMaximumDate(QDate(2003, 1, 1));
-    QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
-    QCOMPARE(m_combo->maximumDate(), QDate(2003, 1, 1));
+    combo->setMaximumDate(QDate(2003, 1, 1));
+    QCOMPARE(combo->minimumDate(), QDate(2000, 1, 1));
+    QCOMPARE(combo->maximumDate(), QDate(2003, 1, 1));
 
-    m_combo->resetDateRange();
-    QVERIFY(!m_combo->minimumDate().isValid());
-    QVERIFY(!m_combo->maximumDate().isValid());
+    combo->resetDateRange();
+    QVERIFY(!combo->minimumDate().isValid());
+    QVERIFY(!combo->maximumDate().isValid());
 
     // Check functioning when the minimum or maximum date is not already set
 
-    m_combo->setMinimumDate(QDate(2000, 1, 1));
-    QCOMPARE(m_combo->minimumDate(), QDate(2000, 1, 1));
-    QVERIFY(!m_combo->maximumDate().isValid());
+    combo->setMinimumDate(QDate(2000, 1, 1));
+    QCOMPARE(combo->minimumDate(), QDate(2000, 1, 1));
+    QVERIFY(!combo->maximumDate().isValid());
 
-    m_combo->resetMinimumDate();
-    QVERIFY(!m_combo->minimumDate().isValid());
-    QVERIFY(!m_combo->maximumDate().isValid());
+    combo->resetMinimumDate();
+    QVERIFY(!combo->minimumDate().isValid());
+    QVERIFY(!combo->maximumDate().isValid());
 
-    m_combo->setMaximumDate(QDate(2003, 1, 1));
-    QVERIFY(!m_combo->minimumDate().isValid());
-    QCOMPARE(m_combo->maximumDate(), QDate(2003, 1, 1));
+    combo->setMaximumDate(QDate(2003, 1, 1));
+    QVERIFY(!combo->minimumDate().isValid());
+    QCOMPARE(combo->maximumDate(), QDate(2003, 1, 1));
 
-    m_combo->resetMaximumDate();
-    QVERIFY(!m_combo->minimumDate().isValid());
-    QVERIFY(!m_combo->maximumDate().isValid());
+    combo->resetMaximumDate();
+    QVERIFY(!combo->minimumDate().isValid());
+    QVERIFY(!combo->maximumDate().isValid());
 
-    delete m_combo;
 }
 
 void KDateComboBoxTest::testDateList()
 {
-    m_combo = new KDateComboBox(nullptr);
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
     QMap<QDate, QString> map;
 
     // Test default map
-    QCOMPARE(m_combo->dateMap(), map);
+    QCOMPARE(combo->dateMap(), map);
 
     // Test basic map
     map.clear();
@@ -134,30 +131,26 @@ void KDateComboBoxTest::testDateList()
     map.insert(QDate(2000, 1, 2), QString());
     map.insert(QDate(2000, 1, 3), QStringLiteral("separator"));
     map.insert(QDate(), QStringLiteral("No Date"));
-    m_combo->setDateMap(map);
-    QCOMPARE(m_combo->dateMap(), map);
-
-    delete m_combo;
+    combo->setDateMap(map);
+    QCOMPARE(combo->dateMap(), map);
 }
 
 void KDateComboBoxTest::testOptions()
 {
-    m_combo = new KDateComboBox(nullptr);
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
     KDateComboBox::Options options = KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords;
-    QCOMPARE(m_combo->options(), options);
+    QCOMPARE(combo->options(), options);
     options = KDateComboBox::EditDate | KDateComboBox::WarnOnInvalid;
-    m_combo->setOptions(options);
-    QCOMPARE(m_combo->options(), options);
-    delete m_combo;
+    combo->setOptions(options);
+    QCOMPARE(combo->options(), options);
 }
 
 void KDateComboBoxTest::testDisplayFormat()
 {
-    m_combo = new KDateComboBox(nullptr);
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
     QLocale::FormatType format = QLocale::ShortFormat;
-    QCOMPARE(m_combo->displayFormat(), format);
+    QCOMPARE(combo->displayFormat(), format);
     format = QLocale::NarrowFormat;
-    m_combo->setDisplayFormat(format);
-    QCOMPARE(m_combo->displayFormat(), format);
-    delete m_combo;
+    combo->setDisplayFormat(format);
+    QCOMPARE(combo->displayFormat(), format);
 }
