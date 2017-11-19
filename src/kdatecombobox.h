@@ -308,13 +308,6 @@ private:
 
     friend class KDateComboBoxPrivate;
     KDateComboBoxPrivate *const d;
-
-    Q_PRIVATE_SLOT(d, void clickDate())
-    Q_PRIVATE_SLOT(d, void selectDate(QAction *))
-    Q_PRIVATE_SLOT(d, void editDate(const QString &))
-    Q_PRIVATE_SLOT(d, void enterDate(const QDate &))
-    Q_PRIVATE_SLOT(d, void parseDate())
-
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KDateComboBox::Options)

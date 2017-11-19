@@ -57,7 +57,6 @@ public:
                       const QString &maxWarnMsg);
     bool isInDateRange(const QDate &date) const;
 
-// Q_PRIVATE_SLOTs
     void clickDate();
     void selectDate(QAction *action);
     void editDate(const QString &text);
@@ -338,14 +337,16 @@ KDateComboBox::KDateComboBox(QWidget *parent)
     d->initDateWidget();
     d->updateDateWidget();
 
-    connect(d->m_dateMenu,         SIGNAL(triggered(QAction*)),
-            this,                  SLOT(selectDate(QAction*)));
-    connect(this,                  SIGNAL(editTextChanged(QString)),
-            this,                  SLOT(editDate(QString)));
-    connect(d->m_datePicker,       SIGNAL(dateEntered(QDate)),
-            this,                  SLOT(enterDate(QDate)));
-    connect(d->m_datePicker,       SIGNAL(tableClicked()),
-            this,                  SLOT(clickDate()));
+    connect(d->m_dateMenu, &QMenu::triggered,
+            this, [this](QAction *action) { d->selectDate(action); });
+
+    connect(this, &QComboBox::editTextChanged,
+            this, [this](const QString &text) { d->editDate(text); });
+
+    connect(d->m_datePicker, &KDatePicker::dateEntered,
+            this, [this](const QDate &date) { d->enterDate(date); });
+    connect(d->m_datePicker, &KDatePicker::tableClicked,
+            this, [this]() { d->clickDate(); });
 }
 
 KDateComboBox::~KDateComboBox()
