@@ -90,6 +90,8 @@ void KToolTipWidget::KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *tra
     }
 
     q->move(pos);
+    q->createWinId();
+    q->windowHandle()->setProperty("ENABLE_BLUR_BEHIND_HINT", true);
     q->windowHandle()->setTransientParent(transientParent);
     q->show();
 }
@@ -161,9 +163,6 @@ KToolTipWidget::KToolTipWidget(QWidget *parent)
     : QWidget(parent), d(new KToolTipWidgetPrivate(this))
 {
     d->init();
-    // Tell the platform-specific window manager that we want blur behind.
-    createWinId();
-    windowHandle()->setProperty("ENABLE_BLUR_BEHIND_HINT", true);
 }
 
 KToolTipWidget::~KToolTipWidget()
