@@ -101,6 +101,8 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
         ui.domainEdit->hide();
         ui.passEdit->setFocus();
         ui.credentialsGroup->setFocusProxy(ui.passEdit);
+        ui.prompt->setText(QApplication::translate("KPasswordDialog",
+                    "Supply a password below."));
     }
 
     if (!(m_flags & KPasswordDialog::ShowAnonymousLoginCheckBox)) {
