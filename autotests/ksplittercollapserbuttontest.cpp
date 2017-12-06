@@ -63,7 +63,7 @@ void KSplitterCollapserButtonTest::shouldHaveDefaultValue()
     KSplitterCollapserButton *collapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
 
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     QVERIFY(!collapser->isWidgetCollapsed());
@@ -83,7 +83,7 @@ void KSplitterCollapserButtonTest::shouldCollapseWhenClickOnButton()
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
 
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
 
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
     QTest::mouseClick(splitterCollapser, Qt::LeftButton);
@@ -100,7 +100,7 @@ void KSplitterCollapserButtonTest::shouldRestoreCorrectPosition()
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
 
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
@@ -126,7 +126,7 @@ void KSplitterCollapserButtonTest::shouldRestoreCorrectPositionForFirstWidget()
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit1, testSplitter.splitter);
 
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
@@ -151,7 +151,7 @@ void KSplitterCollapserButtonTest::shouldTestVerticalSplitterFirstWidget()
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit1, testSplitter.splitter);
 
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
@@ -177,7 +177,7 @@ void KSplitterCollapserButtonTest::shouldTestVerticalSplitterSecondWidget()
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
 
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
@@ -220,7 +220,7 @@ void KSplitterCollapserButtonTest::shouldBeVisible()
 
     // WHEN showing the splitter
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     // THEN the button should be visible
@@ -275,7 +275,7 @@ void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle()
 
     // WHEN showing the splitter
     testSplitter.show();
-    QTest::qWaitForWindowExposed(&testSplitter);
+    QVERIFY(QTest::qWaitForWindowExposed(&testSplitter));
     QVERIFY(testSplitter.isVisible());
 
     testSplitter.splitter->setSizes(splitterPosition);

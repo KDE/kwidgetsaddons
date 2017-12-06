@@ -53,7 +53,7 @@ void PasswordLineEditTest::shouldShowTogglePassword()
 {
     KPasswordLineEdit lineEdit;
     lineEdit.show();
-    QTest::qWaitForWindowExposed(&lineEdit);
+    QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));
 
     QLineEdit *edit = lineEdit.findChild<QLineEdit *>(QStringLiteral("passwordlineedit"));
     edit->setText(QStringLiteral("FOO"));
@@ -67,7 +67,7 @@ void PasswordLineEditTest::shouldNotShowToggleWhenSetPassword()
 {
     KPasswordLineEdit lineEdit;
     lineEdit.show();
-    QTest::qWaitForWindowExposed(&lineEdit);
+    QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));
     lineEdit.setPassword(QStringLiteral("foo"));
     QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
 }
@@ -76,7 +76,7 @@ void PasswordLineEditTest::shouldShowRevealPassword()
 {
     KPasswordLineEdit lineEdit;
     lineEdit.show();
-    QTest::qWaitForWindowExposed(&lineEdit);
+    QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));
 
     QLineEdit *edit = lineEdit.findChild<QLineEdit *>(QStringLiteral("passwordlineedit"));
     edit->setText(QStringLiteral("FOO"));
