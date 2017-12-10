@@ -80,7 +80,8 @@ void KFontSizeAction::Private::init()
     QFontDatabase fontDB;
     const QList<int> sizes = fontDB.standardSizes();
     QStringList lst;
-    for (QList<int>::ConstIterator it = sizes.begin(); it != sizes.end(); ++it) {
+    lst.reserve(sizes.count());
+    for (QList<int>::ConstIterator it = sizes.begin(), total = sizes.end(); it != total; ++it) {
         lst.append(QString::number(*it));
     }
 

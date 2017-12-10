@@ -103,7 +103,7 @@ QStringList translateFontNameList(const QStringList &names,
     QStringList trNames;
     QHash<QString, QString> trMap;
     Q_FOREACH (const QString &name, names) {
-        QString trName = translateFontName(name);
+        const QString trName = translateFontName(name);
         if (!genericNames.contains(name)) {
             trNames.append(trName);
         }
@@ -115,7 +115,7 @@ QStringList translateFontNameList(const QStringList &names,
 
     // Prepend generic fonts, in the predefined order.
     Q_FOREACH (const QString &genericName, genericNames) {
-        QString trGenericName = translateFontName(genericName);
+        const QString trGenericName = translateFontName(genericName);
         if (trMap.contains(trGenericName)) {
             trNames.prepend(trGenericName);
         }

@@ -113,20 +113,20 @@ public:
 
     QPalette m_palette;
 
-    QDoubleSpinBox *sizeOfFont;
+    QDoubleSpinBox *sizeOfFont = nullptr;
 
-    QTextEdit   *sampleEdit;
+    QTextEdit   *sampleEdit = nullptr;
 
-    QLabel       *familyLabel;
-    QLabel       *styleLabel;
-    QCheckBox    *familyCheckbox;
-    QCheckBox    *styleCheckbox;
-    QCheckBox    *sizeCheckbox;
-    QLabel       *sizeLabel;
-    QListWidget     *familyListBox;
-    QListWidget     *styleListBox;
-    QListWidget     *sizeListBox;
-    QCheckBox    *sizeIsRelativeCheckBox;
+    QLabel       *familyLabel = nullptr;
+    QLabel       *styleLabel = nullptr;
+    QCheckBox    *familyCheckbox = nullptr;
+    QCheckBox    *styleCheckbox = nullptr;
+    QCheckBox    *sizeCheckbox = nullptr;
+    QLabel       *sizeLabel = nullptr;
+    QListWidget     *familyListBox = nullptr;
+    QListWidget     *styleListBox = nullptr;
+    QListWidget     *sizeListBox = nullptr;
+    QCheckBox    *sizeIsRelativeCheckBox = nullptr;
 
     QFont        selFont;
 

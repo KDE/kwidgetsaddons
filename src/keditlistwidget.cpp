@@ -41,14 +41,16 @@ public:
           q(parent)
     {
     }
-    QListView *listView;
-    QPushButton *servUpButton, *servDownButton;
-    QPushButton *servNewButton, *servRemoveButton;
-    QLineEdit *lineEdit;
-    QWidget *editingWidget;
-    QVBoxLayout *mainLayout;
-    QVBoxLayout *btnsLayout;
-    QStringListModel *model;
+    QListView *listView = nullptr;
+    QPushButton *servUpButton = nullptr;
+    QPushButton *servDownButton = nullptr;
+    QPushButton *servNewButton = nullptr;
+    QPushButton *servRemoveButton = nullptr;
+    QLineEdit *lineEdit = nullptr;
+    QWidget *editingWidget = nullptr;
+    QVBoxLayout *mainLayout = nullptr;
+    QVBoxLayout *btnsLayout = nullptr;
+    QStringListModel *model = nullptr;
 
     bool checkAtEntering;
     KEditListWidget::Buttons buttons;

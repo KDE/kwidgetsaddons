@@ -88,15 +88,15 @@ public:
 
     KCharSelect *q;
 
-    QToolButton *backButton;
-    QToolButton *forwardButton;
-    QLineEdit *searchLine;
-    QFontComboBox *fontCombo;
-    QSpinBox *fontSizeSpinBox;
-    QComboBox *sectionCombo;
-    QComboBox *blockCombo;
-    KCharSelectTable *charTable;
-    QTextBrowser *detailBrowser;
+    QToolButton *backButton = nullptr;
+    QToolButton *forwardButton = nullptr;
+    QLineEdit *searchLine = nullptr;
+    QFontComboBox *fontCombo = nullptr;
+    QSpinBox *fontSizeSpinBox = nullptr;
+    QComboBox *sectionCombo = nullptr;
+    QComboBox *blockCombo = nullptr;
+    KCharSelectTable *charTable = nullptr;
+    QTextBrowser *detailBrowser = nullptr;
 
     bool searchMode; //a search is active
     bool historyEnabled;

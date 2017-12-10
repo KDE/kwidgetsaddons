@@ -47,8 +47,8 @@ public:
     void _k_slotSycocaDatabaseChanged(const QStringList &);
 
     KMimeTypeChooser *q;
-    QTreeWidget *mimeTypeTree;
-    QPushButton *btnEditMimeType;
+    QTreeWidget *mimeTypeTree = nullptr;
+    QPushButton *btnEditMimeType = nullptr;
 
     QString defaultgroup;
     QStringList groups;

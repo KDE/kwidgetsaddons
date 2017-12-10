@@ -97,8 +97,8 @@ public:
     KFontRequester *q;
     bool m_onlyFixed;
     QString m_sampleText, m_title;
-    QLabel *m_sampleLabel;
-    QPushButton *m_button;
+    QLabel *m_sampleLabel = nullptr;
+    QPushButton *m_button = nullptr;
     QFont m_selFont;
 };
 
@@ -120,7 +120,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     layout->addWidget(d->m_sampleLabel, 1);
     layout->addWidget(d->m_button);
 
-    connect(d->m_button, SIGNAL(clicked()), SLOT(_k_buttonClicked()));
+    connect(d->m_button, &QPushButton::clicked, this, [this] { d->_k_buttonClicked(); });
 
     d->displaySampleText();
     d->setToolTip();

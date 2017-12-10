@@ -73,12 +73,12 @@ bool KAcceleratorManagerPrivate::standardName(const QString &str)
 
 KAcceleratorManagerPrivate::Item::~Item()
 {
-    if (m_children)
+    if (m_children) {
         while (!m_children->isEmpty()) {
             delete m_children->takeFirst();
         }
-
-    delete m_children;
+        delete m_children;
+    }
 }
 
 void KAcceleratorManagerPrivate::Item::addChild(Item *item)
@@ -658,7 +658,7 @@ void KAccelManagerAlgorithm::findAccelerators(KAccelStringList &result, QString 
     KAccelStringList accel_strings = result;
 
     // initially remove all accelerators
-    for (KAccelStringList::Iterator it = result.begin(); it != result.end(); ++it) {
+    for (KAccelStringList::Iterator it = result.begin(), total = result.end(); it != total; ++it) {
         (*it).setAccel(-1);
     }
 

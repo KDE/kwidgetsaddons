@@ -36,14 +36,12 @@ class KActionMenuPrivate
 public:
     KActionMenuPrivate()
     {
-        m_delayed = true;
-        m_stickyMenu = true;
     }
     ~KActionMenuPrivate()
     {
     }
-    bool m_delayed;
-    bool m_stickyMenu;
+    bool m_delayed = true;
+    bool m_stickyMenu = true;
 };
 
 KActionMenu::KActionMenu(QObject *parent)

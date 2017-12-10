@@ -31,7 +31,7 @@ class KAnimatedButtonPrivate
 {
 public:
     KAnimatedButtonPrivate(KAnimatedButton *qq)
-        : q(qq), movie(nullptr)
+        : q(qq)
     {
     }
 
@@ -42,7 +42,7 @@ public:
     void _k_timerUpdate();
 
     KAnimatedButton *q;
-    QMovie *movie;
+    QMovie *movie = nullptr;
 
     int                    frames;
     int                    current_frame;

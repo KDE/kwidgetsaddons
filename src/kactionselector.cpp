@@ -30,10 +30,15 @@ class KActionSelectorPrivate
 public:
     KActionSelectorPrivate(KActionSelector *q): q(q) {}
 
-    KActionSelector *q;
-    QListWidget *availableListWidget, *selectedListWidget;
-    QToolButton *btnAdd, *btnRemove, *btnUp, *btnDown;
-    QLabel *lAvailable, *lSelected;
+    KActionSelector *q = nullptr;
+    QListWidget *availableListWidget = nullptr;
+    QListWidget *selectedListWidget = nullptr;
+    QToolButton *btnAdd = nullptr;
+    QToolButton *btnRemove = nullptr;
+    QToolButton *btnUp = nullptr;
+    QToolButton *btnDown = nullptr;
+    QLabel *lAvailable = nullptr;
+    QLabel *lSelected = nullptr;
     bool moveOnDoubleClick : 1;
     bool keyboardEnabled : 1;
     bool showUpDownButtons : 1;

@@ -40,11 +40,11 @@ public:
     void init(KMessageWidget *);
 
     KMessageWidget *q;
-    QFrame *content;
-    QLabel *iconLabel;
-    QLabel *textLabel;
-    QToolButton *closeButton;
-    QTimeLine *timeLine;
+    QFrame *content = nullptr;
+    QLabel *iconLabel = nullptr;
+    QLabel *textLabel = nullptr;
+    QToolButton *closeButton = nullptr;
+    QTimeLine *timeLine = nullptr;
     QIcon icon;
 
     KMessageWidget::MessageType messageType;

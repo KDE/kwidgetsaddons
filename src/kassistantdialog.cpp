@@ -36,10 +36,10 @@ public:
     KAssistantDialog *q;
     QHash<KPageWidgetItem *, bool> valid;
     QHash<KPageWidgetItem *, bool> appropriate;
-    KPageWidgetModel *pageModel;
-    QPushButton *backButton;
-    QPushButton *nextButton;
-    QPushButton *finishButton;
+    KPageWidgetModel *pageModel = nullptr;
+    QPushButton *backButton = nullptr;
+    QPushButton *nextButton = nullptr;
+    QPushButton *finishButton = nullptr;
 
     void init();
     void _k_slotUpdateButtons();
