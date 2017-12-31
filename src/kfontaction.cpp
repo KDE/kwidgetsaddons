@@ -157,7 +157,7 @@ QWidget *KFontAction::createWidget(QWidget *parent)
     cb->setCurrentFont(QFont(font().toLower()));
 //    qCDebug(KWidgetsAddonsLog) << "\tspit back=" << cb->currentFont().family();
 
-    connect(cb, SIGNAL(currentFontChanged(QFont)), SLOT(_k_slotFontChanged(QFont)));
+    connect(cb, &QFontComboBox::currentFontChanged, this, [this](const QFont &ft) { d->_k_slotFontChanged(ft); });
     cb->setMinimumWidth(cb->sizeHint().width());
     return cb;
 }

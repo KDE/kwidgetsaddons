@@ -223,7 +223,6 @@ protected:
     void squeezeTextToLabel();
 
 private:
-    Q_PRIVATE_SLOT(d, void _k_copyFullText())
     KSqueezedTextLabelPrivate *const d;
 };
 
