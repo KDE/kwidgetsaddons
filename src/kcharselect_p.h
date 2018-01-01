@@ -80,13 +80,13 @@ public:
     /**
      * Reimplemented.
      */
-    virtual void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) Q_DECL_OVERRIDE;
+    void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) Q_DECL_OVERRIDE;
 
 protected:
     /**
      * Reimplemented.
      */
-    virtual void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     /** Emitted to indicate that character @p c is activated (such as by double-clicking it). */
