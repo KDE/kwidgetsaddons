@@ -83,7 +83,6 @@ public:
 private:
     class KMimeTypeChooserPrivate *d;
 
-    Q_PRIVATE_SLOT(d, void _k_editMimeType())
     Q_PRIVATE_SLOT(d, void _k_slotCurrentChanged(QTreeWidgetItem *))
     Q_PRIVATE_SLOT(d, void _k_slotSycocaDatabaseChanged(QStringList))
 };

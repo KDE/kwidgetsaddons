@@ -407,7 +407,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         d->searchLine->setToolTip(tr("Enter a search term or character here"));
 
         QAction *findAction = new QAction(this);
-        connect(findAction, SIGNAL(triggered(bool)), this, SLOT(_k_activateSearchLine()));
+        connect(findAction, &QAction::triggered, this, [this]() { d->_k_activateSearchLine(); });
         findAction->setObjectName(QStringLiteral("edit_find"));
         findAction->setText(tr("&Find..."));
         findAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
@@ -460,8 +460,8 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         forwardAction->setIcon(tmp);
     }
 
-    connect(d->backButton, SIGNAL(clicked()), this, SLOT(_k_back()));
-    connect(d->forwardButton, SIGNAL(clicked()), this, SLOT(_k_forward()));
+    connect(d->backButton, &QToolButton::clicked, this, [this]() { d->_k_back(); });
+    connect(d->forwardButton, &QToolButton::clicked, this, [this]() { d->_k_forward(); });
 
     d->sectionCombo = new QComboBox(this);
     d->sectionCombo->setToolTip(tr("Select a category"));

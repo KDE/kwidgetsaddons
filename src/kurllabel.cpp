@@ -40,7 +40,7 @@ public:
           floatEnabled(false),
           timer(new QTimer(parent))
     {
-        connect(timer, SIGNAL(timeout()), parent, SLOT(updateColor()));
+        connect(timer, &QTimer::timeout, parent, [this]() { updateColor(); });
     }
 
     ~Private()

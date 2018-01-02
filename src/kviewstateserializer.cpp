@@ -362,7 +362,7 @@ void KViewStateSerializer::restoreState()
 {
     Q_D(KViewStateSerializer);
     // Delete myself if not finished after 60 seconds
-    QTimer::singleShot(60000, this, SLOT(deleteLater()));
+    QTimer::singleShot(60000, this, &KViewStateSerializer::deleteLater);
 
     d->processPendingChanges();
     if (d->hasPendingChanges()) {
