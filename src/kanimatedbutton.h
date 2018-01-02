@@ -81,7 +81,6 @@ private:
 
     Q_PRIVATE_SLOT(d, void _k_movieFrameChanged(int))
     Q_PRIVATE_SLOT(d, void _k_movieFinished())
-    Q_PRIVATE_SLOT(d, void _k_timerUpdate())
 
     Q_DISABLE_COPY(KAnimatedButton)
 };

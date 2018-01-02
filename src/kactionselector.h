@@ -306,27 +306,7 @@ protected:
     bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
 
 private:
-    /**
-      Move selected item from available box to the selected box
-    */
-    Q_PRIVATE_SLOT(d, void buttonAddClicked())
-
-    /**
-      Move selected item from selected box to available box
-    */
-    Q_PRIVATE_SLOT(d, void buttonRemoveClicked())
-
-    /**
-      Move selected item in selected box upwards
-    */
-    Q_PRIVATE_SLOT(d, void buttonUpClicked())
-
-    /**
-      Move seleted item in selected box downwards
-    */
-    Q_PRIVATE_SLOT(d, void buttonDownClicked())
-
-    /**
+   /**
       Moves the item @p item to the other listbox if moveOnDoubleClick is enabled.
     */
     Q_PRIVATE_SLOT(d, void itemDoubleClicked(QListWidgetItem *item))

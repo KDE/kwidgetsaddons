@@ -171,14 +171,6 @@ Q_SIGNALS:
     void aboutToShowContextMenu(QMenu *menu, const QDate &date);
 
 private:
-    Q_PRIVATE_SLOT(d, void nextMonth())
-    Q_PRIVATE_SLOT(d, void previousMonth())
-    Q_PRIVATE_SLOT(d, void beginningOfMonth())
-    Q_PRIVATE_SLOT(d, void endOfMonth())
-    Q_PRIVATE_SLOT(d, void beginningOfWeek())
-    Q_PRIVATE_SLOT(d, void endOfWeek())
-
-private:
     class KDateTablePrivate;
     friend class KDateTablePrivate;
     KDateTablePrivate *const d;

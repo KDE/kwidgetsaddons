@@ -112,7 +112,7 @@ KColorButton::KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
     m_alphaChannel = false;
     q->setAcceptDrops(true);
 
-    connect(q, SIGNAL(clicked()), q, SLOT(_k_chooseColor()));
+    connect(q, &KColorButton::clicked, q, [this]() { _k_chooseColor(); });
 }
 
 KColorButton::KColorButton(QWidget *parent)

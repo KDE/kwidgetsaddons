@@ -57,7 +57,7 @@ public:
 KAnimatedButton::KAnimatedButton(QWidget *parent)
     : QToolButton(parent), d(new KAnimatedButtonPrivate(this))
 {
-    connect(&d->timer, SIGNAL(timeout()), this, SLOT(_k_timerUpdate()));
+    connect(&d->timer, &QTimer::timeout, this, [this]() { d->_k_timerUpdate(); });
 }
 
 KAnimatedButton::~KAnimatedButton()

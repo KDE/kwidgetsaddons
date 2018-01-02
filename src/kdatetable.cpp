@@ -144,37 +144,37 @@ void KDateTable::initAccels()
     next->setObjectName(QStringLiteral("next"));
     next->setShortcuts(QKeySequence::keyBindings(QKeySequence::Forward));
     next->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(next, SIGNAL(triggered(bool)), SLOT(nextMonth()));
+    connect(next, &QAction::triggered, this, [this]() { d->nextMonth(); });
 
     QAction *prior = new QAction(this);
     prior->setObjectName(QStringLiteral("prior"));
     prior->setShortcuts(QKeySequence::keyBindings(QKeySequence::Back));
     prior->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(prior, SIGNAL(triggered(bool)), SLOT(previousMonth()));
+    connect(prior, &QAction::triggered, this, [this]() { d->previousMonth(); });
 
     QAction *beginMonth = new QAction(this);
     beginMonth->setObjectName(QStringLiteral("beginMonth"));
     beginMonth->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToStartOfDocument));
     beginMonth->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(beginMonth, SIGNAL(triggered(bool)), SLOT(beginningOfMonth()));
+    connect(beginMonth, &QAction::triggered, this, [this]() { d->beginningOfMonth(); });
 
     QAction *endMonth = new QAction(this);
     endMonth->setObjectName(QStringLiteral("endMonth"));
     endMonth->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToEndOfDocument));
     endMonth->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(endMonth, SIGNAL(triggered(bool)), SLOT(endOfMonth()));
+    connect(endMonth, &QAction::triggered, this, [this]() { d->endOfMonth(); });
 
     QAction *beginWeek = new QAction(this);
     beginWeek->setObjectName(QStringLiteral("beginWeek"));
     beginWeek->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToStartOfLine));
     beginWeek->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(beginWeek, SIGNAL(triggered(bool)), SLOT(beginningOfWeek()));
+    connect(beginWeek, &QAction::triggered, this, [this]() { d->beginningOfWeek(); });
 
     QAction *endWeek = new QAction(this);
     endWeek->setObjectName(QStringLiteral("endWeek"));
     endWeek->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToEndOfLine));
     endWeek->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(endWeek, SIGNAL(triggered(bool)), SLOT(endOfWeek()));
+    connect(endWeek, &QAction::triggered, this, [this]() { d->endOfWeek(); });
 }
 
 int KDateTable::posFromDate(const QDate &date)

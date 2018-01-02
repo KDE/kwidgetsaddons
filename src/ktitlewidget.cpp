@@ -291,7 +291,7 @@ void KTitleWidget::showEvent(QShowEvent *event)
 {
     Q_UNUSED(event)
     if (d->autoHideTimeout > 0) {
-        QTimer::singleShot(d->autoHideTimeout, this, SLOT(_k_timeoutFinished()));
+        QTimer::singleShot(d->autoHideTimeout, this, [this] { d->_k_timeoutFinished(); });
     }
 }
 
