@@ -1,0 +1,2395 @@
+# Finnish messages for kdelibs4.
+# Copyright © 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs package.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2002,2003, 2005, 2006, 2007.
+# Tapio Kautto <eleknader@phnet.fi>, 2003, 2004.
+# Mikko Ikola <kola@netikka.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003, 2008.
+# Mikko Ikola <ikola@iki.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2004, 2008.
+# Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006, 2007.
+# Joonas Niilola <juippis@roskakori.org>, 2006.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <tpr@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011.
+# Tommi Nieminen <tommi.nieminen@legisign.org>, 2009, 2016, 2017.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2006, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Jl
+# Author: Lliehu
+# Author: Niklas Laxström
+# Author: Suhviksi
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2017-12-03 21:00+0900\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+"X-POT-Import-Date: 2013-01-13 20:43:21+0000\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:29
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Groteski"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:32
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Antiikva"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:35
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Tasalevyinen"
+
+#: fonthelpers.cpp:78
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:82
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:105
+msgctxt "KActionSelector|"
+msgid "&Available:"
+msgstr "&Käytettävissä:"
+
+#: kactionselector.cpp:122
+msgctxt "KActionSelector|"
+msgid "&Selected:"
+msgstr "&Valittu:"
+
+#: kassistantdialog.cpp:105
+msgctxt "KAssistantDialog|go back"
+msgid "&Back"
+msgstr "&Takaisin"
+
+#: kassistantdialog.cpp:107
+msgctxt "KAssistantDialog|"
+msgid "Go back one step"
+msgstr "Siirry yksi askel taaksepäin"
+
+#: kassistantdialog.cpp:112
+msgctxt "KAssistantDialog|Opposite to Back"
+msgid "Next"
+msgstr "Seuraava"
+
+#: kassistantdialog.cpp:119
+msgctxt "KAssistantDialog|"
+msgid "Finish"
+msgstr "Valmis"
+
+#: kcharselect-translation.cpp:24
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Eurooppalaiset kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Afrikkalaiset kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Lähi-idän kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Keski-Aasian kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Etelä-Aasian kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Kaakkoisaasialaiset kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "Indonesia ja Oseanian kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Itä-Aasian kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Amerikkalaiset kirjoitusjärjestelmät"
+
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Symbolit"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Matemaattiset symbolit"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Foneettiset symbolit"
+
+#: kcharselect-translation.cpp:36 kcharselectdata.cpp:739
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Yhdistäviä tarkkeita"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Muut"
+
+# http://www.cs.tut.fi/~jkorpela/unicode/lohkot.html
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Latinalainen perusosa"
+
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Latin-1:n täydennysosa"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latinalaisen merkistön laajennusosa A"
+
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latinalaisen merkistön laajennusosa B"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "IPA-täydennyksiä"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Tarkkeenomaisia erillisiä merkkejä"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Tarkkeita"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Kreikkalaisia ja koptilaisia merkkejä"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Kyrillisiä merkkejä"
+
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Lisää kyrillisiä merkkejä"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armenialaisia merkkejä"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Heprealaisia merkkejä"
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arabialaisia merkkejä"
+
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Syyrialaisia merkkejä"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Lisää arabialaisia merkkejä"
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "N’ko"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samaritan"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandealaisia merkkejä"
+
+#: kcharselect-translation.cpp:57
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Syyrian täydennysosa"
+
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Arabialaisen merkistön laajennusosa A"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengali"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gudžarati"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Orija"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamili"
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannada"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malajalam"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Lao"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tiibettiläisiä merkkejä"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Myanmar (Burma)"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Kartvelilaisia merkkejä"
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangulin jamo-merkkejä"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiopialaisia merkkejä"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Lisää etiopialaisia merkkejä"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Kanadalaisia tavumerkkejä"
+
+#: kcharselect-translation.cpp:79
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogam"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Riimukirjaimia"
+
+#: kcharselect-translation.cpp:81
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: kcharselect-translation.cpp:82
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: kcharselect-translation.cpp:83
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhid"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmer"
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongolialaisia merkkejä"
+
+#: kcharselect-translation.cpp:87
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Kanadalaisten tavumerkkien laajennus"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: kcharselect-translation.cpp:89
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Uusi Tai Lue"
+
+#: kcharselect-translation.cpp:91
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Khmer-symboleita"
+
+#: kcharselect-translation.cpp:92
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Buginese"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Yhdistävien tarkkeiden laajennusosa"
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Balilaisia merkkejä"
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sundalaisia merkkejä"
+
+#: kcharselect-translation.cpp:97
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batakilaisia merkkejä"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcha"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: kcharselect-translation.cpp:100
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Kyrillisen merkistön laajennusosa C"
+
+#: kcharselect-translation.cpp:101
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Sundalaisen merkistön täydennysosa"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Veda-täydennyksiä"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Foneettisten merkkien täydennyksiä"
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Lisää foneettisten merkkien täydennyksiä"
+
+#: kcharselect-translation.cpp:105
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Lisää tarkkeita"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Latinalaisen merkistön lisälaajennuksia"
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Kreikkalaisen merkistön laajennusosa"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Yleisiä välimerkkejä"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Ylä- ja alaindeksejä"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Valuuttamerkkejä"
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Symbolien tarkkeita"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Kirjainsymboleia"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Lukuilmaisuja"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Nuolia"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Matemaattisia operaattoreita"
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Sekalaisia teknisiä merkkejä"
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Ohjausmerkkien symboleita"
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "OCR-merkkejä"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Ympäröityjä alfanumeerisia merkkejä"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Viivapiirrosmerkkejä"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Lohko-osia"
+
+#: kcharselect-translation.cpp:122
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Geometrisia muotoja"
+
+#: kcharselect-translation.cpp:123
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Sekalaisia symboleita"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: kcharselect-translation.cpp:125
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Sekalaisia matemaattisia symboleita A"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Lisää nuolia A"
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braille-merkkejä"
+
+#: kcharselect-translation.cpp:128
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Lisää nuolia B"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Sekalaisia matemaattisia symboleita B"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Lisää matemaattisia operaattoreita"
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Sekalaisia symboleita ja nuolia"
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Glagoliittisia merkkejä"
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latinalaisen merkistön laajennusosa C"
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Koptilaisia merkkejä"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Lisää kartvelilaisia merkkejä"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiopialaisen merkistön laajennusosa"
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Laajennettu kyrillinen A"
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Lisää välimerkkejä"
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "Lisää CJK-radikaaleja"
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Kangxi-radikaaleja"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Sanamerkkien kuvailumerkkejä"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK-symboleita ja -välimerkkejä"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangulin jamo-erillismerkkejä"
+
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo-lisämerkkejä"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK-vetoja"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakanan foneettisia laajennuksia"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Ympäröityjä CJK-kirjaimia ja -kuukausimerkkejä"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK-yhteensopivia merkkejä"
+
+#: kcharselect-translation.cpp:154
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK-sanamerkkien laajennus A"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing-heksagrammisymboleja"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK-sanamerkkejä"
+
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi-tavumerkkejä"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi-radikaaleja"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vai"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Laajennettu kyrillinen B"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Tarkkeenomaisia toonimerkkejä"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latinalaisen merkistön laajennusosa D"
+
+#: kcharselect-translation.cpp:165
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Yleisiä Intian lukuilmaisuja"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari-laajennus"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul Jamo merkistön laajennusosa A"
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Javalaisia merkkejä"
+
+# Monet mediat (mm. Aamulehti ja HBL) eivät tunnusta maan sotilasjunttaa ja käyttävän edelleen maan vanhaa nimeä Burma.
+#: kcharselect-translation.cpp:174
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Burmalaisen merkistön laajennusosa B"
+
+#: kcharselect-translation.cpp:175
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Cham"
+
+# Monet mediat (mm. Aamulehti ja HBL) eivät tunnusta maan sotilasjunttaa ja käyttävän edelleen maan vanhaa nimeä Burma.
+#: kcharselect-translation.cpp:176
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Burmalaisen merkistön laajennusosa A"
+
+#: kcharselect-translation.cpp:177
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Viet"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei Mayek -laajennukset"
+
+#: kcharselect-translation.cpp:179
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiopialaisen merkistön laajennusosa A"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latinalaisen merkistön laajennusosa E"
+
+#: kcharselect-translation.cpp:181
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Cherokeen täydennysosa"
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Hangul-tavumerkkejä"
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul Jamo merkistön laajennusosa B"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Laajennuskoodien ykkösosia"
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Laajennuskoodien ykkösosat erilliskäyttöön"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Laajennuskoodien kakkososia"
+
+#: kcharselect-translation.cpp:188
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Erilliskäytön lohko"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK-yhteensopivuussanamerkkejä"
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Kirjainten tulostusmuotoja"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Arabialaisten merkkien esitysmuotoja A"
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Vaihtelun valitsimia"
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Pystysuuntaisia muotoja"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Tarkkeiden puolikkaita"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK-yhteensopivia merkkien muotoja"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Pienikokoisia muunnelmia"
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Arabialaisten merkkien esitysmuotoja B"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Puoli- ja täyslevyisiä esitysmuotoja"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Erikoismerkkejä"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr "Mahjong-laattoja"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr "Dominopalikoita"
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr "Pelikortteja"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Ympäröityjä aakkosnumeeriset merkkejä"
+
+#: kcharselect-translation.cpp:205
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Ympäröityjen ideografien täydennysosa"
+
+#: kcharselect-translation.cpp:206
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Sekalaisia symboleita ja kuvamerkkejä"
+
+#: kcharselect-translation.cpp:207
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Hymiöitä"
+
+#: kcharselect-translation.cpp:208
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr "Koristekirjaimia"
+
+#: kcharselect-translation.cpp:209
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr "Liikenne- ja karttasymboleja"
+
+#: kcharselect-translation.cpp:210
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Alkemistisia symboleja"
+
+#: kcharselect-translation.cpp:211
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Geometristen muotojen laajennusosa"
+
+#: kcharselect-translation.cpp:212
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Nuolten laajennusosa C"
+
+#: kcharselect-translation.cpp:213
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr "Lisäsymbolit ja -kuvamerkit"
+
+#: kcharselect.cpp:405 kcharselect.cpp:407
+msgctxt "KCharSelect|"
+msgid "Enter a search term or character here"
+msgstr "Syötä hakusana tai merkki"
+
+#: kcharselect.cpp:412
+msgctxt "KCharSelect|"
+msgid "&Find..."
+msgstr "&Etsi…"
+
+#: kcharselect.cpp:432
+msgctxt "KCharSelect|Goes to previous character"
+msgid "Previous in History"
+msgstr "Edellinen merkki historiasta"
+
+#: kcharselect.cpp:434
+msgctxt "KCharSelect|"
+msgid "Previous Character in History"
+msgstr "Edellinen merkki historiasta"
+
+#: kcharselect.cpp:439
+msgctxt "KCharSelect|Goes to next character"
+msgid "Next in History"
+msgstr "Seuraava merkki historiasta"
+
+#: kcharselect.cpp:441
+msgctxt "KCharSelect|"
+msgid "Next Character in History"
+msgstr "Seuraava merkki historiasta"
+
+#: kcharselect.cpp:446
+msgctxt "KCharSelect|go back"
+msgid "&Back"
+msgstr "&Edellinen"
+
+#: kcharselect.cpp:453
+msgctxt "KCharSelect|go forward"
+msgid "&Forward"
+msgstr "&Seuraava"
+
+#: kcharselect.cpp:467
+msgctxt "KCharSelect|"
+msgid "Select a category"
+msgstr "Valitse luokka"
+
+#: kcharselect.cpp:470
+msgctxt "KCharSelect|"
+msgid "Select a block to be displayed"
+msgstr "Valitse näytettävä lohko"
+
+#: kcharselect.cpp:483
+msgctxt "KCharSelect|"
+msgid "Set font"
+msgstr "Aseta fontti"
+
+#: kcharselect.cpp:490
+msgctxt "KCharSelect|"
+msgid "Set font size"
+msgstr "Aseta fonttikoko"
+
+#: kcharselect.cpp:777
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Merkki:"
+
+#: kcharselect.cpp:783
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Nimi: "
+
+#: kcharselect.cpp:792
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Huomautukset ja ristiviitteet"
+
+#: kcharselect.cpp:796
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Muut nimet:"
+
+#: kcharselect.cpp:804
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Muistiinpanot:"
+
+#: kcharselect.cpp:812
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Katso myös:"
+
+#: kcharselect.cpp:827
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Vastaavat:"
+
+#: kcharselect.cpp:835
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Suunnilleen vastaavat:"
+
+#: kcharselect.cpp:843
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Merkin purku:"
+
+#: kcharselect.cpp:855
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "CJK-ideografien tiedot"
+
+#: kcharselect.cpp:858
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Määritelmä englanniksi: "
+
+#: kcharselect.cpp:865
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Mandariinikiinan ääntämys: "
+
+#: kcharselect.cpp:872
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Kantoninkiinan ääntämys: "
+
+#: kcharselect.cpp:879
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Japanin on-ääntämys: "
+
+#: kcharselect.cpp:886
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Japanin kun-ääntämys: "
+
+#: kcharselect.cpp:893
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Tang-ääntämys: "
+
+#: kcharselect.cpp:900
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Korean ääntämys: "
+
+#: kcharselect.cpp:906
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Yleiset merkkiominaisuudet"
+
+#: kcharselect.cpp:907
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Lohko: "
+
+#: kcharselect.cpp:908
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Unicode-luokka: "
+
+#: kcharselect.cpp:912
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Hyödyllisiä esitysmuotoja"
+
+#: kcharselect.cpp:913
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:917
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:924
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "C-oktaalikoodattu UTF-8: "
+
+#: kcharselect.cpp:928
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "XML-entiteetti:"
+
+#: kcharselect.cpp:1075
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Unicode-koodipiste:"
+
+#: kcharselect.cpp:1076
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "Desimaalisena:"
+
+#: kcharselectdata.cpp:312
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "<ei-merkki>"
+
+#: kcharselectdata.cpp:333
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "Erilliskäyttölohkoon kuulumaton laajennuskoodin ykkösosa"
+
+#: kcharselectdata.cpp:335
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "Erilliskäyttölohkoon kuuluva laajennuskoodin ykkösosa"
+
+#: kcharselectdata.cpp:337
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "Laajennuskoodin kakkososa"
+
+#: kcharselectdata.cpp:339
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "Erityiskäyttö"
+
+#: kcharselectdata.cpp:371
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<ei määritetty>"
+
+#: kcharselectdata.cpp:748
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Tulostumaton"
+
+#: kcharselectdata.cpp:781
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Muu, ohjaus"
+
+#: kcharselectdata.cpp:782
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Muu, muotoilu"
+
+#: kcharselectdata.cpp:783
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Muu, määrittelemätön"
+
+#: kcharselectdata.cpp:784
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Muu, erityiskäyttö"
+
+#: kcharselectdata.cpp:785
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Muu, laajennuskoodi"
+
+#: kcharselectdata.cpp:786
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Kirjain, pienaakkonen"
+
+#: kcharselectdata.cpp:787
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Kirjain, tarkkeenomainen"
+
+#: kcharselectdata.cpp:788
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Kirjain, muu"
+
+#: kcharselectdata.cpp:789
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Kirjain, alkukirjainaakkonen"
+
+#: kcharselectdata.cpp:790
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Kirjain, suuraakkonen"
+
+#: kcharselectdata.cpp:791
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Merkki, tarke"
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Merkki, ympyröivä"
+
+#: kcharselectdata.cpp:793
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Merkki, tilaaviemätön"
+
+#: kcharselectdata.cpp:794
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Numero, desimaali"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Numero, kirjain"
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Numero, muu"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Välimerkki, yhdistävä"
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Välimerkki, viiva"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Välimerkki, sulkeva"
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Välimerkki, alkava lainaus"
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Välimerkki, sulkeva lainaus"
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Välimerkki, muu"
+
+#: kcharselectdata.cpp:803
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Väimerkki, alkava"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Symboli, valuutta"
+
+#: kcharselectdata.cpp:805
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Symboli, tarkkeenomainen"
+
+#: kcharselectdata.cpp:806
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Symboli, matematiikka"
+
+#: kcharselectdata.cpp:807
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Symboli, muu"
+
+#: kcharselectdata.cpp:808
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Erotin, rivi"
+
+#: kcharselectdata.cpp:809
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Erotin, kappale"
+
+#: kcharselectdata.cpp:810
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Erotin, väli"
+
+#: kcharselectdata.cpp:811
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: kcolorcombo.cpp:339
+msgctxt "KColorCombo|Custom color"
+msgid "Custom..."
+msgstr "Oma…"
+
+#: kdatecombobox.cpp:168
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Seuraava vuosi"
+
+#: kdatecombobox.cpp:169
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Seuraava kuukausi"
+
+#: kdatecombobox.cpp:170
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Seuraava viikko"
+
+#: kdatecombobox.cpp:171
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Huomenna"
+
+#: kdatecombobox.cpp:172
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Tänään"
+
+#: kdatecombobox.cpp:173
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Eilen"
+
+#: kdatecombobox.cpp:174
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Viime viikolla"
+
+#: kdatecombobox.cpp:175
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Viime kuussa"
+
+#: kdatecombobox.cpp:176
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Viime vuonna"
+
+#: kdatecombobox.cpp:178
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Ei päivää"
+
+#: kdatecombobox.cpp:308
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Antamasi päivä on virheellinen"
+
+#: kdatecombobox.cpp:311
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Päivä ei voi olla aiempi kuin %1"
+
+#: kdatecombobox.cpp:318
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Päivä ei voi olla myöhempi kuin %1"
+
+#: kdatepicker.cpp:189
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Viikko %1"
+
+#: kdatepicker.cpp:294
+msgctxt "KDatePicker|"
+msgid "Next year"
+msgstr "Seuraava vuosi"
+
+#: kdatepicker.cpp:295
+msgctxt "KDatePicker|"
+msgid "Previous year"
+msgstr "Edellinen vuosi"
+
+#: kdatepicker.cpp:296
+msgctxt "KDatePicker|"
+msgid "Next month"
+msgstr "Seuraava kuukausi"
+
+#: kdatepicker.cpp:297
+msgctxt "KDatePicker|"
+msgid "Previous month"
+msgstr "Edellinen kuukausi"
+
+#: kdatepicker.cpp:298
+msgctxt "KDatePicker|"
+msgid "Select a week"
+msgstr "Valitse viikko"
+
+#: kdatepicker.cpp:299
+msgctxt "KDatePicker|"
+msgid "Select a month"
+msgstr "Valitse kuukausi"
+
+#: kdatepicker.cpp:300
+msgctxt "KDatePicker|"
+msgid "Select a year"
+msgstr "Valitse vuosi"
+
+#: kdatepicker.cpp:301
+msgctxt "KDatePicker|"
+msgid "Select the current day"
+msgstr "Valitse nykyinen päivämäärä"
+
+#: kdatepicker.cpp:642
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Sulje"
+
+#: kdatetimeedit.cpp:189
+msgctxt "KDateTimeEdit|UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:190
+msgctxt "KDateTimeEdit|No specific time zone"
+msgid "Floating"
+msgstr "Aikavyöhykkeetön"
+
+#: kdatetimeedit.cpp:230
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+"Antamasi päivämäärä ja aika on ennen aikaisinta sallittua päivämäärää ja "
+"aikaa."
+
+#: kdatetimeedit.cpp:240
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+"Antamasi päivämäärä ja aika on myöhäisimmän sallitun päivämäärän ja ajan "
+"jälkeen."
+
+#: keditlistwidget.cpp:305
+msgctxt "KEditListWidget|"
+msgid "&Add"
+msgstr "&Lisää"
+
+#: keditlistwidget.cpp:317
+msgctxt "KEditListWidget|"
+msgid "&Remove"
+msgstr "&Poista"
+
+#: keditlistwidget.cpp:329
+msgctxt "KEditListWidget|"
+msgid "Move &Up"
+msgstr "Siirrä &ylös"
+
+#: keditlistwidget.cpp:334
+msgctxt "KEditListWidget|"
+msgid "Move &Down"
+msgstr "Siirrä &alas"
+
+#: kfontchooser.cpp:160
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font to be used."
+msgstr "Tästä voit valita käytettävän fontin."
+
+#: kfontchooser.cpp:182
+msgctxt "KFontChooser|"
+msgid "Requested Font"
+msgstr "Haluttu fontti"
+
+#: kfontchooser.cpp:199
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Fontti"
+
+#: kfontchooser.cpp:203
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font family settings."
+msgstr "Valitse tämä valintaruutu, jos haluat muuttaa fonttiperhettä."
+
+#: kfontchooser.cpp:204
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font family?"
+msgstr "Muuta fonttiperhettä"
+
+#: kfontchooser.cpp:208
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Fontti:"
+
+#: kfontchooser.cpp:215
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Fonttityyli"
+
+#: kfontchooser.cpp:219
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font style settings."
+msgstr "Valitse tämä valintaruutu, jos haluat muuttaa fonttityyliä."
+
+#: kfontchooser.cpp:220
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font style?"
+msgstr "Muuta fonttityyliä"
+
+#: kfontchooser.cpp:224
+msgctxt "KFontChooser|"
+msgid "Font style:"
+msgstr "Fonttityyli:"
+
+#: kfontchooser.cpp:232
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Koko"
+
+#: kfontchooser.cpp:236
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font size settings."
+msgstr "Valitse tämä valintaruutu, jos haluat vaihtaa fonttikokoa."
+
+#: kfontchooser.cpp:237
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font size?"
+msgstr "Vaihda fonttikokoa"
+
+#: kfontchooser.cpp:241
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Koko:"
+
+#: kfontchooser.cpp:257
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font family to be used."
+msgstr "Tästä voit valita käytettävän fonttiperheen."
+
+#: kfontchooser.cpp:281
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font style to be used."
+msgstr "Tästä voit valita käytettävän fonttityylin."
+
+#: kfontchooser.cpp:289
+msgctxt "KFontChooser|QFontDatabase"
+msgid "Normal"
+msgstr "Tavallinen"
+
+#: kfontchooser.cpp:290 kfontchooser.cpp:602
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Kursiivi"
+
+#: kfontchooser.cpp:291 kfontchooser.cpp:603
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Kallistettu"
+
+#: kfontchooser.cpp:292
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Lihavoitu"
+
+#: kfontchooser.cpp:293
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Lihavoitu kursiivi"
+
+#: kfontchooser.cpp:312
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Suhteellinen"
+
+#: kfontchooser.cpp:314
+msgctxt "KFontChooser|"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "Fonttikoko<br><i>kiinteä</i> tai <i>suhteellinen</i></br> ympäristöön"
+
+#: kfontchooser.cpp:316
+msgctxt "KFontChooser|"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Tästä voit valita kiinteän fonttikoon tai fonttikoon, joka on suhteellinen "
+"ympäristöön (esimerkiksi käyttöliittymäelementtien mitat ja paperikoko)."
+
+#: kfontchooser.cpp:340
+msgctxt "KFontChooser|"
+msgid "Here you can choose the font size to be used."
+msgstr "Tästä voit valita käytettävän fonttikoon."
+
+#: kfontchooser.cpp:378
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "On sangen hauskaa, että polkupyörä on maanteiden jokapäiväinen ilmiö."
+
+#: kfontchooser.cpp:381
+msgctxt "KFontChooser|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Tämä näyteteksti havainnollistaa nykyisiä asetuksia. Voit lisätä siihen "
+"haluamiasi merkkejä."
+
+#: kfontchooser.cpp:587
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontrequester.cpp:114
+msgctxt "KFontRequester|"
+msgid "Choose..."
+msgstr "Valitse…"
+
+#: kfontrequester.cpp:220
+msgctxt "KFontRequester|"
+msgid "Click to select a font"
+msgstr "Valitse fontti napsauttamalla"
+
+#: kfontrequester.cpp:226
+msgctxt "KFontRequester|"
+msgid "Preview of the selected font"
+msgstr "Fontin esikatselu"
+
+#: kfontrequester.cpp:227
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Tämä on valitun fontin esikatselu. Voit vaihtaa fonttia Valitse-painikkeella."
+
+#: kfontrequester.cpp:230
+#, qt-format
+msgctxt "KFontRequester|"
+msgid "Preview of the \"%1\" font"
+msgstr "Fontin %1 esikatselu"
+
+#: kfontrequester.cpp:231
+#, qt-format
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Tämä on fontin %1 esikatselu. Voit vaihtaa fonttia Valitse-painikkeella."
+
+#: kled.cpp:195
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "LED päällä"
+
+#: kled.cpp:196
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "LED pois päältä"
+
+#: kmessagebox.cpp:77
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:192 kmessagebox.cpp:828 kmessagebox.cpp:877
+msgctxt "KMessageBox|"
+msgid "&Details"
+msgstr "&Yksityiskohdat"
+
+#: kmessagebox.cpp:330
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Yksityiskohdat"
+
+#: kmessagebox.cpp:492 kmessagebox.cpp:546
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Kysymys"
+
+#: kmessagebox.cpp:504 kmessagebox.cpp:560 kmessagebox.cpp:631
+#: kmessagebox.cpp:694 kmessagebox.cpp:763
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Älä kysy uudelleen"
+
+#: kmessagebox.cpp:619 kmessagebox.cpp:682 kmessagebox.cpp:750
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Varoitus"
+
+#: kmessagebox.cpp:802 kmessagebox.cpp:823
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Virhe"
+
+#: kmessagebox.cpp:851 kmessagebox.cpp:872 kmessagebox.cpp:1135
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Virhe"
+
+#: kmessagebox.cpp:911
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Ilmoitus"
+
+#: kmessagebox.cpp:922
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Älä näytä tätä viestiä uudelleen"
+
+#: kmessagewidget.cpp:91
+msgctxt "KMessageWidget|"
+msgid "&Close"
+msgstr "&Sulje"
+
+#: kmessagewidget.cpp:92
+msgctxt "KMessageWidget|"
+msgid "Close message"
+msgstr "Sulje viesti"
+
+#: kmimetypechooser.cpp:89
+msgctxt "KMimeTypeChooser|"
+msgid "Mime Type"
+msgstr "MIME-tyyppi"
+
+#: kmimetypechooser.cpp:92
+msgctxt "KMimeTypeChooser|"
+msgid "Comment"
+msgstr "Kommentti"
+
+#: kmimetypechooser.cpp:95
+msgctxt "KMimeTypeChooser|"
+msgid "Patterns"
+msgstr "Kuviot"
+
+#: kmimetypechooser.cpp:108
+msgctxt "KMimeTypeChooser|"
+msgid "&Edit..."
+msgstr "&Muokkaa…"
+
+#: kmimetypechooser.cpp:118
+msgctxt "KMimeTypeChooser|"
+msgid "Click this button to display the familiar KDE mime type editor."
+msgstr "Näytä tuttu KDE:n MIME-tyyppimuokkain napsauttamalla tätä painiketta."
+
+#: knewpassworddialog.cpp:76
+#, qt-format
+msgctxt "KNewPasswordDialog|"
+msgid "Password must be at least %n character(s) long"
+msgid_plural "Password must be at least %n character(s) long"
+msgstr[0] "Salasanan tulee olla ainakin %n merkin pituinen"
+msgstr[1] "Salasanan tulee olla ainakin %n merkin pituinen"
+
+#: knewpassworddialog.cpp:80
+msgctxt "KNewPasswordDialog|"
+msgid "Password is empty"
+msgstr "Salasana on tyhjä"
+
+#: knewpassworddialog.cpp:84
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords do not match"
+msgstr "Salasanat eivät täsmää"
+
+#: knewpassworddialog.cpp:89
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords match"
+msgstr "Salasanat täsmäävät"
+
+#: knewpassworddialog.cpp:144
+msgctxt "KNewPasswordDialog|"
+msgid "Low Password Strength"
+msgstr "Heikko salasana"
+
+#: knewpassworddialog.cpp:145
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Antamasi salasana on heikko. Voit parantaa sen vahvuutta esimerkiksi näin:\n"
+" – käytä pidempää salasanaa\n"
+" – käytä sekaisin pien- ja suuraakkosia\n"
+" – käytä kirjainten lisäksi numeroita ja muita merkkejä (esim. #)\n"
+"\n"
+"Haluatko kuitenkin käyttää jo kirjoittamaasi salasanaa?"
+
+#: knewpasswordwidget.cpp:64
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Salasanan vahvuusmittari antaa palautetta antamasi salasanan "
+"turvallisuudesta. Parantaaksesi salasanaa voit<ul><li>käyttää pidempää "
+"salasanaa</li><li>käyttää sekaisin pien- ja suuraakkosia</li><li>käyttää "
+"kirjainten lisäksi numeroita ja muita merkkejä (esim. #).</li></ul>"
+
+#: knewpasswordwidget.ui:19
+msgctxt "KNewPasswordWidget|"
+msgid "Password:"
+msgstr "Salasana:"
+
+#: knewpasswordwidget.ui:29
+msgctxt "KNewPasswordWidget|"
+msgid "&Verify:"
+msgstr "&Tarkista:"
+
+#: knewpasswordwidget.ui:54
+msgctxt "KNewPasswordWidget|"
+msgid "Password strength &meter:"
+msgstr "Salasanan vahvuus&mittari:"
+
+#: kpassworddialog.cpp:65
+msgctxt "KPasswordDialog|"
+msgid "Password"
+msgstr "Salasana"
+
+#: kpassworddialog.cpp:104
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Anna salasana."
+
+#: kpassworddialog.ui:26
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Anna käyttäjätunnus ja salasana."
+
+#: kpassworddialog.ui:63
+msgctxt "KPasswordDialog|"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Ei salasanaa; käytä nimetöntä (tai &vieras-) kirjautumista"
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|"
+msgid "Use this password:"
+msgstr "Käytä tätä salasanaa:"
+
+#: kpassworddialog.ui:95
+msgctxt "KPasswordDialog|"
+msgid "Username:"
+msgstr "Käyttäjätunnus:"
+
+#: kpassworddialog.ui:109
+msgctxt "KPasswordDialog|"
+msgid "Domain:"
+msgstr "Verkkoalue:"
+
+#: kpassworddialog.ui:123
+msgctxt "KPasswordDialog|"
+msgid "Password:"
+msgstr "Salasana:"
+
+#: kpassworddialog.ui:137
+msgctxt "KPasswordDialog|"
+msgid "Remember password"
+msgstr "Muista salasana"
+
+#: kpasswordlineedit.cpp:56
+msgctxt "QObject|"
+msgid "Change the visibility of the password"
+msgstr "Vaihda salasanan näkyvyyttä"
+
+#: kpixmapregionselectordialog.cpp:64
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Select Region of Image"
+msgstr "Valitse kuvan alue"
+
+#: kpixmapregionselectordialog.cpp:68
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "Valitse kuvasta kiinnostava alue maalaamalla:"
+
+#: kpixmapregionselectorwidget.cpp:191
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Image Operations"
+msgstr "Kuvan toimenpiteet"
+
+#: kpixmapregionselectorwidget.cpp:193
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "&Rotate Clockwise"
+msgstr "&Kierrä myötäpäivään"
+
+#: kpixmapregionselectorwidget.cpp:195
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Rotate &Counterclockwise"
+msgstr "Kierrä &vastapäivään"
+
+#: ksqueezedtextlabel.cpp:215
+msgctxt "KSqueezedTextLabel|"
+msgid "&Copy Full Text"
+msgstr "&Kopioi koko teksti"
+
+#: kstandardguiitem.cpp:108
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&OK"
+
+#: kstandardguiitem.cpp:113
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Peru"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Kyllä"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Kyllä"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Ei"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Ei"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Hylkää"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Hylkää muutokset"
+
+#: kstandardguiitem.cpp:129
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Tämän painikkeen napsauttaminen hylkää kaikki ikkunan viimeaikaiset "
+"muutokset."
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Tallenna"
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Tallenna tiedot"
+
+#: kstandardguiitem.cpp:140
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Älä tallenna"
+
+#: kstandardguiitem.cpp:141
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Älä tallenna tietoja"
+
+#: kstandardguiitem.cpp:146
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Tallenna &nimellä…"
+
+#: kstandardguiitem.cpp:147
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Tallenna tiedosto toisella nimellä"
+
+#: kstandardguiitem.cpp:152
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Käytä"
+
+#: kstandardguiitem.cpp:152
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Käytä asetuksia"
+
+#: kstandardguiitem.cpp:153
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Jos napsautat <b>Käytä</b>-painiketta, asetukset otetaan käyttöön, mutta "
+"ikkunaa ei suljeta.\n"
+"Tällä painikkeella voit kokeilla asetuksia."
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "&Pääkäyttäjän tila…"
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Siirry pääkäyttäjän tilaan"
+
+#: kstandardguiitem.cpp:162
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Kun napsautat <b>Pääkäyttäjän tila</b> -painiketta, sinulta kysytään "
+"pääkäyttäjän (root) salasana muutoksiin, jotka vaativat pääkäyttäjäoikeuksia."
+
+#: kstandardguiitem.cpp:169
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "&Tyhjennä"
+
+#: kstandardguiitem.cpp:170
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Tyhjennä syöttökenttä"
+
+#: kstandardguiitem.cpp:171
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Tyhjennä syöttökenttä"
+
+#: kstandardguiitem.cpp:176
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "O&hje"
+
+#: kstandardguiitem.cpp:177
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Näytä ohje"
+
+#: kstandardguiitem.cpp:182
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Sulje"
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Sulje nykyinen ikkuna tai tiedosto"
+
+#: kstandardguiitem.cpp:188
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "S&ulje ikkuna"
+
+#: kstandardguiitem.cpp:189
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Sulje nykyinen ikkuna."
+
+#: kstandardguiitem.cpp:194
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "S&ulje tiedosto"
+
+#: kstandardguiitem.cpp:195
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Sulje nykyinen tiedosto."
+
+#: kstandardguiitem.cpp:200
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "O&letusasetukset"
+
+#: kstandardguiitem.cpp:201
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Palauta kaikki asetukset oletusarvoihinsa"
+
+#: kstandardguiitem.cpp:208
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&Takaisin"
+
+#: kstandardguiitem.cpp:209
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Siirry yksi askel taaksepäin"
+
+#: kstandardguiitem.cpp:216
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&Seuraava"
+
+#: kstandardguiitem.cpp:217
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Siirry yksi askel eteenpäin"
+
+#: kstandardguiitem.cpp:227
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "T&ulosta…"
+
+#: kstandardguiitem.cpp:228
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Avaa tulostusikkunan tiedoston tulostamiseksi"
+
+#: kstandardguiitem.cpp:234
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&Jatka"
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Jatka toimenpidettä"
+
+#: kstandardguiitem.cpp:240
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Poista"
+
+#: kstandardguiitem.cpp:241
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Poista kohteet"
+
+#: kstandardguiitem.cpp:246
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Avaa…"
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Avaa tiedosto"
+
+#: kstandardguiitem.cpp:252
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Lopeta"
+
+#: kstandardguiitem.cpp:253
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Lopeta ohjelma"
+
+#: kstandardguiitem.cpp:258
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Aiemmat asetukset"
+
+#: kstandardguiitem.cpp:259
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Palauta asetukset"
+
+#: kstandardguiitem.cpp:264
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Lisää"
+
+#: kstandardguiitem.cpp:269
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&Asetukset…"
+
+#: kstandardguiitem.cpp:274
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Etsi"
+
+#: kstandardguiitem.cpp:279
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Pysäytä"
+
+#: kstandardguiitem.cpp:284
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Lisää"
+
+#: kstandardguiitem.cpp:289
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Poista"
+
+#: kstandardguiitem.cpp:294
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Kokeile"
+
+#: kstandardguiitem.cpp:299
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Ominaisuudet"
+
+#: kstandardguiitem.cpp:304
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Korvaa"
+
+#: ktimecombobox.cpp:252
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Antamasi aika on virheellinen"
+
+#: ktimecombobox.cpp:255
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Aika ei voi olla aiempi kuin %1"
+
+#: ktimecombobox.cpp:262
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Aika ei voi olla myöhempi kuin %1"
+
+#: ktogglefullscreenaction.cpp:44
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Poistu &koko näytön tilasta"
+
+#: ktogglefullscreenaction.cpp:45
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Poistu koko näytöstä"
+
+#: ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Poistu koko näytön tilasta"
+
+#: ktogglefullscreenaction.cpp:49
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "&Koko näytön tila"
+
+#: ktogglefullscreenaction.cpp:50
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Koko näyttö"
+
+#: ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Näytä ikkuna koko näytön tilassa"
