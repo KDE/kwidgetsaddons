@@ -150,7 +150,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
                                        int id, QWidget *parent)
     : QPushButton(icon, text, parent), m_id(id), d(nullptr)
 {
-    connect(this, &KMultiTabBarButton::clicked, this, &KMultiTabBarButton::slotClicked);
+    connect(this, &QPushButton::clicked, this, &KMultiTabBarButton::slotClicked);
 
     // we can't see the focus, so don't take focus. #45557
     // If keyboard navigation is wanted, then only the bar should take focus,
@@ -164,7 +164,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
                                        int id, QWidget *parent)
     : QPushButton(QIcon(pic), text, parent), m_id(id), d(nullptr)
 {
-    connect(this, &KMultiTabBarButton::clicked, this, &KMultiTabBarButton::slotClicked);
+    connect(this, &QPushButton::clicked, this, &KMultiTabBarButton::slotClicked);
 
     // we can't see the focus, so don't take focus. #45557
     // If keyboard navigation is wanted, then only the bar should take focus,
