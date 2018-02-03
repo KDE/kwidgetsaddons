@@ -180,6 +180,8 @@ void KDateComboBoxTest::testSignals()
     combo->show();
     combo->activateWindow();
     QVERIFY(QTest::qWaitForWindowActive(combo.data()));
+    QCOMPARE(combo->currentText(), QStringLiteral("30/05/2016"));
+    QCOMPARE(combo->date(), QDate(2016, 05, 30));
 
     // WHEN typing a new day (Home, Del, '2' -> 20 may 2016)
     QTest::keyClick(combo.data(), Qt::Key_Home);
@@ -187,6 +189,7 @@ void KDateComboBoxTest::testSignals()
     QTest::keyClick(combo.data(), Qt::Key_2);
 
     // THEN
+    QCOMPARE(combo->currentText(), QStringLiteral("20/05/2016"));
     QCOMPARE(combo->date(), QDate(2016, 05, 20));
 
     // and losing focus
