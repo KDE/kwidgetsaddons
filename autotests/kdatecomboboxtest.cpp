@@ -27,6 +27,14 @@
 
 QTEST_MAIN(KDateComboBoxTest)
 
+#ifndef Q_OS_WIN
+void initLocale()
+{
+    setenv("LC_ALL", "en_US.utf-8", 1);
+}
+Q_CONSTRUCTOR_FUNCTION(initLocale)
+#endif
+
 void KDateComboBoxTest::testDefaults()
 {
     QScopedPointer<KDateComboBox> combo(new KDateComboBox);
@@ -180,17 +188,17 @@ void KDateComboBoxTest::testSignals()
     combo->show();
     combo->activateWindow();
     QVERIFY(QTest::qWaitForWindowActive(combo.data()));
-    QCOMPARE(combo->currentText(), QStringLiteral("30/05/2016"));
-    QCOMPARE(combo->date(), QDate(2016, 05, 30));
+    QCOMPARE(combo->currentText(), QStringLiteral("5/30/2016"));
+    QCOMPARE(combo->date(), QDate(2016, 5, 30));
 
-    // WHEN typing a new day (Home, Del, '2' -> 20 may 2016)
+    // WHEN typing a new day (Home, Del, '4' -> 30 April 2016)
     QTest::keyClick(combo.data(), Qt::Key_Home);
     QTest::keyClick(combo.data(), Qt::Key_Delete);
-    QTest::keyClick(combo.data(), Qt::Key_2);
+    QTest::keyClick(combo.data(), Qt::Key_4);
 
     // THEN
-    QCOMPARE(combo->currentText(), QStringLiteral("20/05/2016"));
-    QCOMPARE(combo->date(), QDate(2016, 05, 20));
+    QCOMPARE(combo->currentText(), QStringLiteral("4/30/2016"));
+    QCOMPARE(combo->date(), QDate(2016, 4, 30));
 
     // and losing focus
     combo->clearFocus();
@@ -205,20 +213,22 @@ void KDateComboBoxTest::testSignals()
     QTest::keyClick(combo.data(), Qt::Key_Up);
 
     // THEN
-    QCOMPARE(combo->date(), QDate(2016, 05, 21));
+    QCOMPARE(combo->currentText(), QStringLiteral("5/1/2016"));
+    QCOMPARE(combo->date(), QDate(2016, 5, 1));
     QCOMPARE(spyDateEdited.count(), 0);
     QCOMPARE(spyDateEntered.count(), 1);
     QCOMPARE(spyDateChanged.count(), 1);
     clearSpies();
 
-    // WHEN typing a digit ('1' -> 11 may 2016) then Return
+    // WHEN typing a digit ('6' -> 1 june 2016) then Return
     QTest::keyClick(combo.data(), Qt::Key_Home);
     QTest::keyClick(combo.data(), Qt::Key_Delete);
-    QTest::keyClick(combo.data(), Qt::Key_1);
+    QTest::keyClick(combo.data(), Qt::Key_6);
     QTest::keyClick(combo.data(), Qt::Key_Return);
 
     // THEN
-    QCOMPARE(combo->date(), QDate(2016, 05, 11));
+    QCOMPARE(combo->currentText(), QStringLiteral("6/1/2016"));
+    QCOMPARE(combo->date(), QDate(2016, 6, 1));
     QCOMPARE(spyDateEdited.count(), 2);
     QCOMPARE(spyDateEntered.count(), 1);
     QCOMPARE(spyDateChanged.count(), 1);
