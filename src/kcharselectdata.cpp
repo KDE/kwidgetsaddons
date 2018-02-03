@@ -152,7 +152,7 @@ uint KCharSelectData::mapDataBaseToCodePoint(quint16 code) const
         if (code >= 0xE000 && code <= 0xEFFF) {
             return code + 0x1000;
         }
-        if (code >= 0xF000 && code <= 0xFFFF) {
+        if (code >= 0xF000) {
             return code + 0x10000;
         }
     }
