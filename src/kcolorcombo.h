@@ -27,7 +27,7 @@
 #define KCOLORCOMBO_H
 
 #include <QComboBox>
-#include <QtCore/QList>
+#include <QList>
 
 #include <kwidgetsaddons_export.h>
 

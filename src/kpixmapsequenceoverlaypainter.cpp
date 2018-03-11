@@ -21,13 +21,13 @@
 #include "kpixmapsequence.h"
 
 #include <QWidget>
-#include <QtCore/QPoint>
-#include <QtCore/QRect>
+#include <QPoint>
+#include <QRect>
 #include <QPainter>
-#include <QtCore/QTimer>
-#include <QtCore/QEvent>
-#include <QtCore/QPointer>
-#include <QtCore/QCoreApplication>
+#include <QTimer>
+#include <QEvent>
+#include <QPointer>
+#include <QCoreApplication>
 
 class Q_DECL_HIDDEN KPixmapSequenceOverlayPainter::Private
 {

@@ -20,8 +20,8 @@
 #ifndef _K_PIXMAPSEQUENCE_OVERLAY_PAINTER_H_
 #define _K_PIXMAPSEQUENCE_OVERLAY_PAINTER_H_
 
-#include <QtCore/QObject>
-#include <QtCore/QPoint>
+#include <QObject>
+#include <QPoint>
 
 #include <kwidgetsaddons_export.h>
 

@@ -21,10 +21,10 @@
 #ifndef KCHARSELECTDATA_H
 #define KCHARSELECTDATA_H
 
-#include <QtCore/QChar>
-#include <QtCore/QVector>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
+#include <QChar>
+#include <QVector>
+#include <QString>
+#include <QStringList>
 #include <QFuture>
 #include <QFont>
 

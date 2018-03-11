@@ -24,7 +24,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-#include <QtCore/QAbstractItemModel>
+#include <QAbstractItemModel>
 
 class KPageModelPrivate;
 

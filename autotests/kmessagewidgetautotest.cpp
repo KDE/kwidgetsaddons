@@ -20,7 +20,7 @@
 
 #include "kmessagewidgetautotest.h"
 
-#include <QtTest/QtTest>
+#include <QtTest>
 #include <kmessagewidget.h>
 
 QTEST_MAIN(KMessageWidgetTest)

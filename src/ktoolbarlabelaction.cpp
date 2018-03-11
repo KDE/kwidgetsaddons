@@ -18,7 +18,7 @@
 
 #include "ktoolbarlabelaction.h"
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QApplication>
 #include <QLabel>
 #include <QToolBar>

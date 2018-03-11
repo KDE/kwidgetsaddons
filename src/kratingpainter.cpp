@@ -24,8 +24,8 @@
 #include <QPainter>
 #include <QPixmap>
 #include <QIcon>
-#include <QtCore/QRect>
-#include <QtCore/QPoint>
+#include <QRect>
+#include <QPoint>
 
 class Q_DECL_HIDDEN KRatingPainter::Private
 {

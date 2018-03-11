@@ -19,7 +19,7 @@
  */
 #include <KPixmapSequenceWidget>
 
-#include <QtTest/QTest>
+#include <QTest>
 
 #include "kguiitem.h"
 

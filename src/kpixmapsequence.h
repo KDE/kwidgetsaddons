@@ -21,8 +21,8 @@
 #ifndef _K_PIXMAPSEQUENCE_H_
 #define _K_PIXMAPSEQUENCE_H_
 
-#include <QtCore/QSharedDataPointer>
-#include <QtCore/QSize>
+#include <QSharedDataPointer>
+#include <QSize>
 
 #include <kwidgetsaddons_export.h>
 

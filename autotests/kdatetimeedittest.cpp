@@ -19,12 +19,12 @@
 
 #include "kdatetimeedittest.h"
 
-#include <QtCore/QDate>
+#include <QDate>
 #include <QAction>
 #include <QComboBox>
 #include <QMenu>
 
-#include <QtTest/QtTest>
+#include <QtTest>
 #include "kdatetimeedit.h"
 #include "kdatecombobox.h"
 

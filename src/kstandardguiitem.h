@@ -21,7 +21,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-#include <QtCore/QPair>
+#include <QPair>
 
 #include <kguiitem.h>
 

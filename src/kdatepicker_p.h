@@ -22,7 +22,7 @@
 #ifndef KDATEPICKER_P_H
 #define KDATEPICKER_P_H
 
-#include <QtCore/QDate>
+#include <QDate>
 #include <QLineEdit>
 #include <QValidator>
 

@@ -24,7 +24,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-#include <QtCore/QDateTime>
+#include <QDateTime>
 #include <QFrame>
 
 class QLineEdit;

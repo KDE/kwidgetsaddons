@@ -19,9 +19,9 @@
 
 #include "kdatecomboboxtest.h"
 
-#include <QtCore/QDate>
+#include <QDate>
 
-#include <QtTest/QtTest>
+#include <QtTest>
 #include <QLineEdit>
 #include "kdatecombobox.h"
 

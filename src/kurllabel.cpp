@@ -17,7 +17,7 @@
 
 #include "kurllabel.h"
 
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QApplication>
 #include <QMouseEvent>
 #include <QPalette>

@@ -1,7 +1,7 @@
 
 #include <qapplication.h>
 #include <QWidget>
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <stdlib.h>
 #include "kled.h"
 #include "kledtest.h"

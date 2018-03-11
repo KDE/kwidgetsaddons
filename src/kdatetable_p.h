@@ -23,7 +23,7 @@
 #define KDATETABLE_H
 
 #include <QLineEdit>
-#include <QtCore/QDateTime>
+#include <QDateTime>
 
 class QMenu;
 

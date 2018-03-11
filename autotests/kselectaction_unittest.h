@@ -20,7 +20,7 @@
 #ifndef KSELECTACTION_UNITTEST_H
 #define KSELECTACTION_UNITTEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class KSelectAction_UnitTest : public QObject
 {

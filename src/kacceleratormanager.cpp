@@ -27,8 +27,8 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenuBar>
-#include <QtCore/QMetaClassInfo>
-#include <QtCore/QObject>
+#include <QMetaClassInfo>
+#include <QObject>
 #include <QList>
 #include <QPushButton>
 #include <QRadioButton>

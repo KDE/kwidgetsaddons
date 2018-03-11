@@ -23,7 +23,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-#include <QtCore/Qt>
+#include <Qt>
 
 class QIcon;
 class QPixmap;

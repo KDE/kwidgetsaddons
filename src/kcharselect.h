@@ -21,8 +21,8 @@
 #ifndef kcharselect_h
 #define kcharselect_h
 
-#include <QtCore/QString>
-#include <QtCore/QStringList>
+#include <QString>
+#include <QStringList>
 #include <QWidget>
 #include <kwidgetsaddons_export.h>
 

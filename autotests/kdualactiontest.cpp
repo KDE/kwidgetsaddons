@@ -19,7 +19,7 @@
  */
 #include <kdualaction.h>
 
-#include <QtTest/QtTest>
+#include <QtTest>
 
 #include "kguiitem.h"
 

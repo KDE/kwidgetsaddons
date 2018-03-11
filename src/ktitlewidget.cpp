@@ -20,7 +20,7 @@
 #include "ktitlewidget.h"
 
 #include <QApplication>
-#include <QtCore/QTimer>
+#include <QTimer>
 #include <QMouseEvent>
 #include <QFrame>
 #include <QLabel>

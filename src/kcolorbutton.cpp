@@ -20,7 +20,7 @@
 
 #include "kcolorbutton.h"
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QPainter>
 #include <qdrawutil.h>
 #include <QApplication>

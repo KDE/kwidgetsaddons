@@ -20,8 +20,8 @@
 #ifndef KACCELERATORMANAGER_PRIVATE_H
 #define KACCELERATORMANAGER_PRIVATE_H
 
-#include <QtCore/QString>
-#include <QtCore/QObject>
+#include <QString>
+#include <QObject>
 
 #include <kwidgetsaddons_export.h>
 

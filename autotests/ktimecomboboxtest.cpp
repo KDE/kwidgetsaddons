@@ -19,9 +19,9 @@
 
 #include "ktimecomboboxtest.h"
 
-#include <QtCore/QTime>
+#include <QTime>
 
-#include <QtTest/QtTest>
+#include <QtTest>
 #include <QLineEdit>
 #include <ktimecombobox.h>
 

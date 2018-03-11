@@ -21,7 +21,7 @@
 
 #include "kviewstatemaintainerbase.h"
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QItemSelectionModel>
 #include <QAbstractItemView>
 

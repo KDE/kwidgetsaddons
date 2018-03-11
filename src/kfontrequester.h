@@ -22,7 +22,7 @@
 
 #include <QWidget>
 #include <QFont>
-#include <QtCore/QString>
+#include <QString>
 
 #include <kwidgetsaddons_export.h>
 

@@ -19,7 +19,7 @@
 
 #include "kdatetimeedit.h"
 
-#include <QtCore/QStringList>
+#include <QStringList>
 #include <QKeyEvent>
 #include <QMenu>
 #include <QLineEdit>

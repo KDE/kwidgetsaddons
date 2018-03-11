@@ -19,7 +19,7 @@
 
 #include "ktimecombobox.h"
 
-#include <QtCore/QTime>
+#include <QTime>
 #include <QKeyEvent>
 #include <QLineEdit>
 

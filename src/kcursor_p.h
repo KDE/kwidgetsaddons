@@ -21,9 +21,9 @@
 #ifndef KCURSOR_P_H
 #define KCURSOR_P_H
 
-#include <QtCore/QHash>
-#include <QtCore/QObject>
-#include <QtCore/QTimer>
+#include <QHash>
+#include <QObject>
+#include <QTimer>
 #include <QCursor>
 
 class QWidget;

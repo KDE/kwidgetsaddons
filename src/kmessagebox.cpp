@@ -21,7 +21,7 @@
 #include "kmessagebox.h"
 #include "kmessagebox_p.h"
 
-#include <QtCore/QPointer>
+#include <QPointer>
 #include <QCheckBox>
 #include <QDialog>
 #include <QDialogButtonBox>

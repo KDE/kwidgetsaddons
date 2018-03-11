@@ -26,8 +26,8 @@
 #define _KMultitabbar_h_
 
 #include <QLayout>
-#include <QtCore/QString>
-#include <QtCore/QList>
+#include <QString>
+#include <QList>
 #include <QPushButton>
 
 #include <kwidgetsaddons_export.h>

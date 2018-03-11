@@ -20,7 +20,7 @@
 #include "kselectaction_unittest.h"
 #include <QComboBox>
 #include <QStandardItemModel>
-#include <QtTest/QtTest>
+#include <QtTest>
 #include <kselectaction.h>
 #include <qtoolbar.h>
 

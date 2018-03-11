@@ -22,8 +22,8 @@
 #ifndef KVIEWSTATESERIALIZER_H
 #define KVIEWSTATESERIALIZER_H
 
-#include <QtCore/QObject>
-#include <QtCore/QPair>
+#include <QObject>
+#include <QPair>
 
 #include "kwidgetsaddons_export.h"
 

@@ -24,8 +24,8 @@
 
 #include <QPixmap>
 #include <QPainter>
-#include <QtCore/QVector>
-#include <QtCore/QtDebug>
+#include <QVector>
+#include <QtDebug>
 
 class Q_DECL_HIDDEN KPixmapSequence::Private : public QSharedData
 {
