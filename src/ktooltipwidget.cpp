@@ -119,11 +119,11 @@ QPoint KToolTipWidget::KToolTipWidgetPrivate::centerBelow(const QRect &rect, QSc
     // It must be assured that:
     // - the content is fully visible
     // - the content is not drawn inside rect
-
-    const QSize size = content->sizeHint();
+    
+    const QSize size = q->sizeHint();
     const int margin = q->style()->pixelMetric(QStyle::PM_ToolTipLabelFrameWidth);
     const QRect screenGeometry = screen->geometry();
-
+    
     const bool hasRoomToLeft  = (rect.left()   - size.width()  - margin >= screenGeometry.left());
     const bool hasRoomToRight = (rect.right()  + size.width()  + margin <= screenGeometry.right());
     const bool hasRoomAbove   = (rect.top()    - size.height() - margin >= screenGeometry.top());
@@ -142,14 +142,14 @@ QPoint KToolTipWidget::KToolTipWidgetPrivate::centerBelow(const QRect &rect, QSc
         if (hasRoomBelow) {
             y = rect.bottom() + margin;
         } else {
-            y = rect.top() - size.height() - margin;
+            y = rect.top() - size.height() - margin + 1;
         }
     } else {
         Q_ASSERT(hasRoomToLeft || hasRoomToRight);
         if (hasRoomToRight) {
             x = rect.right() + margin;
         } else {
-            x = rect.left() - size.width() - margin;
+            x = rect.left() - size.width() - margin + 1;
         }
         // Put the tooltip at the bottom of the screen. The x-coordinate has already
         // been adjusted, so that no overlapping with rect occurs.

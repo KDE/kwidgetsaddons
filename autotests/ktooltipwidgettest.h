@@ -19,6 +19,7 @@
 #define KTOOLTIPWIDGETTEST_H
 
 #include <QObject>
+#include <QRect>
 
 class KToolTipWidgetTest : public QObject
 {
@@ -26,11 +27,20 @@ class KToolTipWidgetTest : public QObject
 
 private Q_SLOTS:
 
+    void initTestCase();
+    
     void showTooltipShouldShowContent();
     void hideLaterShouldHideAfterDelay();
     void setZeroDelayShouldHideImmediately();
     void shouldHideImmediatelyIfContentDestroyed();
     void shouldNotTakeOwnershipOfContent();
+    
+    void shouldNotObscureTarget_data();
+    void shouldNotObscureTarget();
+    
+private:
+    QRect m_screenGeometry;
+    const int m_offset = 10;
 };
 
 #endif
