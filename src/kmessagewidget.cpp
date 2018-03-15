@@ -279,7 +279,7 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
     switch (type) {
     case Positive:
         bg1.setRgb(39, 174,  96); // values taken from kcolorscheme.cpp (Positive)
-        fg.setRgb(239, 240, 241);
+        fg.setRgb(252, 252, 252);
         break;
     case Information:
         bg1 = palette().highlight().color();
@@ -287,13 +287,13 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
         break;
     case Warning:
         bg1.setRgb(246, 116, 0); // values taken from kcolorscheme.cpp (Neutral)
-        fg.setRgb(239, 240, 241);
+        fg.setRgb(252, 252, 252);
         break;
     case Error:
         bg1.setRgb(218, 68, 83); // values taken from kcolorscheme.cpp (Negative)
         // #357210: use darker color to improve the visibility of close button.
         bg1 = bg1.darker(110);
-        fg.setRgb(239, 240, 241);
+        fg.setRgb(252, 252, 252);
         break;
     }
 
