@@ -154,3 +154,71 @@ void KDateComboBoxTest::testDisplayFormat()
     combo->setDisplayFormat(format);
     QCOMPARE(combo->displayFormat(), format);
 }
+
+void KDateComboBoxTest::testSignals()
+{
+    // GIVEN
+    QScopedPointer<KDateComboBox> combo(new KDateComboBox);
+    QSignalSpy spyDateEntered(combo.data(), &KDateComboBox::dateEntered);
+    QSignalSpy spyDateEdited(combo.data(), &KDateComboBox::dateEdited);
+    QSignalSpy spyDateChanged(combo.data(), &KDateComboBox::dateChanged);
+    auto clearSpies = [&]() {
+        spyDateEntered.clear();
+        spyDateEdited.clear();
+        spyDateChanged.clear();
+    };
+
+    // WHEN setting a date programmatically
+    combo->setDate(QDate(2016, 05, 30));
+
+    // THEN
+    QCOMPARE(spyDateEntered.count(), 0);
+    QCOMPARE(spyDateEdited.count(), 0);
+    QCOMPARE(spyDateChanged.count(), 1);
+    clearSpies();
+
+    combo->show();
+    combo->activateWindow();
+    QVERIFY(QTest::qWaitForWindowActive(combo.data()));
+
+    // WHEN typing a new day (Home, Del, '2' -> 20 may 2016)
+    QTest::keyClick(combo.data(), Qt::Key_Home);
+    QTest::keyClick(combo.data(), Qt::Key_Delete);
+    QTest::keyClick(combo.data(), Qt::Key_2);
+
+    // THEN
+    QCOMPARE(combo->date(), QDate(2016, 05, 20));
+
+    // and losing focus
+    combo->clearFocus();
+
+    // THEN
+    QCOMPARE(spyDateEdited.count(), 2);
+    QCOMPARE(spyDateEntered.count(), 0);
+    QCOMPARE(spyDateChanged.count(), 1);
+    clearSpies();
+
+    // WHEN typing Key_Up
+    QTest::keyClick(combo.data(), Qt::Key_Up);
+
+    // THEN
+    QCOMPARE(combo->date(), QDate(2016, 05, 21));
+    QCOMPARE(spyDateEdited.count(), 0);
+    QCOMPARE(spyDateEntered.count(), 1);
+    QCOMPARE(spyDateChanged.count(), 1);
+    clearSpies();
+
+    // WHEN typing a digit ('1' -> 11 may 2016) then Return
+    QTest::keyClick(combo.data(), Qt::Key_Home);
+    QTest::keyClick(combo.data(), Qt::Key_Delete);
+    QTest::keyClick(combo.data(), Qt::Key_1);
+    QTest::keyClick(combo.data(), Qt::Key_Return);
+
+    // THEN
+    QCOMPARE(combo->date(), QDate(2016, 05, 11));
+    QCOMPARE(spyDateEdited.count(), 2);
+    QCOMPARE(spyDateEntered.count(), 1);
+    QCOMPARE(spyDateChanged.count(), 1);
+    clearSpies();
+
+}

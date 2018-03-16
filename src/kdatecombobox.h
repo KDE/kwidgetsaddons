@@ -142,9 +142,10 @@ public:
 Q_SIGNALS:
 
     /**
-     * Signal if the date has been manually entered or selected by the user.
+     * Signal if the date has been manually entered (by typing a date and losing focus, or pressing Enter)
+     * or selected by the user (using the popup selector, or up, down, page up, page down keys, or the mouse wheel).
      *
-     * The returned date may be invalid.
+     * The emitted date may be invalid.
      *
      * @param date the new date
      */
@@ -154,7 +155,7 @@ Q_SIGNALS:
      * Signal if the date has been changed either manually by the user
      * or programatically.
      *
-     * The returned date may be invalid.
+     * The emitted date may be invalid.
      *
      * @param date the new date
      */
@@ -163,7 +164,7 @@ Q_SIGNALS:
     /**
      * Signal if the date is being manually edited by the user.
      *
-     * The returned date may be invalid.
+     * The emitted date may be invalid, or may not yet be what the user intends as the final date.
      *
      * @param date the new date
      */

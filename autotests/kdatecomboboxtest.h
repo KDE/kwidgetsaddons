@@ -35,6 +35,7 @@ private Q_SLOTS:
     void testDateList();
     void testOptions();
     void testDisplayFormat();
+    void testSignals();
 };
 
 #endif // KDATECOMBOBOXTEST_H

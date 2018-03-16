@@ -77,6 +77,7 @@ public:
     QString m_minWarnMsg;
     QString m_maxWarnMsg;
     bool m_warningShown;
+    bool m_edited; // and dateChanged not yet emitted
     QLocale::FormatType m_displayFormat;
     QMap<QDate, QString> m_dateMap;
 };
@@ -87,6 +88,7 @@ KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *q)
       m_datePicker(new KDatePicker(q)),
       m_datePickerAction(new QWidgetAction(q)),
       m_warningShown(false),
+      m_edited(false),
       m_displayFormat(QLocale::ShortFormat)
 {
     m_options = KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords;
@@ -274,6 +276,7 @@ void KDateComboBoxPrivate::editDate(const QString &text)
 {
     m_warningShown = false;
     m_date = q->locale().toDate(text, dateFormat(m_displayFormat));
+    m_edited = true;
     emit q->dateEdited(m_date);
 }
 
@@ -343,6 +346,14 @@ KDateComboBox::KDateComboBox(QWidget *parent)
     connect(this, &QComboBox::editTextChanged,
             this, [this](const QString &text) { d->editDate(text); });
 
+    connect(lineEdit(), &QLineEdit::returnPressed,
+            this, [this]() {
+            if (d->m_edited) {
+                d->enterDate(date());
+                emit dateChanged(date());
+            }
+    });
+
     connect(d->m_datePicker, &KDatePicker::dateEntered,
             this, [this](const QDate &date) { d->enterDate(date); });
     connect(d->m_datePicker, &KDatePicker::tableClicked,
@@ -366,6 +377,7 @@ void KDateComboBox::setDate(const QDate &date)
         return;
     }
 
+    d->m_edited = false;
     assignDate(date);
     d->updateDateWidget();
     emit dateChanged(d->m_date);
@@ -512,6 +524,10 @@ void KDateComboBox::focusOutEvent(QFocusEvent *event)
 {
     d->parseDate();
     d->warnDate();
+    if (d->m_edited) {
+        d->m_edited = false;
+        emit dateChanged(d->m_date);
+    }
     QComboBox::focusOutEvent(event);
 }
 
