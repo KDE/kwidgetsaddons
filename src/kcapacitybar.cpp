@@ -186,6 +186,7 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
         opt.minimum = 0;
         opt.maximum = 100;
         opt.progress = d->value;
+        opt.state |= QStyle::State_Horizontal;
         opt.text = d->text;
         opt.textAlignment = Qt::AlignCenter;
         opt.textVisible = true;
