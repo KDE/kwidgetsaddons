@@ -137,8 +137,9 @@ QPoint KToolTipWidget::KToolTipWidgetPrivate::centerBelow(const QRect &rect, QSc
     if (hasRoomBelow || hasRoomAbove) {
         x = qMax(screenGeometry.left(), rect.center().x() - size.width() / 2);
         if (x + size.width() >= screenGeometry.right()) {
-            x = qMax(0, screenGeometry.right() - size.width() + 1);
+            x = screenGeometry.right() - size.width() + 1;
         }
+        Q_ASSERT(x >= 0);
         if (hasRoomBelow) {
             y = rect.bottom() + margin;
         } else {
@@ -179,6 +180,10 @@ void KToolTipWidget::showAt(const QPoint &pos, QWidget *content, QWindow *transi
 void KToolTipWidget::showBelow(const QRect &rect, QWidget *content, QWindow *transientParent)
 {
     d->addWidget(content);
+    const QSize marginSize{
+        2 * content->style()->pixelMetric(QStyle::PM_DefaultTopLevelMargin),
+        2 * content->style()->pixelMetric(QStyle::PM_DefaultTopLevelMargin)};
+    content->setMaximumSize(transientParent->screen()->geometry().size() - marginSize);
     d->show(d->centerBelow(rect, transientParent->screen()), transientParent);
 }
 

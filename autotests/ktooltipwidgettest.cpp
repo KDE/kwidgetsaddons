@@ -1,17 +1,17 @@
 /*
  * Copyright (c) 2017 Elvis Angelaccio <elvis.angelaccio@kde.org>
  * Copyright (c) 2018 Michael Heidelbach <ottwolt@gmail.com>
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
@@ -119,15 +119,17 @@ void KToolTipWidgetTest::shouldNotTakeOwnershipOfContent()
 
 void KToolTipWidgetTest::shouldNotObscureTarget_data()
 {
+    qDebug() << "Style used" << QApplication::style()->objectName();
+
     QTest::addColumn<QPoint>("position");
     QTest::addColumn<QString>("content");
-    
+
     const QMap<QString,QPoint> positions{
         {QStringLiteral("topleft"), QPoint(m_offset, m_offset)},
         {QStringLiteral("topright"), QPoint(-m_offset, m_offset)},
         {QStringLiteral("bottomright"), QPoint(-m_offset, -m_offset)},
         {QStringLiteral("bottomleft"), QPoint(m_offset, -m_offset)},
-        {QStringLiteral("centered"), 
+        {QStringLiteral("centered"),
             QPoint(m_screenGeometry.width() / 2, m_screenGeometry.height() / 2)}
     };
 
@@ -137,7 +139,7 @@ void KToolTipWidgetTest::shouldNotObscureTarget_data()
         QTest::newRow(qPrintable(QStringLiteral("small/%1").arg(i.key())) )
             << i.value()
             << QStringLiteral("dummy text");
-        
+
         QTest::newRow(qPrintable(QStringLiteral("multiline/%1").arg(i.key())))
             << i.value()
             << QStringLiteral("dummy text\nLine 1\nLine 2\nLine 3");
@@ -145,9 +147,9 @@ void KToolTipWidgetTest::shouldNotObscureTarget_data()
         QTest::newRow(qPrintable(QStringLiteral("one long line/%1").arg(i.key())))
             << i.value()
             << QStringLiteral(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis sed elit auctor lobortis non a urna. Quisque non posuere mauris. Suspendisse potenti. In diam leo, lobortis at placerat nec, sagittis at tortor. Pellentesque scelerisque enim vel elementum scelerisque. Integer eget lectus vitae lorem pulvinar hendrerit. Suspendisse auctor sapien vel semper porta. Vestibulum fringilla aliquet tincidunt. Maecenas mollis mauris et erat viverra mollis. Proin suscipit felis nisi, a dapibus est hendrerit euismod. Suspendisse quis faucibus quam. Fusce eu cursus magna, et egestas purus. Duis enim sapien, feugiat id facilisis non, rhoncus ut lectus. Aliquam at nisi vel ligula interdum ultricies. Donec condimentum ante quam, eu congue lectus pulvinar in. Cras interdum, neque quis fermentum consequat, lectus tellus eleifend turpis." 
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis sed elit auctor lobortis non a urna. Quisque non posuere mauris. Suspendisse potenti. In diam leo, lobortis at placerat nec, sagittis at tortor. Pellentesque scelerisque enim vel elementum scelerisque. Integer eget lectus vitae lorem pulvinar hendrerit. Suspendisse auctor sapien vel semper porta. Vestibulum fringilla aliquet tincidunt. Maecenas mollis mauris et erat viverra mollis. Proin suscipit felis nisi, a dapibus est hendrerit euismod. Suspendisse quis faucibus quam. Fusce eu cursus magna, et egestas purus. Duis enim sapien, feugiat id facilisis non, rhoncus ut lectus. Aliquam at nisi vel ligula interdum ultricies. Donec condimentum ante quam, eu congue lectus pulvinar in. Cras interdum, neque quis fermentum consequat, lectus tellus eleifend turpis."
             );
-            
+
         if (m_screenGeometry.width() >= 1600 && m_screenGeometry.height() >= 900) {
             QTest::newRow(qPrintable(QStringLiteral("super large/%1").arg(i.key())))
                 << i.value()
@@ -158,7 +160,7 @@ void KToolTipWidgetTest::shouldNotObscureTarget_data()
                     "dummy 3 text\nLine 1\nLine 2\nLine 3"
                     "dummy 4 text\nLine 1\nLine 2\nLine 3"
 
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis sed elit auctor lobortis non a urna. Quisque non posuere mauris. Suspendisse potenti. In diam leo, lobortis at placerat nec, sagittis at tortor. Pellentesque scelerisque enim vel elementum scelerisque. Integer eget lectus vitae lorem pulvinar hendrerit. Suspendisse auctor sapien vel semper porta. Vestibulum fringilla aliquet tincidunt. Maecenas mollis mauris et erat viverra mollis. Proin suscipit felis nisi, a dapibus est hendrerit euismod. Suspendisse quis faucibus quam. Fusce eu cursus magna, et egestas purus. Duis enim sapien, feugiat id facilisis non, rhoncus ut lectus. Aliquam at nisi vel ligula interdum ultricies. Donec condimentum ante quam, eu congue lectus pulvinar in. Cras interdum, neque quis fermentum consequat, lectus tellus eleifend turpis." 
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis sed elit auctor lobortis non a urna. Quisque non posuere mauris. Suspendisse potenti. In diam leo, lobortis at placerat nec, sagittis at tortor. Pellentesque scelerisque enim vel elementum scelerisque. Integer eget lectus vitae lorem pulvinar hendrerit. Suspendisse auctor sapien vel semper porta. Vestibulum fringilla aliquet tincidunt. Maecenas mollis mauris et erat viverra mollis. Proin suscipit felis nisi, a dapibus est hendrerit euismod. Suspendisse quis faucibus quam. Fusce eu cursus magna, et egestas purus. Duis enim sapien, feugiat id facilisis non, rhoncus ut lectus. Aliquam at nisi vel ligula interdum ultricies. Donec condimentum ante quam, eu congue lectus pulvinar in. Cras interdum, neque quis fermentum consequat, lectus tellus eleifend turpis."
                 );
         }
     }
@@ -177,30 +179,28 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
 
     containerWidget->adjustSize();
     containerWidget->move(
-        position.x() >= 0 
-            ? position.x() 
-            : m_screenGeometry.right() + position.x() - containerWidget->width(), 
-        position.y() >= 0 
-            ? position.y() 
+        position.x() >= 0
+            ? position.x()
+            : m_screenGeometry.right() + position.x() - containerWidget->width(),
+        position.y() >= 0
+            ? position.y()
             : m_screenGeometry.bottom() + position.y() - containerWidget->height()
     );
-    containerWidget->show(); 
+    containerWidget->show();
     QVERIFY(QTest::qWaitForWindowActive(containerWidget));
     QVERIFY(targetWidget->isVisible());
-    
+
     QRect targetRect = QRect(targetWidget->frameGeometry());
     targetRect.moveTo(targetWidget->mapToGlobal(QPoint(0, 0)));
-    
+
     QLabel* contentWidget = new QLabel(content);
-    const QSize shrinkSize(2 * m_offset, 2 * m_offset);
-    contentWidget->setMaximumSize(m_screenGeometry.size() - shrinkSize);
-    
+
     QVERIFY2(containerWidget->windowHandle(), "Container's window handle is invalid");
     KToolTipWidget tooltipWidget;
     tooltipWidget.showBelow(targetRect, contentWidget, containerWidget->windowHandle());
     QVERIFY(QTest::qWaitForWindowActive(&tooltipWidget));
     const QRect tooltipRect = tooltipWidget.frameGeometry();
-    
+
     qDebug() << QStringLiteral("tooltip: %1x%2 x=%3, y=%4")
         .arg(tooltipRect.width())
         .arg(tooltipRect.height())
@@ -214,7 +214,7 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
 
     QVERIFY2(!tooltipRect.intersects(targetRect), "Target obscured");
     QCOMPARE(tooltipRect.intersected(m_screenGeometry), tooltipRect);
-    
+
     // Check margins
     if (tooltipRect.bottom() <  targetRect.top()) {
         QCOMPARE(margin, targetRect.top() - tooltipRect.bottom());
@@ -224,11 +224,11 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
         QCOMPARE(margin, targetRect.left() - tooltipRect.right());
     } else if (tooltipRect.left() > targetRect.right() ) {
         QCOMPARE(margin, tooltipRect.left() - targetRect.right());
-    } 
-    
+    }
+
     tooltipWidget.hide();
     QVERIFY(tooltipWidget.isHidden());
-    
+
     delete contentWidget;
     delete containerWidget;
 }
