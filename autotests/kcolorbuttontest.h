@@ -28,14 +28,7 @@ class KColorButtonTest : public QObject
     Q_OBJECT
 
 private Q_SLOTS:
-    void initTestCase();
-    void testChangeAndCancel();
-    void testDoubleClickChange();
-    void testOkChange();
-    void testRecentColorsPick();
-
-private:
-    QColor black40Colors;
+    void testOpenDialog();
 };
 
 #endif
