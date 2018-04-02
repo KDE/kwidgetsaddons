@@ -36,5 +36,5 @@ void KColorButtonTest::testOpenDialog()
     QColorDialog *dialog = colorButton.findChild<QColorDialog *>();
     QVERIFY(dialog != nullptr);
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
-    QCOMPARE(dialog->currentColor(), Qt::red);
+    QCOMPARE(dialog->currentColor(), QColor(Qt::red));
 }
