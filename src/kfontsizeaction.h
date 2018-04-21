@@ -45,7 +45,7 @@ public:
     KFontSizeAction(const QString &text, QObject *parent);
     KFontSizeAction(const QIcon &icon, const QString &text, QObject *parent);
 
-    virtual ~KFontSizeAction();
+    ~KFontSizeAction() Q_DECL_OVERRIDE;
 
     int fontSize() const;
 

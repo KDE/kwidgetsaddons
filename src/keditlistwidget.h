@@ -118,7 +118,7 @@ public:
                     bool checkAtEntering = false,
                     Buttons buttons = All);
 
-    virtual ~KEditListWidget();
+    ~KEditListWidget() Q_DECL_OVERRIDE;
 
     /**
      * @returns a pointer to the embedded QListView.

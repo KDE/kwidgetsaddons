@@ -61,7 +61,7 @@ public:
     /**
      * The destructor.
      */
-    ~KDateTable();
+    ~KDateTable() Q_DECL_OVERRIDE;
 
     /**
      * Returns a recommended size for the widget.

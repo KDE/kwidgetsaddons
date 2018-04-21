@@ -123,7 +123,7 @@ public:
     /**
      * Destructs the font chooser.
      */
-    virtual ~KFontChooser();
+    ~KFontChooser() Q_DECL_OVERRIDE;
 
     /**
      * Enables or disable a font column in the chooser.

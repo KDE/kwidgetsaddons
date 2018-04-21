@@ -38,7 +38,7 @@ public:
     };
 
     KColorComboDelegate(QObject *parent = nullptr);
-    virtual ~KColorComboDelegate();
+    ~KColorComboDelegate() Q_DECL_OVERRIDE;
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;

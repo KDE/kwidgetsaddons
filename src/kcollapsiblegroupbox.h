@@ -45,7 +45,7 @@ class KWIDGETSADDONS_EXPORT KCollapsibleGroupBox : public QWidget
 
 public:
     explicit KCollapsibleGroupBox(QWidget *parent = nullptr);
-    virtual ~KCollapsibleGroupBox();
+    ~KCollapsibleGroupBox() Q_DECL_OVERRIDE;
 
     /**
      * Set the title that will be permanently shown at the top of the collapsing box

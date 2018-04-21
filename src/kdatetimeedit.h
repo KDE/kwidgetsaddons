@@ -78,7 +78,7 @@ public:
     /**
      * Destroy the widget
      */
-    virtual ~KDateTimeEdit();
+    ~KDateTimeEdit() Q_DECL_OVERRIDE;
 
     /**
      * Return the currently set widget options

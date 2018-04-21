@@ -70,7 +70,7 @@ public:
     /**
      * Destroy the widget
      */
-    virtual ~KDateComboBox();
+    ~KDateComboBox() Q_DECL_OVERRIDE;
 
     /**
      * Return the currently selected date

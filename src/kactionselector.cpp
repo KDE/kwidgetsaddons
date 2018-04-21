@@ -407,7 +407,6 @@ bool KActionSelector::eventFilter(QObject *o, QEvent *e)
                 break;
             default:
                 return QWidget::eventFilter(o, e);
-                break;
             }
             return true;
         } else if (QListWidget *lb = qobject_cast<QListWidget *>(o)) {

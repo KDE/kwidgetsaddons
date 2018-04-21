@@ -80,7 +80,7 @@ public:
       * @param parent       The parent of the widget.
       */
     explicit KCapacityBar(DrawTextMode drawTextMode, QWidget *parent = nullptr);
-    ~KCapacityBar();
+    ~KCapacityBar() Q_DECL_OVERRIDE;
 
     /**
       * Capacity bar fill value.

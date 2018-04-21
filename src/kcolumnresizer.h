@@ -84,7 +84,7 @@ public:
      */
     explicit KColumnResizer(QObject *parent = nullptr);
 
-    ~KColumnResizer();
+    ~KColumnResizer() Q_DECL_OVERRIDE;
 
     /**
      * Add all widgets from @p layout which are in column @p column to the list

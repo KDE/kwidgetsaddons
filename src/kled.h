@@ -113,7 +113,7 @@ public:
      * Destroys the LED widget.
      * @short Destructor
      */
-    ~KLed();
+    ~KLed() Q_DECL_OVERRIDE;
 
     /**
      * Returns the current color of the widget.

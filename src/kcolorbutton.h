@@ -59,7 +59,7 @@ public:
      */
     KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent = nullptr);
 
-    virtual ~KColorButton();
+    ~KColorButton() Q_DECL_OVERRIDE;
 
     /**
      * Returns the currently chosen color.

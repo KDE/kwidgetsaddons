@@ -45,7 +45,7 @@ public:
     explicit KFontAction(QObject *parent);
     KFontAction(const QString &text, QObject *parent);
     KFontAction(const QIcon &icon, const QString &text, QObject *parent);
-    virtual ~KFontAction();
+    ~KFontAction() Q_DECL_OVERRIDE;
 
     QString font() const;
 

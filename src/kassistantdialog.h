@@ -55,7 +55,7 @@ public:
      * default of zero is usually what you want.
      */
     explicit KAssistantDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
-    virtual ~KAssistantDialog();
+    ~KAssistantDialog() Q_DECL_OVERRIDE;
 
     /**
      * Specify if the content of the page is valid, and if the next button may be enabled on this page.

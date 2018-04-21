@@ -52,7 +52,7 @@ public:
     /**
      * Destructs the decorator.
      */
-    ~KDragWidgetDecoratorBase();
+    ~KDragWidgetDecoratorBase() Q_DECL_OVERRIDE;
 
     /**
      * Enables/disables drag-support. Default is enabled.

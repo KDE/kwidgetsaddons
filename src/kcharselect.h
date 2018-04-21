@@ -158,7 +158,7 @@ public:
         QObject *actionParent,
         const Controls controls = AllGuiElements);
 
-    ~KCharSelect();
+    ~KCharSelect() Q_DECL_OVERRIDE;
 
     /**
      * Reimplemented.

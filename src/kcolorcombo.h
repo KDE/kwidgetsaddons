@@ -54,7 +54,7 @@ public:
      * Constructs a color combo box.
      */
     explicit KColorCombo(QWidget *parent = nullptr);
-    ~KColorCombo();
+    ~KColorCombo() Q_DECL_OVERRIDE;
 
     /**
      * Selects the color @p col.

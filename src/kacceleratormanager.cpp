@@ -514,7 +514,7 @@ QString KAccelString::accelerated() const
 
 QChar KAccelString::accelerator() const
 {
-    if ((m_accel < 0) || (m_accel > (int)m_pureText.length())) {
+    if ((m_accel < 0) || (m_accel > m_pureText.length())) {
         return QChar();
     }
 
@@ -550,7 +550,7 @@ void KAccelString::calculateWeights(int initialWeight)
         }
 
         // try to preserve the wanted accelarators
-        if ((int)pos == accel()) {
+        if (pos == accel()) {
             weight += KAccelManagerAlgorithm::WANTED_ACCEL_EXTRA_WEIGHT;
             // qCDebug(KWidgetsAddonsLog) << "wanted " << m_pureText << " " << KAcceleratorManagerPrivate::standardName(m_origText);
             if (KAcceleratorManagerPrivate::standardName(m_origText))  {
@@ -578,7 +578,7 @@ int KAccelString::stripAccelerator(QString &text)
     while (p >= 0) {
         p = text.indexOf(QLatin1Char('&'), p) + 1;
 
-        if (p <= 0 || p >= (int)text.length()) {
+        if (p <= 0 || p >= text.length()) {
             break;
         }
 
@@ -713,7 +713,7 @@ void KPopupAccelManager::aboutToShow()
 // item has been added or removed, so we can not do much more than
     // to compare the items each time the menu is shown :-(
 
-    if (m_count != (int)m_popup->actions().count()) {
+    if (m_count != m_popup->actions().count()) {
         findMenuEntries(m_entries);
         calculateAccelerators();
         m_count = m_popup->actions().count();
