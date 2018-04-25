@@ -21,6 +21,7 @@
 #include "kmessagewidget.h"
 
 #include <QAction>
+#include <QApplication>
 #include <QEvent>
 #include <QGridLayout>
 #include <QHBoxLayout>
@@ -253,74 +254,61 @@ KMessageWidget::MessageType KMessageWidget::messageType() const
     return d->messageType;
 }
 
-static QColor darkShade(QColor c)
-{
-    qreal contrast = 0.7; // taken from kcolorscheme for the dark shade
-
-    qreal darkAmount;
-    if (c.lightnessF() < 0.006) { /* too dark */
-        darkAmount = 0.02 + 0.40 * contrast;
-    } else if (c.lightnessF() > 0.93) { /* too bright */
-        darkAmount = -0.06 - 0.60 * contrast;
-    } else {
-        darkAmount = (-c.lightnessF()) * (0.55 + contrast * 0.35);
-    }
-
-    qreal v = c.lightnessF() + darkAmount;
-    v = v > 0.0 ? (v < 1.0 ? v : 1.0) : 0.0;
-    c.setHsvF(c.hslHueF(), c.hslSaturationF(), v);
-    return c;
-}
-
 void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
 {
     d->messageType = type;
-    QColor bg0, bg1, bg2, border, fg;
+    QColor bgBaseColor;
+
+    // We have to hardcode colors here because KWidgetsAddons is a tier 1 framework
+    // and therefore can't depend on any other KDE Frameworks
+    // The following RGB color values come from the "default" scheme in kcolorscheme.cpp
     switch (type) {
     case Positive:
-        bg1.setRgb(39, 174,  96); // values taken from kcolorscheme.cpp (Positive)
-        fg.setRgb(252, 252, 252);
+        bgBaseColor.setRgb(39, 174,  96); // Window: ForegroundPositive
+        setIcon(QIcon::fromTheme(QStringLiteral("dialog-positive")));
         break;
     case Information:
-        bg1 = palette().highlight().color();
-        fg = palette().highlightedText().color();
+        bgBaseColor.setRgb(61, 174, 233); // Window: ForegroundActive
+        setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         break;
     case Warning:
-        bg1.setRgb(246, 116, 0); // values taken from kcolorscheme.cpp (Neutral)
-        fg.setRgb(252, 252, 252);
+        bgBaseColor.setRgb(246, 116, 0); // Window: ForegroundNeutral
+        setIcon(QIcon::fromTheme(QStringLiteral("dialog-warning")));
         break;
     case Error:
-        bg1.setRgb(218, 68, 83); // values taken from kcolorscheme.cpp (Negative)
-        // #357210: use darker color to improve the visibility of close button.
-        bg1 = bg1.darker(110);
-        fg.setRgb(252, 252, 252);
+        bgBaseColor.setRgb(218, 68, 83); // Window: ForegroundNegative
+        setIcon(QIcon::fromTheme(QStringLiteral("dialog-error")));
         break;
     }
+    const qreal bgBaseColorAlpha = 0.2;
+    bgBaseColor.setAlphaF(bgBaseColorAlpha);
 
-    // Colors
-    bg0 = bg1.lighter(110);
-    bg2 = bg1.darker(110);
-    border = darkShade(bg1);
+    const QPalette palette = QGuiApplication::palette();
+    const QColor windowColor = palette.window().color();
+    const QColor textColor = palette.text().color();
+    const QColor border = bgBaseColor;
+
+    // Generate a final background color from overlaying bgBaseColor over windowColor
+    const int newRed = (bgBaseColor.red() * bgBaseColorAlpha) + (windowColor.red() * (1 - bgBaseColorAlpha));
+    const int newGreen = (bgBaseColor.green() * bgBaseColorAlpha) + (windowColor.green() * (1 - bgBaseColorAlpha));
+    const int newBlue = (bgBaseColor.blue() * bgBaseColorAlpha) + (windowColor.blue() * (1 - bgBaseColorAlpha));
+
+    const QColor bgFinalColor = QColor(newRed, newGreen, newBlue);
 
     d->content->setStyleSheet(
         QString::fromLatin1(".QFrame {"
-                              "background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,"
-                              "    stop: 0 %1,"
-                              "    stop: 0.1 %2,"
-                              "    stop: 1.0 %3);"
-                              "border-radius: 5px;"
-                              "border: 1px solid %4;"
-                              "margin: %5px;"
+                              "background-color: %1;"
+                              "border-radius: 4px;"
+                              "border: 2px solid %2;"
+                              "margin: %3px;"
                               "}"
-                              ".QLabel { color: %6; }"
+                              ".QLabel { color: %4; }"
                              )
-        .arg(bg0.name())
-        .arg(bg1.name())
-        .arg(bg2.name())
+        .arg(bgFinalColor.name())
         .arg(border.name())
         // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
         .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this) - 1)
-        .arg(fg.name())
+        .arg(textColor.name())
     );
 }
 
