@@ -265,19 +265,15 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
     switch (type) {
     case Positive:
         bgBaseColor.setRgb(39, 174,  96); // Window: ForegroundPositive
-        setIcon(QIcon::fromTheme(QStringLiteral("dialog-positive")));
         break;
     case Information:
         bgBaseColor.setRgb(61, 174, 233); // Window: ForegroundActive
-        setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         break;
     case Warning:
         bgBaseColor.setRgb(246, 116, 0); // Window: ForegroundNeutral
-        setIcon(QIcon::fromTheme(QStringLiteral("dialog-warning")));
         break;
     case Error:
         bgBaseColor.setRgb(218, 68, 83); // Window: ForegroundNegative
-        setIcon(QIcon::fromTheme(QStringLiteral("dialog-error")));
         break;
     }
     const qreal bgBaseColorAlpha = 0.2;
