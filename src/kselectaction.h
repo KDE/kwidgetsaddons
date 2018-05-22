@@ -74,7 +74,7 @@ public:
 
     /**
      * Constructs a selection action with text; a shortcut may be specified by
-     * the ampersand character (e.g. \"&amp;Option\" creates a shortcut with key \e O )
+     * the ampersand character (e.g. "&Option" creates a shortcut with key \e O )
      *
      * This is the most common KSelectAction used when you do not have a
      * corresponding icon (note that it won't appear in the current version
@@ -88,7 +88,7 @@ public:
 
     /**
      * Constructs a selection action with text and an icon; a shortcut may be specified by
-     * the ampersand character (e.g. \"&amp;Option\" creates a shortcut with key \e O )
+     * the ampersand character (e.g. "&Option" creates a shortcut with key \e O )
      *
      * This is the other common KSelectAction used.  Use it when you
      * \e do have a corresponding icon.
@@ -314,7 +314,7 @@ public:
     void removeAllActions();
 
     /**
-     * Sets whether any occurrence of the ampersand character ( &amp; ) in items
+     * Sets whether any occurrence of the ampersand character ( & ) in items
      * should be interpreted as keyboard accelerator for items displayed in a
      * menu or not.  Only applies to (overloaded) methods dealing with QStrings,
      * not those dealing with QActions.

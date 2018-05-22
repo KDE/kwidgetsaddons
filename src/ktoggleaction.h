@@ -55,7 +55,7 @@ public:
 
     /**
      * Constructs an action with text; a shortcut may be specified by
-     * the ampersand character (e.g. \"&amp;Option\" creates a shortcut with key \e O )
+     * the ampersand character (e.g. "&Option" creates a shortcut with key \e O )
      *
      * This is the most common QAction used when you do not have a
      * corresponding icon (note that it won't appear in the current version
@@ -69,7 +69,7 @@ public:
 
     /**
      * Constructs an action with text and an icon; a shortcut may be specified by
-     * the ampersand character (e.g. \"&amp;Option\" creates a shortcut with key \e O )
+     * the ampersand character (e.g. "&Option" creates a shortcut with key \e O )
      *
      * This is the other common QAction used.  Use it when you
      * \e do have a corresponding icon.
