@@ -294,6 +294,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     const int rows = model->rowCount();
     q->setUpdatesEnabled(false);
     QHeaderView *hHeader = q->horizontalHeader();
+    hHeader->setMinimumSectionSize(new_w);
     const int spaceLeft = viewportWidth - new_w * columns;
     for (int i = 0; i <= columns; ++i) {
         if (i < spaceLeft) {
@@ -313,6 +314,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     if (new_h < 5 || new_h < 4 + fontHeight) {
         new_h = qMax(5, 4 + fontHeight);
     }
+    vHeader->setMinimumSectionSize(new_h);
     for (int i = 0; i < rows; ++i) {
         vHeader->resizeSection(i, new_h);
     }
