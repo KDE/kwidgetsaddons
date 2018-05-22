@@ -188,8 +188,6 @@ public:
     bool setCurrentAction(QAction *action);
 
     /**
-     * \overload setCurrentAction(QAction*)
-     *
      * Convenience function to set the currently checked action to be the action
      * at index \p index.
      *
@@ -201,10 +199,8 @@ public:
     bool setCurrentItem(int index);
 
     /**
-     * \overload setCurrentAction(QAction*)
-     *
-     * Convenience function to set the currently checked action to be the action
-     * which has \p text as its text().
+     * Overloaded member function, provided for convenience, to set the currently
+     * checked action to be the action which has \p text as its text().
      *
      * If there is no action at that index, the currently checked action (if any) will
      * be deselected.
@@ -219,20 +215,16 @@ public:
     void addAction(QAction *action);
 
     /**
-     * \overload addAction(QAction* action)
-     *
-     * Convenience function which creates an action from \a text and inserts it into
-     * the list of selectable actions.
+     * Overloaded member function, provided for convenience, which creates an action
+     * from \p text and inserts it into the list of selectable actions.
      *
      * The newly created action is checkable and not user configurable.
      */
     QAction *addAction(const QString &text);
 
     /**
-     * \overload addAction(QAction* action)
-     *
-     * Convenience function which creates an action from \a text and \a icon and inserts it into
-     * the list of selectable actions.
+     * Overloaded member function, provided for convenience, which creates an action
+     * from \p text and \p icon and inserts it into the list of selectable actions.
      *
      * The newly created action is checkable and not user configurable.
      */
