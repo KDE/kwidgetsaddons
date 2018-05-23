@@ -61,7 +61,7 @@ public:
     /**
      * The destructor.
      */
-    ~KDateTable() Q_DECL_OVERRIDE;
+    ~KDateTable() override;
 
     /**
      * Returns a recommended size for the widget.
@@ -70,7 +70,7 @@ public:
      * to be done there anyway. The size is stored in maxCell. The
      * sizeHint() simply returns a multiple of maxCell.
      */
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
     /**
      * Set the font size of the date table.
@@ -128,21 +128,21 @@ protected:
      */
     virtual QDate dateFromPos(int pos);
 
-    void paintEvent(QPaintEvent *e) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *e) override;
 
     /**
      * React on mouse clicks that select a date.
      */
-    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void wheelEvent(QWheelEvent *e) Q_DECL_OVERRIDE;
-    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
-    void focusInEvent(QFocusEvent *e) Q_DECL_OVERRIDE;
-    void focusOutEvent(QFocusEvent *e) Q_DECL_OVERRIDE;
+    void mousePressEvent(QMouseEvent *e) override;
+    void wheelEvent(QWheelEvent *e) override;
+    void keyPressEvent(QKeyEvent *e) override;
+    void focusInEvent(QFocusEvent *e) override;
+    void focusOutEvent(QFocusEvent *e) override;
 
     /**
      * Cell highlight on mouse hovering
      */
-    bool event(QEvent *e) Q_DECL_OVERRIDE;
+    bool event(QEvent *e) override;
 
 Q_SIGNALS:
     /**

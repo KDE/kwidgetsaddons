@@ -199,9 +199,9 @@ public Q_SLOTS:
     void setAutoHideTimeout(int msecs);
 
 protected:
-    void changeEvent(QEvent *e) Q_DECL_OVERRIDE;
-    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
-    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
+    void changeEvent(QEvent *e) override;
+    void showEvent(QShowEvent *event) override;
+    bool eventFilter(QObject *object, QEvent *event) override;
 
 private:
     class Private;

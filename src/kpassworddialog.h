@@ -268,7 +268,7 @@ public:
     /**
      * @internal
      */
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
     /**
      * Returns the button box used in the dialog.

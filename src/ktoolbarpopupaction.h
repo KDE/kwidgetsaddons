@@ -117,7 +117,7 @@ public:
     /**
      * Reimplemented from QWidgetAction.
      */
-    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *parent) override;
 
 private:
     class Private;

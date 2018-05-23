@@ -45,13 +45,13 @@ public:
     explicit KFontAction(QObject *parent);
     KFontAction(const QString &text, QObject *parent);
     KFontAction(const QIcon &icon, const QString &text, QObject *parent);
-    ~KFontAction() Q_DECL_OVERRIDE;
+    ~KFontAction() override;
 
     QString font() const;
 
     void setFont(const QString &family);
 
-    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *parent) override;
 
 private:
     class KFontActionPrivate;

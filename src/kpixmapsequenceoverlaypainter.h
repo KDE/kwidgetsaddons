@@ -151,7 +151,7 @@ public Q_SLOTS:
     void stop();
     
 protected:
-    bool eventFilter(QObject *obj, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     class Private;

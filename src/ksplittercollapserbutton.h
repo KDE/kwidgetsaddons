@@ -58,7 +58,7 @@ public:
      */
     bool isWidgetCollapsed() const;
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
 public Q_SLOTS:
     /**
@@ -79,12 +79,12 @@ private Q_SLOTS:
     void slotClicked();
 
 protected:
-    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
-    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *) override;
+    void paintEvent(QPaintEvent *) override;
 
-    void enterEvent(QEvent *event) Q_DECL_OVERRIDE;
-    void leaveEvent(QEvent *event) Q_DECL_OVERRIDE;
-    void showEvent(QShowEvent *event) Q_DECL_OVERRIDE;
+    void enterEvent(QEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+    void showEvent(QShowEvent *event) override;
 private:
     class Private;
     Private *const d;

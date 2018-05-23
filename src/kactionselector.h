@@ -298,12 +298,12 @@ protected:
     /**
       Reimplemented for internal reasons.
     */
-    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) override;
 
     /**
       Reimplemented for internal reasons.
     */
-    bool eventFilter(QObject *, QEvent *) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *) override;
 
 private:
    /**

@@ -94,13 +94,13 @@ public:
      * will be -1 to indicate the label's ability to shrink its width
      * by squeezing the text
      */
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const override;
 
     /**
      * @return the label's preferred size, which is wide enough
      * to display the text without squeezing it
      */
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
     /**
      * Sets the indentation of the label.
@@ -205,17 +205,17 @@ protected:
     /**
      * \reimp
      */
-    void mouseReleaseEvent(QMouseEvent *) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *) override;
 
     /**
      * Called when widget is resized
      */
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
 
     /**
      * \reimp
      */
-    void contextMenuEvent(QContextMenuEvent *) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *) override;
 
     /**
      * does the dirty work

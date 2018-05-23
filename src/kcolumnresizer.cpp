@@ -52,7 +52,7 @@ public:
         return m_formLayout;
     }
 
-    QSize sizeHint() const Q_DECL_OVERRIDE
+    QSize sizeHint() const override
     {
         QSize size = QWidgetItem::sizeHint();
         if (m_width != -1) {
@@ -61,7 +61,7 @@ public:
         return size;
     }
 
-    QSize minimumSize() const Q_DECL_OVERRIDE
+    QSize minimumSize() const override
     {
         QSize size = QWidgetItem::minimumSize();
         if (m_width != -1) {
@@ -70,7 +70,7 @@ public:
         return size;
     }
 
-    QSize maximumSize() const Q_DECL_OVERRIDE
+    QSize maximumSize() const override
     {
         QSize size = QWidgetItem::maximumSize();
         if (m_width != -1) {
@@ -79,7 +79,7 @@ public:
         return size;
     }
 
-    void setGeometry(const QRect &_rect) Q_DECL_OVERRIDE
+    void setGeometry(const QRect &_rect) override
     {
         QRect rect = _rect;
         int width = widget()->sizeHint().width();

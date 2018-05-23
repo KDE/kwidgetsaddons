@@ -70,7 +70,7 @@ public:
     /**
      * Destroy the widget
      */
-    ~KDateComboBox() Q_DECL_OVERRIDE;
+    ~KDateComboBox() override;
 
     /**
      * Return the currently selected date
@@ -286,15 +286,15 @@ public Q_SLOTS:
 
 protected:
 
-    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
-    void showPopup() Q_DECL_OVERRIDE;
-    void hidePopup() Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
-    void wheelEvent(QWheelEvent *event) Q_DECL_OVERRIDE;
-    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
-    void focusInEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
-    void focusOutEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
-    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *object, QEvent *event) override;
+    void showPopup() override;
+    void hidePopup() override;
+    void mousePressEvent(QMouseEvent *event) override;
+    void wheelEvent(QWheelEvent *event) override;
+    void keyPressEvent(QKeyEvent *event) override;
+    void focusInEvent(QFocusEvent *event) override;
+    void focusOutEvent(QFocusEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
     /**
      * Assign the date for the widget.

@@ -113,7 +113,7 @@ public:
      * Destroys the LED widget.
      * @short Destructor
      */
-    ~KLed() Q_DECL_OVERRIDE;
+    ~KLed() override;
 
     /**
      * Returns the current color of the widget.
@@ -215,8 +215,8 @@ public:
      */
     void setDarkFactor(int darkFactor);
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 
 public Q_SLOTS:
 
@@ -240,8 +240,8 @@ public Q_SLOTS:
     void off();
 
 protected:
-    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) override;
+    void resizeEvent(QResizeEvent *) override;
 
     /**
      * @internal

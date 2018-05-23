@@ -52,7 +52,7 @@ public:
     /**
      * Destructs the decorator.
      */
-    ~KDragWidgetDecoratorBase() Q_DECL_OVERRIDE;
+    ~KDragWidgetDecoratorBase() override;
 
     /**
      * Enables/disables drag-support. Default is enabled.
@@ -81,7 +81,7 @@ protected:
     /**
      * Reimplemented to add drag-support
      */
-    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
     /**
      * Starts a drag (Copy by default) using dragObject()
@@ -134,7 +134,7 @@ private:
     /**
      * Reimplemented to use the QDrag factory
      */
-    QDrag *dragObject() Q_DECL_OVERRIDE
+    QDrag *dragObject() override
     {
         if (m_factory) {
             Widget *w = static_cast<Widget *>(decoratedWidget());

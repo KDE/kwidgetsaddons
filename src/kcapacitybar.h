@@ -80,7 +80,7 @@ public:
       * @param parent       The parent of the widget.
       */
     explicit KCapacityBar(DrawTextMode drawTextMode, QWidget *parent = nullptr);
-    ~KCapacityBar() Q_DECL_OVERRIDE;
+    ~KCapacityBar() override;
 
     /**
       * Capacity bar fill value.
@@ -218,14 +218,14 @@ public:
     void drawCapacityBar(QPainter *p, const QRect &rect) const;
 
     // Reimplemented from QWidget
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const override;
 
 protected:
     // Reimplemented from QWidget
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 
     // Reimplemented from QWidget
-    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
+    void changeEvent(QEvent *event) override;
 
 private:
     /**

@@ -78,7 +78,7 @@ public:
     /**
      * Destroy the widget
      */
-    ~KDateTimeEdit() Q_DECL_OVERRIDE;
+    ~KDateTimeEdit() override;
 
     /**
      * Return the currently set widget options
@@ -557,10 +557,10 @@ public Q_SLOTS:
 
 protected:
 
-    bool eventFilter(QObject *object, QEvent *event) Q_DECL_OVERRIDE;
-    void focusInEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
-    void focusOutEvent(QFocusEvent *event) Q_DECL_OVERRIDE;
-    void resizeEvent(QResizeEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *object, QEvent *event) override;
+    void focusInEvent(QFocusEvent *event) override;
+    void focusOutEvent(QFocusEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
     /**
      * Assign the date, time and time zone for the widget.

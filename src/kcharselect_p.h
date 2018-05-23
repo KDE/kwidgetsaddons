@@ -54,7 +54,7 @@ public:
 
     ~KCharSelectTable();
 
-    void resizeEvent(QResizeEvent *) Q_DECL_OVERRIDE;
+    void resizeEvent(QResizeEvent *) override;
 
     /** Set the font to be displayed to @p _font . */
     void setFont(const QFont &_font);
@@ -80,13 +80,13 @@ public:
     /**
      * Reimplemented.
      */
-    void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) Q_DECL_OVERRIDE;
+    void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) override;
 
 protected:
     /**
      * Reimplemented.
      */
-    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *e) override;
 
 Q_SIGNALS:
     /** Emitted to indicate that character @p c is activated (such as by double-clicking it). */
@@ -122,7 +122,7 @@ public:
     }
 
     enum internalRoles {CharacterRole = Qt::UserRole};
-    int rowCount(const QModelIndex & = QModelIndex()) const Q_DECL_OVERRIDE
+    int rowCount(const QModelIndex & = QModelIndex()) const override
     {
         if (m_chars.count() % m_columns == 0) {
             return m_chars.count() / m_columns;
@@ -130,7 +130,7 @@ public:
             return m_chars.count() / m_columns + 1;
         }
     }
-    int columnCount(const QModelIndex & = QModelIndex()) const Q_DECL_OVERRIDE
+    int columnCount(const QModelIndex & = QModelIndex()) const override
     {
         return m_columns;
     }
@@ -141,7 +141,7 @@ public:
         m_font = font;
         endResetModel();
     }
-    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE
+    Qt::ItemFlags flags(const QModelIndex &index) const override
     {
         int pos = m_columns * (index.row()) + index.column();
         if (pos >= m_chars.size() || index.row() < 0 || index.column() < 0) {
@@ -149,8 +149,8 @@ public:
         }
         return (Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsSelectable | Qt::ItemIsEnabled);
     }
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-    QMimeData *mimeData(const QModelIndexList &indexes) const Q_DECL_OVERRIDE
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QMimeData *mimeData(const QModelIndexList &indexes) const override
     {
         if (indexes.size() != 1) {
             return nullptr;
@@ -160,18 +160,18 @@ public:
         mimeData->setText(QString::fromUcs4(&character, 1));
         return mimeData;
     }
-    Qt::DropActions supportedDropActions() const Q_DECL_OVERRIDE
+    Qt::DropActions supportedDropActions() const override
     {
         return Qt::CopyAction;
     }
-    QStringList mimeTypes() const Q_DECL_OVERRIDE
+    QStringList mimeTypes() const override
     {
         QStringList types;
         types << QStringLiteral("text/plain");
         return types;
     }
     bool dropMimeData(const QMimeData *data, Qt::DropAction action,
-                      int row, int column, const QModelIndex &parent) Q_DECL_OVERRIDE;
+                      int row, int column, const QModelIndex &parent) override;
 
     void setColumnCount(int columns);
 

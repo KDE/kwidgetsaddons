@@ -123,7 +123,7 @@ public:
     /**
      * Destructs the font chooser.
      */
-    ~KFontChooser() Q_DECL_OVERRIDE;
+    ~KFontChooser() override;
 
     /**
      * Enables or disable a font column in the chooser.
@@ -253,7 +253,7 @@ public:
     /**
      * Reimplemented for internal reasons.
      */
-    QSize sizeHint(void) const Q_DECL_OVERRIDE;
+    QSize sizeHint(void) const override;
 
 Q_SIGNALS:
     /**

@@ -33,7 +33,7 @@ class MyPasswordDialog : public QDialog
 public:
     MyPasswordDialog(QWidget *parent = nullptr);
 
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 private Q_SLOTS:
     void slotPasswordStatusChanged();

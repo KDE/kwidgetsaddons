@@ -59,7 +59,7 @@ public:
      */
     KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent = nullptr);
 
-    ~KColorButton() Q_DECL_OVERRIDE;
+    ~KColorButton() override;
 
     /**
      * Returns the currently chosen color.
@@ -95,8 +95,8 @@ public:
      */
     void setDefaultColor(const QColor &c);
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 
 Q_SIGNALS:
     /**
@@ -106,12 +106,12 @@ Q_SIGNALS:
     void changed(const QColor &newColor);
 
 protected:
-    void paintEvent(QPaintEvent *pe) Q_DECL_OVERRIDE;
-    void dragEnterEvent(QDragEnterEvent *) Q_DECL_OVERRIDE;
-    void dropEvent(QDropEvent *) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *pe) override;
+    void dragEnterEvent(QDragEnterEvent *) override;
+    void dropEvent(QDropEvent *) override;
+    void mousePressEvent(QMouseEvent *e) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
+    void keyPressEvent(QKeyEvent *e) override;
 
 private:
     class KColorButtonPrivate;

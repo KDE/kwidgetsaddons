@@ -95,7 +95,7 @@ public:
     /**
      * Reimplemented from QWidgetAction.
      */
-    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *parent) override;
 
 Q_SIGNALS:
     /**
@@ -105,8 +105,8 @@ Q_SIGNALS:
     void textChanged(const QString &newText);
 
 protected:
-    bool event(QEvent *) Q_DECL_OVERRIDE;
-    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
+    bool event(QEvent *) override;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
     class Private;

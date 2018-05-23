@@ -118,7 +118,7 @@ public:
                     bool checkAtEntering = false,
                     Buttons buttons = All);
 
-    ~KEditListWidget() Q_DECL_OVERRIDE;
+    ~KEditListWidget() override;
 
     /**
      * @returns a pointer to the embedded QListView.
@@ -234,7 +234,7 @@ public:
     /**
      * Reimplented for interal reasons. The API is not affected.
      */
-    bool eventFilter(QObject *o, QEvent *e) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *o, QEvent *e) override;
 
 Q_SIGNALS:
     void changed();

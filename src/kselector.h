@@ -104,11 +104,11 @@ protected:
      */
     virtual void drawArrow(QPainter *painter, const QPoint &pos);
 
-    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void mouseMoveEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void mouseReleaseEvent(QMouseEvent *e) Q_DECL_OVERRIDE;
-    void wheelEvent(QWheelEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) override;
+    void mousePressEvent(QMouseEvent *e) override;
+    void mouseMoveEvent(QMouseEvent *e) override;
+    void mouseReleaseEvent(QMouseEvent *e) override;
+    void wheelEvent(QWheelEvent *) override;
 
 private:
     QPoint calcArrowPos(int val);
@@ -196,7 +196,7 @@ public:
 
 protected:
 
-    void drawContents(QPainter *) Q_DECL_OVERRIDE;
+    void drawContents(QPainter *) override;
     virtual QSize minimumSize() const;
 
 private:

@@ -46,7 +46,7 @@ public:
     DatePickerValidator(KDatePicker *parent)
         : QValidator(parent), picker(parent) {}
 
-    State validate(QString &text, int &) const Q_DECL_OVERRIDE
+    State validate(QString &text, int &) const override
     {
         QLocale::FormatType formats[] = { QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat };
         QLocale locale = picker->locale();

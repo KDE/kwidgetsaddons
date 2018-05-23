@@ -38,10 +38,10 @@ public:
     };
 
     KColorComboDelegate(QObject *parent = nullptr);
-    ~KColorComboDelegate() Q_DECL_OVERRIDE;
+    ~KColorComboDelegate() override;
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE;
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
 };
 
 static QBrush k_colorcombodelegate_brush(const QModelIndex &index, int role)

@@ -54,7 +54,7 @@ public:
      * Constructs a color combo box.
      */
     explicit KColorCombo(QWidget *parent = nullptr);
-    ~KColorCombo() Q_DECL_OVERRIDE;
+    ~KColorCombo() override;
 
     /**
      * Selects the color @p col.
@@ -102,7 +102,7 @@ Q_SIGNALS:
     void highlighted(const QColor &col);
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 
 private:
     friend class KColorComboPrivate;

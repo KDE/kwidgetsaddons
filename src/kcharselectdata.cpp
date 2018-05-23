@@ -60,7 +60,7 @@ public:
         return f;
     }
 
-    void run() Q_DECL_OVERRIDE
+    void run() override
     {
         Index index = m_data->createIndex(m_dataFile);
         reportResult(index);

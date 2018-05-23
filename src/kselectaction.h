@@ -362,16 +362,16 @@ protected:
     /**
      * Reimplemented from QWidgetAction.
      */
-    QWidget *createWidget(QWidget *parent) Q_DECL_OVERRIDE;
+    QWidget *createWidget(QWidget *parent) override;
 
     /**
      * Reimplemented from QWidgetAction.
      */
-    void deleteWidget(QWidget *widget) Q_DECL_OVERRIDE;
+    void deleteWidget(QWidget *widget) override;
 
-    bool event(QEvent *event) Q_DECL_OVERRIDE;
+    bool event(QEvent *event) override;
 
-    bool eventFilter(QObject *watched, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 
     /**
      * @internal

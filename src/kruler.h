@@ -373,7 +373,7 @@ public Q_SLOTS:
     void slotEndOffset(int);
 
 protected:
-    void paintEvent(QPaintEvent *) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *) override;
 
 private:
     void initWidget(Qt::Orientation orientation);

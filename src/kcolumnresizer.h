@@ -84,7 +84,7 @@ public:
      */
     explicit KColumnResizer(QObject *parent = nullptr);
 
-    ~KColumnResizer() Q_DECL_OVERRIDE;
+    ~KColumnResizer() override;
 
     /**
      * Add all widgets from @p layout which are in column @p column to the list
@@ -116,7 +116,7 @@ public:
     void removeWidget(QWidget *widget);
 
 protected:
-    bool eventFilter(QObject *, QEvent *event) Q_DECL_OVERRIDE;
+    bool eventFilter(QObject *, QEvent *event) override;
 
 private:
     KColumnResizerPrivate *const d;

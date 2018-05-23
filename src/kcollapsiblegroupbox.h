@@ -45,7 +45,7 @@ class KWIDGETSADDONS_EXPORT KCollapsibleGroupBox : public QWidget
 
 public:
     explicit KCollapsibleGroupBox(QWidget *parent = nullptr);
-    ~KCollapsibleGroupBox() Q_DECL_OVERRIDE;
+    ~KCollapsibleGroupBox() override;
 
     /**
      * Set the title that will be permanently shown at the top of the collapsing box
@@ -71,8 +71,8 @@ public:
      */
     bool isExpanded() const;
 
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
 
 public Q_SLOTS:
     /**
@@ -102,14 +102,14 @@ Q_SIGNALS:
     void expandedChanged();
 
 protected:
-    void paintEvent(QPaintEvent*) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent*) override;
 
-    bool event(QEvent*) Q_DECL_OVERRIDE;
-    void mousePressEvent(QMouseEvent*) Q_DECL_OVERRIDE;
-    void mouseMoveEvent(QMouseEvent*) Q_DECL_OVERRIDE;
-    void leaveEvent(QEvent*) Q_DECL_OVERRIDE;
-    void keyPressEvent(QKeyEvent*) Q_DECL_OVERRIDE;
-    void resizeEvent(QResizeEvent*) Q_DECL_OVERRIDE;
+    bool event(QEvent*) override;
+    void mousePressEvent(QMouseEvent*) override;
+    void mouseMoveEvent(QMouseEvent*) override;
+    void leaveEvent(QEvent*) override;
+    void keyPressEvent(QKeyEvent*) override;
+    void resizeEvent(QResizeEvent*) override;
 
 private Q_SLOTS:
     void overrideFocusPolicyOf(QWidget *widget);

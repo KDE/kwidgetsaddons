@@ -52,7 +52,7 @@ public:
         }
     }
 
-    bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) Q_DECL_OVERRIDE
+    bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) override
     {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::ButtonCode(0));
         if (code == KMessageBox::Yes || code == KMessageBox::No) {
@@ -61,28 +61,28 @@ public:
         }
         return true;
     }
-    bool shouldBeShownContinue(const QString &dontShowAgainName) Q_DECL_OVERRIDE
+    bool shouldBeShownContinue(const QString &dontShowAgainName) override
     {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::Yes);
         return code == KMessageBox::Yes;
     }
-    void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result) Q_DECL_OVERRIDE
+    void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result) override
     {
         m_saved[dontShowAgainName] = result;
     }
-    void saveDontShowAgainContinue(const QString &dontShowAgainName) Q_DECL_OVERRIDE
+    void saveDontShowAgainContinue(const QString &dontShowAgainName) override
     {
         m_saved[dontShowAgainName] = KMessageBox::No;
     }
-    void enableAllMessages() Q_DECL_OVERRIDE
+    void enableAllMessages() override
     {
         m_saved.clear();
     }
-    void enableMessage(const QString &dontShowAgainName) Q_DECL_OVERRIDE
+    void enableMessage(const QString &dontShowAgainName) override
     {
         m_saved.remove(dontShowAgainName);
     }
-    void setConfig(KConfig *) Q_DECL_OVERRIDE
+    void setConfig(KConfig *) override
     {
         qCWarning(KWidgetsAddonsLog) << "Using QSettings based KMessageBoxDontAskAgainInterface. KMessageBox::setDontShowAgainConfig ignored";
     }
@@ -95,7 +95,7 @@ private:
 class KMessageBoxNotifyDummy : public KMessageBoxNotifyInterface
 {
 public:
-    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget * /*parent*/) Q_DECL_OVERRIDE {}
+    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget * /*parent*/) override {}
 };
 
 Q_GLOBAL_STATIC(KMessageBoxDontAskAgainQSettingsStorage, s_defaultDontAskAgainInterface)

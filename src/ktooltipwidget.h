@@ -109,10 +109,10 @@ Q_SIGNALS:
     void hidden();
 
 protected:
-    void enterEvent(QEvent *) Q_DECL_OVERRIDE;
-    void hideEvent(QHideEvent *) Q_DECL_OVERRIDE;
-    void leaveEvent(QEvent *) Q_DECL_OVERRIDE;
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void enterEvent(QEvent *) override;
+    void hideEvent(QHideEvent *) override;
+    void leaveEvent(QEvent *) override;
+    void paintEvent(QPaintEvent *event) override;
 
 private:
     class KToolTipWidgetPrivate;

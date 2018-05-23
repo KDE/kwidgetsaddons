@@ -158,12 +158,12 @@ public:
         QObject *actionParent,
         const Controls controls = AllGuiElements);
 
-    ~KCharSelect() Q_DECL_OVERRIDE;
+    ~KCharSelect() override;
 
     /**
      * Reimplemented.
      */
-    QSize sizeHint() const Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
 
     /**
      * Sets the allowed Unicode code planes. If @p all is @c false, then
