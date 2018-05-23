@@ -87,7 +87,7 @@ public:
      */
     explicit KSqueezedTextLabel(const QString &text, QWidget *parent = nullptr);
 
-    virtual ~KSqueezedTextLabel();
+    ~KSqueezedTextLabel() override;
 
     /**
      * @return the label's minimum size, where the horizontal component

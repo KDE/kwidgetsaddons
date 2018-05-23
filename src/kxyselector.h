@@ -53,7 +53,7 @@ public:
     /**
      * Destructs the widget.
      */
-    ~KXYSelector();
+    ~KXYSelector() override;
 
     /**
      * Sets the current values in horizontal and

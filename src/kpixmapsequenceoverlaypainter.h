@@ -51,13 +51,13 @@ public:
     /**
      * Constructor
      */
-    KPixmapSequenceOverlayPainter(QObject *parent = nullptr);
+    explicit KPixmapSequenceOverlayPainter(QObject *parent = nullptr);
     KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent = nullptr);
 
     /**
      * Destructor
      */
-    ~KPixmapSequenceOverlayPainter();
+    ~KPixmapSequenceOverlayPainter() override;
 
     /**
      * The sequence used to draw the overlay.

@@ -105,7 +105,7 @@ public:
     /**
      * Destructs the label.
      */
-    virtual ~KUrlLabel();
+    ~KUrlLabel() override;
 
     /**
      * Returns the URL.

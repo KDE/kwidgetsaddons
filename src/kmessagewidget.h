@@ -134,7 +134,7 @@ public:
     /**
      * Destructor.
      */
-    ~KMessageWidget();
+    ~KMessageWidget() override;
 
     /**
      * Get the text of this message widget.

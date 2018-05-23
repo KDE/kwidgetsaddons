@@ -203,7 +203,7 @@ public:
     /**
      * Destroys the page widget model.
      */
-    ~KPageWidgetModel();
+    ~KPageWidgetModel() override;
 
     /**
      * Adds a new top level page to the model.

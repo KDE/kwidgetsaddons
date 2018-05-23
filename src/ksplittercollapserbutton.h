@@ -50,7 +50,7 @@ public:
     /**
       * Destructor
       */
-    ~KSplitterCollapserButton();
+    ~KSplitterCollapserButton() override;
 
     /**
      * @brief isWidgetCollapsed

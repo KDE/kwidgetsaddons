@@ -51,12 +51,12 @@ public:
     /**
      * Creates a new rating widget.
      */
-    KRatingWidget(QWidget *parent = nullptr);
+    explicit KRatingWidget(QWidget *parent = nullptr);
 
     /**
      * Destructor
      */
-    ~KRatingWidget();
+    ~KRatingWidget() override;
 
     /**
      * \return The current rating.

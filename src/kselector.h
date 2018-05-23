@@ -62,7 +62,7 @@ public:
     /*
      * Destructs the widget.
      */
-    ~KSelector();
+    ~KSelector() override;
 
     /**
      * @return the rectangle on which subclasses should draw.
@@ -155,7 +155,7 @@ public:
     /**
      * Destructs the widget.
      */
-    ~KGradientSelector();
+    ~KGradientSelector() override;
 
     /**
      * Sets the colors that make up the gradient. Any previously set colors

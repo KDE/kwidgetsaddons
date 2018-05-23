@@ -34,9 +34,7 @@ class KMimeTypeChooserPrivate
 {
 public:
     KMimeTypeChooserPrivate(KMimeTypeChooser *parent)
-        : q(parent),
-          mimeTypeTree(nullptr),
-          btnEditMimeType(nullptr)
+        : q(parent)
     {
     }
 

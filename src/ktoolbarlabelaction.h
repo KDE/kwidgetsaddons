@@ -76,7 +76,7 @@ public:
     /**
      * Destroys the toolbar label.
      */
-    virtual ~KToolBarLabelAction();
+    ~KToolBarLabelAction() override;
 
     /**
      * Sets the label's buddy to buddy.

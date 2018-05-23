@@ -122,8 +122,8 @@ class KPageListView : public QListView
     Q_OBJECT
 
 public:
-    KPageListView(QWidget *parent = nullptr);
-    virtual ~KPageListView();
+    explicit KPageListView(QWidget *parent = nullptr);
+    ~KPageListView() override;
 
     void setModel(QAbstractItemModel *model) override;
 
@@ -156,7 +156,7 @@ class KPageTabbedView : public QAbstractItemView
 
 public:
     KPageTabbedView(QWidget *parent = nullptr);
-    virtual ~KPageTabbedView();
+    ~KPageTabbedView() override;
 
     void setModel(QAbstractItemModel *model) override;
 
@@ -188,7 +188,7 @@ class KPageListViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 
 public:
-    KPageListViewDelegate(QObject *parent = nullptr);
+    explicit KPageListViewDelegate(QObject *parent = nullptr);
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override;
@@ -206,8 +206,8 @@ class KPageListViewProxy : public QAbstractProxyModel
     Q_OBJECT
 
 public:
-    KPageListViewProxy(QObject *parent = nullptr);
-    virtual ~KPageListViewProxy();
+    explicit KPageListViewProxy(QObject *parent = nullptr);
+    ~KPageListViewProxy() override;
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;

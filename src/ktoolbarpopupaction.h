@@ -71,7 +71,7 @@ public:
     /**
      * Destroys the toolbar popup action.
      */
-    virtual ~KToolBarPopupAction();
+    ~KToolBarPopupAction() override;
 
     /**
      * The popup menu that is shown when clicking (some time) on the toolbar

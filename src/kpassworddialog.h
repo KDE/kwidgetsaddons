@@ -135,7 +135,7 @@ public:
     /**
      * Destructor
      */
-    ~KPasswordDialog();
+    ~KPasswordDialog() override;
 
     /**
      * Sets the prompt to show to the user.

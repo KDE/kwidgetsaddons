@@ -102,7 +102,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~KSelectAction();
+    ~KSelectAction() override;
 
     enum ToolBarMode {
         /// Creates a button which pops up a menu when interacted with, as defined by toolButtonPopupMode().

@@ -91,13 +91,10 @@ QString KTitleWidget::Private::iconTypeToIconName(KTitleWidget::MessageType type
     switch (type) {
     case KTitleWidget::InfoMessage:
         return QStringLiteral("dialog-information");
-        break;
     case KTitleWidget::ErrorMessage:
         return QStringLiteral("dialog-error");
-        break;
     case KTitleWidget::WarningMessage:
         return QStringLiteral("dialog-warning");
-        break;
     case KTitleWidget::PlainMessage:
         break;
     }

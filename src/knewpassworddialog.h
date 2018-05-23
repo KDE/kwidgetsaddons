@@ -81,7 +81,7 @@ public:
     /**
      * Destructs the password dialog.
      */
-    virtual ~KNewPasswordDialog();
+    ~KNewPasswordDialog() override;
 
     /**
      * Sets the password prompt.

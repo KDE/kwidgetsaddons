@@ -49,13 +49,13 @@ public:
     /**
      * Constructor
      */
-    KPixmapSequenceWidget(QWidget *parent = nullptr);
+    explicit KPixmapSequenceWidget(QWidget *parent = nullptr);
     KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent = nullptr);
 
     /**
      * Destructor
      */
-    ~KPixmapSequenceWidget();
+    ~KPixmapSequenceWidget() override;
 
     /**
      * The sequence used to draw the overlay.

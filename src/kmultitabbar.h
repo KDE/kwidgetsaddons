@@ -205,7 +205,7 @@ class KWIDGETSADDONS_EXPORT KMultiTabBarButton: public QPushButton
     Q_OBJECT
 public:
     int id() const;
-    virtual ~KMultiTabBarButton();
+    ~KMultiTabBarButton() override;
 
 public Q_SLOTS:
     void setText(const QString &text);
@@ -247,7 +247,7 @@ class KWIDGETSADDONS_EXPORT KMultiTabBarTab: public KMultiTabBarButton
 {
     Q_OBJECT
 public:
-    virtual ~KMultiTabBarTab();
+    ~KMultiTabBarTab() override;
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
 

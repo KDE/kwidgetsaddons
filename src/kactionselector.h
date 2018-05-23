@@ -92,7 +92,7 @@ class KWIDGETSADDONS_EXPORT KActionSelector : public QWidget
 
 public:
     explicit KActionSelector(QWidget *parent = nullptr);
-    ~KActionSelector();
+    ~KActionSelector() override;
 
     /**
        @return The QListWidget holding the available actions

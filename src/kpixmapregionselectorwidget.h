@@ -65,7 +65,7 @@ public:
     /**
      * Destructor for a KPixmapRegionSelectorWidget
      */
-    ~KPixmapRegionSelectorWidget();
+    ~KPixmapRegionSelectorWidget() override;
 
     /**
      * Sets the pixmap which will be shown for the user to select a region from.

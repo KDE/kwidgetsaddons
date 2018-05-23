@@ -46,7 +46,7 @@ public:
      */
     explicit KToolBarSpacerAction(QObject *parent);
 
-    virtual ~KToolBarSpacerAction();
+    ~KToolBarSpacerAction() override;
 
     /**
      * Reimplemented from QWidgetAction.

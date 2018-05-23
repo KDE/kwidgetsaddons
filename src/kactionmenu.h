@@ -58,7 +58,7 @@ public:
     explicit KActionMenu(QObject *parent);
     KActionMenu(const QString &text, QObject *parent);
     KActionMenu(const QIcon &icon, const QString &text, QObject *parent);
-    virtual ~KActionMenu();
+    ~KActionMenu() override;
 
     /**
      * @deprecated

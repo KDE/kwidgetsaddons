@@ -66,7 +66,7 @@ public:
     /**
      * Destroy the widget
      */
-    virtual ~KTimeComboBox();
+    ~KTimeComboBox() override;
 
     /**
      * Return the currently selected time

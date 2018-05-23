@@ -71,7 +71,7 @@ public:
     /**
      * Destroys the toggle fullscreen action.
      */
-    virtual ~KToggleFullScreenAction();
+    ~KToggleFullScreenAction() override;
 
     /**
      * Sets the window that will be related to this action.

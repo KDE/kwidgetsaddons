@@ -263,17 +263,13 @@ Qt::ArrowType KSelector::arrowDirection() const
     switch (d->arrowPE) {
     case QStyle::PE_IndicatorArrowUp:
         return Qt::UpArrow;
-        break;
     case QStyle::PE_IndicatorArrowDown:
         return Qt::DownArrow;
-        break;
     case QStyle::PE_IndicatorArrowRight:
         return Qt::RightArrow;
-        break;
     case QStyle::PE_IndicatorArrowLeft:
     default:
         return Qt::LeftArrow;
-        break;
     }
 }
 

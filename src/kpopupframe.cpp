@@ -53,9 +53,9 @@ class KPopupFrame::KPopupFramePrivate::OutsideClickCatcher
     : public QObject
 {
 public:
-    OutsideClickCatcher(QObject *parent = nullptr)
+    explicit OutsideClickCatcher(QObject *parent = nullptr)
         : QObject(parent), m_popup(nullptr) { }
-    ~OutsideClickCatcher() { }
+    ~OutsideClickCatcher() override { }
 
     void setPopupFrame(KPopupFrame *popup)
     {

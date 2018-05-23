@@ -53,7 +53,7 @@ class KWIDGETSADDONS_EXPORT KToolTipWidget : public QWidget
 
 public:
     explicit KToolTipWidget(QWidget *parent = nullptr);
-    virtual ~KToolTipWidget();
+    ~KToolTipWidget() override;
 
     /**
      * Show a tooltip containing @p content. The pos() of the tooltip will be @p pos.

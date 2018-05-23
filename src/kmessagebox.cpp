@@ -92,7 +92,6 @@ static QIcon themedMessageBoxIcon(QMessageBox::Icon icon)
     switch (icon) {
     case QMessageBox::NoIcon:
         return QIcon();
-        break;
     case QMessageBox::Information:
         icon_name = QStringLiteral("dialog-information");
         break;

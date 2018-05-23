@@ -99,7 +99,7 @@ public:
      */
     explicit KTitleWidget(QWidget *parent = nullptr);
 
-    virtual ~KTitleWidget();
+    ~KTitleWidget() override;
 
     /**
      * @param widget Widget displayed on the title widget.
