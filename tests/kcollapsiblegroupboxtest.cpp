@@ -52,6 +52,12 @@ int main(int argc, char *argv[])
         auto checkBox = new QCheckBox(QStringLiteral("Some really long text that goes on and on and on for ever and ever"));
         innerLayout->addWidget(checkBox);
 
+        auto label = new QLabel(groupBox);
+        label->setText(QStringLiteral("Some input field:"));
+        // Word-wrapping in labels triggers a bug in the layout positioning.
+        label->setWordWrap(true);
+        innerLayout->addWidget(label);
+
         auto lineEdit = new QLineEdit(groupBox);
         innerLayout->addWidget(lineEdit);
 
