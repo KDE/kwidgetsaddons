@@ -98,6 +98,7 @@ QT_TRANSLATE_NOOP3("KCharSelectData", "Batak", "KCharselect unicode block name")
 QT_TRANSLATE_NOOP3("KCharSelectData", "Lepcha", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Ol Chiki", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Cyrillic Extended-C", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Georgian Extended", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Sundanese Supplement", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Vedic Extensions", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Phonetic Extensions", "KCharselect unicode block name");
@@ -211,3 +212,4 @@ QT_TRANSLATE_NOOP3("KCharSelectData", "Alchemical Symbols", "KCharselect unicode
 QT_TRANSLATE_NOOP3("KCharSelectData", "Geometric Shapes Extended", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Supplemental Arrows-C", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Supplemental Symbols and Pictographs", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Chess Symbols", "KCharselect unicode block name");
