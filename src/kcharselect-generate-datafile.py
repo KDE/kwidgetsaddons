@@ -125,7 +125,6 @@ Cyrillic Extended-B
 Cyrillic Extended-C
 Georgian
 Georgian Supplement
-Georgian Extended
 Glagolitic
 Greek and Coptic
 Greek Extended
@@ -247,7 +246,6 @@ SECTION Symbols
 General Punctuation
 Alchemical Symbols
 Braille Patterns
-Chess Symbols
 Control Pictures
 Currency Symbols
 Dingbats
