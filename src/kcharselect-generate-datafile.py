@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 #
 # This script generates a data file containing all Unicode information needed
@@ -103,7 +103,7 @@
 from struct import *
 import sys
 import re
-import StringIO
+import io
 
 # Based on http://www.unicode.org/charts/, updated for Unicode 9.0
 sectiondata = '''
@@ -388,7 +388,7 @@ class Names:
             if entry[1] == "<control>":
                 if not hadcontrol:
                     out.write(pack("=b", entry[2]))
-                    out.write(entry[1] + "\0")
+                    out.write(entry[1].encode("utf-8") + b"\0")
                     size = len(entry[1]) + 2
                     entry[1] = pos
                     self.controlpos = pos
@@ -398,7 +398,7 @@ class Names:
                     entry[1] = self.controlpos
             else:
                 out.write(pack("=b", entry[2]))
-                out.write(entry[1] + "\0")
+                out.write(entry[1].encode("utf-8") + b"\0")
                 size = len(entry[1]) + 2
                 entry[1] = pos
                 pos += size
@@ -414,9 +414,9 @@ class Details:
     def __init__(self):
         self.details = {}
     def addEntry(self, char, category, text):
-        if not self.details.has_key(char):
+        if not char in self.details:
             self.details[char] = {}
-        if not self.details[char].has_key(category):
+        if not category in self.details[char]:
             self.details[char][category] = []
         self.details[char][category].append(text)
 
@@ -426,7 +426,7 @@ class Details:
             for cat in char.values():
                 for s in cat:
                     if type(s) is str:
-                        size += len(s) + 1
+                        size += len(s.encode("utf-8")) + 1
                     else:
                         size += 2
         return size
@@ -440,8 +440,8 @@ class Details:
                 for i in range(0, len(cat)):
                     s = cat[i]
                     if type(s) is str:
-                        out.write(s + "\0")
-                        size = len(s) + 1
+                        out.write(s.encode("utf-8") + b"\0")
+                        size = len(s.encode("utf-8")) + 1
                     else:
                         out.write(pack("=H", s))
                         size = 2
@@ -461,23 +461,23 @@ class Details:
             equiv_count = 0
             seeAlso = 0
             seeAlso_count = 0
-            if self.details[char].has_key("alias"):
+            if "alias" in self.details[char]:
                 alias = self.details[char]["alias"][0]
                 alias_count = len(self.details[char]["alias"])
 
-            if self.details[char].has_key("note"):
+            if "note" in self.details[char]:
                 note = self.details[char]["note"][0]
                 note_count = len(self.details[char]["note"])
 
-            if self.details[char].has_key("approxEquiv"):
+            if "approxEquiv" in self.details[char]:
                 approxEquiv = self.details[char]["approxEquiv"][0]
                 approxEquiv_count = len(self.details[char]["approxEquiv"])
 
-            if self.details[char].has_key("equiv"):
+            if "equiv" in self.details[char]:
                 equiv = self.details[char]["equiv"][0]
                 equiv_count = len(self.details[char]["equiv"])
 
-            if self.details[char].has_key("seeAlso"):
+            if "seeAlso" in self.details[char]:
                 seeAlso = self.details[char]["seeAlso"][0]
                 seeAlso_count = len(self.details[char]["seeAlso"])
 
@@ -526,16 +526,16 @@ class SectionsBlocks:
     def writeBlockStrings(self, out, pos):
         index = 0
         for block in self.blocks:
-            out.write(block[2] + "\0")
-            size = len(block[2]) + 1
+            out.write(block[2].encode("utf-8") + b"\0")
+            size = len(block[2].encode("utf-8")) + 1
             found = False
             for section in self.sections:
                 if section[1] == block[2]:
-                    print "found", section
+                    print("found", section)
                     section[1] = index
                     found = True
             if not found:
-                print "Error: Did not find any category for block \""+block[2]+"\""
+                print("Error: Did not find any category for block \""+block[2]+"\"")
                 sys.exit(1)
             block[2] = index
             pos += size
@@ -556,8 +556,8 @@ class SectionsBlocks:
             if section[0] != lastsection:
                 index += 1
                 lastsection = section[0]
-                out.write(section[0] + "\0")
-                size = len(section[0]) + 1
+                out.write(section[0].encode("utf-8") + b"\0")
+                size = len(section[0].encode("utf-8")) + 1
                 section[0] = index
                 lastpos = pos
                 pos += size
@@ -585,7 +585,7 @@ class Unihan:
         uni = int(uni, 16)
         if category != "kDefinition" and category != "kCantonese" and category != "kMandarin" and category != "kTang" and category != "kKorean" and category != "kJapaneseKun" and category != "kJapaneseOn":
             return
-        if not self.unihan.has_key(uni):
+        if not uni in self.unihan:
             self.unihan[uni] = [None, None, None, None, None, None, None]
         if category == "kDefinition":
             self.unihan[uni][0] = value
@@ -607,7 +607,7 @@ class Unihan:
         for char in self.unihan.keys():
             for entry in self.unihan[char]:
                 if entry != None:
-                    size += len(entry) + 1
+                    size += len(entry.encode("utf-8")) + 1
         return size
 
     def calculateOffsetSize(self):
@@ -617,8 +617,8 @@ class Unihan:
         for char in self.unihan.keys():
             for i in range(0, 7):
                 if self.unihan[char][i] != None:
-                    out.write(self.unihan[char][i] + "\0")
-                    size = len(self.unihan[char][i]) + 1
+                    out.write(self.unihan[char][i].encode("utf-8") + b"\0")
+                    size = len(self.unihan[char][i].encode("utf-8")) + 1
                     self.unihan[char][i] = pos
                     pos += size
         return pos
@@ -726,14 +726,14 @@ class Parser:
             elif currSection != "":
                 sectionsBlocks.addSection(currSection, line)
             else:
-                print "error in data file"
+                print("error in data file")
                 sys.exit(1)
     def parseUnihan(self, inUnihan, unihan):
         regexp = re.compile(r'^U\+([0-9A-F]+)\s+([^\s]+)\s+(.+)$')
         count = 0
         for line in inUnihan:
             if count % 100000 == 0:
-                print "\b.",; sys.stdout.flush()
+                print("\b."); sys.stdout.flush()
             count += 1
             line = line[:-1]
             m = regexp.match(line)
@@ -743,7 +743,7 @@ class Parser:
                 unihan.addUnihan(remap(m.group(1)), m.group(2), m.group(3))
 
 def writeTranslationDummy(out, data):
-    out.write("""/* This file is part of the KDE libraries
+    out.write(b"""/* This file is part of the KDE libraries
 
    Copyright (C) 2007 Daniel Laidig <d.laidig@gmx.de>
    Copyright (C) 2016 John Zaitseff <J.Zaitseff@zap.org.au>
@@ -767,7 +767,7 @@ def writeTranslationDummy(out, data):
 */\n\n""")
     for group in data:
         for entry in group[1]:
-            out.write("QT_TRANSLATE_NOOP3(\"KCharSelectData\", \""+entry+"\", \""+group[0]+"\");\n")
+            out.write(b"QT_TRANSLATE_NOOP3(\"KCharSelectData\", \""+entry.encode("utf-8")+b"\", \""+group[0].encode("utf-8")+b"\");\n")
 
 out = open("kcharselect-data", "wb")
 outTranslationDummy = open("kcharselect-translation.cpp", "wb")
@@ -775,11 +775,11 @@ outTranslationDummy = open("kcharselect-translation.cpp", "wb")
 inUnicodeData = open("UnicodeData.txt", "r")
 inNamesList = open("NamesList.txt", "r")
 inBlocks = open("Blocks.txt", "r")
-inSections = StringIO.StringIO(sectiondata)
+inSections = io.StringIO(sectiondata)
 inUnihan = open("Unihan_Readings.txt", "r")
 
 if calcsize('=H') != 2 or calcsize('=I') != 4:
-    print "Error: Sizes of ushort and uint are not 16 and 32 bit as expected"
+    print("Error: Sizes of ushort and uint are not 16 and 32 bit as expected")
     sys.exit(1)
 
 names = Names()
@@ -789,92 +789,92 @@ unihan = Unihan()
 
 parser = Parser()
 
-print "========== parsing files ==================="
+print("========== parsing files ===================")
 parser.parseUnicodeData(inUnicodeData, names)
-print ".",; sys.stdout.flush()
+print("."); sys.stdout.flush()
 parser.parseDetails(inNamesList, details)
-print "\b.",; sys.stdout.flush()
+print("\b."); sys.stdout.flush()
 parser.parseBlocks(inBlocks, sectionsBlocks)
-print "\b.",; sys.stdout.flush()
+print("\b."); sys.stdout.flush()
 parser.parseSections(inSections, sectionsBlocks)
-print "\b.",; sys.stdout.flush()
+print("\b."); sys.stdout.flush()
 parser.parseUnihan(inUnihan, unihan)
-print "\b.",; sys.stdout.flush()
+print("\b."); sys.stdout.flush()
 
-print "done."
+print("done.")
 
 pos = 0
 
 #write header, size: 40 bytes
-print "========== writing header =================="
+print("========== writing header ==================")
 out.write(pack("=I", 40))
-print "names strings begin", 40
+print("names strings begin", 40)
 
 namesOffsetBegin = names.calculateStringSize() + 40
 out.write(pack("=I", namesOffsetBegin))
-print "names offsets begin", namesOffsetBegin
+print("names offsets begin", namesOffsetBegin)
 
 detailsStringBegin = namesOffsetBegin + names.calculateOffsetSize()
 out.write(pack("=I", detailsStringBegin))
-print "details strings begin", detailsStringBegin
+print("details strings begin", detailsStringBegin)
 
 detailsOffsetBegin = detailsStringBegin + details.calculateStringSize()
 out.write(pack("=I", detailsOffsetBegin))
-print "details offsets begin", detailsOffsetBegin
+print("details offsets begin", detailsOffsetBegin)
 
 blocksStringBegin = detailsOffsetBegin + details.calculateOffsetSize()
 out.write(pack("=I", blocksStringBegin))
-print "block strings begin", blocksStringBegin
+print("block strings begin", blocksStringBegin)
 
 blocksOffsetBegin = blocksStringBegin + sectionsBlocks.calculateBlockStringSize()
 out.write(pack("=I", blocksOffsetBegin))
-print "block offsets begin", blocksOffsetBegin
+print("block offsets begin", blocksOffsetBegin)
 
 sectionStringBegin = blocksOffsetBegin + sectionsBlocks.calculateBlockOffsetSize()
 out.write(pack("=I", sectionStringBegin))
-print "section strings begin", sectionStringBegin
+print("section strings begin", sectionStringBegin)
 
 sectionOffsetBegin = sectionStringBegin + sectionsBlocks.calculateSectionStringSize()
 out.write(pack("=I", sectionOffsetBegin))
-print "section offsets begin", sectionOffsetBegin
+print("section offsets begin", sectionOffsetBegin)
 
 unihanStringBegin = sectionOffsetBegin + sectionsBlocks.calculateSectionOffsetSize()
 out.write(pack("=I", unihanStringBegin))
-print "unihan strings begin", unihanStringBegin
+print("unihan strings begin", unihanStringBegin)
 
 unihanOffsetBegin = unihanStringBegin + unihan.calculateStringSize()
 out.write(pack("=I", unihanOffsetBegin))
-print "unihan offsets begin", unihanOffsetBegin
+print("unihan offsets begin", unihanOffsetBegin)
 
 end = unihanOffsetBegin + unihan.calculateOffsetSize()
-print "end should be", end
+print("end should be", end)
 
 pos += 40
 
-print "========== writing data ===================="
+print("========== writing data ====================")
 
 pos = names.writeStrings(out, pos)
-print "names strings written, position", pos
+print("names strings written, position", pos)
 pos = names.writeOffsets(out, pos)
-print "names offsets written, position", pos
+print("names offsets written, position", pos)
 pos = details.writeStrings(out, pos)
-print "details strings written, position", pos
+print("details strings written, position", pos)
 pos = details.writeOffsets(out, pos)
-print "details offsets written, position", pos
+print("details offsets written, position", pos)
 pos = sectionsBlocks.writeBlockStrings(out, pos)
-print "block strings written, position", pos
+print("block strings written, position", pos)
 pos = sectionsBlocks.writeBlockOffsets(out, pos)
-print "block offsets written, position", pos
+print("block offsets written, position", pos)
 pos = sectionsBlocks.writeSectionStrings(out, pos)
-print "section strings written, position", pos
+print("section strings written, position", pos)
 pos = sectionsBlocks.writeSectionOffsets(out, pos)
-print "section offsets written, position", pos
+print("section offsets written, position", pos)
 pos = unihan.writeStrings(out, pos)
-print "unihan strings written, position", pos
+print("unihan strings written, position", pos)
 pos = unihan.writeOffsets(out, pos)
-print "unihan offsets written, position", pos
+print("unihan offsets written, position", pos)
 
-print "========== writing translation dummy  ======"
+print("========== writing translation dummy  ======")
 translationData = [["KCharSelect section name", sectionsBlocks.getSectionList()], ["KCharselect unicode block name",sectionsBlocks.getBlockList()]]
 writeTranslationDummy(outTranslationDummy, translationData)
-print "done. make sure to copy both kcharselect-data and kcharselect-translation.cpp."
+print("done. make sure to copy both kcharselect-data and kcharselect-translation.cpp.")
