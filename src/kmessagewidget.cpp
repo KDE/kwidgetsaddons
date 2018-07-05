@@ -54,6 +54,7 @@ public:
     QPixmap contentSnapShot;
 
     void createLayout();
+    void applyStyleSheet();
     void updateSnapShot();
     void updateLayout();
     void slotTimeLineChanged(qreal);
@@ -164,6 +165,59 @@ void KMessageWidgetPrivate::createLayout()
     q->updateGeometry();
 }
 
+void KMessageWidgetPrivate::applyStyleSheet()
+{
+    QColor bgBaseColor;
+
+    // We have to hardcode colors here because KWidgetsAddons is a tier 1 framework
+    // and therefore can't depend on any other KDE Frameworks
+    // The following RGB color values come from the "default" scheme in kcolorscheme.cpp
+    switch (messageType) {
+    case KMessageWidget::Positive:
+        bgBaseColor.setRgb(39, 174,  96); // Window: ForegroundPositive
+        break;
+    case KMessageWidget::Information:
+        bgBaseColor.setRgb(61, 174, 233); // Window: ForegroundActive
+        break;
+    case KMessageWidget::Warning:
+        bgBaseColor.setRgb(246, 116, 0); // Window: ForegroundNeutral
+        break;
+    case KMessageWidget::Error:
+        bgBaseColor.setRgb(218, 68, 83); // Window: ForegroundNegative
+        break;
+    }
+    const qreal bgBaseColorAlpha = 0.2;
+    bgBaseColor.setAlphaF(bgBaseColorAlpha);
+
+    const QPalette palette = QGuiApplication::palette();
+    const QColor windowColor = palette.window().color();
+    const QColor textColor = palette.text().color();
+    const QColor border = bgBaseColor;
+
+    // Generate a final background color from overlaying bgBaseColor over windowColor
+    const int newRed = (bgBaseColor.red() * bgBaseColorAlpha) + (windowColor.red() * (1 - bgBaseColorAlpha));
+    const int newGreen = (bgBaseColor.green() * bgBaseColorAlpha) + (windowColor.green() * (1 - bgBaseColorAlpha));
+    const int newBlue = (bgBaseColor.blue() * bgBaseColorAlpha) + (windowColor.blue() * (1 - bgBaseColorAlpha));
+
+    const QColor bgFinalColor = QColor(newRed, newGreen, newBlue);
+
+    content->setStyleSheet(
+        QString::fromLatin1(".QFrame {"
+                              "background-color: %1;"
+                              "border-radius: 4px;"
+                              "border: 2px solid %2;"
+                              "margin: %3px;"
+                              "}"
+                              ".QLabel { color: %4; }"
+                             )
+        .arg(bgFinalColor.name())
+        .arg(border.name())
+        // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
+        .arg(q->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, q) - 1)
+        .arg(textColor.name())
+    );
+}
+
 void KMessageWidgetPrivate::updateLayout()
 {
     if (content->layout()) {
@@ -257,55 +311,7 @@ KMessageWidget::MessageType KMessageWidget::messageType() const
 void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
 {
     d->messageType = type;
-    QColor bgBaseColor;
-
-    // We have to hardcode colors here because KWidgetsAddons is a tier 1 framework
-    // and therefore can't depend on any other KDE Frameworks
-    // The following RGB color values come from the "default" scheme in kcolorscheme.cpp
-    switch (type) {
-    case Positive:
-        bgBaseColor.setRgb(39, 174,  96); // Window: ForegroundPositive
-        break;
-    case Information:
-        bgBaseColor.setRgb(61, 174, 233); // Window: ForegroundActive
-        break;
-    case Warning:
-        bgBaseColor.setRgb(246, 116, 0); // Window: ForegroundNeutral
-        break;
-    case Error:
-        bgBaseColor.setRgb(218, 68, 83); // Window: ForegroundNegative
-        break;
-    }
-    const qreal bgBaseColorAlpha = 0.2;
-    bgBaseColor.setAlphaF(bgBaseColorAlpha);
-
-    const QPalette palette = QGuiApplication::palette();
-    const QColor windowColor = palette.window().color();
-    const QColor textColor = palette.text().color();
-    const QColor border = bgBaseColor;
-
-    // Generate a final background color from overlaying bgBaseColor over windowColor
-    const int newRed = (bgBaseColor.red() * bgBaseColorAlpha) + (windowColor.red() * (1 - bgBaseColorAlpha));
-    const int newGreen = (bgBaseColor.green() * bgBaseColorAlpha) + (windowColor.green() * (1 - bgBaseColorAlpha));
-    const int newBlue = (bgBaseColor.blue() * bgBaseColorAlpha) + (windowColor.blue() * (1 - bgBaseColorAlpha));
-
-    const QColor bgFinalColor = QColor(newRed, newGreen, newBlue);
-
-    d->content->setStyleSheet(
-        QString::fromLatin1(".QFrame {"
-                              "background-color: %1;"
-                              "border-radius: 4px;"
-                              "border: 2px solid %2;"
-                              "margin: %3px;"
-                              "}"
-                              ".QLabel { color: %4; }"
-                             )
-        .arg(bgFinalColor.name())
-        .arg(border.name())
-        // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
-        .arg(style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this) - 1)
-        .arg(textColor.name())
-    );
+    d->applyStyleSheet();
 }
 
 QSize KMessageWidget::sizeHint() const
@@ -324,6 +330,8 @@ bool KMessageWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::Polish && !d->content->layout()) {
         d->createLayout();
+    } else if (event->type() == QEvent::PaletteChange) {
+        d->applyStyleSheet();
     }
     return QFrame::event(event);
 }
