@@ -30,7 +30,7 @@ namespace
 
 KSqueezedTextLabel* createLabel(const QString &text = QStringLiteral("Squeeze me"))
 {
-    KSqueezedTextLabel *label = new KSqueezedTextLabel(text, 0);
+    KSqueezedTextLabel *label = new KSqueezedTextLabel(text, nullptr);
     label->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     label->show();
     return label;
