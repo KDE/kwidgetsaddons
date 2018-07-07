@@ -1,0 +1,2391 @@
+# Translation of kwidgetsaddons5_qt.po into Serbian.
+# Marko Rosic <roske@kde.org.yu>, 2003.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kwidgetsaddons5_qt\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2017-12-15 12:37+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: qtrich\n"
+"X-Environment: kde\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:29
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "бесерифни"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:32
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "серифни"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:35
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "једноширински"
+
+#: fonthelpers.cpp:78
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:82
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:105
+msgctxt "KActionSelector|"
+msgid "&Available:"
+msgstr "&Доступно:"
+
+#: kactionselector.cpp:122
+msgctxt "KActionSelector|"
+msgid "&Selected:"
+msgstr "&Изабрано:"
+
+#: kassistantdialog.cpp:105
+msgctxt "KAssistantDialog|go back"
+msgid "&Back"
+msgstr "На&зад"
+
+#: kassistantdialog.cpp:107
+msgctxt "KAssistantDialog|"
+msgid "Go back one step"
+msgstr "Врати се корак назад"
+
+#: kassistantdialog.cpp:112
+msgctxt "KAssistantDialog|Opposite to Back"
+msgid "Next"
+msgstr "Напријед"
+
+#: kassistantdialog.cpp:119
+msgctxt "KAssistantDialog|"
+msgid "Finish"
+msgstr "Заврши"
+
+#: kcharselect-translation.cpp:24
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "европска писма"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "афричка писма"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "блискоисточна писма"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "средњоазијска писма"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "јужноазијска писма"
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "југоисточна азијска писма"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "индонезијска и океанијска писма"
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "источноазијска писма"
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "америчка писма"
+
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "симболи"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "математички симболи"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "фонетски симболи"
+
+#: kcharselect-translation.cpp:36 kcharselectdata.cpp:739
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "комбинујући дијакритици"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "други"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "основни латинички"
+
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "латинички‑1 допунски"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "латинички проширени‑А"
+
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "латинички проширени‑Б"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "ИПА проширења"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "слова за измјену размака"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "комбинујући дијакритици"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "грчки и коптски"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "ћирилички"
+
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "ћирилички допунски"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "јерменски"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "хебрејски"
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "арапски"
+
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "сиријски"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "арапски допунски"
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "тана"
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "НКо"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "самарјански"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "мандајски"
+
+#: kcharselect-translation.cpp:57
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "сиријски допунски"
+
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "арапски проширени‑А"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "деванагари"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "бенгалски"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "гурмуки"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "гуџарати"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "оријски"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "тамилски"
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "телугу"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "канада"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "малајалам"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "синхалески"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "тајландски"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "лаоћански"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "тибетански"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "мјанмарски"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "грузијски"
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "хангул ђамо"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "етиопски"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "етиопски допунски"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "чироки"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "сједињени слоговни канадских старосједилаца"
+
+#: kcharselect-translation.cpp:79
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "огам"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "рунски"
+
+#: kcharselect-translation.cpp:81
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "тагалог"
+
+#: kcharselect-translation.cpp:82
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "ханану"
+
+#: kcharselect-translation.cpp:83
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "бухид"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "тагбанва"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "кмерски"
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "монголски"
+
+#: kcharselect-translation.cpp:87
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "сједињени канадски абориџински слоговни проширени"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "лимбу"
+
+#: kcharselect-translation.cpp:89
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "тајландски ле"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "нови тајландски луе"
+
+#: kcharselect-translation.cpp:91
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "кмерски симболи"
+
+#: kcharselect-translation.cpp:92
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "бугинески"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "тајландски там"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "комбинујући дијакритици проширени"
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "балинески"
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "сундански"
+
+#: kcharselect-translation.cpp:97
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "батак"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "лепча"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "ол чики"
+
+#: kcharselect-translation.cpp:100
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "ћирилички проширени‑Ц"
+
+#: kcharselect-translation.cpp:101
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "сундански допунски"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "ведска проширења"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "фонетска проширења"
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "фонетска проширења допунска"
+
+#: kcharselect-translation.cpp:105
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "комбинујући дијакритици допунски"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "латинички проширени додатни"
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "грчки проширени"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "општа интерпункција"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "индекси и изложиоци"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "симболи валута"
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "комбинујући дијакритици за симболе"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "словолики симболи"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "бројевни облици"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "стрелице"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "математички оператори"
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "разни технички"
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "контролне слике"
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "оптичко препознавање знакова"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "затворени алфанумерици"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "кутијасти цртежи"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "блоковски елементи"
+
+#: kcharselect-translation.cpp:122
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "геометријски облици"
+
+#: kcharselect-translation.cpp:123
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "разни симболи"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "дингбати"
+
+#: kcharselect-translation.cpp:125
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "разни математички симболи‑А"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "допунске стрелице‑А"
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Брајеви обрасци"
+
+#: kcharselect-translation.cpp:128
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "допунске стрелице‑Б"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "разни математички симболи‑Б"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "допунски математички оператори"
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "разни симболи и стрелице"
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "глагољички"
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "латинички проширени‑Ц"
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "коптски"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "грузијски допунски"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "тифинаг"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "етиопски проширени"
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "ћирилички проширени‑А"
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "допунска интерпункција"
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "ЦЈК радикали допунски"
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Кангсијеви радикали"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "идеографски описни знакови"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "ЦЈК симболи и интерпункција"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "хирагана"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "катакана"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "бопомофо"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "хангул ђамо за сагласност"
+
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "канбун"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "бопомофо проширени"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "ЦЈК потези"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "катакана фонетска проширења"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "затворена ЦЈК слова и мјесеци"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "ЦЈК за сагласност"
+
+#: kcharselect-translation.cpp:154
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "ЦЈК сједињени идеографи проширење А"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "јиђинг хексаграм симболи"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "ЦЈК сједињени идеографи"
+
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "ји слогови"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "ји радикали"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "лису"
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "вај"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "ћирилички проширени‑Б"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "бамум"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "слова тонске модификације"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "латинички проширени‑Д"
+
+#: kcharselect-translation.cpp:165
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "силоти нагри"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "заједнички индијски бројевни облици"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "пагс‑па"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "саураштра"
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "деванагари проширени"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "кајах ли"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "ређанг"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "хангул ђамо проширени‑А"
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "јавански"
+
+#: kcharselect-translation.cpp:174
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "мјанмарски проширени‑Б"
+
+#: kcharselect-translation.cpp:175
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "чам"
+
+#: kcharselect-translation.cpp:176
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "мјанмарски проширени‑А"
+
+#: kcharselect-translation.cpp:177
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "тајландски вијет"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "митеј мајек проширења"
+
+#: kcharselect-translation.cpp:179
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "етиопски проширени А"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "латинички проширени‑Е"
+
+#: kcharselect-translation.cpp:181
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "чироки допунски"
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "митеј мајек"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "хангул слогови"
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "хангул ђамо проширени‑Б"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "високи сурогати"
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "високи сурогати приватни"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "ниски сурогати"
+
+#: kcharselect-translation.cpp:188
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "област за приватну употребу"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "ЦЈК идеографи за сагласност"
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "алфабетски представни облици"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "арапски представни облици‑А"
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "бирачи варијација"
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "усправни облици"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "комбинујуће полуознаке"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "ЦЈК облици за сагласност"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "мале варијације облика"
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "арапски представни облици‑Б"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "полушироки и широки облици"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "посебни"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr "маџонг плочице"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr "домине"
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr "карте за игру"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "затворени алфанумерици допунски"
+
+#: kcharselect-translation.cpp:205
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "затворени идеографски допунски"
+
+#: kcharselect-translation.cpp:206
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "разни симболи и пиктографи"
+
+#: kcharselect-translation.cpp:207
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "емотикони"
+
+#: kcharselect-translation.cpp:208
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr "орнаментални дингбати"
+
+#: kcharselect-translation.cpp:209
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr "транспортни и картографски симболи"
+
+#: kcharselect-translation.cpp:210
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "алхемијски симболи"
+
+#: kcharselect-translation.cpp:211
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "геометријски облици проширени"
+
+#: kcharselect-translation.cpp:212
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "допунске стрелице‑Ц"
+
+#: kcharselect-translation.cpp:213
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr "допунски симболи и пиктографи"
+
+#: kcharselect.cpp:405 kcharselect.cpp:407
+msgctxt "KCharSelect|"
+msgid "Enter a search term or character here"
+msgstr "Унесите израз или знак за тражење"
+
+#: kcharselect.cpp:412
+msgctxt "KCharSelect|"
+msgid "&Find..."
+msgstr "&Нађи..."
+
+#: kcharselect.cpp:432
+msgctxt "KCharSelect|Goes to previous character"
+msgid "Previous in History"
+msgstr "Претходни у историјату"
+
+#: kcharselect.cpp:434
+msgctxt "KCharSelect|"
+msgid "Previous Character in History"
+msgstr "Претходни знак из историјата"
+
+#: kcharselect.cpp:439
+msgctxt "KCharSelect|Goes to next character"
+msgid "Next in History"
+msgstr "Сљедећи у историјату"
+
+#: kcharselect.cpp:441
+msgctxt "KCharSelect|"
+msgid "Next Character in History"
+msgstr "Сљедећи знак из историјата"
+
+#: kcharselect.cpp:446
+msgctxt "KCharSelect|go back"
+msgid "&Back"
+msgstr "На&зад"
+
+#: kcharselect.cpp:453
+msgctxt "KCharSelect|go forward"
+msgid "&Forward"
+msgstr "&Напријед"
+
+# >> @info:tooltip
+#: kcharselect.cpp:467
+msgctxt "KCharSelect|"
+msgid "Select a category"
+msgstr "Изаберите категорију."
+
+# >> @info:tooltip
+#: kcharselect.cpp:470
+msgctxt "KCharSelect|"
+msgid "Select a block to be displayed"
+msgstr "Изаберите блок за приказивање."
+
+#: kcharselect.cpp:483
+msgctxt "KCharSelect|"
+msgid "Set font"
+msgstr "Постави фонт"
+
+#: kcharselect.cpp:490
+msgctxt "KCharSelect|"
+msgid "Set font size"
+msgstr "Постави величину фонта"
+
+#: kcharselect.cpp:777
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Знак:"
+
+#: kcharselect.cpp:783
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Име: "
+
+#: kcharselect.cpp:792
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Тумачења и упућивања"
+
+#: kcharselect.cpp:796
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Допунска имена:"
+
+#: kcharselect.cpp:804
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Биљешке:"
+
+#: kcharselect.cpp:812
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Види и:"
+
+#: kcharselect.cpp:827
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Еквиваленти:"
+
+#: kcharselect.cpp:835
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Приближни еквиваленти:"
+
+#: kcharselect.cpp:843
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Декомпозиција:"
+
+#: kcharselect.cpp:855
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "Подаци о ЦЈК идеографу"
+
+#: kcharselect.cpp:858
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Дефиниција на енглеском: "
+
+#: kcharselect.cpp:865
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Мандарински изговор: "
+
+#: kcharselect.cpp:872
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Кантонски изговор: "
+
+#: kcharselect.cpp:879
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Јапански он‑изговор: "
+
+#: kcharselect.cpp:886
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Јапански кун‑изговор: "
+
+#: kcharselect.cpp:893
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Танг изговор: "
+
+#: kcharselect.cpp:900
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Корејски изговор: "
+
+#: kcharselect.cpp:906
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Општа својства знака"
+
+#: kcharselect.cpp:907
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Блок: "
+
+#: kcharselect.cpp:908
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Уникодска категорија: "
+
+#: kcharselect.cpp:912
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Разне корисне представе"
+
+#: kcharselect.cpp:913
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "УТФ‑8:"
+
+#: kcharselect.cpp:917
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "УТФ‑16: "
+
+#: kcharselect.cpp:924
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "Октално избјегнут УТФ‑8 по Ц‑у: "
+
+#: kcharselect.cpp:928
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "Декадни ИксМЛ ентитет:"
+
+#: kcharselect.cpp:1075
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Уникодска тачка:"
+
+#: kcharselect.cpp:1076
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "Декадно"
+
+# well-spelled: незнак
+#: kcharselectdata.cpp:312
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "<незнак>"
+
+#: kcharselectdata.cpp:333
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<високи сурогат за јавну употребу>"
+
+#: kcharselectdata.cpp:335
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<високи сурогат за приватну употребу>"
+
+#: kcharselectdata.cpp:337
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<ниски сурогат>"
+
+#: kcharselectdata.cpp:339
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<приватна употреба>"
+
+#: kcharselectdata.cpp:371
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<није додијељено>"
+
+#: kcharselectdata.cpp:748
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "неисписиви"
+
+#: kcharselectdata.cpp:781
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "други, контрола"
+
+#: kcharselectdata.cpp:782
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "други, формат"
+
+#: kcharselectdata.cpp:783
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "други, није додијељено"
+
+#: kcharselectdata.cpp:784
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "други, приватна употреба"
+
+#: kcharselectdata.cpp:785
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "други, сурогат"
+
+#: kcharselectdata.cpp:786
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "слово, мало"
+
+#: kcharselectdata.cpp:787
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "слово, модификатор"
+
+#: kcharselectdata.cpp:788
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "слово, друго"
+
+#: kcharselectdata.cpp:789
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "слово, верзал"
+
+#: kcharselectdata.cpp:790
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "слово, велико"
+
+#: kcharselectdata.cpp:791
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "ознака, размичућа комбинујућа"
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "ознака, обухватајућа"
+
+#: kcharselectdata.cpp:793
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "ознака, неразмичућа"
+
+#: kcharselectdata.cpp:794
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "број, декадна цифра"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "број, слово"
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "број, други"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "интерпункција, повезивач"
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "интерпункција, црта"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "интерпункција, затварајућа"
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "интерпункција, завршни наводник"
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "интерпункција, почетни наводник"
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "интерпункција, друга"
+
+#: kcharselectdata.cpp:803
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "интерпункција, отворена"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "симбол, валута"
+
+#: kcharselectdata.cpp:805
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "симбол, модификатор"
+
+#: kcharselectdata.cpp:806
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "симбол, математика"
+
+#: kcharselectdata.cpp:807
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "симбол, други"
+
+#: kcharselectdata.cpp:808
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "раздвајач, ред"
+
+#: kcharselectdata.cpp:809
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "раздвајач, пасус"
+
+#: kcharselectdata.cpp:810
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "раздвајач, размак"
+
+#: kcharselectdata.cpp:811
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "непознато"
+
+#: kcolorcombo.cpp:339
+msgctxt "KColorCombo|Custom color"
+msgid "Custom..."
+msgstr "Посебна..."
+
+#: kdatecombobox.cpp:170
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "сљедећа година"
+
+#: kdatecombobox.cpp:171
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "сљедећи мјесец"
+
+#: kdatecombobox.cpp:172
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "сљедећа седмица"
+
+#: kdatecombobox.cpp:173
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "сутра"
+
+#: kdatecombobox.cpp:174
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "данас"
+
+#: kdatecombobox.cpp:175
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "јуче"
+
+#: kdatecombobox.cpp:176
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "прошла седмица"
+
+#: kdatecombobox.cpp:177
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "прошли мјесец"
+
+#: kdatecombobox.cpp:178
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "прошла година"
+
+#: kdatecombobox.cpp:180
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "без датума"
+
+#: kdatecombobox.cpp:311
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Унели сте лош датум"
+
+#: kdatecombobox.cpp:314
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Датум не може бити ранији од %1"
+
+#: kdatecombobox.cpp:321
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Датум не може бити каснији од %1"
+
+#: kdatepicker.cpp:189
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "седмица %1"
+
+# >> @info:tooltip
+#: kdatepicker.cpp:294
+msgctxt "KDatePicker|"
+msgid "Next year"
+msgstr "Сљедећа година"
+
+# >> @info:tooltip
+#: kdatepicker.cpp:295
+msgctxt "KDatePicker|"
+msgid "Previous year"
+msgstr "Претходна година"
+
+# >> @info:tooltip
+#: kdatepicker.cpp:296
+msgctxt "KDatePicker|"
+msgid "Next month"
+msgstr "Сљедећи мјесец"
+
+# >> @info:tooltip
+#: kdatepicker.cpp:297
+msgctxt "KDatePicker|"
+msgid "Previous month"
+msgstr "Претходни мјесец."
+
+# >> @info:tooltip
+#: kdatepicker.cpp:298
+msgctxt "KDatePicker|"
+msgid "Select a week"
+msgstr "Изаберите седмицу."
+
+# >> @info:tooltip
+#: kdatepicker.cpp:299
+msgctxt "KDatePicker|"
+msgid "Select a month"
+msgstr "Изаберите мјесец."
+
+# >> @info:tooltip
+#: kdatepicker.cpp:300
+msgctxt "KDatePicker|"
+msgid "Select a year"
+msgstr "Изаберите годину."
+
+# >> @info:tooltip
+#: kdatepicker.cpp:301
+msgctxt "KDatePicker|"
+msgid "Select the current day"
+msgstr "Изаберите данашњи дан."
+
+#: kdatepicker.cpp:642
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Затвори"
+
+#: kdatetimeedit.cpp:189
+msgctxt "KDateTimeEdit|UTC time zone"
+msgid "UTC"
+msgstr "УТЦ"
+
+#: kdatetimeedit.cpp:190
+msgctxt "KDateTimeEdit|No specific time zone"
+msgid "Floating"
+msgstr "пливајућа"
+
+#: kdatetimeedit.cpp:230
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr "Унесени датум и време пре су минимално дозвољених."
+
+#: kdatetimeedit.cpp:240
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr "Унесени датум и време после су максимално дозвољених."
+
+#: keditlistwidget.cpp:305
+msgctxt "KEditListWidget|"
+msgid "&Add"
+msgstr "&Додај"
+
+#: keditlistwidget.cpp:317
+msgctxt "KEditListWidget|"
+msgid "&Remove"
+msgstr "&Уклони"
+
+#: keditlistwidget.cpp:329
+msgctxt "KEditListWidget|"
+msgid "Move &Up"
+msgstr "Помјери на&горе"
+
+#: keditlistwidget.cpp:334
+msgctxt "KEditListWidget|"
+msgid "Move &Down"
+msgstr "Помјери на&доље"
+
+#: kfontchooser.cpp:160
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font to be used."
+msgstr "Изаберите фонт."
+
+#: kfontchooser.cpp:182
+msgctxt "KFontChooser|"
+msgid "Requested Font"
+msgstr "Тражени фонт"
+
+#: kfontchooser.cpp:199
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Фонт"
+
+#: kfontchooser.cpp:203
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font family settings."
+msgstr "Попуните ову кућицу да измијените поставке породице фонтова."
+
+#: kfontchooser.cpp:204
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font family?"
+msgstr "Измијенити породицу фонтова?"
+
+#: kfontchooser.cpp:208
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Фонт:"
+
+#: kfontchooser.cpp:215
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Стил фонта"
+
+#: kfontchooser.cpp:219
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font style settings."
+msgstr "Попуните ову кућицу да измијените поставке стила фонта."
+
+#: kfontchooser.cpp:220
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font style?"
+msgstr "Измијенити стил фонта?"
+
+# rewrite-msgid: /Font//
+#: kfontchooser.cpp:224
+msgctxt "KFontChooser|"
+msgid "Font style:"
+msgstr "Стил:"
+
+#: kfontchooser.cpp:232
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Величина"
+
+#: kfontchooser.cpp:236
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font size settings."
+msgstr "Попуните ову кућицу да измијените поставке величине фонта."
+
+#: kfontchooser.cpp:237
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font size?"
+msgstr "Измијенити величину фонта?"
+
+#: kfontchooser.cpp:241
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Величина:"
+
+#: kfontchooser.cpp:257
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font family to be used."
+msgstr "Изаберите породицу фонтова."
+
+#: kfontchooser.cpp:281
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font style to be used."
+msgstr "Изаберите стил фонта."
+
+#: kfontchooser.cpp:289
+msgctxt "KFontChooser|QFontDatabase"
+msgid "Normal"
+msgstr "нормални"
+
+#: kfontchooser.cpp:290 kfontchooser.cpp:602
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "курзивни"
+
+#: kfontchooser.cpp:291 kfontchooser.cpp:603
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "искошени"
+
+#: kfontchooser.cpp:292
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "подебљани"
+
+#: kfontchooser.cpp:293
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "подебљани курзивни"
+
+#: kfontchooser.cpp:312
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "релативна"
+
+#: kfontchooser.cpp:314
+msgctxt "KFontChooser|"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"Величина фонта<br /><i>фиксна</i> или <i>релативна</i><br />у односу на "
+"окружење"
+
+#: kfontchooser.cpp:316
+msgctxt "KFontChooser|"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Одаберите желите ли непромјенљиву величину фонта или величину која се рачуна "
+"динамички и прилагођава промјенама окружења (нпр. димензијама виџета, "
+"величини папира)."
+
+#: kfontchooser.cpp:340
+msgctxt "KFontChooser|"
+msgid "Here you can choose the font size to be used."
+msgstr "Изаберите величину фонта која ће се користити."
+
+#: kfontchooser.cpp:378
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr ""
+"Љубазни фењерџија чађавог лица хоће да ми покаже штос\n"
+"Ljubazni fenjerdžija čađavog lica hoće da mi pokaže štos"
+
+#: kfontchooser.cpp:381
+msgctxt "KFontChooser|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Овај исјечак текста илуструје тренутне поставке. Можете га измијенити како "
+"бисте испробали знакове који вас посебно занимају."
+
+#: kfontchooser.cpp:587
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontrequester.cpp:114
+msgctxt "KFontRequester|"
+msgid "Choose..."
+msgstr "Изабери..."
+
+#: kfontrequester.cpp:220
+msgctxt "KFontRequester|"
+msgid "Click to select a font"
+msgstr "Кликните за избор фонта"
+
+#: kfontrequester.cpp:226
+msgctxt "KFontRequester|"
+msgid "Preview of the selected font"
+msgstr "Преглед изабраног фонта"
+
+#: kfontrequester.cpp:227
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"<html>Ово је преглед изабраног фонта. Можете га промијенити кликом на дугме "
+"Изабери....</html>"
+
+#: kfontrequester.cpp:230
+#, qt-format
+msgctxt "KFontRequester|"
+msgid "Preview of the \"%1\" font"
+msgstr "Преглед фонта „%1“"
+
+#: kfontrequester.cpp:231
+#, qt-format
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"<html>Ово је преглед фонта „%1“. Можете га промијенити кликнувши на дугме "
+"Изабери....</html>"
+
+#: kled.cpp:195
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "Лампица укључена"
+
+#: kled.cpp:196
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "Лампица искључена"
+
+#: kmessagebox.cpp:77
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:192 kmessagebox.cpp:828 kmessagebox.cpp:877
+msgctxt "KMessageBox|"
+msgid "&Details"
+msgstr "&Детаљи"
+
+#: kmessagebox.cpp:330
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Детаљи"
+
+#: kmessagebox.cpp:492 kmessagebox.cpp:546
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Питање"
+
+#: kmessagebox.cpp:504 kmessagebox.cpp:560 kmessagebox.cpp:631
+#: kmessagebox.cpp:694 kmessagebox.cpp:763
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Не питај више"
+
+#: kmessagebox.cpp:619 kmessagebox.cpp:682 kmessagebox.cpp:750
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Упозорење"
+
+#: kmessagebox.cpp:802 kmessagebox.cpp:823
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Грешка"
+
+#: kmessagebox.cpp:851 kmessagebox.cpp:872 kmessagebox.cpp:1135
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Извините"
+
+#: kmessagebox.cpp:911
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Информација"
+
+#: kmessagebox.cpp:922
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Не приказуј више ову поруку"
+
+#: kmessagewidget.cpp:92
+msgctxt "KMessageWidget|"
+msgid "&Close"
+msgstr "&Затвори"
+
+#: kmessagewidget.cpp:93
+msgctxt "KMessageWidget|"
+msgid "Close message"
+msgstr "Затвори поруку"
+
+#: kmimetypechooser.cpp:89
+msgctxt "KMimeTypeChooser|"
+msgid "Mime Type"
+msgstr "МИМЕ тип"
+
+#: kmimetypechooser.cpp:92
+msgctxt "KMimeTypeChooser|"
+msgid "Comment"
+msgstr "Коментар"
+
+#: kmimetypechooser.cpp:95
+msgctxt "KMimeTypeChooser|"
+msgid "Patterns"
+msgstr "Обрасци"
+
+#: kmimetypechooser.cpp:108
+msgctxt "KMimeTypeChooser|"
+msgid "&Edit..."
+msgstr "&Уреди..."
+
+#: kmimetypechooser.cpp:118
+msgctxt "KMimeTypeChooser|"
+msgid "Click this button to display the familiar KDE mime type editor."
+msgstr "Кликните на ово дугме да позовете КДЕ‑ов уређивач МИМЕ типова."
+
+#: knewpassworddialog.cpp:76
+#, qt-format
+msgctxt "KNewPasswordDialog|"
+msgid "Password must be at least %n character(s) long"
+msgid_plural "Password must be at least %n character(s) long"
+msgstr[0] "Лозинка мора имати бар %n знак"
+msgstr[1] "Лозинка мора имати бар %n знака"
+msgstr[2] "Лозинка мора имати бар %n знакова"
+
+#: knewpassworddialog.cpp:80
+msgctxt "KNewPasswordDialog|"
+msgid "Password is empty"
+msgstr "Лозинка је празна"
+
+#: knewpassworddialog.cpp:84
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords do not match"
+msgstr "Лозинке се не поклапају"
+
+#: knewpassworddialog.cpp:89
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords match"
+msgstr "Лозинке се поклапају"
+
+#: knewpassworddialog.cpp:144
+msgctxt "KNewPasswordDialog|"
+msgid "Low Password Strength"
+msgstr "Слаба лозинка"
+
+#: knewpassworddialog.cpp:145
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Лозинка коју сте унијели није јака. Да бисте појачали лозинку, поступите "
+"овако:\n"
+" - унесите дужу лозинку,\n"
+" - користите мјешавину малих и великих слова,\n"
+" - поред слова задајте и неке бројеве или симболе (#, %, итд.)\n"
+"Желите ли ипак да наставите са већ унијетом лозинком?"
+
+#: knewpasswordwidget.cpp:64
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Мјерач јачине указује на безбједност лозинке коју сте унијели. Да бисте "
+"појачали лозинку, поступите овако:<ul><li>унесите дужу лозинку;</"
+"li><li>користите мјешавину малих и великих слова;</li><li>поред слова "
+"задајте и неке бројеве или симболе (#, %, итд).</li></ul>"
+
+#: knewpasswordwidget.ui:19
+msgctxt "KNewPasswordWidget|"
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: knewpasswordwidget.ui:29
+msgctxt "KNewPasswordWidget|"
+msgid "&Verify:"
+msgstr "Про&вјери:"
+
+#: knewpasswordwidget.ui:54
+msgctxt "KNewPasswordWidget|"
+msgid "Password strength &meter:"
+msgstr "&Мјерач јачине лозинке:"
+
+#: kpassworddialog.cpp:65
+msgctxt "KPasswordDialog|"
+msgid "Password"
+msgstr "Лозинка"
+
+#: kpassworddialog.cpp:104
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Наведите испод лозинку."
+
+#: kpassworddialog.ui:26
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Наведите испод корисничко име и лозинку."
+
+#: kpassworddialog.ui:63
+msgctxt "KPasswordDialog|"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Без лозинке, анонимна (или &гостинска) пријава"
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|"
+msgid "Use this password:"
+msgstr "Ова лозинка:"
+
+#: kpassworddialog.ui:95
+msgctxt "KPasswordDialog|"
+msgid "Username:"
+msgstr "Корисничко име:"
+
+#: kpassworddialog.ui:109
+msgctxt "KPasswordDialog|"
+msgid "Domain:"
+msgstr "Домен:"
+
+#: kpassworddialog.ui:123
+msgctxt "KPasswordDialog|"
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: kpassworddialog.ui:137
+msgctxt "KPasswordDialog|"
+msgid "Remember password"
+msgstr "Запамти лозинку"
+
+#: kpasswordlineedit.cpp:56
+msgctxt "QObject|"
+msgid "Change the visibility of the password"
+msgstr "Промени видљивост лозинке"
+
+# >> @title:window
+#: kpixmapregionselectordialog.cpp:64
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Select Region of Image"
+msgstr "Избор области слике"
+
+#: kpixmapregionselectordialog.cpp:68
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "Кликните и превуците преко слике да изаберете дио који вас занима:"
+
+#: kpixmapregionselectorwidget.cpp:191
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Image Operations"
+msgstr "Поступци над сликом"
+
+#: kpixmapregionselectorwidget.cpp:193
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "&Rotate Clockwise"
+msgstr "Окрени &у смјеру казаљке на сату"
+
+#: kpixmapregionselectorwidget.cpp:195
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Rotate &Counterclockwise"
+msgstr "Окрени &супротно смјеру казаљке на сату"
+
+#: ksqueezedtextlabel.cpp:215
+msgctxt "KSqueezedTextLabel|"
+msgid "&Copy Full Text"
+msgstr "&Копирај цио текст"
+
+#: kstandardguiitem.cpp:108
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&У реду"
+
+#: kstandardguiitem.cpp:113
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Одустани"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Да"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Да"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Не"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Не"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Одбаци"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Одбаци измјене"
+
+#: kstandardguiitem.cpp:129
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr "Кликом овдје поништићете све измјене начињене у овом дијалогу."
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Сачувај"
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Сачувај податке"
+
+#: kstandardguiitem.cpp:140
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Немој да сачуваш"
+
+#: kstandardguiitem.cpp:141
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Немој да сачуваш податке"
+
+#: kstandardguiitem.cpp:146
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Сачувај &као..."
+
+#: kstandardguiitem.cpp:147
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Сачувај фајл под другим именом"
+
+#: kstandardguiitem.cpp:152
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Примијени"
+
+#: kstandardguiitem.cpp:152
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Примијени измјене"
+
+#: kstandardguiitem.cpp:153
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Кликом на <b>Примијени</b> поставке ће бити предате програму, али дијалог "
+"неће бити затворен.\n"
+"Користите ово када испробавате различите вриједности."
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Администраторски &режим..."
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Улазак у администраторски режим"
+
+#: kstandardguiitem.cpp:162
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Кликом на <b>Администраторски режим...</b> бићете упитани за "
+"администраторску (корјену) лозинку, неопходну за измјене које захтијевају "
+"корјена овлашћења."
+
+#: kstandardguiitem.cpp:169
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "&Очисти"
+
+#: kstandardguiitem.cpp:170
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Очисти унос"
+
+#: kstandardguiitem.cpp:171
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Очисти садржај у пољу за унос"
+
+#: kstandardguiitem.cpp:176
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "По&моћ"
+
+#: kstandardguiitem.cpp:177
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Прикажи помоћ"
+
+#: kstandardguiitem.cpp:182
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Затвори"
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Затвори тренутни прозор или документ"
+
+#: kstandardguiitem.cpp:188
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "&Затвори прозор"
+
+#: kstandardguiitem.cpp:189
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Затвори тренутни прозор"
+
+#: kstandardguiitem.cpp:194
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "&Затвори документ"
+
+#: kstandardguiitem.cpp:195
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Затвори тренутни документ"
+
+#: kstandardguiitem.cpp:200
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Подразумијевано"
+
+#: kstandardguiitem.cpp:201
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Врати све поставке на подразумијеване вриједности"
+
+#: kstandardguiitem.cpp:208
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "На&зад"
+
+#: kstandardguiitem.cpp:209
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Врати се корак назад"
+
+#: kstandardguiitem.cpp:216
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&Напријед"
+
+#: kstandardguiitem.cpp:217
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Иди корак напријед"
+
+#: kstandardguiitem.cpp:227
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Штампај..."
+
+#: kstandardguiitem.cpp:228
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Отвара дијалог за штампање текућег документа"
+
+#: kstandardguiitem.cpp:234
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&Настави"
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Настави поступак"
+
+#: kstandardguiitem.cpp:240
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Обриши"
+
+#: kstandardguiitem.cpp:241
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Обриши ставке"
+
+#: kstandardguiitem.cpp:246
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Отвори..."
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Отвори фајл"
+
+#: kstandardguiitem.cpp:252
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Напусти"
+
+#: kstandardguiitem.cpp:253
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Напусти програм"
+
+#: kstandardguiitem.cpp:258
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Ресетуј"
+
+#: kstandardguiitem.cpp:259
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Ресетуј поставу"
+
+#: kstandardguiitem.cpp:264
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Уметни"
+
+#: kstandardguiitem.cpp:269
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&Подеси..."
+
+#: kstandardguiitem.cpp:274
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Нађи"
+
+#: kstandardguiitem.cpp:279
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Заустави"
+
+#: kstandardguiitem.cpp:284
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Додај"
+
+#: kstandardguiitem.cpp:289
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Уклони"
+
+#: kstandardguiitem.cpp:294
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Проба"
+
+#: kstandardguiitem.cpp:299
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Својства"
+
+#: kstandardguiitem.cpp:304
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Пребриши"
+
+#: ktimecombobox.cpp:252
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Унели сте лоше време"
+
+#: ktimecombobox.cpp:255
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Време не може бити раније од %1"
+
+#: ktimecombobox.cpp:262
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Време не може бити касније од %1"
+
+#: ktogglefullscreenaction.cpp:44
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Напусти &цио екран"
+
+#: ktogglefullscreenaction.cpp:45
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Напусти цио екран"
+
+#: ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Напусти цио екран"
+
+#: ktogglefullscreenaction.cpp:49
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Преко &цијелог екрана"
+
+#: ktogglefullscreenaction.cpp:50
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Цио екран"
+
+#: ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Развуци прозор преко целог екрана"

@@ -1,0 +1,3012 @@
+# translation of kdelibs4.po to Uzbek
+# translation of kdelibs4.po to
+# Copyright (C) 2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005, 2006, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2009-10-17 00:34+0200\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:29
+#, fuzzy
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "&Текшириш:"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:32
+#, fuzzy
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "&Текшириш:"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:35
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr ""
+
+#: fonthelpers.cpp:78
+#, fuzzy, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1%"
+
+#: fonthelpers.cpp:82
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language and %2-variant name"
+#| msgid "%1 [%2]"
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:105
+#, fuzzy
+#| msgid "&Available:"
+msgctxt "KActionSelector|"
+msgid "&Available:"
+msgstr "&Мавжуд:"
+
+#: kactionselector.cpp:122
+#, fuzzy
+#| msgid "&Selected:"
+msgctxt "KActionSelector|"
+msgid "&Selected:"
+msgstr "&Танланган:"
+
+#: kassistantdialog.cpp:105
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KAssistantDialog|go back"
+msgid "&Back"
+msgstr "О&рқага"
+
+#: kassistantdialog.cpp:107
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KAssistantDialog|"
+msgid "Go back one step"
+msgstr "Бир қадам орқага"
+
+#: kassistantdialog.cpp:112
+#, fuzzy
+#| msgctxt "Opposite to Back"
+#| msgid "Next"
+msgctxt "KAssistantDialog|Opposite to Back"
+msgid "Next"
+msgstr "Кейинги"
+
+#: kassistantdialog.cpp:119
+#, fuzzy
+#| msgid "Finish"
+msgctxt "KAssistantDialog|"
+msgid "Finish"
+msgstr "Тайёр"
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "С&крипт"
+
+#: kcharselect-translation.cpp:25
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "С&крипт"
+
+#: kcharselect-translation.cpp:26
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "KDE cкриптлари"
+
+#: kcharselect-translation.cpp:27
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Central Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Марказий Осиё ёзувлари"
+
+#: kcharselect-translation.cpp:28
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Жанубий-шарқий Осиё ёзувлари"
+
+#: kcharselect-translation.cpp:29
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Жанубий-шарқий Осиё ёзувлари"
+
+#: kcharselect-translation.cpp:30
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "С&крипт"
+
+#: kcharselect-translation.cpp:31
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Шарқий Осиё ёзувлари"
+
+#: kcharselect-translation.cpp:32
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "С&крипт"
+
+#: kcharselect-translation.cpp:33
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Белгилар"
+
+#: kcharselect-translation.cpp:34
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Математик белгилар"
+
+#: kcharselect-translation.cpp:35
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:36 kcharselectdata.cpp:739
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:37
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Бошқа"
+
+#: kcharselect-translation.cpp:38
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Асосий лотинча"
+
+#: kcharselect-translation.cpp:39
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:40
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:41
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:42
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr ""
+
+#: kcharselect-translation.cpp:44
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr ""
+
+#: kcharselect-translation.cpp:46
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Кирилча"
+
+#: kcharselect-translation.cpp:47
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:48
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Арманча"
+
+#: kcharselect-translation.cpp:49
+#, fuzzy
+#| msgctxt "@item Spelling dictionary"
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Яҳудийча"
+
+#: kcharselect-translation.cpp:50
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Арабча"
+
+#: kcharselect-translation.cpp:51
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syriac"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Сурияча"
+
+#: kcharselect-translation.cpp:52
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:53
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Thaana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Таана"
+
+#: kcharselect-translation.cpp:54
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "Йўқ"
+
+#: kcharselect-translation.cpp:55
+#, fuzzy
+#| msgid "Ramadan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Рамазон"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr ""
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:58
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:59
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Деванагари"
+
+#: kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bengali"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Бенгалча"
+
+#: kcharselect-translation.cpp:61
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Gurmukhi"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Гурмукхи"
+
+#: kcharselect-translation.cpp:62
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Gujarati"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Гужарати"
+
+#: kcharselect-translation.cpp:63
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Oriya"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Ория"
+
+#: kcharselect-translation.cpp:64
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tamil"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Тамилча"
+
+#: kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Telugu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Телугу"
+
+#: kcharselect-translation.cpp:66
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Каннада"
+
+#: kcharselect-translation.cpp:67
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Malayalam"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Малайалам"
+
+#: kcharselect-translation.cpp:68
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sinhala"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Синхала"
+
+#: kcharselect-translation.cpp:69
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Тайча"
+
+#: kcharselect-translation.cpp:70
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lao"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Лаосча"
+
+#: kcharselect-translation.cpp:71
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tibetan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Тибетча"
+
+#: kcharselect-translation.cpp:72
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Мянмар"
+
+#: kcharselect-translation.cpp:73
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Грузинча"
+
+#: kcharselect-translation.cpp:74
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Хангул"
+
+#: kcharselect-translation.cpp:75
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Эфиопча"
+
+#: kcharselect-translation.cpp:76
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:77
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cherokee"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Чероки"
+
+#: kcharselect-translation.cpp:78
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Канада аборигенларига мансуб"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ogham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Огҳам"
+
+#: kcharselect-translation.cpp:80
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Runic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Рунча"
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagalog"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Тагалог"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hanunoo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Ҳануну"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Buhid"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Буҳид"
+
+#: kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagbanwa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Тагбанва"
+
+#: kcharselect-translation.cpp:85
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Кхмерча"
+
+#: kcharselect-translation.cpp:86
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mongolian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Муғулча"
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Канада аборигенларига мансуб"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr ""
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgid "Mail Client"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Хат-хабар клиенти"
+
+#: kcharselect-translation.cpp:90
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Тайча"
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Иш телефон"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr ""
+
+#: kcharselect-translation.cpp:94
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:95
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Иш телефон"
+
+#: kcharselect-translation.cpp:96
+#, fuzzy
+#| msgid "Sunday"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Якшанба"
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Катакана"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr ""
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr ""
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:102
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:103
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:104
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:106
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:107
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:108
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:109
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Умумий мосламалар"
+
+#: kcharselect-translation.cpp:110
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Жанубий-шарқий Осиё ёзувлари"
+
+#: kcharselect-translation.cpp:111
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Пул белгилари"
+
+#: kcharselect-translation.cpp:112
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:113
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Ҳарфга ўхшаш белгилар"
+
+#: kcharselect-translation.cpp:114
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Сон шакиллари"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr ""
+
+#: kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Математик операторлар"
+
+#: kcharselect-translation.cpp:117
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Ҳар хил"
+
+#: kcharselect-translation.cpp:118
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Ctrl"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr ""
+
+#: kcharselect-translation.cpp:120
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Айлана ва тўртбурчак"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr ""
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Ҳужжатни ёпиш"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:124
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Ҳар хил белгилар"
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Сон"
+
+#: kcharselect-translation.cpp:126
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Ҳар хил белгилар"
+
+#: kcharselect-translation.cpp:127
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Умумий мосламалар"
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Брайл шрифти"
+
+#: kcharselect-translation.cpp:129
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Умумий мосламалар"
+
+#: kcharselect-translation.cpp:130
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Ҳар хил белгилар"
+
+#: kcharselect-translation.cpp:131
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Математик операторлар"
+
+#: kcharselect-translation.cpp:132
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Ҳар хил белгилар"
+
+#: kcharselect-translation.cpp:133
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Болтиқча"
+
+#: kcharselect-translation.cpp:134
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:135
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Нусха олиш"
+
+#: kcharselect-translation.cpp:136
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr ""
+
+#: kcharselect-translation.cpp:138
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Эфиопча"
+
+#: kcharselect-translation.cpp:139
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:140
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Умумий мосламалар"
+
+#: kcharselect-translation.cpp:141
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr ""
+
+#: kcharselect-translation.cpp:143
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Географик жойи"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr ""
+
+#: kcharselect-translation.cpp:145
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Ҳирагана"
+
+#: kcharselect-translation.cpp:146
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Катакана"
+
+#: kcharselect-translation.cpp:147
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Бопомофо"
+
+#: kcharselect-translation.cpp:148
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Хангул"
+
+#: kcharselect-translation.cpp:149
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Каннада"
+
+#: kcharselect-translation.cpp:150
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Бопомофо"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr ""
+
+#: kcharselect-translation.cpp:152
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr ""
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "Хангул"
+
+#: kcharselect-translation.cpp:155
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "Фрейм ҳақида маълумот"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:157
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "Фрейм ҳақида маълумот"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr ""
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr ""
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr ""
+
+#: kcharselect-translation.cpp:161
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Мар"
+
+#: kcharselect-translation.cpp:162
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:163
+#, fuzzy
+#| msgid "Tamuz"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Тамуз"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr ""
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr ""
+
+#: kcharselect-translation.cpp:167
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Сон шакиллари"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr ""
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr ""
+
+#: kcharselect-translation.cpp:170
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Деванагари"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr ""
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr ""
+
+#: kcharselect-translation.cpp:173
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Japanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Японча"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgid "Kha"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Пай"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:178
+#, fuzzy
+#| msgid "Mail Client"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Хат-хабар клиенти"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:180
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Эфиопча"
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:182
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr ""
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr ""
+
+#: kcharselect-translation.cpp:185
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Манзил ҳақида кенгроқ маълумот"
+
+#: kcharselect-translation.cpp:186
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Шахсий"
+
+#: kcharselect-translation.cpp:187
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Шахсий"
+
+#: kcharselect-translation.cpp:188
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Шахсий"
+
+#: kcharselect-translation.cpp:189
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Шахсий"
+
+#: kcharselect-translation.cpp:190
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "Хангул"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr ""
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr ""
+
+#: kcharselect-translation.cpp:194
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Вертикал"
+
+#: kcharselect-translation.cpp:195
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:196
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "Хангул"
+
+#: kcharselect-translation.cpp:197
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Нишончалар"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:199
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Катакана ярим энли шакиллар"
+
+#: kcharselect-translation.cpp:200
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr ""
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:205
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Айлана ва тўртбурчак"
+
+#: kcharselect-translation.cpp:206
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Апплет юкланмоқда"
+
+#: kcharselect-translation.cpp:207
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Ҳар хил белгилар"
+
+#: kcharselect-translation.cpp:208
+#, fuzzy
+#| msgid "Emoticons"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Ҳис-туйғулар"
+
+#: kcharselect-translation.cpp:209
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:210
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:211
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Technical Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Техник белгилар"
+
+#: kcharselect-translation.cpp:212
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Геометрик белгилар"
+
+#: kcharselect-translation.cpp:213
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Умумий мосламалар"
+
+#: kcharselect-translation.cpp:214
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:215
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Геометрик белгилар"
+
+#: kcharselect.cpp:407 kcharselect.cpp:409
+msgctxt "KCharSelect|"
+msgid "Enter a search term or character here"
+msgstr ""
+
+#: kcharselect.cpp:414
+#, fuzzy
+#| msgid "&Find..."
+msgctxt "KCharSelect|"
+msgid "&Find..."
+msgstr "&Қидириш"
+
+#: kcharselect.cpp:434
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Previous Item in List"
+msgctxt "KCharSelect|Goes to previous character"
+msgid "Previous in History"
+msgstr "Рўйхатдаги олдинги банд"
+
+#: kcharselect.cpp:436
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KCharSelect|"
+msgid "Previous Character in History"
+msgstr "Ўтган йил"
+
+#: kcharselect.cpp:441
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Next Item in List"
+msgctxt "KCharSelect|Goes to next character"
+msgid "Next in History"
+msgstr "Рўйхатдаги кейинги банд"
+
+#: kcharselect.cpp:443
+#, fuzzy
+#| msgid "Set of Characters"
+msgctxt "KCharSelect|"
+msgid "Next Character in History"
+msgstr "Белгилар тўплами"
+
+#: kcharselect.cpp:448
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KCharSelect|go back"
+msgid "&Back"
+msgstr "О&рқага"
+
+#: kcharselect.cpp:455
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KCharSelect|go forward"
+msgid "&Forward"
+msgstr "Ол&динга"
+
+#: kcharselect.cpp:469
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "Select a category"
+msgstr "Йилни танлаш"
+
+#: kcharselect.cpp:472
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "Select a block to be displayed"
+msgstr "Кўрсатиш учун хабар"
+
+#: kcharselect.cpp:485
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "Set font"
+msgstr "Шрифтни танлаш"
+
+#: kcharselect.cpp:492
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "Set font size"
+msgstr "Шрифтнинг ўлчамини ўзгартиришни истайсизми?"
+
+#: kcharselect.cpp:779
+#, fuzzy
+#| msgid "Character:"
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Белги:"
+
+#: kcharselect.cpp:785
+#, fuzzy
+#| msgid "Name: "
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Номи:"
+
+#: kcharselect.cpp:794
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr ""
+
+#: kcharselect.cpp:798
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Илтимос номини киритинг:"
+
+#: kcharselect.cpp:806
+#, fuzzy
+#| msgid "Notes:"
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Изоҳ:"
+
+#: kcharselect.cpp:814
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr ""
+
+#: kcharselect.cpp:829
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr ""
+
+#: kcharselect.cpp:837
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr ""
+
+#: kcharselect.cpp:845
+#, fuzzy
+#| msgid "Description:"
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Таърифи:"
+
+#: kcharselect.cpp:857
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "Фрейм ҳақида маълумот"
+
+#: kcharselect.cpp:860
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr ""
+
+#: kcharselect.cpp:867
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:874
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:881
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:888
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:895
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:902
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:908
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr ""
+
+#: kcharselect.cpp:909
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr ""
+
+#: kcharselect.cpp:910
+#, fuzzy
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Unicode &коди:"
+
+#: kcharselect.cpp:914
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr ""
+
+#: kcharselect.cpp:915
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr ""
+
+#: kcharselect.cpp:919
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr ""
+
+#: kcharselect.cpp:926
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr ""
+
+#: kcharselect.cpp:930
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr ""
+
+#: kcharselect.cpp:1077
+#, fuzzy
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Unicode &коди:"
+
+#: kcharselect.cpp:1078
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr ""
+
+#: kcharselectdata.cpp:312
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "Ҳар қандай белги"
+
+#: kcharselectdata.cpp:333
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "Шахсий"
+
+#: kcharselectdata.cpp:335
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "Шахсий"
+
+#: kcharselectdata.cpp:337
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr ""
+
+#: kcharselectdata.cpp:339
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "Шахсий"
+
+#: kcharselectdata.cpp:371
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr ""
+
+#: kcharselectdata.cpp:748
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Горизонтал"
+
+#: kcharselectdata.cpp:781
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Бошқа ҳисса қўшувчилар:"
+
+#: kcharselectdata.cpp:782
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "vCard формати"
+
+#: kcharselectdata.cpp:783
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr ""
+
+#: kcharselectdata.cpp:784
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Шахсий"
+
+#: kcharselectdata.cpp:785
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "vCard формати"
+
+#: kcharselectdata.cpp:786
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Охирги ўзгартириш:"
+
+#: kcharselectdata.cpp:787
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Охирги ўзгартириш:"
+
+#: kcharselectdata.cpp:788
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Сон шакиллари"
+
+#: kcharselectdata.cpp:789
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Охирги ўзгартириш:"
+
+#: kcharselectdata.cpp:790
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Охирги ўзгартириш:"
+
+#: kcharselectdata.cpp:791
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr ""
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr ""
+
+#: kcharselectdata.cpp:793
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr ""
+
+#: kcharselectdata.cpp:794
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr ""
+
+#: kcharselectdata.cpp:795
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "NumLock"
+
+#: kcharselectdata.cpp:796
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Сон шакиллари"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr ""
+
+#: kcharselectdata.cpp:798
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Умумий мосламалар"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr ""
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr ""
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr ""
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr ""
+
+#: kcharselectdata.cpp:803
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Умумий мосламалар"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr ""
+
+#: kcharselectdata.cpp:805
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Охирги ўзгартириш:"
+
+#: kcharselectdata.cpp:806
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Symbols"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Белгилар"
+
+#: kcharselectdata.cpp:807
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Сон шакиллари"
+
+#: kcharselectdata.cpp:808
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Сатрнинг боши"
+
+#: kcharselectdata.cpp:809
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Алмаштиришни бошлаш"
+
+#: kcharselectdata.cpp:810
+#, fuzzy
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Алмаштиришни бошлаш"
+
+#: kcharselectdata.cpp:811
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Номаълум"
+
+#: kcolorcombo.cpp:339
+#, fuzzy
+#| msgctxt "Custom color"
+#| msgid "Custom..."
+msgctxt "KColorCombo|Custom color"
+msgid "Custom..."
+msgstr "Бошқа..."
+
+#: kdatecombobox.cpp:170
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Келаси йил"
+
+#: kdatecombobox.cpp:171
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Келаси ой"
+
+#: kdatecombobox.cpp:172
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Келаси йил"
+
+#: kdatecombobox.cpp:173
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kdatecombobox.cpp:174
+#, fuzzy
+#| msgid "Today"
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Бугун"
+
+#: kdatecombobox.cpp:175
+#, fuzzy
+#| msgid "Yesterday"
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Кеча"
+
+#: kdatecombobox.cpp:176
+#, fuzzy
+#| msgid "Last Name"
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Фамилияси"
+
+#: kdatecombobox.cpp:177
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Келаси ой"
+
+#: kdatecombobox.cpp:178
+#, fuzzy
+#| msgid "Last Name"
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Фамилияси"
+
+#: kdatecombobox.cpp:180
+#, fuzzy
+#| msgid "Dates"
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Учрашувлар"
+
+#: kdatecombobox.cpp:311
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr ""
+
+#: kdatecombobox.cpp:314
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr ""
+
+#: kdatecombobox.cpp:321
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr ""
+
+#: kdatepicker.cpp:189
+#, fuzzy, qt-format
+#| msgid "Week %1"
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Ҳафта %1"
+
+#: kdatepicker.cpp:294
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDatePicker|"
+msgid "Next year"
+msgstr "Келаси йил"
+
+#: kdatepicker.cpp:295
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KDatePicker|"
+msgid "Previous year"
+msgstr "Ўтган йил"
+
+#: kdatepicker.cpp:296
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDatePicker|"
+msgid "Next month"
+msgstr "Келаси ой"
+
+#: kdatepicker.cpp:297
+#, fuzzy
+#| msgid "Previous month"
+msgctxt "KDatePicker|"
+msgid "Previous month"
+msgstr "Ўтган ой"
+
+#: kdatepicker.cpp:298
+#, fuzzy
+#| msgid "Select a week"
+msgctxt "KDatePicker|"
+msgid "Select a week"
+msgstr "Ҳафтани танлаш"
+
+#: kdatepicker.cpp:299
+#, fuzzy
+#| msgid "Select a month"
+msgctxt "KDatePicker|"
+msgid "Select a month"
+msgstr "Ойни танлаш"
+
+#: kdatepicker.cpp:300
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KDatePicker|"
+msgid "Select a year"
+msgstr "Йилни танлаш"
+
+#: kdatepicker.cpp:301
+#, fuzzy
+#| msgid "Select the current day"
+msgctxt "KDatePicker|"
+msgid "Select the current day"
+msgstr "Жорий кунни танлаш"
+
+#: kdatepicker.cpp:642
+#, fuzzy
+#| msgid "Close"
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Ёпиш"
+
+#: kdatetimeedit.cpp:189
+msgctxt "KDateTimeEdit|UTC time zone"
+msgid "UTC"
+msgstr ""
+
+#: kdatetimeedit.cpp:190
+#, fuzzy
+msgctxt "KDateTimeEdit|No specific time zone"
+msgid "Floating"
+msgstr "Баҳо"
+
+#: kdatetimeedit.cpp:230
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+
+#: kdatetimeedit.cpp:240
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+
+#: keditlistwidget.cpp:305
+#, fuzzy
+#| msgid "&Add"
+msgctxt "KEditListWidget|"
+msgid "&Add"
+msgstr "&Қўшиш"
+
+#: keditlistwidget.cpp:317
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "KEditListWidget|"
+msgid "&Remove"
+msgstr "&Олиб ташлаш"
+
+#: keditlistwidget.cpp:329
+#, fuzzy
+#| msgid "Move &Up"
+msgctxt "KEditListWidget|"
+msgid "Move &Up"
+msgstr "&Юқорига"
+
+#: keditlistwidget.cpp:334
+#, fuzzy
+#| msgid "Move &Down"
+msgctxt "KEditListWidget|"
+msgid "Move &Down"
+msgstr "&Пастга"
+
+#: kfontchooser.cpp:160
+#, fuzzy
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font to be used."
+msgstr "Бу ерда фойдаланиш учун шрифтни танлашингиз мумкин."
+
+#: kfontchooser.cpp:182
+#, fuzzy
+#| msgid "Requested Font"
+msgctxt "KFontChooser|"
+msgid "Requested Font"
+msgstr "Талаб қилинган шрифт"
+
+#: kfontchooser.cpp:199
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font"
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Шрифт"
+
+#: kfontchooser.cpp:203
+#, fuzzy
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font family settings."
+msgstr "Шрифтнинг оиласини ўзгартириш учун шуни танланг."
+
+#: kfontchooser.cpp:204
+#, fuzzy
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font family?"
+msgstr "Шрифт оиласини ўзгартирайми?"
+
+#: kfontchooser.cpp:208
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font:"
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Шрифт:"
+
+#: kfontchooser.cpp:215
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font style"
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Шрифтнинг услуби"
+
+#: kfontchooser.cpp:219
+#, fuzzy
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font style settings."
+msgstr "Шрифтнинг услубини ўзгартириш учун шуни танланг."
+
+#: kfontchooser.cpp:220
+#, fuzzy
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font style?"
+msgstr "Шрифтнинг услубини ўзгартирайми?"
+
+#: kfontchooser.cpp:224
+#, fuzzy
+#| msgid "Font style:"
+msgctxt "KFontChooser|"
+msgid "Font style:"
+msgstr "Шрифтнинг услуби:"
+
+#: kfontchooser.cpp:232
+#, fuzzy
+#| msgid "Size"
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Ўлчами"
+
+#: kfontchooser.cpp:236
+#, fuzzy
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font size settings."
+msgstr "Шрифтнинг ўлчамини ўзгартириш учун шу ерни белгиланг."
+
+#: kfontchooser.cpp:237
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Change font size?"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font size?"
+msgstr "Шрифтнинг ўлчамини ўзгартиришни истайсизми?"
+
+#: kfontchooser.cpp:241
+#, fuzzy
+#| msgctxt "@label:listbox Font size"
+#| msgid "Size:"
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Ўлчами:"
+
+#: kfontchooser.cpp:257
+#, fuzzy
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font family to be used."
+msgstr "Бу ерда фойдаланиш учун шрифтнинг оиласини танлашингиз мумкин."
+
+#: kfontchooser.cpp:281
+#, fuzzy
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font style to be used."
+msgstr "Бу ерда фойдаланиш учун шрифтнинг услубини танлашингиз мумкин."
+
+#: kfontchooser.cpp:289
+#, fuzzy
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "KFontChooser|QFontDatabase"
+msgid "Normal"
+msgstr "Оддий"
+
+#: kfontchooser.cpp:290 kfontchooser.cpp:602
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Қия"
+
+#: kfontchooser.cpp:291 kfontchooser.cpp:603
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Oblique"
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Ярим қия"
+
+#: kfontchooser.cpp:292
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold"
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Қалин"
+
+#: kfontchooser.cpp:293
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Қалин қия"
+
+#: kfontchooser.cpp:312
+#, fuzzy
+#| msgctxt "@item font size"
+#| msgid "Relative"
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Нисбий"
+
+#: kfontchooser.cpp:314
+#, fuzzy
+msgctxt "KFontChooser|"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "Шрифтнинг<br><i>белгиланган</i> ёки <i>муҳитга нисбатан</i> ўлчами"
+
+#: kfontchooser.cpp:316
+msgctxt "KFontChooser|"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+
+#: kfontchooser.cpp:340
+#, fuzzy
+#| msgid "Here you can choose the font size to be used."
+msgctxt "KFontChooser|"
+msgid "Here you can choose the font size to be used."
+msgstr "Бу ерда фойдаланиш учун шрифтнинг ўлчамини танлашингиз мумкин."
+
+#: kfontchooser.cpp:378
+#, fuzzy
+#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "Оқ чойнакга оқ қапқоқ кўк чойнакга кўк қапқоқ"
+
+#: kfontchooser.cpp:381
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Ушбу матн жорий мосламаларни тасвирлайди. Махсус белгиларни текшириш учун "
+"уни таҳрирлашингиз мумкин."
+
+#: kfontchooser.cpp:587
+#, fuzzy, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1%"
+
+#: kfontrequester.cpp:114
+#, fuzzy
+#| msgid "Choose..."
+msgctxt "KFontRequester|"
+msgid "Choose..."
+msgstr "Танлаш"
+
+#: kfontrequester.cpp:220
+#, fuzzy
+#| msgid "Click to select a font"
+msgctxt "KFontRequester|"
+msgid "Click to select a font"
+msgstr "Шрифтни танлаш учун сичқонча билан босинг"
+
+#: kfontrequester.cpp:226
+#, fuzzy
+#| msgid "Preview of the selected font"
+msgctxt "KFontRequester|"
+msgid "Preview of the selected font"
+msgstr "Танланган шрифтни кўриб чиқиш"
+
+#: kfontrequester.cpp:227
+#, fuzzy
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Танланган шрифтни кўриб чиқиш. Уни \"Танлаш\" тугмаси ёрдамида "
+"ўзгартиришингиз мумкин."
+
+#: kfontrequester.cpp:230
+#, fuzzy, qt-format
+#| msgid "Preview of the \"%1\" font"
+msgctxt "KFontRequester|"
+msgid "Preview of the \"%1\" font"
+msgstr "\"%1\" шрифтини кўриб чиқиш"
+
+#: kfontrequester.cpp:231
+#, fuzzy, qt-format
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"\"%1\" шрифтини кўриб чиқиш. Уни \"Танлаш\" тугмаси ёрдамида ўзгартиришингиз "
+"мумкин."
+
+#: kled.cpp:195
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr ""
+
+#: kled.cpp:196
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr ""
+
+#: kmessagebox.cpp:77
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr ""
+
+#: kmessagebox.cpp:191 kmessagebox.cpp:827 kmessagebox.cpp:876
+#, fuzzy
+#| msgid "&Details"
+msgctxt "KMessageBox|"
+msgid "&Details"
+msgstr "&Тафсилотлар"
+
+#: kmessagebox.cpp:329
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Тафсилотлар"
+
+#: kmessagebox.cpp:491 kmessagebox.cpp:545
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Сўроқ"
+
+#: kmessagebox.cpp:503 kmessagebox.cpp:559 kmessagebox.cpp:630
+#: kmessagebox.cpp:693 kmessagebox.cpp:762
+#, fuzzy
+#| msgid "Do not ask again"
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Бошқа сўралмасин"
+
+#: kmessagebox.cpp:618 kmessagebox.cpp:681 kmessagebox.cpp:749
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Диққат"
+
+#: kmessagebox.cpp:801 kmessagebox.cpp:822
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Хато"
+
+#: kmessagebox.cpp:850 kmessagebox.cpp:871 kmessagebox.cpp:1134
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Узр"
+
+#: kmessagebox.cpp:910
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Маълумот"
+
+#: kmessagebox.cpp:921
+#, fuzzy
+#| msgid "Do not show this message again"
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Бу хабар бошқа кўрсатилмасин"
+
+#: kmessagewidget.cpp:93
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KMessageWidget|"
+msgid "&Close"
+msgstr "Ё&пиш"
+
+#: kmessagewidget.cpp:94
+#, fuzzy
+#| msgid "Close Message"
+msgctxt "KMessageWidget|"
+msgid "Close message"
+msgstr "Хабарни ёпиш"
+
+#: kmimetypechooser.cpp:87
+#, fuzzy
+#| msgid "Mime types"
+msgctxt "KMimeTypeChooser|"
+msgid "Mime Type"
+msgstr "MIME турлари"
+
+#: kmimetypechooser.cpp:90
+#, fuzzy
+#| msgid "Comment"
+msgctxt "KMimeTypeChooser|"
+msgid "Comment"
+msgstr "Изоҳ"
+
+#: kmimetypechooser.cpp:93
+#, fuzzy
+msgctxt "KMimeTypeChooser|"
+msgid "Patterns"
+msgstr "Брайл шрифти"
+
+#: kmimetypechooser.cpp:106
+#, fuzzy
+#| msgid "&Edit..."
+msgctxt "KMimeTypeChooser|"
+msgid "&Edit..."
+msgstr "&Таҳрирлаш"
+
+#: kmimetypechooser.cpp:116
+msgctxt "KMimeTypeChooser|"
+msgid "Click this button to display the familiar KDE mime type editor."
+msgstr ""
+
+#: knewpassworddialog.cpp:76
+#, fuzzy, qt-format
+msgctxt "KNewPasswordDialog|"
+msgid "Password must be at least %n character(s) long"
+msgid_plural "Password must be at least %n character(s) long"
+msgstr[0] "Махфий сўз камида битта белгидан иборат бўлиши шарт"
+
+#: knewpassworddialog.cpp:80
+#, fuzzy
+#| msgid "Password is empty"
+msgctxt "KNewPasswordDialog|"
+msgid "Password is empty"
+msgstr "Махфий сўз бўш"
+
+#: knewpassworddialog.cpp:84
+#, fuzzy
+#| msgid "Passwords do not match"
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords do not match"
+msgstr "Махфий сўзлар мос келмайди"
+
+#: knewpassworddialog.cpp:89
+#, fuzzy
+#| msgid "Passwords match"
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords match"
+msgstr "Махфий сўзлар мос келади"
+
+#: knewpassworddialog.cpp:144
+#, fuzzy
+#| msgid "Low Password Strength"
+msgctxt "KNewPasswordDialog|"
+msgid "Low Password Strength"
+msgstr "Махфий сўз ишончли эмас"
+
+#: knewpassworddialog.cpp:145
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+
+#: knewpasswordwidget.cpp:64
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+
+#: knewpasswordwidget.ui:19
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KNewPasswordWidget|"
+msgid "Password:"
+msgstr "Махфий сўз:"
+
+#: knewpasswordwidget.ui:29
+#, fuzzy
+#| msgid "&Verify:"
+msgctxt "KNewPasswordWidget|"
+msgid "&Verify:"
+msgstr "&Текшириш:"
+
+#: knewpasswordwidget.ui:54
+#, fuzzy
+#| msgid "Password strength meter:"
+msgctxt "KNewPasswordWidget|"
+msgid "Password strength &meter:"
+msgstr "Махфий сўз ишончлиги:"
+
+#: kpassworddialog.cpp:65
+#, fuzzy
+#| msgid "Password"
+msgctxt "KPasswordDialog|"
+msgid "Password"
+msgstr "Махфий сўз"
+
+#: kpassworddialog.cpp:104
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Қуйида фойдаланувчи ва махфий сўзни киритинг."
+
+#: kpassworddialog.ui:26
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Қуйида фойдаланувчи ва махфий сўзни киритинг."
+
+#: kpassworddialog.ui:63
+msgctxt "KPasswordDialog|"
+msgid "No password, use anonymous (or &guest) login"
+msgstr ""
+
+#: kpassworddialog.ui:70
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|"
+msgid "Use this password:"
+msgstr "Махфий сўзни &эслаб қолиш"
+
+#: kpassworddialog.ui:95
+#, fuzzy
+#| msgid "Username:"
+msgctxt "KPasswordDialog|"
+msgid "Username:"
+msgstr "Фойдаланувчи:"
+
+#: kpassworddialog.ui:109
+#, fuzzy
+#| msgid "Domain:"
+msgctxt "KPasswordDialog|"
+msgid "Domain:"
+msgstr "Домен:"
+
+#: kpassworddialog.ui:123
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KPasswordDialog|"
+msgid "Password:"
+msgstr "Махфий сўз:"
+
+#: kpassworddialog.ui:137
+#, fuzzy
+#| msgid "Remember password"
+msgctxt "KPasswordDialog|"
+msgid "Remember password"
+msgstr "Махфий сўзни эслаб қолиш"
+
+#: kpasswordlineedit.cpp:56
+msgctxt "QObject|"
+msgid "Change the visibility of the password"
+msgstr ""
+
+#: kpixmapregionselectordialog.cpp:64
+#, fuzzy
+#| msgid "Select Region of Image"
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Select Region of Image"
+msgstr "Расмнинг қисмини танланг"
+
+#: kpixmapregionselectordialog.cpp:68
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr ""
+
+#: kpixmapregionselectorwidget.cpp:191
+#, fuzzy
+#| msgid "Image Operations"
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Image Operations"
+msgstr "Расм амаллари"
+
+#: kpixmapregionselectorwidget.cpp:193
+#, fuzzy
+#| msgid "&Rotate Clockwise"
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "&Rotate Clockwise"
+msgstr "Соат кўрсатгичи &бўйича буриш"
+
+#: kpixmapregionselectorwidget.cpp:195
+#, fuzzy
+#| msgid "Rotate &Counterclockwise"
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Rotate &Counterclockwise"
+msgstr "Соат &кўрсатгичига қарши буриш"
+
+#: ksqueezedtextlabel.cpp:215
+#, fuzzy
+msgctxt "KSqueezedTextLabel|"
+msgid "&Copy Full Text"
+msgstr "&Матндан нусха олиш"
+
+#: kstandardguiitem.cpp:108
+#, fuzzy
+#| msgid "&OK"
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&Ок"
+
+#: kstandardguiitem.cpp:113
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Бекор қилиш"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "&Yes"
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Ҳа"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "Yes"
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Ҳа"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "&No"
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Йўқ"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "No"
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Йўқ"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "&Discard"
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Воз кечиш"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "Discard changes"
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Ўзгаришлардан воз кечиш"
+
+#: kstandardguiitem.cpp:129
+#, fuzzy
+#| msgid ""
+#| "Pressing this button will discard all recent changes made in this dialog."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Агар бу тугма босилса, ушбу ойнада киритилган ўзгаришлар эътиборга олинмайди."
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "&Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Сақлаш"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "Save data"
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Маълумотни сақлаш"
+
+#: kstandardguiitem.cpp:140
+#, fuzzy
+#| msgid "&Do Not Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "С&ақланмасин"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid "Do not save data"
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Маълумот сақланмасин"
+
+#: kstandardguiitem.cpp:146
+#, fuzzy
+#| msgid "Save &As..."
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "...сифатида с&ақлаш"
+
+#: kstandardguiitem.cpp:147
+#, fuzzy
+#| msgid "Save file with another name"
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Файлни бошқа ном билан сақлаш"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "&Apply"
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "Қў&ллаш"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "Apply changes"
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Ўзгаришларни қўллаш"
+
+#: kstandardguiitem.cpp:153
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Агар <b>Қўллаш</b> босилса, мосламалар дастурга узатилади аммо мулоқат "
+"ойнаси ёпилмайди.\n"
+"Бундан турли мосламаларни синаб кўриш учун фойдаланинг."
+
+#: kstandardguiitem.cpp:161
+#, fuzzy
+#| msgid "Administrator &Mode..."
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "&Бошқарувчи усули"
+
+#: kstandardguiitem.cpp:161
+#, fuzzy
+#| msgid "Enter Administrator Mode"
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Бошқарувчи усулига ўтиш"
+
+#: kstandardguiitem.cpp:162
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"<b>Бошқарувчи усули</b> тугмаси босилганда ўзгаришларни киритиш учун "
+"бошқарувчининг (root) махфий сўзи сўралади."
+
+#: kstandardguiitem.cpp:169
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "Т&озалаш"
+
+#: kstandardguiitem.cpp:170
+#, fuzzy
+#| msgid "Clear input"
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Киритишни тозалаш"
+
+#: kstandardguiitem.cpp:171
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Таҳрир майдонидаги матнни ўчириш"
+
+#: kstandardguiitem.cpp:176
+#, fuzzy
+#| msgid "&Help"
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Ёрдам"
+
+#: kstandardguiitem.cpp:177
+#, fuzzy
+#| msgid "Show help"
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Ёрдамни кўрсатиш"
+
+#: kstandardguiitem.cpp:182
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "Ё&пиш"
+
+#: kstandardguiitem.cpp:183
+#, fuzzy
+#| msgid "Close the current window or document"
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Жорий ойнани ёки ҳужжатни ёпиш"
+
+#: kstandardguiitem.cpp:188
+#, fuzzy
+#| msgid "&Close Window"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "&Ойнани ёпиш"
+
+#: kstandardguiitem.cpp:189
+#, fuzzy
+#| msgid "Close the current window."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Жорий ойнани ёпиш"
+
+#: kstandardguiitem.cpp:194
+#, fuzzy
+#| msgid "&Close Document"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "Ҳужжатни ё&пиш"
+
+#: kstandardguiitem.cpp:195
+#, fuzzy
+#| msgid "Close the current document."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Жорий ҳужжатни ёпиш"
+
+#: kstandardguiitem.cpp:200
+#, fuzzy
+#| msgid "&Defaults"
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Андозалар"
+
+#: kstandardguiitem.cpp:201
+#, fuzzy
+#| msgid "Reset all items to their default values"
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Ҳамма элементларнинг андоза қийматларини қайта тиклаш"
+
+#: kstandardguiitem.cpp:208
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "О&рқага"
+
+#: kstandardguiitem.cpp:209
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Бир қадам орқага"
+
+#: kstandardguiitem.cpp:216
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "Ол&динга"
+
+#: kstandardguiitem.cpp:217
+#, fuzzy
+#| msgid "Go forward one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Бир қадам олдинга"
+
+#: kstandardguiitem.cpp:227
+#, fuzzy
+#| msgid "&Print..."
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Босиб чиқариш"
+
+#: kstandardguiitem.cpp:228
+#, fuzzy
+#| msgid "Opens the print dialog to print the current document"
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Жорий ҳужжатни босиб чиқариш учун мулоқат ойнасини очади"
+
+#: kstandardguiitem.cpp:234
+#, fuzzy
+#| msgid "C&ontinue"
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&Давом этиш"
+
+#: kstandardguiitem.cpp:235
+#, fuzzy
+#| msgid "Continue operation"
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Амални давом этиш"
+
+#: kstandardguiitem.cpp:240
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "Ў&чириш"
+
+#: kstandardguiitem.cpp:241
+#, fuzzy
+#| msgid "Delete item(s)"
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Банд(лар)ни ўчириш"
+
+#: kstandardguiitem.cpp:246
+#, fuzzy
+#| msgid "&Open..."
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Очиш..."
+
+#: kstandardguiitem.cpp:247
+#, fuzzy
+#| msgid "Open file"
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Файлни очиш"
+
+#: kstandardguiitem.cpp:252
+#, fuzzy
+#| msgid "&Quit"
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "Чи&қиш"
+
+#: kstandardguiitem.cpp:253
+#, fuzzy
+#| msgid "Quit application"
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Дастурдан чиқиш"
+
+#: kstandardguiitem.cpp:258
+#, fuzzy
+#| msgid "&Reset"
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Тиклаш"
+
+#: kstandardguiitem.cpp:259
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "KSpell2 мосламалари"
+
+#: kstandardguiitem.cpp:264
+#, fuzzy
+#| msgid "&Insert"
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "Қўй&иш"
+
+#: kstandardguiitem.cpp:269
+#, fuzzy
+#| msgid "Confi&gure..."
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&Мослаш..."
+
+#: kstandardguiitem.cpp:274
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Қидириш"
+
+#: kstandardguiitem.cpp:279
+#, fuzzy
+#| msgid "Stop"
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Тўхтатиш"
+
+#: kstandardguiitem.cpp:284
+#, fuzzy
+#| msgid "Add"
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Қўшиш"
+
+#: kstandardguiitem.cpp:289
+#, fuzzy
+#| msgid "Remove"
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Олиб ташлаш"
+
+#: kstandardguiitem.cpp:294
+#, fuzzy
+#| msgid "Test"
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Синов"
+
+#: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgid "Properties"
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Хоссалари"
+
+#: kstandardguiitem.cpp:304
+#, fuzzy
+#| msgid "&Overwrite"
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Алмаштириш"
+
+#: ktimecombobox.cpp:252
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr ""
+
+#: ktimecombobox.cpp:255
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr ""
+
+#: ktimecombobox.cpp:262
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr ""
+
+#: ktogglefullscreenaction.cpp:44
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Бутун &экрандан қайтиш"
+
+#: ktogglefullscreenaction.cpp:45
+#, fuzzy
+#| msgid "Exit Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Бутун экрандан қайтиш"
+
+#: ktogglefullscreenaction.cpp:46
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Бутун &экрандан қайтиш"
+
+#: ktogglefullscreenaction.cpp:49
+#, fuzzy
+#| msgid "F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Бутун &экранга"
+
+#: ktogglefullscreenaction.cpp:50
+#, fuzzy
+#| msgid "Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Бутун экранга"
+
+#: ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr ""
