@@ -36,6 +36,7 @@ private Q_SLOTS:
     void testTimeList();
     void testOptions();
     void testDisplayFormat();
+    void testMask();
 
 private:
 

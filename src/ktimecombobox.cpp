@@ -105,10 +105,27 @@ QString KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format, bool 
     null.replace(locale.toString(56), QLatin1String(""));
     mask.replace(locale.toString(789), QLatin1String("900"));
     null.replace(locale.toString(789), QLatin1String(""));
-    if (format.contains(QLatin1String("ap")) ||
-            format.contains(QLatin1String("AP"))) {
+
+    // See if this time format contains a specifier for
+    // AM/PM, regardless of case.
+    int ampmPos = format.indexOf(QLatin1String("AP"), 0, Qt::CaseInsensitive);
+
+    if (ampmPos != -1) {
+        // Get the locale aware am/pm strings
         QString am = locale.amText();
         QString pm = locale.pmText();
+
+        // Convert the am/pm strings to the same case
+        // as the input format. This is necessary to
+        // provide a correct mask to the line edit.
+        if (format[ampmPos].isUpper()) {
+            am = am.toUpper();
+            pm = pm.toUpper();
+        } else {
+            am = am.toLower();
+            pm = pm.toLower();
+        }
+
         int ampmLen = qMax(am.length(), pm.length());
         QString ampmMask;
         for (int i = 0; i < ampmLen; ++i) {

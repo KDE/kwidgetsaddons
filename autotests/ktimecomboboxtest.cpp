@@ -184,3 +184,27 @@ void KTimeComboBoxTest::testDisplayFormat()
     QCOMPARE(m_combo->displayFormat(), format);
     delete m_combo;
 }
+
+void KTimeComboBoxTest::testMask()
+{
+    // Store the current locale, and set to one which reproduces the bug.
+    QLocale currentLocale;
+
+    // Test that the line edit input mask AM/PM portion gets correctly
+    // replaced with aa.
+    QLocale::setDefault(QLocale(QLocale::English, QLocale::Australia));
+    m_combo = new KTimeComboBox(nullptr);
+    QString mask = m_combo->lineEdit()->inputMask();
+    QVERIFY(mask.contains(QLatin1String("aa")));
+    delete m_combo;
+
+    // For 24 hour time formats, no am/pm specifier in mask
+    QLocale::setDefault(QLocale(QLocale::Norwegian, QLocale::Norway));
+    m_combo = new KTimeComboBox(nullptr);
+    mask = m_combo->lineEdit()->inputMask();
+    QVERIFY(!mask.contains(QLatin1String("aa")));
+    delete m_combo;
+
+    // Restore the previous locale
+    QLocale::setDefault(currentLocale);
+}
