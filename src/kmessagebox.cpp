@@ -85,38 +85,6 @@ namespace KMessageBox
  */
 QDialogButtonBox::StandardButton KWIDGETSADDONS_EXPORT(*KMessageBox_exec_hook)(QDialog *) = nullptr;
 
-static QIcon themedMessageBoxIcon(QMessageBox::Icon icon)
-{
-    QString icon_name;
-
-    switch (icon) {
-    case QMessageBox::NoIcon:
-        return QIcon();
-    case QMessageBox::Information:
-        icon_name = QStringLiteral("dialog-information");
-        break;
-    case QMessageBox::Warning:
-        icon_name = QStringLiteral("dialog-warning");
-        break;
-    case QMessageBox::Critical:
-        icon_name = QStringLiteral("dialog-error");
-        break;
-    case QMessageBox::Question:
-        icon_name = QStringLiteral("dialog-question");
-        break;
-    default:
-        break;
-    }
-
-    QIcon ret = QIcon::fromTheme(icon_name);
-
-    if (ret.isNull()) {
-        return QMessageBox::standardIcon(icon);
-    } else {
-        return ret;
-    }
-}
-
 static void applyOptions(QDialog *dialog, KMessageBox::Options options)
 {
     if (options & KMessageBox::WindowModal) {
@@ -204,7 +172,26 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         const QString &ask, bool *checkboxReturn,
         Options options, const QString &details)
 {
-    return createKMessageBox(dialog, buttons, themedMessageBoxIcon(icon), text, strlist,
+    QIcon tmpIcon;
+    QStyle *style = dialog ? dialog->style() : QApplication::style();
+    switch (icon) {
+    case QMessageBox::Information:
+        tmpIcon = style->standardIcon(QStyle::SP_MessageBoxInformation, nullptr, dialog);
+        break;
+    case QMessageBox::Warning:
+        tmpIcon = style->standardIcon(QStyle::SP_MessageBoxWarning, nullptr, dialog);
+        break;
+    case QMessageBox::Critical:
+        tmpIcon = style->standardIcon(QStyle::SP_MessageBoxCritical, nullptr, dialog);
+        break;
+    case QMessageBox::Question:
+        tmpIcon = style->standardIcon(QStyle::SP_MessageBoxQuestion, nullptr, dialog);
+        break;
+    default:
+        break;
+    }
+
+    return createKMessageBox(dialog, buttons, tmpIcon, text, strlist,
                              ask, checkboxReturn, options, details, icon);
 }
 
