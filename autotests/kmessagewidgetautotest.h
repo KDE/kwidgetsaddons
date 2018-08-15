@@ -39,6 +39,7 @@ private Q_SLOTS:
     void testOverlappingDoubleHide_data();
     void testOverlappingDoubleHide();
     void testHideWithNotYetShownParent();
+    void testNonAnimatedShowAfterAnimatedHide();
 };
 
 #endif
