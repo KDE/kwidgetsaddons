@@ -42,6 +42,7 @@ add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(tests)
+    add_subdirectory(examples)
 endif()
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
