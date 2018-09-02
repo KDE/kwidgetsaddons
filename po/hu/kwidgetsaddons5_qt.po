@@ -1,0 +1,2519 @@
+# Kiszel Kristóf <ulysses@kubuntu.org>, 2010.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2015.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2015-01-12 11:23+0100\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:29
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Sans Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:32
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Serif"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:35
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Monospace"
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Monospace"
+
+#: fonthelpers.cpp:78
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:82
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:105
+msgctxt "KActionSelector|"
+msgid "&Available:"
+msgstr "&Elérhető:"
+
+#: kactionselector.cpp:122
+msgctxt "KActionSelector|"
+msgid "&Selected:"
+msgstr "&Kijelölve:"
+
+#: kassistantdialog.cpp:105
+msgctxt "KAssistantDialog|go back"
+msgid "&Back"
+msgstr "&Vissza"
+
+#: kassistantdialog.cpp:107
+msgctxt "KAssistantDialog|"
+msgid "Go back one step"
+msgstr "Visszalépés eggyel"
+
+#: kassistantdialog.cpp:112
+msgctxt "KAssistantDialog|Opposite to Back"
+msgid "Next"
+msgstr "Következő"
+
+#: kassistantdialog.cpp:119
+msgctxt "KAssistantDialog|"
+msgid "Finish"
+msgstr "Befejezés"
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+#| msgid "Open Script"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Szkript megnyitása"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Afrikai írásjelek"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Közel-keleti írásjelek"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Közép-ázsiai írásjelek"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Dél-ázsiai írásjelek"
+
+#: kcharselect-translation.cpp:29
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Délkelet-ázsiai írásjelek"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr ""
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Kelet-ázsiai írásjelek"
+
+#: kcharselect-translation.cpp:32
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Afrikai írásjelek"
+
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Szimbólumok"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Matematikai jelek"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Fonetikai jelek"
+
+#: kcharselect-translation.cpp:36 kcharselectdata.cpp:739
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Kombináló diakritikus jelek"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Egyéb"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Latin alap"
+
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Latin-1 kiegészítés"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latin kibővített A"
+
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latin kibővített B"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "IPA-kiegészítések"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Térközmódosító betűk"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Kombináló diakritikus jelek"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Görög és kopt"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Cirill"
+
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Cirill kiegészítés"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Örmény"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Héber"
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arab"
+
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Szír"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Arab kiegészítés"
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "NKo"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Szamaritánus"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandai"
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Cirill kiegészítés"
+
+#: kcharselect-translation.cpp:58
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Latin kibővített A"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengáli"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gudzsarati"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Orija"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamil"
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannada"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malajalam"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Szingaléz"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Thai"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Laó"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibeti"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Mianmar"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Grúz"
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul jamó"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etióp"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Etióp kiegészítés"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cseroki"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Egységesített kanadai őslakossági szótagjelek"
+
+#: kcharselect-translation.cpp:79
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogham"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Rúnikus"
+
+#: kcharselect-translation.cpp:81
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: kcharselect-translation.cpp:82
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunó"
+
+#: kcharselect-translation.cpp:83
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhid"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmer"
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongol"
+
+#: kcharselect-translation.cpp:87
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Egységes kanadai őslakosírás (kiterjesztett)"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: kcharselect-translation.cpp:89
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai le"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Új tai lue"
+
+#: kcharselect-translation.cpp:91
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Khmer szimbólumok"
+
+#: kcharselect-translation.cpp:92
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Bugi"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: kcharselect-translation.cpp:94
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Kombináló diakritikus jelek"
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Bali"
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Szundanéz"
+
+#: kcharselect-translation.cpp:97
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batak"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcsa"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Cirill kiterjesztett A"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Geometriai alakzatok"
+
+#: kcharselect-translation.cpp:102
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Latin-1 kiegészítés"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Védikus kiterjesztések"
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Fonetikus kiterjesztések"
+
+#: kcharselect-translation.cpp:105
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Kiegészítő fonetikus kiterjesztések"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Kiegészítő kombináló diakritikus jelek"
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "További latin kibővített"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Görög kiterjesztett"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Általános központozó jelek"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Felső és alsó indexek"
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Pénzjelek"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Kombináló diakritikus jelek és szimbólumok"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Betűszerű szimbólumok"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Számalakok"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Nyilak"
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Matematikai operátorok"
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Vegyes technikai jelek"
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Vezérlőábrák"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Optikai karakterfelismerés"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Zárt alfanumerikusok"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Keretrajzolók"
+
+#: kcharselect-translation.cpp:122
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Blokkelemek"
+
+#: kcharselect-translation.cpp:123
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Geometriai alakzatok"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Egyéb szimbólumok"
+
+#: kcharselect-translation.cpp:125
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Vegyes matematikai szimbólumok A"
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Kiegészítő nyilak A"
+
+#: kcharselect-translation.cpp:128
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braille-minták"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Kiegészítő nyilak B"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Vegyes matematikai szimbólumok B"
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Kiegészítő matematikai operátorok"
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Vegyes szimbólumok és nyilak"
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Glagolitikus"
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latin kiterjesztett C"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Kopt"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Grúz kiegészítés"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etióp kiterjesztett"
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Cirill kiterjesztett A"
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Kiegészító központozó jelek"
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "CJK gyökök kiegészítés"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Kangxi gyökök"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Ideografikus leírókarakterek"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK szimbólumok és központozó jelek"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul kompatibilitási jamó"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo kiterjesztett"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK vonások"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana fonetikus kiterjesztések"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Zárt CJK írásjelek és hónapok"
+
+#: kcharselect-translation.cpp:154
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK kompatibilitási"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK egységesített ideográfok kiterjesztett A"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing hexagram-szimbólumok"
+
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK egységesített ideográfok"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi szótagok"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi gyökök"
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vaisakha"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Cirill kiterjesztett B"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Hangmódosító jelek"
+
+#: kcharselect-translation.cpp:165
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latin kibővített D"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Elterjedt indikus számformák"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari (kiterjesztett)"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul jamo kiterjesztett A"
+
+#: kcharselect-translation.cpp:174
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Jávai"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Myanmar kiterjesztett A"
+
+#: kcharselect-translation.cpp:176
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Cham"
+
+#: kcharselect-translation.cpp:177
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Myanmar kiterjesztett A"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai viet"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei mayek"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etióp kiterjesztett A"
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latin kibővített A"
+
+#: kcharselect-translation.cpp:182
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Cirill kiegészítés"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei mayek"
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Hangul szótagok"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul jamo kiterjesztett B"
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Felső azonosítók"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Felső egyéni célú azonosítók"
+
+#: kcharselect-translation.cpp:188
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Alsó azonosítók"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "uEgyéni célú terület"
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK kompatibilitási ideográfok"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Alfabetikus prezentációs alakok"
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Arab prezentációs alakok A"
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Variációválasztók"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Függőleges alakok"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Kombináló féljelek"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK kompatibilitási alakok"
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Kisalakú variánsok"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Arab prezentációs alakok B"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Fél- és teljes szélességű alakok"
+
+#: kcharselect-translation.cpp:200
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Speciális jelek"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:205
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Zárt alfanumerikusok"
+
+#: kcharselect-translation.cpp:206
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Etióp kiegészítés"
+
+#: kcharselect-translation.cpp:207
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Vegyes szimbólumok és nyilak"
+
+#: kcharselect-translation.cpp:208
+#, fuzzy
+#| msgid "Emoticons"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Emotikonok"
+
+#: kcharselect-translation.cpp:209
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:210
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:211
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Matematikai jelek"
+
+#: kcharselect-translation.cpp:212
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Geometriai alakzatok"
+
+#: kcharselect-translation.cpp:213
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Kiegészítő nyilak A"
+
+#: kcharselect-translation.cpp:214
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:215
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Khmer szimbólumok"
+
+#: kcharselect.cpp:407 kcharselect.cpp:409
+msgctxt "KCharSelect|"
+msgid "Enter a search term or character here"
+msgstr "Itt lehet megadni a keresendő szöveget"
+
+#: kcharselect.cpp:414
+msgctxt "KCharSelect|"
+msgid "&Find..."
+msgstr "&Keresés…"
+
+#: kcharselect.cpp:434
+msgctxt "KCharSelect|Goes to previous character"
+msgid "Previous in History"
+msgstr "Előző karakter"
+
+#: kcharselect.cpp:436
+msgctxt "KCharSelect|"
+msgid "Previous Character in History"
+msgstr "Előző karakter"
+
+#: kcharselect.cpp:441
+msgctxt "KCharSelect|Goes to next character"
+msgid "Next in History"
+msgstr "Következő karakter"
+
+#: kcharselect.cpp:443
+msgctxt "KCharSelect|"
+msgid "Next Character in History"
+msgstr "Következő karakter"
+
+#: kcharselect.cpp:448
+msgctxt "KCharSelect|go back"
+msgid "&Back"
+msgstr "&Vissza"
+
+#: kcharselect.cpp:455
+msgctxt "KCharSelect|go forward"
+msgid "&Forward"
+msgstr "&Előre"
+
+#: kcharselect.cpp:469
+msgctxt "KCharSelect|"
+msgid "Select a category"
+msgstr "Válasszon ki egy kategóriát"
+
+#: kcharselect.cpp:472
+msgctxt "KCharSelect|"
+msgid "Select a block to be displayed"
+msgstr "Válasszon ki egy blokkot megjelenítéshez"
+
+#: kcharselect.cpp:485
+msgctxt "KCharSelect|"
+msgid "Set font"
+msgstr "Betűtípus-beállítás"
+
+#: kcharselect.cpp:492
+msgctxt "KCharSelect|"
+msgid "Set font size"
+msgstr "Betűméret-beállítás"
+
+#: kcharselect.cpp:779
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Karakter:"
+
+#: kcharselect.cpp:785
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Név: "
+
+#: kcharselect.cpp:794
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Feljegyzések és keresztreferenciák"
+
+#: kcharselect.cpp:798
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Másodlagos nevek:"
+
+#: kcharselect.cpp:806
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Megjegyzések:"
+
+#: kcharselect.cpp:814
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Lásd még:"
+
+#: kcharselect.cpp:829
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Egyenértékű elemek:"
+
+#: kcharselect.cpp:837
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Megközelítőleg egyenértékű elemek:"
+
+#: kcharselect.cpp:845
+#, fuzzy
+#| msgid "Description:"
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Leírás:"
+
+#: kcharselect.cpp:857
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "CJK ideografikus jellemzők"
+
+#: kcharselect.cpp:860
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Definíció angolul:"
+
+#: kcharselect.cpp:867
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Kínai kiejtés: "
+
+#: kcharselect.cpp:874
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Kantoni kiejtés: "
+
+#: kcharselect.cpp:881
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Japán kiejtés: "
+
+#: kcharselect.cpp:888
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Japán kun-olvasatú kiejtés: "
+
+#: kcharselect.cpp:895
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Tang kiejtés: "
+
+#: kcharselect.cpp:902
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Koreai kiejtés: "
+
+#: kcharselect.cpp:908
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Általános karakterjellemzők"
+
+#: kcharselect.cpp:909
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Blokk: "
+
+#: kcharselect.cpp:910
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Unicode-kategória: "
+
+#: kcharselect.cpp:914
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Egyéb megjelenési formák"
+
+#: kcharselect.cpp:915
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:919
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:926
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "C oktális UTF-8 kód: "
+
+#: kcharselect.cpp:930
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "XML decimális entitás:"
+
+#: kcharselect.cpp:1077
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Unicode-kódpont:"
+
+#: kcharselect.cpp:1078
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "Decimálisan:"
+
+#: kcharselectdata.cpp:312
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "Bármilyen karakter"
+
+#: kcharselectdata.cpp:333
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Magas helyettesítő - közhasználatra>"
+
+#: kcharselectdata.cpp:335
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Magas helyettesítő - magánhasználatra>"
+
+#: kcharselectdata.cpp:337
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Alacsony helyettesítő>"
+
+#: kcharselectdata.cpp:339
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Magánhasználatra>"
+
+#: kcharselectdata.cpp:371
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<nincs hozzárendelve>"
+
+#: kcharselectdata.cpp:748
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Nem nyomtatható"
+
+#: kcharselectdata.cpp:781
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Egyéb - vezérlők"
+
+#: kcharselectdata.cpp:782
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Egyéb - formátumok"
+
+#: kcharselectdata.cpp:783
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Egyéb, nem besorolt"
+
+#: kcharselectdata.cpp:784
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Egyéb, egyéni célú"
+
+#: kcharselectdata.cpp:785
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Egyéb, reprezentáns"
+
+#: kcharselectdata.cpp:786
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Betűk - kisbetűk"
+
+#: kcharselectdata.cpp:787
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Betű, módosító"
+
+#: kcharselectdata.cpp:788
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Betű, egyéb"
+
+#: kcharselectdata.cpp:789
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Betű, cím"
+
+#: kcharselectdata.cpp:790
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Betű, nagybetű"
+
+#: kcharselectdata.cpp:791
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Jel, kombináló térköz"
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Jel, bezáró"
+
+#: kcharselectdata.cpp:793
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Jel, nem térköz"
+
+#: kcharselectdata.cpp:794
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Szám, decimális számjegy"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Szám, betű"
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Szám - egyéb"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Központozó, kapcsoló"
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Központozó, vonás"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Központozó, bezáró"
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Központozó, bezáró idézőjel"
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Központozó, nyitó zárójel"
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Központozó, egyéb"
+
+#: kcharselectdata.cpp:803
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Központozó, nyitó"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Szimbólum, pénzjel"
+
+#: kcharselectdata.cpp:805
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Szimbólum, módosító"
+
+#: kcharselectdata.cpp:806
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Szimbólum, matematikai"
+
+#: kcharselectdata.cpp:807
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Szimbólum - egyéb"
+
+#: kcharselectdata.cpp:808
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Elválasztó - vonal"
+
+#: kcharselectdata.cpp:809
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Elválasztó, bekezdés"
+
+#: kcharselectdata.cpp:810
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Elválasztó, szóköz"
+
+#: kcharselectdata.cpp:811
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: kcolorcombo.cpp:339
+msgctxt "KColorCombo|Custom color"
+msgid "Custom..."
+msgstr "Egyéni…"
+
+#: kdatecombobox.cpp:170
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Következő év"
+
+#: kdatecombobox.cpp:171
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Következő hónap"
+
+#: kdatecombobox.cpp:172
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Következő hét"
+
+#: kdatecombobox.cpp:173
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Holnap"
+
+#: kdatecombobox.cpp:174
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Ma"
+
+#: kdatecombobox.cpp:175
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Tegnap"
+
+#: kdatecombobox.cpp:176
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Előző héten"
+
+#: kdatecombobox.cpp:177
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Előző hónapban"
+
+#: kdatecombobox.cpp:178
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Előző évben"
+
+#: kdatecombobox.cpp:180
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Nincs dátum"
+
+#: kdatecombobox.cpp:311
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "A megadott dátum érvénytelen"
+
+#: kdatecombobox.cpp:314
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "A dátum nem lehet korábbi mint %1"
+
+#: kdatecombobox.cpp:321
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "A dátum nem lehet későbbi mint %1"
+
+#: kdatepicker.cpp:189
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "%1. hét"
+
+#: kdatepicker.cpp:294
+msgctxt "KDatePicker|"
+msgid "Next year"
+msgstr "Következő év"
+
+#: kdatepicker.cpp:295
+msgctxt "KDatePicker|"
+msgid "Previous year"
+msgstr "Előző év"
+
+#: kdatepicker.cpp:296
+msgctxt "KDatePicker|"
+msgid "Next month"
+msgstr "Következő hónap"
+
+#: kdatepicker.cpp:297
+msgctxt "KDatePicker|"
+msgid "Previous month"
+msgstr "Előző hónap"
+
+#: kdatepicker.cpp:298
+msgctxt "KDatePicker|"
+msgid "Select a week"
+msgstr "Válasszon ki egy hetet"
+
+#: kdatepicker.cpp:299
+msgctxt "KDatePicker|"
+msgid "Select a month"
+msgstr "Válasszon egy hónapot"
+
+#: kdatepicker.cpp:300
+msgctxt "KDatePicker|"
+msgid "Select a year"
+msgstr "Válasszon egy évet"
+
+#: kdatepicker.cpp:301
+msgctxt "KDatePicker|"
+msgid "Select the current day"
+msgstr "A mai nap kiválasztása"
+
+#: kdatepicker.cpp:642
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Bezárás"
+
+#: kdatetimeedit.cpp:189
+msgctxt "KDateTimeEdit|UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:190
+msgctxt "KDateTimeEdit|No specific time zone"
+msgid "Floating"
+msgstr "Lebegő"
+
+#: kdatetimeedit.cpp:230
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+"A megadott dátum és idő a minimálisan engedélyezett dátum és idő előtt van."
+
+#: kdatetimeedit.cpp:240
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+"A megadott dátum és idő a maximálisan engedélyezett dátum és idő után van."
+
+#: keditlistwidget.cpp:305
+msgctxt "KEditListWidget|"
+msgid "&Add"
+msgstr "&Hozzáadás"
+
+#: keditlistwidget.cpp:317
+msgctxt "KEditListWidget|"
+msgid "&Remove"
+msgstr "&Eltávolítás"
+
+#: keditlistwidget.cpp:329
+msgctxt "KEditListWidget|"
+msgid "Move &Up"
+msgstr "Mozgatás &felfelé"
+
+#: keditlistwidget.cpp:334
+msgctxt "KEditListWidget|"
+msgid "Move &Down"
+msgstr "Mozgatás &lefelé"
+
+#: kfontchooser.cpp:160
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font to be used."
+msgstr "Itt választhatja ki a használni kívánt betűtípust."
+
+#: kfontchooser.cpp:182
+msgctxt "KFontChooser|"
+msgid "Requested Font"
+msgstr "A kívánt betűtípus"
+
+#: kfontchooser.cpp:199
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Betűtípus"
+
+#: kfontchooser.cpp:203
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font family settings."
+msgstr "Jelölje be ezt, ha meg szeretné változtatni a betűtípus jellemzőit."
+
+#: kfontchooser.cpp:204
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font family?"
+msgstr "Meg szeretné változtatni a betűcsaládot?"
+
+#: kfontchooser.cpp:208
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Betűtípus:"
+
+#: kfontchooser.cpp:215
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Betűstílus"
+
+#: kfontchooser.cpp:219
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font style settings."
+msgstr "Jelölje be ezt, ha meg szeretné változtatni a betűstílust."
+
+#: kfontchooser.cpp:220
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font style?"
+msgstr "Meg szeretné változtatni a betűstílust?"
+
+#: kfontchooser.cpp:224
+msgctxt "KFontChooser|"
+msgid "Font style:"
+msgstr "Betűstílus:"
+
+#: kfontchooser.cpp:232
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Méret"
+
+#: kfontchooser.cpp:236
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Enable this checkbox to change the font size settings."
+msgstr "Jelölje be ezt, ha a betűméretet meg szeretné változtatni."
+
+#: kfontchooser.cpp:237
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Change font size?"
+msgstr "Meg szeretné változtatni a betűméretet?"
+
+#: kfontchooser.cpp:241
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Méret:"
+
+#: kfontchooser.cpp:257
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font family to be used."
+msgstr "Itt lehet megváltoztatni a használni kívánt betűcsaládot."
+
+#: kfontchooser.cpp:281
+msgctxt "KFontChooser|@info:whatsthis"
+msgid "Here you can choose the font style to be used."
+msgstr "Itt lehet kiválasztani a használni kívánt betűstílust."
+
+#: kfontchooser.cpp:289
+msgctxt "KFontChooser|QFontDatabase"
+msgid "Normal"
+msgstr "Normál"
+
+#: kfontchooser.cpp:290 kfontchooser.cpp:602
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Dőlt"
+
+#: kfontchooser.cpp:291 kfontchooser.cpp:603
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Döntött"
+
+#: kfontchooser.cpp:292
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Félkövér"
+
+#: kfontchooser.cpp:293
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Félkövér, dőlt"
+
+#: kfontchooser.cpp:312
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Relatív"
+
+#: kfontchooser.cpp:314
+msgctxt "KFontChooser|"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"A betűméret lehet <br /><i>állandó szélességű</i> vagy <i>arányosan változó</"
+"i><br /> (a környezethez képest)"
+
+#: kfontchooser.cpp:316
+msgctxt "KFontChooser|"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Itt lehet átváltani a rögzített betűméret és az arányosan, a környezet "
+"alapján módosított betűméret használata között (például ha az elemméretek "
+"vagy a papírméret megváltozik)."
+
+#: kfontchooser.cpp:340
+msgctxt "KFontChooser|"
+msgid "Here you can choose the font size to be used."
+msgstr "Itt lehet kiválasztani a használni kívánt betűméretet."
+
+#: kfontchooser.cpp:378
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "Árvíztűrő Tükörfúrógép"
+
+#: kfontchooser.cpp:381
+msgctxt "KFontChooser|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Ez a mintaszöveg a beállításoknak megfelelően jelenik meg. A szöveg "
+"módosítható, hogy mindegyik karakter kipróbálható legyen."
+
+#: kfontchooser.cpp:587
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontrequester.cpp:114
+msgctxt "KFontRequester|"
+msgid "Choose..."
+msgstr "Kiválasztás…"
+
+#: kfontrequester.cpp:220
+msgctxt "KFontRequester|"
+msgid "Click to select a font"
+msgstr "Kattintson ide a betűtípus kiválasztásához"
+
+#: kfontrequester.cpp:226
+msgctxt "KFontRequester|"
+msgid "Preview of the selected font"
+msgstr "A kiválasztott betűtípus előnézeti képe"
+
+#: kfontrequester.cpp:227
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Ez a kiválasztott betűtípus előnézeti képe. A betűtípus megváltoztatásához "
+"kattintson a „Választás…” gombra."
+
+#: kfontrequester.cpp:230
+#, qt-format
+msgctxt "KFontRequester|"
+msgid "Preview of the \"%1\" font"
+msgstr "A(z) „%1” betűtípus előnézeti képe"
+
+#: kfontrequester.cpp:231
+#, qt-format
+msgctxt "KFontRequester|"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose...\" button."
+msgstr ""
+"Ez a(z) „%1” betűtípus előnézeti képe. A betűtípus megváltoztatásához "
+"kattintson a „Választás…” gombra."
+
+#: kled.cpp:195
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "LED bekapcsolva"
+
+#: kled.cpp:196
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "LED kikapcsolva"
+
+#: kmessagebox.cpp:77
+#, fuzzy
+#| msgctxt "@action:button post-filter"
+#| msgid "."
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:159 kmessagebox.cpp:814 kmessagebox.cpp:863
+#, fuzzy
+#| msgid "&Details"
+msgctxt "KMessageBox|"
+msgid "&Details"
+msgstr "&Részletek"
+
+#: kmessagebox.cpp:316
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Részletek"
+
+#: kmessagebox.cpp:478 kmessagebox.cpp:532
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Kérdés"
+
+#: kmessagebox.cpp:490 kmessagebox.cpp:546 kmessagebox.cpp:617
+#: kmessagebox.cpp:680 kmessagebox.cpp:749
+#, fuzzy
+#| msgid "Do not ask again"
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Többször ne jelenjen meg ez a kérdés"
+
+#: kmessagebox.cpp:605 kmessagebox.cpp:668 kmessagebox.cpp:736
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+#: kmessagebox.cpp:788 kmessagebox.cpp:809
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Hiba"
+
+#: kmessagebox.cpp:837 kmessagebox.cpp:858 kmessagebox.cpp:1121
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Hiba történt"
+
+#: kmessagebox.cpp:897
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Információ"
+
+#: kmessagebox.cpp:908
+#, fuzzy
+#| msgid "Do not show this message again"
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Többször ne jelenjen meg ez az üzenet"
+
+#: kmessagewidget.cpp:95
+msgctxt "KMessageWidget|"
+msgid "&Close"
+msgstr "&Bezárás"
+
+#: kmessagewidget.cpp:96
+msgctxt "KMessageWidget|"
+msgid "Close message"
+msgstr "Üzenet bezárása"
+
+#: kmimetypechooser.cpp:87
+#, fuzzy
+#| msgid "Mime types"
+msgctxt "KMimeTypeChooser|"
+msgid "Mime Type"
+msgstr "MIME-típusok"
+
+#: kmimetypechooser.cpp:90
+#, fuzzy
+#| msgid "Comment"
+msgctxt "KMimeTypeChooser|"
+msgid "Comment"
+msgstr "Megjegyzés"
+
+#: kmimetypechooser.cpp:93
+#, fuzzy
+#| msgctxt "KCharSelectData|KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KMimeTypeChooser|"
+msgid "Patterns"
+msgstr "Braille-minták"
+
+#: kmimetypechooser.cpp:106
+#, fuzzy
+#| msgid "&Edit..."
+msgctxt "KMimeTypeChooser|"
+msgid "&Edit..."
+msgstr "S&zerkesztés…"
+
+#: kmimetypechooser.cpp:116
+msgctxt "KMimeTypeChooser|"
+msgid "Click this button to display the familiar KDE mime type editor."
+msgstr ""
+
+#: knewpassworddialog.cpp:76
+#, qt-format
+msgctxt "KNewPasswordDialog|"
+msgid "Password must be at least %n character(s) long"
+msgid_plural "Password must be at least %n character(s) long"
+msgstr[0] "A jelszónak legalább %n karakter hosszúnak kell lennie"
+msgstr[1] "A jelszónak legalább %n karakter hosszúnak kell lennie"
+
+#: knewpassworddialog.cpp:80
+msgctxt "KNewPasswordDialog|"
+msgid "Password is empty"
+msgstr "A jelszó üres"
+
+#: knewpassworddialog.cpp:84
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords do not match"
+msgstr "A jelszavak nem egyeznek"
+
+#: knewpassworddialog.cpp:89
+msgctxt "KNewPasswordDialog|"
+msgid "Passwords match"
+msgstr "A jelszavak megegyeznek"
+
+#: knewpassworddialog.cpp:144
+msgctxt "KNewPasswordDialog|"
+msgid "Low Password Strength"
+msgstr "A jelszó gyenge"
+
+#: knewpassworddialog.cpp:145
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"A megadott jelszó túlságosan gyenge. A jelszó biztonsága több módon "
+"növelhető:\n"
+" - hosszabb jelszóval\n"
+" - kis- és nagybetűk vegyes használatával\n"
+" - számjegyek, szimbólumok (például #) és betűk vegyes használatával\n"
+"\n"
+"Biztosan ezt a jelszót szeretné használni?"
+
+#: knewpasswordwidget.cpp:64
+#, fuzzy
+#| msgctxt "KNewPasswordDialog|"
+#| msgid ""
+#| "The password strength meter gives an indication of the security of the "
+#| "password you have entered.  To improve the strength of the password, "
+#| "try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols, such as #, as well as letters."
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"A jelszóerősség-jelző annak eldöntését segíti, hogy a beírt jelszó kellően "
+"biztonságos-e. A jelszó biztonsága több módon növelhető:\n"
+" - hosszabb jelszóval\n"
+" - kis- és nagybetűk vegyes használatával\n"
+" - számjegyek, szimbólumok (például #) és betűk vegyes használatával"
+
+#: knewpasswordwidget.ui:19
+#, fuzzy
+#| msgctxt "KNewPasswordDialog|"
+#| msgid "Password:"
+msgctxt "KNewPasswordWidget|"
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: knewpasswordwidget.ui:29
+#, fuzzy
+#| msgctxt "KNewPasswordDialog|"
+#| msgid "&Verify:"
+msgctxt "KNewPasswordWidget|"
+msgid "&Verify:"
+msgstr "E&llenőrzés:"
+
+#: knewpasswordwidget.ui:54
+#, fuzzy
+#| msgctxt "KNewPasswordDialog|"
+#| msgid "Password strength meter:"
+msgctxt "KNewPasswordWidget|"
+msgid "Password strength &meter:"
+msgstr "Jelszóerősség-jelző:"
+
+#: kpassworddialog.cpp:65
+msgctxt "KPasswordDialog|"
+msgid "Password"
+msgstr "Jelszó"
+
+#: kpassworddialog.cpp:104
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Adja meg a felhasználónevet és a jelszót."
+
+#: kpassworddialog.ui:26
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Adja meg a felhasználónevet és a jelszót."
+
+#: kpassworddialog.ui:63
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "No password, use anonymous (or guest) login"
+msgctxt "KPasswordDialog|"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Nincs jelszó, névtelen (vagy vendég) bejelentkezés"
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|"
+msgid "Use this password:"
+msgstr "Ezen jelszó használata:"
+
+#: kpassworddialog.ui:95
+msgctxt "KPasswordDialog|"
+msgid "Username:"
+msgstr "Felhasználónév:"
+
+#: kpassworddialog.ui:109
+msgctxt "KPasswordDialog|"
+msgid "Domain:"
+msgstr "Tartomány:"
+
+#: kpassworddialog.ui:123
+msgctxt "KPasswordDialog|"
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: kpassworddialog.ui:137
+msgctxt "KPasswordDialog|"
+msgid "Remember password"
+msgstr "A jelszó megjegyzése"
+
+#: kpasswordlineedit.cpp:56
+msgctxt "QObject|"
+msgid "Change the visibility of the password"
+msgstr ""
+
+#: kpixmapregionselectordialog.cpp:64
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Select Region of Image"
+msgstr "Válasszon ki egy képterületet"
+
+#: kpixmapregionselectordialog.cpp:68
+msgctxt "KPixmapRegionSelectorDialog|"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "Kattintással és húzással jelölje ki a kép egy részét:"
+
+#: kpixmapregionselectorwidget.cpp:191
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Image Operations"
+msgstr "Képműveletek"
+
+#: kpixmapregionselectorwidget.cpp:193
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "&Rotate Clockwise"
+msgstr "Forgatás &jobbra"
+
+#: kpixmapregionselectorwidget.cpp:195
+msgctxt "KPixmapRegionSelectorWidget|"
+msgid "Rotate &Counterclockwise"
+msgstr "Forgatás &balra"
+
+#: ksqueezedtextlabel.cpp:215
+msgctxt "KSqueezedTextLabel|"
+msgid "&Copy Full Text"
+msgstr "&Másolás"
+
+#: kstandardguiitem.cpp:108
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&OK"
+
+#: kstandardguiitem.cpp:113
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Mégsem"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Igen"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Igen"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Nem"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Nem"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "El&dobás"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "A módosítások eldobása"
+
+#: kstandardguiitem.cpp:129
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Ha megnyomja ezt a gombot, akkor az eddig tett módosítások vissza lesznek "
+"vonva."
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "M&entés"
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Az adatok elmentése"
+
+#: kstandardguiitem.cpp:140
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Nem kell menteni"
+
+#: kstandardguiitem.cpp:141
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Az adatmentés kihagyása"
+
+#: kstandardguiitem.cpp:146
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Mentés más&ként…"
+
+#: kstandardguiitem.cpp:147
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "A fájl mentése más néven"
+
+#: kstandardguiitem.cpp:152
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Alkalmazás"
+
+#: kstandardguiitem.cpp:152
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Változtatások alkalmazása"
+
+#: kstandardguiitem.cpp:153
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Ha az <b>Alkalmazás</b> gombra kattint, akkor a beállítások átadódnak a "
+"programnak, de a párbeszédablak nyitva marad.\n"
+"Így többféle beállítást is ki lehet próbálni."
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Rendszerga&zdai mód…"
+
+#: kstandardguiitem.cpp:161
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Belépés rendszergazdai módba"
+
+#: kstandardguiitem.cpp:162
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Ha rákattint a <b>Rendszergazdai mód</b>ra, a program be fogja kérni a "
+"rendszergazdai jelszót, hogy a kívánt privilegizált műveletek elvégezhetők "
+"legyenek."
+
+#: kstandardguiitem.cpp:169
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "&Törlés"
+
+#: kstandardguiitem.cpp:170
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Mezők törlése"
+
+#: kstandardguiitem.cpp:171
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "A szöveges mezők tartalmának törlése"
+
+#: kstandardguiitem.cpp:176
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Súgó"
+
+#: kstandardguiitem.cpp:177
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Súgó megjelenítése"
+
+#: kstandardguiitem.cpp:182
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Bezárás"
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "A jelenlegi ablak vagy dokumentum bezárása"
+
+#: kstandardguiitem.cpp:188
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "&Ablak bezárása"
+
+#: kstandardguiitem.cpp:189
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "A jelenlegi ablak bezárása."
+
+#: kstandardguiitem.cpp:194
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "&Dokumentum bezárása"
+
+#: kstandardguiitem.cpp:195
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Az aktuális dokumentum bezárása."
+
+#: kstandardguiitem.cpp:200
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "Ala&pértelmezés"
+
+#: kstandardguiitem.cpp:201
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Az összes elem visszaállítása az alapértelmezett értékekre"
+
+#: kstandardguiitem.cpp:208
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&Vissza"
+
+#: kstandardguiitem.cpp:209
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Visszalépés eggyel"
+
+#: kstandardguiitem.cpp:216
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&Előre"
+
+#: kstandardguiitem.cpp:217
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Előrelépés eggyel"
+
+#: kstandardguiitem.cpp:227
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Nyomtatás…"
+
+#: kstandardguiitem.cpp:228
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr ""
+"Megnyitja a nyomtatási párbeszédablakot az aktuális dokumentum "
+"kinyomtatásához"
+
+#: kstandardguiitem.cpp:234
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "F&olytatás"
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "A művelet folytatása"
+
+#: kstandardguiitem.cpp:240
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Törlés"
+
+#: kstandardguiitem.cpp:241
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Elemek törlése"
+
+#: kstandardguiitem.cpp:246
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Megnyitás…"
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Fájl megnyitása"
+
+#: kstandardguiitem.cpp:252
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Kilépés"
+
+#: kstandardguiitem.cpp:253
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Kilépés az alkalmazásból"
+
+#: kstandardguiitem.cpp:258
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Alapállapotba"
+
+#: kstandardguiitem.cpp:259
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "A beállítások alapállapotba hozása"
+
+#: kstandardguiitem.cpp:264
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Beszúrás"
+
+#: kstandardguiitem.cpp:269
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "B&eállítás…"
+
+#: kstandardguiitem.cpp:274
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Keresés"
+
+#: kstandardguiitem.cpp:279
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Leállítás"
+
+#: kstandardguiitem.cpp:284
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Hozzáadás"
+
+#: kstandardguiitem.cpp:289
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: kstandardguiitem.cpp:294
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Teszt"
+
+#: kstandardguiitem.cpp:299
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Tulajdonságok"
+
+#: kstandardguiitem.cpp:304
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Felülírás"
+
+#: ktimecombobox.cpp:269
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "A megadott idő érvénytelen"
+
+#: ktimecombobox.cpp:272
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Az idő nem lehet korábbi mint %1"
+
+#: ktimecombobox.cpp:279
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Az idő nem lehet későbbi mint %1"
+
+#: ktogglefullscreenaction.cpp:44
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Kilépés a &teljes képernyős módból"
+
+#: ktogglefullscreenaction.cpp:45
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Kilépés a teljes képernyős módból"
+
+#: ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Kilépés a &teljes képernyős módból"
+
+#: ktogglefullscreenaction.cpp:49
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "&Teljes képernyős mód"
+
+#: ktogglefullscreenaction.cpp:50
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Teljes képernyős mód"
+
+#: ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Ablak megjelenítése teljes képernyős módban"
