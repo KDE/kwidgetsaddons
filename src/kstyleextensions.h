@@ -48,7 +48,7 @@ namespace KStyleExtensions
 /**
  * Resolve a dynamic QStyle::ControlElement for eg. QStyle::drawControl()
  *
- * @returns a unique QStyle::ControlElement or 0 in case the style doesn't suuport this element
+ * @returns a unique QStyle::ControlElement or 0 in case the style doesn't support this element
  * @p element a valid element string appname.CE_element, eg. "amarok.CE_Analyzer"
  * @p widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
  * @since 5.3

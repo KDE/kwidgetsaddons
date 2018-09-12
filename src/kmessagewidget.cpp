@@ -464,7 +464,7 @@ void KMessageWidget::animatedHide()
     }
 
     if (!isVisible()) {
-        // explicitely hide it, so it stays hidden in case it is only not visible due to the parents
+        // explicitly hide it, so it stays hidden in case it is only not visible due to the parents
         hide();
         emit hideAnimationFinished();
         return;

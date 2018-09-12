@@ -89,7 +89,7 @@ public:
      * append  a new button to the button area. The button can later on be accessed with button(ID)
      * eg for connecting signals to it
      * @param icon a icon for the button
-     * @param id an arbitraty ID value. It will be emitted in the clicked signal for identifying the button
+     * @param id an arbitrary ID value. It will be emitted in the clicked signal for identifying the button
      *  if more than one button is connected to a signals.
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
@@ -160,7 +160,7 @@ public:
     class KMultiTabBarButton *button(int id) const;
 
     /**
-     * get a pointer to a tab within the tab area, identiifed by its ID
+     * get a pointer to a tab within the tab area, identified by its ID
      */
     class KMultiTabBarTab *tab(int id) const;
 
@@ -253,13 +253,13 @@ public:
 
 public Q_SLOTS:
     /**
-     * this is used internaly, but can be used by the user, if (s)he wants to
+     * this is used internally, but can be used by the user, if (s)he wants to
      * It the according call of KMultiTabBar is invoked though this modifications will be overwritten
      */
     void setPosition(KMultiTabBar::KMultiTabBarPosition);
 
     /**
-     * this is used internaly, but can be used by the user, if (s)he wants to
+     * this is used internally, but can be used by the user, if (s)he wants to
      * It the according call of KMultiTabBar is invoked though this modifications will be overwritten
      */
     void setStyle(KMultiTabBar::KMultiTabBarStyle);

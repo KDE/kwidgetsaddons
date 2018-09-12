@@ -35,7 +35,6 @@
 #include <QStyle>
 #include <QToolButton>
 #include <QDoubleValidator>
-#include <QFontDatabase>
 
 #include "moc_kdatepicker.cpp"
 #include "moc_kdatepicker_p.cpp"
@@ -455,7 +454,7 @@ void KDatePicker::selectMonthClicked()
 
     QMenu popup(d->selectMonth);
     // Populate the pick list with all the month names, this may change by year
-    // JPL do we need to do somethng here for months that fall outside valid range?
+    // JPL do we need to do something here for months that fall outside valid range?
     const int monthsInYear = QDate(thisDate.year() + 1, 1, 1).addDays(-1).month();
     for (int m = 1; m <= monthsInYear; m++) {
         popup.addAction(locale().standaloneMonthName(m))->setData(m);

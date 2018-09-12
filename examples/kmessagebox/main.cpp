@@ -43,7 +43,7 @@ int main (int argc, char *argv[])
         QStringLiteral("Description to tell you to click<br />on <b>either</b> button"),
         QStringLiteral("My Title"),
         yesButton
-        /*noButton not explicitely set, falls back to default*/
+        /*noButton not explicitly set, falls back to default*/
     );
 
     if (res == KMessageBox::Yes) {

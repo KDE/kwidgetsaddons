@@ -18,6 +18,7 @@
 */
 
 #include "kacceleratormanager.h"
+#include "kacceleratormanager_p.h"
 
 #include <QApplication>
 #include <QMainWindow>
@@ -41,7 +42,6 @@
 #include <QTextDocument>
 #include <QDebug>
 
-#include "kacceleratormanager_p.h"
 #include "loggingcategory.h"
 #include "common_helpers_p.h"
 
@@ -549,7 +549,7 @@ void KAccelString::calculateWeights(int initialWeight)
             weight += (50 - pos);
         }
 
-        // try to preserve the wanted accelarators
+        // try to preserve the wanted accelerators
         if (pos == accel()) {
             weight += KAccelManagerAlgorithm::WANTED_ACCEL_EXTRA_WEIGHT;
             // qCDebug(KWidgetsAddonsLog) << "wanted " << m_pureText << " " << KAcceleratorManagerPrivate::standardName(m_origText);

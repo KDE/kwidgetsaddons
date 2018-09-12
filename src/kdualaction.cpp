@@ -18,10 +18,9 @@
  * 02110-1301  USA
  */
 #include "kdualaction.h"
+#include "kdualaction_p.h"
 
 #include <QIcon>
-
-#include "kdualaction_p.h"
 
 //---------------------------------------------------------------------
 // KDualActionPrivate

@@ -34,7 +34,7 @@
  *
  * \section usage Usage Example
  *
- * Requesting a simple password, assynchronous
+ * Requesting a simple password, asynchronous
  *
  * \code
  *  KPasswordDialog *dlg = new KPasswordDialog( parent );

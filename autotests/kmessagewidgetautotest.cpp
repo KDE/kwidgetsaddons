@@ -25,7 +25,7 @@
 
 QTEST_MAIN(KMessageWidgetTest)
 
-// KMessageWidget is currently hardcoded to a 500 ms timeline and default QTimeLine 40 ms update intervall
+// KMessageWidget is currently hardcoded to a 500 ms timeline and default QTimeLine 40 ms update interval
 // let's have 7 updates for now, should be save
 const int overlappingWaitingTime = 280;
 

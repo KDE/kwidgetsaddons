@@ -66,7 +66,7 @@ public:
 
     /**
      * Set the main widget. You cannot set the main widget from the constructor,
-     * since it must be a child of the frame itselfes.
+     * since it must be a child of the frame itself.
      * Be careful: the size is set to the main widgets size. It is up to you to
      * set the main widgets correct size before setting it as the main
      * widget.
