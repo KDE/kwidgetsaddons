@@ -18,7 +18,6 @@
 */
 
 #include "kacceleratormanager.h"
-#include "kacceleratormanager_p.h"
 
 #include <QApplication>
 #include <QMainWindow>
@@ -42,6 +41,7 @@
 #include <QTextDocument>
 #include <QDebug>
 
+#include "kacceleratormanager_p.h"
 #include "loggingcategory.h"
 #include "common_helpers_p.h"
 
