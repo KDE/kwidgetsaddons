@@ -56,7 +56,7 @@ public:
         case InfoMessage:
         case WarningMessage:
         case ErrorMessage:
-            styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }").arg(q->palette().color(QPalette::HighlightedText).name()).arg(q->palette().color(QPalette::Highlight).name());
+            styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }").arg(q->palette().color(QPalette::HighlightedText).name(), q->palette().color(QPalette::Highlight).name());
             break;
         case PlainMessage:
         default:

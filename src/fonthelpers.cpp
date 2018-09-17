@@ -80,7 +80,7 @@ QString translateFontName(const QString &name)
         // i18n: Filter by which the translators can translate, or otherwise
         // operate on the font names not put up for regular translation.
         trfont = QCoreApplication::translate("FontHelpers", "%1 [%2]", "@item Font name [foundry]")
-                 .arg(trFamily).arg(trFoundry);
+                 .arg(trFamily, trFoundry);
     }
     return trfont;
 }
