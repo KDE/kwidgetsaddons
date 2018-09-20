@@ -225,7 +225,6 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
 
 void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent *ev)
 {
-#if QT_VERSION >= 0x040700
     if (QApplication::clipboard()->supportsSelection() &&
             textInteractionFlags() != Qt::NoTextInteraction &&
             ev->button() == Qt::LeftButton &&
@@ -253,9 +252,7 @@ void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent *ev)
             txt = txt.mid(selectionStart(), txt.length() - start - charsAfterSelection);
         }
         QApplication::clipboard()->setText(txt, QClipboard::Selection);
-    } else
-#endif
-    {
+    } else {
         QLabel::mouseReleaseEvent(ev);
     }
 }
