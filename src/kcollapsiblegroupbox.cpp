@@ -122,6 +122,13 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
     d->updateChildrenFocus(expanded);
 
     d->animation->setDirection(expanded ? QTimeLine::Forward : QTimeLine::Backward);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    // QTimeLine::duration() must be > 0
+    const int duration = qMax(1, style()->styleHint(QStyle::SH_Widget_Animation_Duration));
+    d->animation->setDuration(duration);
+#else
+    d->animation->setDuration(style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this) ? 500 : 1);
+#endif
     d->animation->start();
 
     //when going from collapsed to expanded changing the child visibility calls an updateGeometry
