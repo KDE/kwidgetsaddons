@@ -193,7 +193,6 @@ if (PythonModuleGeneration_FOUND)
     PYTHONNAMESPACE PyKF5
     MODULENAME KWidgetsAddons
     RULES_FILE "${CMAKE_SOURCE_DIR}/cmake/rules_PyKF5.py"
-    INSTALL_DIR_SUFFIX ${KDE_INSTALL_PYTHONBINDINGSDIR}
     SIP_DEPENDS
       QtWidgets/QtWidgetsmod.sip
     HEADERS
