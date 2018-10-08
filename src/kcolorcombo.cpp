@@ -250,6 +250,7 @@ QList<QColor> KColorCombo::colors() const
 {
     if (d->colorList.isEmpty()) {
         QList<QColor> list;
+        list.reserve(STANDARD_PALETTE_SIZE);
         for (int i = 0; i < STANDARD_PALETTE_SIZE; ++i) {
             list += standardColor(i);
         }

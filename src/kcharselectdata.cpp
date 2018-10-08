@@ -480,6 +480,7 @@ QStringList KCharSelectData::aliases(uint c)
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 2);
 
     QStringList aliases;
+    aliases.reserve(count);
 
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
@@ -504,6 +505,7 @@ QStringList KCharSelectData::notes(uint c)
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 7);
 
     QStringList notes;
+    notes.reserve(count);
 
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
@@ -529,6 +531,7 @@ QVector<uint> KCharSelectData::seeAlso(uint c)
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 22);
 
     QVector<uint> seeAlso;
+    seeAlso.reserve(count);
 
     for (int i = 0;  i < count;  i++) {
         seeAlso.append(mapDataBaseToCodePoint(qFromLittleEndian<quint16> (udata + offset)));
@@ -553,6 +556,7 @@ QStringList KCharSelectData::equivalents(uint c)
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 17);
 
     QStringList equivalents;
+    equivalents.reserve(count);
 
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
@@ -578,6 +582,7 @@ QStringList KCharSelectData::approximateEquivalents(uint c)
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 12);
 
     QStringList approxEquivalents;
+    approxEquivalents.reserve(count);
 
     const char *data = dataFile.constData();
     for (int i = 0;  i < count;  i++) {
@@ -636,6 +641,7 @@ QStringList KCharSelectData::unihanInfo(uint c)
             max = mid - 1;
         } else {
             QStringList res;
+            res.reserve(7);
             for (int i = 0; i < 7; i++) {
                 quint32 offset = qFromLittleEndian<quint32>(udata + offsetBegin + mid * 30 + 2 + i * 4);
                 if (offset != 0) {

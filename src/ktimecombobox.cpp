@@ -458,6 +458,7 @@ QList<QTime> KTimeComboBox::timeList() const
     //Return the drop down list as it is what can be selected currently
     QList<QTime> list;
     int c = count();
+    list.reserve(c);
     for (int i = 0; i < c; ++i) {
         list.append(itemData(i).toTime());
     }
