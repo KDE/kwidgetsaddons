@@ -38,6 +38,7 @@ class KPageModelPrivate;
  *  Qt::ItemDataRoles it provides the two roles
  *
  *    @li HeaderRole
+ *    @li HeaderVisibleRole
  *    @li WidgetRole
  *
  *  which are used to return a header string for a page and a QWidget
@@ -79,7 +80,12 @@ public:
          * QVariant v = QVariant::fromValue(myWidget);
          * \endcode
          */
-        WidgetRole
+        WidgetRole,
+        /**
+         * when true, show the page header, if false don't
+         * @since 5.50
+         */
+        HeaderVisibleRole
     };
 
     /**

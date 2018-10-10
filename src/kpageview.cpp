@@ -260,6 +260,11 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
 {
     Q_Q(KPageView);
 
+    const bool headerVisible = model->data(index, KPageModel::HeaderVisibleRole).toBool();
+    if (!headerVisible) {
+        titleWidget->setVisible(false);
+        return;
+    }
     QString header = model->data(index, KPageModel::HeaderRole).toString();
     if (header.isNull()) {   //TODO KDE5 remove that ugly logic, see also doxy-comments in KPageWidgetItem::setHeader()
         header = model->data(index, Qt::DisplayRole).toString();

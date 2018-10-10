@@ -33,7 +33,7 @@ class Q_DECL_HIDDEN KPageWidgetItem::Private
 {
 public:
     Private()
-        : checkable(false), checked(false), enabled(true)
+        : checkable(false), checked(false), enabled(true), headerVisible(true)
     {
     }
 
@@ -50,6 +50,7 @@ public:
     bool checkable : 1;
     bool checked : 1;
     bool enabled : 1;
+    bool headerVisible : 1;
 };
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget)
@@ -100,6 +101,18 @@ void KPageWidgetItem::setEnabled(bool enabled)
 bool KPageWidgetItem::isEnabled() const
 {
     return d->enabled;
+}
+
+bool KPageWidgetItem::isHeaderVisible() const
+{
+    return d->headerVisible;
+}
+
+void KPageWidgetItem::setHeaderVisible(bool visible)
+{
+    d->headerVisible = visible;
+
+    emit changed();
 }
 
 QWidget *KPageWidgetItem::widget() const
@@ -288,6 +301,8 @@ QVariant KPageWidgetModel::data(const QModelIndex &index, int role) const
         return QVariant(item->pageWidgetItem()->icon());
     } else if (role == HeaderRole) {
         return QVariant(item->pageWidgetItem()->header());
+    } else if (role == HeaderVisibleRole) {
+        return item->pageWidgetItem()->isHeaderVisible();
     } else if (role == WidgetRole) {
         return QVariant::fromValue(item->pageWidgetItem()->widget());
     } else if (role == Qt::CheckStateRole) {

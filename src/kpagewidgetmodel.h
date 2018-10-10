@@ -62,6 +62,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      */
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
 
+    Q_PROPERTY(bool headerVisible READ isHeaderVisible WRITE setHeaderVisible)
 public:
     /**
      * Creates a new page widget item.
@@ -149,6 +150,18 @@ public:
      * Returns whether the page widget item is enabled.
      */
     bool isEnabled() const;
+
+    /**
+     * Returns wether the page will show the header title
+     * @since 5.50
+     */
+    bool isHeaderVisible() const;
+
+    /**
+     * Set wether the page shoulddraw the title
+     * @since 5.50
+     */
+    void setHeaderVisible(bool visible);
 
 public Q_SLOTS:
     /**
