@@ -241,7 +241,6 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
     double h = (height() / (double) d->m_numWeekRows) - 1;
     QRectF cell = QRectF(0, 0, w, h);
     QString cellText;
-    QPen pen;
     QColor cellBackgroundColor, cellTextColor;
     QFont cellFont = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
     bool workingDay = false;

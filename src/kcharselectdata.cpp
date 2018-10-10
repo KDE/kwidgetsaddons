@@ -675,7 +675,6 @@ QChar::Category KCharSelectData::category(uint c)
     int min = 0;
     int mid;
     int max = ((offsetEnd - offsetBegin) / 6) - 1;
-    QString s;
 
     while (max >= min) {
         mid = (min + max) / 2;
