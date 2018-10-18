@@ -191,9 +191,9 @@ QMenu *KPixmapRegionSelectorWidget::createPopupMenu()
     popup->addSection(tr("Image Operations"));
 
     popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-right")), tr("&Rotate Clockwise"),
-                     this, SLOT(rotateClockwise()));
+                     this, &KPixmapRegionSelectorWidget::rotateClockwise);
     popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-left")), tr("Rotate &Counterclockwise"),
-                     this, SLOT(rotateCounterclockwise()));
+                     this, &KPixmapRegionSelectorWidget::rotateCounterclockwise);
 
     /*
        I wonder if it would be appropriate to have here an "Open with..." option to

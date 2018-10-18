@@ -52,8 +52,8 @@ protected:
         q->setLayout(layout);
 
         if (mPageWidget) {
-            q->connect(mPageWidget, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)),
-                       q, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)));
+            q->connect(mPageWidget, &KPageWidget::currentPageChanged,
+                       q, &KPageDialog::currentPageChanged);
             q->connect(mPageWidget, &KPageWidget::pageRemoved,
                        q, &KPageDialog::pageRemoved);
             layout->addWidget(mPageWidget);

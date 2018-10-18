@@ -316,13 +316,13 @@ void KDatePicker::initWidget(const QDate &date_)
         d->monthBackward->setIcon(QIcon::fromTheme(QStringLiteral("arrow-left")));
     }
 
-    connect(d->table, SIGNAL(dateChanged(QDate)), SLOT(dateChangedSlot(QDate)));
+    connect(d->table, QOverload<const QDate&>::of(&KDateTable::dateChanged), this, &KDatePicker::dateChangedSlot);
     connect(d->table, &KDateTable::tableClicked, this, &KDatePicker::tableClickedSlot);
     connect(d->monthForward, &QAbstractButton::clicked, this, &KDatePicker::monthForwardClicked);
     connect(d->monthBackward, &QAbstractButton::clicked, this, &KDatePicker::monthBackwardClicked);
     connect(d->yearForward, &QAbstractButton::clicked, this, &KDatePicker::yearForwardClicked);
     connect(d->yearBackward, &QAbstractButton::clicked, this, &KDatePicker::yearBackwardClicked);
-    connect(d->selectWeek, SIGNAL(activated(int)), SLOT(weekSelected(int)));
+    connect(d->selectWeek, QOverload<int>::of(&QComboBox::activated), this, &KDatePicker::weekSelected);
     connect(d->todayButton, &QAbstractButton::clicked, this, &KDatePicker::todayButtonClicked);
     connect(d->selectMonth, &QAbstractButton::clicked, this, &KDatePicker::selectMonthClicked);
     connect(d->selectYear, &QAbstractButton::toggled, this, &KDatePicker::selectYearClicked);
@@ -500,7 +500,7 @@ void KDatePicker::selectYearClicked()
     picker->setYear(thisDate.year());
     picker->selectAll();
     popup->setMainWidget(picker);
-    connect(picker, SIGNAL(closeMe(int)), popup, SLOT(close(int)));
+    connect(picker, &KDatePickerPrivateYearSelector::closeMe, popup, &KPopupFrame::close);
     picker->setFocus();
 
     if (popup->exec(d->selectYear->mapToGlobal(QPoint(0, d->selectMonth->height())))) {
