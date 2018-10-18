@@ -112,7 +112,10 @@ class KCharSelectItemModel: public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    KCharSelectItemModel(QVector<uint> chars, const QFont &font, QObject *parent): QAbstractTableModel(parent), m_chars(chars), m_font(font)
+    KCharSelectItemModel(const QVector<uint> &chars, const QFont &font, QObject *parent)
+        : QAbstractTableModel(parent)
+        , m_chars(chars)
+        , m_font(font)
     {
         if (chars.count()) {
             m_columns = chars.count();
