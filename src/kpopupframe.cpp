@@ -52,6 +52,7 @@ public:
 class KPopupFrame::KPopupFramePrivate::OutsideClickCatcher
     : public QObject
 {
+    Q_OBJECT
 public:
     explicit OutsideClickCatcher(QObject *parent = nullptr)
         : QObject(parent), m_popup(nullptr) { }
@@ -191,3 +192,5 @@ int KPopupFrame::exec(int x, int y)
 {
     return exec(QPoint(x, y));
 }
+
+#include "kpopupframe.moc"

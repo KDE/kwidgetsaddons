@@ -28,6 +28,7 @@
 
 class KColorComboDelegate : public QAbstractItemDelegate
 {
+    Q_OBJECT
 public:
     enum ItemRoles {
         ColorRole = Qt::UserRole + 1
@@ -353,3 +354,4 @@ void KColorComboPrivate::addColors()
 }
 
 #include "moc_kcolorcombo.cpp"
+#include "kcolorcombo.moc"

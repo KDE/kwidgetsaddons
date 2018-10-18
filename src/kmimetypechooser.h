@@ -113,6 +113,7 @@ private:
   */
 class KWIDGETSADDONS_EXPORT KMimeTypeChooserDialog : public QDialog
 {
+    Q_OBJECT
 public:
     /**
      * Create a KMimeTypeChooser dialog.

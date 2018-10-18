@@ -36,6 +36,7 @@
 
 class KPageStackedWidget : public QStackedWidget
 {
+    Q_OBJECT
 public:
     KPageStackedWidget(QWidget *parent = nullptr)
         : QStackedWidget(parent)
@@ -101,6 +102,7 @@ class KPageListViewProxy;
 
 class KPagePlainView : public QAbstractItemView
 {
+    Q_OBJECT
 public:
     KPagePlainView(QWidget *parent = nullptr);
 

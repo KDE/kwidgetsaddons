@@ -41,6 +41,7 @@
 
 class DatePickerValidator : public QValidator
 {
+    Q_OBJECT
 public:
     DatePickerValidator(KDatePicker *parent)
         : QValidator(parent), picker(parent) {}
@@ -654,3 +655,5 @@ bool KDatePicker::hasCloseButton() const
 {
     return (d->closeButton);
 }
+
+#include "kdatepicker.moc"
