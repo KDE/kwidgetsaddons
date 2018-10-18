@@ -896,10 +896,8 @@ QVector<uint> KCharSelectData::find(const QString &needle)
 
     QVector<uint> sortedResult;
     sortedResult.reserve(result.count());
-    QSet<uint>::const_iterator it = result.begin();
-    const QSet<uint>::const_iterator end = result.end();
-    for ( ; it != end ; ++it ) {
-        sortedResult.append(*it);
+    for (auto c : qAsConst(result)) {
+        sortedResult.append(c);
     }
     qSort(sortedResult);
 
