@@ -83,7 +83,7 @@ public:
         WidgetRole,
         /**
          * when true, show the page header, if false don't
-         * @since 5.50
+         * @since 5.52
          */
         HeaderVisibleRole
     };

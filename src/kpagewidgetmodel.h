@@ -61,7 +61,9 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      * It dis-/enables both the widget and the item in the list-/treeview.
      */
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
-
+    /**
+     * @since 5.52
+     */
     Q_PROPERTY(bool headerVisible READ isHeaderVisible WRITE setHeaderVisible)
 public:
     /**
@@ -153,13 +155,13 @@ public:
 
     /**
      * Returns wether the page will show the header title
-     * @since 5.50
+     * @since 5.52
      */
     bool isHeaderVisible() const;
 
     /**
      * Set wether the page shoulddraw the title
-     * @since 5.50
+     * @since 5.52
      */
     void setHeaderVisible(bool visible);
 
