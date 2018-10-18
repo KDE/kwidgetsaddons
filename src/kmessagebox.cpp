@@ -779,7 +779,7 @@ ButtonCode warningYesNoCancelList(QWidget *parent, const QString &text,
 void error(QWidget *parent,  const QString &text,
            const QString &caption, Options options)
 {
-    return errorList(parent, text, QStringList(), caption, options);
+    errorList(parent, text, QStringList(), caption, options);
 }
 
 static void errorListInternal(QDialog *dialog, const QString &text, const QStringList &strlist,
