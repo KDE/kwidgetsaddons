@@ -633,8 +633,8 @@ bool KDateTable::setDate(const QDate &toDate)
 
     QDate oldDate = date();
     d->setDate(toDate);
-    emit(dateChanged(date(), oldDate));
-    emit(dateChanged(date()));
+    emit dateChanged(date(), oldDate);
+    emit dateChanged(date());
     update();
 
     return true;

@@ -53,7 +53,7 @@ public:
         }
 
         q->setFont(font.family());
-        q->triggered(font.family());
+        emit q->triggered(font.family());
 
 //        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }

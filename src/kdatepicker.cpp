@@ -100,7 +100,7 @@ void KDatePickerPrivateYearSelector::yearEnteredSlot()
     // check if new year will lead to a valid date
     if (QDate(newYear, oldDate.month(), oldDate.day()).isValid()) {
         result = newYear;
-        emit(closeMe(1));
+        emit closeMe(1);
     } else {
         QApplication::beep();
     }
@@ -384,13 +384,13 @@ void KDatePicker::dateChangedSlot(const QDate &date_)
     d->selectWeek->setCurrentIndex((date_.dayOfYear() + firstDay.dayOfWeek() - 2) / 7);
     d->selectYear->setText(QString::number(date_.year()).rightJustified(4, QLatin1Char('0')));
 
-    emit(dateChanged(date_));
+    emit dateChanged(date_);
 }
 
 void KDatePicker::tableClickedSlot()
 {
-    emit(dateSelected(date()));
-    emit(tableClicked());
+    emit dateSelected(date());
+    emit tableClicked();
 }
 
 const QDate &KDatePicker::date() const
@@ -546,7 +546,7 @@ void KDatePicker::lineEnterPressed()
     QDate newDate = QDate::fromString(d->line->text(), locale().dateFormat());
 
     if (newDate.isValid()) {
-        emit(dateEntered(newDate));
+        emit dateEntered(newDate);
         setDate(newDate);
         d->table->setFocus();
     } else {
