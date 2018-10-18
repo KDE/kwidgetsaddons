@@ -137,7 +137,7 @@ KGuiItem save()
 
 KGuiItem dontSave()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Do Not Save"), QStringLiteral(""),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Do Not Save"), QString(),
                     QApplication::translate("KStandardGuiItem", "Do not save data"));
 }
 
@@ -158,7 +158,7 @@ KGuiItem apply()
 
 KGuiItem adminMode()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "Administrator &Mode..."), QStringLiteral(""), QApplication::translate("KStandardGuiItem", "Enter Administrator Mode"),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Administrator &Mode..."), QString(), QApplication::translate("KStandardGuiItem", "Enter Administrator Mode"),
                     QApplication::translate("KStandardGuiItem", "When you click <b>Administrator Mode</b> you will be prompted "
                          "for the administrator (root) password in order to make changes "
                          "which require root privileges."));

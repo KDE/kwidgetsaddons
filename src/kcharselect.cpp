@@ -847,7 +847,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
             if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
                 continue;
             }
-            html += QStringLiteral("<li>") + createLinks(s_data()->formatCode(c2, 4, QStringLiteral(""))) + QStringLiteral("</li>");
+            html += QStringLiteral("<li>") + createLinks(s_data()->formatCode(c2, 4, QString())) + QStringLiteral("</li>");
         }
         html += QStringLiteral("</ul>");
     }
