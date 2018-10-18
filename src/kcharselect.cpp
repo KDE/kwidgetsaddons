@@ -386,8 +386,8 @@ void attachToActionParent(QAction *action, QObject *actionParent, const QList<QK
     action->setParent(actionParent);
 
     if (actionParent->inherits("KActionCollection")) {
-        QMetaObject::invokeMethod(actionParent, "addAction", Q_ARG(QString, action->objectName()), Q_ARG(QAction *, action));
-        QMetaObject::invokeMethod(actionParent, "setDefaultShortcuts", Q_ARG(QAction *, action), Q_ARG(QList<QKeySequence>, shortcuts));
+        QMetaObject::invokeMethod(actionParent, "addAction", Q_ARG(QString, action->objectName()), Q_ARG(QAction*, action));
+        QMetaObject::invokeMethod(actionParent, "setDefaultShortcuts", Q_ARG(QAction*, action), Q_ARG(QList<QKeySequence>, shortcuts));
     } else {
         action->setShortcuts(shortcuts);
     }
