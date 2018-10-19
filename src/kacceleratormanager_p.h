@@ -20,12 +20,12 @@
 #ifndef KACCELERATORMANAGER_PRIVATE_H
 #define KACCELERATORMANAGER_PRIVATE_H
 
+#include <QVector>
 #include <QString>
 #include <QObject>
 
-#include <kwidgetsaddons_export.h>
-
 class QStackedWidget;
+class QMenu;
 class QMenuBar;
 class QTabBar;
 class QDockWidget;
