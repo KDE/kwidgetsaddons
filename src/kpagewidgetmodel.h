@@ -154,13 +154,13 @@ public:
     bool isEnabled() const;
 
     /**
-     * Returns wether the page will show the header title
+     * Returns whether the page will show the header title
      * @since 5.52
      */
     bool isHeaderVisible() const;
 
     /**
-     * Set wether the page shoulddraw the title
+     * Set whether the page should show the header title
      * @since 5.52
      */
     void setHeaderVisible(bool visible);
