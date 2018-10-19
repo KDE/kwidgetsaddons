@@ -18,13 +18,13 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "kselectactiontest.h"
+
 #include <QToolBar>
 #include <QApplication>
 #include <QMenuBar>
 
 #include <QDebug>
-
-#include "kselectactiontest.h"
 
 #include <kselectaction.h>
 

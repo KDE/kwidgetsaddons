@@ -19,14 +19,14 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "kpagewidgettest.h"
+
 #include <QApplication>
 #include <QGridLayout>
 #include <QLabel>
 #include <QPushButton>
 
 #include "kpagewidgetmodel.h"
-
-#include "kpagewidgettest.h"
 
 KPageWidgetTest::KPageWidgetTest(QWidget *parent)
     : QWidget(parent)

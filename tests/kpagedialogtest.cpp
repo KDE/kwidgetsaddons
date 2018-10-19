@@ -19,11 +19,11 @@
     Boston, MA 02110-1301, USA.
 */
 
+#include "kpagedialogtest.h"
+
 #include <QApplication>
 #include <QBoxLayout>
 #include <QLabel>
-
-#include "kpagedialogtest.h"
 
 KPageDialogTest::KPageDialogTest(QWidget *parent)
     : KPageDialog(parent)

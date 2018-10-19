@@ -1,10 +1,11 @@
 
+#include "kledtest.h"
+
 #include <qapplication.h>
 #include <QWidget>
 #include <QTimer>
 #include <stdlib.h>
 #include "kled.h"
-#include "kledtest.h"
 
 KLedTest::KLedTest(QWidget *parent)
     : QWidget(parent),
