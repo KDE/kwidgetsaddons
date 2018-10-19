@@ -38,7 +38,7 @@ class KPageStackedWidget : public QStackedWidget
 {
     Q_OBJECT
 public:
-    KPageStackedWidget(QWidget *parent = nullptr)
+    explicit KPageStackedWidget(QWidget *parent = nullptr)
         : QStackedWidget(parent)
     {
     }
@@ -104,7 +104,7 @@ class KPagePlainView : public QAbstractItemView
 {
     Q_OBJECT
 public:
-    KPagePlainView(QWidget *parent = nullptr);
+    explicit KPagePlainView(QWidget *parent = nullptr);
 
     QModelIndex indexAt(const QPoint &point) const override;
     void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) override;
@@ -141,7 +141,7 @@ class KPageTreeView : public QTreeView
     Q_OBJECT
 
 public:
-    KPageTreeView(QWidget *parent = nullptr);
+    explicit KPageTreeView(QWidget *parent = nullptr);
 
     void setModel(QAbstractItemModel *model) override;
 
@@ -157,7 +157,7 @@ class KPageTabbedView : public QAbstractItemView
     Q_OBJECT
 
 public:
-    KPageTabbedView(QWidget *parent = nullptr);
+    explicit KPageTabbedView(QWidget *parent = nullptr);
     ~KPageTabbedView() override;
 
     void setModel(QAbstractItemModel *model) override;

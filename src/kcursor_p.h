@@ -40,7 +40,7 @@ class KCursorPrivateAutoHideEventFilter : public QObject
     Q_OBJECT
 
 public:
-    KCursorPrivateAutoHideEventFilter(QWidget *widget);
+    explicit KCursorPrivateAutoHideEventFilter(QWidget *widget);
     ~KCursorPrivateAutoHideEventFilter();
 
     bool eventFilter(QObject *o, QEvent *e) override;
