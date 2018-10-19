@@ -17,8 +17,8 @@
     Boston, MA 02110-1301, USA.
 */
 
-#ifndef KDATECOMBOBOXTEST_H
-#define KDATECOMBOBOXTEST_H
+#ifndef KDATETIMEEDITTEST_H
+#define KDATETIMEEDITTEST_H
 
 #include <QWidget>
 
