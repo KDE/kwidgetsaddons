@@ -139,6 +139,14 @@ public:
      */
     int autoHideTimeout() const;
 
+    /**
+     * @return The level of this title: it influences the font size following the guidelines at
+     *         https://www.my-scratch.de/HIG/style/typography.html
+     *         It also corresponds to the level api of Kirigami Heading for QML applications
+     * @since 5.53
+     */
+    int level();
+
 public Q_SLOTS:
     /**
      * @param text Text displayed on the label. It can either be plain text or rich text. If it
@@ -197,6 +205,14 @@ public Q_SLOTS:
      * @param msecs timeout value in milliseconds
      */
     void setAutoHideTimeout(int msecs);
+
+    /**
+     * Sets the level of this title, similar to HTML's h1 h2 h3...
+     * follows KDE HIG https://www.my-scratch.de/HIG/style/typography.html
+     * @param level the level of the title, 1 is the biggest font and most important, descending
+     * @since 5.53
+     */
+    void setLevel(int level);
 
 protected:
     void changeEvent(QEvent *e) override;

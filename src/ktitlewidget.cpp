@@ -41,7 +41,24 @@ public:
 
     QString textStyleSheet() const
     {
-        const int fontSize = qRound(QApplication::font().pointSize() * 1.4);
+        qreal factor;
+        switch (level) {
+        case 1:
+            factor = 1.80;
+            break;
+        case 2:
+            factor = 1.30;
+            break;
+        case 3:
+            factor = 1.20;
+            break;
+        case 4:
+            factor = 1.10;
+            break;
+        default:
+            factor = 1;
+        }
+        const int fontSize = qRound(QApplication::font().pointSize() * factor);
         return QStringLiteral("QLabel { font-size: %1pt; color: %2 }").arg(QString::number(fontSize), q->palette().color(QPalette::WindowText).name());
     }
 
@@ -65,6 +82,7 @@ public:
         return styleSheet;
     }
 
+    int level = 1;
     KTitleWidget *q;
     QGridLayout *headerLayout;
     QLabel *imageLabel;
@@ -111,11 +129,13 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     titleFrame->setFrameShape(QFrame::StyledPanel);
     titleFrame->setFrameShadow(QFrame::Plain);
     titleFrame->setBackgroundRole(QPalette::Base);
+    titleFrame->setContentsMargins(0, 0, 0, 0);
 
     // default image / text part start
     d->headerLayout = new QGridLayout(titleFrame);
     d->headerLayout->setColumnStretch(0, 1);
     d->headerLayout->setMargin(6);
+    d->headerLayout->setContentsMargins(0, 0, 0, 0);
 
     d->textLabel = new QLabel(titleFrame);
     d->textLabel->setVisible(false);
@@ -193,6 +213,16 @@ void KTitleWidget::changeEvent(QEvent *e)
     if (e->type() == QEvent::PaletteChange || e->type() == QEvent::FontChange
                                            || e->type() == QEvent::ApplicationFontChange) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
+        //Qt stylesheet doesn't support lighter font-weight
+        QFont font(d->textLabel->font());
+        if (d->level <= 4) {
+            font.setWeight(QFont::Light);
+            font.setStyleName(QStringLiteral("Light"));
+        } else {
+            font.setWeight(QFont::Normal);
+            font.setStyleName(QStringLiteral("Regular"));
+        }
+        d->textLabel->setFont(font);
         d->commentLabel->setStyleSheet(d->commentStyleSheet());
     }
 }
@@ -203,11 +233,46 @@ void KTitleWidget::setText(const QString &text, Qt::Alignment alignment)
 
     if (!Qt::mightBeRichText(text)) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
+        //Qt stylesheet doesn't support lighter font-weight
+        QFont font(d->textLabel->font());
+        if (d->level <= 4) {
+            font.setWeight(QFont::Light);
+            font.setStyleName(QStringLiteral("Light"));
+        } else {
+            font.setWeight(QFont::Normal);
+            font.setStyleName(QStringLiteral("Regular"));
+        }
+        d->textLabel->setFont(font);
     }
 
     d->textLabel->setText(text);
     d->textLabel->setAlignment(alignment);
     show();
+}
+
+void KTitleWidget::setLevel(int level)
+{
+    if (d->level == level) {
+        return;
+    }
+
+    d->level = level;
+
+    d->textLabel->setStyleSheet(d->textStyleSheet());
+    //Qt stylesheet doesn't support lighter font-weight
+    QFont font(d->textLabel->font());
+    if (d->level <= 4) {
+        font.setWeight(QFont::Light);
+        font.setStyleName(QStringLiteral("Light"));
+    } else {
+        font.setWeight(QFont::Normal);
+        font.setStyleName(QStringLiteral("Regular"));
+    }
+}
+
+int KTitleWidget::level()
+{
+    return d->level;
 }
 
 void KTitleWidget::setText(const QString &text, MessageType type)
