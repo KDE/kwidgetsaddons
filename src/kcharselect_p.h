@@ -117,7 +117,7 @@ public:
         , m_chars(chars)
         , m_font(font)
     {
-        if (chars.count()) {
+        if (!chars.isEmpty()) {
             m_columns = chars.count();
         } else {
             m_columns = 1;
