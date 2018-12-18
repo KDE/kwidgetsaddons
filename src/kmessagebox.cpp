@@ -324,6 +324,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
             };
             detailsLabel->setTextInteractionFlags(flags);
             detailsLabel->setWordWrap(true);
+            detailsLabel->setMinimumSize(detailsLabel->sizeHint());
             detailsLayout->addWidget(detailsLabel, 50);
         } else {
             QTextBrowser *detailTextEdit = new QTextBrowser();
@@ -344,12 +345,6 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
 
     if (!usingListWidget && !usingScrollArea && !usingSqueezedTextLabel && details.isEmpty()) {
         dialog->setFixedSize(dialog->sizeHint() + QSize(10, 10));
-    } else if (!details.isEmpty() && dialog->minimumHeight() < iconLabel->sizeHint().height() * 2) { //strange bug...
-        if (!usingScrollArea) {
-            dialog->setMinimumSize(300, qMax(150, qMax(iconLabel->sizeHint().height(), messageLabel->sizeHint().height())));
-        } else {
-            dialog->setMinimumSize(300, qMax(150, iconLabel->sizeHint().height()));
-        }
     }
 
     if ((options & KMessageBox::Dangerous)) {
