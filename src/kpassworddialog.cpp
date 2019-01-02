@@ -385,7 +385,7 @@ void KPasswordDialog::accept()
 
     // we do this to allow the error message, if any, to go away
     // checkPassword() may block for a period of time
-    QTimer::singleShot(0, this, SLOT(actuallyAccept()));
+    QTimer::singleShot(0, this, [this] { d->actuallyAccept(); });
 }
 
 void KPasswordDialog::KPasswordDialogPrivate::actuallyAccept()

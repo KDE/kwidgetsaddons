@@ -102,7 +102,7 @@ QStringList translateFontNameList(const QStringList &names,
     // Translate fonts, but do not add generics to the list right away.
     QStringList trNames;
     QHash<QString, QString> trMap;
-    Q_FOREACH (const QString &name, names) {
+    for (const QString &name : names) {
         const QString trName = translateFontName(name);
         if (!genericNames.contains(name)) {
             trNames.append(trName);

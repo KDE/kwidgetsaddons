@@ -67,7 +67,7 @@ void KToolBarLabelAction::setBuddy(QAction *buddy)
     Q_FOREACH (QWidget *widget, buddy->associatedWidgets())
         if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget)) {
             QWidget *newBuddy = toolBar->widgetForAction(buddy);
-            Q_FOREACH (QLabel *label, labels) {
+            for (QLabel *label : qAsConst(labels)) {
                 label->setBuddy(newBuddy);
             }
             return;

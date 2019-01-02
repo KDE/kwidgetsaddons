@@ -814,7 +814,7 @@ qreal KFontChooser::Private::fillSizeList(const QList<qreal> &sizes_)
     // Insert sizes into the listbox.
     sizeListBox->clear();
     qSort(sizes);
-    Q_FOREACH (qreal size, sizes) {
+    for (qreal size : qAsConst(sizes)) {
         sizeListBox->addItem(formatFontSize(size));
     }
 
@@ -838,8 +838,8 @@ qreal KFontChooser::Private::setupSizeListBox(const QString &family, const QStri
     } else {
         // A bitmap font.
         //sampleEdit->setPaletteBackgroundPixmap( BitmapPixmap ); // TODO
-        QList<int> smoothSizes = dbase.smoothSizes(family, style);
-        Q_FOREACH (int size, smoothSizes) {
+        const QList<int> smoothSizes = dbase.smoothSizes(family, style);
+        for (int size : smoothSizes) {
             sizes.append(size);
         }
     }
