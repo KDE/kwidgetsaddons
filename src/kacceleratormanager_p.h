@@ -261,6 +261,9 @@ private:
         Item() : m_widget(nullptr), m_children(nullptr), m_index(-1) {}
         ~Item();
 
+        Item(const Item &) = delete;
+        Item &operator=(const Item &) = delete;
+
         void addChild(Item *item);
 
         QWidget       *m_widget;

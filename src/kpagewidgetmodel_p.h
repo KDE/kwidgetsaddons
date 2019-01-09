@@ -29,6 +29,9 @@ public:
     explicit PageItem(KPageWidgetItem *pageItem, PageItem *parent = nullptr);
     ~PageItem();
 
+    PageItem(const PageItem &) = delete;
+    PageItem &operator=(const PageItem &) = delete;
+
     void appendChild(PageItem *child);
     void insertChild(int row, PageItem *child);
     void removeChild(int row);
