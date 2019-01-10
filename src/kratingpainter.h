@@ -61,6 +61,9 @@ public:
      */
     ~KRatingPainter();
 
+    KRatingPainter(const KRatingPainter &) = delete;
+    KRatingPainter &operator=(const KRatingPainter &) = delete;
+
     /**
      * The maximum rating, i.e. how many stars are drawn
      * in total.
