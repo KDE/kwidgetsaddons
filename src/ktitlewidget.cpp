@@ -213,16 +213,6 @@ void KTitleWidget::changeEvent(QEvent *e)
     if (e->type() == QEvent::PaletteChange || e->type() == QEvent::FontChange
                                            || e->type() == QEvent::ApplicationFontChange) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
-        //Qt stylesheet doesn't support lighter font-weight
-        QFont font(d->textLabel->font());
-        if (d->level <= 4) {
-            font.setWeight(QFont::Light);
-            font.setStyleName(QStringLiteral("Light"));
-        } else {
-            font.setWeight(QFont::Normal);
-            font.setStyleName(QStringLiteral("Regular"));
-        }
-        d->textLabel->setFont(font);
         d->commentLabel->setStyleSheet(d->commentStyleSheet());
     }
 }
@@ -233,16 +223,6 @@ void KTitleWidget::setText(const QString &text, Qt::Alignment alignment)
 
     if (!Qt::mightBeRichText(text)) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
-        //Qt stylesheet doesn't support lighter font-weight
-        QFont font(d->textLabel->font());
-        if (d->level <= 4) {
-            font.setWeight(QFont::Light);
-            font.setStyleName(QStringLiteral("Light"));
-        } else {
-            font.setWeight(QFont::Normal);
-            font.setStyleName(QStringLiteral("Regular"));
-        }
-        d->textLabel->setFont(font);
     }
 
     d->textLabel->setText(text);
@@ -259,15 +239,6 @@ void KTitleWidget::setLevel(int level)
     d->level = level;
 
     d->textLabel->setStyleSheet(d->textStyleSheet());
-    //Qt stylesheet doesn't support lighter font-weight
-    QFont font(d->textLabel->font());
-    if (d->level <= 4) {
-        font.setWeight(QFont::Light);
-        font.setStyleName(QStringLiteral("Light"));
-    } else {
-        font.setWeight(QFont::Normal);
-        font.setStyleName(QStringLiteral("Regular"));
-    }
 }
 
 int KTitleWidget::level()
