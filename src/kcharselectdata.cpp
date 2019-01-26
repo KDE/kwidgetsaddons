@@ -64,7 +64,7 @@ public:
     {
         Index index = m_data->createIndex(m_dataFile);
         reportResult(index);
-        reportFinished();
+        reportFinished(nullptr);
     }
 
 private:
