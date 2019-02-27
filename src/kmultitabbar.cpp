@@ -61,11 +61,11 @@ KMultiTabBarInternal::KMultiTabBarInternal(QWidget *parent, KMultiTabBar::KMulti
     } else {
         mainLayout = new QHBoxLayout(this);
     }
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(0);
     mainLayout->addStretch();
     setFrameStyle(NoFrame);
-    setBackgroundRole(QPalette::Background);
+    setBackgroundRole(QPalette::Window);
 }
 
 KMultiTabBarInternal::~KMultiTabBarInternal()
@@ -532,7 +532,7 @@ KMultiTabBar::KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent)
         d->m_l = new QHBoxLayout(this);
         setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed/*, true*/);
     }
-    d->m_l->setMargin(0);
+    d->m_l->setContentsMargins(0, 0, 0, 0);
     d->m_l->setSpacing(0);
 
     d->m_internal = new KMultiTabBarInternal(this, pos);

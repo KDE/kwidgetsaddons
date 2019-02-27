@@ -76,7 +76,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     d->visuals = visuals;
 
     QVBoxLayout *vboxLayout = new QVBoxLayout(this);
-    vboxLayout->setMargin(0);
+    vboxLayout->setContentsMargins(0, 0, 0, 0);
     if (!text.isEmpty()) {
         vboxLayout->addWidget(new QLabel(text, this));
     }

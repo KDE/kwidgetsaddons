@@ -34,7 +34,7 @@ KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
 {
     Q_D(KPageDialog);
     d->mPageWidget = new KPageWidget(this);
-    d->mPageWidget->layout()->setMargin(0);
+    d->mPageWidget->layout()->setContentsMargins(0, 0, 0, 0);
 
     d->mButtonBox = new QDialogButtonBox(this);
     d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));

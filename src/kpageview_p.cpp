@@ -213,7 +213,7 @@ KPageTabbedView::KPageTabbedView(QWidget *parent)
     setFrameShape(NoFrame);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     mTabWidget = new QTabWidget(this);
     connect(mTabWidget, &QTabWidget::currentChanged, this, &KPageTabbedView::currentPageChanged);
@@ -496,7 +496,7 @@ void KPageListViewDelegate::drawFocus(QPainter *painter, const QStyleOptionViewI
         QPalette::ColorGroup cg = (option.state & QStyle::State_Enabled)
                                   ? QPalette::Normal : QPalette::Disabled;
         o.backgroundColor = option.palette.color(cg, (option.state & QStyle::State_Selected)
-                            ? QPalette::Highlight : QPalette::Background);
+                            ? QPalette::Highlight : QPalette::Window);
 
         QStyle *style = option.widget ? option.widget->style() : QApplication::style();
         style->drawPrimitive(QStyle::PE_FrameFocusRect, &o, painter, option.widget);

@@ -108,7 +108,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     d->m_onlyFixed = onlyFixed;
 
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     d->m_sampleLabel = new QLabel(this);
     d->m_button = new QPushButton(tr("Choose..."), this);

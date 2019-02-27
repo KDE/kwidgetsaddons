@@ -45,7 +45,7 @@ public:
         setCentralWidget(mainWidget);
 
         QVBoxLayout *layout = new QVBoxLayout(mainWidget);
-        layout->setMargin(0);
+        layout->setContentsMargins(0, 0, 0, 0);
         layout->setSpacing(0);
         QToolBar *toolBar = addToolBar(QStringLiteral("Toolbar"));
 

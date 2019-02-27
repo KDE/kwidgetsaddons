@@ -91,7 +91,7 @@ KPasswordLineEdit::KPasswordLineEdit(QWidget *parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     d->passwordLineEdit = new QLineEdit(this);
     d->passwordLineEdit->setObjectName(QStringLiteral("passwordlineedit"));
     d->passwordLineEdit->setEchoMode(QLineEdit::Password);

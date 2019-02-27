@@ -398,7 +398,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->actionParent = actionParent;
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     if (SearchLine & controls) {
         QHBoxLayout *searchLayout = new QHBoxLayout();
         mainLayout->addLayout(searchLayout);
