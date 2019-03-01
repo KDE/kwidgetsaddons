@@ -1065,7 +1065,7 @@ QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
     int pos = m_columns * (index.row()) + index.column();
     if (!index.isValid() || pos < 0 || pos >= m_chars.size()
             || index.row() < 0 || index.column() < 0) {
-        if (role == Qt::BackgroundColorRole) {
+        if (role == Qt::BackgroundRole) {
             return QVariant(qApp->palette().color(QPalette::Button));
         }
         return QVariant();
@@ -1084,7 +1084,7 @@ QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
             return QVariant(QString::fromUcs4(&c, 1));
         }
         return QVariant();
-    } else if (role == Qt::BackgroundColorRole) {
+    } else if (role == Qt::BackgroundRole) {
         QFontMetrics fm = QFontMetrics(m_font);
         if (fm.inFontUcs4(c) && s_data()->isPrint(c)) {
             return QVariant(qApp->palette().color(QPalette::Base));

@@ -323,7 +323,7 @@ bool KUrlLabel::event(QEvent *event)
         QPalette palette = parentWidget() ? parentWidget()->palette() : qApp->palette();
 
         palette.setBrush(QPalette::Base, palette.brush(QPalette::Normal, QPalette::Window));
-        palette.setColor(QPalette::WindowText, this->palette().color(QPalette::Active, QPalette::Foreground));
+        palette.setColor(QPalette::WindowText, this->palette().color(QPalette::Active, QPalette::WindowText));
         setPalette(palette);
 
         d->linkColor = palette.color(QPalette::Active, QPalette::Link);
