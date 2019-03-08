@@ -266,6 +266,7 @@ Playing Cards
 Small Form Variants
 Supplemental Punctuation
 Supplemental Symbols and Pictographs
+Symbols and Pictographs Extended-A
 Transport and Map Symbols
 Vertical Forms
 Yijing Hexagram Symbols

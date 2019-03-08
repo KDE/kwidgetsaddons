@@ -213,3 +213,4 @@ QT_TRANSLATE_NOOP3("KCharSelectData", "Geometric Shapes Extended", "KCharselect 
 QT_TRANSLATE_NOOP3("KCharSelectData", "Supplemental Arrows-C", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Supplemental Symbols and Pictographs", "KCharselect unicode block name");
 QT_TRANSLATE_NOOP3("KCharSelectData", "Chess Symbols", "KCharselect unicode block name");
+QT_TRANSLATE_NOOP3("KCharSelectData", "Symbols and Pictographs Extended-A", "KCharselect unicode block name");
