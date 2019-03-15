@@ -111,7 +111,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     layout->setContentsMargins(0, 0, 0, 0);
 
     d->m_sampleLabel = new QLabel(this);
-    d->m_button = new QPushButton(tr("Choose..."), this);
+    d->m_button = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), QStringLiteral(), this);
 
     d->m_sampleLabel->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
     setFocusProxy(d->m_button);
@@ -217,7 +217,7 @@ void KFontRequester::KFontRequesterPrivate::displaySampleText()
 
 void KFontRequester::KFontRequesterPrivate::setToolTip()
 {
-    m_button->setToolTip(tr("Click to select a font"));
+    m_button->setToolTip(tr("Choose Font..."));
 
     m_sampleLabel->setToolTip(QString());
     m_sampleLabel->setWhatsThis(QString());
@@ -225,11 +225,11 @@ void KFontRequester::KFontRequesterPrivate::setToolTip()
     if (m_title.isNull()) {
         m_sampleLabel->setToolTip(tr("Preview of the selected font"));
         m_sampleLabel->setWhatsThis(tr("This is a preview of the selected font. You can change it"
-                                       " by clicking the \"Choose...\" button."));
+                                       " by clicking the \"Choose Font...\" button."));
     } else {
         m_sampleLabel->setToolTip(tr("Preview of the \"%1\" font").arg(m_title));
         m_sampleLabel->setWhatsThis(tr("This is a preview of the \"%1\" font. You can change it"
-                                       " by clicking the \"Choose...\" button.").arg(m_title));
+                                       " by clicking the \"Choose Font...\" button.").arg(m_title));
     }
 }
 
