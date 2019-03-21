@@ -813,7 +813,7 @@ qreal KFontChooser::Private::fillSizeList(const QList<qreal> &sizes_)
 
     // Insert sizes into the listbox.
     sizeListBox->clear();
-    qSort(sizes);
+    std::sort(sizes.begin(), sizes.end());
     for (qreal size : qAsConst(sizes)) {
         sizeListBox->addItem(formatFontSize(size));
     }

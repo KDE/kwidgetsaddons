@@ -117,7 +117,7 @@ void KFontSizeAction::setFontSize(int size)
         // New size
         lst.append(size);
         // Sort the list
-        qSort(lst);
+        std::sort(lst.begin(), lst.end());
         for (int it : qAsConst(lst)) {
             QAction *const action = addAction(QString::number(it));
             if (it == size) {

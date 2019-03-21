@@ -147,7 +147,7 @@ void KTimeComboBoxTest::testTimeList()
     list.clear();
     list << QTime(17, 16, 15) << QTime(4, 0, 0);
     m_combo->setTimeList(list);
-    qSort(list);
+    std::sort(list.begin(), list.end());
     QCOMPARE(m_combo->timeList(), list);
     QCOMPARE(m_combo->minimumTime(), QTime(4, 0, 0));
     QCOMPARE(m_combo->maximumTime(), QTime(17, 16, 15));

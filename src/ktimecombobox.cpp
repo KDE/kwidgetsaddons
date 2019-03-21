@@ -475,7 +475,7 @@ void KTimeComboBox::setTimeList(QList<QTime> timeList,
                 d->m_timeList.append(time);
             }
         }
-        qSort(d->m_timeList);
+        std::sort(d->m_timeList.begin(), d->m_timeList.end());
         // Does the updateTimeWidget call for us
         setTimeRange(d->m_timeList.first(), d->m_timeList.last(),
                      minWarnMsg, maxWarnMsg);

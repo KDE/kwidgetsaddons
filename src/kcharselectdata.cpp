@@ -899,7 +899,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     for (auto c : qAsConst(result)) {
         sortedResult.append(c);
     }
-    qSort(sortedResult);
+    std::sort(sortedResult.begin(), sortedResult.end());
 
     returnRes += sortedResult;
     return returnRes;
