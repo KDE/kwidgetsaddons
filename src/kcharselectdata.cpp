@@ -855,7 +855,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
         searchStrings = splitString(simplified);
     }
 
-    if (searchStrings.count() == 0) {
+    if (searchStrings.isEmpty()) {
         return returnRes;
     }
 

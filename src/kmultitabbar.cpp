@@ -634,7 +634,7 @@ void KMultiTabBar::removeButton(int id)
         }
     }
 
-    if (d->m_buttons.count() == 0) {
+    if (d->m_buttons.isEmpty()) {
         d->m_btnTabSep->hide();
     }
 }

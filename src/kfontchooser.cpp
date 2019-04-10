@@ -792,7 +792,7 @@ qreal KFontChooser::Private::fillSizeList(const QList<qreal> &sizes_)
 
     QList<qreal> sizes = sizes_;
     bool canCustomize = false;
-    if (sizes.count() == 0) {
+    if (sizes.isEmpty()) {
         static const int c[] = {
             4,  5,  6,  7,
             8,  9,  10, 11,
@@ -973,7 +973,7 @@ void KFontChooser::getFontList(QStringList &list, uint fontListCriteria)
         if ((fontListCriteria & FixedWidthFonts) > 0) {
             // Fallback.. if there are no fixed fonts found, it's probably a
             // bug in the font server or Qt.  In this case, just use 'fixed'
-            if (lstFonts.count() == 0) {
+            if (lstFonts.isEmpty()) {
                 lstFonts.append(QStringLiteral("fixed"));
             }
         }
