@@ -551,8 +551,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
 
     setFocusPolicy(Qt::StrongFocus);
     setFocusProxy(d->charTable);
-    d->_k_sectionSelected(0);
-    d->_k_blockSelected(0);
+    d->_k_sectionSelected(0); // this will also call _k_blockSelected(0)
     setCurrentCodePoint(QChar::Null);
 
     d->historyEnabled = true;
