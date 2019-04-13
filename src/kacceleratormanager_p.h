@@ -44,7 +44,7 @@ class KAccelString
 {
 public:
 
-    KAccelString() : m_pureText(), m_accel(-1) {}
+    KAccelString() : m_pureText(), m_accel(-1), m_orig_accel(-1) {}
     explicit KAccelString(const QString &input, int initalWeight = -1);
 
     void calculateWeights(int initialWeight);
