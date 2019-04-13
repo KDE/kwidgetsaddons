@@ -466,9 +466,11 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     connect(d->forwardButton, &QToolButton::clicked, this, [this]() { d->_k_forward(); });
 
     d->sectionCombo = new QComboBox(this);
+    d->sectionCombo->setObjectName(QStringLiteral("sectionCombo"));
     d->sectionCombo->setToolTip(tr("Select a category"));
     comboLayout->addWidget(d->sectionCombo);
     d->blockCombo = new QComboBox(this);
+    d->blockCombo->setObjectName(QStringLiteral("blockCombo"));
     d->blockCombo->setToolTip(tr("Select a block to be displayed"));
     d->blockCombo->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     comboLayout->addWidget(d->blockCombo, 1);

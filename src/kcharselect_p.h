@@ -172,9 +172,7 @@ public:
     }
     QStringList mimeTypes() const override
     {
-        QStringList types;
-        types << QStringLiteral("text/plain");
-        return types;
+        return {QStringLiteral("text/plain")};
     }
     bool dropMimeData(const QMimeData *data, Qt::DropAction action,
                       int row, int column, const QModelIndex &parent) override;
