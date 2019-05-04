@@ -31,6 +31,7 @@
 
 #include <string.h>
 #include <qstandardpaths.h>
+#include <../test-config.h>
 
 /* constants for hangul (de)composition, see UAX #15 */
 #define SBase 0xAC00
@@ -94,8 +95,13 @@ bool KCharSelectData::openDataFile()
     if (!dataFile.isEmpty()) {
         return true;
     } else {
-        QFile file(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/kcharselect/kcharselect-data")));
+        QString fileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kf5/kcharselect/kcharselect-data"));
+        if (fileName.isEmpty()) {
+            fileName = QStringLiteral(TOP_SRCDIR "/src/kcharselect-data"); // for autotests before installation
+        }
+        QFile file(fileName);
         if (!file.open(QIODevice::ReadOnly)) {
+            qWarning() << "Couldn't find kf5/kcharselect/kcharselect-data in the install prefix (under GenericDataLocation) nor in the builtin path" << TOP_SRCDIR;
             return false;
         }
         dataFile = file.readAll();

@@ -38,6 +38,8 @@ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ecm_install_po_files_as_qm(po)
 endif()
 
+configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
+
 add_subdirectory(src)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
