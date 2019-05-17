@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 
     QWidget toplevel;
     QBoxLayout *mainbox = new QBoxLayout(QBoxLayout::TopToBottom, &toplevel);
-    mainbox->setMargin(10);
+    mainbox->setContentsMargins(10, 10, 10, 10);
 
     KSeparator *sep1 = new KSeparator(Qt::Vertical, &toplevel);
     mainbox->addWidget(sep1);

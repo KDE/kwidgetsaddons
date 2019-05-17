@@ -48,7 +48,7 @@ public:
 
         QWidget *checkBoxTitleMainWidget = new QWidget(this);
         QVBoxLayout *titleLayout = new QVBoxLayout(checkBoxTitleMainWidget);
-        titleLayout->setMargin(6);
+        titleLayout->setContentsMargins(6, 6, 6, 6);
 
         QCheckBox *checkBox = new QCheckBox(QStringLiteral("Text Checkbox"), checkBoxTitleMainWidget);
         titleLayout->addWidget(checkBox);
