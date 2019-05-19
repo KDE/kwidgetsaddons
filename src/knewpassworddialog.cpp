@@ -73,20 +73,20 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::_k_passwordStatusChanged()
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
         //~ singular Password must be at least %n character long
         //~ plural Password must be at least %n characters long
-        showMessageWidget(tr("Password must be at least %n character(s) long", "", ui.pwdWidget->minimumPasswordLength()), KMessageWidget::Error);
+        showMessageWidget(tr("Password must be at least %n character(s) long.", "", ui.pwdWidget->minimumPasswordLength()), KMessageWidget::Error);
         break;
     case KNewPasswordWidget::EmptyPasswordNotAllowed:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        showMessageWidget(tr("Password is empty"), KMessageWidget::Warning);
+        showMessageWidget(tr("Password is empty."), KMessageWidget::Warning);
         break;
     case KNewPasswordWidget::PasswordNotVerified:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        showMessageWidget(tr("Passwords do not match"), KMessageWidget::Warning);
+        showMessageWidget(tr("Passwords do not match."), KMessageWidget::Warning);
         break;
     case KNewPasswordWidget::WeakPassword:
     case KNewPasswordWidget::StrongPassword:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
-        showMessageWidget(tr("Passwords match"), KMessageWidget::Positive);
+        showMessageWidget(tr("Passwords match."), KMessageWidget::Positive);
         break;
     }
 }
