@@ -70,14 +70,6 @@ void KPageViewPrivate::_k_rebuildGui()
         }
     }
 
-    view->setFrameShape(QFrame::NoFrame);
-    view->setContentsMargins(0, 0, 0, 0);
-    view->viewport()->setContentsMargins(0, 0, 0, 0);
-    view->setAutoFillBackground(true);
-    view->setBackgroundRole(QPalette::Base);
-    view->viewport()->setAutoFillBackground(true);
-    view->viewport()->setBackgroundRole(QPalette::Base);
-
     if (faceType == KPageView::Tabbed) {
         stack->setVisible(false);
         layout->removeWidget(stack);

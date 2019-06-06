@@ -83,7 +83,6 @@ KPageDialog::~KPageDialog()
 void KPageDialog::setFaceType(FaceType faceType)
 {
     d_func()->mPageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
-    //d_func()->mPageWidget->setFaceType(KPageView::Plain);
 }
 
 KPageWidgetItem *KPageDialog::addPage(QWidget *widget, const QString &name)
