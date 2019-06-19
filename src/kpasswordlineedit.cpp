@@ -97,6 +97,7 @@ KPasswordLineEdit::KPasswordLineEdit(QWidget *parent)
     d->passwordLineEdit->setEchoMode(QLineEdit::Password);
     connect(d->passwordLineEdit, &QLineEdit::textChanged, this, &KPasswordLineEdit::passwordChanged);
     setFocusProxy(d->passwordLineEdit);
+    setFocusPolicy(d->passwordLineEdit->focusPolicy());
     mainLayout->addWidget(d->passwordLineEdit);
     d->initialize();
 }
