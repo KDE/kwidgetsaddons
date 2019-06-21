@@ -44,6 +44,7 @@
 #endif
 #include <ksqueezedtextlabel.h>
 
+#include <KCollapsibleGroupBox>
 // Some i18n filters, that standard button texts are piped through
 // (the new KGuiItem object with filtered text is created from the old one).
 
@@ -155,9 +156,6 @@ public Q_SLOTS:
         QDialogButtonBox::StandardButton code = m_buttons->standardButton(button);
         if (code != QDialogButtonBox::NoButton) {
             m_dialog->done(code);
-        } else if (m_details && (button->objectName() == QStringLiteral("detailsButton"))) {
-            button->setText(QApplication::translate("KMessageBox", "&Details") + (m_details->isVisible() ? QStringLiteral(" >>") : QStringLiteral(" <<")));
-            m_details->setVisible(!m_details->isVisible());
         }
     }
 
@@ -313,7 +311,10 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
     topLayout->addWidget(mainWidget);
 
     if (!details.isEmpty()) {
-        QGroupBox *detailsGroup = new QGroupBox(QApplication::translate("KMessageBox", "Details"));
+        QHBoxLayout *detailsHLayout = new QHBoxLayout();
+        detailsHLayout->addSpacing(2 * spacingHint + iconLayout->sizeHint().width());
+        KCollapsibleGroupBox *detailsGroup = new KCollapsibleGroupBox();
+        detailsGroup->setTitle(QApplication::translate("KMessageBox", "Details"));
         QVBoxLayout *detailsLayout = new QVBoxLayout(detailsGroup);
         if (details.length() < 512) {
             QLabel *detailsLabel = new QLabel(details);
@@ -336,12 +337,13 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         if (!usingListWidget) {
             mainLayout->setStretchFactor(hLayout, 10);
         }
-        topLayout->addWidget(detailsGroup);
+        detailsHLayout->addWidget(detailsGroup);
+        topLayout->addLayout(detailsHLayout);
         buttonsHelper->setDetailsWidget(detailsGroup);
-        detailsGroup->hide();
     }
 
     topLayout->addWidget(buttons);
+    topLayout->setSizeConstraint(QLayout::SetFixedSize);
 
     if (!usingListWidget && !usingScrollArea && !usingSqueezedTextLabel && details.isEmpty()) {
         dialog->setFixedSize(dialog->sizeHint() + QSize(10, 10));
@@ -804,13 +806,7 @@ static void detailedErrorInternal(QDialog *dialog, const QString &text,
     dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Error") : caption);
     dialog->setObjectName(QStringLiteral("error"));
 
-    QPushButton *detailsButton = new QPushButton;
-    detailsButton->setObjectName(QStringLiteral("detailsButton"));
-    detailsButton->setText(QApplication::translate("KMessageBox", "&Details") + QStringLiteral(" >>"));
-    detailsButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
-
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->addButton(detailsButton, QDialogButtonBox::HelpRole);
     buttonBox->addButton(QDialogButtonBox::Ok);
     buttonBox->button(QDialogButtonBox::Ok)->setFocus();
 
@@ -853,13 +849,7 @@ static void detailedSorryInternal(QDialog *dialog, const QString &text,
     dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : caption);
     dialog->setObjectName(QStringLiteral("sorry"));
 
-    QPushButton *detailsButton = new QPushButton;
-    detailsButton->setObjectName(QStringLiteral("detailsButton"));
-    detailsButton->setText(QApplication::translate("KMessageBox", "&Details") + QStringLiteral(" >>"));
-    detailsButton->setIcon(QIcon::fromTheme(QStringLiteral("help-about")));
-
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->addButton(detailsButton, QDialogButtonBox::HelpRole);
     buttonBox->addButton(QDialogButtonBox::Ok);
     buttonBox->button(QDialogButtonBox::Ok)->setFocus();
 
