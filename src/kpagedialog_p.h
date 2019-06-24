@@ -23,6 +23,7 @@
 #include "kpagedialog.h"
 #include <QDialogButtonBox>
 #include <QLayout>
+#include <QAbstractItemView>
 
 class KPageDialogPrivate
 {
@@ -64,7 +65,11 @@ protected:
         if (mButtonBox) {
             q->connect(mButtonBox, &QDialogButtonBox::accepted, q, &QDialog::accept);
             q->connect(mButtonBox, &QDialogButtonBox::rejected, q, &QDialog::reject);
-            layout->addWidget(mButtonBox);
+            if (mPageWidget) {
+                mPageWidget->setPageFooter(mButtonBox);
+            } else {
+                layout->addWidget(mButtonBox);
+            }
         }
     }
 };

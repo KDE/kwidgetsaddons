@@ -33,6 +33,7 @@
 #include <QTabBar>
 #include <QTreeView>
 #include <ktitlewidget.h>
+#include <QPointer>
 
 class KPageStackedWidget : public QStackedWidget
 {
@@ -76,6 +77,9 @@ protected:
     QWidget *defaultWidget;
 
     QAbstractItemView *view;
+
+    QPointer <QWidget> pageHeader;
+    QPointer <QWidget> pageFooter;
 
     void updateTitleWidget(const QModelIndex &index);
 

@@ -78,7 +78,12 @@ void KPageViewPrivate::_k_rebuildGui()
         stack->setVisible(true);
     }
 
-    titleWidget->setVisible(q->showPageHeader());
+    if (pageHeader) {
+        pageHeader->setVisible(q->showPageHeader());
+        titleWidget->setVisible(false);
+    } else {
+        titleWidget->setVisible(q->showPageHeader());
+    }
 
     Qt::Alignment alignment = q->viewPosition();
     if (alignment & Qt::AlignTop) {
@@ -88,7 +93,7 @@ void KPageViewPrivate::_k_rebuildGui()
     } else if (alignment & Qt::AlignBottom) {
         layout->addWidget(view, 4, 1);
     } else if (alignment & Qt::AlignLeft) {
-        layout->addWidget(view, 1, 0, 2, 1);
+        layout->addWidget(view, 1, 0, 3, 1);
     }
 }
 
@@ -303,6 +308,7 @@ void KPageViewPrivate::init()
 {
     Q_Q(KPageView);
     layout = new QGridLayout(q);
+    layout->setContentsMargins(0, 0, 0, 0);
     stack = new KPageStackedWidget(q);
     titleWidget = new KTitleWidget(q);
     QPixmap emptyPixmap(22, 22);
@@ -442,6 +448,64 @@ void KPageView::setDefaultWidget(QWidget *widget)
     }
 }
 
+void KPageView::setPageHeader(QWidget *header)
+{
+    Q_D(KPageView);
+    if (d->pageHeader == header) {
+        return;
+    }
+
+    if (d->pageHeader == header) {
+        return;
+    }
+
+    if (d->pageHeader) {
+        d->layout->removeWidget(d->pageHeader);
+    }
+    d->layout->removeWidget(d->titleWidget);
+
+    d->pageHeader = header;
+
+    if (d->pageHeader) {
+        d->layout->addWidget(d->pageHeader, 1, 1);
+        d->pageHeader->setVisible(showPageHeader());
+    } else {
+        d->layout->addWidget(d->titleWidget, 1, 1);
+        d->titleWidget->setVisible(showPageHeader());
+    }
+    
+}
+
+QWidget *KPageView::pageHeader() const
+{
+    Q_D(const KPageView);
+    return d->pageHeader;
+}
+
+void KPageView::setPageFooter(QWidget *footer)
+{
+    Q_D(KPageView);
+    if (d->pageFooter == footer) {
+        return;
+    }
+
+    if (d->pageFooter) {
+        d->layout->removeWidget(d->pageFooter);
+    }
+
+    d->pageFooter = footer;
+
+    if (footer) {
+        d->layout->addWidget(d->pageFooter, 3, 1);
+    }
+}
+
+QWidget *KPageView::pageFooter() const
+{
+    Q_D(const KPageView);
+    return d->pageFooter;
+}
+
 QAbstractItemView *KPageView::createView()
 {
     Q_D(KPageView);
@@ -482,7 +546,7 @@ bool KPageView::showPageHeader() const
     if (faceType == Tabbed) {
         return false;
     } else {
-        return !d->titleWidget->text().isEmpty();
+        return d->pageHeader || !d->titleWidget->text().isEmpty();
     }
 }
 
