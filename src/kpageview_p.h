@@ -78,8 +78,8 @@ protected:
 
     QAbstractItemView *view;
 
-    QPointer <QWidget> pageHeader;
-    QPointer <QWidget> pageFooter;
+    QPointer<QWidget> pageHeader;
+    QPointer<QWidget> pageFooter;
 
     void updateTitleWidget(const QModelIndex &index);
 

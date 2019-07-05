@@ -455,10 +455,6 @@ void KPageView::setPageHeader(QWidget *header)
         return;
     }
 
-    if (d->pageHeader == header) {
-        return;
-    }
-
     if (d->pageHeader) {
         d->layout->removeWidget(d->pageHeader);
     }
@@ -473,7 +469,6 @@ void KPageView::setPageHeader(QWidget *header)
         d->layout->addWidget(d->titleWidget, 1, 1);
         d->titleWidget->setVisible(showPageHeader());
     }
-    
 }
 
 QWidget *KPageView::pageHeader() const
