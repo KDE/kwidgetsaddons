@@ -6,6 +6,7 @@ qt5_add_resources(kwidgetsaddons_ICON_SRCS icons.qrc)
 set(kwidgetsaddons_SRCS
   kacceleratormanager.cpp
   kanimatedbutton.cpp
+  kbusyindicatorwidget.cpp
   kcharselect.cpp
   kcharselectdata.cpp
   kcollapsiblegroupbox.cpp
@@ -115,6 +116,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   HEADER_NAMES
   KAcceleratorManager
   KAnimatedButton
+  KBusyIndicatorWidget
   KCharSelect
   KCollapsibleGroupBox
   KColorButton
@@ -198,6 +200,7 @@ if (PythonModuleGeneration_FOUND)
     HEADERS
       kacceleratormanager.h
       kanimatedbutton.h
+      kbusyindicatorwidget.h
       kcharselect.h
       kcollapsiblegroupbox.h
       kcolorbutton.h

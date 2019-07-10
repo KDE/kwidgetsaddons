@@ -13,6 +13,7 @@ endmacro()
 
 kwidgetsaddons_executable_tests(
   kanimatedbuttontest
+  kbusyindicatorwidgettest
   kcharselecttest
   kcollapsiblegroupboxtest
   kdatepicktest
