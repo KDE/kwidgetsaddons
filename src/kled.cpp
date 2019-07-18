@@ -20,7 +20,6 @@
 
 #include "kled.h"
 
-#include <QApplication>
 #include <QPainter>
 #include <QImage>
 #include <QStyle>

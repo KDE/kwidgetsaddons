@@ -27,6 +27,7 @@
 #include <QWidgetAction>
 #include <QDesktopWidget>
 #include <QVector>
+#include <QDate>
 
 #include "kdatepicker.h"
 #include "kmessagebox.h"

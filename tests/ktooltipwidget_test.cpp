@@ -20,7 +20,6 @@
 #include <KToolTipWidget>
 
 #include <QApplication>
-#include <QDebug>
 #include <QPushButton>
 #include <QSpinBox>
 #include <QVBoxLayout>

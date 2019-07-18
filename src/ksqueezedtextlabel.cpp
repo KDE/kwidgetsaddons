@@ -23,7 +23,6 @@
 #include <QMenu>
 #include <QClipboard>
 #include <QApplication>
-#include <QMimeData>
 #include <QTextDocument>
 
 class KSqueezedTextLabelPrivate

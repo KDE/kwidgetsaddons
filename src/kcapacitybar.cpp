@@ -23,15 +23,12 @@
 
 #include <math.h>
 
-#include <QApplication>
-#include <QLabel>
 #include <QStyle>
 #include <QPainter>
-#include <QBoxLayout>
 #include <QPaintEvent>
 #include <QPainterPath>
 #include <QLinearGradient>
-#include <QStyleOptionFrame>
+#include <QStyleOptionProgressBar>
 
 #define ROUND_MARGIN     6
 #define VERTICAL_SPACING 1

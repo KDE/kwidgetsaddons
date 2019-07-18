@@ -28,19 +28,16 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenuBar>
-#include <QMetaClassInfo>
 #include <QObject>
 #include <QList>
 #include <QPushButton>
 #include <QRadioButton>
-#include <QDoubleSpinBox>
 #include <QTabBar>
 #include <QTextEdit>
 #include <QWidget>
 #include <QStackedWidget>
 #include <QDockWidget>
-#include <QTextDocument>
-#include <QDebug>
+#include <QMetaProperty>
 
 #include "loggingcategory.h"
 #include "common_helpers_p.h"

@@ -24,7 +24,6 @@
 #include <QAbstractScrollArea>
 #include <QTimer>
 #include <QWidget>
-#include <QFile>
 
 void KCursor::setAutoHideCursor(QWidget *w, bool enable,
                                 bool customEventFilter)

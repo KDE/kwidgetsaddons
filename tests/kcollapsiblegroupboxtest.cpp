@@ -21,9 +21,7 @@
 #include <QLineEdit>
 #include <QWidget>
 #include <QVBoxLayout>
-#include <QFrame>
 #include <QCheckBox>
-#include <QGroupBox>
 #include <QLabel>
 
 #include <kcollapsiblegroupbox.h>

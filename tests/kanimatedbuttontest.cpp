@@ -22,7 +22,6 @@
 #include "kanimatedbutton.h"
 
 #include <QApplication>
-#include <QLabel>
 #include <qlayout.h>
 #include <QLineEdit>
 #include <QPushButton>

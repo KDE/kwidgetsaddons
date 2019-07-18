@@ -20,7 +20,6 @@
 
 #include "kratingpainter.h"
 
-#include <QDebug>
 #include <QPainter>
 #include <QPixmap>
 #include <QIcon>

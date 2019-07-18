@@ -21,9 +21,10 @@
 #include <QApplication>
 #include <QToolButton>
 #include <QLabel>
-#include <QLayout>
-#include <QActionEvent>
 #include <QListWidget>
+#include <QKeyEvent>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 
 class KActionSelectorPrivate
 {

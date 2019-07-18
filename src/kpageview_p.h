@@ -30,7 +30,6 @@
 #include <QStackedWidget>
 #include <QAbstractProxyModel>
 #include <QListView>
-#include <QTabBar>
 #include <QTreeView>
 #include <ktitlewidget.h>
 

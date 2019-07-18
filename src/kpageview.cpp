@@ -30,9 +30,7 @@
 
 #include <QAbstractItemView>
 #include <QGridLayout>
-#include <QLabel>
 #include <QSize>
-#include <QStackedWidget>
 #include <QTimer>
 
 void KPageViewPrivate::_k_rebuildGui()

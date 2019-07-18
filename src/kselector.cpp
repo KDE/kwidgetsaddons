@@ -19,7 +19,6 @@
 
 #include "kselector.h"
 
-#include <QImage>
 #include <QPainter>
 #include <QPaintEvent>
 #include <QPixmap>

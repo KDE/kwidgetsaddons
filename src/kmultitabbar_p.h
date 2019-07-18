@@ -26,6 +26,7 @@
 #define K_MULTI_TAB_BAR_P_H
 #include <QScrollArea>
 #include <kmultitabbar.h>
+#include <QVBoxLayout>
 
 class KMultiTabBarInternal: public QFrame
 {

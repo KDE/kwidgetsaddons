@@ -22,11 +22,10 @@
 
 #include <QLabel>
 #include <QPushButton>
-#include <QLayout>
 #include <QFontDatabase>
 #include <QFontInfo>
 #include <QFontDialog>
-#include <QLocale>
+#include <QHBoxLayout>
 
 #include <kfontchooser.h>
 

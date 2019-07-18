@@ -22,9 +22,6 @@
 
 #include <KColumnResizer>
 
-#include <QFile>
-#include <QFormLayout>
-#include <QLabel>
 #include "ui_kcolumnresizertest-forms.h"
 #include "ui_kcolumnresizertest-grids.h"
 #include "ui_kcolumnresizertest-grid-and-form.h"

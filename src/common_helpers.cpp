@@ -18,7 +18,6 @@
 */
 
 #include <common_helpers_p.h>
-#include <QDebug>
 
 // If pos points to alphanumeric X in "...(X)...", which is preceded or
 // followed only by non-alphanumerics, then "(X)" gets removed.

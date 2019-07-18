@@ -23,9 +23,7 @@
 #include "loggingcategory.h"
 
 #include <QPixmap>
-#include <QPainter>
 #include <QVector>
-#include <QtDebug>
 
 class Q_DECL_HIDDEN KPixmapSequence::Private : public QSharedData
 {

@@ -21,7 +21,6 @@
 
 #include <QApplication>
 #include <QCheckBox>
-#include <QDebug>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

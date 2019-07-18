@@ -21,7 +21,6 @@
 #define KCOLORBUTTONTEST_H
 
 #include <QObject>
-#include <QColor>
 
 class KColorButtonTest : public QObject
 {

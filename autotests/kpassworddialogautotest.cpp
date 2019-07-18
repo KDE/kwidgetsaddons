@@ -20,7 +20,6 @@
 #include "kpassworddialogautotest.h"
 
 #include <QAction>
-#include <QLineEdit>
 #include <QTest>
 
 #include <KPasswordDialog>

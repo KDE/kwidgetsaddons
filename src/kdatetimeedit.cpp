@@ -19,11 +19,6 @@
 
 #include "kdatetimeedit.h"
 
-#include <QStringList>
-#include <QKeyEvent>
-#include <QMenu>
-#include <QLineEdit>
-#include <QWidgetAction>
 
 #include "kdatepicker.h"
 #include "kdatecombobox.h"

@@ -25,7 +25,6 @@
 #include "kpagedialog.h"
 #include "kpagedialog_p.h"
 
-#include <QTimer>
 #include <QLayout>
 
 KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)

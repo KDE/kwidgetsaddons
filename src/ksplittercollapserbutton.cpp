@@ -26,12 +26,10 @@
 // Qt
 #include <QApplication>
 #include <QEvent>
-#include <QMouseEvent>
 #include <QSplitter>
 #include <QStyleOptionToolButton>
 #include <QStylePainter>
 #include <QTimeLine>
-#include <QDebug>
 
 enum Direction {
     LeftToRight = 0,

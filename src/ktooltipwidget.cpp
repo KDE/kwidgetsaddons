@@ -21,7 +21,6 @@
 
 #include "ktooltipwidget.h"
 
-#include <QApplication>
 #include <QPaintEvent>
 #include <QScreen>
 #include <QStylePainter>

@@ -20,14 +20,12 @@
 
 #include <KToolTipWidget>
 
-#include <QWindow>
-#include <QDesktopWidget>
-#include <QScreen>
 #include <QLayout>
 #include <QStyle>
 #include <QLabel>
 #include <QLineEdit>
 #include <QSignalSpy>
+#include <QScreen>
 #include <QTest>
 
 void KToolTipWidgetTest::initTestCase()

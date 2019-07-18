@@ -29,12 +29,13 @@
 #include <QColor>
 #include <QImage>
 #include <QLabel>
-#include <QLayout>
 #include <QMenu>
 #include <QRubberBand>
 #include <QCursor>
 #include <QApplication>
 #include <QMouseEvent>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 class Q_DECL_HIDDEN KPixmapRegionSelectorWidget::Private
 {

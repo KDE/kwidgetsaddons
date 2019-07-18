@@ -23,11 +23,10 @@
 
 #include <QApplication>
 #include <QPushButton>
-#include <QLayout>
 #include <QLabel>
-#include <QBoxLayout>
 #include <QDebug>
-
+#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <kcolorcombo.h>
 
 KColorComboTest::KColorComboTest(QWidget *widget)

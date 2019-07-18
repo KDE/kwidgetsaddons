@@ -23,11 +23,9 @@
 #include "loggingcategory.h"
 
 #include <QCoreApplication>
-#include <QDebug>
 #include <QPluginLoader>
 #include <QSettings>
 #include <QStandardPaths>
-#include <QVariant>
 
 namespace KMessageBox
 {

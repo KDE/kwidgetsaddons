@@ -28,9 +28,7 @@
 
 #include "kfontaction.h"
 
-#include <QDebug>
 #include <QFontComboBox>
-#include <QToolBar>
 
 #include <kfontchooser.h>
 

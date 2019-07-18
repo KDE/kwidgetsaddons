@@ -21,7 +21,6 @@
 #include "kmessagewidget.h"
 
 #include <QAction>
-#include <QApplication>
 #include <QEvent>
 #include <QGridLayout>
 #include <QHBoxLayout>
@@ -31,7 +30,7 @@
 #include <QTimeLine>
 #include <QToolButton>
 #include <QStyle>
-
+#include <QGuiApplication>
 //---------------------------------------------------------------------
 // KMessageWidgetPrivate
 //---------------------------------------------------------------------

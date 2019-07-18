@@ -23,7 +23,6 @@
 
 #include <QDialog>
 #include <QDialogButtonBox>
-#include <QFlags>
 
 #include <kwidgetsaddons_export.h>
 

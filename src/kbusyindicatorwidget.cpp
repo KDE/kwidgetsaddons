@@ -23,9 +23,9 @@
 #include <QApplication>
 #include <QIcon>
 #include <QPainter>
-#include <QPropertyAnimation>
 #include <QResizeEvent>
 #include <QStyle>
+#include <QVariantAnimation>
 
 class KBusyIndicatorWidgetPrivate
 {

@@ -23,7 +23,6 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
-#include <QPixmap>
 
 /**
  * @class KXYSelector kxyselector.h KXYSelector

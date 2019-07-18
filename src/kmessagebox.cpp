@@ -25,7 +25,6 @@
 #include <QCheckBox>
 #include <QDialog>
 #include <QDialogButtonBox>
-#include <QGroupBox>
 #include <QLabel>
 #include <QLayout>
 #include <QListWidget>
@@ -33,7 +32,6 @@
 #include <QDesktopWidget>
 #include <QScrollArea>
 #include <QScrollBar>
-#include <QTextDocumentFragment>
 #include <QTextBrowser>
 #include <QWindow>
 

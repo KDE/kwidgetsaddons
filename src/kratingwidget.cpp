@@ -23,9 +23,8 @@
 
 #include <QPainter>
 #include <QPixmap>
-#include <QKeyEvent>
-#include <QImage>
 #include <QIcon>
+#include <QMouseEvent>
 
 class Q_DECL_HIDDEN KRatingWidget::Private
 {

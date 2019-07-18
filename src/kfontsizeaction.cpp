@@ -29,10 +29,7 @@
 
 #include "loggingcategory.h"
 
-#include <QDebug>
 #include <QFontDatabase>
-#include <QToolBar>
-#include <QToolButton>
 
 class Q_DECL_HIDDEN KFontSizeAction::Private
 {

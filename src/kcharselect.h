@@ -22,7 +22,6 @@
 #define kcharselect_h
 
 #include <QString>
-#include <QStringList>
 #include <QWidget>
 #include <kwidgetsaddons_export.h>
 

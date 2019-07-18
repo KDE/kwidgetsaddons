@@ -23,14 +23,14 @@
 
 #include <QStringList>
 #include <QKeyEvent>
-#include <QLabel>
-#include <QLayout>
 #include <QLineEdit>
 #include <QListView>
 #include <QPushButton>
 #include <QApplication>
 #include <QComboBox>
 #include <QStringListModel>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 class KEditListWidgetPrivate
 {

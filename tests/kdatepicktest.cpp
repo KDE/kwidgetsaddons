@@ -21,7 +21,6 @@
 
 #include "kdatepicker.h"
 #include <QApplication>
-#include <QLineEdit>
 #include <QTimer>
 
 class Manager : public QObject

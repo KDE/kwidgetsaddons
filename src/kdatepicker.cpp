@@ -28,13 +28,11 @@
 #include <QComboBox>
 #include <QFont>
 #include <QFontDatabase>
-#include <QLayout>
 #include <QKeyEvent>
 #include <QMenu>
-#include <QPainter>
 #include <QStyle>
 #include <QToolButton>
-#include <QDoubleValidator>
+#include <QLayout>
 
 #include "moc_kdatepicker.cpp"
 #include "moc_kdatepicker_p.cpp"

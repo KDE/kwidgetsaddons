@@ -22,8 +22,6 @@
 #include <QtTest>
 #include <kcolorbutton.h>
 #include <QColorDialog>
-#include <QComboBox>
-#include <QDialogButtonBox>
 
 QTEST_MAIN(KColorButtonTest)
 

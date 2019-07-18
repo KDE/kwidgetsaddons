@@ -21,14 +21,9 @@
 */
 #include "knewpassworddialog.h"
 
-#include <QApplication>
-#include <QProgressBar>
 #include <QPushButton>
-#include <QRegExp>
-#include <QSize>
 #include <QString>
 #include <QStyleOption>
-#include <QLineEdit>
 #include <QMessageBox>
 
 #include <ktitlewidget.h>

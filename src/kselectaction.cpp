@@ -35,7 +35,6 @@
 #include "loggingcategory.h"
 
 #include <QActionEvent>
-#include <QDebug>
 #include <QEvent>
 #include <QMenu>
 #include <QToolButton>

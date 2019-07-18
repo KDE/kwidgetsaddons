@@ -25,7 +25,6 @@
 #include <QDesktopWidget>
 #include <QPushButton>
 #include <QStyleOption>
-#include <QTextDocument>
 #include <QTimer>
 
 #include <ktitlewidget.h>

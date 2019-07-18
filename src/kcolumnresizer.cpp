@@ -21,7 +21,6 @@
 
 #include "loggingcategory.h"
 
-#include <QDebug>
 #include <QEvent>
 #include <QFormLayout>
 #include <QGridLayout>

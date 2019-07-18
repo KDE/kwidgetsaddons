@@ -22,7 +22,6 @@
 #define KMIMETYPE_EDITOR_H
 
 #include <kwidgetsaddons_export.h>
-#include <QDialog>
 #include <QWidget>
 
 /**

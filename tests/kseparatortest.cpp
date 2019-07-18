@@ -18,7 +18,6 @@
  */
 
 #include <QApplication>
-#include <QLayout>
 #include <QWidget>
 #include <QBoxLayout>
 

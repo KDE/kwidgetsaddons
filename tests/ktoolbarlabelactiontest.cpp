@@ -22,7 +22,6 @@
 #include <QMainWindow>
 #include <QVBoxLayout>
 #include <QLineEdit>
-#include <QLabel>
 #include <QToolBar>
 #include <QPushButton>
 #include <QString>

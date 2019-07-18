@@ -25,8 +25,6 @@
 #include <QStyle>
 #include <QPainter>
 #include <QStyleOption>
-#include <QAction>
-#include <QDebug>
 #include <QTimeLine>
 #include <QMouseEvent>
 

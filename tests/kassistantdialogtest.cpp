@@ -20,9 +20,7 @@
 
 #include <QApplication>
 #include <QLabel>
-#include <QLayout>
-//Added by qt3to4:
-#include <QBoxLayout>
+#include <QHBoxLayout>
 #include <kassistantdialog.h>
 
 int main(int argc, char **argv)

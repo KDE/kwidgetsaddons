@@ -25,9 +25,7 @@
 #ifndef _KMultitabbar_h_
 #define _KMultitabbar_h_
 
-#include <QLayout>
 #include <QString>
-#include <QList>
 #include <QPushButton>
 
 #include <kwidgetsaddons_export.h>
