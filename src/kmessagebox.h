@@ -324,6 +324,20 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancel(QWidget *parent,
         Options options = Notify);
 
 /**
+ * Display a "warning" dialog with a collapsible "Details" section.
+ *
+ * @since 5.61
+ */
+KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
+        const QString &text,
+        const QString &caption = QString(),
+        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+        const QString &dontAskAgainName = QString(),
+        Options options = Notify,
+        const QString &details = QString());
+
+/**
  * Display a "warning" dialog with a listbox to show information to the user.
  *
  * @param parent  Parent widget.

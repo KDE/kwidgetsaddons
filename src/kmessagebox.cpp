@@ -649,7 +649,8 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QStri
         const KGuiItem &buttonContinue_,
         const KGuiItem &buttonCancel_,
         const QString &dontAskAgainName,
-        Options options)
+        Options options,
+        const QString &details)
 {
     if (!shouldBeShownContinue(dontAskAgainName)) {
         delete dialog;
@@ -673,7 +674,7 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QStri
     bool checkboxResult = false;
     const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
-                                         &checkboxResult, options);
+                                         &checkboxResult, options, details);
 
     if (result != QDialogButtonBox::Yes) {
         return Cancel;
@@ -693,7 +694,21 @@ ButtonCode warningContinueCancelList(QWidget *parent, const QString &text,
                                      Options options)
 {
     return warningContinueCancelListInternal(new QDialog(parent), text, strlist, caption, buttonContinue, buttonCancel,
-            dontAskAgainName, options);
+            dontAskAgainName, options, QString());
+}
+
+
+ButtonCode warningContinueCancelDetailed(QWidget *parent,
+                                 const QString &text,
+                                 const QString &caption,
+                                 const KGuiItem &buttonContinue,
+                                 const KGuiItem &buttonCancel,
+                                 const QString &dontAskAgainName,
+                                 Options options,
+                                 const QString &details)
+{
+    return warningContinueCancelListInternal(new QDialog(parent), text, QStringList(), caption,
+                                     buttonContinue, buttonCancel, dontAskAgainName, options, details);
 }
 
 ButtonCode warningYesNoCancel(QWidget *parent, const QString &text,
@@ -941,7 +956,7 @@ static ButtonCode messageBoxInternal(QDialog *dialog, DialogType type, const QSt
                                         buttonYes, buttonNo, dontShow, options);
     case WarningContinueCancel:
         return warningContinueCancelListInternal(dialog, text, QStringList(), caption,
-                KGuiItem(buttonYes.text()), buttonCancel, dontShow, options);
+                KGuiItem(buttonYes.text()), buttonCancel, dontShow, options, QString());
     case WarningYesNoCancel:
         return warningYesNoCancelListInternal(dialog, text, QStringList(), caption,
                                               buttonYes, buttonNo, buttonCancel, dontShow, options);
@@ -1049,7 +1064,7 @@ ButtonCode warningContinueCancelListWId(WId parent_id, const QString &text,
                                         Options options)
 {
     return warningContinueCancelListInternal(createWIdDialog(parent_id), text, strlist, caption, buttonContinue, buttonCancel,
-            dontAskAgainName, options);
+            dontAskAgainName, options, QString());
 }
 
 ButtonCode warningYesNoCancelWId(WId parent_id, const QString &text,
