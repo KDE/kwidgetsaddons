@@ -34,7 +34,7 @@ public:
         : q(parent)
     {
         animation.setLoopCount(-1);
-        animation.setDuration(1500);
+        animation.setDuration(2000);
         animation.setStartValue(0);
         animation.setEndValue(360);
         QObject::connect(&animation, &QVariantAnimation::valueChanged,
