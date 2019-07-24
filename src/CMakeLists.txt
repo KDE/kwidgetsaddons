@@ -305,6 +305,10 @@ if (BUILD_QCH)
     )
 endif()
 
+if(BUILD_DESIGNERPLUGIN)
+    add_subdirectory(designer)
+endif()
+
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
