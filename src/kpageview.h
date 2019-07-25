@@ -162,25 +162,25 @@ public:
     /**
      * Set a widget as the header for this Page view
      * It will replace the standard page title
-     * @since 5.60
+     * @since 5.61
      */
     void setPageHeader(QWidget *header);
 
     /**
      * Widget of the header for this page view
-     * @since 5.60
+     * @since 5.61
      */
     QWidget *pageHeader() const;
 
     /**
      * Set a widget as the footer for this Page view
-     * @since 5.60
+     * @since 5.61
      */
     void setPageFooter(QWidget *footer);
 
     /**
      * Widget of the footer for this page view
-     * @since 5.60
+     * @since 5.61
      */
     QWidget *pageFooter() const;
 
