@@ -159,6 +159,31 @@ public:
      */
     void setDefaultWidget(QWidget *widget);
 
+    /**
+     * Set a widget as the header for this Page view
+     * It will replace the standard page title
+     * @since 5.60
+     */
+    void setPageHeader(QWidget *header);
+
+    /**
+     * Widget of the header for this page view
+     * @since 5.60
+     */
+    QWidget *pageHeader() const;
+
+    /**
+     * Set a widget as the footer for this Page view
+     * @since 5.60
+     */
+    void setPageFooter(QWidget *footer);
+
+    /**
+     * Widget of the footer for this page view
+     * @since 5.60
+     */
+    QWidget *pageFooter() const;
+
 Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page changes.

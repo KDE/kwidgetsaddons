@@ -82,6 +82,12 @@ KPageDialog::~KPageDialog()
 void KPageDialog::setFaceType(FaceType faceType)
 {
     d_func()->mPageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
+
+    if (faceType == Tabbed) {
+        layout()->setContentsMargins(6, 6, 6, 6);
+    } else {
+        layout()->setContentsMargins(0, 0, 0, 0);
+    }
 }
 
 KPageWidgetItem *KPageDialog::addPage(QWidget *widget, const QString &name)

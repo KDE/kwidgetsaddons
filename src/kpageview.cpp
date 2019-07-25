@@ -76,17 +76,36 @@ void KPageViewPrivate::_k_rebuildGui()
         stack->setVisible(true);
     }
 
-    titleWidget->setVisible(q->showPageHeader());
+    layout->removeWidget(titleWidget);
+
+    if (pageHeader) {
+        layout->removeWidget(pageHeader);
+        pageHeader->setVisible(q->showPageHeader());
+        titleWidget->setVisible(false);
+
+        if (faceType == KPageView::Tabbed) {
+            layout->addWidget(pageHeader, 1, 1);
+        } else {
+            layout->addWidget(pageHeader, 1, 1, 1, 2);
+        }
+    } else {
+        titleWidget->setVisible(q->showPageHeader());
+        if (faceType == KPageView::Tabbed) {
+            layout->addWidget(titleWidget, 1, 1);
+        } else {
+            layout->addWidget(titleWidget, 1, 1, 1, 2);
+        }
+    }
 
     Qt::Alignment alignment = q->viewPosition();
     if (alignment & Qt::AlignTop) {
         layout->addWidget(view, 2, 1);
     } else if (alignment & Qt::AlignRight) {
-        layout->addWidget(view, 1, 2, 2, 1);
+        layout->addWidget(view, 1, 2, 4, 1);
     } else if (alignment & Qt::AlignBottom) {
         layout->addWidget(view, 4, 1);
     } else if (alignment & Qt::AlignLeft) {
-        layout->addWidget(view, 1, 0, 2, 1);
+        layout->addWidget(view, 1, 0, 4, 1);
     }
 }
 
@@ -301,12 +320,13 @@ void KPageViewPrivate::init()
 {
     Q_Q(KPageView);
     layout = new QGridLayout(q);
+    layout->setContentsMargins(0, 0, 0, 0);
     stack = new KPageStackedWidget(q);
     titleWidget = new KTitleWidget(q);
     QPixmap emptyPixmap(22, 22);
     emptyPixmap.fill(Qt::transparent);
     titleWidget->setPixmap(emptyPixmap);
-    layout->addWidget(titleWidget, 1, 1);
+    layout->addWidget(titleWidget, 1, 1, 1, 2);
     layout->addWidget(stack, 2, 1);
 
     defaultWidget = new QWidget(q);
@@ -440,6 +460,60 @@ void KPageView::setDefaultWidget(QWidget *widget)
     }
 }
 
+void KPageView::setPageHeader(QWidget *header)
+{
+    Q_D(KPageView);
+    if (d->pageHeader == header) {
+        return;
+    }
+
+    if (d->pageHeader) {
+        d->layout->removeWidget(d->pageHeader);
+    }
+    d->layout->removeWidget(d->titleWidget);
+
+    d->pageHeader = header;
+
+    // Give it a colSpan of 2 to add a margin to the right
+    if (d->pageHeader) {
+        d->layout->addWidget(d->pageHeader, 1, 1, 1, 2);
+        d->pageHeader->setVisible(showPageHeader());
+    } else {
+        d->layout->addWidget(d->titleWidget, 1, 1, 1, 2);
+        d->titleWidget->setVisible(showPageHeader());
+    }
+}
+
+QWidget *KPageView::pageHeader() const
+{
+    Q_D(const KPageView);
+    return d->pageHeader;
+}
+
+void KPageView::setPageFooter(QWidget *footer)
+{
+    Q_D(KPageView);
+    if (d->pageFooter == footer) {
+        return;
+    }
+
+    if (d->pageFooter) {
+        d->layout->removeWidget(d->pageFooter);
+    }
+
+    d->pageFooter = footer;
+
+    if (footer) {
+        d->layout->addWidget(d->pageFooter, 3, 1);
+    }
+}
+
+QWidget *KPageView::pageFooter() const
+{
+    Q_D(const KPageView);
+    return d->pageFooter;
+}
+
 QAbstractItemView *KPageView::createView()
 {
     Q_D(KPageView);
@@ -480,7 +554,7 @@ bool KPageView::showPageHeader() const
     if (faceType == Tabbed) {
         return false;
     } else {
-        return !d->titleWidget->text().isEmpty();
+        return d->pageHeader || !d->titleWidget->text().isEmpty();
     }
 }
 
