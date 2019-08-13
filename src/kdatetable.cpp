@@ -22,13 +22,14 @@
 #include "kdatetable_p.h"
 
 #include <QAction>
+#include <QActionEvent>
 #include <QFontDatabase>
 #include <QPainter>
 #include <QStyle>
 #include <QStyleOptionViewItem>
-#include <QActionEvent>
 #include <QApplication>
 #include <QMenu>
+#include <QDate>
 
 #include <cmath>
 

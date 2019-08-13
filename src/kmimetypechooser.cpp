@@ -21,13 +21,12 @@
 #include "kmimetypeeditor.h"
 #include <qmimedatabase.h>
 
-#include <QApplication>
 #include <QDialogButtonBox>
 #include <QLabel>
-#include <QLayout>
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QTreeWidget>
+#include <QVBoxLayout>
 
 //BEGIN KMimeTypeChooserPrivate
 class KMimeTypeChooserPrivate

@@ -1,6 +1,7 @@
 #include <QApplication>
 
 #include "kdatetable_p.h"
+#include <QDate>
 
 int main(int argc, char **argv)
 {

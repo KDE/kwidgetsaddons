@@ -18,7 +18,6 @@
  */
 
 #include "kseparator.h"
-#include <QStyle>
 
 KSeparator::KSeparator(QWidget *parent, Qt::WindowFlags f) : QFrame(parent, f)
 {

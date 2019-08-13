@@ -24,7 +24,7 @@
 
 #include <QDate>
 #include <QLineEdit>
-#include <QValidator>
+#include <QIntValidator>
 
 /** Year selection widget.
 * @internal
