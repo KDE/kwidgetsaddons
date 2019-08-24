@@ -896,7 +896,7 @@ void KFontChooser::Private::setupDisplay()
 
     // 2nd family fallback.
     if (i == numEntries) {
-        QString fallback = family + QStringLiteral(" [");
+        QString fallback = family + QLatin1String(" [");
         for (i = 0; i < numEntries; ++i) {
             if (qtFamilies[familyListBox->item(i)->text()].toLower().startsWith(fallback)) {
                 familyListBox->setCurrentRow(i);

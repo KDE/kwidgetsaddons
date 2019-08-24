@@ -319,7 +319,7 @@ QString KCharSelectData::name(uint c)
     } else if ((c >= 0x3400 && c <= 0x4DBF)
             || (c >= 0x4E00 && c <= 0x9FFF)
             || (c >= 0x20000 && c <= 0x2F7FF)) {
-        return QStringLiteral("CJK UNIFIED IDEOGRAPH-") + formatCode(c, 4, QString());
+        return QLatin1String("CJK UNIFIED IDEOGRAPH-") + formatCode(c, 4, QString());
     } else if (c >= 0xAC00 && c <= 0xD7AF) {
         /* compute hangul syllable name as per UAX #15 */
         int SIndex = c - SBase;
@@ -344,11 +344,11 @@ QString KCharSelectData::name(uint c)
     } else if ((c >= 0xE000 && c <= 0xF8FF) || c >= 0xF0000) {
         return QCoreApplication::translate("KCharSelectData", "<Private Use>");
     } else if ((c >= 0xF900 && c <= 0xFAFF) || (c >= 0x2F800 && c <= 0x2FFFF)) {
-        return QStringLiteral("CJK COMPATIBILITY IDEOGRAPH-") + formatCode(c, 4, QString());
+        return QLatin1String("CJK COMPATIBILITY IDEOGRAPH-") + formatCode(c, 4, QString());
     }
     quint16 unicode = mapCodePointToDataBase(c);
     if (unicode == 0xFFFF) {
-        return QStringLiteral("NON-BMP-CHARACTER-") + formatCode(c, 4, QString());
+        return QLatin1String("NON-BMP-CHARACTER-") + formatCode(c, 4, QString());
     } else {
         const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
         const quint32 offsetBegin = qFromLittleEndian<quint32>(data + 4);
@@ -756,15 +756,15 @@ bool KCharSelectData::isCombining(uint c)
 QString KCharSelectData::display(uint c, const QFont &font)
 {
     if (!isDisplayable(c)) {
-        return QStringLiteral("<b>") + QCoreApplication::translate("KCharSelectData", "Non-printable") + QStringLiteral("</b>");
+        return QLatin1String("<b>") + QCoreApplication::translate("KCharSelectData", "Non-printable") + QLatin1String("</b>");
     } else {
-        QString s = QStringLiteral("<font size=\"+4\" face=\"") + font.family() + QStringLiteral("\">");
+        QString s = QLatin1String("<font size=\"+4\" face=\"") + font.family() + QLatin1String("\">");
         if (isCombining(c)) {
             s += displayCombining(c);
         } else {
-            s += QStringLiteral("&#") + QString::number(c) + QLatin1Char(';');
+            s += QLatin1String("&#") + QString::number(c) + QLatin1Char(';');
         }
-        s += QStringLiteral("</font>");
+        s += QLatin1String("</font>");
         return s;
     }
 }
@@ -781,8 +781,8 @@ QString KCharSelectData::displayCombining(uint c)
      * Eventually, it would be nice to determine whether the character
      * combines to the left or to the right, etc.
      */
-    QString s = QStringLiteral("&nbsp;&#") + QString::number(c) + QStringLiteral(";&nbsp;") +
-                QStringLiteral(" (ab&#") + QString::number(c) + QStringLiteral(";c)");
+    QString s = QLatin1String("&nbsp;&#") + QString::number(c) + QLatin1String(";&nbsp;") +
+                QLatin1String(" (ab&#") + QString::number(c) + QLatin1String(";c)");
     return s;
 }
 

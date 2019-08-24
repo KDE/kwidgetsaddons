@@ -200,7 +200,7 @@ void KFontAction::setFont(const QString &family)
         }
     }
 
-    lowerName += QStringLiteral(" [");
+    lowerName += QLatin1String(" [");
     if (setCurrentAction(lowerName, Qt::CaseInsensitive)) {
         return;
     }

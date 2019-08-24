@@ -777,13 +777,13 @@ void KCharSelect::KCharSelectPrivate::_k_updateCurrentChar(uint c)
 
 void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 {
-    QString html = QStringLiteral("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ') +
-                   s_data()->formatCode(c)  + QStringLiteral("<br />");
+    QString html = QLatin1String("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ') +
+                   s_data()->formatCode(c)  + QLatin1String("<br />");
 
     QString name = s_data()->name(c);
     if (!name.isEmpty()) {
         //is name ever empty? </p> should always be there...
-        html += tr("Name: ") + name.toHtmlEscaped() + QStringLiteral("</p>");
+        html += tr("Name: ") + name.toHtmlEscaped() + QLatin1String("</p>");
     }
     QStringList aliases = s_data()->aliases(c);
     QStringList notes = s_data()->notes(c);
@@ -792,70 +792,70 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     QStringList approxEquivalents = s_data()->approximateEquivalents(c);
     QVector<uint> decomposition = s_data()->decomposition(c);
     if (!(aliases.isEmpty() && notes.isEmpty() && seeAlso.isEmpty() && equivalents.isEmpty() && approxEquivalents.isEmpty() && decomposition.isEmpty())) {
-        html += QStringLiteral("<p><b>") + tr("Annotations and Cross References") + QStringLiteral("</b></p>");
+        html += QLatin1String("<p><b>") + tr("Annotations and Cross References") + QLatin1String("</b></p>");
     }
 
     if (!aliases.isEmpty()) {
-        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") + tr("Alias names:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Alias names:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         foreach (const QString &alias, aliases) {
-            html += QStringLiteral("<li>") + alias.toHtmlEscaped() + QStringLiteral("</li>");
+            html += QLatin1String("<li>") + alias.toHtmlEscaped() + QLatin1String("</li>");
         }
-        html += QStringLiteral("</ul>");
+        html += QLatin1String("</ul>");
     }
 
     if (!notes.isEmpty()) {
-        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") + tr("Notes:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Notes:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         foreach (const QString &note, notes) {
-            html += QStringLiteral("<li>") + createLinks(note.toHtmlEscaped()) + QStringLiteral("</li>");
+            html += QLatin1String("<li>") + createLinks(note.toHtmlEscaped()) + QLatin1String("</li>");
         }
-        html += QStringLiteral("</ul>");
+        html += QLatin1String("</ul>");
     }
 
     if (!seeAlso.isEmpty()) {
-        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") + tr("See also:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("See also:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         foreach (uint c2, seeAlso) {
             if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
                 continue;
             }
-            html += QStringLiteral("<li><a href=\"") + QString::number(c2, 16) + QStringLiteral("\">");
+            html += QLatin1String("<li><a href=\"") + QString::number(c2, 16) + QLatin1String("\">");
             if (s_data()->isPrint(c2)) {
-                html += QStringLiteral("&#8206;&#") + QString::number(c2) + QStringLiteral("; ");
+                html += QLatin1String("&#8206;&#") + QString::number(c2) + QLatin1String("; ");
             }
-            html += s_data()->formatCode(c2) + QLatin1Char(' ') + s_data()->name(c2).toHtmlEscaped() + QStringLiteral("</a></li>");
+            html += s_data()->formatCode(c2) + QLatin1Char(' ') + s_data()->name(c2).toHtmlEscaped() + QLatin1String("</a></li>");
         }
-        html += QStringLiteral("</ul>");
+        html += QLatin1String("</ul>");
     }
 
     if (!equivalents.isEmpty()) {
-        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") + tr("Equivalents:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Equivalents:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         foreach (const QString &equivalent, equivalents) {
-            html += QStringLiteral("<li>") + createLinks(equivalent.toHtmlEscaped()) + QStringLiteral("</li>");
+            html += QLatin1String("<li>") + createLinks(equivalent.toHtmlEscaped()) + QLatin1String("</li>");
         }
-        html += QStringLiteral("</ul>");
+        html += QLatin1String("</ul>");
     }
 
     if (!approxEquivalents.isEmpty()) {
-        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") + tr("Approximate equivalents:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Approximate equivalents:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         foreach (const QString &approxEquivalent, approxEquivalents) {
-            html += QStringLiteral("<li>") + createLinks(approxEquivalent.toHtmlEscaped()) + QStringLiteral("</li>");
+            html += QLatin1String("<li>") + createLinks(approxEquivalent.toHtmlEscaped()) + QLatin1String("</li>");
         }
-        html += QStringLiteral("</ul>");
+        html += QLatin1String("</ul>");
     }
 
     if (!decomposition.isEmpty()) {
-        html += QStringLiteral("<p style=\"margin-bottom: 0px;\">") +  tr("Decomposition:") + QStringLiteral("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") +  tr("Decomposition:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         foreach (uint c2, decomposition) {
             if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
                 continue;
             }
-            html += QStringLiteral("<li>") + createLinks(s_data()->formatCode(c2, 4, QString())) + QStringLiteral("</li>");
+            html += QLatin1String("<li>") + createLinks(s_data()->formatCode(c2, 4, QString())) + QLatin1String("</li>");
         }
-        html += QStringLiteral("</ul>");
+        html += QLatin1String("</ul>");
     }
 
     QStringList unihan = s_data()->unihanInfo(c);
     if (unihan.count() == 7) {
-        html += QStringLiteral("<p><b>") + tr("CJK Ideograph Information") + QStringLiteral("</b></p><p>");
+        html += QLatin1String("<p><b>") + tr("CJK Ideograph Information") + QLatin1String("</b></p><p>");
         bool newline = true;
         if (!unihan[0].isEmpty()) {
             html += tr("Definition in English: ") + unihan[0];
@@ -863,72 +863,72 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
         }
         if (!unihan[2].isEmpty()) {
             if (!newline) {
-                html += QStringLiteral("<br>");
+                html += QLatin1String("<br>");
             }
             html += tr("Mandarin Pronunciation: ") + unihan[2];
             newline = false;
         }
         if (!unihan[1].isEmpty()) {
             if (!newline) {
-                html += QStringLiteral("<br>");
+                html += QLatin1String("<br>");
             }
             html += tr("Cantonese Pronunciation: ") + unihan[1];
             newline = false;
         }
         if (!unihan[6].isEmpty()) {
             if (!newline) {
-                html += QStringLiteral("<br>");
+                html += QLatin1String("<br>");
             }
             html += tr("Japanese On Pronunciation: ") + unihan[6];
             newline = false;
         }
         if (!unihan[5].isEmpty()) {
             if (!newline) {
-                html += QStringLiteral("<br>");
+                html += QLatin1String("<br>");
             }
             html += tr("Japanese Kun Pronunciation: ") + unihan[5];
             newline = false;
         }
         if (!unihan[3].isEmpty()) {
             if (!newline) {
-                html += QStringLiteral("<br>");
+                html += QLatin1String("<br>");
             }
             html += tr("Tang Pronunciation: ") + unihan[3];
             newline = false;
         }
         if (!unihan[4].isEmpty()) {
             if (!newline) {
-                html += QStringLiteral("<br>");
+                html += QLatin1String("<br>");
             }
             html += tr("Korean Pronunciation: ") + unihan[4];
             newline = false;
         }
-        html += QStringLiteral("</p>");
+        html += QLatin1String("</p>");
     }
 
-    html += QStringLiteral("<p><b>") + tr("General Character Properties") + QStringLiteral("</b><br>");
-    html += tr("Block: ") + s_data()->block(c) + QStringLiteral("<br>");
-    html += tr("Unicode category: ") + s_data()->categoryText(s_data()->category(c)) + QStringLiteral("</p>");
+    html += QLatin1String("<p><b>") + tr("General Character Properties") + QLatin1String("</b><br>");
+    html += tr("Block: ") + s_data()->block(c) + QLatin1String("<br>");
+    html += tr("Unicode category: ") + s_data()->categoryText(s_data()->category(c)) + QLatin1String("</p>");
 
     QByteArray utf8 = QString::fromUcs4(&c, 1).toUtf8();
 
-    html += QStringLiteral("<p><b>") + tr("Various Useful Representations") + QStringLiteral("</b><br>");
+    html += QLatin1String("<p><b>") + tr("Various Useful Representations") + QLatin1String("</b><br>");
     html += tr("UTF-8:");
     foreach (unsigned char c, utf8) {
         html += QLatin1Char(' ') + s_data()->formatCode(c, 2, QStringLiteral("0x"));
     }
-    html += QStringLiteral("<br>") + tr("UTF-16: ");
+    html += QLatin1String("<br>") + tr("UTF-16: ");
     if (QChar::requiresSurrogates(c)) {
         html += s_data()->formatCode(QChar::highSurrogate(c), 4, QStringLiteral("0x"));
         html += QLatin1Char(' ') + s_data->formatCode(QChar::lowSurrogate(c), 4, QStringLiteral("0x"));
     } else {
         html += s_data()->formatCode(c, 4, QStringLiteral("0x"));
     }
-    html += QStringLiteral("<br>") + tr("C octal escaped UTF-8: ");
+    html += QLatin1String("<br>") + tr("C octal escaped UTF-8: ");
     foreach (unsigned char c, utf8) {
         html += s_data()->formatCode(c, 3, QStringLiteral("\\"), 8);
     }
-    html += QStringLiteral("<br>") + tr("XML decimal entity:") + QStringLiteral(" &amp;#") + QString::number(c) + QStringLiteral(";</p>");
+    html += QLatin1String("<br>") + tr("XML decimal entity:") + QLatin1String(" &amp;#") + QString::number(c) + QLatin1String(";</p>");
 
     detailBrowser->setHtml(html);
 }
@@ -951,12 +951,12 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
         if (!allPlanesEnabled && QChar::requiresSurrogates(unicode)) {
             continue;
         }
-        QString link = QStringLiteral("<a href=\"") + c + QStringLiteral("\">");
+        QString link = QLatin1String("<a href=\"") + c + QLatin1String("\">");
         if (s_data()->isPrint(unicode)) {
-            link += QStringLiteral("&#8206;&#") + QString::number(unicode) + QStringLiteral(";&nbsp;");
+            link += QLatin1String("&#8206;&#") + QString::number(unicode) + QLatin1String(";&nbsp;");
         }
-        link += QStringLiteral("U+") + c + QLatin1Char(' ');
-        link += s_data()->name(unicode).toHtmlEscaped() + QStringLiteral("</a>");
+        link += QLatin1String("U+") + c + QLatin1Char(' ');
+        link += s_data()->name(unicode).toHtmlEscaped() + QLatin1String("</a>");
         s.replace(c, link);
     }
     return s;
@@ -1074,8 +1074,8 @@ QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
 
     uint c = m_chars[pos];
     if (role == Qt::ToolTipRole) {
-        QString result = s_data()->display(c, m_font) + QStringLiteral("<br />") + s_data()->name(c).toHtmlEscaped() + QStringLiteral("<br />") +
-                         tr("Unicode code point:") + QLatin1Char(' ') + s_data()->formatCode(c) + QStringLiteral("<br />") +
+        QString result = s_data()->display(c, m_font) + QLatin1String("<br />") + s_data()->name(c).toHtmlEscaped() + QLatin1String("<br />") +
+                         tr("Unicode code point:") + QLatin1Char(' ') + s_data()->formatCode(c) + QLatin1String("<br />") +
                          tr("In decimal", "Character") + QLatin1Char(' ') + QString::number(c);
         return QVariant(result);
     } else if (role == Qt::TextAlignmentRole) {
