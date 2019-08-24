@@ -178,7 +178,7 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
         }
 
         if (visuals & KMimeTypeChooser::Patterns) {
-            item->setText(cl, mt.globPatterns().join(QStringLiteral("; ")));
+            item->setText(cl, mt.globPatterns().join(QLatin1String("; ")));
         }
 
         if (selMimeTypes.contains(mimetype)) {

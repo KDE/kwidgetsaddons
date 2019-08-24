@@ -126,7 +126,7 @@ void KSqueezedTextLabel::squeezeTextToLabel()
     }
 
     if (squeezed) {
-        QLabel::setText(squeezedLines.join(QStringLiteral("\n")));
+        QLabel::setText(squeezedLines.join(QLatin1Char('\n')));
         setToolTip(d->fullText);
     } else {
         QLabel::setText(d->fullText);
