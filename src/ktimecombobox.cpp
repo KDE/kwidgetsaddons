@@ -98,13 +98,13 @@ QString KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format, bool 
     QString mask = formatTime(QTime(12, 34, 56, 789));
     QString null = mask;
     mask.replace(locale.toString(12), QLatin1String("09"));
-    null.replace(locale.toString(12), QLatin1String(""));
+    null.remove(locale.toString(12));
     mask.replace(locale.toString(34), QLatin1String("99"));
-    null.replace(locale.toString(34), QLatin1String(""));
+    null.remove(locale.toString(34));
     mask.replace(locale.toString(56), QLatin1String("99"));
-    null.replace(locale.toString(56), QLatin1String(""));
+    null.remove(locale.toString(56));
     mask.replace(locale.toString(789), QLatin1String("900"));
-    null.replace(locale.toString(789), QLatin1String(""));
+    null.remove(locale.toString(789));
 
     // See if this time format contains a specifier for
     // AM/PM, regardless of case.
@@ -132,7 +132,7 @@ QString KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format, bool 
             ampmMask.append(QLatin1Char('a'));
         }
         mask.replace(pm, ampmMask);
-        null.replace(pm, QLatin1String(""));
+        null.remove(pm);
     }
 
     if (nullMask) {
