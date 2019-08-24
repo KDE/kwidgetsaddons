@@ -52,7 +52,7 @@ static QString DropAmpersands(const QString &text)
     while (p >= 0 && p < label.length() - 1) {
         if (label[p + 1].isLetterOrNumber() // Valid accelerator.
                 || label[p + 1] == QLatin1Char('&')) { // Escaped accelerator marker.
-            label = label.left(p) + label.mid(p + 1);
+            label.remove(p, 1);
         }
 
         p = label.indexOf(QLatin1Char('&'), p + 1);
