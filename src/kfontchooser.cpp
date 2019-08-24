@@ -882,8 +882,9 @@ void KFontChooser::Private::setupDisplay()
 
     // 1st family fallback.
     if (i == numEntries) {
-        if (family.contains(QLatin1Char('['))) {
-            family = family.left(family.indexOf(QLatin1Char('['))).trimmed();
+        const int bracketPos = family.indexOf(QLatin1Char('['));
+        if (bracketPos != -1) {
+            family = family.leftRef(bracketPos).trimmed().toString();
             for (i = 0; i < numEntries; ++i) {
                 if (family == qtFamilies[familyListBox->item(i)->text()].toLower()) {
                     familyListBox->setCurrentRow(i);
