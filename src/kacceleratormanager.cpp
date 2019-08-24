@@ -766,7 +766,7 @@ void KPopupAccelManager::findMenuEntries(KAccelStringList &list)
 // Duplicated from qaction.cpp
 static QString copy_of_qt_strippedText(QString s)
 {
-    s.remove(QStringLiteral("..."));
+    s.remove(QLatin1String("..."));
     for (int i = 0; i < s.size(); ++i) {
         if (s.at(i) == QLatin1Char('&')) {
             s.remove(i, 1);
