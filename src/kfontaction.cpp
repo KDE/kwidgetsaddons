@@ -193,7 +193,7 @@ void KFontAction::setFont(const QString &family)
 
     int i = lowerName.indexOf(QLatin1String(" ["));
     if (i > -1) {
-        lowerName = lowerName.left(i);
+        lowerName.truncate(i);
         i = 0;
         if (setCurrentAction(lowerName, Qt::CaseInsensitive)) {
             return;

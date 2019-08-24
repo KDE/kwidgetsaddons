@@ -462,8 +462,9 @@ KAccelString::KAccelString(const QString &input, int initialWeight)
 
     m_origText = m_pureText;
 
-    if (m_pureText.contains(QLatin1Char('\t'))) {
-        m_pureText = m_pureText.left(m_pureText.indexOf(QLatin1Char('\t')));
+    const int tabPos = m_pureText.indexOf(QLatin1Char('\t'));
+    if (tabPos != -1) {
+        m_pureText.truncate(tabPos);
     }
 
     m_orig_accel = m_accel = stripAccelerator(m_pureText);
