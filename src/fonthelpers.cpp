@@ -53,7 +53,7 @@ void splitFontString(const QString &name, QString *family, QString *foundry)
             *family = name.leftRef(p1).trimmed().toString();
         }
         if (foundry) {
-            *foundry = name.mid(p1 + 1, p2 - p1 - 1).trimmed();
+            *foundry = name.midRef(p1 + 1, p2 - p1 - 1).trimmed().toString();
         }
     }
 }
