@@ -300,7 +300,7 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
         if (validDay) {
             cellText = QString::number(cellDate.day());
         } else {
-            cellText = QLatin1String("");
+            cellText = QString();
         }
 
         if (! validDay || cellDate.month() != d->m_date.month()) {
