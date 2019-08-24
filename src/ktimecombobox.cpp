@@ -272,14 +272,14 @@ void KTimeComboBoxPrivate::warnTime()
                 warnMsg = KTimeComboBox::tr("Time cannot be earlier than %1", "@info").arg(formatTime(m_minTime));
             } else {
                 warnMsg = m_minWarnMsg;
-                warnMsg.replace(QStringLiteral("%1"), formatTime(m_minTime));
+                warnMsg.replace(QLatin1String("%1"), formatTime(m_minTime));
             }
         } else if (m_time > m_maxTime) {
             if (m_maxWarnMsg.isEmpty()) {
                 warnMsg = KTimeComboBox::tr("Time cannot be later than %1", "@info").arg(formatTime(m_maxTime));
             } else {
                 warnMsg = m_maxWarnMsg;
-                warnMsg.replace(QStringLiteral("%1"), formatTime(m_maxTime));
+                warnMsg.replace(QLatin1String("%1"), formatTime(m_maxTime));
             }
         }
         m_warningShown = true;

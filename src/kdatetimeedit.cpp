@@ -226,7 +226,7 @@ void KDateTimeEditPrivate::warnDateTime()
             } else {
                 warnMsg = m_minWarnMsg;
                 //TODO localize properly
-                warnMsg.replace(QStringLiteral("%1"), q->locale().toString(m_minDateTime));
+                warnMsg.replace(QLatin1String("%1"), q->locale().toString(m_minDateTime));
             }
         } else if (m_maxDateTime.isValid() && m_dateTime > m_maxDateTime) {
             if (m_maxWarnMsg.isEmpty()) {
@@ -235,7 +235,7 @@ void KDateTimeEditPrivate::warnDateTime()
                 warnMsg = KDateTimeEdit::tr("The entered date and time is after the maximum allowed date and time.", "@info");
             } else {
                 warnMsg = m_maxWarnMsg;
-                warnMsg.replace(QStringLiteral("%1"), q->locale().toString(m_maxDateTime));
+                warnMsg.replace(QLatin1String("%1"), q->locale().toString(m_maxDateTime));
             }
         }
         KMessageBox::sorry(q, warnMsg);
