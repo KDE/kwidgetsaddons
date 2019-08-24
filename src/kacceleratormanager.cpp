@@ -490,7 +490,7 @@ QString KAccelString::accelerated() const
             int oa = m_orig_accel;
 
             if (m_accel >= 0) {
-                result.insert(m_accel, QStringLiteral("(!)&"));
+                result.insert(m_accel, QLatin1String("(!)&"));
                 if (m_accel < m_orig_accel) {
                     oa += 4;
                 }
@@ -504,7 +504,7 @@ QString KAccelString::accelerated() const
             if (m_orig_accel != -1) {
                 result.remove(m_orig_accel, 1);
             }
-            result.insert(m_accel, QStringLiteral("&"));
+            result.insert(m_accel, QLatin1Char('&'));
         }
     }
     return result;
