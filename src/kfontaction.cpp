@@ -191,7 +191,7 @@ void KFontAction::setFont(const QString &family)
         return;
     }
 
-    int i = lowerName.indexOf(QStringLiteral(" ["));
+    int i = lowerName.indexOf(QLatin1String(" ["));
     if (i > -1) {
         lowerName = lowerName.left(i);
         i = 0;

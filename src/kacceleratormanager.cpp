@@ -450,12 +450,12 @@ void KAcceleratorManager::last_manage(QString &added,  QString &changed, QString
 KAccelString::KAccelString(const QString &input, int initialWeight)
     : m_pureText(input), m_weight()
 {
-    m_orig_accel = m_pureText.indexOf(QStringLiteral("(!)&"));
+    m_orig_accel = m_pureText.indexOf(QLatin1String("(!)&"));
     if (m_orig_accel != -1) {
         m_pureText.remove(m_orig_accel, 4);
     }
 
-    m_orig_accel = m_pureText.indexOf(QStringLiteral("(&&)"));
+    m_orig_accel = m_pureText.indexOf(QLatin1String("(&&)"));
     if (m_orig_accel != -1) {
         m_pureText.replace(m_orig_accel, 4, QStringLiteral("&"));
     }
