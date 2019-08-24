@@ -261,13 +261,10 @@ PageItem *PageItem::findChild(const KPageWidgetItem *item)
 
 void PageItem::dump(int indent)
 {
-    QString prefix;
-    for (int i = 0; i < indent; ++i) {
-        prefix.append(QStringLiteral(" "));
-    }
+    const QString indentation(indent, QLatin1Char(' '));
 
     const QString name = (mPageWidgetItem ? mPageWidgetItem->name() : QStringLiteral("root"));
-    qCDebug(KWidgetsAddonsLog, "%s (%p)", qPrintable(QString(QStringLiteral("%1%2")).arg(prefix, name)), (void *)this);
+    qCDebug(KWidgetsAddonsLog, "%s (%p)", qPrintable(QString(indentation + name)), (void *)this);
     for (int i = 0; i < mChildItems.count(); ++i) {
         mChildItems[ i ]->dump(indent + 2);
     }

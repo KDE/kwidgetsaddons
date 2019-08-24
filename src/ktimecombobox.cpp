@@ -127,10 +127,7 @@ QString KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format, bool 
         }
 
         int ampmLen = qMax(am.length(), pm.length());
-        QString ampmMask;
-        for (int i = 0; i < ampmLen; ++i) {
-            ampmMask.append(QLatin1Char('a'));
-        }
+        const QString ampmMask(ampmLen, QLatin1Char('a'));
         mask.replace(pm, ampmMask);
         null.remove(pm);
     }
