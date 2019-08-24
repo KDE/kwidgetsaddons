@@ -110,7 +110,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     layout->setContentsMargins(0, 0, 0, 0);
 
     d->m_sampleLabel = new QLabel(this);
-    d->m_button = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), QStringLiteral(), this);
+    d->m_button = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), QString(), this);
 
     d->m_sampleLabel->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
     setFocusProxy(d->m_button);
