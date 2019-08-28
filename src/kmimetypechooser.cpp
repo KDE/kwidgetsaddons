@@ -230,7 +230,7 @@ void KMimeTypeChooserPrivate::_k_slotCurrentChanged(QTreeWidgetItem *item)
 // TODO: see _k_editMimeType
 void KMimeTypeChooserPrivate::_k_slotSycocaDatabaseChanged(const QStringList &changedResources)
 {
-    if (changedResources.contains(QStringLiteral("xdgdata-mime"))) {
+    if (changedResources.contains(QLatin1String("xdgdata-mime"))) {
         loadMimeTypes();
     }
 }
