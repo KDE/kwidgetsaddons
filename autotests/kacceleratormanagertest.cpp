@@ -31,7 +31,8 @@ static QStringList extractActionTexts(QMenu &menu, std::function<QString(const Q
 
     QStringList ret;
     bool lastIsSeparator = false;
-    foreach (const QAction *action, menu.actions()) {
+    const auto menuActions = menu.actions();
+    for (const QAction *action : menuActions) {
         if (action->isSeparator()) {
             if (!lastIsSeparator) { // Qt gets rid of duplicate separators, so we should too
                 ret.append(QStringLiteral("separator"));

@@ -124,14 +124,14 @@ public:
     void updateWidth()
     {
         int width = 0;
-        Q_FOREACH(QWidget *widget, m_widgets) {
+        for (QWidget *widget : qAsConst(m_widgets)) {
             width = qMax(widget->sizeHint().width(), width);
         }
-        Q_FOREACH(FormLayoutWidgetItem *item, m_formWidgetItemList) {
+        for (FormLayoutWidgetItem *item : qAsConst(m_formWidgetItemList)) {
             item->setWidth(width);
             item->formLayout()->update();
         }
-        Q_FOREACH(const GridColumnInfo &info, m_gridColumnInfoList) {
+        for (const GridColumnInfo &info : qAsConst(m_gridColumnInfoList)) {
             info.layout->setColumnMinimumWidth(info.column, width);
         }
     }

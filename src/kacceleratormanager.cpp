@@ -121,7 +121,8 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
     // collect the contents
     KAccelStringList contents;
-    Q_FOREACH (Item *it, *item->m_children) {
+    contents.reserve(item->m_children->size());
+    for (Item *it : qAsConst(*item->m_children)) {
         contents << it->m_content;
     }
 
@@ -130,7 +131,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
     // write them back into the widgets
     int cnt = -1;
-    Q_FOREACH (Item *it, *item->m_children) {
+    for (Item *it : qAsConst(*item->m_children)) {
         cnt++;
 
         QDockWidget *dock = qobject_cast<QDockWidget *>(it->m_widget);
@@ -179,7 +180,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
     }
 
     // calculate the accelerators for the children
-    Q_FOREACH (Item *it, *item->m_children) {
+    for (Item *it : qAsConst(*item->m_children)) {
         if (it->m_widget && it->m_widget->isVisibleTo(item->m_widget)) {
             calculateAccelerators(it, used);
         }
@@ -188,8 +189,8 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
 void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item)
 {
-    QList<QWidget *> childList = widget->findChildren<QWidget *>();
-    Q_FOREACH (QWidget *w, childList) {
+    const QList<QWidget*> childList = widget->findChildren<QWidget*>();
+    for (QWidget *w : childList) {
         // Ignore unless we have the direct parent
         if (qobject_cast<QWidget *>(w->parent()) != widget) {
             continue;
@@ -742,7 +743,8 @@ void KPopupAccelManager::findMenuEntries(KAccelStringList &list)
     list.clear();
 
     // read out the menu entries
-    Q_FOREACH (QAction *maction, m_popup->actions()) {
+    const auto menuActions = m_popup->actions();
+    for (QAction *maction : menuActions) {
         if (maction->isSeparator()) {
             continue;
         }
@@ -779,7 +781,8 @@ static QString copy_of_qt_strippedText(QString s)
 void KPopupAccelManager::setMenuEntries(const KAccelStringList &list)
 {
     uint cnt = 0;
-    Q_FOREACH (QAction *maction, m_popup->actions()) {
+    const auto menuActions = m_popup->actions();
+    for (QAction *maction : menuActions) {
         if (maction->isSeparator()) {
             continue;
         }

@@ -89,7 +89,8 @@ void KFontSizeAction::setFontSize(int size)
 {
     if (size == fontSize()) {
         const QString test = QString::number(size);
-        Q_FOREACH (QAction *action, actions()) {
+        const auto actions = this->actions();
+        for (QAction *action : actions) {
             if (action->text() == test) {
                 setCurrentAction(action);
                 return;

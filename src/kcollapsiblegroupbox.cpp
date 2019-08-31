@@ -332,7 +332,8 @@ void KCollapsibleGroupBoxPrivate::recalculateHeaderSize()
 
 void KCollapsibleGroupBoxPrivate::updateChildrenFocus(bool expanded)
 {
-    foreach (QObject *child, q->children()) {
+    const auto children = q->children();
+    for (QObject *child : children) {
         QWidget *widget = qobject_cast<QWidget*>(child);
         if (!widget) {
             continue;

@@ -57,10 +57,10 @@ public:
     {
         // unhook the event filter, as the deletion of the actiongroup
         // will trigger it
-        Q_FOREACH (QComboBox *box, m_comboBoxes) {
+        for (QComboBox *box : qAsConst(m_comboBoxes)) {
             box->removeEventFilter(q_ptr);
         }
-        Q_FOREACH (QToolButton *button, m_buttons) {
+        for (QToolButton *button : qAsConst(m_buttons)) {
             button->removeEventFilter(q_ptr);
         }
         delete m_actionGroup;

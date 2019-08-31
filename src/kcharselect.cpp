@@ -608,7 +608,9 @@ QList<QChar> KCharSelect::displayedChars() const
         qFatal("You must use KCharSelect::displayedCodePoints instead of KCharSelect::displayedChars");
     }
     QList<QChar> result;
-    foreach (uint c, d->charTable->displayedChars()) {
+    const auto displayedChars = d->charTable->displayedChars();
+    result.reserve(displayedChars.size());
+    for (uint c : displayedChars) {
         result.append(QChar(c));
     }
     return result;
@@ -785,19 +787,19 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
         //is name ever empty? </p> should always be there...
         html += tr("Name: ") + name.toHtmlEscaped() + QLatin1String("</p>");
     }
-    QStringList aliases = s_data()->aliases(c);
-    QStringList notes = s_data()->notes(c);
-    QVector<uint> seeAlso = s_data()->seeAlso(c);
-    QStringList equivalents = s_data()->equivalents(c);
-    QStringList approxEquivalents = s_data()->approximateEquivalents(c);
-    QVector<uint> decomposition = s_data()->decomposition(c);
+    const QStringList aliases = s_data()->aliases(c);
+    const QStringList notes = s_data()->notes(c);
+    const QVector<uint> seeAlso = s_data()->seeAlso(c);
+    const QStringList equivalents = s_data()->equivalents(c);
+    const QStringList approxEquivalents = s_data()->approximateEquivalents(c);
+    const QVector<uint> decomposition = s_data()->decomposition(c);
     if (!(aliases.isEmpty() && notes.isEmpty() && seeAlso.isEmpty() && equivalents.isEmpty() && approxEquivalents.isEmpty() && decomposition.isEmpty())) {
         html += QLatin1String("<p><b>") + tr("Annotations and Cross References") + QLatin1String("</b></p>");
     }
 
     if (!aliases.isEmpty()) {
         html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Alias names:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
-        foreach (const QString &alias, aliases) {
+        for (const QString &alias : aliases) {
             html += QLatin1String("<li>") + alias.toHtmlEscaped() + QLatin1String("</li>");
         }
         html += QLatin1String("</ul>");
@@ -805,7 +807,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
     if (!notes.isEmpty()) {
         html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Notes:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
-        foreach (const QString &note, notes) {
+        for (const QString &note : notes) {
             html += QLatin1String("<li>") + createLinks(note.toHtmlEscaped()) + QLatin1String("</li>");
         }
         html += QLatin1String("</ul>");
@@ -813,7 +815,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
     if (!seeAlso.isEmpty()) {
         html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("See also:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
-        foreach (uint c2, seeAlso) {
+        for (uint c2 : seeAlso) {
             if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
                 continue;
             }
@@ -828,7 +830,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
     if (!equivalents.isEmpty()) {
         html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Equivalents:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
-        foreach (const QString &equivalent, equivalents) {
+        for (const QString &equivalent : equivalents) {
             html += QLatin1String("<li>") + createLinks(equivalent.toHtmlEscaped()) + QLatin1String("</li>");
         }
         html += QLatin1String("</ul>");
@@ -836,7 +838,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
     if (!approxEquivalents.isEmpty()) {
         html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Approximate equivalents:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
-        foreach (const QString &approxEquivalent, approxEquivalents) {
+        for (const QString &approxEquivalent : approxEquivalents) {
             html += QLatin1String("<li>") + createLinks(approxEquivalent.toHtmlEscaped()) + QLatin1String("</li>");
         }
         html += QLatin1String("</ul>");
@@ -844,7 +846,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
     if (!decomposition.isEmpty()) {
         html += QLatin1String("<p style=\"margin-bottom: 0px;\">") +  tr("Decomposition:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
-        foreach (uint c2, decomposition) {
+        for (uint c2 : decomposition) {
             if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
                 continue;
             }
@@ -910,11 +912,11 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     html += tr("Block: ") + s_data()->block(c) + QLatin1String("<br>");
     html += tr("Unicode category: ") + s_data()->categoryText(s_data()->category(c)) + QLatin1String("</p>");
 
-    QByteArray utf8 = QString::fromUcs4(&c, 1).toUtf8();
+    const QByteArray utf8 = QString::fromUcs4(&c, 1).toUtf8();
 
     html += QLatin1String("<p><b>") + tr("Various Useful Representations") + QLatin1String("</b><br>");
     html += tr("UTF-8:");
-    foreach (unsigned char c, utf8) {
+    for (unsigned char c : utf8) {
         html += QLatin1Char(' ') + s_data()->formatCode(c, 2, QStringLiteral("0x"));
     }
     html += QLatin1String("<br>") + tr("UTF-16: ");
@@ -925,7 +927,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
         html += s_data()->formatCode(c, 4, QStringLiteral("0x"));
     }
     html += QLatin1String("<br>") + tr("C octal escaped UTF-8: ");
-    foreach (unsigned char c, utf8) {
+    for (unsigned char c : utf8) {
         html += s_data()->formatCode(c, 3, QStringLiteral("\\"), 8);
     }
     html += QLatin1String("<br>") + tr("XML decimal entity:") + QLatin1String(" &amp;#") + QString::number(c) + QLatin1String(";</p>");
@@ -945,8 +947,8 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
         pos += rx.matchedLength();
     }
 
-    QSet<QString> chars2 = QSet<QString>::fromList(chars);
-    foreach (const QString &c, chars2) {
+    const QSet<QString> chars2 = QSet<QString>::fromList(chars);
+    for (const QString &c : chars2) {
         int unicode = c.toInt(nullptr, 16);
         if (!allPlanesEnabled && QChar::requiresSurrogates(unicode)) {
             continue;
@@ -965,8 +967,8 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
 void KCharSelect::KCharSelectPrivate::_k_sectionSelected(int index)
 {
     blockCombo->clear();
-    QVector<int> blocks = s_data()->sectionContents(index);
-    foreach (int block, blocks) {
+    const QVector<int> blocks = s_data()->sectionContents(index);
+    for (int block : blocks) {
         if (!allPlanesEnabled) {
             const QVector<uint> contents = s_data()->blockContents(block);
             if (!contents.isEmpty() && QChar::requiresSurrogates(contents.at(0))) {

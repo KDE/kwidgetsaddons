@@ -58,13 +58,15 @@ void KToolBarLabelAction::setBuddy(QAction *buddy)
     d->buddy = buddy;
 
     QList<QLabel *> labels;
-    Q_FOREACH (QWidget *widget, associatedWidgets())
+    const auto associatedWidgets = this->associatedWidgets();
+    for (QWidget *widget : associatedWidgets) {
         if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget))
             if (QLabel *label = qobject_cast<QLabel *>(toolBar->widgetForAction(this))) {
                 labels.append(label);
             }
-
-    Q_FOREACH (QWidget *widget, buddy->associatedWidgets())
+    }
+    const auto buddysAssociatedWidgets = buddy->associatedWidgets();
+    for (QWidget *widget : buddysAssociatedWidgets) {
         if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget)) {
             QWidget *newBuddy = toolBar->widgetForAction(buddy);
             for (QLabel *label : qAsConst(labels)) {
@@ -72,6 +74,7 @@ void KToolBarLabelAction::setBuddy(QAction *buddy)
             }
             return;
         }
+    }
 }
 
 QAction *KToolBarLabelAction::buddy() const
@@ -94,7 +97,8 @@ bool KToolBarLabelAction::event(QEvent *event)
 bool KToolBarLabelAction::eventFilter(QObject *watched, QEvent *event)
 {
     if (d->label && d->buddy && event->type() == QEvent::PolishRequest && watched == d->label) {
-        Q_FOREACH (QWidget *widget, d->buddy->associatedWidgets()) {
+        const auto buddysAssociatedWidgets = d->buddy->associatedWidgets();
+        for (QWidget *widget : buddysAssociatedWidgets) {
             if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget)) {
                 QWidget *newBuddy = toolBar->widgetForAction(d->buddy);
                 d->label->setBuddy(newBuddy);

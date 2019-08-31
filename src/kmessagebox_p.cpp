@@ -37,7 +37,8 @@ public:
     {
         m_filePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + QCoreApplication::instance()->applicationName() + QLatin1String(".kmessagebox");
         QSettings s(m_filePath, QSettings::IniFormat);
-        foreach (const QString &key, s.allKeys()) {
+        const auto keys = s.allKeys();
+        for (const QString &key : keys) {
             m_saved.insert(key, static_cast<KMessageBox::ButtonCode>(s.value(key).toInt()));
         }
     }

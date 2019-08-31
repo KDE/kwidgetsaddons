@@ -75,7 +75,9 @@ KDateTimeEditPrivate::KDateTimeEditPrivate(KDateTimeEdit *q)
     m_dateTime = QDateTime::currentDateTime();
     m_dateTime.setTime(QTime(0, 0, 0));
     m_calendarLocales << q->locale();
-    foreach (const QByteArray &zoneId, QTimeZone::availableTimeZoneIds()) {
+    const auto zoneIds = QTimeZone::availableTimeZoneIds();
+    m_zones.reserve(zoneIds.size());
+    for (const QByteArray &zoneId : zoneIds) {
         m_zones << QTimeZone(zoneId);
     }
 }
@@ -149,7 +151,7 @@ void KDateTimeEditPrivate::initCalendarWidget()
 {
     ui.m_calendarCombo->blockSignals(true);
     ui.m_calendarCombo->clear();
-    foreach (const QLocale &calendarLocale, m_calendarLocales) {
+    for (const QLocale &calendarLocale : qAsConst(m_calendarLocales)) {
         ui.m_calendarCombo->addItem(calendarLocale.name(), calendarLocale);
     }
     ui.m_calendarCombo->setCurrentIndex(ui.m_calendarCombo->findData(q->locale()));
@@ -183,7 +185,7 @@ void KDateTimeEditPrivate::initTimeZoneWidget()
     ui.m_timeZoneCombo->clear();
     ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("UTC", "UTC time zone"), QByteArray("UTC"));
     ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("Floating", "No specific time zone"), QByteArray());
-    foreach (const QTimeZone &zone, m_zones) {
+    for (const QTimeZone &zone : qAsConst(m_zones)) {
         ui.m_timeZoneCombo->addItem(QString::fromUtf8(zone.id()), zone.id());
     }
     ui.m_timeZoneCombo->setVisible((m_options & KDateTimeEdit::ShowTimeZone) == KDateTimeEdit::ShowTimeZone);

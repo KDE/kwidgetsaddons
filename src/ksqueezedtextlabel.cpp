@@ -115,7 +115,9 @@ void KSqueezedTextLabel::squeezeTextToLabel()
     const int labelWidth = contentsRect().width();
     QStringList squeezedLines;
     bool squeezed = false;
-    Q_FOREACH (const QString &line, d->fullText.split(QLatin1Char('\n'))) {
+    const auto textLines = d->fullText.split(QLatin1Char('\n'));
+    squeezedLines.reserve(textLines.size());
+    for (const QString &line : textLines) {
         int lineWidth = fm.width(line);
         if (lineWidth > labelWidth) {
             squeezed = true;

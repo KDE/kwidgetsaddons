@@ -210,7 +210,8 @@ void KDateTimeEditTest::testTimeSpec()
 
     QCOMPARE(m_edit->timeZone(), QDateTime::currentDateTime().timeZone());
     QList<QTimeZone> zones;
-    foreach (const QByteArray &zoneId, QTimeZone::availableTimeZoneIds()) {
+    const auto zoneIds = QTimeZone::availableTimeZoneIds();
+    for (const QByteArray &zoneId : zoneIds) {
         zones << QTimeZone(zoneId);
     }
     QCOMPARE(m_edit->timeZones(), zones);
@@ -229,7 +230,8 @@ void KDateTimeEditTest::testTimeSpec()
 template<typename T>
 static T findVisibleChild(QWidget *parent)
 {
-    foreach (T child, parent->findChildren<T>()) {
+    const auto children = parent->findChildren<T>();
+    for (T child : children) {
         if (child->isVisible()) {
             return child;
         }

@@ -60,12 +60,12 @@ static QFont nearestExistingFont(const QFont &font)
     // Check if the family has the requested size.
     // Only for bitmap fonts.
     if (!dbase.isSmoothlyScalable(family, style)) {
-        QList<int> sizes = dbase.smoothSizes(family, style);
+        const QList<int> sizes = dbase.smoothSizes(family, style);
         if (!sizes.contains(size)) {
             // Find nearest available size.
             int mindiff = 1000;
             int refsize = size;
-            Q_FOREACH (int lsize, sizes) {
+            for (int lsize : sizes) {
                 int diff = qAbs(refsize - lsize);
                 if (mindiff > diff) {
                     mindiff = diff;

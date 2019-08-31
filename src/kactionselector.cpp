@@ -433,8 +433,8 @@ bool KActionSelector::eventFilter(QObject *o, QEvent *e)
 void KActionSelectorPrivate::buttonAddClicked()
 {
     // move all selected items from available to selected listbox
-    QList<QListWidgetItem *> list = availableListWidget->selectedItems();
-    Q_FOREACH (QListWidgetItem *item, list) {
+    const QList<QListWidgetItem*> list = availableListWidget->selectedItems();
+    for (QListWidgetItem *item : list) {
         availableListWidget->takeItem(availableListWidget->row(item));
         selectedListWidget->insertItem(insertionIndex(selectedListWidget, selectedInsertionPolicy), item);
         selectedListWidget->setCurrentItem(item);
@@ -449,8 +449,8 @@ void KActionSelectorPrivate::buttonAddClicked()
 void KActionSelectorPrivate::buttonRemoveClicked()
 {
     // move all selected items from selected to available listbox
-    QList<QListWidgetItem *> list = selectedListWidget->selectedItems();
-    Q_FOREACH (QListWidgetItem *item, list) {
+    const QList<QListWidgetItem*> list = selectedListWidget->selectedItems();
+    for (QListWidgetItem *item : list) {
         selectedListWidget->takeItem(selectedListWidget->row(item));
         availableListWidget->insertItem(insertionIndex(availableListWidget, availableInsertionPolicy), item);
         availableListWidget->setCurrentItem(item);

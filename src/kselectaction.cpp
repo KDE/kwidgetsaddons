@@ -192,7 +192,8 @@ QAction *KSelectAction::action(const QString &text, Qt::CaseSensitivity cs) cons
         compare = text.toLower();
     }
 
-    foreach (QAction *action, selectableActionGroup()->actions()) {
+    const auto selectableActions = selectableActionGroup()->actions();
+    for (QAction *action : selectableActions) {
         const QString text = ::DropAmpersands(action->text());
         if (cs == Qt::CaseSensitive) {
             if (text == compare) {
@@ -224,7 +225,7 @@ void KSelectAction::setComboWidth(int width)
 
     d->m_comboWidth = width;
 
-    foreach (QComboBox *box, d->m_comboBoxes) {
+    for (QComboBox *box : qAsConst(d->m_comboBoxes)) {
         box->setMaximumWidth(d->m_comboWidth);
     }
 
@@ -236,7 +237,7 @@ void KSelectAction::setMaxComboViewCount(int n)
     Q_D(KSelectAction);
     d->m_maxComboViewCount = n;
 
-    foreach (QComboBox *box, d->m_comboBoxes)
+    for (QComboBox *box : qAsConst(d->m_comboBoxes)) {
         if (d->m_maxComboViewCount != -1) {
             box->setMaxVisibleItems(d->m_maxComboViewCount);
         } else
@@ -244,6 +245,7 @@ void KSelectAction::setMaxComboViewCount(int n)
         {
             box->setMaxVisibleItems(10);
         }
+    }
 
     emit changed();
 }
@@ -291,12 +293,12 @@ QAction *KSelectAction::removeAction(QAction *action)
     bool hasActions = selectableActionGroup()->actions().isEmpty();
     setEnabled(!hasActions);
 
-    foreach (QToolButton *button, d->m_buttons) {
+    for (QToolButton *button : qAsConst(d->m_buttons)) {
         button->setEnabled(!hasActions);
         button->removeAction(action);
     }
 
-    foreach (QComboBox *comboBox, d->m_comboBoxes) {
+    for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
         comboBox->setEnabled(!hasActions);
         comboBox->removeAction(action);
     }
@@ -315,12 +317,12 @@ void KSelectAction::insertAction(QAction *before, QAction *action)
     setEnabled(true);
 
     // Keep in sync with createToolBarWidget()
-    foreach (QToolButton *button, d->m_buttons) {
+    for (QToolButton *button : qAsConst(d->m_buttons)) {
         button->setEnabled(true);
         button->insertAction(before, action);
     }
 
-    foreach (QComboBox *comboBox, d->m_comboBoxes) {
+    for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
         comboBox->setEnabled(true);
         comboBox->insertAction(before, action);
     }
@@ -351,7 +353,9 @@ QStringList KSelectAction::items() const
     Q_D(const KSelectAction);
     QStringList ret;
 
-    foreach (QAction *action, d->m_actionGroup->actions()) {
+    const auto actions = d->m_actionGroup->actions();
+    ret.reserve(actions.size());
+    for (QAction *action : actions) {
         ret << ::DropAmpersands(action->text());
     }
 
@@ -376,7 +380,7 @@ void KSelectAction::setItems(const QStringList &lst)
 
     clear();
 
-    foreach (const QString &string, lst) {
+    for (const QString &string : lst) {
         if (!string.isEmpty()) {
             addAction(string);
         } else {
@@ -429,7 +433,7 @@ void KSelectAction::setEditable(bool edit)
     Q_D(KSelectAction);
     d->m_edit = edit;
 
-    foreach (QComboBox *comboBox, d->m_comboBoxes) {
+    for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
         comboBox->setEditable(edit);
     }
 
@@ -476,11 +480,7 @@ void KSelectAction::setToolButtonPopupMode(QToolButton::ToolButtonPopupMode mode
 
 void KSelectActionPrivate::_k_comboBoxDeleted(QObject *object)
 {
-    foreach (QComboBox *comboBox, m_comboBoxes)
-        if (object == comboBox) {
-            m_comboBoxes.removeAll(static_cast<QComboBox *>(object));
-            break;
-        }
+    m_comboBoxes.removeAll(static_cast<QComboBox*>(object));
 }
 
 void KSelectActionPrivate::_k_comboBoxCurrentIndexChanged(int index)
@@ -587,11 +587,12 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
         comboBox->setWhatsThis(whatsThis());
         comboBox->setStatusTip(statusTip());
 
-        foreach (QAction *action, selectableActionGroup()->actions()) {
+        const auto selectableActions = selectableActionGroup()->actions();
+        for (QAction *action : selectableActions) {
             comboBox->addAction(action);
         }
 
-        if (selectableActionGroup()->actions().isEmpty()) {
+        if (selectableActions.isEmpty()) {
             comboBox->setEnabled(false);
         }
 
@@ -621,12 +622,12 @@ bool KSelectAction::event(QEvent *event)
 {
     Q_D(KSelectAction);
     if (event->type() == QEvent::ActionChanged) {
-        Q_FOREACH (QComboBox *comboBox, d->m_comboBoxes) {
+        for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
             comboBox->setToolTip(toolTip());
             comboBox->setWhatsThis(whatsThis());
             comboBox->setStatusTip(statusTip());
         }
-        Q_FOREACH (QToolButton *toolButton, d->m_buttons) {
+        for (QToolButton *toolButton : qAsConst(d->m_buttons)) {
             toolButton->setToolTip(toolTip());
             toolButton->setWhatsThis(whatsThis());
             toolButton->setStatusTip(statusTip());
@@ -652,16 +653,19 @@ static int TrueCurrentItem(KSelectAction *sa)
     QAction *curAction = sa->currentAction();
     //qCDebug(KWidgetsAddonsLog) << "\tTrueCurrentItem(" << sa << ") curAction=" << curAction;
 
-    foreach (QAction *action, sa->actions()) {
+    const auto actions = sa->actions();
+    int i = 0;
+    for (QAction *action : actions) {
         if (action->isChecked()) {
             //qCDebug(KWidgetsAddonsLog) << "\t\taction " << action << " (text=" << action->text () << ") isChecked";
 
             // 2 actions checked case?
             if (action != curAction) {
                 //qCDebug(KWidgetsAddonsLog) << "\t\t\tmust be newly selected one";
-                return sa->actions().indexOf(action);
+                return i;
             }
         }
+        ++i;
     }
 
     //qCDebug(KWidgetsAddonsLog) << "\t\tcurrent action still selected? " << (curAction && curAction->isChecked ());

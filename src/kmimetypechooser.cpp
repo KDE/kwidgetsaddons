@@ -145,7 +145,7 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
     QTreeWidgetItem *idefault = nullptr; //open this, if all other fails
     QTreeWidgetItem *firstChecked = nullptr; // make this one visible after the loop
 
-    foreach (const QMimeType &mt, mimetypes) {
+    for (const QMimeType &mt : mimetypes) {
         const QString mimetype = mt.name();
         const int index = mimetype.indexOf(QLatin1Char('/'));
         const QString maj = mimetype.left(index);
@@ -262,7 +262,8 @@ QStringList KMimeTypeChooser::mimeTypes() const
     QStringList mimeList;
     QList<QTreeWidgetItem *> checkedItems;
     getCheckedItems(checkedItems, d->mimeTypeTree);
-    foreach (QTreeWidgetItem *item, checkedItems) {
+    mimeList.reserve(checkedItems.size());
+    for (QTreeWidgetItem *item : qAsConst(checkedItems)) {
         mimeList.append(item->parent()->text(0) + QLatin1Char('/') + item->text(0));
     }
     return mimeList;
@@ -274,7 +275,7 @@ QStringList KMimeTypeChooser::patterns() const
     QList<QTreeWidgetItem *> checkedItems;
     getCheckedItems(checkedItems, d->mimeTypeTree);
     QMimeDatabase db;
-    foreach (QTreeWidgetItem *item, checkedItems) {
+    for (QTreeWidgetItem *item : qAsConst(checkedItems)) {
         QMimeType mime = db.mimeTypeForName(item->parent()->text(0) + QLatin1Char('/') + item->text(0));
         Q_ASSERT(mime.isValid());
         patternList += mime.globPatterns();
