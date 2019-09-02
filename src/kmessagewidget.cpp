@@ -27,6 +27,7 @@
 #include <QLabel>
 #include <QPainter>
 #include <QShowEvent>
+#include <QStyleOption>
 #include <QTimeLine>
 #include <QToolButton>
 #include <QStyle>
@@ -93,7 +94,9 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     QAction *closeAction = new QAction(q);
     closeAction->setText(KMessageWidget::tr("&Close"));
     closeAction->setToolTip(KMessageWidget::tr("Close message"));
-    closeAction->setIcon(q->style()->standardIcon(QStyle::SP_DialogCloseButton));
+    QStyleOptionFrame opt;
+    opt.initFrom(q);
+    closeAction->setIcon(q->style()->standardIcon(QStyle::SP_DialogCloseButton, &opt, q));
 
     QObject::connect(closeAction, &QAction::triggered, q, &KMessageWidget::animatedHide);
 
