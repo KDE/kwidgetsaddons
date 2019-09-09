@@ -49,7 +49,7 @@ public:
         QModelIndex currentIndex;
         do {
             currentIndex = nextIndex;
-            nextIndex = currentIndex.child(0, 0);
+            nextIndex = pageModel->index(0, 0, currentIndex);
             if (!nextIndex.isValid()) {
                 nextIndex = currentIndex.sibling(currentIndex.row() + 1, 0);
             }

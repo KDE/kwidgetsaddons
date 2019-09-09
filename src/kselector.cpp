@@ -168,7 +168,7 @@ void KSelector::mouseReleaseEvent(QMouseEvent *e)
 
 void KSelector::wheelEvent(QWheelEvent *e)
 {
-    int val = value() + e->delta() / 120;
+    int val = value() + e->angleDelta().y() / 120;
     setSliderDown(true);
     setValue(val);
     setSliderDown(false);
@@ -333,14 +333,14 @@ void KGradientSelector::drawContents(QPainter *painter)
     if (orientation() == Qt::Vertical) {
         int yPos = contentsRect().top() + painter->fontMetrics().ascent() + 2;
         int xPos = contentsRect().left() + (contentsRect().width() -
-                                            painter->fontMetrics().width(d->text2)) / 2;
+                                            painter->fontMetrics().horizontalAdvance(d->text2)) / 2;
         QPen pen(qGray(firstColor().rgb()) > 180 ? Qt::black : Qt::white);
         painter->setPen(pen);
         painter->drawText(xPos, yPos, d->text2);
 
         yPos = contentsRect().bottom() - painter->fontMetrics().descent() - 2;
         xPos = contentsRect().left() + (contentsRect().width() -
-                                        painter->fontMetrics().width(d->text1)) / 2;
+                                        painter->fontMetrics().horizontalAdvance(d->text1)) / 2;
         pen.setColor(qGray(secondColor().rgb()) > 180 ? Qt::black : Qt::white);
         painter->setPen(pen);
         painter->drawText(xPos, yPos, d->text1);
@@ -354,7 +354,7 @@ void KGradientSelector::drawContents(QPainter *painter)
         pen.setColor(qGray(secondColor().rgb()) > 180 ? Qt::black : Qt::white);
         painter->setPen(pen);
         painter->drawText(contentsRect().right() -
-                          painter->fontMetrics().width(d->text2) - 2, yPos, d->text2);
+                          painter->fontMetrics().horizontalAdvance(d->text2) - 2, yPos, d->text2);
     }
 }
 

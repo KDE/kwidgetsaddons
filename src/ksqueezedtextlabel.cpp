@@ -77,7 +77,7 @@ QSize KSqueezedTextLabel::sizeHint() const
 {
     int maxWidth = QApplication::desktop()->screenGeometry(this).width() * 3 / 4;
     QFontMetrics fm(fontMetrics());
-    int textWidth = fm.width(d->fullText);
+    int textWidth = fm.boundingRect(d->fullText).width();
     if (textWidth > maxWidth) {
         textWidth = maxWidth;
     }
@@ -118,7 +118,7 @@ void KSqueezedTextLabel::squeezeTextToLabel()
     const auto textLines = d->fullText.split(QLatin1Char('\n'));
     squeezedLines.reserve(textLines.size());
     for (const QString &line : textLines) {
-        int lineWidth = fm.width(line);
+        int lineWidth = fm.boundingRect(line).width();
         if (lineWidth > labelWidth) {
             squeezed = true;
             squeezedLines << fm.elidedText(line, d->elideMode, labelWidth);
@@ -145,7 +145,7 @@ QRect KSqueezedTextLabel::contentsRect() const
         if (frameWidth() == 0) {
             indent = 0;
         } else {
-            indent = fontMetrics().width(QLatin1Char('x')) / 2 - margin;
+            indent = fontMetrics().horizontalAdvance(QLatin1Char('x')) / 2 - margin;
         }
     }
 

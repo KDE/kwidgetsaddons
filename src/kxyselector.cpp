@@ -194,12 +194,7 @@ void KXYSelector::mouseMoveEvent(QMouseEvent *e)
 
 void KXYSelector::wheelEvent(QWheelEvent *e)
 {
-    if (e->orientation() == Qt::Horizontal) {
-        setValues(xValue() + e->delta() / 120, yValue());
-    } else {
-        setValues(xValue(), yValue() + e->delta() / 120);
-    }
-
+    setValues(xValue() + e->angleDelta().x() / 120, yValue() + e->angleDelta().y() / 120);
     emit valueChanged(d->xPos, d->yPos);
 }
 

@@ -524,7 +524,7 @@ void KDateTable::setFontSize(int size)
 
 void KDateTable::wheelEvent(QWheelEvent *e)
 {
-    setDate(d->m_date.addMonths(-(int)(e->delta() / 120)));
+    setDate(d->m_date.addMonths(-(int)(e->angleDelta().y() / 120)));
     e->accept();
 }
 

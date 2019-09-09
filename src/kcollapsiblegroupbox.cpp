@@ -285,15 +285,13 @@ void KCollapsibleGroupBox::keyPressEvent(QKeyEvent *event)
 
 void KCollapsibleGroupBox::resizeEvent(QResizeEvent *event)
 {
-    int top, left, right, bottom;
-    getContentsMargins(&left, &top, &right, &bottom);
+    const QMargins margins = contentsMargins();
 
     if (layout()) {
         //we don't want the layout trying to fit the current frame of the animation so always set it to the target height
-        layout()->setGeometry(QRect(left, top, width() - left - right, layout()->sizeHint().height()));
+        layout()->setGeometry(QRect(margins.left(), margins.top(), width() - margins.left() - margins.right(), layout()->sizeHint().height()));
     }
 
-    Q_UNUSED(bottom)
     QWidget::resizeEvent(event);
 }
 

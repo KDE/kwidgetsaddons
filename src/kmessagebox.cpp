@@ -279,7 +279,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         QFontMetrics fm(styleOption.font);
         int w = listWidget->width();
         for (const QString &str : strlist) {
-            w = qMax(w, fm.width(str));
+            w = qMax(w, fm.boundingRect(str).width());
         }
         const int borderWidth = listWidget->width() - listWidget->viewport()->width() + listWidget->verticalScrollBar()->height();
         w += borderWidth;

@@ -155,7 +155,7 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     QCOMPARE(label->sizeHint().width(), 0);
 
     const QString text = QStringLiteral("Squeeze me");
-    const int labelWidth = label->fontMetrics().width(text);  // no chrome set
+    const int labelWidth = label->fontMetrics().boundingRect(text).width();  // no chrome set
     label->setText(text);
 
     QVERIFY(label->isSqueezed());
@@ -199,7 +199,7 @@ void KSqueezedTextLabelAutotest::testClearing()
 void KSqueezedTextLabelAutotest::testChrome_data()
 {
     const QFontMetrics fm(KSqueezedTextLabel().fontMetrics());
-    const int xWidth = fm.width(QLatin1Char('x')) / 2;
+    const int xWidth = fm.horizontalAdvance(QLatin1Char('x')) / 2;
 
     QTest::addColumn<QString>("attribute");
     QTest::addColumn<int>("amount");

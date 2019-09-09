@@ -584,7 +584,7 @@ void KDateComboBox::mousePressEvent(QMouseEvent *event)
 void KDateComboBox::wheelEvent(QWheelEvent *event)
 {
     QDate temp;
-    if (event->delta() < 0) {
+    if (event->angleDelta().y() < 0) {
         temp = d->m_date.addDays(-1);
     } else {
         temp = d->m_date.addDays(1);

@@ -396,7 +396,7 @@ KRuler::setEndLabel(const QString &label)
         QFont font = this->font();
         font.setPointSize(LABEL_SIZE);
         QFontMetrics fm(font);
-        d->fontWidth = fm.width(d->endlabel);
+        d->fontWidth = fm.horizontalAdvance(d->endlabel);
     }
     update(contentsRect());
 }
@@ -686,7 +686,7 @@ KRuler::paintEvent(QPaintEvent * /*e*/)
 #endif
                 p.drawText(END_LABEL_X, END_LABEL_Y, d->endlabel);
             }
-            p.resetMatrix();
+            p.resetTransform();
         }
 
         // draw the tiny marks

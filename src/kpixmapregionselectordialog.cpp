@@ -23,6 +23,7 @@
 #include <QDesktopWidget>
 #include <QImage>
 #include <QLabel>
+#include <QScreen>
 #include <QVBoxLayout>
 
 #include <kpixmapregionselectorwidget.h>
@@ -49,10 +50,9 @@ public:
     {
         if (pixmapSelectorWidget) {
             //Set maximum size for picture
-            QDesktopWidget desktopWidget;
-            QRect screen = desktopWidget.availableGeometry();
+            const QRect screenGeometry = pixmapSelectorWidget->screen()->availableGeometry();
             pixmapSelectorWidget->setMaximumWidgetSize(
-                (int)(screen.width() * 4.0 / 5), (int)(screen.height() * 4.0 / 5));
+                (int)(screenGeometry.width() * 4.0 / 5), (int)(screenGeometry.height() * 4.0 / 5));
         }
     }
 };

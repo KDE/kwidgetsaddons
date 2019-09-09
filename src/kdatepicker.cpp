@@ -608,7 +608,7 @@ void KDatePicker::setFontSize(int s)
 
     // stolen from QToolButton
     QSize textSize = metrics.size(Qt::TextShowMnemonic, longestMonth);
-    textSize.setWidth(textSize.width() + metrics.width(QLatin1Char(' ')) * 2);
+    textSize.setWidth(textSize.width() + metrics.horizontalAdvance(QLatin1Char(' ')) * 2);
     int w = textSize.width();
     int h = textSize.height();
     opt.rect.setHeight(h);   // PM_MenuButtonIndicator depends on the height

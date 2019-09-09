@@ -21,10 +21,11 @@
 
 #include "kpopupframe.h"
 
-#include <QApplication>
 #include <QDesktopWidget>
 #include <QEventLoop>
+#include <QGuiApplication>
 #include <QKeyEvent>
+#include <QScreen>
 
 class Q_DECL_HIDDEN KPopupFrame::KPopupFramePrivate
 {
@@ -149,23 +150,26 @@ void KPopupFrame::resizeEvent(QResizeEvent *e)
 void KPopupFrame::popup(const QPoint &pos)
 {
     // Make sure the whole popup is visible.
-    QRect desktopGeometry = QApplication::desktop()->screenGeometry(pos);
+    QScreen *screen = QGuiApplication::screenAt(pos);
 
     int x = pos.x();
     int y = pos.y();
     int w = width();
     int h = height();
-    if (x + w > desktopGeometry.x() + desktopGeometry.width()) {
-        x = desktopGeometry.width() - w;
-    }
-    if (y + h > desktopGeometry.y() + desktopGeometry.height()) {
-        y = desktopGeometry.height() - h;
-    }
-    if (x < desktopGeometry.x()) {
-        x = 0;
-    }
-    if (y < desktopGeometry.y()) {
-        y = 0;
+    if (screen) {
+        const QRect desktopGeometry = screen->geometry();
+        if (x + w > desktopGeometry.x() + desktopGeometry.width()) {
+            x = desktopGeometry.width() - w;
+        }
+        if (y + h > desktopGeometry.y() + desktopGeometry.height()) {
+            y = desktopGeometry.height() - h;
+        }
+        if (x < desktopGeometry.x()) {
+            x = 0;
+        }
+        if (y < desktopGeometry.y()) {
+            y = 0;
+        }
     }
 
     // Pop the thingy up.

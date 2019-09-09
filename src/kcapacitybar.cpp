@@ -350,9 +350,7 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
 
 QSize KCapacityBar::minimumSizeHint() const
 {
-    int width = (d->drawTextMode == KCapacityBar::DrawTextInline) ?
-                fontMetrics().width(d->text) + ROUND_MARGIN * 2 :
-                fontMetrics().width(d->text);
+    int width = fontMetrics().boundingRect(d->text).width() + ((d->drawTextMode == KCapacityBar::DrawTextInline) ? ROUND_MARGIN * 2 : 0);
 
     int height = (d->drawTextMode == KCapacityBar::DrawTextInline) ?
                  qMax(fontMetrics().height(), d->barHeight) :
