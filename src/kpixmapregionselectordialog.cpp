@@ -21,6 +21,7 @@
 
 #include <QDialogButtonBox>
 #include <QDesktopWidget>
+#include <QGuiApplication>
 #include <QImage>
 #include <QLabel>
 #include <QScreen>
