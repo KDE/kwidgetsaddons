@@ -50,9 +50,16 @@ public:
     {
         if (pixmapSelectorWidget) {
             //Set maximum size for picture
-            const QRect screenGeometry = pixmapSelectorWidget->screen()->availableGeometry();
-            pixmapSelectorWidget->setMaximumWidgetSize(
-                (int)(screenGeometry.width() * 4.0 / 5), (int)(screenGeometry.height() * 4.0 / 5));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
+            QScreen *screen = pixmapSelectorWidget->screen();
+#else
+            QScreen *screen = QGuiApplication::screenAt(pixmapSelectorWidget->geometry().center());
+#endif
+            if (screen) {
+                const QRect screenGeometry = screen->availableGeometry();
+                pixmapSelectorWidget->setMaximumWidgetSize(
+                        (int)(screenGeometry.width() * 4.0 / 5), (int)(screenGeometry.height() * 4.0 / 5));
+            }
         }
     }
 };
