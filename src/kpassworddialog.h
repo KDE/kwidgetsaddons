@@ -148,13 +148,25 @@ public:
     QString prompt() const;
 
     /**
-     * set an image that appears next to the prompt.
+     * Set the icon that appears next to the prompt.
+     * @since 5.63
      */
-    void setPixmap(const QPixmap &);
+    void setIcon(const QIcon &icon);
+
     /**
-     *
+     * Returns the icon that appears next to the prompt.
      */
-    QPixmap pixmap() const;
+    QIcon icon() const;
+
+    /**
+     * set an image that appears next to the prompt.
+     * @deprecated since 5.63 use setIcon()
+     */
+    KWIDGETSADDONS_DEPRECATED void setPixmap(const QPixmap &);
+    /**
+     * @deprecated since 5.63 use icon()
+     */
+    KWIDGETSADDONS_DEPRECATED QPixmap pixmap() const;
 
     /**
      * Adds a comment line to the dialog.

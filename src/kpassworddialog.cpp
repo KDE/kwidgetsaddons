@@ -38,7 +38,6 @@ public:
     KPasswordDialogPrivate(KPasswordDialog *q)
         : q(q),
           userEditCombo(nullptr),
-          pixmapLabel(nullptr),
           commentRow(0)
     {}
 
@@ -52,7 +51,7 @@ public:
     Ui_KPasswordDialog ui;
     QMap<QString, QString> knownLogins;
     QComboBox *userEditCombo;
-    QLabel *pixmapLabel;
+    QIcon icon;
     KPasswordDialogFlags m_flags;
     unsigned int commentRow;
 };
@@ -123,30 +122,32 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
 
     QRect desktop = QApplication::desktop()->screenGeometry(q->topLevelWidget());
     q->setMinimumWidth(qMin(1000, qMax(q->sizeHint().width(), desktop.width() / 4)));
+    q->setIcon(QIcon::fromTheme(QStringLiteral("dialog-password")));
+}
+
+void KPasswordDialog::setIcon(const QIcon &icon)
+{
+    d->icon = icon;
+
     QStyleOption option;
-    option.initFrom(q);
-    const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
-    q->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize));
+    option.initFrom(this);
+    const int iconSize = style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this);
+    d->ui.pixmapLabel->setPixmap(icon.pixmap(iconSize));
+}
+
+QIcon KPasswordDialog::icon() const
+{
+    return d->icon;
 }
 
 void KPasswordDialog::setPixmap(const QPixmap &pixmap)
 {
-    if (!d->pixmapLabel) {
-        d->pixmapLabel = new QLabel(this);
-        d->pixmapLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
-        d->ui.hboxLayout->insertWidget(0, d->pixmapLabel);
-    }
-
-    d->pixmapLabel->setPixmap(pixmap);
+    d->ui.pixmapLabel->setPixmap(pixmap);
 }
 
 QPixmap KPasswordDialog::pixmap() const
 {
-    if (!d->pixmapLabel) {
-        return QPixmap();
-    }
-
-    return *d->pixmapLabel->pixmap();
+    return *d->ui.pixmapLabel->pixmap();
 }
 
 void KPasswordDialog::setUsername(const QString &user)

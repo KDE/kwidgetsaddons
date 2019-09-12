@@ -94,16 +94,31 @@ public:
     QString prompt() const;
 
     /**
-     * Sets the pixmap that appears next to the prompt in the dialog.  The default pixmap represent a simple key.
+     * Sets the icon that appears next to the prompt in the dialog. The default icon represents a simple key.
+     * @since 5.63
+     */
+    void setIcon(const QIcon &icon);
+
+    /**
+     * Returns the icon that appears next to the prompt in the dialog. The default icon represents a simple key.
+     * @since 5.63
+     */
+    QIcon icon() const;
+
+    /**
+     * Sets the pixmap that appears next to the prompt in the dialog. The default pixmap represents a simple key.
      *
      * the recommended size is KIconLoader::SizeHuge
+     *
+     * @deprecated since 5.63 use setIcon()
      */
-    void setPixmap(const QPixmap &);
+    KWIDGETSADDONS_DEPRECATED void setPixmap(const QPixmap &);
 
     /**
      * Returns the pixmap that appears next to the prompt in the dialog
+     * @deprecated since 5.63 use setIcon()
      */
-    QPixmap pixmap() const;
+    KWIDGETSADDONS_DEPRECATED QPixmap pixmap() const;
 
     /**
      * Allow empty passwords? - Default: true

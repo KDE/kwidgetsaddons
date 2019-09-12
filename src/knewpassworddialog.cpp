@@ -44,6 +44,7 @@ public:
     KNewPasswordDialog *q;
 
     QString pass;
+    QIcon icon;
 
     Ui::KNewPasswordDialog ui;
 };
@@ -51,11 +52,8 @@ public:
 void KNewPasswordDialog::KNewPasswordDialogPrivate::init()
 {
     ui.setupUi(q);
+    q->setIcon(QIcon::fromTheme(QStringLiteral("dialog-password")));
 
-    QStyleOption option;
-    option.initFrom(q);
-    const int iconSize = q->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, q);
-    ui.labelIcon->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-password")).pixmap(iconSize, iconSize));
     ui.statusMsgWidget->hide();
 
     connect(ui.pwdWidget, SIGNAL(passwordStatusChanged()), q, SLOT(_k_passwordStatusChanged()));
@@ -117,6 +115,21 @@ void KNewPasswordDialog::setPrompt(const QString &prompt)
 QString KNewPasswordDialog::prompt() const
 {
     return d->ui.labelPrompt->text();
+}
+
+void KNewPasswordDialog::setIcon(const QIcon &icon)
+{
+    d->icon = icon;
+    QStyleOption option;
+    option.initFrom(this);
+    const int iconSize = style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this);
+    d->ui.labelIcon->setPixmap(icon.pixmap(iconSize, iconSize));
+    d->ui.labelIcon->setFixedSize(d->ui.labelIcon->sizeHint());
+}
+
+QIcon KNewPasswordDialog::icon() const
+{
+    return d->icon;
 }
 
 void KNewPasswordDialog::setPixmap(const QPixmap &pixmap)
