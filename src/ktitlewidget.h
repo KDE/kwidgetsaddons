@@ -42,7 +42,7 @@
  * @code
 KTitleWidget *titleWidget = new KTitleWidget(this);
 titleWidget->setText(i18n("Title"));
-titleWidget->setPixmap(QIcon::fromTheme("screen").pixmap(22, 22));
+titleWidget->setIcon(QIcon::fromTheme("screen"));
  * @endcode
  *
  * Use it with an own widget:
