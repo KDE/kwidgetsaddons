@@ -172,6 +172,14 @@ public Q_SLOTS:
     void setComment(const QString &comment, MessageType type = PlainMessage);
 
     /**
+     * Set the icon to display in the header.
+     * @param icon the icon to display in the header.
+     * @param alignment alignment of the icon (default is right aligned).
+     * @since 5.63
+     */
+    void setIcon(const QIcon &icon, ImageAlignment alignment = ImageRight);
+
+    /**
      * @param pixmap Pixmap displayed in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
@@ -182,15 +190,17 @@ public Q_SLOTS:
      * @param icon name of the icon to display in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
+     * @deprecated since 5.63 use setIcon() instead
      */
-    void setPixmap(const QString &icon, ImageAlignment alignment = ImageRight);
+    KWIDGETSADDONS_DEPRECATED void setPixmap(const QString &icon, ImageAlignment alignment = ImageRight);
 
     /**
      * @param icon the icon to display in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
+     * @deprecated since 5.63 use setIcon() instead
      */
-    void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
+    KWIDGETSADDONS_DEPRECATED void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
     /**
      * @param type the type of message icon to display in the header. The pixmap is by default right, but

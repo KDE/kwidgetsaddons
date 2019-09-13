@@ -262,6 +262,11 @@ void KTitleWidget::setComment(const QString &comment, MessageType type)
     show();
 }
 
+void KTitleWidget::setIcon(const QIcon &icon, KTitleWidget::ImageAlignment alignment)
+{
+    setPixmap(icon.pixmap(style()->pixelMetric(QStyle::PM_MessageBoxIconSize)), alignment);
+}
+
 void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
 {
     d->imageLabel->setVisible(!pixmap.isNull());
@@ -290,17 +295,17 @@ void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
 
 void KTitleWidget::setPixmap(const QString &icon, ImageAlignment alignment)
 {
-    setPixmap(QIcon::fromTheme(icon), alignment);
+    setIcon(QIcon::fromTheme(icon), alignment);
 }
 
 void KTitleWidget::setPixmap(const QIcon &icon, ImageAlignment alignment)
 {
-    setPixmap(icon.pixmap(style()->pixelMetric(QStyle::PM_MessageBoxIconSize)), alignment);
+    setIcon(icon, alignment);
 }
 
 void KTitleWidget::setPixmap(MessageType type, ImageAlignment alignment)
 {
-    setPixmap(QIcon::fromTheme(d->iconTypeToIconName(type)), alignment);
+    setIcon(QIcon::fromTheme(d->iconTypeToIconName(type)), alignment);
 }
 
 int KTitleWidget::autoHideTimeout() const
