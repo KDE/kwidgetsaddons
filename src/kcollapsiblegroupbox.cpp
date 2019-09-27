@@ -122,6 +122,7 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
     d->animation->setDirection(expanded ? QTimeLine::Forward : QTimeLine::Backward);
     // QTimeLine::duration() must be > 0
     const int duration = qMax(1, style()->styleHint(QStyle::SH_Widget_Animation_Duration));
+    d->animation->stop();
     d->animation->setDuration(duration);
     d->animation->start();
 
