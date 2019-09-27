@@ -149,12 +149,12 @@ bool testMessageBox(int test)
 
     case 13:
         i = KMessageBox::Ok;
-        KMessageBox::sorry(nullptr, QStringLiteral("Sorry, Your harddisk appears to be empty."));
+        KMessageBox::sorry(nullptr, QStringLiteral("Sorry, Your harddisk appears to be empty."), QString(), KGuiItem(QStringLiteral("Abort")));
         break;
 
     case 14:
         i = KMessageBox::Ok;
-        KMessageBox::detailedSorry(nullptr, QStringLiteral("Sorry, Your harddisk appears to be empty."), QStringLiteral("We don't know more yet."), QStringLiteral("Oops"));
+        KMessageBox::detailedSorry(nullptr, QStringLiteral("Sorry, Your harddisk appears to be empty."), QStringLiteral("We don't know more yet."), QStringLiteral("Oops"), KGuiItem(QStringLiteral("Abort")));
         break;
 
     case 15:

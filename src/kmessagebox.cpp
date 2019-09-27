@@ -836,13 +836,19 @@ void detailedError(QWidget *parent, const QString &text,
 }
 
 static void sorryInternal(QDialog *dialog, const QString &text,
-                          const QString &caption, Options options)
+                          const QString &caption,
+                          const KGuiItem &buttonOk_,
+                          Options options)
 {
+    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
+    I18N_POST_BUTTON_FILTER
+
     dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : caption);
     dialog->setObjectName(QStringLiteral("sorry"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok);
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
 
     applyOptions(dialog, options);
 
@@ -852,19 +858,31 @@ static void sorryInternal(QDialog *dialog, const QString &text,
 void sorry(QWidget *parent, const QString &text,
            const QString &caption, Options options)
 {
-    sorryInternal(new QDialog(parent), text, caption, options);
+    sorryInternal(new QDialog(parent), text, caption, KStandardGuiItem::ok(), options);
+}
+
+void sorry(QWidget *parent, const QString &text,
+           const QString &caption, const KGuiItem &item, Options options)
+{
+    sorryInternal(new QDialog(parent), text, caption, item, options);
 }
 
 static void detailedSorryInternal(QDialog *dialog, const QString &text,
                                   const QString &details,
-                                  const QString &caption, Options options)
+                                  const QString &caption,
+                                  const KGuiItem &buttonOk_,
+                                  Options options)
 {
+    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
+    I18N_POST_BUTTON_FILTER
+
     dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : caption);
     dialog->setObjectName(QStringLiteral("sorry"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->addButton(QDialogButtonBox::Ok);
     buttonBox->button(QDialogButtonBox::Ok)->setFocus();
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
 
     applyOptions(dialog, options);
 
@@ -875,7 +893,16 @@ void detailedSorry(QWidget *parent, const QString &text,
                    const QString &details,
                    const QString &caption, Options options)
 {
-    detailedSorryInternal(new QDialog(parent), text, details, caption, options);
+    detailedSorryInternal(new QDialog(parent), text, details, caption, KStandardGuiItem::ok(), options);
+}
+
+void detailedSorry(QWidget *parent, const QString &text,
+                   const QString &details,
+                   const QString &caption,
+                   const KGuiItem &buttonOk,
+                   Options options)
+{
+    detailedSorryInternal(new QDialog(parent), text, details, caption, buttonOk, options);
 }
 
 void information(QWidget *parent, const QString &text,
@@ -969,7 +996,7 @@ static ButtonCode messageBoxInternal(QDialog *dialog, DialogType type, const QSt
         return KMessageBox::Ok;
 
     case Sorry:
-        sorryInternal(dialog, text, caption, options);
+        sorryInternal(dialog, text, caption, KStandardGuiItem::ok(), options);
         return KMessageBox::Ok;
     }
     return KMessageBox::Cancel;
@@ -1134,7 +1161,16 @@ void detailedSorryWId(WId parent_id, const QString &text,
                       const QString &details,
                       const QString &caption, Options options)
 {
-    detailedSorryInternal(createWIdDialog(parent_id), text, details, caption, options);
+    detailedSorryInternal(createWIdDialog(parent_id), text, details, caption, KStandardGuiItem::ok(), options);
+}
+
+void detailedSorryWId(WId parent_id, const QString &text,
+                      const QString &details,
+                      const QString &caption,
+                      const KGuiItem &buttonOk,
+                      Options options)
+{
+    detailedSorryInternal(createWIdDialog(parent_id), text, details, caption, buttonOk, options);
 }
 
 void informationWId(WId parent_id, const QString &text,

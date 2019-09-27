@@ -572,12 +572,40 @@ KWIDGETSADDONS_EXPORT void detailedError(QWidget *parent,
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
  * NOTE: The ok button will always have the i18n'ed text '&OK'.
+ * See the overload with a KGuiItem argument to change that.
  */
-
 KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
                                  const QString &text,
                                  const QString &caption = QString(),
                                  Options options = Notify);
+
+/**
+ * Display a "Sorry" dialog.
+ *
+ * @param parent  Parent widget.
+ * @param text    Message string.
+ * @param caption Message box title. The application name is added to
+ *                the title. The default title is i18n("Sorry").
+ * @param buttonOk The text for the only button.
+ *                 The default is KStandardGuiItem::ok().
+ * @param options  see OptionsType
+ *
+ * Either your program messed up and asks for understanding
+ * or your user did something stupid.
+ *
+ * To be used for small problems like
+ * "Sorry, I can't find the file you specified."
+ *
+ * The default button is "&OK". Pressing "Esc" selects the OK-button.
+ *
+ * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
+ * @since 5.63
+ */
+KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
+                                 const QString &text,
+                                 const QString &caption /*= QString()*/,
+                                 const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+                                 Options options = Notify); // TODO KF6 merge with previous overload
 
 /**
  * Displays a "Sorry" dialog with a "Details >>" button.
@@ -603,6 +631,7 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
  * NOTE: The ok button will always have the i18n'ed text '&OK'.
+ * See the overload with a KGuiItem argument to change that.
  */
 
 KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
@@ -610,6 +639,40 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
         const QString &details,
         const QString &caption = QString(),
         Options options = Notify);
+
+/**
+ * Displays a "Sorry" dialog with a "Details >>" button.
+ *
+ * @param parent  Parent widget.
+ * @param text    Message string.
+ * @param details Detailed message string.
+ * @param caption Message box title. The application name is added to
+ *                the title. The default title is i18n("Sorry").
+ * @param buttonOk The text for the only button.
+ *                 The default is KStandardGuiItem::ok().
+ * @param options  see Options
+ *
+ * Either your program messed up and asks for understanding
+ * or your user did something stupid.
+ *
+ * To be used for small problems like
+ * "Sorry, I can't find the file you specified."
+ *
+ * And then @p details can contain something like
+ * "foobar.txt was not found in any of
+ *  the following directories:
+ *  /usr/bin,/usr/local/bin,/usr/sbin"
+ *
+ * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
+ * @since 5.63
+ */
+
+KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
+        const QString &text,
+        const QString &details,
+        const QString &caption /* = QString() */,
+        const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+        Options options = Notify);  // TODO KF6: merge with previous overload
 
 /**
  * Display an "Information" dialog.
@@ -893,7 +956,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoWId(WId parent_id,
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancelWId(WId parent_id,
         const QString &text,
-        const QString &caption = QString(),
+       const QString &caption = QString(),
         const KGuiItem &buttonYes = KStandardGuiItem::yes(),
         const KGuiItem &buttonNo = KStandardGuiItem::no(),
         const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -1031,12 +1094,35 @@ KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ * @since 5.63
+ */
+KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
+                                    const QString &text,
+                                    const QString &caption /*= QString()*/,
+                                    const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+                                    Options options = Notify); // TODO KF6 merge with previous overload
+
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
         const QString &text,
         const QString &details,
         const QString &caption = QString(),
         Options options = Notify);
+
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ * @since 5.63
+ */
+KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
+        const QString &text,
+        const QString &details,
+        const QString &caption /*= QString()*/,
+        const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+        Options options = Notify); // TODO KF6 merge with previous overload
 
 /**
  * This function accepts the window id of the parent window, instead
