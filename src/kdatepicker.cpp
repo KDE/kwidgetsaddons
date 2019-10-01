@@ -570,16 +570,14 @@ void KDatePicker::setFontSize(int s)
         d->selectMonth,
         d->selectYear,
     };
-    const int NoOfButtons = sizeof(buttons) / sizeof(buttons[0]);
-    int count;
     QFont font;
     QRect r;
     // -----
     d->fontsize = s;
-    for (count = 0; count < NoOfButtons; ++count) {
-        font = buttons[count]->font();
+    for (QWidget *button : buttons) {
+        font = button->font();
         font.setPointSize(s);
-        buttons[count]->setFont(font);
+        button->setFont(font);
     }
     d->table->setFontSize(s);
 
