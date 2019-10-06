@@ -360,13 +360,11 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
 /* Class: KCharSelect                                             */
 /******************************************************************/
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
 KCharSelect::KCharSelect(QWidget *parent, const Controls controls)
     : QWidget(parent), d(new KCharSelectPrivate(this))
 {
     initWidget(controls, nullptr);
 }
-#endif
 
 KCharSelect::KCharSelect(
     QWidget *parent
