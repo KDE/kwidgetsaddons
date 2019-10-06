@@ -95,7 +95,7 @@ public:
      */
     int appendButton(const QIcon &icon, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 13)
     /**
      * append  a new button to the button area. The button can later on be accessed with button(ID)
      * eg for connecting signals to it
@@ -108,7 +108,8 @@ public:
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
      */
-    KWIDGETSADDONS_DEPRECATED int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 13, "Use KMultiTabBar::appendButton(const QIcon&, ...)")
+    int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 #endif
 
     /**
@@ -125,7 +126,7 @@ public:
      */
     int appendTab(const QIcon &icon, int id = -1, const QString &text = QString());
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 13)
     /**
      * append a new tab to the tab area. It can be accessed lateron with tabb(id);
      *
@@ -135,7 +136,8 @@ public:
      * @param id an arbitrary ID which can be used later on to identify the tab
      * @param text if a mode with text is used it will be the tab text, otherwise a mouse over hint
      */
-    KWIDGETSADDONS_DEPRECATED int appendTab(const QPixmap &pic, int id = -1, const QString &text = QString());
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 13, "Use KMultiTabBar::appendTab(const QIcon&, ...)")
+    int appendTab(const QPixmap &pic, int id = -1, const QString &text = QString());
 #endif
 
     /**

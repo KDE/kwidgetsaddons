@@ -124,11 +124,12 @@ public Q_SLOTS:
      */
     void setRating(int rating);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
-     * \deprecated use setRating( int rating )
+     * \deprecated Since 5.0, use setRating(int rating)
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED void setRating(unsigned int rating);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setRating(int)")
+    void setRating(unsigned int rating);
 #endif
 
     /**
@@ -138,11 +139,12 @@ public Q_SLOTS:
      */
     void setMaxRating(int max);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
-     * \deprecated use setMaxRating( int max )
+     * \deprecated Since 5.0, use setMaxRating( int max )
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED void setMaxRating(unsigned int max);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setMaxRating(int)")
+    void setMaxRating(unsigned int max);
 #endif
 
     /**
@@ -151,11 +153,12 @@ public Q_SLOTS:
      */
     void setHalfStepsEnabled(bool enabled);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
-     * \deprecated Use setHalfStepsEnabled
+     * \deprecated Since 5.0, use setHalfStepsEnabled(bool).
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED void setOnlyPaintFullSteps(bool);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setHalfStepsEnabled(bool)")
+    void setOnlyPaintFullSteps(bool);
 #endif
 
     /**
@@ -184,14 +187,15 @@ public Q_SLOTS:
      */
     void setCustomPixmap(const QPixmap &pixmap);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Set the pixap to be used to display a rating step.
      * By default the "rating" pixmap is loaded.
      *
-     * \deprecated use setCustomPixmap
+     * \deprecated Since 5.0, use setCustomPixmap()
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED void setPixmap(const QPixmap &);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setCustomPixmap(const QPixmap&)")
+    void setPixmap(const QPixmap &);
 #endif
 
     /**

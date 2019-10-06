@@ -106,7 +106,7 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     return button;
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void KActionMenu::remove(QAction *cmd)
 {
     if (cmd) {

@@ -58,7 +58,7 @@ KToolBarPopupAction::~KToolBarPopupAction()
     delete menu();
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 QMenu *KToolBarPopupAction::popupMenu() const
 {
     return menu();

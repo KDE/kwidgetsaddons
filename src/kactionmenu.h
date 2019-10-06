@@ -60,11 +60,12 @@ public:
     KActionMenu(const QIcon &icon, const QString &text, QObject *parent);
     ~KActionMenu() override;
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
-     * @deprecated
+     * @deprecated Since 5.0.
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED void remove(QAction *);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KActionMenu::removeAction(QAction*)")
+    void remove(QAction *);
 #endif
 
     /**
@@ -77,13 +78,14 @@ public:
     QAction *insertSeparator(QAction *before);
     void removeAction(QAction *action);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * Returns this action's menu as a KMenu, if it is one.
      * If none exists, one will be created.
-     * @deprecated use menu() instead.
+     * @deprecated Since 5.0, use menu() instead.
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    inline KWIDGETSADDONS_DEPRECATED QMenu *popupMenu()
+    inline KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KActionMenu::menu()")
+    QMenu *popupMenu()
     {
         return menu();
     }

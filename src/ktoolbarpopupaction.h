@@ -73,15 +73,16 @@ public:
      */
     ~KToolBarPopupAction() override;
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**
      * The popup menu that is shown when clicking (some time) on the toolbar
      * button. You may want to plug items into it on creation, or connect to
      * aboutToShow for a more dynamic menu.
      *
-     * \deprecated use menu() instead
+     * \deprecated Since 5.0, use menu() instead
      */
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
-    KWIDGETSADDONS_DEPRECATED QMenu *popupMenu() const;
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KToolBarPopupAction::menu()")
+    QMenu *popupMenu() const;
 #endif
 
     /**

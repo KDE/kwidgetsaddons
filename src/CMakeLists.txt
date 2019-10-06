@@ -100,8 +100,15 @@ ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
 
 
 add_library(KF5WidgetsAddons ${kwidgetsaddons_SRCS})
-generate_export_header(KF5WidgetsAddons BASE_NAME KWidgetsAddons)
 add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
+ecm_generate_export_header(KF5WidgetsAddons
+    BASE_NAME KWidgetsAddons
+    # GROUP_BASE_NAME KF <- enable once all of KF modules use ecm_generate_export_header
+    VERSION ${KF5_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 5.0 5.13
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
 
 target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
 

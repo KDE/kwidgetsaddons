@@ -55,7 +55,7 @@ KRatingWidget::~KRatingWidget()
     delete d;
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void KRatingWidget::setPixmap(const QPixmap &pix)
 {
     setCustomPixmap(pix);
@@ -133,7 +133,7 @@ bool KRatingWidget::halfStepsEnabled() const
     return d->ratingPainter.halfStepsEnabled();
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void KRatingWidget::setRating(unsigned int rating)
 {
     setRating((int)rating);
@@ -151,7 +151,7 @@ void KRatingWidget::setRating(int rating)
     }
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void KRatingWidget::setMaxRating(unsigned int max)
 {
     setMaxRating((int)max);
@@ -170,7 +170,7 @@ void KRatingWidget::setHalfStepsEnabled(bool enabled)
     update();
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void KRatingWidget::setOnlyPaintFullSteps(bool fs)
 {
     setHalfStepsEnabled(!fs);

@@ -566,7 +566,7 @@ int KMultiTabBar::appendButton(const QIcon &icon, int id, QMenu *popup, const QS
     return 0;
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 13)
 int KMultiTabBar::appendButton(const QPixmap &pic, int id, QMenu *popup, const QString &x)
 {
     // reuse icon variant
@@ -597,7 +597,7 @@ int KMultiTabBar::appendTab(const QIcon &icon, int id, const QString &text)
     return 0;
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 13)
 int KMultiTabBar::appendTab(const QPixmap &pic, int id, const QString &text)
 {
     d->m_internal->appendTab(pic, id, text);

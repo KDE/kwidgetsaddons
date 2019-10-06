@@ -182,7 +182,7 @@ KRuler::~KRuler()
     delete d;
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void
 KRuler::setMinValue(int value)
 {
@@ -190,7 +190,7 @@ KRuler::setMinValue(int value)
 }
 #endif
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 int
 KRuler::minValue() const
 {
@@ -198,7 +198,7 @@ KRuler::minValue() const
 }
 #endif
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void
 KRuler::setMaxValue(int value)
 {
@@ -206,7 +206,7 @@ KRuler::setMaxValue(int value)
 }
 #endif
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 int
 KRuler::maxValue() const
 {
@@ -364,7 +364,7 @@ KRuler::showPointer() const
     return d->showpointer;
 }
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void
 KRuler::setFrameStyle(int)
 {

@@ -849,11 +849,12 @@ KWIDGETSADDONS_EXPORT void saveDontShowAgainContinue(const QString &dontShowAgai
  */
 KWIDGETSADDONS_EXPORT void setDontShowAgainConfig(KConfig *cfg);
 
-#ifndef KWIDGETSADDONS_NO_DEPRECATED
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
 /**
  * @deprecated since 5.0, use setDontShowAgainConfig()
  */
-KWIDGETSADDONS_DEPRECATED_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg) { setDontShowAgainConfig(cfg); }
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KMessageBox::setDontShowAgainConfig(KConfig*)")
+KWIDGETSADDONS_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg) { setDontShowAgainConfig(cfg); }
 #endif
 
 /**
