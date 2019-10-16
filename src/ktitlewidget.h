@@ -186,21 +186,27 @@ public Q_SLOTS:
      */
     void setPixmap(const QPixmap &pixmap, ImageAlignment alignment = ImageRight);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 63)
     /**
      * @param icon name of the icon to display in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
      * @deprecated since 5.63 use setIcon() instead
      */
-    KWIDGETSADDONS_DEPRECATED void setPixmap(const QString &icon, ImageAlignment alignment = ImageRight);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KTitleWidget::setIcon(const QIcon &, ImageAlignment)")
+    void setPixmap(const QString &icon, ImageAlignment alignment = ImageRight);
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 63)
     /**
      * @param icon the icon to display in the header. The pixmap is by default right, but
      * @param alignment can be used to display it also left.
      * @see pixmap()
      * @deprecated since 5.63 use setIcon() instead
      */
-    KWIDGETSADDONS_DEPRECATED void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KTitleWidget::setIcon(const QIcon &, ImageAlignment)")
+    void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
+#endif
 
     /**
      * @param type the type of message icon to display in the header. The pixmap is by default right, but

@@ -293,15 +293,19 @@ void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
     d->imageLabel->setPixmap(pixmap);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
 void KTitleWidget::setPixmap(const QString &icon, ImageAlignment alignment)
 {
     setIcon(QIcon::fromTheme(icon), alignment);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
 void KTitleWidget::setPixmap(const QIcon &icon, ImageAlignment alignment)
 {
     setIcon(icon, alignment);
 }
+#endif
 
 void KTitleWidget::setPixmap(MessageType type, ImageAlignment alignment)
 {
