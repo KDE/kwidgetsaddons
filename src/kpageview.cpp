@@ -320,7 +320,6 @@ void KPageViewPrivate::init()
 {
     Q_Q(KPageView);
     layout = new QGridLayout(q);
-    layout->setContentsMargins(0, 0, 0, 0);
     stack = new KPageStackedWidget(q);
     titleWidget = new KTitleWidget(q);
     QPixmap emptyPixmap(22, 22);

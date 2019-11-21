@@ -81,11 +81,6 @@ KPageWidget::~KPageWidget()
 
 KPageWidgetItem *KPageWidget::addPage(QWidget *widget, const QString &name)
 {
-    // force layout margin to zero so that it aligns well with title widget
-    if (widget->layout()) {
-        widget->layout()->setContentsMargins(0, 0, 0, 0);
-    }
-
     return d_func()->model()->addPage(widget, name);
 }
 

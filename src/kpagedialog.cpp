@@ -26,6 +26,7 @@
 #include "kpagedialog_p.h"
 
 #include <QLayout>
+#include <QStyle>
 
 KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
     : QDialog(parent, flags),
@@ -33,7 +34,6 @@ KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
 {
     Q_D(KPageDialog);
     d->mPageWidget = new KPageWidget(this);
-    d->mPageWidget->layout()->setContentsMargins(0, 0, 0, 0);
 
     d->mButtonBox = new QDialogButtonBox(this);
     d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));
@@ -81,12 +81,22 @@ KPageDialog::~KPageDialog()
 
 void KPageDialog::setFaceType(FaceType faceType)
 {
-    d_func()->mPageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
+    KPageWidget *pageWidget = d_func()->mPageWidget;
+    pageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
 
-    if (faceType == Tabbed) {
-        layout()->setContentsMargins(6, 6, 6, 6);
-    } else {
+    // Use zero margins for dialogs with the sidebar style so that the sidebar
+    // can be flush with the window edge; margins for the content are added
+    // automatically
+    if (faceType == KPageWidget::Auto || faceType == KPageWidget::List){
         layout()->setContentsMargins(0, 0, 0, 0);
+    } else {
+        const QStyle *style = pageWidget->style();
+        layout()->setContentsMargins(
+            style->pixelMetric(QStyle::PM_LayoutLeftMargin),
+            style->pixelMetric(QStyle::PM_LayoutTopMargin),
+            style->pixelMetric(QStyle::PM_LayoutRightMargin),
+            style->pixelMetric(QStyle::PM_LayoutBottomMargin)
+        );
     }
 }
 
