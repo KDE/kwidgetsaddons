@@ -116,17 +116,23 @@ void KUrlLabel::mouseReleaseEvent(QMouseEvent *event)
     switch (event->button()) {
     case Qt::LeftButton:
         emit leftClickedUrl();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 65)
         emit leftClickedUrl(d->url);
+#endif
         break;
 
     case Qt::MidButton:
         emit middleClickedUrl();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 65)
         emit middleClickedUrl(d->url);
+#endif
         break;
 
     case Qt::RightButton:
         emit rightClickedUrl();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 65)
         emit rightClickedUrl(d->url);
+#endif
         break;
 
     default:
@@ -291,9 +297,10 @@ void KUrlLabel::enterEvent(QEvent *event)
             setUnderline(true);
         }
     }
-
     emit enteredUrl();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 65)
     emit enteredUrl(d->url);
+#endif
 }
 
 void KUrlLabel::leaveEvent(QEvent *event)
@@ -309,9 +316,10 @@ void KUrlLabel::leaveEvent(QEvent *event)
     }
 
     setUnderline(d->realUnderlined);
-
     emit leftUrl();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 65)
     emit leftUrl(d->url);
+#endif
 }
 
 bool KUrlLabel::event(QEvent *event)

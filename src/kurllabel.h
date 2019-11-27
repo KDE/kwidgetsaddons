@@ -269,61 +269,73 @@ public Q_SLOTS:
 
 Q_SIGNALS:
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the mouse has passed over the label.
      *
      * @param url The URL for this label.
+     * @deprecated Since 5.65, use enteredUrl();
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::enteredUrl()")
     void enteredUrl(const QString &url);
-
+#endif
     /**
      * Emitted when the mouse has passed over the label.
      */
     void enteredUrl();
-
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the mouse is no longer over the label.
      *
+     * @deprecated Since 5.65, use leftUrl();
      * @param url The URL for this label.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::leftUrl()")
     void leftUrl(const QString &url);
+#endif
 
     /**
      * Emitted when the mouse is no longer over the label.
      */
     void leftUrl();
-
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the user clicked the left mouse button on this label.
      *
      * @param url The URL for this label.
+     * @deprecated Since 5.65, use leftClickedUrl();
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::leftClickedUrl()")
     void leftClickedUrl(const QString &url);
-
+#endif
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
     void leftClickedUrl();
-
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the user clicked the right mouse button on this label.
      *
      * @param url The URL for this label.
+     * @deprecated Since 5.65, use rightClickedUrl();
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::rightClickedUrl()")
     void rightClickedUrl(const QString &url);
-
+#endif
     /**
      * Emitted when the user clicked the right mouse button on this label.
      */
     void rightClickedUrl();
-
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the user clicked the middle mouse button on this label.
      *
      * @param url The URL for this label.
+     * @deprecated Since 5.65, use middleClickedUrl(const QString &url);
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::middleClickedUrl()")
     void middleClickedUrl(const QString &url);
-
+#endif
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
