@@ -213,7 +213,7 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
     if (isSqueezed()) {
         QMenu menu(this);
 
-        QAction *act = new QAction(tr("&Copy Full Text"), &menu);
+        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), tr("&Copy Full Text"), &menu);
         connect(act, &QAction::triggered, this, [this]() { d->_k_copyFullText(); });
         menu.addAction(act);
 
