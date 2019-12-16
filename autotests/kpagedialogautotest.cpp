@@ -22,7 +22,7 @@
 
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QtTest>
+#include <QTest>
 
 QTEST_MAIN(KPageDialogAutoTest)
 

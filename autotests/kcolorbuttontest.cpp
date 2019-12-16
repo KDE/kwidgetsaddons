@@ -19,7 +19,7 @@
 
 #include "kcolorbuttontest.h"
 
-#include <QtTest>
+#include <QTest>
 #include <kcolorbutton.h>
 #include <QColorDialog>
 

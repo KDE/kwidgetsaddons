@@ -24,7 +24,7 @@
 #include <QComboBox>
 #include <QMenu>
 
-#include <QtTest>
+#include <QTest>
 #include "kdatetimeedit.h"
 #include "kdatecombobox.h"
 

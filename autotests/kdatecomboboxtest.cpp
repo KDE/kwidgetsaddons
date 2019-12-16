@@ -21,7 +21,8 @@
 
 #include <QDate>
 
-#include <QtTest>
+#include <QTest>
+#include <QSignalSpy>
 #include <QLineEdit>
 #include "kdatecombobox.h"
 

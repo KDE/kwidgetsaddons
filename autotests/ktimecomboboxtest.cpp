@@ -21,7 +21,7 @@
 
 #include <QTime>
 
-#include <QtTest>
+#include <QTest>
 #include <QLineEdit>
 #include <ktimecombobox.h>
 

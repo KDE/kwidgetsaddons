@@ -19,7 +19,8 @@
  */
 #include <kdualaction.h>
 
-#include <QtTest>
+#include <QTest>
+#include <QSignalSpy>
 
 #include "kguiitem.h"
 
