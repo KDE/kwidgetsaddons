@@ -177,8 +177,8 @@ void KViewStateSerializerPrivate::processPendingChanges()
     Q_Q(KViewStateSerializer);
 
     q->restoreCurrentItem(m_pendingCurrent);
-    q->restoreSelection(m_pendingSelections.toList());
-    q->restoreExpanded(m_pendingExpansions.toList());
+    q->restoreSelection(m_pendingSelections.values());
+    q->restoreExpanded(m_pendingExpansions.values());
     q->restoreScrollState(m_verticalScrollBarValue, m_horizontalScrollBarValue);
 }
 
