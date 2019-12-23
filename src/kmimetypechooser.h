@@ -99,7 +99,7 @@ private:
   *
   * @code
   *    QString text = i18n("Select the MimeTypes you want for this file type.");
-  *    QStringList list = QStringList::split( QRegExp("\\s*;\\s*"), leMimetypes->text() );
+  *    QStringList list = QStringList::split( QRegularExpression("\\s*;\\s*"), leMimetypes->text() );
   *    KMimeTypeChooserDialog dlg( i18n("Select Mime Types"), text, list, "text", this );
   *    if ( dlg.exec() == KDialog::Accepted ) {
   *      leWildcards->setText( dlg.chooser()->patterns().join(";") );

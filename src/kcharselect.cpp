@@ -34,6 +34,7 @@
 #include <QFontComboBox>
 #include <QHeaderView>
 #include <QLineEdit>
+#include <QRegularExpression>
 #include <QSplitter>
 #include <QToolButton>
 #include <QTextBrowser>
@@ -935,14 +936,13 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
 QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
 {
-    QRegExp rx(QStringLiteral("\\b([\\dABCDEF]{4,5})\\b"));
-
+    const QRegularExpression rx(QStringLiteral("\\b([\\dABCDEF]{4,5})\\b"));
+    QRegularExpressionMatchIterator iter = rx.globalMatch(s);
+    QRegularExpressionMatch match;
     QStringList chars;
-    int pos = 0;
-
-    while ((pos = rx.indexIn(s, pos)) != -1) {
-        chars << rx.cap(1);
-        pos += rx.matchedLength();
+    while (iter.hasNext()) {
+        match = iter.next();
+        chars << match.captured(1);
     }
 
     const QSet<QString> chars2 = QSet<QString>::fromList(chars);

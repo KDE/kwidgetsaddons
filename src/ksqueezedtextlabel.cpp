@@ -23,6 +23,7 @@
 #include <QMenu>
 #include <QClipboard>
 #include <QApplication>
+#include <QRegularExpression>
 #include <QTextDocument>
 
 class KSqueezedTextLabelPrivate
@@ -246,7 +247,7 @@ void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent *ev)
             // Strip markup tags
             if (textFormat() == Qt::RichText
                     || (textFormat() == Qt::AutoText && Qt::mightBeRichText(txt))) {
-                txt.remove(QRegExp(QStringLiteral("<[^>]*>")));
+                txt.remove(QRegularExpression(QStringLiteral("<[^>]*>")));
                 // account for stripped characters
                 charsAfterSelection -= d->fullText.length() - txt.length();
             }
