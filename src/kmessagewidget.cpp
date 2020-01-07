@@ -237,8 +237,8 @@ void KMessageWidgetPrivate::updateSnapShot()
     // window layouts to be activated. Calling this method from resizeEvent()
     // can lead to infinite recursion, see:
     // https://bugs.kde.org/show_bug.cgi?id=311336
-    contentSnapShot = QPixmap(content->size() * q->devicePixelRatio());
-    contentSnapShot.setDevicePixelRatio(q->devicePixelRatio());
+    contentSnapShot = QPixmap(content->size() * q->devicePixelRatioF());
+    contentSnapShot.setDevicePixelRatio(q->devicePixelRatioF());
     contentSnapShot.fill(Qt::transparent);
     content->render(&contentSnapShot, QPoint(), QRegion(), QWidget::DrawChildren);
 }
