@@ -228,7 +228,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
 
     QLabel *messageLabel = new QLabel(text, mainWidget);
     messageLabel->setOpenExternalLinks(options & KMessageBox::AllowLink);
-    Qt::TextInteractionFlags flags = Qt::TextSelectableByMouse | Qt::TextSelectableByKeyboard;
+    Qt::TextInteractionFlags flags = Qt::TextSelectableByMouse;
     if (options & KMessageBox::AllowLink) {
         flags |= Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
     }
@@ -317,7 +317,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         if (details.length() < 512) {
             QLabel *detailsLabel = new QLabel(details);
             detailsLabel->setOpenExternalLinks(options & KMessageBox::AllowLink);
-            Qt::TextInteractionFlags flags = Qt::TextSelectableByMouse | Qt::TextSelectableByKeyboard;
+            Qt::TextInteractionFlags flags = Qt::TextSelectableByMouse;
             if (options & KMessageBox::AllowLink) {
                 flags |= Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
             };
