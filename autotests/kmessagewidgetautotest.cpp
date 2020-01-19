@@ -33,11 +33,9 @@ const int overlappingWaitingTime = 280;
 #define CHECK_FULLY_VISIBLE \
     QVERIFY(w.isVisible()); \
     QCOMPARE(w.height(), w.sizeHint().height()); \
-    QCOMPARE(w.findChild<QWidget*>(QStringLiteral("contentWidget")) ->pos(), QPoint(0, 0));
 
 #define CHECK_FULLY_NOT_VISIBLE \
     QCOMPARE(w.height(), 0); \
-    QCOMPARE(w.findChild<QWidget*>(QStringLiteral("contentWidget")) ->pos(), QPoint(0, -w.sizeHint().height())); \
     QVERIFY(!w.isVisible());
 
 
