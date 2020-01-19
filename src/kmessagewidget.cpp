@@ -218,8 +218,8 @@ void KMessageWidgetPrivate::applyStyleSheet()
                              )
         .arg(bgFinalColor.name())
         .arg(border.name())
-        // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 1px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
-        .arg(q->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, q) - 1)
+        // DefaultFrameWidth returns the size of the external margin + border width. We know our border is 2px, so we subtract this from the frame normal QStyle FrameWidth to get our margin
+        .arg(q->style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, q) - 2)
         .arg(textColor.name())
     );
 }
