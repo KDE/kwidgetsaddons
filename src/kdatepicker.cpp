@@ -613,7 +613,7 @@ void KDatePicker::setFontSize(int s)
 
     QSize metricBound = style()->sizeFromContents(
                             QStyle::CT_ToolButton, &opt, QSize(w, h), d->selectMonth
-                        ).expandedTo(QApplication::globalStrut());
+                        );
 
     d->selectMonth->setMinimumSize(metricBound);
 }
