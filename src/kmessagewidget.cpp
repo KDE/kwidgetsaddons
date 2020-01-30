@@ -21,6 +21,7 @@
 #include "kmessagewidget.h"
 
 #include <QAction>
+#include <QApplication>
 #include <QEvent>
 #include <QGridLayout>
 #include <QHBoxLayout>
@@ -97,6 +98,8 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     closeButton->setDefaultAction(closeAction);
 
     q->setMessageType(KMessageWidget::Information);
+
+    q->connect(qApp, &QApplication::paletteChanged, q, [this] {KMessageWidgetPrivate::setPalette();});
 }
 
 void KMessageWidgetPrivate::createLayout()
@@ -190,6 +193,7 @@ void KMessageWidgetPrivate::setPalette()
     // palette propagation
     iconLabel->setPalette(palette);
     textLabel->setPalette(palette);
+    q->style()->polish(q);
     // update the Icon in case it is recolorable
     q->setIcon(icon);
     q->update();
@@ -290,8 +294,6 @@ bool KMessageWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::Polish && !layout()) {
         d->createLayout();
-    } else if (event->type() == QEvent::PaletteChange) {
-        d->setPalette();
     } else if (event->type() == QEvent::Show && !d->ignoreShowEventDoingAnimatedShow) {
         setFixedHeight(d->bestContentHeight());
     } else if (event->type() == QEvent::ParentChange) {
