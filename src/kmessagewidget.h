@@ -244,6 +244,8 @@ public Q_SLOTS:
      * If word wrap is disabled, the message widget's minimum size is
      * such that the entire text fits.
      *
+     * By default word wrap is disabled.
+     *
      * @param wordWrap disable/enable word wrap
      * @see wordWrap()
      */
@@ -252,6 +254,8 @@ public Q_SLOTS:
     /**
      * Set the visibility of the close button. If @p visible is @e true,
      * a close button is shown that calls animatedHide() if clicked.
+     *
+     * By default the close button is set to be visible.
      *
      * @see closeButtonVisible(), animatedHide()
      */
