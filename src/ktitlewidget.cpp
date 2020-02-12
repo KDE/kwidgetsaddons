@@ -44,7 +44,7 @@ public:
         qreal factor;
         switch (level) {
         case 1:
-            factor = 1.80;
+            factor = 1.50;
             break;
         case 2:
             factor = 1.30;
