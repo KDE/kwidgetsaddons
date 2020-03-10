@@ -117,7 +117,7 @@ bool KCharSelectData::openDataFile()
         if (blocks <= 167) { // maximum possible number of blocks in BMP
             // no remapping
             remapType = -1;
-        } else if (blocks >= 174 && blocks <= 178) {
+        } else if (blocks >= 174 && blocks <= 179) {
             // remapping introduced in 5.25
             remapType = 0;
         } else {

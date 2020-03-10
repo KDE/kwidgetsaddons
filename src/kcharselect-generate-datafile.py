@@ -267,6 +267,7 @@ Small Form Variants
 Supplemental Punctuation
 Supplemental Symbols and Pictographs
 Symbols and Pictographs Extended-A
+Symbols for Legacy Computing
 Transport and Map Symbols
 Vertical Forms
 Yijing Hexagram Symbols
