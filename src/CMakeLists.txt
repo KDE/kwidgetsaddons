@@ -26,6 +26,7 @@ set(kwidgetsaddons_SRCS
   kdragwidgetdecorator.cpp
   kdualaction.cpp
   kfontchooser.cpp
+  kfontchooserdialog.cpp
   kguiitem.cpp
   kled.cpp
   kmessagebox.cpp
@@ -135,6 +136,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KDualAction
   KFontAction
   KFontChooser
+  KFontChooserDialog
   KFontSizeAction
   KGuiItem
   KLed
@@ -219,6 +221,7 @@ if (PythonModuleGeneration_FOUND)
       kdualaction.h
       kfontaction.h
       kfontchooser.h
+      kfontchooserdialog.h
       kfontsizeaction.h
       kguiitem.h
       kled.h

@@ -25,6 +25,7 @@ kwidgetsaddons_executable_tests(
   kseparatortest
   ksqueezedtextlabeltest
   ktitlewidgettest
+  kfontchooserdialogtest
   kfontrequestertest
   kpassworddialogtest
   keditlistwidgettest
