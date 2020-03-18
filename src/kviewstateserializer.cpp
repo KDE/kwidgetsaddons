@@ -261,7 +261,12 @@ void KViewStateSerializer::restoreExpanded(const QStringList &indexStrings)
         return;
     }
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
     d->m_pendingExpansions.unite(indexStrings.toSet());
+#else
+    d->m_pendingExpansions.unite(QSet<QString>(indexStrings.begin(), indexStrings.end()));
+#endif
+
     d->restoreExpanded();
     if (d->hasPendingChanges()) {
         d->listenToPendingChanges();
@@ -310,7 +315,12 @@ void KViewStateSerializer::restoreSelection(const QStringList &indexStrings)
         return;
     }
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
     d->m_pendingSelections.unite(indexStrings.toSet());
+#else
+    d->m_pendingSelections.unite(QSet<QString>(indexStrings.begin(), indexStrings.end()));
+#endif
+
     d->restoreSelection();
     if (d->hasPendingChanges()) {
         d->listenToPendingChanges();

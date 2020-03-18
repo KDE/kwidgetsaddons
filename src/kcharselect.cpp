@@ -939,14 +939,13 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
     const QRegularExpression rx(QStringLiteral("\\b([\\dABCDEF]{4,5})\\b"));
     QRegularExpressionMatchIterator iter = rx.globalMatch(s);
     QRegularExpressionMatch match;
-    QStringList chars;
+    QSet<QString> chars;
     while (iter.hasNext()) {
         match = iter.next();
-        chars << match.captured(1);
+        chars.insert(match.captured(1));
     }
 
-    const QSet<QString> chars2 = QSet<QString>::fromList(chars);
-    for (const QString &c : chars2) {
+    for (const QString &c : qAsConst(chars)) {
         int unicode = c.toInt(nullptr, 16);
         if (!allPlanesEnabled && QChar::requiresSurrogates(unicode)) {
             continue;
