@@ -185,7 +185,7 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
             : m_screenGeometry.bottom() + position.y() - containerWidget->height()
     );
     containerWidget->show();
-    QVERIFY(QTest::qWaitForWindowActive(containerWidget));
+    QVERIFY(QTest::qWaitForWindowExposed(containerWidget));
     QVERIFY(targetWidget->isVisible());
 
     QRect targetRect = QRect(targetWidget->frameGeometry());
@@ -196,7 +196,7 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
     QVERIFY2(containerWidget->windowHandle(), "Container's window handle is invalid");
     KToolTipWidget tooltipWidget;
     tooltipWidget.showBelow(targetRect, contentWidget, containerWidget->windowHandle());
-    QVERIFY(QTest::qWaitForWindowActive(&tooltipWidget));
+    QVERIFY(QTest::qWaitForWindowExposed(&tooltipWidget));
     const QRect tooltipRect = tooltipWidget.frameGeometry();
 
     qDebug() << QStringLiteral("tooltip: %1x%2 x=%3, y=%4")
