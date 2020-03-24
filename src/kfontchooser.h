@@ -267,7 +267,6 @@ private:
 
     Q_DISABLE_COPY(KFontChooser)
 
-    Q_PRIVATE_SLOT(d, void _k_toggled_checkbox())
     Q_PRIVATE_SLOT(d, void _k_family_chosen_slot(const QString &))
     Q_PRIVATE_SLOT(d, void _k_size_chosen_slot(const QString &))
     Q_PRIVATE_SLOT(d, void _k_style_chosen_slot(const QString &))
