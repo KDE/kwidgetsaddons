@@ -858,7 +858,7 @@ KWIDGETSADDONS_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg) { setD
 #endif
 
 /**
- * Use @p dontAskAgainInterface for all settings related to the donShowAgain feature.
+ * Use @p dontAskAgainInterface for all settings related to the dontShowAgain feature.
  * This method does not take ownership of @p dontAskAgainInterface.
  *
  * @since 5.0
@@ -885,7 +885,7 @@ KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notify
  * @param ask     The text of the checkbox. If empty none will be shown.
  * @param checkboxReturn The result of the checkbox. If it's initially
  *                true then the checkbox will be checked by default.
- *                May be a null pointer.
+ *                May be a null pointer. Incompatible with NoExec.
  * @param options  see Options
  * @param details Detailed message string.
  * @return A QDialogButtonBox::StandardButton button code, not a KMessageBox
@@ -917,7 +917,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  * @param ask     The text of the checkbox. If empty none will be shown.
  * @param checkboxReturn The result of the checkbox. If it's initially
  *                true then the checkbox will be checked by default.
- *                May be a null pointer.
+ *                May be a null pointer. Incompatible with NoExec.
  * @param options  see Options
  * @param details Detailed message string.
  * @param notifyType The type of notification to send when this message
