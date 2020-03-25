@@ -129,6 +129,8 @@ public:
     QListWidget     *sizeListBox = nullptr;
     QCheckBox    *sizeIsRelativeCheckBox = nullptr;
 
+    QCheckBox *onlyFixedCheckbox = nullptr;
+
     QFont        selFont;
 
     QString      selectedStyle;
@@ -369,6 +371,21 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     });
 
     mainLayout->addWidget(sampleEdit);
+
+    // Add a checkbox to toggle showing only monospace/fixed-width fonts
+    onlyFixedCheckbox = new QCheckBox(KFontChooser::tr("Show only monospaced fonts", "@option:check"));
+    onlyFixedCheckbox->setEnabled(flags ^ ShowDifferences);
+    onlyFixedCheckbox->setChecked(usingFixed);
+
+    connect(onlyFixedCheckbox, &QAbstractButton::toggled, q, [this](const bool state) {
+        q->setFont(selFont, state);
+    });
+
+    if (flags & ShowDifferences) { // In this mode follow the state of the familyCheckbox
+        connect(familyCheckbox, &QAbstractButton::toggled, onlyFixedCheckbox, &QWidget::setEnabled);
+    }
+    mainLayout->addWidget(onlyFixedCheckbox);
+
     // Finished setting up the chooser layout
 
     // lets initialize the display if possible

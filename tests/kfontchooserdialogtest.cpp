@@ -37,6 +37,9 @@ int main(int argc, char **argv)
     int nRet = KFontChooserDialog::getFont(font);
     qDebug() << font.toString();
 
+    nRet = KFontChooserDialog::getFont(font, KFontChooser::FixedFontsOnly);
+    qDebug() << font.toString();
+
     KFontChooser::FontDiffFlags diffFlags;
     nRet = KFontChooserDialog::getFontDiff(font, diffFlags);
     qDebug() << font.toString();
