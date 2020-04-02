@@ -154,10 +154,6 @@ KRuler::KRuler(Qt::Orientation orient, int widgetWidth,
 
 void KRuler::initWidget(Qt::Orientation orientation)
 {
-#ifdef __GNUC__
-#warning FIXME setFrameStyle(WinPanel | Raised);
-#endif
-
     d->showpointer = INIT_SHOW_POINTER;
     d->showEndL = INIT_SHOW_END_LABEL;
     d->lengthFix = INIT_LENGTH_FIX;
