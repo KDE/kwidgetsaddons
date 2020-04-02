@@ -828,7 +828,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     QSet<uint> result;
 
     QVector<uint> returnRes;
-    QString simplified = needle.simplified();
+    QString simplified = needle.length() > 1 ? needle.simplified() : needle;
     QStringList searchStrings;
 
     QRegularExpression octalExp(QStringLiteral("^\\\\[0-7][0-7\\\\]*$"));
