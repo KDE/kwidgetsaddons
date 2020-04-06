@@ -315,7 +315,7 @@ int KMessageWidget::heightForWidth(int width) const
     ensurePolished();
     return QFrame::heightForWidth(width);
 }
-#include <QDebug>
+
 void KMessageWidget::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event)
