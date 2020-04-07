@@ -23,9 +23,12 @@
 
 #include <QDialogButtonBox>
 #include <QLabel>
+#include <QLineEdit>
 #include <QPushButton>
+#include <QSortFilterProxyModel>
 #include <QStandardPaths>
-#include <QTreeWidget>
+#include <QStandardItemModel>
+#include <QTreeView>
 #include <QVBoxLayout>
 
 //BEGIN KMimeTypeChooserPrivate
@@ -38,13 +41,17 @@ public:
     }
 
     void loadMimeTypes(const QStringList &selected = QStringList());
+    QVector<const QStandardItem *> getCheckedItems();
 
     void _k_editMimeType();
-    void _k_slotCurrentChanged(QTreeWidgetItem *);
+    void _k_slotCurrentChanged(const QModelIndex &index);
     void _k_slotSycocaDatabaseChanged(const QStringList &);
 
     KMimeTypeChooser *q;
-    QTreeWidget *mimeTypeTree = nullptr;
+    QTreeView *mimeTypeTree = nullptr;
+    QStandardItemModel *m_model = nullptr;
+    QSortFilterProxyModel *m_proxyModel = nullptr;
+    QLineEdit *m_filterLineEdit = nullptr;
     QPushButton *btnEditMimeType = nullptr;
 
     QString defaultgroup;
@@ -80,22 +87,47 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
         vboxLayout->addWidget(new QLabel(text, this));
     }
 
-    d->mimeTypeTree = new QTreeWidget(this);
+    d->mimeTypeTree = new QTreeView(this);
+    d->m_model = new QStandardItemModel(d->mimeTypeTree);
+    d->m_proxyModel = new QSortFilterProxyModel(d->mimeTypeTree);
+    d->m_proxyModel->setRecursiveFilteringEnabled(true);
+    d->m_proxyModel->setFilterKeyColumn(-1);
+    d->m_proxyModel->setSourceModel(d->m_model);
+    d->mimeTypeTree->setModel(d->m_proxyModel);
+
+    d->m_filterLineEdit = new QLineEdit(this);
+    d->m_filterLineEdit->setPlaceholderText(tr("Search for file type or filename pattern..."));
+    QLabel *filterLabel = new QLabel(tr("&Filter:"));
+    filterLabel->setBuddy(d->m_filterLineEdit);
+    connect(d->m_filterLineEdit, &QLineEdit::textChanged, this, [this](const QString &text) {
+        d->m_proxyModel->setFilterRegularExpression(
+                QRegularExpression(text, QRegularExpression::CaseInsensitiveOption));
+    });
+
+    QHBoxLayout *filterLayout = new QHBoxLayout();
+    filterLayout->addWidget(filterLabel);
+    filterLayout->addWidget(d->m_filterLineEdit);
+    vboxLayout->addLayout(filterLayout);
+    d->m_filterLineEdit->setFocus();
+
     vboxLayout->addWidget(d->mimeTypeTree);
-    QStringList headerLabels;
-    headerLabels.append(tr("Mime Type"));
+    QStringList headerLabels({tr("Mime Type")});
 
     if (visuals & Comments) {
         headerLabels.append(tr("Comment"));
     }
+
     if (visuals & Patterns) {
         headerLabels.append(tr("Patterns"));
     }
 
-    d->mimeTypeTree->setColumnCount(headerLabels.count());
-    d->mimeTypeTree->setHeaderLabels(headerLabels);
+    d->m_model->setColumnCount(headerLabels.count());
+    d->m_model->setHorizontalHeaderLabels(headerLabels);
     QFontMetrics fm(d->mimeTypeTree->fontMetrics());
-    d->mimeTypeTree->setColumnWidth(0, 20 * fm.height()); // big enough for most names, but not for the insanely long ones
+    // big enough for most names/comments, but not for the insanely long ones
+    const int optWidth = 20 * fm.averageCharWidth();
+    d->mimeTypeTree->setColumnWidth(0, optWidth);
+    d->mimeTypeTree->setColumnWidth(1, optWidth);
 
     d->loadMimeTypes(selMimeTypes);
 
@@ -104,16 +136,15 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
         buttonLayout->addStretch(1);
         d->btnEditMimeType = new QPushButton(tr("&Edit..."), this);
         buttonLayout->addWidget(d->btnEditMimeType);
+        d->btnEditMimeType->setEnabled(false);
 
         connect(d->btnEditMimeType, &QPushButton::clicked, this, [this]() { d->_k_editMimeType(); });
-        d->btnEditMimeType->setEnabled(false);
-        connect(d->mimeTypeTree, &QTreeWidget::itemDoubleClicked,
-                this, [this]() { d->_k_editMimeType(); });
-        connect(d->mimeTypeTree, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
-                this, SLOT(_k_slotCurrentChanged(QTreeWidgetItem*)));
+        connect(d->mimeTypeTree, &QAbstractItemView::doubleClicked, this, [this]() { d->_k_editMimeType(); });
 
-        d->btnEditMimeType->setWhatsThis(tr(
-                                            "Click this button to display the familiar KDE mime type editor."));
+        connect(d->mimeTypeTree, &QTreeView::activated,
+                this, [this](const QModelIndex &index) { d->_k_slotCurrentChanged(index); });
+
+        d->btnEditMimeType->setToolTip(tr("Launch the KDE mime type editor."));
 
         vboxLayout->addLayout(buttonLayout);
     }
@@ -135,29 +166,35 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
         selMimeTypes = q->mimeTypes();
     }
 
-    mimeTypeTree->clear();
-
-    QMap<QString, QTreeWidgetItem *> groupItems;
+    QMap<QString, QStandardItem *> groupItems;
     QMimeDatabase db;
     const QList<QMimeType> mimetypes = db.allMimeTypes();
 
     bool agroupisopen = false;
-    QTreeWidgetItem *idefault = nullptr; //open this, if all other fails
-    QTreeWidgetItem *firstChecked = nullptr; // make this one visible after the loop
+    QStandardItem *idefault = nullptr; //open this, if all other fails
+    QStandardItem *firstChecked = nullptr; // make this one visible after the loop
 
     for (const QMimeType &mt : mimetypes) {
         const QString mimetype = mt.name();
         const int index = mimetype.indexOf(QLatin1Char('/'));
+        // e.g. "text", "audio", "inode"
         const QString maj = mimetype.left(index);
 
         if (!groups.isEmpty() && !groups.contains(maj)) {
             continue;
         }
 
-        QTreeWidgetItem *groupItem;
-        QMap<QString, QTreeWidgetItem *>::Iterator mit = groupItems.find(maj);
+        QStandardItem *groupItem;
+        QMap<QString, QStandardItem *>::Iterator mit = groupItems.find(maj);
         if (mit == groupItems.end()) {
-            groupItem = new QTreeWidgetItem(mimeTypeTree, QStringList(maj));
+            groupItem = new QStandardItem(maj);
+            groupItem->setFlags(Qt::ItemIsEnabled);
+            // a dud item to fill the patterns column next to "groupItem" and setFlags() on it
+            QStandardItem *secondColumn = new QStandardItem();
+            secondColumn->setFlags(Qt::NoItemFlags);
+            QStandardItem *thirdColumn = new QStandardItem();
+            thirdColumn->setFlags(Qt::NoItemFlags);
+            m_model->appendRow({groupItem, secondColumn, thirdColumn});
             groupItems.insert(maj, groupItem);
             if (maj == defaultgroup) {
                 idefault = groupItem;
@@ -166,64 +203,84 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
             groupItem = mit.value();
         }
 
+        // e.g. "html", "plain", "mp4"
         const QString min = mimetype.mid(index + 1);
-        QTreeWidgetItem *item = new QTreeWidgetItem(groupItem, QStringList(min));
-        item->setIcon(0, QIcon::fromTheme(mt.iconName()));
+        QStandardItem *mime = new QStandardItem(QIcon::fromTheme(mt.iconName()), min);
+        mime->setFlags(Qt::ItemIsSelectable | Qt::ItemIsUserCheckable | Qt::ItemIsEnabled);
 
-        int cl = 1;
-
+        QStandardItem *comments = nullptr;
         if (visuals & KMimeTypeChooser::Comments) {
-            item->setText(cl, mt.comment());
-            cl++;
+            comments = new QStandardItem(mt.comment());
+            comments->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         }
+
+        QStandardItem *patterns = nullptr;
 
         if (visuals & KMimeTypeChooser::Patterns) {
-            item->setText(cl, mt.globPatterns().join(QLatin1String("; ")));
+            patterns = new QStandardItem(mt.globPatterns().join(QLatin1String("; ")));
+            patterns->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
         }
 
+        groupItem->appendRow(QList<QStandardItem *>({mime, comments, patterns}));
+
         if (selMimeTypes.contains(mimetype)) {
-            item->setCheckState(0, Qt::Checked);
-            groupItem->setExpanded(true);
+            mime->setCheckState(Qt::Checked);
+            const QModelIndex index = m_proxyModel->mapFromSource(m_model->indexFromItem(groupItem));
+            mimeTypeTree->expand(index);
             agroupisopen = true;
             if (!firstChecked) {
-                firstChecked = item;
+                firstChecked = mime;
             }
         } else {
-            item->setCheckState(0, Qt::Unchecked);
+            mime->setCheckState(Qt::Unchecked);
         }
     }
 
+    m_model->sort(0);
+
     if (firstChecked) {
-        mimeTypeTree->scrollToItem(firstChecked);
+        const QModelIndex index = m_proxyModel->mapFromSource(m_model->indexFromItem(firstChecked));
+        mimeTypeTree->scrollTo(index);
     }
 
     if (!agroupisopen && idefault) {
-        idefault->setExpanded(true);
-        mimeTypeTree->scrollToItem(idefault);
+        const QModelIndex index = m_proxyModel->mapFromSource(m_model->indexFromItem(idefault));
+        mimeTypeTree->expand(index);
+        mimeTypeTree->scrollTo(index);
     }
-    mimeTypeTree->resizeColumnToContents(1);
 }
 
 void KMimeTypeChooserPrivate::_k_editMimeType()
 {
-    QTreeWidgetItem *item = mimeTypeTree->currentItem();
-    if (!item || !item->parent()) {
+    QModelIndex mimeIndex = m_proxyModel->mapToSource(mimeTypeTree->currentIndex());
+
+    // skip parent (non-leaf) nodes
+    if (m_model->hasChildren(mimeIndex)) {
         return;
     }
-    QString mt = (item->parent())->text(0) + QLatin1Char('/') + item->text(0);
+
+    if (mimeIndex.column() > 0) { // we need the item from column 0 to concatenate "mt" below
+        mimeIndex = m_model->sibling(mimeIndex.row(), 0, mimeIndex);
+    }
+
+    const QStandardItem *item = m_model->itemFromIndex(mimeIndex);
+    const QString mt = (item->parent())->text() + QLatin1Char('/') + item->text();
+    KMimeTypeEditor::editMimeType(mt, q);
+
     // KF5 TODO: use a QFileSystemWatcher on one of the shared-mime-info generated files, instead.
     //q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
     //            q, SLOT(_k_slotSycocaDatabaseChanged(QStringList)) );
 #pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a mimetype")
     // or a better idea: a QMimeDatabaseWatcher class in Qt itself
 
-    KMimeTypeEditor::editMimeType(mt, q);
 }
 
-void KMimeTypeChooserPrivate::_k_slotCurrentChanged(QTreeWidgetItem *item)
+void KMimeTypeChooserPrivate::_k_slotCurrentChanged(const QModelIndex &index)
 {
     if (btnEditMimeType) {
-        btnEditMimeType->setEnabled(item && item->parent());
+        const QModelIndex srcIndex = m_proxyModel->mapToSource(index);
+        const QStandardItem *currentItem = m_model->itemFromIndex(srcIndex);
+        btnEditMimeType->setEnabled(currentItem && currentItem->parent());
     }
 }
 
@@ -235,36 +292,30 @@ void KMimeTypeChooserPrivate::_k_slotSycocaDatabaseChanged(const QStringList &ch
     }
 }
 
-// recursive helper for mimeTypes()
-static void getCheckedItems(QList<QTreeWidgetItem *> &lst, QTreeWidgetItem *parent)
+QVector<const QStandardItem *> KMimeTypeChooserPrivate::getCheckedItems()
 {
-    for (int i = 0; i < parent->childCount(); ++i) {
-        QTreeWidgetItem *item = parent->child(i);
-        if (item->checkState(0) == Qt::Checked) {
-            lst.append(item);
+    QVector<const QStandardItem *> lst;
+    const int rowCount = m_model->rowCount();
+    for (int i = 0; i < rowCount; ++i) {
+        const QStandardItem *groupItem = m_model->item(i);
+        const int childCount = groupItem->rowCount();
+        for (int j = 0; j < childCount; ++j) {
+            const QStandardItem *child = groupItem->child(j);
+            if (child->checkState() == Qt::Checked) {
+                lst.append(child);
+            }
         }
-        getCheckedItems(lst, item);
     }
-}
-
-static void getCheckedItems(QList<QTreeWidgetItem *> &lst, QTreeWidget *tree)
-{
-    for (int i = 0; i < tree->topLevelItemCount(); ++i) {
-        QTreeWidgetItem *topItem = tree->topLevelItem(i);
-        //if (topItem->checkState(0) == Qt::Checked)
-        //    lst.append(topItem);
-        getCheckedItems(lst, topItem);
-    }
+    return lst;
 }
 
 QStringList KMimeTypeChooser::mimeTypes() const
 {
     QStringList mimeList;
-    QList<QTreeWidgetItem *> checkedItems;
-    getCheckedItems(checkedItems, d->mimeTypeTree);
+    const QVector<const QStandardItem *> checkedItems = d->getCheckedItems();
     mimeList.reserve(checkedItems.size());
-    for (QTreeWidgetItem *item : qAsConst(checkedItems)) {
-        mimeList.append(item->parent()->text(0) + QLatin1Char('/') + item->text(0));
+    for (const QStandardItem *item : checkedItems) {
+        mimeList.append(item->parent()->text() + QLatin1Char('/') + item->text());
     }
     return mimeList;
 }
@@ -272,11 +323,10 @@ QStringList KMimeTypeChooser::mimeTypes() const
 QStringList KMimeTypeChooser::patterns() const
 {
     QStringList patternList;
-    QList<QTreeWidgetItem *> checkedItems;
-    getCheckedItems(checkedItems, d->mimeTypeTree);
+    const QVector<const QStandardItem *> checkedItems = d->getCheckedItems();
     QMimeDatabase db;
-    for (QTreeWidgetItem *item : qAsConst(checkedItems)) {
-        QMimeType mime = db.mimeTypeForName(item->parent()->text(0) + QLatin1Char('/') + item->text(0));
+    for (const QStandardItem *item : checkedItems) {
+        QMimeType mime = db.mimeTypeForName(item->parent()->text() + QLatin1Char('/') + item->text());
         Q_ASSERT(mime.isValid());
         patternList += mime.globPatterns();
     }
@@ -304,7 +354,7 @@ public:
 
 //BEGIN KMimeTypeChooserDialog
 KMimeTypeChooserDialog::KMimeTypeChooserDialog(
-    const QString &caption,
+    const QString &title,
     const QString &text,
     const QStringList &selMimeTypes,
     const QString &defaultGroup,
@@ -313,7 +363,7 @@ KMimeTypeChooserDialog::KMimeTypeChooserDialog(
     QWidget *parent)
     : QDialog(parent), d(new Private(this))
 {
-    setWindowTitle(caption);
+    setWindowTitle(title);
 
     d->m_chooser = new KMimeTypeChooser(text, selMimeTypes,
                                         defaultGroup, groupsToShow, visuals,
@@ -322,14 +372,14 @@ KMimeTypeChooserDialog::KMimeTypeChooserDialog(
 }
 
 KMimeTypeChooserDialog::KMimeTypeChooserDialog(
-    const QString &caption,
+    const QString &title,
     const QString &text,
     const QStringList &selMimeTypes,
     const QString &defaultGroup,
     QWidget *parent)
     : QDialog(parent), d(new Private(this))
 {
-    setWindowTitle(caption);
+    setWindowTitle(title);
 
     d->m_chooser = new KMimeTypeChooser(text, selMimeTypes,
                                         defaultGroup, QStringList(),
@@ -360,6 +410,13 @@ void KMimeTypeChooserDialog::Private::init()
 KMimeTypeChooserDialog::~KMimeTypeChooserDialog()
 {
     delete d;
+}
+
+QSize KMimeTypeChooserDialog::sizeHint() const
+{
+    QFontMetrics fm(fontMetrics());
+    const int viewableSize = fm.averageCharWidth() * 60;
+    return QSize(viewableSize, viewableSize);
 }
 
 //END KMimeTypeChooserDialog

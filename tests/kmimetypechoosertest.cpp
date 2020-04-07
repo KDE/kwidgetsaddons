@@ -26,12 +26,13 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    QString text = QStringLiteral("Select the MimeTypes you want for this file type.");
-    QStringList list;
-    list << QStringLiteral("inode/directory") << QStringLiteral("text/plain");
+    const QString text = QStringLiteral("Select the MimeTypes you want for this file type.");
+    QStringList list({QStringLiteral("inode/directory"), QStringLiteral("text/plain")});
+
     KMimeTypeChooserDialog dlg(QStringLiteral("Select Mime Types"), text, list, QStringLiteral("text"), QStringList(),
                                KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
                                (QWidget *)nullptr);
+
     if (dlg.exec() == QDialog::Accepted) {
         qDebug() << dlg.chooser()->patterns();
         qDebug() << dlg.chooser()->mimeTypes().join(QLatin1Char(';'));
