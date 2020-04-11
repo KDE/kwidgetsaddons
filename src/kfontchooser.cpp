@@ -390,9 +390,9 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
 
     // lets initialize the display if possible
     if (usingFixed) {
-        q->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont), usingFixed);
+        q->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont), true);
     } else {
-        q->setFont(QGuiApplication::font(), usingFixed);
+        q->setFont(QGuiApplication::font(), false);
     }
 
     // check or uncheck or gray out the "relative" checkbox
