@@ -20,14 +20,13 @@
 #include "kfontrequester.h"
 #include "fonthelpers_p.h"
 
+#include <KFontChooserDialog>
+
 #include <QLabel>
 #include <QPushButton>
 #include <QFontDatabase>
 #include <QFontInfo>
-#include <QFontDialog>
 #include <QHBoxLayout>
-
-#include <kfontchooser.h>
 
 #include <cmath>
 
@@ -183,15 +182,12 @@ void KFontRequester::setTitle(const QString &title)
 
 void KFontRequester::KFontRequesterPrivate::_k_buttonClicked()
 {
-    QFontDialog::FontDialogOptions flags;
-    if (m_onlyFixed) {
-        flags = QFontDialog::MonospacedFonts;
-    }
-    bool ok = false;
-    QFont font = QFontDialog::getFont(&ok, m_selFont, q->parentWidget(), QString(), flags);
+    KFontChooser::DisplayFlags flags = m_onlyFixed ? KFontChooser::FixedFontsOnly
+                                                     : KFontChooser::NoDisplayFlags;
 
-    if (ok) {
-        m_selFont = font;
+    const int result = KFontChooserDialog::getFont(m_selFont, flags, q->parentWidget());
+
+    if (result == QDialog::Accepted) {
         displaySampleText();
         emit q->fontSelected(m_selFont);
     }

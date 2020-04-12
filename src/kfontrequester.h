@@ -33,7 +33,7 @@ class QPushButton;
  * @class KFontRequester kfontrequester.h KFontRequester
  *
  * This class provides a widget with a lineedit and a button, which invokes
- * a font dialog (QFontDialog).
+ * a font dialog (KFontChooserDialog).
  *
  * The lineedit provides a preview of the selected font. The preview text can
  * be customized. You can also have the font dialog show only the fixed fonts.
