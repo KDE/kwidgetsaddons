@@ -993,10 +993,35 @@ void KFontChooser::Private::fillFamilyListBox(bool onlyFixedFonts)
 // Hence, construct custom style identifiers sufficient for the purpose.
 QString KFontChooser::Private::styleIdentifier(const QFont &font)
 {
+    const int weight = font.weight();
+    QString styleName = font.styleName();
+    // If the styleName property is empty and the weight is QFont::Normal, that
+    // could mean it's a "Regular"-like style with the styleName part stripped
+    // so that subsequent calls to setBold(true) can work properly (i.e. selecting
+    // the "Bold" style provided by the font itself) without resorting to font
+    // "emboldening" which looks ugly.
+    // See also KConfigGroupGui::writeEntryGui().
+    if (styleName.isEmpty() && weight == QFont::Normal) {
+        QFontDatabase fdb;
+        const QStringList styles = fdb.styles(font.family());
+        for (const QString &style : styles) {
+            // orderded by commonness, i.e. "Regular" is the most common
+            if (style == QLatin1String("Regular")
+                || style == QLatin1String("Normal")
+                || style == QLatin1String("Book")
+                || style == QLatin1String("Roman")) {
+                styleName = style;
+            } else {
+                // nothing more we can do
+            }
+        }
+    }
+
     const QChar comma(QLatin1Char(','));
-    return   QString::number(font.weight()) + comma
+    return   QString::number(weight) + comma
              + QString::number((int)font.style()) + comma
-             + QString::number(font.stretch());
+             + QString::number(font.stretch()) + comma
+             + styleName;
 }
 
 #include "moc_kfontchooser.cpp"

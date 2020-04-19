@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 
     QApplication app(argc, argv);
 
-    app.setFont(QFont(QStringLiteral("DejaVu Sans"), 11));
+    app.setFont(QFont(QStringLiteral("Noto Sans"), 11));
 
     //  QFont font = QFont("Times",18,QFont::Bold);
 
