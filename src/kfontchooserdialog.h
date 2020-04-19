@@ -31,6 +31,8 @@ class QStringList;
 class KFontChooserDialogPrivate;
 
 /**
+ * @class KFontChooserDialog kfontchooserdialog.h KFontChooserDialog
+ *
  * @short A font selection dialog.
  *
  * The KFontChooserDialog provides a dialog for interactive font selection.
@@ -64,7 +66,7 @@ class KFontChooserDialogPrivate;
  *      }
  * \endcode
  *
- * \image html kfontchooserdialog.png "KDE Font Dialog"
+ * \image html kfontchooserdialog.png "KFontChooserDialog"
  *
  * @author Preston Brown <pbrown@kde.org>, Bernd Wuebben <wuebben@kde.org>
  *
@@ -78,9 +80,8 @@ public:
     /**
      * Constructs a font selection dialog.
      *
-     * @param flags Defines how the font chooser is displayed.
-     *        @see KFontChooser::DisplayFlags
-     * @param parent The parent widget of the dialog, if any.
+     * @param flags flags to define how the font chooser is displayed
+     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
      */
     explicit KFontChooserDialog(const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags,
                                 QWidget *parent = nullptr);
@@ -90,14 +91,14 @@ public:
     /**
      * Sets the currently selected font in the dialog.
      *
-     * @param font The font to select
-     * @param onlyFixed If true, the font list will show only fixed width (monospace)
+     * @param font the font to select
+     * @param onlyFixed if @c true, the font list will show only fixed width (monospace)
      *        fonts, otherwise all available fonts are shown
      */
     void setFont(const QFont &font, bool onlyFixed = false);
 
     /**
-     * @return The currently selected font in the dialog.
+     * @return the currently selected font in the dialog
      */
     QFont font() const;
 
@@ -105,11 +106,10 @@ public:
      * Creates a modal font dialog, lets the user choose a font, and returns when
      * the dialog is closed.
      *
-     * @param theFont a reference to the font to write the chosen font into.
-     * @param flags Defines how the font chooser is displayed.
-     *        @see KFontChooser::DisplayFlags
-     * @param parent Parent widget of the dialog; the dialog will be centered relative to it.
-     * @return QDialog::result().
+     * @param theFont a reference to the font to write the chosen font into
+     * @param flags flags to define how the font chooser is displayed
+     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * @return QDialog::result()
      */
     static int getFont(QFont &theFont,
                        const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags,
@@ -121,12 +121,11 @@ public:
      * dialog is closed. Useful for choosing slight adjustments to the font set
      * when the user would otherwise have to manually edit a number of fonts.
      *
-     * @param theFont a reference to the font to write the chosen font into.
-     * @param flags  Defines how the font chooser is displayed.
-     *        @see KFontChooser::DisplayFlags
-     * @param diffFlags a reference to the int into which the chosen
+     * @param theFont a reference to the font to write the chosen font into
+     * @param flags flags to define how the font chooser is displayed
+     * @param diffFlags a reference to the integer bitmask into which the chosen
      *        difference selection bitmask should be written.
-     *        Check the returned bitmask like:
+     *        Check the bitmask afterwards like:
      *        \code
      *        if ( diffFlags & KFontChooser::FontDiffFamily )  {
      *            [...]
@@ -138,9 +137,9 @@ public:
      *            [...]
      *        }
      *        \endcode
-     * @param parent Parent widget of the dialog; the dialog will be centered relative to it.
+     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
      *
-     * @returns QDialog::result().
+     * @returns QDialog::result()
      */
     static int getFontDiff(QFont &theFont,
                            KFontChooser::FontDiffFlags &diffFlags,
