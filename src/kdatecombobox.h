@@ -47,6 +47,7 @@ public:
      * Options provided by the widget
      * @see options()
      * @see setOptions()
+     * @see Options
      */
     enum Option {
         EditDate         = 0x0001,  /**< Allow the user to manually edit the date in the combo line edit */
@@ -55,6 +56,9 @@ public:
         DateKeywords     = 0x0008,  /**< Show date keywords in the drop-down */
         WarnOnInvalid    = 0x0010   /**< Show a warning on focus out if the date is invalid */
     };
+    /**
+     * Stores a combination of #Option values.
+     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 

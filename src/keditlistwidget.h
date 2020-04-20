@@ -86,6 +86,7 @@ public:
     /**
      * Enumeration of the buttons, the listbox offers. Specify them in the
      * constructor in the buttons parameter, or in setButtons.
+     * @see Buttons
      */
     enum Button {
         Add = 0x0001,
@@ -94,6 +95,9 @@ public:
         All = Add | Remove | UpDown
     };
 
+    /**
+     * Stores a combination of #Button values.
+     */
     Q_DECLARE_FLAGS(Buttons, Button)
     Q_FLAG(Buttons)
 

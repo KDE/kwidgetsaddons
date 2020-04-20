@@ -63,6 +63,9 @@ class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
 
 public:
 
+    /**
+     * @see KPasswordDialogFlags
+     */
     enum KPasswordDialogFlag {
         NoFlags = 0x00,
         /**
@@ -95,6 +98,9 @@ public:
          */
         DomainReadOnly = 0x20
     };
+    /**
+     * Stores a combination of #KPasswordDialogFlag values.
+     */
     Q_DECLARE_FLAGS(KPasswordDialogFlags, KPasswordDialogFlag)
 
     enum ErrorType {

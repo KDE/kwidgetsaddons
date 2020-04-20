@@ -77,6 +77,9 @@ enum DialogType {
     QuestionYesNoCancel = 9
 };
 
+/**
+ * @see Options
+ */
 enum Option {
     Notify = 1,        ///< Emit a KNotify event
     AllowLink = 2,     ///< The message may contain links.
@@ -86,6 +89,9 @@ enum Option {
     WindowModal = 32   ///< The window is to be modal relative to its parent. By default, it is application modal.
 };
 
+/**
+ * Stores a combination of #Option values.
+ */
 Q_DECLARE_FLAGS(Options, Option)
 
 } // namespace

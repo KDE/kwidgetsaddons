@@ -84,6 +84,7 @@ class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
 public:
     /**
      * Flags to set the shown widgets
+     * @see Controls
      */
     enum Control {
         /**
@@ -119,6 +120,9 @@ public:
          */
         AllGuiElements      = 65535
     };
+    /**
+     * Stores a combination of #Control values.
+     */
     Q_DECLARE_FLAGS(Controls,
                     Control)
 

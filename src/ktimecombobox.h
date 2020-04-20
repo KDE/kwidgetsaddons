@@ -48,6 +48,7 @@ public:
      * Options provided by the widget
      * @see options
      * @see setOptions
+     * @see Options
      */
     enum Option {
         EditTime         = 0x0001,  /**< Allow the user to manually edit the time in the combo line edit */
@@ -55,6 +56,9 @@ public:
         ForceTime        = 0x0004,  /**< Any set or entered time will be forced to one of the drop-down times */
         WarnOnInvalid    = 0x0008   /**< Show a warning box on focus out if the user enters an invalid time */
     };
+    /**
+     * Stores a combination of #Option values.
+     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 

@@ -64,25 +64,33 @@ public:
 
     /**
      * Flags for selecting which font attributes to change
+     * @see FontDiffFlags
      */
     enum FontDiff {
-        NoFontDiffFlags = 0,
+        NoFontDiffFlags = 0, ///< No flags set
         FontDiffFamily = 1,  ///< Identifies a requested change in the font family.
         FontDiffStyle = 2,   ///< Identifies a requested change in the font style.
         FontDiffSize = 4,    ///< Identifies a requested change in the font size.
         AllFontDiffs = FontDiffFamily | FontDiffStyle | FontDiffSize
     };
+    /**
+     * Stores an combination of #FontDiff values.
+     */
     Q_DECLARE_FLAGS(FontDiffFlags, FontDiff)
 
     /**
      * Flags for selecting what is displayed in the widget.
+     * @see DisplayFlags
      */
     enum DisplayFlag {
-        NoDisplayFlags = 0,
+        NoDisplayFlags = 0, ///< No flags set
         FixedFontsOnly = 1, ///< Only show fixed fonts, excluding proportional fonts
         DisplayFrame = 2,   ///< Show a visual frame around the chooser
         ShowDifferences = 4 ///< Display the font differences interfaces
     };
+    /**
+     * Stores a combination of #DisplayFlag values.
+     */
     Q_DECLARE_FLAGS(DisplayFlags, DisplayFlag)
 
     /**

@@ -48,6 +48,7 @@ public:
      * Options provided by the widget
      * @see options
      * @see setOptions
+     * @see Options
      */
     enum Option {
         ShowCalendar     = 0x00001,  /**< If the Calendar System edit is displayed */
@@ -67,6 +68,9 @@ public:
         ForceTime        = 0x04000,  /**< The entered time can only be a selected time */
         WarnOnInvalid    = 0x08000   /**< Show a warning on focus out if the date or time is invalid */
     };
+    /**
+     * Stores a combination of #Option values.
+     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
