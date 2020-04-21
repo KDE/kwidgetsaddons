@@ -213,7 +213,6 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     ++row;
 
     familyListBox = new QListWidget(page);
-    familyListBox->setEnabled(flags ^ ShowDifferences);
     gridLayout->addWidget(familyListBox, row, 0);
 
     connect(familyListBox, &QListWidget::currentTextChanged, [this](const QString &family) {
@@ -221,6 +220,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     });
 
     if (flags & ShowDifferences) {
+        familyListBox->setEnabled(false);
         connect(familyCheckbox, &QAbstractButton::toggled, familyListBox, &QWidget::setEnabled);
     }
 
@@ -252,7 +252,6 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     ++row;
 
     styleListBox = new QListWidget(page);
-    styleListBox->setEnabled(flags ^ ShowDifferences);
     gridLayout->addWidget(styleListBox, row, 1);
 
     // Populate usual styles, to determine minimum list width;
@@ -270,6 +269,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     });
 
     if (flags & ShowDifferences) {
+        styleListBox->setEnabled(false);
         connect(styleCheckbox, &QAbstractButton::toggled, styleListBox, &QWidget::setEnabled);
     }
 
@@ -297,9 +297,6 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     sizeOfFont->setMaximum(512);
     sizeOfFont->setDecimals(1);
     sizeOfFont->setSingleStep(1);
-
-    sizeListBox->setEnabled(flags ^ ShowDifferences);
-    sizeOfFont->setEnabled(flags ^ ShowDifferences);
 
     if (sizeIsRelativeState) {
         QString sizeIsRelativeCBText =
@@ -345,6 +342,8 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     });
 
     if (flags & ShowDifferences) {
+        sizeListBox->setEnabled(false);
+        sizeOfFont->setEnabled(false);
         connect(sizeCheckbox, &QAbstractButton::toggled, sizeListBox, &QWidget::setEnabled);
         connect(sizeCheckbox, &QAbstractButton::toggled, sizeOfFont, &QWidget::setEnabled);
     }
@@ -372,20 +371,22 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
 
     mainLayout->addWidget(sampleEdit);
 
-    // Add a checkbox to toggle showing only monospace/fixed-width fonts
-    onlyFixedCheckbox = new QCheckBox(KFontChooser::tr("Show only monospaced fonts", "@option:check"));
-    onlyFixedCheckbox->setEnabled(flags ^ ShowDifferences);
-    onlyFixedCheckbox->setChecked(usingFixed);
+    // If the calling app sets FixedFontsOnly, respect its decision
+    if (!usingFixed && !(flags & NoFixedCheckBox)) {
+        // Add a checkbox to toggle showing only monospace/fixed-width fonts
+        onlyFixedCheckbox = new QCheckBox(KFontChooser::tr("Show only monospaced fonts", "@option:check"));
+        onlyFixedCheckbox->setChecked(usingFixed);
 
-    connect(onlyFixedCheckbox, &QAbstractButton::toggled, q, [this](const bool state) {
-        q->setFont(selFont, state);
-    });
+        connect(onlyFixedCheckbox, &QAbstractButton::toggled, q, [this](const bool state) {
+            q->setFont(selFont, state);
+        });
 
-    if (flags & ShowDifferences) { // In this mode follow the state of the familyCheckbox
-        connect(familyCheckbox, &QAbstractButton::toggled, onlyFixedCheckbox, &QWidget::setEnabled);
+        if (flags & ShowDifferences) { // In this mode follow the state of the familyCheckbox
+            onlyFixedCheckbox->setEnabled(false);
+            connect(familyCheckbox, &QAbstractButton::toggled, onlyFixedCheckbox, &QWidget::setEnabled);
+        }
+        mainLayout->addWidget(onlyFixedCheckbox);
     }
-    mainLayout->addWidget(onlyFixedCheckbox);
-
     // Finished setting up the chooser layout
 
     // lets initialize the display if possible

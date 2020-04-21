@@ -34,14 +34,29 @@ int main(int argc, char **argv)
     //  QFont font = QFont("Times",18,QFont::Bold);
 
     QFont font;
+    qDebug() << "Default use case, all bells and whistles";
     int nRet = KFontChooserDialog::getFont(font);
     qDebug() << font.toString();
 
+    qDebug() << "Only show monospaced fonts, FixedOnly checkbox is _not_ shown";
     nRet = KFontChooserDialog::getFont(font, KFontChooser::FixedFontsOnly);
     qDebug() << font.toString();
 
+    qDebug() << "Don't show the FixedOnly checkbox";
+    nRet = KFontChooserDialog::getFont(font, KFontChooser::NoFixedCheckBox);
+    qDebug() << font.toString();
+
     KFontChooser::FontDiffFlags diffFlags;
+    qDebug() << "ShowDifferences mode";
     nRet = KFontChooserDialog::getFontDiff(font, diffFlags);
+    qDebug() << font.toString();
+
+    qDebug() << "ShowDifferences mode and only showing monospaced fonts (the FixedOnly checkbox is _not_ shown)";
+    nRet = KFontChooserDialog::getFontDiff(font, diffFlags, KFontChooser::FixedFontsOnly);
+    qDebug() << font.toString();
+
+    qDebug() << "ShowDifferences mode with FixeOnly checkbox not shown";
+    nRet = KFontChooserDialog::getFontDiff(font, diffFlags, KFontChooser::NoFixedCheckBox);
     qDebug() << font.toString();
 
     return nRet;
