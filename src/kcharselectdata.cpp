@@ -831,9 +831,8 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     QString simplified = needle.length() > 1 ? needle.simplified() : needle;
     QStringList searchStrings;
 
-    QRegularExpression octalExp(QStringLiteral("^\\\\[0-7][0-7\\\\]*$"));
-    QRegularExpressionMatch match = octalExp.match(simplified);
-    if (match.hasMatch()) {
+    static const QRegularExpression octalExp(QStringLiteral("^\\\\[0-7][0-7\\\\]*$"));
+    if (octalExp.match(simplified).hasMatch()) {
         // search for C octal escaped UTF-8
         QByteArray utf8;
         int byte = -1;
@@ -865,14 +864,15 @@ QVector<uint> KCharSelectData::find(const QString &needle)
         return returnRes;
     }
 
-    QRegularExpression hexExp(QStringLiteral("^(|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4,5})$"));
-    foreach (const QString &s, searchStrings) {
-        QRegularExpressionMatch match = hexExp.match(s);
+    static const QRegularExpression hexExp(QStringLiteral("^(?:|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4,5})$"));
+    for (const QString &s : qAsConst(searchStrings)) {
+        const QRegularExpressionMatch match = hexExp.match(s);
         if (match.hasMatch()) {
-            returnRes.append(match.captured(2).toInt(nullptr, 16));
+            const QString cap = match.captured(1);
+            returnRes.append(cap.toInt(nullptr, 16));
             // search for "1234" instead of "0x1234"
             if (s.length() == 6 || s.length() == 7) {
-                searchStrings[searchStrings.indexOf(s)] = match.captured(2);
+                searchStrings[searchStrings.indexOf(s)] = cap;
             }
         }
         // try to parse string as decimal number
