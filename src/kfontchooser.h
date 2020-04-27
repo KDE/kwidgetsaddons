@@ -88,7 +88,6 @@ public:
                                 ///< checkbox to toggle showing only monospaced fonts is not shown in this case)
         DisplayFrame = 2,       ///< Show a visual frame around the chooser
         ShowDifferences = 4,    ///< Display the font differences interfaces
-        NoFixedCheckBox = 8,    ///< Do not Show a checkbox to toggle showing only fixed fonts
     };
     /**
      * Stores a combination of #DisplayFlag values.

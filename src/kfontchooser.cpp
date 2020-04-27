@@ -372,7 +372,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     mainLayout->addWidget(sampleEdit);
 
     // If the calling app sets FixedFontsOnly, respect its decision
-    if (!usingFixed && !(flags & NoFixedCheckBox)) {
+    if (!usingFixed) {
         // Add a checkbox to toggle showing only monospace/fixed-width fonts
         onlyFixedCheckbox = new QCheckBox(KFontChooser::tr("Show only monospaced fonts", "@option:check"));
         onlyFixedCheckbox->setChecked(usingFixed);

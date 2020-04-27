@@ -42,10 +42,6 @@ int main(int argc, char **argv)
     nRet = KFontChooserDialog::getFont(font, KFontChooser::FixedFontsOnly);
     qDebug() << font.toString();
 
-    qDebug() << "Don't show the FixedOnly checkbox";
-    nRet = KFontChooserDialog::getFont(font, KFontChooser::NoFixedCheckBox);
-    qDebug() << font.toString();
-
     KFontChooser::FontDiffFlags diffFlags;
     qDebug() << "ShowDifferences mode";
     nRet = KFontChooserDialog::getFontDiff(font, diffFlags);
@@ -53,10 +49,6 @@ int main(int argc, char **argv)
 
     qDebug() << "ShowDifferences mode and only showing monospaced fonts (the FixedOnly checkbox is _not_ shown)";
     nRet = KFontChooserDialog::getFontDiff(font, diffFlags, KFontChooser::FixedFontsOnly);
-    qDebug() << font.toString();
-
-    qDebug() << "ShowDifferences mode with FixeOnly checkbox not shown";
-    nRet = KFontChooserDialog::getFontDiff(font, diffFlags, KFontChooser::NoFixedCheckBox);
     qDebug() << font.toString();
 
     return nRet;
