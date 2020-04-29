@@ -522,7 +522,6 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->charTable = new KCharSelectTable(this, QFont());
     if (CharacterTable & controls) {
         splitter->addWidget(d->charTable);
-        d->charTable->setFocus(Qt::OtherFocusReason);
     } else {
         d->charTable->hide();
     }
@@ -549,7 +548,12 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     connect(d->detailBrowser, SIGNAL(anchorClicked(QUrl)), this, SLOT(_k_linkClicked(QUrl)));
 
     setFocusPolicy(Qt::StrongFocus);
-    setFocusProxy(d->charTable);
+    if(SearchLine & controls) {
+        setFocusProxy(d->searchLine);
+    } else {
+        setFocusProxy(d->charTable);
+    }
+
     d->_k_sectionSelected(0); // this will also call _k_blockSelected(0)
     setCurrentCodePoint(QChar::Null);
 
