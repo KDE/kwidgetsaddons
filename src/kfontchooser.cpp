@@ -186,7 +186,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     int row = flags & DisplayFrame ? 1 : 0;
 
     if (flags & DisplayFrame) {
-        page = new QGroupBox(KFontChooser::tr("Requested Font"), q);
+        page = new QGroupBox(KFontChooser::tr("Requested Font", "@title:group"), q);
         mainLayout->addWidget(page);
         gridLayout = new QGridLayout(page);
     } else {
@@ -243,7 +243,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
         styleLabel = nullptr;
     } else {
         styleCheckbox = nullptr;
-        styleLabel = new QLabel(KFontChooser::tr("Font style:"), page);
+        styleLabel = new QLabel(KFontChooser::tr("Font style:", "@label"), page);
         styleLayout->addWidget(styleLabel, 1, Qt::AlignLeft);
     }
     styleLayout->addSpacing(checkBoxGap);
@@ -256,7 +256,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
 
     // Populate usual styles, to determine minimum list width;
     // will be replaced later with correct styles.
-    styleListBox->addItem(KFontChooser::tr("Normal", "QFontDatabase"));
+    styleListBox->addItem(KFontChooser::tr("Normal", "@item font"));
     styleListBox->addItem(KFontChooser::tr("Italic", "@item font"));
     styleListBox->addItem(KFontChooser::tr("Oblique", "@item font"));
     styleListBox->addItem(KFontChooser::tr("Bold", "@item font"));
@@ -302,11 +302,11 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
         QString sizeIsRelativeCBText =
             KFontChooser::tr("Relative", "@item font size");
         QString sizeIsRelativeCBToolTipText =
-            KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment");
+            KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment", "@info:tooltip");
         QString sizeIsRelativeCBWhatsThisText =
             KFontChooser::tr("Here you can switch between fixed font size and font size "
                "to be calculated dynamically and adjusted to changing "
-               "environment (e.g. widget dimensions, paper size).");
+               "environment (e.g. widget dimensions, paper size).", "@info:whatsthis");
         sizeIsRelativeCheckBox = new QCheckBox(sizeIsRelativeCBText, page);
         sizeIsRelativeCheckBox->setTristate(flags & ShowDifferences);
         QGridLayout *sizeLayout2 = new QGridLayout();
@@ -362,7 +362,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     sampleEdit->setTextCursor(QTextCursor(sampleEdit->document()));
     QString sampleEditWhatsThisText =
         KFontChooser::tr("This sample text illustrates the current settings. "
-           "You may edit it to test special characters.");
+           "You may edit it to test special characters.", "@info:whatsthis");
     sampleEdit->setWhatsThis(sampleEditWhatsThisText);
 
     connect(q, &KFontChooser::fontSelected, q, [this](const QFont &font) {

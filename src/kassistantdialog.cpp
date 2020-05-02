@@ -102,21 +102,21 @@ void KAssistantDialog::Private::init()
 
     const QString iconBack = QApplication::isRightToLeft() ? QStringLiteral("go-next") : QStringLiteral("go-previous");
     const QString iconNext = QApplication::isRightToLeft() ? QStringLiteral("go-previous") : QStringLiteral("go-next");
-    backButton->setText(tr("&Back", "go back"));
+    backButton->setText(tr("&Back", "@action:button go back"));
     backButton->setIcon(QIcon::fromTheme(iconBack));
-    backButton->setToolTip(tr("Go back one step"));
+    backButton->setToolTip(tr("Go back one step", "@info:tooltip"));
     q->connect(backButton, &QAbstractButton::clicked, q, &KAssistantDialog::back);
     buttonBox->addButton(backButton, QDialogButtonBox::ActionRole);
 
     nextButton = new QPushButton;
-    nextButton->setText(tr("Next", "Opposite to Back"));
+    nextButton->setText(tr("Next", "@action:button Opposite to Back"));
     nextButton->setIcon(QIcon::fromTheme(iconNext));
     nextButton->setDefault(true);
     q->connect(nextButton, &QAbstractButton::clicked, q, &KAssistantDialog::next);
     buttonBox->addButton(nextButton, QDialogButtonBox::ActionRole);
 
     finishButton = new QPushButton;
-    finishButton->setText(tr("Finish"));
+    finishButton->setText(tr("Finish", "@action:button"));
     finishButton->setIcon(QIcon::fromTheme(QStringLiteral("dialog-ok-apply")));
     buttonBox->addButton(finishButton, QDialogButtonBox::AcceptRole);
 

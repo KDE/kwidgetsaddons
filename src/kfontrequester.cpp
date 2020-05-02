@@ -212,19 +212,19 @@ void KFontRequester::KFontRequesterPrivate::displaySampleText()
 
 void KFontRequester::KFontRequesterPrivate::setToolTip()
 {
-    m_button->setToolTip(tr("Choose Font..."));
+    m_button->setToolTip(tr("Choose font...", "@info:tooltip"));
 
     m_sampleLabel->setToolTip(QString());
     m_sampleLabel->setWhatsThis(QString());
 
     if (m_title.isNull()) {
-        m_sampleLabel->setToolTip(tr("Preview of the selected font"));
+        m_sampleLabel->setToolTip(tr("Preview of the selected font", "@info:tooltip"));
         m_sampleLabel->setWhatsThis(tr("This is a preview of the selected font. You can change it"
-                                       " by clicking the \"Choose Font...\" button."));
+                                       " by clicking the \"Choose Font...\" button.", "@info:whatsthis"));
     } else {
-        m_sampleLabel->setToolTip(tr("Preview of the \"%1\" font").arg(m_title));
+        m_sampleLabel->setToolTip(tr("Preview of the \"%1\" font", "@info:tooltip").arg(m_title));
         m_sampleLabel->setWhatsThis(tr("This is a preview of the \"%1\" font. You can change it"
-                                       " by clicking the \"Choose Font...\" button.").arg(m_title));
+                                       " by clicking the \"Choose Font...\" button.", "@info:whatsthis").arg(m_title));
     }
 }
 

@@ -183,8 +183,8 @@ void KDateTimeEditPrivate::initTimeZoneWidget()
 {
     ui.m_timeZoneCombo->blockSignals(true);
     ui.m_timeZoneCombo->clear();
-    ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("UTC", "UTC time zone"), QByteArray("UTC"));
-    ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("Floating", "No specific time zone"), QByteArray());
+    ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("UTC", "@item:inlistbox UTC time zone"), QByteArray("UTC"));
+    ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("Floating", "@item:inlistbox No specific time zone"), QByteArray());
     for (const QTimeZone &zone : qAsConst(m_zones)) {
         ui.m_timeZoneCombo->addItem(QString::fromUtf8(zone.id()), zone.id());
     }

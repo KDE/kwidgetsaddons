@@ -103,7 +103,7 @@ KActionSelector::KActionSelector(QWidget *parent)
 
     QVBoxLayout *loAv = new QVBoxLayout();
     lo->addLayout(loAv);
-    d->lAvailable = new QLabel(tr("&Available:"), this);
+    d->lAvailable = new QLabel(tr("&Available:", "@label:listbox"), this);
     loAv->addWidget(d->lAvailable);
     d->availableListWidget = new QListWidget(this);
     loAv->addWidget(d->availableListWidget);
@@ -120,7 +120,7 @@ KActionSelector::KActionSelector(QWidget *parent)
 
     QVBoxLayout *loS = new QVBoxLayout();
     lo->addLayout(loS);
-    d->lSelected = new QLabel(tr("&Selected:"), this);
+    d->lSelected = new QLabel(tr("&Selected:", "@label:listbox"), this);
     loS->addWidget(d->lSelected);
     d->selectedListWidget = new QListWidget(this);
     loS->addWidget(d->selectedListWidget);

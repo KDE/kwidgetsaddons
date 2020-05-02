@@ -403,14 +403,14 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         mainLayout->addLayout(searchLayout);
         d->searchLine = new QLineEdit(this);
         searchLayout->addWidget(d->searchLine);
-        d->searchLine->setPlaceholderText(tr("Enter a search term or character here"));
+        d->searchLine->setPlaceholderText(tr("Enter a search term or character...", "@info:placeholder"));
         d->searchLine->setClearButtonEnabled(true);
-        d->searchLine->setToolTip(tr("Enter a search term or character here"));
+        d->searchLine->setToolTip(tr("Enter a search term or character here", "@info:tooltip"));
 
         QAction *findAction = new QAction(this);
         connect(findAction, &QAction::triggered, this, [this]() { d->_k_activateSearchLine(); });
         findAction->setObjectName(QStringLiteral("edit_find"));
-        findAction->setText(tr("&Find..."));
+        findAction->setText(tr("&Find...", "@action"));
         findAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
         attachToActionParent(findAction, actionParent, QKeySequence::keyBindings(QKeySequence::Find));
 
@@ -430,28 +430,28 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->backButton = new QToolButton(this);
     comboLayout->addWidget(d->backButton);
     d->backButton->setEnabled(false);
-    d->backButton->setText(tr("Previous in History", "Goes to previous character"));
+    d->backButton->setText(tr("Previous in History", "@action:button Goes to previous character"));
     d->backButton->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
-    d->backButton->setToolTip(tr("Previous Character in History"));
+    d->backButton->setToolTip(tr("Go to previous character in history", "@info:tooltip"));
 
     d->forwardButton = new QToolButton(this);
     comboLayout->addWidget(d->forwardButton);
     d->forwardButton->setEnabled(false);
-    d->forwardButton->setText(tr("Next in History", "Goes to next character"));
+    d->forwardButton->setText(tr("Next in History", "@action:button Goes to next character"));
     d->forwardButton->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
-    d->forwardButton->setToolTip(tr("Next Character in History"));
+    d->forwardButton->setToolTip(tr("Go to next character in history", "info:tooltip"));
 
     QAction *backAction = new QAction(this);
     connect(backAction, &QAction::triggered, d->backButton, &QAbstractButton::animateClick);
     backAction->setObjectName(QStringLiteral("go_back"));
-    backAction->setText(tr("&Back", "go back"));
+    backAction->setText(tr("&Back", "@action go back"));
     backAction->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
     attachToActionParent(backAction, actionParent, QKeySequence::keyBindings(QKeySequence::Back));
 
     QAction *forwardAction = new QAction(this);
     connect(forwardAction, &QAction::triggered, d->forwardButton, &QAbstractButton::animateClick);
     forwardAction->setObjectName(QStringLiteral("go_forward"));
-    forwardAction->setText(tr("&Forward", "go forward"));
+    forwardAction->setText(tr("&Forward", "@action go forward"));
     forwardAction->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
     attachToActionParent(forwardAction, actionParent, QKeySequence::keyBindings(QKeySequence::Forward));
 
@@ -466,11 +466,11 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
 
     d->sectionCombo = new QComboBox(this);
     d->sectionCombo->setObjectName(QStringLiteral("sectionCombo"));
-    d->sectionCombo->setToolTip(tr("Select a category"));
+    d->sectionCombo->setToolTip(tr("Select a category", "@info:tooltip"));
     comboLayout->addWidget(d->sectionCombo);
     d->blockCombo = new QComboBox(this);
     d->blockCombo->setObjectName(QStringLiteral("blockCombo"));
-    d->blockCombo->setToolTip(tr("Select a block to be displayed"));
+    d->blockCombo->setToolTip(tr("Select a block to be displayed", "@info:tooltip"));
     d->blockCombo->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     comboLayout->addWidget(d->blockCombo, 1);
     d->sectionCombo->addItems(s_data()->sectionList());
@@ -483,14 +483,14 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     comboLayout->addWidget(d->fontCombo);
     d->fontCombo->setEditable(true);
     d->fontCombo->resize(d->fontCombo->sizeHint());
-    d->fontCombo->setToolTip(tr("Set font"));
+    d->fontCombo->setToolTip(tr("Set font", "@info:tooltip"));
 
     d->fontSizeSpinBox = new QSpinBox(this);
     comboLayout->addWidget(d->fontSizeSpinBox);
     d->fontSizeSpinBox->setValue(QWidget::font().pointSize());
     d->fontSizeSpinBox->setRange(1, 400);
     d->fontSizeSpinBox->setSingleStep(1);
-    d->fontSizeSpinBox->setToolTip(tr("Set font size"));
+    d->fontSizeSpinBox->setToolTip(tr("Set font size", "@info:tooltip"));
 
     connect(d->fontCombo, SIGNAL(currentIndexChanged(QString)), this, SLOT(_k_fontSelected()));
     connect(d->fontSizeSpinBox, SIGNAL(valueChanged(int)), this, SLOT(_k_fontSelected()));

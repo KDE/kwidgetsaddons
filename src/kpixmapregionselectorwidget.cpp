@@ -189,11 +189,11 @@ QMenu *KPixmapRegionSelectorWidget::createPopupMenu()
 {
     QMenu *popup = new QMenu(this);
     popup->setObjectName(QStringLiteral("PixmapRegionSelectorPopup"));
-    popup->addSection(tr("Image Operations"));
+    popup->addSection(tr("Image Operations", "@title:menu"));
 
-    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-right")), tr("&Rotate Clockwise"),
+    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-right")), tr("&Rotate Clockwise", "@action:inmenu"),
                      this, &KPixmapRegionSelectorWidget::rotateClockwise);
-    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-left")), tr("Rotate &Counterclockwise"),
+    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-left")), tr("Rotate &Counterclockwise", "@action:inmenu"),
                      this, &KPixmapRegionSelectorWidget::rotateCounterclockwise);
 
     /*

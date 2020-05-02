@@ -40,7 +40,7 @@ KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, 
     : QDialog(parent),
       d(new KFontChooserDialogPrivate)
 {
-    setWindowTitle(tr("Select Font"));
+    setWindowTitle(tr("Select Font", "@title:window"));
     d->chooser = new KFontChooser(this, flags, QStringList(), 8, nullptr);
     d->chooser->setObjectName(QStringLiteral("fontChooser"));
 

@@ -338,7 +338,7 @@ void KColorComboPrivate::_k_slotHighlighted(int index)
 
 void KColorComboPrivate::addColors()
 {
-    q->addItem(KColorCombo::tr("Custom...", "Custom color"));
+    q->addItem(KColorCombo::tr("Custom...", "@item:inlistbox Custom color"));
 
     if (colorList.isEmpty()) {
         for (int i = 0; i < STANDARD_PALETTE_SIZE; ++i) {

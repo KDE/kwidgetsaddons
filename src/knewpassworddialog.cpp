@@ -66,20 +66,20 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::_k_passwordStatusChanged()
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
         //~ singular Password must be at least %n character long
         //~ plural Password must be at least %n characters long
-        showMessageWidget(tr("Password must be at least %n character(s) long.", "", ui.pwdWidget->minimumPasswordLength()), KMessageWidget::Error);
+        showMessageWidget(tr("Password must be at least %n character(s) long.", "@info", ui.pwdWidget->minimumPasswordLength()), KMessageWidget::Error);
         break;
     case KNewPasswordWidget::EmptyPasswordNotAllowed:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        showMessageWidget(tr("Password is empty."), KMessageWidget::Warning);
+        showMessageWidget(tr("Password is empty.", "@info"), KMessageWidget::Warning);
         break;
     case KNewPasswordWidget::PasswordNotVerified:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-        showMessageWidget(tr("Passwords do not match."), KMessageWidget::Warning);
+        showMessageWidget(tr("Passwords do not match.", "@info"), KMessageWidget::Warning);
         break;
     case KNewPasswordWidget::WeakPassword:
     case KNewPasswordWidget::StrongPassword:
         ui.buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);
-        showMessageWidget(tr("Passwords match."), KMessageWidget::Positive);
+        showMessageWidget(tr("Passwords match.", "@info"), KMessageWidget::Positive);
         break;
     }
 }
@@ -151,7 +151,7 @@ bool KNewPasswordDialog::checkAndGetPassword(QString *pwd)
 
     if (d->ui.pwdWidget->passwordStatus() == KNewPasswordWidget::WeakPassword) {
         QMessageBox::StandardButton selectedButton = QMessageBox::warning(this,
-                tr("Low Password Strength"),
+                tr("Low Password Strength", "@title:window"),
                 tr("The password you have entered has a low strength. "
                    "To improve the strength of "
                    "the password, try:\n"

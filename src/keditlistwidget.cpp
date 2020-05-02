@@ -302,7 +302,7 @@ void KEditListWidget::setButtons(Buttons buttons)
     }
 
     if ((buttons & Add) && !d->servNewButton) {
-        d->servNewButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), tr("&Add"), this);
+        d->servNewButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), tr("&Add", "@action:button"), this);
         d->servNewButton->setEnabled(false);
         d->servNewButton->show();
         connect(d->servNewButton, &QAbstractButton::clicked, this, &KEditListWidget::addItem);
@@ -314,7 +314,7 @@ void KEditListWidget::setButtons(Buttons buttons)
     }
 
     if ((buttons & Remove) && !d->servRemoveButton) {
-        d->servRemoveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), tr("&Remove"), this);
+        d->servRemoveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), tr("&Remove", "@action:button"), this);
         d->servRemoveButton->setEnabled(false);
         d->servRemoveButton->show();
         connect(d->servRemoveButton, &QAbstractButton::clicked, this, &KEditListWidget::removeItem);
@@ -326,12 +326,12 @@ void KEditListWidget::setButtons(Buttons buttons)
     }
 
     if ((buttons & UpDown) && !d->servUpButton) {
-        d->servUpButton = new QPushButton(QIcon::fromTheme(QStringLiteral("arrow-up")), tr("Move &Up"), this);
+        d->servUpButton = new QPushButton(QIcon::fromTheme(QStringLiteral("arrow-up")), tr("Move &Up", "@action:button"), this);
         d->servUpButton->setEnabled(false);
         d->servUpButton->show();
         connect(d->servUpButton, &QAbstractButton::clicked, this, &KEditListWidget::moveItemUp);
 
-        d->servDownButton = new QPushButton(QIcon::fromTheme(QStringLiteral("arrow-down")), tr("Move &Down"), this);
+        d->servDownButton = new QPushButton(QIcon::fromTheme(QStringLiteral("arrow-down")), tr("Move &Down", "@action:button"), this);
         d->servDownButton->setEnabled(false);
         d->servDownButton->show();
         connect(d->servDownButton, &QAbstractButton::clicked, this, &KEditListWidget::moveItemDown);

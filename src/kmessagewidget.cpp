@@ -85,8 +85,8 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     QObject::connect(textLabel, &QLabel::linkHovered, q, &KMessageWidget::linkHovered);
 
     QAction *closeAction = new QAction(q);
-    closeAction->setText(KMessageWidget::tr("&Close"));
-    closeAction->setToolTip(KMessageWidget::tr("Close message"));
+    closeAction->setText(KMessageWidget::tr("&Close", "@action:button"));
+    closeAction->setToolTip(KMessageWidget::tr("Close message", "@info:tooltip"));
     QStyleOptionFrame opt;
     opt.initFrom(q);
     closeAction->setIcon(q->style()->standardIcon(QStyle::SP_DialogCloseButton, &opt, q));

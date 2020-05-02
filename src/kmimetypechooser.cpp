@@ -96,8 +96,8 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     d->mimeTypeTree->setModel(d->m_proxyModel);
 
     d->m_filterLineEdit = new QLineEdit(this);
-    d->m_filterLineEdit->setPlaceholderText(tr("Search for file type or filename pattern..."));
-    QLabel *filterLabel = new QLabel(tr("&Filter:"));
+    d->m_filterLineEdit->setPlaceholderText(tr("Search for file type or filename pattern...", "@info:placeholder"));
+    QLabel *filterLabel = new QLabel(tr("&Filter:", "@label:textbox"));
     filterLabel->setBuddy(d->m_filterLineEdit);
     connect(d->m_filterLineEdit, &QLineEdit::textChanged, this, [this](const QString &text) {
         d->m_proxyModel->setFilterRegularExpression(
@@ -111,14 +111,14 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     d->m_filterLineEdit->setFocus();
 
     vboxLayout->addWidget(d->mimeTypeTree);
-    QStringList headerLabels({tr("Mime Type")});
+    QStringList headerLabels({tr("MIME Type", "@title:column")});
 
     if (visuals & Comments) {
-        headerLabels.append(tr("Comment"));
+        headerLabels.append(tr("Comment", "@title:column"));
     }
 
     if (visuals & Patterns) {
-        headerLabels.append(tr("Patterns"));
+        headerLabels.append(tr("Patterns", "@title:column"));
     }
 
     d->m_model->setColumnCount(headerLabels.count());
@@ -134,7 +134,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     if (visuals & EditButton) {
         QHBoxLayout *buttonLayout = new QHBoxLayout();
         buttonLayout->addStretch(1);
-        d->btnEditMimeType = new QPushButton(tr("&Edit..."), this);
+        d->btnEditMimeType = new QPushButton(tr("&Edit...", "@action:button"), this);
         buttonLayout->addWidget(d->btnEditMimeType);
         d->btnEditMimeType->setEnabled(false);
 
@@ -144,7 +144,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
         connect(d->mimeTypeTree, &QTreeView::activated,
                 this, [this](const QModelIndex &index) { d->_k_slotCurrentChanged(index); });
 
-        d->btnEditMimeType->setToolTip(tr("Launch the KDE mime type editor."));
+        d->btnEditMimeType->setToolTip(tr("Launch the MIME type editor", "@info:tooltip"));
 
         vboxLayout->addLayout(buttonLayout);
     }

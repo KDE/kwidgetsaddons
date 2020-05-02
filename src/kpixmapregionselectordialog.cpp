@@ -69,11 +69,11 @@ KPixmapRegionSelectorDialog::KPixmapRegionSelectorDialog(QWidget *parent)
     : QDialog(parent),
       d(new Private(this))
 {
-    setWindowTitle(tr("Select Region of Image"));
+    setWindowTitle(tr("Select Region of Image", "@title:window"));
 
     QVBoxLayout *boxLayout = new QVBoxLayout(this);
 
-    QLabel *label = new QLabel(tr("Please click and drag on the image to select the region of interest:"), this);
+    QLabel *label = new QLabel(tr("Please click and drag on the image to select the region of interest:", "@label:chooser"), this);
     d->pixmapSelectorWidget = new KPixmapRegionSelectorWidget(this);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(this);

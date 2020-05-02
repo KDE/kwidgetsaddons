@@ -289,14 +289,14 @@ void KDatePicker::initWidget(const QDate &date_)
     d->todayButton = new QToolButton(this);
     d->todayButton->setIcon(QIcon::fromTheme(QStringLiteral("go-jump-today")));
 
-    d->yearForward->setToolTip(tr("Next year"));
-    d->yearBackward->setToolTip(tr("Previous year"));
-    d->monthForward->setToolTip(tr("Next month"));
-    d->monthBackward->setToolTip(tr("Previous month"));
-    d->selectWeek->setToolTip(tr("Select a week"));
-    d->selectMonth->setToolTip(tr("Select a month"));
-    d->selectYear->setToolTip(tr("Select a year"));
-    d->todayButton->setToolTip(tr("Select the current day"));
+    d->yearForward->setToolTip(tr("Next year", "@info:tooltip"));
+    d->yearBackward->setToolTip(tr("Previous year", "@info:tooltip"));
+    d->monthForward->setToolTip(tr("Next month", "@info:tooltip"));
+    d->monthBackward->setToolTip(tr("Previous month", "@info:tooltip"));
+    d->selectWeek->setToolTip(tr("Select a week", "@info:tooltip"));
+    d->selectMonth->setToolTip(tr("Select a month", "@info:tooltip"));
+    d->selectYear->setToolTip(tr("Select a year", "@info:tooltip"));
+    d->todayButton->setToolTip(tr("Select the current day", "@info:tooltip"));
 
     // -----
     setFontSize(d->fontsize);

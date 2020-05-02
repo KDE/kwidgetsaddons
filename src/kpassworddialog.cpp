@@ -60,7 +60,7 @@ KPasswordDialog::KPasswordDialog(QWidget *parent,
                                  const KPasswordDialogFlags &flags)
     : QDialog(parent), d(new KPasswordDialogPrivate(this))
 {
-    setWindowTitle(tr("Password"));
+    setWindowTitle(tr("Password", "@title:window"));
     setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-password"), windowIcon()));
     d->m_flags = flags;
     d->init();
