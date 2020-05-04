@@ -134,6 +134,11 @@ QString KPageWidgetItem::name() const
 
 void KPageWidgetItem::setHeader(const QString &header)
 {
+    const bool autoHeaderInvisibilityTriggered = header.isEmpty() & !header.isNull();
+    if (autoHeaderInvisibilityTriggered) {
+        qCWarning(KWidgetsAddonsLog) << "KPageWidgetItem::setHeader() called with empty non-null string, which is deprecated. Use KPageWidgetItem::setHeaderVisible(false) instead.";
+    }
+
     d->header = header;
 
     emit changed();
