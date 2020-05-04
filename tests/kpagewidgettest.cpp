@@ -128,10 +128,10 @@ void KPageWidgetTest::addPage()
 {
     static int counter = 0;
 
-    const QString title = QString(QStringLiteral("dynamic folder %1")).arg(QString::number(counter));
+    const QString title = QStringLiteral("dynamic folder %1").arg(QString::number(counter));
     KPageWidgetItem *item = mWidget->addPage(new QPushButton(title), title);
     item->setIcon(QIcon::fromTheme(QStringLiteral("folder")));
-    item->setHeader(QString(QStringLiteral("Header Test No. %1")).arg(QString::number(counter)));
+    item->setHeader(QStringLiteral("Header Test No. %1").arg(QString::number(counter)));
     item->setCheckable(true);
 
     counter++;
@@ -146,7 +146,7 @@ void KPageWidgetTest::addSubPage()
         return;
     }
 
-    const QString title = QString(QStringLiteral("subfolder %1")).arg(QString::number(counter));
+    const QString title = QStringLiteral("subfolder %1").arg(QString::number(counter));
     item = mWidget->addSubPage(item, new QLabel(title), title);
     item->setIcon(QIcon::fromTheme(QStringLiteral("folder")));
 
@@ -162,7 +162,7 @@ void KPageWidgetTest::insertPage()
         return;
     }
 
-    const QString title = QString(QStringLiteral("before folder %1")).arg(QString::number(counter));
+    const QString title = QStringLiteral("before folder %1").arg(QString::number(counter));
     item = mWidget->insertPage(item, new QLabel(title), title);
     item->setIcon(QIcon::fromTheme(QStringLiteral("folder")));
 
