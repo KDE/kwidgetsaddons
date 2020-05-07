@@ -393,7 +393,8 @@ void KPageView::setModel(QAbstractItemModel *model)
 
 QAbstractItemModel *KPageView::model() const
 {
-    return d_func()->model;
+    Q_D(const KPageView);
+    return d->model;
 }
 
 void KPageView::setFaceType(FaceType faceType)
@@ -406,7 +407,8 @@ void KPageView::setFaceType(FaceType faceType)
 
 KPageView::FaceType KPageView::faceType() const
 {
-    return d_func()->faceType;
+    Q_D(const KPageView);
+    return d->faceType;
 }
 
 void KPageView::setCurrentPage(const QModelIndex &index)

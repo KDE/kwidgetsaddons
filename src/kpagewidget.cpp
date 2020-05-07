@@ -81,43 +81,59 @@ KPageWidget::~KPageWidget()
 
 KPageWidgetItem *KPageWidget::addPage(QWidget *widget, const QString &name)
 {
-    return d_func()->model()->addPage(widget, name);
+    Q_D(KPageWidget);
+
+    return d->model()->addPage(widget, name);
 }
 
 void KPageWidget::addPage(KPageWidgetItem *item)
 {
-    d_func()->model()->addPage(item);
+    Q_D(KPageWidget);
+
+    d->model()->addPage(item);
 }
 
 KPageWidgetItem *KPageWidget::insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name)
 {
-    return d_func()->model()->insertPage(before, widget, name);
+    Q_D(KPageWidget);
+
+    return d->model()->insertPage(before, widget, name);
 }
 
 void KPageWidget::insertPage(KPageWidgetItem *before, KPageWidgetItem *item)
 {
-    d_func()->model()->insertPage(before, item);
+    Q_D(KPageWidget);
+
+    d->model()->insertPage(before, item);
 }
 
 KPageWidgetItem *KPageWidget::addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name)
 {
-    return d_func()->model()->addSubPage(parent, widget, name);
+    Q_D(KPageWidget);
+
+    return d->model()->addSubPage(parent, widget, name);
 }
 
 void KPageWidget::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item)
 {
-    d_func()->model()->addSubPage(parent, item);
+    Q_D(KPageWidget);
+
+    d->model()->addSubPage(parent, item);
 }
 
 void KPageWidget::removePage(KPageWidgetItem *item)
 {
+    Q_D(KPageWidget);
+
     emit pageRemoved(item); // Q_EMIT signal before we remove it, because the item will be deleted in the model
-    d_func()->model()->removePage(item);
+    d->model()->removePage(item);
 }
 
 void KPageWidget::setCurrentPage(KPageWidgetItem *item)
 {
-    const QModelIndex index = d_func()->model()->index(item);
+    Q_D(KPageWidget);
+
+    const QModelIndex index = d->model()->index(item);
     if (!index.isValid()) {
         return;
     }
@@ -127,13 +143,15 @@ void KPageWidget::setCurrentPage(KPageWidgetItem *item)
 
 KPageWidgetItem *KPageWidget::currentPage() const
 {
+    Q_D(const KPageWidget);
+
     const QModelIndex index = KPageView::currentPage();
 
     if (!index.isValid()) {
         return nullptr;
     }
 
-    return d_func()->model()->item(index);
+    return d->model()->item(index);
 }
 
 #include "moc_kpagewidget.cpp"

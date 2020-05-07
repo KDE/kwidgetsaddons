@@ -81,8 +81,9 @@ KPageDialog::~KPageDialog()
 
 void KPageDialog::setFaceType(FaceType faceType)
 {
-    KPageWidget *pageWidget = d_func()->mPageWidget;
-    pageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
+    Q_D(KPageDialog);
+
+    d->mPageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
 
     // Use zero margins for dialogs with the sidebar style so that the sidebar
     // can be flush with the window edge; margins for the content are added
@@ -90,7 +91,7 @@ void KPageDialog::setFaceType(FaceType faceType)
     if (faceType == KPageDialog::Auto || faceType == KPageDialog::List){
         layout()->setContentsMargins(0, 0, 0, 0);
     } else {
-        const QStyle *style = pageWidget->style();
+        const QStyle *style = d->mPageWidget->style();
         layout()->setContentsMargins(
             style->pixelMetric(QStyle::PM_LayoutLeftMargin),
             style->pixelMetric(QStyle::PM_LayoutTopMargin),
@@ -102,95 +103,131 @@ void KPageDialog::setFaceType(FaceType faceType)
 
 KPageWidgetItem *KPageDialog::addPage(QWidget *widget, const QString &name)
 {
-    return d_func()->mPageWidget->addPage(widget, name);
+    Q_D(KPageDialog);
+
+    return d->mPageWidget->addPage(widget, name);
 }
 
 void KPageDialog::addPage(KPageWidgetItem *item)
 {
-    d_func()->mPageWidget->addPage(item);
+    Q_D(KPageDialog);
+
+    d->mPageWidget->addPage(item);
 }
 
 KPageWidgetItem *KPageDialog::insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name)
 {
-    return d_func()->mPageWidget->insertPage(before, widget, name);
+    Q_D(KPageDialog);
+
+    return d->mPageWidget->insertPage(before, widget, name);
 }
 
 void KPageDialog::insertPage(KPageWidgetItem *before, KPageWidgetItem *item)
 {
-    d_func()->mPageWidget->insertPage(before, item);
+    Q_D(KPageDialog);
+
+    d->mPageWidget->insertPage(before, item);
 }
 
 KPageWidgetItem *KPageDialog::addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name)
 {
-    return d_func()->mPageWidget->addSubPage(parent, widget, name);
+    Q_D(KPageDialog);
+
+    return d->mPageWidget->addSubPage(parent, widget, name);
 }
 
 void KPageDialog::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item)
 {
-    d_func()->mPageWidget->addSubPage(parent, item);
+    Q_D(KPageDialog);
+
+    d->mPageWidget->addSubPage(parent, item);
 }
 
 void KPageDialog::removePage(KPageWidgetItem *item)
 {
-    d_func()->mPageWidget->removePage(item);
+    Q_D(KPageDialog);
+
+    d->mPageWidget->removePage(item);
 }
 
 void KPageDialog::setCurrentPage(KPageWidgetItem *item)
 {
-    d_func()->mPageWidget->setCurrentPage(item);
+    Q_D(KPageDialog);
+
+    d->mPageWidget->setCurrentPage(item);
 }
 
 KPageWidgetItem *KPageDialog::currentPage() const
 {
-    return d_func()->mPageWidget->currentPage();
+    Q_D(const KPageDialog);
+
+    return d->mPageWidget->currentPage();
 }
 
 void KPageDialog::setStandardButtons(QDialogButtonBox::StandardButtons buttons)
 {
-    d_func()->mButtonBox->setStandardButtons(buttons);
+    Q_D(KPageDialog);
+
+    d->mButtonBox->setStandardButtons(buttons);
 }
 
 QPushButton *KPageDialog::button(QDialogButtonBox::StandardButton which) const
 {
-    return d_func()->mButtonBox->button(which);
+    Q_D(const KPageDialog);
+
+    return d->mButtonBox->button(which);
 }
 
 void KPageDialog::addActionButton(QAbstractButton *button)
 {
-    d_func()->mButtonBox->addButton(button, QDialogButtonBox::ActionRole);
+    Q_D(KPageDialog);
+
+    d->mButtonBox->addButton(button, QDialogButtonBox::ActionRole);
 }
 
 KPageWidget *KPageDialog::pageWidget()
 {
-    return d_func()->mPageWidget;
+    Q_D(KPageDialog);
+
+    return d->mPageWidget;
 }
 
 void KPageDialog::setPageWidget(KPageWidget *widget)
 {
-    delete d_func()->mPageWidget;
-    d_func()->mPageWidget = widget;
-    d_func()->init();
+    Q_D(KPageDialog);
+
+    delete d->mPageWidget;
+    d->mPageWidget = widget;
+    d->init();
 }
 
 const KPageWidget *KPageDialog::pageWidget() const
 {
-    return d_func()->mPageWidget;
+    Q_D(const KPageDialog);
+
+    return d->mPageWidget;
 }
 
 QDialogButtonBox *KPageDialog::buttonBox()
 {
-    return d_func()->mButtonBox;
+    Q_D(KPageDialog);
+
+    return d->mButtonBox;
 }
 
 const QDialogButtonBox *KPageDialog::buttonBox() const
 {
-    return d_func()->mButtonBox;
+    Q_D(const KPageDialog);
+
+    return d->mButtonBox;
 }
 
 void KPageDialog::setButtonBox(QDialogButtonBox *box)
 {
-    delete d_func()->mButtonBox;
-    d_func()->mButtonBox = box;
-    d_func()->init();
+    Q_D(KPageDialog);
+
+    delete d->mButtonBox;
+    d->mButtonBox = box;
+    d->init();
 }
 

@@ -362,12 +362,14 @@ Qt::ItemFlags KPageWidgetModel::flags(const QModelIndex &index) const
 
 QModelIndex KPageWidgetModel::index(int row, int column, const QModelIndex &parent) const
 {
+    Q_D(const KPageWidgetModel);
+
     PageItem *parentItem;
 
     if (parent.isValid()) {
         parentItem = static_cast<PageItem *>(parent.internalPointer());
     } else {
-        parentItem = d_func()->rootItem;
+        parentItem = d->rootItem;
     }
 
     PageItem *childItem = parentItem->child(row);
@@ -380,6 +382,8 @@ QModelIndex KPageWidgetModel::index(int row, int column, const QModelIndex &pare
 
 QModelIndex KPageWidgetModel::parent(const QModelIndex &index) const
 {
+    Q_D(const KPageWidgetModel);
+
     if (!index.isValid()) {
         return QModelIndex();
     }
@@ -387,7 +391,7 @@ QModelIndex KPageWidgetModel::parent(const QModelIndex &index) const
     PageItem *item = static_cast<PageItem *>(index.internalPointer());
     PageItem *parentItem = item->parent();
 
-    if (parentItem == d_func()->rootItem) {
+    if (parentItem == d->rootItem) {
         return QModelIndex();
     } else {
         return createIndex(parentItem->row(), 0, parentItem);
@@ -396,10 +400,12 @@ QModelIndex KPageWidgetModel::parent(const QModelIndex &index) const
 
 int KPageWidgetModel::rowCount(const QModelIndex &parent) const
 {
+    Q_D(const KPageWidgetModel);
+
     PageItem *parentItem;
 
     if (!parent.isValid()) {
-        parentItem = d_func()->rootItem;
+        parentItem = d->rootItem;
     } else {
         parentItem = static_cast<PageItem *>(parent.internalPointer());
     }
@@ -448,7 +454,9 @@ KPageWidgetItem *KPageWidgetModel::insertPage(KPageWidgetItem *before, QWidget *
 
 void KPageWidgetModel::insertPage(KPageWidgetItem *before, KPageWidgetItem *item)
 {
-    PageItem *beforePageItem = d_func()->rootItem->findChild(before);
+    Q_D(KPageWidgetModel);
+
+    PageItem *beforePageItem = d->rootItem->findChild(before);
     if (!beforePageItem) {
         qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
@@ -464,7 +472,7 @@ void KPageWidgetModel::insertPage(KPageWidgetItem *before, KPageWidgetItem *item
     int row = beforePageItem->row();
 
     QModelIndex index;
-    if (parent != d_func()->rootItem) {
+    if (parent != d->rootItem) {
         index = createIndex(parent->row(), 0, parent);
     }
 
@@ -489,7 +497,9 @@ KPageWidgetItem *KPageWidgetModel::addSubPage(KPageWidgetItem *parent, QWidget *
 
 void KPageWidgetModel::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item)
 {
-    PageItem *parentPageItem = d_func()->rootItem->findChild(parent);
+    Q_D(KPageWidgetModel);
+
+    PageItem *parentPageItem = d->rootItem->findChild(parent);
     if (!parentPageItem) {
         qCDebug(KWidgetsAddonsLog, "Invalid KPageWidgetItem passed!");
         return;
@@ -504,7 +514,7 @@ void KPageWidgetModel::addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item
     int row = parentPageItem->childCount();
 
     QModelIndex index;
-    if (parentPageItem != d_func()->rootItem) {
+    if (parentPageItem != d->rootItem) {
         index = createIndex(parentPageItem->row(), 0, parentPageItem);
     }
 
@@ -571,11 +581,13 @@ KPageWidgetItem *KPageWidgetModel::item(const QModelIndex &index) const
 
 QModelIndex KPageWidgetModel::index(const KPageWidgetItem *item) const
 {
+    Q_D(const KPageWidgetModel);
+
     if (!item) {
         return QModelIndex();
     }
 
-    const PageItem *pageItem = d_func()->rootItem->findChild(item);
+    const PageItem *pageItem = d->rootItem->findChild(item);
     if (!pageItem) {
         return QModelIndex();
     }
