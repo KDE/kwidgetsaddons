@@ -86,6 +86,7 @@ protected:
     void cleanupPages();
     QList<QWidget *> collectPages(const QModelIndex &parent = QModelIndex());
     KPageView::FaceType detectAutoFace() const;
+    KPageView::FaceType effectiveFaceType() const;
 
     // private slots
     void _k_rebuildGui();

@@ -174,6 +174,15 @@ QList<QWidget *> KPageViewPrivate::collectPages(const QModelIndex &parentIndex)
     return retval;
 }
 
+KPageView::FaceType KPageViewPrivate::effectiveFaceType() const
+{
+    if (faceType == KPageView::Auto) {
+        return detectAutoFace();
+    }
+
+    return faceType;
+}
+
 KPageView::FaceType KPageViewPrivate::detectAutoFace() const
 {
     if (!model) {
@@ -516,39 +525,28 @@ QWidget *KPageView::pageFooter() const
 QAbstractItemView *KPageView::createView()
 {
     Q_D(KPageView);
-    if (d->faceType == Auto) {
-        const FaceType faceType = d->detectAutoFace();
+    const FaceType faceType = d->effectiveFaceType();
 
-        if (faceType == Plain) {
-            return new KDEPrivate::KPagePlainView(this);
-        } else if (faceType == List) {
-            return new KDEPrivate::KPageListView(this);
-        } else if (faceType == Tree) {
-            return new KDEPrivate::KPageTreeView(this);
-        } else { // should never happen
-            return nullptr;
-        }
-    } else if (d->faceType == Plain) {
+    if (faceType == Plain) {
         return new KDEPrivate::KPagePlainView(this);
-    } else if (d->faceType == List) {
-        return new KDEPrivate::KPageListView(this);
-    } else if (d->faceType == Tree) {
-        return new KDEPrivate::KPageTreeView(this);
-    } else if (d->faceType == Tabbed) {
-        return new KDEPrivate::KPageTabbedView(this);
-    } else {
-        return nullptr;
     }
+    if (faceType == List) {
+        return new KDEPrivate::KPageListView(this);
+    }
+    if (faceType == Tree) {
+        return new KDEPrivate::KPageTreeView(this);
+    }
+    if (faceType == Tabbed) {
+        return new KDEPrivate::KPageTabbedView(this);
+    }
+
+    return nullptr;
 }
 
 bool KPageView::showPageHeader() const
 {
     Q_D(const KPageView);
-    FaceType faceType = d->faceType;
-
-    if (faceType == Auto) {
-        faceType = d->detectAutoFace();
-    }
+    const FaceType faceType = d->effectiveFaceType();
 
     if (faceType == Tabbed) {
         return false;
@@ -560,11 +558,7 @@ bool KPageView::showPageHeader() const
 Qt::Alignment KPageView::viewPosition() const
 {
     Q_D(const KPageView);
-    FaceType faceType = d->faceType;
-
-    if (faceType == Auto) {
-        faceType = d->detectAutoFace();
-    }
+    const FaceType faceType = d->effectiveFaceType();
 
     if (faceType == Plain || faceType == Tabbed) {
         return Qt::AlignTop;
