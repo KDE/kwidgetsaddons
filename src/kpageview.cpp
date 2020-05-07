@@ -349,9 +349,8 @@ void KPageViewPrivate::init()
  * KPageView Implementation
  */
 KPageView::KPageView(QWidget *parent)
-    : QWidget(parent), d_ptr(new KPageViewPrivate(this))
+    : KPageView(*new KPageViewPrivate(this), parent)
 {
-    d_ptr->init();
 }
 
 KPageView::KPageView(KPageViewPrivate &dd, QWidget *parent)

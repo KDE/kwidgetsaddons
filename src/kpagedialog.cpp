@@ -29,32 +29,14 @@
 #include <QStyle>
 
 KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
-    : QDialog(parent, flags),
-      d_ptr(new KPageDialogPrivate(this))
+    : KPageDialog(*new KPageDialogPrivate(this), nullptr, parent, flags)
 {
-    Q_D(KPageDialog);
-    d->mPageWidget = new KPageWidget(this);
-
-    d->mButtonBox = new QDialogButtonBox(this);
-    d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));
-    d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-
-    d->init();
 }
 
 KPageDialog::KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags)
-    : QDialog(parent, flags),
-      d_ptr(new KPageDialogPrivate(this))
+    : KPageDialog(*new KPageDialogPrivate(this), widget, parent, flags)
 {
-    Q_D(KPageDialog);
     Q_ASSERT(widget);
-    widget->setParent(this);
-    d->mPageWidget = widget;
-    d->mButtonBox = new QDialogButtonBox(this);
-    d->mButtonBox->setObjectName(QStringLiteral("buttonbox"));
-    d->mButtonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-
-    d->init();
 }
 
 KPageDialog::KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags)
