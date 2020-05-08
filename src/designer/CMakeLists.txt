@@ -79,7 +79,7 @@ ecm_qtdesignerplugin_widget(KMessageWidget
     GROUP "Display (KF5)"
 )
 ecm_qtdesignerplugin_widget(KMimeTypeChooser
-    TOOLTIP "Provides a checkable list of all available mimetypes."
+    TOOLTIP "Provides a checkable list of all available MIME types."
     CONSTRUCTOR_ARGS_CODE "(QString(), QStringList(), QString(), QStringList(), KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns, parent)"
     GROUP "Input (KF5)"
 )

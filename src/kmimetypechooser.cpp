@@ -270,7 +270,7 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
     // KF5 TODO: use a QFileSystemWatcher on one of the shared-mime-info generated files, instead.
     //q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
     //            q, SLOT(_k_slotSycocaDatabaseChanged(QStringList)) );
-#pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a mimetype")
+#pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a MIME type")
     // or a better idea: a QMimeDatabaseWatcher class in Qt itself
 
 }

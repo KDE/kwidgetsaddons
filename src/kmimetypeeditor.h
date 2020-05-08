@@ -32,7 +32,7 @@ namespace KMimeTypeEditor
 {
     /**
      * Starts the file types editor for a given MIME type.
-     * @param mimeType the mimetype to edit, e.g. "text/plain"
+     * @param mimeType the MIME type to edit, e.g. "text/plain"
      * @param widget the parent widget
      * @since 5.4
      */

@@ -46,8 +46,8 @@ bool LineEditUrlDropEventFilter::eventFilter(QObject *obj, QEvent *ev)
     }
     QDropEvent *dropEv = static_cast<QDropEvent *>(ev);
 
-    //Handle only url drops, we check the mimetype for the standard or kde's urllist
-    //It would be interesting to handle urls that don't have any mimetype set (like a drag and drop from kate)
+    //Handle only url drops, we check the MIME type for the standard or kde's urllist
+    //It would be interesting to handle urls that don't have any MIME type set (like a drag and drop from kate)
     const QMimeData *data = dropEv->mimeData();
     if (!data->hasUrls() && !data->hasFormat(QLatin1String(s_kdeUriListMime))) {
         return false;
