@@ -46,17 +46,22 @@ public:
 
     State validate(QString &text, int &) const override
     {
+        return toDate(text).isValid() ? QValidator::Acceptable : QValidator::Intermediate;
+    }
+
+    QDate toDate(const QString &text) const
+    {
         QLocale::FormatType formats[] = { QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat };
         QLocale locale = picker->locale();
 
+        QDate date;
         for (int i = 0; i < 3; i++) {
-            QDate tmp = locale.toDate(text, formats[i]);
-            if (tmp.isValid()) {
-                return Acceptable;
+            date = locale.toDate(text, formats[i]);
+            if (date.isValid()) {
+                break;
             }
         }
-
-        return QValidator::Intermediate;
+        return date;
     }
 
 private:
@@ -542,7 +547,7 @@ KDateTable *KDatePicker::dateTable() const
 
 void KDatePicker::lineEnterPressed()
 {
-    QDate newDate = QDate::fromString(d->line->text(), locale().dateFormat());
+    const QDate newDate = d->val->toDate(d->line->text());
 
     if (newDate.isValid()) {
         emit dateEntered(newDate);
