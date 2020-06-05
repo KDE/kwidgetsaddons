@@ -141,7 +141,11 @@ void KNewPasswordDialog::setPixmap(const QPixmap &pixmap)
 
 QPixmap KNewPasswordDialog::pixmap() const
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+    return d->ui.labelIcon->pixmap(Qt::ReturnByValue);
+#else
     return *d->ui.labelIcon->pixmap();
+#endif
 }
 #endif
 
