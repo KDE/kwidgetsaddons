@@ -179,9 +179,11 @@ void KToolTipWidget::showAt(const QPoint &pos, QWidget *content, QWindow *transi
 void KToolTipWidget::showBelow(const QRect &rect, QWidget *content, QWindow *transientParent)
 {
     d->addWidget(content);
+    auto *style = content->style();
     const QSize marginSize{
-        2 * content->style()->pixelMetric(QStyle::PM_DefaultTopLevelMargin),
-        2 * content->style()->pixelMetric(QStyle::PM_DefaultTopLevelMargin)};
+        style->pixelMetric(QStyle::PM_LayoutLeftMargin) + style->pixelMetric(QStyle::PM_LayoutRightMargin),
+        style->pixelMetric(QStyle::PM_LayoutTopMargin) + style->pixelMetric(QStyle::PM_LayoutBottomMargin)
+    };
     content->setMaximumSize(transientParent->screen()->geometry().size() - marginSize);
     d->show(d->centerBelow(rect, transientParent->screen()), transientParent);
 }
