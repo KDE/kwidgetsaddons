@@ -241,7 +241,7 @@ KDatePicker::KDatePicker(const QDate &date_, QWidget *parent)
 
 void KDatePicker::initWidget(const QDate &date_)
 {
-    const int spacingHint = style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
+    const int horizontalSpacing = style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing);
 
     QBoxLayout *topLayout = new QVBoxLayout(this);
     topLayout->setSpacing(0);
@@ -258,7 +258,7 @@ void KDatePicker::initWidget(const QDate &date_)
     d->monthBackward = new QToolButton(this);
     d->monthBackward ->setAutoRaise(true);
     d->navigationLayout->addWidget(d->monthBackward);
-    d->navigationLayout->addSpacing(spacingHint);
+    d->navigationLayout->addSpacing(horizontalSpacing);
 
     d->selectMonth = new QToolButton(this);
     d->selectMonth ->setAutoRaise(true);
@@ -267,7 +267,7 @@ void KDatePicker::initWidget(const QDate &date_)
     d->selectYear->setCheckable(true);
     d->selectYear->setAutoRaise(true);
     d->navigationLayout->addWidget(d->selectYear);
-    d->navigationLayout->addSpacing(spacingHint);
+    d->navigationLayout->addSpacing(horizontalSpacing);
 
     d->monthForward = new QToolButton(this);
     d->monthForward ->setAutoRaise(true);
@@ -637,8 +637,8 @@ void KDatePicker::setCloseButton(bool enable)
     if (enable) {
         d->closeButton = new QToolButton(this);
         d->closeButton->setAutoRaise(true);
-        const int spacingHint = style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-        d->navigationLayout->addSpacing(spacingHint);
+        const int horizontalSpacing = style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing);
+        d->navigationLayout->addSpacing(horizontalSpacing);
         d->navigationLayout->addWidget(d->closeButton);
         d->closeButton->setToolTip(tr("Close", "@action:button"));
         d->closeButton->setIcon(QIcon::fromTheme(QStringLiteral("window-close")));

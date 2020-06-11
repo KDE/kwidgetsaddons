@@ -200,8 +200,9 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
 
     QWidget *mainWidget = new QWidget(dialog);
     QVBoxLayout *mainLayout = new QVBoxLayout(mainWidget);
-    const int spacingHint = mainWidget->style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-    mainLayout->setSpacing(spacingHint * 2); // provide extra spacing
+    const int verticalSpacing = mainWidget->style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing);
+    const int horizontalSpacing = mainWidget->style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing);
+    mainLayout->setSpacing(verticalSpacing * 2); // provide extra spacing
     mainLayout->setContentsMargins(0, 0, 0, 0);
     buttons->setParent(dialog);
 
@@ -224,7 +225,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
     iconLayout->addStretch(5);
 
     hLayout->addLayout(iconLayout, 0);
-    hLayout->addSpacing(spacingHint);
+    hLayout->addSpacing(horizontalSpacing);
 
     QLabel *messageLabel = new QLabel(text, mainWidget);
     messageLabel->setOpenExternalLinks(options & KMessageBox::AllowLink);
@@ -310,7 +311,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
 
     if (!details.isEmpty()) {
         QHBoxLayout *detailsHLayout = new QHBoxLayout();
-        detailsHLayout->addSpacing(2 * spacingHint + iconLayout->sizeHint().width());
+        detailsHLayout->addSpacing(2 * horizontalSpacing + iconLayout->sizeHint().width());
         KCollapsibleGroupBox *detailsGroup = new KCollapsibleGroupBox();
         detailsGroup->setTitle(QApplication::translate("KMessageBox", "Details"));
         QVBoxLayout *detailsLayout = new QVBoxLayout(detailsGroup);

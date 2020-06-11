@@ -177,8 +177,9 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     // part with a preview of the selected font
     QVBoxLayout *mainLayout = new QVBoxLayout(q);
     mainLayout->setContentsMargins(0, 0, 0, 0);
-    const int spacingHint = q->style()->pixelMetric(QStyle::PM_DefaultLayoutSpacing);
-    int checkBoxGap = spacingHint / 2;
+    auto *style = q->style();
+    const int sizeListBoxGap = style->pixelMetric(QStyle::PM_LayoutVerticalSpacing) / 2;
+    const int checkBoxGap = style->pixelMetric(QStyle::PM_LayoutHorizontalSpacing) / 2;
 
     // Build the grid of font attribute widgets for the upper part of mainLayout
     QWidget *page;
@@ -310,7 +311,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
         sizeIsRelativeCheckBox = new QCheckBox(sizeIsRelativeCBText, page);
         sizeIsRelativeCheckBox->setTristate(flags & ShowDifferences);
         QGridLayout *sizeLayout2 = new QGridLayout();
-        sizeLayout2->setSpacing(spacingHint / 2);
+        sizeLayout2->setVerticalSpacing(sizeListBoxGap);
         gridLayout->addLayout(sizeLayout2, row, 2);
         sizeLayout2->setColumnStretch(1, 1);   // to prevent text from eating the right border
         sizeLayout2->addWidget(sizeOfFont, 0, 0, 1, 2);
@@ -321,7 +322,7 @@ void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &f
     } else {
         sizeIsRelativeCheckBox = nullptr;
         QGridLayout *sizeLayout2 = new QGridLayout();
-        sizeLayout2->setSpacing(spacingHint / 2);
+        sizeLayout2->setVerticalSpacing(sizeListBoxGap);
         gridLayout->addLayout(sizeLayout2, row, 2);
         sizeLayout2->addWidget(sizeOfFont, 0, 0);
         sizeLayout2->addWidget(sizeListBox, 1, 0);
