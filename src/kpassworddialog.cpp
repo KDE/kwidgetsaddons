@@ -253,8 +253,10 @@ void KPasswordDialog::addCommentLine(const QString &label,
         if (li) {
             QLabel *l = qobject_cast<QLabel *>(li->widget());
             if (l && l->wordWrap()) {
-                const int marginHint = style()->pixelMetric(QStyle::PM_DefaultChildMargin);
-                int w = sizeHint().width() - firstColumnWidth - (2 * marginHint) - gridMarginLeft - gridMarginRight - spacing;
+                auto *style = this->style();
+                const int leftMargin = style->pixelMetric(QStyle::PM_LayoutLeftMargin);
+                const int rightMargin = style->pixelMetric(QStyle::PM_LayoutRightMargin);
+                int w = sizeHint().width() - firstColumnWidth - leftMargin - rightMargin - gridMarginLeft - gridMarginRight - spacing;
                 l->setMinimumSize(w, l->heightForWidth(w));
             }
         }
@@ -303,8 +305,10 @@ void KPasswordDialog::setPrompt(const QString &prompt)
 {
     d->ui.prompt->setText(prompt);
     d->ui.prompt->setWordWrap(true);
-    const int marginHint = style()->pixelMetric(QStyle::PM_DefaultChildMargin);
-    d->ui.prompt->setMinimumHeight(d->ui.prompt->heightForWidth(width() - (2 * marginHint)));
+    auto *style = this->style();
+    const int leftMarginHint = style->pixelMetric(QStyle::PM_LayoutLeftMargin);
+    const int rightMarginHint = style->pixelMetric(QStyle::PM_LayoutRightMargin);
+    d->ui.prompt->setMinimumHeight(d->ui.prompt->heightForWidth(width() - leftMarginHint - rightMarginHint));
 }
 
 QString KPasswordDialog::prompt() const
