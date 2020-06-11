@@ -24,7 +24,6 @@
 #include "ksplittercollapserbutton.h"
 
 // Qt
-#include <QApplication>
 #include <QEvent>
 #include <QSplitter>
 #include <QStyleOptionToolButton>
@@ -278,7 +277,7 @@ QSize KSplitterCollapserButton::sizeHint() const
     if (d->isVertical()) {
         sh.transpose();
     }
-    return sh.expandedTo(QApplication::globalStrut());
+    return sh;
 }
 
 void KSplitterCollapserButton::slotClicked()
