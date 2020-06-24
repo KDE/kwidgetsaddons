@@ -228,9 +228,12 @@ protected:
     */
     KMultiTabBarButton(const QIcon &icon, const QString &, int id, QWidget *parent);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
     /** Should not be created directly. Use KMultiTabBar::appendButton
     */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use overload with QIcon")
     KMultiTabBarButton(const QPixmap &pic, const QString &, int id, QWidget *parent);
+#endif
 private:
     friend class KMultiTabBar;
 
@@ -270,8 +273,17 @@ public Q_SLOTS:
      */
     void setState(bool state);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use KMultiTabBar::setIcon(const QIcon&)")
     void setIcon(const QString &);
+#endif
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use KMultiTabBar::setIcon(const QIcon&)")
     void setIcon(const QPixmap &);
+#endif
+public:
+    using KMultiTabBarButton::setIcon;
+
 protected:
     void paintEvent(QPaintEvent *) override;
 private:
@@ -292,11 +304,14 @@ private:
      */
     KMultiTabBarTab(const QIcon &icon, const QString &, int id, QWidget *parent,
                     KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use overload with QIcon")
     KMultiTabBarTab(const QPixmap &pic, const QString &, int id, QWidget *parent,
                     KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
+#endif
     KMultiTabBarTabPrivate *const d;
 };
 

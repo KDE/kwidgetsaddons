@@ -158,6 +158,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
     Q_UNUSED(d);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
                                        int id, QWidget *parent)
     : QPushButton(QIcon(pic), text, parent), m_id(id), d(nullptr)
@@ -171,6 +172,7 @@ KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
     setAttribute(Qt::WA_LayoutUsesWidgetRect);
     Q_UNUSED(d);
 }
+#endif
 
 KMultiTabBarButton::~KMultiTabBarButton()
 {
@@ -238,6 +240,7 @@ KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon, const QString &text,
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic, const QString &text,
                                  int id, QWidget *parent,
                                  KMultiTabBar::KMultiTabBarPosition pos,
@@ -250,6 +253,7 @@ KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic, const QString &text,
     // shrink down to icon only, but prefer to show text if it's there
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 }
+#endif
 
 KMultiTabBarTab::~KMultiTabBarTab()
 {
@@ -374,17 +378,20 @@ void KMultiTabBarTab::setState(bool newState)
     updateGeometry();
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 void KMultiTabBarTab::setIcon(const QString &icon)
 {
     const QIcon i = QIcon::fromTheme(icon);
-    const int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, nullptr, this);
-    setIcon(i.pixmap(iconSize));
+    setIcon(i);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 void KMultiTabBarTab::setIcon(const QPixmap &icon)
 {
     QPushButton::setIcon(icon);
 }
+#endif
 
 bool KMultiTabBarTab::shouldDrawText() const
 {
