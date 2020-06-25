@@ -100,13 +100,13 @@ public:
      * append  a new button to the button area. The button can later on be accessed with button(ID)
      * eg for connecting signals to it
      *
-     * @deprecated since 5.13, use the appendButton() with QIcon
-     *
      * @param pic a pixmap for the button
      * @param id an arbitraty ID value. It will be emitted in the clicked signal for identifying the button
      *  if more than one button is connected to a signals.
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future
+     *
+     * @deprecated Since 5.13, use appendButton(const QIcon &, int, QMenu *, const QString &)
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 13, "Use KMultiTabBar::appendButton(const QIcon&, ...)")
     int appendButton(const QPixmap &pic, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
@@ -130,11 +130,11 @@ public:
     /**
      * append a new tab to the tab area. It can be accessed lateron with tabb(id);
      *
-     * @deprecated since 5.13, use the appendTab() with QIcon
-     *
      * @param pic a bitmap for the tab
      * @param id an arbitrary ID which can be used later on to identify the tab
      * @param text if a mode with text is used it will be the tab text, otherwise a mouse over hint
+     *
+     * @deprecated Since 5.13, use appendTab(const QIcon &, int, const QString &)
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 13, "Use KMultiTabBar::appendTab(const QIcon&, ...)")
     int appendTab(const QPixmap &pic, int id = -1, const QString &text = QString());
