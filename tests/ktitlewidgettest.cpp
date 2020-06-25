@@ -34,7 +34,8 @@ public:
 
         KTitleWidget *titleWidget = new KTitleWidget(this);
         titleWidget->setText(QStringLiteral("Title"));
-        titleWidget->setPixmap(QIcon::fromTheme(QStringLiteral("screen")).pixmap(22, 22), KTitleWidget::ImageLeft);
+        titleWidget->setIconSize(QSize(22, 22));
+        titleWidget->setIcon(QIcon::fromTheme(QStringLiteral("kde")), KTitleWidget::ImageLeft);
 
         mainLayout->addWidget(titleWidget);
 

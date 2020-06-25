@@ -33,9 +33,11 @@ class Q_DECL_HIDDEN KTitleWidget::Private
 {
 public:
     Private(KTitleWidget *parent)
-        : q(parent),
-          autoHideTimeout(0),
-          messageType(InfoMessage)
+        : q(parent)
+          // use Left so updateIconAlignment(ImageRight) as called by constructor triggers the default layout
+        , iconAlignment(KTitleWidget::ImageLeft)
+        , autoHideTimeout(0)
+        , messageType(InfoMessage)
     {
     }
 
@@ -82,12 +84,49 @@ public:
         return styleSheet;
     }
 
+    void updateIconAlignment(KTitleWidget::ImageAlignment newIconAlignment)
+    {
+        if (iconAlignment == newIconAlignment) {
+            return;
+        }
+
+        iconAlignment = newIconAlignment;
+
+        headerLayout->removeWidget(textLabel);
+        headerLayout->removeWidget(commentLabel);
+        headerLayout->removeWidget(imageLabel);
+
+        if (iconAlignment == ImageLeft) {
+            // swap the text and image labels around
+            headerLayout->addWidget(imageLabel, 0, 0, 2, 1);
+            headerLayout->addWidget(textLabel, 0, 1);
+            headerLayout->addWidget(commentLabel, 1, 1);
+            headerLayout->setColumnStretch(0, 0);
+            headerLayout->setColumnStretch(1, 1);
+        } else {
+            headerLayout->addWidget(textLabel, 0, 0);
+            headerLayout->addWidget(commentLabel, 1, 0);
+            headerLayout->addWidget(imageLabel, 0, 1, 2, 1);
+            headerLayout->setColumnStretch(1, 0);
+            headerLayout->setColumnStretch(0, 1);
+        }
+    }
+
+    void updatePixmap()
+    {
+        const QPixmap pixmap = icon.pixmap(q->iconSize());
+        imageLabel->setPixmap(pixmap);
+    }
+
     int level = 1;
     KTitleWidget *q;
     QGridLayout *headerLayout;
     QLabel *imageLabel;
     QLabel *textLabel;
     QLabel *commentLabel;
+    QIcon icon;
+    QSize iconSize;
+    KTitleWidget::ImageAlignment iconAlignment;
     int autoHideTimeout;
     MessageType messageType;
 
@@ -133,7 +172,6 @@ KTitleWidget::KTitleWidget(QWidget *parent)
 
     // default image / text part start
     d->headerLayout = new QGridLayout(titleFrame);
-    d->headerLayout->setColumnStretch(0, 1);
     d->headerLayout->setContentsMargins(0, 0, 0, 0);
 
     d->textLabel = new QLabel(titleFrame);
@@ -143,16 +181,13 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     d->imageLabel = new QLabel(titleFrame);
     d->imageLabel->setVisible(false);
 
-    d->headerLayout->addWidget(d->textLabel, 0, 0);
-    d->headerLayout->addWidget(d->imageLabel, 0, 1, 1, 2);
-
     d->commentLabel = new QLabel(titleFrame);
     d->commentLabel->setVisible(false);
     d->commentLabel->setOpenExternalLinks(true);
     d->commentLabel->setWordWrap(true);
     d->commentLabel->setTextInteractionFlags(Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse);
-    d->headerLayout->addWidget(d->commentLabel, 1, 0);
 
+    d->updateIconAlignment(ImageRight); // make sure d->iconAlignment is left, to trigger initial layout
     // default image / text part end
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -196,9 +231,29 @@ QString KTitleWidget::comment() const
     return d->commentLabel->text();
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 const QPixmap *KTitleWidget::pixmap() const
 {
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     return d->imageLabel->pixmap();
+QT_WARNING_POP
+}
+#endif
+
+QIcon KTitleWidget::icon() const
+{
+    return d->icon;
+}
+
+QSize KTitleWidget::iconSize() const
+{
+    if (d->iconSize.isValid()) {
+        return d->iconSize;
+    }
+    const int iconSizeExtent = style()->pixelMetric(QStyle::PM_MessageBoxIconSize);
+    return QSize(iconSizeExtent, iconSizeExtent);
 }
 
 void KTitleWidget::setBuddy(QWidget *buddy)
@@ -213,6 +268,12 @@ void KTitleWidget::changeEvent(QEvent *e)
                                            || e->type() == QEvent::ApplicationFontChange) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
         d->commentLabel->setStyleSheet(d->commentStyleSheet());
+        d->updatePixmap();
+    } else if (e->type() == QEvent::StyleChange) {
+        if (!d->iconSize.isValid()) {
+            // relies on style's PM_MessageBoxIconSize
+            d->updatePixmap();
+        }
     }
 }
 
@@ -247,7 +308,7 @@ int KTitleWidget::level()
 
 void KTitleWidget::setText(const QString &text, MessageType type)
 {
-    setPixmap(type);
+    setIcon(type);
     setText(text);
 }
 
@@ -264,34 +325,44 @@ void KTitleWidget::setComment(const QString &comment, MessageType type)
 
 void KTitleWidget::setIcon(const QIcon &icon, KTitleWidget::ImageAlignment alignment)
 {
-    setPixmap(icon.pixmap(style()->pixelMetric(QStyle::PM_MessageBoxIconSize)), alignment);
+    d->icon = icon;
+
+    d->imageLabel->setVisible(!icon.isNull());
+
+    d->updateIconAlignment(alignment);
+
+    d->updatePixmap();
 }
 
-void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
+void KTitleWidget::setIconSize(const QSize& iconSize)
 {
-    d->imageLabel->setVisible(!pixmap.isNull());
-
-    d->headerLayout->removeWidget(d->textLabel);
-    d->headerLayout->removeWidget(d->commentLabel);
-    d->headerLayout->removeWidget(d->imageLabel);
-
-    if (alignment == ImageLeft) {
-        // swap the text and image labels around
-        d->headerLayout->addWidget(d->imageLabel, 0, 0, 2, 1);
-        d->headerLayout->addWidget(d->textLabel, 0, 1);
-        d->headerLayout->addWidget(d->commentLabel, 1, 1);
-        d->headerLayout->setColumnStretch(0, 0);
-        d->headerLayout->setColumnStretch(1, 1);
-    } else {
-        d->headerLayout->addWidget(d->textLabel, 0, 0);
-        d->headerLayout->addWidget(d->commentLabel, 1, 0);
-        d->headerLayout->addWidget(d->imageLabel, 0, 1, 2, 1);
-        d->headerLayout->setColumnStretch(1, 0);
-        d->headerLayout->setColumnStretch(0, 1);
+    if (d->iconSize == iconSize) {
+        return;
     }
 
-    d->imageLabel->setPixmap(pixmap);
+    const QSize oldEffectiveIconSize = this->iconSize();
+
+    d->iconSize = iconSize;
+
+    if (oldEffectiveIconSize != this->iconSize()) {
+        d->updatePixmap();
+    }
 }
+
+
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
+void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
+{
+    d->icon = QIcon(pixmap);
+    d->iconSize = pixmap.size();
+
+    d->imageLabel->setVisible(!d->icon.isNull());
+
+    d->updateIconAlignment(alignment);
+
+    d->updatePixmap();
+}
+#endif
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
 void KTitleWidget::setPixmap(const QString &icon, ImageAlignment alignment)
@@ -307,7 +378,14 @@ void KTitleWidget::setPixmap(const QIcon &icon, ImageAlignment alignment)
 }
 #endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 void KTitleWidget::setPixmap(MessageType type, ImageAlignment alignment)
+{
+    setIcon(type, alignment);
+}
+#endif
+
+void KTitleWidget::setIcon(MessageType type, ImageAlignment alignment)
 {
     setIcon(QIcon::fromTheme(d->iconTypeToIconName(type)), alignment);
 }
