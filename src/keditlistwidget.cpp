@@ -81,7 +81,7 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
     btnsLayout = new QVBoxLayout;
     btnsLayout->addStretch();
 
-    model = new QStringListModel();
+    model = new QStringListModel(q);
     listView = new QListView(q);
     listView->setModel(model);
 
