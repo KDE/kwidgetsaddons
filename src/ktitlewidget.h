@@ -141,7 +141,7 @@ public:
 
     /**
      * @return The level of this title: it influences the font size following the guidelines at
-     *         https://www.my-scratch.de/HIG/style/typography.html
+     *         https://hig.kde.org/style/typography.html
      *         It also corresponds to the level api of Kirigami Heading for QML applications
      * @since 5.53
      */
@@ -224,7 +224,7 @@ public Q_SLOTS:
 
     /**
      * Sets the level of this title, similar to HTML's h1 h2 h3...
-     * follows KDE HIG https://www.my-scratch.de/HIG/style/typography.html
+     * follows KDE HIG https://hig.kde.org/style/typography.html
      * @param level the level of the title, 1 is the biggest font and most important, descending
      * @since 5.53
      */
