@@ -271,11 +271,12 @@ void KMultiTabBarTab::setStyle(KMultiTabBar::KMultiTabBarStyle style)
     updateGeometry();
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 QPixmap KMultiTabBarTab::iconPixmap() const
 {
-    int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, nullptr, this);
-    return icon().pixmap(iconSize);
+    return icon().pixmap(iconSize());
 }
+#endif
 
 void KMultiTabBarTab::initStyleOption(QStyleOptionToolButton *opt) const
 {
@@ -283,7 +284,7 @@ void KMultiTabBarTab::initStyleOption(QStyleOptionToolButton *opt) const
 
     // Setup icon..
     if (!icon().isNull()) {
-        opt->iconSize = iconPixmap().size();
+        opt->iconSize = iconSize();
         opt->icon     = icon();
     }
 
@@ -325,8 +326,7 @@ void KMultiTabBarTab::computeMargins(int *hMargin, int *vMargin) const
     QStyleOptionToolButton opt;
     initStyleOption(&opt);
 
-    QPixmap iconPix = iconPixmap();
-    QSize trialSize = iconPix.size() / iconPix.devicePixelRatio();
+    QSize trialSize = opt.iconSize;
     QSize expandSize = style()->sizeFromContents(QStyle::CT_ToolButton, &opt, trialSize, this);
 
     *hMargin = (expandSize.width()  - trialSize.width()) / 2;
@@ -343,8 +343,7 @@ QSize KMultiTabBarTab::computeSizeHint(bool withText) const
     computeMargins(&hMargin, &vMargin);
 
     // Compute interior size, starting from pixmap..
-    QPixmap iconPix = iconPixmap();
-    QSize size = iconPix.size() / iconPix.devicePixelRatio();
+    QSize size = opt.iconSize;
 
     // Always include text height in computation, to avoid resizing the minor direction
     // when expanding text..
@@ -423,17 +422,16 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
     // We first figure out how much room we have for the text, based on
     // icon size and margin, try to fit in by eliding, and perhaps
     // give up on drawing the text entirely if we're too short on room
-    QPixmap icon = iconPixmap();
     int textRoom = 0;
     int iconRoom = 0;
 
     QString t;
     if (shouldDrawText()) {
         if (isVertical()) {
-            iconRoom = icon.height() / icon.devicePixelRatio() + 2 * vMargin;
+            iconRoom = opt.iconSize.height() + 2 * vMargin;
             textRoom = height() - iconRoom - vMargin;
         } else {
-            iconRoom = icon.width() / icon.devicePixelRatio() + 2 * hMargin;
+            iconRoom = opt.iconSize.width() + 2 * hMargin;
             textRoom = width() - iconRoom - hMargin;
         }
 
@@ -446,11 +444,13 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
         }
     }
 
+    const QPixmap iconPixmap = icon().pixmap(opt.iconSize);
+
     // Label time.... Simple case: no text, so just plop down the icon right in the center
     // We only do this when the button never draws the text, to avoid jumps in icon position
     // when resizing
     if (!shouldDrawText()) {
-        style()->drawItemPixmap(&painter, rect(), Qt::AlignCenter | Qt::AlignVCenter, icon);
+        style()->drawItemPixmap(&painter, rect(), Qt::AlignCenter | Qt::AlignVCenter, iconPixmap);
         return;
     }
 
@@ -489,7 +489,7 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
         }
     }
 
-    style()->drawItemPixmap(&painter, iconArea, Qt::AlignCenter | Qt::AlignVCenter, icon);
+    style()->drawItemPixmap(&painter, iconArea, Qt::AlignCenter | Qt::AlignVCenter, iconPixmap);
 
     if (t.isEmpty()) {
         return;

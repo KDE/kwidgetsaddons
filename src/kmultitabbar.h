@@ -294,7 +294,9 @@ private:
     QSize computeSizeHint(bool withText) const;
     bool shouldDrawText() const;
     bool isVertical()     const;
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
     QPixmap iconPixmap()  const;
+#endif
 
     void initStyleOption(QStyleOptionToolButton *opt) const;
 
