@@ -289,7 +289,12 @@ void KMultiTabBarTab::initStyleOption(QStyleOptionToolButton *opt) const
     }
 
     opt->state |= QStyle::State_AutoRaise;
-
+    if (!isChecked() && !isDown()) {
+        opt->state |= QStyle::State_Raised;
+    }
+    if (isDown()) {
+        opt->state |= QStyle::State_Sunken;
+    }
     if (isChecked()) {
         opt->state |= QStyle::State_On;
     }
