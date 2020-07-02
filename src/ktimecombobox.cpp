@@ -35,7 +35,7 @@ public:
     QTime defaultMinTime();
     QTime defaultMaxTime();
 
-    QString timeFormatToInputMask(const QString &format, bool nullMask = false);
+    std::pair<QString,QString> timeFormatToInputMask(const QString &format);
     QTime nearestIntervalTime(const QTime &time);
     QString formatTime(const QTime &time);
 
@@ -90,21 +90,16 @@ QTime KTimeComboBoxPrivate::defaultMaxTime()
     return QTime(23, 59, 59, 999);
 }
 
-QString KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format, bool nullMask)
+std::pair<QString,QString> KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format)
 {
     const QLocale locale = q->locale();
 
-    //TODO not sure this will always work, does it support DigitSets, am/pm is dodgy?
-    QString mask = formatTime(QTime(12, 34, 56, 789));
-    QString null = mask;
-    mask.replace(locale.toString(12), QLatin1String("09"));
-    null.remove(locale.toString(12));
-    mask.replace(locale.toString(34), QLatin1String("99"));
-    null.remove(locale.toString(34));
-    mask.replace(locale.toString(56), QLatin1String("99"));
-    null.remove(locale.toString(56));
-    mask.replace(locale.toString(789), QLatin1String("900"));
-    null.remove(locale.toString(789));
+    QString example = formatTime(QTime(12, 34, 56, 789));
+    // Replace time components with edit mask characters.
+    example.replace(locale.toString(12), QLatin1String("09"));
+    example.replace(locale.toString(34), QLatin1String("99"));
+    example.replace(locale.toString(56), QLatin1String("99"));
+    example.replace(locale.toString(789), QLatin1String("900"));
 
     // See if this time format contains a specifier for
     // AM/PM, regardless of case.
@@ -127,16 +122,24 @@ QString KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format, bool 
         }
 
         int ampmLen = qMax(am.length(), pm.length());
-        const QString ampmMask(ampmLen, QLatin1Char('a'));
-        mask.replace(pm, ampmMask);
-        null.remove(pm);
+        const QString ampmMask(ampmLen, QLatin1Char('x'));
+        example.replace(pm, ampmMask);
     }
 
-    if (nullMask) {
-        return null;
-    } else {
-        return mask;
+    // Build a mask by copying mask characters and escaping the rest.
+    QString mask;
+    QString null;
+    for (const QChar c : example) {
+        if (c == QLatin1Char('0') || c == QLatin1Char('9') || c == QLatin1Char('x')) {
+            mask.append(c);
+        } else {
+            mask.append(QLatin1Char('\\'));
+            mask.append(c);
+            null.append(c);
+        }
     }
+
+    return std::make_pair(mask, null);
 }
 
 QTime KTimeComboBoxPrivate::nearestIntervalTime(const QTime &time)
@@ -165,9 +168,9 @@ void KTimeComboBoxPrivate::initTimeWidget()
     q->clear();
 
     // Set the input mask from the current format
-    const QLocale locale = q->locale();
-    q->lineEdit()->setInputMask(timeFormatToInputMask(locale.timeFormat(m_displayFormat)));
-    m_nullString = timeFormatToInputMask(locale.timeFormat(m_displayFormat), true);
+    QString mask;
+    std::tie(mask, m_nullString) = timeFormatToInputMask(q->locale().timeFormat(m_displayFormat));
+    q->lineEdit()->setInputMask(mask);
 
     // If EditTime then set the line edit
     q->lineEdit()->setReadOnly((m_options & KTimeComboBox::EditTime) != KTimeComboBox::EditTime);

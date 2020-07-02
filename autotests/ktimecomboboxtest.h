@@ -28,6 +28,9 @@ class KTimeComboBoxTest : public QWidget
 {
     Q_OBJECT
 
+public:
+    KTimeComboBoxTest();
+
 private Q_SLOTS:
     void testDefaults();
     void testValidNull();
@@ -37,6 +40,8 @@ private Q_SLOTS:
     void testOptions();
     void testDisplayFormat();
     void testMask();
+    void testEdit_data();
+    void testEdit();
 
 private:
 

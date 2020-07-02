@@ -27,6 +27,11 @@
 
 QTEST_MAIN(KTimeComboBoxTest)
 
+KTimeComboBoxTest::KTimeComboBoxTest()
+{
+    QLocale::setDefault(QLocale(QLocale::C));
+}
+
 void KTimeComboBoxTest::testDefaults()
 {
     m_combo = new KTimeComboBox();
@@ -191,20 +196,64 @@ void KTimeComboBoxTest::testMask()
     QLocale currentLocale;
 
     // Test that the line edit input mask AM/PM portion gets correctly
-    // replaced with aa.
+    // replaced with xx.
     QLocale::setDefault(QLocale(QLocale::English, QLocale::Australia));
     m_combo = new KTimeComboBox(nullptr);
     QString mask = m_combo->lineEdit()->inputMask();
-    QVERIFY(mask.contains(QLatin1String("aa")));
+    QVERIFY(mask.contains(QLatin1String("xx")));
     delete m_combo;
 
     // For 24 hour time formats, no am/pm specifier in mask
     QLocale::setDefault(QLocale(QLocale::Norwegian, QLocale::Norway));
     m_combo = new KTimeComboBox(nullptr);
     mask = m_combo->lineEdit()->inputMask();
-    QVERIFY(!mask.contains(QLatin1String("aa")));
+    QVERIFY(!mask.contains(QLatin1String("xx")));
     delete m_combo;
 
     // Restore the previous locale
+    QLocale::setDefault(currentLocale);
+}
+
+void KTimeComboBoxTest::testEdit_data()
+{
+    QTest::addColumn<QString>("locale");
+
+    QTest::newRow("C") << QStringLiteral("C");
+    QTest::newRow("el_GR") << QStringLiteral("el_GR");  // bug 361764; non-ASCII AM/PM
+    QTest::newRow("en_AU") << QStringLiteral("en_AU");  // bug 361764
+    QTest::newRow("en_CA") << QStringLiteral("en_CA");  // bug 405857
+    QTest::newRow("en_IE") << QStringLiteral("en_IE");  // bug 361764
+    QTest::newRow("en_US") << QStringLiteral("en_US");
+    QTest::newRow("fr_CA") << QStringLiteral("fr_CA");  // bug 409912
+    QTest::newRow("ko_KR") << QStringLiteral("ko_KR");  // non-ASCII AM/PM
+}
+
+static const QTime MIDNIGHT = QTime(00, 00, 00);
+static const QTime END_AM = QTime(11, 59, 00);
+static const QTime NOON = QTime(12, 00, 00);
+static const QTime END_PM = QTime(23, 59, 00);
+
+// Test that the widget can process times using the current locale and edit mask.
+// See https://bugs.kde.org/show_bug.cgi?id=409867
+void KTimeComboBoxTest::testEdit()
+{
+    QLocale currentLocale;
+
+    QFETCH(QString, locale);
+
+    QLocale::setDefault(QLocale(locale));
+    m_combo = new KTimeComboBox(nullptr);
+
+    m_combo->setTime(MIDNIGHT);
+    QCOMPARE(m_combo->time(), MIDNIGHT);
+    m_combo->setTime(END_AM);
+    QCOMPARE(m_combo->time(), END_AM);
+    m_combo->setTime(NOON);
+    QCOMPARE(m_combo->time(), NOON);
+    m_combo->setTime(END_PM);
+    QCOMPARE(m_combo->time(), END_PM);
+
+    delete m_combo;
+
     QLocale::setDefault(currentLocale);
 }
