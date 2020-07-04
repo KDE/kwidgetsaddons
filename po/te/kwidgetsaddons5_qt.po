@@ -1,0 +1,3484 @@
+# translation of kdelibs4.po to Telugu
+#
+#
+# Purushottam Boyanapalli <boyanapalli@gmail.com>, 2005.
+# విజయ్ కిరణ్ కముజు <infyquest@gmail.com>, 2007.
+# pavithran <pavithran.s@gmail.com>, 2007.
+# Krishna Babu K <kkrothap@redhat.com>, 2008, 2009.
+# sreekalyanbapatla <sreekalyan3@gmail.com>, 2013.
+# GVS.Giri <gvs.giri@swecha.net>, 2013.
+# Bhuvan Krishna <bhuvan@swecha.org>,2013.
+# Naveen Kandimalla <naveen@swecha.net>,2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2013-11-04 23:55+0630\n"
+"Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
+"Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:29
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Sans Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "సాన్‍స్  సెరీఫ్"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:32
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "సెరిఫ్"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:35
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Monospace"
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "మోనోస్పేస్"
+
+#: fonthelpers.cpp:78
+#, fuzzy, qt-format
+#| msgctxt "@application/plain"
+#| msgid "%1"
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:82
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language and %2-variant name"
+#| msgid "%1 [%2]"
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:106
+#, fuzzy
+#| msgid "&Available:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "(&A) సిద్దము:"
+
+#: kactionselector.cpp:123
+#, fuzzy
+#| msgid "&Selected:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "(&S) ఎన్నుకోబడిన:"
+
+#: kassistantdialog.cpp:105
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "(&B) వెనుకకు"
+
+#: kassistantdialog.cpp:107
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "ఒక అడుగు వెనుకకు వెళ్ళు"
+
+#: kassistantdialog.cpp:112
+#, fuzzy
+#| msgctxt "Opposite to Back"
+#| msgid "Next"
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "తరువాత"
+
+#: kassistantdialog.cpp:119
+#, fuzzy
+#| msgid "Finish"
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "ముగింపు"
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+#| msgid "Open Script"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "స్క్రిప్ట్ తెరువు"
+
+#: kcharselect-translation.cpp:25
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "ఆఫ్రికా స్క్రిప్ట్లు"
+
+#: kcharselect-translation.cpp:26
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Middle Eastern Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "మద్య ఆసియా లిపులు"
+
+#: kcharselect-translation.cpp:27
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Central Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "మధ్య ఆసియా స్క్రిప్ట్లు"
+
+#: kcharselect-translation.cpp:28
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "దక్షినం  ఆసియా  లి"
+
+#: kcharselect-translation.cpp:29
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "ఆగ్నెయ ఆసియా  స్క్రిప్ట్లు"
+
+#: kcharselect-translation.cpp:30
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Indic Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "భారతియ స్క్రిప్ట్లు"
+
+#: kcharselect-translation.cpp:31
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "తూర్పు ఆసియా స్క్రిప్ట్లు"
+
+#: kcharselect-translation.cpp:32
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "ఆఫ్రికా స్క్రిప్ట్లు"
+
+#: kcharselect-translation.cpp:33
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "చిహ్నాలు"
+
+#: kcharselect-translation.cpp:34
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "గణితాత్మక చిహ్నాలు"
+
+#: kcharselect-translation.cpp:35
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Phonetic Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "ఫోనెటిక్ చిహ్నాలు"
+
+#: kcharselect-translation.cpp:36 kcharselectdata.cpp:750
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "డయాక్రిటికల్ గుర్తులను కలుపుతోంది"
+
+#: kcharselect-translation.cpp:37
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "ఇతర"
+
+#: kcharselect-translation.cpp:38
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "ప్రాధమిక లాటిన్"
+
+#: kcharselect-translation.cpp:39
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "లాటిన్-1 సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:40
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "లాటిన్ ఎక్‍స్‌టెండెడ్-A"
+
+#: kcharselect-translation.cpp:41
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "లాటిన్ ఎక్‍స్‌టెండెడ్-B"
+
+#: kcharselect-translation.cpp:42
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "IPA Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "IPA పొ‍డిగింపులు"
+
+#: kcharselect-translation.cpp:43
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Spacing Modifier Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "క్రమాంతరీకరణ సవరణి అక్షరములు"
+
+#: kcharselect-translation.cpp:44
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "డయాక్రిటికల్ గుర్తులను కలుపుతోంది"
+
+#: kcharselect-translation.cpp:45
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek and Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "గ్రీక్ మరియు కాప్టిక్"
+
+#: kcharselect-translation.cpp:46
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "సిరిల్లిక్"
+
+#: kcharselect-translation.cpp:47
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "సిరిల్లిక్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:48
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "అర్మెనియన్"
+
+#: kcharselect-translation.cpp:49
+#, fuzzy
+#| msgctxt "@item Spelling dictionary"
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "హిబ్రూ"
+
+#: kcharselect-translation.cpp:50
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "అరబిక్"
+
+#: kcharselect-translation.cpp:51
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syriac"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "సిరియాక్"
+
+#: kcharselect-translation.cpp:52
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "అరబిక్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:53
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Thaana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "తానా"
+
+#: kcharselect-translation.cpp:54
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "NKo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "న్కొ"
+
+#: kcharselect-translation.cpp:55
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Samaritan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "సమరీటా"
+
+#: kcharselect-translation.cpp:56
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mandaic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "మాండయిక్"
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "సిరిల్లిక్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:58
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "లాటిన్ ఎక్‍స్‌టెండెడ్-A"
+
+#: kcharselect-translation.cpp:59
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "దేనాగరి"
+
+#: kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Bengali"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "బెంగాల"
+
+#: kcharselect-translation.cpp:61
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Gurmukhi"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "గురుము"
+
+#: kcharselect-translation.cpp:62
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Gujarati"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "గుజరాతి"
+
+#: kcharselect-translation.cpp:63
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Oriya"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "ఒరియ"
+
+#: kcharselect-translation.cpp:64
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Tamil"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "తమి"
+
+#: kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Telugu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "తెలు"
+
+#: kcharselect-translation.cpp:66
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "కన్న"
+
+#: kcharselect-translation.cpp:67
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Malayalam"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "మయాళం"
+
+#: kcharselect-translation.cpp:68
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sinhala"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "సింహళ"
+
+#: kcharselect-translation.cpp:69
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "థాయ్"
+
+#: kcharselect-translation.cpp:70
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lao"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "లాఓ"
+
+#: kcharselect-translation.cpp:71
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tibetan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "టిబెటియన్"
+
+#: kcharselect-translation.cpp:72
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "మ్యాన్మార్"
+
+#: kcharselect-translation.cpp:73
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "జార్జియన్"
+
+#: kcharselect-translation.cpp:74
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "హాంగుల్ జామొ"
+
+#: kcharselect-translation.cpp:75
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "ఇథియోపిక్"
+
+#: kcharselect-translation.cpp:76
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "ఇథియోపిక్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:77
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cherokee"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "చెరొకీ"
+
+#: kcharselect-translation.cpp:78
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "యూనిఫైడ్ కెనడియన్ అనాది అక్షరములు"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ogham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "ఓగ్‌హామ్"
+
+#: kcharselect-translation.cpp:80
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Runic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "రునిక్"
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagalog"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "మార్పుల చీటి"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hanunoo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "హనునో"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Buhid"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "బుహిద్"
+
+#: kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagbanwa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:85
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Khmer"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "కెహ్మె"
+
+#: kcharselect-translation.cpp:86
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mongolian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "మంగోలియన్"
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "యూనిఫైడ్ కెనడియన్ అబొరిజినల్ సిల్లబిక్స్ కొనసాగించబడ్దా"
+
+#: kcharselect-translation.cpp:88
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Limbu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "లింబు"
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Le"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "థాయ్ లె"
+
+#: kcharselect-translation.cpp:90
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "New Tai Lue"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "కొత్త థాయ్ లుయ్"
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "హ్మెర్ చిహ్నాలు"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Buginese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "బుగినీస్"
+
+#: kcharselect-translation.cpp:93
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Tham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "థాయ్ థామా"
+
+#: kcharselect-translation.cpp:94
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "డయాక్రిటికల్ గుర్తులను కలుపుతోంది"
+
+#: kcharselect-translation.cpp:95
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Balinese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "బలనీస్"
+
+#: kcharselect-translation.cpp:96
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sundanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "సండెనీ"
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Batak"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "బట"
+
+#: kcharselect-translation.cpp:98
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lepcha"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "లెప్చా"
+
+#: kcharselect-translation.cpp:99
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ol Chiki"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "ఓల్ చికి"
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "సిరిల్లిక్ పొడగిం-A"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "జియోమెట్రిక్ షేప్‍స్"
+
+#: kcharselect-translation.cpp:102
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "లాటిన్-1 సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:103
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vedic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "వేదిక్ కొనసాగింపు"
+
+#: kcharselect-translation.cpp:104
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "ఫోనెటిక్ పొడిగింపులు"
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "ఫోనెటిక్ పొడిగింపుల సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:106
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "డయాక్రిటికల్ గుర్తుల సప్లిమెంట్‌ను కలుపుతోంది"
+
+#: kcharselect-translation.cpp:107
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended Additional"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "లాటిన్ ఎక్‍స్‌టెండె‍డ్ ఎడిషనల్"
+
+#: kcharselect-translation.cpp:108
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "గ్రీక్ ఎక్‍స్‌టెండెడ్"
+
+#: kcharselect-translation.cpp:109
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "General Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "సాదారణ పంక్చ్యుయేషన్"
+
+#: kcharselect-translation.cpp:110
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Superscripts and Subscripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "సూపర్‌స్క్రిప్‍ట్స్   మరియ సబ్‌స్క్రిప్‍ట్స్"
+
+#: kcharselect-translation.cpp:111
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "డబ్బు చిహ్నాలు"
+
+#: kcharselect-translation.cpp:112
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks for Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "చిహ్నముల కొరకు డయాక్రిటికల్ గుర్తులను కలుపుతోంది"
+
+#: kcharselect-translation.cpp:113
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Letterlike Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "అక్షరము-వంటి  చిహ్నములు"
+
+#: kcharselect-translation.cpp:114
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "సంఖ్యా రూపములు"
+
+#: kcharselect-translation.cpp:115
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "బాణములు"
+
+#: kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "గణితాత్మక ఆపరేటర్లు"
+
+#: kcharselect-translation.cpp:117
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Technical"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "నానావిధ సాంకేతిక"
+
+#: kcharselect-translation.cpp:118
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Control Pictures"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "కంట్రోల్ పిక్చర్‍స్"
+
+#: kcharselect-translation.cpp:119
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Optical Character Recognition"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "ఆప్టికల్ కారెక్టర్ రికగ్నైజేషన్ (ఆప్టికల్ అక్షర గుర్తింపు)"
+
+#: kcharselect-translation.cpp:120
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "ఎన్‌క్లోజ్డు అక్షరసంఖ్యలు"
+
+#: kcharselect-translation.cpp:121
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Box Drawing"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "బాక్‍స్  చిత్రలేఖనం"
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Block Elements"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "బ్లాక్ యెలిమెంట్‍స్"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "జియోమెట్రిక్ షేప్‍స్"
+
+#: kcharselect-translation.cpp:124
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "నానావిధ చిహ్నాలు"
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Dingbats"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: kcharselect-translation.cpp:126
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "నానావిధ గణితాత్మక చిహ్నాలు-A"
+
+#: kcharselect-translation.cpp:127
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "సప్లిమెంటల్ బాణాలు-A"
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "బ్రెయిలి మాదిరిలు"
+
+#: kcharselect-translation.cpp:129
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "సప్లిమెంటల్ బాణాలు-B"
+
+#: kcharselect-translation.cpp:130
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "నానావిధ గణితాత్మక చిహ్నాలు-B"
+
+#: kcharselect-translation.cpp:131
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "సప్లిమెంటల్ గణితాత్మక ఆపరేటర్లు"
+
+#: kcharselect-translation.cpp:132
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "నానావిధ చిహ్నాలు మరియు బాణాలు"
+
+#: kcharselect-translation.cpp:133
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Glagolitic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "గ్లాగలిటిక్"
+
+#: kcharselect-translation.cpp:134
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-C"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "లాటిన్ ఎక్‍స్‌టెండెడ్-C"
+
+#: kcharselect-translation.cpp:135
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "కాప్టిక్"
+
+#: kcharselect-translation.cpp:136
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "జార్జియన్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:137
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tifinagh"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: kcharselect-translation.cpp:138
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "ఇథియోపిక్ ఎక్‍స్‌టెండెడ్"
+
+#: kcharselect-translation.cpp:139
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "సిరిల్లిక్ పొడగిం-A"
+
+#: kcharselect-translation.cpp:140
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "సప్లిమెంటల్ పంక్చ్యుయేషన్"
+
+#: kcharselect-translation.cpp:141
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Radicals Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "CJK రాడికల్‍స్  సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:142
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kangxi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "కాంగ్జి రాడికల్‍స్"
+
+#: kcharselect-translation.cpp:143
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ideographic Description Characters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "ఐడియోగ్రాఫిక్ విశదీకరణ అక్షరములు"
+
+#: kcharselect-translation.cpp:144
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Symbols and Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK చిహ్నాలు మరియు పంక్చ్యుయేషన్"
+
+#: kcharselect-translation.cpp:145
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "హిరగానా"
+
+#: kcharselect-translation.cpp:146
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "కటాకనా"
+
+#: kcharselect-translation.cpp:147
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "బొపొమొఫొ"
+
+#: kcharselect-translation.cpp:148
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Compatibility Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "హాంగుల్ సారూప్య జామొ"
+
+#: kcharselect-translation.cpp:149
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kanbun"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "కన్‌బన్"
+
+#: kcharselect-translation.cpp:150
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "బొపొమొఫొ ఎక్‍స్‌టెండెడ్"
+
+#: kcharselect-translation.cpp:151
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Strokes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK స్ట్రోక్‍స్"
+
+#: kcharselect-translation.cpp:152
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "కెటకనా ఫోనెటిక్ పొడిగింపులు"
+
+#: kcharselect-translation.cpp:153
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed CJK Letters and Months"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "ఎన్‌క్లోజ్డు CJK అక్షరములు మరియు నెలలు"
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK సారూప్యత"
+
+#: kcharselect-translation.cpp:155
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs Extension A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK యూనిఫైడ్ ఐడియోగ్రాఫ్‍స్  పొడిగింపు A"
+
+#: kcharselect-translation.cpp:156
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yijing Hexagram Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing హెక్సాగ్రామ్ చిహ్నాలు"
+
+#: kcharselect-translation.cpp:157
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK యూనిఫైడ్ ఐడియోగ్రాఫ్‍స్"
+
+#: kcharselect-translation.cpp:158
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yi Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi అక్షరములు"
+
+#: kcharselect-translation.cpp:159
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi రాడికల్‍స్"
+
+#: kcharselect-translation.cpp:160
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lisu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "లి"
+
+#: kcharselect-translation.cpp:161
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "వఐ"
+
+#: kcharselect-translation.cpp:162
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "సిరిల్లిక్  పొడగిం-B"
+
+#: kcharselect-translation.cpp:163
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bamum"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "బమ"
+
+#: kcharselect-translation.cpp:164
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Modifier Tone Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "సవరణి టోన్ అక్షరములు"
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-D"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "లాటిన్ ఎక్‍స్‌టెండెడ్-D"
+
+#: kcharselect-translation.cpp:166
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syloti Nagri"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "సైలోతి నాగ్రి"
+
+#: kcharselect-translation.cpp:167
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Common Indic Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "ఒకేరకమైన ఇండిక్ సంఖ్య ఫారం "
+
+#: kcharselect-translation.cpp:168
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phags-pa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "ఫాగ్‍స్ -పా"
+
+#: kcharselect-translation.cpp:169
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Saurashtra"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "సౌరాష్ట్ర"
+
+#: kcharselect-translation.cpp:170
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Devanagari Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "దేవనాగరి పొడగిం"
+
+#: kcharselect-translation.cpp:171
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kayah Li"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "కయ్యా లి"
+
+#: kcharselect-translation.cpp:172
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Rejang"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "రెజాంగ్"
+
+#: kcharselect-translation.cpp:173
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "హంగుల్ జామొ  ఎక్స్టెండె-A"
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Javanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "జానీస్"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "మయన్మార్-ఎక్స్టెండెడ్-"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "చా"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "మయన్మార్-ఎక్స్టెండెడ్-"
+
+#: kcharselect-translation.cpp:178
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Viet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "టాయ్ వాయిట్"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "మీతి మాయెక్"
+
+#: kcharselect-translation.cpp:180
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "ఇథియోపిక్  ఎక్స్టెండడ్-"
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "లాటిన్ ఎక్‍స్‌టెండెడ్-A"
+
+#: kcharselect-translation.cpp:182
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "సిరిల్లిక్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:183
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "మీతి మాయెక్"
+
+#: kcharselect-translation.cpp:184
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "హంగుల్ అక్షరములు"
+
+#: kcharselect-translation.cpp:185
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "హంగుల్ జామొ ఎక్స్టెండెడ్-"
+
+#: kcharselect-translation.cpp:186
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "ఉన్నత సరోగేట్‍స్"
+
+#: kcharselect-translation.cpp:187
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Private Use Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "ఎక్కువ వ్యక్తిగతంగా వుపయోగించు సరోగేట్‍స్"
+
+#: kcharselect-translation.cpp:188
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Low Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "తక్కువ సరోగేట్‍స్"
+
+#: kcharselect-translation.cpp:189
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Private Use Area"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "వ్యక్తిగతంగా వుపయోగించు ప్రదేశము"
+
+#: kcharselect-translation.cpp:190
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK సారూప్య ఐడియోగ్రాఫ్‍స్"
+
+#: kcharselect-translation.cpp:191
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Alphabetic Presentation Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "అక్షర సమర్పణ ఫాంలు"
+
+#: kcharselect-translation.cpp:192
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "అరబిక్ సమర్పణ ఫాంలు-A"
+
+#: kcharselect-translation.cpp:193
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Variation Selectors"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "వేరియేషన్ యెంపికచేయునవి"
+
+#: kcharselect-translation.cpp:194
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vertical Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "నిలువు ఫాంలు"
+
+#: kcharselect-translation.cpp:195
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Half Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "అర్ధ గుర్తులను కలుపుట"
+
+#: kcharselect-translation.cpp:196
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK సారూప్య ఫాంలు"
+
+#: kcharselect-translation.cpp:197
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Small Form Variants"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "చిన్న ఫాం వేరియంట్సు"
+
+#: kcharselect-translation.cpp:198
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "అరబిక్ సమర్పణ ఫాంలు-B"
+
+#: kcharselect-translation.cpp:199
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Halfwidth and Fullwidth Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "సగం-వెడల్పు మరియు పూర్తి-వెడల్పు ఫారంలు"
+
+#: kcharselect-translation.cpp:200
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Specials"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "విశేషములు"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:205
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "ఎన్‌క్లోజ్డు అక్షరసంఖ్యలు"
+
+#: kcharselect-translation.cpp:206
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "ఇథియోపిక్ సప్లిమెంట్"
+
+#: kcharselect-translation.cpp:207
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "నానావిధ చిహ్నాలు మరియు బాణాలు"
+
+#: kcharselect-translation.cpp:208
+#, fuzzy
+#| msgid "Emoticons"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "ఎమొటికాన్లు"
+
+#: kcharselect-translation.cpp:209
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:210
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:211
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "గణితాత్మక చిహ్నాలు"
+
+#: kcharselect-translation.cpp:212
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "జియోమెట్రిక్ షేప్‍స్"
+
+#: kcharselect-translation.cpp:213
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "సప్లిమెంటల్ బాణాలు-A"
+
+#: kcharselect-translation.cpp:214
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:215
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "హ్మెర్ చిహ్నాలు"
+
+#: kcharselect-translation.cpp:216
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "నానావిధ చిహ్నాలు మరియు బాణాలు"
+
+#: kcharselect-translation.cpp:217
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr ""
+
+#: kcharselect.cpp:406
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "శోధన పదాన్ని లేదా అక్షరాన్ని యిక్కడ ప్రవేశపెట్టుము"
+
+#: kcharselect.cpp:408
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "శోధన పదాన్ని లేదా అక్షరాన్ని యిక్కడ ప్రవేశపెట్టుము"
+
+#: kcharselect.cpp:413
+#, fuzzy
+#| msgid "&Find..."
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "(&F) కనుగొను..."
+
+#: kcharselect.cpp:433
+#, fuzzy
+#| msgctxt "Goes to previous character"
+#| msgid "Previous in History"
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "జాబితా లోని మును పటి అంశము"
+
+#: kcharselect.cpp:435
+#, fuzzy
+#| msgid "Previous Character in History"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "గత అక్షరము చరిత్రలో"
+
+#: kcharselect.cpp:440
+#, fuzzy
+#| msgctxt "Goes to next character"
+#| msgid "Next in History"
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "చరి లోని తరువాత  అంశము"
+
+#: kcharselect.cpp:442
+#, fuzzy
+#| msgid "Next Character in History"
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "తరువాత అక్షరం చరిత్ర "
+
+#: kcharselect.cpp:447
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "(&B) వెనుకకు"
+
+#: kcharselect.cpp:454
+#, fuzzy
+#| msgid "&Forward"
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "(&F) ముందుకు"
+
+#: kcharselect.cpp:469
+#, fuzzy
+#| msgid "Select a category"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "వర్గమును యెంపికచేయుము"
+
+#: kcharselect.cpp:473
+#, fuzzy
+#| msgid "Select a block to be displayed"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "ప్రదర్శనకు వొక బ్లాక్‌ను యెంపికచేయుము"
+
+#: kcharselect.cpp:486
+#, fuzzy
+#| msgid "Set font"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "అక్షరరూపము అమర్చుము"
+
+#: kcharselect.cpp:493
+#, fuzzy
+#| msgid "Set font size"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "అక్షర పరిమాణాన్ని అమర్చుము"
+
+#: kcharselect.cpp:785
+#, fuzzy
+#| msgid "Character:"
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "అక్షరం:"
+
+#: kcharselect.cpp:791
+#, fuzzy
+#| msgid "Name: "
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "పేరు:"
+
+#: kcharselect.cpp:800
+#, fuzzy
+#| msgid "Annotations and Cross References"
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "ప్రకటనలు మరియు క్రాస్ రిఫరెన్సెస్"
+
+#: kcharselect.cpp:804
+#, fuzzy
+#| msgid "Alias names:"
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "మారు పేరులు:"
+
+#: kcharselect.cpp:812
+#, fuzzy
+#| msgid "Notes:"
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "వ్యాఖ్యలు:"
+
+#: kcharselect.cpp:820
+#, fuzzy
+#| msgid "See also:"
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "ఇవి కూడా చూడండి:"
+
+#: kcharselect.cpp:835
+#, fuzzy
+#| msgid "Equivalents:"
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "సమానములు"
+
+#: kcharselect.cpp:843
+#, fuzzy
+#| msgid "Approximate equivalents:"
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "దరిదాపుగా సమానములు:"
+
+#: kcharselect.cpp:851
+#, fuzzy
+#| msgid "Description:"
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "వర్ణన:"
+
+#: kcharselect.cpp:863
+#, fuzzy
+#| msgid "CJK Ideograph Information"
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "CJK ఐడియోగ్రాఫ్ సమాచారము"
+
+#: kcharselect.cpp:866
+#, fuzzy
+#| msgid "Definition in English: "
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "ఆంగ్లములో నిర్వచనము: "
+
+#: kcharselect.cpp:873
+#, fuzzy
+#| msgid "Mandarin Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "మాండ్రియన్ ఉచ్ఛారణ: "
+
+#: kcharselect.cpp:880
+#, fuzzy
+#| msgid "Cantonese Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "కెటోనీస్ ఉచ్ఛారణ:"
+
+#: kcharselect.cpp:887
+#, fuzzy
+#| msgid "Japanese On Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "జపనీస్ ఆన్ ఉచ్ఛారణ: "
+
+#: kcharselect.cpp:894
+#, fuzzy
+#| msgid "Japanese Kun Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "జపనీస్ కున్ ఉచ్ఛారణ: "
+
+#: kcharselect.cpp:901
+#, fuzzy
+#| msgid "Tang Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "టాంగ్ ఉచ్ఛారణ: "
+
+#: kcharselect.cpp:908
+#, fuzzy
+#| msgid "Korean Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "కొరియన్ ఉచ్ఛారణ: "
+
+#: kcharselect.cpp:914
+#, fuzzy
+#| msgid "General Character Properties"
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "సాదారణ అక్షర గుణములు"
+
+#: kcharselect.cpp:915
+#, fuzzy
+#| msgid "Block: "
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "బ్లాక్: "
+
+#: kcharselect.cpp:916
+#, fuzzy
+#| msgid "Unicode category: "
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "యూనికోడ్ వర్గము: "
+
+#: kcharselect.cpp:920
+#, fuzzy
+#| msgid "Various Useful Representations"
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "వివిధ వుపయోగకర రిప్రజెంటేషన్‍స్"
+
+#: kcharselect.cpp:921
+#, fuzzy
+#| msgid "UTF-8:"
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "యుటిఎఫ్-8:"
+
+#: kcharselect.cpp:925
+#, fuzzy
+#| msgid "UTF-16: "
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "యుటిఎఫ్-16:"
+
+#: kcharselect.cpp:932
+#, fuzzy
+#| msgid "C octal escaped UTF-8: "
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "C octal escaped UTF-8: "
+
+#: kcharselect.cpp:936
+#, fuzzy
+#| msgid "XML decimal entity:"
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "XML దశాంశ వస్తుత్వము(యెన్టిటి):"
+
+#: kcharselect.cpp:1081
+#, fuzzy
+#| msgid "Unicode code point:"
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "యూనికోడ్ పా : "
+
+#: kcharselect.cpp:1082
+#, fuzzy
+#| msgctxt "Character"
+#| msgid "In decimal:"
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "దశాంశం లో"
+
+#: kcharselectdata.cpp:318
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "ఎదైనా అక్షరం"
+
+#: kcharselectdata.cpp:339
+#, fuzzy
+#| msgid "<Non Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Non Private Use High Surrogate>"
+
+#: kcharselectdata.cpp:341
+#, fuzzy
+#| msgid "<Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Private Use High Surrogate>"
+
+#: kcharselectdata.cpp:343
+#, fuzzy
+#| msgid "<Low Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<తక్కువ Surrogate>"
+
+#: kcharselectdata.cpp:345
+#, fuzzy
+#| msgid "<Private Use>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<వ్యక్తిగత అవసరానికి>"
+
+#: kcharselectdata.cpp:377
+#, fuzzy
+#| msgid "<not assigned>"
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<అప్పగించని>"
+
+#: kcharselectdata.cpp:759
+#, fuzzy
+#| msgid "Non-printable"
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "ప్రచురించలేనివి"
+
+#: kcharselectdata.cpp:792
+#, fuzzy
+#| msgid "Other, Control"
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "యితర, నియంత్రణ"
+
+#: kcharselectdata.cpp:793
+#, fuzzy
+#| msgid "Other, Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "ఇతర, ఫార్మాట్"
+
+#: kcharselectdata.cpp:794
+#, fuzzy
+#| msgid "Other, Not Assigned"
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "ఇతర, అప్పగించబడలేదు"
+
+#: kcharselectdata.cpp:795
+#, fuzzy
+#| msgid "Other, Private Use"
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "ఇతర, వ్యక్తిగత వుపయోగము"
+
+#: kcharselectdata.cpp:796
+#, fuzzy
+#| msgid "Other, Surrogate"
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "ఇతర, సరోగేట్"
+
+#: kcharselectdata.cpp:797
+#, fuzzy
+#| msgid "Letter, Lowercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "అక్షరము, చిన్నబడి"
+
+#: kcharselectdata.cpp:798
+#, fuzzy
+#| msgid "Letter, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "అక్షరము, సవరణి"
+
+#: kcharselectdata.cpp:799
+#, fuzzy
+#| msgid "Letter, Other"
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "అక్షరము,ఇతర"
+
+#: kcharselectdata.cpp:800
+#, fuzzy
+#| msgid "Letter, Titlecase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "అక్షరము, శీర్షికబడి"
+
+#: kcharselectdata.cpp:801
+#, fuzzy
+#| msgid "Letter, Uppercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "అక్షరము, పెద్దబడి"
+
+#: kcharselectdata.cpp:802
+#, fuzzy
+#| msgid "Mark, Spacing Combining"
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "గర్తు, క్రమాంతరీకరణం కలుపుట"
+
+#: kcharselectdata.cpp:803
+#, fuzzy
+#| msgid "Mark, Enclosing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "గుర్తు, ఎన్‌క్లోజింగ్"
+
+#: kcharselectdata.cpp:804
+#, fuzzy
+#| msgid "Mark, Non-Spacing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "గుర్తు, క్రమాంతరీకరణము-కాని"
+
+#: kcharselectdata.cpp:805
+#, fuzzy
+#| msgid "Number, Decimal Digit"
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "సంఖ్య, దశాంశ అంకె"
+
+#: kcharselectdata.cpp:806
+#, fuzzy
+#| msgid "Number, Letter"
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "సంఖ్య, అక్షరము"
+
+#: kcharselectdata.cpp:807
+#, fuzzy
+#| msgid "Number, Other"
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "సంఖ్య, ఇతర"
+
+#: kcharselectdata.cpp:808
+#, fuzzy
+#| msgid "Punctuation, Connector"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "పంక్చుయేషన్, అనుసంధానిం"
+
+#: kcharselectdata.cpp:809
+#, fuzzy
+#| msgid "Punctuation, Dash"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "పంక్చుయేషన్, డాష్"
+
+#: kcharselectdata.cpp:810
+#, fuzzy
+#| msgid "Punctuation, Close"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "పంక్చుయేషన్, మూయి"
+
+#: kcharselectdata.cpp:811
+#, fuzzy
+#| msgid "Punctuation, Final Quote"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "పంక్చుయేషన్, చివరి కోట్"
+
+#: kcharselectdata.cpp:812
+#, fuzzy
+#| msgid "Punctuation, Initial Quote"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "పంక్చుయేషన్, ప్రాధమిక కోట్"
+
+#: kcharselectdata.cpp:813
+#, fuzzy
+#| msgid "Punctuation, Other"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "పంక్చుయేషన్, ఇతర"
+
+#: kcharselectdata.cpp:814
+#, fuzzy
+#| msgid "Punctuation, Open"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "పంక్చుయేషన్, తెరువు"
+
+#: kcharselectdata.cpp:815
+#, fuzzy
+#| msgid "Symbol, Currency"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "చిహ్నము, డబ్బు"
+
+#: kcharselectdata.cpp:816
+#, fuzzy
+#| msgid "Symbol, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "చిహ్నము, సవరణి"
+
+#: kcharselectdata.cpp:817
+#, fuzzy
+#| msgid "Symbol, Math"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "చిహ్నము, గణిత"
+
+#: kcharselectdata.cpp:818
+#, fuzzy
+#| msgid "Symbol, Other"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "చిహ్నము, ఇతర"
+
+#: kcharselectdata.cpp:819
+#, fuzzy
+#| msgid "Separator, Line"
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "వేరుచేయునది, గీత"
+
+#: kcharselectdata.cpp:820
+#, fuzzy
+#| msgid "Separator, Paragraph"
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "వేరుచేయునది, పరిచ్ఛేదము"
+
+#: kcharselectdata.cpp:821
+#, fuzzy
+#| msgid "Separator, Space"
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "వేరుచేయునది, ఖాళీ"
+
+#: kcharselectdata.cpp:822
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "తెలియని"
+
+#: kcolorcombo.cpp:341
+#, fuzzy
+#| msgctxt "Custom color"
+#| msgid "Custom..."
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "నిర్దేశితమైన..."
+
+#: kdatecombobox.cpp:171
+#, fuzzy
+#| msgctxt "@option next year"
+#| msgid "Next Year"
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "వచ్చే  సంవత్సరము"
+
+#: kdatecombobox.cpp:172
+#, fuzzy
+#| msgctxt "@option next month"
+#| msgid "Next Month"
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "వచ్చే  నెల"
+
+#: kdatecombobox.cpp:173
+#, fuzzy
+#| msgctxt "@option next week"
+#| msgid "Next Week"
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "వచ్చే వార"
+
+#: kdatecombobox.cpp:174
+#, fuzzy
+#| msgctxt "@option tomorrow"
+#| msgid "Tomorrow"
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "మరుసటిరో"
+
+#: kdatecombobox.cpp:175
+#, fuzzy
+#| msgid "Today"
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "ఈరొజు"
+
+#: kdatecombobox.cpp:176
+#, fuzzy
+#| msgid "Yesterday"
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "నిన్న"
+
+#: kdatecombobox.cpp:177
+#, fuzzy
+#| msgctxt "@option last week"
+#| msgid "Last Week"
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "చివరి వార"
+
+#: kdatecombobox.cpp:178
+#, fuzzy
+#| msgctxt "@option last month"
+#| msgid "Last Month"
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "చివరి నె"
+
+#: kdatecombobox.cpp:179
+#, fuzzy
+#| msgctxt "@option last year"
+#| msgid "Last Year"
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "చివరి  సంవత్సరం "
+
+#: kdatecombobox.cpp:181
+#, fuzzy
+#| msgctxt "@option do not specify a date"
+#| msgid "No Date"
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "తారీఖు లే"
+
+#: kdatecombobox.cpp:312
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The date you entered is invalid"
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "మీరు ఇచ్చిన తేది సరి అయినది కాదు"
+
+#: kdatecombobox.cpp:315
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Date cannot be earlier than %1"
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "మీరు ఇవ్వు తేదీ ముందుగా ఉండరాదు %1"
+
+#: kdatecombobox.cpp:322
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Date cannot be later than %1"
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "మీరు ఇవ్వు తేదీ తరువాతది గా ఉండరాదు %1"
+
+#: kdatepicker.cpp:192
+#, fuzzy, qt-format
+#| msgid "Week %1"
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "వారం %1"
+
+#: kdatepicker.cpp:297
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "వచ్చే సంవత్సరము"
+
+#: kdatepicker.cpp:298
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "పోయిన సంవత్సరము"
+
+#: kdatepicker.cpp:299
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "వచ్చే నెల"
+
+#: kdatepicker.cpp:300
+#, fuzzy
+#| msgid "Previous month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "పోయిన నెల"
+
+#: kdatepicker.cpp:301
+#, fuzzy
+#| msgid "Select a week"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "వారం ఎంచుకొనుము"
+
+#: kdatepicker.cpp:302
+#, fuzzy
+#| msgid "Select a month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "నెల ఎంచుకొనుము"
+
+#: kdatepicker.cpp:303
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "సంవత్సరము ఎంచుకొనుము"
+
+#: kdatepicker.cpp:304
+#, fuzzy
+#| msgid "Select the current day"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "నేటి తేదిని ఎంచుకొనుము"
+
+#: kdatepicker.cpp:643
+#, fuzzy
+#| msgid "Close"
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "మూసివెయుము"
+
+#: kdatetimeedit.cpp:186
+#, fuzzy
+#| msgctxt "UTC time zone"
+#| msgid "UTC"
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:187
+#, fuzzy
+#| msgctxt "No specific time zone"
+#| msgid "Floating"
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "ఫ్లోటిం"
+
+#: kdatetimeedit.cpp:227
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The entered date and time is before the minimum allowed date and time."
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr "మీరు ఇవ్వు తేదీ మరియు సమయం కనీసం ముందుదిగా అయ్యి ఉండాలి"
+
+#: kdatetimeedit.cpp:237
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The entered date and time is after the maximum allowed date and time."
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr "మీరు ఇవ్వు తేదీ మరియు సమయం గరిష్టంగా తరువాతది గా అయ్యి ఉండాలి"
+
+#: keditlistwidget.cpp:305
+#, fuzzy
+#| msgid "&Add"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "(&A) కలుపు"
+
+#: keditlistwidget.cpp:317
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "(&R) తొలగించు"
+
+#: keditlistwidget.cpp:329
+#, fuzzy
+#| msgid "Move &Up"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "(&U) పైకి జరపండి"
+
+#: keditlistwidget.cpp:334
+#, fuzzy
+#| msgid "Move &Down"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "(&D) క్రిందకి జరపండి"
+
+#: kfontchooser.cpp:190
+#, fuzzy
+#| msgid "Requested Font"
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "అభ్యర్దించిన అక్షరరూపం"
+
+#: kfontchooser.cpp:204
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font"
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "అక్షర రూపము"
+
+#: kfontchooser.cpp:209
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font:"
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "అక్షర రూపము:"
+
+#: kfontchooser.cpp:242
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font style"
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "అక్షర శైలి"
+
+#: kfontchooser.cpp:247
+#, fuzzy
+#| msgid "Font style:"
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "అక్షర శైలి:"
+
+#: kfontchooser.cpp:260
+#, fuzzy
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "సాధారణ"
+
+#: kfontchooser.cpp:261 kfontchooser.cpp:589
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "ఇటాలిక్"
+
+#: kfontchooser.cpp:262 kfontchooser.cpp:590
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Oblique"
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "వక్రము"
+
+#: kfontchooser.cpp:263
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold"
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "లావుగా"
+
+#: kfontchooser.cpp:264
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "లావు ఇటాలిక్"
+
+#: kfontchooser.cpp:281
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Size"
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "పరిమాణము"
+
+#: kfontchooser.cpp:286
+#, fuzzy
+#| msgctxt "@label:listbox Font size"
+#| msgid "Size:"
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "పరిమాణము:"
+
+#: kfontchooser.cpp:304
+#, fuzzy
+#| msgctxt "@item font size"
+#| msgid "Relative"
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "సంబంధిత"
+
+#: kfontchooser.cpp:306
+#, fuzzy
+#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "అక్షర పరిమాణం పర్యావర్ణనికి <br /><i>స్థిరమైన</i> లేక <i>సంబంధిత</i><br />"
+
+#: kfontchooser.cpp:308
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+
+#: kfontchooser.cpp:362
+#, fuzzy
+#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
+
+#: kfontchooser.cpp:365
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"ఈ మాదిరి వచనం ప్రస్తుత అమరికలు చూపును. మీరు దినిని ప్రత్యేక అక్షరాలని పరీక్షించడానికి మార్చవచ్చు."
+
+#: kfontchooser.cpp:378
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr ""
+
+#: kfontchooser.cpp:574
+#, fuzzy, qt-format
+#| msgctxt "@application/plain"
+#| msgid "%1"
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:43
+#, fuzzy
+#| msgid "Select Font"
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "అక్షరరూపము ఎంచుకొనుము"
+
+#: kfontrequester.cpp:215
+#, fuzzy
+#| msgid "Choose..."
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "ఎంపిక..."
+
+#: kfontrequester.cpp:221
+#, fuzzy
+#| msgid "Preview of the selected font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "ఎంచుకొన్న అక్షర రూపపు ముందు వీక్షణ"
+
+#: kfontrequester.cpp:222
+#, fuzzy
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr "మీరు ఇంతక్రితం ఎంచుకున్న అక్షరశైలిని. మార్చుటకు ఎంచుకో మీట నొక్కండి"
+
+#: kfontrequester.cpp:225
+#, fuzzy, qt-format
+#| msgid "Preview of the \"%1\" font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "\"%1\" అక్షర రూపం యొక్క ముందు వీక్షణ"
+
+#: kfontrequester.cpp:226
+#, fuzzy, qt-format
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr "మీరు ఇంతక్రితం ఎంచుకున్న \"%1\" అక్షరశైలిని. మార్చుటకు ఎంచుకో మీట నొక్కండి"
+
+#: kled.cpp:194
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr ""
+
+#: kled.cpp:195
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr ""
+
+#: kmessagebox.cpp:76
+#, fuzzy
+#| msgctxt "@action:button post-filter"
+#| msgid "."
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:316
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "వివరములు"
+
+#: kmessagebox.cpp:474 kmessagebox.cpp:528
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "ప్రశ్న"
+
+#: kmessagebox.cpp:486 kmessagebox.cpp:542 kmessagebox.cpp:613
+#: kmessagebox.cpp:677 kmessagebox.cpp:760
+#, fuzzy
+#| msgid "Do not ask again"
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "మరల అడుగవద్దు"
+
+#: kmessagebox.cpp:601 kmessagebox.cpp:665 kmessagebox.cpp:747
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "హెచ్చరిక"
+
+#: kmessagebox.cpp:799 kmessagebox.cpp:820
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "దోషం"
+
+#: kmessagebox.cpp:847 kmessagebox.cpp:880 kmessagebox.cpp:1147
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "క్షమించండి"
+
+#: kmessagebox.cpp:923
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "సమాచారం"
+
+#: kmessagebox.cpp:934
+#, fuzzy
+#| msgid "Do not show this message again"
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "ఈ సందేశము మరల చూపవద్దు"
+
+#: kmessagewidget.cpp:88
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "(&C) మూసివెయుము"
+
+#: kmessagewidget.cpp:89
+#, fuzzy
+#| msgid "Close Message"
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "సందేశము మూసివేయుము"
+
+#: kmimetypechooser.cpp:99
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr ""
+
+#: kmimetypechooser.cpp:100
+#, fuzzy
+#| msgid "Filter"
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "వడపో"
+
+#: kmimetypechooser.cpp:114
+#, fuzzy
+#| msgid "Mime types"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "మైమ్ రకములు"
+
+#: kmimetypechooser.cpp:117
+#, fuzzy
+#| msgid "Comment"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "వ్యాఖ్య"
+
+#: kmimetypechooser.cpp:121
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "బ్రెయిలి మాదిరిలు"
+
+#: kmimetypechooser.cpp:137
+#, fuzzy
+#| msgid "&Edit..."
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "(&E) సరిదిద్దు..."
+
+#: kmimetypechooser.cpp:147
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr ""
+
+#: knewpassworddialog.cpp:69
+#, fuzzy, qt-format
+#| msgid "Password must be at least 1 character long"
+#| msgid_plural "Password must be at least %1 characters long"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "సంకేతపదము కనీసం 1 అక్షరంమైనా వుండాలి"
+msgstr[1] "సంకేతపదము కనీసం 1 అక్షరంమైనా వుండాలి"
+msgstr[2] "సంకేతపదము కనీసం 1 అక్షరంమైనా వుండాలి"
+msgstr[3] "సంకేతపదము కనీసం 1 అక్షరంమైనా వుండాలి"
+msgstr[4] "సంకేతపదము కనీసం 1 అక్షరంమైనా వుండాలి"
+
+#: knewpassworddialog.cpp:73
+#, fuzzy
+#| msgid "Password is empty"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "ఖాళి సంకేతపదము"
+
+#: knewpassworddialog.cpp:77
+#, fuzzy
+#| msgid "Passwords do not match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "సంకేతపదములు సరికాలేదు"
+
+#: knewpassworddialog.cpp:82
+#, fuzzy
+#| msgid "Passwords match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "పాస్ వర్డులు సరిపొయాయి"
+
+#: knewpassworddialog.cpp:158
+#, fuzzy
+#| msgid "Low Password Strength"
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "తక్కువ సంకేతపదము శక్తి"
+
+#: knewpassworddialog.cpp:159
+#, fuzzy
+#| msgid ""
+#| "The password you have entered has a low strength. To improve the strength "
+#| "of the password, try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols as well as letters.\n"
+#| "\n"
+#| "Would you like to use this password anyway?"
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"మీరు ప్రవేశపెట్టిన సంకేతపదము తక్కువ బలమును కలిగివుంది. సంకేతపదము బలమును పెంచుటకు, వీటిని "
+"ప్రయత్నించండి:\n"
+" - పొడవైన సంకేతపదమును వుపయోగించండి;\n"
+" - చిన్న మరియు పెద్ద అక్షరములను కలిపి వుపయోగించండి;\n"
+" - సంఖ్యలు మరియు చిహ్నములు అదేవిధంగా అక్షరములను వుపయోగించండి.\n"
+"\n"
+"మీరు ఏమైనా ఈ సంకేతపదమునే వుపయోగించాలని అనుకొనుచున్నారా?"
+
+#: knewpasswordwidget.cpp:64
+#, fuzzy
+#| msgid ""
+#| "The password strength meter gives an indication of the security of the "
+#| "password you have entered.  To improve the strength of the password, "
+#| "try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols, such as #, as well as letters."
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"సంకేతపదము బలము కొలబద్ద మీరు ప్రవేశపెట్టిన సంకేతపదము యొక్క సురక్షతను సూచిస్తుంది. సంకేతపదము "
+"యొక్క బలమును పెంచుటకు, వీటిని ప్రయత్నించండి:\n"
+" - పొడవైన సంకేతపదమును వుపయోగించండి;\n"
+" - పెద్ద మరియు చిన్న అక్షరములను కలిపి వుపయోగించండి;\n"
+" - సంఖ్యలు లేదా చిహ్నాలు, # వంటివి, అదేవిధంగా అక్షరములను వుపయోగించండి."
+
+#: knewpasswordwidget.ui:19
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "సంకేతపదము:"
+
+#: knewpasswordwidget.ui:29
+#, fuzzy
+#| msgid "&Verify:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "(&V) సరిచూడు:"
+
+#: knewpasswordwidget.ui:54
+#, fuzzy
+#| msgid "Password strength meter:"
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "సంకేతపదము శక్తి కొలమానము:"
+
+#: kpassworddialog.cpp:63
+#, fuzzy
+#| msgid "Password"
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "సంకేతపదము"
+
+#: kpassworddialog.cpp:103
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "వినియోగదారినామము మరియు సంకేతపదమును క్రిందన అందివ్వుము."
+
+#: kpassworddialog.ui:33
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "వినియోగదారినామము మరియు సంకేతపదమును క్రిందన అందివ్వుము."
+
+#: kpassworddialog.ui:70
+#, fuzzy
+#| msgid "No password, use anonymous (or guest) login"
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "సంకేతపదము లెదు, అనామక (లెదా అతిథి) ల ప్రవేశించండి."
+
+#: kpassworddialog.ui:77
+#, fuzzy
+#| msgid "Use this password:"
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "(&K) రహస్య పదాన్ని  వాడు"
+
+#: kpassworddialog.ui:102
+#, fuzzy
+#| msgid "Username:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "యూజర్ పేరు:"
+
+#: kpassworddialog.ui:116
+#, fuzzy
+#| msgid "Domain:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "డొమైన్:"
+
+#: kpassworddialog.ui:130
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "సంకేతపదము:"
+
+#: kpassworddialog.ui:144
+#, fuzzy
+#| msgid "Remember password"
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "సంకేతపదము గుర్తుంచుకొ"
+
+#: kpasswordlineedit.cpp:56
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr ""
+
+#: kpixmapregionselectordialog.cpp:72
+#, fuzzy
+#| msgid "Select Region of Image"
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "చిత్రంలొ ప్రదేశాన్ని ఎంచుకొండి"
+
+#: kpixmapregionselectordialog.cpp:76
+#, fuzzy
+#| msgid "Please click and drag on the image to select the region of interest:"
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "అభీష్టమైన ప్రాంతమును యెంపికచేసుకొనుటకు దయచేసి చిత్రముపై నొక్క లాగండి:"
+
+#: kpixmapregionselectorwidget.cpp:192
+#, fuzzy
+#| msgid "Image Operations"
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "చిత్ర కార్యాలు"
+
+#: kpixmapregionselectorwidget.cpp:194
+#, fuzzy
+#| msgid "&Rotate Clockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "(&R) సవ్య దిశలొ తిప్పు"
+
+#: kpixmapregionselectorwidget.cpp:196
+#, fuzzy
+#| msgid "Rotate &Counterclockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "(&C) అపసవ్య దిశలొ తిప్పు"
+
+#: ksqueezedtextlabel.cpp:217
+#, fuzzy
+#| msgid "&Copy Full Text"
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "(&C) పూర్తి వచనంను నకలు చేయి"
+
+#: kstandardguiitem.cpp:108
+#, fuzzy
+#| msgid "&OK"
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "(&O) సరే"
+
+#: kstandardguiitem.cpp:113
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "(&C) రద్దు"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "&Yes"
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "(&Y) ఔను"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "Yes"
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "ఔను"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "&No"
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "(&N) కాదు"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "No"
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "కాదు"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "&Discard"
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "(&D) విస్మరించు"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "Discard changes"
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "మార్పులను విస్మరించుము"
+
+#: kstandardguiitem.cpp:129
+#, fuzzy
+#| msgid ""
+#| "Pressing this button will discard all recent changes made in this dialog."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr "ఈ  బొత్తం  నొక్కితే  ఈ  సంభాషను నందు ఇటీవల చేసిన మార్పులను తీసివేయబడతాయి"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "&Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "(&S) దాచు"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "Save data"
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "దత్తంసాలను దాచు"
+
+#: kstandardguiitem.cpp:140
+#, fuzzy
+#| msgid "&Do Not Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "(&D) దాచవద్దు"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid "Do not save data"
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "దత్తాంశమును భద్రపరచవద్దు"
+
+#: kstandardguiitem.cpp:146
+#, fuzzy
+#| msgid "Save &As..."
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "(&A) ఇలా దాచు..."
+
+#: kstandardguiitem.cpp:147
+#, fuzzy
+#| msgid "Save file with another name"
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "దస్త్రాన్ని ఇంకో పేరుతో దాచు"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "&Apply"
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "(&A) వర్తించు"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "Apply changes"
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "మార్పులను వర్తించు"
+
+#: kstandardguiitem.cpp:153
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Apply</b>, the settings will be handed over to the "
+#| "program, but the dialog will not be closed.\n"
+#| "Use this to try different settings."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"<b>వర్తించు</b> నొక్కినప్పుడు, అమర్పులు ప్రోగ్రామ్‌కు అప్పగించబడతాయి, అయితే సంభాషన మూయబడదు.\n"
+"వేరే అమర్పులను ప్రయత్నంచుటకు దీనిని పయోగించుము."
+
+#: kstandardguiitem.cpp:161
+#, fuzzy
+#| msgid "Administrator &Mode..."
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "(&M) వ్యవస్థ పాలకుని స్థితి..."
+
+#: kstandardguiitem.cpp:161
+#, fuzzy
+#| msgid "Enter Administrator Mode"
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "వ్యవస్థ పాలకుని స్థితి లొకి వెళ్ళండి"
+
+#: kstandardguiitem.cpp:162
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Administrator Mode</b> you will be prompted for the "
+#| "administrator (root) password in order to make changes which require root "
+#| "privileges."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"<b>వ్యవస్థ పాలకుని స్థితి</b>ని క్లిక్ చేసిన, రూట్ అధికారాలు కలిగిన  మార్పులను  అనుమతించటాని మిమ్మలని "
+"వ్యవస్థ పాలకుని (రూట్) సంకేతపదము అడుగబడును "
+
+#: kstandardguiitem.cpp:169
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "(&l) ఖాళిచేయుము"
+
+#: kstandardguiitem.cpp:170
+#, fuzzy
+#| msgid "Clear input"
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "మూలాంశము చెరిపివేయుము"
+
+#: kstandardguiitem.cpp:171
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "ఎడిట్ ఫీల్ద్ లొవున్న మూలాంశమును చెరిపివేయుము"
+
+#: kstandardguiitem.cpp:176
+#, fuzzy
+#| msgid "&Help"
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "(&H) సహాయము"
+
+#: kstandardguiitem.cpp:177
+#, fuzzy
+#| msgid "Show help"
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "సహాయము చూపుము"
+
+#: kstandardguiitem.cpp:182
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "(&C) మూసివెయుము"
+
+#: kstandardguiitem.cpp:183
+#, fuzzy
+#| msgid "Close the current window or document"
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "ప్రస్తుత విండొ లేక పత్రాన్ని మూసివేయి"
+
+#: kstandardguiitem.cpp:188
+#, fuzzy
+#| msgid "&Close Window"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "విండొ మూసివే"
+
+#: kstandardguiitem.cpp:189
+#, fuzzy
+#| msgid "Close the current window."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "ప్రస్తుత  గవాకము   మూసివేయి"
+
+#: kstandardguiitem.cpp:194
+#, fuzzy
+#| msgid "&Close Document"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "పత్రం మూసివేయి"
+
+#: kstandardguiitem.cpp:195
+#, fuzzy
+#| msgid "Close the current document."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "ప్రస్తుత గవాక లేక  మూసివేయి"
+
+#: kstandardguiitem.cpp:200
+#, fuzzy
+#| msgid "&Defaults"
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "(&D) అప్రమేయాలు"
+
+#: kstandardguiitem.cpp:201
+#, fuzzy
+#| msgid "Reset all items to their default values"
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "అన్ని అంశములను వాటి అప్రమేయ విలువులకు పునఃఅమర్పు చేయుము"
+
+#: kstandardguiitem.cpp:208
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "(&B) వెనుకకు"
+
+#: kstandardguiitem.cpp:209
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "ఒక అడుగు వెనుకకు వెళ్ళు"
+
+#: kstandardguiitem.cpp:216
+#, fuzzy
+#| msgid "&Forward"
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "(&F) ముందుకు"
+
+#: kstandardguiitem.cpp:217
+#, fuzzy
+#| msgid "Go forward one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "ఒక ఆడుగు ముందుకు వెళ్ళు"
+
+#: kstandardguiitem.cpp:227
+#, fuzzy
+#| msgid "&Print..."
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "(&P) ప్రచురించు..."
+
+#: kstandardguiitem.cpp:228
+#, fuzzy
+#| msgid "Opens the print dialog to print the current document"
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "ప్రస్తుత పత్రం ప్రచురించేందుకు ప్రచురణ డైలాగ్ ను తెరుస్తుంది"
+
+#: kstandardguiitem.cpp:234
+#, fuzzy
+#| msgid "C&ontinue"
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "(&o) కొనసాగించుము"
+
+#: kstandardguiitem.cpp:235
+#, fuzzy
+#| msgid "Continue operation"
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "చర్య కొనసాగించు"
+
+#: kstandardguiitem.cpp:240
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "(&D) తొలగించు"
+
+#: kstandardguiitem.cpp:241
+#, fuzzy
+#| msgid "Delete item(s)"
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "అంశాలను తీసివేయండి"
+
+#: kstandardguiitem.cpp:246
+#, fuzzy
+#| msgid "&Open..."
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "(&O) తెరువండి..."
+
+#: kstandardguiitem.cpp:247
+#, fuzzy
+#| msgid "Open file"
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "దస్త్రం తెరువండి"
+
+#: kstandardguiitem.cpp:252
+#, fuzzy
+#| msgid "&Quit"
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "(&Q) విరమించు"
+
+#: kstandardguiitem.cpp:253
+#, fuzzy
+#| msgid "Quit application"
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "కార్యక్రమం మూసివేయి"
+
+#: kstandardguiitem.cpp:258
+#, fuzzy
+#| msgid "&Reset"
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "(&R) పునః అమర్పు"
+
+#: kstandardguiitem.cpp:259
+#, fuzzy
+#| msgid "Reset configuration"
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "ఆకృతీకరణ పునఃఅమర్పు చేయుము"
+
+#: kstandardguiitem.cpp:264
+#, fuzzy
+#| msgctxt "Verb"
+#| msgid "&Insert"
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "(&I) దూర్చు"
+
+#: kstandardguiitem.cpp:269
+#, fuzzy
+#| msgid "Confi&gure..."
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "(&g) అమర్చు..."
+
+#: kstandardguiitem.cpp:274
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "(&F) కనుగొను"
+
+#: kstandardguiitem.cpp:279
+#, fuzzy
+#| msgid "Stop"
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "ఆగు"
+
+#: kstandardguiitem.cpp:284
+#, fuzzy
+#| msgid "Add"
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "కలుపు"
+
+#: kstandardguiitem.cpp:289
+#, fuzzy
+#| msgid "Remove"
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "తొలగించు"
+
+#: kstandardguiitem.cpp:294
+#, fuzzy
+#| msgid "Test"
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "పరీక్ష"
+
+#: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgid "Properties"
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "గుణములు"
+
+#: kstandardguiitem.cpp:304
+#, fuzzy
+#| msgid "&Overwrite"
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "(&O) తిరిగి వ్రాయు"
+
+#: ktimecombobox.cpp:269
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The time you entered is invalid"
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "మీరు ఇచ్చిన సమయం సరి అయినది కాదు"
+
+#: ktimecombobox.cpp:272
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Time cannot be earlier than %1"
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "మీరు ఇచ్చిన సమయం ముందుదిగా ఉండరాదు %1"
+
+#: ktimecombobox.cpp:279
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Time cannot be later than %1"
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "మీరు ఇచ్చిన సమయం తరువాతది గా ఉండరాదు %1"
+
+#: ktogglefullscreenaction.cpp:44
+#, fuzzy
+#| msgctxt "@action:inmenu"
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "(&u) పూర్తి తెర స్థితిని  మూసివేయిటకు"
+
+#: ktogglefullscreenaction.cpp:45
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Exit Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "పూర్తి తెర స్థితి నుంచి బయటకు రావటానికి "
+
+#: ktogglefullscreenaction.cpp:46
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Exit full screen mode"
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "(&u) పూర్తి తెర స్థితి నుంచి బయటకు  రావుట"
+
+#: ktogglefullscreenaction.cpp:49
+#, fuzzy
+#| msgid "F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "(&u) పూర్తి తెర స్థితి"
+
+#: ktogglefullscreenaction.cpp:50
+#, fuzzy
+#| msgctxt "@action:intoolbar"
+#| msgid "Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "పూర్తి తెర "
+
+#: ktogglefullscreenaction.cpp:51
+#, fuzzy
+#| msgctxt "@info:tooltip"
+#| msgid "Display the window in full screen"
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "గవాక్షమును పూర్తి తెర లొ చూపించుట"

@@ -1,0 +1,3451 @@
+# translation of kdelibs4.po to Thai
+# Copyright (C) 2003,2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003,2004, 2005.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2005, 2008, 2010.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2006, 2007.
+# Narachai Sakorn <narachai@gmail.com>, 2008.
+# Phuwanat Sakornsakolpat <narachai@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2010-12-31 22:47+0700\n"
+"Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:29
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Sans Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "แบบอักษรกลุ่ม Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:32
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "แบบอักษรกลุ่ม Serif"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:35
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Monospace"
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "แบบอักษรความกว้างคงที่"
+
+#: fonthelpers.cpp:78
+#, fuzzy, qt-format
+#| msgctxt "@application/plain"
+#| msgid "%1"
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:82
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language and %2-variant name"
+#| msgid "%1 [%2]"
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:106
+#, fuzzy
+#| msgid "&Available:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "ที่&มีให้เลือก:"
+
+#: kactionselector.cpp:123
+#, fuzzy
+#| msgid "&Selected:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "ที่เ&ลือกไว้: "
+
+#: kassistantdialog.cpp:105
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "&ย้อนกลับ"
+
+#: kassistantdialog.cpp:107
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "ย้อนกลับไปหนึ่งขั้น"
+
+#: kassistantdialog.cpp:112
+#, fuzzy
+#| msgctxt "Opposite to Back"
+#| msgid "Next"
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "ถัดไป"
+
+#: kassistantdialog.cpp:119
+#, fuzzy
+#| msgid "Finish"
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "เสร็จสิ้น"
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+#| msgid "Open Script"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "เปิดสคริปต์"
+
+#: kcharselect-translation.cpp:25
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "แบบตัวเขียนแอฟริกา"
+
+#: kcharselect-translation.cpp:26
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Middle Eastern Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "แบบตัวเขียนตะวันออกกลาง"
+
+#: kcharselect-translation.cpp:27
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Central Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "แบบตัวเขียนเอเชียกลาง"
+
+#: kcharselect-translation.cpp:28
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "แบบตัวเขียนเอเชียใต้"
+
+#: kcharselect-translation.cpp:29
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "แบบตัวเขียนเอเชียตะวันออกเฉียงใต้"
+
+#: kcharselect-translation.cpp:30
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Indic Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "แบบตัวเขียนอินดิค"
+
+#: kcharselect-translation.cpp:31
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "แบบตัวเขียนเอเชียตะวันออก"
+
+#: kcharselect-translation.cpp:32
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "แบบตัวเขียนแอฟริกา"
+
+#: kcharselect-translation.cpp:33
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "สัญลักษณ์"
+
+#: kcharselect-translation.cpp:34
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "สัญลักษณ์คณิตศาสตร์"
+
+#: kcharselect-translation.cpp:35
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Phonetic Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "สัญลักษณ์แทนการออกเสียง"
+
+#: kcharselect-translation.cpp:36 kcharselectdata.cpp:750
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "เครื่องหมายกำหนดเสียงแบบรวม"
+
+#: kcharselect-translation.cpp:37
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#: kcharselect-translation.cpp:38
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "อักษรละตินพื้นฐาน"
+
+#: kcharselect-translation.cpp:39
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "อักษรละตินเสริม 1"
+
+#: kcharselect-translation.cpp:40
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "อักษรละตินเพิ่มเติม A"
+
+#: kcharselect-translation.cpp:41
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "อักษรละตินเพิ่มเติม B"
+
+#: kcharselect-translation.cpp:42
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "IPA Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "อักษรขยาย IPA"
+
+#: kcharselect-translation.cpp:43
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Spacing Modifier Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "อักษรสำหรับดัดแปลงช่องไฟ"
+
+#: kcharselect-translation.cpp:44
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "เครื่องหมายกำหนดเสียงแบบรวม"
+
+#: kcharselect-translation.cpp:45
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek and Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "อักษรกรีกและคอปติก"
+
+#: kcharselect-translation.cpp:46
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "ไซริลิค"
+
+#: kcharselect-translation.cpp:47
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "ตัวเสริมอักษรไซริลลิค"
+
+#: kcharselect-translation.cpp:48
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "อักษรอาร์เมเนีย"
+
+#: kcharselect-translation.cpp:49
+#, fuzzy
+#| msgctxt "@item Spelling dictionary"
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "ฮิบรู"
+
+#: kcharselect-translation.cpp:50
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "อารบิก"
+
+#: kcharselect-translation.cpp:51
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syriac"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "อักษรซีเรีย"
+
+#: kcharselect-translation.cpp:52
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "อักษรเสริมภาษาอารบิค"
+
+#: kcharselect-translation.cpp:53
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Thaana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "อักษรธานา"
+
+#: kcharselect-translation.cpp:54
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "NKo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "อักษร NKo"
+
+#: kcharselect-translation.cpp:55
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Samaritan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "อักษรซาแมเรีย"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr ""
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "ตัวเสริมอักษรไซริลลิค"
+
+#: kcharselect-translation.cpp:58
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "อักษรละตินเพิ่มเติม A"
+
+#: kcharselect-translation.cpp:59
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "เทวนาครี"
+
+#: kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Bengali"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "เบงกาลี"
+
+#: kcharselect-translation.cpp:61
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Gurmukhi"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "คุรมุขี"
+
+#: kcharselect-translation.cpp:62
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Gujarati"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "คุชราตี"
+
+#: kcharselect-translation.cpp:63
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Oriya"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "โอริยา"
+
+#: kcharselect-translation.cpp:64
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Tamil"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "ทมิฬ"
+
+#: kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Telugu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "เทลูกู"
+
+#: kcharselect-translation.cpp:66
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "กัณณาฐ"
+
+#: kcharselect-translation.cpp:67
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Malayalam"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "มะละยาลัม"
+
+#: kcharselect-translation.cpp:68
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sinhala"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "อักษรสิงหล"
+
+#: kcharselect-translation.cpp:69
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "ไทย"
+
+#: kcharselect-translation.cpp:70
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lao"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "อักษรลาว"
+
+#: kcharselect-translation.cpp:71
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tibetan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "อักษรฑิเบต"
+
+#: kcharselect-translation.cpp:72
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "อักษรพม่า"
+
+#: kcharselect-translation.cpp:73
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "อักษรจอร์เจีย"
+
+#: kcharselect-translation.cpp:74
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "อักษรพยัญชนะฮันกึล"
+
+#: kcharselect-translation.cpp:75
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "อักษรเอธิโอเปีย"
+
+#: kcharselect-translation.cpp:76
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "ตัวเสริมอักษรเอธิโอเปีย"
+
+#: kcharselect-translation.cpp:77
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cherokee"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "อักษรเชโรกี"
+
+#: kcharselect-translation.cpp:78
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "ตัวพยางค์พื้นเมืองแคนาดา"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ogham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "อักษรออกัม"
+
+#: kcharselect-translation.cpp:80
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Runic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "อักษรรูนิค"
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagalog"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "อักษรตากาล็อก"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hanunoo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "อักษรฮันนูนู"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Buhid"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "อักษรบูฮิด"
+
+#: kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagbanwa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "อักษรตักบันวา"
+
+#: kcharselect-translation.cpp:85
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Khmer"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "เขมร"
+
+#: kcharselect-translation.cpp:86
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mongolian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "อักษรมองโกล"
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "ส่วนขยายตัวพยางค์พื้นเมืองแคนาดา"
+
+#: kcharselect-translation.cpp:88
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Limbu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "อักษรลิมบู"
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Le"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "อักษรไทลื้อ"
+
+#: kcharselect-translation.cpp:90
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "New Tai Lue"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "อักษรไทลื้อใหม่"
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "สัญลักษณ์ภาษาเขมร"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Buginese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "อักษรบูกิ"
+
+#: kcharselect-translation.cpp:93
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Tham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "อักษรไทธรรม"
+
+#: kcharselect-translation.cpp:94
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "เครื่องหมายกำหนดเสียงแบบรวม"
+
+#: kcharselect-translation.cpp:95
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Balinese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "อักษรบาหลี"
+
+#: kcharselect-translation.cpp:96
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sundanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "อักษรซูดาน"
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "คะตะคะนะ"
+
+#: kcharselect-translation.cpp:98
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lepcha"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "เลปชา"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr ""
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "อักษรไซริลลิคเพิ่มเติม A"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "รูปร่างทางเรขาคณิต"
+
+#: kcharselect-translation.cpp:102
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "อักษรละตินเสริม 1"
+
+#: kcharselect-translation.cpp:103
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vedic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "ส่วนขยายพระเวท"
+
+#: kcharselect-translation.cpp:104
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "ส่วนขยายสัญลักษณ์การออกเสียง"
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "ส่วนเสริมของส่วนขยายสัญลักษณ์การออกเสียง"
+
+#: kcharselect-translation.cpp:106
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "ส่วนเสริมเครื่องหมายกำกับการออกเสียงแบบรวม"
+
+#: kcharselect-translation.cpp:107
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended Additional"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "ตัวเพิ่มเติมส่วนขยายละติน"
+
+#: kcharselect-translation.cpp:108
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "ส่วนขยายภาษากรีก"
+
+#: kcharselect-translation.cpp:109
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "General Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "เครื่องหมายวรรคตอนกรีก"
+
+#: kcharselect-translation.cpp:110
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Superscripts and Subscripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "ตัวยกและตัวห้อย"
+
+#: kcharselect-translation.cpp:111
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "สัญลักษณ์เงินตรา"
+
+#: kcharselect-translation.cpp:112
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks for Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "เครื่องหมายกำกับเสียงแบบรวมสำหรับสัญลักษณ์"
+
+#: kcharselect-translation.cpp:113
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Letterlike Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "สัญลักษณ์คล้ายตัวอักษร"
+
+#: kcharselect-translation.cpp:114
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "รูปแบบตัวเลข"
+
+#: kcharselect-translation.cpp:115
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "ลูกศร"
+
+#: kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "ตัวดำเนินการทางคณิตศาสตร์"
+
+#: kcharselect-translation.cpp:117
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Technical"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "ตัวเทคนิคเบ็ดเตล็ด"
+
+#: kcharselect-translation.cpp:118
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Control Pictures"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "รูปภาพสำหรับควบคุม"
+
+#: kcharselect-translation.cpp:119
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Optical Character Recognition"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "การแปลงภาพเป็นตัวอักษร"
+
+#: kcharselect-translation.cpp:120
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "อักขระในวงเล็บ"
+
+#: kcharselect-translation.cpp:121
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Box Drawing"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "เส้นวาดกล่อง"
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Block Elements"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "ส่วนประกอบบล็อค"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "รูปร่างทางเรขาคณิต"
+
+#: kcharselect-translation.cpp:124
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "สัญลักษณ์เบ็ดเตล็ด"
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Dingbats"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "แบบอักษรรูปภาพ"
+
+#: kcharselect-translation.cpp:126
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "สัญลักษณ์คณิตศาสตร์เบ็ดเตล็ดแบบ A"
+
+#: kcharselect-translation.cpp:127
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "ลูกศรเสริม A"
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "รูปแบบอักษรเบรลล์"
+
+#: kcharselect-translation.cpp:129
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "ลูกศรเสริม B"
+
+#: kcharselect-translation.cpp:130
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "สัญลักษณ์คณิตศาสตร์เบ็ดเตล็ดแบบ B"
+
+#: kcharselect-translation.cpp:131
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "ส่วนเสริมตัวดำเนินการทางคณิตศาสตร์"
+
+#: kcharselect-translation.cpp:132
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "สัญลักษณ์และลูกศรเบ็ดเตล็ด"
+
+#: kcharselect-translation.cpp:133
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Glagolitic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "อักษรกลาโกลิติก"
+
+#: kcharselect-translation.cpp:134
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-C"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "อักษรละตินเพิ่มเติม C"
+
+#: kcharselect-translation.cpp:135
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "คอปติก"
+
+#: kcharselect-translation.cpp:136
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "ส่วนเสริมเกรกอเรียน"
+
+#: kcharselect-translation.cpp:137
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tifinagh"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "อักษรทิฟินาค"
+
+#: kcharselect-translation.cpp:138
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "ส่วนขยายอักษรเอธิโอเปีย"
+
+#: kcharselect-translation.cpp:139
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "อักษรไซริลลิคเพิ่มเติม A"
+
+#: kcharselect-translation.cpp:140
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "เครื่องหมายวรรคตอนเสริม"
+
+#: kcharselect-translation.cpp:141
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Radicals Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "ส่วนเสริมอักษรราก CJK"
+
+#: kcharselect-translation.cpp:142
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kangxi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "อักษรรากคังซี"
+
+#: kcharselect-translation.cpp:143
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ideographic Description Characters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "ตัวอักขระอธิบายความคิด"
+
+#: kcharselect-translation.cpp:144
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Symbols and Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "สัญลักษณ์และเครื่องหมายวรรคตอน CJK"
+
+#: kcharselect-translation.cpp:145
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "ฮิระงะนะ"
+
+#: kcharselect-translation.cpp:146
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "คะตะคะนะ"
+
+#: kcharselect-translation.cpp:147
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "ปอพอมอฟอ (จู้อิน)"
+
+#: kcharselect-translation.cpp:148
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Compatibility Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "อักษรจาโมที่เข้าได้กับฮันกึล"
+
+#: kcharselect-translation.cpp:149
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kanbun"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "คันบุน"
+
+#: kcharselect-translation.cpp:150
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "ส่วนขยายปอพอมอฟอ"
+
+#: kcharselect-translation.cpp:151
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Strokes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "เส้นขีด CJK"
+
+#: kcharselect-translation.cpp:152
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "ส่วนเสริมการออกเสียงคะตะคะนะ"
+
+#: kcharselect-translation.cpp:153
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed CJK Letters and Months"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "อักษร CJK ที่มีวงครอบและเดือน"
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "อักษรที่เข้ากันได้กับ CJK"
+
+#: kcharselect-translation.cpp:155
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs Extension A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "ส่วนขยายอักษรภาพแบบรวม CJK แบบ A"
+
+#: kcharselect-translation.cpp:156
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yijing Hexagram Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "สัญลักษณ์ยี่จิง"
+
+#: kcharselect-translation.cpp:157
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "อักษรภาพรวม CJK"
+
+#: kcharselect-translation.cpp:158
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yi Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "อักษรพยางค์ยี่"
+
+#: kcharselect-translation.cpp:159
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "อักษรรากยี่"
+
+#: kcharselect-translation.cpp:160
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lisu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "ลีซอ"
+
+#: kcharselect-translation.cpp:161
+#, fuzzy
+#| msgctxt "of Farvardin short"
+#| msgid "of Far"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "of Far"
+
+#: kcharselect-translation.cpp:162
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "อักษรไซริลลิคเพิ่มเติม B"
+
+#: kcharselect-translation.cpp:163
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bamum"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "อารบิก"
+
+#: kcharselect-translation.cpp:164
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Modifier Tone Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "อักษรแปลงเสียง"
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-D"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "ส่วนขยายละติน D"
+
+#: kcharselect-translation.cpp:166
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syloti Nagri"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "อักษรสิลเหตินาครี"
+
+#: kcharselect-translation.cpp:167
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Common Indic Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "รูปแบบตัวเลขอินดิกสามัญ"
+
+#: kcharselect-translation.cpp:168
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phags-pa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "อักษรพัก-ปา"
+
+#: kcharselect-translation.cpp:169
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Saurashtra"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "เสาราษฎร์"
+
+#: kcharselect-translation.cpp:170
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Devanagari Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "อักษรเทวนาครี - ส่วนเพิ่มเติม"
+
+#: kcharselect-translation.cpp:171
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kayah Li"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "คยาห์"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr ""
+
+#: kcharselect-translation.cpp:173
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "อักษรฮันกึล - เพิ่มเติม-A"
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Javanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "อักษรชวา"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "อักษรพม่า เพิ่มเติม-A"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "อักษรจาม"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "อักษรพม่า เพิ่มเติม-A"
+
+#: kcharselect-translation.cpp:178
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Viet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "ไทเวียด"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "มณีปุรี"
+
+#: kcharselect-translation.cpp:180
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "ส่วนขยายอักษรเอธิโอเปีย"
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "อักษรละตินเพิ่มเติม A"
+
+#: kcharselect-translation.cpp:182
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "ตัวเสริมอักษรไซริลลิค"
+
+#: kcharselect-translation.cpp:183
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "มณีปุรี"
+
+#: kcharselect-translation.cpp:184
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "พยางค์ฮันกึล"
+
+#: kcharselect-translation.cpp:185
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "อักษรฮันกึล - เพิ่มเติม-B"
+
+#: kcharselect-translation.cpp:186
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "รหัสแทนยูนิโคดส่วนบน"
+
+#: kcharselect-translation.cpp:187
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Private Use Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "รหัสแทนยูนิโคดส่วนบนสำหรับใช้ส่วนตัว"
+
+#: kcharselect-translation.cpp:188
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Low Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "รหัสแทนยูนิโคดส่วนล่าง"
+
+#: kcharselect-translation.cpp:189
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Private Use Area"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "พื้นที่ใช้ส่วนตัว"
+
+#: kcharselect-translation.cpp:190
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "อักษรภาพที่เข้าได้กับ CJK"
+
+#: kcharselect-translation.cpp:191
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Alphabetic Presentation Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "รูปแบบการเสนออักขระ"
+
+#: kcharselect-translation.cpp:192
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "รูปแบบการนำเสนอภาษาอารบิค A"
+
+#: kcharselect-translation.cpp:193
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Variation Selectors"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "ตัวเลือกตัวแปร"
+
+#: kcharselect-translation.cpp:194
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vertical Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "รูปแบบแนวดิ่ง"
+
+#: kcharselect-translation.cpp:195
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Half Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "ครึ่งเครื่องหมายแบบรวม"
+
+#: kcharselect-translation.cpp:196
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "รูปแบบที่เข้าได้กับ CJK"
+
+#: kcharselect-translation.cpp:197
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Small Form Variants"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "รูปแปรแบบเล็ก"
+
+#: kcharselect-translation.cpp:198
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "รูปแบบการนำเสนอภาษาอารบิค B"
+
+#: kcharselect-translation.cpp:199
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Halfwidth and Fullwidth Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "รูปแบบครึ่งความกว้างและเต็มความกว้าง"
+
+#: kcharselect-translation.cpp:200
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Specials"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "พิเศษ"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:205
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "อักขระในวงเล็บ"
+
+#: kcharselect-translation.cpp:206
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "ตัวเสริมอักษรเอธิโอเปีย"
+
+#: kcharselect-translation.cpp:207
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "สัญลักษณ์และลูกศรเบ็ดเตล็ด"
+
+#: kcharselect-translation.cpp:208
+#, fuzzy
+#| msgid "Emoticons"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "ไอคอนสื่ออารมณ์"
+
+#: kcharselect-translation.cpp:209
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:210
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:211
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "สัญลักษณ์คณิตศาสตร์"
+
+#: kcharselect-translation.cpp:212
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "รูปร่างทางเรขาคณิต"
+
+#: kcharselect-translation.cpp:213
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "ลูกศรเสริม A"
+
+#: kcharselect-translation.cpp:214
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:215
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "สัญลักษณ์ภาษาเขมร"
+
+#: kcharselect-translation.cpp:216
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "สัญลักษณ์และลูกศรเบ็ดเตล็ด"
+
+#: kcharselect-translation.cpp:217
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr ""
+
+#: kcharselect.cpp:406
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "ป้อนคำหรือตัวอักษรที่จะใช้ค้นหาได้ที่นี่"
+
+#: kcharselect.cpp:408
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "ป้อนคำหรือตัวอักษรที่จะใช้ค้นหาได้ที่นี่"
+
+#: kcharselect.cpp:413
+#, fuzzy
+#| msgid "&Find..."
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "ค้น&หา..."
+
+#: kcharselect.cpp:433
+#, fuzzy
+#| msgctxt "Goes to previous character"
+#| msgid "Previous in History"
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "ตัวก่อนหน้านี้ในรายการประวัติ"
+
+#: kcharselect.cpp:435
+#, fuzzy
+#| msgid "Previous Character in History"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "อักขระตัวก่อนนี้ในรายการประวัติ"
+
+#: kcharselect.cpp:440
+#, fuzzy
+#| msgctxt "Goes to next character"
+#| msgid "Next in History"
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "ตัวถัดไปในรายการประวัติ"
+
+#: kcharselect.cpp:442
+#, fuzzy
+#| msgid "Next Character in History"
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "อักขระตัวถัดไปในรายการประวัติ"
+
+#: kcharselect.cpp:447
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "&ย้อนกลับ"
+
+#: kcharselect.cpp:454
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "&ต่อไป"
+
+#: kcharselect.cpp:469
+#, fuzzy
+#| msgid "Select a category"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "เลือกหมวดหมู่"
+
+#: kcharselect.cpp:473
+#, fuzzy
+#| msgid "Select a block to be displayed"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "เลือกบล็อกที่จะให้แสดง"
+
+#: kcharselect.cpp:486
+#, fuzzy
+#| msgid "Set font"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "ตั้งแบบอักษร"
+
+#: kcharselect.cpp:493
+#, fuzzy
+#| msgid "Set font size"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "ตั้งขนาดอักษร"
+
+#: kcharselect.cpp:785
+#, fuzzy
+#| msgid "Character:"
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "อักขระ:"
+
+#: kcharselect.cpp:791
+#, fuzzy
+#| msgid "Name: "
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "ชื่อ: "
+
+#: kcharselect.cpp:800
+#, fuzzy
+#| msgid "Annotations and Cross References"
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "หมายเหตุประกอบและส่วนอ้างอิง"
+
+#: kcharselect.cpp:804
+#, fuzzy
+#| msgid "Alias names:"
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "ชื่อแฝง:"
+
+#: kcharselect.cpp:812
+#, fuzzy
+#| msgid "Notes:"
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "หมายเหตุ:"
+
+#: kcharselect.cpp:820
+#, fuzzy
+#| msgid "See also:"
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "ดูเพิ่มเติมที่:"
+
+#: kcharselect.cpp:835
+#, fuzzy
+#| msgid "Equivalents:"
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "เทียบเท่ากับ:"
+
+#: kcharselect.cpp:843
+#, fuzzy
+#| msgid "Approximate equivalents:"
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "เทียบเท่าโดยประมาณกับ:"
+
+#: kcharselect.cpp:851
+#, fuzzy
+#| msgid "Description:"
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "คำอธิบาย:"
+
+#: kcharselect.cpp:863
+#, fuzzy
+#| msgid "CJK Ideograph Information"
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "ข้อมูลอักษรภาพ CJK"
+
+#: kcharselect.cpp:866
+#, fuzzy
+#| msgid "Definition in English: "
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "นิยามในภาษาอังกฤษ: "
+
+#: kcharselect.cpp:873
+#, fuzzy
+#| msgid "Mandarin Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "การออกเสียงแบบจีนกลาง: "
+
+#: kcharselect.cpp:880
+#, fuzzy
+#| msgid "Cantonese Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "การออกเสียงแบบกวางตุ้ง: "
+
+#: kcharselect.cpp:887
+#, fuzzy
+#| msgid "Japanese On Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "การออกเสียงภาษาญี่ปุ่นแบบอง (จีน): "
+
+#: kcharselect.cpp:894
+#, fuzzy
+#| msgid "Japanese Kun Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "การออกเสียงภาษาญี่ปุ่นแบบคุง (ญี่ปุ่น): "
+
+#: kcharselect.cpp:901
+#, fuzzy
+#| msgid "Tang Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "การออกเสียงแบบราชวงศ์ถัง: "
+
+#: kcharselect.cpp:908
+#, fuzzy
+#| msgid "Korean Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "การออกเสียงแบบเกาหลี: "
+
+#: kcharselect.cpp:914
+#, fuzzy
+#| msgid "General Character Properties"
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "คุณสมบัติอักขระทั่วไป"
+
+#: kcharselect.cpp:915
+#, fuzzy
+#| msgid "Block: "
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "บล็อค: "
+
+#: kcharselect.cpp:916
+#, fuzzy
+#| msgid "Unicode category: "
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "หมวดหมู่ยูนิโค้ด: "
+
+#: kcharselect.cpp:920
+#, fuzzy
+#| msgid "Various Useful Representations"
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "ตัวแทนที่มีประโยชน์ต่าง ๆ"
+
+#: kcharselect.cpp:921
+#, fuzzy
+#| msgid "UTF-8:"
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:925
+#, fuzzy
+#| msgid "UTF-16: "
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:932
+#, fuzzy
+#| msgid "C octal escaped UTF-8: "
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "อักขระ escape UTF-8 แบบเลขฐาน 8 ของภาษา C:"
+
+#: kcharselect.cpp:936
+#, fuzzy
+#| msgid "XML decimal entity:"
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "ขอบเขตทศนิยมของ XML:"
+
+#: kcharselect.cpp:1081
+#, fuzzy
+#| msgid "Unicode code point:"
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "รหัสยูนิโค้ด: "
+
+#: kcharselect.cpp:1082
+#, fuzzy
+#| msgctxt "Character"
+#| msgid "In decimal:"
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "ฐานสิบ:"
+
+#: kcharselectdata.cpp:318
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "อักขระใด ๆ"
+
+#: kcharselectdata.cpp:339
+#, fuzzy
+#| msgid "<Non Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<ไม่ใช้ส่วนตัว แทนตัวสูง>"
+
+#: kcharselectdata.cpp:341
+#, fuzzy
+#| msgid "<Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<ใช้ส่วนตัว แทนตัวสูง>"
+
+#: kcharselectdata.cpp:343
+#, fuzzy
+#| msgid "<Low Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<แทนตัวต่ำ>"
+
+#: kcharselectdata.cpp:345
+#, fuzzy
+#| msgid "<Private Use>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<ใช้ส่วนตัว>"
+
+#: kcharselectdata.cpp:377
+#, fuzzy
+#| msgid "<not assigned>"
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<ยังไม่กำหนด>"
+
+#: kcharselectdata.cpp:759
+#, fuzzy
+#| msgid "Non-printable"
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "พิมพ์ไม่ได้"
+
+#: kcharselectdata.cpp:792
+#, fuzzy
+#| msgid "Other, Control"
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "อื่น ๆ, ควบคุม"
+
+#: kcharselectdata.cpp:793
+#, fuzzy
+#| msgid "Other, Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "อื่น ๆ, รูปแบบ"
+
+#: kcharselectdata.cpp:794
+#, fuzzy
+#| msgid "Other, Not Assigned"
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "อื่น ๆ, ยังไม่กำหนด"
+
+#: kcharselectdata.cpp:795
+#, fuzzy
+#| msgid "Other, Private Use"
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "อื่น ๆ, ใช้ส่วนตัว"
+
+#: kcharselectdata.cpp:796
+#, fuzzy
+#| msgid "Other, Surrogate"
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "อื่น ๆ, ใช้แทน"
+
+#: kcharselectdata.cpp:797
+#, fuzzy
+#| msgid "Letter, Lowercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "อักษร, ตัวพิมพ์เล็ก"
+
+#: kcharselectdata.cpp:798
+#, fuzzy
+#| msgid "Letter, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "อักษร, ตัวดัดแปลง"
+
+#: kcharselectdata.cpp:799
+#, fuzzy
+#| msgid "Letter, Other"
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "อักษร, อื่น ๆ"
+
+#: kcharselectdata.cpp:800
+#, fuzzy
+#| msgid "Letter, Titlecase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "อักษร, อักษรใหญ่ตัวแรก"
+
+#: kcharselectdata.cpp:801
+#, fuzzy
+#| msgid "Letter, Uppercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "อักษร, อักษรตัวพิมพ์ใหญ่"
+
+#: kcharselectdata.cpp:802
+#, fuzzy
+#| msgid "Mark, Spacing Combining"
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "เครื่องหมาย, การรวมช่องไฟ"
+
+#: kcharselectdata.cpp:803
+#, fuzzy
+#| msgid "Mark, Enclosing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "เครื่องหมาย, ครอบ"
+
+#: kcharselectdata.cpp:804
+#, fuzzy
+#| msgid "Mark, Non-Spacing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "เครื่องหมาย, ไม่มีช่องไฟ"
+
+#: kcharselectdata.cpp:805
+#, fuzzy
+#| msgid "Number, Decimal Digit"
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "ตัวเลข, ตัวเลขทศนิยม"
+
+#: kcharselectdata.cpp:806
+#, fuzzy
+#| msgid "Number, Letter"
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "ตัวเลข, อักษร"
+
+#: kcharselectdata.cpp:807
+#, fuzzy
+#| msgid "Number, Other"
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "ตัวเลข, อื่น ๆ"
+
+#: kcharselectdata.cpp:808
+#, fuzzy
+#| msgid "Punctuation, Connector"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "เครื่องหมายวรรคตอน, ตัวเชื่อม"
+
+#: kcharselectdata.cpp:809
+#, fuzzy
+#| msgid "Punctuation, Dash"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "เครื่องหมายวรรคตอน, ขีดกลาง"
+
+#: kcharselectdata.cpp:810
+#, fuzzy
+#| msgid "Punctuation, Close"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "เครื่องหมายวรรคตอน, ปิด"
+
+#: kcharselectdata.cpp:811
+#, fuzzy
+#| msgid "Punctuation, Final Quote"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "เครื่องหมายวรรคตอน, อัญประกาศปิด"
+
+#: kcharselectdata.cpp:812
+#, fuzzy
+#| msgid "Punctuation, Initial Quote"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "เครื่องหมายวรรคตอน, อัญประกาศเปิด"
+
+#: kcharselectdata.cpp:813
+#, fuzzy
+#| msgid "Punctuation, Other"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "เครื่องหมายวรรคตอน, อื่น ๆ"
+
+#: kcharselectdata.cpp:814
+#, fuzzy
+#| msgid "Punctuation, Open"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "เครื่องหมายวรรคตอน, เปิด"
+
+#: kcharselectdata.cpp:815
+#, fuzzy
+#| msgid "Symbol, Currency"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "สัญลักษณ์, เงินตรา"
+
+#: kcharselectdata.cpp:816
+#, fuzzy
+#| msgid "Symbol, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "สัญลักษณ์, ตัวแปลง"
+
+#: kcharselectdata.cpp:817
+#, fuzzy
+#| msgid "Symbol, Math"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "สัญลัษณ์, คณิตศาสตร์"
+
+#: kcharselectdata.cpp:818
+#, fuzzy
+#| msgid "Symbol, Other"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "สัญลักษณ์, อื่นๆ"
+
+#: kcharselectdata.cpp:819
+#, fuzzy
+#| msgid "Separator, Line"
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "ตัวแยก, บรรทัด"
+
+#: kcharselectdata.cpp:820
+#, fuzzy
+#| msgid "Separator, Paragraph"
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "ตัวแยก, ย่อหน้า"
+
+#: kcharselectdata.cpp:821
+#, fuzzy
+#| msgid "Separator, Space"
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "ตัวแยก, วรรค"
+
+#: kcharselectdata.cpp:822
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "ไม่รู้จัก"
+
+#: kcolorcombo.cpp:341
+#, fuzzy
+#| msgctxt "Custom color"
+#| msgid "Custom..."
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "กำหนดเอง..."
+
+#: kdatecombobox.cpp:171
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "ปีถัดไป"
+
+#: kdatecombobox.cpp:172
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "เดือนถัดไป"
+
+#: kdatecombobox.cpp:173
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "ปีถัดไป"
+
+#: kdatecombobox.cpp:174
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kdatecombobox.cpp:175
+#, fuzzy
+#| msgid "Today"
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "วันนี้"
+
+#: kdatecombobox.cpp:176
+#, fuzzy
+#| msgid "Yesterday"
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "เมื่อวานนี้"
+
+#: kdatecombobox.cpp:177
+#, fuzzy
+#| msgctxt ""
+#| "referring to a filter on the modification and usage date of files/"
+#| "resources"
+#| msgid "Last Week"
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "สัปดาห์ก่อน"
+
+#: kdatecombobox.cpp:178
+#, fuzzy
+#| msgctxt ""
+#| "referring to a filter on the modification and usage date of files/"
+#| "resources"
+#| msgid "Last Month"
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "เดือนก่อน"
+
+#: kdatecombobox.cpp:179
+#, fuzzy
+#| msgctxt ""
+#| "referring to a filter on the modification and usage date of files/"
+#| "resources"
+#| msgid "Last Year"
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "ปีก่อน"
+
+#: kdatecombobox.cpp:181
+#, fuzzy
+#| msgid "No text"
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "ไม่มีข้อความ"
+
+#: kdatecombobox.cpp:312
+#, fuzzy
+#| msgctxt "SSL error"
+#| msgid "The certificate is invalid"
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "ใบรับรองใช้งานไม่ได้"
+
+#: kdatecombobox.cpp:315
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr ""
+
+#: kdatecombobox.cpp:322
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr ""
+
+#: kdatepicker.cpp:192
+#, fuzzy, qt-format
+#| msgid "Week %1"
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "สับดาห์ %1"
+
+#: kdatepicker.cpp:297
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "ปีถัดไป"
+
+#: kdatepicker.cpp:298
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "ปีก่อน"
+
+#: kdatepicker.cpp:299
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "เดือนถัดไป"
+
+#: kdatepicker.cpp:300
+#, fuzzy
+#| msgid "Previous month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "เดือนก่อน"
+
+#: kdatepicker.cpp:301
+#, fuzzy
+#| msgid "Select a week"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "เลือกสัปดาห์"
+
+#: kdatepicker.cpp:302
+#, fuzzy
+#| msgid "Select a month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "เลือกเดือน"
+
+#: kdatepicker.cpp:303
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "เลือกปี"
+
+#: kdatepicker.cpp:304
+#, fuzzy
+#| msgid "Select the current day"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "เลือกวันปัจจุบัน"
+
+#: kdatepicker.cpp:643
+#, fuzzy
+#| msgid "Close"
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "ปิด"
+
+#: kdatetimeedit.cpp:186
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr ""
+
+#: kdatetimeedit.cpp:187
+#, fuzzy
+#| msgid "Rating"
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "การจัดอันดับ"
+
+#: kdatetimeedit.cpp:227
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+
+#: kdatetimeedit.cpp:237
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+
+#: keditlistwidget.cpp:305
+#, fuzzy
+#| msgid "&Add"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "เ&พิ่ม"
+
+#: keditlistwidget.cpp:317
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "เ&อาออก"
+
+#: keditlistwidget.cpp:329
+#, fuzzy
+#| msgid "Move &Up"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "ย้าย&ขึ้น"
+
+#: keditlistwidget.cpp:334
+#, fuzzy
+#| msgid "Move &Down"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "ย้าย&ลง"
+
+#: kfontchooser.cpp:190
+#, fuzzy
+#| msgid "Requested Font"
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "แบบอักษรที่ต้องการ"
+
+#: kfontchooser.cpp:204
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font"
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "แบบอักษร"
+
+#: kfontchooser.cpp:209
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font:"
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "แบบอักษร:"
+
+#: kfontchooser.cpp:242
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font style"
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "ลักษณะแบบอักษร"
+
+#: kfontchooser.cpp:247
+#, fuzzy
+#| msgid "Font style:"
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "ลักษณะแบบอักษร:"
+
+#: kfontchooser.cpp:260
+#, fuzzy
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "ธรรมดา"
+
+#: kfontchooser.cpp:261 kfontchooser.cpp:589
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "ตัวเอียง"
+
+#: kfontchooser.cpp:262 kfontchooser.cpp:590
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Oblique"
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "ตัวเฉียง"
+
+#: kfontchooser.cpp:263
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold"
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "ตัวหนา"
+
+#: kfontchooser.cpp:264
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "ตัวเอียงหนา"
+
+#: kfontchooser.cpp:281
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Size"
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "ขนาด"
+
+#: kfontchooser.cpp:286
+#, fuzzy
+#| msgctxt "@label:listbox Font size"
+#| msgid "Size:"
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "ขนาด:"
+
+#: kfontchooser.cpp:304
+#, fuzzy
+#| msgctxt "@item font size"
+#| msgid "Relative"
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "ขนาดสัมพัทธ์"
+
+#: kfontchooser.cpp:306
+#, fuzzy
+#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "ขนาดแบบอักษร<br /><i>คงที่</i> หรือ <i>สัมพัทธ์</i><br />กับสภาพแวดล้อม"
+
+#: kfontchooser.cpp:308
+#, fuzzy
+#| msgid ""
+#| "Here you can switch between fixed font size and font size to be "
+#| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#| "dimensions, paper size)."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"คุณสามารถเปลี่ยนไปมาระหว่างขนาดแบบอักษรคงที่ และขนาดแบบอักษรที่จะถูกคำนวณแบบไม่คงที่ "
+"และปรับค่าให้เข้ากับสภาพแวดล้อมที่เปลี่ยนไปด้วย (เช่น มิติของวิดเจ็ต, ขนาดกระดาษ เป็นต้น)"
+
+#: kfontchooser.cpp:362
+#, fuzzy
+#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr ""
+"The Quick Brown Fox Jumps Over The Lazy Dog\n"
+"เป็นมนุษย์สุดประเสริฐเลิศคุณค่า กว่าบรรดาฝูงสัตว์เดรัจฉาน\n"
+"จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร"
+
+#: kfontchooser.cpp:365
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"นี่เป็นข้อความตัวอย่างที่แสดงให้เห็นลักษณะการตั้งค่าในปัจจุบัน "
+"คุณอาจจะแก้ไขมันเพื่อทดสอบอักขระพิเศษก็ได้เช่นกัน"
+
+#: kfontchooser.cpp:378
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr ""
+
+#: kfontchooser.cpp:574
+#, fuzzy, qt-format
+#| msgctxt "@application/plain"
+#| msgid "%1"
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:43
+#, fuzzy
+#| msgid "Select Font"
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "เลือกแบบอักษร"
+
+#: kfontrequester.cpp:215
+#, fuzzy
+#| msgid "Choose..."
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "เลือก..."
+
+#: kfontrequester.cpp:221
+#, fuzzy
+#| msgid "Preview of the selected font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "แสดงตัวอย่างของแบบอักษรที่เลือก"
+
+#: kfontrequester.cpp:222
+#, fuzzy
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"นี่เป็นส่วนแสดงตัวอย่างของแบบอักษรที่เลือกไว้ คุณสามารถเปลี่ยนมันได้ด้วยการคลิกที่ปุ่ม \"เลือก...\""
+
+#: kfontrequester.cpp:225
+#, fuzzy, qt-format
+#| msgid "Preview of the \"%1\" font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "แสดงตัวอย่างของแบบอักษร \"%1\""
+
+#: kfontrequester.cpp:226
+#, fuzzy, qt-format
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"นี่เป็นส่วนแสดงตัวอย่างของแบบอักษร \"%1\" คุณสามารถเปลี่ยนมันได้ด้วยการคลิกที่ปุ่ม \"เลือก...\""
+
+#: kled.cpp:194
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr ""
+
+#: kled.cpp:195
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr ""
+
+#: kmessagebox.cpp:76
+#, fuzzy
+#| msgctxt "@action:button post-filter"
+#| msgid "."
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:316
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "รายละเอียด"
+
+#: kmessagebox.cpp:474 kmessagebox.cpp:528
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "คำถาม"
+
+#: kmessagebox.cpp:486 kmessagebox.cpp:542 kmessagebox.cpp:613
+#: kmessagebox.cpp:677 kmessagebox.cpp:760
+#, fuzzy
+#| msgid "Do not ask again"
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "ไม่ต้องถามอีก"
+
+#: kmessagebox.cpp:601 kmessagebox.cpp:665 kmessagebox.cpp:747
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "คำเตือน"
+
+#: kmessagebox.cpp:799 kmessagebox.cpp:820
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "ผิดพลาด"
+
+#: kmessagebox.cpp:847 kmessagebox.cpp:880 kmessagebox.cpp:1147
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "ขออภัย"
+
+#: kmessagebox.cpp:923
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "ข้อมูล"
+
+#: kmessagebox.cpp:934
+#, fuzzy
+#| msgid "Do not show this message again"
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "ไม่ต้องแสดงข้อความนี้อีก"
+
+#: kmessagewidget.cpp:88
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "&ปิด"
+
+#: kmessagewidget.cpp:89
+#, fuzzy
+#| msgid "Close Message"
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "ปิดข้อความ"
+
+#: kmimetypechooser.cpp:99
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr ""
+
+#: kmimetypechooser.cpp:100
+#, fuzzy
+#| msgid "Filter"
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "ตัวกรอง"
+
+#: kmimetypechooser.cpp:114
+#, fuzzy
+#| msgid "Mime types"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "ประเภท Mime ของแฟ้ม"
+
+#: kmimetypechooser.cpp:117
+#, fuzzy
+#| msgid "Comment"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "หมายเหตุ"
+
+#: kmimetypechooser.cpp:121
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "รูปแบบอักษรเบรลล์"
+
+#: kmimetypechooser.cpp:137
+#, fuzzy
+#| msgid "&Edit..."
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "แ&ก้ไข..."
+
+#: kmimetypechooser.cpp:147
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr ""
+
+#: knewpassworddialog.cpp:69
+#, fuzzy, qt-format
+#| msgid "Password must be at least 1 character long"
+#| msgid_plural "Password must be at least %1 characters long"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "รหัสผ่านต้องมีความยาวอย่างน้อย %1 ตัวอักษร"
+
+#: knewpassworddialog.cpp:73
+#, fuzzy
+#| msgid "Password is empty"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "รหัสผ่านว่าง"
+
+#: knewpassworddialog.cpp:77
+#, fuzzy
+#| msgid "Passwords do not match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "รหัสผ่านไม่ตรงกัน"
+
+#: knewpassworddialog.cpp:82
+#, fuzzy
+#| msgid "Passwords match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "รหัสผ่านตรงกัน"
+
+#: knewpassworddialog.cpp:158
+#, fuzzy
+#| msgid "Low Password Strength"
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "รหัสผ่านมีความปลอดภัยต่ำ"
+
+#: knewpassworddialog.cpp:159
+#, fuzzy
+#| msgid ""
+#| "The password you have entered has a low strength. To improve the strength "
+#| "of the password, try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols as well as letters.\n"
+#| "\n"
+#| "Would you like to use this password anyway?"
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"รหัสผ่านที่คุณป้อนมา มีระดับความปลอดภัยต่ำ ควรกำหนดรหัสผ่านให้มีความปลอดภัยสูงด้วยการ:\n"
+" - ใช้รหัสผ่านที่มีความยาวมากขึ้น;\n"
+" - ใช้รหัสผ่านที่เป็นการผสมระหว่างอักษรตัวเล็กและอักษรตัวใหญ่;\n"
+" - ใช้ตัวเลขหรือสัญลักษณ์ร่วมกับตัวอักษร\n"
+"ถึงอย่างไรคุณก็จะใช้รหัสผ่านนี้ใช่หรือไม่ ?"
+
+#: knewpasswordwidget.cpp:64
+#, fuzzy
+#| msgid ""
+#| "The password strength meter gives an indication of the security of the "
+#| "password you have entered.  To improve the strength of the password, "
+#| "try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols, such as #, as well as letters."
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"ระดับความแข็งแกร่งของรหัสผ่าน จะเป็นตัวชี้วัดได้ว่าระบบมีความปลอดภัยมากเพียงใด "
+"โดยมีหลักสำหรับกำหนดรหัสผ่านที่มีความปลอดภัยสูงคือ:\n"
+" - ใช้รหัสผ่านที่มีความยาวมากขึ้น;\n"
+" - ใช้รหัสผ่านที่เป็นการผสมระหว่างอักษรตัวเล็กและอักษรตัวใหญ่;\n"
+" - ใช้ตัวเลขหรือสัญลักษณ์ร่วมกับตัวอักษร"
+
+#: knewpasswordwidget.ui:19
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "รหัสผ่าน:"
+
+#: knewpasswordwidget.ui:29
+#, fuzzy
+#| msgid "&Verify:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "&ตรวจสอบ:"
+
+#: knewpasswordwidget.ui:54
+#, fuzzy
+#| msgid "Password strength meter:"
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "ระดับความแข็งแกร่งของรหัสผ่าน:"
+
+#: kpassworddialog.cpp:63
+#, fuzzy
+#| msgid "Password"
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+#: kpassworddialog.cpp:103
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "ป้อนชื่อผู้ใช้และรหัสผ่านทางด้านล่าง"
+
+#: kpassworddialog.ui:33
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "ป้อนชื่อผู้ใช้และรหัสผ่านทางด้านล่าง"
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr ""
+
+#: kpassworddialog.ui:77
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "&จดจำรหัสผ่าน"
+
+#: kpassworddialog.ui:102
+#, fuzzy
+#| msgid "Username:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "ชื่อผู้ใช้:"
+
+#: kpassworddialog.ui:116
+#, fuzzy
+#| msgid "Domain:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "โดเมน:"
+
+#: kpassworddialog.ui:130
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "รหัสผ่าน:"
+
+#: kpassworddialog.ui:144
+#, fuzzy
+#| msgid "Remember password"
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "จดจำรหัสผ่าน"
+
+#: kpasswordlineedit.cpp:56
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr ""
+
+#: kpixmapregionselectordialog.cpp:72
+#, fuzzy
+#| msgid "Select Region of Image"
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "เลือกพื้นที่ของภาพ"
+
+#: kpixmapregionselectordialog.cpp:76
+#, fuzzy
+#| msgid "Please click and drag on the image to select the region of interest:"
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "โปรดคลิกค้างแล้วลากบนภาพเพื่อเลือกพื้นที่ที่ต้องการ:"
+
+#: kpixmapregionselectorwidget.cpp:192
+#, fuzzy
+#| msgid "Image Operations"
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "การดำเนินการกับรูปภาพ"
+
+#: kpixmapregionselectorwidget.cpp:194
+#, fuzzy
+#| msgid "&Rotate Clockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "หมุน&ตามเข็มนาฬิกา"
+
+#: kpixmapregionselectorwidget.cpp:196
+#, fuzzy
+#| msgid "Rotate &Counterclockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "หมุน&ทวนเข็มนาฬิกา"
+
+#: ksqueezedtextlabel.cpp:217
+#, fuzzy
+#| msgid "&Copy Full Text"
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "&คัดลอกข้อความเต็ม"
+
+#: kstandardguiitem.cpp:108
+#, fuzzy
+#| msgid "&OK"
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&ตกลง"
+
+#: kstandardguiitem.cpp:113
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&ยกเลิก"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "&Yes"
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "ใ&ช่"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+#| msgid "Yes"
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "ใช่"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "&No"
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "ไ&ม่ใช่"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "No"
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "ไม่ใช่"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "&Discard"
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&ละทิ้ง"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "Discard changes"
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "ละทิ้งการเปลี่ยนแปลง"
+
+#: kstandardguiitem.cpp:129
+#, fuzzy
+#| msgid ""
+#| "Pressing this button will discard all recent changes made in this dialog."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr "หากกดปุ่มนี้ จะทำการยกเลิกการเปลี่ยนแปลงที่ได้ทำไว้ทั้งหมดในกล่องโต้ตอบนี้"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "&Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&บันทึก"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "Save data"
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "บันทึกข้อมูล"
+
+#: kstandardguiitem.cpp:140
+#, fuzzy
+#| msgid "&Do Not Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "ไม่บั&นทึก"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid "Do not save data"
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "ไม่ต้องบันทึกข้อมูล"
+
+#: kstandardguiitem.cpp:146
+#, fuzzy
+#| msgid "Save &As..."
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "บัน&ทึกเป็น..."
+
+#: kstandardguiitem.cpp:147
+#, fuzzy
+#| msgid "Save file with another name"
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "บันทึกแฟ้มเป็นชื่ออื่น"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "&Apply"
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&ปรับใช้"
+
+#: kstandardguiitem.cpp:152
+#, fuzzy
+#| msgid "Apply changes"
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "ปรับใช้การเปลี่ยนแปลง"
+
+#: kstandardguiitem.cpp:153
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Apply</b>, the settings will be handed over to the "
+#| "program, but the dialog will not be closed.\n"
+#| "Use this to try different settings."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"เมื่อคุณคลิกที่ปุ่ม <b>ปรับใช้</b> การตั้งค่าจะถูกปรับใช้งานกับโปรแกรมทันที\n"
+"แต่กล่องตั้งค่านี้จะยังคงอยู่ เพื่อให้คุณได้ทดลองตั้งค่าอื่น ๆ อีก"
+
+#: kstandardguiitem.cpp:161
+#, fuzzy
+#| msgid "Administrator &Mode..."
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "โ&หมดผู้บริหารระบบ..."
+
+#: kstandardguiitem.cpp:161
+#, fuzzy
+#| msgid "Enter Administrator Mode"
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "เข้าสู่โหมดผู้บริหารระบบ"
+
+#: kstandardguiitem.cpp:162
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Administrator Mode</b> you will be prompted for the "
+#| "administrator (root) password in order to make changes which require root "
+#| "privileges."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"เมื่อคลิกที่ปุ่ม <b>โหมดผู้บริหารระบบ</b> จะมีการถามรหัสผ่านของผู้บริหารระบบ (root) "
+"เพื่อใช้ในการเปลี่ยนแปลงค่าต่าง ๆ ที่ต้องการใช้สิทธิ์ของผู้บริหารระบบ"
+
+#: kstandardguiitem.cpp:169
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "&ล้าง"
+
+#: kstandardguiitem.cpp:170
+#, fuzzy
+#| msgid "Clear input"
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "ล้างช่องป้อนข้อมูล"
+
+#: kstandardguiitem.cpp:171
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "ล้างสิ่งที่อยู่ในช่องป้อนข้อมูล"
+
+#: kstandardguiitem.cpp:176
+#, fuzzy
+#| msgid "&Help"
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&ช่วยเหลือ"
+
+#: kstandardguiitem.cpp:177
+#, fuzzy
+#| msgid "Show help"
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "แสดงความช่วยเหลือ"
+
+#: kstandardguiitem.cpp:182
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&ปิด"
+
+#: kstandardguiitem.cpp:183
+#, fuzzy
+#| msgid "Close the current window or document"
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "ปิดหน้าต่างหรือเอกสารปัจจุบัน"
+
+#: kstandardguiitem.cpp:188
+#, fuzzy
+#| msgid "&Close Window"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "ปิ&ดหน้าต่าง"
+
+#: kstandardguiitem.cpp:189
+#, fuzzy
+#| msgid "Close the current window."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "ปิดหน้าต่างปัจจุบัน"
+
+#: kstandardguiitem.cpp:194
+#, fuzzy
+#| msgid "&Close Document"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "ปิ&ดเอกสาร"
+
+#: kstandardguiitem.cpp:195
+#, fuzzy
+#| msgid "Close the current document."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "ปิดเอกสารปัจจุบัน"
+
+#: kstandardguiitem.cpp:200
+#, fuzzy
+#| msgid "&Defaults"
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "ค่าปริ&ยาย"
+
+#: kstandardguiitem.cpp:201
+#, fuzzy
+#| msgid "Reset all items to their default values"
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "ตั้งค่ารายการทั้งหมดให้กลับไปใช้ค่าปริยาย"
+
+#: kstandardguiitem.cpp:208
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&ย้อนกลับ"
+
+#: kstandardguiitem.cpp:209
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "ย้อนกลับไปหนึ่งขั้น"
+
+#: kstandardguiitem.cpp:216
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&ต่อไป"
+
+#: kstandardguiitem.cpp:217
+#, fuzzy
+#| msgid "Go forward one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "ทำต่อไปหนึ่งขั้น"
+
+#: kstandardguiitem.cpp:227
+#, fuzzy
+#| msgid "&Print..."
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&พิมพ์..."
+
+#: kstandardguiitem.cpp:228
+#, fuzzy
+#| msgid "Opens the print dialog to print the current document"
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "เปิดกล่องการพิมพ์เพื่อพิมพ์เอกสารปัจจุบัน"
+
+#: kstandardguiitem.cpp:234
+#, fuzzy
+#| msgid "C&ontinue"
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "ทำ&ต่อไป"
+
+#: kstandardguiitem.cpp:235
+#, fuzzy
+#| msgid "Continue operation"
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "ดำเนินการต่อไป"
+
+#: kstandardguiitem.cpp:240
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&ลบ"
+
+#: kstandardguiitem.cpp:241
+#, fuzzy
+#| msgid "Delete item(s)"
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "ลบรายการ"
+
+#: kstandardguiitem.cpp:246
+#, fuzzy
+#| msgid "&Open..."
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "เ&ปิด..."
+
+#: kstandardguiitem.cpp:247
+#, fuzzy
+#| msgid "Open file"
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "เปิดแฟ้ม"
+
+#: kstandardguiitem.cpp:252
+#, fuzzy
+#| msgid "&Quit"
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&ออก"
+
+#: kstandardguiitem.cpp:253
+#, fuzzy
+#| msgid "Quit application"
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "ออกจากโปรแกรม"
+
+#: kstandardguiitem.cpp:258
+#, fuzzy
+#| msgid "&Reset"
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "ตั้งค่าใ&หม่"
+
+#: kstandardguiitem.cpp:259
+#, fuzzy
+#| msgid "Reset configuration"
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "ตั้งค่าการปรับแต่งใหม่"
+
+#: kstandardguiitem.cpp:264
+#, fuzzy
+#| msgctxt "Verb"
+#| msgid "&Insert"
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "แ&ทรก"
+
+#: kstandardguiitem.cpp:269
+#, fuzzy
+#| msgid "Confi&gure..."
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "ป&รับแต่ง..."
+
+#: kstandardguiitem.cpp:274
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&ค้นหา"
+
+#: kstandardguiitem.cpp:279
+#, fuzzy
+#| msgid "Stop"
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "หยุด"
+
+#: kstandardguiitem.cpp:284
+#, fuzzy
+#| msgid "Add"
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "เพิ่ม"
+
+#: kstandardguiitem.cpp:289
+#, fuzzy
+#| msgid "Remove"
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "เอาออก"
+
+#: kstandardguiitem.cpp:294
+#, fuzzy
+#| msgid "Test"
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "ทดสอบ"
+
+#: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgid "Properties"
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "คุณสมบัติ"
+
+#: kstandardguiitem.cpp:304
+#, fuzzy
+#| msgid "&Overwrite"
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "เขียน&ทับ"
+
+#: ktimecombobox.cpp:269
+#, fuzzy
+#| msgctxt "SSL error"
+#| msgid "The certificate is invalid"
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "ใบรับรองใช้งานไม่ได้"
+
+#: ktimecombobox.cpp:272
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr ""
+
+#: ktimecombobox.cpp:279
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr ""
+
+#: ktogglefullscreenaction.cpp:44
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "ออกจากโหมดเต็&มหน้าจอ"
+
+#: ktogglefullscreenaction.cpp:45
+#, fuzzy
+#| msgid "Exit Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "ออกจากเต็มหน้าจอ"
+
+#: ktogglefullscreenaction.cpp:46
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "ออกจากโหมดเต็&มหน้าจอ"
+
+#: ktogglefullscreenaction.cpp:49
+#, fuzzy
+#| msgid "F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "โหมดเ&ต็มหน้าจอ"
+
+#: ktogglefullscreenaction.cpp:50
+#, fuzzy
+#| msgid "Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "เต็มหน้าจอ"
+
+#: ktogglefullscreenaction.cpp:51
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr ""
