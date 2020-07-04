@@ -1,23 +1,12 @@
 /*
- * This file is part of the KDE project
- * Copyright (C) 2008 Fredrik Höglund <fredrik@kde.org>
- * Copyright (C) 2008 Konstantin Heil <konst.heil@stud.uni-heidelberg.de>
- * Copyright (C) 2009 Peter Penz <peter.penz@gmx.at>
- * Copyright (C) 2017 Elvis Angelaccio <elvis.angelaccio@kde.org>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library. If not, see <http://www.gnu.org/licenses/>.
- */
+    This file is part of the KDE project
+    SPDX-FileCopyrightText: 2008 Fredrik Höglund <fredrik@kde.org>
+    SPDX-FileCopyrightText: 2008 Konstantin Heil <konst.heil@stud.uni-heidelberg.de>
+    SPDX-FileCopyrightText: 2009 Peter Penz <peter.penz@gmx.at>
+    SPDX-FileCopyrightText: 2017 Elvis Angelaccio <elvis.angelaccio@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.1-or-later
+*/
 
 #include "ktooltipwidget.h"
 
