@@ -193,6 +193,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KSplitterCollapserButton
   KStyleExtensions
   KToolTipWidget
+  KCursorSaver
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 

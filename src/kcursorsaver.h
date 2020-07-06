@@ -1,0 +1,75 @@
+/*
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
+
+#ifndef KCURSORSAVER_H
+#define KCURSORSAVER_H
+
+#include <QCursor>
+#include <QApplication>
+
+/**
+ * @short sets a cursor and makes sure it's restored on destruction
+ * Create a KCursorSaver object when you want to set the cursor.
+ * As soon as it gets out of scope, it will restore the original
+ * cursor.
+ * @since 5.73
+ */
+class KCursorSaver
+{
+public:
+    /// constructor taking QCursor shapes
+    explicit KCursorSaver(Qt::CursorShape shape)
+    {
+        QApplication::setOverrideCursor(QCursor(shape));
+        inited = true;
+    }
+
+    /// copy constructor. The right side won't restore the cursor
+    KCursorSaver(const KCursorSaver &rhs)
+    {
+        *this = rhs;
+    }
+
+    /// restore the cursor
+    ~KCursorSaver()
+    {
+        if (inited) {
+            QApplication::restoreOverrideCursor();
+        }
+    }
+
+    /// call this to explitly restore the cursor
+    inline void restoreCursor()
+    {
+        QApplication::restoreOverrideCursor();
+        inited = false;
+    }
+
+protected:
+    void operator=(const KCursorSaver &rhs)
+    {
+        inited = rhs.inited;
+        rhs.inited = false;
+    }
+
+private:
+    mutable bool inited;
+};
+
+/**
+ * convenience functions
+ */
+namespace KBusyPtr {
+inline KCursorSaver idle()
+{
+    return KCursorSaver(Qt::ArrowCursor);
+}
+
+inline KCursorSaver busy()
+{
+    return KCursorSaver(Qt::WaitCursor);
+}
+}
+
+#endif
