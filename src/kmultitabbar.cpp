@@ -452,13 +452,17 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
     }
     //alignFlags = Qt::AlignLeading | Qt::AlignVCenter;
 
+    const int iconXShift = (isChecked() || isDown()) ? style()->pixelMetric(QStyle::PM_ButtonShiftHorizontal, &opt, this) : 0;
+    const int iconYShift = (isChecked() || isDown()) ? style()->pixelMetric(QStyle::PM_ButtonShiftVertical, &opt, this) : 0;
     if (isVertical()) {
         if (bottomIcon) {
             labelArea = QRect(0, vMargin, width(), textRoom);
             iconArea  = QRect(0, vMargin + textRoom, width(), iconRoom);
+            iconArea.translate(iconYShift, -iconXShift);
         } else {
             labelArea = QRect(0, iconRoom, width(), textRoom);
             iconArea  = QRect(0, 0, width(), iconRoom);
+            iconArea.translate(-iconYShift, iconXShift);
         }
     } else {
         // Pretty simple --- depends only on RTL/LTR
@@ -469,6 +473,7 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
             labelArea = QRect(iconRoom, 0, textRoom, height());
             iconArea  = QRect(0, 0, iconRoom, height());
         }
+        iconArea.translate(iconXShift, iconYShift);
     }
 
     style()->drawItemPixmap(&painter, iconArea, Qt::AlignCenter | Qt::AlignVCenter, iconPixmap);
