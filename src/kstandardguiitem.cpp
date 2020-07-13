@@ -290,7 +290,7 @@ KGuiItem properties()
 
 KGuiItem overwrite()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Overwrite"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Overwrite"), QStringLiteral("document-replace"));
 }
 
 void assign(QPushButton *button, StandardItem item)
