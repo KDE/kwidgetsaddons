@@ -95,8 +95,10 @@ qt5_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
 ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
     HEADER loggingcategory.h
     IDENTIFIER KWidgetsAddonsLog
-    CATEGORY_NAME kf5.kwidgetsaddons
+    CATEGORY_NAME kf.kwidgetsaddons
     DEFAULT_SEVERITY Warning
+    DESCRIPTION "KWidgetsAddons"
+    EXPORT KWIDGETSADDONS
 )
 
 
@@ -321,6 +323,12 @@ endif()
 if(BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
 endif()
+
+ecm_qt_install_logging_categories(
+    EXPORT KWIDGETSADDONS
+    FILE kwidgetsaddons.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
 
 include(ECMGeneratePriFile)
 ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons)
