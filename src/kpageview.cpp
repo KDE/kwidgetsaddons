@@ -95,27 +95,33 @@ void KPageViewPrivate::_k_rebuildGui()
 void KPageViewPrivate::updatePageMargins()
 {
     Q_Q(KPageView);
+
+    auto *style = q->style();
+
+    int margin;
     if (pageMarginsMode == KPageView::NoPageMargins) {
-        pageLayout->setContentsMargins(0, 0, 0, 0);
+        margin = 0;
     } else {
-        auto *style = q->style();
         // TODO: PM_DefaultTopLevelMargin is deprecated for Qt 6, but for now there is no
         // other way to have the same toplevel margin used also for other dialogs
-        const int topLevelMargin = style->pixelMetric(QStyle::PM_DefaultTopLevelMargin);
-        int leftMargin = topLevelMargin;
-        const int topMargin = topLevelMargin;
-        int rightMargin = topLevelMargin;
-        const int bottomMargin = topLevelMargin;
-        if (faceType != KPageView::Tabbed && effectiveFaceType() != KPageView::Plain) {
-            Qt::Alignment alignment = q->viewPosition();
-            if (alignment & Qt::AlignLeft) {
-                leftMargin = 0;
-            } else if (alignment & Qt::AlignRight) {
-                rightMargin = 0;
-            }
-        }
-        pageLayout->setContentsMargins(leftMargin, topMargin, rightMargin, bottomMargin);
+        margin = style->pixelMetric(QStyle::PM_DefaultTopLevelMargin);
     }
+    int leftMargin = margin;
+    const int topMargin = margin;
+    int rightMargin = margin;
+    const int bottomMargin = margin;
+
+    if (faceType != KPageView::Tabbed && effectiveFaceType() != KPageView::Plain) {
+        const Qt::Alignment alignment = q->viewPosition();
+        if (alignment & Qt::AlignLeft) {
+            leftMargin = style->pixelMetric(QStyle::PM_LayoutLeftMargin);
+        } else if (alignment & Qt::AlignRight) {
+            rightMargin = style->pixelMetric(QStyle::PM_LayoutRightMargin);
+        }
+    }
+
+    pageLayout->setContentsMargins(leftMargin, topMargin, rightMargin, bottomMargin);
+    pageLayout->setSpacing(style->pixelMetric(QStyle::PM_LayoutVerticalSpacing));
 }
 
 void KPageViewPrivate::updateSelection()
@@ -346,6 +352,7 @@ void KPageViewPrivate::init()
     Q_Q(KPageView);
     mainLayout = new QHBoxLayout(q);
     mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setSpacing(0);
 
     pageLayout = new QVBoxLayout;
 
@@ -362,6 +369,8 @@ void KPageViewPrivate::init()
 
     // page should use most space, so stretch with 1
     mainLayout->addLayout(pageLayout, 1);
+
+    updatePageMargins();
 }
 
 /**
