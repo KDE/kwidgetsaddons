@@ -12,7 +12,6 @@
 #include "kpagedialog_p.h"
 
 #include <QLayout>
-#include <QStyle>
 
 KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
     : KPageDialog(*new KPageDialogPrivate(this), nullptr, parent, flags)
@@ -54,18 +53,14 @@ void KPageDialog::setFaceType(FaceType faceType)
     d->mPageWidget->setFaceType(static_cast<KPageWidget::FaceType>(faceType));
 
     // Use zero margins for dialogs with the sidebar style so that the sidebar
-    // can be flush with the window edge; margins for the content are added
-    // automatically
+    // can be flush with the window edge.
     if (faceType == KPageDialog::Auto || faceType == KPageDialog::List){
         layout()->setContentsMargins(0, 0, 0, 0);
+        d->mPageWidget->setPageMarginsMode(KPageView::TopLevelPageMargins);
     } else {
-        const QStyle *style = d->mPageWidget->style();
-        layout()->setContentsMargins(
-            style->pixelMetric(QStyle::PM_LayoutLeftMargin),
-            style->pixelMetric(QStyle::PM_LayoutTopMargin),
-            style->pixelMetric(QStyle::PM_LayoutRightMargin),
-            style->pixelMetric(QStyle::PM_LayoutBottomMargin)
-        );
+        // reset to style defaults
+        layout()->setContentsMargins(-1, -1, -1, -1);
+        d->mPageWidget->setPageMarginsMode(KPageView::NoPageMargins);
     }
 }
 

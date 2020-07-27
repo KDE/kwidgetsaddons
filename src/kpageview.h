@@ -49,6 +49,8 @@ class KWIDGETSADDONS_EXPORT KPageView : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(FaceType faceType READ faceType WRITE setFaceType)
+    /// @since 5.74
+    Q_PROPERTY(PageMarginsMode pageMarginsMode READ pageMarginsMode WRITE setPageMarginsMode)
     Q_DECLARE_PRIVATE(KPageView)
 
 public:
@@ -83,6 +85,26 @@ public:
         Tabbed
     };
     Q_ENUM(FaceType)
+
+    /**
+     * Modes for the margins added around the actual page with the header,
+     * the current page content and the footer to the sides without the navigation.
+     *
+     * These margins are in addition to any contents margins set for the
+     * complete KPageView widget or its toplevel layout.
+     */
+    enum PageMarginsMode {
+        /**
+         * No extra margins are added.
+         */
+        NoPageMargins,
+        /**
+         * Margins are added using QStyle::PM_DefaultTopLevelMargin on all sides
+         * not facing the navigation.
+         */
+        TopLevelPageMargins,
+    };
+    Q_ENUM(PageMarginsMode)
 
     /**
      * Creates a page view with given parent.
@@ -170,6 +192,22 @@ public:
      */
     QWidget *pageFooter() const;
 
+    /**
+     * Sets the mode for the margins added around the page with the header, content and footer
+     * to the sides without the navigation.
+     *
+     * Default is NoMargins.
+     *
+     * @since 5.74
+     */
+    void setPageMarginsMode(PageMarginsMode mode);
+
+    /**
+     * @return the current margins mode
+     * @since 5.74
+     */
+    PageMarginsMode pageMarginsMode() const;
+
 Q_SIGNALS:
     /**
      * This signal is emitted whenever the current page changes.
@@ -178,6 +216,8 @@ Q_SIGNALS:
     void currentPageChanged(const QModelIndex &current, const QModelIndex &previous);
 
 protected:
+    void changeEvent(QEvent *event) override;
+
     /**
      * Returns the navigation view, depending on the current
      * face type.

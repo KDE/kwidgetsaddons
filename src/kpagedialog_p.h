@@ -42,6 +42,7 @@ protected:
         layout->setContentsMargins(0, 0, 0, 0);
 
         if (mPageWidget) {
+            mPageWidget->setPageMarginsMode(KPageView::TopLevelPageMargins);
             q->connect(mPageWidget, &KPageWidget::currentPageChanged,
                        q, &KPageDialog::currentPageChanged);
             q->connect(mPageWidget, &KPageWidget::pageRemoved,

@@ -18,6 +18,9 @@
 #include <QGridLayout>
 #include <QSize>
 #include <QTimer>
+#include <QStyle>
+#include <QEvent>
+
 
 void KPageViewPrivate::_k_rebuildGui()
 {
@@ -54,44 +57,64 @@ void KPageViewPrivate::_k_rebuildGui()
         }
     }
 
-    if (faceType == KPageView::Tabbed) {
-        stack->setVisible(false);
-        layout->removeWidget(stack);
+    // update header visibility
+    const bool isPageHeaderShown = q->showPageHeader();
+    if (pageHeader) {
+        pageHeader->setVisible(isPageHeaderShown);
     } else {
-        layout->addWidget(stack, 2, 1);
+        titleWidget->setVisible(isPageHeaderShown);
+    }
+
+    // update main page with either stack or tabbed view
+    pageLayout->removeWidget(stack);
+
+    if (faceType == KPageView::Tabbed) {
+        // view should use most space, so stretch with 1
+        pageLayout->insertWidget(1, view, 1);
+        stack->setVisible(false);
+    } else {
+        // stack should use most space, so stretch with 1
+        pageLayout->insertWidget(1, stack, 1);
         stack->setVisible(true);
     }
 
-    layout->removeWidget(titleWidget);
-
-    if (pageHeader) {
-        layout->removeWidget(pageHeader);
-        pageHeader->setVisible(q->showPageHeader());
-        titleWidget->setVisible(false);
-
-        if (faceType == KPageView::Tabbed) {
-            layout->addWidget(pageHeader, 1, 1);
+    // main layout
+    if (faceType != KPageView::Tabbed && effectiveFaceType() != KPageView::Plain) {
+        Qt::Alignment alignment = q->viewPosition();
+        if (alignment & Qt::AlignLeft) {
+            mainLayout->insertWidget(0, view);
+        } else if (alignment & Qt::AlignRight) {
+            mainLayout->addWidget(view);
         } else {
-            layout->addWidget(pageHeader, 1, 1, 1, 2);
-        }
-    } else {
-        titleWidget->setVisible(q->showPageHeader());
-        if (faceType == KPageView::Tabbed) {
-            layout->addWidget(titleWidget, 1, 1);
-        } else {
-            layout->addWidget(titleWidget, 1, 1, 1, 2);
+            qCWarning(KWidgetsAddonsLog) << "Unsupported navigation view position:" << alignment;
         }
     }
+    updatePageMargins();
+}
 
-    Qt::Alignment alignment = q->viewPosition();
-    if (alignment & Qt::AlignTop) {
-        layout->addWidget(view, 2, 1);
-    } else if (alignment & Qt::AlignRight) {
-        layout->addWidget(view, 1, 2, 4, 1);
-    } else if (alignment & Qt::AlignBottom) {
-        layout->addWidget(view, 4, 1);
-    } else if (alignment & Qt::AlignLeft) {
-        layout->addWidget(view, 1, 0, 4, 1);
+void KPageViewPrivate::updatePageMargins()
+{
+    Q_Q(KPageView);
+    if (pageMarginsMode == KPageView::NoPageMargins) {
+        pageLayout->setContentsMargins(0, 0, 0, 0);
+    } else {
+        auto *style = q->style();
+        // TODO: PM_DefaultTopLevelMargin is deprecated for Qt 6, but for now there is no
+        // other way to have the same toplevel margin used also for other dialogs
+        const int topLevelMargin = style->pixelMetric(QStyle::PM_DefaultTopLevelMargin);
+        int leftMargin = topLevelMargin;
+        const int topMargin = topLevelMargin;
+        int rightMargin = topLevelMargin;
+        const int bottomMargin = topLevelMargin;
+        if (faceType != KPageView::Tabbed && effectiveFaceType() != KPageView::Plain) {
+            Qt::Alignment alignment = q->viewPosition();
+            if (alignment & Qt::AlignLeft) {
+                leftMargin = 0;
+            } else if (alignment & Qt::AlignRight) {
+                rightMargin = 0;
+            }
+        }
+        pageLayout->setContentsMargins(leftMargin, topMargin, rightMargin, bottomMargin);
     }
 }
 
@@ -306,26 +329,39 @@ void KPageViewPrivate::_k_dataChanged(const QModelIndex &, const QModelIndex &)
 }
 
 KPageViewPrivate::KPageViewPrivate(KPageView *_parent)
-    : q_ptr(_parent), model(nullptr), faceType(KPageView::Auto),
-      layout(nullptr), stack(nullptr), titleWidget(nullptr), view(nullptr)
+    : q_ptr(_parent)
+    , model(nullptr)
+    , faceType(KPageView::Auto)
+    , pageMarginsMode(KPageView::NoPageMargins)
+    , mainLayout(nullptr)
+    , pageLayout(nullptr)
+    , stack(nullptr)
+    , titleWidget(nullptr)
+    , view(nullptr)
 {
 }
 
 void KPageViewPrivate::init()
 {
     Q_Q(KPageView);
-    layout = new QGridLayout(q);
+    mainLayout = new QHBoxLayout(q);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    pageLayout = new QVBoxLayout;
+
     stack = new KPageStackedWidget(q);
     titleWidget = new KTitleWidget(q);
-    layout->addWidget(titleWidget, 1, 1, 1, 2);
-    layout->addWidget(stack, 2, 1);
 
     defaultWidget = new QWidget(q);
     stack->addWidget(defaultWidget);
 
-    // stack should use most space
-    layout->setColumnStretch(1, 1);
-    layout->setRowStretch(2, 1);
+    // initial layout
+    pageLayout->addWidget(titleWidget);
+    // stack should use most space, so stretch with 1
+    pageLayout->addWidget(stack, 1);
+
+    // page should use most space, so stretch with 1
+    mainLayout->addLayout(pageLayout, 1);
 }
 
 /**
@@ -382,6 +418,11 @@ QAbstractItemModel *KPageView::model() const
 void KPageView::setFaceType(FaceType faceType)
 {
     Q_D(KPageView);
+
+    if (d->faceType == faceType) {
+        return;
+    }
+
     d->faceType = faceType;
 
     d->_k_rebuildGui();
@@ -392,6 +433,27 @@ KPageView::FaceType KPageView::faceType() const
     Q_D(const KPageView);
     return d->faceType;
 }
+
+void KPageView::setPageMarginsMode(KPageView::PageMarginsMode pageMarginsMode)
+{
+    Q_D(KPageView);
+
+    if (d->pageMarginsMode == pageMarginsMode) {
+        return;
+    }
+
+    d->pageMarginsMode = pageMarginsMode;
+
+    d->updatePageMargins();
+}
+
+
+KPageView::PageMarginsMode KPageView::pageMarginsMode() const
+{
+    Q_D(const KPageView);
+    return d->pageMarginsMode;
+}
+
 
 void KPageView::setCurrentPage(const QModelIndex &index)
 {
@@ -460,18 +522,19 @@ void KPageView::setPageHeader(QWidget *header)
     }
 
     if (d->pageHeader) {
-        d->layout->removeWidget(d->pageHeader);
+        d->pageLayout->removeWidget(d->pageHeader);
+    } else {
+        d->pageLayout->removeWidget(d->titleWidget);
     }
-    d->layout->removeWidget(d->titleWidget);
 
     d->pageHeader = header;
 
-    // Give it a colSpan of 2 to add a margin to the right
+    // insert always as first, but set invisible in case
     if (d->pageHeader) {
-        d->layout->addWidget(d->pageHeader, 1, 1, 1, 2);
+        d->pageLayout->insertWidget(0, d->pageHeader);
         d->pageHeader->setVisible(showPageHeader());
     } else {
-        d->layout->addWidget(d->titleWidget, 1, 1, 1, 2);
+        d->pageLayout->insertWidget(0, d->titleWidget);
         d->titleWidget->setVisible(showPageHeader());
     }
 }
@@ -490,13 +553,14 @@ void KPageView::setPageFooter(QWidget *footer)
     }
 
     if (d->pageFooter) {
-        d->layout->removeWidget(d->pageFooter);
+        d->pageLayout->removeWidget(d->pageFooter);
     }
 
     d->pageFooter = footer;
 
     if (footer) {
-        d->layout->addWidget(d->pageFooter, 3, 1);
+        // appending as last
+        d->pageLayout->addWidget(d->pageFooter);
     }
 }
 
@@ -548,6 +612,16 @@ Qt::Alignment KPageView::viewPosition() const
         return Qt::AlignTop;
     } else {
         return Qt::AlignLeft;
+    }
+}
+
+void KPageView::changeEvent(QEvent* event)
+{
+    Q_D(KPageView);
+
+    QWidget::changeEvent(event);
+    if (event->type() == QEvent::StyleChange) {
+        d->updatePageMargins();
     }
 }
 

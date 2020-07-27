@@ -12,7 +12,8 @@
 #include "kpageview.h"
 
 #include <QAbstractItemDelegate>
-#include <QGridLayout>
+#include <QVBoxLayout>
+#include <QHBoxLayout>
 #include <QStackedWidget>
 #include <QAbstractProxyModel>
 #include <QListView>
@@ -54,9 +55,11 @@ protected:
     // data
     QAbstractItemModel *model;
     KPageView::FaceType faceType;
+    KPageView::PageMarginsMode pageMarginsMode;
 
     // gui
-    QGridLayout *layout;
+    QHBoxLayout *mainLayout;
+    QVBoxLayout *pageLayout;
     KPageStackedWidget *stack;
     KTitleWidget *titleWidget;
     QWidget *defaultWidget;
@@ -66,6 +69,7 @@ protected:
     QPointer<QWidget> pageHeader;
     QPointer<QWidget> pageFooter;
 
+    void updatePageMargins();
     void updateTitleWidget(const QModelIndex &index);
 
     void updateSelection();
