@@ -1,0 +1,2941 @@
+# KDE3 - Georgian translation of kdelibs4.po
+# Gia Shervashidze <giasher@telenet.ge>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2009-12-17 02:11+0400\n"
+"Last-Translator: George Machitidze <giomac@gmail.com>\n"
+"Language-Team: Georgian <http://www.gia.ge>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:16
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Sans Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:19
+#, fuzzy
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "&შემოწმება:"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:22
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr ""
+
+#: fonthelpers.cpp:65
+#, fuzzy, qt-format
+#| msgid "%1%"
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1%"
+
+#: fonthelpers.cpp:69
+#, fuzzy, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 - [%2]"
+
+#: kactionselector.cpp:95
+#, fuzzy
+#| msgid "&Available:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "&შესაძლო:"
+
+#: kactionselector.cpp:112
+#, fuzzy
+#| msgid "&Selected:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "&შერჩეული:"
+
+#: kassistantdialog.cpp:94
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "&უკან"
+
+#: kassistantdialog.cpp:96
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "ერთი ნაბიჯით უკან"
+
+#: kassistantdialog.cpp:101
+#, fuzzy
+#| msgctxt "Opposite to Back"
+#| msgid "Next"
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "შემდეგი"
+
+#: kassistantdialog.cpp:108
+#, fuzzy
+#| msgid "Finish"
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "დასრულება"
+
+#: kcharselect-translation.cpp:11
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:12
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:13
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:14
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:15
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:16
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:17
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:18
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:19
+#, fuzzy
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:20
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:21
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:22
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:737
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "სხვა"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr ""
+
+#: kcharselect-translation.cpp:26
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr ""
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr ""
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr ""
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr ""
+
+#: kcharselect-translation.cpp:33
+#, fuzzy
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "კირილიცა"
+
+#: kcharselect-translation.cpp:34
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:35
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "სომხური"
+
+#: kcharselect-translation.cpp:36
+#, fuzzy
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "ივრითი"
+
+#: kcharselect-translation.cpp:37
+#, fuzzy
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "არაბული"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr ""
+
+#: kcharselect-translation.cpp:39
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:40
+#, fuzzy
+#| msgid "R. Thaani"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "რაბი ულ აჰირ"
+
+#: kcharselect-translation.cpp:41
+#, fuzzy
+#| msgid "No"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "არა"
+
+#: kcharselect-translation.cpp:42
+#, fuzzy
+#| msgid "Ramadan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "რამადანი"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr ""
+
+#: kcharselect-translation.cpp:44
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:45
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr ""
+
+#: kcharselect-translation.cpp:47
+#, fuzzy
+#| msgid "Baltic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "ბალტიური"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr ""
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr ""
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr ""
+
+#: kcharselect-translation.cpp:51
+#, fuzzy
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "ტაი"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr ""
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr ""
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr ""
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr ""
+
+#: kcharselect-translation.cpp:56
+#, fuzzy
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "ტაი"
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Pause"
+
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr ""
+
+#: kcharselect-translation.cpp:59
+#, fuzzy
+#| msgid "Manual"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "ხელით"
+
+#: kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "ქართული"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr ""
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr ""
+
+#: kcharselect-translation.cpp:63
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr ""
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr ""
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr ""
+
+#: kcharselect-translation.cpp:67
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "რუნები"
+
+#: kcharselect-translation.cpp:68
+#, fuzzy
+#| msgid "Change"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "შეცვლა"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr ""
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr ""
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr ""
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr ""
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr ""
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr ""
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr ""
+
+#: kcharselect-translation.cpp:76
+#, fuzzy
+#| msgid "New Game"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "ახალი თამაში"
+
+#: kcharselect-translation.cpp:77
+#, fuzzy
+#| msgid "New Game"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "ახალი თამაში"
+
+#: kcharselect-translation.cpp:78
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+#| msgid "Japanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "იაპონური"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr ""
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgid "Japanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "იაპონური"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgid "Sunday"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "კვირა"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr ""
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr ""
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr ""
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:88
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr ""
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:93
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr ""
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr ""
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr ""
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "ხელ&ნაწერი"
+
+#: kcharselect-translation.cpp:98
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "რიცხვითი ფორმები"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr ""
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr ""
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr ""
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+#| msgid "Ctrl"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Ctrl"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr ""
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr ""
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr ""
+
+#: kcharselect-translation.cpp:109
+#, fuzzy
+#| msgid "Add Elements"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "კომენტარი"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr ""
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:112
+#, fuzzy
+#| msgid "Digit"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "ციფრი"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr ""
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr ""
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr ""
+
+#: kcharselect-translation.cpp:120
+#, fuzzy
+#| msgid "Baltic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "ბალტიური"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr ""
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+#| msgid "Copy"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "კოპირება"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr ""
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr ""
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr ""
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr ""
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr ""
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr ""
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr ""
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr ""
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr ""
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr ""
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr ""
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr ""
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr ""
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr ""
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr ""
+
+#: kcharselect-translation.cpp:142
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "ბლოკის მონაცემები"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:144
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "ბლოკის მონაცემები"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr ""
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr ""
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr ""
+
+#: kcharselect-translation.cpp:148
+#, fuzzy
+#| msgctxt "of March"
+#| msgid "of Mar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "მარ"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:150
+#, fuzzy
+#| msgid "Tamuz"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "თანუზი"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr ""
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr ""
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr ""
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "რიცხვითი ფორმები"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr ""
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr ""
+
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr ""
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr ""
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr ""
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:161
+#, fuzzy
+#| msgid "Japanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "იაპონური"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:163
+#, fuzzy
+#| msgid "Kha"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "ხამ"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+#| msgid "New Game"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "ახალი თამაში"
+
+#: kcharselect-translation.cpp:166
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:168
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:169
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr ""
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr ""
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:173
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "პირადი"
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "პირადი"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgid "vCard Format"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "სავიზიტოს ფორმატი"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "პირადი"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "ბლოკის მონაცემები"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr ""
+
+#: kcharselect-translation.cpp:179
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr ""
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "რიცხვითი ფორმები"
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr ""
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr ""
+
+#: kcharselect-translation.cpp:184
+#, fuzzy
+#| msgid "Icons"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "პიქტოგრამები"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr ""
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr ""
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr ""
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:192
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:193
+#, fuzzy
+#| msgid "Loading Applet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "აპლეტის ჩატვირთვა"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:195
+#, fuzzy
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "[პარამეტრები]"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:198
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr ""
+
+#: kcharselect-translation.cpp:200
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr ""
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:202
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr ""
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr ""
+
+#: kcharselect.cpp:393
+#, fuzzy
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "ძიება ინტერნეტში"
+
+#: kcharselect.cpp:395
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr ""
+
+#: kcharselect.cpp:400
+#, fuzzy
+#| msgid "&Find..."
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "&პოვნა..."
+
+#: kcharselect.cpp:420
+#, fuzzy
+#| msgid "Previous Item in List"
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "სიის წინა ელემენტი"
+
+#: kcharselect.cpp:422
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "წინა წელი"
+
+#: kcharselect.cpp:427
+#, fuzzy
+#| msgid "Next Item in List"
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "სიის შემდეგი ელემენტი"
+
+#: kcharselect.cpp:429
+#, fuzzy
+#| msgid "Set of Characters"
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "სიმბოლოთა ნაკრები"
+
+#: kcharselect.cpp:434
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "&უკან"
+
+#: kcharselect.cpp:441
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "&წინ"
+
+#: kcharselect.cpp:456
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "წლის არჩევა"
+
+#: kcharselect.cpp:460
+#, fuzzy
+#| msgid "Message string to be displayed"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "შეტყობინების ტექსტი"
+
+#: kcharselect.cpp:473
+#, fuzzy
+#| msgid "Select Font"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "შრიფტის არჩევა"
+
+#: kcharselect.cpp:480
+#, fuzzy
+#| msgid "Change font size?"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "შევცვალო შრიფტის ზომა?"
+
+#: kcharselect.cpp:772
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "ნებისმიერი სიმბოლო"
+
+#: kcharselect.cpp:778
+#, fuzzy
+#| msgid "Name: "
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "სახელი:"
+
+#: kcharselect.cpp:787
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr ""
+
+#: kcharselect.cpp:791
+#, fuzzy
+#| msgid "Please enter name:"
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "მიუთითეთ სახელი:"
+
+#: kcharselect.cpp:799
+#, fuzzy
+#| msgid "Notes:"
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "შენიშვნები:"
+
+#: kcharselect.cpp:807
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr ""
+
+#: kcharselect.cpp:822
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr ""
+
+#: kcharselect.cpp:830
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr ""
+
+#: kcharselect.cpp:838
+#, fuzzy
+#| msgid "Description:"
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "აღწერილობა:"
+
+#: kcharselect.cpp:850
+#, fuzzy
+#| msgid "Frame Information"
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "ბლოკის მონაცემები"
+
+#: kcharselect.cpp:853
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr ""
+
+#: kcharselect.cpp:860
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:867
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:874
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:881
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:888
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:895
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr ""
+
+#: kcharselect.cpp:901
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr ""
+
+#: kcharselect.cpp:902
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr ""
+
+#: kcharselect.cpp:903
+#, fuzzy
+#| msgid "&Unicode code point:"
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "&უნიკოდი:"
+
+#: kcharselect.cpp:907
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr ""
+
+#: kcharselect.cpp:908
+#, fuzzy
+#| msgid "UTF-8:"
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:912
+#, fuzzy
+#| msgid "UTF-16: "
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:919
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr ""
+
+#: kcharselect.cpp:923
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr ""
+
+#: kcharselect.cpp:1068
+#, fuzzy
+#| msgid "&Unicode code point:"
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "&უნიკოდი:"
+
+#: kcharselect.cpp:1069
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr ""
+
+#: kcharselectdata.cpp:305
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "ნებისმიერი სიმბოლო"
+
+#: kcharselectdata.cpp:326
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr ""
+
+#: kcharselectdata.cpp:328
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "პირადი"
+
+#: kcharselectdata.cpp:330
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr ""
+
+#: kcharselectdata.cpp:332
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "პირადი"
+
+#: kcharselectdata.cpp:364
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr ""
+
+#: kcharselectdata.cpp:746
+#, fuzzy
+#| msgid "Horizontal"
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "ჰორიზონტალური"
+
+#: kcharselectdata.cpp:779
+#, fuzzy
+#| msgid "Other Contributors:"
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "სხვა მონაწილეები:"
+
+#: kcharselectdata.cpp:780
+#, fuzzy
+#| msgid "vCard Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "სავიზიტოს ფორმატი"
+
+#: kcharselectdata.cpp:781
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr ""
+
+#: kcharselectdata.cpp:782
+#, fuzzy
+#| msgid "Private"
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "პირადი"
+
+#: kcharselectdata.cpp:783
+#, fuzzy
+#| msgid "vCard Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "სავიზიტოს ფორმატი"
+
+#: kcharselectdata.cpp:784
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "ბოლო ცვლილება:"
+
+#: kcharselectdata.cpp:785
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "ბოლო ცვლილება:"
+
+#: kcharselectdata.cpp:786
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "რიცხვითი ფორმები"
+
+#: kcharselectdata.cpp:787
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "ბოლო ცვლილება:"
+
+#: kcharselectdata.cpp:788
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "ბოლო ცვლილება:"
+
+#: kcharselectdata.cpp:789
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr ""
+
+#: kcharselectdata.cpp:790
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr ""
+
+#: kcharselectdata.cpp:791
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr ""
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr ""
+
+#: kcharselectdata.cpp:793
+#, fuzzy
+#| msgctxt "QAccel"
+#| msgid "Number Lock"
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Number Lock"
+
+#: kcharselectdata.cpp:794
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "რიცხვითი ფორმები"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr ""
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr ""
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr ""
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr ""
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr ""
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr ""
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr ""
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr ""
+
+#: kcharselectdata.cpp:803
+#, fuzzy
+#| msgid "Last modified:"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "ბოლო ცვლილება:"
+
+#: kcharselectdata.cpp:804
+#, fuzzy
+#| msgid "Symbolic Link"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "სიმბოლური ბმა"
+
+#: kcharselectdata.cpp:805
+#, fuzzy
+#| msgctxt "QFont"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "რიცხვითი ფორმები"
+
+#: kcharselectdata.cpp:806
+#, fuzzy
+#| msgid "Start of Line"
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "სტრიქონის დასაწყისი"
+
+#: kcharselectdata.cpp:807
+#, fuzzy
+#| msgid "Start replace"
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "შეცვლის დაწყება"
+
+#: kcharselectdata.cpp:808
+#, fuzzy
+#| msgid "Start replace"
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "შეცვლის დაწყება"
+
+#: kcharselectdata.cpp:809
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "უცნობია"
+
+#: kcolorcombo.cpp:329
+#, fuzzy
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "&შერჩევით"
+
+#: kdatecombobox.cpp:158
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "შემდეგი წელი"
+
+#: kdatecombobox.cpp:159
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "შემდეგი თვე"
+
+#: kdatecombobox.cpp:160
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "შემდეგი წელი"
+
+#: kdatecombobox.cpp:161
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr ""
+
+#: kdatecombobox.cpp:162
+#, fuzzy
+#| msgid "Monday"
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "ორშაბათი"
+
+#: kdatecombobox.cpp:163
+#, fuzzy
+#| msgid "Tuesday"
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "სამშაბათი"
+
+#: kdatecombobox.cpp:164
+#, fuzzy
+#| msgid "&Last Page"
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "&ბოლო გვერდი"
+
+#: kdatecombobox.cpp:165
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "შემდეგი თვე"
+
+#: kdatecombobox.cpp:166
+#, fuzzy
+#| msgid "&Last Page"
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "&ბოლო გვერდი"
+
+#: kdatecombobox.cpp:168
+#, fuzzy
+#| msgid "Date"
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "თარიღები"
+
+#: kdatecombobox.cpp:299
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr ""
+
+#: kdatecombobox.cpp:302
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr ""
+
+#: kdatecombobox.cpp:309
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr ""
+
+#: kdatepicker.cpp:180
+#, fuzzy, qt-format
+#| msgid "Week %1"
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "კვირა %1"
+
+#: kdatepicker.cpp:285
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "შემდეგი წელი"
+
+#: kdatepicker.cpp:286
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "წინა წელი"
+
+#: kdatepicker.cpp:287
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "შემდეგი თვე"
+
+#: kdatepicker.cpp:288
+#, fuzzy
+#| msgid "Previous month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "წინა თვე"
+
+#: kdatepicker.cpp:289
+#, fuzzy
+#| msgid "Select a week"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "თვის არჩევა"
+
+#: kdatepicker.cpp:290
+#, fuzzy
+#| msgid "Select a month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "კვირის არჩევა"
+
+#: kdatepicker.cpp:291
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "წლის არჩევა"
+
+#: kdatepicker.cpp:292
+#, fuzzy
+#| msgid "Select the current day"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "მიმდინარე დღის არჩევა"
+
+#: kdatepicker.cpp:631
+#, fuzzy
+#| msgid "Close"
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "დახურვა"
+
+#: kdatetimeedit.cpp:173
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr ""
+
+#: kdatetimeedit.cpp:174
+#, fuzzy
+#| msgid "Rating"
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "რეიტინგი"
+
+#: kdatetimeedit.cpp:214
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+
+#: kdatetimeedit.cpp:224
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+
+#: keditlistwidget.cpp:294
+#, fuzzy
+#| msgid "&Add"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "&დამატება"
+
+#: keditlistwidget.cpp:306
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "&ამოშლა"
+
+#: keditlistwidget.cpp:318
+#, fuzzy
+#| msgid "Move &Up"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "&ზემოთ გადატანა"
+
+#: keditlistwidget.cpp:323
+#, fuzzy
+#| msgid "Move &Down"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "&ქვემოთ გადატანა"
+
+#: kfontchooser.cpp:177
+#, fuzzy
+#| msgid "Requested Font"
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "მოთხოვნილი შრიფტი"
+
+#: kfontchooser.cpp:191
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font"
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "შრიფტი"
+
+#: kfontchooser.cpp:196
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font:"
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "შრიფტი:"
+
+#: kfontchooser.cpp:229
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font style"
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "შრიფტის სტილი"
+
+#: kfontchooser.cpp:234
+#, fuzzy
+#| msgid "Font style:"
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "შრიფტის სტილი:"
+
+#: kfontchooser.cpp:247
+#, fuzzy
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "ჩვეულებრივი"
+
+#: kfontchooser.cpp:248 kfontchooser.cpp:576
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "კურსივი"
+
+#: kfontchooser.cpp:249 kfontchooser.cpp:577
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr ""
+
+#: kfontchooser.cpp:250
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold"
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "მუქი"
+
+#: kfontchooser.cpp:251
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "მუქი კურსივი"
+
+#: kfontchooser.cpp:268
+#, fuzzy
+#| msgid "Size"
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "ზომა"
+
+#: kfontchooser.cpp:273
+#, fuzzy
+#| msgctxt "@label:listbox Font size"
+#| msgid "Size:"
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "ზომა:"
+
+#: kfontchooser.cpp:291
+#, fuzzy
+#| msgctxt "@item font size"
+#| msgid "Relative"
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "ფარდობითი"
+
+#: kfontchooser.cpp:293
+#, fuzzy
+#| msgid "Font size<br><i>fixed</i> or <i>relative</i><br>to environment"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "შრიფტის ზომა<br><i>ფიქსირებული</i> ან <i>ფარდობითი</i><br>გარემოსადმი"
+
+#: kfontchooser.cpp:295
+#, fuzzy
+#| msgid ""
+#| "Here you can switch between fixed font size and font size to be "
+#| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#| "dimensions, paper size)."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"აქ შეგიძლიათ გადაერთოთ შრიფტის ფიქსირებული ზომიდან ფარდობითზე, რომელიც "
+"დინამიურად მორგებულია გარემოსადმი (მაგ., მართვის ელემენტებისა და ქაღალდის "
+"ზომა და სხვ.) და პირიქით"
+
+#: kfontchooser.cpp:349
+#, fuzzy
+#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "აბგდევზთიკლმნოპჟრსტუფქღყშჩცძწჭხჯჰ"
+
+#: kfontchooser.cpp:352
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"ამ ნიმუშში ილუსტრირებულია შემდეგი პარამეტრები. შეგიძლიათ დაარედაქტიროთ "
+"სპეციალური სიმბოლოების შესამოწმებლად."
+
+#: kfontchooser.cpp:365
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr ""
+
+#: kfontchooser.cpp:561
+#, fuzzy, qt-format
+#| msgid "%1%"
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1%"
+
+#: kfontchooserdialog.cpp:43
+#, fuzzy
+#| msgid "Select Font"
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "შრიფტის არჩევა"
+
+#: kfontrequester.cpp:202
+#, fuzzy
+#| msgid "Choose..."
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "არჩევა..."
+
+#: kfontrequester.cpp:208
+#, fuzzy
+#| msgid "Preview of the selected font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "მონიშნული შრიფტის ნიმუში"
+
+#: kfontrequester.cpp:209
+#, fuzzy
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"ეს მონიშნული შრიფტის ნიმუშია. მისი შეცვლა შეგიძლიათ თუ დაწკაპავთ ღილაკს "
+"\"არჩევა...\"."
+
+#: kfontrequester.cpp:212
+#, fuzzy, qt-format
+#| msgid "Preview of the \"%1\" font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "\"%1\" შრიფტის ნიმუში"
+
+#: kfontrequester.cpp:213
+#, fuzzy, qt-format
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"ეს \"%1\" შრიფტის ნიმუშია. მისი შეცვლა შეგიძლიათ თუ დაწკაპავთ ღილაკს "
+"\"არჩევა...\"."
+
+#: kled.cpp:182
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr ""
+
+#: kled.cpp:183
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr ""
+
+#: kmessagebox.cpp:64
+#, fuzzy
+#| msgctxt "@action:button post-filter"
+#| msgid "."
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:304
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "დეტალები"
+
+#: kmessagebox.cpp:462 kmessagebox.cpp:516
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "შეკითხვა"
+
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:601
+#: kmessagebox.cpp:665 kmessagebox.cpp:748
+#, fuzzy
+#| msgid "Do not ask again"
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "აღარ დამეკითხო"
+
+#: kmessagebox.cpp:589 kmessagebox.cpp:653 kmessagebox.cpp:735
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "გაფრთხილება"
+
+#: kmessagebox.cpp:787 kmessagebox.cpp:808
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "შეცდომა"
+
+#: kmessagebox.cpp:835 kmessagebox.cpp:868 kmessagebox.cpp:1135
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "უკაცრავად"
+
+#: kmessagebox.cpp:911
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "ინფორმაცია"
+
+#: kmessagebox.cpp:922
+#, fuzzy
+#| msgid "Do not show this message again"
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "აღარ მიჩვენო ეს შეტყობინება"
+
+#: kmessagewidget.cpp:76
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "&დახურვა"
+
+#: kmessagewidget.cpp:77
+#, fuzzy
+#| msgid "Close Message"
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "შეტყობინების დახურვა"
+
+#: kmimetypechooser.cpp:88
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr ""
+
+#: kmimetypechooser.cpp:89
+#, fuzzy
+#| msgid "Filter"
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "ფილტრი"
+
+#: kmimetypechooser.cpp:103
+#, fuzzy
+#| msgid "Mime types"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "MIME ტიპები"
+
+#: kmimetypechooser.cpp:106
+#, fuzzy
+#| msgid "Comment"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "კომენტარი"
+
+#: kmimetypechooser.cpp:110
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr ""
+
+#: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit..."
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "&რეადქტირება..."
+
+#: kmimetypechooser.cpp:136
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr ""
+
+#: knewpassworddialog.cpp:58
+#, fuzzy, qt-format
+#| msgid "Password must be at least 1 character long"
+#| msgid_plural "Password must be at least %1 characters long"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "პაროლი უნდა შეიცავდეს %1 სიმბოლოს მაინც"
+
+#: knewpassworddialog.cpp:62
+#, fuzzy
+#| msgid "Password is empty"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "პაროლი ცარიელია"
+
+#: knewpassworddialog.cpp:66
+#, fuzzy
+#| msgid "Passwords do not match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "პაროლები არ თანხვდება"
+
+#: knewpassworddialog.cpp:71
+#, fuzzy
+#| msgid "Passwords match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "პაროლები თანხვდება"
+
+#: knewpassworddialog.cpp:147
+#, fuzzy
+#| msgid "Low Password Strength"
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "სუსტი პაროლი"
+
+#: knewpassworddialog.cpp:148
+#, fuzzy
+#| msgid ""
+#| "The password you have entered has a low strength. To improve the strength "
+#| "of the password, try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols as well as letters.\n"
+#| "\n"
+#| "Would you like to use this password anyway?"
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"მითიტებული პაროლი სუსტია. პაროლი უფრო საიმედო რომ იყოს:\n"
+" - მას საკმარისი სიგრძე უნდა ჰქონდეს;\n"
+" - მასში შერეული უნდა იყოს ასოები და ციფრები;\n"
+" - ასოებისა და ციფრების გარდა მასში უნდა იყოს სპეციალური სიმბილოები. მაგ,  "
+"#.\n"
+"\n"
+"მაინც გამოვიყენო ეს პაროლი?"
+
+#: knewpasswordwidget.cpp:53
+#, fuzzy
+#| msgid ""
+#| "The password strength meter gives an indication of the security of the "
+#| "password you have entered.  To improve the strength of the password, "
+#| "try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols, such as #, as well as letters."
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"პაროლის საიმედოობის მზომი აჩვენებს პაროლის უსაფრთხოების დონეს. პაროლი უფრო "
+"საიმედო რომ იყოს:\n"
+" - მას საკმარისი სიგრძე უნდა ჰქონდეს;\n"
+" - მასში შერეული უნდა იყოს ასოები და ციფრები;\n"
+" - ასოებისა და ციფრების გარდა მასში უნდა იყოს სპეციალური სიმბილოები. მაგ,  #."
+
+#: knewpasswordwidget.ui:19
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "პაროლი:"
+
+#: knewpasswordwidget.ui:29
+#, fuzzy
+#| msgid "&Verify:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "&შემოწმება:"
+
+#: knewpasswordwidget.ui:54
+#, fuzzy
+#| msgid "Password strength meter:"
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "პაროლის საიმედოობის მზომი:"
+
+#: kpassworddialog.cpp:52
+#, fuzzy
+#| msgid "Password"
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "პაროლი"
+
+#: kpassworddialog.cpp:92
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr ""
+
+#: kpassworddialog.ui:33
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr ""
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr ""
+
+#: kpassworddialog.ui:77
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "პაროლის &შენახვა"
+
+#: kpassworddialog.ui:102
+#, fuzzy
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "მონაწილე:"
+
+#: kpassworddialog.ui:116
+#, fuzzy
+#| msgid "Chain:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "ჯაჭვი:"
+
+#: kpassworddialog.ui:130
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "პაროლი:"
+
+#: kpassworddialog.ui:144
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "პაროლის &შენახვა"
+
+#: kpasswordlineedit.cpp:42
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr ""
+
+#: kpixmapregionselectordialog.cpp:60
+#, fuzzy
+#| msgid "Select Region of Image"
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "ნახატის რეგიონის არჩევა"
+
+#: kpixmapregionselectordialog.cpp:64
+#, fuzzy
+#| msgid "Please click and drag on the image to select the region of interest:"
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "დაწკაპეთ და გადააადგილეთ ნახატი ინტერესის რეგიონის შესარჩევად:"
+
+#: kpixmapregionselectorwidget.cpp:180
+#, fuzzy
+#| msgid "Image Operations"
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "ოპერაციები ნახატზე"
+
+#: kpixmapregionselectorwidget.cpp:182
+#, fuzzy
+#| msgid "&Rotate Clockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "საათის ისრის &მიმართულებით"
+
+#: kpixmapregionselectorwidget.cpp:184
+#, fuzzy
+#| msgid "Rotate &Counterclockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "საათის ისრის მიმართულების სა&წინააღმდეგოდ"
+
+#: ksqueezedtextlabel.cpp:206
+#, fuzzy
+#| msgid "&Copy Text"
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "ტექსტის &კოპირება"
+
+#: kstandardguiitem.cpp:97
+#, fuzzy
+#| msgid "&OK"
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&დიახ"
+
+#: kstandardguiitem.cpp:102
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&გაუქმება"
+
+#: kstandardguiitem.cpp:107
+#, fuzzy
+#| msgid "&Yes"
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&დიახ"
+
+#: kstandardguiitem.cpp:107
+#, fuzzy
+#| msgid "Yes"
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "დიახ"
+
+#: kstandardguiitem.cpp:112
+#, fuzzy
+#| msgid "&No"
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&არა"
+
+#: kstandardguiitem.cpp:112
+#, fuzzy
+#| msgid "No"
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "არა"
+
+#: kstandardguiitem.cpp:117
+#, fuzzy
+#| msgid "&Discard"
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&უარყოფა"
+
+#: kstandardguiitem.cpp:117
+#, fuzzy
+#| msgid "Discard changes"
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "ცვლილებების გაუქმება"
+
+#: kstandardguiitem.cpp:118
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr "ამ ღილაკზე დაჭერა დიალოგის დაფის ყველა ცვლილებებს გააუქმებს"
+
+#: kstandardguiitem.cpp:124
+#, fuzzy
+#| msgid "&Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&შენახვა"
+
+#: kstandardguiitem.cpp:124
+#, fuzzy
+#| msgid "Save data"
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "მონაცემთა შენახვა"
+
+#: kstandardguiitem.cpp:129
+#, fuzzy
+#| msgid "&Do Not Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&არ შენახვა"
+
+#: kstandardguiitem.cpp:130
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "მონაცემების არ შენახვა"
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "Save &As..."
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "შენახვა &როგორც..."
+
+#: kstandardguiitem.cpp:136
+#, fuzzy
+#| msgid "Save file with another name"
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "ფაილის სხვა სახელით შენახვა"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid "&Apply"
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&გამოყენება"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid "Apply changes"
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "ცვლილებების გამოყენება"
+
+#: kstandardguiitem.cpp:142
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"ღილაკზე <b>გამოყენება<b> დაწკაპვის შემდეგ პარამეტრები პროგრამას გადაეცემა, "
+"მაგრამ დიალოგი არ დაიხურება.\n"
+"ეს შეგიძლია სხვა პარამეტრების გამოსაცდელად გამოიყენოთ."
+
+#: kstandardguiitem.cpp:150
+#, fuzzy
+#| msgid "Administrator &Mode..."
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "&ადმინისტრირების რეჟიმი..."
+
+#: kstandardguiitem.cpp:150
+#, fuzzy
+#| msgid "Enter Administrator Mode"
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "ადმინისტრირების რეჟიმში შესვლა"
+
+#: kstandardguiitem.cpp:151
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"ღილაკზე  <b>ადმინისტრირების რეჟიმი</b> დაწკაპვის შემდეგ მოგეთხოვებათ "
+"ადმინისტრატორის (root) პაროლი, რადგან სისტემური დონის ცვლილებების "
+"განხორციელება გჭირდებათ."
+
+#: kstandardguiitem.cpp:158
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "გასუ&ფთავება"
+
+#: kstandardguiitem.cpp:159
+#, fuzzy
+#| msgid "Clear input"
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "შეტანილის გასუფთავება"
+
+#: kstandardguiitem.cpp:160
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "რედაქტირების ველში შეტანილის გასუფთავება"
+
+#: kstandardguiitem.cpp:165
+#, fuzzy
+#| msgid "&Help"
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&დახმარება"
+
+#: kstandardguiitem.cpp:166
+#, fuzzy
+#| msgid "Show help"
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "დახმარების ჩვენება"
+
+#: kstandardguiitem.cpp:171
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&დახურვა"
+
+#: kstandardguiitem.cpp:172
+#, fuzzy
+#| msgid "Close the current window or document"
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "მიმდინარე ფანჯრის ან დოკუმენტის დახურვა"
+
+#: kstandardguiitem.cpp:177
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "დავხურო ფანჯარა?"
+
+#: kstandardguiitem.cpp:178
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "მიმდინარე ფანჯრის ან დოკუმენტის დახურვა"
+
+#: kstandardguiitem.cpp:183
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "დოკუმენტის დახურვა"
+
+#: kstandardguiitem.cpp:184
+#, fuzzy
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "მიმდინარე ფანჯრის ან დოკუმენტის დახურვა"
+
+#: kstandardguiitem.cpp:189
+#, fuzzy
+#| msgid "&Defaults"
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&ნაგულისხმები"
+
+#: kstandardguiitem.cpp:190
+#, fuzzy
+#| msgid "Reset all items to their default values"
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "ყველა ელემენტის ნაგულისხმები მნიშვნელობის აღდგენა"
+
+#: kstandardguiitem.cpp:197
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&უკან"
+
+#: kstandardguiitem.cpp:198
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "ერთი ნაბიჯით უკან"
+
+#: kstandardguiitem.cpp:205
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&წინ"
+
+#: kstandardguiitem.cpp:206
+#, fuzzy
+#| msgid "Go forward one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "ერთი ნაბიჯით წინ"
+
+#: kstandardguiitem.cpp:216
+#, fuzzy
+#| msgid "&Print..."
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&ბეჭდვა..."
+
+#: kstandardguiitem.cpp:217
+#, fuzzy
+#| msgid "Opens the print dialog to print the current document"
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "მიმდინარე დოკუმენტის ბეჭდვის დიალოგის გახსნა"
+
+#: kstandardguiitem.cpp:223
+#, fuzzy
+#| msgid "C&ontinue"
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&გაგრძელება"
+
+#: kstandardguiitem.cpp:224
+#, fuzzy
+#| msgid "Continue operation"
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "ოპერაციის გაგრძელება"
+
+#: kstandardguiitem.cpp:229
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&წაშლა"
+
+#: kstandardguiitem.cpp:230
+#, fuzzy
+#| msgid "Delete item(s)"
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "ელემენტ(ებ)ის წაშლა"
+
+#: kstandardguiitem.cpp:235
+#, fuzzy
+#| msgid "&Open..."
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&გახსნა..."
+
+#: kstandardguiitem.cpp:236
+#, fuzzy
+#| msgid "Open file"
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "ფაილის გახსნა"
+
+#: kstandardguiitem.cpp:241
+#, fuzzy
+#| msgid "&Quit"
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&დასრულება"
+
+#: kstandardguiitem.cpp:242
+#, fuzzy
+#| msgid "Quit application"
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "პროგრამის დასრულება"
+
+#: kstandardguiitem.cpp:247
+#, fuzzy
+#| msgid "&Reset"
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "ა&ღდგენა"
+
+#: kstandardguiitem.cpp:248
+#, fuzzy
+#| msgid "Reset configuration"
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "კონფიგურაციის აღდგენა"
+
+#: kstandardguiitem.cpp:253
+#, fuzzy
+#| msgctxt "Verb"
+#| msgid "&Insert"
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&ჩამატება"
+
+#: kstandardguiitem.cpp:258
+#, fuzzy
+#| msgid "Confi&gure..."
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&გამართვა..."
+
+#: kstandardguiitem.cpp:263
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&პოვნა"
+
+#: kstandardguiitem.cpp:268
+#, fuzzy
+#| msgid "Stop"
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "შეჩერება"
+
+#: kstandardguiitem.cpp:273
+#, fuzzy
+#| msgid "Add"
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "დამატება"
+
+#: kstandardguiitem.cpp:278
+#, fuzzy
+#| msgid "Remove"
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "ამოშლა"
+
+#: kstandardguiitem.cpp:283
+#, fuzzy
+#| msgid "Test"
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "ტესტი"
+
+#: kstandardguiitem.cpp:288
+#, fuzzy
+#| msgid "Properties"
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "პარამეტრები"
+
+#: kstandardguiitem.cpp:293
+#, fuzzy
+#| msgid "&Overwrite"
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&გადაწერა"
+
+#: ktimecombobox.cpp:256
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr ""
+
+#: ktimecombobox.cpp:259
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr ""
+
+#: ktimecombobox.cpp:266
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr ""
+
+#: ktogglefullscreenaction.cpp:33
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "სრულეკრანიანი რეჟიმიდან &გამოსვლა"
+
+#: ktogglefullscreenaction.cpp:34
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "სრულეკრანიანი რეჟიმიდან &გამოსვლა"
+
+#: ktogglefullscreenaction.cpp:35
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "სრულეკრანიანი რეჟიმიდან &გამოსვლა"
+
+#: ktogglefullscreenaction.cpp:38
+#, fuzzy
+#| msgid "F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "&სრულეკრანიანი რეჟიმი"
+
+#: ktogglefullscreenaction.cpp:39
+#, fuzzy
+#| msgid "Full Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "სრული ეკრანის რეჟიმი"
+
+#: ktogglefullscreenaction.cpp:40
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr ""

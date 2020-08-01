@@ -1,0 +1,2362 @@
+# translation of kdelibs4.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
+# Keld Simonsen <keld@keldix.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2020-07-27 18:26+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:16
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:19
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Serif"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:22
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Monospace"
+
+#: fonthelpers.cpp:65
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:69
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:95
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "&Tilgængelig:"
+
+#: kactionselector.cpp:112
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "&Markeret:"
+
+#: kassistantdialog.cpp:94
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "Til&bage"
+
+#: kassistantdialog.cpp:96
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "Gå et trin tilbage"
+
+#: kassistantdialog.cpp:101
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "Næste"
+
+#: kassistantdialog.cpp:108
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "Afslut"
+
+#: kcharselect-translation.cpp:11
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Europæiske scripter"
+
+#: kcharselect-translation.cpp:12
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Afrikanske scripter"
+
+#: kcharselect-translation.cpp:13
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Mellemøstlige scripter"
+
+#: kcharselect-translation.cpp:14
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Centralasiatiske scripter"
+
+#: kcharselect-translation.cpp:15
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Sydasiatiske scripter"
+
+#: kcharselect-translation.cpp:16
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Sydøstasiatiske scripter"
+
+#: kcharselect-translation.cpp:17
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "Indonesien og oceaniske scripter"
+
+#: kcharselect-translation.cpp:18
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Østasiatiske scripter"
+
+#: kcharselect-translation.cpp:19
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Amerikanske scripter"
+
+#: kcharselect-translation.cpp:20
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Møntsymboler"
+
+#: kcharselect-translation.cpp:21
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Matematiske symboler"
+
+#: kcharselect-translation.cpp:22
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Fonetiske symboler"
+
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:737
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Kombinerende diakritiske tegn"
+
+#: kcharselect-translation.cpp:24
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Andet"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Latin"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Latin-1-supplement"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latin udvidet-A"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latin udvidet-B"
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "IPA-udvidelser"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Mellemrumsændringer"
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Kombinerende diakritiske mærker"
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Græsk og koptisk"
+
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Kyrillisk"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Kyrillisk supplement"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armensk"
+
+#: kcharselect-translation.cpp:36
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Hebraisk"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arabisk"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Syrisk"
+
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Arabisk supplement"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "NKo"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samaritansk"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandaic"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Syrisk supplement"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Arabisk udvidet-A"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengali"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Oriya"
+
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamil"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannadisk"
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malayalisk"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Thailandsk"
+
+#: kcharselect-translation.cpp:57
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Lao"
+
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetansk"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Georgisk"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiopisk"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Etiopisk supplement"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Canadisk aboriginal"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogham"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Runic"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhid"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmersk"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongolsk"
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Canadisk aboriginal, udvidet"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Ny Tai Lue"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Khmer-symboler"
+
+#: kcharselect-translation.cpp:79
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Buginesisk"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "lanna"
+
+#: kcharselect-translation.cpp:81
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Kombinerende diakritiske tegn udvidet"
+
+#: kcharselect-translation.cpp:82
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Balinesisk "
+
+#: kcharselect-translation.cpp:83
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sundanesisk"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batak"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcha"
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: kcharselect-translation.cpp:87
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Kyrillisk, udvidet-C"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Georgisk udvidet"
+
+#: kcharselect-translation.cpp:89
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Sundanesisk supplement"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Vediske udvidelser"
+
+#: kcharselect-translation.cpp:91
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Fonetiske udvidelser"
+
+#: kcharselect-translation.cpp:92
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Fonetiske udvidelser supplement"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Kombinerede diakritiske mærker supplement"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Latin udvidet yderligere"
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Græsk udvidet"
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Generel tegnsætning"
+
+#: kcharselect-translation.cpp:97
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Forhøjet og sænket skrift"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Valutasymboler"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Kombinerede diakritiske mærker for symboler"
+
+#: kcharselect-translation.cpp:100
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Bogstavlignende symboler"
+
+#: kcharselect-translation.cpp:101
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Talformer"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Pile"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Matematiske operatorer"
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Diverse teknisk"
+
+#: kcharselect-translation.cpp:105
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Kontrolbilleder"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Optisk tegngenkendelse"
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Indelukkede alfanumeriske"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Kassetegning"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Blokelementer"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Geometriske former"
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Diverse symboler"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Diverse matematiske symboler-A"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Supplerende pile-A"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braille-mønstre"
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Supplerende pile-B"
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Diverse matematiske symboler-B"
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Supplerende matematiske operatorer"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Diverse symboler og pile"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Glagolitisk"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latin udvidet-C"
+
+#: kcharselect-translation.cpp:122
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Koptisk"
+
+#: kcharselect-translation.cpp:123
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Georgisk supplement"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: kcharselect-translation.cpp:125
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiopisk udvidet"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Kyrillisk, udvidet-A"
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Supplerende tegnsætning"
+
+#: kcharselect-translation.cpp:128
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "CJK-radikaler supplement"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Kangxi-radikaler"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Ideografisk beskrivelsestegn"
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK-symboler og tegnsætning"
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul kompatibilitets-jamo"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo udvidet"
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK-stød"
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana fonetiske udvidelser"
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Indelukkede CJK-bogstaver og måneder"
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK-kompatibilitet"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK forenede ideografer udvidelse A"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing hexagram-symboler"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK forenede ideografer"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi-stavelser"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi-radikaler"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vai"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Kyrillisk, udvidet-B"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Ændring af bogstavers toning"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latin udvidet-D"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: kcharselect-translation.cpp:154
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Fællesindiske talformer"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari udvidet"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul Jamo, udvidet-A"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Javanesisk"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Myanmar, udvidet-B"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Cham"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Myanmar, udvidet-A"
+
+#: kcharselect-translation.cpp:165
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Viet"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei Mayek udvidelser"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiopisk udvidet-A"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latin udvidet-E"
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Cherokee supplement"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Hangul-stavelser"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul Jamo, udvidet-B"
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Høje surrogater"
+
+#: kcharselect-translation.cpp:174
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Høje surrogater til privat brug"
+
+#: kcharselect-translation.cpp:175
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Lave surrogater"
+
+#: kcharselect-translation.cpp:176
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Område til privat brug"
+
+#: kcharselect-translation.cpp:177
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK-kompatibilitets-Ideografer"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Alfabetiske præsentationsformularer"
+
+#: kcharselect-translation.cpp:179
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Arabiske præsentationsformularer-A"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Variationsudvælgere"
+
+#: kcharselect-translation.cpp:181
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Lodrette formularer"
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Kombinerede halvmærker"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK-kompatibilitetsformularer"
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Små formularvarianter"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Arabisk præsentationsformularer-B"
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Halvbredde- og fuldbreddeformer"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Specialer"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr "Mahjong-brikker"
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr "Domino-brikker"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr "Spillekort"
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Indelukkede alfanumeriske supplement"
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Indelukket ideografisk supplement"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Diverse symboler og piktogrammer"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Emotikoner"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr "Ornamentale dingbats"
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr "Transport- og kortsymboler"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Alkemisymboler"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Geometriske former udvidet"
+
+#: kcharselect-translation.cpp:200
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Supplerende pile-C"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr "Supplerende symboler og piktogrammer"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Skaksymboler"
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "Symboler og piktogrammer, udvidet-A"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr "Symboler for historisk computing"
+
+#: kcharselect.cpp:393
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "Indtast søgeudtryk eller -tegn..."
+
+#: kcharselect.cpp:395
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "Indtast søgeudtryk eller -tegn her"
+
+#: kcharselect.cpp:400
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "&Find..."
+
+#: kcharselect.cpp:420
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "Forrige i historikken"
+
+#: kcharselect.cpp:422
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "Forrige tegn i historikken"
+
+#: kcharselect.cpp:427
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "Næste i historikken"
+
+#: kcharselect.cpp:429
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "Næste tegn i historikken"
+
+#: kcharselect.cpp:434
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "Til&bage"
+
+#: kcharselect.cpp:441
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "&Frem"
+
+#: kcharselect.cpp:456
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "Vælg en kategori"
+
+#: kcharselect.cpp:460
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "Vælg en blok som skal vises"
+
+#: kcharselect.cpp:473
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "Vælg skrifttype"
+
+#: kcharselect.cpp:480
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "Vælg skriftstørrelse"
+
+#: kcharselect.cpp:772
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Tegn:"
+
+#: kcharselect.cpp:778
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Navn:"
+
+#: kcharselect.cpp:787
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Annotationer og krydsreferencer"
+
+#: kcharselect.cpp:791
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Aliasnavne:"
+
+#: kcharselect.cpp:799
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Noter:"
+
+#: kcharselect.cpp:807
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Se også:"
+
+#: kcharselect.cpp:822
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Tilsvarende:"
+
+#: kcharselect.cpp:830
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Tilnærm tilsvarende:"
+
+#: kcharselect.cpp:838
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Dekomposition:"
+
+#: kcharselect.cpp:850
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "CJK ideograf-information"
+
+#: kcharselect.cpp:853
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Definition på engelsk: "
+
+#: kcharselect.cpp:860
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Udtalelse på mandarin: "
+
+#: kcharselect.cpp:867
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Udtalelse på kantonesisk: "
+
+#: kcharselect.cpp:874
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Udtalelse på japansk on: "
+
+#: kcharselect.cpp:881
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Udtalelse på japansk kun: "
+
+#: kcharselect.cpp:888
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Udtalelse på tang: "
+
+#: kcharselect.cpp:895
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Udtalelse på koreansk:"
+
+#: kcharselect.cpp:901
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Generelle tegnegenskaber"
+
+#: kcharselect.cpp:902
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Blok: "
+
+#: kcharselect.cpp:903
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Unicode-kategori: "
+
+#: kcharselect.cpp:907
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Diverse nyttige repræsentationer"
+
+#: kcharselect.cpp:908
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:912
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:919
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "UTF-8 uden C-octal: "
+
+#: kcharselect.cpp:923
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "XML decimal-enhed:"
+
+#: kcharselect.cpp:1068
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Unicode-kodepunkt: "
+
+#: kcharselect.cpp:1069
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "I decimaltal:"
+
+#: kcharselectdata.cpp:305
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "<ikke-tegn>"
+
+#: kcharselectdata.cpp:326
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Høje surrogater til ikke-privat brug>"
+
+#: kcharselectdata.cpp:328
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Høje surrogater til privat brug>"
+
+#: kcharselectdata.cpp:330
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Lav surrogat>"
+
+#: kcharselectdata.cpp:332
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Privat brug>"
+
+#: kcharselectdata.cpp:364
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<ikke tildelt>"
+
+#: kcharselectdata.cpp:746
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Kan ikke skrives (vandret)"
+
+#: kcharselectdata.cpp:779
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Andet, kontrol"
+
+#: kcharselectdata.cpp:780
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Andet, format"
+
+#: kcharselectdata.cpp:781
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Andet, ikke tildelt"
+
+#: kcharselectdata.cpp:782
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Andet, privat brug"
+
+#: kcharselectdata.cpp:783
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Andet, surrogat"
+
+#: kcharselectdata.cpp:784
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Bogstav, lille"
+
+#: kcharselectdata.cpp:785
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Bogstav, ændring"
+
+#: kcharselectdata.cpp:786
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Bogstav, andet"
+
+#: kcharselectdata.cpp:787
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Bogstav, titel"
+
+#: kcharselectdata.cpp:788
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Bogstav, stort"
+
+#: kcharselectdata.cpp:789
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Mærke, mellemrumskombination"
+
+#: kcharselectdata.cpp:790
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Mærk, indelukning"
+
+#: kcharselectdata.cpp:791
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Mærke, ikke-mellemrum"
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Tal, decimalciffer"
+
+#: kcharselectdata.cpp:793
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Tal, bogstav"
+
+#: kcharselectdata.cpp:794
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Tal, andet"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Tegnsætning, forbinder"
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Tegnsætning, bindestreg"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Tegnsætning, luk"
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Tegnsætning, citat slut"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Tegnsætning, citat begynd"
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Tegnsætning, andet"
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Tegnsætning, åbn"
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Symbol, valuta"
+
+#: kcharselectdata.cpp:803
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Symbol, ændring"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Symbol, matematik"
+
+#: kcharselectdata.cpp:805
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Symbol, andet"
+
+#: kcharselectdata.cpp:806
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Adskillelse, linje"
+
+#: kcharselectdata.cpp:807
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Adskillelse, afsnit"
+
+#: kcharselectdata.cpp:808
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Adskillelse, mellemrum"
+
+#: kcharselectdata.cpp:809
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Ukendt"
+
+#: kcolorcombo.cpp:329
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "Brugerdefineret..."
+
+#: kdatecombobox.cpp:158
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Næste år"
+
+#: kdatecombobox.cpp:159
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Næste måned"
+
+#: kdatecombobox.cpp:160
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Næste uge"
+
+#: kdatecombobox.cpp:161
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "I morgen"
+
+#: kdatecombobox.cpp:162
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "I dag"
+
+#: kdatecombobox.cpp:163
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "I går"
+
+#: kdatecombobox.cpp:164
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Sidste uge"
+
+#: kdatecombobox.cpp:165
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Sidste måned"
+
+#: kdatecombobox.cpp:166
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Sidste år"
+
+#: kdatecombobox.cpp:168
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Ingen dato"
+
+#: kdatecombobox.cpp:299
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Den angivne dato er ugyldig"
+
+#: kdatecombobox.cpp:302
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Datoen kan ikke være før %1"
+
+#: kdatecombobox.cpp:309
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Datoen kan ikke være efter %1"
+
+#: kdatepicker.cpp:180
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Uge %1"
+
+#: kdatepicker.cpp:285
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "Næste år"
+
+#: kdatepicker.cpp:286
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "Forrige år"
+
+#: kdatepicker.cpp:287
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "Næste måned"
+
+#: kdatepicker.cpp:288
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "Forrige måned"
+
+#: kdatepicker.cpp:289
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "Vælg en uge"
+
+#: kdatepicker.cpp:290
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "Vælg en måned"
+
+#: kdatepicker.cpp:291
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "Vælg et år"
+
+#: kdatepicker.cpp:292
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "Vælg den aktuelle dag."
+
+#: kdatepicker.cpp:631
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Luk"
+
+#: kdatetimeedit.cpp:173
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:174
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "Flydende"
+
+#: kdatetimeedit.cpp:214
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr "Angiven dato og klokkeslæt er før mindste tilladte dato og klokkeslæt."
+
+#: kdatetimeedit.cpp:224
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+"Angiven dato og klokkeslæt er efter højeste tilladte dato og klokkeslæt."
+
+#: keditlistwidget.cpp:294
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "&Tilføj"
+
+#: keditlistwidget.cpp:306
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "&Fjern"
+
+#: keditlistwidget.cpp:318
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "Flyt &op"
+
+#: keditlistwidget.cpp:323
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "Flyt &ned"
+
+#: kfontchooser.cpp:177
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "Ønsket skrifttype"
+
+#: kfontchooser.cpp:191
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Skrifttype"
+
+#: kfontchooser.cpp:196
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Skrifttype:"
+
+#: kfontchooser.cpp:229
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Skrifttypestil"
+
+#: kfontchooser.cpp:234
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "Skriftstil:"
+
+#: kfontchooser.cpp:247
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "Normal"
+
+#: kfontchooser.cpp:248 kfontchooser.cpp:576
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Kursiv"
+
+#: kfontchooser.cpp:249 kfontchooser.cpp:577
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Skæv"
+
+#: kfontchooser.cpp:250
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Fed"
+
+#: kfontchooser.cpp:251
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Fed kursiv"
+
+#: kfontchooser.cpp:268
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Størrelse"
+
+#: kfontchooser.cpp:273
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Størrelse:"
+
+#: kfontchooser.cpp:291
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Relativ"
+
+#: kfontchooser.cpp:293
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"Skriftstørrelse<br /><i>fast</i> eller <i>relativ</i><br />til omgivelser"
+
+#: kfontchooser.cpp:295
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Her kan du skifte mellem fast skriftstørrelse og en skriftstørrelse der "
+"beregnes dynamisk og justeres efter ændringer i omgivelserne (f.eks. "
+"kontroldimensioner, papirstørrelse)."
+
+#: kfontchooser.cpp:349
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "The Quick Brown Fox Jumps Over The Lazy Dog ÆØÅæøå"
+
+#: kfontchooser.cpp:352
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Denne eksempeltekst illustrerer de nuværende indstillinger. Du kan redigere "
+"den for at teste specielle tegn."
+
+#: kfontchooser.cpp:365
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr "Vis kun monospace-skrifttyper"
+
+#: kfontchooser.cpp:561
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:43
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "Vælg skrifttype"
+
+#: kfontrequester.cpp:202
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "Vælg skrifttype..."
+
+#: kfontrequester.cpp:208
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "Forhåndsvisning af den valgte skrifttype"
+
+#: kfontrequester.cpp:209
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Dette er en forhåndsvisning af den valgte skrifttype. Du kan ændre den ved "
+"at klikke på knappen \"Vælg skrifttype...\"."
+
+#: kfontrequester.cpp:212
+#, qt-format
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "Forhåndsvis \"%1\"-skrifttypen"
+
+#: kfontrequester.cpp:213
+#, qt-format
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Dette er en forhåndsvisning af skrifttypen \"%1\". Du kan ændre den ved at "
+"klikke på knappen \"Vælg skrifttype...\"."
+
+#: kled.cpp:182
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "LED til"
+
+#: kled.cpp:183
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "LED fra"
+
+#: kmessagebox.cpp:64
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:304
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Detaljer"
+
+#: kmessagebox.cpp:462 kmessagebox.cpp:516
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Spørgsmål"
+
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:601
+#: kmessagebox.cpp:665 kmessagebox.cpp:748
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Spørg ikke igen"
+
+#: kmessagebox.cpp:589 kmessagebox.cpp:653 kmessagebox.cpp:735
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Advarsel"
+
+#: kmessagebox.cpp:787 kmessagebox.cpp:808
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Fejl"
+
+#: kmessagebox.cpp:835 kmessagebox.cpp:868 kmessagebox.cpp:1135
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Beklager"
+
+#: kmessagebox.cpp:911
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Information"
+
+#: kmessagebox.cpp:922
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Vis ikke denne besked igen"
+
+#: kmessagewidget.cpp:76
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "&Luk"
+
+#: kmessagewidget.cpp:77
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "Luk besked"
+
+#: kmimetypechooser.cpp:88
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr "Søg efter filtype- eller filnavnmønster..."
+
+#: kmimetypechooser.cpp:89
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "&Filter:"
+
+#: kmimetypechooser.cpp:103
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "MIME-type"
+
+#: kmimetypechooser.cpp:106
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "Kommentar"
+
+#: kmimetypechooser.cpp:110
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "Mønstre"
+
+#: kmimetypechooser.cpp:126
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "R&edigér..."
+
+#: kmimetypechooser.cpp:136
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr "Start MIME-type-editoren"
+
+#: knewpassworddialog.cpp:58
+#, qt-format
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "Adgangskoden skal være mindst %n tegn lang."
+msgstr[1] "Adgangskoden skal være mindst %n tegn lang."
+
+#: knewpassworddialog.cpp:62
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "Adgangskoden er tom."
+
+#: knewpassworddialog.cpp:66
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "Adgangskoderne er ikke ens."
+
+#: knewpassworddialog.cpp:71
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "Adgangskoderne matcher."
+
+#: knewpassworddialog.cpp:147
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "Lav adgangskodestyrke"
+
+#: knewpassworddialog.cpp:148
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Adangskoden du har indtastet har lav styrke. For at forbedre styrken af "
+"adgangskoden kan du prøve:\n"
+" - at bruge en længere adgangskode;\n"
+" - at bruge en blanding af små og store bogstaver;\n"
+" - at bruge tal eller symboler, såsom #, sammen med bogstaver.\n"
+"\n"
+"Vil du gerne bruge adgangskoden alligevel?"
+
+#: knewpasswordwidget.cpp:53
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Styrkemåling af adgangskode giver en indikation af sikkerheden af den "
+"adgangskode du har indtastet. For at forbedre styrken af adgangskoden kan du "
+"prøve: <ul><li>at bruge en længere adgangskode;</li><li>at bruge en blanding "
+"af små og store bogstaver;</li><li>at bruge tal eller symboler, såsom #, "
+"sammen med bogstaver.</li></ul>"
+
+#: knewpasswordwidget.ui:19
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "Adgangskode:"
+
+#: knewpasswordwidget.ui:29
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "&Verificér:"
+
+#: knewpasswordwidget.ui:54
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "Styrke&måling af adgangskode:"
+
+#: kpassworddialog.cpp:52
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "Adgangskode"
+
+#: kpassworddialog.cpp:92
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Angiv en adgangskode nedenfor."
+
+#: kpassworddialog.ui:33
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Angiv brugernavn og adgangskode herunder."
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Ingen adgangskode, brug anonymt (eller &gæste-) login"
+
+#: kpassworddialog.ui:77
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "Brug denne adgangskode:"
+
+#: kpassworddialog.ui:102
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "Brugernavn:"
+
+#: kpassworddialog.ui:116
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "Domæne:"
+
+#: kpassworddialog.ui:130
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "Adgangskode:"
+
+#: kpassworddialog.ui:144
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "Husk adgangskode"
+
+#: kpasswordlineedit.cpp:42
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr "Skift adgangskodens synlighed"
+
+#: kpixmapregionselectordialog.cpp:60
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "Vælg område af billede"
+
+#: kpixmapregionselectordialog.cpp:64
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr ""
+"Træk og slip venligst billedet for at vælge det område der interesserer:"
+
+#: kpixmapregionselectorwidget.cpp:180
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "Billedoperationer"
+
+#: kpixmapregionselectorwidget.cpp:182
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "&Rotér med uret"
+
+#: kpixmapregionselectorwidget.cpp:184
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "Rotér &mod uret"
+
+#: ksqueezedtextlabel.cpp:206
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "K&opiér hele teksten"
+
+#: kstandardguiitem.cpp:97
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&OK"
+
+#: kstandardguiitem.cpp:102
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Annullér"
+
+#: kstandardguiitem.cpp:107
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Ja"
+
+#: kstandardguiitem.cpp:107
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Ja"
+
+#: kstandardguiitem.cpp:112
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Nej"
+
+#: kstandardguiitem.cpp:112
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Nej"
+
+#: kstandardguiitem.cpp:117
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Kassér"
+
+#: kstandardguiitem.cpp:117
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Kassér ændringer"
+
+#: kstandardguiitem.cpp:118
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Et klik på denne knap vil kassere alle nylige ændringer lavet i denne dialog."
+
+#: kstandardguiitem.cpp:124
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Gem"
+
+#: kstandardguiitem.cpp:124
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Gem data"
+
+#: kstandardguiitem.cpp:129
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Gem ikke"
+
+#: kstandardguiitem.cpp:130
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Gem ikke data"
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Gem &som..."
+
+#: kstandardguiitem.cpp:136
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Gem fil under et andet navn"
+
+#: kstandardguiitem.cpp:141
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Anvend"
+
+#: kstandardguiitem.cpp:141
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Anvend ændringer"
+
+#: kstandardguiitem.cpp:142
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Når du klikker på knappen Anvend vil de nye indstillinger blive overført til "
+"programmet, men dialogen forbliver åben.\n"
+"Brug dette til at prøve andre indstillinger."
+
+#: kstandardguiitem.cpp:150
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Administrator&tilstand..."
+
+#: kstandardguiitem.cpp:150
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Gå ind i administratortilstand"
+
+#: kstandardguiitem.cpp:151
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Når du klikker på <b>Administratortilstand</b> vil du blive bedt om  "
+"administratorens (root) adgangskode for at kunne lave ændringer der kræver "
+"root-privilegier."
+
+#: kstandardguiitem.cpp:158
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "R&yd"
+
+#: kstandardguiitem.cpp:159
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Ryd inddata"
+
+#: kstandardguiitem.cpp:160
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Ryd inddata i redigeringsfeltet"
+
+#: kstandardguiitem.cpp:165
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Hjælp"
+
+#: kstandardguiitem.cpp:166
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Vis hjælp"
+
+#: kstandardguiitem.cpp:171
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Luk"
+
+#: kstandardguiitem.cpp:172
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Luk det aktuelle vindue eller dokument"
+
+#: kstandardguiitem.cpp:177
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "&Luk vindue"
+
+#: kstandardguiitem.cpp:178
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Luk det aktuelle vindue."
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "&Luk dokument"
+
+#: kstandardguiitem.cpp:184
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Luk det aktuelle dokument."
+
+#: kstandardguiitem.cpp:189
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Standard"
+
+#: kstandardguiitem.cpp:190
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Nulstil alle punkter til deres standardværdier"
+
+#: kstandardguiitem.cpp:197
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "Til&bage"
+
+#: kstandardguiitem.cpp:198
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Gå et trin tilbage"
+
+#: kstandardguiitem.cpp:205
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "&Frem"
+
+#: kstandardguiitem.cpp:206
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Gå et trin frem"
+
+#: kstandardguiitem.cpp:216
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Udskriv..."
+
+#: kstandardguiitem.cpp:217
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Åbner udskriftsdialogen for at udskrive det aktuelle dokument"
+
+#: kstandardguiitem.cpp:223
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "F&ortsæt"
+
+#: kstandardguiitem.cpp:224
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Fortsæt operationen"
+
+#: kstandardguiitem.cpp:229
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Slet"
+
+#: kstandardguiitem.cpp:230
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Slet elementer"
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "Å&bn..."
+
+#: kstandardguiitem.cpp:236
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Åbn fil"
+
+#: kstandardguiitem.cpp:241
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Afslut"
+
+#: kstandardguiitem.cpp:242
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Afslut program"
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Nulstil"
+
+#: kstandardguiitem.cpp:248
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Nulstil indstilling"
+
+#: kstandardguiitem.cpp:253
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Indsæt"
+
+#: kstandardguiitem.cpp:258
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&Indstil..."
+
+#: kstandardguiitem.cpp:263
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Find"
+
+#: kstandardguiitem.cpp:268
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Stop"
+
+#: kstandardguiitem.cpp:273
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Tilføj"
+
+#: kstandardguiitem.cpp:278
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Fjern"
+
+#: kstandardguiitem.cpp:283
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Test"
+
+#: kstandardguiitem.cpp:288
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Egenskaber"
+
+#: kstandardguiitem.cpp:293
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Overskriv"
+
+#: ktimecombobox.cpp:256
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Det angivne klokkeslæt er ugyldigt"
+
+#: ktimecombobox.cpp:259
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Tiden kan ikke være før %1"
+
+#: ktimecombobox.cpp:266
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Tiden kan ikke være efter %1"
+
+#: ktogglefullscreenaction.cpp:33
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Afslut fuldskærms&tilstand"
+
+#: ktogglefullscreenaction.cpp:34
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Afslut fuldskærm"
+
+#: ktogglefullscreenaction.cpp:35
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Afslut fuldskærmstilstand"
+
+#: ktogglefullscreenaction.cpp:38
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "F&uldskærmstilstand"
+
+#: ktogglefullscreenaction.cpp:39
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Fuldskærm"
+
+#: ktogglefullscreenaction.cpp:40
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Vis vinduet i fuld skærm"
