@@ -38,6 +38,7 @@ set(kwidgetsaddons_SRCS
   kfontrequester.cpp
   kpassworddialog.cpp
   kruler.cpp
+  krecentfilesmenu.cpp
   kselector.cpp
   kxyselector.cpp
   kseparator.cpp
@@ -155,6 +156,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KFontRequester
   KPasswordDialog
   KRuler
+  KRecentFilesMenu
   KSelector,KGradientSelector
   KTitleWidget
   KXYSelector
