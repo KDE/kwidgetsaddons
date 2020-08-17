@@ -22,6 +22,8 @@
 #include <QMenu>
 #include <QUrl>
 
+#include <memory> // for std::unique_ptr
+
 class KRecentFilesMenuPrivate;
 
 /**
