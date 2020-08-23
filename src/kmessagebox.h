@@ -82,13 +82,9 @@ enum Option {
  */
 Q_DECLARE_FLAGS(Options, Option)
 
-} // namespace
+// This declaration must be defined before first Option is used in method signatures
+Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
 
-// This declaration must be defined before first Option is used in method signatures AND outside the namespace
-Q_DECLARE_OPERATORS_FOR_FLAGS(KMessageBox::Options)
-
-namespace KMessageBox
-{
 /**
  * Display a simple "question" dialog.
  *
