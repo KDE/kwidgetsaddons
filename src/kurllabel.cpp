@@ -110,7 +110,7 @@ void KUrlLabel::mouseReleaseEvent(QMouseEvent *event)
 #endif
         break;
 
-    case Qt::MidButton:
+    case Qt::MiddleButton:
         emit middleClickedUrl();
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 65)
         emit middleClickedUrl(d->url);
