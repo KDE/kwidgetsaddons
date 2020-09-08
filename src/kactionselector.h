@@ -107,7 +107,7 @@ public:
      * This enum defines policies for where to insert moved items in a listbox.
      *
      * @sa availableInsertionPolicy(), setAvailableInsertionPolicy(),
-     * selectedInsertionPolicy(), setSelectedInsertionPolicy().
+     * selectedInsertionPolicy(), setSelectedInsertionPolicy()
      */
     enum InsertionPolicy {
         BelowCurrent, ///< The item is inserted below the listbox' currentItem() or at the end if there is no current item.
@@ -188,26 +188,26 @@ public:
     /**
      * @return The current insertion policy for the available listbox.
      * The default policy for the available listbox is Sorted.
-     * See also InsertionPolicy, setAvailableInsertionPolicy().
+     * @sa InsertionPolicy, setAvailableInsertionPolicy()
      */
     InsertionPolicy availableInsertionPolicy() const;
 
     /**
      * Sets the insertion policy for the available listbox.
-     * See also InsertionPolicy, availableInsertionPolicy().
+     * @sa InsertionPolicy, availableInsertionPolicy()
      */
     void setAvailableInsertionPolicy(InsertionPolicy policy);
 
     /**
      * @return The current insertion policy for the selected listbox.
      * The default policy for the selected listbox is BelowCurrent.
-     * See also InsertionPolicy, setSelectedInsertionPolicy().
+     * @sa InsertionPolicy, setSelectedInsertionPolicy()
      */
     InsertionPolicy selectedInsertionPolicy() const;
 
     /**
      * Sets the insertion policy for the selected listbox.
-     * See also InsertionPolicy, selectedInsertionPolicy().
+     * @sa InsertionPolicy, selectedInsertionPolicy()
      */
     void setSelectedInsertionPolicy(InsertionPolicy policy);
 

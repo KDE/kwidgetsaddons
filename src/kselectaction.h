@@ -140,14 +140,14 @@ public:
     /**
      * Returns the index of the current item.
      *
-     * @sa currentItem and currentAction
+     * @sa currentText(), currentAction()
      */
     int currentItem() const;
 
     /**
      * Returns the text of the currently selected item.
      *
-     * @sa currentItem and currentAction
+     * @sa currentItem(), currentAction()
      */
     QString currentText() const;
 
