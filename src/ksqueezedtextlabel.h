@@ -47,15 +47,10 @@ class KSqueezedTextLabelPrivate;
  *
  * @author Ronny Standtke <Ronny.Standtke@gmx.de>
  */
-
 // TODO KF6:
 //   - make more functions virtual (to benefit subclasses of KSqueezedTextLabel)
 //   - try to eliminate need for non-virtual-warning (to benefit use as QLabel),
 //     see https://phabricator.kde.org/D7164 for some ideas/considerations
-
-/*
- * QLabel
- */
 class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel
 {
     Q_OBJECT
