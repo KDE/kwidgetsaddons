@@ -156,13 +156,13 @@ class KWIDGETSADDONS_EXPORT KViewStateSerializer : public QObject
     Q_OBJECT
 public:
     /**
-      Constructor
-    */
+     * Constructor
+     */
     explicit KViewStateSerializer(QObject *parent = nullptr);
 
     /**
-      Destructor
-    */
+     * Destructor
+     */
     ~KViewStateSerializer();
 
     /**
@@ -176,13 +176,13 @@ public:
     void setView(QAbstractItemView *view);
 
     /**
-      The QItemSelectionModel whose state is persisted.
-    */
+     * The QItemSelectionModel whose state is persisted.
+     */
     QItemSelectionModel *selectionModel() const;
 
     /**
-      Sets the QItemSelectionModel whose state is persisted.
-    */
+     * Sets the QItemSelectionModel whose state is persisted.
+     */
     void setSelectionModel(QItemSelectionModel *selectionModel);
 
     /**
@@ -228,13 +228,13 @@ public:
 
 protected:
     /**
-      Reimplement to return an index in the @p model described by the unique key @p key
-    */
+     * Reimplement to return an index in the @p model described by the unique key @p key
+     */
     virtual QModelIndex indexFromConfigString(const QAbstractItemModel *model, const QString &key) const = 0;
 
     /**
-      Reimplement to return a unique string for the @p index.
-    */
+     * Reimplement to return a unique string for the @p index.
+     */
     virtual QString indexToConfigString(const QModelIndex &index) const = 0;
 
     void restoreState();

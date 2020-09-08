@@ -58,7 +58,6 @@
  * @author Elvis Angelaccio <elvis.angelaccio@kde.org>
  * @since 5.16
  */
-
 class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
 {
     Q_OBJECT

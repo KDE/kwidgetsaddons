@@ -51,13 +51,13 @@ public:
 
     /**
      * Returns the currently selected color.
-     **/
+     */
     QColor color() const;
 
     /**
      * Find whether the currently selected color is a custom color selected
      * using a color dialog.
-     **/
+     */
     bool isCustomColor() const;
 
     /**
@@ -65,18 +65,18 @@ public:
      * list.
      * @param colors list of colors. If empty, the selection list reverts to
      *             the standard list.
-     **/
+     */
     void setColors(const QList<QColor> &colors);
 
     /**
      * Return the list of colors available for selection.
      * @return list of colors
-     **/
+     */
     QList<QColor> colors() const;
 
     /**
      * Clear the color list and don't show it, till the next setColor() call
-     **/
+     */
     void showEmptyList();
 
 Q_SIGNALS:

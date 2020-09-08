@@ -53,7 +53,6 @@ class QWidget;
  * @author Geert Jansen <jansen@kde.org>
  * @author Olivier Goffart <ogoffart@kde.org>
  */
-
 class KWIDGETSADDONS_EXPORT KNewPasswordDialog
     : public QDialog
 {

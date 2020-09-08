@@ -51,7 +51,6 @@ checkboxTitleWidget->setWidget(checkBoxTitleMainWidget);
  * @see KPageView
  * @author Urs Wolfer \<uwolfer @ kde.org\>
  */
-
 class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
 {
     Q_OBJECT

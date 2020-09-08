@@ -211,7 +211,7 @@ Q_SIGNALS:
      * This signal is emitted whenever a page has been removed.
      *
      * @param page The page which has been removed
-     **/
+     */
     void pageRemoved(KPageWidgetItem *page);
 
 protected:

@@ -44,7 +44,7 @@ namespace KMessageBox
 {
 /**
  * Button types.
- **/
+ */
 enum ButtonCode {
     Ok = 1,
     Cancel = 2,
@@ -112,7 +112,6 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  *
  * The default button is "Yes". Pressing "Esc" selects "No".
  */
-
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
         const QString &text,
         const QString &caption = QString(),
@@ -149,7 +148,6 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
  *
  * The default button is "Yes". Pressing "Esc" selects "Cancel".
  */
-
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
         const QString &text,
         const QString &caption = QString(),
@@ -190,7 +188,6 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
  *
  * The default button is "Yes". Pressing "Esc" selects "No".
  */
-
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
         const QString &text,
         const QStringList &strlist,
@@ -267,7 +264,6 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
  *
  * The default button is "No". Pressing "Esc" selects "No".
  */
-
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
         const QString &text,
         const QStringList &strlist,
@@ -401,7 +397,6 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  *
  * The default button is "Yes". Pressing "Esc" selects "Cancel"
  */
-
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
         const QString &text,
         const QString &caption = QString(),
@@ -478,7 +473,6 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
  *
  * NOTE: The OK button will always have the i18n'ed text '&OK'.
  */
-
 KWIDGETSADDONS_EXPORT void error(QWidget *parent,
                                  const QString &text,
                                  const QString &caption = QString(),
@@ -507,7 +501,6 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent,
  *
  * NOTE: The OK button will always have the i18n'ed text '&OK'.
  */
-
 KWIDGETSADDONS_EXPORT void errorList(QWidget *parent,
                                      const QString &text,
                                      const QStringList &strlist,
@@ -623,7 +616,6 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
  * NOTE: The ok button will always have the i18n'ed text '&OK'.
  * See the overload with a KGuiItem argument to change that.
  */
-
 KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
         const QString &text,
         const QString &details,
@@ -656,7 +648,6 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
  * @since 5.63
  */
-
 KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
         const QString &text,
         const QString &details,
@@ -687,7 +678,6 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  *
  *  NOTE: The OK button will always have the i18n'ed text '&OK'.
  */
-
 KWIDGETSADDONS_EXPORT void information(QWidget *parent,
                                        const QString &text,
                                        const QString &caption = QString(),
@@ -720,7 +710,6 @@ KWIDGETSADDONS_EXPORT void information(QWidget *parent,
  *
  *  NOTE: The OK button will always have the i18n'ed text '&OK'.
  */
-
 KWIDGETSADDONS_EXPORT void informationList(QWidget *parent,
         const QString &text,
         const QStringList &strlist,
@@ -788,7 +777,6 @@ KWIDGETSADDONS_EXPORT void about(QWidget *parent,
  *       and for Information, none is used.
  * @return a button code, as defined in KMessageBox.
  */
-
 KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent, DialogType type, const QString &text,
         const QString &caption = QString(),
         const KGuiItem &buttonYes = KStandardGuiItem::yes(),

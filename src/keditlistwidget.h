@@ -48,7 +48,7 @@ public:
 
     /**
      * Custom editor class
-     **/
+     */
     class KWIDGETSADDONS_EXPORT CustomEditor
     {
     public:

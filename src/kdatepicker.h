@@ -24,20 +24,17 @@ class KDateTable;
  *
  * Provides a widget for calendar date input.
  *
- *     Different from the
- *     previous versions, it now emits two types of signals, either
- * dateSelected() or dateEntered() (see documentation for both
- *     signals).
+ * Different from the previous versions, it now emits two types of signals,
+ * either dateSelected() or dateEntered() (see documentation for both signals).
  *
- *     A line edit has been added in the newer versions to allow the user
- *     to select a date directly by entering numbers like 19990101
- *     or 990101.
+ * A line edit has been added in the newer versions to allow the user
+ * to select a date directly by entering numbers like 19990101
+ * or 990101.
  *
  * \image html kdatepicker.png "KDatePicker Widget"
  *
- *     @author Tim Gilman, Mirko Boehm
- *
- **/
+ * @author Tim Gilman, Mirko Boehm
+ */
 class KWIDGETSADDONS_EXPORT KDatePicker: public QFrame
 {
     Q_OBJECT
@@ -48,32 +45,33 @@ class KWIDGETSADDONS_EXPORT KDatePicker: public QFrame
 public:
     /**
      * The constructor. The current date will be displayed initially.
-     **/
+     */
     explicit KDatePicker(QWidget *parent = nullptr);
 
     /**
      * The constructor. The given date will be displayed initially.
-     **/
+     */
     explicit KDatePicker(const QDate &dt, QWidget *parent = nullptr);
 
     /**
      * The destructor.
-     **/
+     */
     ~KDatePicker() override;
 
-    /** The size hint for date pickers. The size hint recommends the
-     *   minimum size of the widget so that all elements may be placed
-     *  without clipping. This sometimes looks ugly, so when using the
-     *  size hint, try adding 28 to each of the reported numbers of
-     *  pixels.
-     **/
+    /**
+     * The size hint for date pickers. The size hint recommends the
+     * minimum size of the widget so that all elements may be placed
+     * without clipping. This sometimes looks ugly, so when using the
+     * size hint, try adding 28 to each of the reported numbers of
+     * pixels.
+     */
     QSize sizeHint() const override;
 
     /**
      * Sets the date.
      *
-     *  @returns @p false and does not change anything if the date given is invalid.
-     **/
+     * @returns @p false and does not change anything if the date given is invalid.
+     */
     bool setDate(const QDate &date);
 
     /**
@@ -82,13 +80,8 @@ public:
     const QDate &date() const;
 
     /**
-     * @returns the KDateTable widget child of this KDatePicker
-     * widget.
-     */
-
-    /**
      * Sets the font size of the widgets elements.
-     **/
+     */
     void setFontSize(int);
 
     /**
@@ -134,30 +127,34 @@ protected Q_SLOTS:
     void weekSelected(int);
 
 Q_SIGNALS:
-    /** This signal is emitted each time the selected date is changed.
-     *  Usually, this does not mean that the date has been entered,
-     *  since the date also changes, for example, when another month is
-     *  selected.
-     *  @see dateSelected
+    /**
+     * This signal is emitted each time the selected date is changed.
+     * Usually, this does not mean that the date has been entered,
+     * since the date also changes, for example, when another month is
+     * selected.
+     * @see dateSelected
      */
     void dateChanged(const QDate &date);
 
-    /** This signal is emitted each time a day has been selected by
-     *  clicking on the table (hitting a day in the current month). It
-     *  has the same meaning as dateSelected() in older versions of
-     *  KDatePicker.
+    /**
+     * This signal is emitted each time a day has been selected by
+     * clicking on the table (hitting a day in the current month). It
+     * has the same meaning as dateSelected() in older versions of
+     * KDatePicker.
      */
     void dateSelected(const QDate &date);
 
-    /** This signal is emitted when enter is pressed and a VALID date
-     *  has been entered before into the line edit. Connect to both
-     *  dateEntered() and dateSelected() to receive all events where the
-     *  user really enters a date.
+    /**
+     * This signal is emitted when enter is pressed and a VALID date
+     * has been entered before into the line edit. Connect to both
+     * dateEntered() and dateSelected() to receive all events where the
+     * user really enters a date.
      */
     void dateEntered(const QDate &date);
 
-    /** This signal is emitted when the day has been selected by
-     *  clicking on it in the table.
+    /**
+     * This signal is emitted when the day has been selected by
+     * clicking on it in the table.
      */
     void tableClicked();
 

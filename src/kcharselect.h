@@ -57,7 +57,6 @@ class QUrl;
  * @author Reginald Stadlbauer <reggie@kde.org>
  * @author Daniel Laidig <d.laidig@gmx.de>
  */
-
 class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
 {
     Q_OBJECT

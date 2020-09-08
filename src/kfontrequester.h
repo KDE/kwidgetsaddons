@@ -28,7 +28,6 @@ class QPushButton;
  * \image html kfontrequester.png "KFontRequester"
  *
  * @author Nadeem Hasan <nhasan@kde.org>
- *
  */
 class KWIDGETSADDONS_EXPORT KFontRequester : public QWidget
 {

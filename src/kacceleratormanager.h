@@ -23,8 +23,7 @@ class QStringList;
  * accelerators for any widget.
  *
  * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
-*/
-
+ */
 class KWIDGETSADDONS_EXPORT KAcceleratorManager
 {
 public:

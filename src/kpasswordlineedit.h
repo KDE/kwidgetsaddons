@@ -31,7 +31,6 @@ class KPasswordLineEditPrivate;
  * @author Laurent Montel <montel@kde.org>
  * @since 5.37
  */
-
 class KWIDGETSADDONS_EXPORT KPasswordLineEdit : public QWidget
 {
     Q_OBJECT

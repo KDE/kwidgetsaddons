@@ -67,7 +67,6 @@ class KActionSelectorPrivate;
 
     @author Anders Lund <anders@alweb.dk>
 */
-
 class KWIDGETSADDONS_EXPORT KActionSelector : public QWidget
 {
     Q_OBJECT
@@ -84,18 +83,18 @@ public:
     ~KActionSelector() override;
 
     /**
-       @return The QListWidget holding the available actions
-    */
+     * @return The QListWidget holding the available actions
+     */
     QListWidget *availableListWidget() const;
 
     /**
-       @return The QListWidget holding the selected actions
-    */
+     * @return The QListWidget holding the selected actions
+     */
     QListWidget *selectedListWidget() const;
 
     /**
-      This enum identifies the moving buttons
-    */
+     * This enum identifies the moving buttons
+     */
     enum MoveButton {
         ButtonAdd,
         ButtonRemove,
@@ -105,11 +104,11 @@ public:
     Q_ENUM(MoveButton)
 
     /**
-      This enum defines policies for where to insert moved items in a listbox.
-
-      @sa availableInsertionPolicy(), setAvailableInsertionPolicy(),
-      selectedInsertionPolicy(), setSelectedInsertionPolicy().
-    */
+     * This enum defines policies for where to insert moved items in a listbox.
+     *
+     * @sa availableInsertionPolicy(), setAvailableInsertionPolicy(),
+     * selectedInsertionPolicy(), setSelectedInsertionPolicy().
+     */
     enum InsertionPolicy {
         BelowCurrent, ///< The item is inserted below the listbox' currentItem() or at the end if there is no current item.
         Sorted,       ///< The listbox is sort()ed after one or more items are inserted.
@@ -119,197 +118,198 @@ public:
     Q_ENUM(InsertionPolicy)
 
     /**
-      @return Whether moveOnDoubleClcik is enabled.
-
-      If enabled, an item in any listbox will be moved to the other one whenever
-      double-clicked.
-      This feature is enabled by default.
-      @sa setMoveOnDoubleClick()
-    */
+     * @return Whether moveOnDoubleClcik is enabled.
+     *
+     * If enabled, an item in any listbox will be moved to the other one whenever
+     * double-clicked.
+     * This feature is enabled by default.
+     * @sa setMoveOnDoubleClick()
+     */
     bool moveOnDoubleClick() const;
 
     /**
-      Sets moveOnDoubleClick to @p enable
-      @sa moveOnDoubleClick()
-    */
+     * Sets moveOnDoubleClick to @p enable
+     * @sa moveOnDoubleClick()
+     */
     void setMoveOnDoubleClick(bool enable);
 
     /**
-      @return Whether keyboard control is enabled.
-
-      When Keyboard control is enabled, the widget will react to
-      the following keyboard actions:
-      @li CTRL + Right - simulate clicking the add button
-      @li CTRL + Left - simulate clicking the remove button
-      @li CTRL + Up - simulate clicking the up button
-      @li CTRL + Down - simulate clicking the down button
-
-      Additionally, pressing RETURN or ENTER on one of the list boxes
-      will cause the current item of that listbox to be moved to the other
-      listbox.
-
-      The keyboard actions are enabled by default.
-
-      @sa setKeyboardEnabled()
-    */
+     * @return Whether keyboard control is enabled.
+     *
+     * When Keyboard control is enabled, the widget will react to
+     * the following keyboard actions:
+     * @li CTRL + Right - simulate clicking the add button
+     * @li CTRL + Left - simulate clicking the remove button
+     * @li CTRL + Up - simulate clicking the up button
+     * @li CTRL + Down - simulate clicking the down button
+     *
+     * Additionally, pressing RETURN or ENTER on one of the list boxes
+     * will cause the current item of that listbox to be moved to the other
+     * listbox.
+     *
+     * The keyboard actions are enabled by default.
+     *
+     * @sa setKeyboardEnabled()
+     */
     bool keyboardEnabled() const;
 
     /**
-      Sets the keyboard enabled depending on @p enable.
-      @sa keyboardEnabled()
-    */
+     * Sets the keyboard enabled depending on @p enable.
+     * @sa keyboardEnabled()
+     */
     void setKeyboardEnabled(bool enable);
 
     /**
-      @return The text of the label for the available items listbox.
-    */
+     * @return The text of the label for the available items listbox.
+     */
     QString availableLabel() const;
 
     /**
-      Sets the label for the available items listbox to @p text.
-      Note that this label has the listbox as its @e buddy, so that
-      if you have a single ampersand in the text, the following character
-      will become the accelerator to focus the listbox.
-    */
+     * Sets the label for the available items listbox to @p text.
+     * Note that this label has the listbox as its @e buddy, so that
+     * if you have a single ampersand in the text, the following character
+     * will become the accelerator to focus the listbox.
+     */
     void setAvailableLabel(const QString &text);
 
     /**
-      @return the label of the selected items listbox.
-    */
+     * @return the label of the selected items listbox.
+     */
     QString selectedLabel() const;
 
     /**
-      Sets the label for the selected items listbox to @p text.
-      Note that this label has the listbox as its @e buddy, so that
-      if you have a single ampersand in the text, the following character
-      will become the accelerator to focus the listbox.
-    */
+     * Sets the label for the selected items listbox to @p text.
+     * Note that this label has the listbox as its @e buddy, so that
+     * if you have a single ampersand in the text, the following character
+     * will become the accelerator to focus the listbox.
+     */
     void setSelectedLabel(const QString &text);
 
     /**
-      @return The current insertion policy for the available listbox.
-      The default policy for the available listbox is Sorted.
-      See also InsertionPolicy, setAvailableInsertionPolicy().
-    */
+     * @return The current insertion policy for the available listbox.
+     * The default policy for the available listbox is Sorted.
+     * See also InsertionPolicy, setAvailableInsertionPolicy().
+     */
     InsertionPolicy availableInsertionPolicy() const;
 
     /**
-      Sets the insertion policy for the available listbox.
-      See also InsertionPolicy, availableInsertionPolicy().
-    */
+     * Sets the insertion policy for the available listbox.
+     * See also InsertionPolicy, availableInsertionPolicy().
+     */
     void setAvailableInsertionPolicy(InsertionPolicy policy);
 
     /**
-      @return The current insertion policy for the selected listbox.
-      The default policy for the selected listbox is BelowCurrent.
-      See also InsertionPolicy, setSelectedInsertionPolicy().
-    */
+     * @return The current insertion policy for the selected listbox.
+     * The default policy for the selected listbox is BelowCurrent.
+     * See also InsertionPolicy, setSelectedInsertionPolicy().
+     */
     InsertionPolicy selectedInsertionPolicy() const;
 
     /**
-      Sets the insertion policy for the selected listbox.
-      See also InsertionPolicy, selectedInsertionPolicy().
-    */
+     * Sets the insertion policy for the selected listbox.
+     * See also InsertionPolicy, selectedInsertionPolicy().
+     */
     void setSelectedInsertionPolicy(InsertionPolicy policy);
 
     /**
-      @return whether the Up and Down buttons should be displayed.
-    */
+     * @return whether the Up and Down buttons should be displayed.
+     */
     bool showUpDownButtons() const;
 
     /**
-      Sets whether the Up and Down buttons should be displayed
-      according to @p show
-    */
+     * Sets whether the Up and Down buttons should be displayed
+     * according to @p show
+     */
     void setShowUpDownButtons(bool show);
 
     /**
-      Sets the pixmap of the button @p button to @p icon.
-      It calls SmallIconSet(pm) to generate the icon set.
-    */
+     * Sets the pixmap of the button @p button to @p icon.
+     * It calls SmallIconSet(pm) to generate the icon set.
+     */
     void setButtonIcon(const QString &icon, MoveButton button);
 
     /**
-      Sets the iconset for button @p button to @p iconset.
-      You can use this method to set a custom icon set. Either
-      created by QIconSet, or use the application instance of
-      KIconLoader (recommended).
-    */
+     * Sets the iconset for button @p button to @p iconset.
+     * You can use this method to set a custom icon set. Either
+     * created by QIconSet, or use the application instance of
+     * KIconLoader (recommended).
+     */
     void setButtonIconSet(const QIcon &iconset, MoveButton button);
 
     /**
-      Sets the tooltip for the button @p button to @p tip.
-    */
+     * Sets the tooltip for the button @p button to @p tip.
+     */
     void setButtonTooltip(const QString &tip, MoveButton button);
 
     /**
-      Sets the whatsthis help for button @p button to @p text.
-    */
+     * Sets the whatsthis help for button @p button to @p text.
+     */
     void setButtonWhatsThis(const QString &text, MoveButton button);
 
 Q_SIGNALS:
     /**
-      Emitted when an item is moved to the "selected" listbox.
-    */
+     * Emitted when an item is moved to the "selected" listbox.
+     */
     void added(QListWidgetItem *item);
 
     /**
-      Emitted when an item is moved out of the "selected" listbox.
-    */
+     * Emitted when an item is moved out of the "selected" listbox.
+     */
     void removed(QListWidgetItem *item);
 
     /**
-      Emitted when an item is moved upwards in the "selected" listbox.
-    */
+     * Emitted when an item is moved upwards in the "selected" listbox.
+     */
     void movedUp(QListWidgetItem *item);
 
     /**
-      Emitted when an item is moved downwards in the "selected" listbox.
-    */
+     * Emitted when an item is moved downwards in the "selected" listbox.
+     */
     void movedDown(QListWidgetItem *item);
 
     /**
-      Emitted when an item is moved to the "selected" listbox.
-    */
+     * Emitted when an item is moved to the "selected" listbox.
+     */
 //  void addedToSelection( QListWidgetItem *item );
 
 public Q_SLOTS:
     /**
-       Sets the enabled state of all moving buttons to reflect the current
-       options.
-
-       Be sure to call this if you add or removes items to either listbox after the
-       widget is shown
-    */
+     * Sets the enabled state of all moving buttons to reflect the current
+     * options.
+     *
+     * Be sure to call this if you add or removes items to either listbox after the
+     * widget is shown
+     */
     void setButtonsEnabled();
 
 protected:
     /**
-      Reimplemented for internal reasons.
-    */
+     * Reimplemented for internal reasons.
+     */
     void keyPressEvent(QKeyEvent *) override;
 
     /**
-      Reimplemented for internal reasons.
-    */
+     * Reimplemented for internal reasons.
+     */
     bool eventFilter(QObject *, QEvent *) override;
 
 private:
    /**
-      Moves the item @p item to the other listbox if moveOnDoubleClick is enabled.
-    */
+     * Moves the item @p item to the other listbox if moveOnDoubleClick is enabled.
+     */
     Q_PRIVATE_SLOT(d, void itemDoubleClicked(QListWidgetItem *item))
 
     /**
-      connected to both list boxes to set the buttons enabled
-    */
+     * connected to both list boxes to set the buttons enabled
+     */
     Q_PRIVATE_SLOT(d, void slotCurrentChanged(QListWidgetItem *))
 
 private:
 
-    /** @private
-      Private data storage
-    */
+    /**
+     * @private
+     * Private data storage
+     */
     friend class KActionSelectorPrivate;
     KActionSelectorPrivate *const d;
 

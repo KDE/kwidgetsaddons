@@ -118,8 +118,7 @@ private:
  * gradient between two colors provided by the programmer.
  *
  * \image html kgradientselector.png "KGradientSelector Widget"
- *
- **/
+ */
 class KWIDGETSADDONS_EXPORT KGradientSelector : public KSelector
 {
     Q_OBJECT

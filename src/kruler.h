@@ -72,7 +72,7 @@ class KWIDGETSADDONS_EXPORT KRuler : public QAbstractSlider
 public:
     /**
      * The types of units used.
-     **/
+     */
     enum MetricStyle { Custom = 0, Pixel, Inch, Millimetres, Centimetres, Metres };
     Q_ENUM(MetricStyle)
 
@@ -91,7 +91,7 @@ public:
      * @param parent     Will be handed over to QFrame.
      * @param f          Will be handed over to QFrame.
      *
-     **/
+     */
     explicit KRuler(Qt::Orientation orient, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
@@ -124,7 +124,7 @@ public:
      * to the main event loop.
      *
      * @deprecated Since 5.0, use setMinimum(int).
-     **/
+     */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRuler::setMinimum(int)")
     void setMinValue(int);
 #endif
@@ -134,7 +134,7 @@ public:
      * Returns the minimal value of the ruler pointer.
      *
      * @deprecated Since 5.0, use minimum().
-     **/
+     */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRuler::minimum()")
     int minValue() const;
 #endif
@@ -170,7 +170,7 @@ public:
     void setTinyMarkDistance(int);
     /**
      * Returns the distance between tiny marks.
-     **/
+     */
     int tinyMarkDistance() const;
 
     /**
@@ -190,7 +190,7 @@ public:
      *
      * For English (inches) styles it defaults to twice the little mark distance.
      * For metric styles it defaults to five times the little mark distance.
-     **/
+     */
     void setMediumMarkDistance(int);
     int mediumMarkDistance() const;
 
@@ -198,36 +198,36 @@ public:
      * Sets distance between big marks.
      *
      * For English (inches) or metric styles it is twice the medium mark distance.
-     **/
+     */
     void setBigMarkDistance(int);
     /**
      * Returns the distance between big marks.
-     **/
+     */
     int bigMarkDistance() const;
 
     /**
      * Shows/hides tiny marks.
-     **/
+     */
     void setShowTinyMarks(bool);
     bool showTinyMarks() const;
     /**
      * Shows/hides little marks.
-     **/
+     */
     void setShowLittleMarks(bool);
     bool showLittleMarks() const;
     /**
      * Shows/hides medium marks.
-     **/
+     */
     void setShowMediumMarks(bool);
     bool showMediumMarks() const;
     /**
      * Shows/hides big marks.
-     **/
+     */
     void setShowBigMarks(bool);
     bool showBigMarks() const;
     /**
      * Shows/hides end marks.
-     **/
+     */
     void setShowEndMarks(bool);
     bool showEndMarks() const;
     /**
@@ -249,14 +249,14 @@ public:
      * Show/hide number values of the end marks.
      *
      * Default is @p false.
-     **/
+     */
     void setShowEndLabel(bool);
     bool showEndLabel() const;
 
     /**
      * Sets the label this is drawn at the beginning of the visible part
      * of the ruler to @p label
-     **/
+     */
     void setEndLabel(const QString &);
     QString endLabel() const;
 
@@ -264,7 +264,7 @@ public:
      * Sets up the necessary tasks for the provided styles.
      *
      * A convenience method.
-     **/
+     */
     void setRulerMetricStyle(KRuler::MetricStyle);
 
     /**
@@ -289,7 +289,7 @@ public:
 
     /**
      * Returns the number of pixels between two base marks.
-     **/
+     */
     double pixelPerMark() const;
 
     /**
@@ -323,7 +323,7 @@ public:
      * Only the visible part of the ruler is moved.
      *
      * @param count Number of pixel moving up or left relative to the previous position
-     **/
+     */
     void slideUp(int count = 1);
 
     /**
@@ -336,7 +336,7 @@ public:
      * Only the visible part of the ruler is moved.
      *
      * @param count Number of pixel moving up or left relative to the previous position
-     **/
+     */
     void slideDown(int count = 1);
 
     /**
@@ -346,12 +346,12 @@ public:
      * from the start of the ruler.
      *
      * @param offset Number of pixel to move the ruler up or left from the beginning
-     **/
+     */
     void setOffset(int offset);
 
     /**
      * Returns the current ruler offset.
-     **/
+     */
     int offset() const;
 
     int endOffset() const;
@@ -363,7 +363,7 @@ public Q_SLOTS:
      *
      * The offset is NOT updated.
      * QWidget::repaint() is called afterwards.
-     **/
+     */
     void slotNewValue(int);
 
     /**
@@ -371,7 +371,7 @@ public Q_SLOTS:
      *
      * The pointer is NOT updated.
      * QWidget::repaint() is called afterwards.
-     **/
+     */
     void slotNewOffset(int);
 
     void slotEndOffset(int);

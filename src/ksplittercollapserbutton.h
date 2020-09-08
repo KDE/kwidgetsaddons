@@ -33,8 +33,8 @@ public:
     explicit KSplitterCollapserButton(QWidget *childWidget, QSplitter *splitter);
 
     /**
-      * Destructor
-      */
+     * Destructor
+     */
     ~KSplitterCollapserButton() override;
 
     /**

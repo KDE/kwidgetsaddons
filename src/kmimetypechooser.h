@@ -81,36 +81,36 @@ private:
 };
 
 /**
-  * @class KMimeTypeChooserDialog kmimetypechooser.h KMimeTypeChooserDialog
-  *
-  * @short A dialog to select MIME types from the list of available ones on the system
-  *
-  * This dialog embeds KMimeTypeChooser widget, presenting a checkable tree list of
-  * MIME types, each with its associated icon, and optinally associated glob patterns
-  * (displayed in a separate column); also an optional Edit button to launch a
-  * MIME type editor to edit the selected MIME type.
-  *
-  * Here is an example, using the dialog to set the text of two line edits with the
-  * list of MIME type names and glob patterns, respectively, of the MIME types that
-  * the user has selected:
-  *
-  * @code
-  *    QLineEdit *leMimetypes = new QLineEdit();
-  *    QLineEdit *leGlobPatterns = new QLineEdit();
-  *    [...]
-  *    QString textLine = i18n("Select MIME types");
-  *    QStringList mimeList = QStringList::split(QRegularExpression("\\s*;\\s*"), leMimetypes->text());
-  *    KMimeTypeChooserDialog dlg(i18n("Select MIME Types"), textLine, mimeList, "text", this);
-  *    if (dlg.exec() == QDialog::Accepted) {
-  *        leMimetypes->setText(dlg.chooser()->mimeTypes().join(";"));
-  *        leGlobPatterns->setText(dlg.chooser()->patterns().join(";"));
-  *    }
-  * @endcode
-  *
-  * \image html kmimetypechooserdialog.png "KMimeTypeChooserDialog in action"
-  *
-  * @author Anders Lund (anders at alweb dk) dec 19, 2001
-  */
+ * @class KMimeTypeChooserDialog kmimetypechooser.h KMimeTypeChooserDialog
+ *
+ * @short A dialog to select MIME types from the list of available ones on the system
+ *
+ * This dialog embeds KMimeTypeChooser widget, presenting a checkable tree list of
+ * MIME types, each with its associated icon, and optinally associated glob patterns
+ * (displayed in a separate column); also an optional Edit button to launch a
+ * MIME type editor to edit the selected MIME type.
+ *
+ * Here is an example, using the dialog to set the text of two line edits with the
+ * list of MIME type names and glob patterns, respectively, of the MIME types that
+ * the user has selected:
+ *
+ * @code
+ *    QLineEdit *leMimetypes = new QLineEdit();
+ *    QLineEdit *leGlobPatterns = new QLineEdit();
+ *    [...]
+ *    QString textLine = i18n("Select MIME types");
+ *    QStringList mimeList = QStringList::split(QRegularExpression("\\s*;\\s*"), leMimetypes->text());
+ *    KMimeTypeChooserDialog dlg(i18n("Select MIME Types"), textLine, mimeList, "text", this);
+ *    if (dlg.exec() == QDialog::Accepted) {
+ *        leMimetypes->setText(dlg.chooser()->mimeTypes().join(";"));
+ *        leGlobPatterns->setText(dlg.chooser()->patterns().join(";"));
+ *    }
+ * @endcode
+ *
+ * \image html kmimetypechooserdialog.png "KMimeTypeChooserDialog in action"
+ *
+ * @author Anders Lund (anders at alweb dk) dec 19, 2001
+ */
 class KWIDGETSADDONS_EXPORT KMimeTypeChooserDialog : public QDialog
 {
     Q_OBJECT

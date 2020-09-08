@@ -14,16 +14,16 @@
 
 class KColorButtonPrivate;
 /**
-* @class KColorButton kcolorbutton.h KColorButton
-*
-* @short A pushbutton to display or allow user selection of a color.
-*
-* This widget can be used to display or allow user selection of a color.
-*
-* \image html kcolorbutton.png "KColorButton Widget"
-*
-* @see QColorDialog
-*/
+ * @class KColorButton kcolorbutton.h KColorButton
+ *
+ * @short A pushbutton to display or allow user selection of a color.
+ *
+ * This widget can be used to display or allow user selection of a color.
+ *
+ * \image html kcolorbutton.png "KColorButton Widget"
+ *
+ * @see QColorDialog
+ */
 class KWIDGETSADDONS_EXPORT KColorButton : public QPushButton
 {
     Q_OBJECT

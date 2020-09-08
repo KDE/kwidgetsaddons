@@ -97,7 +97,7 @@ public:
 
         /**
          * A problem with the user name as entered
-         **/
+         */
         UsernameError,
 
         /**
@@ -113,7 +113,7 @@ public:
         /**
          * A problem with the domain as entered
          * @since 4.1
-         **/
+         */
         DomainError
     };
 

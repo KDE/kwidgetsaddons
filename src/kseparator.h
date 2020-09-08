@@ -30,7 +30,7 @@ public:
      * Constructor.
      * @param parent parent object.
      * @param f extra QWidget flags.
-     **/
+     */
     explicit KSeparator(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
@@ -39,13 +39,13 @@ public:
      * Possible values are Horizontal or Vertical.
      * @param parent parent object.
      * @param f extra QWidget flags.
-     **/
+     */
     explicit KSeparator(Qt::Orientation orientation, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
      * Returns the orientation of the separator.
      * @return int Possible values Horizontal or Vertical.
-     **/
+     */
     Qt::Orientation orientation() const;
 
     /**

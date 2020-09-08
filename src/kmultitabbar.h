@@ -206,13 +206,15 @@ protected:
     void showEvent(class QShowEvent *) override;
     void paintEvent(class QPaintEvent *) override;
 
-    /** Should not be created directly. Use KMultiTabBar::appendButton
-    */
+    /**
+     * Should not be created directly. Use KMultiTabBar::appendButton
+     */
     KMultiTabBarButton(const QIcon &icon, const QString &, int id, QWidget *parent);
 
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
-    /** Should not be created directly. Use KMultiTabBar::appendButton
-    */
+    /**
+     * Should not be created directly. Use KMultiTabBar::appendButton
+     */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use overload with QIcon")
     KMultiTabBarButton(const QPixmap &pic, const QString &, int id, QWidget *parent);
 #endif

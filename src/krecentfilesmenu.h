@@ -30,7 +30,6 @@ class KRecentFilesMenuPrivate;
  * A menu that offers a set of recent files.
  *
  * @since 5.74
- *
  */
 class KWIDGETSADDONS_EXPORT KRecentFilesMenu : public QMenu
 {
