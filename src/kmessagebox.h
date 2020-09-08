@@ -471,7 +471,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- * NOTE: The OK button will always have the i18n'ed text '&OK'.
+ * @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void error(QWidget *parent,
                                  const QString &text,
@@ -499,7 +499,7 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- * NOTE: The OK button will always have the i18n'ed text '&OK'.
+ * @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void errorList(QWidget *parent,
                                      const QString &text,
@@ -529,7 +529,7 @@ KWIDGETSADDONS_EXPORT void errorList(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- * NOTE: The OK button will always have the i18n'ed text '&OK'.
+ * @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void detailedError(QWidget *parent,
         const QString &text,
@@ -554,7 +554,7 @@ KWIDGETSADDONS_EXPORT void detailedError(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- * NOTE: The ok button will always have the i18n'ed text '&OK'.
+ * @note The OK button will always have the i18n'ed text '&OK'.
  * See the overload with a KGuiItem argument to change that.
  */
 KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
@@ -613,7 +613,7 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- * NOTE: The ok button will always have the i18n'ed text '&OK'.
+ * @note The OK button will always have the i18n'ed text '&OK'.
  * See the overload with a KGuiItem argument to change that.
  */
 KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
@@ -676,7 +676,7 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- *  NOTE: The OK button will always have the i18n'ed text '&OK'.
+ *  @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void information(QWidget *parent,
                                        const QString &text,
@@ -708,7 +708,7 @@ KWIDGETSADDONS_EXPORT void information(QWidget *parent,
  *
  * The default button is "&OK". Pressing "Esc" selects the OK-button.
  *
- *  NOTE: The OK button will always have the i18n'ed text '&OK'.
+ *  @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void informationList(QWidget *parent,
         const QString &text,
@@ -746,7 +746,7 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
  *
  * The default button is "&OK".
  *
- *  NOTE: The ok button will always have the i18n'ed text '&OK'.
+ *  @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void about(QWidget *parent,
                                  const QString &text,

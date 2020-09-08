@@ -99,7 +99,7 @@ public:
      *
      * The width sets the fixed width of the widget. This is useful if you
      * want to draw the ruler bigger or smaller than the default size.
-     * Note: The size of the marks doesn't change.
+     * @note The size of the marks doesn't change.
      * @p parent and @p f are passed to QFrame.
      *
      * @param orient      Orientation of the ruler.

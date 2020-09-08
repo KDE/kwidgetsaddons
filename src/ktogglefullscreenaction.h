@@ -32,7 +32,7 @@
  * do not call directly the slot connected to the toggled() signal. The slot
  * still needs to explicitly set the window state though.
  *
- * Note: Do NOT use QWidget::showFullScreen() or QWidget::showNormal().
+ * @note Do NOT use QWidget::showFullScreen() or QWidget::showNormal().
  * They have several side-effects besides just switching the fullscreen
  * state (for example, showNormal() resets all window states, not just
  * fullscreen). Use the KToggleFullScreenAction::setFullScreen() helper function.
