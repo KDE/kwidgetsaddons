@@ -69,7 +69,6 @@ public:
      */
     bool setDate(const QDate &date);
 
-    // KDE5 remove the const & from the returned QDate
     /**
      * @returns the selected date.
      */

@@ -385,6 +385,7 @@ void KDatePicker::tableClickedSlot()
     emit tableClicked();
 }
 
+// TODO KF6: remove the const & from the returned QDate
 const QDate &KDatePicker::date() const
 {
     return d->table->date();

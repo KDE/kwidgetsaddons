@@ -33,7 +33,7 @@ public:
      */
     QWidget *main;
 
-    // ### KDE 5: Remove this, add a hideEvent() reimplementation instead.
+    // TODO KF6: Remove this, add a hideEvent() reimplementation instead.
     class OutsideClickCatcher;
     OutsideClickCatcher *outsideClickCatcher;
 };
