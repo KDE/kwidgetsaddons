@@ -97,9 +97,7 @@ void KPageViewPrivate::_k_rebuildGui()
 
 void KPageViewPrivate::updateSelection()
 {
-    /**
-     * Select the first item in the view if not done yet.
-     */
+    // Select the first item in the view if not done yet.
 
     if (!model) {
         return;
@@ -117,9 +115,7 @@ void KPageViewPrivate::updateSelection()
 
 void KPageViewPrivate::cleanupPages()
 {
-    /**
-     * Remove all orphan pages from the stacked widget.
-     */
+    // Remove all orphan pages from the stacked widget.
 
     const QList<QWidget *> widgets = collectPages();
 
@@ -141,10 +137,8 @@ void KPageViewPrivate::cleanupPages()
 
 QList<QWidget *> KPageViewPrivate::collectPages(const QModelIndex &parentIndex)
 {
-    /**
-     * Traverse through the model recursive and collect all widgets in
-     * a list.
-     */
+    // Traverse through the model recursive and collect all widgets in
+    // a list.
     QList<QWidget *> retval;
 
     int rows = model->rowCount(parentIndex);
@@ -175,9 +169,7 @@ KPageView::FaceType KPageViewPrivate::detectAutoFace() const
         return KPageView::Plain;
     }
 
-    /**
-     * Check whether the model has sub pages.
-     */
+    // Check whether the model has sub pages.
     bool hasSubPages = false;
     const int count = model->rowCount();
     for (int i = 0; i < count; ++i) {
@@ -204,19 +196,15 @@ void KPageViewPrivate::_k_modelChanged()
         return;
     }
 
-    /**
-     * If the face type is Auto, we rebuild the GUI whenever the layout
-     * of the model changes.
-     */
+    // If the face type is Auto, we rebuild the GUI whenever the layout
+    // of the model changes.
     if (faceType == KPageView::Auto) {
         _k_rebuildGui();
         // If you discover some crashes use the line below instead...
         //QTimer::singleShot(0, q, SLOT(_k_rebuildGui()));
     }
 
-    /**
-     * Set the stack to the minimum size of the largest widget.
-     */
+    // Set the stack to the minimum size of the largest widget.
     QSize size = stack->size();
     const QList<QWidget *> widgets = collectPages();
     for (int i = 0; i < widgets.count(); ++i) {
@@ -289,10 +277,8 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
 
 void KPageViewPrivate::_k_dataChanged(const QModelIndex &, const QModelIndex &)
 {
-    /**
-     * When data has changed we update the header and icon for the currently selected
-     * page.
-     */
+    // When data has changed we update the header and icon for the currently selected
+    // page.
     if (!view) {
         return;
     }
@@ -328,9 +314,7 @@ void KPageViewPrivate::init()
     layout->setRowStretch(2, 1);
 }
 
-/**
- * KPageView Implementation
- */
+// KPageView Implementation
 KPageView::KPageView(QWidget *parent)
     : KPageView(*new KPageViewPrivate(this), parent)
 {

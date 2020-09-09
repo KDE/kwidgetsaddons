@@ -44,11 +44,9 @@ KPageWidgetItem::KPageWidgetItem(QWidget *widget)
 {
     d->widget = widget;
 
-    /**
-     * Hide the widget, otherwise when the widget has this KPageView as
-     * parent the widget is shown outside the QStackedWidget if the page
-     * was not selected ( and reparented ) yet.
-     */
+    // Hide the widget, otherwise when the widget has this KPageView as
+    // parent the widget is shown outside the QStackedWidget if the page
+    // was not selected ( and reparented ) yet.
     if (d->widget) {
         d->widget->hide();
     }
@@ -60,11 +58,9 @@ KPageWidgetItem::KPageWidgetItem(QWidget *widget, const QString &name)
     d->widget = widget;
     d->name = name;
 
-    /**
-     * Hide the widget, otherwise when the widget has this KPageView as
-     * parent the widget is shown outside the QStackedWidget if the page
-     * was not selected ( and reparented ) yet.
-     */
+    // Hide the widget, otherwise when the widget has this KPageView as
+    // parent the widget is shown outside the QStackedWidget if the page
+    // was not selected ( and reparented ) yet.
     if (d->widget) {
         d->widget->hide();
     }

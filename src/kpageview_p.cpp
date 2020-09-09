@@ -20,9 +20,7 @@
 
 using namespace KDEPrivate;
 
-/**
- * KPagePlainView
- */
+// KPagePlainView
 
 KPagePlainView::KPagePlainView(QWidget *parent)
     : QAbstractItemView(parent)
@@ -73,9 +71,7 @@ QRegion KPagePlainView::visualRegionForSelection(const QItemSelection &) const
     return QRegion();
 }
 
-/**
- * KPageListView
- */
+// KPageListView
 
 KPageListView::KPageListView(QWidget *parent)
     : QListView(parent)
@@ -132,9 +128,7 @@ void KPageListView::updateWidth()
     setFixedWidth(sizeHintForColumn(0) + verticalScrollBar()->sizeHint().width() + 5);
 }
 
-/**
- * KPageTreeView
- */
+// KPageTreeView
 
 KPageTreeView::KPageTreeView(QWidget *parent)
     : QTreeView(parent)
@@ -183,9 +177,7 @@ void KPageTreeView::expandItems(const QModelIndex &index)
     }
 }
 
-/**
- * KPageTabbedView
- */
+// KPageTabbedView
 
 KPageTabbedView::KPageTabbedView(QWidget *parent)
     : QAbstractItemView(parent)
@@ -350,9 +342,7 @@ void KPageTabbedView::dataChanged(const QModelIndex &index, const QModelIndex &,
     }
 }
 
-/**
- * KPageListViewDelegate
- */
+// KPageListViewDelegate
 
 KPageListViewDelegate::KPageListViewDelegate(QObject *parent)
     : QAbstractItemDelegate(parent)
@@ -449,9 +439,7 @@ QSize KPageListViewDelegate::sizeHint(const QStyleOptionViewItem &option, const 
     int hp = pixmap.height() / pixmap.devicePixelRatio();
 
     if (hp == 0) {
-        /**
-         * No pixmap loaded yet, we'll use the default icon size in this case.
-         */
+        // No pixmap loaded yet, we'll use the default icon size in this case.
         hp = iconSize;
         wp = iconSize;
     }
@@ -489,9 +477,7 @@ void KPageListViewDelegate::drawFocus(QPainter *painter, const QStyleOptionViewI
     }
 }
 
-/**
- * KPageListViewProxy
- */
+// KPageListViewProxy
 
 KPageListViewProxy::KPageListViewProxy(QObject *parent)
     : QAbstractProxyModel(parent)

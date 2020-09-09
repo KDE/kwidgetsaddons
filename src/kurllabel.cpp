@@ -329,9 +329,7 @@ void KUrlLabel::leaveEvent(QEvent *event)
 bool KUrlLabel::event(QEvent *event)
 {
     if (event->type() == QEvent::PaletteChange) {
-        /**
-         * Use parentWidget() unless you are a toplevel widget, then try qAapp
-         */
+        // Use parentWidget() unless you are a toplevel widget, then try qAapp
         QPalette palette = parentWidget() ? parentWidget()->palette() : qApp->palette();
 
         palette.setBrush(QPalette::Base, palette.brush(QPalette::Normal, QPalette::Window));

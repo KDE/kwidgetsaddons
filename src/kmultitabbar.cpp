@@ -16,7 +16,7 @@
 
 #include <math.h>
 
-/**
+/*
  A bit of an overview about what's going on here:
  There are two sorts of things that can be in the tab bar: tabs and regular
  buttons. The former are managed by KMultiTabBarInternal, the later

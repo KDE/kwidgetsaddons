@@ -107,10 +107,8 @@ QWidget *KToolBarLabelAction::createWidget(QWidget *_parent)
     if (!d->label) {
         d->label = new QLabel(parent);
 
-        /**
-         * These lines were copied from Konqueror's KonqDraggableLabel class in
-         * konq_misc.cc
-         */
+        // These lines were copied from Konqueror's KonqDraggableLabel class in
+        // konq_misc.cc
         d->label->setBackgroundRole(QPalette::Button);
         d->label->setAlignment((QApplication::isRightToLeft() ? Qt::AlignRight : Qt::AlignLeft) |
                                Qt::AlignVCenter);
