@@ -16,16 +16,9 @@
 class Q_DECL_HIDDEN KRatingWidget::Private
 {
 public:
-    Private()
-        : rating(0),
-          hoverRating(-1),
-          pixSize(16)
-    {
-    }
-
-    int rating;
-    int hoverRating;
-    int pixSize;
+    int rating = 0;
+    int hoverRating = -1;
+    int pixSize = 16;
 
     KRatingPainter ratingPainter;
 };

@@ -22,7 +22,7 @@ class Q_DECL_HIDDEN KToggleAction::Private
 {
 public:
     Private(KToggleAction *_parent)
-        : parent(_parent), checkedGuiItem(nullptr)
+        : parent(_parent)
     {
     }
 
@@ -38,8 +38,8 @@ public:
                 parent, &KToggleAction::slotToggled);
     }
 
-    KToggleAction *parent;
-    KGuiItem *checkedGuiItem;
+    KToggleAction *const parent;
+    KGuiItem *checkedGuiItem = nullptr;
 };
 
 KToggleAction::KToggleAction(QObject *parent)

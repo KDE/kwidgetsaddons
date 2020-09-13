@@ -30,7 +30,7 @@ public:
         });
     }
 
-    KBusyIndicatorWidget *q = nullptr;
+    KBusyIndicatorWidget *const q;
     QVariantAnimation animation;
     QIcon icon = QIcon::fromTheme(QStringLiteral("view-refresh"));
     qreal rotation = 0;

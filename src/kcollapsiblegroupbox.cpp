@@ -23,21 +23,18 @@ public:
     QSize contentSize() const;
     QSize contentMinimumSize() const;
 
-    KCollapsibleGroupBox *q;
+    KCollapsibleGroupBox *const q;
     QTimeLine *animation;
     QString title;
-    bool isExpanded;
-    bool headerContainsMouse;
+    bool isExpanded = false;
+    bool headerContainsMouse = false;
     QSize headerSize;
-    int shortcutId;
+    int shortcutId = 0;
     QMap<QWidget*, Qt::FocusPolicy> focusMap;    // Used to restore focus policy of widgets.
 };
 
 KCollapsibleGroupBoxPrivate::KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox* q):
-    q(q),
-    isExpanded(false),
-    headerContainsMouse(false),
-    shortcutId(0)
+    q(q)
 {}
 
 KCollapsibleGroupBox::KCollapsibleGroupBox(QWidget* parent):

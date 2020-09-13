@@ -24,7 +24,7 @@ class Q_DECL_HIDDEN KPixmapRegionSelectorWidget::Private
 public:
     Private(KPixmapRegionSelectorWidget *q): q(q) {}
 
-    KPixmapRegionSelectorWidget *q;
+    KPixmapRegionSelectorWidget *const q;
 
     /**
     * Recalculates the pixmap that is shown based on the current selected area,

@@ -21,7 +21,6 @@ public:
     FormLayoutWidgetItem(QWidget *widget, QFormLayout *formLayout, QFormLayout::ItemRole itemRole)
         : QWidgetItem(widget)
         , m_formLayout(formLayout)
-        , m_width(-1)
         , m_itemRole(itemRole)
     {}
 
@@ -76,9 +75,9 @@ public:
     }
 
 private:
-    QFormLayout *m_formLayout;
-    int m_width;
-    QFormLayout::ItemRole m_itemRole;
+    QFormLayout *const m_formLayout;
+    int m_width = -1;
+    const QFormLayout::ItemRole m_itemRole;
 };
 
 struct GridColumnInfo

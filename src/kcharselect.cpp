@@ -32,13 +32,13 @@ Q_GLOBAL_STATIC(KCharSelectData, s_data)
 class KCharSelectTablePrivate
 {
 public:
-    KCharSelectTablePrivate(KCharSelectTable *q): q(q), model(nullptr)
+    KCharSelectTablePrivate(KCharSelectTable *q): q(q)
     {}
 
-    KCharSelectTable *q;
+    KCharSelectTable *const q;
 
     QFont font;
-    KCharSelectItemModel *model;
+    KCharSelectItemModel *model = nullptr;
     QVector<uint> chars;
     uint chr;
 
@@ -60,12 +60,6 @@ public:
 
     KCharSelectPrivate(KCharSelect *q)
         : q(q)
-        , searchLine(nullptr)
-        , searchMode(false)
-        , historyEnabled(false)
-        , allPlanesEnabled(false)
-        , inHistory(0)
-        , actionParent(nullptr)
     {
     }
 
@@ -74,7 +68,7 @@ public:
         return KCharSelect::tr(str);
     }
 
-    KCharSelect *q;
+    KCharSelect *const q;
 
     QToolButton *backButton = nullptr;
     QToolButton *forwardButton = nullptr;
@@ -86,12 +80,12 @@ public:
     KCharSelectTable *charTable = nullptr;
     QTextBrowser *detailBrowser = nullptr;
 
-    bool searchMode; //a search is active
-    bool historyEnabled;
-    bool allPlanesEnabled;
-    int inHistory; //index of current char in history
+    bool searchMode = false; //a search is active
+    bool historyEnabled = false;
+    bool allPlanesEnabled = false;
+    int inHistory = 0; //index of current char in history
     QList<HistoryItem> history;
-    QObject *actionParent;
+    QObject *actionParent = nullptr;
 
     QString createLinks(QString s);
     void historyAdd(uint c, bool fromSearch, const QString &searchString);

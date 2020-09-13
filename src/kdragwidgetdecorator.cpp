@@ -15,14 +15,8 @@
 class KDragWidgetDecoratorBasePrivate
 {
 public:
-    KDragWidgetDecoratorBasePrivate()
-        : dragEnabled(true),
-          decoratedWidget(nullptr)
-    {
-    }
-
-    bool dragEnabled;
-    QWidget *decoratedWidget;
+    bool dragEnabled = true;
+    QWidget *decoratedWidget = nullptr;
     QPoint startPos;
 };
 

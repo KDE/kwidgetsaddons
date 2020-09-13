@@ -22,10 +22,7 @@ class Q_DECL_HIDDEN KToolTipWidget::KToolTipWidgetPrivate
 {
 public:
     KToolTipWidgetPrivate(KToolTipWidget *parent)
-        : q(parent),
-          layout(nullptr),
-          content(nullptr),
-          contentParent(nullptr)
+        : q(parent)
     {}
 
     void init();
@@ -36,11 +33,11 @@ public:
     void restoreParent();
     QPoint centerBelow(const QRect &rect, QScreen *screen) const;
 
-    KToolTipWidget *q;
+    KToolTipWidget *const q;
     QTimer hideTimer;
-    QVBoxLayout *layout;
-    QWidget *content;
-    QWidget *contentParent;
+    QVBoxLayout *layout = nullptr;
+    QWidget *content = nullptr;
+    QWidget *contentParent = nullptr;
 };
 
 void KToolTipWidget::KToolTipWidgetPrivate::init()

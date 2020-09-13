@@ -22,7 +22,7 @@ public:
     {
     }
 
-    KAssistantDialog *q;
+    KAssistantDialog *const q;
     QHash<KPageWidgetItem *, bool> valid;
     QHash<KPageWidgetItem *, bool> appropriate;
     KPageWidgetModel *pageModel = nullptr;

@@ -25,9 +25,7 @@ class Q_DECL_HIDDEN KFontAction::KFontActionPrivate
 {
 public:
     KFontActionPrivate(KFontAction *parent)
-        : q(parent),
-          settingFont(0),
-          fontFilters(QFontComboBox::AllFonts)
+        : q(parent)
     {
     }
 
@@ -45,9 +43,9 @@ public:
 //        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }
 
-    KFontAction *q;
-    int settingFont;
-    QFontComboBox::FontFilters fontFilters;
+    KFontAction *const q;
+    int settingFont = 0;
+    QFontComboBox::FontFilters fontFilters = QFontComboBox::AllFonts;
 };
 
 QStringList _k_fontList(const QFontComboBox::FontFilters &fontFilters = QFontComboBox::AllFonts)

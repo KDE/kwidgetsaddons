@@ -11,7 +11,7 @@
 class Q_DECL_HIDDEN KPixmapSequenceWidget::Private
 {
 public:
-    KPixmapSequenceOverlayPainter *m_painter;
+    KPixmapSequenceOverlayPainter *m_painter = nullptr;
 };
 
 KPixmapSequenceWidget::KPixmapSequenceWidget(QWidget *parent)

@@ -36,7 +36,7 @@ public:
 
     void setValues(int _xPos, int _yPos);
 
-    KXYSelector *q;
+    KXYSelector *const q;
     int px;
     int py;
     int xPos;

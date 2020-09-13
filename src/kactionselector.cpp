@@ -20,7 +20,7 @@ class KActionSelectorPrivate
 public:
     KActionSelectorPrivate(KActionSelector *q): q(q) {}
 
-    KActionSelector *q = nullptr;
+    KActionSelector *const q = nullptr;
     QListWidget *availableListWidget = nullptr;
     QListWidget *selectedListWidget = nullptr;
     QToolButton *btnAdd = nullptr;

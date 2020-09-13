@@ -30,7 +30,7 @@ public:
     void _k_movieFinished();
     void _k_timerUpdate();
 
-    KAnimatedButton *q;
+    KAnimatedButton *const q;
     QMovie *movie = nullptr;
 
     int                    frames;

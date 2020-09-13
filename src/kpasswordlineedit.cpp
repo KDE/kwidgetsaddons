@@ -30,7 +30,7 @@ public:
     QAction *toggleEchoModeAction = nullptr;
     bool isToggleEchoModeAvailable = true;
     bool revealPasswordAvailable = true;
-    KPasswordLineEdit *q;
+    KPasswordLineEdit *const q;
 };
 
 void KPasswordLineEditPrivate::initialize()

@@ -16,17 +16,11 @@
 class Q_DECL_HIDDEN KLed::Private
 {
 public:
-    Private()
-        : darkFactor(300),
-          state(On), look(Raised), shape(Circular)
-    {
-    }
-
-    int darkFactor;
+    int darkFactor = 300;
     QColor color;
-    State state;
-    Look look;
-    Shape shape;
+    State state = On;
+    Look look = Raised;
+    Shape shape = Circular;
 
     QPixmap cachedPixmap[2]; // for both states
 };

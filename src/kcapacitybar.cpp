@@ -28,23 +28,17 @@ class Q_DECL_HIDDEN KCapacityBar::Private
 {
 public:
     Private(KCapacityBar::DrawTextMode drawTextMode)
-        : value(0)
-        , fillFullBlocks(true)
-        , continuous(true)
-        , barHeight(12)
-        , horizontalTextAlignment(Qt::AlignCenter)
-        , ce_capacityBar(QStyle::ControlElement(0))
-        , drawTextMode(drawTextMode) {}
+        : drawTextMode(drawTextMode) {}
 
     ~Private() {}
 
     QString text;
-    int value;
-    bool fillFullBlocks;
-    bool continuous;
-    int barHeight;
-    Qt::Alignment horizontalTextAlignment;
-    QStyle::ControlElement ce_capacityBar;
+    int value = 0;
+    bool fillFullBlocks = true;
+    bool continuous = true;
+    int barHeight = 12;
+    Qt::Alignment horizontalTextAlignment = Qt::AlignCenter;
+    QStyle::ControlElement ce_capacityBar = QStyle::ControlElement(0);
 
     KCapacityBar::DrawTextMode drawTextMode;
 };

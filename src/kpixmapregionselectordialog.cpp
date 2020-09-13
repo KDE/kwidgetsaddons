@@ -21,12 +21,12 @@ class Q_DECL_HIDDEN KPixmapRegionSelectorDialog::Private
 {
 public:
     Private(KPixmapRegionSelectorDialog *parent)
-        : pixmapSelectorWidget(nullptr), q(parent)
+        : q(parent)
     {
     }
 
-    KPixmapRegionSelectorWidget *pixmapSelectorWidget;
-    KPixmapRegionSelectorDialog *q;
+    KPixmapRegionSelectorWidget *pixmapSelectorWidget = nullptr;
+    KPixmapRegionSelectorDialog *const q;
 
     void init()
     {

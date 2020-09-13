@@ -25,9 +25,7 @@ class Q_DECL_HIDDEN KPasswordDialog::KPasswordDialogPrivate
 {
 public:
     KPasswordDialogPrivate(KPasswordDialog *q)
-        : q(q),
-          userEditCombo(nullptr),
-          commentRow(0)
+        : q(q)
     {}
 
     void actuallyAccept();
@@ -36,13 +34,13 @@ public:
     void updateFields();
     void init();
 
-    KPasswordDialog *q;
+    KPasswordDialog *const q;
     Ui_KPasswordDialog ui;
     QMap<QString, QString> knownLogins;
-    QComboBox *userEditCombo;
+    QComboBox *userEditCombo = nullptr;
     QIcon icon;
     KPasswordDialogFlags m_flags;
-    unsigned int commentRow;
+    unsigned int commentRow = 0;
 };
 
 KPasswordDialog::KPasswordDialog(QWidget *parent,

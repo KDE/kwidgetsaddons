@@ -18,12 +18,7 @@ class Q_DECL_HIDDEN KNewPasswordWidget::KNewPasswordWidgetPrivate
 {
 public:
     KNewPasswordWidgetPrivate(KNewPasswordWidget *parent)
-        : q(parent),
-          passwordStatus(WeakPassword),
-          minimumPasswordLength(0),
-          passwordStrengthWarningLevel(1),
-          reasonablePasswordLength(8),
-          toggleEchoModeAction(nullptr)
+        : q(parent)
     {}
 
     void init();
@@ -32,14 +27,14 @@ public:
     int effectivePasswordLength(const QString &password);
     void updatePasswordStatus(PasswordStatus status);
 
-    KNewPasswordWidget *q;
+    KNewPasswordWidget *const q;
 
-    PasswordStatus passwordStatus;
-    int minimumPasswordLength;
-    int passwordStrengthWarningLevel;
-    int reasonablePasswordLength;
+    PasswordStatus passwordStatus = WeakPassword;
+    int minimumPasswordLength = 0;
+    int passwordStrengthWarningLevel = 1;
+    int reasonablePasswordLength = 8;
 
-    QAction *toggleEchoModeAction;
+    QAction *toggleEchoModeAction = nullptr;
     QColor backgroundWarningColor;
     QColor defaultBackgroundColor;
 

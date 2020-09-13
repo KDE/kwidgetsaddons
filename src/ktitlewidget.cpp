@@ -108,7 +108,7 @@ public:
     }
 
     int level = 1;
-    KTitleWidget *q;
+    KTitleWidget *const q;
     QGridLayout *headerLayout;
     QLabel *imageLabel;
     QLabel *textLabel;

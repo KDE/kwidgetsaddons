@@ -24,14 +24,8 @@
 class Q_DECL_HIDDEN KSelector::Private
 {
 public:
-    Private()
-    {
-        arrowPE = QStyle::PE_IndicatorArrowLeft;
-        m_indent = true;
-    }
-
-    bool m_indent;
-    QStyle::PrimitiveElement arrowPE;
+    bool m_indent = true;
+    QStyle::PrimitiveElement arrowPE = QStyle::PE_IndicatorArrowLeft;
 };
 
 class Q_DECL_HIDDEN KGradientSelector::KGradientSelectorPrivate

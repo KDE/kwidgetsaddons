@@ -16,25 +16,15 @@
 class Q_DECL_HIDDEN KRatingPainter::Private
 {
 public:
-    Private()
-        : maxRating(10),
-          spacing(0),
-          isEnabled(true),
-          bHalfSteps(true),
-          alignment(Qt::AlignCenter),
-          direction(Qt::LeftToRight)
-    {
-    }
-
     QPixmap getPixmap(int size, QIcon::State state = QIcon::On);
 
-    int maxRating;
-    int spacing;
+    int maxRating = 10;
+    int spacing = 0;
     QIcon icon;
-    bool isEnabled;
-    bool bHalfSteps;
-    Qt::Alignment alignment;
-    Qt::LayoutDirection direction;
+    bool isEnabled = true;
+    bool bHalfSteps = true;
+    Qt::Alignment alignment = Qt::AlignCenter;
+    Qt::LayoutDirection direction = Qt::LeftToRight;
     QPixmap customPixmap;
 };
 

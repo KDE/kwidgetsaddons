@@ -53,7 +53,7 @@ public:
     }
 
 private:
-    KDatePicker *picker;
+    KDatePicker *const picker;
 };
 
 // Week numbers are defined by ISO 8601

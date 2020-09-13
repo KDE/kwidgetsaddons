@@ -25,9 +25,7 @@ class KEditListWidgetPrivate
 {
 public:
     KEditListWidgetPrivate(KEditListWidget *parent)
-        : lineEdit(nullptr),
-          editingWidget(nullptr),
-          q(parent)
+        : q(parent)
     {
     }
     QListView *listView = nullptr;
@@ -51,7 +49,7 @@ public:
     QModelIndex selectedIndex();
 
 private:
-    KEditListWidget *q;
+    KEditListWidget *const q;
 };
 
 void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButtons,

@@ -23,7 +23,6 @@ class Q_DECL_HIDDEN KToggleFullScreenAction::Private
 public:
     Private(KToggleFullScreenAction *action)
         : q(action)
-        , window(nullptr)
     {
     }
 
@@ -42,8 +41,8 @@ public:
         }
     }
 
-    KToggleFullScreenAction *q;
-    QWidget *window;
+    KToggleFullScreenAction *const q;
+    QWidget *window = nullptr;
 };
 
 KToggleFullScreenAction::KToggleFullScreenAction(QObject *parent)

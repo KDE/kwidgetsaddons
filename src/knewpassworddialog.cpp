@@ -30,7 +30,7 @@ public:
     void _k_passwordStatusChanged();
     void showMessageWidget(const QString &message, KMessageWidget::MessageType type);
 
-    KNewPasswordDialog *q;
+    KNewPasswordDialog *const q;
 
     QString pass;
     QIcon icon;

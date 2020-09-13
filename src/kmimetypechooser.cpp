@@ -36,7 +36,7 @@ public:
     void _k_slotCurrentChanged(const QModelIndex &index);
     void _k_slotSycocaDatabaseChanged(const QStringList &);
 
-    KMimeTypeChooser *q;
+    KMimeTypeChooser *const q;
     QTreeView *mimeTypeTree = nullptr;
     QStandardItemModel *m_model = nullptr;
     QSortFilterProxyModel *m_proxyModel = nullptr;

@@ -56,8 +56,8 @@ public:
     }
 
 private:
-    KCharSelectData *m_data;
-    QByteArray m_dataFile;
+    KCharSelectData *const m_data;
+    const QByteArray m_dataFile;
 };
 
 static const char JAMO_L_TABLE[][4] = {

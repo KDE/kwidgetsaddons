@@ -28,12 +28,7 @@ Boston, MA 02110-1301, USA.
 class KFontChooserDialogPrivate
 {
 public:
-    KFontChooserDialogPrivate()
-        : chooser(nullptr)
-    {
-    }
-
-    KFontChooser *chooser;
+    KFontChooser *chooser = nullptr;
 };
 
 KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, QWidget *parent)

@@ -30,7 +30,7 @@ public:
 
     void init();
 
-    KFontSizeAction *q;
+    KFontSizeAction *const q;
 };
 
 // BEGIN KFontSizeAction
