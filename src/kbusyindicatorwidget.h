@@ -12,6 +12,8 @@
 #include <QWidget>
 
 /**
+ * @class KBusyIndicatorWidget kbusyindicatorwidget.h KBusyIndicatorWidget
+ *
  * @brief Rotating spinning icon to indicate busyness
  *
  * When you need to communicate to the user that your application is busy with

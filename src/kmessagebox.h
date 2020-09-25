@@ -27,6 +27,8 @@ class QStringList;
 class KConfig;
 
 /**
+ * @class KMessageBox kmessagebox.h KMessageBox
+ *
  * Easy message dialog box.
  *
  * Provides convenience functions for some i18n'ed standard dialogs,
