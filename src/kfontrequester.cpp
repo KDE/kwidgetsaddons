@@ -17,58 +17,6 @@
 
 #include <cmath>
 
-// Determine if the font with given properties is available on the system,
-// otherwise find and return the best fitting combination.
-static QFont nearestExistingFont(const QFont &font)
-{
-    QFontDatabase dbase;
-
-    // Initialize font data according to given font object.
-    QString family = font.family();
-    QString style = dbase.styleString(font);
-    qreal size = font.pointSizeF();
-
-    // Check if the family exists.
-    const QStringList families = dbase.families();
-    if (!families.contains(family)) {
-        // Chose another family.
-        family = QFontInfo(font).family(); // the nearest match
-        if (!families.contains(family)) {
-            family = families.count() ? families.at(0) : QStringLiteral("fixed");
-        }
-    }
-
-    // Check if the family has the requested style.
-    // Easiest by piping it through font selection in the database.
-    QString retStyle = dbase.styleString(dbase.font(family, style, 10));
-    style = retStyle;
-
-    // Check if the family has the requested size.
-    // Only for bitmap fonts.
-    if (!dbase.isSmoothlyScalable(family, style)) {
-        const QList<int> sizes = dbase.smoothSizes(family, style);
-        if (!sizes.contains(size)) {
-            // Find nearest available size.
-            int mindiff = 1000;
-            int refsize = size;
-            for (int lsize : sizes) {
-                int diff = qAbs(refsize - lsize);
-                if (mindiff > diff) {
-                    mindiff = diff;
-                    size = lsize;
-                }
-            }
-        }
-    }
-
-    // Select the font with confirmed properties.
-    QFont result = dbase.font(family, style, int(size));
-    if (dbase.isSmoothlyScalable(family, style) && result.pointSize() == floor(size)) {
-        result.setPointSizeF(size);
-    }
-    return result;
-}
-
 class Q_DECL_HIDDEN KFontRequester::KFontRequesterPrivate
 {
 public:
@@ -148,7 +96,7 @@ QPushButton *KFontRequester::button() const
 
 void KFontRequester::setFont(const QFont &font, bool onlyFixed)
 {
-    d->m_selFont = nearestExistingFont(font);
+    d->m_selFont = font;
     d->m_onlyFixed = onlyFixed;
 
     d->displaySampleText();
