@@ -2,6 +2,7 @@
     This file is part of the KDE libraries
     SPDX-FileCopyrightText: 2000 David Faure <faure@kde.org>
     SPDX-FileCopyrightText: 2007 Olivier Goffart <ogoffart at kde.org>
+    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -73,6 +74,18 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
     ui.setupUi(q);
     ui.buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     ui.errorMessage->setHidden(true);
+
+    ui.userEditContextHelpButton->hide();
+    ui.userEditContextHelpButton->setFlat(true);
+    ui.userEditContextHelpButton->setIcon(QIcon::fromTheme(QStringLiteral("help-contextual")));
+    ui.userEditContextHelpButton->setText(QString());
+    const QString description = QApplication::translate("KPasswordDialog", "Show Contextual Help");
+    ui.userEditContextHelpButton->setAccessibleName(description);
+    ui.userEditContextHelpButton->setToolTip(description);
+    connect(ui.userEditContextHelpButton, &QPushButton::released, q, [this] {
+        QEvent ev(QEvent::WhatsThis);
+        qApp->sendEvent(ui.userEdit, &ev);
+    });
 
     // Row 4: Username field
     if (m_flags & KPasswordDialog::ShowUsernameLine) {
@@ -409,6 +422,12 @@ bool KPasswordDialog::checkPassword()
 QDialogButtonBox *KPasswordDialog::buttonBox() const
 {
     return d->ui.buttonBox;
+}
+
+void KPasswordDialog::setUsernameContextHelp(const QString &help)
+{
+    d->ui.userEditContextHelpButton->setVisible(true);
+    d->ui.userEdit->setWhatsThis(help);
 }
 
 #include "moc_kpassworddialog.cpp"

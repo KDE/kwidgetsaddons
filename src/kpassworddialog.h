@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2000 David Faure <faure@kde.org>
     SPDX-FileCopyrightText: 2000 Dawit Alemayehu <adawit@kde.org>
     SPDX-FileCopyrightText: 2007 Olivier Goffart <ogoffart at kde.org>
+    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -289,6 +290,17 @@ public:
      * @since 5.0
      */
     QDialogButtonBox *buttonBox() const;
+
+    /**
+     * Sets contextual help for the username input field. This displays a
+     * somewhat visual hint in the UI giving very visible access to a whats-this
+     * style input description for the user name line. This is particularly useful
+     * when the user name may require or support special input syntax.
+     * For example windows-like auth dialogs supports multiple different logon
+     * name syntax.
+     * @since 5.76
+     */
+    void setUsernameContextHelp(const QString &help);
 
 Q_SIGNALS:
     /**
