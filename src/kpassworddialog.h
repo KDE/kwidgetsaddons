@@ -18,7 +18,7 @@
 /**
  * @class KPasswordDialog kpassworddialog.h KPasswordDialog
  *
- * A dialog for requesting a password and optionaly a login from the end user.
+ * A dialog for requesting a password and optionally a login from the end user.
  *
  * \section usage Usage Example
  *
@@ -270,7 +270,7 @@ public:
      * Presets a number of login+password pairs that the user can choose from.
      * The passwords can be empty if you simply want to offer usernames to choose from.
      *
-     * This require the flag ShowUnernameLine to be set in the constructoe, and not the flag UsernameReadOnly
+     * This require the flag ShowUsernameLine to be set in the constructoe, and not the flag UsernameReadOnly
      * @param knownLogins map of known logins: the keys are usernames, the values are passwords.
      */
     void setKnownLogins(const QMap<QString, QString> &knownLogins);
