@@ -9,7 +9,6 @@
 
 #include <QApplication>
 
-#include <kguiitem.h>
 
 namespace KStandardGuiItem
 {

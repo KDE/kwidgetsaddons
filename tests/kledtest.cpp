@@ -2,9 +2,6 @@
 #include "kledtest.h"
 
 #include <qapplication.h>
-#include <QWidget>
-#include <QTimer>
-#include <stdlib.h>
 #include "kled.h"
 
 KLedTest::KLedTest(QWidget *parent)

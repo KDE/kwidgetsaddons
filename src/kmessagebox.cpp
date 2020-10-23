@@ -12,7 +12,6 @@
 #include <QPointer>
 #include <QCheckBox>
 #include <QDialog>
-#include <QDialogButtonBox>
 #include <QLabel>
 #include <QLayout>
 #include <QListWidget>

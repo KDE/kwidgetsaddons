@@ -8,7 +8,6 @@
 #include "kpixmapsequence.h"
 
 #include <QWidget>
-#include <QPoint>
 #include <QRect>
 #include <QPainter>
 #include <QTimer>

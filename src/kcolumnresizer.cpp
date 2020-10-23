@@ -9,7 +9,6 @@
 #include "loggingcategory.h"
 
 #include <QEvent>
-#include <QFormLayout>
 #include <QGridLayout>
 #include <QSet>
 #include <QTimer>

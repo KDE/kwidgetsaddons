@@ -14,7 +14,6 @@
 #include <QPainter>
 #include <QPixmap>
 #include <QTimer>
-#include <QToolButton>
 
 class KAnimatedButtonPrivate
 {

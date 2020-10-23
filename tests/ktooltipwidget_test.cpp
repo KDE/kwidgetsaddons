@@ -6,7 +6,6 @@
 
 #include "ktooltipwidget_test.h"
 
-#include <KToolTipWidget>
 
 #include <QApplication>
 #include <QPushButton>

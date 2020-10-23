@@ -26,7 +26,6 @@
 #include <QActionEvent>
 #include <QEvent>
 #include <QMenu>
-#include <QToolButton>
 #include <QToolBar>
 #include <QStandardItem>
 
