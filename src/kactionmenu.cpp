@@ -17,7 +17,6 @@
 #include "kactionmenu.h"
 
 #include <QMenu>
-#include <QToolButton>
 #include <QToolBar>
 
 class KActionMenuPrivate
@@ -29,8 +28,10 @@ public:
     ~KActionMenuPrivate()
     {
     }
-    bool m_delayed = true;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
     bool m_stickyMenu = true;
+#endif
+    QToolButton::ToolButtonPopupMode m_popupMode = QToolButton::MenuButtonPopup;
 };
 
 KActionMenu::KActionMenu(QObject *parent)
@@ -82,15 +83,8 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     QObject::connect(parent, &QToolBar::toolButtonStyleChanged,
                      button, &QToolButton::setToolButtonStyle);
     button->setDefaultAction(this);
+    button->setPopupMode(popupMode());
     QObject::connect(button, &QToolButton::triggered, parent, &QToolBar::actionTriggered);
-
-    if (delayed()) {
-        button->setPopupMode(QToolButton::DelayedPopup);
-    } else if (stickyMenu()) {
-        button->setPopupMode(QToolButton::InstantPopup);
-    } else {
-        button->setPopupMode(QToolButton::MenuButtonPopup);
-    }
 
     return button;
 }
@@ -135,23 +129,62 @@ void KActionMenu::removeAction(QAction *action)
     menu()->removeAction(action);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
 bool KActionMenu::delayed() const
 {
-    return d->m_delayed;
+    return popupMode() == QToolButton::DelayedPopup;
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
 void KActionMenu::setDelayed(bool _delayed)
 {
-    d->m_delayed = _delayed;
+    if (_delayed) {
+        setPopupMode(QToolButton::DelayedPopup);
+    } else {
+        if (d->m_stickyMenu) {
+            setPopupMode(QToolButton::InstantPopup);
+        } else {
+            setPopupMode(QToolButton::MenuButtonPopup);
+        }
+    }
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
 bool KActionMenu::stickyMenu() const
 {
-    return d->m_stickyMenu;
+    if (popupMode() == QToolButton::DelayedPopup) {
+        return d->m_stickyMenu;
+    } else if (popupMode() == QToolButton::InstantPopup) {
+        return true;
+    } else { // MenuButtonPopup
+        return false;
+    }
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
 void KActionMenu::setStickyMenu(bool sticky)
 {
+    if (popupMode() != QToolButton::DelayedPopup) {
+        if (sticky) {
+            setPopupMode(QToolButton::InstantPopup);
+        } else {
+            setPopupMode(QToolButton::MenuButtonPopup);
+        }
+    }
+
     d->m_stickyMenu = sticky;
 }
+#endif
 
+QToolButton::ToolButtonPopupMode KActionMenu::popupMode() const
+{
+    return d->m_popupMode;
+}
+
+void KActionMenu::setPopupMode(QToolButton::ToolButtonPopupMode popupMode)
+{
+    d->m_popupMode = popupMode;
+}

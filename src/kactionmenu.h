@@ -16,6 +16,7 @@
 #ifndef KACTIONMENU_H
 #define KACTIONMENU_H
 
+#include <QToolButton>
 #include <QWidgetAction>
 
 #include <kwidgetsaddons_export.h>
@@ -25,23 +26,22 @@ class QMenu;
 /**
  * @class KActionMenu kactionmenu.h KActionMenu
  *
- * A KActionMenu is an action that has several properties specific to holding a
- * sub-menu of other actions.
- *
- * Any QAction can be used to create a submenu.
+ * A KActionMenu is an action that provides a sub-menu of other actions.
  *
  * Plugged in a popupmenu, it will create a submenu.
  * Plugged in a toolbar, it will create a button with a popup menu.
  *
  * This is the action used by the XMLGUI since it holds other actions.
  * If you want a submenu for selecting one tool among many (without icons), see KSelectAction.
- * See also setDelayed about the main action.
  */
 class KWIDGETSADDONS_EXPORT KActionMenu : public QWidgetAction
 {
     Q_OBJECT
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
     Q_PROPERTY(bool delayed READ delayed WRITE setDelayed)
     Q_PROPERTY(bool stickyMenu READ stickyMenu WRITE setStickyMenu)
+#endif
+    Q_PROPERTY(QToolButton::ToolButtonPopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
     explicit KActionMenu(QObject *parent);
@@ -80,16 +80,22 @@ public:
     }
 #endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
     /**
      * Returns true if this action creates a delayed popup menu
      * when plugged in a KToolBar.
+     *
+     * @deprecated Since 5.77, use popupMode() instead.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::popupMode()")
     bool delayed() const;
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
     /**
      * If set to true, this action will create a delayed popup menu
      * when plugged in a KToolBar. Otherwise it creates a normal popup.
-     * Default: delayed
+     * Default: false
      *
      * Remember that if the "main" action (the toolbar button itself)
      * cannot be clicked, then you should call setDelayed(false).
@@ -98,15 +104,24 @@ public:
      * in a toolbar: in a menu, the parent of a submenu can't be activated.
      * To get a "normal" menu item when plugged a menu (and no submenu)
      * use KToolBarPopupAction.
+     *
+     * @deprecated Since 5.77, use setPopupMode() instead.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::setPopupMode()")
     void setDelayed(bool delayed);
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
     /**
      * Returns true if this action creates a sticky popup menu.
      * @see setStickyMenu().
+     * @deprecated Since 5.77, use popupMode() instead.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::popupMode()")
     bool stickyMenu() const;
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
     /**
      * If set to true, this action will create a sticky popup menu
      * when plugged in a KToolBar.
@@ -114,8 +129,40 @@ public:
      * clicked elsewhere. This feature allows you to make a selection without
      * having to press and hold down the mouse while making a selection.
      * Default: sticky.
+     *
+     * @deprecated Since 5.77, use setPopupMode() instead.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::setPopupMode()")
     void setStickyMenu(bool sticky);
+#endif
+
+    /**
+     * The currently used popup mode when plugged in a KToolBar.
+     *
+     * @see setPopupMode()
+     *
+     * @since 5.77
+     */
+    QToolButton::ToolButtonPopupMode popupMode() const;
+
+    /**
+     * Determines the popup mode when plugged in a KToolBar.
+     *
+     * Options are:
+     *  - QToolButton::InstantPopup
+     *    Clicking anywhere on the toolbar button opens the popup menu.
+     *  - QToolButton::DelayedPopup
+     *    Clicking anywhere on the toolbar button triggers the default action.
+     *    Clicking and holding the toolbar button opens the popup menu instead.
+     *  - QToolButton::MenuButtonPopup (Default)
+     *    The toolbar button is split in a main button (triggers default action)
+     *    and an arrow button (opens the popup menu).
+     *
+     * @see QToolButton
+     *
+     * @since 5.77
+     */
+    void setPopupMode(QToolButton::ToolButtonPopupMode popupMode);
 
     QWidget *createWidget(QWidget *parent) override;
 
