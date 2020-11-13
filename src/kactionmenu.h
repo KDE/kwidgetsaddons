@@ -95,7 +95,7 @@ public:
     /**
      * If set to true, this action will create a delayed popup menu
      * when plugged in a KToolBar. Otherwise it creates a normal popup.
-     * Default: false
+     * Default: true
      *
      * Remember that if the "main" action (the toolbar button itself)
      * cannot be clicked, then you should call setDelayed(false).
@@ -149,12 +149,12 @@ public:
      * Determines the popup mode when plugged in a KToolBar.
      *
      * Options are:
-     *  - QToolButton::InstantPopup
+     *  - QToolButton::InstantPopup (Default)
      *    Clicking anywhere on the toolbar button opens the popup menu.
      *  - QToolButton::DelayedPopup
      *    Clicking anywhere on the toolbar button triggers the default action.
      *    Clicking and holding the toolbar button opens the popup menu instead.
-     *  - QToolButton::MenuButtonPopup (Default)
+     *  - QToolButton::MenuButtonPopup
      *    The toolbar button is split in a main button (triggers default action)
      *    and an arrow button (opens the popup menu).
      *

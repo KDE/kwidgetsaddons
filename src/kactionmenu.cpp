@@ -31,7 +31,7 @@ public:
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
     bool m_stickyMenu = true;
 #endif
-    QToolButton::ToolButtonPopupMode m_popupMode = QToolButton::MenuButtonPopup;
+    QToolButton::ToolButtonPopupMode m_popupMode = QToolButton::DelayedPopup;
 };
 
 KActionMenu::KActionMenu(QObject *parent)
