@@ -21,21 +21,21 @@ public:
         m_hasIcon = false;
     }
 
-    KGuiItemPrivate(const KGuiItemPrivate &rhs)
+    KGuiItemPrivate(const KGuiItemPrivate &other)
     {
-        (*this) = rhs;
+        (*this) = other;
     }
 
-    KGuiItemPrivate &operator=(const KGuiItemPrivate &rhs)
+    KGuiItemPrivate &operator=(const KGuiItemPrivate &other)
     {
-        m_text = rhs.m_text;
-        m_icon = rhs.m_icon;
-        m_iconName = rhs.m_iconName;
-        m_toolTip = rhs.m_toolTip;
-        m_whatsThis = rhs.m_whatsThis;
-        m_statusText = rhs.m_statusText;
-        m_enabled = rhs.m_enabled;
-        m_hasIcon = rhs.m_hasIcon;
+        m_text = other.m_text;
+        m_icon = other.m_icon;
+        m_iconName = other.m_iconName;
+        m_toolTip = other.m_toolTip;
+        m_whatsThis = other.m_whatsThis;
+        m_statusText = other.m_statusText;
+        m_enabled = other.m_enabled;
+        m_hasIcon = other.m_hasIcon;
 
         return *this;
     }
@@ -211,4 +211,3 @@ void KGuiItem::assign(QPushButton *button, const KGuiItem &item)
     button->setToolTip(item.d->m_toolTip);
     button->setWhatsThis(item.d->m_whatsThis);
 }
-
