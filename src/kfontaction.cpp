@@ -129,7 +129,7 @@ QString KFontAction::font() const
 QWidget *KFontAction::createWidget(QWidget *parent)
 {
 //    qCDebug(KWidgetsAddonsLog) << "KFontAction::createWidget()";
-#pragma message "FIXME: items need to be converted"
+
     // This is the visual element on the screen.  This method overrides
     // the KSelectAction one, preventing KSelectAction from creating its
     // regular KComboBox.
