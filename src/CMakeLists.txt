@@ -68,6 +68,7 @@ set(kwidgetsaddons_SRCS
   kpagewidgetmodel.cpp
   kassistantdialog.cpp
   kmessagewidget.cpp
+  kmessagedialog.cpp
   knewpassworddialog.cpp
   lineediturldropeventfilter.cpp
   kpasswordlineedit.cpp
@@ -183,6 +184,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KPageWidgetModel,KPageWidgetItem
   KAssistantDialog
   KMessageWidget
+  KMessageDialog
   KNewPasswordDialog
   LineEditUrlDropEventFilter
   KPasswordLineEdit
@@ -268,6 +270,7 @@ if (PythonModuleGeneration_FOUND)
       kpagewidgetmodel.h
       kassistantdialog.h
       kmessagewidget.h
+      kmessagedialog.h
       knewpassworddialog.h
       lineediturldropeventfilter.h
       kpasswordlineedit.h
