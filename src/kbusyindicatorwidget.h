@@ -17,7 +17,7 @@
  * @brief Rotating spinning icon to indicate busyness
  *
  * When you need to communicate to the user that your application is busy with
- * something you'll want to use a KBusyIndicatorWidget to display an infinately
+ * something you'll want to use a KBusyIndicatorWidget to display an infinitely
  * spinnning indicator icon.
  *
  * A way of using this widget is to combine it with a QLabel to construct a
@@ -26,14 +26,14 @@
  * ```
  * auto layout = new QHBoxLayout;
  * layout->addWidget(new KBusyIndicatorWidget);
- * layout->addWidget(new QLabel(QStringLiteral("Waterig the flowers...")));
+ * layout->addWidget(new QLabel(QStringLiteral("Watering the flowers...")));
  * ```
  *
  * @image html kbusyindicatorwidget.png "KBusyIndicatorWidget with label"
  *
  * KBusyIndicatorWidget is set apart from KPixmapSequenceWidget in that it
  * does not render a pixmap sequence but rather animates a scaled Icon.
- * It can support multiple semi-abitrary sizes and quality is only limited
+ * It can support multiple semi-arbitrary sizes and quality is only limited
  * by the resolution of available icons. It is also easier to use as its use
  * is more specific.
  *
