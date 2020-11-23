@@ -38,8 +38,8 @@ namespace KStyleExtensions
  * Resolve a dynamic QStyle::ControlElement for eg. QStyle::drawControl()
  *
  * @returns a unique QStyle::ControlElement or 0 in case the style doesn't support this element
- * @p element a valid element string appname.CE_element, eg. "amarok.CE_Analyzer"
- * @p widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
+ * @param element a valid element string appname.CE_element, eg. "amarok.CE_Analyzer"
+ * @param widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
  * @since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString &element, const QWidget *widget);
@@ -47,8 +47,8 @@ KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString 
  * Resolve a dynamic QStyle::StyleHint to query QStyle::styleHint()
  *
  * @returns a unique QStyle::StyleHint or 0 in case the style doesn't suuport this element
- * @p element a valid element string appname.SH_element, eg. "amarok.SH_Analyzer"
- * @p widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
+ * @param element a valid element string appname.SH_element, eg. "amarok.SH_Analyzer"
+ * @param widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
  * @since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::StyleHint customStyleHint(const QString &element, const QWidget *widget);
@@ -56,8 +56,8 @@ KWIDGETSADDONS_EXPORT QStyle::StyleHint customStyleHint(const QString &element, 
  * Resolve a dynamic QStyle::SubElement for eg. QStyle::subElementRect()
  *
  * @returns a unique QStyle::SubElement or 0 in case the style doesn't suuport this element
- * @p element a valid element string appname.SE_element, eg. "amarok.SE_AnalyzerCanvas"
- * @p widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
+ * @param element a valid element string appname.SE_element, eg. "amarok.SE_AnalyzerCanvas"
+ * @param widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
  * @since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::SubElement customSubElement(const QString &element, const QWidget *widget);

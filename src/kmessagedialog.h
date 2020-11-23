@@ -119,9 +119,9 @@ public:
     /**
      * Constructs a KMessageDialog.
      *
-     * @p type the dialog Type, one of KMessageDialog::Type enum
-     * @p text the text message that is going to be displayed in the dialog
-     * @p parent a QWidget* that will be set as the dialog parent
+     * @param type the dialog Type, one of KMessageDialog::Type enum
+     * @param text the text message that is going to be displayed in the dialog
+     * @param parent a QWidget* that will be set as the dialog parent
      */
     explicit KMessageDialog(KMessageDialog::Type type,
                             const QString &text,
@@ -130,9 +130,9 @@ public:
     /**
      * This constructor takes the window Id of the parent window, instead of a QWidget*.
      *
-     * @p type the dialog Type, one of KMessageDialog::Type enum
-     * @p text the text message that is going to be displayed in the dialog
-     * @p parent_id the native parent's window system identifier
+     * @param type the dialog Type, one of KMessageDialog::Type enum
+     * @param text the text message that is going to be displayed in the dialog
+     * @param parent_id the native parent's window system identifier
      */
     explicit KMessageDialog(KMessageDialog::Type type,
                             const QString &text,

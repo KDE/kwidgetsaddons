@@ -37,7 +37,8 @@ protected:
 public Q_SLOTS:
     /**
      * Close the popup window. This is called from the main widget, usually.
-     * @p r is the result returned from exec().
+     *
+     * @param r is the result returned from exec()
      */
     void close(int r);
 
