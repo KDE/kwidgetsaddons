@@ -301,50 +301,54 @@ void KMessageDialog::setDetails(const QString &details)
 void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &buttonNo,
                                 const KGuiItem &buttonCancel)
 {
+    auto btnAccept = !buttonAccept.text().isEmpty() ? buttonAccept : KStandardGuiItem::yes();
+    auto btnNo = !buttonNo.text().isEmpty() ? buttonNo : KStandardGuiItem::no();
+    auto btnCancel = !buttonCancel.text().isEmpty() ? buttonCancel : KStandardGuiItem::cancel();
+
     switch (d->m_type) {
     case KMessageDialog::QuestionYesNo:
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), btnAccept);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), btnNo);
         break;
     case KMessageDialog::QuestionYesNoCancel:
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No
                                            | QDialogButtonBox::Cancel);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Cancel), buttonCancel);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), btnAccept);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), btnNo);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Cancel), btnCancel);
         break;
     case KMessageDialog::WarningYesNo: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), btnAccept);
 
-        auto *noBtn = d->m_buttonBox->button(QDialogButtonBox::No);
-        KGuiItem::assign(noBtn, buttonNo);
-        noBtn->setDefault(true);
+        auto *noB = d->m_buttonBox->button(QDialogButtonBox::No);
+        KGuiItem::assign(noB, btnNo);
+        noB->setDefault(true);
         break;
     }
     case KMessageDialog::WarningYesNoCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), btnAccept);
+        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), btnNo);
 
-        auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
-        KGuiItem::assign(cancelButton, buttonCancel);
-        cancelButton->setDefault(true);
+        auto *cancelB = d->m_buttonBox->button(QDialogButtonBox::Cancel);
+        KGuiItem::assign(cancelB, btnCancel);
+        cancelB->setDefault(true);
         break;
     }
     case KMessageDialog::WarningContinueCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::Cancel);
 
-        KGuiItem buttonContinue = buttonAccept;
+        KGuiItem buttonContinue = btnAccept;
         if (buttonContinue.text() == KStandardGuiItem::yes().text()) {
             buttonContinue = KStandardGuiItem::cont();
         }
         KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonContinue);
 
-        auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
-        KGuiItem::assign(cancelButton, buttonCancel);
-        cancelButton->setDefault(true);
+        auto *cancelB = d->m_buttonBox->button(QDialogButtonBox::Cancel);
+        KGuiItem::assign(cancelB, btnCancel);
+        cancelB->setDefault(true);
         break;
     }
     case KMessageDialog::Information:

@@ -217,14 +217,19 @@ public:
      * by default KStandardGuiItem::yes() and KStandardGuiItem::no() respectively. For
      * dialog Types that have a Cancel button, @p buttonCancel will be used.
      *
-     * You can use a KGuiItem to get a button with custom text and icon.
+     * You can use a KGuiItem to construct a button with custom text and icon.
+     *
+     * If the text attribute of @p buttonAccept, @p buttonNo, or @p buttonCancel
+     * is empty (i.e. the KGuiItem is malformed), then KStandardGuiItem::yes(),
+     * KStandardGuiItem::no(), or KStandardGuiItem::cancel() will be used instead,
+     * respectively.
      *
      * @note
      * - If you don't call this method the dialog will have no buttons
      * - For WarningContinueCancel dialog Type, if buttonAccept has the same text as
      *   KStandardGuiItem::yes(), KStandardGuiItem::cont() will be used instead
      * - For dialog Types: Information, Sorry, and Error only one button
-     *   (KStandardGuiItem::ok()) is added to the dialog.
+     *   (KStandardGuiItem::ok()) is added to the dialog
      */
     void setButtons(const KGuiItem &buttonAccept = KStandardGuiItem::yes(),
                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
