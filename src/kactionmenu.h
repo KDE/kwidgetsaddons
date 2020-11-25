@@ -149,9 +149,9 @@ public:
      * Determines the popup mode when plugged in a KToolBar.
      *
      * Options are:
-     *  - QToolButton::InstantPopup (Default)
+     *  - QToolButton::InstantPopup
      *    Clicking anywhere on the toolbar button opens the popup menu.
-     *  - QToolButton::DelayedPopup
+     *  - QToolButton::DelayedPopup (Default)
      *    Clicking anywhere on the toolbar button triggers the default action.
      *    Clicking and holding the toolbar button opens the popup menu instead.
      *  - QToolButton::MenuButtonPopup
