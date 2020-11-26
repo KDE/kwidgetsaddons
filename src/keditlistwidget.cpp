@@ -75,7 +75,7 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
     subLayout->addWidget(listView);
     subLayout->addLayout(btnsLayout);
 
-    mainLayout->insertLayout(1, subLayout);
+    mainLayout->addLayout(subLayout);
 
     setEditor(lineEdit, representationWidget);
 
@@ -103,7 +103,7 @@ void KEditListWidgetPrivate::setEditor(QLineEdit *newLineEdit, QWidget *represen
         representationWidget->setParent(q);
     }
 
-    mainLayout->insertWidget(0, editingWidget);
+    mainLayout->insertWidget(0, editingWidget); // before subLayout
 
     lineEdit->installEventFilter(q);
 
