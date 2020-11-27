@@ -28,13 +28,10 @@ private Q_SLOTS:
     void changeBlock()
     {
         KCharSelect selector(nullptr, nullptr);
-        // This asserts in QHeaderView, fix is up at https://codereview.qt-project.org/258967
-#if QT_VERSION >= QT_VERSION_CHECK(5, 13, 0)
         QComboBox *blockCombo = selector.findChild<QComboBox *>(QStringLiteral("blockCombo"));
         QVERIFY(blockCombo);
         blockCombo->setCurrentIndex(1);
         QCOMPARE(selector.currentCodePoint(), 128);
-#endif
     }
 };
 
