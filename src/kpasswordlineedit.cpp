@@ -98,7 +98,6 @@ void KPasswordLineEdit::setPassword(const QString &password)
     if (d->passwordLineEdit->text() != password) {
         d->isToggleEchoModeAvailable = password.isEmpty();
         d->passwordLineEdit->setText(password);
-        Q_EMIT passwordChanged(password);
     }
 }
 

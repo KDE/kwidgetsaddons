@@ -10,6 +10,7 @@
 #include <QLineEdit>
 #include <QTest>
 #include <QAction>
+#include <QSignalSpy>
 
 PasswordLineEditTest::PasswordLineEditTest(QObject *parent)
     : QObject(parent)
@@ -76,6 +77,15 @@ void PasswordLineEditTest::shouldShowRevealPassword()
 
     edit->clear();
     QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
+}
+
+void PasswordLineEditTest::shouldEmitSignalPasswordChanged()
+{
+    KPasswordLineEdit lineEdit;
+    lineEdit.show();
+    QSignalSpy spy(&lineEdit, &KPasswordLineEdit::passwordChanged);
+    lineEdit.setPassword(QStringLiteral("foo"));
+    QCOMPARE(spy.count(), 1);
 }
 
 QTEST_MAIN(PasswordLineEditTest)

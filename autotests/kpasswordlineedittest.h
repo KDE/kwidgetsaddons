@@ -20,6 +20,7 @@ private Q_SLOTS:
     void shouldShowTogglePassword();
     void shouldNotShowToggleWhenSetPassword();
     void shouldShowRevealPassword();
+    void shouldEmitSignalPasswordChanged();
 };
 
 #endif
