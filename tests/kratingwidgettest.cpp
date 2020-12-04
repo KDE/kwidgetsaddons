@@ -15,14 +15,14 @@ int main(int argc, char **argv)
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     QWidget window;
-    window.setLayout(new QVBoxLayout);
+    auto *layout = new QVBoxLayout(&window);
 
     KRatingWidget *enabled = new KRatingWidget(&window);
-    window.layout()->addWidget(enabled);
+    layout->addWidget(enabled);
 
     KRatingWidget *disabled = new KRatingWidget(&window);
     disabled->setEnabled(false);
-    window.layout()->addWidget(disabled);
+    layout->addWidget(disabled);
 
     window.show();
 

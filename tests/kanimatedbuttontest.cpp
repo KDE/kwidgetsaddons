@@ -36,8 +36,7 @@ AnimationGroup::AnimationGroup(const QString &path, int size, QWidget *parent)
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
-    setLayout(lay);
+    QVBoxLayout *lay = new QVBoxLayout(this);
 
     QWidget *top = new QWidget(this);
     lay->addWidget(top);

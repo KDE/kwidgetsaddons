@@ -17,8 +17,8 @@
 KSplitterCollapserButtonGui_test::KSplitterCollapserButtonGui_test(int indexOfWidgetAssociateToSplitterCollapser, Qt::Orientation orientation, QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *lay = new QHBoxLayout;
-    setLayout(lay);
+    QHBoxLayout *lay = new QHBoxLayout(this);
+
     QSplitter *splitter = new QSplitter(orientation);
     lay->addWidget(splitter);
     QTextEdit *firstTextEdit = new QTextEdit;

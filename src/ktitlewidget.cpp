@@ -182,7 +182,6 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(titleFrame);
     mainLayout->setContentsMargins(0, 0, 0, 0);
-    setLayout(mainLayout);
 }
 
 KTitleWidget::~KTitleWidget()

@@ -41,10 +41,9 @@ int main(int argc, char **argv)
     QObject::connect(buttonBox, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
     QObject::connect(buttonBox, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
-    QVBoxLayout *layout = new QVBoxLayout;
+    auto *layout = new QVBoxLayout(&dialog);
     layout->addWidget(edit);
     layout->addWidget(buttonBox);
-    dialog.setLayout(layout);
 
     if (dialog.exec() == QDialog::Accepted) {
         list = edit->items();

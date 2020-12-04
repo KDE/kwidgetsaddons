@@ -42,8 +42,7 @@ KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, 
     connect(d->chooser, &KFontChooser::fontSelected, this, &KFontChooserDialog::fontSelected);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(d->chooser);
     mainLayout->addWidget(buttonBox);
 

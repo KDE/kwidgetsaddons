@@ -37,8 +37,7 @@ protected:
         Q_Q(KPageDialog);
         delete q->layout();
 
-        QVBoxLayout *layout = new QVBoxLayout;
-        q->setLayout(layout);
+        QVBoxLayout *layout = new QVBoxLayout(q);
         layout->setContentsMargins(0, 0, 0, 0);
 
         if (mPageWidget) {

@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         auto groupBox = new KCollapsibleGroupBox;
         groupBox->setTitle(QStringLiteral("&Advanced Options"));
 
-        auto innerLayout = new QVBoxLayout;
+        auto *innerLayout = new QVBoxLayout(groupBox);
         for (int i =0; i<6;i++) {
             auto checkBox = new QCheckBox(QStringLiteral("Some text"));
             innerLayout->addWidget(checkBox);
@@ -51,7 +51,6 @@ int main(int argc, char *argv[])
         innerLayout->addWidget(hiddenCheckBox);
         hiddenCheckBox->hide();
 
-        groupBox->setLayout(innerLayout);
         mainWindowLayout.addWidget(groupBox);
     }
 
@@ -60,15 +59,13 @@ int main(int argc, char *argv[])
         auto groupBox = new KCollapsibleGroupBox;
         groupBox->setTitle(QStringLiteral("Pick a &date"));
 
-        auto innerLayout = new QVBoxLayout;
+        auto innerLayout = new QVBoxLayout(groupBox);
         auto datePicker = new KDatePicker();
         innerLayout->addWidget(datePicker);
-        groupBox->setLayout(innerLayout);
         mainWindowLayout.addWidget(groupBox);
     }
 
     mainWindowLayout.addStretch();
-    mainWindow.setLayout(&mainWindowLayout);
 
     mainWindow.resize(400, 300);
     mainWindow.show();

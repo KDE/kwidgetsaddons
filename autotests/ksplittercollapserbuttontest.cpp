@@ -17,8 +17,8 @@ Q_DECLARE_METATYPE(Qt::Orientation)
 TestSplitter::TestSplitter(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *lay = new QHBoxLayout;
-    setLayout(lay);
+    QHBoxLayout *lay = new QHBoxLayout(this);
+
     splitter = new QSplitter;
     lay->addWidget(splitter);
     splitter->setObjectName(QStringLiteral("splitter"));

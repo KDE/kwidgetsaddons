@@ -313,7 +313,6 @@ void KPageTabbedView::layoutChanged()
         if (page) {
             QWidget *widget = new QWidget(this);
             QVBoxLayout *layout = new QVBoxLayout(widget);
-            widget->setLayout(layout);
             layout->addWidget(page);
             page->setVisible(true);
             mTabWidget->addTab(widget, icon, title);

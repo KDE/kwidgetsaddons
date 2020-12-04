@@ -137,7 +137,6 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
 
         vboxLayout->addLayout(buttonLayout);
     }
-    setLayout(vboxLayout);
 }
 
 KMimeTypeChooser::~KMimeTypeChooser()
@@ -384,8 +383,7 @@ KMimeTypeChooser *KMimeTypeChooserDialog::chooser()
 
 void KMimeTypeChooserDialog::Private::init()
 {
-    QVBoxLayout *layout = new QVBoxLayout;
-    q->setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(q);
 
     layout->addWidget(m_chooser);
 

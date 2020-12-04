@@ -292,8 +292,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         }
     }
 
-    QVBoxLayout *topLayout = new QVBoxLayout;
-    dialog->setLayout(topLayout);
+    QVBoxLayout *topLayout = new QVBoxLayout(dialog);
     topLayout->addWidget(mainWidget);
 
     if (!details.isEmpty()) {
