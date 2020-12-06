@@ -18,18 +18,22 @@
 
 #include <QMenu>
 #include <QToolBar>
-#include <QToolButton>
 
 class Q_DECL_HIDDEN KToolBarPopupAction::Private
 {
 public:
     Private()
-        : delayed(true), stickyMenu(true)
+        : m_popupMode(QToolButton::MenuButtonPopup)
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
+        , stickyMenu(true)
+#endif
     {
     }
 
-    bool delayed: 1;
+    QToolButton::ToolButtonPopupMode m_popupMode;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     bool stickyMenu: 1;
+#endif
 };
 
 KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent)
@@ -66,6 +70,7 @@ QWidget *KToolBarPopupAction::createWidget(QWidget *_parent)
     button->setIconSize(parent->iconSize());
     button->setToolButtonStyle(parent->toolButtonStyle());
     button->setDefaultAction(this);
+    button->setPopupMode(d->m_popupMode);
 
     connect(parent, &QToolBar::iconSizeChanged,
             button, &QAbstractButton::setIconSize);
@@ -74,36 +79,65 @@ QWidget *KToolBarPopupAction::createWidget(QWidget *_parent)
     connect(button, &QToolButton::triggered,
             parent, &QToolBar::actionTriggered);
 
-    if (d->delayed)
-        if (d->stickyMenu) {
-            button->setPopupMode(QToolButton::MenuButtonPopup);
-        } else {
-            button->setPopupMode(QToolButton::DelayedPopup);
-        }
-    else {
-        button->setPopupMode(QToolButton::InstantPopup);
-    }
-
     return button;
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
 bool KToolBarPopupAction::delayed() const
 {
-    return d->delayed;
+    return popupMode() != QToolButton::InstantPopup;
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
 void KToolBarPopupAction::setDelayed(bool delayed)
 {
-    d->delayed = delayed;
+    if (delayed) {
+        if (d->stickyMenu) {
+            setPopupMode(QToolButton::MenuButtonPopup);
+        } else {
+            setPopupMode(QToolButton::DelayedPopup);
+        }
+    } else {
+        setPopupMode(QToolButton::InstantPopup);
+    }
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
 bool KToolBarPopupAction::stickyMenu() const
 {
-    return d->stickyMenu;
+    if (popupMode() == QToolButton::InstantPopup) {
+        return d->stickyMenu;
+    } else if (popupMode() == QToolButton::MenuButtonPopup) {
+        return true;
+    } else { // DelayedPopup
+        return false;
+    }
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
 void KToolBarPopupAction::setStickyMenu(bool sticky)
 {
+    if (popupMode() != QToolButton::InstantPopup) {
+        if (sticky) {
+            setPopupMode(QToolButton::MenuButtonPopup);
+        } else {
+            setPopupMode(QToolButton::DelayedPopup);
+        }
+    }
+
     d->stickyMenu = sticky;
 }
+#endif
 
+QToolButton::ToolButtonPopupMode KToolBarPopupAction::popupMode() const
+{
+    return d->m_popupMode;
+}
+
+void KToolBarPopupAction::setPopupMode(QToolButton::ToolButtonPopupMode popupMode)
+{
+    d->m_popupMode = popupMode;
+}

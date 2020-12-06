@@ -17,6 +17,7 @@ ecm_add_tests(
   kselectaction_unittest.cpp
   ksqueezedtextlabelautotest.cpp
   ktimecomboboxtest.cpp
+  ktoolbarpopupactiontest.cpp
   ktooltipwidgettest.cpp
   kmessagewidgetautotest.cpp
   kpagedialogautotest.cpp

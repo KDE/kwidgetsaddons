@@ -16,6 +16,7 @@
 #ifndef KTOOLBARPOPUPACTION_H
 #define KTOOLBARPOPUPACTION_H
 
+#include <QToolButton>
 #include <QWidgetAction>
 
 #include <kwidgetsaddons_export.h>
@@ -41,8 +42,11 @@ class QMenu;
 class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
 {
     Q_OBJECT
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
     Q_PROPERTY(bool delayed READ delayed WRITE setDelayed)
     Q_PROPERTY(bool stickyMenu READ stickyMenu WRITE setStickyMenu)
+#endif
+    Q_PROPERTY(QToolButton::ToolButtonPopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
     //Not all constructors - because we need an icon, since this action only makes
@@ -74,25 +78,37 @@ public:
     QMenu *popupMenu() const;
 #endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
     /**
      * Returns true if this action creates a delayed popup menu
      * when plugged in a KToolBar.
+     *
+     * @deprecated Since 5.78, use popupMode() instead.
      */
     bool delayed() const;
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
     /**
      * If set to true, this action will create a delayed popup menu
      * when plugged in a KToolBar. Otherwise it creates a normal popup.
      * Default: delayed.
+     *
+     * @deprecated Since 5.78, use setPopupMode() instead.
      */
     void setDelayed(bool delayed);
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
     /**
      * Returns true if this action creates a sticky popup menu.
      * @see setStickyMenu().
+     * @deprecated Since 5.78, use popupMode() instead.
      */
     bool stickyMenu() const;
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
     /**
      * If set to true, this action will create a sticky popup menu
      * when plugged in a KToolBar.
@@ -101,8 +117,39 @@ public:
      * having to press and hold down the mouse while making a selection.
      * Only available if delayed() is true.
      * Default: sticky.
+     *
+     * @deprecated Since 5.78, use setPopupMode() instead.
      */
     void setStickyMenu(bool sticky);
+#endif
+
+    /**
+     * The popup mode of the toolbar button.
+     *
+     * @see setPopupMode()
+     *
+     * @since 5.78
+     */
+    QToolButton::ToolButtonPopupMode popupMode() const;
+
+    /**
+     * Determines the popup mode of the toolbar button.
+     *
+     * Options are:
+     *  - QToolButton::InstantPopup
+     *    Clicking anywhere on the toolbar button opens the popup menu.
+     *  - QToolButton::DelayedPopup
+     *    Clicking anywhere on the toolbar button triggers the default action.
+     *    Clicking and holding the toolbar button opens the popup menu instead.
+     *  - QToolButton::MenuButtonPopup (Default)
+     *    The toolbar button is split in a main button (triggers default action)
+     *    and an arrow button (opens the popup menu).
+     *
+     * @see QToolButton
+     *
+     * @since 5.78
+     */
+    void setPopupMode(QToolButton::ToolButtonPopupMode popupMode);
 
     /**
      * Reimplemented from QWidgetAction.
