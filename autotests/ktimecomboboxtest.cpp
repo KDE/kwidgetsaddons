@@ -191,7 +191,7 @@ void KTimeComboBoxTest::testMask()
     delete m_combo;
 
     // For 24 hour time formats, no am/pm specifier in mask
-    QLocale::setDefault(QLocale(QLocale::Norwegian, QLocale::Norway));
+    QLocale::setDefault(QLocale(QLocale::NorwegianBokmal, QLocale::Norway));
     m_combo = new KTimeComboBox(nullptr);
     mask = m_combo->lineEdit()->inputMask();
     QVERIFY(!mask.contains(QLatin1String("xx")));
