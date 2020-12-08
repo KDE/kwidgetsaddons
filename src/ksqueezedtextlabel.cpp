@@ -8,11 +8,11 @@
 #include "ksqueezedtextlabel.h"
 #include <QAction>
 #include <QContextMenuEvent>
-#include <QDesktopWidget>
 #include <QMenu>
 #include <QClipboard>
 #include <QApplication>
 #include <QRegularExpression>
+#include <QScreen>
 #include <QTextDocument>
 
 class KSqueezedTextLabelPrivate
@@ -62,7 +62,7 @@ QSize KSqueezedTextLabel::minimumSizeHint() const
 
 QSize KSqueezedTextLabel::sizeHint() const
 {
-    int maxWidth = QApplication::desktop()->screenGeometry(this).width() * 3 / 4;
+    int maxWidth = screen()->geometry().width() * 3 / 4;
     QFontMetrics fm(fontMetrics());
     int textWidth = fm.boundingRect(d->fullText).width();
     if (textWidth > maxWidth) {

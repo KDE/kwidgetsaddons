@@ -9,7 +9,6 @@
 
 #include "kpopupframe.h"
 
-#include <QDesktopWidget>
 #include <QEventLoop>
 #include <QGuiApplication>
 #include <QKeyEvent>

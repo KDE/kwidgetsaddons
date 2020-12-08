@@ -12,9 +12,9 @@
 #include <QMenu>
 #include <QLineEdit>
 #include <QWidgetAction>
-#include <QDesktopWidget>
 #include <QVector>
 #include <QDate>
+#include <QScreen>
 
 #include "kdatepicker.h"
 #include "kmessagebox.h"
@@ -528,7 +528,7 @@ void KDateComboBox::showPopup()
     d->m_datePicker->setDate(d->m_date);
     d->m_datePicker->blockSignals(false);
 
-    const QRect desk = QApplication::desktop()->screenGeometry(this);
+    const QRect desk = screen()->geometry();
 
     QPoint popupPoint = mapToGlobal(QPoint(0, 0));
 

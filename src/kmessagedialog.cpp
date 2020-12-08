@@ -12,7 +12,6 @@
 #include <QApplication>
 #include <QCheckBox>
 #include <QDebug>
-#include <QDesktopWidget>
 #include <QDialogButtonBox>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -25,6 +24,7 @@
 #include <QTextBrowser>
 #include <QVBoxLayout>
 #include <QWindow>
+#include <QScreen>
 
 #include <KCollapsibleGroupBox>
 #include <KSqueezedTextLabel>
@@ -86,7 +86,7 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type,
     iconLayout->addWidget(d->m_iconLabel);
     hLayout->addSpacing(widgetStyle->pixelMetric(QStyle::PM_LayoutHorizontalSpacing));
 
-    const QRect desktop = QApplication::desktop()->screenGeometry(this);
+    const QRect desktop = screen()->geometry();
     const auto desktopWidth = desktop.width();
     // Main message text
     d->m_messageLabel = new QLabel(text, d->m_mainWidget);
@@ -283,7 +283,7 @@ void KMessageDialog::setListWidgetItems(const QStringList &strlist)
     const int borderWidth = d->m_listWidget->width() - d->m_listWidget->viewport()->width()
                             + d->m_listWidget->verticalScrollBar()->height();
     listWidth += borderWidth;
-    const auto deskWidthPortion = QApplication::desktop()->screenGeometry(this).width() * 0.85;
+    const auto deskWidthPortion = screen()->geometry().width() * 0.85;
     if (listWidth > deskWidthPortion) { // Limit the list widget size to 85% of screen width
         listWidth = qRound(deskWidthPortion);
     }

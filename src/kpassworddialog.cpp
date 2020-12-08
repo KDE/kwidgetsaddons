@@ -12,10 +12,10 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QLayout>
-#include <QDesktopWidget>
 #include <QPushButton>
 #include <QStyleOption>
 #include <QTimer>
+#include <QScreen>
 
 #include <ktitlewidget.h>
 
@@ -117,7 +117,7 @@ void KPasswordDialogPrivate::init()
 
     updateFields();
 
-    QRect desktop = QApplication::desktop()->screenGeometry(q->topLevelWidget());
+    QRect desktop = q->topLevelWidget()->screen()->geometry();
     q->setMinimumWidth(qMin(1000, qMax(q->sizeHint().width(), desktop.width() / 4)));
     q->setIcon(QIcon::fromTheme(QStringLiteral("dialog-password")));
 }

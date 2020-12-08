@@ -16,11 +16,11 @@
 #include <QLayout>
 #include <QListWidget>
 #include <QPushButton>
-#include <QDesktopWidget>
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QTextBrowser>
 #include <QWindow>
+#include <QScreen>
 
 #include <qapplication.h>
 #if 0
@@ -222,7 +222,7 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
     }
     messageLabel->setTextInteractionFlags(flags);
 
-    QRect desktop = QApplication::desktop()->screenGeometry(dialog);
+    QRect desktop = dialog->screen()->geometry();
     bool usingSqueezedTextLabel = false;
     if (messageLabel->sizeHint().width() > desktop.width() * 0.5) {
         // enable automatic wrapping of messages which are longer than 50% of screen width
