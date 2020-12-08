@@ -13,6 +13,8 @@
 
 #include <kwidgetsaddons_export.h>
 
+class QWidget;
+
 /**
  * @class KToolBarSpacerAction ktoolbarspaceraction.h KToolBarSpacerAction
  *

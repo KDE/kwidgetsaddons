@@ -19,6 +19,7 @@
 #include "ktoggleaction_p.h"
 
 #include <QEvent>
+#include <QWidget>
 
 class KToggleFullScreenActionPrivate : public KToggleActionPrivate
 {

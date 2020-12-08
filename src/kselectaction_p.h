@@ -22,6 +22,7 @@
 #define KSELECTACTION_P_H
 
 #include <QComboBox>
+#include <QActionGroup>
 
 class KSelectActionPrivate
 {

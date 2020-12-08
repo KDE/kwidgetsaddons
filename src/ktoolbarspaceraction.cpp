@@ -7,6 +7,8 @@
 
 #include "ktoolbarspaceraction.h"
 
+#include <QWidget>
+
 class KToolBarSpacerActionPrivate {};
 
 KToolBarSpacerAction::KToolBarSpacerAction(QObject *parent)

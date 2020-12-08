@@ -18,6 +18,8 @@
 
 #include <ktoggleaction.h>
 
+class QWidget;
+
 class KToggleFullScreenActionPrivate;
 
 /**
