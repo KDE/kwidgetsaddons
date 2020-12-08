@@ -904,7 +904,7 @@ QSet<uint> KCharSelectData::getMatchingChars(const QString &s)
         return QSet<uint>();
     }
     futureIndex.waitForFinished();
-    const Index index = futureIndex;
+    const Index index = futureIndex.result();
     Index::const_iterator pos = index.lowerBound(s);
     QSet<uint> result;
 
