@@ -10,6 +10,7 @@
 
 #include <QObject>
 #include <QPair>
+#include <QStringList>
 
 #include "kwidgetsaddons_export.h"
 
@@ -18,7 +19,6 @@ class QItemSelectionModel;
 class QAbstractItemModel;
 class QAbstractScrollArea;
 class QModelIndex;
-class QStringList;
 
 class KViewStateSerializerPrivate;
 

@@ -10,9 +10,10 @@
 
 #include <kwidgetsaddons_export.h>
 
+#include <QStringList>
+
 class QWidget;
 class QString;
-class QStringList;
 
 /**
  * @class KAcceleratorManager kacceleratormanager.h KAcceleratorManager

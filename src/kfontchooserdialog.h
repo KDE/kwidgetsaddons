@@ -22,11 +22,11 @@
 #define K_FONT_CHOOSER_DIALOG_H
 
 #include <QDialog>
+#include <QStringList>
 
 #include <kfontchooser.h>
 
 class QFont;
-class QStringList;
 
 class KFontChooserDialogPrivate;
 

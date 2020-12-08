@@ -9,11 +9,11 @@
 #define K_FONT_CHOOSER_H
 
 #include <kwidgetsaddons_export.h>
+#include <QStringList>
 #include <QWidget>
 #include <memory>
 
 class QFont;
-class QStringList;
 
 /**
  * @class KFontChooser kfontchooser.h KFontChooser
