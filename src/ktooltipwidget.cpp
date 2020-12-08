@@ -233,7 +233,7 @@ void KToolTipWidget::paintEvent(QPaintEvent *event)
     QStylePainter painter(this);
     painter.setClipRegion(event->region());
     QStyleOptionFrame option;
-    option.init(this);
+    option.initFrom(this);
     painter.drawPrimitive(QStyle::PE_PanelTipLabel, option);
     painter.end();
 
