@@ -56,7 +56,7 @@ class KFontChooserDialogPrivate;
  *   https://bugreports.qt.io/browse/QTBUG-63792
  *   https://bugs.kde.org/show_bug.cgi?id=378523
  *
- * Example:
+ * Example, using the static getFont() method:
  *
  * \code
  *      QFont myFont;
@@ -64,6 +64,20 @@ class KFontChooserDialogPrivate;
  *      if (result == QDialog::Accepted) {
  *            ...
  *      }
+ * \endcode
+ *
+ * Another example, this time showing the dialog with show() (or open()):
+ * \code
+ *      KFontChooserDialog *fontDlg = new KFontChooserDialog(KFontChooser::NoDisplayFlags, this);
+ *      // Delete the dialog when it's closed
+ *      fontDlg->setAttribute(Qt::WA_DeleteOnClose);
+ *
+ *      connect(fontDlg, &QDialog::accepted, this, [fontDlg]() {
+ *          // Get the selected font via fontDlg->font() and apply it, save it to
+ *          // the settings... etc.
+ *      });
+ *
+ *      fontDlg->show();
  * \endcode
  *
  * \image html kfontchooserdialog.png "KFontChooserDialog"

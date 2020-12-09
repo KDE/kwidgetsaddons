@@ -37,7 +37,7 @@ KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, 
     , d(new KFontChooserDialogPrivate)
 {
     setWindowTitle(tr("Select Font", "@title:window"));
-    d->chooser = new KFontChooser(this, flags, QStringList(), 8, nullptr);
+    d->chooser = new KFontChooser(this, flags, QStringList(), 8 /*visibleListSize*/, nullptr /*sizeIsRelativeState*/);
     d->chooser->setObjectName(QStringLiteral("fontChooser"));
 
     connect(d->chooser, &KFontChooser::fontSelected, this, &KFontChooserDialog::fontSelected);
