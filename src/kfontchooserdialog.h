@@ -25,6 +25,8 @@
 
 #include <kfontchooser.h>
 
+#include <functional>
+
 class QFont;
 class QStringList;
 
@@ -64,6 +66,17 @@ class KFontChooserDialogPrivate;
  *      if (result == QDialog::Accepted) {
  *            ...
  *      }
+ * \endcode
+ *
+ * Example (async):
+ *
+ * \code
+ *      KFontChooserDialog::getFont(oldFont, KFontChooser::NoDisplayFlags, window,
+ *                                  this, [&](const QFont &selectedFont, int dialogCode) {
+ *          if (dialogCode == QDialog::Accepted) {
+ *              ...
+ *          }
+ *      });
  * \endcode
  *
  * \image html kfontchooserdialog.png "KFontChooserDialog"
@@ -116,6 +129,43 @@ public:
                        QWidget *parent = nullptr);
 
     /**
+     * Creates a modal font dialog, lets the user choose a font, and calls the slot or lambda when
+     * the dialog is closed.
+     *
+     * @param font the font to set initially
+     * @param flags flags to define how the font chooser is displayed
+     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * @param receiver receiver object of the slot @p slot or context object for the lambda @p slot
+     * @param slot slot of the receiver object to call or lambda, signature should be compatible to
+     *             @c signal(const QFont &font, int dialogCode)
+     *
+     * @since 5.78
+     */
+    template<class Receiver, class Func>
+    static inline void getFont(const QFont &font,
+                               KFontChooser::DisplayFlags flags,
+                               QWidget *parent,
+                               const Receiver *recvr, Func slot)
+    {
+        KFontChooserDialog *dialog = createInternal(font, flags, parent);
+        QObject::connect(dialog, &KFontChooserDialog::gotFont, recvr, slot);
+        dialog->open();
+    }
+
+    /**
+     * Overload for getFont(const QFont &, KFontChooser::DisplayFlags flags, QWidget *parent, const Receiver *, Func), with @p flags set to @c KFontChooser::NoDisplayFlags.
+     *
+     * @since 5.78
+     */
+    template<class Receiver, class Func>
+    static inline void getFont(const QFont &font,
+                               QWidget *parent,
+                               const Receiver *recvr, Func slot)
+    {
+        getFont<Receiver, Func>(font, KFontChooser::NoDisplayFlags, parent, recvr, slot);
+    }
+
+    /**
      * Creates a modal font difference dialog, lets the user choose a selection
      * of changes that should be made to a set of fonts, and returns when the
      * dialog is closed. Useful for choosing slight adjustments to the font set
@@ -146,6 +196,58 @@ public:
                            const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags,
                            QWidget *parent = nullptr);
 
+    /**
+     * Creates a modal font difference dialog, lets the user choose a selection
+     * of changes that should be made to a set of fonts, and calls the slot or lambda
+     * when the dialog is closed. Useful for choosing slight adjustments to the font set
+     * when the user would otherwise have to manually edit a number of fonts.
+     *
+     * @param font the font to set initially
+     * @param flags flags to define how the font chooser is displayed
+     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * @param receiver receiver object of the slot @p slot or context object for the lambda method @p slot
+     * @param slot slot of the receiver object to call or lambda, signature should be compatible to
+     *             @c signal(const QFont &font, KFontChooser::FontDiffFlags diffFlags, int dialogCode)
+     *             where @p diffFlags is an integer bitmask holding the chosen difference selection bitmask.
+     *             Check the bitmask like:
+     *             \code
+     *             if ( diffFlags & KFontChooser::FontDiffFamily )  {
+     *                 [...]
+     *             }
+     *             if ( diffFlags & KFontChooser::FontDiffStyle ) {
+     *                 [...]
+     *             }
+     *             if ( diffFlags & KFontChooser::FontDiffSize ) {
+     *                 [...]
+     *             }
+     *             \endcode
+     *
+     * @since 5.78
+     */
+    template<class Receiver, class Func>
+    static inline void getFontDiff(const QFont &font,
+                                   KFontChooser::DisplayFlags flags,
+                                   QWidget *parent,
+                                   const Receiver *recvr, Func slot)
+    {
+        KFontChooserDialog *dialog = createInternalDiff(font, flags, parent);
+        QObject::connect(dialog, &KFontChooserDialog::gotFontDiff, recvr, slot);
+        dialog->open();
+    }
+
+    /**
+     * Overload for getFontDiff(const QFont &, KFontChooser::DisplayFlags flags, QWidget *parent, const Receiver *, Func), with @p flags set to @c KFontChooser::NoDisplayFlags.
+     *
+     * @since 5.78
+     */
+    template<class Receiver, class Func>
+    static inline void getFontDiff(const QFont &font,
+                                   QWidget *parent,
+                                   const Receiver *recvr, Func slot)
+    {
+        getFontDiff<Receiver, Func>(font, KFontChooser::NoDisplayFlags, parent, recvr, slot);
+    }
+
 Q_SIGNALS:
     /**
      * Emitted whenever the currently selected font changes.
@@ -153,6 +255,35 @@ Q_SIGNALS:
      * not running modal.
      */
     void fontSelected(const QFont &font);
+
+private:
+    /**
+     * @internal
+     */
+    static
+    KFontChooserDialog * createInternal(const QFont &font, KFontChooser::DisplayFlags flags, QWidget *parent);
+
+    /**
+     * @internal
+     */
+    static
+    KFontChooserDialog * createInternalDiff(const QFont &font,
+                                           KFontChooser::DisplayFlags flags,
+                                           QWidget *parent);
+
+Q_SIGNALS:
+    /**
+     * @internal
+     * Helper signal for getFont(..., const Receiver *recvr, Func slot),
+     * to have Qt's connect do all the special handling needed to wire up to a lambda or slot
+     */
+    void gotFont(const QFont &font, int dialogCode, QPrivateSignal);
+    /**
+     * @internal
+     * Helper signal for getFontDiff(..., const Receiver *recvr, Func slot),
+     * to have Qt's connect do all the special handling needed to wire up to a lambda or slot
+     */
+    void gotFontDiff(const QFont &font, KFontChooser::FontDiffFlags diffFlags, int dialogCode, QPrivateSignal);
 
 private:
     KFontChooserDialogPrivate *const d;

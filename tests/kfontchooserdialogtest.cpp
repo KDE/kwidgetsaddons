@@ -21,6 +21,7 @@
 #include "kfontchooserdialog.h"
 
 #include <QApplication>
+#include <QCommandLineParser>
 #include <QDebug>
 
 int main(int argc, char **argv)
@@ -31,25 +32,80 @@ int main(int argc, char **argv)
 
     app.setFont(QFont(QStringLiteral("Noto Sans"), 11));
 
+    QCommandLineParser parser;
+    QCommandLineOption syncOption(QStringList{QStringLiteral("sync")}, QStringLiteral("Do sync calls"));
+    parser.addOption(syncOption);
+    parser.addHelpOption();
+    parser.process(app);
+
+    int nRet;
+    const bool doSync = parser.isSet(syncOption);
     //  QFont font = QFont("Times",18,QFont::Bold);
 
-    QFont font;
-    qDebug() << "Default use case, all bells and whistles";
-    int nRet = KFontChooserDialog::getFont(font);
-    qDebug() << font.toString();
+    if (doSync) {
+        qDebug() << "Sync calls:";
 
-    qDebug() << "Only show monospaced fonts, FixedOnly checkbox is _not_ shown";
-    nRet = KFontChooserDialog::getFont(font, KFontChooser::FixedFontsOnly);
-    qDebug() << font.toString();
+        QFont font;
+        qDebug() << "Default use case, all bells and whistles";
+        nRet = KFontChooserDialog::getFont(font);
+        qDebug() << font.toString();
 
-    KFontChooser::FontDiffFlags diffFlags;
-    qDebug() << "ShowDifferences mode";
-    nRet = KFontChooserDialog::getFontDiff(font, diffFlags);
-    qDebug() << font.toString();
+        qDebug() << "Only show monospaced fonts, FixedOnly checkbox is _not_ shown";
+        nRet = KFontChooserDialog::getFont(font, KFontChooser::FixedFontsOnly);
+        qDebug() << font.toString();
 
-    qDebug() << "ShowDifferences mode and only showing monospaced fonts (the FixedOnly checkbox is _not_ shown)";
-    nRet = KFontChooserDialog::getFontDiff(font, diffFlags, KFontChooser::FixedFontsOnly);
-    qDebug() << font.toString();
+        KFontChooser::FontDiffFlags diffFlags;
+        qDebug() << "ShowDifferences mode";
+        nRet = KFontChooserDialog::getFontDiff(font, diffFlags);
+        qDebug() << font.toString();
+
+        qDebug() << "ShowDifferences mode and only showing monospaced fonts (the FixedOnly checkbox is _not_ shown)";
+        nRet = KFontChooserDialog::getFontDiff(font, diffFlags, KFontChooser::FixedFontsOnly);
+        qDebug() << font.toString();
+    } else {
+        qDebug() << "Async calls:";
+
+        qDebug() << "Default use case, all bells and whistles";
+        QFont font;
+        KFontChooserDialog::getFont(font, nullptr, &app, [&](const QFont &selectedFont, int dialogCode) {
+            nRet = dialogCode;
+            if (dialogCode == QDialog::Accepted) {
+                font = selectedFont;
+            }
+            qDebug() << font.toString();
+
+            qDebug() << "Only show monospaced fonts, FixedOnly checkbox is _not_ shown";
+            KFontChooserDialog::getFont(font, KFontChooser::FixedFontsOnly, nullptr, &app, [&](const QFont &selectedFont, int dialogCode) {
+                nRet = dialogCode;
+                if (dialogCode == QDialog::Accepted) {
+                    font = selectedFont;
+                }
+                qDebug() << font.toString();
+
+                qDebug() << "ShowDifferences mode";
+                KFontChooserDialog::getFontDiff(font, nullptr, &app,
+                                                    [&](const QFont &selectedFont, KFontChooser::FontDiffFlags diffFlags, int dialogCode) {
+                    nRet = dialogCode;
+                    if (dialogCode == QDialog::Accepted) {
+                        font = selectedFont;
+                    }
+                    qDebug() << font.toString() << diffFlags;
+
+                    qDebug() << "ShowDifferences mode and only showing monospaced fonts (the FixedOnly checkbox is _not_ shown)";
+                    KFontChooserDialog::getFontDiff(font, KFontChooser::FixedFontsOnly, nullptr, &app,
+                                                    [&](const QFont &selectedFont, KFontChooser::FontDiffFlags diffFlags, int dialogCode) {
+                        nRet = dialogCode;
+                        if (dialogCode == QDialog::Accepted) {
+                            font = selectedFont;
+                        }
+                        qDebug() << font.toString() << diffFlags;
+                    });
+                });
+            });
+        });
+
+        app.exec();
+    }
 
     return nRet;
 }

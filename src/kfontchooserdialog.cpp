@@ -115,3 +115,48 @@ int KFontChooserDialog::getFont(QFont &theFont, const KFontChooser::DisplayFlags
     }
     return result;
 }
+
+// static
+KFontChooserDialog * KFontChooserDialog::createInternal(const QFont &font,
+                                                        KFontChooser::DisplayFlags flags,
+                                                        QWidget *parent)
+{
+    auto *dialog = new KFontChooserDialog(flags, parent);
+    dialog->setObjectName(QStringLiteral("Font Selector"));
+    dialog->setFont(font, flags & KFontChooser::FixedFontsOnly);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    connect(dialog, &QDialog::finished, dialog, [dialog](int result) {
+        QFont font;
+        if (result == Accepted) {
+            font = dialog->d->chooser->font();
+            stripRegularStyleName(font);
+        }
+        Q_EMIT dialog->gotFont(font, result, QPrivateSignal());
+    });
+
+    return dialog;
+}
+
+KFontChooserDialog * KFontChooserDialog::createInternalDiff(const QFont &font,
+                                                            KFontChooser::DisplayFlags flags,
+                                                            QWidget *parent)
+{
+    auto *dialog = new KFontChooserDialog(flags | KFontChooser::ShowDifferences, parent);
+    dialog->setObjectName(QStringLiteral("Font Selector"));
+    dialog->setFont(font, flags & KFontChooser::FixedFontsOnly);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    connect(dialog, &QDialog::finished, dialog, [dialog](int result) {
+        QFont font;
+        KFontChooser::FontDiffFlags diffFlags;
+        if (result == Accepted) {
+            font = dialog->d->chooser->font();
+            diffFlags = dialog->d->chooser->fontDiffFlags();
+            stripRegularStyleName(font);
+        }
+        Q_EMIT dialog->gotFontDiff(font, diffFlags, result, QPrivateSignal());
+    });
+
+    return dialog;
+}
