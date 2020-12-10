@@ -24,6 +24,7 @@ Boston, MA 02110-1301, USA.
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QPointer>
 
 class KFontChooserDialogPrivate
 {
@@ -88,30 +89,32 @@ static void stripRegularStyleName(QFont &font)
 int KFontChooserDialog::getFontDiff(QFont &theFont, KFontChooser::FontDiffFlags &diffFlags,
                              const KFontChooser::DisplayFlags &flags, QWidget *parent)
 {
-    KFontChooserDialog dlg(flags | KFontChooser::ShowDifferences, parent);
-    dlg.setObjectName(QStringLiteral("Font Selector"));
-    dlg.setFont(theFont, flags & KFontChooser::FixedFontsOnly);
+    QPointer<KFontChooserDialog> dialog = new KFontChooserDialog(flags | KFontChooser::ShowDifferences, parent);
+    dialog->setObjectName(QStringLiteral("Font Selector"));
+    dialog->setFont(theFont, flags & KFontChooser::FixedFontsOnly);
 
-    const int result = dlg.exec();
+    const int result = dialog->exec();
     if (result == Accepted) {
-        theFont = dlg.d->chooser->font();
-        diffFlags = dlg.d->chooser->fontDiffFlags();
+        theFont = dialog->d->chooser->font();
+        diffFlags = dialog->d->chooser->fontDiffFlags();
         stripRegularStyleName(theFont);
     }
+    delete dialog;
     return result;
 }
 
 // static
 int KFontChooserDialog::getFont(QFont &theFont, const KFontChooser::DisplayFlags &flags, QWidget *parent)
 {
-    KFontChooserDialog dlg(flags, parent);
-    dlg.setObjectName(QStringLiteral("Font Selector"));
-    dlg.setFont(theFont, flags & KFontChooser::FixedFontsOnly);
+    QPointer<KFontChooserDialog> dialog = new KFontChooserDialog(flags, parent);
+    dialog->setObjectName(QStringLiteral("Font Selector"));
+    dialog->setFont(theFont, flags & KFontChooser::FixedFontsOnly);
 
-    const int result = dlg.exec();
+    const int result = dialog->exec();
     if (result == Accepted) {
-        theFont = dlg.d->chooser->font();
+        theFont = dialog->d->chooser->font();
         stripRegularStyleName(theFont);
     }
+    delete dialog;
     return result;
 }
