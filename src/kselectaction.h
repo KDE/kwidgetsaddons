@@ -319,28 +319,52 @@ public:
 
 Q_SIGNALS:
     /**
-     * This signal is emitted when an item is selected; @param action
-     * indicates the item selected.
+     * This signal is emitted when an item is selected.
+     * @param action indicates the item selected
      */
     void triggered(QAction *action);
+    // TODO KF6:: rename to actionTriggered(QAction *action)
+    // We cannot do this in KF5, due to existing slot method with same signature, see below
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
     /**
-     * This signal is emitted when an item is selected; @param index indicates
-     * the item selected.
+     * This signal is emitted when an item is selected.
+     * @param index indicates the item selected
+     * @deprecated Since 5.78, use indexTriggered(int)
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 78, "Use KSelectAction::indexTriggered(int)")
     void triggered(int index);
+#endif
+    /**
+     * This signal is emitted when an item is selected.
+     * @param index indicates the item selected
+     * @since 5.78
+     */
+    void indexTriggered(int index);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
+    /**
+     * This signal is emitted when an item is selected.
+     * @param text indicates the item selected
+     * @deprecated Since 5.78, use textTriggered(const QString &)
+     */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 78, "Use KSelectAction::textTriggered(const QString &)")
+    void triggered(const QString &text);
+#endif
 
     /**
-     * This signal is emitted when an item is selected; @param text indicates
-     * the item selected.
+     * This signal is emitted when an item is selected.
+     * @param text indicates the item selected
+     * @since 5.78
      */
-    void triggered(const QString &text);
+    void textTriggered(const QString &text);
 
 protected Q_SLOTS:
     /**
      * This function is called whenever an action from the selections is triggered.
      */
     virtual void actionTriggered(QAction *action);
+    // TODO KF6:: rename to handleActionTriggered, to release name to signal
 
     /**
      * For structured menu building. Deselects all items if the action was unchecked by the top menu

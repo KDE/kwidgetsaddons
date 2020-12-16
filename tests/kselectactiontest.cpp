@@ -41,15 +41,15 @@ SelectActionTest::SelectActionTest(QWidget *parent)
 
     m_comboSelect->setToolBarMode(KSelectAction::ComboBoxMode);
     m_comboSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_comboSelect, SIGNAL(triggered(QAction*)), SLOT(triggered(QAction*)));
-    connect(m_comboSelect, SIGNAL(triggered(int)), SLOT(triggered(int)));
-    connect(m_comboSelect, SIGNAL(triggered(QString)), SLOT(triggered(QString)));
+    connect(m_comboSelect, SIGNAL(triggered(QAction*)), SLOT(actionTriggered(QAction*)));
+    connect(m_comboSelect, SIGNAL(indexTriggered(int)), SLOT(indexTriggered(int)));
+    connect(m_comboSelect, SIGNAL(textTriggered(QString)), SLOT(textTriggered(QString)));
 
     m_buttonSelect->setToolBarMode(KSelectAction::MenuMode);
     m_buttonSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_buttonSelect, SIGNAL(triggered(QAction*)), SLOT(triggered(QAction*)));
-    connect(m_buttonSelect, SIGNAL(triggered(int)), SLOT(triggered(int)));
-    connect(m_buttonSelect, SIGNAL(triggered(QString)), SLOT(triggered(QString)));
+    connect(m_buttonSelect, SIGNAL(triggered(QAction*)), SLOT(actionTriggered(QAction*)));
+    connect(m_buttonSelect, SIGNAL(indexTriggered(int)), SLOT(indexTriggered(int)));
+    connect(m_buttonSelect, SIGNAL(textTriggered(QString)), SLOT(textTriggered(QString)));
 
     menuBar()->addAction(m_comboSelect);
     menuBar()->addAction(m_buttonSelect);
@@ -61,17 +61,17 @@ SelectActionTest::SelectActionTest(QWidget *parent)
     toolBar->addAction(m_buttonSelect);
 }
 
-void SelectActionTest::triggered(QAction *action)
+void SelectActionTest::actionTriggered(QAction *action)
 {
     qDebug() << Q_FUNC_INFO << action;
 }
 
-void SelectActionTest::triggered(int index)
+void SelectActionTest::indexTriggered(int index)
 {
     qDebug() << Q_FUNC_INFO << index;
 }
 
-void SelectActionTest::triggered(const QString &text)
+void SelectActionTest::textTriggered(const QString &text)
 {
     qDebug() << Q_FUNC_INFO << '"' << text << '"';
 }

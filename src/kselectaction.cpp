@@ -332,8 +332,14 @@ void KSelectAction::actionTriggered(QAction *action)
     }
 
     emit triggered(action);
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     emit triggered(index);
+#endif
+    emit indexTriggered(index);
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     emit triggered(text);
+#endif
+    emit textTriggered(text);
 }
 
 QStringList KSelectAction::items() const

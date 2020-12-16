@@ -37,8 +37,12 @@ public:
             return;
         }
 
-        q->setFont(font.family());
-        emit q->triggered(font.family());
+        const QString fontFamily = font.family();
+        q->setFont(fontFamily);
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
+        emit q->triggered(fontFamily);
+#endif
+        emit q->textTriggered(fontFamily);
 
 //        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }

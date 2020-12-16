@@ -19,9 +19,9 @@ public:
     SelectActionTest(QWidget *parent = nullptr);
 
 public Q_SLOTS:
-    void triggered(QAction *action);
-    void triggered(int index);
-    void triggered(const QString &text);
+    void actionTriggered(QAction *action);
+    void indexTriggered(int index);
+    void textTriggered(const QString &text);
 
     void slotActionTriggered(bool state);
 
