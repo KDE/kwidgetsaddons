@@ -169,15 +169,7 @@ void KToolTipWidget::showBelow(const QRect &rect, QWidget *content, QWindow *tra
     const auto contentMargins = layout()->contentsMargins();
     const QSize screenSize = transientParent->screen()->geometry().size();
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
     content->setMaximumSize(screenSize.shrunkBy(contentMargins));
-#else
-    const QSize marginSize {
-        contentMargins.left() + contentMargins.right(),
-        contentMargins.top() + contentMargins.bottom(),
-    };
-    content->setMaximumSize(screenSize - marginSize);
-#endif
 
     d->show(d->centerBelow(rect, transientParent->screen()), transientParent);
 }

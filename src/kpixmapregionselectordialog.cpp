@@ -39,11 +39,7 @@ public:
     {
         if (pixmapSelectorWidget) {
             //Set maximum size for picture
-#if QT_VERSION >= QT_VERSION_CHECK(5, 14, 0)
             QScreen *screen = pixmapSelectorWidget->screen();
-#else
-            QScreen *screen = QGuiApplication::screenAt(pixmapSelectorWidget->geometry().center());
-#endif
             if (screen) {
                 const QRect screenGeometry = screen->availableGeometry();
                 pixmapSelectorWidget->setMaximumWidgetSize(
