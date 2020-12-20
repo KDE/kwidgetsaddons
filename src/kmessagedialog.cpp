@@ -302,18 +302,24 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
                                 const KGuiItem &buttonCancel)
 {
     switch (d->m_type) {
-    case KMessageDialog::QuestionYesNo:
+    case KMessageDialog::QuestionYesNo: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
+        auto *buttonYes = d->m_buttonBox->button(QDialogButtonBox::Yes);
+        KGuiItem::assign(buttonYes, buttonAccept);
+        buttonYes->setFocus();
         KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
         break;
-    case KMessageDialog::QuestionYesNoCancel:
+    }
+    case KMessageDialog::QuestionYesNoCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No
                                            | QDialogButtonBox::Cancel);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
+        auto *buttonYes = d->m_buttonBox->button(QDialogButtonBox::Yes);
+        KGuiItem::assign(buttonYes, buttonAccept);
+        buttonYes->setFocus();
         KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::No), buttonNo);
         KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Cancel), buttonCancel);
         break;
+    }
     case KMessageDialog::WarningYesNo: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
         KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), buttonAccept);
@@ -321,6 +327,7 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
         auto *noBtn = d->m_buttonBox->button(QDialogButtonBox::No);
         KGuiItem::assign(noBtn, buttonNo);
         noBtn->setDefault(true);
+        noBtn->setFocus();
         break;
     }
     case KMessageDialog::WarningYesNoCancel: {
@@ -331,6 +338,7 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
         auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
         KGuiItem::assign(cancelButton, buttonCancel);
         cancelButton->setDefault(true);
+        cancelButton->setFocus();
         break;
     }
     case KMessageDialog::WarningContinueCancel: {
@@ -345,14 +353,18 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
         auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
         KGuiItem::assign(cancelButton, buttonCancel);
         cancelButton->setDefault(true);
+        cancelButton->setFocus();
         break;
     }
     case KMessageDialog::Information:
     case KMessageDialog::Sorry:
-    case KMessageDialog::Error:
+    case KMessageDialog::Error: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Ok);
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Ok), KStandardGuiItem::ok());
+        auto *okButton = d->m_buttonBox->button(QDialogButtonBox::Ok);
+        KGuiItem::assign(okButton, KStandardGuiItem::ok());
+        okButton->setFocus();
         break;
+    }
     default:
         break;
     }
