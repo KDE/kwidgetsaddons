@@ -97,6 +97,13 @@ void KSelectActionPrivate::init(KSelectAction *q)
     QObject::connect(q_ptr, &QAction::toggled, q_ptr, &KSelectAction::slotToggled);
     q_ptr->setMenu(new QMenu());
     q_ptr->setEnabled(false);
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
+    // forward deprecated signals to undeprecated, to be backward-compatible to unported subclasses
+    QObject::connect(q_ptr, QOverload<int>::of(&KSelectAction::triggered),
+                     q_ptr, &KSelectAction::indexTriggered);
+    QObject::connect(q_ptr, QOverload<const QString&>::of(&KSelectAction::triggered),
+                     q_ptr, &KSelectAction::textTriggered);
+#endif
 }
 
 QActionGroup *KSelectAction::selectableActionGroup() const
@@ -333,13 +340,13 @@ void KSelectAction::actionTriggered(QAction *action)
 
     emit triggered(action);
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
+    // will also indirectly emit indexTriggered & textTriggered, due to signal connection in init()
     emit triggered(index);
-#endif
-    emit indexTriggered(index);
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     emit triggered(text);
-#endif
+#else
+    emit indexTriggered(index);
     emit textTriggered(text);
+#endif
 }
 
 QStringList KSelectAction::items() const
