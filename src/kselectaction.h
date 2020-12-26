@@ -352,7 +352,7 @@ Q_SIGNALS:
      *     // will also indirectly emit indexTriggered since 5.78
      *     emit triggered(index);
      * #else
-     *     emit indexTriggered(index;
+     *     emit indexTriggered(index);
      * #endif
      * @endcode
      *
@@ -386,7 +386,7 @@ Q_SIGNALS:
      *     // will also indirectly emit textTriggered since 5.78
      *     emit triggered(action->text());
      * #else
-     *     emit textTriggered(action->text();
+     *     emit textTriggered(action->text());
      * #endif
      * @endcode
      *
