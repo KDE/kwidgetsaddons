@@ -320,7 +320,7 @@ Q_SIGNALS:
      * Emitted when the user clicked the middle mouse button on this label.
      *
      * @param url The URL for this label.
-     * @deprecated Since 5.65, use middleClickedUrl(const QString &url);
+     * @deprecated Since 5.65, use middleClickedUrl();
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::middleClickedUrl()")
     void middleClickedUrl(const QString &url);
