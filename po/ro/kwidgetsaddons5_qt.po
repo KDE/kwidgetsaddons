@@ -1,0 +1,2861 @@
+# Traducerea kdelibs4.po în Română
+# Laurenţiu Buzdugan <lbuz@rolix.org>, 2008, 2009.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2014, 2020.
+# Cristian Oneț <onet.cristian@gmail.com>, 2010, 2011, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2020-10-05 23:17+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:16
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Fără serife"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:19
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Cu serife"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:22
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Monospațiat"
+
+#: fonthelpers.cpp:65
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:69
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:95
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "&Disponibil:"
+
+#: kactionselector.cpp:112
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "Ale&s:"
+
+#: kassistantdialog.cpp:94
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "Înap&oi"
+
+#: kassistantdialog.cpp:96
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "Mergi cu un pas înapoi"
+
+#: kassistantdialog.cpp:101
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "Următor"
+
+#: kassistantdialog.cpp:108
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "Termină"
+
+#: kcharselect-translation.cpp:11
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Alfabete europene"
+
+#: kcharselect-translation.cpp:12
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Alfabete africane"
+
+#: kcharselect-translation.cpp:13
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Alfabete din orientul mijlociu"
+
+#: kcharselect-translation.cpp:14
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Alfabete central-asiatice"
+
+#: kcharselect-translation.cpp:15
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Alfabete sud-asiatice"
+
+#: kcharselect-translation.cpp:16
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Alfabete sud-est-asiatice"
+
+#: kcharselect-translation.cpp:17
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Indic Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "Scrieri indice"
+
+#: kcharselect-translation.cpp:18
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Alfabete est-asiatice"
+
+#: kcharselect-translation.cpp:19
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Alfabete americane"
+
+#: kcharselect-translation.cpp:20
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Simboluri"
+
+#: kcharselect-translation.cpp:21
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Simboluri matematice"
+
+#: kcharselect-translation.cpp:22
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Simboluri fonetice"
+
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:737
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Diacritice combinatorii"
+
+#: kcharselect-translation.cpp:24
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Altele"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Latin de bază"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Adaos Latin-1"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latin extins-A"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latin extins-B"
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "Extensii IPA"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Litere modificatoare de spațiere"
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Semne diacritice combinatorii"
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Grec și coptic"
+
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Chirilic"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Adaos chirilic"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armean"
+
+#: kcharselect-translation.cpp:36
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Ebraic"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arab"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Sirian"
+
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Adaos arab"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "NKo"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samaritan"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandaic"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Adaos sirian"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Arab extins-A"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengalez"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Oriya"
+
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamil"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannada"
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Tailandez"
+
+#: kcharselect-translation.cpp:57
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Lao"
+
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetan"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Georgian"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiopian"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Adaos etiopian"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Aborigenă canadină"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogham"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Runic"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhid"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmer"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongol"
+
+#: kcharselect-translation.cpp:74
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Silabică aborigenă canadină extinsă"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Noul Tai Lue"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Simboluri Khmer"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Buginese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Buginese"
+
+#: kcharselect-translation.cpp:80
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Tham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Semne diacritice combinatorii"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Balinese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Balinese"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sundanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sudaneză"
+
+#: kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Batak"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batak"
+
+#: kcharselect-translation.cpp:85
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lepcha"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcha"
+
+#: kcharselect-translation.cpp:86
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ol Chiki"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Chirilic extins-A"
+
+#: kcharselect-translation.cpp:88
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Forme geometrice"
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Adaos Latin-1"
+
+#: kcharselect-translation.cpp:90
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vedic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Extensii vedice"
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Extensii fonetice"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Adaos extensii fonetice"
+
+#: kcharselect-translation.cpp:93
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Adaos semne diacritice combinatorii"
+
+#: kcharselect-translation.cpp:94
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended Additional"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Latin extins suplimentar"
+
+#: kcharselect-translation.cpp:95
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Grec extins"
+
+#: kcharselect-translation.cpp:96
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "General Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Punctuație generală"
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Superscripts and Subscripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Indici superiori și inferiori"
+
+#: kcharselect-translation.cpp:98
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Simboluri monedă"
+
+#: kcharselect-translation.cpp:99
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks for Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Marcaje diacritice combinatorii pentru simboluri"
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Letterlike Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Simboluri literale"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Forme numerice"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Săgeți"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Operatori matematici"
+
+#: kcharselect-translation.cpp:104
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Technical"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Tehnice, diverse"
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Control Pictures"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Imagini de control"
+
+#: kcharselect-translation.cpp:106
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Optical Character Recognition"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Recunoaștere Optică a Caracterelor"
+
+#: kcharselect-translation.cpp:107
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Alfanumerice anexate"
+
+#: kcharselect-translation.cpp:108
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Box Drawing"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Desenare casetă"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Elemente-bloc"
+
+#: kcharselect-translation.cpp:110
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Forme geometrice"
+
+#: kcharselect-translation.cpp:111
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Simboluri diverse"
+
+#: kcharselect-translation.cpp:112
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Dingbats"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: kcharselect-translation.cpp:113
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Diverse simboluri matematice-A"
+
+#: kcharselect-translation.cpp:114
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Săgeți suplimentare-A"
+
+#: kcharselect-translation.cpp:115
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Șabloane Braille"
+
+#: kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Săgeți suplimentare-B"
+
+#: kcharselect-translation.cpp:117
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Diverse simboluri matematice-B"
+
+#: kcharselect-translation.cpp:118
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Operatori matematici suplimentari"
+
+#: kcharselect-translation.cpp:119
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Diverse simboluri și săgeți"
+
+#: kcharselect-translation.cpp:120
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Glagolitic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Glagolitic"
+
+#: kcharselect-translation.cpp:121
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-C"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latin extins-C"
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Coptic"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Supliment georgian"
+
+#: kcharselect-translation.cpp:124
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tifinagh"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinag"
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiopian extins"
+
+#: kcharselect-translation.cpp:126
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Chirilic extins-A"
+
+#: kcharselect-translation.cpp:127
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Punctuație suplimentară"
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Radicals Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "Rădăcini suplimentare CJK"
+
+#: kcharselect-translation.cpp:129
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kangxi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Rădăcini Kangxi"
+
+#: kcharselect-translation.cpp:130
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ideographic Description Characters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Caractere de descriere ideografică"
+
+#: kcharselect-translation.cpp:131
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Symbols and Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "Simboluri și punctuație CJK"
+
+#: kcharselect-translation.cpp:132
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:133
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:134
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:135
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Compatibility Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Jamo pentru compatibilitate Hangul"
+
+#: kcharselect-translation.cpp:136
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kanbun"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: kcharselect-translation.cpp:137
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo extins"
+
+#: kcharselect-translation.cpp:138
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Strokes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK Strokes"
+
+#: kcharselect-translation.cpp:139
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Extensii fonetice Katakana"
+
+#: kcharselect-translation.cpp:140
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed CJK Letters and Months"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Litere și luni CJK anexate"
+
+#: kcharselect-translation.cpp:141
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "Compatibilitate CJK"
+
+#: kcharselect-translation.cpp:142
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs Extension A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "Ideografe CJK unificate extensia A"
+
+#: kcharselect-translation.cpp:143
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yijing Hexagram Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Hexagrame Yijing"
+
+#: kcharselect-translation.cpp:144
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "Ideografe CJK unificate"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Silabe Yi"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Rădăcini Yi"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vai"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Chirilic extins-B"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: kcharselect-translation.cpp:151
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Modifier Tone Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Modificatori de ton"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latin extins-D"
+
+#: kcharselect-translation.cpp:153
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syloti Nagri"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Common Indic Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Forme numerice indice comune"
+
+#: kcharselect-translation.cpp:155
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phags-pa"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: kcharselect-translation.cpp:156
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Saurashtra"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: kcharselect-translation.cpp:157
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Devanagari Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari extins"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: kcharselect-translation.cpp:160
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul Jamo extins-A"
+
+#: kcharselect-translation.cpp:161
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Javanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Iavanez"
+
+#: kcharselect-translation.cpp:162
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Birmania extins-A"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Cham"
+
+#: kcharselect-translation.cpp:164
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Birmania extins-A"
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Viet"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Vietnam"
+
+#: kcharselect-translation.cpp:166
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei Mayek"
+
+#: kcharselect-translation.cpp:167
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiopian extins-A"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latin extins-E"
+
+#: kcharselect-translation.cpp:169
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Adaos chirilic"
+
+#: kcharselect-translation.cpp:170
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Meetei Mayek"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: kcharselect-translation.cpp:171
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Silabe Hangul"
+
+#: kcharselect-translation.cpp:172
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul Jamo extins-B"
+
+#: kcharselect-translation.cpp:173
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Surogat mare"
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Private Use Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Surogat mare uz privat"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Low Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Surogat mic"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Private Use Area"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Zonă de utilizare privată"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "Ideografe pentru compatibilitate CJK"
+
+#: kcharselect-translation.cpp:178
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Alphabetic Presentation Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Forme de prezentare alfabetice"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Forme de prezentare arabe-A"
+
+#: kcharselect-translation.cpp:180
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Variation Selectors"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Selectori variație"
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vertical Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Forme verticale"
+
+#: kcharselect-translation.cpp:182
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Half Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Marcaje de jumătate combinatorii"
+
+#: kcharselect-translation.cpp:183
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "Forme pentru compatibilitate CJK"
+
+#: kcharselect-translation.cpp:184
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Small Form Variants"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Variante cu formă mică"
+
+#: kcharselect-translation.cpp:185
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Forme de prezentare arabe-B"
+
+#: kcharselect-translation.cpp:186
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Halfwidth and Fullwidth Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Forme de lățime semidepline și depline"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Speciale"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:192
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Alfanumerice anexate"
+
+#: kcharselect-translation.cpp:193
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Adaos etiopian"
+
+#: kcharselect-translation.cpp:194
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Diverse simboluri și săgeți"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Emoticoni"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:198
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Simboluri matematice"
+
+#: kcharselect-translation.cpp:199
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Forme geometrice"
+
+#: kcharselect-translation.cpp:200
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Săgeți suplimentare-A"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:202
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Simboluri Khmer"
+
+#: kcharselect-translation.cpp:203
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "Diverse simboluri și săgeți"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr ""
+
+#: kcharselect.cpp:387
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "Introduceți aici termenul sau caracterul de căutat"
+
+#: kcharselect.cpp:389
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "Introduceți aici termenul sau caracterul de căutat"
+
+#: kcharselect.cpp:394
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "C&aută..."
+
+#: kcharselect.cpp:414
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "Precedent în istoric"
+
+#: kcharselect.cpp:416
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "Mergi la caracterul precedent în istoric"
+
+#: kcharselect.cpp:421
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "Următor în istoric"
+
+#: kcharselect.cpp:423
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "Mergi la caracterul următor în istoric"
+
+#: kcharselect.cpp:428
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "Înap&oi"
+
+#: kcharselect.cpp:435
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "În&ainte"
+
+#: kcharselect.cpp:450
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "Alegeți o categorie"
+
+#: kcharselect.cpp:454
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "Alegeți un bloc de afișat"
+
+#: kcharselect.cpp:467
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "Stabilire font"
+
+#: kcharselect.cpp:474
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "Stabilire dimensiune font"
+
+#: kcharselect.cpp:766
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Caracter:"
+
+#: kcharselect.cpp:772
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Denumire: "
+
+#: kcharselect.cpp:781
+#, fuzzy
+#| msgid "Annotations and Cross References"
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Note explicațive și referințe încrucișate"
+
+#: kcharselect.cpp:785
+#, fuzzy
+#| msgid "Alias names:"
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Nume alias:"
+
+#: kcharselect.cpp:793
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Note:"
+
+#: kcharselect.cpp:801
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Vezi și:"
+
+#: kcharselect.cpp:816
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Echivalenți:"
+
+#: kcharselect.cpp:824
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Echivalenți aproximativi:"
+
+#: kcharselect.cpp:832
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Descompunere:"
+
+#: kcharselect.cpp:844
+#, fuzzy
+#| msgid "CJK Ideograph Information"
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "Informație ideograf CJK"
+
+#: kcharselect.cpp:847
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Definiția în engleză: "
+
+#: kcharselect.cpp:854
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Pronunția mandarină: "
+
+#: kcharselect.cpp:861
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Pronunția cantoneză: "
+
+#: kcharselect.cpp:868
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Pronunția japoneză On: "
+
+#: kcharselect.cpp:875
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Pronunția japoneză Kun: "
+
+#: kcharselect.cpp:882
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Pronunția Tang: "
+
+#: kcharselect.cpp:889
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Pronunția coreeană: "
+
+#: kcharselect.cpp:895
+#, fuzzy
+#| msgid "General Character Properties"
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Prorietăți generale caracter"
+
+#: kcharselect.cpp:896
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Bloc:"
+
+#: kcharselect.cpp:897
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Categorie Unicod:"
+
+#: kcharselect.cpp:901
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Diferite reprezentări utile"
+
+#: kcharselect.cpp:902
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:906
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:913
+#, fuzzy
+#| msgid "C octal escaped UTF-8: "
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "UTF-8 eludat octal în C:"
+
+#: kcharselect.cpp:917
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "Entitate zecimală XML:"
+
+#: kcharselect.cpp:1062
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Punct de cod Unicod:"
+
+#: kcharselect.cpp:1063
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "În zecimal:"
+
+#: kcharselectdata.cpp:305
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "<non-caracter>"
+
+#: kcharselectdata.cpp:326
+#, fuzzy
+#| msgid "<Non Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Surogat mare altele decât uz privat>"
+
+#: kcharselectdata.cpp:328
+#, fuzzy
+#| msgid "<Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Surogat mare uz privat>"
+
+#: kcharselectdata.cpp:330
+#, fuzzy
+#| msgid "<Low Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Surogat mic>"
+
+#: kcharselectdata.cpp:332
+#, fuzzy
+#| msgid "<Private Use>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Utilizare privată>"
+
+#: kcharselectdata.cpp:364
+#, fuzzy
+#| msgid "<not assigned>"
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<neatribuit>"
+
+#: kcharselectdata.cpp:746
+#, fuzzy
+#| msgid "Non-printable"
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Neimprimabil"
+
+#: kcharselectdata.cpp:779
+#, fuzzy
+#| msgid "Other, Control"
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Altele, Control"
+
+#: kcharselectdata.cpp:780
+#, fuzzy
+#| msgid "Other, Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Altele, Format"
+
+#: kcharselectdata.cpp:781
+#, fuzzy
+#| msgid "Other, Not Assigned"
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Altele, Neatribuit"
+
+#: kcharselectdata.cpp:782
+#, fuzzy
+#| msgid "Other, Private Use"
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Altele, Uz privat"
+
+#: kcharselectdata.cpp:783
+#, fuzzy
+#| msgid "Other, Surrogate"
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Altele, surogate"
+
+#: kcharselectdata.cpp:784
+#, fuzzy
+#| msgid "Letter, Lowercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Literă, minusculă"
+
+#: kcharselectdata.cpp:785
+#, fuzzy
+#| msgid "Letter, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Literă, modificator"
+
+#: kcharselectdata.cpp:786
+#, fuzzy
+#| msgid "Letter, Other"
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Literă, alta"
+
+#: kcharselectdata.cpp:787
+#, fuzzy
+#| msgid "Letter, Titlecase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Literă, de titlu"
+
+#: kcharselectdata.cpp:788
+#, fuzzy
+#| msgid "Letter, Uppercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Literă, majusculă"
+
+#: kcharselectdata.cpp:789
+#, fuzzy
+#| msgid "Mark, Spacing Combining"
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Semn, spațiu combinator"
+
+#: kcharselectdata.cpp:790
+#, fuzzy
+#| msgid "Mark, Enclosing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Semn, închidere"
+
+#: kcharselectdata.cpp:791
+#, fuzzy
+#| msgid "Mark, Non-Spacing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Semn, ne-spațiator"
+
+#: kcharselectdata.cpp:792
+#, fuzzy
+#| msgid "Number, Decimal Digit"
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Număr, cifră zecimală"
+
+#: kcharselectdata.cpp:793
+#, fuzzy
+#| msgid "Number, Letter"
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Număr, literă"
+
+#: kcharselectdata.cpp:794
+#, fuzzy
+#| msgid "Number, Other"
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Număr, altul"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Punctuație, conector"
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Punctuație, cratimă"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Punctuație, închidere"
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Punctuație, ghilimele finale"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Punctuație, ghilimele inițiale"
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Punctuație, alta"
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Punctuație, deschidere"
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Simbol, monedă"
+
+#: kcharselectdata.cpp:803
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Simbol, modificator"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Simbol, matematic"
+
+#: kcharselectdata.cpp:805
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Simbol, altul"
+
+#: kcharselectdata.cpp:806
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Separator, linie"
+
+#: kcharselectdata.cpp:807
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Separator, paragraf"
+
+#: kcharselectdata.cpp:808
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Separator, spațiu"
+
+#: kcharselectdata.cpp:809
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: kcolorcombo.cpp:329
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "Personalizat..."
+
+#: kdatecombobox.cpp:158
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "La anul"
+
+#: kdatecombobox.cpp:159
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Luna viitoare"
+
+#: kdatecombobox.cpp:160
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Săptămâna viitoare"
+
+#: kdatecombobox.cpp:161
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Mâine"
+
+#: kdatecombobox.cpp:162
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Azi"
+
+#: kdatecombobox.cpp:163
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Ieri"
+
+#: kdatecombobox.cpp:164
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Săptămâna trecută"
+
+#: kdatecombobox.cpp:165
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Luna trecută"
+
+#: kdatecombobox.cpp:166
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Anul trecut"
+
+#: kdatecombobox.cpp:168
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Nicio dată"
+
+#: kdatecombobox.cpp:299
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Data pe care ați introdus-o e greșită"
+
+#: kdatecombobox.cpp:302
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Data nu poate fi mai devreme de %1"
+
+#: kdatecombobox.cpp:309
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Data nu poate fi mai târziu de %1"
+
+#: kdatepicker.cpp:180
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Săptămâna %1"
+
+#: kdatepicker.cpp:285
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "Anul viitor"
+
+#: kdatepicker.cpp:286
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "Anul trecut"
+
+#: kdatepicker.cpp:287
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "Luna viitoare"
+
+#: kdatepicker.cpp:288
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "Luna trecută"
+
+#: kdatepicker.cpp:289
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "Alege o săptămână"
+
+#: kdatepicker.cpp:290
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "Alege o lună"
+
+#: kdatepicker.cpp:291
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "Alege un an"
+
+#: kdatepicker.cpp:292
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "Alege ziua curentă"
+
+#: kdatepicker.cpp:632
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Închide"
+
+#: kdatetimeedit.cpp:173
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:174
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "Flotant"
+
+#: kdatetimeedit.cpp:214
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The entered date and time is before the minimum allowed date and time."
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr "Data și ora introdusă este înainte de data și ora minimă permisă."
+
+#: kdatetimeedit.cpp:224
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The entered date and time is after the maximum allowed date and time."
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr "Data și ora introdusă este după data și ora maximă permisă."
+
+#: keditlistwidget.cpp:292
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "&Adaugă"
+
+#: keditlistwidget.cpp:304
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "&Elimină"
+
+#: keditlistwidget.cpp:316
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "Mută mai s&us"
+
+#: keditlistwidget.cpp:321
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "Mută mai j&os"
+
+#: kfontchooser.cpp:177
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "Fontul cerut"
+
+#: kfontchooser.cpp:191
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Font"
+
+#: kfontchooser.cpp:196
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Font:"
+
+#: kfontchooser.cpp:229
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Stil fonturi"
+
+#: kfontchooser.cpp:234
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "Stil fonturi:"
+
+#: kfontchooser.cpp:247
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "Normal"
+
+#: kfontchooser.cpp:248 kfontchooser.cpp:576
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Cursiv"
+
+#: kfontchooser.cpp:249 kfontchooser.cpp:577
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Oblic"
+
+#: kfontchooser.cpp:250
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Aldin"
+
+#: kfontchooser.cpp:251
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Aldin cursiv"
+
+#: kfontchooser.cpp:268
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Dimensiune"
+
+#: kfontchooser.cpp:273
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Dimensiune:"
+
+#: kfontchooser.cpp:291
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Relativă"
+
+#: kfontchooser.cpp:293
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "Dimensiune font<br /><i>fixă</i> sau <i>relativă</i><br />la mediu"
+
+#: kfontchooser.cpp:295
+#, fuzzy
+#| msgid ""
+#| "Here you can switch between fixed font size and font size to be "
+#| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#| "dimensions, paper size)."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Aici puteți comuta între mărimea de font fixă și mărimea de font calculată "
+"dinamic și ajustată la modificarea mediului (de exemplu dimensiunile "
+"componentelor de interfață, mărimea foii de hârtie)."
+
+#: kfontchooser.cpp:349
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "ăĂâÂîÎșȘțȚ - Mica vulpiță șireată sare peste câinele leneș"
+
+#: kfontchooser.cpp:352
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Acest text model ilustrează configurările curente. Îl puteți edita pentru a "
+"testa caractere speciale."
+
+#: kfontchooser.cpp:365
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr "Arată numai fonturi monospațiate"
+
+#: kfontchooser.cpp:561
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:39
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "Alege fontul"
+
+#: kfontrequester.cpp:150
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "Alege fontul..."
+
+#: kfontrequester.cpp:156
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "Previzualizarea fontului ales"
+
+#: kfontrequester.cpp:157
+#, fuzzy
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Aceasta este o previzualizare a fontului selectat. Îl puteți schimba dacă "
+"dați clic pe butonul \"Alege...\"."
+
+#: kfontrequester.cpp:160
+#, qt-format
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "Previzualizarea fontului „%1”"
+
+#: kfontrequester.cpp:161
+#, fuzzy, qt-format
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Aceasta este o previzualizare a fontului „%1”. Îl puteți schimba dacă dați "
+"clic pe butonul \"Alege...\"."
+
+#: kled.cpp:176
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "LED pornit"
+
+#: kled.cpp:177
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "LED oprit"
+
+#: kmessagebox.cpp:63
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:302
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Detalii"
+
+#: kmessagebox.cpp:460 kmessagebox.cpp:514
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Întrebare"
+
+#: kmessagebox.cpp:472 kmessagebox.cpp:528 kmessagebox.cpp:599
+#: kmessagebox.cpp:663 kmessagebox.cpp:746
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Nu mai întreba"
+
+#: kmessagebox.cpp:587 kmessagebox.cpp:651 kmessagebox.cpp:733
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Avertisment"
+
+#: kmessagebox.cpp:785 kmessagebox.cpp:806
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Eroare"
+
+#: kmessagebox.cpp:833 kmessagebox.cpp:866 kmessagebox.cpp:1133
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Scuze"
+
+#: kmessagebox.cpp:909
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Informații"
+
+#: kmessagebox.cpp:920
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Nu mai arăta acest mesaj"
+
+#: kmessagedialog.cpp:133
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Details"
+msgctxt "KMessageDialog|"
+msgid "Details"
+msgstr "Detalii"
+
+#: kmessagedialog.cpp:198
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Question"
+msgctxt "KMessageDialog|"
+msgid "Question"
+msgstr "Întrebare"
+
+#: kmessagedialog.cpp:203
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt "KMessageDialog|"
+msgid "Warning"
+msgstr "Avertisment"
+
+#: kmessagedialog.cpp:206
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Information"
+msgctxt "KMessageDialog|"
+msgid "Information"
+msgstr "Informații"
+
+#: kmessagedialog.cpp:209
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Sorry"
+msgctxt "KMessageDialog|"
+msgid "Sorry"
+msgstr "Scuze"
+
+#: kmessagedialog.cpp:212
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt "KMessageDialog|"
+msgid "Error"
+msgstr "Eroare"
+
+#: kmessagewidget.cpp:76
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "În&chide"
+
+#: kmessagewidget.cpp:77
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "Închide mesajul"
+
+#: kmimetypechooser.cpp:88
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr "Caută tip de fișier sau model de denumire..."
+
+#: kmimetypechooser.cpp:89
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "&Filtru:"
+
+#: kmimetypechooser.cpp:103
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "Tip MIME"
+
+#: kmimetypechooser.cpp:106
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "Comentariu"
+
+#: kmimetypechooser.cpp:110
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "Modele"
+
+#: kmimetypechooser.cpp:126
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "Modificar&e..."
+
+#: kmimetypechooser.cpp:136
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr ""
+
+#: knewpassworddialog.cpp:58
+#, qt-format
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "Parola trebuie să fie de cel puțin %n caracter."
+msgstr[1] "Parola trebuie să fie de cel puțin %n caractere."
+msgstr[2] "Parola trebuie să fie de cel puțin %n de caractere."
+
+#: knewpassworddialog.cpp:62
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "Parola e goală."
+
+#: knewpassworddialog.cpp:66
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "Parolele nu se potrivesc."
+
+#: knewpassworddialog.cpp:71
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "Parolele se potrivesc."
+
+#: knewpassworddialog.cpp:147
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "Parolă de putere mică"
+
+#: knewpassworddialog.cpp:148
+#, fuzzy
+#| msgid ""
+#| "The password you have entered has a low strength. To improve the strength "
+#| "of the password, try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols as well as letters.\n"
+#| "\n"
+#| "Would you like to use this password anyway?"
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Parola introdusă este ușor de aflat. Pentru a o îmbunătăți, încercați:\n"
+" - să scrieți o parolă mai lungă;\n"
+" - să utilizați o combinație de litere mari și mici;\n"
+" - să folosiți atât litere, cât și numere sau simboluri.\n"
+"\n"
+"Doriți să utilizați parola introdusă în aceste condiții?"
+
+#: knewpasswordwidget.cpp:48
+#, fuzzy
+#| msgid ""
+#| "The password strength meter gives an indication of the security of the "
+#| "password you have entered.  To improve the strength of the password, "
+#| "try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols, such as #, as well as letters."
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Indicatorul de calitate a parolei vă oferă o imagine a securității parolei "
+"introduse. Pentru a o îmbunătăți, încercați:\n"
+" - să scrieți o parolă mai lungă;\n"
+" - să utilizați o combinație de litere mari și mici;\n"
+" - să folosiți atât litere, cât și numere și/sau simboluri (de ex.:  \"#\")."
+
+#: knewpasswordwidget.ui:19
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "Parolă:"
+
+#: knewpasswordwidget.ui:29
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "&Verificare:"
+
+#: knewpasswordwidget.ui:54
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "&Măsurător de siguranță a parolei:"
+
+#: kpassworddialog.cpp:51
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "Parolă"
+
+#: kpassworddialog.cpp:82
+msgctxt "KPasswordDialog|"
+msgid "Show Contextual Help"
+msgstr ""
+
+#: kpassworddialog.cpp:103
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Furnizați o parolă mai jos."
+
+#: kpassworddialog.ui:33
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Furnizați un nume de utilizator și o parolă mai jos."
+
+#: kpassworddialog.ui:70
+#, fuzzy
+#| msgid "No password, use anonymous (or guest) login"
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Fără parolă, folosește autentificare anonimă (sau ca oaspete)"
+
+#: kpassworddialog.ui:77
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "Folosește această parolă:"
+
+#: kpassworddialog.ui:102
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "Nume de utilizator:"
+
+#: kpassworddialog.ui:127
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "Domeniu:"
+
+#: kpassworddialog.ui:141
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "Parolă:"
+
+#: kpassworddialog.ui:155
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "Ține minte parola"
+
+#: kpasswordlineedit.cpp:42
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr "Schimbă vizibilitatea parolei"
+
+#: kpixmapregionselectordialog.cpp:56
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "Alegeți regiunea imaginii"
+
+#: kpixmapregionselectordialog.cpp:60
+#, fuzzy
+#| msgid "Please click and drag on the image to select the region of interest:"
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr ""
+"Dați clic și trageți peste imagine pentru a selecta regiunea care vă "
+"interesează:"
+
+#: kpixmapregionselectorwidget.cpp:174
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "Operații asupra imaginii"
+
+#: kpixmapregionselectorwidget.cpp:176
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "&Rotește la dreapta"
+
+#: kpixmapregionselectorwidget.cpp:178
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "Rotește la &stânga"
+
+#: krecentfilesmenu.cpp:103
+msgctxt "KRecentFilesMenu|"
+msgid "No Entries"
+msgstr "Nicio înregistrare"
+
+#: krecentfilesmenu.cpp:106
+msgctxt "KRecentFilesMenu|"
+msgid "Clear List"
+msgstr "Curăță lista"
+
+#: krecentfilesmenu.cpp:113
+msgctxt "KRecentFilesMenu|"
+msgid "Recent Files"
+msgstr "Fișiere recente"
+
+#: ksqueezedtextlabel.cpp:206
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "&Copiază tot textul"
+
+#: kstandardguiitem.cpp:96
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&Bine"
+
+#: kstandardguiitem.cpp:101
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Renunță"
+
+#: kstandardguiitem.cpp:106
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Da"
+
+#: kstandardguiitem.cpp:106
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Da"
+
+#: kstandardguiitem.cpp:111
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Nu"
+
+#: kstandardguiitem.cpp:111
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Nu"
+
+#: kstandardguiitem.cpp:116
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Aruncă"
+
+#: kstandardguiitem.cpp:116
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Elimină modificările"
+
+#: kstandardguiitem.cpp:117
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Dacă apăsați acest buton, veți pierde modificările recente făcute în acest "
+"dialog."
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Salvează"
+
+#: kstandardguiitem.cpp:123
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Salvează datele"
+
+#: kstandardguiitem.cpp:128
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "N&u salva"
+
+#: kstandardguiitem.cpp:129
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Nu salva datele"
+
+#: kstandardguiitem.cpp:134
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "S&alvează ca..."
+
+#: kstandardguiitem.cpp:135
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Salvează fișierul cu altă denumire"
+
+#: kstandardguiitem.cpp:140
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Aplică"
+
+#: kstandardguiitem.cpp:140
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Aplică modificările"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Apply</b>, the settings will be handed over to the "
+#| "program, but the dialog will not be closed.\n"
+#| "Use this to try different settings."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Când veți apăsa <b>Aplică</b> configurările vor fitransmise programului, dar "
+"acest dialog nu va fi închis.\n"
+"Utilizați-l pentru a încerca diferite configurări."
+
+#: kstandardguiitem.cpp:149
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Regim de ad&ministrator..."
+
+#: kstandardguiitem.cpp:149
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Intră în regimul de administrator"
+
+#: kstandardguiitem.cpp:150
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Administrator Mode</b> you will be prompted for the "
+#| "administrator (root) password in order to make changes which require root "
+#| "privileges."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Dacă dați clic pe <b>Mod administrator</b>, pentru a putea face modificări "
+"care necesită privilegii de \"root\", vi se va cere să introduceți parola de "
+"administrator (root)."
+
+#: kstandardguiitem.cpp:157
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "Cu&răță"
+
+#: kstandardguiitem.cpp:158
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Curăță datele introduse"
+
+#: kstandardguiitem.cpp:159
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Șterge linia de editare"
+
+#: kstandardguiitem.cpp:164
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Ajutor"
+
+#: kstandardguiitem.cpp:165
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Arată ajutorul"
+
+#: kstandardguiitem.cpp:170
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "În&chide"
+
+#: kstandardguiitem.cpp:171
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Închide fereastra sau documentul actual"
+
+#: kstandardguiitem.cpp:176
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "În&chide fereastra"
+
+#: kstandardguiitem.cpp:177
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Închide fereastra actuală."
+
+#: kstandardguiitem.cpp:182
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "În&chide documentul"
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Închide documentul actual."
+
+#: kstandardguiitem.cpp:188
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Implicite"
+
+#: kstandardguiitem.cpp:189
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Reinițializează toate elementele la valorile lor implicite"
+
+#: kstandardguiitem.cpp:196
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "Înap&oi"
+
+#: kstandardguiitem.cpp:197
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Mergi cu un pas înapoi"
+
+#: kstandardguiitem.cpp:204
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "În&ainte"
+
+#: kstandardguiitem.cpp:205
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Mergi cu un pas înainte"
+
+#: kstandardguiitem.cpp:215
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "Ti&părește..."
+
+#: kstandardguiitem.cpp:216
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Deschide dialogul de tipărire pentru a imprima documentul actual"
+
+#: kstandardguiitem.cpp:222
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "C&ontinuă"
+
+#: kstandardguiitem.cpp:223
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Continuă operația"
+
+#: kstandardguiitem.cpp:228
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "Ș&terge"
+
+#: kstandardguiitem.cpp:229
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Șterge element(e)"
+
+#: kstandardguiitem.cpp:234
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Deschide..."
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Deschide fișier"
+
+#: kstandardguiitem.cpp:240
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Termină"
+
+#: kstandardguiitem.cpp:241
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Închide aplicația"
+
+#: kstandardguiitem.cpp:246
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Reinițializează"
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Reinițializează configurarea"
+
+#: kstandardguiitem.cpp:252
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Inserează"
+
+#: kstandardguiitem.cpp:257
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "Confi&gurează..."
+
+#: kstandardguiitem.cpp:262
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "C&aută"
+
+#: kstandardguiitem.cpp:267
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Oprește"
+
+#: kstandardguiitem.cpp:272
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Adaugă"
+
+#: kstandardguiitem.cpp:277
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Elimină"
+
+#: kstandardguiitem.cpp:282
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Testează"
+
+#: kstandardguiitem.cpp:287
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: kstandardguiitem.cpp:292
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Suprascrie"
+
+#: ktimecombobox.cpp:256
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Ora pe care ați introdus-o e greșită"
+
+#: ktimecombobox.cpp:259
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Ora nu poate fi mai devreme de %1"
+
+#: ktimecombobox.cpp:266
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Ora nu poate fi mai târziu de %1"
+
+#: ktogglefullscreenaction.cpp:32
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Părăsește regim&ul de ecran complet"
+
+#: ktogglefullscreenaction.cpp:33
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Ieși din ecranul complet"
+
+#: ktogglefullscreenaction.cpp:34
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Părăsește regimul de ecran complet"
+
+#: ktogglefullscreenaction.cpp:37
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Regim de &ecran complet"
+
+#: ktogglefullscreenaction.cpp:38
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Ecran complet"
+
+#: ktogglefullscreenaction.cpp:39
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Afișează fereastra pe tot ecranul"
