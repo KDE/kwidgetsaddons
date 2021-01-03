@@ -9,6 +9,7 @@
 #define KPAGEWIDGETMODEL_H
 
 #include "kpagemodel.h"
+#include <memory>
 
 class QWidget;
 
@@ -180,7 +181,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 class KPageWidgetModelPrivate;

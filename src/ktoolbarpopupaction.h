@@ -18,6 +18,7 @@
 
 #include <QToolButton>
 #include <QWidgetAction>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -158,7 +159,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

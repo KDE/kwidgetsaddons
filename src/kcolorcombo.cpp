@@ -223,10 +223,7 @@ KColorCombo::KColorCombo(QWidget *parent)
     setMaxVisibleItems(13);
 }
 
-KColorCombo::~KColorCombo()
-{
-    delete d;
-}
+KColorCombo::~KColorCombo() = default;
 
 void KColorCombo::setColors(const QList<QColor> &colors)
 {

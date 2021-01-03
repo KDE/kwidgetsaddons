@@ -11,8 +11,7 @@
 
 #include <QComboBox>
 #include <QLocale>
-
-class KTimeComboBoxPrivate;
+#include <memory>
 
 /**
  * @class KTimeComboBox ktimecombobox.h KTimeComboBox
@@ -324,9 +323,8 @@ protected:
     virtual void assignTime(const QTime &time);
 
 private:
-
     friend class KTimeComboBoxPrivate;
-    KTimeComboBoxPrivate *const d;
+    std::unique_ptr<class KTimeComboBoxPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void selectTime(int index))
     Q_PRIVATE_SLOT(d, void enterTime(const QTime &))

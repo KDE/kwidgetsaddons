@@ -43,10 +43,7 @@ KBusyIndicatorWidget::KBusyIndicatorWidget(QWidget *parent)
 {
 }
 
-KBusyIndicatorWidget::~KBusyIndicatorWidget()
-{
-    delete d;
-}
+KBusyIndicatorWidget::~KBusyIndicatorWidget() = default;
 
 QSize KBusyIndicatorWidget::minimumSizeHint() const
 {

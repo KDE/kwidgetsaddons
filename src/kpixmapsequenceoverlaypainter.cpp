@@ -119,7 +119,6 @@ KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(const KPixmapSequen
 KPixmapSequenceOverlayPainter::~KPixmapSequenceOverlayPainter()
 {
     stop();
-    delete d;
 }
 
 KPixmapSequence KPixmapSequenceOverlayPainter::sequence() const

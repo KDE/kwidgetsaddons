@@ -11,6 +11,7 @@
 #include <kpagedialog.h>
 
 #include <kwidgetsaddons_export.h>
+#include <memory>
 
 /**
  * @class KAssistantDialog kassistantdialog.h KAssistantDialog
@@ -135,7 +136,7 @@ protected:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_PRIVATE_SLOT(d, void _k_slotUpdateButtons())
 

@@ -326,10 +326,7 @@ KPageView::KPageView(KPageViewPrivate &dd, QWidget *parent)
     d_ptr->init();
 }
 
-KPageView::~KPageView()
-{
-    delete d_ptr;
-}
+KPageView::~KPageView() = default;
 
 void KPageView::setModel(QAbstractItemModel *model)
 {

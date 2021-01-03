@@ -63,7 +63,6 @@ KActionMenu::KActionMenu(const QIcon &icon, const QString &text, QObject *parent
 
 KActionMenu::~KActionMenu()
 {
-    delete d;
     delete menu();
 }
 

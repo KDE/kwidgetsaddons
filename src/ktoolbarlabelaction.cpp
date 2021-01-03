@@ -37,10 +37,7 @@ KToolBarLabelAction::KToolBarLabelAction(QAction *buddy, const QString &text, QO
     d->label = nullptr;
 }
 
-KToolBarLabelAction::~KToolBarLabelAction()
-{
-    delete d;
-}
+KToolBarLabelAction::~KToolBarLabelAction() = default;
 
 void KToolBarLabelAction::setBuddy(QAction *buddy)
 {

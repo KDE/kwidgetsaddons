@@ -290,10 +290,7 @@ KTimeComboBox::KTimeComboBox(QWidget *parent)
             this, [this](const QString &str) { d->editTime(str); });
 }
 
-KTimeComboBox::~KTimeComboBox()
-{
-    delete d;
-}
+KTimeComboBox::~KTimeComboBox() = default;
 
 QTime KTimeComboBox::time() const
 {

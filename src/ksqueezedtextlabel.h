@@ -10,8 +10,7 @@
 
 #include <kwidgetsaddons_export.h>
 #include <QLabel>
-
-class KSqueezedTextLabelPrivate;
+#include <memory>
 
 /**
  * @class KSqueezedTextLabel ksqueezedtextlabel.h KSqueezedTextLabel
@@ -207,7 +206,7 @@ protected:
     void squeezeTextToLabel();
 
 private:
-    KSqueezedTextLabelPrivate *const d;
+    std::unique_ptr<class KSqueezedTextLabelPrivate> const d;
 };
 
 #endif // KSQUEEZEDTEXTLABEL_H

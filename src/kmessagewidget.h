@@ -12,8 +12,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QFrame>
-
-class KMessageWidgetPrivate;
+#include <memory>
 
 /**
  * @class KMessageWidget kmessagewidget.h KMessageWidget
@@ -330,8 +329,8 @@ protected:
     void resizeEvent(QResizeEvent *event) override;
 
 private:
-    KMessageWidgetPrivate *const d;
     friend class KMessageWidgetPrivate;
+    std::unique_ptr<class KMessageWidgetPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotTimeLineChanged(qreal))
     Q_PRIVATE_SLOT(d, void slotTimeLineFinished())

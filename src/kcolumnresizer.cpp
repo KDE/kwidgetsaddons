@@ -171,10 +171,7 @@ KColumnResizer::KColumnResizer(QObject *parent)
     , d(new KColumnResizerPrivate(this))
 {}
 
-KColumnResizer::~KColumnResizer()
-{
-    delete d;
-}
+KColumnResizer::~KColumnResizer() = default;
 
 void KColumnResizer::addWidget(QWidget *widget)
 {

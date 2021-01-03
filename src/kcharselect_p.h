@@ -12,6 +12,7 @@
 #include <QFont>
 #include <QMimeData>
 #include <QTableView>
+#include <memory>
 
 #include "kcharselectdata_p.h"
 
@@ -88,7 +89,7 @@ private:
 
 private:
     friend class KCharSelectTablePrivate;
-    KCharSelectTablePrivate *const d;
+    std::unique_ptr<class KCharSelectTablePrivate> const d;
 
     Q_DISABLE_COPY(KCharSelectTable)
 };

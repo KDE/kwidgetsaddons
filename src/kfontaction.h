@@ -18,6 +18,8 @@
 
 #include <kselectaction.h>
 
+#include <memory>
+
 /**
  * @class KFontAction kfontaction.h KFontAction
  *
@@ -44,7 +46,7 @@ public:
 
 private:
     class KFontActionPrivate;
-    KFontActionPrivate *const d;
+    std::unique_ptr<class KFontActionPrivate> const d;
 };
 
 #endif

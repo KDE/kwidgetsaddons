@@ -13,6 +13,7 @@
 
 #include <QDialog>
 #include <QDialogButtonBox>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -334,7 +335,7 @@ private:
 private:
     class KPasswordDialogPrivate;
     friend class KPasswordDialogPrivate;
-    KPasswordDialogPrivate *const d;
+    std::unique_ptr<class KPasswordDialogPrivate> const d;
 
     Q_DISABLE_COPY(KPasswordDialog)
 };

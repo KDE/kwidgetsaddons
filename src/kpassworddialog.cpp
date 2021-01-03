@@ -54,10 +54,7 @@ KPasswordDialog::KPasswordDialog(QWidget *parent,
     d->init();
 }
 
-KPasswordDialog::~KPasswordDialog()
-{
-    delete d;
-}
+KPasswordDialog::~KPasswordDialog() = default;
 
 void KPasswordDialog::KPasswordDialogPrivate::updateFields()
 {

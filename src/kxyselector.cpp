@@ -54,10 +54,7 @@ KXYSelector::KXYSelector(QWidget *parent)
 {
 }
 
-KXYSelector::~KXYSelector()
-{
-    delete d;
-}
+KXYSelector::~KXYSelector() = default;
 
 int KXYSelector::xValue() const
 {

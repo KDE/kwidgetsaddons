@@ -11,8 +11,7 @@
 
 #include <QComboBox>
 #include <QLocale>
-
-class KDateComboBoxPrivate;
+#include <memory>
 
 /**
  * @class KDateComboBox kdatecombobox.h KDateComboBox
@@ -297,9 +296,8 @@ protected:
     virtual void assignDate(const QDate &date);
 
 private:
-
     friend class KDateComboBoxPrivate;
-    KDateComboBoxPrivate *const d;
+    std::unique_ptr<class KDateComboBoxPrivate> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KDateComboBox::Options)

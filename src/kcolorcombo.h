@@ -19,7 +19,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-class KColorComboPrivate;
+#include <memory>
 
 /**
  * @class KColorCombo kcolorcombo.h KColorCombo
@@ -94,7 +94,7 @@ protected:
 
 private:
     friend class KColorComboPrivate;
-    KColorComboPrivate *const d;
+    std::unique_ptr<class KColorComboPrivate> const d;
 
     Q_DISABLE_COPY(KColorCombo)
 

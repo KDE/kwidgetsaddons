@@ -10,6 +10,7 @@
 
 #include <kwidgetsaddons_export.h>
 #include <QToolButton>
+#include <memory>
 
 /**
  * @class KAnimatedButton kanimatedbutton.h KAnimatedButton
@@ -66,7 +67,7 @@ public Q_SLOTS:
     void stop();
 
 private:
-    class KAnimatedButtonPrivate *const d;
+    std::unique_ptr<class KAnimatedButtonPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_movieFrameChanged(int))
     Q_PRIVATE_SLOT(d, void _k_movieFinished())

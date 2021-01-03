@@ -60,10 +60,7 @@ KToggleFullScreenAction::KToggleFullScreenAction(QWidget *window, QObject *paren
     setWindow(window);
 }
 
-KToggleFullScreenAction::~KToggleFullScreenAction()
-{
-    delete d;
-}
+KToggleFullScreenAction::~KToggleFullScreenAction() = default;
 
 void KToggleFullScreenAction::setWindow(QWidget *window)
 {

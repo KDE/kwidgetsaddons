@@ -138,10 +138,7 @@ KCharSelectTable::KCharSelectTable(QWidget *parent, const QFont &_font)
     d->_k_resizeCells();
 }
 
-KCharSelectTable::~KCharSelectTable()
-{
-    delete d;
-}
+KCharSelectTable::~KCharSelectTable() = default;
 
 void KCharSelectTable::setFont(const QFont &_font)
 {
@@ -541,10 +538,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->historyEnabled = true;
 }
 
-KCharSelect::~KCharSelect()
-{
-    delete d;
-}
+KCharSelect::~KCharSelect() = default;
 
 QSize KCharSelect::sizeHint() const
 {

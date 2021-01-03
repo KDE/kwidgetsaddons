@@ -13,6 +13,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QFrame>
+#include <memory>
 
 class QLineEdit;
 class KDateTable;
@@ -161,9 +162,11 @@ Q_SIGNALS:
 private:
     KDateTable *dateTable() const;
     void initWidget(const QDate &date);
+
+private:
     class KDatePickerPrivate;
     friend class KDatePickerPrivate;
-    KDatePickerPrivate *const d;
+    std::unique_ptr<class KDatePickerPrivate> const d;
 };
 
 #endif //  KDATEPICKER_H

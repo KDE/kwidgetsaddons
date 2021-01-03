@@ -90,10 +90,7 @@ KNewPasswordDialog::KNewPasswordDialog(QWidget *parent)
     d->init();
 }
 
-KNewPasswordDialog::~KNewPasswordDialog()
-{
-    delete d;
-}
+KNewPasswordDialog::~KNewPasswordDialog() = default;
 
 void KNewPasswordDialog::setPrompt(const QString &prompt)
 {

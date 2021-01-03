@@ -196,10 +196,7 @@ KEditListWidget::CustomEditor::CustomEditor(QComboBox *combo)
     Q_ASSERT(d->lineEdit);
 }
 
-KEditListWidget::CustomEditor::~CustomEditor()
-{
-    delete d;
-}
+KEditListWidget::CustomEditor::~CustomEditor() = default;
 
 void KEditListWidget::CustomEditor::setRepresentationWidget(QWidget *repWidget)
 {
@@ -237,10 +234,7 @@ KEditListWidget::KEditListWidget(const CustomEditor &custom,
     d->init(checkAtEntering, buttons, custom.representationWidget());
 }
 
-KEditListWidget::~KEditListWidget()
-{
-    delete d;
-}
+KEditListWidget::~KEditListWidget() = default;
 
 void KEditListWidget::setCustomEditor(const CustomEditor &editor)
 {

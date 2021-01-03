@@ -13,8 +13,9 @@
 
 #include <kwidgetsaddons_export.h>
 
+#include <memory>
+
 class QDrag;
-class KDragWidgetDecoratorBasePrivate;
 
 /**
  * @brief A decorator which adds drag-support to widgets
@@ -77,7 +78,7 @@ protected:
     virtual void startDrag();
 
 private:
-    KDragWidgetDecoratorBasePrivate *const d;
+    std::unique_ptr<class KDragWidgetDecoratorBasePrivate> const d;
 };
 
 /**

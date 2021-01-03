@@ -91,10 +91,7 @@ KPopupFrame::KPopupFrame(QWidget *parent)
     setMidLineWidth(2);
 }
 
-KPopupFrame::~KPopupFrame()
-{
-    delete d;
-}
+KPopupFrame::~KPopupFrame() = default;
 
 void KPopupFrame::keyPressEvent(QKeyEvent *e)
 {

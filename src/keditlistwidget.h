@@ -13,6 +13,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
+#include <memory>
 
 class QLineEdit;
 class QComboBox;
@@ -65,7 +66,7 @@ public:
 
     private:
         friend class CustomEditorPrivate;
-        CustomEditorPrivate *const d;
+        std::unique_ptr<class CustomEditorPrivate> const d;
 
         Q_DISABLE_COPY(CustomEditor)
     };
@@ -255,7 +256,7 @@ private Q_SLOTS:
 
 private:
     friend class KEditListWidgetPrivate;
-    KEditListWidgetPrivate *const d;
+    std::unique_ptr<class KEditListWidgetPrivate> const d;
 
     Q_DISABLE_COPY(KEditListWidget)
 };

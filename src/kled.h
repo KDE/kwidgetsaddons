@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
+#include <memory>
 
 class QColor;
 
@@ -238,10 +239,11 @@ protected:
     void updateCachedPixmap();
 
 private:
-    class Private;
-    Private *const d;
-
     void updateAccessibleName();
+
+private:
+    class Private;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

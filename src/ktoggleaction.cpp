@@ -66,10 +66,7 @@ KToggleAction::KToggleAction(const QIcon &icon, const QString &text, QObject *pa
     d->init();
 }
 
-KToggleAction::~KToggleAction()
-{
-    delete d;
-}
+KToggleAction::~KToggleAction() = default;
 
 void KToggleAction::setCheckedState(const KGuiItem &checkedItem)
 {

@@ -120,10 +120,7 @@ KFontAction::KFontAction(const QIcon &icon, const QString &text, QObject *parent
     setEditable(true);
 }
 
-KFontAction::~KFontAction()
-{
-    delete d;
-}
+KFontAction::~KFontAction() = default;
 
 QString KFontAction::font() const
 {

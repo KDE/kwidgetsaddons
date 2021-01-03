@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <Qt>
+#include <memory>
 
 class QIcon;
 class QPixmap;
@@ -202,7 +203,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

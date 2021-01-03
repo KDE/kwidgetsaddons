@@ -10,9 +10,9 @@
 
 #include <QWidget>
 #include <QLineEdit>
+#include <memory>
 #include <kwidgetsaddons_export.h>
 class QAction;
-class KPasswordLineEditPrivate;
 
 /**
  * @class KPasswordLineEdit kpasswordlineedit.h KPasswordLineEdit
@@ -118,7 +118,7 @@ Q_SIGNALS:
     void passwordChanged(const QString &password);
 
 private:
-    KPasswordLineEditPrivate *const d;
+    std::unique_ptr<class KPasswordLineEditPrivate> const d;
 };
 
 #endif

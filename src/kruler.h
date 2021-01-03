@@ -12,6 +12,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QAbstractSlider>
+#include <memory>
 
 /**
  * @class KRuler kruler.h KRuler
@@ -384,7 +385,7 @@ private:
 
 private:
     class KRulerPrivate;
-    KRulerPrivate *const d;
+    std::unique_ptr<class KRulerPrivate> const d;
 };
 
 #endif

@@ -30,10 +30,7 @@ KRatingWidget::KRatingWidget(QWidget *parent)
     setMouseTracking(true);
 }
 
-KRatingWidget::~KRatingWidget()
-{
-    delete d;
-}
+KRatingWidget::~KRatingWidget() = default;
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void KRatingWidget::setPixmap(const QPixmap &pix)

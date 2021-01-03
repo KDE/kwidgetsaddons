@@ -51,7 +51,7 @@ protected Q_SLOTS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

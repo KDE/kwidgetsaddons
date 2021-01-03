@@ -139,10 +139,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     }
 }
 
-KMimeTypeChooser::~KMimeTypeChooser()
-{
-    delete d;
-}
+KMimeTypeChooser::~KMimeTypeChooser() = default;
 
 void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeTypes)
 {
@@ -394,10 +391,7 @@ void KMimeTypeChooserDialog::Private::init()
     layout->addWidget(buttonBox);
 }
 
-KMimeTypeChooserDialog::~KMimeTypeChooserDialog()
-{
-    delete d;
-}
+KMimeTypeChooserDialog::~KMimeTypeChooserDialog() = default;
 
 QSize KMimeTypeChooserDialog::sizeHint() const
 {

@@ -28,10 +28,7 @@ KDragWidgetDecoratorBase::KDragWidgetDecoratorBase(QWidget *parent)
     d->decoratedWidget = parent;
 }
 
-KDragWidgetDecoratorBase::~KDragWidgetDecoratorBase()
-{
-    delete d;
-}
+KDragWidgetDecoratorBase::~KDragWidgetDecoratorBase() = default;
 
 bool KDragWidgetDecoratorBase::isDragEnabled() const
 {

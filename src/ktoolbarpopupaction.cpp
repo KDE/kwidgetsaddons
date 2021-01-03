@@ -47,7 +47,6 @@ KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text,
 
 KToolBarPopupAction::~KToolBarPopupAction()
 {
-    delete d;
     delete menu();
 }
 

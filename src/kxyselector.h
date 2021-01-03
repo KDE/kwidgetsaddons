@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
+#include <memory>
 
 /**
  * @class KXYSelector kxyselector.h KXYSelector
@@ -130,7 +131,7 @@ private:
 private:
     class Private;
     friend class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_DISABLE_COPY(KXYSelector)
 };

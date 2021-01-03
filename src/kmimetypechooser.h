@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 #include <QDialog>
 #include <QWidget>
+#include <memory>
 
 /**
  * @class KMimeTypeChooser kmimetypechooser.h KMimeTypeChooser
@@ -74,7 +75,7 @@ public:
     QStringList patterns() const;
 
 private:
-    class KMimeTypeChooserPrivate *d;
+    std::unique_ptr<class KMimeTypeChooserPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_slotCurrentChanged(const QModelIndex &index))
     Q_PRIVATE_SLOT(d, void _k_slotSycocaDatabaseChanged(QStringList))
@@ -161,6 +162,6 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 #endif // _KMIMETYPE_CHOOSER_H_

@@ -9,6 +9,7 @@
 #define KTOOLBARSPACERACTION_H
 
 #include <QWidgetAction>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -43,8 +44,7 @@ public:
     QWidget *createWidget(QWidget *parent) override;
 
 private:
-    class Private;
-    Private *const d;
+    std::unique_ptr<class KToolBarSpacerActionPrivate> const d;
 };
 
 #endif

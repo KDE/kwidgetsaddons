@@ -13,6 +13,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QFrame>
+#include <memory>
 
 /**
  * @class KPopupFrame kpopupframe.h KPopupFrame
@@ -89,7 +90,7 @@ Q_SIGNALS:
 private:
     class KPopupFramePrivate;
     friend class KPopupFramePrivate;
-    KPopupFramePrivate *const d;
+    std::unique_ptr<class KPopupFramePrivate> const d;
 
     Q_DISABLE_COPY(KPopupFrame)
 };

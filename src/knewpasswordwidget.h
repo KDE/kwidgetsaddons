@@ -13,6 +13,7 @@
 #define KNEWPASSWORDWIDGET_H
 
 #include <QWidget>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -238,7 +239,7 @@ Q_SIGNALS:
 
 private:
     class KNewPasswordWidgetPrivate;
-    KNewPasswordWidgetPrivate *const d;
+    std::unique_ptr<class KNewPasswordWidgetPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_passwordChanged())
     Q_PRIVATE_SLOT(d, void _k_toggleEchoMode())

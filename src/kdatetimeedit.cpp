@@ -256,10 +256,7 @@ KDateTimeEdit::KDateTimeEdit(QWidget *parent)
             this,                      SLOT(selectTimeZone(int)));
 }
 
-KDateTimeEdit::~KDateTimeEdit()
-{
-    delete d;
-}
+KDateTimeEdit::~KDateTimeEdit() = default;
 
 QDateTime KDateTimeEdit::dateTime() const
 {

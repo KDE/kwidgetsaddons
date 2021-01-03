@@ -9,6 +9,7 @@
 #define KTOOLBARLABELACTION_H
 
 #include <QWidgetAction>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -99,7 +100,7 @@ protected:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

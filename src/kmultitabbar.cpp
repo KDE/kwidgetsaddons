@@ -23,6 +23,9 @@
  by the KMultiTabBar itself.
 */
 
+class KMultiTabBarTabPrivate {};
+class KMultiTabBarButtonPrivate {};
+
 class KMultiTabBarPrivate
 {
 public:
@@ -547,7 +550,6 @@ KMultiTabBar::~KMultiTabBar()
 {
     qDeleteAll(d->m_buttons);
     d->m_buttons.clear();
-    delete d;
 }
 
 int KMultiTabBar::appendButton(const QIcon &icon, int id, QMenu *popup, const QString &)

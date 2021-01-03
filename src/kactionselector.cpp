@@ -144,10 +144,7 @@ KActionSelector::KActionSelector(QWidget *parent)
     setButtonsEnabled();
 }
 
-KActionSelector::~KActionSelector()
-{
-    delete d;
-}
+KActionSelector::~KActionSelector() = default;
 
 //END Constructor/destroctor
 

@@ -11,7 +11,8 @@
 
 #include <kwidgetsaddons_export.h>
 
-class KDualActionPrivate;
+#include <memory>
+
 class KGuiItem;
 
 /**
@@ -188,8 +189,8 @@ Q_SIGNALS:
 
 private:
     Q_PRIVATE_SLOT(d, void slotTriggered())
-    KDualActionPrivate *const d;
     friend class KDualActionPrivate;
+    std::unique_ptr<class KDualActionPrivate> const d;
 };
 
 #endif /* KDUALACTION_H */

@@ -9,6 +9,7 @@
 #define KPIXMAPREGIONSELECTORDIALOG_H
 
 #include <QDialog>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -104,7 +105,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_PRIVATE_SLOT(d, void _k_adjustPixmapSize())
 

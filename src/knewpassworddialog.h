@@ -12,6 +12,7 @@
 #define KNEWPASSWORDDIALOG_H
 
 #include <QDialog>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -257,7 +258,7 @@ Q_SIGNALS:
 
 private:
     class KNewPasswordDialogPrivate;
-    KNewPasswordDialogPrivate *const d;
+    std::unique_ptr<class KNewPasswordDialogPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_passwordStatusChanged())
 };

@@ -55,10 +55,7 @@ KCapacityBar::KCapacityBar(KCapacityBar::DrawTextMode drawTextMode, QWidget *par
     d->ce_capacityBar = KStyleExtensions::customControlElement(QStringLiteral("CE_CapacityBar"), this);
 }
 
-KCapacityBar::~KCapacityBar()
-{
-    delete d;
-}
+KCapacityBar::~KCapacityBar() = default;
 
 void KCapacityBar::setValue(int value)
 {

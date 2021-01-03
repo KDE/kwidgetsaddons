@@ -10,6 +10,7 @@
 #include <QWidget>
 #include <QFont>
 #include <QString>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -119,7 +120,7 @@ Q_SIGNALS:
 private:
     class KFontRequesterPrivate;
     friend class KFontRequesterPrivate;
-    KFontRequesterPrivate *const d;
+    std::unique_ptr<class KFontRequesterPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_buttonClicked())
 

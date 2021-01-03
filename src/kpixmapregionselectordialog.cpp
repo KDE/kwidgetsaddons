@@ -72,10 +72,7 @@ KPixmapRegionSelectorDialog::KPixmapRegionSelectorDialog(QWidget *parent)
     d->init();
 }
 
-KPixmapRegionSelectorDialog::~KPixmapRegionSelectorDialog()
-{
-    delete d;
-}
+KPixmapRegionSelectorDialog::~KPixmapRegionSelectorDialog() = default;
 
 KPixmapRegionSelectorWidget *KPixmapRegionSelectorDialog::pixmapRegionSelectorWidget() const
 {

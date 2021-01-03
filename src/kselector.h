@@ -16,6 +16,7 @@
 #include <QAbstractSlider>
 #include <QGradient>
 #include <QWidget>
+#include <memory>
 
 /**
  * @class KSelector kselector.h KSelector
@@ -105,7 +106,7 @@ private:
 private:
     class Private;
     friend class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_DISABLE_COPY(KSelector)
 };
@@ -189,7 +190,7 @@ protected:
 private:
     class KGradientSelectorPrivate;
     friend class KGradientSelectorPrivate;
-    KGradientSelectorPrivate *const d;
+    std::unique_ptr<class KGradientSelectorPrivate> const d;
 
     Q_DISABLE_COPY(KGradientSelector)
 };

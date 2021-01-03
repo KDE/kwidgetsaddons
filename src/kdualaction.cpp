@@ -59,10 +59,7 @@ KDualAction::KDualAction(QObject *parent)
     d->init(this);
 }
 
-KDualAction::~KDualAction()
-{
-    delete d;
-}
+KDualAction::~KDualAction() = default;
 
 void KDualAction::setActiveGuiItem(const KGuiItem &item)
 {

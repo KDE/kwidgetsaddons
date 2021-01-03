@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QAbstractItemModel>
+#include <memory>
 
 class KPageModelPrivate;
 
@@ -86,7 +87,7 @@ public:
 
 protected:
     KPageModel(KPageModelPrivate &dd, QObject *parent);
-    KPageModelPrivate *const d_ptr;
+    std::unique_ptr<class KPageModelPrivate> const d_ptr;
 };
 
 #endif

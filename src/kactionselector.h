@@ -10,14 +10,13 @@
 
 #include <kwidgetsaddons_export.h>
 #include <QWidget>
+#include <memory>
 
 class QListWidget;
 class QListWidgetItem;
 class QKeyEvent;
 class QEvent;
 class QIcon;
-
-class KActionSelectorPrivate;
 
 /**
     @class KActionSelector kactionselector.h KActionSelector
@@ -311,7 +310,7 @@ private:
      * Private data storage
      */
     friend class KActionSelectorPrivate;
-    KActionSelectorPrivate *const d;
+    std::unique_ptr<class KActionSelectorPrivate> const d;
 
     Q_DISABLE_COPY(KActionSelector)
 };

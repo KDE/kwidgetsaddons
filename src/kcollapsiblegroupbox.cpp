@@ -63,7 +63,6 @@ KCollapsibleGroupBox::~KCollapsibleGroupBox()
     if (d->animation->state() == QTimeLine::Running) {
         d->animation->stop();
     }
-    delete d;
 }
 
 void KCollapsibleGroupBox::setTitle(const QString& title)

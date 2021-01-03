@@ -9,6 +9,7 @@
 
 #include <QObject>
 #include <QPoint>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -142,7 +143,7 @@ protected:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_PRIVATE_SLOT(d, void _k_timeout())
 };

@@ -231,7 +231,7 @@ public:
                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
 
 private:
-    std::unique_ptr<KMessageDialogPrivate> d;
+    std::unique_ptr<KMessageDialogPrivate> const d;
 };
 
 #endif // KMESSAGEDIALOG_H

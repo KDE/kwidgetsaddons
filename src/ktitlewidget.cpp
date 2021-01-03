@@ -184,10 +184,7 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     mainLayout->setContentsMargins(0, 0, 0, 0);
 }
 
-KTitleWidget::~KTitleWidget()
-{
-    delete d;
-}
+KTitleWidget::~KTitleWidget() = default;
 
 bool KTitleWidget::eventFilter(QObject *object, QEvent *event)
 {

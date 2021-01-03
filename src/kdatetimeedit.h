@@ -12,8 +12,8 @@
 #include <QLocale>
 #include <QTimeZone>
 #include <QWidget>
+#include <memory>
 
-class KDateTimeEditPrivate;
 
 /**
  * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
@@ -594,9 +594,8 @@ protected:
     void assignTimeZone(const QTimeZone &zone);
 
 private:
-
     friend class KDateTimeEditPrivate;
-    KDateTimeEditPrivate *const d;
+    std::unique_ptr<class KDateTimeEditPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void selectCalendar(int))
     Q_PRIVATE_SLOT(d, void enterCalendar(const QLocale &))

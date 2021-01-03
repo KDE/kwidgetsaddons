@@ -9,6 +9,7 @@
 #define KCAPACITYBAR_H
 
 #include <QWidget>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -219,7 +220,7 @@ private:
      * @internal
      */
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

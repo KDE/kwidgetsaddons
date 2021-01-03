@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
+#include <memory>
 
 /**
  * @class KToolTipWidget ktooltipwidget.h KToolTipWidget
@@ -105,7 +106,7 @@ protected:
 
 private:
     class KToolTipWidgetPrivate;
-    QScopedPointer<KToolTipWidgetPrivate> d;
+    std::unique_ptr<class KToolTipWidgetPrivate> const d;
 
     Q_DISABLE_COPY(KToolTipWidget)
 };

@@ -9,10 +9,8 @@
 #define KCOLLAPSIBLEGROUPBOX_H
 
 #include <kwidgetsaddons_export.h>
-
 #include <QWidget>
-
-class KCollapsibleGroupBoxPrivate;
+#include <memory>
 
 /**
  * @class KCollapsibleGroupBox kcollapsiblegroupbox.h KCollapsibleGroupBox
@@ -102,7 +100,7 @@ private Q_SLOTS:
     void overrideFocusPolicyOf(QWidget *widget);
 
 private:
-    KCollapsibleGroupBoxPrivate *const d;
+    std::unique_ptr<class KCollapsibleGroupBoxPrivate> const d;
 
     Q_DISABLE_COPY(KCollapsibleGroupBox)
 };

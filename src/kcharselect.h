@@ -10,6 +10,7 @@
 
 #include <QString>
 #include <QWidget>
+#include <memory>
 #include <kwidgetsaddons_export.h>
 
 class QFont;
@@ -291,7 +292,7 @@ private:
     Q_PRIVATE_SLOT(d, void _k_linkClicked(QUrl))
 
     class KCharSelectPrivate;
-    KCharSelectPrivate *const d;
+    std::unique_ptr<class KCharSelectPrivate> const d;
 
     void initWidget(const Controls, QObject *);
 };

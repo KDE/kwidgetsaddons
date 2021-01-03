@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QPushButton>
+#include <memory>
 
 class KColorButtonPrivate;
 /**
@@ -103,7 +104,8 @@ protected:
 
 private:
     class KColorButtonPrivate;
-    KColorButtonPrivate *const d;
+    std::unique_ptr<class KColorButtonPrivate> const d;
+
     Q_PRIVATE_SLOT(d, void _k_colorChosen())
 };
 

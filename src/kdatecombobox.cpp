@@ -348,10 +348,7 @@ KDateComboBox::KDateComboBox(QWidget *parent)
             this, [this]() { d->clickDate(); });
 }
 
-KDateComboBox::~KDateComboBox()
-{
-    delete d;
-}
+KDateComboBox::~KDateComboBox() = default;
 
 QDate KDateComboBox::date() const
 {

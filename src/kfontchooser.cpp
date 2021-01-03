@@ -149,10 +149,7 @@ KFontChooser::KFontChooser(QWidget *parent,
     d->init(flags, fontList, visibleListSize, sizeIsRelativeState);
 }
 
-KFontChooser::~KFontChooser()
-{
-    delete d;
-}
+KFontChooser::~KFontChooser() = default;
 
 void KFontChooser::Private::init(const DisplayFlags &flags, const QStringList &fontList,
                                  int visibleListSize, Qt::CheckState *sizeIsRelativeState)

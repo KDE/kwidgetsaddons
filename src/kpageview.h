@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
+#include <memory>
 
 class KPageModel;
 
@@ -205,7 +206,7 @@ protected:
     virtual Qt::Alignment viewPosition() const;
 
     KPageView(KPageViewPrivate &dd, QWidget *parent);
-    KPageViewPrivate *const d_ptr;
+    std::unique_ptr<class KPageViewPrivate> const d_ptr;
 
 private:
     Q_PRIVATE_SLOT(d_func(), void _k_rebuildGui())

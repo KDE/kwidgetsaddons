@@ -8,6 +8,7 @@
 #define _K_PIXMAPSEQUENCE_WIDGET_H_
 
 #include <QWidget>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -77,7 +78,7 @@ public Q_SLOTS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif

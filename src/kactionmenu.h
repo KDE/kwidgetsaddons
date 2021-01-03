@@ -18,6 +18,7 @@
 
 #include <QToolButton>
 #include <QWidgetAction>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -167,7 +168,7 @@ public:
     QWidget *createWidget(QWidget *parent) override;
 
 private:
-    class KActionMenuPrivate *const d;
+    std::unique_ptr<class KActionMenuPrivate> const d;
 };
 
 #endif

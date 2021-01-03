@@ -88,10 +88,7 @@ KPasswordLineEdit::KPasswordLineEdit(QWidget *parent)
     d->initialize();
 }
 
-KPasswordLineEdit::~KPasswordLineEdit()
-{
-    delete d;
-}
+KPasswordLineEdit::~KPasswordLineEdit() = default;
 
 void KPasswordLineEdit::setPassword(const QString &password)
 {

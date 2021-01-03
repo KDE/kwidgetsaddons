@@ -66,10 +66,7 @@ KPageWidgetItem::KPageWidgetItem(QWidget *widget, const QString &name)
     }
 }
 
-KPageWidgetItem::~KPageWidgetItem()
-{
-    delete d;
-}
+KPageWidgetItem::~KPageWidgetItem() = default;
 
 void KPageWidgetItem::setEnabled(bool enabled)
 {

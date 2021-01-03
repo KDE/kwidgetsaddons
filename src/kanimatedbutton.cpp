@@ -53,8 +53,6 @@ KAnimatedButton::~KAnimatedButton()
     d->timer.stop();
     qDeleteAll(d->framesCache);
     delete d->movie;
-
-    delete d;
 }
 
 void KAnimatedButton::start()

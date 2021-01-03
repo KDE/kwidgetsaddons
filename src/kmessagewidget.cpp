@@ -239,10 +239,7 @@ KMessageWidget::KMessageWidget(const QString &text, QWidget *parent)
     setText(text);
 }
 
-KMessageWidget::~KMessageWidget()
-{
-    delete d;
-}
+KMessageWidget::~KMessageWidget() = default;
 
 QString KMessageWidget::text() const
 {

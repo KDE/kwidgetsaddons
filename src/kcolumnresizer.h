@@ -12,12 +12,12 @@
 #include <QFormLayout>
 #include <QObject>
 
+#include <memory>
+
 class QEvent;
 class QGridLayout;
 class QLayout;
 class QWidget;
-
-class KColumnResizerPrivate;
 
 /**
  * @class KColumnResizer kcolumnresizer.h KColumnResizer
@@ -106,7 +106,7 @@ protected:
     bool eventFilter(QObject *, QEvent *event) override;
 
 private:
-    KColumnResizerPrivate *const d;
+    std::unique_ptr<class KColumnResizerPrivate> const d;
     Q_DISABLE_COPY(KColumnResizer)
 
     Q_PRIVATE_SLOT(d, void updateWidth())

@@ -8,8 +8,8 @@
 #define KBUSYINDICATORWIDGET_H
 
 #include <kwidgetsaddons_export.h>
-
 #include <QWidget>
+#include <memory>
 
 /**
  * @class KBusyIndicatorWidget kbusyindicatorwidget.h KBusyIndicatorWidget
@@ -56,7 +56,7 @@ protected:
     bool event(QEvent *event) override;
 
 private:
-    class KBusyIndicatorWidgetPrivate *const d;
+    std::unique_ptr<class KBusyIndicatorWidgetPrivate> const d;
 };
 
 #endif // KBUSYINDICATORWIDGET_H

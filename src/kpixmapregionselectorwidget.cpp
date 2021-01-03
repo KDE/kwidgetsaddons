@@ -78,10 +78,7 @@ KPixmapRegionSelectorWidget::KPixmapRegionSelectorWidget(QWidget *parent)
     d->m_rubberBand->hide();
 }
 
-KPixmapRegionSelectorWidget::~KPixmapRegionSelectorWidget()
-{
-    delete d;
-}
+KPixmapRegionSelectorWidget::~KPixmapRegionSelectorWidget() = default;
 
 QPixmap KPixmapRegionSelectorWidget::pixmap() const
 {

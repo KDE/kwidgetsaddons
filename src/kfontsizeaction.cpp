@@ -55,10 +55,7 @@ KFontSizeAction::KFontSizeAction(const QIcon &icon, const QString &text, QObject
     d->init();
 }
 
-KFontSizeAction::~KFontSizeAction()
-{
-    delete d;
-}
+KFontSizeAction::~KFontSizeAction() = default;
 
 void KFontSizeAction::Private::init()
 {

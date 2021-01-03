@@ -59,10 +59,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     d->setToolTip();
 }
 
-KFontRequester::~KFontRequester()
-{
-    delete d;
-}
+KFontRequester::~KFontRequester() = default;
 
 QFont KFontRequester::font() const
 {

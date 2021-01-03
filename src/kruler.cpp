@@ -161,10 +161,7 @@ void KRuler::initWidget(Qt::Orientation orientation)
     d->dir = orientation;
 }
 
-KRuler::~KRuler()
-{
-    delete d;
-}
+KRuler::~KRuler() = default;
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
 void

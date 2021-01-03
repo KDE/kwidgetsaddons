@@ -184,10 +184,7 @@ KNewPasswordWidget::KNewPasswordWidget(QWidget *parent)
     d->init();
 }
 
-KNewPasswordWidget::~KNewPasswordWidget()
-{
-    delete d;
-}
+KNewPasswordWidget::~KNewPasswordWidget() = default;
 
 KNewPasswordWidget::PasswordStatus KNewPasswordWidget::passwordStatus() const
 {

@@ -56,10 +56,7 @@ KSelector::KSelector(Qt::Orientation o, QWidget *parent)
     }
 }
 
-KSelector::~KSelector()
-{
-    delete d;
-}
+KSelector::~KSelector() = default;
 
 void KSelector::setIndent(bool i)
 {
@@ -285,10 +282,7 @@ KGradientSelector::KGradientSelector(Qt::Orientation o, QWidget *parent)
 {
 }
 
-KGradientSelector::~KGradientSelector()
-{
-    delete d;
-}
+KGradientSelector::~KGradientSelector() = default;
 
 void KGradientSelector::drawContents(QPainter *painter)
 {

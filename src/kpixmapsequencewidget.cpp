@@ -36,7 +36,6 @@ KPixmapSequenceWidget::KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget
 KPixmapSequenceWidget::~KPixmapSequenceWidget()
 {
     delete d->m_painter;
-    delete d;
 }
 
 KPixmapSequence KPixmapSequenceWidget::sequence() const

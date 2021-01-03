@@ -7,15 +7,15 @@
 
 #include "ktoolbarspaceraction.h"
 
+class KToolBarSpacerActionPrivate {};
+
 KToolBarSpacerAction::KToolBarSpacerAction(QObject *parent)
     : QWidgetAction(parent)
     , d(nullptr)
 {
 }
 
-KToolBarSpacerAction::~KToolBarSpacerAction()
-{
-}
+KToolBarSpacerAction::~KToolBarSpacerAction() = default;
 
 QWidget *KToolBarSpacerAction::createWidget(QWidget *parent)
 {

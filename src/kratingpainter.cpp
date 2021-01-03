@@ -65,10 +65,7 @@ KRatingPainter::KRatingPainter()
 {
 }
 
-KRatingPainter::~KRatingPainter()
-{
-    delete d;
-}
+KRatingPainter::~KRatingPainter() = default;
 
 int KRatingPainter::maxRating() const
 {

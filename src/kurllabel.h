@@ -15,6 +15,7 @@
 #include <QColor>
 #include <QLabel>
 #include <QPixmap>
+#include <memory>
 
 class QCursor;
 
@@ -353,7 +354,7 @@ protected:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_PRIVATE_SLOT(d, void updateColor())
 };

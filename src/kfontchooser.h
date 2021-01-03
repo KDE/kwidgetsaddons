@@ -10,6 +10,7 @@
 
 #include <kwidgetsaddons_export.h>
 #include <QWidget>
+#include <memory>
 
 class QFont;
 class QStringList;
@@ -259,7 +260,7 @@ Q_SIGNALS:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_DISABLE_COPY(KFontChooser)
 

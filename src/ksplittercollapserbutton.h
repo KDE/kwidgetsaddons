@@ -10,6 +10,7 @@
 
 // Qt
 #include <QToolButton>
+#include <memory>
 #include <kwidgetsaddons_export.h>
 
 class QSplitter;
@@ -72,7 +73,7 @@ protected:
     void showEvent(QShowEvent *event) override;
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 };
 
 #endif /* KSPLITTERCOLLAPSERBUTTON_H */

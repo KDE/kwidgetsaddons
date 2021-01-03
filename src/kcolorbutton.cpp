@@ -124,10 +124,7 @@ KColorButton::KColorButton(const QColor &c, const QColor &defaultColor, QWidget 
     setDefaultColor(defaultColor);
 }
 
-KColorButton::~KColorButton()
-{
-    delete d;
-}
+KColorButton::~KColorButton() = default;
 
 QColor KColorButton::color() const
 {

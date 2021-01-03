@@ -9,6 +9,7 @@
 
 #include <kwidgetsaddons_export.h>
 #include <QFrame>
+#include <memory>
 
 /**
  * @class KSeparator kseparator.h KSeparator
@@ -42,6 +43,8 @@ public:
      */
     explicit KSeparator(Qt::Orientation orientation, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
+    ~KSeparator() override;
+
     /**
      * Returns the orientation of the separator.
      * @return int Possible values Horizontal or Vertical.
@@ -56,7 +59,7 @@ public:
     void setOrientation(Qt::Orientation orientation);
 
 private:
-    class KSeparatorPrivate *d;
+    std::unique_ptr<class KSeparatorPrivate> const d;
 };
 
 #endif // KSEPARATOR_H

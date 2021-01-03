@@ -77,10 +77,7 @@ KAssistantDialog::KAssistantDialog(KPageWidget *widget, QWidget *parent, Qt::Win
     d->pageModel = static_cast<KPageWidgetModel *>(widget->model());
 }
 
-KAssistantDialog::~KAssistantDialog()
-{
-    delete d;
-}
+KAssistantDialog::~KAssistantDialog() = default;
 
 void KAssistantDialog::Private::init()
 {

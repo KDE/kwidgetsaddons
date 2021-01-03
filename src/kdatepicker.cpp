@@ -334,10 +334,7 @@ void KDatePicker::initWidget(const QDate &date_)
     dateChangedSlot(date_);    // needed because table emits changed only when newDate != oldDate
 }
 
-KDatePicker::~KDatePicker()
-{
-    delete d;
-}
+KDatePicker::~KDatePicker() = default;
 
 bool KDatePicker::eventFilter(QObject *o, QEvent *e)
 {

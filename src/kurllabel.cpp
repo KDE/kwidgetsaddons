@@ -90,10 +90,7 @@ KUrlLabel::KUrlLabel(QWidget *parent)
     d->setLinkColor(d->linkColor);
 }
 
-KUrlLabel::~KUrlLabel()
-{
-    delete d;
-}
+KUrlLabel::~KUrlLabel() = default;
 
 void KUrlLabel::mouseReleaseEvent(QMouseEvent *event)
 {

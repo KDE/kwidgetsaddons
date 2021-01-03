@@ -218,10 +218,7 @@ KSplitterCollapserButton::KSplitterCollapserButton(QWidget *childWidget, QSplitt
     connect(this, &KSplitterCollapserButton::clicked, this, &KSplitterCollapserButton::slotClicked);
 }
 
-KSplitterCollapserButton::~KSplitterCollapserButton()
-{
-    delete d;
-}
+KSplitterCollapserButton::~KSplitterCollapserButton() = default;
 
 bool KSplitterCollapserButton::isWidgetCollapsed() const
 {

@@ -23,8 +23,5 @@ KPageModel::KPageModel(KPageModelPrivate &dd, QObject *parent)
     d_ptr->q_ptr = this;
 }
 
-KPageModel::~KPageModel()
-{
-    delete d_ptr;
-}
+KPageModel::~KPageModel() = default;
 

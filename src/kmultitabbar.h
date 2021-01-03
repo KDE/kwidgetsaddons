@@ -9,6 +9,7 @@
 
 #include <QString>
 #include <QPushButton>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -17,9 +18,6 @@ class QPainter;
 class QMenu;
 class QStyleOptionToolButton;
 
-class KMultiTabBarPrivate;
-class KMultiTabBarTabPrivate;
-class KMultiTabBarButtonPrivate;
 class KMultiTabBarInternal;
 
 /**
@@ -174,7 +172,7 @@ protected:
     virtual void fontChange(const QFont &);
     void updateSeparator();
 private:
-    KMultiTabBarPrivate *const d;
+    std::unique_ptr<class KMultiTabBarPrivate> const d;
 };
 
 /**
@@ -222,7 +220,7 @@ private:
     friend class KMultiTabBar;
 
     int m_id;
-    KMultiTabBarButtonPrivate *const d;
+    std::unique_ptr<class KMultiTabBarButtonPrivate> const d;
 };
 
 /**
@@ -298,7 +296,7 @@ private:
     KMultiTabBarTab(const QPixmap &pic, const QString &, int id, QWidget *parent,
                     KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
 #endif
-    KMultiTabBarTabPrivate *const d;
+    std::unique_ptr<class KMultiTabBarTabPrivate> const d;
 };
 
 #endif

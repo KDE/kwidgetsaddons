@@ -54,10 +54,7 @@ KLed::KLed(const QColor &color, State state, Look look, Shape shape,
     updateAccessibleName();
 }
 
-KLed::~KLed()
-{
-    delete d;
-}
+KLed::~KLed() = default;
 
 KLed::State KLed::state() const
 {

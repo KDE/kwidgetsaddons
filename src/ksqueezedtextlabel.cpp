@@ -46,10 +46,7 @@ KSqueezedTextLabel::KSqueezedTextLabel(QWidget *parent)
     d->elideMode = Qt::ElideMiddle;
 }
 
-KSqueezedTextLabel::~KSqueezedTextLabel()
-{
-    delete d;
-}
+KSqueezedTextLabel::~KSqueezedTextLabel() = default;
 
 void KSqueezedTextLabel::resizeEvent(QResizeEvent *)
 {

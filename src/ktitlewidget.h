@@ -11,6 +11,7 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QWidget>
+#include <memory>
 
 /**
  * @class KTitleWidget ktitlewidget.h KTitleWidget
@@ -279,7 +280,8 @@ protected:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
+
     Q_DISABLE_COPY(KTitleWidget)
 };
 

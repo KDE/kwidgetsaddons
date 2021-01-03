@@ -12,6 +12,7 @@
 
 #include <QPixmap>
 #include <QWidget>
+#include <memory>
 
 class QMenu;
 
@@ -142,7 +143,7 @@ protected:
 private:
     class Private;
     friend class Private;
-    Private *const d;
+    std::unique_ptr<class Private> const d;
 
     Q_DISABLE_COPY(KPixmapRegionSelectorWidget)
 };
