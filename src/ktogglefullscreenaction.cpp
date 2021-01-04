@@ -16,18 +16,24 @@
 
 #include "ktogglefullscreenaction.h"
 
+#include "ktoggleaction_p.h"
+
 #include <QEvent>
 
-class Q_DECL_HIDDEN KToggleFullScreenAction::Private
+class KToggleFullScreenActionPrivate : public KToggleActionPrivate
 {
+    Q_DECLARE_PUBLIC(KToggleFullScreenAction)
+
 public:
-    Private(KToggleFullScreenAction *action)
-        : q(action)
+    KToggleFullScreenActionPrivate(KToggleFullScreenAction *q)
+        : KToggleActionPrivate(q)
     {
     }
 
     void updateTextsAndIcon()
     {
+        Q_Q(KToggleFullScreenAction);
+
         if (q->isChecked()) {
             q->setText(KToggleFullScreenAction::tr("Exit F&ull Screen Mode", "@action:inmenu"));
             q->setIconText(KToggleFullScreenAction::tr("Exit Full Screen", "@action:intoolbar"));
@@ -41,21 +47,22 @@ public:
         }
     }
 
-    KToggleFullScreenAction *const q;
     QWidget *window = nullptr;
 };
 
 KToggleFullScreenAction::KToggleFullScreenAction(QObject *parent)
-    : KToggleAction(parent),
-      d(new Private(this))
+    : KToggleAction(*new KToggleFullScreenActionPrivate(this), parent)
 {
+    Q_D(KToggleFullScreenAction);
+
     d->updateTextsAndIcon();
 }
 
 KToggleFullScreenAction::KToggleFullScreenAction(QWidget *window, QObject *parent)
-    : KToggleAction(parent),
-      d(new Private(this))
+    : KToggleAction(*new KToggleFullScreenActionPrivate(this), parent)
 {
+    Q_D(KToggleFullScreenAction);
+
     d->updateTextsAndIcon();
     setWindow(window);
 }
@@ -64,6 +71,8 @@ KToggleFullScreenAction::~KToggleFullScreenAction() = default;
 
 void KToggleFullScreenAction::setWindow(QWidget *window)
 {
+    Q_D(KToggleFullScreenAction);
+
     if (d->window) {
         d->window->removeEventFilter(this);
     }
@@ -77,12 +86,16 @@ void KToggleFullScreenAction::setWindow(QWidget *window)
 
 void KToggleFullScreenAction::slotToggled(bool checked)
 {
+    Q_D(KToggleFullScreenAction);
+
     KToggleAction::slotToggled(checked);
     d->updateTextsAndIcon();
 }
 
 bool KToggleFullScreenAction::eventFilter(QObject *object, QEvent *event)
 {
+    Q_D(KToggleFullScreenAction);
+
     if (object == d->window)
         if (event->type() == QEvent::WindowStateChange) {
             if (d->window->isFullScreen() != isChecked()) {

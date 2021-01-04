@@ -16,49 +16,59 @@
 
 #include "kfontsizeaction.h"
 
+#include "kselectaction_p.h"
+
 #include "loggingcategory.h"
 
 #include <QFontDatabase>
 
-class Q_DECL_HIDDEN KFontSizeAction::Private
+class KFontSizeActionPrivate : public KSelectActionPrivate
 {
+    Q_DECLARE_PUBLIC(KFontSizeAction)
+
 public:
-    Private(KFontSizeAction *parent)
-        : q(parent)
+    KFontSizeActionPrivate(KFontSizeAction *q)
+        : KSelectActionPrivate(q)
     {
     }
 
     void init();
-
-    KFontSizeAction *const q;
 };
 
 // BEGIN KFontSizeAction
 KFontSizeAction::KFontSizeAction(QObject *parent)
-    : KSelectAction(parent),
-      d(new Private(this))
+    : KSelectAction(*new KFontSizeActionPrivate(this), parent)
 {
+    Q_D(KFontSizeAction);
+
     d->init();
 }
 
 KFontSizeAction::KFontSizeAction(const QString &text, QObject *parent)
-    : KSelectAction(text, parent),
-      d(new Private(this))
+    : KSelectAction(*new KFontSizeActionPrivate(this), parent)
 {
+    Q_D(KFontSizeAction);
+
+    setText(text);
     d->init();
 }
 
 KFontSizeAction::KFontSizeAction(const QIcon &icon, const QString &text, QObject *parent)
-    : KSelectAction(icon, text, parent),
-      d(new Private(this))
+    : KSelectAction(*new KFontSizeActionPrivate(this), parent)
 {
+    Q_D(KFontSizeAction);
+
+    setIcon(icon);
+    setText(text);
     d->init();
 }
 
 KFontSizeAction::~KFontSizeAction() = default;
 
-void KFontSizeAction::Private::init()
+void KFontSizeActionPrivate::init()
 {
+    Q_Q(KFontSizeAction);
+
     q->setEditable(true);
     QFontDatabase fontDB;
     const QList<int> sizes = fontDB.standardSizes();

@@ -14,6 +14,7 @@
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <kpagewidget.h>
+#include <memory>
 
 class KPageDialogPrivate;
 
@@ -265,7 +266,7 @@ protected:
     void setButtonBox(QDialogButtonBox *box);
 
 protected:
-    KPageDialogPrivate *const d_ptr;
+    std::unique_ptr<class KPageDialogPrivate> const d_ptr;
 };
 
 #endif

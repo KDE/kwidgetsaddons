@@ -7,6 +7,7 @@
 
 #include "kassistantdialog.h"
 
+#include "kpagedialog_p.h"
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QPushButton>
@@ -14,15 +15,17 @@
 
 #include <QHash>
 
-class Q_DECL_HIDDEN KAssistantDialog::Private
+class KAssistantDialogPrivate : public KPageDialogPrivate
 {
+    Q_DECLARE_PUBLIC(KAssistantDialog)
+    Q_DECLARE_TR_FUNCTIONS(KAssistantDialog)
+
 public:
-    Private(KAssistantDialog *q)
-        : q(q)
+    KAssistantDialogPrivate(KAssistantDialog *q)
+        : KPageDialogPrivate(q)
     {
     }
 
-    KAssistantDialog *const q;
     QHash<KPageWidgetItem *, bool> valid;
     QHash<KPageWidgetItem *, bool> appropriate;
     KPageWidgetModel *pageModel = nullptr;
@@ -61,8 +64,10 @@ public:
 };
 
 KAssistantDialog::KAssistantDialog(QWidget *parent, Qt::WindowFlags flags)
-    : KPageDialog(parent, flags), d(new Private(this))
+    : KPageDialog(*new KAssistantDialogPrivate(this), nullptr, parent, flags)
 {
+    Q_D(KAssistantDialog);
+
     d->init();
     //workaround to get the page model
     KPageWidget *pagewidget = findChild<KPageWidget *>();
@@ -71,16 +76,20 @@ KAssistantDialog::KAssistantDialog(QWidget *parent, Qt::WindowFlags flags)
 }
 
 KAssistantDialog::KAssistantDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags)
-    : KPageDialog(widget, parent, flags), d(new Private(this))
+    : KPageDialog(*new KAssistantDialogPrivate(this), widget, parent, flags)
 {
+    Q_D(KAssistantDialog);
+
     d->init();
     d->pageModel = static_cast<KPageWidgetModel *>(widget->model());
 }
 
 KAssistantDialog::~KAssistantDialog() = default;
 
-void KAssistantDialog::Private::init()
+void KAssistantDialogPrivate::init()
 {
+    Q_Q(KAssistantDialog);
+
     QDialogButtonBox *buttonBox = q->buttonBox();
 
     buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Help);
@@ -113,6 +122,8 @@ void KAssistantDialog::Private::init()
 
 void KAssistantDialog::back()
 {
+    Q_D(KAssistantDialog);
+
     QModelIndex nextIndex = d->getPrevious(d->pageModel->index(currentPage()));
     if (nextIndex.isValid()) {
         setCurrentPage(d->pageModel->item(nextIndex));
@@ -121,6 +132,8 @@ void KAssistantDialog::back()
 
 void KAssistantDialog::next()
 {
+    Q_D(KAssistantDialog);
+
     QModelIndex nextIndex = d->getNext(d->pageModel->index(currentPage()));
     if (nextIndex.isValid()) {
         setCurrentPage(d->pageModel->item(nextIndex));
@@ -131,6 +144,8 @@ void KAssistantDialog::next()
 
 void KAssistantDialog::setValid(KPageWidgetItem *page, bool enable)
 {
+    Q_D(KAssistantDialog);
+
     d->valid[page] = enable;
     if (page == currentPage()) {
         d->_k_slotUpdateButtons();
@@ -139,11 +154,15 @@ void KAssistantDialog::setValid(KPageWidgetItem *page, bool enable)
 
 bool KAssistantDialog::isValid(KPageWidgetItem *page) const
 {
+    Q_D(const KAssistantDialog);
+
     return d->valid.value(page, true);
 }
 
-void KAssistantDialog::Private::_k_slotUpdateButtons()
+void KAssistantDialogPrivate::_k_slotUpdateButtons()
 {
+    Q_Q(KAssistantDialog);
+
     QModelIndex currentIndex = pageModel->index(q->currentPage());
     //change the caption of the next/finish button
     QModelIndex nextIndex = getNext(currentIndex);
@@ -158,33 +177,45 @@ void KAssistantDialog::Private::_k_slotUpdateButtons()
 
 void KAssistantDialog::showEvent(QShowEvent *event)
 {
+    Q_D(KAssistantDialog);
+
     d->_k_slotUpdateButtons(); //called because last time that function was called is when the first page was added, so the next button show "finish"
     KPageDialog::showEvent(event);
 }
 
 void KAssistantDialog::setAppropriate(KPageWidgetItem *page, bool appropriate)
 {
+    Q_D(KAssistantDialog);
+
     d->appropriate[page] = appropriate;
     d->_k_slotUpdateButtons();
 }
 
 bool KAssistantDialog::isAppropriate(KPageWidgetItem *page) const
 {
+    Q_D(const KAssistantDialog);
+
     return d->appropriate.value(page, true);
 }
 
 QPushButton* KAssistantDialog::backButton() const
 {
+    Q_D(const KAssistantDialog);
+
     return d->backButton;
 }
 
 QPushButton* KAssistantDialog::nextButton() const
 {
+    Q_D(const KAssistantDialog);
+
     return d->nextButton;
 }
 
 QPushButton* KAssistantDialog::finishButton() const
 {
+    Q_D(const KAssistantDialog);
+
     return d->finishButton;
 }
 

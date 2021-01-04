@@ -28,8 +28,8 @@ class KSelectActionPrivate
     Q_DECLARE_PUBLIC(KSelectAction)
 
 public:
-    KSelectActionPrivate()
-        : q_ptr(nullptr)
+    KSelectActionPrivate(KSelectAction *q)
+        : q_ptr(q)
     {
         m_edit = false;
         m_menuAccelsEnabled = true;
@@ -58,7 +58,7 @@ public:
     void _k_comboBoxDeleted(QObject *);
     void _k_comboBoxCurrentIndexChanged(int);
 
-    void init(KSelectAction *);
+    void init();
 
     bool m_edit : 1;
     bool m_menuAccelsEnabled : 1;
@@ -91,7 +91,7 @@ public:
         return text;
     }
 
-    KSelectAction *q_ptr;
+    KSelectAction * const q_ptr;
 };
 
 #endif // KSELECTACTION_P_H

@@ -22,6 +22,7 @@
 #include <kwidgetsaddons_export.h>
 
 class KGuiItem;
+class KToggleActionPrivate;
 
 /**
  *  @class KToggleAction ktoggleaction.h KToggleAction
@@ -90,9 +91,14 @@ public:
 protected Q_SLOTS:
     virtual void slotToggled(bool checked);
 
+protected:
+    KToggleAction(KToggleActionPrivate &dd, QObject *parent);
+
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    friend class KToggleFullScreenAction;
+    Q_DECLARE_PRIVATE_D(d, KToggleAction)
+    std::unique_ptr<class KToggleActionPrivate> const d;
+    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
 };
 
 #endif

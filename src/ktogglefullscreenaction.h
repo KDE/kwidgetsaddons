@@ -18,6 +18,8 @@
 
 #include <ktoggleaction.h>
 
+class KToggleFullScreenActionPrivate;
+
 /**
  * @class KToggleFullScreenAction ktogglefullscreenaction.h KToggleFullScreenAction
  *
@@ -81,8 +83,12 @@ protected Q_SLOTS:
     void slotToggled(bool checked) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    Q_DECLARE_PRIVATE_D(KToggleAction::d, KToggleFullScreenAction)
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KToggleFullScreenAction) in any methods
+    const void * d;
+#endif
 };
 
 #endif

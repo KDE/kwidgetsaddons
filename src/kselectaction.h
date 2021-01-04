@@ -22,6 +22,7 @@
 
 #include <QToolButton>
 #include <QWidgetAction>
+#include <memory>
 
 #include <kwidgetsaddons_export.h>
 
@@ -51,7 +52,6 @@ class KWIDGETSADDONS_EXPORT KSelectAction : public QWidgetAction
     Q_PROPERTY(QToolButton::ToolButtonPopupMode toolButtonPopupMode READ toolButtonPopupMode WRITE setToolButtonPopupMode)
     Q_PROPERTY(int currentItem READ currentItem WRITE setCurrentItem)
     Q_PROPERTY(QStringList items READ items WRITE setItems)
-    Q_DECLARE_PRIVATE(KSelectAction)
 
 public:
     /**
@@ -433,9 +433,11 @@ protected:
      */
     KSelectAction(KSelectActionPrivate &dd, QObject *parent);
 
-    KSelectActionPrivate *d_ptr;
+    std::unique_ptr<class KSelectActionPrivate> const d_ptr;
 
 private:
+    Q_DECLARE_PRIVATE(KSelectAction)
+
     Q_PRIVATE_SLOT(d_func(), void _k_comboBoxDeleted(QObject *))
     Q_PRIVATE_SLOT(d_func(), void _k_comboBoxCurrentIndexChanged(int))
 };

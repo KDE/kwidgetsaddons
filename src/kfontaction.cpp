@@ -17,20 +17,26 @@
 
 #include "kfontaction.h"
 
+#include "kselectaction_p.h"
+
 #include <QFontComboBox>
 
 #include <kfontchooser.h>
 
-class Q_DECL_HIDDEN KFontAction::KFontActionPrivate
+class KFontActionPrivate : public KSelectActionPrivate
 {
+    Q_DECLARE_PUBLIC(KFontAction)
+
 public:
-    KFontActionPrivate(KFontAction *parent)
-        : q(parent)
+    KFontActionPrivate(KFontAction *q)
+        : KSelectActionPrivate(q)
     {
     }
 
     void _k_slotFontChanged(const QFont &font)
     {
+        Q_Q(KFontAction);
+
 //        qCDebug(KWidgetsAddonsLog) << "QFontComboBox - slotFontChanged("
 //                 << font.family() << ") settingFont=" << settingFont;
         if (settingFont) {
@@ -47,7 +53,6 @@ public:
 //        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }
 
-    KFontAction *const q;
     int settingFont = 0;
     QFontComboBox::FontFilters fontFilters = QFontComboBox::AllFonts;
 };
@@ -85,8 +90,10 @@ QStringList _k_fontList(const QFontComboBox::FontFilters &fontFilters = QFontCom
 }
 
 KFontAction::KFontAction(uint fontListCriteria, QObject *parent)
-    : KSelectAction(parent), d(new KFontActionPrivate(this))
+    : KSelectAction(*new KFontActionPrivate(this), parent)
 {
+    Q_D(KFontAction);
+
     if (fontListCriteria & KFontChooser::FixedWidthFonts) {
         d->fontFilters |= QFontComboBox::MonospacedFonts;
     }
@@ -100,22 +107,25 @@ KFontAction::KFontAction(uint fontListCriteria, QObject *parent)
 }
 
 KFontAction::KFontAction(QObject *parent)
-    : KSelectAction(parent), d(new KFontActionPrivate(this))
+    : KSelectAction(*new KFontActionPrivate(this), parent)
 {
     KSelectAction::setItems(_k_fontList());
     setEditable(true);
 }
 
 KFontAction::KFontAction(const QString &text, QObject *parent)
-    : KSelectAction(text, parent), d(new KFontActionPrivate(this))
+    : KSelectAction(*new KFontActionPrivate(this), parent)
 {
+    setText(text);
     KSelectAction::setItems(_k_fontList());
     setEditable(true);
 }
 
 KFontAction::KFontAction(const QIcon &icon, const QString &text, QObject *parent)
-    : KSelectAction(icon, text, parent), d(new KFontActionPrivate(this))
+    : KSelectAction(*new KFontActionPrivate(this), parent)
 {
+    setIcon(icon);
+    setText(text);
     KSelectAction::setItems(_k_fontList());
     setEditable(true);
 }
@@ -129,6 +139,8 @@ QString KFontAction::font() const
 
 QWidget *KFontAction::createWidget(QWidget *parent)
 {
+    Q_D(KFontAction);
+
 //    qCDebug(KWidgetsAddonsLog) << "KFontAction::createWidget()";
 
     // This is the visual element on the screen.  This method overrides
@@ -142,7 +154,8 @@ QWidget *KFontAction::createWidget(QWidget *parent)
     cb->setCurrentFont(QFont(font().toLower()));
 //    qCDebug(KWidgetsAddonsLog) << "\tspit back=" << cb->currentFont().family();
 
-    connect(cb, &QFontComboBox::currentFontChanged, this, [this](const QFont &ft) { d->_k_slotFontChanged(ft); });
+    connect(cb, &QFontComboBox::currentFontChanged,
+            this, [this](const QFont &ft) { Q_D(KFontAction); d->_k_slotFontChanged(ft); });
     cb->setMinimumWidth(cb->sizeHint().width());
     return cb;
 }
@@ -152,6 +165,8 @@ QWidget *KFontAction::createWidget(QWidget *parent)
  */
 void KFontAction::setFont(const QString &family)
 {
+    Q_D(KFontAction);
+
 //    qCDebug(KWidgetsAddonsLog) << "KFontAction::setFont(" << family << ")";
 
     // Suppress triggered(QString) signal and prevent recursive call to ourself.

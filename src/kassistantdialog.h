@@ -11,7 +11,8 @@
 #include <kpagedialog.h>
 
 #include <kwidgetsaddons_export.h>
-#include <memory>
+
+class KAssistantDialogPrivate;
 
 /**
  * @class KAssistantDialog kassistantdialog.h KAssistantDialog
@@ -135,10 +136,14 @@ protected:
     void showEvent(QShowEvent *event) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    Q_DECLARE_PRIVATE(KAssistantDialog)
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KAssistantDialog) in any methods
+    const void * d;
+#endif
 
-    Q_PRIVATE_SLOT(d, void _k_slotUpdateButtons())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotUpdateButtons())
 
     Q_DISABLE_COPY(KAssistantDialog)
 };

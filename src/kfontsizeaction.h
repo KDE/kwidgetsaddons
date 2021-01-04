@@ -18,6 +18,8 @@
 
 #include <kselectaction.h>
 
+class KFontSizeActionPrivate;
+
 /**
  * @class KFontSizeAction kfontsizeaction.h KFontSizeAction
  *
@@ -50,8 +52,12 @@ protected Q_SLOTS:
     void actionTriggered(QAction *action) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    Q_DECLARE_PRIVATE(KFontSizeAction)
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KFontSizeAction) in any methods
+    const void * d;
+#endif
 };
 
 #endif

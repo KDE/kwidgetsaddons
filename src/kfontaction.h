@@ -18,7 +18,7 @@
 
 #include <kselectaction.h>
 
-#include <memory>
+class KFontActionPrivate;
 
 /**
  * @class KFontAction kfontaction.h KFontAction
@@ -45,8 +45,12 @@ public:
     QWidget *createWidget(QWidget *parent) override;
 
 private:
-    class KFontActionPrivate;
-    std::unique_ptr<class KFontActionPrivate> const d;
+    Q_DECLARE_PRIVATE(KFontAction)
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KFontAction) in any methods
+    const void * d;
+#endif
 };
 
 #endif

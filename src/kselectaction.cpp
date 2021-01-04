@@ -50,30 +50,21 @@ static QString DropAmpersands(const QString &text)
 }
 
 KSelectAction::KSelectAction(QObject *parent)
-    : QWidgetAction(parent)
-    , d_ptr(new KSelectActionPrivate())
+    : KSelectAction(*new KSelectActionPrivate(this), parent)
 {
-    Q_D(KSelectAction);
-    d->init(this);
 }
 
 KSelectAction::KSelectAction(const QString &text, QObject *parent)
-    : QWidgetAction(parent)
-    , d_ptr(new KSelectActionPrivate())
+    : KSelectAction(*new KSelectActionPrivate(this), parent)
 {
-    Q_D(KSelectAction);
-    d->init(this);
     setText(text);
 }
 
 KSelectAction::KSelectAction(const QIcon &icon, const QString &text, QObject *parent)
-    : QWidgetAction(parent)
-    , d_ptr(new KSelectActionPrivate())
+    : KSelectAction(*new KSelectActionPrivate(this), parent)
 {
-    Q_D(KSelectAction);
     setIcon(icon);
     setText(text);
-    d->init(this);
 }
 
 KSelectAction::KSelectAction(KSelectActionPrivate &dd, QObject *parent)
@@ -81,18 +72,16 @@ KSelectAction::KSelectAction(KSelectActionPrivate &dd, QObject *parent)
     , d_ptr(&dd)
 {
     Q_D(KSelectAction);
-    d->init(this);
+    d->init();
 }
 
 KSelectAction::~KSelectAction()
 {
     menu()->deleteLater();
-    delete d_ptr;
 }
 
-void KSelectActionPrivate::init(KSelectAction *q)
+void KSelectActionPrivate::init()
 {
-    q_ptr = q;
     QObject::connect(q_ptr->selectableActionGroup(), &QActionGroup::triggered, q_ptr, &KSelectAction::actionTriggered);
     QObject::connect(q_ptr, &QAction::toggled, q_ptr, &KSelectAction::slotToggled);
     q_ptr->setMenu(new QMenu());

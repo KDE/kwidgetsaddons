@@ -15,52 +15,39 @@
 */
 
 #include "ktoggleaction.h"
+#include "ktoggleaction_p.h"
 
-#include <kguiitem.h>
-
-class Q_DECL_HIDDEN KToggleAction::Private
-{
-public:
-    Private(KToggleAction *_parent)
-        : parent(_parent)
-    {
-    }
-
-    ~Private()
-    {
-        delete checkedGuiItem;
-    }
-
-    void init()
-    {
-        parent->setCheckable(true);
-        connect(parent, &QAction::toggled,
-                parent, &KToggleAction::slotToggled);
-    }
-
-    KToggleAction *const parent;
-    KGuiItem *checkedGuiItem = nullptr;
-};
 
 KToggleAction::KToggleAction(QObject *parent)
-    : QAction(parent),
-      d(new Private(this))
+    : KToggleAction(*new KToggleActionPrivate(this), parent)
 {
+}
+
+KToggleAction::KToggleAction(KToggleActionPrivate &dd, QObject *parent)
+    : QAction(parent)
+    , d(&dd)
+{
+    Q_D(KToggleAction);
+
     d->init();
 }
 
 KToggleAction::KToggleAction(const QString &text, QObject *parent)
     : QAction(parent),
-      d(new Private(this))
+      d(new KToggleActionPrivate(this))
 {
+    Q_D(KToggleAction);
+
     setText(text);
     d->init();
 }
 
 KToggleAction::KToggleAction(const QIcon &icon, const QString &text, QObject *parent)
     : QAction(parent),
-      d(new Private(this))
+      d(new KToggleActionPrivate(this))
 {
+    Q_D(KToggleAction);
+
     setIcon(icon);
     setText(text);
     d->init();
@@ -70,12 +57,16 @@ KToggleAction::~KToggleAction() = default;
 
 void KToggleAction::setCheckedState(const KGuiItem &checkedItem)
 {
+    Q_D(KToggleAction);
+
     delete d->checkedGuiItem;
     d->checkedGuiItem = new KGuiItem(checkedItem);
 }
 
 void KToggleAction::slotToggled(bool)
 {
+    Q_D(KToggleAction);
+
     if (d->checkedGuiItem) {
         QString string = d->checkedGuiItem->text();
         d->checkedGuiItem->setText(text());
