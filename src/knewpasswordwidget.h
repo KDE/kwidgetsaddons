@@ -238,7 +238,6 @@ Q_SIGNALS:
     void passwordStatusChanged();
 
 private:
-    class KNewPasswordWidgetPrivate;
     std::unique_ptr<class KNewPasswordWidgetPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_passwordChanged())

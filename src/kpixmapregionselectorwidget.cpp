@@ -19,10 +19,10 @@
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 
-class Q_DECL_HIDDEN KPixmapRegionSelectorWidget::Private
+class KPixmapRegionSelectorWidgetPrivate
 {
 public:
-    Private(KPixmapRegionSelectorWidget *q): q(q) {}
+    KPixmapRegionSelectorWidgetPrivate(KPixmapRegionSelectorWidget *q): q(q) {}
 
     KPixmapRegionSelectorWidget *const q;
 
@@ -53,7 +53,8 @@ public:
 };
 
 KPixmapRegionSelectorWidget::KPixmapRegionSelectorWidget(QWidget *parent)
-    : QWidget(parent), d(new Private(this))
+    : QWidget(parent)
+    , d(new KPixmapRegionSelectorWidgetPrivate(this))
 {
     QHBoxLayout *hboxLayout = new QHBoxLayout(this);
 
@@ -116,7 +117,7 @@ void KPixmapRegionSelectorWidget::setSelectedRegion(const QRect &rect)
     }
 }
 
-void KPixmapRegionSelectorWidget::Private::updatePixmap()
+void KPixmapRegionSelectorWidgetPrivate::updatePixmap()
 {
     Q_ASSERT(!m_originalPixmap.isNull());
     if (m_originalPixmap.isNull()) {
@@ -265,11 +266,11 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
 
         if (d->m_selectedRegion.contains(mev->pos())
                 && d->m_selectedRegion != d->m_originalPixmap.rect()) {
-            d->m_state = Private::Moving;
+            d->m_state = KPixmapRegionSelectorWidgetPrivate::Moving;
             cursor.setShape(Qt::SizeAllCursor);
             d->m_rubberBand->show();
         } else {
-            d->m_state = Private::Resizing;
+            d->m_state = KPixmapRegionSelectorWidgetPrivate::Resizing;
             cursor.setShape(Qt::CrossCursor);
         }
         QApplication::setOverrideCursor(cursor);
@@ -284,10 +285,10 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
 
         //qCDebug(KWidgetsAddonsLog) << QString("move to  %1,%2").arg( mev->x() ).arg( mev->y() );
 
-        if (d->m_state == Private::Resizing) {
+        if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Resizing) {
             setSelectedRegion(
                 d->calcSelectionRectangle(d->m_tempFirstClick, mev->pos()));
-        } else if (d->m_state == Private::Moving) {
+        } else if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Moving) {
             int mevx = mev->x();
             int mevy = mev->y();
             bool mouseOutside = false;
@@ -335,11 +336,11 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
     if (ev->type() == QEvent::MouseButtonRelease) {
         QMouseEvent *mev = (QMouseEvent *)(ev);
 
-        if (d->m_state == Private::Resizing && mev->pos() == d->m_tempFirstClick) {
+        if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Resizing && mev->pos() == d->m_tempFirstClick) {
             resetSelection();
         }
 
-        d->m_state = Private::None;
+        d->m_state = KPixmapRegionSelectorWidgetPrivate::None;
         QApplication::restoreOverrideCursor();
         d->m_rubberBand->hide();
         return true;
@@ -349,7 +350,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
     return false;
 }
 
-QRect KPixmapRegionSelectorWidget::Private::calcSelectionRectangle(const QPoint &startPoint, const QPoint &_endPoint)
+QRect KPixmapRegionSelectorWidgetPrivate::calcSelectionRectangle(const QPoint &startPoint, const QPoint &_endPoint)
 {
     QPoint endPoint = _endPoint;
     if (endPoint.x() < 0) {

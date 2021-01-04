@@ -129,9 +129,8 @@ private:
     void setPosition(int xp, int yp);
 
 private:
-    class Private;
-    friend class Private;
-    std::unique_ptr<class Private> const d;
+    friend class KXYSelectorPrivate;
+    std::unique_ptr<class KXYSelectorPrivate> const d;
 
     Q_DISABLE_COPY(KXYSelector)
 };

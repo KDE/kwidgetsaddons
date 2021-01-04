@@ -14,8 +14,10 @@
 #include "knewpasswordwidget.h"
 #include "ui_knewpasswordwidget.h"
 
-class Q_DECL_HIDDEN KNewPasswordWidget::KNewPasswordWidgetPrivate
+class KNewPasswordWidgetPrivate
 {
+    Q_DECLARE_TR_FUNCTIONS(KNewPasswordWidget)
+
 public:
     KNewPasswordWidgetPrivate(KNewPasswordWidget *parent)
         : q(parent)
@@ -25,11 +27,11 @@ public:
     void _k_passwordChanged();
     void _k_toggleEchoMode();
     int effectivePasswordLength(const QString &password);
-    void updatePasswordStatus(PasswordStatus status);
+    void updatePasswordStatus(KNewPasswordWidget::PasswordStatus status);
 
     KNewPasswordWidget *const q;
 
-    PasswordStatus passwordStatus = WeakPassword;
+    KNewPasswordWidget::PasswordStatus passwordStatus = KNewPasswordWidget::WeakPassword;
     int minimumPasswordLength = 0;
     int passwordStrengthWarningLevel = 1;
     int reasonablePasswordLength = 8;
@@ -41,7 +43,7 @@ public:
     Ui::KNewPasswordWidget ui;
 };
 
-void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
+void KNewPasswordWidgetPrivate::init()
 {
     ui.setupUi(q);
 
@@ -54,10 +56,10 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
     ui.labelStrengthMeter->setWhatsThis(strengthBarWhatsThis);
     ui.strengthBar->setWhatsThis(strengthBarWhatsThis);
 
-    connect(ui.linePassword, SIGNAL(echoModeChanged(QLineEdit::EchoMode)), q, SLOT(_k_toggleEchoMode()));
+    QObject::connect(ui.linePassword, SIGNAL(echoModeChanged(QLineEdit::EchoMode)), q, SLOT(_k_toggleEchoMode()));
 
-    connect(ui.linePassword, SIGNAL(passwordChanged(QString)), q, SLOT(_k_passwordChanged()));
-    connect(ui.lineVerifyPassword, SIGNAL(textChanged(QString)), q, SLOT(_k_passwordChanged()));
+    QObject::connect(ui.linePassword, SIGNAL(passwordChanged(QString)), q, SLOT(_k_passwordChanged()));
+    QObject::connect(ui.lineVerifyPassword, SIGNAL(textChanged(QString)), q, SLOT(_k_passwordChanged()));
 
     defaultBackgroundColor = q->palette().color(QPalette::Active, QPalette::Base);
     backgroundWarningColor = defaultBackgroundColor;
@@ -65,7 +67,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::init()
     _k_passwordChanged();
 }
 
-void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_passwordChanged()
+void KNewPasswordWidgetPrivate::_k_passwordChanged()
 {
     const QString password = ui.linePassword->password();
     const QString verification = ui.lineVerifyPassword->text();
@@ -84,20 +86,20 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_passwordChanged()
     // update the current password status
     if (match || ui.lineVerifyPassword->isHidden()) {
         if (!q->allowEmptyPasswords() && ui.linePassword->password().isEmpty()) {
-            updatePasswordStatus(EmptyPasswordNotAllowed);
+            updatePasswordStatus(KNewPasswordWidget::EmptyPasswordNotAllowed);
         } else if (ui.linePassword->password().length() < minPasswordLength) {
-            updatePasswordStatus(PasswordTooShort);
+            updatePasswordStatus(KNewPasswordWidget::PasswordTooShort);
         } else if (ui.strengthBar && ui.strengthBar->value() < passwordStrengthWarningLevel) {
-            updatePasswordStatus(WeakPassword);
+            updatePasswordStatus(KNewPasswordWidget::WeakPassword);
         } else {
-            updatePasswordStatus(StrongPassword);
+            updatePasswordStatus(KNewPasswordWidget::StrongPassword);
         }
     } else {
-        updatePasswordStatus(PasswordNotVerified);
+        updatePasswordStatus(KNewPasswordWidget::PasswordNotVerified);
     }
 }
 
-void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_toggleEchoMode()
+void KNewPasswordWidgetPrivate::_k_toggleEchoMode()
 {
     if (ui.linePassword->lineEdit()->echoMode() == QLineEdit::Normal) {
         ui.lineVerifyPassword->hide();
@@ -109,7 +111,7 @@ void KNewPasswordWidget::KNewPasswordWidgetPrivate::_k_toggleEchoMode()
     _k_passwordChanged();
 }
 
-int KNewPasswordWidget::KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
+int KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
 {
     enum Category {
         Digit,
@@ -168,7 +170,7 @@ int KNewPasswordWidget::KNewPasswordWidgetPrivate::effectivePasswordLength(const
     return count;
 }
 
-void KNewPasswordWidget::KNewPasswordWidgetPrivate::updatePasswordStatus(PasswordStatus status)
+void KNewPasswordWidgetPrivate::updatePasswordStatus(KNewPasswordWidget::PasswordStatus status)
 {
     if (passwordStatus == status) {
         return;

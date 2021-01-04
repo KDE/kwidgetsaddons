@@ -47,7 +47,7 @@ public:
     void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 };
 
-class Q_DECL_HIDDEN KCharSelect::KCharSelectPrivate
+class KCharSelectPrivate
 {
 public:
     struct HistoryItem {
@@ -340,7 +340,8 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
 /******************************************************************/
 
 KCharSelect::KCharSelect(QWidget *parent, const Controls controls)
-    : QWidget(parent), d(new KCharSelectPrivate(this))
+    : QWidget(parent)
+    , d(new KCharSelectPrivate(this))
 {
     initWidget(controls, nullptr);
 }
@@ -349,7 +350,8 @@ KCharSelect::KCharSelect(
     QWidget *parent
     , QObject *actionParent
     , const Controls controls)
-    : QWidget(parent), d(new KCharSelectPrivate(this))
+    : QWidget(parent)
+    , d(new KCharSelectPrivate(this))
 {
     initWidget(controls, actionParent);
 }
@@ -630,7 +632,7 @@ void KCharSelect::setCurrentCodePoint(uint c)
     d->charTable->setChar(c);
 }
 
-void KCharSelect::KCharSelectPrivate::historyAdd(uint c, bool fromSearch, const QString &searchString)
+void KCharSelectPrivate::historyAdd(uint c, bool fromSearch, const QString &searchString)
 {
     //qCDebug(KWidgetsAddonsLog) << "about to add char" << c << "fromSearch" << fromSearch << "searchString" << searchString;
 
@@ -662,7 +664,7 @@ void KCharSelect::KCharSelectPrivate::historyAdd(uint c, bool fromSearch, const 
     updateBackForwardButtons();
 }
 
-void KCharSelect::KCharSelectPrivate::showFromHistory(int index)
+void KCharSelectPrivate::showFromHistory(int index)
 {
     Q_ASSERT(index >= 0 && index < history.count());
     Q_ASSERT(index != inHistory);
@@ -690,31 +692,31 @@ void KCharSelect::KCharSelectPrivate::showFromHistory(int index)
     historyEnabled = oldHistoryEnabled;
 }
 
-void KCharSelect::KCharSelectPrivate::updateBackForwardButtons()
+void KCharSelectPrivate::updateBackForwardButtons()
 {
     backButton->setEnabled(inHistory > 0);
     forwardButton->setEnabled(inHistory < history.count() - 1);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_activateSearchLine()
+void KCharSelectPrivate::_k_activateSearchLine()
 {
     searchLine->setFocus();
     searchLine->selectAll();
 }
 
-void KCharSelect::KCharSelectPrivate::_k_back()
+void KCharSelectPrivate::_k_back()
 {
     Q_ASSERT(inHistory > 0);
     showFromHistory(inHistory - 1);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_forward()
+void KCharSelectPrivate::_k_forward()
 {
     Q_ASSERT(inHistory + 1 < history.count());
     showFromHistory(inHistory + 1);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_fontSelected()
+void KCharSelectPrivate::_k_fontSelected()
 {
     QFont font = fontCombo->currentFont();
     font.setPointSize(fontSizeSpinBox->value());
@@ -722,7 +724,7 @@ void KCharSelect::KCharSelectPrivate::_k_fontSelected()
     emit q->currentFontChanged(font);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_charSelected(uint c)
+void KCharSelectPrivate::_k_charSelected(uint c)
 {
     if (!allPlanesEnabled) {
         emit q->charSelected(QChar(c));
@@ -730,7 +732,7 @@ void KCharSelect::KCharSelectPrivate::_k_charSelected(uint c)
     emit q->codePointSelected(c);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_updateCurrentChar(uint c)
+void KCharSelectPrivate::_k_updateCurrentChar(uint c)
 {
     if (!allPlanesEnabled) {
         emit q->currentCharChanged(QChar(c));
@@ -755,7 +757,7 @@ void KCharSelect::KCharSelectPrivate::_k_updateCurrentChar(uint c)
     _k_slotUpdateUnicode(c);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
+void KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 {
     QString html = QLatin1String("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ') +
                    s_data()->formatCode(c)  + QLatin1String("<br />");
@@ -913,7 +915,7 @@ void KCharSelect::KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     detailBrowser->setHtml(html);
 }
 
-QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
+QString KCharSelectPrivate::createLinks(QString s)
 {
     const QRegularExpression rx(QStringLiteral("\\b([\\dABCDEF]{4,5})\\b"));
     QRegularExpressionMatchIterator iter = rx.globalMatch(s);
@@ -940,7 +942,7 @@ QString KCharSelect::KCharSelectPrivate::createLinks(QString s)
     return s;
 }
 
-void KCharSelect::KCharSelectPrivate::_k_sectionSelected(int index)
+void KCharSelectPrivate::_k_sectionSelected(int index)
 {
     blockCombo->clear();
     const QVector<int> blocks = s_data()->sectionContents(index);
@@ -956,7 +958,7 @@ void KCharSelect::KCharSelectPrivate::_k_sectionSelected(int index)
     blockCombo->setCurrentIndex(0);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_blockSelected(int index)
+void KCharSelectPrivate::_k_blockSelected(int index)
 {
     if (index == -1) {
         //the combo box has been cleared and is about to be filled again (because the section has changed)
@@ -974,7 +976,7 @@ void KCharSelect::KCharSelectPrivate::_k_blockSelected(int index)
     charTable->setChar(contents[0]);
 }
 
-void KCharSelect::KCharSelectPrivate::_k_searchEditChanged()
+void KCharSelectPrivate::_k_searchEditChanged()
 {
     if (searchLine->text().isEmpty()) {
         sectionCombo->setEnabled(true);
@@ -999,7 +1001,7 @@ void KCharSelect::KCharSelectPrivate::_k_searchEditChanged()
     }
 }
 
-void KCharSelect::KCharSelectPrivate::_k_search()
+void KCharSelectPrivate::_k_search()
 {
     if (searchLine->text().isEmpty()) {
         return;
@@ -1023,7 +1025,7 @@ void KCharSelect::KCharSelectPrivate::_k_search()
     }
 }
 
-void  KCharSelect::KCharSelectPrivate::_k_linkClicked(QUrl url)
+void  KCharSelectPrivate::_k_linkClicked(QUrl url)
 {
     QString hex = url.toString();
     if (hex.size() > 6) {

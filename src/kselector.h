@@ -104,9 +104,8 @@ private:
     void moveArrow(const QPoint &pos);
 
 private:
-    class Private;
-    friend class Private;
-    std::unique_ptr<class Private> const d;
+    friend class KSelectorPrivate;
+    std::unique_ptr<class KSelectorPrivate> const d;
 
     Q_DISABLE_COPY(KSelector)
 };
@@ -188,7 +187,6 @@ protected:
     virtual QSize minimumSize() const;
 
 private:
-    class KGradientSelectorPrivate;
     friend class KGradientSelectorPrivate;
     std::unique_ptr<class KGradientSelectorPrivate> const d;
 

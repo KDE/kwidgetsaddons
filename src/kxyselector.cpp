@@ -20,10 +20,10 @@
  * The contents of the selector are drawn by derived class.
  */
 
-class Q_DECL_HIDDEN KXYSelector::Private
+class KXYSelectorPrivate
 {
 public:
-    Private(KXYSelector *q):
+    KXYSelectorPrivate(KXYSelector *q):
         q(q),
         xPos(0),
         yPos(0),
@@ -50,7 +50,7 @@ public:
 
 KXYSelector::KXYSelector(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new KXYSelectorPrivate(this))
 {
 }
 
@@ -101,7 +101,7 @@ void KXYSelector::setValues(int _xPos, int _yPos)
     d->setValues(_xPos, _yPos);
 }
 
-void KXYSelector::Private::setValues(int _xPos, int _yPos)
+void KXYSelectorPrivate::setValues(int _xPos, int _yPos)
 {
     int w = q->style()->pixelMetric(QStyle::PM_DefaultFrameWidth);
 

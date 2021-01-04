@@ -19,10 +19,10 @@
 #include <QMenu>
 #include <QToolBar>
 
-class Q_DECL_HIDDEN KToolBarPopupAction::Private
+class KToolBarPopupActionPrivate
 {
 public:
-    Private()
+    KToolBarPopupActionPrivate()
         : m_popupMode(QToolButton::MenuButtonPopup)
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
         , stickyMenu(true)
@@ -38,7 +38,7 @@ public:
 
 KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent)
     : QWidgetAction(parent),
-      d(new Private)
+      d(new KToolBarPopupActionPrivate)
 {
     setIcon(icon);
     setText(text);

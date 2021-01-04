@@ -353,8 +353,7 @@ protected:
     bool event(QEvent *) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KUrlLabelPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void updateColor())
 };

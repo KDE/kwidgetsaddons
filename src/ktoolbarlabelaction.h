@@ -99,8 +99,7 @@ protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KToolBarLabelActionPrivate> const d;
 };
 
 #endif

@@ -291,10 +291,10 @@ private:
     Q_PRIVATE_SLOT(d, void _k_search())
     Q_PRIVATE_SLOT(d, void _k_linkClicked(QUrl))
 
-    class KCharSelectPrivate;
-    std::unique_ptr<class KCharSelectPrivate> const d;
-
     void initWidget(const Controls, QObject *);
+
+private:
+    std::unique_ptr<class KCharSelectPrivate> const d;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KCharSelect::Controls)

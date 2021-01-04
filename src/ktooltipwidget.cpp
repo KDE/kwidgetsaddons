@@ -18,7 +18,7 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
-class Q_DECL_HIDDEN KToolTipWidget::KToolTipWidgetPrivate
+class KToolTipWidgetPrivate
 {
 public:
     KToolTipWidgetPrivate(KToolTipWidget *parent)
@@ -40,35 +40,35 @@ public:
     QWidget *contentParent = nullptr;
 };
 
-void KToolTipWidget::KToolTipWidgetPrivate::init()
+void KToolTipWidgetPrivate::init()
 {
     layout = new QVBoxLayout(q);
 
     hideTimer.setSingleShot(true);
     hideTimer.setInterval(500);
 
-    connect(&hideTimer, &QTimer::timeout, q, &QWidget::hide);
+    QObject::connect(&hideTimer, &QTimer::timeout, q, &QWidget::hide);
 
     q->setAttribute(Qt::WA_TranslucentBackground);
     q->setWindowFlags(Qt::ToolTip | Qt::FramelessWindowHint | Qt::NoDropShadowWindowHint);
 }
 
-void KToolTipWidget::KToolTipWidgetPrivate::addWidget(QWidget *widget)
+void KToolTipWidgetPrivate::addWidget(QWidget *widget)
 {
     removeWidget();
     content = widget;
     storeParent();
     layout->addWidget(content);
-    connect(content, &QWidget::destroyed, q, &QWidget::hide);
+    QObject::connect(content, &QWidget::destroyed, q, &QWidget::hide);
 }
 
-void KToolTipWidget::KToolTipWidgetPrivate::removeWidget()
+void KToolTipWidgetPrivate::removeWidget()
 {
     layout->removeWidget(content);
     restoreParent();
 }
 
-void KToolTipWidget::KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *transientParent)
+void KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *transientParent)
 {
     if (pos.isNull()) {
         return;
@@ -81,7 +81,7 @@ void KToolTipWidget::KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *tra
     q->show();
 }
 
-void KToolTipWidget::KToolTipWidgetPrivate::storeParent()
+void KToolTipWidgetPrivate::storeParent()
 {
     if (!content) {
         return;
@@ -90,7 +90,7 @@ void KToolTipWidget::KToolTipWidgetPrivate::storeParent()
     contentParent = qobject_cast<QWidget*>(content->parent());
 }
 
-void KToolTipWidget::KToolTipWidgetPrivate::restoreParent()
+void KToolTipWidgetPrivate::restoreParent()
 {
     if (!content || !contentParent) {
         return;
@@ -99,7 +99,7 @@ void KToolTipWidget::KToolTipWidgetPrivate::restoreParent()
     content->setParent(contentParent);
 }
 
-QPoint KToolTipWidget::KToolTipWidgetPrivate::centerBelow(const QRect &rect, QScreen *screen) const
+QPoint KToolTipWidgetPrivate::centerBelow(const QRect &rect, QScreen *screen) const
 {
     // It must be assured that:
     // - the content is fully visible

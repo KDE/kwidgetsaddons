@@ -15,7 +15,7 @@
 #include <QKeyEvent>
 #include <QScreen>
 
-class Q_DECL_HIDDEN KPopupFrame::KPopupFramePrivate
+class KPopupFramePrivate
 {
 public:
     KPopupFramePrivate(KPopupFrame *q);
@@ -38,7 +38,7 @@ public:
     OutsideClickCatcher *outsideClickCatcher;
 };
 
-class KPopupFrame::KPopupFramePrivate::OutsideClickCatcher
+class KPopupFramePrivate::OutsideClickCatcher
     : public QObject
 {
     Q_OBJECT
@@ -70,7 +70,7 @@ public:
     }
 };
 
-KPopupFrame::KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q):
+KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q):
     q(q),
     result(0),   // rejected
     main(nullptr),
@@ -79,7 +79,7 @@ KPopupFrame::KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q):
     outsideClickCatcher->setPopupFrame(q);
 }
 
-KPopupFrame::KPopupFramePrivate::~KPopupFramePrivate()
+KPopupFramePrivate::~KPopupFramePrivate()
 {
     delete outsideClickCatcher;
 }

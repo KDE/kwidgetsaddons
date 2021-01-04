@@ -180,8 +180,7 @@ Q_SIGNALS:
     void toggled(bool checked);
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KPageWidgetItemPrivate> const d;
 };
 
 class KPageWidgetModelPrivate;

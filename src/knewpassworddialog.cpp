@@ -19,8 +19,10 @@
 
 #include "ui_knewpassworddialog.h"
 
-class Q_DECL_HIDDEN KNewPasswordDialog::KNewPasswordDialogPrivate
+class KNewPasswordDialogPrivate
 {
+    Q_DECLARE_TR_FUNCTIONS(KNewPasswordDialog)
+
 public:
     KNewPasswordDialogPrivate(KNewPasswordDialog *parent)
         : q(parent)
@@ -38,17 +40,17 @@ public:
     Ui::KNewPasswordDialog ui;
 };
 
-void KNewPasswordDialog::KNewPasswordDialogPrivate::init()
+void KNewPasswordDialogPrivate::init()
 {
     ui.setupUi(q);
     q->setIcon(QIcon::fromTheme(QStringLiteral("dialog-password")));
 
     ui.statusMsgWidget->hide();
 
-    connect(ui.pwdWidget, SIGNAL(passwordStatusChanged()), q, SLOT(_k_passwordStatusChanged()));
+    QObject::connect(ui.pwdWidget, SIGNAL(passwordStatusChanged()), q, SLOT(_k_passwordStatusChanged()));
 }
 
-void KNewPasswordDialog::KNewPasswordDialogPrivate::_k_passwordStatusChanged()
+void KNewPasswordDialogPrivate::_k_passwordStatusChanged()
 {
     switch (ui.pwdWidget->passwordStatus()) {
     case KNewPasswordWidget::PasswordTooShort:
@@ -73,7 +75,7 @@ void KNewPasswordDialog::KNewPasswordDialogPrivate::_k_passwordStatusChanged()
     }
 }
 
-void KNewPasswordDialog::KNewPasswordDialogPrivate::showMessageWidget(const QString &message, KMessageWidget::MessageType type)
+void KNewPasswordDialogPrivate::showMessageWidget(const QString &message, KMessageWidget::MessageType type)
 {
     ui.statusMsgWidget->setText(message);
     ui.statusMsgWidget->setMessageType(type);

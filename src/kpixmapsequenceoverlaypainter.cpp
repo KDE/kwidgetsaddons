@@ -15,7 +15,7 @@
 #include <QPointer>
 #include <QCoreApplication>
 
-class Q_DECL_HIDDEN KPixmapSequenceOverlayPainter::Private
+class KPixmapSequenceOverlayPainterPrivate
 {
 public:
     void init(KPixmapSequenceOverlayPainter *p);
@@ -40,17 +40,17 @@ public:
     KPixmapSequenceOverlayPainter *q;
 };
 
-void KPixmapSequenceOverlayPainter::Private::init(KPixmapSequenceOverlayPainter *p)
+void KPixmapSequenceOverlayPainterPrivate::init(KPixmapSequenceOverlayPainter *p)
 {
     q = p;
     m_widget = nullptr;
     m_alignment = Qt::AlignCenter;
     m_started = false;
     q->setInterval(200);
-    connect(&m_timer, SIGNAL(timeout()), q, SLOT(_k_timeout()));
+    QObject::connect(&m_timer, SIGNAL(timeout()), q, SLOT(_k_timeout()));
 }
 
-void KPixmapSequenceOverlayPainter::Private::_k_timeout()
+void KPixmapSequenceOverlayPainterPrivate::_k_timeout()
 {
     if (sequence().isEmpty()) {
         return;
@@ -62,7 +62,7 @@ void KPixmapSequenceOverlayPainter::Private::_k_timeout()
     }
 }
 
-void KPixmapSequenceOverlayPainter::Private::paintFrame()
+void KPixmapSequenceOverlayPainterPrivate::paintFrame()
 {
     if (m_counter >= sequence().frameCount()) {
         return;
@@ -71,12 +71,12 @@ void KPixmapSequenceOverlayPainter::Private::paintFrame()
     p.drawPixmap(pixmapRect(), sequence().frameAt(m_counter), QRect(QPoint(0, 0), sequence().frameSize()));
 }
 
-KPixmapSequence &KPixmapSequenceOverlayPainter::Private::sequence()
+KPixmapSequence &KPixmapSequenceOverlayPainterPrivate::sequence()
 {
     return m_sequence;
 }
 
-QRect KPixmapSequenceOverlayPainter::Private::pixmapRect()
+QRect KPixmapSequenceOverlayPainterPrivate::pixmapRect()
 {
     QRect rect(m_rect);
     if (!rect.isValid()) {
@@ -103,14 +103,14 @@ QRect KPixmapSequenceOverlayPainter::Private::pixmapRect()
 
 KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(QObject *parent)
     : QObject(parent),
-      d(new Private)
+      d(new KPixmapSequenceOverlayPainterPrivate)
 {
     d->init(this);
 }
 
 KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent)
     : QObject(parent),
-      d(new Private)
+      d(new KPixmapSequenceOverlayPainterPrivate)
 {
     d->init(this);
     d->m_sequence = seq;

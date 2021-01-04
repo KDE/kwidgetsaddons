@@ -109,8 +109,10 @@ void KDatePickerPrivateYearSelector::setYear(int year)
     setText(QString::number(year));
 }
 
-class Q_DECL_HIDDEN KDatePicker::KDatePickerPrivate
+class KDatePickerPrivate
 {
+    Q_DECLARE_TR_FUNCTIONS(KDatePicker)
+
 public:
     KDatePickerPrivate(KDatePicker *q) :
         q(q), closeButton(nullptr), selectWeek(nullptr), todayButton(nullptr), navigationLayout(nullptr)
@@ -153,7 +155,7 @@ public:
     int fontsize;
 };
 
-void KDatePicker::KDatePickerPrivate::fillWeeksCombo()
+void KDatePickerPrivate::fillWeeksCombo()
 {
     // every year can have a different number of weeks
     // it could be that we had 53,1..52 and now 1..53 which is the same number but different
@@ -199,7 +201,7 @@ void KDatePicker::KDatePickerPrivate::fillWeeksCombo()
     }
 }
 
-QDate KDatePicker::KDatePickerPrivate::validDateInYearMonth(int year, int month)
+QDate KDatePickerPrivate::validDateInYearMonth(int year, int month)
 {
     QDate newDate;
 

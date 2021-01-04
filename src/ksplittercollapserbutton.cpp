@@ -37,10 +37,10 @@ static const struct {
     {Qt::DownArrow,  Qt::UpArrow}
 };
 
-class Q_DECL_HIDDEN KSplitterCollapserButton::Private
+class KSplitterCollapserButtonPrivate
 {
 public:
-    Private(KSplitterCollapserButton *qq);
+    KSplitterCollapserButtonPrivate(KSplitterCollapserButton *qq);
 
     KSplitterCollapserButton *q;
     QSplitter *splitter;
@@ -64,7 +64,7 @@ public:
     void startTimeLine();
 };
 
-KSplitterCollapserButton::Private::Private(KSplitterCollapserButton *qq)
+KSplitterCollapserButtonPrivate::KSplitterCollapserButtonPrivate(KSplitterCollapserButton *qq)
     : q(qq),
       splitter(nullptr),
       childWidget(nullptr),
@@ -73,12 +73,12 @@ KSplitterCollapserButton::Private::Private(KSplitterCollapserButton *qq)
 
 }
 
-bool KSplitterCollapserButton::Private::isVertical() const
+bool KSplitterCollapserButtonPrivate::isVertical() const
 {
     return (splitter->orientation() == Qt::Vertical);
 }
 
-bool KSplitterCollapserButton::Private::isWidgetCollapsed() const
+bool KSplitterCollapserButtonPrivate::isWidgetCollapsed() const
 {
     const QRect widgetRect = childWidget->geometry();
     if ((widgetRect.height() == 0) || (widgetRect.width() == 0)) {
@@ -88,7 +88,7 @@ bool KSplitterCollapserButton::Private::isWidgetCollapsed() const
     }
 }
 
-void KSplitterCollapserButton::Private::updatePosition()
+void KSplitterCollapserButtonPrivate::updatePosition()
 {
     int x = 0;
     int y = 0;
@@ -134,12 +134,12 @@ void KSplitterCollapserButton::Private::updatePosition()
     q->move(x, y);
 }
 
-void KSplitterCollapserButton::Private::updateArrow()
+void KSplitterCollapserButtonPrivate::updateArrow()
 {
     q->setArrowType(isWidgetCollapsed() ?  s_arrowDirection[direction].notArrowVisible : s_arrowDirection[direction].arrowVisible);
 }
 
-void KSplitterCollapserButton::Private::widgetEventFilter(QEvent *event)
+void KSplitterCollapserButtonPrivate::widgetEventFilter(QEvent *event)
 {
     switch (event->type()) {
     case QEvent::Resize:
@@ -156,7 +156,7 @@ void KSplitterCollapserButton::Private::widgetEventFilter(QEvent *event)
     }
 }
 
-void KSplitterCollapserButton::Private::updateOpacity()
+void KSplitterCollapserButtonPrivate::updateOpacity()
 {
     const QPoint pos = q->parentWidget()->mapFromGlobal(QCursor::pos());
     const QRect opaqueRect = q->geometry();
@@ -170,7 +170,7 @@ void KSplitterCollapserButton::Private::updateOpacity()
     }
 }
 
-void KSplitterCollapserButton::Private::startTimeLine()
+void KSplitterCollapserButtonPrivate::startTimeLine()
 {
     if (opacityTimeLine->state() == QTimeLine::Running) {
         opacityTimeLine->stop();
@@ -180,7 +180,7 @@ void KSplitterCollapserButton::Private::startTimeLine()
 
 KSplitterCollapserButton::KSplitterCollapserButton(QWidget *childWidget, QSplitter *splitter)
     : QToolButton(),
-      d(new Private(this))
+      d(new KSplitterCollapserButtonPrivate(this))
 {
     setObjectName(QStringLiteral("splittercollapser"));
     // We do not want our collapser to be added as a regular widget in the

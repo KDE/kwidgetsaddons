@@ -17,10 +17,10 @@
 
 #include <kpixmapregionselectorwidget.h>
 
-class Q_DECL_HIDDEN KPixmapRegionSelectorDialog::Private
+class KPixmapRegionSelectorDialogPrivate
 {
 public:
-    Private(KPixmapRegionSelectorDialog *parent)
+    KPixmapRegionSelectorDialogPrivate(KPixmapRegionSelectorDialog *parent)
         : q(parent)
     {
     }
@@ -51,7 +51,7 @@ public:
 
 KPixmapRegionSelectorDialog::KPixmapRegionSelectorDialog(QWidget *parent)
     : QDialog(parent),
-      d(new Private(this))
+      d(new KPixmapRegionSelectorDialogPrivate(this))
 {
     setWindowTitle(tr("Select Region of Image", "@title:window"));
 

@@ -333,7 +333,6 @@ private:
     Q_PRIVATE_SLOT(d, void updateFields())
 
 private:
-    class KPasswordDialogPrivate;
     friend class KPasswordDialogPrivate;
     std::unique_ptr<class KPasswordDialogPrivate> const d;
 

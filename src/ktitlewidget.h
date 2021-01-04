@@ -279,8 +279,7 @@ protected:
     bool eventFilter(QObject *object, QEvent *event) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KTitleWidgetPrivate> const d;
 
     Q_DISABLE_COPY(KTitleWidget)
 };

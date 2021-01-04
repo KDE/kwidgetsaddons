@@ -24,13 +24,11 @@ static const int LightShade = 100;
 static const int MidShade = 200;
 static const int DarkShade = 300;
 
-class Q_DECL_HIDDEN KCapacityBar::Private
+class KCapacityBarPrivate
 {
 public:
-    Private(KCapacityBar::DrawTextMode drawTextMode)
+    KCapacityBarPrivate(KCapacityBar::DrawTextMode drawTextMode)
         : drawTextMode(drawTextMode) {}
-
-    ~Private() {}
 
     QString text;
     int value = 0;
@@ -50,7 +48,7 @@ KCapacityBar::KCapacityBar(QWidget *parent)
 
 KCapacityBar::KCapacityBar(KCapacityBar::DrawTextMode drawTextMode, QWidget *parent)
     : QWidget(parent)
-    , d(new Private(drawTextMode))
+    , d(new KCapacityBarPrivate(drawTextMode))
 {
     d->ce_capacityBar = KStyleExtensions::customControlElement(QStringLiteral("CE_CapacityBar"), this);
 }

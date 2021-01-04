@@ -71,9 +71,9 @@ protected:
     void enterEvent(QEvent *event) override;
     void leaveEvent(QEvent *event) override;
     void showEvent(QShowEvent *event) override;
+
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KSplitterCollapserButtonPrivate> const d;
 };
 
 #endif /* KSPLITTERCOLLAPSERBUTTON_H */

@@ -13,7 +13,7 @@
 #include <QIcon>
 #include <QMouseEvent>
 
-class Q_DECL_HIDDEN KRatingWidget::Private
+class KRatingWidgetPrivate
 {
 public:
     int rating = 0;
@@ -25,7 +25,7 @@ public:
 
 KRatingWidget::KRatingWidget(QWidget *parent)
     : QFrame(parent),
-      d(new Private())
+      d(new KRatingWidgetPrivate())
 {
     setMouseTracking(true);
 }

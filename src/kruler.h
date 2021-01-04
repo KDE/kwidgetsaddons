@@ -384,7 +384,6 @@ private:
     void initWidget(Qt::Orientation orientation);
 
 private:
-    class KRulerPrivate;
     std::unique_ptr<class KRulerPrivate> const d;
 };
 

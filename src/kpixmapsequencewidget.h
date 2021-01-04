@@ -77,8 +77,7 @@ public Q_SLOTS:
     void setInterval(int msecs);
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KPixmapSequenceWidgetPrivate> const d;
 };
 
 #endif

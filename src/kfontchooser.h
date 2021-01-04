@@ -259,8 +259,7 @@ Q_SIGNALS:
     void fontSelected(const QFont &font);
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KFontChooserPrivate> const d;
 
     Q_DISABLE_COPY(KFontChooser)
 

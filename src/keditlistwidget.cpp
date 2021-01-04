@@ -163,10 +163,10 @@ QModelIndex KEditListWidgetPrivate::selectedIndex()
     }
 }
 
-class Q_DECL_HIDDEN KEditListWidget::CustomEditorPrivate
+class KEditListWidgetCustomEditorPrivate
 {
 public:
-    CustomEditorPrivate(KEditListWidget::CustomEditor *q):
+    KEditListWidgetCustomEditorPrivate(KEditListWidget::CustomEditor *q):
         q(q),
         representationWidget(nullptr),
         lineEdit(nullptr) {}
@@ -177,19 +177,19 @@ public:
 };
 
 KEditListWidget::CustomEditor::CustomEditor()
-    : d(new CustomEditorPrivate(this))
+    : d(new KEditListWidgetCustomEditorPrivate(this))
 {
 }
 
 KEditListWidget::CustomEditor::CustomEditor(QWidget *repWidget, QLineEdit *edit)
-    : d(new CustomEditorPrivate(this))
+    : d(new KEditListWidgetCustomEditorPrivate(this))
 {
     d->representationWidget = repWidget;
     d->lineEdit = edit;
 }
 
 KEditListWidget::CustomEditor::CustomEditor(QComboBox *combo)
-    : d(new CustomEditorPrivate(this))
+    : d(new KEditListWidgetCustomEditorPrivate(this))
 {
     d->representationWidget = combo;
     d->lineEdit = qobject_cast<QLineEdit *>(combo->lineEdit());

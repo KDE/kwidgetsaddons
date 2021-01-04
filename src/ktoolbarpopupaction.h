@@ -158,8 +158,7 @@ public:
     QWidget *createWidget(QWidget *parent) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KToolBarPopupActionPrivate> const d;
 };
 
 #endif

@@ -141,9 +141,8 @@ protected:
     bool eventFilter(QObject *obj, QEvent *ev) override;
 
 private:
-    class Private;
-    friend class Private;
-    std::unique_ptr<class Private> const d;
+    friend class KPixmapRegionSelectorWidgetPrivate;
+    std::unique_ptr<class KPixmapRegionSelectorWidgetPrivate> const d;
 
     Q_DISABLE_COPY(KPixmapRegionSelectorWidget)
 };

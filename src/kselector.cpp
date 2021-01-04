@@ -21,14 +21,14 @@
 
 #define ARROWSIZE 5
 
-class Q_DECL_HIDDEN KSelector::Private
+class KSelectorPrivate
 {
 public:
     bool m_indent = true;
     QStyle::PrimitiveElement arrowPE = QStyle::PE_IndicatorArrowLeft;
 };
 
-class Q_DECL_HIDDEN KGradientSelector::KGradientSelectorPrivate
+class KGradientSelectorPrivate
 {
 public:
     KGradientSelectorPrivate(KGradientSelector *q): q(q) {}
@@ -41,14 +41,14 @@ public:
 
 KSelector::KSelector(QWidget *parent)
     : QAbstractSlider(parent)
-    , d(new Private)
+    , d(new KSelectorPrivate)
 {
     setOrientation(Qt::Horizontal);
 }
 
 KSelector::KSelector(Qt::Orientation o, QWidget *parent)
     : QAbstractSlider(parent)
-    , d(new Private)
+    , d(new KSelectorPrivate)
 {
     setOrientation(o);
     if (o == Qt::Horizontal) {

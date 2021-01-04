@@ -202,8 +202,7 @@ public:
     static int getRatingFromPosition(const QRect &rect, Qt::Alignment align, Qt::LayoutDirection direction, const QPoint &pos);
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KRatingPainterPrivate> const d;
 };
 
 #endif

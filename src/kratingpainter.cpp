@@ -13,7 +13,7 @@
 #include <QRect>
 #include <QPoint>
 
-class Q_DECL_HIDDEN KRatingPainter::Private
+class KRatingPainterPrivate
 {
 public:
     QPixmap getPixmap(int size, QIcon::State state = QIcon::On);
@@ -30,7 +30,7 @@ public:
 
 static void _k_imageToGrayScale(QImage &img, float value);
 
-QPixmap KRatingPainter::Private::getPixmap(int size, QIcon::State state)
+QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
 {
     bool toGray = (state == QIcon::Off);
     QPixmap p;
@@ -61,7 +61,7 @@ QPixmap KRatingPainter::Private::getPixmap(int size, QIcon::State state)
 }
 
 KRatingPainter::KRatingPainter()
-    : d(new Private())
+    : d(new KRatingPainterPrivate())
 {
 }
 

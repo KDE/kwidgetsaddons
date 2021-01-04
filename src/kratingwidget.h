@@ -201,8 +201,7 @@ protected:
     void resizeEvent(QResizeEvent *e) override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KRatingWidgetPrivate> const d;
 };
 
 #endif

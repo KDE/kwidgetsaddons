@@ -20,7 +20,7 @@
 #include <QMouseEvent>
 #include <QStyleOptionButton>
 
-class Q_DECL_HIDDEN KColorButton::KColorButtonPrivate
+class KColorButtonPrivate
 {
 public:
     KColorButtonPrivate(KColorButton *q);
@@ -93,14 +93,14 @@ QDrag *_k_createDrag(const QColor &color, QObject *dragsource)
 }
 /////////////////////////////////////////////////////////////////////
 
-KColorButton::KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
+KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
     : q(q)
 {
     m_bdefaultColor = false;
     m_alphaChannel = false;
     q->setAcceptDrops(true);
 
-    connect(q, &KColorButton::clicked, q, [this]() { _k_chooseColor(); });
+    QObject::connect(q, &KColorButton::clicked, q, [this]() { _k_chooseColor(); });
 }
 
 KColorButton::KColorButton(QWidget *parent)
@@ -161,7 +161,7 @@ void KColorButton::setDefaultColor(const QColor &c)
     d->m_defaultColor = c;
 }
 
-void KColorButton::KColorButtonPrivate::initStyleOption(QStyleOptionButton *opt) const
+void KColorButtonPrivate::initStyleOption(QStyleOptionButton *opt) const
 {
     opt->initFrom(q);
     opt->state |= q->isDown() ? QStyle::State_Sunken : QStyle::State_Raised;
@@ -282,7 +282,7 @@ void KColorButton::mouseMoveEvent(QMouseEvent *e)
     }
 }
 
-void KColorButton::KColorButtonPrivate::_k_chooseColor()
+void KColorButtonPrivate::_k_chooseColor()
 {
     QColorDialog *dialog = dialogPtr.data();
     if (dialog) {
@@ -296,12 +296,12 @@ void KColorButton::KColorButtonPrivate::_k_chooseColor()
     dialog->setCurrentColor(q->color());
     dialog->setOption(QColorDialog::ShowAlphaChannel, m_alphaChannel);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    connect(dialog, SIGNAL(accepted()), q, SLOT(_k_colorChosen()));
+    QObject::connect(dialog, SIGNAL(accepted()), q, SLOT(_k_colorChosen()));
     dialogPtr = dialog;
     dialog->show();
 }
 
-void KColorButton::KColorButtonPrivate::_k_colorChosen()
+void KColorButtonPrivate::_k_colorChosen()
 {
     QColorDialog *dialog = dialogPtr.data();
     if (!dialog) {

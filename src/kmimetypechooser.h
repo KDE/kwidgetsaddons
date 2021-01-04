@@ -161,7 +161,6 @@ public:
     QSize sizeHint() const override;
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KMimeTypeChooserDialogPrivate> const d;
 };
 #endif // _KMIMETYPE_CHOOSER_H_

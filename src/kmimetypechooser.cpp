@@ -319,12 +319,12 @@ QStringList KMimeTypeChooser::patterns() const
 }
 //END
 
-//BEGIN KMimeTypeChooserDialog::Private
+//BEGIN KMimeTypeChooserDialogPrivate
 
-class Q_DECL_HIDDEN KMimeTypeChooserDialog::Private
+class KMimeTypeChooserDialogPrivate
 {
 public:
-    Private(KMimeTypeChooserDialog *parent)
+    KMimeTypeChooserDialogPrivate(KMimeTypeChooserDialog *parent)
         : q(parent)
     {
     }
@@ -346,7 +346,8 @@ KMimeTypeChooserDialog::KMimeTypeChooserDialog(
     const QStringList &groupsToShow,
     int visuals,
     QWidget *parent)
-    : QDialog(parent), d(new Private(this))
+    : QDialog(parent)
+    , d(new KMimeTypeChooserDialogPrivate(this))
 {
     setWindowTitle(title);
 
@@ -362,7 +363,8 @@ KMimeTypeChooserDialog::KMimeTypeChooserDialog(
     const QStringList &selMimeTypes,
     const QString &defaultGroup,
     QWidget *parent)
-    : QDialog(parent), d(new Private(this))
+    : QDialog(parent)
+    , d(new KMimeTypeChooserDialogPrivate(this))
 {
     setWindowTitle(title);
 
@@ -378,7 +380,7 @@ KMimeTypeChooser *KMimeTypeChooserDialog::chooser()
     return d->m_chooser;
 }
 
-void KMimeTypeChooserDialog::Private::init()
+void KMimeTypeChooserDialogPrivate::init()
 {
     QVBoxLayout *layout = new QVBoxLayout(q);
 

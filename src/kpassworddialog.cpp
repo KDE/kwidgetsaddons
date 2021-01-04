@@ -22,7 +22,7 @@
 #include "ui_kpassworddialog.h"
 
 /** @internal */
-class Q_DECL_HIDDEN KPasswordDialog::KPasswordDialogPrivate
+class KPasswordDialogPrivate
 {
 public:
     KPasswordDialogPrivate(KPasswordDialog *q)
@@ -40,7 +40,7 @@ public:
     QMap<QString, QString> knownLogins;
     QComboBox *userEditCombo = nullptr;
     QIcon icon;
-    KPasswordDialogFlags m_flags;
+    KPasswordDialog::KPasswordDialogFlags m_flags;
     unsigned int commentRow = 0;
 };
 
@@ -56,7 +56,7 @@ KPasswordDialog::KPasswordDialog(QWidget *parent,
 
 KPasswordDialog::~KPasswordDialog() = default;
 
-void KPasswordDialog::KPasswordDialogPrivate::updateFields()
+void KPasswordDialogPrivate::updateFields()
 {
     if (m_flags & KPasswordDialog::UsernameReadOnly) {
         ui.userEdit->setReadOnly(true);
@@ -66,7 +66,7 @@ void KPasswordDialog::KPasswordDialogPrivate::updateFields()
     ui.credentialsGroup->setEnabled(!q->anonymousMode());
 }
 
-void KPasswordDialog::KPasswordDialogPrivate::init()
+void KPasswordDialogPrivate::init()
 {
     ui.setupUi(q);
     ui.buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -79,7 +79,7 @@ void KPasswordDialog::KPasswordDialogPrivate::init()
     const QString description = QApplication::translate("KPasswordDialog", "Show Contextual Help");
     ui.userEditContextHelpButton->setAccessibleName(description);
     ui.userEditContextHelpButton->setToolTip(description);
-    connect(ui.userEditContextHelpButton, &QPushButton::released, q, [this] {
+    QObject::connect(ui.userEditContextHelpButton, &QPushButton::released, q, [this] {
         QEvent ev(QEvent::WhatsThis);
         qApp->sendEvent(ui.userEdit, &ev);
     });
@@ -370,7 +370,7 @@ void KPasswordDialog::setKnownLogins(const QMap<QString, QString> &knownLogins)
             this, SLOT(activated(QString)));
 }
 
-void KPasswordDialog::KPasswordDialogPrivate::activated(const QString &userName)
+void KPasswordDialogPrivate::activated(const QString &userName)
 {
     QMap<QString, QString>::ConstIterator it = knownLogins.constFind(userName);
     if (it != knownLogins.constEnd()) {
@@ -395,7 +395,7 @@ void KPasswordDialog::accept()
     QTimer::singleShot(0, this, [this] { d->actuallyAccept(); });
 }
 
-void KPasswordDialog::KPasswordDialogPrivate::actuallyAccept()
+void KPasswordDialogPrivate::actuallyAccept()
 {
     if (!q->checkPassword()) {
         return;

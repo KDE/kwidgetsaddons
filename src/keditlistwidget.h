@@ -21,7 +21,6 @@ class QListView;
 class QPushButton;
 class QItemSelection;
 
-class KEditListWidgetPrivate;
 /**
  * @class KEditListWidget keditlistwidget.h KEditListWidget
  *
@@ -45,8 +44,6 @@ class KWIDGETSADDONS_EXPORT KEditListWidget : public QWidget
     Q_PROPERTY(bool checkAtEntering READ checkAtEntering WRITE setCheckAtEntering)
 
 public:
-    class CustomEditorPrivate;
-
     /**
      * Custom editor class
      */
@@ -65,8 +62,8 @@ public:
         virtual QLineEdit *lineEdit() const;
 
     private:
-        friend class CustomEditorPrivate;
-        std::unique_ptr<class CustomEditorPrivate> const d;
+        friend class KEditListWidgetCustomEditorPrivate;
+        std::unique_ptr<class KEditListWidgetCustomEditorPrivate> const d;
 
         Q_DISABLE_COPY(CustomEditor)
     };

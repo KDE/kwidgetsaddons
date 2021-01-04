@@ -59,7 +59,7 @@
 # include <qdatetime.h>
 #endif
 
-class Q_DECL_HIDDEN KRuler::KRulerPrivate
+class KRulerPrivate
 {
 public:
     int  endOffset_length;  /* marks the offset at the end of the ruler

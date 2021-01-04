@@ -88,7 +88,6 @@ Q_SIGNALS:
     void leaveModality();
 
 private:
-    class KPopupFramePrivate;
     friend class KPopupFramePrivate;
     std::unique_ptr<class KPopupFramePrivate> const d;
 

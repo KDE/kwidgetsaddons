@@ -15,15 +15,15 @@
 
 #include <QIcon>
 
-class Q_DECL_HIDDEN KPageWidgetItem::Private
+class KPageWidgetItemPrivate
 {
 public:
-    Private()
+    KPageWidgetItemPrivate()
         : checkable(false), checked(false), enabled(true), headerVisible(true)
     {
     }
 
-    ~Private()
+    ~KPageWidgetItemPrivate()
     {
         delete widget;
         widget = nullptr;
@@ -40,7 +40,8 @@ public:
 };
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget)
-    : QObject(nullptr), d(new Private)
+    : QObject(nullptr)
+    , d(new KPageWidgetItemPrivate)
 {
     d->widget = widget;
 
@@ -53,7 +54,8 @@ KPageWidgetItem::KPageWidgetItem(QWidget *widget)
 }
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget, const QString &name)
-    : QObject(nullptr), d(new Private)
+    : QObject(nullptr)
+    , d(new KPageWidgetItemPrivate)
 {
     d->widget = widget;
     d->name = name;

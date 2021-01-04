@@ -12,7 +12,7 @@
 #include <QLabel>
 #include <QToolBar>
 
-class Q_DECL_HIDDEN KToolBarLabelAction::Private
+class KToolBarLabelActionPrivate
 {
 public:
     QPointer<QAction> buddy;
@@ -21,7 +21,7 @@ public:
 
 KToolBarLabelAction::KToolBarLabelAction(const QString &text, QObject *parent)
     : QWidgetAction(parent),
-      d(new Private)
+      d(new KToolBarLabelActionPrivate)
 {
     setText(text);
     d->label = nullptr;
@@ -29,7 +29,7 @@ KToolBarLabelAction::KToolBarLabelAction(const QString &text, QObject *parent)
 
 KToolBarLabelAction::KToolBarLabelAction(QAction *buddy, const QString &text, QObject *parent)
     : QWidgetAction(parent),
-      d(new Private)
+      d(new KToolBarLabelActionPrivate)
 {
     setBuddy(buddy);
     setText(text);

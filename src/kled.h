@@ -242,8 +242,7 @@ private:
     void updateAccessibleName();
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KLedPrivate> const d;
 };
 
 #endif

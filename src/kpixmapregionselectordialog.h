@@ -104,8 +104,7 @@ public:
     void adjustRegionSelectorWidgetSizeToFitScreen();
 
 private:
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KPixmapRegionSelectorDialogPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_adjustPixmapSize())
 

@@ -8,7 +8,7 @@
 #include "kpixmapsequenceoverlaypainter.h"
 #include "kpixmapsequence.h"
 
-class Q_DECL_HIDDEN KPixmapSequenceWidget::Private
+class KPixmapSequenceWidgetPrivate
 {
 public:
     KPixmapSequenceOverlayPainter *m_painter = nullptr;
@@ -16,7 +16,7 @@ public:
 
 KPixmapSequenceWidget::KPixmapSequenceWidget(QWidget *parent)
     : QWidget(parent),
-      d(new Private)
+      d(new KPixmapSequenceWidgetPrivate)
 {
     d->m_painter = new KPixmapSequenceOverlayPainter(this);
     d->m_painter->setWidget(this);
@@ -24,7 +24,7 @@ KPixmapSequenceWidget::KPixmapSequenceWidget(QWidget *parent)
 
 KPixmapSequenceWidget::KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent)
     : QWidget(parent),
-      d(new Private)
+      d(new KPixmapSequenceWidgetPrivate)
 {
     d->m_painter = new KPixmapSequenceOverlayPainter(seq);
     d->m_painter->setWidget(this);

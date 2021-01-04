@@ -219,8 +219,7 @@ private:
     /**
      * @internal
      */
-    class Private;
-    std::unique_ptr<class Private> const d;
+    std::unique_ptr<class KCapacityBarPrivate> const d;
 };
 
 #endif

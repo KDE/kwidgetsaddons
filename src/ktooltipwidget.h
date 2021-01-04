@@ -105,7 +105,6 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
 private:
-    class KToolTipWidgetPrivate;
     std::unique_ptr<class KToolTipWidgetPrivate> const d;
 
     Q_DISABLE_COPY(KToolTipWidget)

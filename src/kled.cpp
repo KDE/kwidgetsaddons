@@ -13,21 +13,21 @@
 #include <QStyle>
 #include <QStyleOption>
 
-class Q_DECL_HIDDEN KLed::Private
+class KLedPrivate
 {
 public:
     int darkFactor = 300;
     QColor color;
-    State state = On;
-    Look look = Raised;
-    Shape shape = Circular;
+    KLed::State state = KLed::On;
+    KLed::Look look = KLed::Raised;
+    KLed::Shape shape = KLed::Circular;
 
     QPixmap cachedPixmap[2]; // for both states
 };
 
 KLed::KLed(QWidget *parent)
     : QWidget(parent),
-      d(new Private)
+      d(new KLedPrivate)
 {
     setColor(Qt::green);
     updateAccessibleName();
@@ -35,7 +35,7 @@ KLed::KLed(QWidget *parent)
 
 KLed::KLed(const QColor &color, QWidget *parent)
     : QWidget(parent),
-      d(new Private)
+      d(new KLedPrivate)
 {
     setColor(color);
     updateAccessibleName();
@@ -44,7 +44,7 @@ KLed::KLed(const QColor &color, QWidget *parent)
 KLed::KLed(const QColor &color, State state, Look look, Shape shape,
            QWidget *parent)
     : QWidget(parent),
-      d(new Private)
+      d(new KLedPrivate)
 {
     d->state = (state == Off ? Off : On);
     d->look = look;

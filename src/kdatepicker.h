@@ -164,7 +164,6 @@ private:
     void initWidget(const QDate &date);
 
 private:
-    class KDatePickerPrivate;
     friend class KDatePickerPrivate;
     std::unique_ptr<class KDatePickerPrivate> const d;
 };

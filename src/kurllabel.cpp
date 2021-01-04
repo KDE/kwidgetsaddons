@@ -11,10 +11,10 @@
 #include <QMouseEvent>
 #include <QPalette>
 
-class Q_DECL_HIDDEN KUrlLabel::Private
+class KUrlLabelPrivate
 {
 public:
-    Private(const QString &_url, KUrlLabel *_parent)
+    KUrlLabelPrivate(const QString &_url, KUrlLabel *_parent)
         : parent(_parent),
           url(_url),
           tipText(url),
@@ -29,11 +29,7 @@ public:
           floatEnabled(false),
           timer(new QTimer(parent))
     {
-        connect(timer, &QTimer::timeout, parent, [this]() { updateColor(); });
-    }
-
-    ~Private()
-    {
+        QObject::connect(timer, &QTimer::timeout, parent, [this]() { updateColor(); });
     }
 
     void updateColor()
@@ -74,7 +70,7 @@ public:
 
 KUrlLabel::KUrlLabel(const QString &url, const QString &text, QWidget *parent)
     : QLabel(!text.isNull() ? text : url, parent),
-      d(new Private(url, this))
+      d(new KUrlLabelPrivate(url, this))
 {
     setFont(font());
     setCursor(QCursor(Qt::PointingHandCursor));
@@ -83,7 +79,7 @@ KUrlLabel::KUrlLabel(const QString &url, const QString &text, QWidget *parent)
 
 KUrlLabel::KUrlLabel(QWidget *parent)
     : QLabel(parent),
-      d(new Private(QString(), this))
+      d(new KUrlLabelPrivate(QString(), this))
 {
     setFont(font());
     setCursor(QCursor(Qt::PointingHandCursor));

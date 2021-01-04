@@ -14,11 +14,14 @@
 #include <QFontDatabase>
 #include <QFontInfo>
 #include <QHBoxLayout>
+#include <QCoreApplication>
 
 #include <cmath>
 
-class Q_DECL_HIDDEN KFontRequester::KFontRequesterPrivate
+class KFontRequesterPrivate
 {
+    Q_DECLARE_TR_FUNCTIONS(KFontRequester)
+
 public:
     KFontRequesterPrivate(KFontRequester *q): q(q) {}
 
@@ -112,7 +115,7 @@ void KFontRequester::setTitle(const QString &title)
     d->setToolTip();
 }
 
-void KFontRequester::KFontRequesterPrivate::_k_buttonClicked()
+void KFontRequesterPrivate::_k_buttonClicked()
 {
     KFontChooser::DisplayFlags flags = m_onlyFixed ? KFontChooser::FixedFontsOnly
                                                      : KFontChooser::NoDisplayFlags;
@@ -125,7 +128,7 @@ void KFontRequester::KFontRequesterPrivate::_k_buttonClicked()
     }
 }
 
-void KFontRequester::KFontRequesterPrivate::displaySampleText()
+void KFontRequesterPrivate::displaySampleText()
 {
     m_sampleLabel->setFont(m_selFont);
 
@@ -142,7 +145,7 @@ void KFontRequester::KFontRequesterPrivate::displaySampleText()
     }
 }
 
-void KFontRequester::KFontRequesterPrivate::setToolTip()
+void KFontRequesterPrivate::setToolTip()
 {
     m_button->setToolTip(tr("Choose font...", "@info:tooltip"));
 

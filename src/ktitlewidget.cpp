@@ -18,15 +18,15 @@
 #include <QIcon>
 #include <QStyle>
 
-class Q_DECL_HIDDEN KTitleWidget::Private
+class KTitleWidgetPrivate
 {
 public:
-    Private(KTitleWidget *parent)
+    KTitleWidgetPrivate(KTitleWidget *parent)
         : q(parent)
           // use Left so updateIconAlignment(ImageRight) as called by constructor triggers the default layout
         , iconAlignment(KTitleWidget::ImageLeft)
         , autoHideTimeout(0)
-        , messageType(InfoMessage)
+        , messageType(KTitleWidget::InfoMessage)
     {
     }
 
@@ -61,12 +61,12 @@ public:
         //       yet palette appropriate colours for the different use cases!
         //       also .. should we include an icon here,
         //       perhaps using the imageLabel?
-        case InfoMessage:
-        case WarningMessage:
-        case ErrorMessage:
+        case KTitleWidget::InfoMessage:
+        case KTitleWidget::WarningMessage:
+        case KTitleWidget::ErrorMessage:
             styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }").arg(q->palette().color(QPalette::HighlightedText).name(), q->palette().color(QPalette::Highlight).name());
             break;
-        case PlainMessage:
+        case KTitleWidget::PlainMessage:
         default:
             break;
         }
@@ -85,7 +85,7 @@ public:
         headerLayout->removeWidget(commentLabel);
         headerLayout->removeWidget(imageLabel);
 
-        if (iconAlignment == ImageLeft) {
+        if (iconAlignment == KTitleWidget::ImageLeft) {
             // swap the text and image labels around
             headerLayout->addWidget(imageLabel, 0, 0, 2, 1);
             headerLayout->addWidget(textLabel, 0, 1);
@@ -117,7 +117,7 @@ public:
     QSize iconSize;
     KTitleWidget::ImageAlignment iconAlignment;
     int autoHideTimeout;
-    MessageType messageType;
+    KTitleWidget::MessageType messageType;
 
     /**
      * @brief Get the icon name from the icon type
@@ -132,7 +132,7 @@ public:
     }
 };
 
-QString KTitleWidget::Private::iconTypeToIconName(KTitleWidget::MessageType type)
+QString KTitleWidgetPrivate::iconTypeToIconName(KTitleWidget::MessageType type)
 {
     switch (type) {
     case KTitleWidget::InfoMessage:
@@ -150,7 +150,7 @@ QString KTitleWidget::Private::iconTypeToIconName(KTitleWidget::MessageType type
 
 KTitleWidget::KTitleWidget(QWidget *parent)
     : QWidget(parent),
-      d(new Private(this))
+      d(new KTitleWidgetPrivate(this))
 {
     QFrame *titleFrame = new QFrame(this);
     titleFrame->setAutoFillBackground(true);

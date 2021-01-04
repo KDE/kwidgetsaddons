@@ -257,7 +257,6 @@ Q_SIGNALS:
     void newPassword(const QString &password);
 
 private:
-    class KNewPasswordDialogPrivate;
     std::unique_ptr<class KNewPasswordDialogPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void _k_passwordStatusChanged())
