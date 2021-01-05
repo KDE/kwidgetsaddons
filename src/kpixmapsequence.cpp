@@ -12,7 +12,7 @@
 #include <QPixmap>
 #include <QVector>
 
-class Q_DECL_HIDDEN KPixmapSequence::Private : public QSharedData
+class KPixmapSequencePrivate : public QSharedData
 {
 public:
     QVector<QPixmap> mFrames;
@@ -20,7 +20,7 @@ public:
     void loadSequence(const QPixmap &bigPixmap, const QSize &frameSize);
 };
 
-void KPixmapSequence::Private::loadSequence(const QPixmap &bigPixmap, const QSize &frameSize)
+void KPixmapSequencePrivate::loadSequence(const QPixmap &bigPixmap, const QSize &frameSize)
 {
     if (bigPixmap.isNull()) {
         qCWarning(KWidgetsAddonsLog) << "Invalid pixmap specified.";
@@ -51,7 +51,7 @@ void KPixmapSequence::Private::loadSequence(const QPixmap &bigPixmap, const QSiz
 }
 
 KPixmapSequence::KPixmapSequence()
-    : d(new Private)
+    : d(new KPixmapSequencePrivate)
 {
 }
 
@@ -61,13 +61,13 @@ KPixmapSequence::KPixmapSequence(const KPixmapSequence &other)
 }
 
 KPixmapSequence::KPixmapSequence(const QPixmap &bigPixmap, const QSize &frameSize)
-    : d(new Private)
+    : d(new KPixmapSequencePrivate)
 {
     d->loadSequence(bigPixmap, frameSize);
 }
 
 KPixmapSequence::KPixmapSequence(const QString &fullPath, int size)
-    : d(new Private)
+    : d(new KPixmapSequencePrivate)
 {
     d->loadSequence(QPixmap(fullPath), QSize(size, size));
 }

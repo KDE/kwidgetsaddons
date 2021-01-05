@@ -101,8 +101,7 @@ public:
     QPixmap frameAt(int index) const;
 
 private:
-    class Private;
-    QSharedDataPointer<Private> d;
+    QSharedDataPointer<class KPixmapSequencePrivate> d;
 };
 
 #endif
