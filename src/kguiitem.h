@@ -16,6 +16,7 @@
 
 #include <QIcon>
 #include <QString>
+#include <QSharedDataPointer>
 
 class QPushButton;
 
@@ -194,8 +195,7 @@ public:
     static void assign(QPushButton *button, const KGuiItem &item);
 
 private:
-    class KGuiItemPrivate;
-    KGuiItemPrivate *d; //krazy:exclude=dpointer (implicitly shared)
+    QSharedDataPointer<class KGuiItemPrivate> d;
 };
 
 #endif

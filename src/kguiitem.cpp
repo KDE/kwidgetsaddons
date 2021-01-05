@@ -11,8 +11,10 @@
 #include "kguiitem.h"
 
 #include <QPushButton>
+#include <QSharedData>
 
-class Q_DECL_HIDDEN KGuiItem::KGuiItemPrivate
+
+class KGuiItemPrivate : public QSharedData
 {
 public:
     KGuiItemPrivate()
@@ -21,24 +23,9 @@ public:
         m_hasIcon = false;
     }
 
-    KGuiItemPrivate(const KGuiItemPrivate &other)
-    {
-        (*this) = other;
-    }
+    KGuiItemPrivate(const KGuiItemPrivate &other) = default;
 
-    KGuiItemPrivate &operator=(const KGuiItemPrivate &other)
-    {
-        m_text = other.m_text;
-        m_icon = other.m_icon;
-        m_iconName = other.m_iconName;
-        m_toolTip = other.m_toolTip;
-        m_whatsThis = other.m_whatsThis;
-        m_statusText = other.m_statusText;
-        m_enabled = other.m_enabled;
-        m_hasIcon = other.m_hasIcon;
-
-        return *this;
-    }
+    KGuiItemPrivate &operator=(const KGuiItemPrivate &other) = default;
 
     QString m_text;
     QString m_toolTip;
@@ -51,14 +38,14 @@ public:
 };
 
 KGuiItem::KGuiItem()
+    : d(new KGuiItemPrivate)
 {
-    d = new KGuiItemPrivate;
 }
 
 KGuiItem::KGuiItem(const QString &text,    const QString &iconName,
                    const QString &toolTip, const QString &whatsThis)
+    : d(new KGuiItemPrivate)
 {
-    d = new KGuiItemPrivate;
     d->m_text = text;
     d->m_toolTip = toolTip;
     d->m_whatsThis = whatsThis;
@@ -67,38 +54,19 @@ KGuiItem::KGuiItem(const QString &text,    const QString &iconName,
 
 KGuiItem::KGuiItem(const QString &text,    const QIcon &icon,
                    const QString &toolTip, const QString &whatsThis)
+    : d(new KGuiItemPrivate)
 {
-    d = new KGuiItemPrivate;
     d->m_text = text;
     d->m_toolTip = toolTip;
     d->m_whatsThis = whatsThis;
     setIcon(icon);
 }
 
-KGuiItem::KGuiItem(const KGuiItem &rhs)
-    : d(nullptr)
-{
-    (*this) = rhs;
-}
+KGuiItem::KGuiItem(const KGuiItem &rhs) = default;
 
-KGuiItem &KGuiItem::operator=(const KGuiItem &rhs)
-{
-    if (d == rhs.d) {
-        return *this;
-    }
+KGuiItem &KGuiItem::operator=(const KGuiItem &rhs) = default;
 
-    Q_ASSERT(rhs.d);
-
-    delete d;
-    d = new KGuiItemPrivate(*rhs.d);
-
-    return *this;
-}
-
-KGuiItem::~KGuiItem()
-{
-    delete d;
-}
+KGuiItem::~KGuiItem() = default;
 
 QString KGuiItem::text() const
 {
