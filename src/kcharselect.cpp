@@ -49,6 +49,8 @@ public:
 
 class KCharSelectPrivate
 {
+    Q_DECLARE_TR_FUNCTIONS(KCharSelect)
+
 public:
     struct HistoryItem {
         uint c;
@@ -61,11 +63,6 @@ public:
     KCharSelectPrivate(KCharSelect *q)
         : q(q)
     {
-    }
-
-    QString tr(const char *str)
-    {
-        return KCharSelect::tr(str);
     }
 
     KCharSelect *const q;
