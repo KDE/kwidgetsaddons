@@ -138,9 +138,8 @@ protected:
 private:
     Q_DECLARE_PRIVATE(KAssistantDialog)
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
-    // Unused, kept for ABI compatibility, not renamed for source compatibility
-    // Make sure to use Q_D(KAssistantDialog) in any methods
-    const void * d;
+    // Unused, kept for ABI compatibility
+    const void * __kwidgetsaddons_d_do_not_use;
 #endif
 
     Q_PRIVATE_SLOT(d_func(), void _k_slotUpdateButtons())
