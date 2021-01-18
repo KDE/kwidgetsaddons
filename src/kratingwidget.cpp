@@ -122,8 +122,8 @@ void KRatingWidget::setRating(int rating)
     if (rating != d->rating) {
         d->rating = rating;
         d->hoverRating = rating;
-        emit ratingChanged(rating);
-        emit ratingChanged((unsigned int)rating);
+        Q_EMIT ratingChanged(rating);
+        Q_EMIT ratingChanged((unsigned int)rating);
         update();
     }
 }

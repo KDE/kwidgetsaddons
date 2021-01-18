@@ -209,7 +209,7 @@ void KCharSelectTablePrivate::_k_slotSelectionChanged(const QItemSelection &sele
     }
     uint c = temp.toUInt();
     chr = c;
-    emit q->focusItemChanged(c);
+    Q_EMIT q->focusItemChanged(c);
 }
 
 void KCharSelectTable::resizeEvent(QResizeEvent *e)
@@ -303,7 +303,7 @@ void KCharSelectTablePrivate::_k_doubleClicked(const QModelIndex &index)
 {
     uint c = model->data(index, KCharSelectItemModel::CharacterRole).toUInt();
     if (s_data()->isPrint(c)) {
-        emit q->activated(c);
+        Q_EMIT q->activated(c);
     }
 }
 
@@ -312,7 +312,7 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
     if (d->model) {
         switch (e->key()) {
         case Qt::Key_Space:
-            emit activated(QChar::Space);
+            Q_EMIT activated(QChar::Space);
             return;
         case Qt::Key_Enter:
         case Qt::Key_Return: {
@@ -321,7 +321,7 @@ void KCharSelectTable::keyPressEvent(QKeyEvent *e)
             }
             uint c = d->model->data(currentIndex(), KCharSelectItemModel::CharacterRole).toUInt();
             if (s_data()->isPrint(c)) {
-                emit activated(c);
+                Q_EMIT activated(c);
             }
             return;
         }
@@ -718,23 +718,23 @@ void KCharSelectPrivate::_k_fontSelected()
     QFont font = fontCombo->currentFont();
     font.setPointSize(fontSizeSpinBox->value());
     charTable->setFont(font);
-    emit q->currentFontChanged(font);
+    Q_EMIT q->currentFontChanged(font);
 }
 
 void KCharSelectPrivate::_k_charSelected(uint c)
 {
     if (!allPlanesEnabled) {
-        emit q->charSelected(QChar(c));
+        Q_EMIT q->charSelected(QChar(c));
     }
-    emit q->codePointSelected(c);
+    Q_EMIT q->codePointSelected(c);
 }
 
 void KCharSelectPrivate::_k_updateCurrentChar(uint c)
 {
     if (!allPlanesEnabled) {
-        emit q->currentCharChanged(QChar(c));
+        Q_EMIT q->currentCharChanged(QChar(c));
     }
-    emit q->currentCodePointChanged(c);
+    Q_EMIT q->currentCodePointChanged(c);
     if (searchMode) {
         //we are in search mode. make the two comboboxes show the section & block for this character.
         //(when we are not in search mode the current character always belongs to the current section & block.)
@@ -969,7 +969,7 @@ void KCharSelectPrivate::_k_blockSelected(int index)
     int block = blockCombo->itemData(index).toInt();
     const QVector<uint> contents = s_data()->blockContents(block);
     charTable->setContents(contents);
-    emit q->displayedCharsChanged();
+    Q_EMIT q->displayedCharsChanged();
     charTable->setChar(contents[0]);
 }
 
@@ -1016,7 +1016,7 @@ void KCharSelectPrivate::_k_search()
         }
     }
     charTable->setContents(contents);
-    emit q->displayedCharsChanged();
+    Q_EMIT q->displayedCharsChanged();
     if (!contents.isEmpty()) {
         charTable->setChar(contents[0]);
     }
@@ -1096,7 +1096,7 @@ bool KCharSelectItemModel::dropMimeData(const QMimeData *data, Qt::DropAction ac
     if (text.isEmpty()) {
         return false;
     }
-    emit showCharRequested(text.toUcs4().at(0));
+    Q_EMIT showCharRequested(text.toUcs4().at(0));
     return true;
 }
 
@@ -1105,9 +1105,9 @@ void KCharSelectItemModel::setColumnCount(int columns)
     if (columns == m_columns) {
         return;
     }
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
     m_columns = columns;
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 #include "moc_kcharselect.cpp"

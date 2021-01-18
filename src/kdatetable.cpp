@@ -475,7 +475,7 @@ void KDateTable::keyPressEvent(QKeyEvent *e)
         break;
     case Qt::Key_Return:
     case Qt::Key_Enter:
-        emit tableClicked();
+        Q_EMIT tableClicked();
         break;
     case Qt::Key_Control:
     case Qt::Key_Alt:
@@ -592,12 +592,12 @@ void KDateTable::mousePressEvent(QMouseEvent *e)
     // much here
     update();
 
-    emit tableClicked();
+    Q_EMIT tableClicked();
 
     if (e->button() == Qt::RightButton && d->m_popupMenuEnabled) {
         QMenu *menu = new QMenu();
         menu->addSection(locale().toString(d->m_date));
-        emit aboutToShowContextMenu(menu, clickedDate);
+        Q_EMIT aboutToShowContextMenu(menu, clickedDate);
         menu->popup(e->globalPos());
     }
 }
@@ -622,8 +622,8 @@ bool KDateTable::setDate(const QDate &toDate)
 
     QDate oldDate = date();
     d->setDate(toDate);
-    emit dateChanged(date(), oldDate);
-    emit dateChanged(date());
+    Q_EMIT dateChanged(date(), oldDate);
+    Q_EMIT dateChanged(date());
     update();
 
     return true;

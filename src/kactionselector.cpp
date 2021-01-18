@@ -424,7 +424,7 @@ void KActionSelectorPrivate::buttonAddClicked()
         availableListWidget->takeItem(availableListWidget->row(item));
         selectedListWidget->insertItem(insertionIndex(selectedListWidget, selectedInsertionPolicy), item);
         selectedListWidget->setCurrentItem(item);
-        emit q->added(item);
+        Q_EMIT q->added(item);
     }
     if (selectedInsertionPolicy == KActionSelector::Sorted) {
         selectedListWidget->sortItems();
@@ -440,7 +440,7 @@ void KActionSelectorPrivate::buttonRemoveClicked()
         selectedListWidget->takeItem(selectedListWidget->row(item));
         availableListWidget->insertItem(insertionIndex(availableListWidget, availableInsertionPolicy), item);
         availableListWidget->setCurrentItem(item);
-        emit q->removed(item);
+        Q_EMIT q->removed(item);
     }
     if (availableInsertionPolicy == KActionSelector::Sorted) {
         availableListWidget->sortItems();
@@ -458,7 +458,7 @@ void KActionSelectorPrivate::buttonUpClicked()
     selectedListWidget->takeItem(c);
     selectedListWidget->insertItem(c - 1, item);
     selectedListWidget->setCurrentItem(item);
-    emit q->movedUp(item);
+    Q_EMIT q->movedUp(item);
 }
 
 void KActionSelectorPrivate::buttonDownClicked()
@@ -471,7 +471,7 @@ void KActionSelectorPrivate::buttonDownClicked()
     selectedListWidget->takeItem(c);
     selectedListWidget->insertItem(c + 1, item);
     selectedListWidget->setCurrentItem(item);
-    emit q->movedDown(item);
+    Q_EMIT q->movedDown(item);
 }
 
 void KActionSelectorPrivate::itemDoubleClicked(QListWidgetItem *item)
@@ -517,9 +517,9 @@ void KActionSelectorPrivate::moveItem(QListWidgetItem *item)
         lbTo->sortItems();
     }
     if (lbTo == selectedListWidget) {
-        emit q->added(item);
+        Q_EMIT q->added(item);
     } else {
-        emit q->removed(item);
+        Q_EMIT q->removed(item);
     }
 }
 

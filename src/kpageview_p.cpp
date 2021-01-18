@@ -565,7 +565,7 @@ void KPageListViewProxy::rebuildMap()
         qCDebug(KWidgetsAddonsLog, "%d:0 -> %d:%d", i, mList[ i ].row(), mList[ i ].column());
     }
 
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 void KPageListViewProxy::addMapEntry(const QModelIndex &index)

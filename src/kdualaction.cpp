@@ -36,7 +36,7 @@ void KDualActionPrivate::slotTriggered()
         return;
     }
     q->setActive(!isActive);
-    emit q->activeChangedByUser(isActive);
+    Q_EMIT q->activeChangedByUser(isActive);
 }
 
 //---------------------------------------------------------------------
@@ -152,7 +152,7 @@ void KDualAction::setActive(bool active)
     }
     d->isActive = active;
     d->updateFromCurrentState();
-    emit activeChanged(active);
+    Q_EMIT activeChanged(active);
 }
 
 bool KDualAction::isActive() const

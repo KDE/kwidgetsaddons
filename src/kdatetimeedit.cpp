@@ -163,7 +163,7 @@ void KDateTimeEditPrivate::selectCalendar(int index)
 void KDateTimeEditPrivate::enterCalendar(const QLocale &calendarLocale)
 {
     q->setLocale(calendarLocale);
-    emit q->calendarEntered(q->locale());
+    Q_EMIT q->calendarEntered(q->locale());
 }
 
 void KDateTimeEditPrivate::initTimeZoneWidget()
@@ -195,8 +195,8 @@ void KDateTimeEditPrivate::selectTimeZone(int index)
 void KDateTimeEditPrivate::enterTimeZone(const QByteArray &zoneId)
 {
     q->setTimeZone(QTimeZone(zoneId));
-    emit q->dateTimeEntered(m_dateTime);
-    emit q->timeZoneEntered(m_dateTime.timeZone());
+    Q_EMIT q->dateTimeEntered(m_dateTime);
+    Q_EMIT q->timeZoneEntered(m_dateTime.timeZone());
 }
 
 void KDateTimeEditPrivate::warnDateTime()
@@ -327,9 +327,9 @@ void KDateTimeEdit::setDateTime(const QDateTime &dateTime)
 {
     if (dateTime != d->m_dateTime) {
         assignDateTime(dateTime);
-        emit dateTimeChanged(d->m_dateTime);
-        emit dateChanged(d->m_dateTime.date());
-        emit timeChanged(d->m_dateTime.time());
+        Q_EMIT dateTimeChanged(d->m_dateTime);
+        Q_EMIT dateChanged(d->m_dateTime.date());
+        Q_EMIT timeChanged(d->m_dateTime.time());
     }
 }
 
@@ -344,8 +344,8 @@ void KDateTimeEdit::setDate(const QDate &date)
 {
     if (date != d->m_dateTime.date()) {
         assignDate(date);
-        emit dateTimeChanged(d->m_dateTime);
-        emit dateChanged(d->m_dateTime.date());
+        Q_EMIT dateTimeChanged(d->m_dateTime);
+        Q_EMIT dateChanged(d->m_dateTime.date());
     }
 }
 
@@ -359,8 +359,8 @@ void KDateTimeEdit::setTime(const QTime &time)
 {
     if (time != d->m_dateTime.time()) {
         assignTime(time);
-        emit dateTimeChanged(d->m_dateTime);
-        emit timeChanged(d->m_dateTime.time());
+        Q_EMIT dateTimeChanged(d->m_dateTime);
+        Q_EMIT timeChanged(d->m_dateTime.time());
     }
 }
 
@@ -377,8 +377,8 @@ void KDateTimeEdit::setTimeZone(const QTimeZone &zone)
     }
 
     assignTimeZone(zone);
-    emit dateTimeChanged(d->m_dateTime);
-    emit timeZoneChanged(d->m_dateTime.timeZone());
+    Q_EMIT dateTimeChanged(d->m_dateTime);
+    Q_EMIT timeZoneChanged(d->m_dateTime.timeZone());
 }
 
 void KDateTimeEdit::assignTimeZone(const QTimeZone &zone)

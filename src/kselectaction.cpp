@@ -213,7 +213,7 @@ void KSelectAction::setComboWidth(int width)
         box->setMaximumWidth(d->m_comboWidth);
     }
 
-    emit changed();
+    Q_EMIT changed();
 }
 
 void KSelectAction::setMaxComboViewCount(int n)
@@ -231,7 +231,7 @@ void KSelectAction::setMaxComboViewCount(int n)
         }
     }
 
-    emit changed();
+    Q_EMIT changed();
 }
 
 void KSelectAction::addAction(QAction *action)
@@ -327,14 +327,14 @@ void KSelectAction::actionTriggered(QAction *action)
         trigger();    // then imitate usual QAction behaviour so that other submenus (and their items) become unchecked
     }
 
-    emit triggered(action);
+    Q_EMIT triggered(action);
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     // will also indirectly emit indexTriggered & textTriggered, due to signal connection in init()
-    emit triggered(index);
-    emit triggered(text);
+    Q_EMIT triggered(index);
+    Q_EMIT triggered(text);
 #else
-    emit indexTriggered(index);
-    emit textTriggered(text);
+    Q_EMIT indexTriggered(index);
+    Q_EMIT textTriggered(text);
 #endif
 }
 
@@ -427,7 +427,7 @@ void KSelectAction::setEditable(bool edit)
         comboBox->setEditable(edit);
     }
 
-    emit changed();
+    Q_EMIT changed();
 }
 
 bool KSelectAction::isEditable() const

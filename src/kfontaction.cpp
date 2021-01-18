@@ -46,9 +46,9 @@ public:
         const QString fontFamily = font.family();
         q->setFont(fontFamily);
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
-        emit q->triggered(fontFamily);
+        Q_EMIT q->triggered(fontFamily);
 #endif
-        emit q->textTriggered(fontFamily);
+        Q_EMIT q->textTriggered(fontFamily);
 
 //        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }

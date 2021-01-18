@@ -72,7 +72,7 @@ bool KToolBarLabelAction::event(QEvent *event)
 {
     if (event->type() == QEvent::ActionChanged) {
         if (d->label && text() != d->label->text()) {
-            emit textChanged(text());
+            Q_EMIT textChanged(text());
             d->label->setText(text());
         }
     }

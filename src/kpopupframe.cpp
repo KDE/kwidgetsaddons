@@ -64,7 +64,7 @@ public:
         if (event->type() == QEvent::Hide && m_popup) {
             // do not set d->result here, because the popup
             // hides itself after leaving the event loop.
-            emit m_popup->leaveModality();
+            Q_EMIT m_popup->leaveModality();
         }
         return false;
     }
@@ -97,7 +97,7 @@ void KPopupFrame::keyPressEvent(QKeyEvent *e)
 {
     if (e->key() == Qt::Key_Escape) {
         d->result = 0; // rejected
-        emit leaveModality();
+        Q_EMIT leaveModality();
         //qApp->exit_loop();
     }
 }
@@ -110,7 +110,7 @@ void KPopupFrame::hideEvent(QHideEvent *e)
 void KPopupFrame::close(int r)
 {
     d->result = r;
-    emit leaveModality();
+    Q_EMIT leaveModality();
     //qApp->exit_loop();
 }
 

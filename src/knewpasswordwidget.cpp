@@ -177,7 +177,7 @@ void KNewPasswordWidgetPrivate::updatePasswordStatus(KNewPasswordWidget::Passwor
     }
 
     passwordStatus = status;
-    emit q->passwordStatusChanged();
+    Q_EMIT q->passwordStatusChanged();
 }
 
 KNewPasswordWidget::KNewPasswordWidget(QWidget *parent)

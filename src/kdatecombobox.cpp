@@ -265,7 +265,7 @@ void KDateComboBoxPrivate::editDate(const QString &text)
     m_warningShown = false;
     m_date = q->locale().toDate(text, dateFormat(m_displayFormat));
     m_edited = true;
-    emit q->dateEdited(m_date);
+    Q_EMIT q->dateEdited(m_date);
 }
 
 void KDateComboBoxPrivate::parseDate()
@@ -287,7 +287,7 @@ void KDateComboBoxPrivate::enterDate(const QDate &date)
 
     m_dateMenu->hide();
     warnDate();
-    emit q->dateEntered(m_date);
+    Q_EMIT q->dateEntered(m_date);
 }
 
 void KDateComboBoxPrivate::warnDate()
@@ -338,7 +338,7 @@ KDateComboBox::KDateComboBox(QWidget *parent)
             this, [this]() {
             if (d->m_edited) {
                 d->enterDate(date());
-                emit dateChanged(date());
+                Q_EMIT dateChanged(date());
             }
     });
 
@@ -365,7 +365,7 @@ void KDateComboBox::setDate(const QDate &date)
     d->m_edited = false;
     assignDate(date);
     d->updateDateWidget();
-    emit dateChanged(d->m_date);
+    Q_EMIT dateChanged(d->m_date);
 }
 
 void KDateComboBox::assignDate(const QDate &date)
@@ -511,7 +511,7 @@ void KDateComboBox::focusOutEvent(QFocusEvent *event)
     d->warnDate();
     if (d->m_edited) {
         d->m_edited = false;
-        emit dateChanged(d->m_date);
+        Q_EMIT dateChanged(d->m_date);
     }
     QComboBox::focusOutEvent(event);
 }

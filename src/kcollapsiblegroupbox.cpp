@@ -83,7 +83,7 @@ void KCollapsibleGroupBox::setTitle(const QString& title)
     setAccessibleName(title);
 #endif
 
-    emit titleChanged();
+    Q_EMIT titleChanged();
 }
 
 QString KCollapsibleGroupBox::title() const
@@ -98,7 +98,7 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
     }
 
     d->isExpanded = expanded;
-    emit expandedChanged();
+    Q_EMIT expandedChanged();
 
     d->updateChildrenFocus(expanded);
 

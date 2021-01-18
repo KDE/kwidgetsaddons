@@ -100,7 +100,7 @@ void KFontRequester::setFont(const QFont &font, bool onlyFixed)
     d->m_onlyFixed = onlyFixed;
 
     d->displaySampleText();
-    emit fontSelected(d->m_selFont);
+    Q_EMIT fontSelected(d->m_selFont);
 }
 
 void KFontRequester::setSampleText(const QString &text)
@@ -124,7 +124,7 @@ void KFontRequesterPrivate::_k_buttonClicked()
 
     if (result == QDialog::Accepted) {
         displaySampleText();
-        emit q->fontSelected(m_selFont);
+        Q_EMIT q->fontSelected(m_selFont);
     }
 }
 

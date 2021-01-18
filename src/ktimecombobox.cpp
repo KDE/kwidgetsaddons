@@ -232,7 +232,7 @@ void KTimeComboBoxPrivate::selectTime(int index)
 void KTimeComboBoxPrivate::editTime(const QString &text)
 {
     m_warningShown = false;
-    emit q->timeEdited(q->locale().toTime(text, m_displayFormat));
+    Q_EMIT q->timeEdited(q->locale().toTime(text, m_displayFormat));
 }
 
 void KTimeComboBoxPrivate::parseTime()
@@ -244,7 +244,7 @@ void KTimeComboBoxPrivate::enterTime(const QTime &time)
 {
     q->setTime(time);
     warnTime();
-    emit q->timeEntered(m_time);
+    Q_EMIT q->timeEntered(m_time);
 }
 
 void KTimeComboBoxPrivate::warnTime()
@@ -311,7 +311,7 @@ void KTimeComboBox::setTime(const QTime &time)
     }
 
     d->updateTimeWidget();
-    emit timeChanged(d->m_time);
+    Q_EMIT timeChanged(d->m_time);
 }
 
 void KTimeComboBox::assignTime(const QTime &time)

@@ -350,9 +350,9 @@ Q_SIGNALS:
      *     const int index = selectableActionGroup()->actions().indexOf(action);
      * #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
      *     // will also indirectly emit indexTriggered since 5.78
-     *     emit triggered(index);
+     *     Q_EMIT triggered(index);
      * #else
-     *     emit indexTriggered(index);
+     *     Q_EMIT indexTriggered(index);
      * #endif
      * @endcode
      *
@@ -384,9 +384,9 @@ Q_SIGNALS:
      * @code
      * #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
      *     // will also indirectly emit textTriggered since 5.78
-     *     emit triggered(action->text());
+     *     Q_EMIT triggered(action->text());
      * #else
-     *     emit textTriggered(action->text());
+     *     Q_EMIT textTriggered(action->text());
      * #endif
      * @endcode
      *

@@ -236,7 +236,7 @@ void KPixmapRegionSelectorWidget::rotate(RotateDirection direction)
         }
     }
 
-    emit pixmapRotated();
+    Q_EMIT pixmapRotated();
 }
 
 void KPixmapRegionSelectorWidget::rotateClockwise()
