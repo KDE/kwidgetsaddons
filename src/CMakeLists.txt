@@ -109,7 +109,7 @@ add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
 ecm_generate_export_header(KF5WidgetsAddons
     BASE_NAME KWidgetsAddons
     GROUP_BASE_NAME KF
-    VERSION ${KF5_VERSION}
+    VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
     DEPRECATION_VERSIONS 5.0 5.13 5.63 5.65 5.72 5.77 5.78
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
@@ -302,7 +302,7 @@ if (BUILD_QCH)
         KF5WidgetsAddons_QCH
         NAME KWidgetsAddons
         BASE_NAME KF5WidgetsAddons
-        VERSION ${KF5_VERSION}
+        VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
             ${KWidgetsAddons_HEADERS}
