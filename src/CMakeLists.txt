@@ -1,8 +1,6 @@
 include(ECMPoQmTools)
 ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5_qt)
 
-qt5_add_resources(kwidgetsaddons_ICON_SRCS icons.qrc)
-
 set(kwidgetsaddons_SRCS
   kacceleratormanager.cpp
   kanimatedbutton.cpp
@@ -81,8 +79,8 @@ set(kwidgetsaddons_SRCS
   ksplittercollapserbutton.cpp
   kstyleextensions.cpp
   ktooltipwidget.cpp
+  icons.qrc
   ${kwidgetsaddons_QM_LOADER}
-  ${kwidgetsaddons_ICON_SRCS}
 )
 
 set(kwidgetsaddon_UI
