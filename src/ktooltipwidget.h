@@ -13,6 +13,8 @@
 #include <QWidget>
 #include <memory>
 
+#include "qtcompat.h"
+
 /**
  * @class KToolTipWidget ktooltipwidget.h KToolTipWidget
  *
@@ -99,7 +101,7 @@ Q_SIGNALS:
     void hidden();
 
 protected:
-    void enterEvent(QEvent *) override;
+    void enterEvent(EnterEvent *) override;
     void hideEvent(QHideEvent *) override;
     void leaveEvent(QEvent *) override;
     void paintEvent(QPaintEvent *event) override;

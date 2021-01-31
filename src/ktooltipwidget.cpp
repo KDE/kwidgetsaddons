@@ -197,7 +197,7 @@ void KToolTipWidget::setHideDelay(int delay)
     d->hideTimer.setInterval(delay);
 }
 
-void KToolTipWidget::enterEvent(QEvent *)
+void KToolTipWidget::enterEvent(EnterEvent *)
 {
     // Ignore hide delay and leave tooltip visible.
     if (hideDelay() > 0) {

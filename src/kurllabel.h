@@ -17,6 +17,8 @@
 #include <QPixmap>
 #include <memory>
 
+#include "qtcompat.h"
+
 class QCursor;
 
 /**
@@ -340,7 +342,7 @@ protected:
     /**
      * Overridden for internal reasons; the API remains unaffected.
      */
-    void enterEvent(QEvent *) override;
+    void enterEvent(EnterEvent *) override;
 
     /**
      * Overridden for internal reasons; the API remains unaffected.

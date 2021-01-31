@@ -13,6 +13,8 @@
 #include <memory>
 #include <kwidgetsaddons_export.h>
 
+#include "qtcompat.h"
+
 class QSplitter;
 
 /**
@@ -68,7 +70,7 @@ protected:
     bool eventFilter(QObject *, QEvent *) override;
     void paintEvent(QPaintEvent *) override;
 
-    void enterEvent(QEvent *event) override;
+    void enterEvent(EnterEvent *event) override;
     void leaveEvent(QEvent *event) override;
     void showEvent(QShowEvent *event) override;
 

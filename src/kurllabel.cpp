@@ -259,7 +259,7 @@ const QPixmap *KUrlLabel::alternatePixmap() const
     return &d->alternatePixmap;
 }
 
-void KUrlLabel::enterEvent(QEvent *event)
+void KUrlLabel::enterEvent(EnterEvent *event)
 {
     QLabel::enterEvent(event);
 

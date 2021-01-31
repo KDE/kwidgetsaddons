@@ -233,7 +233,7 @@ bool KSplitterCollapserButton::eventFilter(QObject *object, QEvent *event)
     return QToolButton::eventFilter(object, event);
 }
 
-void KSplitterCollapserButton::enterEvent(QEvent *event)
+void KSplitterCollapserButton::enterEvent(EnterEvent *event)
 {
     Q_UNUSED(event)
     d->updateOpacity();
