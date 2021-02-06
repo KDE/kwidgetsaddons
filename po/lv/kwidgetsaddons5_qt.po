@@ -1,0 +1,3503 @@
+# translation of kdelibs4.po to Latvian
+# kdelibs.po tulkojums uz Latviešu valodu
+# Copyright (C) 2005, 2006, 2007, 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
+#
+# Maris Nartiss <maris.nartiss@gmail.com>, 2005.
+# Maris Nartiss <maris.kde@gmail.com>, 2006, 2007, 2008, 2009, 2010, 2011.
+# Linux localization project <viesturs.zarins@mii.lu.lv>, 2007.
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008, 2010.
+# Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+# Einars Sprugis <einars8@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2011-07-06 12:57+0300\n"
+"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"Language-Team: Latvian\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Launchpad-Export-Date: 2007-11-22 17:44+0000\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:16
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Sans Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:19
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Serif"
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Serif"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:22
+#, fuzzy
+#| msgctxt "@item Font name"
+#| msgid "Monospace"
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Vienplatuma"
+
+#: fonthelpers.cpp:65
+#, fuzzy, qt-format
+#| msgctxt "@application/plain"
+#| msgid "%1"
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:69
+#, fuzzy, qt-format
+#| msgctxt "dictionary name. %1-language and %2-variant name"
+#| msgid "%1 [%2]"
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:95
+#, fuzzy
+#| msgid "&Available:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "&Pieejams:"
+
+#: kactionselector.cpp:112
+#, fuzzy
+#| msgid "&Selected:"
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "&Izvēlēts:"
+
+#: kassistantdialog.cpp:100
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "&Atpakaļ"
+
+#: kassistantdialog.cpp:102
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "Iet vienu soli atpakaļ"
+
+#: kassistantdialog.cpp:107
+#, fuzzy
+#| msgctxt "Opposite to Back"
+#| msgid "Next"
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "Nākamais"
+
+#: kassistantdialog.cpp:114
+#, fuzzy
+#| msgid "Finish"
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "Pabeigt"
+
+#: kcharselect-translation.cpp:11
+#, fuzzy
+#| msgid "Open Script"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Atvērt skriptu"
+
+#: kcharselect-translation.cpp:12
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Āfrikas skripti"
+
+#: kcharselect-translation.cpp:13
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Middle Eastern Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Vidējo austrumu skripti"
+
+#: kcharselect-translation.cpp:14
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Central Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Centrālās Āzijas skripti"
+
+#: kcharselect-translation.cpp:15
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Dienvidāzijas skripti"
+
+#: kcharselect-translation.cpp:16
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "South East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Dienvidaustrumāzijas skripti"
+
+#: kcharselect-translation.cpp:17
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr ""
+
+#: kcharselect-translation.cpp:18
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "East Asian Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Austumāzijas skripti"
+
+#: kcharselect-translation.cpp:19
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "African Scripts"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Āfrikas skripti"
+
+#: kcharselect-translation.cpp:20
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Rakstzīmes"
+
+#: kcharselect-translation.cpp:21
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Matemātiskie simboli"
+
+#: kcharselect-translation.cpp:22
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Phonetic Symbols"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Fonētiskie simboli"
+
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:737
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Diakritisko zīmju kombinēšana"
+
+#: kcharselect-translation.cpp:24
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Other"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Cits"
+
+#: kcharselect-translation.cpp:25
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Pamata latīņu"
+
+#: kcharselect-translation.cpp:26
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Latin-1 papildinājums"
+
+#: kcharselect-translation.cpp:27
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:28
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latīņu paplašinātais-B"
+
+#: kcharselect-translation.cpp:29
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "IPA Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "IPA paplašinājumi"
+
+#: kcharselect-translation.cpp:30
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Spacing Modifier Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Atstarpes mainīšanas rakstzīmes"
+
+#: kcharselect-translation.cpp:31
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Diakritisko zīmju kombinēšana"
+
+#: kcharselect-translation.cpp:32
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek and Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Grieķu un Koptu"
+
+#: kcharselect-translation.cpp:33
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Cyrillic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Kirilica"
+
+#: kcharselect-translation.cpp:34
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Kirilicas papildinājums"
+
+#: kcharselect-translation.cpp:35
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Armenian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armēņu"
+
+#: kcharselect-translation.cpp:36
+#, fuzzy
+#| msgctxt "@item Spelling dictionary"
+#| msgid "Hebrew"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Ebreju"
+
+#: kcharselect-translation.cpp:37
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Arabic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arābu"
+
+#: kcharselect-translation.cpp:38
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Syriac"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Sīriešu"
+
+#: kcharselect-translation.cpp:39
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Arābu paplildinājums"
+
+#: kcharselect-translation.cpp:40
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Thaana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Tāna"
+
+#: kcharselect-translation.cpp:41
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "NKo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "NKo"
+
+#: kcharselect-translation.cpp:42
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Samaritan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samāriešu"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr ""
+
+#: kcharselect-translation.cpp:44
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Kirilicas papildinājums"
+
+#: kcharselect-translation.cpp:45
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:46
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Devanagari"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:47
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Bengali"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengāļu"
+
+#: kcharselect-translation.cpp:48
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Gurmukhi"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmuku"
+
+#: kcharselect-translation.cpp:49
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Gujarati"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gudžaratu"
+
+#: kcharselect-translation.cpp:50
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Oriya"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Oriju"
+
+#: kcharselect-translation.cpp:51
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Tamil"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamilu"
+
+#: kcharselect-translation.cpp:52
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Telugu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugu"
+
+#: kcharselect-translation.cpp:53
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Kannada"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannadu"
+
+#: kcharselect-translation.cpp:54
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Malayalam"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malajalu"
+
+#: kcharselect-translation.cpp:55
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sinhala"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhāliešu"
+
+#: kcharselect-translation.cpp:56
+#, fuzzy
+#| msgctxt "@item Text character set"
+#| msgid "Thai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Taizemes"
+
+#: kcharselect-translation.cpp:57
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lao"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Laosiešu"
+
+#: kcharselect-translation.cpp:58
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tibetan"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetiešu"
+
+#: kcharselect-translation.cpp:59
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Myanmar"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Mjanmiešu"
+
+#: kcharselect-translation.cpp:60
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Gruzīnu"
+
+#: kcharselect-translation.cpp:61
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: kcharselect-translation.cpp:62
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiopiešu"
+
+#: kcharselect-translation.cpp:63
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Etiopiešu papildinājums"
+
+#: kcharselect-translation.cpp:64
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cherokee"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Šerokī"
+
+#: kcharselect-translation.cpp:65
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Apvienotās Kanādas aborigēnu zilbes"
+
+#: kcharselect-translation.cpp:66
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ogham"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogam"
+
+#: kcharselect-translation.cpp:67
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Runic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Rūnas"
+
+#: kcharselect-translation.cpp:68
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tagalog"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagalu"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr ""
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr ""
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr ""
+
+#: kcharselect-translation.cpp:72
+#, fuzzy
+#| msgctxt "digit set"
+#| msgid "Khmer"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmeru"
+
+#: kcharselect-translation.cpp:73
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mongolian"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongoļu"
+
+#: kcharselect-translation.cpp:74
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Apvienotās Kanādas aborigēnu zilbes papilašinātās"
+
+#: kcharselect-translation.cpp:75
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Limbu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: kcharselect-translation.cpp:76
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Le"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: kcharselect-translation.cpp:77
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "New Tai Lue"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Jaunais Tai Lue"
+
+#: kcharselect-translation.cpp:78
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Khmeru simboli"
+
+#: kcharselect-translation.cpp:79
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Balinese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Baliešu"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr ""
+
+#: kcharselect-translation.cpp:81
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Combining Diacritical Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Diakritisko zīmju kombinēšana"
+
+#: kcharselect-translation.cpp:82
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Balinese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Baliešu"
+
+#: kcharselect-translation.cpp:83
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Sundanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sudāniešu"
+
+#: kcharselect-translation.cpp:84
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr ""
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr ""
+
+#: kcharselect-translation.cpp:87
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:88
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Ģeometriskas figūras"
+
+#: kcharselect-translation.cpp:89
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin-1 Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Latin-1 papildinājums"
+
+#: kcharselect-translation.cpp:90
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vedic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Vēdiskie  paplašinājumi"
+
+#: kcharselect-translation.cpp:91
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Fonētiskie paplašinājumi"
+
+#: kcharselect-translation.cpp:92
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Phonetic Extensions Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Fonētiskie paplašinājumi papildinājums"
+
+#: kcharselect-translation.cpp:93
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Diakritisko zīmju kombinēšanas paplašinājumi"
+
+#: kcharselect-translation.cpp:94
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended Additional"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Latīņu paplašinātais papildus"
+
+#: kcharselect-translation.cpp:95
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Greek Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Grieķu paplašinātais"
+
+#: kcharselect-translation.cpp:96
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "General Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Pamata pieturzīmes"
+
+#: kcharselect-translation.cpp:97
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Superscripts and Subscripts"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Augšraksti un apakšraksti"
+
+#: kcharselect-translation.cpp:98
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Currency Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Valūtas simboli"
+
+#: kcharselect-translation.cpp:99
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Diacritical Marks for Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Diakritisko zīmju kombinēšana simboliem"
+
+#: kcharselect-translation.cpp:100
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Letterlike Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Burtveidīgi simboli"
+
+#: kcharselect-translation.cpp:101
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Ciparu formas"
+
+#: kcharselect-translation.cpp:102
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Bultas"
+
+#: kcharselect-translation.cpp:103
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Matemātiskie operatori"
+
+#: kcharselect-translation.cpp:104
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Technical"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Dažādi tehniskie"
+
+#: kcharselect-translation.cpp:105
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Control Pictures"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Kontroles attēli"
+
+#: kcharselect-translation.cpp:106
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Optical Character Recognition"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Optiskā rakstzīmju atpazīšana"
+
+#: kcharselect-translation.cpp:107
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Apvilktie burti un cipari"
+
+#: kcharselect-translation.cpp:108
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Box Drawing"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Kastu zīmējumi"
+
+#: kcharselect-translation.cpp:109
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Block Elements"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Bloku elementi"
+
+#: kcharselect-translation.cpp:110
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Ģeometriskas figūras"
+
+#: kcharselect-translation.cpp:111
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Dažādi simboli"
+
+#: kcharselect-translation.cpp:112
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Dingbats"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dekoratīvie simboli"
+
+#: kcharselect-translation.cpp:113
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Dažādi matemātiskie simboli-A"
+
+#: kcharselect-translation.cpp:114
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Papildu bultas-A"
+
+#: kcharselect-translation.cpp:115
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braila simboli"
+
+#: kcharselect-translation.cpp:116
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Papildu bultas-B"
+
+#: kcharselect-translation.cpp:117
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Mathematical Symbols-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Dažādi matemātiskie simboli-B"
+
+#: kcharselect-translation.cpp:118
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Mathematical Operators"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Papildu matemātiskie operatori"
+
+#: kcharselect-translation.cpp:119
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Dažādi simboli un bultas"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr ""
+
+#: kcharselect-translation.cpp:121
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-C"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latīņu paplašinātais-C"
+
+#: kcharselect-translation.cpp:122
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Coptic"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Koptu"
+
+#: kcharselect-translation.cpp:123
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Georgian Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Gruzīnu papildinājums"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr ""
+
+#: kcharselect-translation.cpp:125
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiopiešu paplašinātais"
+
+#: kcharselect-translation.cpp:126
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:127
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Papildus pieturzīmes"
+
+#: kcharselect-translation.cpp:128
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Radicals Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "CJK sakņu papildinājums"
+
+#: kcharselect-translation.cpp:129
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Kangxi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Kangxi saknes"
+
+#: kcharselect-translation.cpp:130
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ideographic Description Characters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Ideogrāfiskās apraksta rakstzīmes"
+
+#: kcharselect-translation.cpp:131
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Symbols and Punctuation"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK simboli un pieturzīmes"
+
+#: kcharselect-translation.cpp:132
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hiragana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:133
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:134
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:135
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Compatibility Jamo"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangulas savietojams ar džamo"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr ""
+
+#: kcharselect-translation.cpp:137
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Bopomofo Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo paplašinātais"
+
+#: kcharselect-translation.cpp:138
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Strokes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK svītras"
+
+#: kcharselect-translation.cpp:139
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Katakana Phonetic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana fonētiskie paplašinājumi"
+
+#: kcharselect-translation.cpp:140
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed CJK Letters and Months"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Apvilktie CJK burti un mēneši"
+
+#: kcharselect-translation.cpp:141
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK savietojamība"
+
+#: kcharselect-translation.cpp:142
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs Extension A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK unificētie ideogrāfi paplašinājums A"
+
+#: kcharselect-translation.cpp:143
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yijing Hexagram Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing sešstūra simboli"
+
+#: kcharselect-translation.cpp:144
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Unified Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK unificētie ideogrāfi"
+
+#: kcharselect-translation.cpp:145
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yi Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi zilbes"
+
+#: kcharselect-translation.cpp:146
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Yi Radicals"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi saknes"
+
+#: kcharselect-translation.cpp:147
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Lisu"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:148
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vai"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vaju"
+
+#: kcharselect-translation.cpp:149
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Kirilicas paplašinātais-B"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr ""
+
+#: kcharselect-translation.cpp:151
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Modifier Tone Letters"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Modificētās toņu rakstzīmes"
+
+#: kcharselect-translation.cpp:152
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-D"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latīņu paplašinātais-D"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr ""
+
+#: kcharselect-translation.cpp:154
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Common Indic Number Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Pamata Indiešu ciparu formas"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr ""
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr ""
+
+#: kcharselect-translation.cpp:157
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Devanagari Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari paplašināts"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr ""
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr ""
+
+#: kcharselect-translation.cpp:160
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:161
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Javanese"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Javiešu"
+
+#: kcharselect-translation.cpp:162
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr ""
+
+#: kcharselect-translation.cpp:164
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:165
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Tai Le"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Le"
+
+#: kcharselect-translation.cpp:166
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vedic Extensions"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Vēdiskie  paplašinājumi"
+
+#: kcharselect-translation.cpp:167
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Extended"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiopiešu paplašinātais"
+
+#: kcharselect-translation.cpp:168
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latīņu paplašinātais-A"
+
+#: kcharselect-translation.cpp:169
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Cyrillic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Kirilicas papildinājums"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr ""
+
+#: kcharselect-translation.cpp:171
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Hangul Syllables"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Hangul zilbes"
+
+#: kcharselect-translation.cpp:172
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Latin Extended-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Latīņu paplašinātais-B"
+
+#: kcharselect-translation.cpp:173
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Augstie aizvietotāji"
+
+#: kcharselect-translation.cpp:174
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "High Private Use Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Augstie aizvietotāji privātai izmantošanai"
+
+#: kcharselect-translation.cpp:175
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Low Surrogates"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Zemie aizvietotāji"
+
+#: kcharselect-translation.cpp:176
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Private Use Area"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Vieta privātiem simboliem"
+
+#: kcharselect-translation.cpp:177
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Ideographs"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK savietojamības ideogrāfi"
+
+#: kcharselect-translation.cpp:178
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Alphabetic Presentation Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Alfabētiskās prezentācijas formas"
+
+#: kcharselect-translation.cpp:179
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Alfabētiskās prezentācijas formas-A"
+
+#: kcharselect-translation.cpp:180
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Variation Selectors"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Variāciju selektori"
+
+#: kcharselect-translation.cpp:181
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Vertical Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Vertikālās formas"
+
+#: kcharselect-translation.cpp:182
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Combining Half Marks"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Puszīmju kombinēšana"
+
+#: kcharselect-translation.cpp:183
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "CJK Compatibility Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK savietojamības formas"
+
+#: kcharselect-translation.cpp:184
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Small Form Variants"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Mazo formu varianti"
+
+#: kcharselect-translation.cpp:185
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Arabic Presentation Forms-B"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Arābu prezentācijas formas-B"
+
+#: kcharselect-translation.cpp:186
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Halfwidth and Fullwidth Forms"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Pusplatuma un pilnplatuma formas"
+
+#: kcharselect-translation.cpp:187
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Specials"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Speciālie"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr ""
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr ""
+
+#: kcharselect-translation.cpp:192
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Enclosed Alphanumerics"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Apvilktie burti un cipari"
+
+#: kcharselect-translation.cpp:193
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Ethiopic Supplement"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Etiopiešu papildinājums"
+
+#: kcharselect-translation.cpp:194
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Dažādi simboli un bultas"
+
+#: kcharselect-translation.cpp:195
+#, fuzzy
+#| msgid "Emoticons"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Emocijzīmes"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr ""
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr ""
+
+#: kcharselect-translation.cpp:198
+#, fuzzy
+#| msgctxt "KCharSelect section name"
+#| msgid "Mathematical Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Matemātiskie simboli"
+
+#: kcharselect-translation.cpp:199
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Geometric Shapes"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Ģeometriskas figūras"
+
+#: kcharselect-translation.cpp:200
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Supplemental Arrows-A"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Papildu bultas-A"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr ""
+
+#: kcharselect-translation.cpp:202
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Khmer Symbols"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Khmeru simboli"
+
+#: kcharselect-translation.cpp:203
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Miscellaneous Symbols and Arrows"
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "Dažādi simboli un bultas"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr ""
+
+#: kcharselect.cpp:383
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "Ievadiet meklēšanas tekstu šeit"
+
+#: kcharselect.cpp:385
+#, fuzzy
+#| msgid "Enter a search term or character here"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "Ievadiet meklēšanas tekstu šeit"
+
+#: kcharselect.cpp:390
+#, fuzzy
+#| msgid "&Find..."
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "&Meklēt..."
+
+#: kcharselect.cpp:410
+#, fuzzy
+#| msgctxt "Goes to previous character"
+#| msgid "Previous in History"
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "Iepriekšējā vēsturē"
+
+#: kcharselect.cpp:412
+#, fuzzy
+#| msgid "Previous Character in History"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "Iepriekšējā rakstzīme vēsturē"
+
+#: kcharselect.cpp:417
+#, fuzzy
+#| msgctxt "Goes to next character"
+#| msgid "Next in History"
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "Nākamā vēsturē"
+
+#: kcharselect.cpp:419
+#, fuzzy
+#| msgid "Next Character in History"
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "Nākamā rakstzīme vēsturē"
+
+#: kcharselect.cpp:424
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "&Atpakaļ"
+
+#: kcharselect.cpp:431
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "Uz &priekšu"
+
+#: kcharselect.cpp:446
+#, fuzzy
+#| msgid "Select a category"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "Izvēlieties kategoriju"
+
+#: kcharselect.cpp:450
+#, fuzzy
+#| msgid "Select a block to be displayed"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "Izvēlieties rādāmo bloku"
+
+#: kcharselect.cpp:463
+#, fuzzy
+#| msgid "Set font"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "Uzstādiet fontu"
+
+#: kcharselect.cpp:470
+#, fuzzy
+#| msgid "Set font size"
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "Uzstādiet fonta izmēru"
+
+#: kcharselect.cpp:759
+#, fuzzy
+#| msgid "Character:"
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Rakstzīme:"
+
+#: kcharselect.cpp:765
+#, fuzzy
+#| msgid "Name: "
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Nosaukums: "
+
+#: kcharselect.cpp:774
+#, fuzzy
+#| msgid "Annotations and Cross References"
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Anotācijas un atsauces"
+
+#: kcharselect.cpp:778
+#, fuzzy
+#| msgid "Alias names:"
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Pseidonīmi:"
+
+#: kcharselect.cpp:786
+#, fuzzy
+#| msgid "Notes:"
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Piezīmes:"
+
+#: kcharselect.cpp:794
+#, fuzzy
+#| msgid "See also:"
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Skat. arī:"
+
+#: kcharselect.cpp:809
+#, fuzzy
+#| msgid "Equivalents:"
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Identiski:"
+
+#: kcharselect.cpp:817
+#, fuzzy
+#| msgid "Approximate equivalents:"
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Gandrīz identiski:"
+
+#: kcharselect.cpp:825
+#, fuzzy
+#| msgid "Description:"
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Apraksts:"
+
+#: kcharselect.cpp:837
+#, fuzzy
+#| msgid "CJK Ideograph Information"
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "CJK Ideograph informācija"
+
+#: kcharselect.cpp:840
+#, fuzzy
+#| msgid "Definition in English: "
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Angliskais apraksts: "
+
+#: kcharselect.cpp:847
+#, fuzzy
+#| msgid "Mandarin Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Mandarīna izruna: "
+
+#: kcharselect.cpp:854
+#, fuzzy
+#| msgid "Cantonese Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Kantonas izruna: "
+
+#: kcharselect.cpp:861
+#, fuzzy
+#| msgid "Japanese On Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Japāņu On izruna: "
+
+#: kcharselect.cpp:868
+#, fuzzy
+#| msgid "Japanese Kun Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Japāņu Kun izruna: "
+
+#: kcharselect.cpp:875
+#, fuzzy
+#| msgid "Tang Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Tangu izruna: "
+
+#: kcharselect.cpp:882
+#, fuzzy
+#| msgid "Korean Pronunciation: "
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Korejiešu izruna: "
+
+#: kcharselect.cpp:888
+#, fuzzy
+#| msgid "General Character Properties"
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Pamata rakstzīmes īpašības"
+
+#: kcharselect.cpp:889
+#, fuzzy
+#| msgid "Block: "
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Bloks: "
+
+#: kcharselect.cpp:890
+#, fuzzy
+#| msgid "Unicode category: "
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Unikoda kategorija: "
+
+#: kcharselect.cpp:894
+#, fuzzy
+#| msgid "Various Useful Representations"
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Dažādas noderīgas preprezentācijas"
+
+#: kcharselect.cpp:895
+#, fuzzy
+#| msgid "UTF-8:"
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:899
+#, fuzzy
+#| msgid "UTF-16: "
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:906
+#, fuzzy
+#| msgid "C octal escaped UTF-8: "
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "C oktāli kodēts UTF-8: "
+
+#: kcharselect.cpp:910
+#, fuzzy
+#| msgid "XML decimal entity:"
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "XML decimālā entīte:"
+
+#: kcharselect.cpp:1055
+#, fuzzy
+#| msgid "Unicode code point:"
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Unikoda koda punkts:"
+
+#: kcharselect.cpp:1056
+#, fuzzy
+#| msgctxt "Character"
+#| msgid "In decimal:"
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "Decimāli:"
+
+#: kcharselectdata.cpp:305
+#, fuzzy
+#| msgid "Any Character"
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "Jebkura rakstzīme"
+
+#: kcharselectdata.cpp:326
+#, fuzzy
+#| msgid "<Non Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Augstais aizvietotājs neprivātai izmantošanai>"
+
+#: kcharselectdata.cpp:328
+#, fuzzy
+#| msgid "<Private Use High Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Augstais aizvietotājs privātai izmantošanai>"
+
+#: kcharselectdata.cpp:330
+#, fuzzy
+#| msgid "<Low Surrogate>"
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Zemais aizvietotājs>"
+
+#: kcharselectdata.cpp:332
+#, fuzzy
+#| msgid "<Private Use>"
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Privātai izmantošanai>"
+
+#: kcharselectdata.cpp:364
+#, fuzzy
+#| msgid "<not assigned>"
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<nav piešķirts>"
+
+#: kcharselectdata.cpp:746
+#, fuzzy
+#| msgid "Non-printable"
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Neredzama"
+
+#: kcharselectdata.cpp:779
+#, fuzzy
+#| msgid "Other, Control"
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Cits, kontroles"
+
+#: kcharselectdata.cpp:780
+#, fuzzy
+#| msgid "Other, Format"
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Cits, formāta"
+
+#: kcharselectdata.cpp:781
+#, fuzzy
+#| msgid "Other, Not Assigned"
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Cits, nav piešķirts"
+
+#: kcharselectdata.cpp:782
+#, fuzzy
+#| msgid "Other, Private Use"
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Cits, privātai izmantošanai"
+
+#: kcharselectdata.cpp:783
+#, fuzzy
+#| msgid "Other, Surrogate"
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Cits, surogāts"
+
+#: kcharselectdata.cpp:784
+#, fuzzy
+#| msgid "Letter, Lowercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Burts, mazais"
+
+#: kcharselectdata.cpp:785
+#, fuzzy
+#| msgid "Letter, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Burts, modifikators"
+
+#: kcharselectdata.cpp:786
+#, fuzzy
+#| msgid "Letter, Other"
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Burts, cits"
+
+#: kcharselectdata.cpp:787
+#, fuzzy
+#| msgid "Letter, Titlecase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Burts, virsraksta"
+
+#: kcharselectdata.cpp:788
+#, fuzzy
+#| msgid "Letter, Uppercase"
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Burts, lielais"
+
+#: kcharselectdata.cpp:789
+#, fuzzy
+#| msgid "Mark, Spacing Combining"
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Zīme, atstarpju kombinēšana"
+
+#: kcharselectdata.cpp:790
+#, fuzzy
+#| msgid "Mark, Enclosing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Zīme, apvilkta"
+
+#: kcharselectdata.cpp:791
+#, fuzzy
+#| msgid "Mark, Non-Spacing"
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Zīme, bez atstarpēm"
+
+#: kcharselectdata.cpp:792
+#, fuzzy
+#| msgid "Number, Decimal Digit"
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Cipars, decimālcipars"
+
+#: kcharselectdata.cpp:793
+#, fuzzy
+#| msgid "Number, Letter"
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Cipars, burts"
+
+#: kcharselectdata.cpp:794
+#, fuzzy
+#| msgid "Number, Other"
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Cipars, cits"
+
+#: kcharselectdata.cpp:795
+#, fuzzy
+#| msgid "Punctuation, Connector"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Pieturzīme, savienotāji"
+
+#: kcharselectdata.cpp:796
+#, fuzzy
+#| msgid "Punctuation, Dash"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Pieturzīme, domuzīmes"
+
+#: kcharselectdata.cpp:797
+#, fuzzy
+#| msgid "Punctuation, Close"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Pieturzīmes, aizverošās"
+
+#: kcharselectdata.cpp:798
+#, fuzzy
+#| msgid "Punctuation, Final Quote"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Pieturzīme, noslēdzošās pēdiņas"
+
+#: kcharselectdata.cpp:799
+#, fuzzy
+#| msgid "Punctuation, Initial Quote"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Pieturzīme, atverošās pēdiņas"
+
+#: kcharselectdata.cpp:800
+#, fuzzy
+#| msgid "Punctuation, Other"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Pieturzīmes, cits"
+
+#: kcharselectdata.cpp:801
+#, fuzzy
+#| msgid "Punctuation, Open"
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Pieturzīmes, atverošās"
+
+#: kcharselectdata.cpp:802
+#, fuzzy
+#| msgid "Symbol, Currency"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Simbols, valūta"
+
+#: kcharselectdata.cpp:803
+#, fuzzy
+#| msgid "Symbol, Modifier"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Simbols, modifikators"
+
+#: kcharselectdata.cpp:804
+#, fuzzy
+#| msgid "Symbol, Math"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Simbols, matemātiskais"
+
+#: kcharselectdata.cpp:805
+#, fuzzy
+#| msgid "Symbol, Other"
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Simbols. cits"
+
+#: kcharselectdata.cpp:806
+#, fuzzy
+#| msgid "Separator, Line"
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Atdalītājs, rindas"
+
+#: kcharselectdata.cpp:807
+#, fuzzy
+#| msgid "Separator, Paragraph"
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Atdalītājs, rindkopas"
+
+#: kcharselectdata.cpp:808
+#, fuzzy
+#| msgid "Separator, Space"
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Atdalītājs, atstarpe"
+
+#: kcharselectdata.cpp:809
+#, fuzzy
+#| msgid "Unknown"
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Nezināms"
+
+#: kcolorcombo.cpp:326
+#, fuzzy
+#| msgctxt "Custom color"
+#| msgid "Custom..."
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "Pielāgota..."
+
+#: kdatecombobox.cpp:158
+#, fuzzy
+#| msgctxt "@option next year"
+#| msgid "Next Year"
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Nākamais gads"
+
+#: kdatecombobox.cpp:159
+#, fuzzy
+#| msgctxt "@option next month"
+#| msgid "Next Month"
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Nākamais mēnesis"
+
+#: kdatecombobox.cpp:160
+#, fuzzy
+#| msgctxt "@option next week"
+#| msgid "Next Week"
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Nākamā nedēļa"
+
+#: kdatecombobox.cpp:161
+#, fuzzy
+#| msgctxt "@option tomorrow"
+#| msgid "Tomorrow"
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Rīt"
+
+#: kdatecombobox.cpp:162
+#, fuzzy
+#| msgid "Today"
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Šodien"
+
+#: kdatecombobox.cpp:163
+#, fuzzy
+#| msgid "Yesterday"
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Vakar"
+
+#: kdatecombobox.cpp:164
+#, fuzzy
+#| msgctxt "@option last week"
+#| msgid "Last Week"
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Pagājušajā nedēļā"
+
+#: kdatecombobox.cpp:165
+#, fuzzy
+#| msgctxt "@option last month"
+#| msgid "Last Month"
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Pagājušajā mēnesī"
+
+#: kdatecombobox.cpp:166
+#, fuzzy
+#| msgctxt "@option last year"
+#| msgid "Last Year"
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Pagājušajā gadā"
+
+#: kdatecombobox.cpp:168
+#, fuzzy
+#| msgctxt "@option do not specify a date"
+#| msgid "No Date"
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Nav datuma"
+
+#: kdatecombobox.cpp:299
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The date you entered is invalid"
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Ievadītais datums nav derīgs"
+
+#: kdatecombobox.cpp:302
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Date cannot be earlier than %1"
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Datums nevar būt agrāks par %1"
+
+#: kdatecombobox.cpp:309
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Date cannot be later than %1"
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Datums nevar būt vēlāks par %1"
+
+#: kdatepicker.cpp:182
+#, fuzzy, qt-format
+#| msgid "Week %1"
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "%1. nedēļa"
+
+#: kdatepicker.cpp:287
+#, fuzzy
+#| msgid "Next year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "Nākamais gads"
+
+#: kdatepicker.cpp:288
+#, fuzzy
+#| msgid "Previous year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "Iepriekšējais gads"
+
+#: kdatepicker.cpp:289
+#, fuzzy
+#| msgid "Next month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "Nākamais mēnesis"
+
+#: kdatepicker.cpp:290
+#, fuzzy
+#| msgid "Previous month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "Iepriekšējais mēnesis"
+
+#: kdatepicker.cpp:291
+#, fuzzy
+#| msgid "Select a week"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "Izvēlēties nedēļu"
+
+#: kdatepicker.cpp:292
+#, fuzzy
+#| msgid "Select a month"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "Izvēlēties mēnesi"
+
+#: kdatepicker.cpp:293
+#, fuzzy
+#| msgid "Select a year"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "Izvēlēties gadu"
+
+#: kdatepicker.cpp:294
+#, fuzzy
+#| msgid "Select the current day"
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "Izvēlēties šodienu"
+
+#: kdatepicker.cpp:631
+#, fuzzy
+#| msgid "Close"
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Aizvērt"
+
+#: kdatetimeedit.cpp:173
+#, fuzzy
+#| msgctxt "UTC time zone"
+#| msgid "UTC"
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:174
+#, fuzzy
+#| msgctxt "No specific time zone"
+#| msgid "Floating"
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "Peldoša"
+
+#: kdatetimeedit.cpp:214
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The entered date and time is before the minimum allowed date and time."
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr "Ievadītais datums un laiks ir pirms minimālā atļautā datuma un laika."
+
+#: kdatetimeedit.cpp:224
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The entered date and time is after the maximum allowed date and time."
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr "Ievadītais datums un laiks ir pirms maksimālā atļautā datuma un laika."
+
+#: keditlistwidget.cpp:286
+#, fuzzy
+#| msgid "&Add"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "&Pievienot"
+
+#: keditlistwidget.cpp:298
+#, fuzzy
+#| msgid "&Remove"
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "&Aizvākt"
+
+#: keditlistwidget.cpp:310
+#, fuzzy
+#| msgid "Move &Up"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "Pārcelt uz &augšu"
+
+#: keditlistwidget.cpp:315
+#, fuzzy
+#| msgid "Move &Down"
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "Pārcelt uz &leju"
+
+#: kfontchooser.cpp:176
+#, fuzzy
+#| msgid "Requested Font"
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "Prasītais fonts"
+
+#: kfontchooser.cpp:190
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font"
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Fonts"
+
+#: kfontchooser.cpp:195
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Font:"
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Fonts:"
+
+#: kfontchooser.cpp:228
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Font style"
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Fonta stils"
+
+#: kfontchooser.cpp:233
+#, fuzzy
+#| msgid "Font style:"
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "Fonta stils:"
+
+#: kfontchooser.cpp:246
+#, fuzzy
+#| msgctxt "normal severity"
+#| msgid "Normal"
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "Normāla"
+
+#: kfontchooser.cpp:247 kfontchooser.cpp:575
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Ieslīpraksts"
+
+#: kfontchooser.cpp:248 kfontchooser.cpp:576
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Oblique"
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Slīpraksts"
+
+#: kfontchooser.cpp:249
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold"
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Treknraksts"
+
+#: kfontchooser.cpp:250
+#, fuzzy
+#| msgctxt "@item font"
+#| msgid "Bold Italic"
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Trekns slīpraksts"
+
+#: kfontchooser.cpp:267
+#, fuzzy
+#| msgctxt "@option:check"
+#| msgid "Size"
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Izmērs"
+
+#: kfontchooser.cpp:272
+#, fuzzy
+#| msgctxt "@label:listbox Font size"
+#| msgid "Size:"
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Izmērs:"
+
+#: kfontchooser.cpp:290
+#, fuzzy
+#| msgctxt "@item font size"
+#| msgid "Relative"
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Relatīvs"
+
+#: kfontchooser.cpp:292
+#, fuzzy
+#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr "Fonta izmērs<br /><i>fiksēts</i> vai <i>relatīvs</i><br /> pret vidi"
+
+#: kfontchooser.cpp:294
+#, fuzzy
+#| msgid ""
+#| "Here you can switch between fixed font size and font size to be "
+#| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#| "dimensions, paper size)."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Šeit jūs varat pārslēgt starp fiksētu fonta izmēru un fonta izmēru, kas tiek "
+"dinamiski aprēķināts un regulēts mainīgām vidēm (piem., logdaļu izmēri, "
+"papīra izmērs)."
+
+#: kfontchooser.cpp:348
+#, fuzzy
+#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "Glāžšķūņa ŗūķēļī aŗ šķērēm griež šķiņķi"
+
+#: kfontchooser.cpp:351
+#, fuzzy
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Šis teksta piemērs ilustrē izvēlētos iestatījumus. Jūs varat to rediģēt, lai "
+"pārbaudītu speciālos simbolus."
+
+#: kfontchooser.cpp:364
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr ""
+
+#: kfontchooser.cpp:560
+#, fuzzy, qt-format
+#| msgctxt "@application/plain"
+#| msgid "%1"
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:39
+#, fuzzy
+#| msgid "Select Font"
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "Izvēlēties fontu"
+
+#: kfontrequester.cpp:150
+#, fuzzy
+#| msgid "Choose..."
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "Izvēlēties..."
+
+#: kfontrequester.cpp:156
+#, fuzzy
+#| msgid "Preview of the selected font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "Izvēlētā fonta priekšskatījums"
+
+#: kfontrequester.cpp:157
+#, fuzzy
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Šī ir izvēlētā fonta priekšskatījums. Jūs varat to izmainīt, nospiežot "
+"\"Izvēlēties...\" pogu."
+
+#: kfontrequester.cpp:160
+#, fuzzy, qt-format
+#| msgid "Preview of the \"%1\" font"
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "Fonta \"%1\" priekšskatījums"
+
+#: kfontrequester.cpp:161
+#, fuzzy, qt-format
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Šis ir fonta \"%1\" priekšskatījums. Jūs varat to izmainīt, nospiežot "
+"\"Izvēlēties...\" pogu."
+
+#: kled.cpp:173
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr ""
+
+#: kled.cpp:174
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr ""
+
+#: kmessagebox.cpp:63
+#, fuzzy
+#| msgctxt "@action:button post-filter"
+#| msgid "."
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:302
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Detaļas"
+
+#: kmessagebox.cpp:460 kmessagebox.cpp:514
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Jautājums"
+
+#: kmessagebox.cpp:472 kmessagebox.cpp:528 kmessagebox.cpp:599
+#: kmessagebox.cpp:663 kmessagebox.cpp:746
+#, fuzzy
+#| msgid "Do not ask again"
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Vairs nejautāt"
+
+#: kmessagebox.cpp:587 kmessagebox.cpp:651 kmessagebox.cpp:733
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Brīdinājums"
+
+#: kmessagebox.cpp:785 kmessagebox.cpp:806
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Kļūda"
+
+#: kmessagebox.cpp:833 kmessagebox.cpp:866 kmessagebox.cpp:1133
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Atvainojiet"
+
+#: kmessagebox.cpp:909
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Informācija"
+
+#: kmessagebox.cpp:920
+#, fuzzy
+#| msgid "Do not show this message again"
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Vairs nerādīt šo ziņojumu"
+
+#: kmessagedialog.cpp:133
+#, fuzzy
+#| msgid "Details"
+msgctxt "KMessageDialog|"
+msgid "Details"
+msgstr "Detaļas"
+
+#: kmessagedialog.cpp:198
+#, fuzzy
+#| msgid "Question"
+msgctxt "KMessageDialog|"
+msgid "Question"
+msgstr "Jautājums"
+
+#: kmessagedialog.cpp:203
+#, fuzzy
+#| msgid "Warning"
+msgctxt "KMessageDialog|"
+msgid "Warning"
+msgstr "Brīdinājums"
+
+#: kmessagedialog.cpp:206
+#, fuzzy
+#| msgid "Information"
+msgctxt "KMessageDialog|"
+msgid "Information"
+msgstr "Informācija"
+
+#: kmessagedialog.cpp:209
+#, fuzzy
+#| msgid "Sorry"
+msgctxt "KMessageDialog|"
+msgid "Sorry"
+msgstr "Atvainojiet"
+
+#: kmessagedialog.cpp:212
+#, fuzzy
+#| msgid "Error"
+msgctxt "KMessageDialog|"
+msgid "Error"
+msgstr "Kļūda"
+
+#: kmessagewidget.cpp:76
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "&Aizvērt"
+
+#: kmessagewidget.cpp:77
+#, fuzzy
+#| msgid "Close Message"
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "Aizvērt ziņojumu"
+
+#: kmimetypechooser.cpp:88
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr ""
+
+#: kmimetypechooser.cpp:89
+#, fuzzy
+#| msgid "Filter"
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "Filtrs"
+
+#: kmimetypechooser.cpp:103
+#, fuzzy
+#| msgid "Mime types"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "MIME tipi"
+
+#: kmimetypechooser.cpp:106
+#, fuzzy
+#| msgid "Comment"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "Komentārs"
+
+#: kmimetypechooser.cpp:110
+#, fuzzy
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Braille Patterns"
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "Braila simboli"
+
+#: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit..."
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "&Labot..."
+
+#: kmimetypechooser.cpp:136
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr ""
+
+#: knewpassworddialog.cpp:60
+#, fuzzy, qt-format
+#| msgid "Password must be at least 1 character long"
+#| msgid_plural "Password must be at least %1 characters long"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "Parolei jābūt vismaz %1 rakstzīmi garai"
+msgstr[1] "Parolei jābūt vismaz %1 rakstzīmi garai"
+msgstr[2] "Parolei jābūt vismaz %1 rakstzīmi garai"
+
+#: knewpassworddialog.cpp:64
+#, fuzzy
+#| msgid "Password is empty"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "Parole ir tukša"
+
+#: knewpassworddialog.cpp:68
+#, fuzzy
+#| msgid "Passwords do not match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "Paroles nesakrīt"
+
+#: knewpassworddialog.cpp:73
+#, fuzzy
+#| msgid "Passwords match"
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "Paroles sakrīt"
+
+#: knewpassworddialog.cpp:146
+#, fuzzy
+#| msgid "Low Password Strength"
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "Vāja parole"
+
+#: knewpassworddialog.cpp:147
+#, fuzzy
+#| msgid ""
+#| "The password you have entered has a low strength. To improve the strength "
+#| "of the password, try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols as well as letters.\n"
+#| "\n"
+#| "Would you like to use this password anyway?"
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Jūsu ievadījāt vāju paroli.  Lai uzlabotu paroles drošumu, jūs varat:\n"
+" - lietot garāku paroli;\n"
+" - lietot gan lielos gan mazos burtus;\n"
+" - bez burtiem lietot arī ciparus un citus simbolus, piemēram, #.\n"
+"\n"
+"Vai vienalga vēlaties lietot šo paroli?"
+
+#: knewpasswordwidget.cpp:50
+#, fuzzy
+#| msgid ""
+#| "The password strength meter gives an indication of the security of the "
+#| "password you have entered.  To improve the strength of the password, "
+#| "try:\n"
+#| " - using a longer password;\n"
+#| " - using a mixture of upper- and lower-case letters;\n"
+#| " - using numbers or symbols, such as #, as well as letters."
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Paroles stipruma mērītājs parāda jūsu ievadītās paroles drošumu.  Lai "
+"uzlabotu paroles drošumu, jūs varat:\n"
+" - lietot garāku paroli;\n"
+" - lietot gan lielos, gan mazos burtus;\n"
+" - bez burtiem lietot arī ciparus un citus simbolus, piemēram, #."
+
+#: knewpasswordwidget.ui:19
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "Parole:"
+
+#: knewpasswordwidget.ui:29
+#, fuzzy
+#| msgid "&Verify:"
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "&Pārbaude:"
+
+#: knewpasswordwidget.ui:54
+#, fuzzy
+#| msgid "Password strength meter:"
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "Paroles stipruma mērītājs:"
+
+#: kpassworddialog.cpp:51
+#, fuzzy
+#| msgid "Password"
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "Parole"
+
+#: kpassworddialog.cpp:79
+msgctxt "KPasswordDialog|"
+msgid "Show Contextual Help"
+msgstr ""
+
+#: kpassworddialog.cpp:100
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Norādiet lietotājvārdu un paroli."
+
+#: kpassworddialog.ui:33
+#, fuzzy
+#| msgid "Supply a username and password below."
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Norādiet lietotājvārdu un paroli."
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr ""
+
+#: kpassworddialog.ui:77
+#, fuzzy
+#| msgid "&Keep password"
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "&Saglabāt paroli"
+
+#: kpassworddialog.ui:102
+#, fuzzy
+#| msgid "Username:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "Lietotājvārds:"
+
+#: kpassworddialog.ui:127
+#, fuzzy
+#| msgid "Domain:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "Domēns:"
+
+#: kpassworddialog.ui:141
+#, fuzzy
+#| msgid "Password:"
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "Parole:"
+
+#: kpassworddialog.ui:155
+#, fuzzy
+#| msgid "Remember password"
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "Atcerēties paroli"
+
+#: kpasswordlineedit.cpp:42
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr ""
+
+#: kpixmapregionselectordialog.cpp:55
+#, fuzzy
+#| msgid "Select Region of Image"
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "Izvēlieties attēla apgabalu"
+
+#: kpixmapregionselectordialog.cpp:59
+#, fuzzy
+#| msgid "Please click and drag on the image to select the region of interest:"
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "Lūdzu, nospiediet un apvelciet interesējošo attēla apgabalu:"
+
+#: kpixmapregionselectorwidget.cpp:172
+#, fuzzy
+#| msgid "Image Operations"
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "Darbības ar attēlu"
+
+#: kpixmapregionselectorwidget.cpp:174
+#, fuzzy
+#| msgid "&Rotate Clockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "&Pagriezt pulksteņrādītāja virzienā"
+
+#: kpixmapregionselectorwidget.cpp:176
+#, fuzzy
+#| msgid "Rotate &Counterclockwise"
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "Pagriezt p&retēji pulksteņrādītāja virzienam"
+
+#: krecentfilesmenu.cpp:103
+#, fuzzy
+#| msgid "No Entries"
+msgctxt "KRecentFilesMenu|"
+msgid "No Entries"
+msgstr "Nav ierakstu"
+
+#: krecentfilesmenu.cpp:106
+#, fuzzy
+#| msgid "Clear List"
+msgctxt "KRecentFilesMenu|"
+msgid "Clear List"
+msgstr "Tīrīt sarakstu"
+
+#: krecentfilesmenu.cpp:113
+#, fuzzy
+#| msgid "Select Files..."
+msgctxt "KRecentFilesMenu|"
+msgid "Recent Files"
+msgstr "Izvēlēties failus..."
+
+#: ksqueezedtextlabel.cpp:203
+#, fuzzy
+#| msgid "&Copy Full Text"
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "&Kopēt pilnu tekstu"
+
+#: kstandardguiitem.cpp:96
+#, fuzzy
+#| msgid "&OK"
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&Labi"
+
+#: kstandardguiitem.cpp:101
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Atcelt"
+
+#: kstandardguiitem.cpp:106
+#, fuzzy
+#| msgid "&Yes"
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Jā"
+
+#: kstandardguiitem.cpp:106
+#, fuzzy
+#| msgid "Yes"
+msgctxt "KStandardGuiItem|"
+msgid "Yes"
+msgstr "Jā"
+
+#: kstandardguiitem.cpp:111
+#, fuzzy
+#| msgid "&No"
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Nē"
+
+#: kstandardguiitem.cpp:111
+#, fuzzy
+#| msgid "No"
+msgctxt "KStandardGuiItem|"
+msgid "No"
+msgstr "Nē"
+
+#: kstandardguiitem.cpp:116
+#, fuzzy
+#| msgid "&Discard"
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Izmest"
+
+#: kstandardguiitem.cpp:116
+#, fuzzy
+#| msgid "Discard changes"
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Izmest izmaiņas"
+
+#: kstandardguiitem.cpp:117
+#, fuzzy
+#| msgid ""
+#| "Pressing this button will discard all recent changes made in this dialog."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Nospiežot šo pogu, visas nesenās izmaiņas, kas veiktas šajā dialogā, tiks "
+"izmestas."
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "&Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Saglabāt"
+
+#: kstandardguiitem.cpp:123
+#, fuzzy
+#| msgid "Save data"
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Saglabāt datus"
+
+#: kstandardguiitem.cpp:128
+#, fuzzy
+#| msgid "&Do Not Save"
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Izmest"
+
+#: kstandardguiitem.cpp:129
+#, fuzzy
+#| msgid "Do not save data"
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Nesaglabāt datus"
+
+#: kstandardguiitem.cpp:134
+#, fuzzy
+#| msgid "Save &As..."
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Saglabāt &kā..."
+
+#: kstandardguiitem.cpp:135
+#, fuzzy
+#| msgid "Save file with another name"
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Saglabāt failu ar citu vārdu"
+
+#: kstandardguiitem.cpp:140
+#, fuzzy
+#| msgid "&Apply"
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Pielietot"
+
+#: kstandardguiitem.cpp:140
+#, fuzzy
+#| msgid "Apply changes"
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Pielietot izmaiņas"
+
+#: kstandardguiitem.cpp:141
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Apply</b>, the settings will be handed over to the "
+#| "program, but the dialog will not be closed.\n"
+#| "Use this to try different settings."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Nospiežot <b>Pielietot</b>, iestatījumi tiks ieviesti programmā, bet dialoga "
+"logs netiks aizvērts.\n"
+"Izmantojiet to, lai izmēģinātu dažādus iestatījumus."
+
+#: kstandardguiitem.cpp:149
+#, fuzzy
+#| msgid "Administrator &Mode..."
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Administratora &režīms..."
+
+#: kstandardguiitem.cpp:149
+#, fuzzy
+#| msgid "Enter Administrator Mode"
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Ieiet administratora režīmā"
+
+#: kstandardguiitem.cpp:150
+#, fuzzy
+#| msgid ""
+#| "When you click <b>Administrator Mode</b> you will be prompted for the "
+#| "administrator (root) password in order to make changes which require root "
+#| "privileges."
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Izvēloties <b>Administratora režīmu</b>, jums būs jāievada administratora "
+"(root) parole un tad varēsiet veikt izmaiņas, kuru izdarīšanai ir "
+"nepieciešamas root privilēģijas."
+
+#: kstandardguiitem.cpp:157
+#, fuzzy
+#| msgid "C&lear"
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "T&īrīt"
+
+#: kstandardguiitem.cpp:158
+#, fuzzy
+#| msgid "Clear input"
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Notīrīt ievadīto"
+
+#: kstandardguiitem.cpp:159
+#, fuzzy
+#| msgid "Clear the input in the edit field"
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Notīrīt ievadīto rediģēšanas laukā"
+
+#: kstandardguiitem.cpp:164
+#, fuzzy
+#| msgid "&Help"
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Palīdzība"
+
+#: kstandardguiitem.cpp:165
+#, fuzzy
+#| msgid "Show help"
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Rādīt palīdzību"
+
+#: kstandardguiitem.cpp:170
+#, fuzzy
+#| msgid "&Close"
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Aizvērt"
+
+#: kstandardguiitem.cpp:171
+#, fuzzy
+#| msgid "Close the current window or document"
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Aizvērt aktīvo logu vai dokumentu"
+
+#: kstandardguiitem.cpp:176
+#, fuzzy
+#| msgid "&Close Window"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "Ai&zvērt logu"
+
+#: kstandardguiitem.cpp:177
+#, fuzzy
+#| msgid "Close the current window."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Aizvērt aktīvo logu."
+
+#: kstandardguiitem.cpp:182
+#, fuzzy
+#| msgid "&Close Document"
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "Ai&zvērt dokumentu"
+
+#: kstandardguiitem.cpp:183
+#, fuzzy
+#| msgid "Close the current document."
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Aizvērt aktīvo dokumentu."
+
+#: kstandardguiitem.cpp:188
+#, fuzzy
+#| msgid "&Defaults"
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Noklusējumi"
+
+#: kstandardguiitem.cpp:189
+#, fuzzy
+#| msgid "Reset all items to their default values"
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Atjaunot visus elementus uz to noklusētajām vērtībām"
+
+#: kstandardguiitem.cpp:196
+#, fuzzy
+#| msgid "&Back"
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&Atpakaļ"
+
+#: kstandardguiitem.cpp:197
+#, fuzzy
+#| msgid "Go back one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Iet vienu soli atpakaļ"
+
+#: kstandardguiitem.cpp:204
+#, fuzzy
+#| msgctxt "go forward"
+#| msgid "&Forward"
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "Uz &priekšu"
+
+#: kstandardguiitem.cpp:205
+#, fuzzy
+#| msgid "Go forward one step"
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Iet vienu soli uz priekšu"
+
+#: kstandardguiitem.cpp:215
+#, fuzzy
+#| msgid "&Print..."
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Drukāt..."
+
+#: kstandardguiitem.cpp:216
+#, fuzzy
+#| msgid "Opens the print dialog to print the current document"
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Atver drukas dialogu, lai drukātu aktīvo dokumentu"
+
+#: kstandardguiitem.cpp:222
+#, fuzzy
+#| msgid "C&ontinue"
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "T&urpināt"
+
+#: kstandardguiitem.cpp:223
+#, fuzzy
+#| msgid "Continue operation"
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Turpināt darbību"
+
+#: kstandardguiitem.cpp:228
+#, fuzzy
+#| msgid "&Delete"
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Dzēst"
+
+#: kstandardguiitem.cpp:229
+#, fuzzy
+#| msgid "Delete item(s)"
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Dzēst vienības"
+
+#: kstandardguiitem.cpp:234
+#, fuzzy
+#| msgid "&Open..."
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Atvērt..."
+
+#: kstandardguiitem.cpp:235
+#, fuzzy
+#| msgid "Open file"
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Atvērt failu"
+
+#: kstandardguiitem.cpp:240
+#, fuzzy
+#| msgid "&Quit"
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Iziet"
+
+#: kstandardguiitem.cpp:241
+#, fuzzy
+#| msgid "Quit application"
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Iziet no programas"
+
+#: kstandardguiitem.cpp:246
+#, fuzzy
+#| msgid "&Reset"
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "A&tstatīt"
+
+#: kstandardguiitem.cpp:247
+#, fuzzy
+#| msgid "Reset configuration"
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Atstatīt konfigurāciju"
+
+#: kstandardguiitem.cpp:252
+#, fuzzy
+#| msgctxt "Verb"
+#| msgid "&Insert"
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Ievietot"
+
+#: kstandardguiitem.cpp:257
+#, fuzzy
+#| msgid "Confi&gure..."
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "&Konfigurēt..."
+
+#: kstandardguiitem.cpp:262
+#, fuzzy
+#| msgid "&Find"
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Meklēt"
+
+#: kstandardguiitem.cpp:267
+#, fuzzy
+#| msgid "Stop"
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Apturēt"
+
+#: kstandardguiitem.cpp:272
+#, fuzzy
+#| msgid "Add"
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Pievienot"
+
+#: kstandardguiitem.cpp:277
+#, fuzzy
+#| msgid "Remove"
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: kstandardguiitem.cpp:282
+#, fuzzy
+#| msgid "Test"
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Pārbaudīt"
+
+#: kstandardguiitem.cpp:287
+#, fuzzy
+#| msgid "Properties"
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Īpašības"
+
+#: kstandardguiitem.cpp:292
+#, fuzzy
+#| msgid "&Overwrite"
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Pārrakstīt"
+
+#: ktimecombobox.cpp:256
+#, fuzzy
+#| msgctxt "@info"
+#| msgid "The time you entered is invalid"
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Ievadītais laiks nav derīgs"
+
+#: ktimecombobox.cpp:259
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Time cannot be earlier than %1"
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Laiks nevar būt agrāks par %1"
+
+#: ktimecombobox.cpp:266
+#, fuzzy, qt-format
+#| msgctxt "@info"
+#| msgid "Time cannot be later than %1"
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Laiks nevar būt vēlāks par %1"
+
+#: ktogglefullscreenaction.cpp:39
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Iziet no pilnekrāna &režīma"
+
+#: ktogglefullscreenaction.cpp:40
+#, fuzzy
+#| msgid "Exit Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Iziet no pilnekrāna režīma"
+
+#: ktogglefullscreenaction.cpp:41
+#, fuzzy
+#| msgid "Exit F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Iziet no pilnekrāna &režīma"
+
+#: ktogglefullscreenaction.cpp:44
+#, fuzzy
+#| msgid "F&ull Screen Mode"
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Pilnekrāna &režīms"
+
+#: ktogglefullscreenaction.cpp:45
+#, fuzzy
+#| msgid "Full Screen"
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Pilnekrāna režīms"
+
+#: ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr ""
