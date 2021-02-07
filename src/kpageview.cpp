@@ -460,6 +460,9 @@ void KPageView::setPageHeader(QWidget *header)
 QWidget *KPageView::pageHeader() const
 {
     Q_D(const KPageView);
+    if (!d->pageHeader) {
+        return d->titleWidget;
+    }
     return d->pageHeader;
 }
 
