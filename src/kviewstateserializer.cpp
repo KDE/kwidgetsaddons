@@ -101,10 +101,7 @@ KViewStateSerializer::KViewStateSerializer(QObject *parent)
     qRegisterMetaType<QModelIndex>("QModelIndex");
 }
 
-KViewStateSerializer::~KViewStateSerializer()
-{
-    delete d_ptr;
-}
+KViewStateSerializer::~KViewStateSerializer() = default;
 
 void KViewStateSerializer::setView(QAbstractItemView *view)
 {

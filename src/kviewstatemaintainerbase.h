@@ -12,6 +12,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 class QItemSelectionModel;
 class QAbstractItemView;
 
@@ -35,7 +37,7 @@ public:
 
 private:
     Q_DECLARE_PRIVATE(KViewStateMaintainerBase)
-    KViewStateMaintainerBasePrivate *const d_ptr;
+    std::unique_ptr<KViewStateMaintainerBasePrivate> const d_ptr;
 
     Q_PRIVATE_SLOT(d_func(), void _k_modelAboutToBeReset())
     Q_PRIVATE_SLOT(d_func(), void _k_modelReset())

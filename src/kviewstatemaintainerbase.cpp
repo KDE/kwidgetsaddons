@@ -47,10 +47,7 @@ KViewStateMaintainerBase::KViewStateMaintainerBase(QObject *parent)
 
 }
 
-KViewStateMaintainerBase::~KViewStateMaintainerBase()
-{
-    delete d_ptr;
-}
+KViewStateMaintainerBase::~KViewStateMaintainerBase() = default;
 
 QItemSelectionModel *KViewStateMaintainerBase::selectionModel() const
 {

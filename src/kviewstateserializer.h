@@ -11,6 +11,7 @@
 #include <QObject>
 #include <QPair>
 #include <QStringList>
+#include <memory>
 
 #include "kwidgetsaddons_export.h"
 
@@ -242,7 +243,7 @@ protected:
 private:
     //@cond PRIVATE
     Q_DECLARE_PRIVATE(KViewStateSerializer)
-    KViewStateSerializerPrivate *const d_ptr;
+    std::unique_ptr<KViewStateSerializerPrivate> const d_ptr;
     Q_PRIVATE_SLOT(d_func(), void rowsInserted(const QModelIndex &, int, int))
     Q_PRIVATE_SLOT(d_func(), void restoreScrollBarState())
     //@endcond
