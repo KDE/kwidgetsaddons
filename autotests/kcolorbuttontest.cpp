@@ -12,6 +12,15 @@
 
 QTEST_MAIN(KColorButtonTest)
 
+void KColorButtonTest::testWaitForWindowExposed()
+{
+    // because this test fails in the Windows CI, in qWaitForWindowExposed
+    // let's test that here
+    QWindow a;
+    a.setVisible(true);
+    QVERIFY(QTest::qWaitForWindowExposed(&a));
+}
+
 void KColorButtonTest::testOpenDialog()
 {
     KColorButton colorButton(Qt::red);
