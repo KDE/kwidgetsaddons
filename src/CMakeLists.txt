@@ -92,15 +92,12 @@ set(kwidgetsaddon_UI
 
 qt5_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
 
-ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
-    HEADER loggingcategory.h
-    IDENTIFIER KWidgetsAddonsLog
+ecm_declare_qloggingcategory(
     CATEGORY_NAME kf.kwidgetsaddons
+    IDENTIFIER KWidgetsAddonsLog
     DEFAULT_SEVERITY Warning
     DESCRIPTION "KWidgetsAddons"
-    EXPORT KWIDGETSADDONS
 )
-
 
 add_library(KF5WidgetsAddons ${kwidgetsaddons_SRCS})
 add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
@@ -112,7 +109,9 @@ ecm_generate_export_header(KF5WidgetsAddons
     DEPRECATION_VERSIONS 5.0 5.13 5.63 5.65 5.72 5.77 5.78
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
-
+ecm_generate_qloggingcategories_source(KF5WidgetsAddons
+    HEADER loggingcategory.h
+)
 target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
 
 target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons>")
@@ -327,10 +326,12 @@ if(BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
 endif()
 
-ecm_qt_install_logging_categories(
-    EXPORT KWIDGETSADDONS
-    FILE kwidgetsaddons.categories
+ecm_install_qloggingcategories_metadata(
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
+# Keep docs file up-to-date
+ecm_generate_qloggingcategories_mddoc(
+    FILE ${CMAKE_SOURCE_DIR}/docs/qloggingcategories.md
 )
 
 include(ECMGeneratePriFile)
