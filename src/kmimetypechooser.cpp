@@ -89,7 +89,8 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     QLabel *filterLabel = new QLabel(tr("&Filter:", "@label:textbox"));
     filterLabel->setBuddy(d->m_filterLineEdit);
     connect(d->m_filterLineEdit, &QLineEdit::textChanged, this, [this](const QString &text) {
-        d->m_proxyModel->setFilterRegularExpression(QRegularExpression(text, QRegularExpression::CaseInsensitiveOption));
+        d->m_proxyModel->setFilterRegularExpression(
+            QRegularExpression(text, QRegularExpression::CaseInsensitiveOption | QRegularExpression::UseUnicodePropertiesOption));
     });
 
     QHBoxLayout *filterLayout = new QHBoxLayout();

@@ -920,7 +920,7 @@ void KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 
 QString KCharSelectPrivate::createLinks(QString s)
 {
-    const QRegularExpression rx(QStringLiteral("\\b([\\dABCDEF]{4,5})\\b"));
+    static const QRegularExpression rx(QStringLiteral("\\b([\\dABCDEF]{4,5})\\b"), QRegularExpression::UseUnicodePropertiesOption);
     QRegularExpressionMatchIterator iter = rx.globalMatch(s);
     QRegularExpressionMatch match;
     QSet<QString> chars;
