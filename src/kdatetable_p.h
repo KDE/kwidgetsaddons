@@ -93,8 +93,7 @@ public:
      * Makes a given date be painted with a given foregroundColor, and background
      * (a rectangle, or a circle/ellipse) in a given color.
      */
-    void setCustomDatePainting(const QDate &date, const QColor &fgColor,
-                               BackgroundMode bgMode = NoBgMode, const QColor &bgColor = QColor());
+    void setCustomDatePainting(const QDate &date, const QColor &fgColor, BackgroundMode bgMode = NoBgMode, const QColor &bgColor = QColor());
 
     /**
      * Unsets the custom painting of a date so that the date is painted as usual.

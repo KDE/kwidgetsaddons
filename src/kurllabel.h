@@ -89,8 +89,7 @@ public:
      * @p parent and @p name are passed to QLabel, which in turn passes
      * them further down
      */
-    explicit KUrlLabel(const QString &url, const QString &text = QString(),
-                       QWidget *parent = nullptr);
+    explicit KUrlLabel(const QString &url, const QString &text = QString(), QWidget *parent = nullptr);
 
     /**
      * Destructs the label.

@@ -18,13 +18,13 @@ void KPasswordDialogAutotest::shouldNotHideVisibilityActionInPlaintextMode()
 {
     KPasswordDialog dialog;
 
-    auto linePassword = dialog.findChild<KPasswordLineEdit*>(QStringLiteral("passEdit"));
+    auto linePassword = dialog.findChild<KPasswordLineEdit *>(QStringLiteral("passEdit"));
     QVERIFY(linePassword);
 
     auto lineEdit = linePassword->lineEdit();
     QVERIFY(lineEdit);
 
-    auto visibilityAction = lineEdit->findChild<QAction*>(QStringLiteral("visibilityAction"));
+    auto visibilityAction = lineEdit->findChild<QAction *>(QStringLiteral("visibilityAction"));
     QVERIFY(visibilityAction && !visibilityAction->isVisible());
 
     linePassword->lineEdit()->setText(QStringLiteral("1234"));
@@ -34,4 +34,3 @@ void KPasswordDialogAutotest::shouldNotHideVisibilityActionInPlaintextMode()
     linePassword->clear();
     QVERIFY(visibilityAction->isVisible());
 }
-

@@ -28,7 +28,6 @@ class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
-
     /**
      * Options provided by the widget
      * @see options()
@@ -36,11 +35,11 @@ public:
      * @see Options
      */
     enum Option {
-        EditDate         = 0x0001,  /**< Allow the user to manually edit the date in the combo line edit */
-        SelectDate       = 0x0002,  /**< Allow the user to select the date from a drop-down menu */
-        DatePicker       = 0x0004,  /**< Show a date picker in the drop-down */
-        DateKeywords     = 0x0008,  /**< Show date keywords in the drop-down */
-        WarnOnInvalid    = 0x0010,  /**< Show a warning on focus out if the date is invalid */
+        EditDate = 0x0001, /**< Allow the user to manually edit the date in the combo line edit */
+        SelectDate = 0x0002, /**< Allow the user to select the date from a drop-down menu */
+        DatePicker = 0x0004, /**< Show a date picker in the drop-down */
+        DateKeywords = 0x0008, /**< Show date keywords in the drop-down */
+        WarnOnInvalid = 0x0010, /**< Show a warning on focus out if the date is invalid */
     };
     /**
      * Stores a combination of #Option values.
@@ -199,10 +198,7 @@ public Q_SLOTS:
      * @param minWarnMsg the minimum warning message
      * @param maxWarnMsg the maximum warning message
      */
-    void setDateRange(const QDate &minDate,
-                      const QDate &maxDate,
-                      const QString &minWarnMsg = QString(),
-                      const QString &maxWarnMsg = QString());
+    void setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
     /**
      * Reset the minimum and maximum date to the default values.
@@ -275,7 +271,6 @@ public Q_SLOTS:
     void setDateMap(QMap<QDate, QString> dateMap);
 
 protected:
-
     bool eventFilter(QObject *object, QEvent *event) override;
     void showPopup() override;
     void hidePopup() override;

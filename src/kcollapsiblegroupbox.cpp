@@ -9,13 +9,14 @@
 
 #include <QLabel>
 #include <QLayout>
-#include <QStyle>
+#include <QMouseEvent>
 #include <QPainter>
+#include <QStyle>
 #include <QStyleOption>
 #include <QTimeLine>
-#include <QMouseEvent>
 
-class KCollapsibleGroupBoxPrivate {
+class KCollapsibleGroupBoxPrivate
+{
 public:
     KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *q);
     void updateChildrenFocus(bool expanded);
@@ -30,20 +31,21 @@ public:
     bool headerContainsMouse = false;
     QSize headerSize;
     int shortcutId = 0;
-    QMap<QWidget*, Qt::FocusPolicy> focusMap;    // Used to restore focus policy of widgets.
+    QMap<QWidget *, Qt::FocusPolicy> focusMap; // Used to restore focus policy of widgets.
 };
 
-KCollapsibleGroupBoxPrivate::KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox* q):
-    q(q)
-{}
+KCollapsibleGroupBoxPrivate::KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *q)
+    : q(q)
+{
+}
 
-KCollapsibleGroupBox::KCollapsibleGroupBox(QWidget* parent):
-    QWidget(parent),
-    d(new KCollapsibleGroupBoxPrivate(this))
+KCollapsibleGroupBox::KCollapsibleGroupBox(QWidget *parent)
+    : QWidget(parent)
+    , d(new KCollapsibleGroupBoxPrivate(this))
 {
     d->recalculateHeaderSize();
 
-    d->animation = new QTimeLine(500, this); //duration matches kmessagewidget
+    d->animation = new QTimeLine(500, this); // duration matches kmessagewidget
     connect(d->animation, &QTimeLine::valueChanged, this, [this](qreal value) {
         setFixedHeight((d->contentSize().height() * value) + d->headerSize.height());
     });
@@ -65,7 +67,7 @@ KCollapsibleGroupBox::~KCollapsibleGroupBox()
     }
 }
 
-void KCollapsibleGroupBox::setTitle(const QString& title)
+void KCollapsibleGroupBox::setTitle(const QString &title)
 {
     d->title = title;
     d->recalculateHeaderSize();
@@ -109,9 +111,9 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
     d->animation->setDuration(duration);
     d->animation->start();
 
-    //when going from collapsed to expanded changing the child visibility calls an updateGeometry
-    //which calls sizeHint with expanded true before the first frame of the animation kicks in
-    //trigger an effective frame 0
+    // when going from collapsed to expanded changing the child visibility calls an updateGeometry
+    // which calls sizeHint with expanded true before the first frame of the animation kicks in
+    // trigger an effective frame 0
     if (expanded) {
         setFixedHeight(d->headerSize.height());
     }
@@ -186,39 +188,37 @@ QSize KCollapsibleGroupBox::minimumSizeHint() const
 bool KCollapsibleGroupBox::event(QEvent *event)
 {
     switch (event->type()) {
-        case QEvent::StyleChange:
-            /*fall through*/
-        case QEvent::FontChange:
-            d->recalculateHeaderSize();
-            break;
-        case QEvent::Shortcut:
-        {
-            QShortcutEvent *se = static_cast<QShortcutEvent*>(event);
-            if(d->shortcutId == se->shortcutId()) {
-                toggle();
-                return true;
-            }
-            break;
+    case QEvent::StyleChange:
+        /*fall through*/
+    case QEvent::FontChange:
+        d->recalculateHeaderSize();
+        break;
+    case QEvent::Shortcut: {
+        QShortcutEvent *se = static_cast<QShortcutEvent *>(event);
+        if (d->shortcutId == se->shortcutId()) {
+            toggle();
+            return true;
         }
-        case QEvent::ChildAdded:
-        {
-            QChildEvent *ce = static_cast<QChildEvent*>(event);
-            if (ce->child()->isWidgetType()) {
-                auto widget = static_cast<QWidget*>(ce->child());
-                // Needs to be called asynchronously because at this point the widget is likely a "real" QWidget,
-                // i.e. the QWidget base class whose constructor sets the focus policy to NoPolicy.
-                // But the constructor of the child class (not yet called) could set a different focus policy later.
-                QMetaObject::invokeMethod(this, "overrideFocusPolicyOf", Qt::QueuedConnection, Q_ARG(QWidget*, widget));
-            }
-            break;
+        break;
+    }
+    case QEvent::ChildAdded: {
+        QChildEvent *ce = static_cast<QChildEvent *>(event);
+        if (ce->child()->isWidgetType()) {
+            auto widget = static_cast<QWidget *>(ce->child());
+            // Needs to be called asynchronously because at this point the widget is likely a "real" QWidget,
+            // i.e. the QWidget base class whose constructor sets the focus policy to NoPolicy.
+            // But the constructor of the child class (not yet called) could set a different focus policy later.
+            QMetaObject::invokeMethod(this, "overrideFocusPolicyOf", Qt::QueuedConnection, Q_ARG(QWidget *, widget));
         }
-        case QEvent::LayoutRequest:
-            if (d->animation->state() == QTimeLine::NotRunning) {
-                setFixedHeight(sizeHint().height());
-            }
-            break;
-        default:
-            break;
+        break;
+    }
+    case QEvent::LayoutRequest:
+        if (d->animation->state() == QTimeLine::NotRunning) {
+            setFixedHeight(sizeHint().height());
+        }
+        break;
+    default:
+        break;
     }
 
     return QWidget::event(event);
@@ -233,7 +233,7 @@ void KCollapsibleGroupBox::mousePressEvent(QMouseEvent *event)
     event->setAccepted(true);
 }
 
-//if mouse has changed whether it is in the top bar or not refresh to change arrow icon
+// if mouse has changed whether it is in the top bar or not refresh to change arrow icon
 void KCollapsibleGroupBox::mouseMoveEvent(QMouseEvent *event)
 {
     const QRect headerRect(0, 0, width(), d->headerSize.height());
@@ -256,7 +256,7 @@ void KCollapsibleGroupBox::leaveEvent(QEvent *event)
 
 void KCollapsibleGroupBox::keyPressEvent(QKeyEvent *event)
 {
-    //event might have just propagated up from a child, if so we don't want to react to it
+    // event might have just propagated up from a child, if so we don't want to react to it
     if (!hasFocus()) {
         return;
     }
@@ -272,7 +272,7 @@ void KCollapsibleGroupBox::resizeEvent(QResizeEvent *event)
     const QMargins margins = contentsMargins();
 
     if (layout()) {
-        //we don't want the layout trying to fit the current frame of the animation so always set it to the target height
+        // we don't want the layout trying to fit the current frame of the animation so always set it to the target height
         layout()->setGeometry(QRect(margins.left(), margins.top(), width() - margins.left() - margins.right(), layout()->sizeHint().height()));
     }
 
@@ -285,7 +285,7 @@ void KCollapsibleGroupBox::overrideFocusPolicyOf(QWidget *widget)
     // A label with word-wrapping enabled will break positioning of the groupbox in the layout.
     // The cause seems to be the setFocusPolicy() call below, but it's not clear why.
     // Until a proper fix is found, as workaround we toggle twice the groupbox which fixes the issue.
-    if (auto label = qobject_cast<QLabel*>(widget)) {
+    if (auto label = qobject_cast<QLabel *>(widget)) {
         if (label->wordWrap()) {
             toggle();
             toggle();
@@ -305,8 +305,7 @@ void KCollapsibleGroupBoxPrivate::recalculateHeaderSize()
     QStyleOption option;
     option.initFrom(q);
 
-    QSize textSize = q->style()->itemTextRect(option.fontMetrics, QRect(), Qt::TextShowMnemonic, false,
-                                     title).size();
+    QSize textSize = q->style()->itemTextRect(option.fontMetrics, QRect(), Qt::TextShowMnemonic, false, title).size();
 
     headerSize = q->style()->sizeFromContents(QStyle::CT_CheckBox, &option, textSize, q);
     q->setContentsMargins(q->style()->pixelMetric(QStyle::PM_IndicatorWidth), headerSize.height(), 0, 0);
@@ -316,7 +315,7 @@ void KCollapsibleGroupBoxPrivate::updateChildrenFocus(bool expanded)
 {
     const auto children = q->children();
     for (QObject *child : children) {
-        QWidget *widget = qobject_cast<QWidget*>(child);
+        QWidget *widget = qobject_cast<QWidget *>(child);
         if (!widget) {
             continue;
         }
@@ -336,7 +335,7 @@ QSize KCollapsibleGroupBoxPrivate::contentSize() const
         const QSize marginSize(margins.left() + margins.right(), margins.top() + margins.bottom());
         return q->layout()->sizeHint() + marginSize;
     }
-    return QSize(0,0);
+    return QSize(0, 0);
 }
 
 QSize KCollapsibleGroupBoxPrivate::contentMinimumSize() const
@@ -346,5 +345,5 @@ QSize KCollapsibleGroupBoxPrivate::contentMinimumSize() const
         const QSize marginSize(margins.left() + margins.right(), margins.top() + margins.bottom());
         return q->layout()->minimumSize() + marginSize;
     }
-    return QSize(0,0);
+    return QSize(0, 0);
 }

@@ -15,12 +15,12 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QSortFilterProxyModel>
-#include <QStandardPaths>
 #include <QStandardItemModel>
+#include <QStandardPaths>
 #include <QTreeView>
 #include <QVBoxLayout>
 
-//BEGIN KMimeTypeChooserPrivate
+// BEGIN KMimeTypeChooserPrivate
 class KMimeTypeChooserPrivate
 {
 public:
@@ -47,19 +47,19 @@ public:
     QStringList groups;
     int visuals;
 };
-//END
+// END
 
 static const char s_keditfiletypeExecutable[] = "keditfiletype5";
 
-//BEGIN KMimeTypeChooser
+// BEGIN KMimeTypeChooser
 KMimeTypeChooser::KMimeTypeChooser(const QString &text,
                                    const QStringList &selMimeTypes,
                                    const QString &defaultGroup,
                                    const QStringList &groupsToShow,
                                    int visuals,
                                    QWidget *parent)
-    : QWidget(parent),
-      d(new KMimeTypeChooserPrivate(this))
+    : QWidget(parent)
+    , d(new KMimeTypeChooserPrivate(this))
 {
     d->defaultgroup = defaultGroup;
     d->groups = groupsToShow;
@@ -89,8 +89,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     QLabel *filterLabel = new QLabel(tr("&Filter:", "@label:textbox"));
     filterLabel->setBuddy(d->m_filterLineEdit);
     connect(d->m_filterLineEdit, &QLineEdit::textChanged, this, [this](const QString &text) {
-        d->m_proxyModel->setFilterRegularExpression(
-                QRegularExpression(text, QRegularExpression::CaseInsensitiveOption));
+        d->m_proxyModel->setFilterRegularExpression(QRegularExpression(text, QRegularExpression::CaseInsensitiveOption));
     });
 
     QHBoxLayout *filterLayout = new QHBoxLayout();
@@ -127,11 +126,16 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
         buttonLayout->addWidget(d->btnEditMimeType);
         d->btnEditMimeType->setEnabled(false);
 
-        connect(d->btnEditMimeType, &QPushButton::clicked, this, [this]() { d->_k_editMimeType(); });
-        connect(d->mimeTypeTree, &QAbstractItemView::doubleClicked, this, [this]() { d->_k_editMimeType(); });
+        connect(d->btnEditMimeType, &QPushButton::clicked, this, [this]() {
+            d->_k_editMimeType();
+        });
+        connect(d->mimeTypeTree, &QAbstractItemView::doubleClicked, this, [this]() {
+            d->_k_editMimeType();
+        });
 
-        connect(d->mimeTypeTree, &QTreeView::activated,
-                this, [this](const QModelIndex &index) { d->_k_slotCurrentChanged(index); });
+        connect(d->mimeTypeTree, &QTreeView::activated, this, [this](const QModelIndex &index) {
+            d->_k_slotCurrentChanged(index);
+        });
 
         d->btnEditMimeType->setToolTip(tr("Launch the MIME type editor", "@info:tooltip"));
 
@@ -156,7 +160,7 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
     const QList<QMimeType> mimetypes = db.allMimeTypes();
 
     bool agroupisopen = false;
-    QStandardItem *idefault = nullptr; //open this, if all other fails
+    QStandardItem *idefault = nullptr; // open this, if all other fails
     QStandardItem *firstChecked = nullptr; // make this one visible after the loop
 
     for (const QMimeType &mt : mimetypes) {
@@ -253,11 +257,10 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
     KMimeTypeEditor::editMimeType(mt, q);
 
     // KF5 TODO: use a QFileSystemWatcher on one of the shared-mime-info generated files, instead.
-    //q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
+    // q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
     //            q, SLOT(_k_slotSycocaDatabaseChanged(QStringList)) );
 #pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a MIME type")
     // or a better idea: a QMimeDatabaseWatcher class in Qt itself
-
 }
 
 void KMimeTypeChooserPrivate::_k_slotCurrentChanged(const QModelIndex &index)
@@ -317,9 +320,9 @@ QStringList KMimeTypeChooser::patterns() const
     }
     return patternList;
 }
-//END
+// END
 
-//BEGIN KMimeTypeChooserDialogPrivate
+// BEGIN KMimeTypeChooserDialogPrivate
 
 class KMimeTypeChooserDialogPrivate
 {
@@ -335,41 +338,39 @@ public:
     KMimeTypeChooser *m_chooser;
 };
 
-//END
+// END
 
-//BEGIN KMimeTypeChooserDialog
-KMimeTypeChooserDialog::KMimeTypeChooserDialog(
-    const QString &title,
-    const QString &text,
-    const QStringList &selMimeTypes,
-    const QString &defaultGroup,
-    const QStringList &groupsToShow,
-    int visuals,
-    QWidget *parent)
+// BEGIN KMimeTypeChooserDialog
+KMimeTypeChooserDialog::KMimeTypeChooserDialog(const QString &title,
+                                               const QString &text,
+                                               const QStringList &selMimeTypes,
+                                               const QString &defaultGroup,
+                                               const QStringList &groupsToShow,
+                                               int visuals,
+                                               QWidget *parent)
     : QDialog(parent)
     , d(new KMimeTypeChooserDialogPrivate(this))
 {
     setWindowTitle(title);
 
-    d->m_chooser = new KMimeTypeChooser(text, selMimeTypes,
-                                        defaultGroup, groupsToShow, visuals,
-                                        this);
+    d->m_chooser = new KMimeTypeChooser(text, selMimeTypes, defaultGroup, groupsToShow, visuals, this);
     d->init();
 }
 
-KMimeTypeChooserDialog::KMimeTypeChooserDialog(
-    const QString &title,
-    const QString &text,
-    const QStringList &selMimeTypes,
-    const QString &defaultGroup,
-    QWidget *parent)
+KMimeTypeChooserDialog::KMimeTypeChooserDialog(const QString &title,
+                                               const QString &text,
+                                               const QStringList &selMimeTypes,
+                                               const QString &defaultGroup,
+                                               QWidget *parent)
     : QDialog(parent)
     , d(new KMimeTypeChooserDialogPrivate(this))
 {
     setWindowTitle(title);
 
-    d->m_chooser = new KMimeTypeChooser(text, selMimeTypes,
-                                        defaultGroup, QStringList(),
+    d->m_chooser = new KMimeTypeChooser(text,
+                                        selMimeTypes,
+                                        defaultGroup,
+                                        QStringList(),
                                         KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
                                         this);
     d->init();
@@ -402,6 +403,6 @@ QSize KMimeTypeChooserDialog::sizeHint() const
     return QSize(viewableSize, viewableSize);
 }
 
-//END KMimeTypeChooserDialog
+// END KMimeTypeChooserDialog
 
 #include "moc_kmimetypechooser.cpp"

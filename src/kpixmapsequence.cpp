@@ -31,8 +31,7 @@ void KPixmapSequencePrivate::loadSequence(const QPixmap &bigPixmap, const QSize 
     if (!size.isValid()) {
         size = QSize(bigPixmap.width(), bigPixmap.width());
     }
-    if (bigPixmap.width() % size.width() ||
-            bigPixmap.height() % size.height()) {
+    if (bigPixmap.width() % size.width() || bigPixmap.height() % size.height()) {
         qCWarning(KWidgetsAddonsLog) << "Invalid framesize.";
         return;
     }
@@ -108,7 +107,7 @@ int KPixmapSequence::frameCount() const
 
 QPixmap KPixmapSequence::frameAt(int index) const
 {
-    if (isEmpty() || index > frameCount()-1 ) {
+    if (isEmpty() || index > frameCount() - 1) {
         qCWarning(KWidgetsAddonsLog) << "No frame loaded";
         return QPixmap();
     }

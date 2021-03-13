@@ -18,8 +18,7 @@
  * or a subclass of it (KLineEdit) to make it handle url drop events so
  * when a url is dropped it replaces the existing content.
  */
-class KWIDGETSADDONS_EXPORT LineEditUrlDropEventFilter
-    : public QObject
+class KWIDGETSADDONS_EXPORT LineEditUrlDropEventFilter : public QObject
 {
     Q_OBJECT
 

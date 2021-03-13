@@ -8,14 +8,13 @@
 #include "kcursor.h"
 #include "kcursor_p.h"
 
+#include <QAbstractScrollArea>
 #include <QCursor>
 #include <QEvent>
-#include <QAbstractScrollArea>
 #include <QTimer>
 #include <QWidget>
 
-void KCursor::setAutoHideCursor(QWidget *w, bool enable,
-                                bool customEventFilter)
+void KCursor::setAutoHideCursor(QWidget *w, bool enable, bool customEventFilter)
 {
     KCursorPrivate::self()->setAutoHideCursor(w, enable, customEventFilter);
 }
@@ -44,8 +43,7 @@ KCursorPrivateAutoHideEventFilter::KCursorPrivateAutoHideEventFilter(QWidget *wi
     , m_isOwnCursor(false)
 {
     mouseWidget()->setMouseTracking(true);
-    connect(&m_autoHideTimer, &QTimer::timeout,
-            this, &KCursorPrivateAutoHideEventFilter::hideCursor);
+    connect(&m_autoHideTimer, &QTimer::timeout, this, &KCursorPrivateAutoHideEventFilter::hideCursor);
 }
 
 KCursorPrivateAutoHideEventFilter::~KCursorPrivateAutoHideEventFilter()
@@ -122,7 +120,7 @@ bool KCursorPrivateAutoHideEventFilter::eventFilter(QObject *o, QEvent *e)
 {
     Q_UNUSED(o);
     // o is m_widget or its viewport
-    //Q_ASSERT( o == m_widget );
+    // Q_ASSERT( o == m_widget );
 
     switch (e->type()) {
     case QEvent::Leave:
@@ -204,13 +202,12 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
             connect(viewport, &QObject::destroyed, this, &KCursorPrivate::slotViewportDestroyed);
         }
         if (!customEventFilter) {
-            w->installEventFilter(filter);   // for key events
+            w->installEventFilter(filter); // for key events
             if (viewport) {
-                viewport->installEventFilter(filter);    // for mouse events
+                viewport->installEventFilter(filter); // for mouse events
             }
         }
-        connect(w, &QObject::destroyed,
-                this, &KCursorPrivate::slotWidgetDestroyed);
+        connect(w, &QObject::destroyed, this, &KCursorPrivate::slotWidgetDestroyed);
     } else {
         KCursorPrivateAutoHideEventFilter *filter = m_eventFilters.take(w);
         if (filter == nullptr) {
@@ -223,8 +220,7 @@ void KCursorPrivate::setAutoHideCursor(QWidget *w, bool enable, bool customEvent
             viewport->removeEventFilter(filter);
         }
         delete filter;
-        disconnect(w, &QObject::destroyed,
-                   this, &KCursorPrivate::slotWidgetDestroyed);
+        disconnect(w, &QObject::destroyed, this, &KCursorPrivate::slotWidgetDestroyed);
     }
 }
 

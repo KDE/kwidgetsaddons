@@ -9,10 +9,10 @@
 #include "moc_kmultitabbar.cpp"
 #include "moc_kmultitabbar_p.cpp"
 
+#include <QMouseEvent>
 #include <QPainter>
 #include <QStyle>
 #include <QStyleOptionButton>
-#include <QMouseEvent>
 
 #include <math.h>
 
@@ -23,8 +23,12 @@
  by the KMultiTabBar itself.
 */
 
-class KMultiTabBarTabPrivate {};
-class KMultiTabBarButtonPrivate {};
+class KMultiTabBarTabPrivate
+{
+};
+class KMultiTabBarButtonPrivate
+{
+};
 
 class KMultiTabBarPrivate
 {
@@ -36,7 +40,8 @@ public:
     KMultiTabBar::KMultiTabBarPosition m_position;
 };
 
-KMultiTabBarInternal::KMultiTabBarInternal(QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos): QFrame(parent)
+KMultiTabBarInternal::KMultiTabBarInternal(QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos)
+    : QFrame(parent)
 {
     m_position = pos;
     if (pos == KMultiTabBar::Left || pos == KMultiTabBar::Right) {
@@ -91,7 +96,7 @@ KMultiTabBarTab *KMultiTabBarInternal::tab(int id) const
 
 int KMultiTabBarInternal::appendTab(const QIcon &icon, int id, const QString &text)
 {
-    KMultiTabBarTab  *tab;
+    KMultiTabBarTab *tab;
     m_tabs.append(tab = new KMultiTabBarTab(icon, text, id, this, m_position, m_style));
 
     // Insert before the stretch..
@@ -129,9 +134,10 @@ void KMultiTabBarInternal::setPosition(enum KMultiTabBar::KMultiTabBarPosition p
 // KMultiTabBarButton
 ///////////////////////////////////////////////////////////////////////////////
 
-KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
-                                       int id, QWidget *parent)
-    : QPushButton(icon, text, parent), m_id(id), d(nullptr)
+KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text, int id, QWidget *parent)
+    : QPushButton(icon, text, parent)
+    , m_id(id)
+    , d(nullptr)
 {
     connect(this, &QPushButton::clicked, this, &KMultiTabBarButton::slotClicked);
 
@@ -144,9 +150,10 @@ KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text,
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text,
-                                       int id, QWidget *parent)
-    : QPushButton(QIcon(pic), text, parent), m_id(id), d(nullptr)
+KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text, int id, QWidget *parent)
+    : QPushButton(QIcon(pic), text, parent)
+    , m_id(id)
+    , d(nullptr)
 {
     connect(this, &QPushButton::clicked, this, &KMultiTabBarButton::slotClicked);
 
@@ -212,11 +219,15 @@ void KMultiTabBarButton::paintEvent(QPaintEvent *)
 // KMultiTabBarTab
 ///////////////////////////////////////////////////////////////////////////////
 
-KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon, const QString &text,
-                                 int id, QWidget *parent,
+KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon,
+                                 const QString &text,
+                                 int id,
+                                 QWidget *parent,
                                  KMultiTabBar::KMultiTabBarPosition pos,
                                  KMultiTabBar::KMultiTabBarStyle style)
-    : KMultiTabBarButton(icon, text, id, parent), m_style(style), d(nullptr)
+    : KMultiTabBarButton(icon, text, id, parent)
+    , m_style(style)
+    , d(nullptr)
 {
     m_position = pos;
     setToolTip(text);
@@ -226,11 +237,15 @@ KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon, const QString &text,
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic, const QString &text,
-                                 int id, QWidget *parent,
+KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic,
+                                 const QString &text,
+                                 int id,
+                                 QWidget *parent,
                                  KMultiTabBar::KMultiTabBarPosition pos,
                                  KMultiTabBar::KMultiTabBarStyle style)
-    : KMultiTabBarButton(pic, text, id, parent), m_style(style), d(nullptr)
+    : KMultiTabBarButton(pic, text, id, parent)
+    , m_style(style)
+    , d(nullptr)
 {
     m_position = pos;
     setToolTip(text);
@@ -270,7 +285,7 @@ void KMultiTabBarTab::initStyleOption(QStyleOptionToolButton *opt) const
     // Setup icon..
     if (!icon().isNull()) {
         opt->iconSize = iconSize();
-        opt->icon     = icon();
+        opt->icon = icon();
     }
 
     // Should we draw text?
@@ -314,7 +329,7 @@ void KMultiTabBarTab::computeMargins(int *hMargin, int *vMargin) const
     QSize trialSize = opt.iconSize;
     QSize expandSize = style()->sizeFromContents(QStyle::CT_ToolButton, &opt, trialSize, this);
 
-    *hMargin = (expandSize.width()  - trialSize.width()) / 2;
+    *hMargin = (expandSize.width() - trialSize.width()) / 2;
     *vMargin = (expandSize.height() - trialSize.height()) / 2;
 }
 
@@ -339,11 +354,11 @@ QSize KMultiTabBarTab::computeSizeHint(bool withText) const
     int majorMargin = isVertical() ? vMargin : hMargin;
     int minorMargin = isVertical() ? hMargin : vMargin;
 
-    size.setWidth(size.width()  + 2 * majorMargin);
+    size.setWidth(size.width() + 2 * majorMargin);
     size.setHeight(size.height() + 2 * minorMargin);
 
     if (withText)
-        // Add enough room for the text, and an extra major margin.
+    // Add enough room for the text, and an extra major margin.
     {
         size.setWidth(size.width() + textSize.width() + majorMargin);
     }
@@ -454,28 +469,28 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
             bottomIcon = true;
         }
     }
-    //alignFlags = Qt::AlignLeading | Qt::AlignVCenter;
+    // alignFlags = Qt::AlignLeading | Qt::AlignVCenter;
 
     const int iconXShift = (isChecked() || isDown()) ? style()->pixelMetric(QStyle::PM_ButtonShiftHorizontal, &opt, this) : 0;
     const int iconYShift = (isChecked() || isDown()) ? style()->pixelMetric(QStyle::PM_ButtonShiftVertical, &opt, this) : 0;
     if (isVertical()) {
         if (bottomIcon) {
             labelArea = QRect(0, vMargin, width(), textRoom);
-            iconArea  = QRect(0, vMargin + textRoom, width(), iconRoom);
+            iconArea = QRect(0, vMargin + textRoom, width(), iconRoom);
             iconArea.translate(iconYShift, -iconXShift);
         } else {
             labelArea = QRect(0, iconRoom, width(), textRoom);
-            iconArea  = QRect(0, 0, width(), iconRoom);
+            iconArea = QRect(0, 0, width(), iconRoom);
             iconArea.translate(-iconYShift, iconXShift);
         }
     } else {
         // Pretty simple --- depends only on RTL/LTR
         if (rtl) {
             labelArea = QRect(hMargin, 0, textRoom, height());
-            iconArea  = QRect(hMargin + textRoom, 0, iconRoom, height());
+            iconArea = QRect(hMargin + textRoom, 0, iconRoom, height());
         } else {
             labelArea = QRect(iconRoom, 0, textRoom, height());
-            iconArea  = QRect(0, 0, iconRoom, height());
+            iconArea = QRect(0, 0, iconRoom, height());
         }
         iconArea.translate(iconXShift, iconYShift);
     }
@@ -520,15 +535,15 @@ KMultiTabBar::KMultiTabBar(QWidget *parent)
 }
 
 KMultiTabBar::KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent)
-    : QWidget(parent),
-      d(new KMultiTabBarPrivate)
+    : QWidget(parent)
+    , d(new KMultiTabBarPrivate)
 {
     if (pos == Left || pos == Right) {
         d->m_l = new QVBoxLayout(this);
-        setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding/*, true*/);
+        setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Expanding /*, true*/);
     } else {
         d->m_l = new QHBoxLayout(this);
-        setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed/*, true*/);
+        setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed /*, true*/);
     }
     d->m_l->setContentsMargins(0, 0, 0, 0);
     d->m_l->setSpacing(0);
@@ -684,4 +699,3 @@ void KMultiTabBar::fontChange(const QFont & /* oldFont */)
 {
     updateGeometry();
 }
-

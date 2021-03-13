@@ -8,10 +8,10 @@
 #ifndef KPASSWORDLINEEDIT_H
 #define KPASSWORDLINEEDIT_H
 
-#include <QWidget>
 #include <QLineEdit>
-#include <memory>
+#include <QWidget>
 #include <kwidgetsaddons_export.h>
+#include <memory>
 class QAction;
 
 /**
@@ -46,8 +46,8 @@ public:
      */
     explicit KPasswordLineEdit(QWidget *parent = nullptr);
     /**
-      * Destructs the lineedit password widget.
-      */
+     * Destructs the lineedit password widget.
+     */
     ~KPasswordLineEdit();
 
     /**

@@ -36,7 +36,7 @@ class KDateTable;
  *
  * @author Tim Gilman, Mirko Boehm
  */
-class KWIDGETSADDONS_EXPORT KDatePicker: public QFrame
+class KWIDGETSADDONS_EXPORT KDatePicker : public QFrame
 {
     Q_OBJECT
     Q_PROPERTY(QDate date READ date WRITE setDate NOTIFY dateChanged USER true)

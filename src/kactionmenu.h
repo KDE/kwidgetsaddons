@@ -74,8 +74,7 @@ public:
      * If none exists, one will be created.
      * @deprecated Since 5.0, use menu() instead.
      */
-    inline KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KActionMenu::menu()")
-    QMenu *popupMenu()
+    inline KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KActionMenu::menu()") QMenu *popupMenu()
     {
         return menu();
     }

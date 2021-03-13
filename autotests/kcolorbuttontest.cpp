@@ -6,9 +6,9 @@
 
 #include "kcolorbuttontest.h"
 
+#include <QColorDialog>
 #include <QTest>
 #include <kcolorbutton.h>
-#include <QColorDialog>
 
 QTEST_MAIN(KColorButtonTest)
 

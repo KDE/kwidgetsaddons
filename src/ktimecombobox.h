@@ -29,7 +29,6 @@ class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
-
     /**
      * Options provided by the widget
      * @see options
@@ -37,10 +36,10 @@ public:
      * @see Options
      */
     enum Option {
-        EditTime         = 0x0001,  /**< Allow the user to manually edit the time in the combo line edit */
-        SelectTime       = 0x0002,  /**< Allow the user to select the time from a drop-down menu */
-        ForceTime        = 0x0004,  /**< Any set or entered time will be forced to one of the drop-down times */
-        WarnOnInvalid    = 0x0008,  /**< Show a warning box on focus out if the user enters an invalid time */
+        EditTime = 0x0001, /**< Allow the user to manually edit the time in the combo line edit */
+        SelectTime = 0x0002, /**< Allow the user to select the time from a drop-down menu */
+        ForceTime = 0x0004, /**< Any set or entered time will be forced to one of the drop-down times */
+        WarnOnInvalid = 0x0008, /**< Show a warning box on focus out if the user enters an invalid time */
     };
     /**
      * Stores a combination of #Option values.
@@ -135,10 +134,7 @@ public:
      * @param minWarnMsg the minimum warning message
      * @param maxWarnMsg the maximum warning message
      */
-    void setTimeRange(const QTime &minTime,
-                      const QTime &maxTime,
-                      const QString &minWarnMsg = QString(),
-                      const QString &maxWarnMsg = QString());
+    void setTimeRange(const QTime &minTime, const QTime &maxTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
     /**
      * Reset the minimum and maximum time to the default values.
@@ -297,12 +293,9 @@ public Q_SLOTS:
      *
      * @see timeList()
      */
-    void setTimeList(QList<QTime> timeList,
-                     const QString &minWarnMsg = QString(),
-                     const QString &maxWarnMsg = QString());
+    void setTimeList(QList<QTime> timeList, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
 protected:
-
     bool eventFilter(QObject *object, QEvent *event) override;
     void showPopup() override;
     void hidePopup() override;
@@ -329,7 +322,6 @@ private:
     Q_PRIVATE_SLOT(d, void selectTime(int index))
     Q_PRIVATE_SLOT(d, void enterTime(const QTime &))
     Q_PRIVATE_SLOT(d, void parseTime())
-
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KTimeComboBox::Options)

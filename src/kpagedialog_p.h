@@ -9,18 +9,18 @@
 #define PAGED_KPAGEDIALOG_P_H
 
 #include "kpagedialog.h"
+#include <QAbstractItemView>
 #include <QDialogButtonBox>
 #include <QLayout>
-#include <QAbstractItemView>
 
 class KPageDialogPrivate
 {
     Q_DECLARE_PUBLIC(KPageDialog)
 public:
     KPageDialogPrivate(KPageDialog *q)
-        : q_ptr(q),
-          mPageWidget(nullptr),
-          mButtonBox(nullptr)
+        : q_ptr(q)
+        , mPageWidget(nullptr)
+        , mButtonBox(nullptr)
     {
     }
 
@@ -41,10 +41,8 @@ public:
         layout->setContentsMargins(0, 0, 0, 0);
 
         if (mPageWidget) {
-            q->connect(mPageWidget, &KPageWidget::currentPageChanged,
-                       q, &KPageDialog::currentPageChanged);
-            q->connect(mPageWidget, &KPageWidget::pageRemoved,
-                       q, &KPageDialog::pageRemoved);
+            q->connect(mPageWidget, &KPageWidget::currentPageChanged, q, &KPageDialog::currentPageChanged);
+            q->connect(mPageWidget, &KPageWidget::pageRemoved, q, &KPageDialog::pageRemoved);
             layout->addWidget(mPageWidget);
         } else {
             layout->addStretch();

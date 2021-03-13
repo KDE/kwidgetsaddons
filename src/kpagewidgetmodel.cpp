@@ -19,7 +19,10 @@ class KPageWidgetItemPrivate
 {
 public:
     KPageWidgetItemPrivate()
-        : checkable(false), checked(false), enabled(true), headerVisible(true)
+        : checkable(false)
+        , checked(false)
+        , enabled(true)
+        , headerVisible(true)
     {
     }
 
@@ -117,7 +120,8 @@ void KPageWidgetItem::setHeader(const QString &header)
 {
     const bool autoHeaderInvisibilityTriggered = header.isEmpty() & !header.isNull();
     if (autoHeaderInvisibilityTriggered) {
-        qCWarning(KWidgetsAddonsLog) << "KPageWidgetItem::setHeader() called with empty non-null string, which is deprecated. Use KPageWidgetItem::setHeaderVisible(false) instead.";
+        qCWarning(KWidgetsAddonsLog)
+            << "KPageWidgetItem::setHeader() called with empty non-null string, which is deprecated. Use KPageWidgetItem::setHeaderVisible(false) instead.";
     }
 
     d->header = header;
@@ -168,7 +172,8 @@ bool KPageWidgetItem::isChecked() const
 }
 
 PageItem::PageItem(KPageWidgetItem *pageWidgetItem, PageItem *parent)
-    : mPageWidgetItem(pageWidgetItem), mParentItem(parent)
+    : mPageWidgetItem(pageWidgetItem)
+    , mParentItem(parent)
 {
 }
 
@@ -236,7 +241,7 @@ PageItem *PageItem::findChild(const KPageWidgetItem *item)
     }
 
     for (int i = 0; i < mChildItems.count(); ++i) {
-        PageItem *pageItem = mChildItems[ i ]->findChild(item);
+        PageItem *pageItem = mChildItems[i]->findChild(item);
         if (pageItem) {
             return pageItem;
         }
@@ -252,7 +257,7 @@ void PageItem::dump(int indent)
     const QString name = (mPageWidgetItem ? mPageWidgetItem->name() : QStringLiteral("root"));
     qCDebug(KWidgetsAddonsLog, "%s (%p)", qPrintable(QString(indentation + name)), (void *)this);
     for (int i = 0; i < mChildItems.count(); ++i) {
-        mChildItems[ i ]->dump(indent + 2);
+        mChildItems[i]->dump(indent + 2);
     }
 }
 

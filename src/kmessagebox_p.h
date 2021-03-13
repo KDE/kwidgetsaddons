@@ -12,7 +12,6 @@
 
 namespace KMessageBox
 {
-
 KMessageBoxDontAskAgainInterface *dontAskAgainInterface();
 
 KMessageBoxNotifyInterface *notifyInterface();

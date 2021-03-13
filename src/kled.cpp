@@ -8,8 +8,8 @@
 
 #include "kled.h"
 
-#include <QPainter>
 #include <QImage>
+#include <QPainter>
 #include <QStyle>
 #include <QStyleOption>
 
@@ -26,25 +26,24 @@ public:
 };
 
 KLed::KLed(QWidget *parent)
-    : QWidget(parent),
-      d(new KLedPrivate)
+    : QWidget(parent)
+    , d(new KLedPrivate)
 {
     setColor(Qt::green);
     updateAccessibleName();
 }
 
 KLed::KLed(const QColor &color, QWidget *parent)
-    : QWidget(parent),
-      d(new KLedPrivate)
+    : QWidget(parent)
+    , d(new KLedPrivate)
 {
     setColor(color);
     updateAccessibleName();
 }
 
-KLed::KLed(const QColor &color, State state, Look look, Shape shape,
-           QWidget *parent)
-    : QWidget(parent),
-      d(new KLedPrivate)
+KLed::KLed(const QColor &color, State state, Look look, Shape shape, QWidget *parent)
+    : QWidget(parent)
+    , d(new KLedPrivate)
 {
     d->state = (state == Off ? Off : On);
     d->look = look;
@@ -159,7 +158,7 @@ QSize KLed::sizeHint() const
     QStyleOption option;
     option.initFrom(this);
     int iconSize = style()->pixelMetric(QStyle::PM_SmallIconSize, &option, this);
-    return QSize(iconSize,  iconSize);
+    return QSize(iconSize, iconSize);
 }
 
 QSize KLed::minimumSizeHint() const
@@ -175,7 +174,7 @@ void KLed::updateAccessibleName()
     QString lastName = accessibleName();
 
     if (lastName.isEmpty() || lastName == onName || lastName == offName) {
-        //Accessible name has not been manually set.
+        // Accessible name has not been manually set.
 
         setAccessibleName(d->state == On ? onName : offName);
     }
@@ -258,4 +257,3 @@ void KLed::paintEvent(QPaintEvent *)
     painter.drawPixmap(1, 1, d->cachedPixmap[d->state]);
     painter.end();
 }
-

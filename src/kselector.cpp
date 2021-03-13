@@ -7,8 +7,8 @@
 
 #include "kselector.h"
 
-#include <QPainter>
 #include <QPaintEvent>
+#include <QPainter>
 #include <QPixmap>
 #include <QStyle>
 #include <QStyleOption>
@@ -31,7 +31,10 @@ public:
 class KGradientSelectorPrivate
 {
 public:
-    KGradientSelectorPrivate(KGradientSelector *q): q(q) {}
+    KGradientSelectorPrivate(KGradientSelector *q)
+        : q(q)
+    {
+    }
 
     KGradientSelector *q;
     QLinearGradient gradient;
@@ -71,7 +74,7 @@ bool KSelector::indent() const
 QRect KSelector::contentsRect() const
 {
     int w = indent() ? style()->pixelMetric(QStyle::PM_DefaultFrameWidth) : 0;
-    //TODO: is the height:width ratio of an indicator arrow always 2:1? hm.
+    // TODO: is the height:width ratio of an indicator arrow always 2:1? hm.
     int iw = (w < ARROWSIZE) ? ARROWSIZE : w;
 
     if (orientation() == Qt::Vertical) {
@@ -164,11 +167,9 @@ void KSelector::moveArrow(const QPoint &pos)
     int iw = (w < ARROWSIZE) ? ARROWSIZE : w;
 
     if (orientation() == Qt::Vertical)
-        val = (maximum() - minimum()) * (height() - pos.y() - iw)
-              / (height() - iw * 2) + minimum();
+        val = (maximum() - minimum()) * (height() - pos.y() - iw) / (height() - iw * 2) + minimum();
     else
-        val = (maximum() - minimum()) * (pos.x() - iw)
-              / (width() - iw * 2) + minimum();
+        val = (maximum() - minimum()) * (pos.x() - iw) / (width() - iw * 2) + minimum();
 
     setValue(val);
     update();
@@ -181,7 +182,7 @@ QPoint KSelector::calcArrowPos(int val)
     int iw = (w < ARROWSIZE) ? ARROWSIZE : w;
 
     if (orientation() == Qt::Vertical) {
-        p.setY(height() - iw - 1 - (height() - 2 * iw - 1) * val  / (maximum() - minimum()));
+        p.setY(height() - iw - 1 - (height() - 2 * iw - 1) * val / (maximum() - minimum()));
 
         if (d->arrowPE == QStyle::PE_IndicatorArrowRight) {
             p.setX(0);
@@ -189,7 +190,7 @@ QPoint KSelector::calcArrowPos(int val)
             p.setX(width() - 5);
         }
     } else {
-        p.setX(iw + (width() - 2 * iw - 1) * val  / (maximum() - minimum()));
+        p.setX(iw + (width() - 2 * iw - 1) * val / (maximum() - minimum()));
 
         if (d->arrowPE == QStyle::PE_IndicatorArrowDown) {
             p.setY(0);
@@ -254,7 +255,8 @@ Qt::ArrowType KSelector::arrowDirection() const
 }
 
 void KSelector::drawContents(QPainter *)
-{}
+{
+}
 
 void KSelector::drawArrow(QPainter *painter, const QPoint &pos)
 {
@@ -264,12 +266,9 @@ void KSelector::drawArrow(QPainter *painter, const QPoint &pos)
     QStyleOption o;
 
     if (orientation() == Qt::Vertical) {
-        o.rect = QRect(pos.x(), pos.y() - ARROWSIZE / 2,
-                       ARROWSIZE, ARROWSIZE);
+        o.rect = QRect(pos.x(), pos.y() - ARROWSIZE / 2, ARROWSIZE, ARROWSIZE);
     } else {
-        o.rect = QRect(pos.x() - ARROWSIZE / 2, pos.y(),
-                       ARROWSIZE, ARROWSIZE);
-
+        o.rect = QRect(pos.x() - ARROWSIZE / 2, pos.y(), ARROWSIZE, ARROWSIZE);
     }
     style()->drawPrimitive(d->arrowPE, &o, painter, this);
 }
@@ -277,12 +276,14 @@ void KSelector::drawArrow(QPainter *painter, const QPoint &pos)
 //----------------------------------------------------------------------------
 
 KGradientSelector::KGradientSelector(QWidget *parent)
-    : KSelector(parent), d(new KGradientSelectorPrivate(this))
+    : KSelector(parent)
+    , d(new KGradientSelectorPrivate(this))
 {
 }
 
 KGradientSelector::KGradientSelector(Qt::Orientation o, QWidget *parent)
-    : KSelector(o, parent), d(new KGradientSelectorPrivate(this))
+    : KSelector(o, parent)
+    , d(new KGradientSelectorPrivate(this))
 {
 }
 
@@ -312,15 +313,13 @@ void KGradientSelector::drawContents(QPainter *painter)
 
     if (orientation() == Qt::Vertical) {
         int yPos = contentsRect().top() + painter->fontMetrics().ascent() + 2;
-        int xPos = contentsRect().left() + (contentsRect().width() -
-                                            painter->fontMetrics().horizontalAdvance(d->text2)) / 2;
+        int xPos = contentsRect().left() + (contentsRect().width() - painter->fontMetrics().horizontalAdvance(d->text2)) / 2;
         QPen pen(qGray(firstColor().rgb()) > 180 ? Qt::black : Qt::white);
         painter->setPen(pen);
         painter->drawText(xPos, yPos, d->text2);
 
         yPos = contentsRect().bottom() - painter->fontMetrics().descent() - 2;
-        xPos = contentsRect().left() + (contentsRect().width() -
-                                        painter->fontMetrics().horizontalAdvance(d->text1)) / 2;
+        xPos = contentsRect().left() + (contentsRect().width() - painter->fontMetrics().horizontalAdvance(d->text1)) / 2;
         pen.setColor(qGray(secondColor().rgb()) > 180 ? Qt::black : Qt::white);
         painter->setPen(pen);
         painter->drawText(xPos, yPos, d->text1);
@@ -333,8 +332,7 @@ void KGradientSelector::drawContents(QPainter *painter)
 
         pen.setColor(qGray(secondColor().rgb()) > 180 ? Qt::black : Qt::white);
         painter->setPen(pen);
-        painter->drawText(contentsRect().right() -
-                          painter->fontMetrics().horizontalAdvance(d->text2) - 2, yPos, d->text2);
+        painter->drawText(contentsRect().right() - painter->fontMetrics().horizontalAdvance(d->text2) - 2, yPos, d->text2);
     }
 }
 
@@ -411,4 +409,3 @@ QString KGradientSelector::secondText() const
 {
     return d->text2;
 }
-

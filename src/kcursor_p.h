@@ -8,10 +8,10 @@
 #ifndef KCURSOR_P_H
 #define KCURSOR_P_H
 
+#include <QCursor>
 #include <QHash>
 #include <QObject>
 #include <QTimer>
-#include <QCursor>
 
 class QWidget;
 
@@ -21,7 +21,7 @@ class QWidget;
  * @internal
  * @author John Firebaugh <jfirebaugh@kde.org>
  * @author Carsten Pfeiffer <pfeiffer@kde.org>
-*/
+ */
 class KCursorPrivateAutoHideEventFilter : public QObject
 {
     Q_OBJECT
@@ -53,7 +53,7 @@ private:
  * @internal
  * @author Carsten Pfeiffer <pfeiffer@kde.org>
  * @author John Firebaugh <jfirebaugh@kde.org>
-*/
+ */
 class KCursorPrivate : public QObject
 {
     friend class KCursor; // to shut up the compiler

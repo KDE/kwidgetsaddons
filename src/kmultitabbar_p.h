@@ -7,10 +7,10 @@
 #ifndef K_MULTI_TAB_BAR_P_H
 #define K_MULTI_TAB_BAR_P_H
 #include <QScrollArea>
-#include <kmultitabbar.h>
 #include <QVBoxLayout>
+#include <kmultitabbar.h>
 
-class KMultiTabBarInternal: public QFrame
+class KMultiTabBarInternal : public QFrame
 {
     Q_OBJECT
 public:
@@ -27,14 +27,15 @@ public:
     {
         return &m_tabs;
     }
+
 private:
     friend class KMultiTabBar;
     QBoxLayout *mainLayout;
     QList<KMultiTabBarTab *> m_tabs;
     enum KMultiTabBar::KMultiTabBarPosition m_position;
     enum KMultiTabBar::KMultiTabBarStyle m_style;
-protected:
 
+protected:
     /**
      * [contentsM|m]ousePressEvent are reimplemented from QScrollView
      * in order to ignore all mouseEvents on the viewport, so that the

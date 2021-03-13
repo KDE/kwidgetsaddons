@@ -7,11 +7,11 @@
 
 #include "kratingpainter.h"
 
+#include <QIcon>
 #include <QPainter>
 #include <QPixmap>
-#include <QIcon>
-#include <QRect>
 #include <QPoint>
+#include <QRect>
 
 class KRatingPainterPrivate
 {
@@ -40,8 +40,7 @@ QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
     } else {
         QIcon _icon(icon);
         if (_icon.isNull()) {
-            if (state == QIcon::Off
-                && QIcon::hasThemeIcon(QStringLiteral("rating-unrated"))) {
+            if (state == QIcon::Off && QIcon::hasThemeIcon(QStringLiteral("rating-unrated"))) {
                 _icon = QIcon::fromTheme(QStringLiteral("rating-unrated"));
                 // our theme provided a separate icon, no need to desaturate
                 toGray = false;
@@ -149,7 +148,7 @@ void KRatingPainter::setSpacing(int s)
 
 static void _k_imageToGrayScale(QImage &img, float value)
 {
-    QRgb *data = (QRgb *) img.bits();
+    QRgb *data = (QRgb *)img.bits();
     QRgb *end = data + img.width() * img.height();
 
     unsigned char gray;
@@ -166,14 +165,11 @@ static void _k_imageToGrayScale(QImage &img, float value)
 
 static void _k_imageToSemiTransparent(QImage &img)
 {
-    QRgb *data = (QRgb *) img.bits();
+    QRgb *data = (QRgb *)img.bits();
     QRgb *end = data + img.width() * img.height();
 
     while (data != end) {
-        *data = qRgba(qRed(*data),
-                      qGreen(*data),
-                      qBlue(*data),
-                      qAlpha(*data) >> 1);
+        *data = qRgba(qRed(*data), qGreen(*data), qBlue(*data), qAlpha(*data) >> 1);
         ++data;
     }
 }
@@ -233,7 +229,6 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
 
     int ratingAreaWidth = ratingPixSize.width() * numUsedStars + usedSpacing * (numUsedStars - 1);
 
-
     int i = 0;
     int x = rect.x();
     if (d->alignment & Qt::AlignRight) {
@@ -259,12 +254,24 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         x += xInc;
     }
     if (half) {
-        painter->drawPixmap(x, y, ratingPixSize.width() / 2, ratingPixSize.height(),
+        painter->drawPixmap(x,
+                            y,
+                            ratingPixSize.width() / 2,
+                            ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? (numHoverStars > 0 ? hoverPix : disabledRatingPix) : ratingPix,
-                            0, 0, ratingPix.width() / 2, ratingPix.height());  //source sizes are deliberately not device independent
-        painter->drawPixmap(x + ratingPixSize.width() / 2, y, ratingPixSize.width() / 2, ratingPixSize.height(),
+                            0,
+                            0,
+                            ratingPix.width() / 2,
+                            ratingPix.height()); // source sizes are deliberately not device independent
+        painter->drawPixmap(x + ratingPixSize.width() / 2,
+                            y,
+                            ratingPixSize.width() / 2,
+                            ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? ratingPix : (numHoverStars > 0 ? hoverPix : disabledRatingPix),
-                            ratingPix.width() / 2, 0, ratingPix.width() / 2, ratingPix.height());
+                            ratingPix.width() / 2,
+                            0,
+                            ratingPix.width() / 2,
+                            ratingPix.height());
         x += xInc;
         ++i;
     }
@@ -273,12 +280,24 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         x += xInc;
     }
     if (halfHover) {
-        painter->drawPixmap(x, y, ratingPixSize.width() / 2, ratingPixSize.height(),
+        painter->drawPixmap(x,
+                            y,
+                            ratingPixSize.width() / 2,
+                            ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? disabledRatingPix : hoverPix,
-                            0, 0, ratingPix.width() / 2, ratingPix.height());
-        painter->drawPixmap(x + ratingPixSize.width() / 2, y, ratingPixSize.width() / 2, ratingPixSize.height(),
+                            0,
+                            0,
+                            ratingPix.width() / 2,
+                            ratingPix.height());
+        painter->drawPixmap(x + ratingPixSize.width() / 2,
+                            y,
+                            ratingPixSize.width() / 2,
+                            ratingPixSize.height(),
                             d->direction == Qt::RightToLeft ? hoverPix : disabledRatingPix,
-                            ratingPix.width() / 2, 0, ratingPix.width() / 2, ratingPix.height());
+                            ratingPix.width() / 2,
+                            0,
+                            ratingPix.width() / 2,
+                            ratingPix.height());
         x += xInc;
         ++i;
     }
@@ -329,7 +348,7 @@ int KRatingPainter::ratingFromPosition(const QRect &rect, const QPoint &pos) con
 
         double one = (double)usedRect.width() / (double)d->maxRating;
 
-//        qCDebug(KWidgetsAddonsLog) << "rating:" << ( int )( ( double )x/one + 0.5 );
+        //        qCDebug(KWidgetsAddonsLog) << "rating:" << ( int )( ( double )x/one + 0.5 );
 
         return (int)((double)x / one + 0.5);
     } else {

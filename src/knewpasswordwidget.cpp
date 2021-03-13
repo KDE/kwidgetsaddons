@@ -21,7 +21,8 @@ class KNewPasswordWidgetPrivate
 public:
     KNewPasswordWidgetPrivate(KNewPasswordWidget *parent)
         : q(parent)
-    {}
+    {
+    }
 
     void init();
     void _k_passwordChanged();
@@ -47,12 +48,13 @@ void KNewPasswordWidgetPrivate::init()
 {
     ui.setupUi(q);
 
-    const QString strengthBarWhatsThis(tr("The password strength meter gives an indication of the security "
-                                          "of the password you have entered. To improve the strength of the password, try:"
-                                          "<ul><li>using a longer password;</li>"
-                                          "<li>using a mixture of upper- and lower-case letters;</li>"
-                                          "<li>using numbers or symbols, such as #, as well as letters.</li></ul>",
-                                          "@info:whatsthis"));
+    const QString strengthBarWhatsThis(
+        tr("The password strength meter gives an indication of the security "
+           "of the password you have entered. To improve the strength of the password, try:"
+           "<ul><li>using a longer password;</li>"
+           "<li>using a mixture of upper- and lower-case letters;</li>"
+           "<li>using numbers or symbols, such as #, as well as letters.</li></ul>",
+           "@info:whatsthis"));
     ui.labelStrengthMeter->setWhatsThis(strengthBarWhatsThis);
     ui.strengthBar->setWhatsThis(strengthBarWhatsThis);
 
@@ -80,7 +82,8 @@ void KNewPasswordWidgetPrivate::_k_passwordChanged()
     ui.lineVerifyPassword->setPalette(palette);
 
     // Password strength calculator
-    int pwstrength = (20 * ui.linePassword->password().length() + 80 * effectivePasswordLength(ui.linePassword->password())) / qMax(reasonablePasswordLength, 2);
+    int pwstrength =
+        (20 * ui.linePassword->password().length() + 80 * effectivePasswordLength(ui.linePassword->password())) / qMax(reasonablePasswordLength, 2);
     ui.strengthBar->setValue(qBound(0, pwstrength, 100));
 
     // update the current password status
@@ -181,7 +184,8 @@ void KNewPasswordWidgetPrivate::updatePasswordStatus(KNewPasswordWidget::Passwor
 }
 
 KNewPasswordWidget::KNewPasswordWidget(QWidget *parent)
-    : QWidget(parent), d(new KNewPasswordWidgetPrivate(this))
+    : QWidget(parent)
+    , d(new KNewPasswordWidgetPrivate(this))
 {
     d->init();
 }

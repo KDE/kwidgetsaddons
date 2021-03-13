@@ -1,7 +1,7 @@
 #include "ksqueezedtextlabel.h"
 #include <QApplication>
-#include <QWidget>
 #include <QVBoxLayout>
+#include <QWidget>
 
 int main(int argc, char **argv)
 {

@@ -60,4 +60,3 @@ void KPageDialogAutoTest::shouldNotAddTwoSameActionButton()
     page.addActionButton(actionButton);
     QCOMPARE(dialogbuttonbox->buttons().count(), 3);
 }
-

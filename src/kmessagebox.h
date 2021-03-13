@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-//krazy:excludeall=dpointer
+// krazy:excludeall=dpointer
 
 #ifndef KMESSAGEBOX_H
 #define KMESSAGEBOX_H
@@ -69,12 +69,13 @@ enum DialogType {
  * @see Options
  */
 enum Option {
-    Notify = 1,        ///< Emit a KNotify event
-    AllowLink = 2,     ///< The message may contain links.
-    Dangerous = 4,     ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or No, depending on which is available.
-    PlainCaption = 8,  ///< Do not use KApplication::makeStdCaption()
-    NoExec = 16,       ///< Do not call exec() in createKMessageBox()
-    WindowModal = 32,  ///< The window is to be modal relative to its parent. By default, it is application modal.
+    Notify = 1, ///< Emit a KNotify event
+    AllowLink = 2, ///< The message may contain links.
+    Dangerous = 4, ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or No, depending on
+                   ///< which is available.
+    PlainCaption = 8, ///< Do not use KApplication::makeStdCaption()
+    NoExec = 16, ///< Do not call exec() in createKMessageBox()
+    WindowModal = 32, ///< The window is to be modal relative to its parent. By default, it is application modal.
 };
 
 /**
@@ -113,12 +114,12 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  * The default button is "Yes". Pressing "Esc" selects "No".
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo =  KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                               const QString &text,
+                                               const QString &caption = QString(),
+                                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                               const QString &dontAskAgainName = QString(),
+                                               Options options = Notify);
 /**
  * Display a simple "question" dialog.
  *
@@ -149,13 +150,13 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
  * The default button is "Yes". Pressing "Esc" selects "Cancel".
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                     const QString &text,
+                                                     const QString &caption = QString(),
+                                                     const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                     const QString &dontAskAgainName = QString(),
+                                                     Options options = Notify);
 
 /**
  * Display a "question" dialog with a listbox to show information to the user
@@ -189,13 +190,13 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
  * The default button is "Yes". Pressing "Esc" selects "No".
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                   const QString &text,
+                                                   const QStringList &strlist,
+                                                   const QString &caption = QString(),
+                                                   const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                   const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                   const QString &dontAskAgainName = QString(),
+                                                   Options options = Notify);
 
 /**
  * Display a "warning" dialog.
@@ -226,12 +227,12 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
  * The default button is "No". Pressing "Esc" selects "No".
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Options(Notify | Dangerous));
+                                              const QString &text,
+                                              const QString &caption = QString(),
+                                              const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                              const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                              const QString &dontAskAgainName = QString(),
+                                              Options options = Options(Notify | Dangerous));
 
 /**
  * Display a "warning" dialog with a listbox to show information to the user
@@ -265,13 +266,13 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
  * The default button is "No". Pressing "Esc" selects "No".
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Options(Notify | Dangerous));
+                                                  const QString &text,
+                                                  const QStringList &strlist,
+                                                  const QString &caption = QString(),
+                                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                  const QString &dontAskAgainName = QString(),
+                                                  Options options = Options(Notify | Dangerous));
 
 /**
  * Display a "warning" dialog.
@@ -302,12 +303,12 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
  * The default button is buttonContinue. Pressing "Esc" selects "Cancel".
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancel(QWidget *parent,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                       const QString &text,
+                                                       const QString &caption = QString(),
+                                                       const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                                       const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                       const QString &dontAskAgainName = QString(),
+                                                       Options options = Notify);
 
 /**
  * Display a "warning" dialog with a collapsible "Details" section.
@@ -315,13 +316,13 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancel(QWidget *parent,
  * @since 5.61
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify,
-        const QString &details = QString());
+                                                               const QString &text,
+                                                               const QString &caption = QString(),
+                                                               const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                                               const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                               const QString &dontAskAgainName = QString(),
+                                                               Options options = Notify,
+                                                               const QString &details = QString());
 
 /**
  * Display a "warning" dialog with a listbox to show information to the user.
@@ -356,13 +357,13 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
  * The default button is buttonContinue. Pressing "Esc" selects "Cancel".
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                           const QString &text,
+                                                           const QStringList &strlist,
+                                                           const QString &caption = QString(),
+                                                           const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                                           const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                           const QString &dontAskAgainName = QString(),
+                                                           Options options = Notify);
 
 /**
  * Display a Yes/No/Cancel "warning" dialog.
@@ -398,13 +399,13 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  * The default button is "Yes". Pressing "Esc" selects "Cancel"
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                    const QString &text,
+                                                    const QString &caption = QString(),
+                                                    const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                    const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                    const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                    const QString &dontAskAgainName = QString(),
+                                                    Options options = Notify);
 
 /**
  * Display a Yes/No/Cancel "warning" dialog with a listbox to show information
@@ -444,14 +445,14 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
  * The default button is "Yes". Pressing "Esc" selects "Cancel"
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                        const QString &text,
+                                                        const QStringList &strlist,
+                                                        const QString &caption = QString(),
+                                                        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                        const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                        const QString &dontAskAgainName = QString(),
+                                                        Options options = Notify);
 
 /**
  * Display an "Error" dialog.
@@ -473,10 +474,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
  *
  * @note The OK button will always have the i18n'ed text '&OK'.
  */
-KWIDGETSADDONS_EXPORT void error(QWidget *parent,
-                                 const QString &text,
-                                 const QString &caption = QString(),
-                                 Options options = Notify);
+KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
 
 /**
  * Display an "Error" dialog with a listbox.
@@ -501,11 +499,8 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent,
  *
  * @note The OK button will always have the i18n'ed text '&OK'.
  */
-KWIDGETSADDONS_EXPORT void errorList(QWidget *parent,
-                                     const QString &text,
-                                     const QStringList &strlist,
-                                     const QString &caption = QString(),
-                                     Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+errorList(QWidget *parent, const QString &text, const QStringList &strlist, const QString &caption = QString(), Options options = Notify);
 
 /**
  * Displays an "Error" dialog with a "Details >>" button.
@@ -531,11 +526,8 @@ KWIDGETSADDONS_EXPORT void errorList(QWidget *parent,
  *
  * @note The OK button will always have the i18n'ed text '&OK'.
  */
-KWIDGETSADDONS_EXPORT void detailedError(QWidget *parent,
-        const QString &text,
-        const QString &details,
-        const QString &caption = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+detailedError(QWidget *parent, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
 
 /**
  * Display a "Sorry" dialog.
@@ -557,10 +549,7 @@ KWIDGETSADDONS_EXPORT void detailedError(QWidget *parent,
  * @note The OK button will always have the i18n'ed text '&OK'.
  * See the overload with a KGuiItem argument to change that.
  */
-KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
-                                 const QString &text,
-                                 const QString &caption = QString(),
-                                 Options options = Notify);
+KWIDGETSADDONS_EXPORT void sorry(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
 
 /**
  * Display a "Sorry" dialog.
@@ -616,11 +605,8 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
  * @note The OK button will always have the i18n'ed text '&OK'.
  * See the overload with a KGuiItem argument to change that.
  */
-KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
-        const QString &text,
-        const QString &details,
-        const QString &caption = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
 
 /**
  * Displays a "Sorry" dialog with a "Details >>" button.
@@ -649,11 +635,11 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  * @since 5.63
  */
 KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
-        const QString &text,
-        const QString &details,
-        const QString &caption /* = QString() */,
-        const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
-        Options options = Notify);  // TODO KF6: merge with previous overload
+                                         const QString &text,
+                                         const QString &details,
+                                         const QString &caption /* = QString() */,
+                                         const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+                                         Options options = Notify); // TODO KF6: merge with previous overload
 
 /**
  * Display an "Information" dialog.
@@ -678,11 +664,8 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  *
  *  @note The OK button will always have the i18n'ed text '&OK'.
  */
-KWIDGETSADDONS_EXPORT void information(QWidget *parent,
-                                       const QString &text,
-                                       const QString &caption = QString(),
-                                       const QString &dontShowAgainName = QString(),
-                                       Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+information(QWidget *parent, const QString &text, const QString &caption = QString(), const QString &dontShowAgainName = QString(), Options options = Notify);
 
 /**
  * Display an "Information" dialog with a listbox.
@@ -711,11 +694,11 @@ KWIDGETSADDONS_EXPORT void information(QWidget *parent,
  *  @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void informationList(QWidget *parent,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const QString &dontShowAgainName = QString(),
-        Options options = Notify);
+                                           const QString &text,
+                                           const QStringList &strlist,
+                                           const QString &caption = QString(),
+                                           const QString &dontShowAgainName = QString(),
+                                           Options options = Notify);
 
 /**
  * Enable all messages which have been turned off with the
@@ -748,10 +731,7 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
  *
  *  @note The OK button will always have the i18n'ed text '&OK'.
  */
-KWIDGETSADDONS_EXPORT void about(QWidget *parent,
-                                 const QString &text,
-                                 const QString &caption = QString(),
-                                 Options options = Notify);
+KWIDGETSADDONS_EXPORT void about(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
 
 /**
  * Alternate method to show a messagebox:
@@ -777,13 +757,15 @@ KWIDGETSADDONS_EXPORT void about(QWidget *parent,
  *       and for Information, none is used.
  * @return a button code, as defined in KMessageBox.
  */
-KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent, DialogType type, const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontShowAskAgainName = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent,
+                                            DialogType type,
+                                            const QString &text,
+                                            const QString &caption = QString(),
+                                            const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                            const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                            const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                            const QString &dontShowAskAgainName = QString(),
+                                            Options options = Notify);
 
 /**
  * @return true if the corresponding yes/no message box should be shown.
@@ -793,8 +775,7 @@ KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent, DialogType type, co
  * time the message box was shown. Only meaningful, if the message box
  * should not be shown.
  */
-KWIDGETSADDONS_EXPORT bool shouldBeShownYesNo(const QString &dontShowAgainName,
-        ButtonCode &result);
+KWIDGETSADDONS_EXPORT bool shouldBeShownYesNo(const QString &dontShowAgainName, ButtonCode &result);
 /**
  * @return true if the corresponding continue/cancel message box should be
  * shown.
@@ -810,8 +791,7 @@ KWIDGETSADDONS_EXPORT bool shouldBeShownContinue(const QString &dontShowAgainNam
  * @param result the value (Yes or No) that should be used as the result
  * for the message box.
  */
-KWIDGETSADDONS_EXPORT void saveDontShowAgainYesNo(const QString &dontShowAgainName,
-        ButtonCode result);
+KWIDGETSADDONS_EXPORT void saveDontShowAgainYesNo(const QString &dontShowAgainName, ButtonCode result);
 
 /**
  * Save the fact that the continue/cancel message box should not be shown
@@ -832,7 +812,10 @@ KWIDGETSADDONS_EXPORT void setDontShowAgainConfig(KConfig *cfg);
  * @deprecated since 5.0, use setDontShowAgainConfig()
  */
 KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KMessageBox::setDontShowAgainConfig(KConfig*)")
-KWIDGETSADDONS_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg) { setDontShowAgainConfig(cfg); }
+KWIDGETSADDONS_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg)
+{
+    setDontShowAgainConfig(cfg);
+}
 #endif
 
 /**
@@ -876,11 +859,15 @@ KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notify
  *         the @p dialog that is passed in is deleted by this
  *         function. Do not delete it yourself.
  */
-KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButtonBox *buttons,
-        QMessageBox::Icon icon, //krazy:exclude=qclasses
-        const QString &text, const QStringList &strlist,
-        const QString &ask, bool *checkboxReturn,
-        Options options, const QString &details = QString());
+KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
+                                                                         QDialogButtonBox *buttons,
+                                                                         QMessageBox::Icon icon, // krazy:exclude=qclasses
+                                                                         const QString &text,
+                                                                         const QStringList &strlist,
+                                                                         const QString &ask,
+                                                                         bool *checkboxReturn,
+                                                                         Options options,
+                                                                         const QString &details = QString());
 
 /**
  * Create content and layout of a standard dialog
@@ -910,165 +897,157 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  *         the @p dialog that is passed in is deleted by this
  *         function. Do not delete it yourself.
  */
-KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButtonBox *buttons,
-        const QIcon &icon,
-        const QString &text, const QStringList &strlist,
-        const QString &ask, bool *checkboxReturn,
-        Options options, const QString &details = QString(),
-        QMessageBox::Icon notifyType = QMessageBox::Information); //krazy:exclude=qclasses
+KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
+                                                                         QDialogButtonBox *buttons,
+                                                                         const QIcon &icon,
+                                                                         const QString &text,
+                                                                         const QStringList &strlist,
+                                                                         const QString &ask,
+                                                                         bool *checkboxReturn,
+                                                                         Options options,
+                                                                         const QString &details = QString(),
+                                                                         QMessageBox::Icon notifyType = QMessageBox::Information); // krazy:exclude=qclasses
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoWId(WId parent_id,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo =  KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                  const QString &text,
+                                                  const QString &caption = QString(),
+                                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                  const QString &dontAskAgainName = QString(),
+                                                  Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancelWId(WId parent_id,
-        const QString &text,
-       const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                        const QString &text,
+                                                        const QString &caption = QString(),
+                                                        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                        const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                        const QString &dontAskAgainName = QString(),
+                                                        Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoListWId(WId parent_id,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                      const QString &text,
+                                                      const QStringList &strlist,
+                                                      const QString &caption = QString(),
+                                                      const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                      const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                      const QString &dontAskAgainName = QString(),
+                                                      Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoWId(WId parent_id,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Options(Notify | Dangerous));
+                                                 const QString &text,
+                                                 const QString &caption = QString(),
+                                                 const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                 const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                 const QString &dontAskAgainName = QString(),
+                                                 Options options = Options(Notify | Dangerous));
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoListWId(WId parent_id,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Options(Notify | Dangerous));
+                                                     const QString &text,
+                                                     const QStringList &strlist,
+                                                     const QString &caption = QString(),
+                                                     const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                     const QString &dontAskAgainName = QString(),
+                                                     Options options = Options(Notify | Dangerous));
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelWId(WId parent_id,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                          const QString &text,
+                                                          const QString &caption = QString(),
+                                                          const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                                          const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                          const QString &dontAskAgainName = QString(),
+                                                          Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelListWId(WId parent_id,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                              const QString &text,
+                                                              const QStringList &strlist,
+                                                              const QString &caption = QString(),
+                                                              const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
+                                                              const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                              const QString &dontAskAgainName = QString(),
+                                                              Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelWId(WId parent_id,
-        const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                       const QString &text,
+                                                       const QString &caption = QString(),
+                                                       const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                       const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                       const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                       const QString &dontAskAgainName = QString(),
+                                                       Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelListWId(WId parent_id,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontAskAgainName = QString(),
-        Options options = Notify);
+                                                           const QString &text,
+                                                           const QStringList &strlist,
+                                                           const QString &caption = QString(),
+                                                           const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                                           const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                                           const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                                           const QString &dontAskAgainName = QString(),
+                                                           Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void errorWId(WId parent_id,
-                                    const QString &text,
-                                    const QString &caption = QString(),
-                                    Options options = Notify);
+KWIDGETSADDONS_EXPORT void errorWId(WId parent_id, const QString &text, const QString &caption = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void errorListWId(WId parent_id,
-                                        const QString &text,
-                                        const QStringList &strlist,
-                                        const QString &caption = QString(),
-                                        Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+errorListWId(WId parent_id, const QString &text, const QStringList &strlist, const QString &caption = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void detailedErrorWId(WId parent_id,
-        const QString &text,
-        const QString &details,
-        const QString &caption = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
-                                    const QString &text,
-                                    const QString &caption = QString(),
-                                    Options options = Notify);
+KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id, const QString &text, const QString &caption = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1085,11 +1064,8 @@ KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
-        const QString &text,
-        const QString &details,
-        const QString &caption = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1097,44 +1073,43 @@ KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
  * @since 5.63
  */
 KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
-        const QString &text,
-        const QString &details,
-        const QString &caption /*= QString()*/,
-        const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
-        Options options = Notify); // TODO KF6 merge with previous overload
+                                            const QString &text,
+                                            const QString &details,
+                                            const QString &caption /*= QString()*/,
+                                            const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+                                            Options options = Notify); // TODO KF6 merge with previous overload
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void informationWId(WId parent_id,
-        const QString &text,
-        const QString &caption = QString(),
-        const QString &dontShowAgainName = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT void
+informationWId(WId parent_id, const QString &text, const QString &caption = QString(), const QString &dontShowAgainName = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void informationListWId(WId parent_id,
-        const QString &text,
-        const QStringList &strlist,
-        const QString &caption = QString(),
-        const QString &dontShowAgainName = QString(),
-        Options options = Notify);
+                                              const QString &text,
+                                              const QStringList &strlist,
+                                              const QString &caption = QString(),
+                                              const QString &dontShowAgainName = QString(),
+                                              Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT ButtonCode messageBoxWId(WId parent_id, DialogType type, const QString &text,
-        const QString &caption = QString(),
-        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-        const QString &dontShowAskAgainName = QString(),
-        Options options = Notify);
+KWIDGETSADDONS_EXPORT ButtonCode messageBoxWId(WId parent_id,
+                                               DialogType type,
+                                               const QString &text,
+                                               const QString &caption = QString(),
+                                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                               const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                               const QString &dontShowAskAgainName = QString(),
+                                               Options options = Notify);
 
 }
 

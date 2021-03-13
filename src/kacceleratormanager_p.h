@@ -8,9 +8,9 @@
 #ifndef KACCELERATORMANAGER_PRIVATE_H
 #define KACCELERATORMANAGER_PRIVATE_H
 
-#include <QVector>
-#include <QString>
 #include <QObject>
+#include <QString>
+#include <QVector>
 
 class QStackedWidget;
 class QMenu;
@@ -26,13 +26,17 @@ class QDockWidget;
  * would be as an accelerator.
  *
  * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
-*/
+ */
 
 class KAccelString
 {
 public:
-
-    KAccelString() : m_pureText(), m_accel(-1), m_orig_accel(-1) {}
+    KAccelString()
+        : m_pureText()
+        , m_accel(-1)
+        , m_orig_accel(-1)
+    {
+    }
     explicit KAccelString(const QString &input, int initalWeight = -1);
 
     void calculateWeights(int initialWeight);
@@ -65,13 +69,12 @@ public:
 
     int maxWeight(int &index, const QString &used) const;
 
-    bool operator == (const KAccelString &c) const
+    bool operator==(const KAccelString &c) const
     {
         return m_pureText == c.m_pureText && m_accel == c.m_accel && m_orig_accel == c.m_orig_accel;
     }
 
 private:
-
     int stripAccelerator(QString &input);
 
     void dump();
@@ -81,7 +84,6 @@ private:
     int m_accel;
     int m_orig_accel;
     QVector<int> m_weight;
-
 };
 
 typedef QList<KAccelString> KAccelStringList;
@@ -91,12 +93,11 @@ typedef QList<KAccelString> KAccelStringList;
  * distribution of accelerators in a hierarchy of widgets.
  *
  * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
-*/
+ */
 
 class KAccelManagerAlgorithm
 {
 public:
-
     enum {
         // Default control weight
         DEFAULT_WEIGHT = 50,
@@ -121,7 +122,6 @@ public:
     };
 
     static void findAccelerators(KAccelStringList &result, QString &used);
-
 };
 
 /**
@@ -131,18 +131,16 @@ public:
  * This is necessary for dynamic menus like for example in kicker.
  *
  * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
-*/
+ */
 
 class KPopupAccelManager : public QObject
 {
     Q_OBJECT
 
 public:
-
     static void manage(QMenu *popup);
 
 protected:
-
     KPopupAccelManager(QMenu *popup);
 
 private Q_SLOTS:
@@ -150,16 +148,14 @@ private Q_SLOTS:
     void aboutToShow();
 
 private:
-
     void calculateAccelerators();
 
     void findMenuEntries(KAccelStringList &list);
     void setMenuEntries(const KAccelStringList &list);
 
-    QMenu       *m_popup;
+    QMenu *m_popup;
     KAccelStringList m_entries;
-    int              m_count;
-
+    int m_count;
 };
 
 class QWidgetStackAccelManager : public QObject
@@ -167,11 +163,9 @@ class QWidgetStackAccelManager : public QObject
     Q_OBJECT
 
 public:
-
     static void manage(QStackedWidget *popup);
 
 protected:
-
     QWidgetStackAccelManager(QStackedWidget *popup);
 
 private Q_SLOTS:
@@ -180,12 +174,10 @@ private Q_SLOTS:
     bool eventFilter(QObject *watched, QEvent *e) override;
 
 private:
-
     void calculateAccelerators();
 
-    QStackedWidget     *m_stack;
+    QStackedWidget *m_stack;
     KAccelStringList m_entries;
-
 };
 
 /*********************************************************************
@@ -200,7 +192,6 @@ private:
 class KAcceleratorManagerPrivate
 {
 public:
-
     static void manage(QWidget *widget);
     static bool programmers_mode;
     static void addStandardActionNames(const QStringList &strList);
@@ -211,8 +202,8 @@ public:
         QString t2 = as.accelerated();
         QString t1 = as.originalText();
         if (t1 != t2) {
-            if (as.accel() == -1)  {
-                removed_string  += QLatin1String("<tr><td>") + t1.toHtmlEscaped() + QLatin1String("</td></tr>");
+            if (as.accel() == -1) {
+                removed_string += QLatin1String("<tr><td>") + t1.toHtmlEscaped() + QLatin1String("</td></tr>");
             } else if (as.originalAccel() == -1) {
                 added_string += QLatin1String("<tr><td>") + t2.toHtmlEscaped() + QLatin1String("</td></tr>");
             } else {
@@ -231,6 +222,7 @@ public:
 
 private:
     class Item;
+
 public:
     typedef QList<Item *> ItemList;
 
@@ -247,8 +239,12 @@ private:
     class Item
     {
     public:
-
-        Item() : m_widget(nullptr), m_children(nullptr), m_index(-1) {}
+        Item()
+            : m_widget(nullptr)
+            , m_children(nullptr)
+            , m_index(-1)
+        {
+        }
         ~Item();
 
         Item(const Item &) = delete;
@@ -256,11 +252,10 @@ private:
 
         void addChild(Item *item);
 
-        QWidget       *m_widget;
-        KAccelString  m_content;
-        ItemList      *m_children;
-        int           m_index;
-
+        QWidget *m_widget;
+        KAccelString m_content;
+        ItemList *m_children;
+        int m_index;
     };
 };
 

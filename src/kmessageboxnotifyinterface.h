@@ -18,8 +18,12 @@
 class KMessageBoxNotifyInterface
 {
 public:
-    KMessageBoxNotifyInterface() {}
-    virtual ~KMessageBoxNotifyInterface() {}
+    KMessageBoxNotifyInterface()
+    {
+    }
+    virtual ~KMessageBoxNotifyInterface()
+    {
+    }
 
     virtual void sendNotification(QMessageBox::Icon notificationType, const QString &message, QWidget *parent) = 0;
 };

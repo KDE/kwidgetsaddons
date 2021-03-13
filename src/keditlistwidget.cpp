@@ -10,16 +10,16 @@
 
 #include "keditlistwidget.h"
 
-#include <QStringList>
+#include <QApplication>
+#include <QComboBox>
+#include <QHBoxLayout>
 #include <QKeyEvent>
 #include <QLineEdit>
 #include <QListView>
 #include <QPushButton>
-#include <QApplication>
-#include <QComboBox>
+#include <QStringList>
 #include <QStringListModel>
 #include <QVBoxLayout>
-#include <QHBoxLayout>
 
 class KEditListWidgetPrivate
 {
@@ -42,8 +42,7 @@ public:
     bool checkAtEntering;
     KEditListWidget::Buttons buttons;
 
-    void init(bool check = false, KEditListWidget::Buttons buttons = KEditListWidget::All,
-              QWidget *representationWidget = nullptr);
+    void init(bool check = false, KEditListWidget::Buttons buttons = KEditListWidget::All, QWidget *representationWidget = nullptr);
     void setEditor(QLineEdit *lineEdit, QWidget *representationWidget = nullptr);
     void updateButtonState();
     QModelIndex selectedIndex();
@@ -52,14 +51,12 @@ private:
     KEditListWidget *const q;
 };
 
-void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButtons,
-                                  QWidget *representationWidget)
+void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButtons, QWidget *representationWidget)
 {
     checkAtEntering = check;
 
     servNewButton = servRemoveButton = servUpButton = servDownButton = nullptr;
-    q->setSizePolicy(QSizePolicy(QSizePolicy::MinimumExpanding,
-                                 QSizePolicy::Preferred));
+    q->setSizePolicy(QSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred));
 
     mainLayout = new QVBoxLayout(q);
     mainLayout->setContentsMargins(0, 0, 0, 0);
@@ -82,22 +79,19 @@ void KEditListWidgetPrivate::init(bool check, KEditListWidget::Buttons newButton
     buttons = KEditListWidget::Buttons();
     q->setButtons(newButtons);
 
-    q->connect(listView->selectionModel(), &QItemSelectionModel::selectionChanged,
-               q, &KEditListWidget::slotSelectionChanged);
+    q->connect(listView->selectionModel(), &QItemSelectionModel::selectionChanged, q, &KEditListWidget::slotSelectionChanged);
 }
 
 void KEditListWidgetPrivate::setEditor(QLineEdit *newLineEdit, QWidget *representationWidget)
 {
-    if (editingWidget != lineEdit &&
-            editingWidget != representationWidget) {
+    if (editingWidget != lineEdit && editingWidget != representationWidget) {
         delete editingWidget;
     }
     if (lineEdit != newLineEdit) {
         delete lineEdit;
     }
     lineEdit = newLineEdit ? newLineEdit : new QLineEdit(q);
-    editingWidget = representationWidget ?
-                    representationWidget : lineEdit;
+    editingWidget = representationWidget ? representationWidget : lineEdit;
 
     if (representationWidget) {
         representationWidget->setParent(q);
@@ -139,7 +133,7 @@ void KEditListWidgetPrivate::updateButtonState()
     const bool hasSelectedItem = selectedIndex().isValid();
 
     // TODO: merge with enableMoveButtons()
-    QPushButton * const buttons[3] = { servUpButton, servDownButton, servRemoveButton };
+    QPushButton *const buttons[3] = {servUpButton, servDownButton, servRemoveButton};
 
     for (QPushButton *button : buttons) {
         if (button) {
@@ -166,10 +160,12 @@ QModelIndex KEditListWidgetPrivate::selectedIndex()
 class KEditListWidgetCustomEditorPrivate
 {
 public:
-    KEditListWidgetCustomEditorPrivate(KEditListWidget::CustomEditor *q):
-        q(q),
-        representationWidget(nullptr),
-        lineEdit(nullptr) {}
+    KEditListWidgetCustomEditorPrivate(KEditListWidget::CustomEditor *q)
+        : q(q)
+        , representationWidget(nullptr)
+        , lineEdit(nullptr)
+    {
+    }
 
     KEditListWidget::CustomEditor *q;
     QWidget *representationWidget;
@@ -219,16 +215,15 @@ QLineEdit *KEditListWidget::CustomEditor::lineEdit() const
 }
 
 KEditListWidget::KEditListWidget(QWidget *parent)
-    : QWidget(parent), d(new KEditListWidgetPrivate(this))
+    : QWidget(parent)
+    , d(new KEditListWidgetPrivate(this))
 {
     d->init();
 }
 
-KEditListWidget::KEditListWidget(const CustomEditor &custom,
-                                 QWidget *parent,
-                                 bool checkAtEntering,
-                                 Buttons buttons)
-    : QWidget(parent), d(new KEditListWidgetPrivate(this))
+KEditListWidget::KEditListWidget(const CustomEditor &custom, QWidget *parent, bool checkAtEntering, Buttons buttons)
+    : QWidget(parent)
+    , d(new KEditListWidgetPrivate(this))
 {
     d->lineEdit = custom.lineEdit();
     d->init(checkAtEntering, buttons, custom.representationWidget());
@@ -320,8 +315,10 @@ void KEditListWidget::setButtons(Buttons buttons)
         d->btnsLayout->insertWidget(2, d->servUpButton);
         d->btnsLayout->insertWidget(3, d->servDownButton);
     } else if ((buttons & UpDown) == 0 && d->servUpButton) {
-        delete d->servUpButton; d->servUpButton = nullptr;
-        delete d->servDownButton; d->servDownButton = nullptr;
+        delete d->servUpButton;
+        d->servUpButton = nullptr;
+        delete d->servDownButton;
+        d->servDownButton = nullptr;
     }
 
     d->buttons = buttons;
@@ -444,7 +441,7 @@ void KEditListWidget::addItem()
 
     const QString &currentTextLE = d->lineEdit->text();
     bool alreadyInList(false);
-    //if we didn't check for dupes at the inserting we have to do it now
+    // if we didn't check for dupes at the inserting we have to do it now
     if (!d->checkAtEntering) {
         // first check current item instead of dumb iterating the entire list
         if (currentIndex.isValid()) {
@@ -486,7 +483,7 @@ void KEditListWidget::addItem()
             d->model->setStringList(lst);
         }
         Q_EMIT changed();
-        Q_EMIT added(currentTextLE);   // TODO: pass the index too
+        Q_EMIT added(currentTextLE); // TODO: pass the index too
     }
 
     d->updateButtonState();
@@ -578,7 +575,7 @@ void KEditListWidget::insertStringList(const QStringList &list, int index)
         content += list;
     } else
         for (int i = 0, j = index; i < list.count(); ++i, ++j) {
-            content.insert(j, list[ i ]);
+            content.insert(j, list[i]);
         }
 
     d->model->setStringList(content);
@@ -601,7 +598,7 @@ QString KEditListWidget::text(int index) const
 {
     const QStringList list = d->model->stringList();
 
-    return list[ index ];
+    return list[index];
 }
 
 QString KEditListWidget::currentText() const
@@ -633,7 +630,7 @@ void KEditListWidget::slotSelectionChanged(const QItemSelection &, const QItemSe
 {
     d->updateButtonState();
     QModelIndex index = d->selectedIndex();
-    enableMoveButtons(index,  QModelIndex());
+    enableMoveButtons(index, QModelIndex());
     if (index.isValid()) {
         d->lineEdit->setFocus(Qt::OtherFocusReason);
     }
@@ -643,8 +640,7 @@ bool KEditListWidget::eventFilter(QObject *o, QEvent *e)
 {
     if (o == d->lineEdit && e->type() == QEvent::KeyPress) {
         QKeyEvent *keyEvent = (QKeyEvent *)e;
-        if (keyEvent->key() == Qt::Key_Down ||
-                keyEvent->key() == Qt::Key_Up) {
+        if (keyEvent->key() == Qt::Key_Down || keyEvent->key() == Qt::Key_Up) {
             return ((QObject *)d->listView)->event(e);
         } else if (keyEvent->key() == Qt::Key_Return || keyEvent->key() == Qt::Key_Enter) {
             return true;
@@ -653,4 +649,3 @@ bool KEditListWidget::eventFilter(QObject *o, QEvent *e)
 
     return false;
 }
-

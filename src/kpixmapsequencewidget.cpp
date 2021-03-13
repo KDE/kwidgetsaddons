@@ -5,8 +5,8 @@
 */
 
 #include "kpixmapsequencewidget.h"
-#include "kpixmapsequenceoverlaypainter.h"
 #include "kpixmapsequence.h"
+#include "kpixmapsequenceoverlaypainter.h"
 
 class KPixmapSequenceWidgetPrivate
 {
@@ -15,16 +15,16 @@ public:
 };
 
 KPixmapSequenceWidget::KPixmapSequenceWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new KPixmapSequenceWidgetPrivate)
+    : QWidget(parent)
+    , d(new KPixmapSequenceWidgetPrivate)
 {
     d->m_painter = new KPixmapSequenceOverlayPainter(this);
     d->m_painter->setWidget(this);
 }
 
 KPixmapSequenceWidget::KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent)
-    : QWidget(parent),
-      d(new KPixmapSequenceWidgetPrivate)
+    : QWidget(parent)
+    , d(new KPixmapSequenceWidgetPrivate)
 {
     d->m_painter = new KPixmapSequenceOverlayPainter(seq);
     d->m_painter->setWidget(this);
@@ -72,4 +72,3 @@ void KPixmapSequenceWidget::setInterval(int msecs)
 {
     d->m_painter->setInterval(msecs);
 }
-

@@ -9,18 +9,18 @@
 #include "kmessagebox.h"
 #include "kmessagebox_p.h"
 
-#include <QPointer>
 #include <QCheckBox>
 #include <QDialog>
 #include <QLabel>
 #include <QLayout>
 #include <QListWidget>
+#include <QPointer>
 #include <QPushButton>
+#include <QScreen>
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QTextBrowser>
 #include <QWindow>
-#include <QScreen>
 
 #include <qapplication.h>
 #if 0
@@ -66,12 +66,11 @@
 
 namespace KMessageBox
 {
-
 /*
  * this static is used by the createKMessageBox function to enqueue dialogs
  * FIXME what should we do about this static?
  */
-QDialogButtonBox::StandardButton KWIDGETSADDONS_EXPORT(*KMessageBox_exec_hook)(QDialog *) = nullptr;
+QDialogButtonBox::StandardButton KWIDGETSADDONS_EXPORT (*KMessageBox_exec_hook)(QDialog *) = nullptr;
 
 static void applyOptions(QDialog *dialog, KMessageBox::Options options)
 {
@@ -123,13 +122,12 @@ class DialogButtonsHelper : public QObject
     Q_OBJECT
 public:
     DialogButtonsHelper(QDialog *dialog, QDialogButtonBox *buttons)
-        : QObject(dialog),
-          m_dialog(dialog),
-          m_buttons(buttons),
-          m_details(nullptr)
+        : QObject(dialog)
+        , m_dialog(dialog)
+        , m_buttons(buttons)
+        , m_details(nullptr)
     {
-        connect(m_buttons, &QDialogButtonBox::clicked,
-                this, &DialogButtonsHelper::onButtonClicked);
+        connect(m_buttons, &QDialogButtonBox::clicked, this, &DialogButtonsHelper::onButtonClicked);
     }
 
     void setDetailsWidget(QWidget *widget)
@@ -152,10 +150,15 @@ private:
     QWidget *m_details;
 };
 
-QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButtonBox *buttons, QMessageBox::Icon icon,
-        const QString &text, const QStringList &strlist,
-        const QString &ask, bool *checkboxReturn,
-        Options options, const QString &details)
+QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
+                                                   QDialogButtonBox *buttons,
+                                                   QMessageBox::Icon icon,
+                                                   const QString &text,
+                                                   const QStringList &strlist,
+                                                   const QString &ask,
+                                                   bool *checkboxReturn,
+                                                   Options options,
+                                                   const QString &details)
 {
     QIcon tmpIcon;
     QStyle *style = dialog ? dialog->style() : QApplication::style();
@@ -176,14 +179,19 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
         break;
     }
 
-    return createKMessageBox(dialog, buttons, tmpIcon, text, strlist,
-                             ask, checkboxReturn, options, details, icon);
+    return createKMessageBox(dialog, buttons, tmpIcon, text, strlist, ask, checkboxReturn, options, details, icon);
 }
 
-QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButtonBox *buttons, const QIcon &icon,
-        const QString &text, const QStringList &strlist,
-        const QString &ask, bool *checkboxReturn, Options options,
-        const QString &details, QMessageBox::Icon notifyType)
+QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
+                                                   QDialogButtonBox *buttons,
+                                                   const QIcon &icon,
+                                                   const QString &text,
+                                                   const QStringList &strlist,
+                                                   const QString &ask,
+                                                   bool *checkboxReturn,
+                                                   Options options,
+                                                   const QString &details,
+                                                   QMessageBox::Icon notifyType)
 {
     DialogButtonsHelper *buttonsHelper = new DialogButtonsHelper(dialog, buttons);
 
@@ -381,19 +389,18 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog, QDialogButto
     return result;
 }
 
-ButtonCode questionYesNo(QWidget *parent, const QString &text,
+ButtonCode questionYesNo(QWidget *parent,
+                         const QString &text,
                          const QString &caption,
                          const KGuiItem &buttonYes,
                          const KGuiItem &buttonNo,
                          const QString &dontAskAgainName,
                          Options options)
 {
-    return questionYesNoList(parent, text, QStringList(), caption,
-                             buttonYes, buttonNo, dontAskAgainName, options);
+    return questionYesNoList(parent, text, QStringList(), caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
-bool shouldBeShownYesNo(const QString &dontShowAgainName,
-                        ButtonCode &result)
+bool shouldBeShownYesNo(const QString &dontShowAgainName, ButtonCode &result)
 {
     if (dontShowAgainName.isEmpty()) {
         return true;
@@ -409,8 +416,7 @@ bool shouldBeShownContinue(const QString &dontShowAgainName)
     return dontAskAgainInterface()->shouldBeShownContinue(dontShowAgainName);
 }
 
-void saveDontShowAgainYesNo(const QString &dontShowAgainName,
-                            ButtonCode result)
+void saveDontShowAgainYesNo(const QString &dontShowAgainName, ButtonCode result)
 {
     if (dontShowAgainName.isEmpty()) {
         return;
@@ -441,13 +447,14 @@ void setDontShowAgainConfig(KConfig *cfg)
     dontAskAgainInterface()->setConfig(cfg);
 }
 
-static ButtonCode questionYesNoListInternal(QDialog *dialog, const QString &text,
-        const QStringList &strlist,
-        const QString &caption,
-        const KGuiItem &buttonYes_,
-        const KGuiItem &buttonNo_,
-        const QString &dontAskAgainName,
-        Options options)
+static ButtonCode questionYesNoListInternal(QDialog *dialog,
+                                            const QString &text,
+                                            const QStringList &strlist,
+                                            const QString &caption,
+                                            const KGuiItem &buttonYes_,
+                                            const KGuiItem &buttonNo_,
+                                            const QString &dontAskAgainName,
+                                            Options options)
 {
     ButtonCode res;
     if (!shouldBeShownYesNo(dontAskAgainName, res)) {
@@ -470,9 +477,14 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog, const QString &text
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Question, text, strlist,
+    const int result = createKMessageBox(dialog,
+                                         buttonBox,
+                                         QMessageBox::Question,
+                                         text,
+                                         strlist,
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
-                                         &checkboxResult, options);
+                                         &checkboxResult,
+                                         options);
     res = (result == QDialogButtonBox::Yes ? Yes : No);
 
     if (checkboxResult) {
@@ -481,7 +493,8 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog, const QString &text
     return res;
 }
 
-ButtonCode questionYesNoList(QWidget *parent, const QString &text,
+ButtonCode questionYesNoList(QWidget *parent,
+                             const QString &text,
                              const QStringList &strlist,
                              const QString &caption,
                              const KGuiItem &buttonYes,
@@ -489,18 +502,17 @@ ButtonCode questionYesNoList(QWidget *parent, const QString &text,
                              const QString &dontAskAgainName,
                              Options options)
 {
-    return questionYesNoListInternal(new QDialog(parent), text, strlist, caption, buttonYes, buttonNo,
-                                     dontAskAgainName, options);
+    return questionYesNoListInternal(new QDialog(parent), text, strlist, caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
 static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
-        const QString &text,
-        const QString &caption,
-        const KGuiItem &buttonYes_,
-        const KGuiItem &buttonNo_,
-        const KGuiItem &buttonCancel_,
-        const QString &dontAskAgainName,
-        Options options)
+                                              const QString &text,
+                                              const QString &caption,
+                                              const KGuiItem &buttonYes_,
+                                              const KGuiItem &buttonNo_,
+                                              const KGuiItem &buttonCancel_,
+                                              const QString &dontAskAgainName,
+                                              Options options)
 {
     ButtonCode res;
     if (!shouldBeShownYesNo(dontAskAgainName, res)) {
@@ -525,10 +537,14 @@ static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Question,
-                                         text, QStringList(),
+    const int result = createKMessageBox(dialog,
+                                         buttonBox,
+                                         QMessageBox::Question,
+                                         text,
+                                         QStringList(),
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
-                                         &checkboxResult, options);
+                                         &checkboxResult,
+                                         options);
 
     if (result == QDialogButtonBox::Yes) {
         res = Yes;
@@ -553,28 +569,28 @@ ButtonCode questionYesNoCancel(QWidget *parent,
                                const QString &dontAskAgainName,
                                Options options)
 {
-    return questionYesNoCancelInternal(new QDialog(parent), text, caption, buttonYes, buttonNo, buttonCancel,
-                                       dontAskAgainName, options);
+    return questionYesNoCancelInternal(new QDialog(parent), text, caption, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
-ButtonCode warningYesNo(QWidget *parent, const QString &text,
+ButtonCode warningYesNo(QWidget *parent,
+                        const QString &text,
                         const QString &caption,
                         const KGuiItem &buttonYes,
                         const KGuiItem &buttonNo,
                         const QString &dontAskAgainName,
                         Options options)
 {
-    return warningYesNoList(parent, text, QStringList(), caption,
-                            buttonYes, buttonNo, dontAskAgainName, options);
+    return warningYesNoList(parent, text, QStringList(), caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
-static ButtonCode warningYesNoListInternal(QDialog *dialog, const QString &text,
-        const QStringList &strlist,
-        const QString &caption,
-        const KGuiItem &buttonYes_,
-        const KGuiItem &buttonNo_,
-        const QString &dontAskAgainName,
-        Options options)
+static ButtonCode warningYesNoListInternal(QDialog *dialog,
+                                           const QString &text,
+                                           const QStringList &strlist,
+                                           const QString &caption,
+                                           const KGuiItem &buttonYes_,
+                                           const KGuiItem &buttonNo_,
+                                           const QString &dontAskAgainName,
+                                           Options options)
 {
     ButtonCode res;
     if (!shouldBeShownYesNo(dontAskAgainName, res)) {
@@ -597,9 +613,14 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog, const QString &text,
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
+    const int result = createKMessageBox(dialog,
+                                         buttonBox,
+                                         QMessageBox::Warning,
+                                         text,
+                                         strlist,
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
-                                         &checkboxResult, options);
+                                         &checkboxResult,
+                                         options);
     res = (result == QDialogButtonBox::Yes ? Yes : No);
 
     if (checkboxResult) {
@@ -608,7 +629,8 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog, const QString &text,
     return res;
 }
 
-ButtonCode warningYesNoList(QWidget *parent, const QString &text,
+ButtonCode warningYesNoList(QWidget *parent,
+                            const QString &text,
                             const QStringList &strlist,
                             const QString &caption,
                             const KGuiItem &buttonYes,
@@ -616,8 +638,7 @@ ButtonCode warningYesNoList(QWidget *parent, const QString &text,
                             const QString &dontAskAgainName,
                             Options options)
 {
-    return warningYesNoListInternal(new QDialog(parent), text, strlist, caption, buttonYes, buttonNo,
-                                    dontAskAgainName, options);
+    return warningYesNoListInternal(new QDialog(parent), text, strlist, caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
 ButtonCode warningContinueCancel(QWidget *parent,
@@ -628,18 +649,18 @@ ButtonCode warningContinueCancel(QWidget *parent,
                                  const QString &dontAskAgainName,
                                  Options options)
 {
-    return warningContinueCancelList(parent, text, QStringList(), caption,
-                                     buttonContinue, buttonCancel, dontAskAgainName, options);
+    return warningContinueCancelList(parent, text, QStringList(), caption, buttonContinue, buttonCancel, dontAskAgainName, options);
 }
 
-static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QString &text,
-        const QStringList &strlist,
-        const QString &caption,
-        const KGuiItem &buttonContinue_,
-        const KGuiItem &buttonCancel_,
-        const QString &dontAskAgainName,
-        Options options,
-        const QString &details)
+static ButtonCode warningContinueCancelListInternal(QDialog *dialog,
+                                                    const QString &text,
+                                                    const QStringList &strlist,
+                                                    const QString &caption,
+                                                    const KGuiItem &buttonContinue_,
+                                                    const KGuiItem &buttonCancel_,
+                                                    const QString &dontAskAgainName,
+                                                    Options options,
+                                                    const QString &details)
 {
     if (!shouldBeShownContinue(dontAskAgainName)) {
         delete dialog;
@@ -661,9 +682,15 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QStri
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
+    const int result = createKMessageBox(dialog,
+                                         buttonBox,
+                                         QMessageBox::Warning,
+                                         text,
+                                         strlist,
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
-                                         &checkboxResult, options, details);
+                                         &checkboxResult,
+                                         options,
+                                         details);
 
     if (result != QDialogButtonBox::Yes) {
         return Cancel;
@@ -674,7 +701,8 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog, const QStri
     return Continue;
 }
 
-ButtonCode warningContinueCancelList(QWidget *parent, const QString &text,
+ButtonCode warningContinueCancelList(QWidget *parent,
+                                     const QString &text,
                                      const QStringList &strlist,
                                      const QString &caption,
                                      const KGuiItem &buttonContinue,
@@ -682,25 +710,31 @@ ButtonCode warningContinueCancelList(QWidget *parent, const QString &text,
                                      const QString &dontAskAgainName,
                                      Options options)
 {
-    return warningContinueCancelListInternal(new QDialog(parent), text, strlist, caption, buttonContinue, buttonCancel,
-            dontAskAgainName, options, QString());
+    return warningContinueCancelListInternal(new QDialog(parent), text, strlist, caption, buttonContinue, buttonCancel, dontAskAgainName, options, QString());
 }
-
 
 ButtonCode warningContinueCancelDetailed(QWidget *parent,
-                                 const QString &text,
-                                 const QString &caption,
-                                 const KGuiItem &buttonContinue,
-                                 const KGuiItem &buttonCancel,
-                                 const QString &dontAskAgainName,
-                                 Options options,
-                                 const QString &details)
+                                         const QString &text,
+                                         const QString &caption,
+                                         const KGuiItem &buttonContinue,
+                                         const KGuiItem &buttonCancel,
+                                         const QString &dontAskAgainName,
+                                         Options options,
+                                         const QString &details)
 {
-    return warningContinueCancelListInternal(new QDialog(parent), text, QStringList(), caption,
-                                     buttonContinue, buttonCancel, dontAskAgainName, options, details);
+    return warningContinueCancelListInternal(new QDialog(parent),
+                                             text,
+                                             QStringList(),
+                                             caption,
+                                             buttonContinue,
+                                             buttonCancel,
+                                             dontAskAgainName,
+                                             options,
+                                             details);
 }
 
-ButtonCode warningYesNoCancel(QWidget *parent, const QString &text,
+ButtonCode warningYesNoCancel(QWidget *parent,
+                              const QString &text,
                               const QString &caption,
                               const KGuiItem &buttonYes,
                               const KGuiItem &buttonNo,
@@ -708,18 +742,18 @@ ButtonCode warningYesNoCancel(QWidget *parent, const QString &text,
                               const QString &dontAskAgainName,
                               Options options)
 {
-    return warningYesNoCancelList(parent, text, QStringList(), caption,
-                                  buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
+    return warningYesNoCancelList(parent, text, QStringList(), caption, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
-static ButtonCode warningYesNoCancelListInternal(QDialog *dialog, const QString &text,
-        const QStringList &strlist,
-        const QString &caption,
-        const KGuiItem &buttonYes_,
-        const KGuiItem &buttonNo_,
-        const KGuiItem &buttonCancel_,
-        const QString &dontAskAgainName,
-        Options options)
+static ButtonCode warningYesNoCancelListInternal(QDialog *dialog,
+                                                 const QString &text,
+                                                 const QStringList &strlist,
+                                                 const QString &caption,
+                                                 const KGuiItem &buttonYes_,
+                                                 const KGuiItem &buttonNo_,
+                                                 const KGuiItem &buttonCancel_,
+                                                 const QString &dontAskAgainName,
+                                                 Options options)
 {
     ButtonCode res;
     if (!shouldBeShownYesNo(dontAskAgainName, res)) {
@@ -744,9 +778,14 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog, const QString 
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
-    const int result = createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, strlist,
+    const int result = createKMessageBox(dialog,
+                                         buttonBox,
+                                         QMessageBox::Warning,
+                                         text,
+                                         strlist,
                                          dontAskAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not ask again"),
-                                         &checkboxResult, options);
+                                         &checkboxResult,
+                                         options);
 
     if (result == QDialogButtonBox::Yes) {
         res = Yes;
@@ -762,7 +801,8 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog, const QString 
     return res;
 }
 
-ButtonCode warningYesNoCancelList(QWidget *parent, const QString &text,
+ButtonCode warningYesNoCancelList(QWidget *parent,
+                                  const QString &text,
                                   const QStringList &strlist,
                                   const QString &caption,
                                   const KGuiItem &buttonYes,
@@ -771,18 +811,15 @@ ButtonCode warningYesNoCancelList(QWidget *parent, const QString &text,
                                   const QString &dontAskAgainName,
                                   Options options)
 {
-    return warningYesNoCancelListInternal(new QDialog(parent), text, strlist, caption, buttonYes, buttonNo, buttonCancel,
-                                          dontAskAgainName, options);
+    return warningYesNoCancelListInternal(new QDialog(parent), text, strlist, caption, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
-void error(QWidget *parent,  const QString &text,
-           const QString &caption, Options options)
+void error(QWidget *parent, const QString &text, const QString &caption, Options options)
 {
     errorList(parent, text, QStringList(), caption, options);
 }
 
-static void errorListInternal(QDialog *dialog, const QString &text, const QStringList &strlist,
-                              const QString &caption, Options options)
+static void errorListInternal(QDialog *dialog, const QString &text, const QStringList &strlist, const QString &caption, Options options)
 {
     dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Error") : caption);
     dialog->setObjectName(QStringLiteral("error"));
@@ -795,15 +832,12 @@ static void errorListInternal(QDialog *dialog, const QString &text, const QStrin
     createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, strlist, QString(), nullptr, options);
 }
 
-void errorList(QWidget *parent, const QString &text, const QStringList &strlist,
-               const QString &caption, Options options)
+void errorList(QWidget *parent, const QString &text, const QStringList &strlist, const QString &caption, Options options)
 {
     errorListInternal(new QDialog(parent), text, strlist, caption, options);
 }
 
-static void detailedErrorInternal(QDialog *dialog, const QString &text,
-                                  const QString &details,
-                                  const QString &caption, Options options)
+static void detailedErrorInternal(QDialog *dialog, const QString &text, const QString &details, const QString &caption, Options options)
 {
     dialog->setWindowTitle(caption.isEmpty() ? QApplication::translate("KMessageBox", "Error") : caption);
     dialog->setObjectName(QStringLiteral("error"));
@@ -817,17 +851,12 @@ static void detailedErrorInternal(QDialog *dialog, const QString &text,
     createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, QStringList(), QString(), nullptr, options, details);
 }
 
-void detailedError(QWidget *parent, const QString &text,
-                   const QString &details,
-                   const QString &caption, Options options)
+void detailedError(QWidget *parent, const QString &text, const QString &details, const QString &caption, Options options)
 {
     detailedErrorInternal(new QDialog(parent), text, details, caption, options);
 }
 
-static void sorryInternal(QDialog *dialog, const QString &text,
-                          const QString &caption,
-                          const KGuiItem &buttonOk_,
-                          Options options)
+static void sorryInternal(QDialog *dialog, const QString &text, const QString &caption, const KGuiItem &buttonOk_, Options options)
 {
     I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
     I18N_POST_BUTTON_FILTER
@@ -844,23 +873,18 @@ static void sorryInternal(QDialog *dialog, const QString &text,
     createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
 }
 
-void sorry(QWidget *parent, const QString &text,
-           const QString &caption, Options options)
+void sorry(QWidget *parent, const QString &text, const QString &caption, Options options)
 {
     sorryInternal(new QDialog(parent), text, caption, KStandardGuiItem::ok(), options);
 }
 
-void sorry(QWidget *parent, const QString &text,
-           const QString &caption, const KGuiItem &item, Options options)
+void sorry(QWidget *parent, const QString &text, const QString &caption, const KGuiItem &item, Options options)
 {
     sorryInternal(new QDialog(parent), text, caption, item, options);
 }
 
-static void detailedSorryInternal(QDialog *dialog, const QString &text,
-                                  const QString &details,
-                                  const QString &caption,
-                                  const KGuiItem &buttonOk_,
-                                  Options options)
+static void
+detailedSorryInternal(QDialog *dialog, const QString &text, const QString &details, const QString &caption, const KGuiItem &buttonOk_, Options options)
 {
     I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
     I18N_POST_BUTTON_FILTER
@@ -878,30 +902,27 @@ static void detailedSorryInternal(QDialog *dialog, const QString &text,
     createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options, details);
 }
 
-void detailedSorry(QWidget *parent, const QString &text,
-                   const QString &details,
-                   const QString &caption, Options options)
+void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &caption, Options options)
 {
     detailedSorryInternal(new QDialog(parent), text, details, caption, KStandardGuiItem::ok(), options);
 }
 
-void detailedSorry(QWidget *parent, const QString &text,
-                   const QString &details,
-                   const QString &caption,
-                   const KGuiItem &buttonOk,
-                   Options options)
+void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &caption, const KGuiItem &buttonOk, Options options)
 {
     detailedSorryInternal(new QDialog(parent), text, details, caption, buttonOk, options);
 }
 
-void information(QWidget *parent, const QString &text,
-                 const QString &caption, const QString &dontShowAgainName, Options options)
+void information(QWidget *parent, const QString &text, const QString &caption, const QString &dontShowAgainName, Options options)
 {
     informationList(parent, text, QStringList(), caption, dontShowAgainName, options);
 }
 
-static void informationListInternal(QDialog *dialog, const QString &text, const QStringList &strlist,
-                                    const QString &caption, const QString &dontShowAgainName, Options options)
+static void informationListInternal(QDialog *dialog,
+                                    const QString &text,
+                                    const QStringList &strlist,
+                                    const QString &caption,
+                                    const QString &dontShowAgainName,
+                                    Options options)
 {
     if (!shouldBeShownContinue(dontShowAgainName)) {
         delete dialog;
@@ -918,23 +939,31 @@ static void informationListInternal(QDialog *dialog, const QString &text, const 
 
     bool checkboxResult = false;
 
-    createKMessageBox(dialog, buttonBox, QMessageBox::Information, text, strlist,
+    createKMessageBox(dialog,
+                      buttonBox,
+                      QMessageBox::Information,
+                      text,
+                      strlist,
                       dontShowAgainName.isEmpty() ? QString() : QApplication::translate("KMessageBox", "Do not show this message again"),
-                      &checkboxResult, options);
+                      &checkboxResult,
+                      options);
 
     if (checkboxResult) {
         saveDontShowAgainContinue(dontShowAgainName);
     }
 }
 
-void informationList(QWidget *parent, const QString &text, const QStringList &strlist,
-                     const QString &caption, const QString &dontShowAgainName, Options options)
+void informationList(QWidget *parent,
+                     const QString &text,
+                     const QStringList &strlist,
+                     const QString &caption,
+                     const QString &dontShowAgainName,
+                     Options options)
 {
     informationListInternal(new QDialog(parent), text, strlist, caption, dontShowAgainName, options);
 }
 
-void about(QWidget *parent, const QString &text,
-           const QString &caption, Options options)
+void about(QWidget *parent, const QString &text, const QString &caption, Options options)
 {
     QDialog *dialog = new QDialog(parent, Qt::Dialog);
     if (!caption.isEmpty()) {
@@ -955,27 +984,27 @@ void about(QWidget *parent, const QString &text,
     createKMessageBox(dialog, buttonBox, qApp->windowIcon(), text, QStringList(), QString(), nullptr, options);
 }
 
-static ButtonCode messageBoxInternal(QDialog *dialog, DialogType type, const QString &text,
-                                     const QString &caption, const KGuiItem &buttonYes,
-                                     const KGuiItem &buttonNo, const KGuiItem &buttonCancel,
-                                     const QString &dontShow, Options options)
+static ButtonCode messageBoxInternal(QDialog *dialog,
+                                     DialogType type,
+                                     const QString &text,
+                                     const QString &caption,
+                                     const KGuiItem &buttonYes,
+                                     const KGuiItem &buttonNo,
+                                     const KGuiItem &buttonCancel,
+                                     const QString &dontShow,
+                                     Options options)
 {
     switch (type) {
     case QuestionYesNo:
-        return questionYesNoListInternal(dialog, text, QStringList(), caption,
-                                         buttonYes, buttonNo, dontShow, options);
+        return questionYesNoListInternal(dialog, text, QStringList(), caption, buttonYes, buttonNo, dontShow, options);
     case QuestionYesNoCancel:
-        return questionYesNoCancelInternal(dialog, text, caption,
-                                           buttonYes, buttonNo, buttonCancel, dontShow, options);
+        return questionYesNoCancelInternal(dialog, text, caption, buttonYes, buttonNo, buttonCancel, dontShow, options);
     case WarningYesNo:
-        return warningYesNoListInternal(dialog, text, QStringList(), caption,
-                                        buttonYes, buttonNo, dontShow, options);
+        return warningYesNoListInternal(dialog, text, QStringList(), caption, buttonYes, buttonNo, dontShow, options);
     case WarningContinueCancel:
-        return warningContinueCancelListInternal(dialog, text, QStringList(), caption,
-                KGuiItem(buttonYes.text()), buttonCancel, dontShow, options, QString());
+        return warningContinueCancelListInternal(dialog, text, QStringList(), caption, KGuiItem(buttonYes.text()), buttonCancel, dontShow, options, QString());
     case WarningYesNoCancel:
-        return warningYesNoCancelListInternal(dialog, text, QStringList(), caption,
-                                              buttonYes, buttonNo, buttonCancel, dontShow, options);
+        return warningYesNoCancelListInternal(dialog, text, QStringList(), caption, buttonYes, buttonNo, buttonCancel, dontShow, options);
     case Information:
         informationListInternal(dialog, text, QStringList(), caption, dontShow, options);
         return KMessageBox::Ok;
@@ -991,27 +1020,32 @@ static ButtonCode messageBoxInternal(QDialog *dialog, DialogType type, const QSt
     return KMessageBox::Cancel;
 }
 
-ButtonCode messageBox(QWidget *parent, DialogType type, const QString &text,
-                      const QString &caption, const KGuiItem &buttonYes,
-                      const KGuiItem &buttonNo, const KGuiItem &buttonCancel,
-                      const QString &dontShow, Options options)
+ButtonCode messageBox(QWidget *parent,
+                      DialogType type,
+                      const QString &text,
+                      const QString &caption,
+                      const KGuiItem &buttonYes,
+                      const KGuiItem &buttonNo,
+                      const KGuiItem &buttonCancel,
+                      const QString &dontShow,
+                      Options options)
 {
-    return messageBoxInternal(new QDialog(parent), type, text, caption,
-                              buttonYes, buttonNo, buttonCancel, dontShow, options);
+    return messageBoxInternal(new QDialog(parent), type, text, caption, buttonYes, buttonNo, buttonCancel, dontShow, options);
 }
 
-ButtonCode questionYesNoWId(WId parent_id, const QString &text,
+ButtonCode questionYesNoWId(WId parent_id,
+                            const QString &text,
                             const QString &caption,
                             const KGuiItem &buttonYes,
                             const KGuiItem &buttonNo,
                             const QString &dontAskAgainName,
                             Options options)
 {
-    return questionYesNoListWId(parent_id, text, QStringList(), caption,
-                                buttonYes, buttonNo, dontAskAgainName, options);
+    return questionYesNoListWId(parent_id, text, QStringList(), caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
-ButtonCode questionYesNoListWId(WId parent_id, const QString &text,
+ButtonCode questionYesNoListWId(WId parent_id,
+                                const QString &text,
                                 const QStringList &strlist,
                                 const QString &caption,
                                 const KGuiItem &buttonYes,
@@ -1019,8 +1053,7 @@ ButtonCode questionYesNoListWId(WId parent_id, const QString &text,
                                 const QString &dontAskAgainName,
                                 Options options)
 {
-    return questionYesNoListInternal(createWIdDialog(parent_id), text, strlist, caption, buttonYes, buttonNo,
-                                     dontAskAgainName, options);
+    return questionYesNoListInternal(createWIdDialog(parent_id), text, strlist, caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
 ButtonCode questionYesNoCancelWId(WId parent_id,
@@ -1032,22 +1065,22 @@ ButtonCode questionYesNoCancelWId(WId parent_id,
                                   const QString &dontAskAgainName,
                                   Options options)
 {
-    return questionYesNoCancelInternal(createWIdDialog(parent_id), text, caption, buttonYes, buttonNo, buttonCancel,
-                                       dontAskAgainName, options);
+    return questionYesNoCancelInternal(createWIdDialog(parent_id), text, caption, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
-ButtonCode warningYesNoWId(WId parent_id, const QString &text,
+ButtonCode warningYesNoWId(WId parent_id,
+                           const QString &text,
                            const QString &caption,
                            const KGuiItem &buttonYes,
                            const KGuiItem &buttonNo,
                            const QString &dontAskAgainName,
                            Options options)
 {
-    return warningYesNoListWId(parent_id, text, QStringList(), caption,
-                               buttonYes, buttonNo, dontAskAgainName, options);
+    return warningYesNoListWId(parent_id, text, QStringList(), caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
-ButtonCode warningYesNoListWId(WId parent_id, const QString &text,
+ButtonCode warningYesNoListWId(WId parent_id,
+                               const QString &text,
                                const QStringList &strlist,
                                const QString &caption,
                                const KGuiItem &buttonYes,
@@ -1055,8 +1088,7 @@ ButtonCode warningYesNoListWId(WId parent_id, const QString &text,
                                const QString &dontAskAgainName,
                                Options options)
 {
-    return warningYesNoListInternal(createWIdDialog(parent_id), text, strlist, caption, buttonYes, buttonNo,
-                                    dontAskAgainName, options);
+    return warningYesNoListInternal(createWIdDialog(parent_id), text, strlist, caption, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
 ButtonCode warningContinueCancelWId(WId parent_id,
@@ -1067,11 +1099,11 @@ ButtonCode warningContinueCancelWId(WId parent_id,
                                     const QString &dontAskAgainName,
                                     Options options)
 {
-    return warningContinueCancelListWId(parent_id, text, QStringList(), caption,
-                                        buttonContinue, buttonCancel, dontAskAgainName, options);
+    return warningContinueCancelListWId(parent_id, text, QStringList(), caption, buttonContinue, buttonCancel, dontAskAgainName, options);
 }
 
-ButtonCode warningContinueCancelListWId(WId parent_id, const QString &text,
+ButtonCode warningContinueCancelListWId(WId parent_id,
+                                        const QString &text,
                                         const QStringList &strlist,
                                         const QString &caption,
                                         const KGuiItem &buttonContinue,
@@ -1079,11 +1111,19 @@ ButtonCode warningContinueCancelListWId(WId parent_id, const QString &text,
                                         const QString &dontAskAgainName,
                                         Options options)
 {
-    return warningContinueCancelListInternal(createWIdDialog(parent_id), text, strlist, caption, buttonContinue, buttonCancel,
-            dontAskAgainName, options, QString());
+    return warningContinueCancelListInternal(createWIdDialog(parent_id),
+                                             text,
+                                             strlist,
+                                             caption,
+                                             buttonContinue,
+                                             buttonCancel,
+                                             dontAskAgainName,
+                                             options,
+                                             QString());
 }
 
-ButtonCode warningYesNoCancelWId(WId parent_id, const QString &text,
+ButtonCode warningYesNoCancelWId(WId parent_id,
+                                 const QString &text,
                                  const QString &caption,
                                  const KGuiItem &buttonYes,
                                  const KGuiItem &buttonNo,
@@ -1091,11 +1131,11 @@ ButtonCode warningYesNoCancelWId(WId parent_id, const QString &text,
                                  const QString &dontAskAgainName,
                                  Options options)
 {
-    return warningYesNoCancelListWId(parent_id, text, QStringList(), caption,
-                                     buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
+    return warningYesNoCancelListWId(parent_id, text, QStringList(), caption, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
-ButtonCode warningYesNoCancelListWId(WId parent_id, const QString &text,
+ButtonCode warningYesNoCancelListWId(WId parent_id,
+                                     const QString &text,
                                      const QStringList &strlist,
                                      const QString &caption,
                                      const KGuiItem &buttonYes,
@@ -1104,31 +1144,25 @@ ButtonCode warningYesNoCancelListWId(WId parent_id, const QString &text,
                                      const QString &dontAskAgainName,
                                      Options options)
 {
-    return warningYesNoCancelList(createWIdDialog(parent_id), text, strlist, caption, buttonYes, buttonNo, buttonCancel,
-                                  dontAskAgainName, options);
+    return warningYesNoCancelList(createWIdDialog(parent_id), text, strlist, caption, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
-void errorWId(WId parent_id, const QString &text,
-              const QString &caption, Options options)
+void errorWId(WId parent_id, const QString &text, const QString &caption, Options options)
 {
     errorListWId(parent_id, text, QStringList(), caption, options);
 }
 
-void errorListWId(WId parent_id,  const QString &text, const QStringList &strlist,
-                  const QString &caption, Options options)
+void errorListWId(WId parent_id, const QString &text, const QStringList &strlist, const QString &caption, Options options)
 {
     errorListInternal(createWIdDialog(parent_id), text, strlist, caption, options);
 }
 
-void detailedErrorWId(WId parent_id, const QString &text,
-                      const QString &details,
-                      const QString &caption, Options options)
+void detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &caption, Options options)
 {
     detailedErrorInternal(createWIdDialog(parent_id), text, details, caption, options);
 }
 
-void sorryWId(WId parent_id, const QString &text,
-              const QString &caption, Options options)
+void sorryWId(WId parent_id, const QString &text, const QString &caption, Options options)
 {
     QWidget *parent = QWidget::find(parent_id);
     QDialog *dialog = new QDialog(parent, Qt::Dialog);
@@ -1146,41 +1180,42 @@ void sorryWId(WId parent_id, const QString &text,
     createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
 }
 
-void detailedSorryWId(WId parent_id, const QString &text,
-                      const QString &details,
-                      const QString &caption, Options options)
+void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &caption, Options options)
 {
     detailedSorryInternal(createWIdDialog(parent_id), text, details, caption, KStandardGuiItem::ok(), options);
 }
 
-void detailedSorryWId(WId parent_id, const QString &text,
-                      const QString &details,
-                      const QString &caption,
-                      const KGuiItem &buttonOk,
-                      Options options)
+void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &caption, const KGuiItem &buttonOk, Options options)
 {
     detailedSorryInternal(createWIdDialog(parent_id), text, details, caption, buttonOk, options);
 }
 
-void informationWId(WId parent_id, const QString &text,
-                    const QString &caption, const QString &dontShowAgainName, Options options)
+void informationWId(WId parent_id, const QString &text, const QString &caption, const QString &dontShowAgainName, Options options)
 {
     informationListWId(parent_id, text, QStringList(), caption, dontShowAgainName, options);
 }
 
-void informationListWId(WId parent_id, const QString &text, const QStringList &strlist,
-                        const QString &caption, const QString &dontShowAgainName, Options options)
+void informationListWId(WId parent_id,
+                        const QString &text,
+                        const QStringList &strlist,
+                        const QString &caption,
+                        const QString &dontShowAgainName,
+                        Options options)
 {
     informationListInternal(createWIdDialog(parent_id), text, strlist, caption, dontShowAgainName, options);
 }
 
-ButtonCode messageBoxWId(WId parent_id, DialogType type, const QString &text,
-                         const QString &caption, const KGuiItem &buttonYes,
-                         const KGuiItem &buttonNo, const KGuiItem &buttonCancel,
-                         const QString &dontShow, Options options)
+ButtonCode messageBoxWId(WId parent_id,
+                         DialogType type,
+                         const QString &text,
+                         const QString &caption,
+                         const KGuiItem &buttonYes,
+                         const KGuiItem &buttonNo,
+                         const KGuiItem &buttonCancel,
+                         const QString &dontShow,
+                         Options options)
 {
-    return messageBoxInternal(createWIdDialog(parent_id), type, text, caption,
-                              buttonYes, buttonNo, buttonCancel, dontShow, options);
+    return messageBoxInternal(createWIdDialog(parent_id), type, text, caption, buttonYes, buttonNo, buttonCancel, dontShow, options);
 }
 
 } // namespace

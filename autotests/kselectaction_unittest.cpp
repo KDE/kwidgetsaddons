@@ -56,10 +56,10 @@ void KSelectAction_UnitTest::testSetToolTipBeforeRequestingToolButtonWidget()
     selectAction.setToolTip(QStringLiteral("Test"));
 
     QToolBar toolBar;
-    //Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
+    // Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
     //(in ComboBoxMode the widget is released automatically when it is
-    //destroyed). When the action is added to the QToolBar, it requests and
-    //releases the widget as needed.
+    // destroyed). When the action is added to the QToolBar, it requests and
+    // releases the widget as needed.
     toolBar.addAction(&selectAction);
     QWidget *widget = toolBar.widgetForAction(&selectAction);
 
@@ -75,10 +75,10 @@ void KSelectAction_UnitTest::testSetToolTipAfterRequestingToolButtonWidget()
     selectAction.setToolBarMode(KSelectAction::MenuMode);
 
     QToolBar toolBar;
-    //Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
+    // Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
     //(in ComboBoxMode the widget is released automatically when it is
-    //destroyed). When the action is added to the QToolBar, it requests and
-    //releases the widget as needed.
+    // destroyed). When the action is added to the QToolBar, it requests and
+    // releases the widget as needed.
     toolBar.addAction(&selectAction);
     QWidget *widget = toolBar.widgetForAction(&selectAction);
 
@@ -128,10 +128,10 @@ void KSelectAction_UnitTest::testSetWhatsThisBeforeRequestingToolButtonWidget()
     selectAction.setWhatsThis(QStringLiteral("Test"));
 
     QToolBar toolBar;
-    //Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
+    // Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
     //(in ComboBoxMode the widget is released automatically when it is
-    //destroyed). When the action is added to the QToolBar, it requests and
-    //releases the widget as needed.
+    // destroyed). When the action is added to the QToolBar, it requests and
+    // releases the widget as needed.
     toolBar.addAction(&selectAction);
     QWidget *widget = toolBar.widgetForAction(&selectAction);
 
@@ -147,10 +147,10 @@ void KSelectAction_UnitTest::testSetWhatsThisAfterRequestingToolButtonWidget()
     selectAction.setToolBarMode(KSelectAction::MenuMode);
 
     QToolBar toolBar;
-    //Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
+    // Don't use requestWidget, as it needs a releaseWidget when used in MenuMode
     //(in ComboBoxMode the widget is released automatically when it is
-    //destroyed). When the action is added to the QToolBar, it requests and
-    //releases the widget as needed.
+    // destroyed). When the action is added to the QToolBar, it requests and
+    // releases the widget as needed.
     toolBar.addAction(&selectAction);
     QWidget *widget = toolBar.widgetForAction(&selectAction);
 

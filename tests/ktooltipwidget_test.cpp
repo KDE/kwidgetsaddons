@@ -6,7 +6,6 @@
 
 #include "ktooltipwidget_test.h"
 
-
 #include <QApplication>
 #include <QPushButton>
 #include <QSpinBox>
@@ -61,4 +60,3 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
-

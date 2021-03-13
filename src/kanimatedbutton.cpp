@@ -32,20 +32,23 @@ public:
     KAnimatedButton *const q;
     QMovie *movie = nullptr;
 
-    int                    frames;
-    int                    current_frame;
-    QPixmap                pixmap;
-    QTimer                 timer;
-    QString                icon_path;
-    QVector<QPixmap *>      framesCache; // We keep copies of each frame so that
+    int frames;
+    int current_frame;
+    QPixmap pixmap;
+    QTimer timer;
+    QString icon_path;
+    QVector<QPixmap *> framesCache; // We keep copies of each frame so that
     // the icon code can properly cache them in QPixmapCache,
     // and not fill it up with dead copies
 };
 
 KAnimatedButton::KAnimatedButton(QWidget *parent)
-    : QToolButton(parent), d(new KAnimatedButtonPrivate(this))
+    : QToolButton(parent)
+    , d(new KAnimatedButtonPrivate(this))
 {
-    connect(&d->timer, &QTimer::timeout, this, [this]() { d->_k_timerUpdate(); });
+    connect(&d->timer, &QTimer::timeout, this, [this]() {
+        d->_k_timerUpdate();
+    });
 }
 
 KAnimatedButton::~KAnimatedButton()

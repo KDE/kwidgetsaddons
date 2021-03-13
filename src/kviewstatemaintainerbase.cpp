@@ -7,16 +7,15 @@
 
 #include "kviewstatemaintainerbase.h"
 
-#include <QPointer>
-#include <QItemSelectionModel>
 #include <QAbstractItemView>
+#include <QItemSelectionModel>
+#include <QPointer>
 
 class KViewStateMaintainerBasePrivate
 {
     KViewStateMaintainerBasePrivate(KViewStateMaintainerBase *qq)
         : q_ptr(qq)
     {
-
     }
 
     Q_DECLARE_PUBLIC(KViewStateMaintainerBase)
@@ -42,9 +41,9 @@ void KViewStateMaintainerBasePrivate::_k_modelReset()
 }
 
 KViewStateMaintainerBase::KViewStateMaintainerBase(QObject *parent)
-    : QObject(parent), d_ptr(new KViewStateMaintainerBasePrivate(this))
+    : QObject(parent)
+    , d_ptr(new KViewStateMaintainerBasePrivate(this))
 {
-
 }
 
 KViewStateMaintainerBase::~KViewStateMaintainerBase() = default;

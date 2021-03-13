@@ -35,8 +35,7 @@ KPageWidget::KPageWidget(KPageWidgetPrivate &dd, QWidget *parent)
     : KPageView(dd, parent)
 {
     Q_D(KPageWidget);
-    connect(this, SIGNAL(currentPageChanged(QModelIndex,QModelIndex)),
-            this, SLOT(_k_slotCurrentPageChanged(QModelIndex,QModelIndex)));
+    connect(this, SIGNAL(currentPageChanged(QModelIndex, QModelIndex)), this, SLOT(_k_slotCurrentPageChanged(QModelIndex, QModelIndex)));
 
     if (!d->KPageViewPrivate::model) {
         setModel(new KPageWidgetModel(this));
@@ -44,8 +43,7 @@ KPageWidget::KPageWidget(KPageWidgetPrivate &dd, QWidget *parent)
         Q_ASSERT(qobject_cast<KPageWidgetModel *>(d->KPageViewPrivate::model));
     }
 
-    connect(d->model(), &KPageWidgetModel::toggled,
-            this, &KPageWidget::pageToggled);
+    connect(d->model(), &KPageWidgetModel::toggled, this, &KPageWidget::pageToggled);
 }
 
 KPageWidget::KPageWidget(QWidget *parent)

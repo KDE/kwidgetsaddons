@@ -8,10 +8,10 @@
 #include "kassistantdialog.h"
 
 #include "kpagedialog_p.h"
+#include <QApplication>
 #include <QDialogButtonBox>
 #include <QIcon>
 #include <QPushButton>
-#include <QApplication>
 
 #include <QHash>
 
@@ -69,7 +69,7 @@ KAssistantDialog::KAssistantDialog(QWidget *parent, Qt::WindowFlags flags)
     Q_D(KAssistantDialog);
 
     d->init();
-    //workaround to get the page model
+    // workaround to get the page model
     KPageWidget *pagewidget = findChild<KPageWidget *>();
     Q_ASSERT(pagewidget);
     d->pageModel = static_cast<KPageWidgetModel *>(pagewidget->model());
@@ -117,7 +117,7 @@ void KAssistantDialogPrivate::init()
 
     q->setFaceType(KPageDialog::Plain);
 
-    q->connect(q, SIGNAL(currentPageChanged(KPageWidgetItem*,KPageWidgetItem*)), q, SLOT(_k_slotUpdateButtons()));
+    q->connect(q, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)), q, SLOT(_k_slotUpdateButtons()));
 }
 
 void KAssistantDialog::back()
@@ -164,13 +164,13 @@ void KAssistantDialogPrivate::_k_slotUpdateButtons()
     Q_Q(KAssistantDialog);
 
     QModelIndex currentIndex = pageModel->index(q->currentPage());
-    //change the caption of the next/finish button
+    // change the caption of the next/finish button
     QModelIndex nextIndex = getNext(currentIndex);
     finishButton->setEnabled(!nextIndex.isValid() && q->isValid(q->currentPage()));
     nextButton->setEnabled(nextIndex.isValid() && q->isValid(q->currentPage()));
     finishButton->setDefault(!nextIndex.isValid());
     nextButton->setDefault(nextIndex.isValid());
-    //enable or disable the back button;
+    // enable or disable the back button;
     nextIndex = getPrevious(currentIndex);
     backButton->setEnabled(nextIndex.isValid());
 }
@@ -179,7 +179,7 @@ void KAssistantDialog::showEvent(QShowEvent *event)
 {
     Q_D(KAssistantDialog);
 
-    d->_k_slotUpdateButtons(); //called because last time that function was called is when the first page was added, so the next button show "finish"
+    d->_k_slotUpdateButtons(); // called because last time that function was called is when the first page was added, so the next button show "finish"
     KPageDialog::showEvent(event);
 }
 
@@ -198,21 +198,21 @@ bool KAssistantDialog::isAppropriate(KPageWidgetItem *page) const
     return d->appropriate.value(page, true);
 }
 
-QPushButton* KAssistantDialog::backButton() const
+QPushButton *KAssistantDialog::backButton() const
 {
     Q_D(const KAssistantDialog);
 
     return d->backButton;
 }
 
-QPushButton* KAssistantDialog::nextButton() const
+QPushButton *KAssistantDialog::nextButton() const
 {
     Q_D(const KAssistantDialog);
 
     return d->nextButton;
 }
 
-QPushButton* KAssistantDialog::finishButton() const
+QPushButton *KAssistantDialog::finishButton() const
 {
     Q_D(const KAssistantDialog);
 

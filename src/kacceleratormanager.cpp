@@ -9,26 +9,26 @@
 #include "kacceleratormanager_p.h"
 
 #include <QApplication>
-#include <QMainWindow>
 #include <QCheckBox>
 #include <QComboBox>
+#include <QDockWidget>
 #include <QGroupBox>
 #include <QLabel>
 #include <QLineEdit>
-#include <QMenuBar>
-#include <QObject>
 #include <QList>
+#include <QMainWindow>
+#include <QMenuBar>
+#include <QMetaProperty>
+#include <QObject>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QStackedWidget>
 #include <QTabBar>
 #include <QTextEdit>
 #include <QWidget>
-#include <QStackedWidget>
-#include <QDockWidget>
-#include <QMetaProperty>
 
-#include "loggingcategory.h"
 #include "common_helpers_p.h"
+#include "loggingcategory.h"
 
 /*********************************************************************
 
@@ -155,7 +155,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
         }
 
         int tprop = it->m_widget->metaObject()->indexOfProperty("text");
-        if (tprop != -1)  {
+        if (tprop != -1) {
             if (checkChange(contents[cnt])) {
                 it->m_widget->setProperty("text", contents[cnt].accelerated());
             }
@@ -177,7 +177,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
 void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item)
 {
-    const QList<QWidget*> childList = widget->findChildren<QWidget*>();
+    const QList<QWidget *> childList = widget->findChildren<QWidget *>();
     for (QWidget *w : childList) {
         // Ignore unless we have the direct parent
         if (qobject_cast<QWidget *>(w->parent()) != widget) {
@@ -214,7 +214,7 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
 
     QDockWidget *dock = qobject_cast<QDockWidget *>(w);
     if (dock) {
-        //QWidgetStackAccelManager::manage( wds );
+        // QWidgetStackAccelManager::manage( wds );
         manageDockWidget(dock, item);
     }
 
@@ -252,7 +252,7 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
     }
 
     // now treat 'ordinary' widgets
-    QLabel *label =  qobject_cast<QLabel *>(w);
+    QLabel *label = qobject_cast<QLabel *>(w);
     if (label) {
         if (!label->buddy()) {
             return;
@@ -268,7 +268,7 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
         QString content;
         QVariant variant;
         int tprop = w->metaObject()->indexOfProperty("text");
-        if (tprop != -1)  {
+        if (tprop != -1) {
             QMetaProperty p = w->metaObject()->property(tprop);
             if (p.isValid() && p.isWritable()) {
                 variant = p.read(w);
@@ -277,9 +277,9 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
             }
         }
 
-        if (tprop == -1)  {
+        if (tprop == -1) {
             tprop = w->metaObject()->indexOfProperty("title");
-            if (tprop != -1)  {
+            if (tprop != -1) {
                 QMetaProperty p = w->metaObject()->property(tprop);
                 if (p.isValid() && p.isWritable()) {
                     variant = p.read(w);
@@ -421,7 +421,7 @@ void KAcceleratorManager::manage(QWidget *widget, bool programmers_mode)
     KAcceleratorManagerPrivate::manage(widget);
 }
 
-void KAcceleratorManager::last_manage(QString &added,  QString &changed, QString &removed)
+void KAcceleratorManager::last_manage(QString &added, QString &changed, QString &removed)
 {
     added = KAcceleratorManagerPrivate::added_string;
     changed = KAcceleratorManagerPrivate::changed_string;
@@ -435,7 +435,8 @@ void KAcceleratorManager::last_manage(QString &added,  QString &changed, QString
  *********************************************************************/
 
 KAccelString::KAccelString(const QString &input, int initialWeight)
-    : m_pureText(input), m_weight()
+    : m_pureText(input)
+    , m_weight()
 {
     m_orig_accel = m_pureText.indexOf(QLatin1String("(!)&"));
     if (m_orig_accel != -1) {
@@ -538,7 +539,7 @@ void KAccelString::calculateWeights(int initialWeight)
         if (pos == accel()) {
             weight += KAccelManagerAlgorithm::WANTED_ACCEL_EXTRA_WEIGHT;
             // qCDebug(KWidgetsAddonsLog) << "wanted " << m_pureText << " " << KAcceleratorManagerPrivate::standardName(m_origText);
-            if (KAcceleratorManagerPrivate::standardName(m_origText))  {
+            if (KAcceleratorManagerPrivate::standardName(m_origText)) {
                 weight += KAccelManagerAlgorithm::STANDARD_ACCEL;
             }
         }
@@ -685,7 +686,9 @@ void KAccelManagerAlgorithm::findAccelerators(KAccelStringList &result, QString 
  *********************************************************************/
 
 KPopupAccelManager::KPopupAccelManager(QMenu *popup)
-    : QObject(popup), m_popup(popup), m_count(-1)
+    : QObject(popup)
+    , m_popup(popup)
+    , m_count(-1)
 {
     aboutToShow(); // do one check and then connect to show
     connect(popup, &QMenu::aboutToShow, this, &KPopupAccelManager::aboutToShow);
@@ -695,7 +698,7 @@ void KPopupAccelManager::aboutToShow()
 {
     // Note: we try to be smart and avoid recalculating the accelerators
     // whenever possible. Unfortunately, there is no way to know if an
-// item has been added or removed, so we can not do much more than
+    // item has been added or removed, so we can not do much more than
     // to compare the items each time the menu is shown :-(
 
     if (m_count != m_popup->actions().count()) {
@@ -806,7 +809,8 @@ void QWidgetStackAccelManager::manage(QStackedWidget *stack)
 }
 
 QWidgetStackAccelManager::QWidgetStackAccelManager(QStackedWidget *stack)
-    : QObject(stack), m_stack(stack)
+    : QObject(stack)
+    , m_stack(stack)
 {
     currentChanged(stack->currentIndex()); // do one check and then connect to show
     connect(stack, &QStackedWidget::currentChanged, this, &QWidgetStackAccelManager::currentChanged);

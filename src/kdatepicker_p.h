@@ -11,8 +11,8 @@
 #define KDATEPICKER_P_H
 
 #include <QDate>
-#include <QLineEdit>
 #include <QIntValidator>
+#include <QLineEdit>
 
 /**
  * Year selection widget.

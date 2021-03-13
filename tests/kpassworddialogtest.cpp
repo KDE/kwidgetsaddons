@@ -17,17 +17,18 @@
 
 int main(int argc, char *argv[])
 {
-   
     QApplication::setApplicationName(QStringLiteral("KNewPasswordDialogTest"));
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication a(argc, argv);
 
-
-    //step 1  simple password
+    // step 1  simple password
     {
         KPasswordDialog dlg(nullptr, KPasswordDialog::ShowKeepPassword);
-        dlg.setPrompt(i18n("This is a long prompt line. It is important it to be long so we can test the dialog does not get broken because of multiline labels. Please enter a password:"));
-        dlg.addCommentLine(i18n("This is a rather large left comment line"), i18n("Right part of the comment line has to be long too so be test the layouting works really ok. Please visit http://www.kde.org"));
+        dlg.setPrompt(
+            i18n("This is a long prompt line. It is important it to be long so we can test the dialog does not get broken because of multiline labels. Please "
+                 "enter a password:"));
+        dlg.addCommentLine(i18n("This is a rather large left comment line"),
+                           i18n("Right part of the comment line has to be long too so be test the layouting works really ok. Please visit http://www.kde.org"));
 
         if (dlg.exec()) {
             std::cout << "Entered password: " << qPrintable(dlg.password()) << std::endl;
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    //step 2 readonly username
+    // step 2 readonly username
     {
         KPasswordDialog dlg(nullptr, KPasswordDialog::ShowUsernameLine | KPasswordDialog::UsernameReadOnly);
         dlg.setPrompt(i18n("Enter a password for the test"));
@@ -52,7 +53,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    //step 3 with some username preset
+    // step 3 with some username preset
     {
         KPasswordDialog dlg(nullptr, KPasswordDialog::ShowUsernameLine);
         dlg.setPrompt(i18n("Enter a password for the test"));
@@ -64,7 +65,7 @@ int main(int argc, char *argv[])
         dlg.setKnownLogins(logins);
 
         if (dlg.exec()) {
-            std::cout << "Entered password: " << qPrintable(dlg.password()) << " for username " <<  qPrintable(dlg.username()) << std::endl;
+            std::cout << "Entered password: " << qPrintable(dlg.password()) << " for username " << qPrintable(dlg.username()) << std::endl;
         } else {
             std::cout << "No password" << std::endl;
             return -1;
@@ -72,6 +73,4 @@ int main(int argc, char *argv[])
     }
 
     return 0;
-
 }
-

@@ -6,16 +6,15 @@
 
 #include "kpasswordlineedittest.h"
 #include "kpasswordlineedit.h"
+#include <QAction>
 #include <QHBoxLayout>
 #include <QLineEdit>
-#include <QTest>
-#include <QAction>
 #include <QSignalSpy>
+#include <QTest>
 
 PasswordLineEditTest::PasswordLineEditTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void PasswordLineEditTest::shouldHaveDefaultValue()

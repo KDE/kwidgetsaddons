@@ -36,10 +36,11 @@ public:
      * This enum provides a rotation direction.
      * @see KPixmapRegionSelectorWidget::rotate()
      */
-    enum RotateDirection { Rotate90, //!< Rotate 90 degrees to the right.
-                           Rotate180, //!< Rotate 180 degrees.
-                           Rotate270  //!< Rotate 90 degrees to the left.
-                         };
+    enum RotateDirection {
+        Rotate90, //!< Rotate 90 degrees to the right.
+        Rotate180, //!< Rotate 180 degrees.
+        Rotate270 //!< Rotate 90 degrees to the left.
+    };
 
     /**
      * Constructor for a KPixmapRegionSelectorWidget.

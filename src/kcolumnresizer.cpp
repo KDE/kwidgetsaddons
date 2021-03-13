@@ -21,7 +21,8 @@ public:
         : QWidgetItem(widget)
         , m_formLayout(formLayout)
         , m_itemRole(itemRole)
-    {}
+    {
+    }
 
     void setWidth(int width)
     {
@@ -79,12 +80,12 @@ private:
     const QFormLayout::ItemRole m_itemRole;
 };
 
-struct GridColumnInfo
-{
+struct GridColumnInfo {
     GridColumnInfo(QGridLayout *layout_, int column_)
         : layout(layout_)
         , column(column_)
-    {}
+    {
+    }
     QGridLayout *layout;
     int column;
 };
@@ -169,7 +170,8 @@ public:
 KColumnResizer::KColumnResizer(QObject *parent)
     : QObject(parent)
     , d(new KColumnResizerPrivate(this))
-{}
+{
+}
 
 KColumnResizer::~KColumnResizer() = default;
 

@@ -8,8 +8,8 @@
 #ifndef KANIMATEDBUTTON_H
 #define KANIMATEDBUTTON_H
 
-#include <kwidgetsaddons_export.h>
 #include <QToolButton>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 /**
@@ -44,8 +44,8 @@ public:
     virtual ~KAnimatedButton();
 
     /**
-    * Returns the path used to load the animation
-    */
+     * Returns the path used to load the animation
+     */
     QString animationPath() const;
 
     /**

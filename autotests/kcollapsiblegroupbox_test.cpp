@@ -23,8 +23,7 @@ void KCollapsibleGroupBoxTest::testDestructorCrash()
     // The unittest does not crash the first time,
     // so we run it twice.
     int i = 0;
-    while(i != 2) {
-
+    while (i != 2) {
         QDialog *dlg = new QDialog(nullptr);
 
         QVBoxLayout *mainvlayout = new QVBoxLayout(dlg);

@@ -1,17 +1,17 @@
 #ifndef kledtest_h
 #define kledtest_h
 
-#include <QWidget>
 #include <QTimer>
-#include <stdlib.h>
+#include <QWidget>
 #include <kled.h>
+#include <stdlib.h>
 
 class KLedTest : public QWidget
 {
     Q_OBJECT
 protected:
     QTimer timer;
-    KLed *leds[/*KLed::NoOfShapes*/2 * /*KLed::NoOfLooks*/3 * /*KLed::NoOfStates*/2];
+    KLed *leds[/*KLed::NoOfShapes*/ 2 * /*KLed::NoOfLooks*/ 3 * /*KLed::NoOfStates*/ 2];
     const int LedWidth;
     const int LedHeight;
     const int Grid;
@@ -21,16 +21,15 @@ protected:
     int x, y, index;
 
     QTimer t_toggle, t_color, t_look;
-    //KLed *l;                // create lamp
-    //KLed *l;                // create lamp
-    KLed *l;              // create lamp
-    //KLed *l;                // create lamp
-    //KLed *l;                // create lamp
+    // KLed *l;                // create lamp
+    // KLed *l;                // create lamp
+    KLed *l; // create lamp
+    // KLed *l;                // create lamp
+    // KLed *l;                // create lamp
     int ledcolor;
-    KLed::Look  ledlook;
+    KLed::Look ledlook;
 
 public:
-
     KLedTest(QWidget *parent = nullptr);
     ~KLedTest();
 
@@ -41,8 +40,6 @@ public Q_SLOTS:
 
     void nextColor();
     void nextLook();
-
 };
 
 #endif
-

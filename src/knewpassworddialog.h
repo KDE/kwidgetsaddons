@@ -54,8 +54,7 @@ class QWidget;
  * @author Geert Jansen <jansen@kde.org>
  * @author Olivier Goffart <ogoffart@kde.org>
  */
-class KWIDGETSADDONS_EXPORT KNewPasswordDialog
-    : public QDialog
+class KWIDGETSADDONS_EXPORT KNewPasswordDialog : public QDialog
 {
     Q_OBJECT
 
@@ -232,7 +231,6 @@ public:
     void accept() override;
 
 protected:
-
     /**
      * Virtual function that can be overridden to provide password
      * checking in derived classes. It should return @p true if the
@@ -263,4 +261,3 @@ private:
 };
 
 #endif // KNEWPASSWORDDIALOG_H
-

@@ -28,7 +28,6 @@ class QString;
 class KWIDGETSADDONS_EXPORT KAcceleratorManager
 {
 public:
-
     /**
      * Manages the accelerators of a widget.
      *
@@ -54,7 +53,7 @@ public:
     static void manage(QWidget *widget, bool programmers_mode = false);
 
     /** \internal returns the result of the last manage operation. */
-    static void last_manage(QString &added,  QString &changed,  QString &removed);
+    static void last_manage(QString &added, QString &changed, QString &removed);
 
     /**
      * Use this method for a widget (and its children) you want no accels to be set on.

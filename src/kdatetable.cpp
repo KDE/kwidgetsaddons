@@ -11,20 +11,21 @@
 
 #include <QAction>
 #include <QActionEvent>
+#include <QApplication>
+#include <QDate>
 #include <QFontDatabase>
+#include <QMenu>
 #include <QPainter>
 #include <QStyle>
 #include <QStyleOptionViewItem>
-#include <QApplication>
-#include <QMenu>
-#include <QDate>
 
 #include <cmath>
 
 class KDateTable::KDateTablePrivate
 {
 public:
-    KDateTablePrivate(KDateTable *q): q(q)
+    KDateTablePrivate(KDateTable *q)
+        : q(q)
     {
         m_popupMenuEnabled = false;
         m_useCustomColors = false;
@@ -47,8 +48,8 @@ public:
     KDateTable *q;
 
     /**
-    * The currently selected date.
-    */
+     * The currently selected date.
+     */
     QDate m_date;
 
     /**
@@ -89,21 +90,21 @@ public:
         QColor bgColor;
         BackgroundMode bgMode;
     };
-    QHash <int, DatePaintingMode> m_customPaintingModes;
+    QHash<int, DatePaintingMode> m_customPaintingModes;
 
     int m_hoveredPos;
 };
 
 KDateTable::KDateTable(const QDate &date, QWidget *parent)
-    : QWidget(parent),
-      d(new KDateTablePrivate(this))
+    : QWidget(parent)
+    , d(new KDateTablePrivate(this))
 {
     initWidget(date);
 }
 
 KDateTable::KDateTable(QWidget *parent)
-    : QWidget(parent),
-      d(new KDateTablePrivate(this))
+    : QWidget(parent)
+    , d(new KDateTablePrivate(this))
 {
     initWidget(QDate::currentDate());
 }
@@ -133,37 +134,49 @@ void KDateTable::initAccels()
     next->setObjectName(QStringLiteral("next"));
     next->setShortcuts(QKeySequence::keyBindings(QKeySequence::Forward));
     next->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(next, &QAction::triggered, this, [this]() { d->nextMonth(); });
+    connect(next, &QAction::triggered, this, [this]() {
+        d->nextMonth();
+    });
 
     QAction *prior = new QAction(this);
     prior->setObjectName(QStringLiteral("prior"));
     prior->setShortcuts(QKeySequence::keyBindings(QKeySequence::Back));
     prior->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(prior, &QAction::triggered, this, [this]() { d->previousMonth(); });
+    connect(prior, &QAction::triggered, this, [this]() {
+        d->previousMonth();
+    });
 
     QAction *beginMonth = new QAction(this);
     beginMonth->setObjectName(QStringLiteral("beginMonth"));
     beginMonth->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToStartOfDocument));
     beginMonth->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(beginMonth, &QAction::triggered, this, [this]() { d->beginningOfMonth(); });
+    connect(beginMonth, &QAction::triggered, this, [this]() {
+        d->beginningOfMonth();
+    });
 
     QAction *endMonth = new QAction(this);
     endMonth->setObjectName(QStringLiteral("endMonth"));
     endMonth->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToEndOfDocument));
     endMonth->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(endMonth, &QAction::triggered, this, [this]() { d->endOfMonth(); });
+    connect(endMonth, &QAction::triggered, this, [this]() {
+        d->endOfMonth();
+    });
 
     QAction *beginWeek = new QAction(this);
     beginWeek->setObjectName(QStringLiteral("beginWeek"));
     beginWeek->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToStartOfLine));
     beginWeek->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(beginWeek, &QAction::triggered, this, [this]() { d->beginningOfWeek(); });
+    connect(beginWeek, &QAction::triggered, this, [this]() {
+        d->beginningOfWeek();
+    });
 
     QAction *endWeek = new QAction(this);
     endWeek->setObjectName(QStringLiteral("endWeek"));
     endWeek->setShortcuts(QKeySequence::keyBindings(QKeySequence::MoveToEndOfLine));
     endWeek->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-    connect(endWeek, &QAction::triggered, this, [this]() { d->endOfWeek(); });
+    connect(endWeek, &QAction::triggered, this, [this]() {
+        d->endOfWeek();
+    });
 }
 
 int KDateTable::posFromDate(const QDate &date)
@@ -197,8 +210,8 @@ void KDateTable::paintEvent(QPaintEvent *e)
 {
     QPainter p(this);
     const QRect &rectToUpdate = e->rect();
-    double cellWidth = width() / (double) d->m_numDayColumns;
-    double cellHeight = height() / (double) d->m_numWeekRows;
+    double cellWidth = width() / (double)d->m_numDayColumns;
+    double cellHeight = height() / (double)d->m_numWeekRows;
     int leftCol = (int)std::floor(rectToUpdate.left() / cellWidth);
     int topRow = (int)std::floor(rectToUpdate.top() / cellHeight);
     int rightCol = (int)std::ceil(rectToUpdate.right() / cellWidth);
@@ -226,8 +239,8 @@ void KDateTable::paintEvent(QPaintEvent *e)
 
 void KDateTable::paintCell(QPainter *painter, int row, int col)
 {
-    double w = (width() / (double) d->m_numDayColumns) - 1;
-    double h = (height() / (double) d->m_numWeekRows) - 1;
+    double w = (width() / (double)d->m_numDayColumns) - 1;
+    double h = (height() / (double)d->m_numWeekRows) - 1;
     QRectF cell = QRectF(0, 0, w, h);
     QString cellText;
     QColor cellBackgroundColor, cellTextColor;
@@ -235,21 +248,20 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
     bool workingDay = false;
     int cellWeekDay, pos;
 
-    //Calculate the position of the cell in the grid
+    // Calculate the position of the cell in the grid
     pos = d->m_numDayColumns * (row - 1) + col;
 
-    //Calculate what day of the week the cell is
+    // Calculate what day of the week the cell is
     if (col + locale().firstDayOfWeek() <= d->m_numDayColumns) {
         cellWeekDay = col + locale().firstDayOfWeek();
     } else {
         cellWeekDay = col + locale().firstDayOfWeek() - d->m_numDayColumns;
     }
 
-    //FIXME This is wrong if the widget is not using the global!
-    //See if cell day is normally a working day
+    // FIXME This is wrong if the widget is not using the global!
+    // See if cell day is normally a working day
     if (locale().weekdays().first() <= locale().weekdays().last()) {
-        if (cellWeekDay >= locale().weekdays().first() &&
-                cellWeekDay <= locale().weekdays().last()) {
+        if (cellWeekDay >= locale().weekdays().first() && cellWeekDay <= locale().weekdays().last()) {
             workingDay = true;
         }
     } else {
@@ -260,10 +272,9 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
     }
 
     if (row == 0) {
+        // We are drawing a header cell
 
-        //We are drawing a header cell
-
-        //If not a normal working day, then use "do not work today" color
+        // If not a normal working day, then use "do not work today" color
         if (workingDay) {
             cellTextColor = palette().color(QPalette::WindowText);
         } else {
@@ -271,15 +282,14 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
         }
         cellBackgroundColor = palette().color(QPalette::Window);
 
-        //Set the text to the short day name and bold it
+        // Set the text to the short day name and bold it
         cellFont.setBold(true);
         cellText = locale().dayName(cellWeekDay, QLocale::ShortFormat);
 
     } else {
+        // We are drawing a day cell
 
-        //We are drawing a day cell
-
-        //Calculate the date the cell represents
+        // Calculate the date the cell represents
         QDate cellDate = dateFromPos(pos);
 
         bool validDay = cellDate.isValid();
@@ -291,7 +301,7 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
             cellText = QString();
         }
 
-        if (! validDay || cellDate.month() != d->m_date.month()) {
+        if (!validDay || cellDate.month() != d->m_date.month()) {
             // we are either
             // ° painting an invalid day
             // ° painting a day of the previous month or
@@ -299,7 +309,7 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
             cellBackgroundColor = palette().color(backgroundRole());
             cellTextColor = palette().color(QPalette::Disabled, QPalette::Text);
         } else {
-            //Paint a day of the current month
+            // Paint a day of the current month
 
             // Background Colour priorities will be (high-to-low):
             // * Selected Day Background Colour
@@ -316,15 +326,15 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
             // * Selected Day Colour
             // * Normal Day Colour
 
-            //Determine various characteristics of the cell date
+            // Determine various characteristics of the cell date
             bool selectedDay = (cellDate == date());
             bool currentDay = (cellDate == QDate::currentDate());
             bool dayOfPray = (cellDate.dayOfWeek() == Qt::Sunday);
             // TODO: Uncomment if QLocale ever gets the feature...
-            //bool dayOfPray = ( cellDate.dayOfWeek() == locale().dayOfPray() );
+            // bool dayOfPray = ( cellDate.dayOfWeek() == locale().dayOfPray() );
             bool customDay = (d->m_useCustomColors && d->m_customPaintingModes.contains(cellDate.toJulianDay()));
 
-            //Default values for a normal cell
+            // Default values for a normal cell
             cellBackgroundColor = palette().color(backgroundRole());
             cellTextColor = palette().color(foregroundRole());
 
@@ -341,7 +351,7 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
                 cellTextColor = palette().color(QPalette::HighlightedText);
             }
 
-            //If custom colors or shape are required for this date
+            // If custom colors or shape are required for this date
             if (customDay) {
                 KDateTablePrivate::DatePaintingMode mode = d->m_customPaintingModes[cellDate.toJulianDay()];
                 if (mode.bgMode != NoBgMode) {
@@ -352,15 +362,14 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
                 cellTextColor = mode.fgColor;
             }
 
-            //If the cell day is the day of religious observance, then always color text red unless Custom overrides
-            if (! customDay && dayOfPray) {
+            // If the cell day is the day of religious observance, then always color text red unless Custom overrides
+            if (!customDay && dayOfPray) {
                 cellTextColor = Qt::darkRed;
             }
-
         }
     }
 
-    //Draw the background
+    // Draw the background
     if (row == 0) {
         painter->setPen(cellBackgroundColor);
         painter->setBrush(cellBackgroundColor);
@@ -383,12 +392,12 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
         style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter, this);
     }
 
-    //Draw the text
+    // Draw the text
     painter->setPen(cellTextColor);
     painter->setFont(cellFont);
     painter->drawText(cell, Qt::AlignCenter, cellText, &cell);
 
-    //Draw the base line
+    // Draw the base line
     if (row == 0) {
         painter->setPen(palette().color(foregroundRole()));
         painter->drawLine(QPointF(0, h), QPointF(w, h));
@@ -447,7 +456,7 @@ void KDateTable::keyPressEvent(QKeyEvent *e)
     switch (e->key()) {
     case Qt::Key_Up:
         // setDate does validity checking for us
-        setDate(d->m_date.addDays(- d->m_numDayColumns));
+        setDate(d->m_date.addDays(-d->m_numDayColumns));
         break;
     case Qt::Key_Down:
         // setDate does validity checking for us
@@ -484,7 +493,7 @@ void KDateTable::keyPressEvent(QKeyEvent *e)
         // Don't beep for modifiers
         break;
     default:
-        if (!e->modifiers()) {   // hm
+        if (!e->modifiers()) { // hm
             QApplication::beep();
         }
     }
@@ -551,7 +560,7 @@ bool KDateTable::event(QEvent *ev)
 
 void KDateTable::mousePressEvent(QMouseEvent *e)
 {
-    if (e->type() != QEvent::MouseButtonPress) {  // the KDatePicker only reacts on mouse press events:
+    if (e->type() != QEvent::MouseButtonPress) { // the KDatePicker only reacts on mouse press events:
         return;
     }
 
@@ -570,7 +579,7 @@ void KDateTable::mousePressEvent(QMouseEvent *e)
         col = mouseCoord.x() * d->m_numDayColumns / width();
     }
 
-    if (row < 1 || col < 0) {  // the user clicked on the frame of the table
+    if (row < 1 || col < 0) { // the user clicked on the frame of the table
         return;
     }
 
@@ -647,10 +656,9 @@ void KDateTable::focusOutEvent(QFocusEvent *e)
 QSize KDateTable::sizeHint() const
 {
     if (d->m_maxCell.height() > 0 && d->m_maxCell.width() > 0) {
-        return QSize(qRound(d->m_maxCell.width() * d->m_numDayColumns),
-                     (qRound(d->m_maxCell.height() + 2) * d->m_numWeekRows));
+        return QSize(qRound(d->m_maxCell.width() * d->m_numDayColumns), (qRound(d->m_maxCell.height() + 2) * d->m_numWeekRows));
     } else {
-        //qCDebug(KWidgetsAddonsLog) << "KDateTable::sizeHint: obscure failure - " << endl;
+        // qCDebug(KWidgetsAddonsLog) << "KDateTable::sizeHint: obscure failure - " << endl;
         return QSize(-1, -1);
     }
 }

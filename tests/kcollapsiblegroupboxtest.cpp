@@ -6,15 +6,14 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 #include <QApplication>
-#include <QLineEdit>
-#include <QWidget>
-#include <QVBoxLayout>
 #include <QCheckBox>
 #include <QLabel>
+#include <QLineEdit>
+#include <QVBoxLayout>
+#include <QWidget>
 
-#include <kcollapsiblegroupbox.h>
 #include "kdatepicker.h"
-
+#include <kcollapsiblegroupbox.h>
 
 int main(int argc, char *argv[])
 {
@@ -25,13 +24,13 @@ int main(int argc, char *argv[])
 
     QVBoxLayout mainWindowLayout(&mainWindow);
 
-    //add a layout with many items to make sure it doesn't shuffle them weirdly when animating
+    // add a layout with many items to make sure it doesn't shuffle them weirdly when animating
     {
         auto groupBox = new KCollapsibleGroupBox;
         groupBox->setTitle(QStringLiteral("&Advanced Options"));
 
         auto *innerLayout = new QVBoxLayout(groupBox);
-        for (int i =0; i<6;i++) {
+        for (int i = 0; i < 6; i++) {
             auto checkBox = new QCheckBox(QStringLiteral("Some text"));
             innerLayout->addWidget(checkBox);
         }
@@ -54,7 +53,7 @@ int main(int argc, char *argv[])
         mainWindowLayout.addWidget(groupBox);
     }
 
-    //another item which should expand to fill width
+    // another item which should expand to fill width
     {
         auto groupBox = new KCollapsibleGroupBox;
         groupBox->setTitle(QStringLiteral("Pick a &date"));

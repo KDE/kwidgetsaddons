@@ -42,7 +42,6 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
     Q_PROPERTY(int darkFactor READ darkFactor WRITE setDarkFactor)
 
 public:
-
     /**
      * Status of the light is on/off.
      * @short LED on/off.
@@ -62,7 +61,11 @@ public:
      *
      * @short LED look.
      */
-    enum Look  { Flat, Raised, Sunken, };
+    enum Look {
+        Flat,
+        Raised,
+        Sunken,
+    };
     Q_ENUM(Look)
 
     /**
@@ -95,8 +98,7 @@ public:
      * @param parent The parent widget.
      * @short Constructor
      */
-    KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape,
-         QWidget *parent = nullptr);
+    KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape, QWidget *parent = nullptr);
 
     /**
      * Destroys the LED widget.

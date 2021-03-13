@@ -12,13 +12,13 @@
 #include "kpageview.h"
 
 #include <QAbstractItemDelegate>
-#include <QGridLayout>
-#include <QStackedWidget>
 #include <QAbstractProxyModel>
+#include <QGridLayout>
 #include <QListView>
+#include <QPointer>
+#include <QStackedWidget>
 #include <QTreeView>
 #include <ktitlewidget.h>
-#include <QPointer>
 
 class KPageStackedWidget : public QStackedWidget
 {
@@ -86,7 +86,6 @@ private:
 
 namespace KDEPrivate
 {
-
 class KPageListViewDelegate;
 class KPageListViewProxy;
 

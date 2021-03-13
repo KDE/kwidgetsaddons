@@ -6,9 +6,8 @@
 
 #include "kdatetimeedit.h"
 
-
-#include "kdatepicker.h"
 #include "kdatecombobox.h"
+#include "kdatepicker.h"
 #include "kmessagebox.h"
 
 #include "ui_kdatetimeedit.h"
@@ -32,7 +31,7 @@ public:
 
     void warnDateTime();
 
-//private Q_SLOTS:
+    // private Q_SLOTS:
     void selectCalendar(int index);
     void enterCalendar(const QLocale &calendarLocale);
     void selectTimeZone(int index);
@@ -56,9 +55,8 @@ public:
 KDateTimeEditPrivate::KDateTimeEditPrivate(KDateTimeEdit *q)
     : q(q)
 {
-    m_options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate |
-                KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime |
-                KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords;
+    m_options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime
+        | KDateTimeEdit::SelectTime | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords;
     m_dateTime = QDateTime::currentDateTime();
     m_dateTime.setTime(QTime(0, 0, 0));
     m_calendarLocales << q->locale();
@@ -76,14 +74,14 @@ KDateTimeEditPrivate::~KDateTimeEditPrivate()
 QDateTime KDateTimeEditPrivate::defaultMinDateTime()
 {
     // TODO: Find a way to get it from QLocale
-    //return KDateTime(calendar()->earliestValidDate(), QTime(0, 0, 0, 0));
+    // return KDateTime(calendar()->earliestValidDate(), QTime(0, 0, 0, 0));
     return QDateTime();
 }
 
 QDateTime KDateTimeEditPrivate::defaultMaxDateTime()
 {
     // TODO: Find a way to get it from QLocale
-    //return KDateTime(calendar()->latestValidDate(), QTime(23, 59, 59, 999));
+    // return KDateTime(calendar()->latestValidDate(), QTime(23, 59, 59, 999));
     return QDateTime();
 }
 
@@ -201,26 +199,25 @@ void KDateTimeEditPrivate::enterTimeZone(const QByteArray &zoneId)
 
 void KDateTimeEditPrivate::warnDateTime()
 {
-    if (!q->isValid() &&
-            (m_options & KDateTimeEdit::WarnOnInvalid) == KDateTimeEdit::WarnOnInvalid) {
+    if (!q->isValid() && (m_options & KDateTimeEdit::WarnOnInvalid) == KDateTimeEdit::WarnOnInvalid) {
         QString warnMsg;
         if (!m_dateTime.isValid()) {
-            //TODO Add missing string
-            //warnMsg = tr("The date or time you entered is invalid");
+            // TODO Add missing string
+            // warnMsg = tr("The date or time you entered is invalid");
         } else if (m_minDateTime.isValid() && m_dateTime < m_minDateTime) {
             if (m_minWarnMsg.isEmpty()) {
-                //TODO Add datetime to string
-                //warnMsg = q->tr("Date and time cannot be earlier than %1", "@info").arg(formatDate(m_minDate));
+                // TODO Add datetime to string
+                // warnMsg = q->tr("Date and time cannot be earlier than %1", "@info").arg(formatDate(m_minDate));
                 warnMsg = KDateTimeEdit::tr("The entered date and time is before the minimum allowed date and time.", "@info");
             } else {
                 warnMsg = m_minWarnMsg;
-                //TODO localize properly
+                // TODO localize properly
                 warnMsg.replace(QLatin1String("%1"), q->locale().toString(m_minDateTime));
             }
         } else if (m_maxDateTime.isValid() && m_dateTime > m_maxDateTime) {
             if (m_maxWarnMsg.isEmpty()) {
-                //TODO Add datetime to string
-                //warnMsg = q->tr("Date cannot be later than %1", "@info").arg(formatDate(m_maxDate));
+                // TODO Add datetime to string
+                // warnMsg = q->tr("Date cannot be later than %1", "@info").arg(formatDate(m_maxDate));
                 warnMsg = KDateTimeEdit::tr("The entered date and time is after the maximum allowed date and time.", "@info");
             } else {
                 warnMsg = m_maxWarnMsg;
@@ -232,12 +229,12 @@ void KDateTimeEditPrivate::warnDateTime()
 }
 
 KDateTimeEdit::KDateTimeEdit(QWidget *parent)
-    : QWidget(parent),
-      d(new KDateTimeEditPrivate(this))
+    : QWidget(parent)
+    , d(new KDateTimeEditPrivate(this))
 {
     d->ui.setupUi(this);
-    //Need to do the min/max defaults here and not in private init as need to wait for ui to init
-    //the KDateComboBox which holds the calendar object.  Revisit this???
+    // Need to do the min/max defaults here and not in private init as need to wait for ui to init
+    // the KDateComboBox which holds the calendar object.  Revisit this???
     d->m_minDateTime = d->defaultMinDateTime();
     d->m_maxDateTime = d->defaultMaxDateTime();
     d->ui.m_calendarCombo->installEventFilter(this);
@@ -246,14 +243,10 @@ KDateTimeEdit::KDateTimeEdit(QWidget *parent)
     d->ui.m_timeZoneCombo->installEventFilter(this);
     d->initWidgets();
 
-    connect(d->ui.m_dateCombo, &KDateComboBox::dateChanged,
-            this,                  &KDateTimeEdit::setDate);
-    connect(d->ui.m_timeCombo, &KTimeComboBox::timeChanged,
-            this,                  &KDateTimeEdit::setTime);
-    connect(d->ui.m_calendarCombo, SIGNAL(activated(int)),
-            this,                      SLOT(selectCalendar(int)));
-    connect(d->ui.m_timeZoneCombo, SIGNAL(activated(int)),
-            this,                      SLOT(selectTimeZone(int)));
+    connect(d->ui.m_dateCombo, &KDateComboBox::dateChanged, this, &KDateTimeEdit::setDate);
+    connect(d->ui.m_timeCombo, &KTimeComboBox::timeChanged, this, &KDateTimeEdit::setTime);
+    connect(d->ui.m_calendarCombo, SIGNAL(activated(int)), this, SLOT(selectCalendar(int)));
+    connect(d->ui.m_timeZoneCombo, SIGNAL(activated(int)), this, SLOT(selectTimeZone(int)));
 }
 
 KDateTimeEdit::~KDateTimeEdit() = default;
@@ -417,20 +410,13 @@ void KDateTimeEdit::resetMaximumDateTime()
     d->m_maxDateTime = d->defaultMaxDateTime();
 }
 
-void KDateTimeEdit::setDateTimeRange(const QDateTime &minDateTime,
-                                     const QDateTime &maxDateTime,
-                                     const QString &minErrorMsg,
-                                     const QString &maxErrorMsg)
+void KDateTimeEdit::setDateTimeRange(const QDateTime &minDateTime, const QDateTime &maxDateTime, const QString &minErrorMsg, const QString &maxErrorMsg)
 {
-    if (minDateTime.isValid() &&
-            maxDateTime.isValid() &&
-            minDateTime <= maxDateTime) {
-
+    if (minDateTime.isValid() && maxDateTime.isValid() && minDateTime <= maxDateTime) {
         d->m_minDateTime = minDateTime;
         d->m_minWarnMsg = minErrorMsg;
         d->m_maxDateTime = maxDateTime;
         d->m_maxWarnMsg = maxErrorMsg;
-
     }
 }
 
@@ -492,9 +478,7 @@ int KDateTimeEdit::timeListInterval() const
     return d->ui.m_timeCombo->timeListInterval();
 }
 
-void KDateTimeEdit::setTimeList(QList<QTime> timeList,
-                                const QString &minWarnMsg,
-                                const QString &maxWarnMsg)
+void KDateTimeEdit::setTimeList(QList<QTime> timeList, const QString &minWarnMsg, const QString &maxWarnMsg)
 {
     d->ui.m_timeCombo->setTimeList(timeList, minWarnMsg, maxWarnMsg);
 }

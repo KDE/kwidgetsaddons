@@ -69,9 +69,9 @@ public:
     void setRange(int minX, int minY, int maxX, int maxY);
 
     /**
-      * Sets the color used to draw the marker
+     * Sets the color used to draw the marker
      * @param col the color
-      */
+     */
     void setMarkerColor(const QColor &col);
 
     /**

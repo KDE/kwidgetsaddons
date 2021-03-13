@@ -15,8 +15,8 @@
 #include <kwidgetsaddons_export.h>
 
 #include <QIcon>
-#include <QString>
 #include <QSharedDataPointer>
+#include <QString>
 
 class QPushButton;
 
@@ -53,10 +53,7 @@ public:
      * @param tooltip the tooltip to use for this item
      * @param whatsThis the text to use for the WhatThis help message
      */
-    explicit KGuiItem(const QString &text,
-                      const QString &iconName  = QString(),
-                      const QString &toolTip   = QString(),
-                      const QString &whatsThis = QString());
+    explicit KGuiItem(const QString &text, const QString &iconName = QString(), const QString &toolTip = QString(), const QString &whatsThis = QString());
     /**
      * Constructs a KGuiItem with the provided arguments.
      *
@@ -66,9 +63,7 @@ public:
      * @param tooltip the tooltip to use for this item
      * @param whatsThis the text to use for the WhatThis help message
      */
-    KGuiItem(const QString &text, const QIcon &icon,
-             const QString &toolTip   = QString(),
-             const QString &whatsThis = QString());
+    KGuiItem(const QString &text, const QIcon &icon, const QString &toolTip = QString(), const QString &whatsThis = QString());
 
     /**
      * Constructs a copy of @p other.
@@ -77,7 +72,7 @@ public:
 
     /**
      * Assigns @p other to this KGuiItem object and returns a reference to this object.
-    */
+     */
     KGuiItem &operator=(const KGuiItem &other);
 
     /**

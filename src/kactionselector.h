@@ -8,8 +8,8 @@
 #ifndef _KACTION_SELECTOR_H_
 #define _KACTION_SELECTOR_H_
 
-#include <kwidgetsaddons_export.h>
 #include <QWidget>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 class QListWidget;
@@ -110,9 +110,9 @@ public:
      */
     enum InsertionPolicy {
         BelowCurrent, ///< The item is inserted below the listbox' currentItem() or at the end if there is no current item.
-        Sorted,       ///< The listbox is sort()ed after one or more items are inserted.
-        AtTop,        ///< The item is inserted at index 0 in the listbox.
-        AtBottom,     ///< The item is inserted at the end of the listbox.
+        Sorted, ///< The listbox is sort()ed after one or more items are inserted.
+        AtTop, ///< The item is inserted at index 0 in the listbox.
+        AtBottom, ///< The item is inserted at the end of the listbox.
     };
     Q_ENUM(InsertionPolicy)
 
@@ -269,7 +269,7 @@ Q_SIGNALS:
     /**
      * Emitted when an item is moved to the "selected" listbox.
      */
-//  void addedToSelection( QListWidgetItem *item );
+    //  void addedToSelection( QListWidgetItem *item );
 
 public Q_SLOTS:
     /**
@@ -293,7 +293,7 @@ protected:
     bool eventFilter(QObject *, QEvent *) override;
 
 private:
-   /**
+    /**
      * Moves the item @p item to the other listbox if moveOnDoubleClick is enabled.
      */
     Q_PRIVATE_SLOT(d, void itemDoubleClicked(QListWidgetItem *item))
@@ -304,7 +304,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotCurrentChanged(QListWidgetItem *))
 
 private:
-
     /**
      * @private
      * Private data storage

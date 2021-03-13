@@ -9,10 +9,10 @@
 #include "kanimatedbutton.h"
 
 #include <QApplication>
-#include <qlayout.h>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QSpinBox>
+#include <qlayout.h>
 
 AnimationGroup::AnimationGroup(const QString &path, int size, QWidget *parent)
     : QGroupBox(parent)
@@ -63,10 +63,8 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-
     MainWindow *window = new MainWindow();
     window->show();
 
     return app.exec();
 }
-

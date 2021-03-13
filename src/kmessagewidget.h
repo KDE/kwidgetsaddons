@@ -94,7 +94,6 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
     Q_PROPERTY(MessageType messageType READ messageType WRITE setMessageType)
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
 public:
-
     /**
      * Available message types.
      * The background colors are chosen depending on the message type.

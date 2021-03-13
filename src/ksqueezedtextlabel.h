@@ -8,8 +8,8 @@
 #ifndef KSQUEEZEDTEXTLABEL_H
 #define KSQUEEZEDTEXTLABEL_H
 
-#include <kwidgetsaddons_export.h>
 #include <QLabel>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 /**

@@ -8,9 +8,9 @@
 #ifndef K_FONT_CHOOSER_H
 #define K_FONT_CHOOSER_H
 
-#include <kwidgetsaddons_export.h>
 #include <QStringList>
 #include <QWidget>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 class QFont;
@@ -46,8 +46,8 @@ public:
      */
     enum FontColumn {
         FamilyList = 0x01, ///< Identifies the family (leftmost) list.
-        StyleList = 0x02,  ///< Identifies the style (center) list.
-        SizeList = 0x04,   ///< Identifies the size (rightmost) list.
+        StyleList = 0x02, ///< Identifies the style (center) list.
+        SizeList = 0x04, ///< Identifies the size (rightmost) list.
     };
 
     /**
@@ -56,9 +56,9 @@ public:
      */
     enum FontDiff {
         NoFontDiffFlags = 0, ///< No flags set
-        FontDiffFamily = 1,  ///< Identifies a requested change in the font family.
-        FontDiffStyle = 2,   ///< Identifies a requested change in the font style.
-        FontDiffSize = 4,    ///< Identifies a requested change in the font size.
+        FontDiffFamily = 1, ///< Identifies a requested change in the font family.
+        FontDiffStyle = 2, ///< Identifies a requested change in the font style.
+        FontDiffSize = 4, ///< Identifies a requested change in the font size.
         AllFontDiffs = FontDiffFamily | FontDiffStyle | FontDiffSize,
     };
     /**
@@ -71,11 +71,11 @@ public:
      * @see DisplayFlags
      */
     enum DisplayFlag {
-        NoDisplayFlags = 0,     ///< No flags set
-        FixedFontsOnly = 1,     ///< Only show monospaced/fixed-width fonts, excluding proportional fonts, (the
-                                ///< checkbox to toggle showing only monospaced fonts is not shown in this case)
-        DisplayFrame = 2,       ///< Show a visual frame around the chooser
-        ShowDifferences = 4,    ///< Display the font differences interfaces
+        NoDisplayFlags = 0, ///< No flags set
+        FixedFontsOnly = 1, ///< Only show monospaced/fixed-width fonts, excluding proportional fonts, (the
+                            ///< checkbox to toggle showing only monospaced fonts is not shown in this case)
+        DisplayFrame = 2, ///< Show a visual frame around the chooser
+        ShowDifferences = 4, ///< Display the font differences interfaces
     };
     /**
      * Stores a combination of #DisplayFlag values.

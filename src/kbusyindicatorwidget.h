@@ -7,8 +7,8 @@
 #ifndef KBUSYINDICATORWIDGET_H
 #define KBUSYINDICATORWIDGET_H
 
-#include <kwidgetsaddons_export.h>
 #include <QWidget>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 /**

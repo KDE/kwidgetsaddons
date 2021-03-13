@@ -9,15 +9,15 @@
 #define KCHARSELECTDATA_H
 
 #include <QChar>
-#include <QVector>
+#include <QFont>
+#include <QFuture>
 #include <QString>
 #include <QStringList>
-#include <QFuture>
-#include <QFont>
+#include <QVector>
 
 // Internal class used by KCharSelect
 
-typedef QMap<QString, QVector<quint16> > Index;
+typedef QMap<QString, QVector<quint16>> Index;
 
 class KCharSelectData
 {
@@ -78,4 +78,4 @@ private:
     friend class RunIndexCreation;
 };
 
-#endif  /* #ifndef KCHARSELECTDATA_H */
+#endif /* #ifndef KCHARSELECTDATA_H */

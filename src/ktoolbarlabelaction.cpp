@@ -7,9 +7,9 @@
 
 #include "ktoolbarlabelaction.h"
 
-#include <QPointer>
 #include <QApplication>
 #include <QLabel>
+#include <QPointer>
 #include <QToolBar>
 
 class KToolBarLabelActionPrivate
@@ -20,16 +20,16 @@ public:
 };
 
 KToolBarLabelAction::KToolBarLabelAction(const QString &text, QObject *parent)
-    : QWidgetAction(parent),
-      d(new KToolBarLabelActionPrivate)
+    : QWidgetAction(parent)
+    , d(new KToolBarLabelActionPrivate)
 {
     setText(text);
     d->label = nullptr;
 }
 
 KToolBarLabelAction::KToolBarLabelAction(QAction *buddy, const QString &text, QObject *parent)
-    : QWidgetAction(parent),
-      d(new KToolBarLabelActionPrivate)
+    : QWidgetAction(parent)
+    , d(new KToolBarLabelActionPrivate)
 {
     setBuddy(buddy);
     setText(text);
@@ -107,8 +107,7 @@ QWidget *KToolBarLabelAction::createWidget(QWidget *_parent)
         // These lines were copied from Konqueror's KonqDraggableLabel class in
         // konq_misc.cc
         d->label->setBackgroundRole(QPalette::Button);
-        d->label->setAlignment((QApplication::isRightToLeft() ? Qt::AlignRight : Qt::AlignLeft) |
-                               Qt::AlignVCenter);
+        d->label->setAlignment((QApplication::isRightToLeft() ? Qt::AlignRight : Qt::AlignLeft) | Qt::AlignVCenter);
         d->label->adjustSize();
         d->label->setText(text());
         d->label->installEventFilter(this);
@@ -116,4 +115,3 @@ QWidget *KToolBarLabelAction::createWidget(QWidget *_parent)
 
     return d->label;
 }
-

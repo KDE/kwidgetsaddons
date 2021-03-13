@@ -6,8 +6,8 @@
 */
 #include <kdualaction.h>
 
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 #include "kguiitem.h"
 

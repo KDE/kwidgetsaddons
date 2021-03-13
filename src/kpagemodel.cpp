@@ -13,15 +13,16 @@ KPageModelPrivate::~KPageModelPrivate()
 }
 
 KPageModel::KPageModel(QObject *parent)
-    : QAbstractItemModel(parent), d_ptr(nullptr)
+    : QAbstractItemModel(parent)
+    , d_ptr(nullptr)
 {
 }
 
 KPageModel::KPageModel(KPageModelPrivate &dd, QObject *parent)
-    : QAbstractItemModel(parent), d_ptr(&dd)
+    : QAbstractItemModel(parent)
+    , d_ptr(&dd)
 {
     d_ptr->q_ptr = this;
 }
 
 KPageModel::~KPageModel() = default;
-

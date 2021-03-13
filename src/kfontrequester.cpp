@@ -9,12 +9,12 @@
 
 #include <KFontChooserDialog>
 
-#include <QLabel>
-#include <QPushButton>
+#include <QCoreApplication>
 #include <QFontDatabase>
 #include <QFontInfo>
 #include <QHBoxLayout>
-#include <QCoreApplication>
+#include <QLabel>
+#include <QPushButton>
 
 #include <cmath>
 
@@ -23,7 +23,10 @@ class KFontRequesterPrivate
     Q_DECLARE_TR_FUNCTIONS(KFontRequester)
 
 public:
-    KFontRequesterPrivate(KFontRequester *q): q(q) {}
+    KFontRequesterPrivate(KFontRequester *q)
+        : q(q)
+    {
+    }
 
     void displaySampleText();
     void setToolTip();
@@ -39,7 +42,8 @@ public:
 };
 
 KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
-    : QWidget(parent), d(new KFontRequesterPrivate(this))
+    : QWidget(parent)
+    , d(new KFontRequesterPrivate(this))
 {
     d->m_onlyFixed = onlyFixed;
 
@@ -56,7 +60,9 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     layout->addWidget(d->m_sampleLabel, 1);
     layout->addWidget(d->m_button);
 
-    connect(d->m_button, &QPushButton::clicked, this, [this] { d->_k_buttonClicked(); });
+    connect(d->m_button, &QPushButton::clicked, this, [this] {
+        d->_k_buttonClicked();
+    });
 
     d->displaySampleText();
     d->setToolTip();
@@ -117,8 +123,7 @@ void KFontRequester::setTitle(const QString &title)
 
 void KFontRequesterPrivate::_k_buttonClicked()
 {
-    KFontChooser::DisplayFlags flags = m_onlyFixed ? KFontChooser::FixedFontsOnly
-                                                     : KFontChooser::NoDisplayFlags;
+    KFontChooser::DisplayFlags flags = m_onlyFixed ? KFontChooser::FixedFontsOnly : KFontChooser::NoDisplayFlags;
 
     const int result = KFontChooserDialog::getFont(m_selFont, flags, q->parentWidget());
 
@@ -154,14 +159,17 @@ void KFontRequesterPrivate::setToolTip()
 
     if (m_title.isNull()) {
         m_sampleLabel->setToolTip(tr("Preview of the selected font", "@info:tooltip"));
-        m_sampleLabel->setWhatsThis(tr("This is a preview of the selected font. You can change it"
-                                       " by clicking the \"Choose Font...\" button.", "@info:whatsthis"));
+        m_sampleLabel->setWhatsThis(
+            tr("This is a preview of the selected font. You can change it"
+               " by clicking the \"Choose Font...\" button.",
+               "@info:whatsthis"));
     } else {
         m_sampleLabel->setToolTip(tr("Preview of the \"%1\" font", "@info:tooltip").arg(m_title));
         m_sampleLabel->setWhatsThis(tr("This is a preview of the \"%1\" font. You can change it"
-                                       " by clicking the \"Choose Font...\" button.", "@info:whatsthis").arg(m_title));
+                                       " by clicking the \"Choose Font...\" button.",
+                                       "@info:whatsthis")
+                                        .arg(m_title));
     }
 }
 
 #include "moc_kfontrequester.cpp"
-

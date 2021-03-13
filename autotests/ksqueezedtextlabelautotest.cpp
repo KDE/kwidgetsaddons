@@ -14,8 +14,7 @@ Q_DECLARE_METATYPE(Qt::TextElideMode)
 
 namespace
 {
-
-KSqueezedTextLabel* createLabel(const QString &text = QStringLiteral("Squeeze me"))
+KSqueezedTextLabel *createLabel(const QString &text = QStringLiteral("Squeeze me"))
 {
     KSqueezedTextLabel *label = new KSqueezedTextLabel(text, nullptr);
     label->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -27,7 +26,6 @@ void squeezeLabel(KSqueezedTextLabel *label, const int pixels = 1)
 {
     label->resize(label->size().width() - pixels, label->size().height());
 }
-
 
 } // namespace
 
@@ -121,7 +119,7 @@ void KSqueezedTextLabelAutotest::testElideMode()
 
     QVERIFY(label->isSqueezed() || mode == Qt::ElideNone);
     QVERIFY(label->text().startsWith(prefix));
-    QVERIFY(0 < infixPos && infixPos < label->text().length()-1);
+    QVERIFY(0 < infixPos && infixPos < label->text().length() - 1);
     QVERIFY(label->text().endsWith(postfix));
 }
 
@@ -142,7 +140,7 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     QCOMPARE(label->sizeHint().width(), 0);
 
     const QString text = QStringLiteral("Squeeze me");
-    const int labelWidth = label->fontMetrics().boundingRect(text).width();  // no chrome set
+    const int labelWidth = label->fontMetrics().boundingRect(text).width(); // no chrome set
     label->setText(text);
 
     QVERIFY(label->isSqueezed());
@@ -221,7 +219,6 @@ void KSqueezedTextLabelAutotest::testChrome()
 }
 
 QTEST_MAIN(KSqueezedTextLabelAutotest)
-
 
 // TODO
 // currently untested, may need clarification/definition of correct behaviour:

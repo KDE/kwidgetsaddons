@@ -26,8 +26,10 @@ void KPageViewPrivate::_k_rebuildGui()
 
     QModelIndex currentLastIndex;
     if (view && view->selectionModel()) {
-        QObject::disconnect(view->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-                            q, SLOT(_k_pageSelected(QItemSelection,QItemSelection)));
+        QObject::disconnect(view->selectionModel(),
+                            SIGNAL(selectionChanged(QItemSelection, QItemSelection)),
+                            q,
+                            SLOT(_k_pageSelected(QItemSelection, QItemSelection)));
         currentLastIndex = view->selectionModel()->currentIndex();
     }
 
@@ -45,7 +47,10 @@ void KPageViewPrivate::_k_rebuildGui()
 
     // setup new view
     if (view->selectionModel()) {
-        QObject::connect(view->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), q, SLOT(_k_pageSelected(QItemSelection,QItemSelection)));
+        QObject::connect(view->selectionModel(),
+                         SIGNAL(selectionChanged(QItemSelection, QItemSelection)),
+                         q,
+                         SLOT(_k_pageSelected(QItemSelection, QItemSelection)));
 
         if (currentLastIndex.isValid()) {
             view->selectionModel()->setCurrentIndex(currentLastIndex, QItemSelectionModel::Select);
@@ -124,7 +129,7 @@ void KPageViewPrivate::cleanupPages()
 
         bool found = false;
         for (int j = 0; j < widgets.count(); ++j) {
-            if (widgets[ j ] == page) {
+            if (widgets[j] == page) {
                 found = true;
             }
         }
@@ -201,14 +206,14 @@ void KPageViewPrivate::_k_modelChanged()
     if (faceType == KPageView::Auto) {
         _k_rebuildGui();
         // If you discover some crashes use the line below instead...
-        //QTimer::singleShot(0, q, SLOT(_k_rebuildGui()));
+        // QTimer::singleShot(0, q, SLOT(_k_rebuildGui()));
     }
 
     // Set the stack to the minimum size of the largest widget.
     QSize size = stack->size();
     const QList<QWidget *> widgets = collectPages();
     for (int i = 0; i < widgets.count(); ++i) {
-        const QWidget *widget = widgets[ i ];
+        const QWidget *widget = widgets[i];
         if (widget) {
             size = size.expandedTo(widget->minimumSizeHint());
         }
@@ -240,7 +245,7 @@ void KPageViewPrivate::_k_pageSelected(const QItemSelection &index, const QItemS
         QWidget *widget = qvariant_cast<QWidget *>(model->data(currentIndex, KPageModel::WidgetRole));
 
         if (widget) {
-            if (stack->indexOf(widget) == -1) {     // not included yet
+            if (stack->indexOf(widget) == -1) { // not included yet
                 stack->addWidget(widget);
             }
 
@@ -266,7 +271,7 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
         return;
     }
     QString header = model->data(index, KPageModel::HeaderRole).toString();
-    if (header.isNull()) {   //TODO KF6 remove that ugly logic, see also doxy-comments in KPageWidgetItem::setHeader()
+    if (header.isNull()) { // TODO KF6 remove that ugly logic, see also doxy-comments in KPageWidgetItem::setHeader()
         header = model->data(index, Qt::DisplayRole).toString();
     }
 
@@ -292,8 +297,13 @@ void KPageViewPrivate::_k_dataChanged(const QModelIndex &, const QModelIndex &)
 }
 
 KPageViewPrivate::KPageViewPrivate(KPageView *_parent)
-    : q_ptr(_parent), model(nullptr), faceType(KPageView::Auto),
-      layout(nullptr), stack(nullptr), titleWidget(nullptr), view(nullptr)
+    : q_ptr(_parent)
+    , model(nullptr)
+    , faceType(KPageView::Auto)
+    , layout(nullptr)
+    , stack(nullptr)
+    , titleWidget(nullptr)
+    , view(nullptr)
 {
 }
 
@@ -321,7 +331,8 @@ KPageView::KPageView(QWidget *parent)
 }
 
 KPageView::KPageView(KPageViewPrivate &dd, QWidget *parent)
-    : QWidget(parent), d_ptr(&dd)
+    : QWidget(parent)
+    , d_ptr(&dd)
 {
     d_ptr->init();
 }
@@ -334,16 +345,14 @@ void KPageView::setModel(QAbstractItemModel *model)
     // clean up old model
     if (d->model) {
         disconnect(d->model, SIGNAL(layoutChanged()), this, SLOT(_k_modelChanged()));
-        disconnect(d->model, SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-                   this, SLOT(_k_dataChanged(QModelIndex,QModelIndex)));
+        disconnect(d->model, SIGNAL(dataChanged(QModelIndex, QModelIndex)), this, SLOT(_k_dataChanged(QModelIndex, QModelIndex)));
     }
 
     d->model = model;
 
     if (d->model) {
         connect(d->model, SIGNAL(layoutChanged()), this, SLOT(_k_modelChanged()));
-        connect(d->model, SIGNAL(dataChanged(QModelIndex,QModelIndex)),
-                this, SLOT(_k_dataChanged(QModelIndex,QModelIndex)));
+        connect(d->model, SIGNAL(dataChanged(QModelIndex, QModelIndex)), this, SLOT(_k_dataChanged(QModelIndex, QModelIndex)));
 
         // set new model in navigation view
         if (d->view) {

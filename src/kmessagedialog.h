@@ -104,7 +104,6 @@ class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
     Q_OBJECT
 
 public:
-
     enum Type {
         QuestionYesNo = 1,
         QuestionYesNoCancel,
@@ -123,9 +122,7 @@ public:
      * @param text the text message that is going to be displayed in the dialog
      * @param parent a QWidget* that will be set as the dialog parent
      */
-    explicit KMessageDialog(KMessageDialog::Type type,
-                            const QString &text,
-                            QWidget *parent = nullptr);
+    explicit KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent = nullptr);
 
     /**
      * This constructor takes the window Id of the parent window, instead of a QWidget*.
@@ -134,9 +131,7 @@ public:
      * @param text the text message that is going to be displayed in the dialog
      * @param parent_id the native parent's window system identifier
      */
-    explicit KMessageDialog(KMessageDialog::Type type,
-                            const QString &text,
-                            WId parent_id);
+    explicit KMessageDialog(KMessageDialog::Type type, const QString &text, WId parent_id);
     /**
      * Destructor
      */

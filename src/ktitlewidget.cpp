@@ -9,21 +9,21 @@
 #include "ktitlewidget.h"
 
 #include <QApplication>
-#include <QTimer>
-#include <QMouseEvent>
 #include <QFrame>
+#include <QIcon>
 #include <QLabel>
 #include <QLayout>
-#include <QTextDocument>
-#include <QIcon>
+#include <QMouseEvent>
 #include <QStyle>
+#include <QTextDocument>
+#include <QTimer>
 
 class KTitleWidgetPrivate
 {
 public:
     KTitleWidgetPrivate(KTitleWidget *parent)
         : q(parent)
-          // use Left so updateIconAlignment(ImageRight) as called by constructor triggers the default layout
+        // use Left so updateIconAlignment(ImageRight) as called by constructor triggers the default layout
         , iconAlignment(KTitleWidget::ImageLeft)
         , autoHideTimeout(0)
         , messageType(KTitleWidget::InfoMessage)
@@ -57,14 +57,15 @@ public:
     {
         QString styleSheet;
         switch (messageType) {
-        //FIXME: we need the usability color styles to implement different
+        // FIXME: we need the usability color styles to implement different
         //       yet palette appropriate colours for the different use cases!
         //       also .. should we include an icon here,
         //       perhaps using the imageLabel?
         case KTitleWidget::InfoMessage:
         case KTitleWidget::WarningMessage:
         case KTitleWidget::ErrorMessage:
-            styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }").arg(q->palette().color(QPalette::HighlightedText).name(), q->palette().color(QPalette::Highlight).name());
+            styleSheet = QStringLiteral("QLabel { color: palette(%1); background: palette(%2); }")
+                             .arg(q->palette().color(QPalette::HighlightedText).name(), q->palette().color(QPalette::Highlight).name());
             break;
         case KTitleWidget::PlainMessage:
         default:
@@ -149,8 +150,8 @@ QString KTitleWidgetPrivate::iconTypeToIconName(KTitleWidget::MessageType type)
 }
 
 KTitleWidget::KTitleWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new KTitleWidgetPrivate(this))
+    : QWidget(parent)
+    , d(new KTitleWidgetPrivate(this))
 {
     QFrame *titleFrame = new QFrame(this);
     titleFrame->setAutoFillBackground(true);
@@ -189,8 +190,7 @@ KTitleWidget::~KTitleWidget() = default;
 bool KTitleWidget::eventFilter(QObject *object, QEvent *event)
 {
     // Hide message label on click
-    if (d->autoHideTimeout > 0 &&
-            event->type() == QEvent::MouseButtonPress) {
+    if (d->autoHideTimeout > 0 && event->type() == QEvent::MouseButtonPress) {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
         if (mouseEvent && mouseEvent->button() == Qt::LeftButton) {
             setVisible(false);
@@ -219,11 +219,11 @@ QString KTitleWidget::comment() const
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 const QPixmap *KTitleWidget::pixmap() const
 {
-QT_WARNING_PUSH
-QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     return d->imageLabel->pixmap();
-QT_WARNING_POP
+    QT_WARNING_POP
 }
 #endif
 
@@ -249,8 +249,7 @@ void KTitleWidget::setBuddy(QWidget *buddy)
 void KTitleWidget::changeEvent(QEvent *e)
 {
     QWidget::changeEvent(e);
-    if (e->type() == QEvent::PaletteChange || e->type() == QEvent::FontChange
-                                           || e->type() == QEvent::ApplicationFontChange) {
+    if (e->type() == QEvent::PaletteChange || e->type() == QEvent::FontChange || e->type() == QEvent::ApplicationFontChange) {
         d->textLabel->setStyleSheet(d->textStyleSheet());
         d->commentLabel->setStyleSheet(d->commentStyleSheet());
         d->updatePixmap();
@@ -301,7 +300,7 @@ void KTitleWidget::setComment(const QString &comment, MessageType type)
 {
     d->commentLabel->setVisible(!comment.isNull());
 
-    //TODO: should we override the current icon with the corresponding MessageType icon?
+    // TODO: should we override the current icon with the corresponding MessageType icon?
     d->messageType = type;
     d->commentLabel->setStyleSheet(d->commentStyleSheet());
     d->commentLabel->setText(comment);
@@ -319,7 +318,7 @@ void KTitleWidget::setIcon(const QIcon &icon, KTitleWidget::ImageAlignment align
     d->updatePixmap();
 }
 
-void KTitleWidget::setIconSize(const QSize& iconSize)
+void KTitleWidget::setIconSize(const QSize &iconSize)
 {
     if (d->iconSize == iconSize) {
         return;
@@ -333,7 +332,6 @@ void KTitleWidget::setIconSize(const QSize& iconSize)
         d->updatePixmap();
     }
 }
-
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
 void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
@@ -395,7 +393,9 @@ void KTitleWidget::showEvent(QShowEvent *event)
 {
     Q_UNUSED(event)
     if (d->autoHideTimeout > 0) {
-        QTimer::singleShot(d->autoHideTimeout, this, [this] { d->_k_timeoutFinished(); });
+        QTimer::singleShot(d->autoHideTimeout, this, [this] {
+            d->_k_timeoutFinished();
+        });
     }
 }
 

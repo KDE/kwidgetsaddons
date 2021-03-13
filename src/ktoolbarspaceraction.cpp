@@ -9,7 +9,9 @@
 
 #include <QWidget>
 
-class KToolBarSpacerActionPrivate {};
+class KToolBarSpacerActionPrivate
+{
+};
 
 KToolBarSpacerAction::KToolBarSpacerAction(QObject *parent)
     : QWidgetAction(parent)

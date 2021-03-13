@@ -23,8 +23,7 @@ public:
         animation.setDuration(2000);
         animation.setStartValue(0);
         animation.setEndValue(360);
-        QObject::connect(&animation, &QVariantAnimation::valueChanged,
-                q, [=](QVariant value) {
+        QObject::connect(&animation, &QVariantAnimation::valueChanged, q, [=](QVariant value) {
             rotation = value.toReal();
             q->update(); // repaint new rotation
         });

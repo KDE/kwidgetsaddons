@@ -28,8 +28,7 @@ int main(int argc, char **argv)
 
     auto toggle = new QPushButton(QStringLiteral("Toggle Visible"), &window);
 
-    QObject::connect(toggle, &QPushButton::clicked,
-            busyWidget, [=] {
+    QObject::connect(toggle, &QPushButton::clicked, busyWidget, [=] {
         busyWidget->setVisible(!busyWidget->isVisible());
     });
 

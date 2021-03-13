@@ -8,9 +8,9 @@
 #ifndef KMIMETYPE_CHOOSER_H
 #define KMIMETYPE_CHOOSER_H
 
-#include <kwidgetsaddons_export.h>
 #include <QDialog>
 #include <QWidget>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 /**
@@ -56,13 +56,12 @@ public:
      * @param groupsToShow a list of MIME type groups to show. If empty, all groups are shown
      * @param parent The parent widget to use
      */
-    explicit
-    KMimeTypeChooser(const QString &text = QString(),
-                     const QStringList &selectedMimeTypes = QStringList(),
-                     const QString &defaultGroup = QString(),
-                     const QStringList &groupsToShow = QStringList(),
-                     int visuals = Comments | Patterns | EditButton,
-                     QWidget *parent = nullptr);
+    explicit KMimeTypeChooser(const QString &text = QString(),
+                              const QStringList &selectedMimeTypes = QStringList(),
+                              const QString &defaultGroup = QString(),
+                              const QStringList &groupsToShow = QStringList(),
+                              int visuals = Comments | Patterns | EditButton,
+                              QWidget *parent = nullptr);
     ~KMimeTypeChooser();
 
     /**
@@ -133,14 +132,13 @@ public:
      * @param groupsToShow A list of MIME type groups to show. If empty, all groups are shown
      * @param parent The parent widget to use
      */
-    explicit
-    KMimeTypeChooserDialog(const QString &title = QString(),
-                           const QString &text = QString(),
-                           const QStringList &selectedMimeTypes = QStringList(),
-                           const QString &defaultGroup = QString(),
-                           const QStringList &groupsToShow = QStringList(),
-                           int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
-                           QWidget *parent = nullptr);
+    explicit KMimeTypeChooserDialog(const QString &title = QString(),
+                                    const QString &text = QString(),
+                                    const QStringList &selectedMimeTypes = QStringList(),
+                                    const QString &defaultGroup = QString(),
+                                    const QStringList &groupsToShow = QStringList(),
+                                    int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
+                                    QWidget *parent = nullptr);
 
     /**
      * @overload

@@ -18,8 +18,12 @@
 class KMessageBoxDontAskAgainInterface
 {
 public:
-    KMessageBoxDontAskAgainInterface() {}
-    virtual ~KMessageBoxDontAskAgainInterface() {}
+    KMessageBoxDontAskAgainInterface()
+    {
+    }
+    virtual ~KMessageBoxDontAskAgainInterface()
+    {
+    }
 
     virtual bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) = 0;
     virtual bool shouldBeShownContinue(const QString &dontShowAgainName) = 0;

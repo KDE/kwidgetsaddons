@@ -13,7 +13,6 @@
 #include <QPushButton>
 #include <QSharedData>
 
-
 class KGuiItemPrivate : public QSharedData
 {
 public:
@@ -42,8 +41,7 @@ KGuiItem::KGuiItem()
 {
 }
 
-KGuiItem::KGuiItem(const QString &text,    const QString &iconName,
-                   const QString &toolTip, const QString &whatsThis)
+KGuiItem::KGuiItem(const QString &text, const QString &iconName, const QString &toolTip, const QString &whatsThis)
     : d(new KGuiItemPrivate)
 {
     d->m_text = text;
@@ -52,8 +50,7 @@ KGuiItem::KGuiItem(const QString &text,    const QString &iconName,
     setIconName(iconName);
 }
 
-KGuiItem::KGuiItem(const QString &text,    const QIcon &icon,
-                   const QString &toolTip, const QString &whatsThis)
+KGuiItem::KGuiItem(const QString &text, const QIcon &icon, const QString &toolTip, const QString &whatsThis)
     : d(new KGuiItemPrivate)
 {
     d->m_text = text;
@@ -81,18 +78,18 @@ QString KGuiItem::plainText() const
         return d->m_text;
     }
 
-    //Can assume len >= 1 from now on.
+    // Can assume len >= 1 from now on.
     QString stripped;
 
     int resultLength = 0;
     stripped.resize(len);
 
-    const QChar *data    = d->m_text.unicode();
+    const QChar *data = d->m_text.unicode();
     for (int pos = 0; pos < len; ++pos) {
-        if (data[ pos ] != QLatin1Char('&')) {
-            stripped[ resultLength++ ] = data[ pos ];
-        } else if (pos + 1 < len && data[ pos + 1 ] == QLatin1Char('&')) {
-            stripped[ resultLength++ ] = data[ pos++ ];
+        if (data[pos] != QLatin1Char('&')) {
+            stripped[resultLength++] = data[pos];
+        } else if (pos + 1 < len && data[pos + 1] == QLatin1Char('&')) {
+            stripped[resultLength++] = data[pos++];
         }
     }
 

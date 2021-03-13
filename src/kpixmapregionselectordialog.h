@@ -74,8 +74,7 @@ public:
      * @returns the selected rectangle, or an invalid rectangle if the user
      * pressed the Cancel button.
      */
-    static QRect getSelectedRegion(const QPixmap &pixmap, int aspectRatioWidth,
-                                   int aspectRatioHeight, QWidget *parent = nullptr);
+    static QRect getSelectedRegion(const QPixmap &pixmap, int aspectRatioWidth, int aspectRatioHeight, QWidget *parent = nullptr);
 
     /**
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
@@ -94,8 +93,7 @@ public:
      * @returns the selected image, or an invalid image if the user
      * pressed the Cancel button.
      */
-    static QImage getSelectedImage(const QPixmap &pixmap, int aspectRatioWidth,
-                                   int aspectRatioHeight, QWidget *parent = nullptr);
+    static QImage getSelectedImage(const QPixmap &pixmap, int aspectRatioWidth, int aspectRatioHeight, QWidget *parent = nullptr);
 
     /**
      * @since 4.4.3

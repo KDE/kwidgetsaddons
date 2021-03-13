@@ -17,7 +17,6 @@
 #include "ktoggleaction.h"
 #include "ktoggleaction_p.h"
 
-
 KToggleAction::KToggleAction(QObject *parent)
     : KToggleAction(*new KToggleActionPrivate(this), parent)
 {
@@ -33,8 +32,8 @@ KToggleAction::KToggleAction(KToggleActionPrivate &dd, QObject *parent)
 }
 
 KToggleAction::KToggleAction(const QString &text, QObject *parent)
-    : QAction(parent),
-      d(new KToggleActionPrivate(this))
+    : QAction(parent)
+    , d(new KToggleActionPrivate(this))
 {
     Q_D(KToggleAction);
 
@@ -43,8 +42,8 @@ KToggleAction::KToggleAction(const QString &text, QObject *parent)
 }
 
 KToggleAction::KToggleAction(const QIcon &icon, const QString &text, QObject *parent)
-    : QAction(parent),
-      d(new KToggleActionPrivate(this))
+    : QAction(parent)
+    , d(new KToggleActionPrivate(this))
 {
     Q_D(KToggleAction);
 
@@ -83,4 +82,3 @@ void KToggleAction::slotToggled(bool)
         }
     }
 }
-

@@ -69,7 +69,6 @@ public:
     };
 
 public:
-
     /**
      * Enumeration of the buttons, the listbox offers. Specify them in the
      * constructor in the buttons parameter, or in setButtons.
@@ -104,10 +103,7 @@ public:
      *
      * @see KUrlRequester::customEditor(), setCustomEditor
      */
-    KEditListWidget(const CustomEditor &customEditor,
-                    QWidget *parent = nullptr,
-                    bool checkAtEntering = false,
-                    Buttons buttons = All);
+    KEditListWidget(const CustomEditor &customEditor, QWidget *parent = nullptr, bool checkAtEntering = false, Buttons buttons = All);
 
     ~KEditListWidget() override;
 

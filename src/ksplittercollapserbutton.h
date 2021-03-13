@@ -10,8 +10,8 @@
 
 // Qt
 #include <QToolButton>
-#include <memory>
 #include <kwidgetsaddons_export.h>
+#include <memory>
 
 class QSplitter;
 

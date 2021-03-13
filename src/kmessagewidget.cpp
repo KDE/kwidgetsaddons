@@ -12,15 +12,15 @@
 #include <QApplication>
 #include <QEvent>
 #include <QGridLayout>
+#include <QGuiApplication>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPainter>
 #include <QShowEvent>
+#include <QStyle>
 #include <QStyleOption>
 #include <QTimeLine>
 #include <QToolButton>
-#include <QStyle>
-#include <QGuiApplication>
 //---------------------------------------------------------------------
 // KMessageWidgetPrivate
 //---------------------------------------------------------------------
@@ -87,7 +87,9 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
 
     q->setMessageType(KMessageWidget::Information);
 
-    q->connect(qApp, &QApplication::paletteChanged, q, [this] {KMessageWidgetPrivate::setPalette();});
+    q->connect(qApp, &QApplication::paletteChanged, q, [this] {
+        KMessageWidgetPrivate::setPalette();
+    });
 }
 
 void KMessageWidgetPrivate::createLayout()
@@ -160,7 +162,7 @@ void KMessageWidgetPrivate::setPalette()
     // The following RGB color values come from the "default" scheme in kcolorscheme.cpp
     switch (messageType) {
     case KMessageWidget::Positive:
-        bgBaseColor.setRgb(39, 174,  96); // Window: ForegroundPositive
+        bgBaseColor.setRgb(39, 174, 96); // Window: ForegroundPositive
         break;
     case KMessageWidget::Information:
         bgBaseColor.setRgb(61, 174, 233); // Window: ForegroundActive
@@ -374,8 +376,7 @@ void KMessageWidget::animatedShow()
         Q_EMIT hideAnimationFinished();
     }
 
-    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this)
-     || (parentWidget() && !parentWidget()->isVisible())) {
+    if (!style()->styleHint(QStyle::SH_Widget_Animate, nullptr, this) || (parentWidget() && !parentWidget()->isVisible())) {
         show();
         Q_EMIT showAnimationFinished();
         return;
@@ -428,14 +429,12 @@ void KMessageWidget::animatedHide()
 
 bool KMessageWidget::isHideAnimationRunning() const
 {
-    return (d->timeLine->direction() == QTimeLine::Backward)
-        && (d->timeLine->state() == QTimeLine::Running);
+    return (d->timeLine->direction() == QTimeLine::Backward) && (d->timeLine->state() == QTimeLine::Running);
 }
 
 bool KMessageWidget::isShowAnimationRunning() const
 {
-    return (d->timeLine->direction() == QTimeLine::Forward)
-        && (d->timeLine->state() == QTimeLine::Running);
+    return (d->timeLine->direction() == QTimeLine::Forward) && (d->timeLine->state() == QTimeLine::Running);
 }
 
 QIcon KMessageWidget::icon() const
@@ -456,4 +455,3 @@ void KMessageWidget::setIcon(const QIcon &icon)
 }
 
 #include "moc_kmessagewidget.cpp"
-

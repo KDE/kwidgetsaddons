@@ -16,12 +16,12 @@
 
 #include "krecentfilesmenu.h"
 
-#include <QIcon>
-#include <QSettings>
-#include <QGuiApplication>
-#include <QStandardPaths>
-#include <QScreen>
 #include <QFile>
+#include <QGuiApplication>
+#include <QIcon>
+#include <QScreen>
+#include <QSettings>
+#include <QStandardPaths>
 
 class RecentFilesEntry
 {
@@ -80,7 +80,8 @@ public:
     }
 };
 
-class KRecentFilesMenuPrivate {
+class KRecentFilesMenuPrivate
+{
 public:
     QString m_group = QStringLiteral("RecentFiles");
     std::vector<RecentFilesEntry *> m_entries;
@@ -92,12 +93,13 @@ public:
     std::vector<RecentFilesEntry *>::iterator findEntry(const QUrl &url);
 };
 
-KRecentFilesMenu::KRecentFilesMenu(const QString& title, QWidget *parent)
+KRecentFilesMenu::KRecentFilesMenu(const QString &title, QWidget *parent)
     : QMenu(title, parent)
     , d(new KRecentFilesMenuPrivate)
 {
     setIcon(QIcon::fromTheme(QStringLiteral("document-open-recent")));
-    const QString fileName = QStringLiteral("%1/%2_recentfiles").arg(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation), QCoreApplication::applicationName());
+    const QString fileName =
+        QStringLiteral("%1/%2_recentfiles").arg(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation), QCoreApplication::applicationName());
     d->m_settings = new QSettings(fileName, QSettings::Format::IniFormat, this);
 
     d->m_noEntriesAction = new QAction(tr("No Entries"));
@@ -188,7 +190,6 @@ void KRecentFilesMenu::removeUrl(const QUrl &url)
     rebuildMenu();
 }
 
-
 void KRecentFilesMenu::rebuildMenu()
 {
     clear();
@@ -233,7 +234,7 @@ void KRecentFilesMenu::writeToFile()
 
 std::vector<RecentFilesEntry *>::iterator KRecentFilesMenuPrivate::findEntry(const QUrl &url)
 {
-    return std::find_if(m_entries.begin(), m_entries.end(), [url] (RecentFilesEntry *entry) {
+    return std::find_if(m_entries.begin(), m_entries.end(), [url](RecentFilesEntry *entry) {
         return entry->url == url;
     });
 }

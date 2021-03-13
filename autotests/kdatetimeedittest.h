@@ -30,7 +30,6 @@ private Q_SLOTS:
     void testDateMenu();
 
 private:
-
     KDateTimeEdit *m_edit;
 };
 

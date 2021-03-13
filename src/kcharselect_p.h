@@ -96,7 +96,7 @@ private:
 
 // NO D-Pointer needed, private internal class, no public API
 
-class KCharSelectItemModel: public QAbstractTableModel
+class KCharSelectItemModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
@@ -112,7 +112,7 @@ public:
         }
     }
 
-    enum internalRoles {CharacterRole = Qt::UserRole};
+    enum internalRoles { CharacterRole = Qt::UserRole };
     int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (parent.isValid()) {
@@ -162,12 +162,15 @@ public:
     {
         return {QStringLiteral("text/plain")};
     }
-    bool dropMimeData(const QMimeData *data, Qt::DropAction action,
-                      int row, int column, const QModelIndex &parent) override;
+    bool dropMimeData(const QMimeData *data, Qt::DropAction action, int row, int column, const QModelIndex &parent) override;
 
     void setColumnCount(int columns);
 
-    QVector<uint> chars() const { return m_chars; }
+    QVector<uint> chars() const
+    {
+        return m_chars;
+    }
+
 private:
     QVector<uint> m_chars;
     QFont m_font;
@@ -175,6 +178,5 @@ private:
 
 Q_SIGNALS:
     void showCharRequested(uint c);
-
 };
 #endif // KCHARSELECT_P_H

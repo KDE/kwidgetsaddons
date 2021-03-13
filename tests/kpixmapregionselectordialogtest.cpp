@@ -6,10 +6,10 @@
 */
 
 #include "kpixmapregionselectordialog.h"
-#include <QPixmap>
-#include <QImage>
-#include <QFile>
 #include <QApplication>
+#include <QFile>
+#include <QImage>
+#include <QPixmap>
 #include <iostream>
 
 int main(int argc, char **argv)

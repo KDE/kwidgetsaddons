@@ -32,13 +32,13 @@ public:
 
     QToolButton::ToolButtonPopupMode m_popupMode;
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
-    bool stickyMenu: 1;
+    bool stickyMenu : 1;
 #endif
 };
 
 KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent)
-    : QWidgetAction(parent),
-      d(new KToolBarPopupActionPrivate)
+    : QWidgetAction(parent)
+    , d(new KToolBarPopupActionPrivate)
 {
     setIcon(icon);
     setText(text);
@@ -71,12 +71,9 @@ QWidget *KToolBarPopupAction::createWidget(QWidget *_parent)
     button->setDefaultAction(this);
     button->setPopupMode(d->m_popupMode);
 
-    connect(parent, &QToolBar::iconSizeChanged,
-            button, &QAbstractButton::setIconSize);
-    connect(parent, &QToolBar::toolButtonStyleChanged,
-            button, &QToolButton::setToolButtonStyle);
-    connect(button, &QToolButton::triggered,
-            parent, &QToolBar::actionTriggered);
+    connect(parent, &QToolBar::iconSizeChanged, button, &QAbstractButton::setIconSize);
+    connect(parent, &QToolBar::toolButtonStyleChanged, button, &QToolButton::setToolButtonStyle);
+    connect(button, &QToolButton::triggered, parent, &QToolBar::actionTriggered);
 
     return button;
 }

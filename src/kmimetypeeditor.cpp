@@ -21,4 +21,3 @@ void KMimeTypeEditor::editMimeType(const QString &mimeType, QWidget *widget)
 
     QProcess::startDetached(QString::fromLatin1(s_keditfiletypeExecutable), args);
 }
-

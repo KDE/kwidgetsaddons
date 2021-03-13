@@ -14,7 +14,6 @@
 #include <QWidget>
 #include <memory>
 
-
 /**
  * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
  *
@@ -30,7 +29,6 @@ class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
-
     /**
      * Options provided by the widget
      * @see options
@@ -38,22 +36,22 @@ public:
      * @see Options
      */
     enum Option {
-        ShowCalendar     = 0x00001,  /**< If the Calendar System edit is displayed */
-        ShowDate         = 0x00002,  /**< If the Date is displayed */
-        ShowTime         = 0x00004,  /**< If the Time is displayed */
-        ShowTimeZone     = 0x00008,  /**< If the Time Zone is displayed */
-        //EditCalendar     = 0x00010,  /**< Allow the user to manually edit the calendar */
-        EditDate         = 0x00020,  /**< Allow the user to manually edit the date */
-        EditTime         = 0x00040,  /**< Allow the user to manually edit the time */
-        //EditTimeZone     = 0x00080,  /**< Allow the user to manually edit the time zone */
-        SelectCalendar   = 0x00100,  /**< Allow the user to select a calendar */
-        SelectDate       = 0x00200,  /**< Allow the user to select a date */
-        SelectTime       = 0x00400,  /**< Allow the user to select a time */
-        SelectTimeZone   = 0x00800,  /**< Allow the user to select a time zone */
-        DatePicker       = 0x01000,  /**< Show a date picker */
-        DateKeywords     = 0x02000,  /**< Show date keywords */
-        ForceTime        = 0x04000,  /**< The entered time can only be a selected time */
-        WarnOnInvalid    = 0x08000,  /**< Show a warning on focus out if the date or time is invalid */
+        ShowCalendar = 0x00001, /**< If the Calendar System edit is displayed */
+        ShowDate = 0x00002, /**< If the Date is displayed */
+        ShowTime = 0x00004, /**< If the Time is displayed */
+        ShowTimeZone = 0x00008, /**< If the Time Zone is displayed */
+        // EditCalendar     = 0x00010,  /**< Allow the user to manually edit the calendar */
+        EditDate = 0x00020, /**< Allow the user to manually edit the date */
+        EditTime = 0x00040, /**< Allow the user to manually edit the time */
+        // EditTimeZone     = 0x00080,  /**< Allow the user to manually edit the time zone */
+        SelectCalendar = 0x00100, /**< Allow the user to select a calendar */
+        SelectDate = 0x00200, /**< Allow the user to select a date */
+        SelectTime = 0x00400, /**< Allow the user to select a time */
+        SelectTimeZone = 0x00800, /**< Allow the user to select a time zone */
+        DatePicker = 0x01000, /**< Show a date picker */
+        DateKeywords = 0x02000, /**< Show date keywords */
+        ForceTime = 0x04000, /**< The entered time can only be a selected time */
+        WarnOnInvalid = 0x08000, /**< Show a warning on focus out if the date or time is invalid */
     };
     /**
      * Stores a combination of #Option values.
@@ -404,10 +402,8 @@ public Q_SLOTS:
      * @param minWarnMsg the minimum warning message
      * @param maxWarnMsg the maximum warning message
      */
-    void setDateTimeRange(const QDateTime &minDateTime,
-                          const QDateTime &maxDateTime,
-                          const QString &minWarnMsg = QString(),
-                          const QString &maxWarnMsg = QString());
+    void
+    setDateTimeRange(const QDateTime &minDateTime, const QDateTime &maxDateTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
     /**
      * Reset the minimum and maximum date and time to the default
@@ -535,9 +531,7 @@ public Q_SLOTS:
      *
      * @see timeList()
      */
-    void setTimeList(QList<QTime> timeList,
-                     const QString &minWarnMsg = QString(),
-                     const QString &maxWarnMsg = QString());
+    void setTimeList(QList<QTime> timeList, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
     /**
      * Set the time zones able to be selected
@@ -547,7 +541,6 @@ public Q_SLOTS:
     void setTimeZones(const QList<QTimeZone> &zones);
 
 protected:
-
     bool eventFilter(QObject *object, QEvent *event) override;
     void focusInEvent(QFocusEvent *event) override;
     void focusOutEvent(QFocusEvent *event) override;

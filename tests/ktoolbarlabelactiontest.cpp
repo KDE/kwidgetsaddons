@@ -6,12 +6,12 @@
 */
 
 #include <QApplication>
-#include <QMainWindow>
-#include <QVBoxLayout>
 #include <QLineEdit>
-#include <QToolBar>
+#include <QMainWindow>
 #include <QPushButton>
 #include <QString>
+#include <QToolBar>
+#include <QVBoxLayout>
 
 #include <ktoolbarlabelaction.h>
 

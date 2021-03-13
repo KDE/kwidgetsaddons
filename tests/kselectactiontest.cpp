@@ -7,9 +7,9 @@
 
 #include "kselectactiontest.h"
 
-#include <QToolBar>
 #include <QApplication>
 #include <QMenuBar>
+#include <QToolBar>
 
 #include <QDebug>
 
@@ -41,13 +41,13 @@ SelectActionTest::SelectActionTest(QWidget *parent)
 
     m_comboSelect->setToolBarMode(KSelectAction::ComboBoxMode);
     m_comboSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_comboSelect, SIGNAL(triggered(QAction*)), SLOT(actionTriggered(QAction*)));
+    connect(m_comboSelect, SIGNAL(triggered(QAction *)), SLOT(actionTriggered(QAction *)));
     connect(m_comboSelect, SIGNAL(indexTriggered(int)), SLOT(indexTriggered(int)));
     connect(m_comboSelect, SIGNAL(textTriggered(QString)), SLOT(textTriggered(QString)));
 
     m_buttonSelect->setToolBarMode(KSelectAction::MenuMode);
     m_buttonSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_buttonSelect, SIGNAL(triggered(QAction*)), SLOT(actionTriggered(QAction*)));
+    connect(m_buttonSelect, SIGNAL(triggered(QAction *)), SLOT(actionTriggered(QAction *)));
     connect(m_buttonSelect, SIGNAL(indexTriggered(int)), SLOT(indexTriggered(int)));
     connect(m_buttonSelect, SIGNAL(textTriggered(QString)), SLOT(textTriggered(QString)));
 
@@ -99,4 +99,3 @@ void SelectActionTest::slotActionTriggered(bool state)
 {
     qDebug() << sender() << " state " << state;
 }
-

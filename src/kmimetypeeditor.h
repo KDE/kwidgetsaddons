@@ -8,8 +8,8 @@
 #ifndef KMIMETYPE_EDITOR_H
 #define KMIMETYPE_EDITOR_H
 
-#include <kwidgetsaddons_export.h>
 #include <QWidget>
+#include <kwidgetsaddons_export.h>
 
 /**
  * This namespace provides a method for starting the file types editor.
@@ -17,13 +17,13 @@
  */
 namespace KMimeTypeEditor
 {
-    /**
-     * Starts the file types editor for a given MIME type.
-     * @param mimeType the MIME type to edit, e.g. "text/plain"
-     * @param widget the parent widget
-     * @since 5.4
-     */
-    KWIDGETSADDONS_EXPORT void editMimeType(const QString &mimeType, QWidget *widget);
+/**
+ * Starts the file types editor for a given MIME type.
+ * @param mimeType the MIME type to edit, e.g. "text/plain"
+ * @param widget the parent widget
+ * @since 5.4
+ */
+KWIDGETSADDONS_EXPORT void editMimeType(const QString &mimeType, QWidget *widget);
 }
 
 #endif

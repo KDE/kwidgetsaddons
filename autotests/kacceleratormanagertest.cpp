@@ -4,15 +4,15 @@
 
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
-#include <kacceleratormanager.h>
 #include <functional>
+#include <kacceleratormanager.h>
 
-#include <QTest>
 #include <QMenu>
+#include <QTest>
 
 #define QSL QStringLiteral
 
-static QStringList extractActionTexts(QMenu &menu, std::function<QString(const QAction*)> func)
+static QStringList extractActionTexts(QMenu &menu, std::function<QString(const QAction *)> func)
 {
     menu.aboutToShow(); // signals are now public in Qt5, how convenient :-)
 
@@ -53,8 +53,10 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedTexts");
 
         QTest::newRow("basic") << QStringList{QSL("Open"), QSL("Close"), QSL("Quit")} << QStringList{QSL("&Open"), QSL("&Close"), QSL("&Quit")};
-        QTest::newRow("same_first") << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")} << QStringList{QSL("&Open"), QSL("&Close"), QSL("C&lone"), QSL("&Quit")};
-        QTest::newRow("cjk") << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("Clone (&C)"), QSL("Quit (&Q)")} << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("C&lone (C)"), QSL("Quit (&Q)")};
+        QTest::newRow("same_first") << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")}
+                                    << QStringList{QSL("&Open"), QSL("&Close"), QSL("C&lone"), QSL("&Quit")};
+        QTest::newRow("cjk") << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("Clone (&C)"), QSL("Quit (&Q)")}
+                             << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("C&lone (C)"), QSL("Quit (&Q)")};
     }
 
     void testActionTexts()
@@ -79,8 +81,10 @@ private Q_SLOTS:
         QTest::addColumn<QStringList>("expectedTexts");
 
         QTest::newRow("basic") << QStringList{QSL("Open"), QSL("Close"), QSL("Quit")} << QStringList{QSL("Open"), QSL("Close"), QSL("Quit")};
-        QTest::newRow("same_first") << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")} << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")};
-        QTest::newRow("cjk") << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("Clone (&C)"), QSL("Quit (&Q)")} << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")};
+        QTest::newRow("same_first") << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")}
+                                    << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")};
+        QTest::newRow("cjk") << QStringList{QSL("Open (&O)"), QSL("Close (&C)"), QSL("Clone (&C)"), QSL("Quit (&Q)")}
+                             << QStringList{QSL("Open"), QSL("Close"), QSL("Clone"), QSL("Quit")};
     }
 
     void testActionIconTexts()

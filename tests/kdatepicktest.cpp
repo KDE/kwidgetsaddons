@@ -29,7 +29,6 @@ private Q_SLOTS:
         picker.setEnabled(true);
     }
 
-
 private:
     KDatePicker picker;
 };

@@ -9,10 +9,10 @@
 #include <QSplitter>
 #include <qapplication.h>
 
-#include <QTextEdit>
-#include <QHBoxLayout>
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QHBoxLayout>
+#include <QTextEdit>
 
 KSplitterCollapserButtonGui_test::KSplitterCollapserButtonGui_test(int indexOfWidgetAssociateToSplitterCollapser, Qt::Orientation orientation, QWidget *parent)
     : QWidget(parent)
@@ -34,7 +34,6 @@ KSplitterCollapserButtonGui_test::KSplitterCollapserButtonGui_test(int indexOfWi
 
 KSplitterCollapserButtonGui_test::~KSplitterCollapserButtonGui_test()
 {
-
 }
 
 int main(int argc, char **argv)

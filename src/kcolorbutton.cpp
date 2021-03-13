@@ -8,17 +8,17 @@
 
 #include "kcolorbutton.h"
 
-#include <QPointer>
-#include <QPainter>
-#include <qdrawutil.h>
 #include <QApplication>
-#include <QColorDialog>
 #include <QClipboard>
-#include <QMimeData>
+#include <QColorDialog>
 #include <QDrag>
-#include <QStyle>
+#include <QMimeData>
 #include <QMouseEvent>
+#include <QPainter>
+#include <QPointer>
+#include <QStyle>
 #include <QStyleOptionButton>
+#include <qdrawutil.h>
 
 class KColorButtonPrivate
 {
@@ -100,7 +100,9 @@ KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
     m_alphaChannel = false;
     q->setAcceptDrops(true);
 
-    QObject::connect(q, &KColorButton::clicked, q, [this]() { _k_chooseColor(); });
+    QObject::connect(q, &KColorButton::clicked, q, [this]() {
+        _k_chooseColor();
+    });
 }
 
 KColorButton::KColorButton(QWidget *parent)
@@ -178,15 +180,14 @@ void KColorButton::paintEvent(QPaintEvent *)
     QPainter painter(this);
     QStyle *style = QWidget::style();
 
-    //First, we need to draw the bevel.
+    // First, we need to draw the bevel.
     QStyleOptionButton butOpt;
     d->initStyleOption(&butOpt);
     style->drawControl(QStyle::CE_PushButtonBevel, &butOpt, &painter, this);
 
-    //OK, now we can muck around with drawing out pretty little color box
-    //First, sort out where it goes
-    QRect labelRect = style->subElementRect(QStyle::SE_PushButtonContents,
-                                            &butOpt, this);
+    // OK, now we can muck around with drawing out pretty little color box
+    // First, sort out where it goes
+    QRect labelRect = style->subElementRect(QStyle::SE_PushButtonContents, &butOpt, this);
     int shift = style->pixelMetric(QStyle::PM_ButtonMargin, &butOpt, this) / 2;
     labelRect.adjust(shift, shift, -shift, -shift);
     int x, y, w, h;
@@ -218,7 +219,7 @@ void KColorButton::paintEvent(QPaintEvent *)
         QRect focusRect = style->subElementRect(QStyle::SE_PushButtonFocusRect, &butOpt, this);
         QStyleOptionFocusRect focusOpt;
         focusOpt.initFrom(this);
-        focusOpt.rect            = focusRect;
+        focusOpt.rect = focusRect;
         focusOpt.backgroundColor = palette().window().color();
         style->drawPrimitive(QStyle::PE_FrameFocusRect, &focusOpt, &painter, this);
     }
@@ -275,8 +276,7 @@ void KColorButton::mousePressEvent(QMouseEvent *e)
 
 void KColorButton::mouseMoveEvent(QMouseEvent *e)
 {
-    if ((e->buttons() & Qt::LeftButton) &&
-            (e->pos() - d->mPos).manhattanLength() > QApplication::startDragDistance()) {
+    if ((e->buttons() & Qt::LeftButton) && (e->pos() - d->mPos).manhattanLength() > QApplication::startDragDistance()) {
         _k_createDrag(color(), this)->exec();
         setDown(false);
     }

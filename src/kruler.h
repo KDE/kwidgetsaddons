@@ -109,8 +109,7 @@ public:
      * @param f           Will be handed over to QFrame.
      *
      */
-    KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = nullptr,
-           Qt::WindowFlags f = Qt::WindowFlags());
+    KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /**
      * Destructor.

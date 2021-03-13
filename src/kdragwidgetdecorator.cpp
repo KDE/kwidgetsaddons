@@ -21,8 +21,8 @@ public:
 };
 
 KDragWidgetDecoratorBase::KDragWidgetDecoratorBase(QWidget *parent)
-    : QObject(parent),
-      d(new KDragWidgetDecoratorBasePrivate)
+    : QObject(parent)
+    , d(new KDragWidgetDecoratorBasePrivate)
 {
     parent->installEventFilter(this);
     d->decoratedWidget = parent;
@@ -55,9 +55,7 @@ bool KDragWidgetDecoratorBase::eventFilter(QObject *watched, QEvent *event)
 
     } else if (event->type() == QEvent::MouseMove) {
         QMouseEvent *e = static_cast<QMouseEvent *>(event);
-        if ((e->buttons() & Qt::LeftButton) &&
-                (e->pos() - d->startPos).manhattanLength() >
-                QApplication::startDragDistance()) {
+        if ((e->buttons() & Qt::LeftButton) && (e->pos() - d->startPos).manhattanLength() > QApplication::startDragDistance()) {
             startDrag();
             d->decoratedWidget->setProperty("down", false);
             return true;
@@ -84,4 +82,3 @@ void KDragWidgetDecoratorBase::startDrag()
         drag->exec(Qt::CopyAction);
     }
 }
-

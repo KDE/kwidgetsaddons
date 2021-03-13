@@ -77,10 +77,8 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     button->setFocusPolicy(Qt::NoFocus);
     button->setIconSize(parent->iconSize());
     button->setToolButtonStyle(parent->toolButtonStyle());
-    QObject::connect(parent, &QToolBar::iconSizeChanged,
-                     button, &QAbstractButton::setIconSize);
-    QObject::connect(parent, &QToolBar::toolButtonStyleChanged,
-                     button, &QToolButton::setToolButtonStyle);
+    QObject::connect(parent, &QToolBar::iconSizeChanged, button, &QAbstractButton::setIconSize);
+    QObject::connect(parent, &QToolBar::toolButtonStyleChanged, button, &QToolButton::setToolButtonStyle);
     button->setDefaultAction(this);
     button->setPopupMode(popupMode());
     QObject::connect(button, &QToolButton::triggered, parent, &QToolBar::actionTriggered);

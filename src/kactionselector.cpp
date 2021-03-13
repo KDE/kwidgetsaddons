@@ -8,17 +8,20 @@
 #include "kactionselector.h"
 
 #include <QApplication>
-#include <QToolButton>
+#include <QHBoxLayout>
+#include <QKeyEvent>
 #include <QLabel>
 #include <QListWidget>
-#include <QKeyEvent>
-#include <QHBoxLayout>
+#include <QToolButton>
 #include <QVBoxLayout>
 
 class KActionSelectorPrivate
 {
 public:
-    KActionSelectorPrivate(KActionSelector *q): q(q) {}
+    KActionSelectorPrivate(KActionSelector *q)
+        : q(q)
+    {
+    }
 
     KActionSelector *const q = nullptr;
     QListWidget *availableListWidget = nullptr;
@@ -71,7 +74,7 @@ public:
     }
 };
 
-//BEGIN Constructor/destructor
+// BEGIN Constructor/destructor
 
 KActionSelector::KActionSelector(QWidget *parent)
     : QWidget(parent)
@@ -128,14 +131,20 @@ KActionSelector::KActionSelector(QWidget *parent)
 
     d->loadIcons();
 
-    connect(d->btnAdd, &QToolButton::clicked, this, [this]() { d->buttonAddClicked(); });
-    connect(d->btnRemove, &QToolButton::clicked, this, [this]() { d->buttonRemoveClicked(); });
-    connect(d->btnUp, &QToolButton::clicked, this, [this]() { d->buttonUpClicked(); });
-    connect(d->btnDown, &QToolButton::clicked, this, [this]() { d->buttonDownClicked(); });
-    connect(d->availableListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-            this, SLOT(itemDoubleClicked(QListWidgetItem*)));
-    connect(d->selectedListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)),
-            this, SLOT(itemDoubleClicked(QListWidgetItem*)));
+    connect(d->btnAdd, &QToolButton::clicked, this, [this]() {
+        d->buttonAddClicked();
+    });
+    connect(d->btnRemove, &QToolButton::clicked, this, [this]() {
+        d->buttonRemoveClicked();
+    });
+    connect(d->btnUp, &QToolButton::clicked, this, [this]() {
+        d->buttonUpClicked();
+    });
+    connect(d->btnDown, &QToolButton::clicked, this, [this]() {
+        d->buttonDownClicked();
+    });
+    connect(d->availableListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(itemDoubleClicked(QListWidgetItem *)));
+    connect(d->selectedListWidget, SIGNAL(itemDoubleClicked(QListWidgetItem *)), this, SLOT(itemDoubleClicked(QListWidgetItem *)));
     connect(d->availableListWidget, &QListWidget::itemSelectionChanged, this, &KActionSelector::setButtonsEnabled);
     connect(d->selectedListWidget, &QListWidget::itemSelectionChanged, this, &KActionSelector::setButtonsEnabled);
 
@@ -146,9 +155,9 @@ KActionSelector::KActionSelector(QWidget *parent)
 
 KActionSelector::~KActionSelector() = default;
 
-//END Constructor/destroctor
+// END Constructor/destroctor
 
-//BEGIN Public Methods
+// BEGIN Public Methods
 
 QListWidget *KActionSelector::availableListWidget() const
 {
@@ -180,7 +189,7 @@ void KActionSelector::setButtonIcon(const QString &icon, MoveButton button)
         d->btnDown->setIcon(QIcon::fromTheme(icon));
         break;
     default:
-//     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonIcon: DAINBREAD!";
+        //     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonIcon: DAINBREAD!";
         break;
     }
 }
@@ -201,7 +210,7 @@ void KActionSelector::setButtonIconSet(const QIcon &iconset, MoveButton button)
         d->btnDown->setIcon(iconset);
         break;
     default:
-//     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonIconSet: DAINBREAD!";
+        //     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonIconSet: DAINBREAD!";
         break;
     }
 }
@@ -226,7 +235,7 @@ void KActionSelector::setButtonTooltip(const QString &tip, MoveButton button)
         d->btnDown->setToolTip(tip);
         break;
     default:
-//     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonToolTip: DAINBREAD!";
+        //     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonToolTip: DAINBREAD!";
         break;
     }
 }
@@ -247,14 +256,14 @@ void KActionSelector::setButtonWhatsThis(const QString &text, MoveButton button)
         d->btnDown->setWhatsThis(text);
         break;
     default:
-//     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonWhatsThis: DAINBREAD!";
+        //     qCDebug(KWidgetsAddonsLog)<<"KActionSelector::setButtonWhatsThis: DAINBREAD!";
         break;
     }
 }
 
-//END Public Methods
+// END Public Methods
 
-//BEGIN Properties
+// BEGIN Properties
 
 bool KActionSelector::moveOnDoubleClick() const
 {
@@ -333,9 +342,9 @@ void KActionSelector::setShowUpDownButtons(bool show)
     }
 }
 
-//END Properties
+// END Properties
 
-//BEGIN Public Slots
+// BEGIN Public Slots
 
 void KActionSelector::setButtonsEnabled()
 {
@@ -346,12 +355,12 @@ void KActionSelector::setButtonsEnabled()
                            && d->selectedRowIndex(d->selectedListWidget) < d->selectedListWidget->count() - 1);
 }
 
-//END Public Slots
+// END Public Slots
 
-//BEGIN Protected
+// BEGIN Protected
 void KActionSelector::keyPressEvent(QKeyEvent *e)
 {
-    if (! d->keyboardEnabled) {
+    if (!d->keyboardEnabled) {
         return;
     }
     if ((e->modifiers() & Qt::ControlModifier)) {
@@ -412,14 +421,14 @@ bool KActionSelector::eventFilter(QObject *o, QEvent *e)
     return QWidget::eventFilter(o, e);
 }
 
-//END Protected
+// END Protected
 
-//BEGIN Private Slots
+// BEGIN Private Slots
 
 void KActionSelectorPrivate::buttonAddClicked()
 {
     // move all selected items from available to selected listbox
-    const QList<QListWidgetItem*> list = availableListWidget->selectedItems();
+    const QList<QListWidgetItem *> list = availableListWidget->selectedItems();
     for (QListWidgetItem *item : list) {
         availableListWidget->takeItem(availableListWidget->row(item));
         selectedListWidget->insertItem(insertionIndex(selectedListWidget, selectedInsertionPolicy), item);
@@ -435,7 +444,7 @@ void KActionSelectorPrivate::buttonAddClicked()
 void KActionSelectorPrivate::buttonRemoveClicked()
 {
     // move all selected items from selected to available listbox
-    const QList<QListWidgetItem*> list = selectedListWidget->selectedItems();
+    const QList<QListWidgetItem *> list = selectedListWidget->selectedItems();
     for (QListWidgetItem *item : list) {
         selectedListWidget->takeItem(selectedListWidget->row(item));
         availableListWidget->insertItem(insertionIndex(availableListWidget, availableInsertionPolicy), item);
@@ -481,9 +490,9 @@ void KActionSelectorPrivate::itemDoubleClicked(QListWidgetItem *item)
     }
 }
 
-//END Private Slots
+// END Private Slots
 
-//BEGIN Private Methods
+// BEGIN Private Methods
 
 void KActionSelectorPrivate::loadIcons()
 {
@@ -505,8 +514,7 @@ void KActionSelectorPrivate::moveItem(QListWidgetItem *item)
         return;
     }
 
-    KActionSelector::InsertionPolicy p = (lbTo == availableListWidget) ?
-                                         availableInsertionPolicy : selectedInsertionPolicy;
+    KActionSelector::InsertionPolicy p = (lbTo == availableListWidget) ? availableInsertionPolicy : selectedInsertionPolicy;
 
     lbFrom->takeItem(lbFrom->row(item));
     lbTo->insertItem(insertionIndex(lbTo, p), item);
@@ -554,5 +562,5 @@ int KActionSelectorPrivate::selectedRowIndex(QListWidget *lb)
     return lb->row(list.at(0));
 }
 
-//END Private Methods
+// END Private Methods
 #include "moc_kactionselector.cpp"

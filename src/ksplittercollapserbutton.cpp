@@ -30,12 +30,7 @@ const static qreal MINIMUM_OPACITY = 0.3;
 static const struct {
     Qt::ArrowType arrowVisible;
     Qt::ArrowType notArrowVisible;
-} s_arrowDirection[] = {
-    {Qt::LeftArrow,  Qt::RightArrow},
-    {Qt::RightArrow, Qt::LeftArrow},
-    {Qt::UpArrow, Qt::DownArrow},
-    {Qt::DownArrow,  Qt::UpArrow}
-};
+} s_arrowDirection[] = {{Qt::LeftArrow, Qt::RightArrow}, {Qt::RightArrow, Qt::LeftArrow}, {Qt::UpArrow, Qt::DownArrow}, {Qt::DownArrow, Qt::UpArrow}};
 
 class KSplitterCollapserButtonPrivate
 {
@@ -65,12 +60,11 @@ public:
 };
 
 KSplitterCollapserButtonPrivate::KSplitterCollapserButtonPrivate(KSplitterCollapserButton *qq)
-    : q(qq),
-      splitter(nullptr),
-      childWidget(nullptr),
-      opacityTimeLine(nullptr)
+    : q(qq)
+    , splitter(nullptr)
+    , childWidget(nullptr)
+    , opacityTimeLine(nullptr)
 {
-
 }
 
 bool KSplitterCollapserButtonPrivate::isVertical() const
@@ -97,7 +91,7 @@ void KSplitterCollapserButtonPrivate::updatePosition()
 
     if (!isVertical()) {
         const int splitterWidth = splitter->width();
-        const int width =  q->sizeHint().width();
+        const int width = q->sizeHint().width();
         // FIXME: Make this configurable
         y = 30;
         if (direction == LeftToRight) {
@@ -136,7 +130,7 @@ void KSplitterCollapserButtonPrivate::updatePosition()
 
 void KSplitterCollapserButtonPrivate::updateArrow()
 {
-    q->setArrowType(isWidgetCollapsed() ?  s_arrowDirection[direction].notArrowVisible : s_arrowDirection[direction].arrowVisible);
+    q->setArrowType(isWidgetCollapsed() ? s_arrowDirection[direction].notArrowVisible : s_arrowDirection[direction].arrowVisible);
 }
 
 void KSplitterCollapserButtonPrivate::widgetEventFilter(QEvent *event)
@@ -179,8 +173,8 @@ void KSplitterCollapserButtonPrivate::startTimeLine()
 }
 
 KSplitterCollapserButton::KSplitterCollapserButton(QWidget *childWidget, QSplitter *splitter)
-    : QToolButton(),
-      d(new KSplitterCollapserButtonPrivate(this))
+    : QToolButton()
+    , d(new KSplitterCollapserButtonPrivate(this))
 {
     setObjectName(QStringLiteral("splittercollapser"));
     // We do not want our collapser to be added as a regular widget in the
@@ -189,8 +183,7 @@ KSplitterCollapserButton::KSplitterCollapserButton(QWidget *childWidget, QSplitt
 
     d->opacityTimeLine = new QTimeLine(TIMELINE_DURATION, this);
     d->opacityTimeLine->setFrameRange(int(MINIMUM_OPACITY * 1000), 1000);
-    connect(d->opacityTimeLine, &QTimeLine::valueChanged,
-            this, QOverload<>::of(&QWidget::update));
+    connect(d->opacityTimeLine, &QTimeLine::valueChanged, this, QOverload<>::of(&QWidget::update));
 
     d->childWidget = childWidget;
     d->childWidget->installEventFilter(this);
@@ -338,4 +331,3 @@ void KSplitterCollapserButton::paintEvent(QPaintEvent *)
     initStyleOption(&opt2);
     painter.drawControl(QStyle::CE_ToolButtonLabel, opt2);
 }
-

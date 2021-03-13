@@ -1,14 +1,14 @@
 #include "kpixmapsequenceoverlaypaintertest.h"
-#include "kpixmapsequenceoverlaypainter.h"
 #include "kpixmapsequence.h"
+#include "kpixmapsequenceoverlaypainter.h"
 
 #include <QApplication>
-#include <QGridLayout>
 #include <QComboBox>
-#include <QSpinBox>
-#include <QVariant>
 #include <QEvent>
+#include <QGridLayout>
+#include <QSpinBox>
 #include <QTest>
+#include <QVariant>
 
 Q_DECLARE_METATYPE(Qt::Alignment)
 
@@ -68,13 +68,9 @@ bool TestWidget::eventFilter(QObject *o, QEvent *e)
 {
     if (o == m_widget) {
         if (e->type() == QEvent::Paint) {
-
         } else if (e->type() == QEvent::MouseButtonPress) {
-
         } else if (e->type() == QEvent::MouseButtonRelease) {
-
         } else if (e->type() == QEvent::MouseMove) {
-
         }
     }
     return QWidget::eventFilter(o, e);
@@ -86,11 +82,10 @@ int main(int argc, char **argv)
     QApplication::setApplicationName(QStringLiteral("test"));
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-    TestWidget   *window;
+    TestWidget *window;
 
     QApplication testapp(argc, argv);
     window = new TestWidget();
     window->show();
     return testapp.exec();
 }
-

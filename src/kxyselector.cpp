@@ -9,10 +9,10 @@
 
 #include "loggingcategory.h"
 
-#include <QStyle>
-#include <QPainter>
-#include <QStyleOptionFrame>
 #include <QMouseEvent>
+#include <QPainter>
+#include <QStyle>
+#include <QStyleOptionFrame>
 
 //-----------------------------------------------------------------------------
 /*
@@ -23,16 +23,17 @@
 class KXYSelectorPrivate
 {
 public:
-    KXYSelectorPrivate(KXYSelector *q):
-        q(q),
-        xPos(0),
-        yPos(0),
-        minX(0),
-        maxX(100),
-        minY(0),
-        maxY(100),
-        m_markerColor(Qt::white)
-    {}
+    KXYSelectorPrivate(KXYSelector *q)
+        : q(q)
+        , xPos(0)
+        , yPos(0)
+        , minX(0)
+        , maxX(100)
+        , minY(0)
+        , maxY(100)
+        , m_markerColor(Qt::white)
+    {
+    }
 
     void setValues(int _xPos, int _yPos);
 
@@ -131,7 +132,7 @@ void KXYSelectorPrivate::setValues(int _xPos, int _yPos)
 
 void KXYSelector::setMarkerColor(const QColor &col)
 {
-    d->m_markerColor =  col;
+    d->m_markerColor = col;
 }
 
 QRect KXYSelector::contentsRect() const
@@ -226,7 +227,8 @@ void KXYSelector::setPosition(int xp, int yp)
 }
 
 void KXYSelector::drawContents(QPainter *)
-{}
+{
+}
 
 void KXYSelector::drawMarker(QPainter *p, int xp, int yp)
 {
@@ -241,4 +243,3 @@ void KXYSelector::drawMarker(QPainter *p, int xp, int yp)
     */
     p->drawEllipse(xp - 4, yp - 4, 8, 8);
 }
-

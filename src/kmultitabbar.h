@@ -7,8 +7,8 @@
 #ifndef _KMultitabbar_h_
 #define _KMultitabbar_h_
 
-#include <QString>
 #include <QPushButton>
+#include <QString>
 #include <memory>
 
 #include <kwidgetsaddons_export.h>
@@ -34,7 +34,7 @@ class KMultiTabBarInternal;
  *
  * @author Joseph Wenninger
  */
-class KWIDGETSADDONS_EXPORT KMultiTabBar: public QWidget
+class KWIDGETSADDONS_EXPORT KMultiTabBar : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(KMultiTabBarPosition position READ position WRITE setPosition)
@@ -47,7 +47,7 @@ public:
      * The list of available styles for KMultiTabBar
      */
     enum KMultiTabBarStyle {
-        VSNET = 0,     ///< Visual Studio .Net like, always shows icon, only show the text of active tabs
+        VSNET = 0, ///< Visual Studio .Net like, always shows icon, only show the text of active tabs
         KDEV3ICON = 2, ///< KDevelop 3 like, always shows the text and icons
         STYLELAST = 0xffff,
     };
@@ -171,6 +171,7 @@ protected:
     friend class KMultiTabBarButton;
     virtual void fontChange(const QFont &);
     void updateSeparator();
+
 private:
     std::unique_ptr<class KMultiTabBarPrivate> const d;
 };
@@ -180,7 +181,7 @@ private:
  *
  * Use KMultiTabBar::appendButton to append a button, which creates a KMultiTabBarButton instance
  */
-class KWIDGETSADDONS_EXPORT KMultiTabBarButton: public QPushButton
+class KWIDGETSADDONS_EXPORT KMultiTabBarButton : public QPushButton
 {
     Q_OBJECT
 public:
@@ -228,7 +229,7 @@ private:
  *
  * Use KMultiTabBar::appendTab to append a tab, which creates a KMultiTabBarTab instance
  */
-class KWIDGETSADDONS_EXPORT KMultiTabBarTab: public KMultiTabBarButton
+class KWIDGETSADDONS_EXPORT KMultiTabBarTab : public KMultiTabBarButton
 {
     Q_OBJECT
 public:
@@ -268,16 +269,17 @@ public:
 
 protected:
     void paintEvent(QPaintEvent *) override;
+
 private:
     KMultiTabBar::KMultiTabBarPosition m_position;
     KMultiTabBar::KMultiTabBarStyle m_style;
 
-    void  computeMargins(int *hMargin, int *vMargin) const;
+    void computeMargins(int *hMargin, int *vMargin) const;
     QSize computeSizeHint(bool withText) const;
     bool shouldDrawText() const;
-    bool isVertical()     const;
+    bool isVertical() const;
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
-    QPixmap iconPixmap()  const;
+    QPixmap iconPixmap() const;
 #endif
 
     void initStyleOption(QStyleOptionToolButton *opt) const;
@@ -286,15 +288,18 @@ private:
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
-    KMultiTabBarTab(const QIcon &icon, const QString &, int id, QWidget *parent,
-                    KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
+    KMultiTabBarTab(const QIcon &icon, const QString &, int id, QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use overload with QIcon")
-    KMultiTabBarTab(const QPixmap &pic, const QString &, int id, QWidget *parent,
-                    KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
+    KMultiTabBarTab(const QPixmap &pic,
+                    const QString &,
+                    int id,
+                    QWidget *parent,
+                    KMultiTabBar::KMultiTabBarPosition pos,
+                    KMultiTabBar::KMultiTabBarStyle style);
 #endif
     std::unique_ptr<class KMultiTabBarTabPrivate> const d;
 };

@@ -8,10 +8,10 @@
 #include "kcolorcombotest.h"
 
 #include <QApplication>
-#include <QPushButton>
-#include <QLabel>
 #include <QDebug>
 #include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
 #include <QVBoxLayout>
 #include <kcolorcombo.h>
 
@@ -61,13 +61,11 @@ KColorComboTest::KColorComboTest(QWidget *widget)
 
     // Populate the custom list
     QList<QColor> standardList;
-    standardList << Qt::red << Qt::green << Qt::blue << Qt::cyan << Qt::magenta << Qt::yellow << Qt::darkRed
-                 << Qt::darkGreen << Qt::darkBlue << Qt::darkCyan << Qt::darkMagenta << Qt::darkYellow
-                 << Qt::white << Qt::lightGray << Qt::gray << Qt::darkGray << Qt::black;
+    standardList << Qt::red << Qt::green << Qt::blue << Qt::cyan << Qt::magenta << Qt::yellow << Qt::darkRed << Qt::darkGreen << Qt::darkBlue << Qt::darkCyan
+                 << Qt::darkMagenta << Qt::darkYellow << Qt::white << Qt::lightGray << Qt::gray << Qt::darkGray << Qt::black;
     QList<QColor> list;
-    list << QColor(255, 0, 0) << QColor(192, 0, 0) << QColor(128, 0, 0) << QColor(64, 0, 0)
-         << QColor(0, 255, 0) << QColor(0, 192, 0) << QColor(0, 128, 0) << QColor(0, 64, 0)
-         << QColor(0, 0, 255) << QColor(0, 0, 192) << QColor(0, 0, 128) << QColor(0, 0, 64);
+    list << QColor(255, 0, 0) << QColor(192, 0, 0) << QColor(128, 0, 0) << QColor(64, 0, 0) << QColor(0, 255, 0) << QColor(0, 192, 0) << QColor(0, 128, 0)
+         << QColor(0, 64, 0) << QColor(0, 0, 255) << QColor(0, 0, 192) << QColor(0, 0, 128) << QColor(0, 0, 64);
     mCustom->setColors(list);
     if (mCustom->colors() != list) {
         qCritical() << "Custom combo: setColors() != colors()";
@@ -88,7 +86,8 @@ KColorComboTest::KColorComboTest(QWidget *widget)
     QColor col = QColor(1, 2, 3);
     mStandard->setColor(col);
     if (mStandard->color() != col) {
-        qCritical() << "Standard combo: set custom color -> " << mStandard->color().red() << "," << mStandard->color().green() << "," << mStandard->color().blue();
+        qCritical() << "Standard combo: set custom color -> " << mStandard->color().red() << "," << mStandard->color().green() << ","
+                    << mStandard->color().blue();
     }
     if (!mStandard->isCustomColor()) {
         qCritical() << "Standard combo: custom color: isCustomColor() -> false";
@@ -117,7 +116,6 @@ KColorComboTest::KColorComboTest(QWidget *widget)
     if (mCustom->isCustomColor()) {
         qCritical() << "Custom combo: standard color: isCustomColor() -> true";
     }
-
 }
 
 KColorComboTest::~KColorComboTest()
@@ -138,4 +136,3 @@ int main(int argc, char **argv)
     t->show();
     return a.exec();
 }
-

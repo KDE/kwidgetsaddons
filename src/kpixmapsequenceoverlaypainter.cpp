@@ -7,13 +7,13 @@
 #include "kpixmapsequenceoverlaypainter.h"
 #include "kpixmapsequence.h"
 
-#include <QWidget>
-#include <QRect>
-#include <QPainter>
-#include <QTimer>
-#include <QEvent>
-#include <QPointer>
 #include <QCoreApplication>
+#include <QEvent>
+#include <QPainter>
+#include <QPointer>
+#include <QRect>
+#include <QTimer>
+#include <QWidget>
 
 class KPixmapSequenceOverlayPainterPrivate
 {
@@ -102,15 +102,15 @@ QRect KPixmapSequenceOverlayPainterPrivate::pixmapRect()
 }
 
 KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(QObject *parent)
-    : QObject(parent),
-      d(new KPixmapSequenceOverlayPainterPrivate)
+    : QObject(parent)
+    , d(new KPixmapSequenceOverlayPainterPrivate)
 {
     d->init(this);
 }
 
 KPixmapSequenceOverlayPainter::KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent)
-    : QObject(parent),
-      d(new KPixmapSequenceOverlayPainterPrivate)
+    : QObject(parent)
+    , d(new KPixmapSequenceOverlayPainterPrivate)
 {
     d->init(this);
     d->m_sequence = seq;

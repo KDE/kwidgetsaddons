@@ -7,10 +7,9 @@
 
 #include "kpasswordlineedit.h"
 
-#include <QIcon>
 #include <QAction>
 #include <QHBoxLayout>
-
+#include <QIcon>
 
 class KPasswordLineEditPrivate
 {
@@ -40,8 +39,12 @@ void KPasswordLineEditPrivate::initialize()
     toggleEchoModeAction->setObjectName(QStringLiteral("visibilityAction"));
     toggleEchoModeAction->setVisible(false);
     toggleEchoModeAction->setToolTip(QObject::tr("Change the visibility of the password", "@info:tooltip"));
-    q->connect(toggleEchoModeAction, &QAction::triggered, q, [this]() {_k_echoModeToggled();});
-    q->connect(passwordLineEdit, &QLineEdit::textChanged, q, [this](const QString &str) {_k_showToggleEchoModeAction(str);});
+    q->connect(toggleEchoModeAction, &QAction::triggered, q, [this]() {
+        _k_echoModeToggled();
+    });
+    q->connect(passwordLineEdit, &QLineEdit::textChanged, q, [this](const QString &str) {
+        _k_showToggleEchoModeAction(str);
+    });
 }
 
 void KPasswordLineEditPrivate::_k_showToggleEchoModeAction(const QString &text)

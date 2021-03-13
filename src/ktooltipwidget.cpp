@@ -12,8 +12,8 @@
 
 #include <QPaintEvent>
 #include <QScreen>
-#include <QStylePainter>
 #include <QStyleOptionFrame>
+#include <QStylePainter>
 #include <QTimer>
 #include <QVBoxLayout>
 #include <QWindow>
@@ -23,7 +23,8 @@ class KToolTipWidgetPrivate
 public:
     KToolTipWidgetPrivate(KToolTipWidget *parent)
         : q(parent)
-    {}
+    {
+    }
 
     void init();
     void addWidget(QWidget *widget);
@@ -87,7 +88,7 @@ void KToolTipWidgetPrivate::storeParent()
         return;
     }
 
-    contentParent = qobject_cast<QWidget*>(content->parent());
+    contentParent = qobject_cast<QWidget *>(content->parent());
 }
 
 void KToolTipWidgetPrivate::restoreParent()
@@ -109,10 +110,10 @@ QPoint KToolTipWidgetPrivate::centerBelow(const QRect &rect, QScreen *screen) co
     const int margin = q->style()->pixelMetric(QStyle::PM_ToolTipLabelFrameWidth);
     const QRect screenGeometry = screen->geometry();
 
-    const bool hasRoomToLeft  = (rect.left()   - size.width()  - margin >= screenGeometry.left());
-    const bool hasRoomToRight = (rect.right()  + size.width()  + margin <= screenGeometry.right());
-    const bool hasRoomAbove   = (rect.top()    - size.height() - margin >= screenGeometry.top());
-    const bool hasRoomBelow   = (rect.bottom() + size.height() + margin <= screenGeometry.bottom());
+    const bool hasRoomToLeft = (rect.left() - size.width() - margin >= screenGeometry.left());
+    const bool hasRoomToRight = (rect.right() + size.width() + margin <= screenGeometry.right());
+    const bool hasRoomAbove = (rect.top() - size.height() - margin >= screenGeometry.top());
+    const bool hasRoomBelow = (rect.bottom() + size.height() + margin <= screenGeometry.bottom());
     if (!hasRoomAbove && !hasRoomBelow && !hasRoomToLeft && !hasRoomToRight) {
         return QPoint();
     }
@@ -146,7 +147,8 @@ QPoint KToolTipWidgetPrivate::centerBelow(const QRect &rect, QScreen *screen) co
 }
 
 KToolTipWidget::KToolTipWidget(QWidget *parent)
-    : QWidget(parent), d(new KToolTipWidgetPrivate(this))
+    : QWidget(parent)
+    , d(new KToolTipWidgetPrivate(this))
 {
     d->init();
 }
@@ -231,4 +233,3 @@ void KToolTipWidget::paintEvent(QPaintEvent *event)
 
     QWidget::paintEvent(event);
 }
-

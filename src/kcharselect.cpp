@@ -23,17 +23,19 @@
 #include <QLineEdit>
 #include <QRegularExpression>
 #include <QSplitter>
-#include <QToolButton>
 #include <QTextBrowser>
 #include <QTimer>
+#include <QToolButton>
 
 Q_GLOBAL_STATIC(KCharSelectData, s_data)
 
 class KCharSelectTablePrivate
 {
 public:
-    KCharSelectTablePrivate(KCharSelectTable *q): q(q)
-    {}
+    KCharSelectTablePrivate(KCharSelectTable *q)
+        : q(q)
+    {
+    }
 
     KCharSelectTable *const q;
 
@@ -77,10 +79,10 @@ public:
     KCharSelectTable *charTable = nullptr;
     QTextBrowser *detailBrowser = nullptr;
 
-    bool searchMode = false; //a search is active
+    bool searchMode = false; // a search is active
     bool historyEnabled = false;
     bool allPlanesEnabled = false;
-    int inHistory = 0; //index of current char in history
+    int inHistory = 0; // index of current char in history
     QList<HistoryItem> history;
     QObject *actionParent = nullptr;
 
@@ -107,7 +109,8 @@ public:
 /******************************************************************/
 
 KCharSelectTable::KCharSelectTable(QWidget *parent, const QFont &_font)
-    : QTableView(parent), d(new KCharSelectTablePrivate(this))
+    : QTableView(parent)
+    , d(new KCharSelectTablePrivate(this))
 {
     d->font = _font;
 
@@ -180,8 +183,7 @@ void KCharSelectTable::setContents(const QVector<uint> &chars)
     d->_k_resizeCells();
 
     // Setting a model changes the selectionModel. Make sure to always reconnect.
-    connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-            this, SLOT(_k_slotSelectionChanged(QItemSelection,QItemSelection)));
+    connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection, QItemSelection)), this, SLOT(_k_slotSelectionChanged(QItemSelection, QItemSelection)));
     connect(d->model, &KCharSelectItemModel::showCharRequested, this, &KCharSelectTable::showCharRequested);
 
     delete oldModel; // The selection model is thrown away when the model gets destroyed().
@@ -226,7 +228,7 @@ void KCharSelectTable::resizeEvent(QResizeEvent *e)
         // This can be removed once a fixed Qt version is the lowest requirement for Frameworks.
         auto timer = new QTimer(this);
         timer->setSingleShot(true);
-        connect(timer, &QTimer::timeout, [&,timer]() {
+        connect(timer, &QTimer::timeout, [&, timer]() {
             d->_k_resizeCells();
             timer->deleteLater();
         });
@@ -236,8 +238,9 @@ void KCharSelectTable::resizeEvent(QResizeEvent *e)
 
 void KCharSelectTablePrivate::_k_resizeCells()
 {
-    KCharSelectItemModel *model = static_cast<KCharSelectItemModel*>(q->model());
-    if (!model) return;
+    KCharSelectItemModel *model = static_cast<KCharSelectItemModel *>(q->model());
+    if (!model)
+        return;
 
     const int viewportWidth = q->viewport()->size().width();
 
@@ -250,7 +253,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     const QVector<uint> chars = model->chars();
     for (int i = 0; i < chars.size(); ++i) {
         uint thisChar = chars.at(i);
-        if(s_data()->isPrint(thisChar)) {
+        if (s_data()->isPrint(thisChar)) {
             maxCharWidth = qMax(maxCharWidth, fontMetrics.boundingRect(QString::fromUcs4(&thisChar, 1)).width());
         }
     }
@@ -343,10 +346,7 @@ KCharSelect::KCharSelect(QWidget *parent, const Controls controls)
     initWidget(controls, nullptr);
 }
 
-KCharSelect::KCharSelect(
-    QWidget *parent
-    , QObject *actionParent
-    , const Controls controls)
+KCharSelect::KCharSelect(QWidget *parent, QObject *actionParent, const Controls controls)
     : QWidget(parent)
     , d(new KCharSelectPrivate(this))
 {
@@ -362,8 +362,8 @@ void attachToActionParent(QAction *action, QObject *actionParent, const QList<QK
     action->setParent(actionParent);
 
     if (actionParent->inherits("KActionCollection")) {
-        QMetaObject::invokeMethod(actionParent, "addAction", Q_ARG(QString, action->objectName()), Q_ARG(QAction*, action));
-        QMetaObject::invokeMethod(actionParent, "setDefaultShortcuts", Q_ARG(QAction*, action), Q_ARG(QList<QKeySequence>, shortcuts));
+        QMetaObject::invokeMethod(actionParent, "addAction", Q_ARG(QString, action->objectName()), Q_ARG(QAction *, action));
+        QMetaObject::invokeMethod(actionParent, "setDefaultShortcuts", Q_ARG(QAction *, action), Q_ARG(QList<QKeySequence>, shortcuts));
     } else {
         action->setShortcuts(shortcuts);
     }
@@ -385,7 +385,9 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         d->searchLine->setToolTip(tr("Enter a search term or character here", "@info:tooltip"));
 
         QAction *findAction = new QAction(this);
-        connect(findAction, &QAction::triggered, this, [this]() { d->_k_activateSearchLine(); });
+        connect(findAction, &QAction::triggered, this, [this]() {
+            d->_k_activateSearchLine();
+        });
         findAction->setObjectName(QStringLiteral("edit_find"));
         findAction->setText(tr("&Find...", "@action"));
         findAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
@@ -438,8 +440,12 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         forwardAction->setIcon(tmp);
     }
 
-    connect(d->backButton, &QToolButton::clicked, this, [this]() { d->_k_back(); });
-    connect(d->forwardButton, &QToolButton::clicked, this, [this]() { d->_k_forward(); });
+    connect(d->backButton, &QToolButton::clicked, this, [this]() {
+        d->_k_back();
+    });
+    connect(d->forwardButton, &QToolButton::clicked, this, [this]() {
+        d->_k_forward();
+    });
 
     d->sectionCombo = new QComboBox(this);
     d->sectionCombo->setObjectName(QStringLiteral("sectionCombo"));
@@ -525,7 +531,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     connect(d->detailBrowser, SIGNAL(anchorClicked(QUrl)), this, SLOT(_k_linkClicked(QUrl)));
 
     setFocusPolicy(Qt::StrongFocus);
-    if(SearchLine & controls) {
+    if (SearchLine & controls) {
         setFocusProxy(d->searchLine);
     } else {
         setFocusProxy(d->charTable);
@@ -631,18 +637,18 @@ void KCharSelect::setCurrentCodePoint(uint c)
 
 void KCharSelectPrivate::historyAdd(uint c, bool fromSearch, const QString &searchString)
 {
-    //qCDebug(KWidgetsAddonsLog) << "about to add char" << c << "fromSearch" << fromSearch << "searchString" << searchString;
+    // qCDebug(KWidgetsAddonsLog) << "about to add char" << c << "fromSearch" << fromSearch << "searchString" << searchString;
 
     if (!historyEnabled) {
         return;
     }
 
     if (!history.isEmpty() && c == history.last().c) {
-        //avoid duplicates
+        // avoid duplicates
         return;
     }
 
-    //behave like a web browser, i.e. if user goes back from B to A then clicks C, B is forgotten
+    // behave like a web browser, i.e. if user goes back from B to A then clicks C, B is forgotten
     while (!history.isEmpty() && inHistory != history.count() - 1) {
         history.removeLast();
     }
@@ -670,10 +676,10 @@ void KCharSelectPrivate::showFromHistory(int index)
     updateBackForwardButtons();
 
     const HistoryItem &item = history[index];
-    //qCDebug(KWidgetsAddonsLog) << "index" << index << "char" << item.c << "fromSearch" << item.fromSearch
+    // qCDebug(KWidgetsAddonsLog) << "index" << index << "char" << item.c << "fromSearch" << item.fromSearch
     //    << "searchString" << item.searchString;
 
-    //avoid adding an item from history into history again
+    // avoid adding an item from history into history again
     bool oldHistoryEnabled = historyEnabled;
     historyEnabled = false;
     if (item.fromSearch) {
@@ -736,7 +742,7 @@ void KCharSelectPrivate::_k_updateCurrentChar(uint c)
     }
     Q_EMIT q->currentCodePointChanged(c);
     if (searchMode) {
-        //we are in search mode. make the two comboboxes show the section & block for this character.
+        // we are in search mode. make the two comboboxes show the section & block for this character.
         //(when we are not in search mode the current character always belongs to the current section & block.)
         int block = s_data()->blockIndex(c);
         int section = s_data()->sectionIndex(block);
@@ -756,12 +762,12 @@ void KCharSelectPrivate::_k_updateCurrentChar(uint c)
 
 void KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
 {
-    QString html = QLatin1String("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ') +
-                   s_data()->formatCode(c)  + QLatin1String("<br />");
+    QString html = QLatin1String("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ')
+        + s_data()->formatCode(c) + QLatin1String("<br />");
 
     QString name = s_data()->name(c);
     if (!name.isEmpty()) {
-        //is name ever empty? </p> should always be there...
+        // is name ever empty? </p> should always be there...
         html += tr("Name: ") + name.toHtmlEscaped() + QLatin1String("</p>");
     }
     const QStringList aliases = s_data()->aliases(c);
@@ -822,7 +828,7 @@ void KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
     }
 
     if (!decomposition.isEmpty()) {
-        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") +  tr("Decomposition:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
+        html += QLatin1String("<p style=\"margin-bottom: 0px;\">") + tr("Decomposition:") + QLatin1String("</p><ul style=\"margin-top: 0px;\">");
         for (uint c2 : decomposition) {
             if (!allPlanesEnabled && QChar::requiresSurrogates(c2)) {
                 continue;
@@ -958,11 +964,11 @@ void KCharSelectPrivate::_k_sectionSelected(int index)
 void KCharSelectPrivate::_k_blockSelected(int index)
 {
     if (index == -1) {
-        //the combo box has been cleared and is about to be filled again (because the section has changed)
+        // the combo box has been cleared and is about to be filled again (because the section has changed)
         return;
     }
     if (searchMode) {
-        //we are in search mode, so don't fill the table with this block.
+        // we are in search mode, so don't fill the table with this block.
         return;
     }
 
@@ -979,7 +985,7 @@ void KCharSelectPrivate::_k_searchEditChanged()
         sectionCombo->setEnabled(true);
         blockCombo->setEnabled(true);
 
-        //upon leaving search mode, keep the same character selected
+        // upon leaving search mode, keep the same character selected
         searchMode = false;
         uint c = charTable->chr();
         bool oldHistoryEnabled = historyEnabled;
@@ -1022,7 +1028,7 @@ void KCharSelectPrivate::_k_search()
     }
 }
 
-void  KCharSelectPrivate::_k_linkClicked(QUrl url)
+void KCharSelectPrivate::_k_linkClicked(QUrl url)
 {
     QString hex = url.toString();
     if (hex.size() > 6) {
@@ -1041,8 +1047,7 @@ void  KCharSelectPrivate::_k_linkClicked(QUrl url)
 QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
 {
     int pos = m_columns * (index.row()) + index.column();
-    if (!index.isValid() || pos < 0 || pos >= m_chars.size()
-            || index.row() < 0 || index.column() < 0) {
+    if (!index.isValid() || pos < 0 || pos >= m_chars.size() || index.row() < 0 || index.column() < 0) {
         if (role == Qt::BackgroundRole) {
             return QVariant(qApp->palette().color(QPalette::Button));
         }
@@ -1051,9 +1056,9 @@ QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
 
     uint c = m_chars[pos];
     if (role == Qt::ToolTipRole) {
-        QString result = s_data()->display(c, m_font) + QLatin1String("<br />") + s_data()->name(c).toHtmlEscaped() + QLatin1String("<br />") +
-                         tr("Unicode code point:") + QLatin1Char(' ') + s_data()->formatCode(c) + QLatin1String("<br />") +
-                         tr("In decimal", "Character") + QLatin1Char(' ') + QString::number(c);
+        QString result = s_data()->display(c, m_font) + QLatin1String("<br />") + s_data()->name(c).toHtmlEscaped() + QLatin1String("<br />")
+            + tr("Unicode code point:") + QLatin1Char(' ') + s_data()->formatCode(c) + QLatin1String("<br />") + tr("In decimal", "Character")
+            + QLatin1Char(' ') + QString::number(c);
         return QVariant(result);
     } else if (role == Qt::TextAlignmentRole) {
         return QVariant(Qt::AlignHCenter | Qt::AlignVCenter);

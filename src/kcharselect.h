@@ -10,8 +10,8 @@
 
 #include <QString>
 #include <QWidget>
-#include <memory>
 #include <kwidgetsaddons_export.h>
+#include <memory>
 
 class QFont;
 class QUrl;
@@ -105,13 +105,12 @@ public:
         /**
          * Shows everything
          */
-        AllGuiElements      = 65535,
+        AllGuiElements = 65535,
     };
     /**
      * Stores a combination of #Control values.
      */
-    Q_DECLARE_FLAGS(Controls,
-                    Control)
+    Q_DECLARE_FLAGS(Controls, Control)
 
     /**
      * Constructor. @p controls can be used to show a custom set of widgets.
@@ -121,9 +120,7 @@ public:
      *
      * @since 4.2
      */
-    explicit KCharSelect(
-        QWidget *parent,
-        const Controls controls = AllGuiElements);
+    explicit KCharSelect(QWidget *parent, const Controls controls = AllGuiElements);
 
     /**
      * Constructor. @p controls can be used to show a custom set of widgets.
@@ -143,10 +140,7 @@ public:
      *
      * @since 4.2
      */
-    explicit KCharSelect(
-        QWidget *parent,
-        QObject *actionParent,
-        const Controls controls = AllGuiElements);
+    explicit KCharSelect(QWidget *parent, QObject *actionParent, const Controls controls = AllGuiElements);
 
     ~KCharSelect() override;
 

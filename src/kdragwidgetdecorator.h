@@ -99,7 +99,10 @@ public:
     typedef QDrag *(*DragObjectFactory)(Widget *);
 
     KDragWidgetDecorator(Widget *parent = nullptr)
-        : KDragWidgetDecoratorBase(parent), m_factory(nullptr) {}
+        : KDragWidgetDecoratorBase(parent)
+        , m_factory(nullptr)
+    {
+    }
 
     /**
      * @return the QDrag factory used by this decorator

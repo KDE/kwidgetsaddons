@@ -17,8 +17,8 @@
 #ifndef KTOGGLEACTION_P_H
 #define KTOGGLEACTION_P_H
 
-#include "ktoggleaction.h"
 #include "kguiitem.h"
+#include "ktoggleaction.h"
 
 class KToggleActionPrivate
 {
@@ -30,7 +30,7 @@ public:
     {
     }
 
-    virtual ~KToggleActionPrivate() 
+    virtual ~KToggleActionPrivate()
     {
         delete checkedGuiItem;
     }
@@ -40,8 +40,7 @@ public:
         Q_Q(KToggleAction);
 
         q->setCheckable(true);
-        QObject::connect(q, &QAction::toggled,
-                         q, &KToggleAction::slotToggled);
+        QObject::connect(q, &QAction::toggled, q, &KToggleAction::slotToggled);
     }
 
     KToggleAction *const q_ptr;

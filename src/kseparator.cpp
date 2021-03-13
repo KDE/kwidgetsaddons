@@ -6,9 +6,12 @@
 
 #include "kseparator.h"
 
-class KSeparatorPrivate {};
+class KSeparatorPrivate
+{
+};
 
-KSeparator::KSeparator(QWidget *parent, Qt::WindowFlags f) : QFrame(parent, f)
+KSeparator::KSeparator(QWidget *parent, Qt::WindowFlags f)
+    : QFrame(parent, f)
 {
     setLineWidth(1);
     setMidLineWidth(0);
@@ -43,4 +46,3 @@ Qt::Orientation KSeparator::orientation() const
 {
     return ((frameStyle() & VLine) == VLine) ? Qt::Vertical : Qt::Horizontal;
 }
-

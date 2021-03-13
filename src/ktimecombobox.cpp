@@ -6,30 +6,29 @@
 
 #include "ktimecombobox.h"
 
-#include <QTime>
 #include <QKeyEvent>
 #include <QLineEdit>
+#include <QTime>
 
 #include "kmessagebox.h"
 
 class KTimeComboBoxPrivate
 {
 public:
-
     KTimeComboBoxPrivate(KTimeComboBox *q);
     virtual ~KTimeComboBoxPrivate();
 
     QTime defaultMinTime();
     QTime defaultMaxTime();
 
-    std::pair<QString,QString> timeFormatToInputMask(const QString &format);
+    std::pair<QString, QString> timeFormatToInputMask(const QString &format);
     QTime nearestIntervalTime(const QTime &time);
     QString formatTime(const QTime &time);
 
     void initTimeWidget();
     void updateTimeWidget();
 
-// Q_PRIVATE_SLOTs
+    // Q_PRIVATE_SLOTs
     void selectTime(int index);
     void editTime(const QString &text);
     void enterTime(const QTime &time);
@@ -52,11 +51,11 @@ public:
 };
 
 KTimeComboBoxPrivate::KTimeComboBoxPrivate(KTimeComboBox *q)
-    : q(q),
-      m_time(QTime(0, 0, 0)),
-      m_warningShown(false),
-      m_displayFormat(QLocale::ShortFormat),
-      m_timeListInterval(15)
+    : q(q)
+    , m_time(QTime(0, 0, 0))
+    , m_warningShown(false)
+    , m_displayFormat(QLocale::ShortFormat)
+    , m_timeListInterval(15)
 {
     m_options = KTimeComboBox::EditTime | KTimeComboBox::SelectTime;
     m_minTime = defaultMinTime();
@@ -77,7 +76,7 @@ QTime KTimeComboBoxPrivate::defaultMaxTime()
     return QTime(23, 59, 59, 999);
 }
 
-std::pair<QString,QString> KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format)
+std::pair<QString, QString> KTimeComboBoxPrivate::timeFormatToInputMask(const QString &format)
 {
     const QLocale locale = q->locale();
 
@@ -203,7 +202,7 @@ void KTimeComboBoxPrivate::updateTimeWidget()
 {
     q->blockSignals(true);
     int pos = q->lineEdit()->cursorPosition();
-    //Set index before setting text otherwise it overwrites
+    // Set index before setting text otherwise it overwrites
     int i = 0;
     if (!m_time.isValid() || m_time < m_minTime) {
         i = 0;
@@ -249,8 +248,7 @@ void KTimeComboBoxPrivate::enterTime(const QTime &time)
 
 void KTimeComboBoxPrivate::warnTime()
 {
-    if (!m_warningShown && !q->isValid() &&
-            (m_options & KTimeComboBox::WarnOnInvalid) == KTimeComboBox::WarnOnInvalid) {
+    if (!m_warningShown && !q->isValid() && (m_options & KTimeComboBox::WarnOnInvalid) == KTimeComboBox::WarnOnInvalid) {
         QString warnMsg;
         if (!m_time.isValid()) {
             warnMsg = KTimeComboBox::tr("The time you entered is invalid", "@info");
@@ -275,8 +273,8 @@ void KTimeComboBoxPrivate::warnTime()
 }
 
 KTimeComboBox::KTimeComboBox(QWidget *parent)
-    : QComboBox(parent),
-      d(new KTimeComboBoxPrivate(this))
+    : QComboBox(parent)
+    , d(new KTimeComboBoxPrivate(this))
 {
     setEditable(true);
     setInsertPolicy(QComboBox::NoInsert);
@@ -284,10 +282,10 @@ KTimeComboBox::KTimeComboBox(QWidget *parent)
     d->initTimeWidget();
     d->updateTimeWidget();
 
-    connect(this, SIGNAL(activated(int)),
-            this, SLOT(selectTime(int)));
-    connect(this, &KTimeComboBox::editTextChanged,
-            this, [this](const QString &str) { d->editTime(str); });
+    connect(this, SIGNAL(activated(int)), this, SLOT(selectTime(int)));
+    connect(this, &KTimeComboBox::editTextChanged, this, [this](const QString &str) {
+        d->editTime(str);
+    });
 }
 
 KTimeComboBox::~KTimeComboBox() = default;
@@ -322,9 +320,7 @@ void KTimeComboBox::assignTime(const QTime &time)
 bool KTimeComboBox::isValid() const
 {
     d->parseTime();
-    return d->m_time.isValid() &&
-           d->m_time >= d->m_minTime &&
-           d->m_time <= d->m_maxTime;
+    return d->m_time.isValid() && d->m_time >= d->m_minTime && d->m_time <= d->m_maxTime;
 }
 
 bool KTimeComboBox::isNull() const
@@ -376,8 +372,7 @@ void KTimeComboBox::resetMaximumTime()
     setTimeRange(d->m_minTime, d->defaultMaxTime(), d->m_minWarnMsg, QString());
 }
 
-void KTimeComboBox::setTimeRange(const QTime &minTime, const QTime &maxTime,
-                                 const QString &minWarnMsg, const QString &maxWarnMsg)
+void KTimeComboBox::setTimeRange(const QTime &minTime, const QTime &maxTime, const QString &minWarnMsg, const QString &maxWarnMsg)
 {
     if (!minTime.isValid() || !maxTime.isValid() || minTime > maxTime) {
         return;
@@ -421,7 +416,7 @@ int KTimeComboBox::timeListInterval() const
 void KTimeComboBox::setTimeListInterval(int minutes)
 {
     if (minutes != d->m_timeListInterval) {
-        //Must be able to exactly divide the valid time period
+        // Must be able to exactly divide the valid time period
         int lowMins = (d->m_minTime.hour() * 60) + d->m_minTime.minute();
         int hiMins = (d->m_maxTime.hour() * 60) + d->m_maxTime.minute();
         if (d->m_minTime.minute() == 0 && d->m_maxTime.minute() == 59) {
@@ -439,7 +434,7 @@ void KTimeComboBox::setTimeListInterval(int minutes)
 
 QList<QTime> KTimeComboBox::timeList() const
 {
-    //Return the drop down list as it is what can be selected currently
+    // Return the drop down list as it is what can be selected currently
     QList<QTime> list;
     int c = count();
     list.reserve(c);
@@ -449,8 +444,7 @@ QList<QTime> KTimeComboBox::timeList() const
     return list;
 }
 
-void KTimeComboBox::setTimeList(QList<QTime> timeList,
-                                const QString &minWarnMsg, const QString &maxWarnMsg)
+void KTimeComboBox::setTimeList(QList<QTime> timeList, const QString &minWarnMsg, const QString &maxWarnMsg)
 {
     if (timeList != d->m_timeList) {
         d->m_timeList.clear();
@@ -461,8 +455,7 @@ void KTimeComboBox::setTimeList(QList<QTime> timeList,
         }
         std::sort(d->m_timeList.begin(), d->m_timeList.end());
         // Does the updateTimeWidget call for us
-        setTimeRange(d->m_timeList.first(), d->m_timeList.last(),
-                     minWarnMsg, maxWarnMsg);
+        setTimeRange(d->m_timeList.first(), d->m_timeList.last(), minWarnMsg, maxWarnMsg);
     }
 }
 

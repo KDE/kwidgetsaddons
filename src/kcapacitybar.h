@@ -31,8 +31,7 @@ class QPaintEvent;
  *
  * @author Rafael Fernández López <ereslibre@kde.org>
  */
-class KWIDGETSADDONS_EXPORT KCapacityBar
-    : public QWidget
+class KWIDGETSADDONS_EXPORT KCapacityBar : public QWidget
 {
     Q_OBJECT
 
@@ -42,16 +41,14 @@ class KWIDGETSADDONS_EXPORT KCapacityBar
     Q_PROPERTY(bool fillFullBlocks READ fillFullBlocks WRITE setFillFullBlocks)
     Q_PROPERTY(bool continuous READ continuous WRITE setContinuous)
     Q_PROPERTY(int barHeight READ barHeight WRITE setBarHeight)
-    Q_PROPERTY(Qt::Alignment horizontalTextAlignment READ horizontalTextAlignment
-               WRITE setHorizontalTextAlignment)
+    Q_PROPERTY(Qt::Alignment horizontalTextAlignment READ horizontalTextAlignment WRITE setHorizontalTextAlignment)
 
 public:
     enum DrawTextMode {
-        DrawTextInline = 0,     ///< If any text set, draw it into the capacity bar
-        DrawTextOutline,        ///< If any text set, draw it out of the capacity bar
+        DrawTextInline = 0, ///< If any text set, draw it into the capacity bar
+        DrawTextOutline, ///< If any text set, draw it out of the capacity bar
     };
     Q_ENUM(DrawTextMode)
-
 
     /**
      * Constructs a capacity bar with DrawTextOutline as draw text mode.

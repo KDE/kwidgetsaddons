@@ -21,8 +21,8 @@
 #ifndef KSELECTACTION_P_H
 #define KSELECTACTION_P_H
 
-#include <QComboBox>
 #include <QActionGroup>
+#include <QComboBox>
 
 class KSelectActionPrivate
 {
@@ -38,7 +38,7 @@ public:
         m_maxComboViewCount = -1;
 
         m_toolBarMode = KSelectAction::ComboBoxMode;
-        m_toolButtonPopupMode = QToolButton::InstantPopup; //InstantPopup by default because there is no default action
+        m_toolButtonPopupMode = QToolButton::InstantPopup; // InstantPopup by default because there is no default action
 
         m_actionGroup = new QActionGroup(nullptr);
     }
@@ -82,7 +82,7 @@ public:
         QString text = _text;
         int i = 0;
         while (i < text.length()) {
-            if (text[ i ] == QLatin1Char('&')) {
+            if (text[i] == QLatin1Char('&')) {
                 text.insert(i, QLatin1Char('&'));
                 i += 2;
             } else {
@@ -92,7 +92,7 @@ public:
         return text;
     }
 
-    KSelectAction * const q_ptr;
+    KSelectAction *const q_ptr;
 };
 
 #endif // KSELECTACTION_P_H

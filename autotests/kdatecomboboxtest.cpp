@@ -8,10 +8,10 @@
 
 #include <QDate>
 
-#include <QTest>
-#include <QSignalSpy>
-#include <QLineEdit>
 #include "kdatecombobox.h"
+#include <QLineEdit>
+#include <QSignalSpy>
+#include <QTest>
 
 QTEST_MAIN(KDateComboBoxTest)
 
@@ -28,8 +28,8 @@ void KDateComboBoxTest::testDefaults()
     QScopedPointer<KDateComboBox> combo(new KDateComboBox);
     QCOMPARE(combo->date(), QDate::currentDate());
     // Missing support in QLocale;
-    //QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
-    //QCOMPARE(m_combo->maximumDate(), KLocale::global()->calendar()->latestValidDate());
+    // QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
+    // QCOMPARE(m_combo->maximumDate(), KLocale::global()->calendar()->latestValidDate());
     QCOMPARE(combo->isValid(), true);
     QCOMPARE(combo->isNull(), false);
     QCOMPARE(combo->options(), KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords);
@@ -55,8 +55,8 @@ void KDateComboBoxTest::testDateRange()
     QScopedPointer<KDateComboBox> combo(new KDateComboBox);
     combo->setDate(QDate(2000, 1, 1));
     // Missing support in QLocale;
-    //QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
-    //QCOMPARE(m_combo->maximumDate(), KLocale::global()->calendar()->latestValidDate());
+    // QCOMPARE(m_combo->minimumDate(), KLocale::global()->calendar()->earliestValidDate());
+    // QCOMPARE(m_combo->maximumDate(), KLocale::global()->calendar()->latestValidDate());
     QCOMPARE(combo->isValid(), true);
 
     combo->setDateRange(QDate(2001, 1, 1), QDate(2002, 1, 1));
@@ -110,7 +110,6 @@ void KDateComboBoxTest::testDateRange()
     combo->resetMaximumDate();
     QVERIFY(!combo->minimumDate().isValid());
     QVERIFY(!combo->maximumDate().isValid());
-
 }
 
 void KDateComboBoxTest::testDateList()
@@ -221,5 +220,4 @@ void KDateComboBoxTest::testSignals()
     QCOMPARE(spyDateEntered.count(), 1);
     QCOMPARE(spyDateChanged.count(), 1);
     clearSpies();
-
 }

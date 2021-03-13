@@ -7,9 +7,9 @@
 #ifndef KFONTREQUESTER_H
 #define KFONTREQUESTER_H
 
-#include <QWidget>
 #include <QFont>
 #include <QString>
+#include <QWidget>
 #include <memory>
 
 #include <kwidgetsaddons_export.h>
@@ -39,7 +39,6 @@ class KWIDGETSADDONS_EXPORT KFontRequester : public QWidget
     Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontSelected USER true)
 
 public:
-
     /**
      * Constructs a font requester widget.
      *
@@ -127,4 +126,3 @@ private:
 };
 
 #endif // KFONTREQUESTER_H
-

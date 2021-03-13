@@ -17,10 +17,10 @@
 #include <QFont>
 #include <QFontDatabase>
 #include <QKeyEvent>
+#include <QLayout>
 #include <QMenu>
 #include <QStyle>
 #include <QToolButton>
-#include <QLayout>
 
 #include "moc_kdatepicker.cpp"
 #include "moc_kdatepicker_p.cpp"
@@ -30,7 +30,10 @@ class DatePickerValidator : public QValidator
     Q_OBJECT
 public:
     DatePickerValidator(KDatePicker *parent)
-        : QValidator(parent), picker(parent) {}
+        : QValidator(parent)
+        , picker(parent)
+    {
+    }
 
     State validate(QString &text, int &) const override
     {
@@ -39,7 +42,7 @@ public:
 
     QDate toDate(const QString &text) const
     {
-        QLocale::FormatType formats[] = { QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat };
+        QLocale::FormatType formats[] = {QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat};
         QLocale locale = picker->locale();
 
         QDate date;
@@ -59,9 +62,10 @@ private:
 // Week numbers are defined by ISO 8601
 // See http://www.merlyn.demon.co.uk/weekinfo.htm for details
 
-KDatePickerPrivateYearSelector::KDatePickerPrivateYearSelector(
-    const QDate &currentDate, QWidget *parent)
-    : QLineEdit(parent), val(new QIntValidator(this)), result(0)
+KDatePickerPrivateYearSelector::KDatePickerPrivateYearSelector(const QDate &currentDate, QWidget *parent)
+    : QLineEdit(parent)
+    , val(new QIntValidator(this))
+    , result(0)
 {
     oldDate = currentDate;
 
@@ -70,7 +74,7 @@ KDatePickerPrivateYearSelector::KDatePickerPrivateYearSelector(
     setFrame(false);
 
     // TODO: Find a way to get that from QLocale
-    //val->setRange( calendar->year( calendar->earliestValidDate() ),
+    // val->setRange( calendar->year( calendar->earliestValidDate() ),
     //               calendar->year( calendar->latestValidDate() ) );
     setValidator(val);
 
@@ -96,7 +100,6 @@ void KDatePickerPrivateYearSelector::yearEnteredSlot()
     } else {
         QApplication::beep();
     }
-
 }
 
 int KDatePickerPrivateYearSelector::year()
@@ -114,8 +117,12 @@ class KDatePickerPrivate
     Q_DECLARE_TR_FUNCTIONS(KDatePicker)
 
 public:
-    KDatePickerPrivate(KDatePicker *q) :
-        q(q), closeButton(nullptr), selectWeek(nullptr), todayButton(nullptr), navigationLayout(nullptr)
+    KDatePickerPrivate(KDatePicker *q)
+        : q(q)
+        , closeButton(nullptr)
+        , selectWeek(nullptr)
+        , todayButton(nullptr)
+        , navigationLayout(nullptr)
     {
     }
 
@@ -174,7 +181,6 @@ void KDatePickerPrivate::fillWeeksCombo()
     // adding an entry to the week combo for each week in the year
 
     for (; day.isValid() && day <= lastDayOfYear; day = day.addDays(7)) {
-
         // Get the ISO week number for the current day and what year that week is in
         // e.g. 1st day of this year may fall in week 53 of previous year
         int weekYear = thisYear;
@@ -218,13 +224,16 @@ QDate KDatePickerPrivate::validDateInYearMonth(int year, int month)
     return newDate;
 }
 
-KDatePicker::KDatePicker(QWidget *parent) : QFrame(parent), d(new KDatePickerPrivate(this))
+KDatePicker::KDatePicker(QWidget *parent)
+    : QFrame(parent)
+    , d(new KDatePickerPrivate(this))
 {
     initWidget(QDate::currentDate());
 }
 
 KDatePicker::KDatePicker(const QDate &date_, QWidget *parent)
-    : QFrame(parent), d(new KDatePickerPrivate(this))
+    : QFrame(parent)
+    , d(new KDatePickerPrivate(this))
 {
     initWidget(date_);
 }
@@ -246,12 +255,12 @@ void KDatePicker::initWidget(const QDate &date_)
     d->yearBackward->setAutoRaise(true);
     d->navigationLayout->addWidget(d->yearBackward);
     d->monthBackward = new QToolButton(this);
-    d->monthBackward ->setAutoRaise(true);
+    d->monthBackward->setAutoRaise(true);
     d->navigationLayout->addWidget(d->monthBackward);
     d->navigationLayout->addSpacing(horizontalSpacing);
 
     d->selectMonth = new QToolButton(this);
-    d->selectMonth ->setAutoRaise(true);
+    d->selectMonth->setAutoRaise(true);
     d->navigationLayout->addWidget(d->selectMonth);
     d->selectYear = new QToolButton(this);
     d->selectYear->setCheckable(true);
@@ -260,10 +269,10 @@ void KDatePicker::initWidget(const QDate &date_)
     d->navigationLayout->addSpacing(horizontalSpacing);
 
     d->monthForward = new QToolButton(this);
-    d->monthForward ->setAutoRaise(true);
+    d->monthForward->setAutoRaise(true);
     d->navigationLayout->addWidget(d->monthForward);
     d->yearForward = new QToolButton(this);
-    d->yearForward ->setAutoRaise(true);
+    d->yearForward->setAutoRaise(true);
     d->navigationLayout->addWidget(d->yearForward);
     d->navigationLayout->addStretch();
 
@@ -279,7 +288,7 @@ void KDatePicker::initWidget(const QDate &date_)
 
     d->fontsize++; // Make a little bigger
 
-    d->selectWeek = new QComboBox(this);    // read only week selection
+    d->selectWeek = new QComboBox(this); // read only week selection
     d->selectWeek->setFocusPolicy(Qt::NoFocus);
     d->todayButton = new QToolButton(this);
     d->todayButton->setIcon(QIcon::fromTheme(QStringLiteral("go-jump-today")));
@@ -309,7 +318,7 @@ void KDatePicker::initWidget(const QDate &date_)
         d->monthBackward->setIcon(QIcon::fromTheme(QStringLiteral("arrow-left")));
     }
 
-    connect(d->table, QOverload<const QDate&>::of(&KDateTable::dateChanged), this, &KDatePicker::dateChangedSlot);
+    connect(d->table, QOverload<const QDate &>::of(&KDateTable::dateChanged), this, &KDatePicker::dateChangedSlot);
     connect(d->table, &KDateTable::tableClicked, this, &KDatePicker::tableClickedSlot);
     connect(d->monthForward, &QAbstractButton::clicked, this, &KDatePicker::monthForwardClicked);
     connect(d->monthBackward, &QAbstractButton::clicked, this, &KDatePicker::monthBackwardClicked);
@@ -333,7 +342,7 @@ void KDatePicker::initWidget(const QDate &date_)
     bottomLayout->addWidget(d->selectWeek);
 
     d->table->setDate(date_);
-    dateChangedSlot(date_);    // needed because table emits changed only when newDate != oldDate
+    dateChangedSlot(date_); // needed because table emits changed only when newDate != oldDate
 }
 
 KDatePicker::~KDatePicker() = default;
@@ -399,7 +408,7 @@ bool KDatePicker::setDate(const QDate &date_)
 
 void KDatePicker::monthForwardClicked()
 {
-    if (! setDate(date().addMonths(1))) {
+    if (!setDate(date().addMonths(1))) {
         QApplication::beep();
     }
     d->table->setFocus();
@@ -407,7 +416,7 @@ void KDatePicker::monthForwardClicked()
 
 void KDatePicker::monthBackwardClicked()
 {
-    if (! setDate(date().addMonths(-1))) {
+    if (!setDate(date().addMonths(-1))) {
         QApplication::beep();
     }
     d->table->setFocus();
@@ -415,7 +424,7 @@ void KDatePicker::monthBackwardClicked()
 
 void KDatePicker::yearForwardClicked()
 {
-    if (! setDate(d->table->date().addYears(1))) {
+    if (!setDate(d->table->date().addYears(1))) {
         QApplication::beep();
     }
     d->table->setFocus();
@@ -423,7 +432,7 @@ void KDatePicker::yearForwardClicked()
 
 void KDatePicker::yearBackwardClicked()
 {
-    if (! setDate(d->table->date().addYears(-1))) {
+    if (!setDate(d->table->date().addYears(-1))) {
         QApplication::beep();
     }
     d->table->setFocus();
@@ -433,7 +442,7 @@ void KDatePicker::weekSelected(int index)
 {
     QDate targetDay = d->selectWeek->itemData(index).toDateTime().date();
 
-    if (! setDate(targetDay)) {
+    if (!setDate(targetDay)) {
         QApplication::beep();
     }
     d->table->setFocus();
@@ -452,7 +461,7 @@ void KDatePicker::selectMonthClicked()
         popup.addAction(locale().standaloneMonthName(m))->setData(m);
     }
 
-    QAction *item = popup.actions()[ thisDate.month() - 1 ];
+    QAction *item = popup.actions()[thisDate.month() - 1];
     // if this happens the above should already given an assertion
     if (item) {
         popup.setActiveAction(item);
@@ -472,7 +481,7 @@ void KDatePicker::selectMonthClicked()
     newDate.setDate(newDate.year(), newDate.month(), qMin(thisDate.day(), newDate.daysInMonth()));
 
     // Set the date, if it's invalid in any way then alert user and don't update
-    if (! setDate(newDate)) {
+    if (!setDate(newDate)) {
         QApplication::beep();
     }
 }
@@ -504,7 +513,7 @@ void KDatePicker::selectYearClicked()
         newDate = QDate(newDate.year(), newDate.month(), qMin(thisDate.day(), newDate.daysInMonth()));
 
         // Set the date, if it's invalid in any way then alert user and don't update
-        if (! setDate(newDate)) {
+        if (!setDate(newDate)) {
             QApplication::beep();
         }
     }
@@ -595,18 +604,16 @@ void KDatePicker::setFontSize(int s)
 
     QStyleOptionToolButton opt;
     opt.initFrom(d->selectMonth);
-    opt.text      = longestMonth;
+    opt.text = longestMonth;
 
     // stolen from QToolButton
     QSize textSize = metrics.size(Qt::TextShowMnemonic, longestMonth);
     textSize.setWidth(textSize.width() + metrics.horizontalAdvance(QLatin1Char(' ')) * 2);
     int w = textSize.width();
     int h = textSize.height();
-    opt.rect.setHeight(h);   // PM_MenuButtonIndicator depends on the height
+    opt.rect.setHeight(h); // PM_MenuButtonIndicator depends on the height
 
-    QSize metricBound = style()->sizeFromContents(
-                            QStyle::CT_ToolButton, &opt, QSize(w, h), d->selectMonth
-                        );
+    QSize metricBound = style()->sizeFromContents(QStyle::CT_ToolButton, &opt, QSize(w, h), d->selectMonth);
 
     d->selectMonth->setMinimumSize(metricBound);
 }
@@ -630,8 +637,7 @@ void KDatePicker::setCloseButton(bool enable)
         d->navigationLayout->addWidget(d->closeButton);
         d->closeButton->setToolTip(tr("Close", "@action:button"));
         d->closeButton->setIcon(QIcon::fromTheme(QStringLiteral("window-close")));
-        connect(d->closeButton, &QAbstractButton::clicked,
-                topLevelWidget(), &QWidget::close);
+        connect(d->closeButton, &QAbstractButton::clicked, topLevelWidget(), &QWidget::close);
     } else {
         delete d->closeButton;
         d->closeButton = nullptr;

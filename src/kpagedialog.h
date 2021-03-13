@@ -58,7 +58,6 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
     Q_DECLARE_PRIVATE(KPageDialog)
 
 public:
-
     /**
      * The face types supported.
      */
@@ -69,21 +68,21 @@ public:
          * in @c Plain mode, with multiple pages without sub pages
          * it behaves like in @c List mode and like in @c Tree mode otherwise.
          */
-        Auto   = KPageView::Auto,
+        Auto = KPageView::Auto,
         /**
          * A normal dialog
          */
-        Plain  = KPageView::Plain,
+        Plain = KPageView::Plain,
         /**
          * A dialog with an icon list on the left side and a
          * representation of the contents on the right side
          */
-        List   = KPageView::List,
+        List = KPageView::List,
         /**
          * A dialog with a tree on the left side and a
          * representation of the contents on the right side
          */
-        Tree   = KPageView::Tree,
+        Tree = KPageView::Tree,
         /**
          * A dialog with a tab bar above the representation
          * of the contents
@@ -195,8 +194,8 @@ public:
     QPushButton *button(QDialogButtonBox::StandardButton which) const;
 
     /**
-      * Set an action button.
-      */
+     * Set an action button.
+     */
     void addActionButton(QAbstractButton *button);
 
 Q_SIGNALS:

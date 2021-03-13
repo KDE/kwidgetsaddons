@@ -6,14 +6,14 @@
 
 #include "kdatetimeedittest.h"
 
-#include <QDate>
 #include <QAction>
 #include <QComboBox>
+#include <QDate>
 #include <QMenu>
 
-#include <QTest>
-#include "kdatetimeedit.h"
 #include "kdatecombobox.h"
+#include "kdatetimeedit.h"
+#include <QTest>
 
 QTEST_MAIN(KDateTimeEditTest)
 
@@ -24,11 +24,13 @@ void KDateTimeEditTest::testDefaults()
     QCOMPARE(m_edit->date(), QDate::currentDate());
     QCOMPARE(m_edit->time(), QTime(0, 0, 0));
     // Missing support in QLocale
-    //QCOMPARE(m_edit->minimumDateTime(), KDateTime(KLocale::global()->calendar()->earliestValidDate(), QTime(0, 0, 0)));
-    //QCOMPARE(m_edit->maximumDateTime(), KDateTime(KLocale::global()->calendar()->latestValidDate(), QTime(23, 59, 59, 999)));
+    // QCOMPARE(m_edit->minimumDateTime(), KDateTime(KLocale::global()->calendar()->earliestValidDate(), QTime(0, 0, 0)));
+    // QCOMPARE(m_edit->maximumDateTime(), KDateTime(KLocale::global()->calendar()->latestValidDate(), QTime(23, 59, 59, 999)));
     QCOMPARE(m_edit->isValid(), true);
     QCOMPARE(m_edit->isNull(), false);
-    QCOMPARE(m_edit->options(), KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime);
+    QCOMPARE(m_edit->options(),
+             KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords
+                 | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime);
     QCOMPARE(m_edit->dateDisplayFormat(), QLocale::ShortFormat);
     QCOMPARE(m_edit->timeListInterval(), 15);
     QCOMPARE(m_edit->timeDisplayFormat(), QLocale::ShortFormat);
@@ -51,12 +53,11 @@ void KDateTimeEditTest::testDateTimeRange()
     m_edit = new KDateTimeEdit(nullptr);
     m_edit->setDateTime(QDateTime(QDate(2000, 1, 1), QTime(12, 0, 0)));
     // Missing support in QLocale
-    //QCOMPARE(m_edit->minimumDateTime(), KDateTime(KLocale::global()->calendar()->earliestValidDate(), QTime(0, 0, 0)));
-    //QCOMPARE(m_edit->maximumDateTime(), KDateTime(KLocale::global()->calendar()->latestValidDate(), QTime(23, 59, 59, 999)));
+    // QCOMPARE(m_edit->minimumDateTime(), KDateTime(KLocale::global()->calendar()->earliestValidDate(), QTime(0, 0, 0)));
+    // QCOMPARE(m_edit->maximumDateTime(), KDateTime(KLocale::global()->calendar()->latestValidDate(), QTime(23, 59, 59, 999)));
     QCOMPARE(m_edit->isValid(), true);
 
-    m_edit->setDateTimeRange(QDateTime(QDate(2001, 1, 1), QTime(10, 0, 0)),
-                             QDateTime(QDate(2002, 1, 1), QTime(20, 0, 0)));
+    m_edit->setDateTimeRange(QDateTime(QDate(2001, 1, 1), QTime(10, 0, 0)), QDateTime(QDate(2002, 1, 1), QTime(20, 0, 0)));
     QCOMPARE(m_edit->minimumDateTime(), QDateTime(QDate(2001, 1, 1), QTime(10, 0, 0)));
     QCOMPARE(m_edit->maximumDateTime(), QDateTime(QDate(2002, 1, 1), QTime(20, 0, 0)));
     QCOMPARE(m_edit->isValid(), false);
@@ -70,8 +71,7 @@ void KDateTimeEditTest::testDateTimeRange()
     m_edit->setDateTime(QDateTime(QDate(2002, 1, 1), QTime(20, 0, 0, 0)));
     QCOMPARE(m_edit->isValid(), true);
 
-    m_edit->setDateTimeRange(QDateTime(QDate(1995, 1, 1), QTime(10, 0, 0)),
-                             QDateTime(QDate(1990, 1, 1), QTime(20, 0, 0)));
+    m_edit->setDateTimeRange(QDateTime(QDate(1995, 1, 1), QTime(10, 0, 0)), QDateTime(QDate(1990, 1, 1), QTime(20, 0, 0)));
     QCOMPARE(m_edit->minimumDateTime(), QDateTime(QDate(2001, 1, 1), QTime(10, 0, 0)));
     QCOMPARE(m_edit->maximumDateTime(), QDateTime(QDate(2002, 1, 1), QTime(20, 0, 0)));
 
@@ -109,7 +109,8 @@ void KDateTimeEditTest::testDateList()
 void KDateTimeEditTest::testOptions()
 {
     m_edit = new KDateTimeEdit(nullptr);
-    KDateTimeEdit::Options options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime;
+    KDateTimeEdit::Options options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker
+        | KDateTimeEdit::DateKeywords | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime | KDateTimeEdit::SelectTime;
     QCOMPARE(m_edit->options(), options);
     options = KDateTimeEdit::EditDate | KDateTimeEdit::WarnOnInvalid;
     m_edit->setOptions(options);
@@ -132,7 +133,7 @@ void KDateTimeEditTest::testTimeListInterval()
 {
     m_edit = new KDateTimeEdit();
     QCOMPARE(m_edit->timeListInterval(), 15);
-    m_edit-> setTimeListInterval(60);
+    m_edit->setTimeListInterval(60);
     QCOMPARE(m_edit->timeListInterval(), 60);
     delete m_edit;
 }
@@ -229,7 +230,8 @@ static T findVisibleChild(QWidget *parent)
 void KDateTimeEditTest::testDateMenu()
 {
     m_edit = new KDateTimeEdit();
-    KDateTimeEdit::Options options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords;
+    KDateTimeEdit::Options options =
+        KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords;
     m_edit->setOptions(options);
     m_edit->setDate(QDate(2002, 1, 1));
     m_edit->show();
@@ -243,4 +245,3 @@ void KDateTimeEditTest::testDateMenu()
     nextMonthAction->trigger();
     QCOMPARE(m_edit->date(), QDate::currentDate().addMonths(1));
 }
-

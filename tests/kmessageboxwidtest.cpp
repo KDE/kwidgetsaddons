@@ -29,9 +29,7 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    int ret = KMessageBox::warningContinueCancelWId(winId,
-              QStringLiteral("Are you sure you want to continue?"),
-              QStringLiteral("Dangerous stuff"));
+    int ret = KMessageBox::warningContinueCancelWId(winId, QStringLiteral("Are you sure you want to continue?"), QStringLiteral("Dangerous stuff"));
 
     std::cout << "Returned " << ret << '\n';
     return ret;

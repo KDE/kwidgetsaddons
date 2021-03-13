@@ -10,8 +10,8 @@
 #include <KColumnResizer>
 
 #include "ui_kcolumnresizertest-forms.h"
-#include "ui_kcolumnresizertest-grids.h"
 #include "ui_kcolumnresizertest-grid-and-form.h"
+#include "ui_kcolumnresizertest-grids.h"
 #include <QTest>
 
 QTEST_MAIN(KColumnResizerTest)

@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-only OR LGPL-3.0-only or LicenseRef-KDE-Accepted-LGPL
 */
 
-#include <QWidget>
 #include <QVBoxLayout>
+#include <QWidget>
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -32,4 +32,3 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
-

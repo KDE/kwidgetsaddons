@@ -37,14 +37,18 @@ public:
     OutsideClickCatcher *outsideClickCatcher;
 };
 
-class KPopupFramePrivate::OutsideClickCatcher
-    : public QObject
+class KPopupFramePrivate::OutsideClickCatcher : public QObject
 {
     Q_OBJECT
 public:
     explicit OutsideClickCatcher(QObject *parent = nullptr)
-        : QObject(parent), m_popup(nullptr) { }
-    ~OutsideClickCatcher() override { }
+        : QObject(parent)
+        , m_popup(nullptr)
+    {
+    }
+    ~OutsideClickCatcher() override
+    {
+    }
 
     void setPopupFrame(KPopupFrame *popup)
     {
@@ -69,11 +73,12 @@ public:
     }
 };
 
-KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q):
-    q(q),
-    result(0),   // rejected
-    main(nullptr),
-    outsideClickCatcher(new OutsideClickCatcher)
+KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q)
+    : q(q)
+    , result(0)
+    , // rejected
+    main(nullptr)
+    , outsideClickCatcher(new OutsideClickCatcher)
 {
     outsideClickCatcher->setPopupFrame(q);
 }
@@ -84,7 +89,8 @@ KPopupFramePrivate::~KPopupFramePrivate()
 }
 
 KPopupFrame::KPopupFrame(QWidget *parent)
-    : QFrame(parent, Qt::Popup), d(new KPopupFramePrivate(this))
+    : QFrame(parent, Qt::Popup)
+    , d(new KPopupFramePrivate(this))
 {
     setFrameStyle(QFrame::Box | QFrame::Raised);
     setMidLineWidth(2);
@@ -97,7 +103,7 @@ void KPopupFrame::keyPressEvent(QKeyEvent *e)
     if (e->key() == Qt::Key_Escape) {
         d->result = 0; // rejected
         Q_EMIT leaveModality();
-        //qApp->exit_loop();
+        // qApp->exit_loop();
     }
 }
 
@@ -110,7 +116,7 @@ void KPopupFrame::close(int r)
 {
     d->result = r;
     Q_EMIT leaveModality();
-    //qApp->exit_loop();
+    // qApp->exit_loop();
 }
 
 void KPopupFrame::setMainWidget(QWidget *m)
@@ -170,8 +176,7 @@ int KPopupFrame::exec(const QPoint &pos)
     repaint();
     d->result = 0; // rejected
     QEventLoop eventLoop;
-    connect(this, &KPopupFrame::leaveModality,
-            &eventLoop, &QEventLoop::quit);
+    connect(this, &KPopupFrame::leaveModality, &eventLoop, &QEventLoop::quit);
     eventLoop.exec();
 
     hide();

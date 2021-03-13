@@ -53,7 +53,6 @@ class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
     Q_OBJECT
 
 public:
-
     /**
      * @see KPasswordDialogFlags
      */
@@ -125,8 +124,7 @@ public:
      * @param parent the parent widget
      * @param flags a set of KPasswordDialogFlag flags
      */
-    explicit KPasswordDialog(QWidget *parent = nullptr,
-                             const KPasswordDialogFlags &flags = KPasswordDialog::NoFlags);
+    explicit KPasswordDialog(QWidget *parent = nullptr, const KPasswordDialogFlags &flags = KPasswordDialog::NoFlags);
 
     /**
      * Destructor

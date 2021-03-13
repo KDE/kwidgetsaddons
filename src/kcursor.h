@@ -46,8 +46,7 @@ public:
      * a QCanvasView, then you have to pass all key-events that should trigger
      * auto-hiding to autoHideEventFilter().
      */
-    static void setAutoHideCursor(QWidget *w, bool enable,
-                                  bool customEventFilter = false);
+    static void setAutoHideCursor(QWidget *w, bool enable, bool customEventFilter = false);
 
     /**
      * Sets the delay time in milliseconds for auto-hiding. When no keyboard

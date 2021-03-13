@@ -7,10 +7,10 @@
 
 #include "ksqueezedtextlabel.h"
 #include <QAction>
+#include <QApplication>
+#include <QClipboard>
 #include <QContextMenuEvent>
 #include <QMenu>
-#include <QClipboard>
-#include <QApplication>
 #include <QRegularExpression>
 #include <QScreen>
 #include <QTextDocument>
@@ -18,7 +18,6 @@
 class KSqueezedTextLabelPrivate
 {
 public:
-
     void _k_copyFullText()
     {
         QApplication::clipboard()->setText(fullText);
@@ -29,8 +28,8 @@ public:
 };
 
 KSqueezedTextLabel::KSqueezedTextLabel(const QString &text, QWidget *parent)
-    : QLabel(parent),
-      d(new KSqueezedTextLabelPrivate)
+    : QLabel(parent)
+    , d(new KSqueezedTextLabelPrivate)
 {
     setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
     d->fullText = text;
@@ -39,8 +38,8 @@ KSqueezedTextLabel::KSqueezedTextLabel(const QString &text, QWidget *parent)
 }
 
 KSqueezedTextLabel::KSqueezedTextLabel(QWidget *parent)
-    : QLabel(parent),
-      d(new KSqueezedTextLabelPrivate)
+    : QLabel(parent)
+    , d(new KSqueezedTextLabelPrivate)
 {
     setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed));
     d->elideMode = Qt::ElideMiddle;
@@ -201,7 +200,9 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
         QMenu menu(this);
 
         QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), tr("&Copy Full Text", "@action:inmenu"), &menu);
-        connect(act, &QAction::triggered, this, [this]() { d->_k_copyFullText(); });
+        connect(act, &QAction::triggered, this, [this]() {
+            d->_k_copyFullText();
+        });
         menu.addAction(act);
 
         ev->accept();

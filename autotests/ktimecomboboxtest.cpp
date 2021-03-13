@@ -8,8 +8,8 @@
 
 #include <QTime>
 
-#include <QTest>
 #include <QLineEdit>
+#include <QTest>
 #include <ktimecombobox.h>
 
 QTEST_MAIN(KTimeComboBoxTest)
@@ -92,22 +92,22 @@ void KTimeComboBoxTest::testTimeListInterval()
 {
     m_combo = new KTimeComboBox();
     QCOMPARE(m_combo->timeListInterval(), 15);
-    m_combo-> setTimeListInterval(60);
+    m_combo->setTimeListInterval(60);
     QCOMPARE(m_combo->timeListInterval(), 60);
-    m_combo-> setTimeListInterval(7);
+    m_combo->setTimeListInterval(7);
     QCOMPARE(m_combo->timeListInterval(), 60);
-    m_combo-> setTimeListInterval(720);
+    m_combo->setTimeListInterval(720);
     QCOMPARE(m_combo->timeListInterval(), 720);
     QList<QTime> list;
     list << QTime(0, 0, 0) << QTime(12, 0, 0) << QTime(23, 59, 59, 999);
     QCOMPARE(m_combo->timeList(), list);
     m_combo->setTimeRange(QTime(4, 0, 0, 0), QTime(5, 0, 0, 0));
-    m_combo-> setTimeListInterval(30);
+    m_combo->setTimeListInterval(30);
     list.clear();
     list << QTime(4, 0, 0) << QTime(4, 30, 0) << QTime(5, 0, 0, 0);
     QCOMPARE(m_combo->timeList(), list);
     m_combo->setTimeRange(QTime(4, 0, 0, 0), QTime(4, 59, 0, 0));
-    m_combo-> setTimeListInterval(30);
+    m_combo->setTimeListInterval(30);
     list.clear();
     list << QTime(4, 0, 0) << QTime(4, 30, 0) << QTime(4, 59, 0, 0);
     QCOMPARE(m_combo->timeList(), list);
@@ -206,13 +206,13 @@ void KTimeComboBoxTest::testEdit_data()
     QTest::addColumn<QString>("locale");
 
     QTest::newRow("C") << QStringLiteral("C");
-    QTest::newRow("el_GR") << QStringLiteral("el_GR");  // bug 361764; non-ASCII AM/PM
-    QTest::newRow("en_AU") << QStringLiteral("en_AU");  // bug 361764
-    QTest::newRow("en_CA") << QStringLiteral("en_CA");  // bug 405857
-    QTest::newRow("en_IE") << QStringLiteral("en_IE");  // bug 361764
+    QTest::newRow("el_GR") << QStringLiteral("el_GR"); // bug 361764; non-ASCII AM/PM
+    QTest::newRow("en_AU") << QStringLiteral("en_AU"); // bug 361764
+    QTest::newRow("en_CA") << QStringLiteral("en_CA"); // bug 405857
+    QTest::newRow("en_IE") << QStringLiteral("en_IE"); // bug 361764
     QTest::newRow("en_US") << QStringLiteral("en_US");
-    QTest::newRow("fr_CA") << QStringLiteral("fr_CA");  // bug 409912
-    QTest::newRow("ko_KR") << QStringLiteral("ko_KR");  // non-ASCII AM/PM
+    QTest::newRow("fr_CA") << QStringLiteral("fr_CA"); // bug 409912
+    QTest::newRow("ko_KR") << QStringLiteral("ko_KR"); // non-ASCII AM/PM
 }
 
 static const QTime MIDNIGHT = QTime(00, 00, 00);

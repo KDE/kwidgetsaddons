@@ -17,15 +17,14 @@ class KViewStateSerializerPrivate
 {
 public:
     KViewStateSerializerPrivate(KViewStateSerializer *qq)
-        : q_ptr(qq),
-          m_treeView(nullptr),
-          m_view(nullptr),
-          m_selectionModel(nullptr),
-          m_scrollArea(nullptr),
-          m_horizontalScrollBarValue(-1),
-          m_verticalScrollBarValue(-1)
+        : q_ptr(qq)
+        , m_treeView(nullptr)
+        , m_view(nullptr)
+        , m_selectionModel(nullptr)
+        , m_scrollArea(nullptr)
+        , m_horizontalScrollBarValue(-1)
+        , m_verticalScrollBarValue(-1)
     {
-
     }
 
     Q_DECLARE_PUBLIC(KViewStateSerializer)
@@ -70,14 +69,13 @@ public:
         return nullptr;
     }
 
-    void rowsInserted(const QModelIndex &/*index*/, int /*start*/, int /*end*/)
+    void rowsInserted(const QModelIndex & /*index*/, int /*start*/, int /*end*/)
     {
         Q_Q(KViewStateSerializer);
         processPendingChanges();
 
         if (!hasPendingChanges()) {
-            q->disconnect(getModel(), SIGNAL(rowsInserted(QModelIndex,int,int)),
-                          q, SLOT(rowsInserted(QModelIndex,int,int)));
+            q->disconnect(getModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), q, SLOT(rowsInserted(QModelIndex, int, int)));
             q->deleteLater();
         }
     }
@@ -95,7 +93,8 @@ public:
 };
 
 KViewStateSerializer::KViewStateSerializer(QObject *parent)
-    : QObject(nullptr), d_ptr(new KViewStateSerializerPrivate(this))
+    : QObject(nullptr)
+    , d_ptr(new KViewStateSerializerPrivate(this))
 {
     Q_UNUSED(parent);
     qRegisterMetaType<QModelIndex>("QModelIndex");
@@ -142,10 +141,8 @@ void KViewStateSerializerPrivate::listenToPendingChanges()
     if (hasPendingChanges()) {
         const QAbstractItemModel *model = getModel();
         if (model) {
-            q->disconnect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
-                          q, SLOT(rowsInserted(QModelIndex,int,int)));
-            q->connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)),
-                       SLOT(rowsInserted(QModelIndex,int,int)));
+            q->disconnect(model, SIGNAL(rowsInserted(QModelIndex, int, int)), q, SLOT(rowsInserted(QModelIndex, int, int)));
+            q->connect(model, SIGNAL(rowsInserted(QModelIndex, int, int)), SLOT(rowsInserted(QModelIndex, int, int)));
             return;
         } else {
             q->deleteLater();
@@ -357,4 +354,3 @@ void KViewStateSerializer::restoreState()
 }
 
 #include "moc_kviewstateserializer.cpp"
-

@@ -8,8 +8,8 @@
 #ifndef KPAGEWIDGET_P_H
 #define KPAGEWIDGET_P_H
 
-#include "kpagewidget.h"
 #include "kpageview_p.h"
+#include "kpagewidget.h"
 
 class KPageWidgetModel;
 class KPageWidgetPrivate : public KPageViewPrivate

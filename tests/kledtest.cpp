@@ -1,33 +1,33 @@
 
 #include "kledtest.h"
 
-#include <qapplication.h>
 #include "kled.h"
+#include <qapplication.h>
 
 KLedTest::KLedTest(QWidget *parent)
-    : QWidget(parent),
-      LedWidth(16),
-      LedHeight(10),
-      Grid(3),
-      ledcolor(0),
-      ledlook(KLed::Flat),
-      kled_round(true) // Switch HERE between rectangle and circular leds
+    : QWidget(parent)
+    , LedWidth(16)
+    , LedHeight(10)
+    , Grid(3)
+    , ledcolor(0)
+    , ledlook(KLed::Flat)
+    , kled_round(true) // Switch HERE between rectangle and circular leds
 {
     if (kled_round) {
-        //KLed l(KLed::red, &qw);               // create lamp
-        //KLed l(KLed::blue, &qw);              // create lamp
-        l = new KLed(Qt::green, this);              // create lamp
-        //KLed l(KLed::yellow, &qw);                // create lamp
-        //KLed l(KLed::orange, &qw);                // create lamp
+        // KLed l(KLed::red, &qw);               // create lamp
+        // KLed l(KLed::blue, &qw);              // create lamp
+        l = new KLed(Qt::green, this); // create lamp
+        // KLed l(KLed::yellow, &qw);                // create lamp
+        // KLed l(KLed::orange, &qw);                // create lamp
 
         l->resize(16, 30);
-        //l.setLook(KLed::flat);
+        // l.setLook(KLed::flat);
         l->setShape(KLed::Circular);
-        //l->setShape(KLed::Rectangular);
+        // l->setShape(KLed::Rectangular);
 
-        //l->setLook(KLed::Flat);
-        //l->setLook(KLed::Flat);
-        //l->setLook(KLed::Flat);
+        // l->setLook(KLed::Flat);
+        // l->setLook(KLed::Flat);
+        // l->setLook(KLed::Flat);
 
         l->move(5, 5);
         //    ktmp tmpobj(l);
@@ -44,14 +44,13 @@ KLedTest::KLedTest(QWidget *parent)
         l->show();
         resize(240, 140);
     } else {
-        y = Grid; index = 0;
+        y = Grid;
+        index = 0;
         for (int shape = 0; (int)shape < 2; shape = (KLed::Shape)(shape + 1)) {
             x = Grid;
             for (int look = 0; (int)look < 3; look = (KLed::Look)(look + 1)) {
                 for (state = KLed::Off; (int)state < 2; state = (KLed::State)(state + 1)) {
-                    leds[index] = new KLed(Qt::yellow, state,
-                                           (KLed::Look)(look + 1),
-                                           (KLed::Shape)(shape + 1), this);
+                    leds[index] = new KLed(Qt::yellow, state, (KLed::Look)(look + 1), (KLed::Shape)(shape + 1), this);
                     leds[index]->setGeometry(x, y, LedWidth, LedHeight);
                     ++index;
                     x += Grid + LedWidth;
@@ -72,24 +71,29 @@ KLedTest::~KLedTest()
     }
 }
 
-void
-KLedTest::nextColor()
+void KLedTest::nextColor()
 {
-
     ledcolor++;
     ledcolor %= 4;
 
     switch (ledcolor) {
     default:
-    case 0: l->setColor(Qt::green); break;
-    case 1: l->setColor(Qt::blue); break;
-    case 2: l->setColor(Qt::red); break;
-    case 3: l->setColor(Qt::yellow); break;
+    case 0:
+        l->setColor(Qt::green);
+        break;
+    case 1:
+        l->setColor(Qt::blue);
+        break;
+    case 2:
+        l->setColor(Qt::red);
+        break;
+    case 3:
+        l->setColor(Qt::yellow);
+        break;
     }
 }
 
-void
-KLedTest::nextLook()
+void KLedTest::nextLook()
 {
     int tmp;
     if (kled_round) {
@@ -99,12 +103,11 @@ KLedTest::nextLook()
     }
     ledlook = static_cast<KLed::Look>(tmp);
     l->setLook(ledlook);
-    //qDebug("painting look %i", ledlook);
-    //l->repaint();
+    // qDebug("painting look %i", ledlook);
+    // l->repaint();
 }
 
-void
-KLedTest::timeout()
+void KLedTest::timeout()
 {
     const int NoOfLeds = sizeof(leds) / sizeof(leds[0]);
     int count;
@@ -141,6 +144,5 @@ int main(int argc, char **argv)
     }
     */
     widget.show();
-    return a.exec();                // go
+    return a.exec(); // go
 }
-

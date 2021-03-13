@@ -26,8 +26,8 @@
 #include <QActionEvent>
 #include <QEvent>
 #include <QMenu>
-#include <QToolBar>
 #include <QStandardItem>
+#include <QToolBar>
 
 // QAction::setText("Hi") and then KPopupAccelManager exec'ing, causes
 // QAction::text() to return "&Hi" :(  Comboboxes don't have accels and
@@ -39,7 +39,7 @@ static QString DropAmpersands(const QString &text)
     int p = label.indexOf(QLatin1Char('&'));
     while (p >= 0 && p < label.length() - 1) {
         if (label[p + 1].isLetterOrNumber() // Valid accelerator.
-                || label[p + 1] == QLatin1Char('&')) { // Escaped accelerator marker.
+            || label[p + 1] == QLatin1Char('&')) { // Escaped accelerator marker.
             label.remove(p, 1);
         }
 
@@ -88,10 +88,8 @@ void KSelectActionPrivate::init()
     q_ptr->setEnabled(false);
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     // forward deprecated signals to undeprecated, to be backward-compatible to unported subclasses
-    QObject::connect(q_ptr, QOverload<int>::of(&KSelectAction::triggered),
-                     q_ptr, &KSelectAction::indexTriggered);
-    QObject::connect(q_ptr, QOverload<const QString&>::of(&KSelectAction::triggered),
-                     q_ptr, &KSelectAction::textTriggered);
+    QObject::connect(q_ptr, QOverload<int>::of(&KSelectAction::triggered), q_ptr, &KSelectAction::indexTriggered);
+    QObject::connect(q_ptr, QOverload<const QString &>::of(&KSelectAction::triggered), q_ptr, &KSelectAction::textTriggered);
 #endif
 }
 
@@ -127,7 +125,7 @@ QString KSelectAction::currentText() const
 
 bool KSelectAction::setCurrentAction(QAction *action)
 {
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::setCurrentAction(" << action << ")";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::setCurrentAction(" << action << ")";
     if (action) {
         if (actions().contains(action)) {
             if (action->isVisible() && action->isEnabled() && action->isCheckable()) {
@@ -154,7 +152,7 @@ bool KSelectAction::setCurrentAction(QAction *action)
 
 bool KSelectAction::setCurrentItem(int index)
 {
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::setCurrentIndex(" << index << ")";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::setCurrentIndex(" << index << ")";
     return setCurrentAction(action(index));
 }
 
@@ -196,7 +194,7 @@ QAction *KSelectAction::action(const QString &text, Qt::CaseSensitivity cs) cons
 
 bool KSelectAction::setCurrentAction(const QString &text, Qt::CaseSensitivity cs)
 {
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::setCurrentAction(" << text << ",cs=" << cs << ")";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::setCurrentAction(" << text << ",cs=" << cs << ")";
     return setCurrentAction(action(text, cs));
 }
 
@@ -225,7 +223,7 @@ void KSelectAction::setMaxComboViewCount(int n)
         if (d->m_maxComboViewCount != -1) {
             box->setMaxVisibleItems(d->m_maxComboViewCount);
         } else
-            // hardcoded qt default
+        // hardcoded qt default
         {
             box->setMaxVisibleItems(10);
         }
@@ -266,9 +264,9 @@ QAction *KSelectAction::addAction(const QIcon &icon, const QString &text)
 QAction *KSelectAction::removeAction(QAction *action)
 {
     Q_D(KSelectAction);
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::removeAction(" << action << ")";
-    //int index = selectableActionGroup()->actions().indexOf(action);
-    //qCDebug(KWidgetsAddonsLog) << "\tindex=" << index;
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::removeAction(" << action << ")";
+    // int index = selectableActionGroup()->actions().indexOf(action);
+    // qCDebug(KWidgetsAddonsLog) << "\tindex=" << index;
 
     // Removes the action from the group and sets its parent to null.
     d->m_actionGroup->removeAction(action);
@@ -320,11 +318,11 @@ void KSelectAction::actionTriggered(QAction *action)
     // after we've done an emit()
     const QString text = ::DropAmpersands(action->text());
     const int index = selectableActionGroup()->actions().indexOf(action);
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::actionTriggered(" << action << ") text=" << text
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::actionTriggered(" << action << ") text=" << text
     //          << " index=" << index  << " emitting triggered()" << endl;
 
     if (isCheckable()) { // if this is subsidiary of other KSelectAction-derived class
-        trigger();    // then imitate usual QAction behaviour so that other submenus (and their items) become unchecked
+        trigger(); // then imitate usual QAction behaviour so that other submenus (and their items) become unchecked
     }
 
     Q_EMIT triggered(action);
@@ -366,7 +364,7 @@ void KSelectAction::changeItem(int index, const QString &text)
 void KSelectAction::setItems(const QStringList &lst)
 {
     Q_D(KSelectAction);
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::setItems(" << lst << ")";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::setItems(" << lst << ")";
 
     clear();
 
@@ -393,7 +391,7 @@ int KSelectAction::comboWidth() const
 void KSelectAction::clear()
 {
     Q_D(KSelectAction);
-    //qCDebug(KWidgetsAddonsLog) << "KSelectAction::clear()";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::clear()";
 
     // we need to delete the actions later since we may get a call to clear()
     // from a method called due to a triggered(...) signal
@@ -438,7 +436,7 @@ bool KSelectAction::isEditable() const
 
 void KSelectAction::slotToggled(bool checked)
 {
-    //if (checked && selectableActionGroup()->checkedAction())
+    // if (checked && selectableActionGroup()->checkedAction())
     if (!checked && currentAction()) { // other's submenu item has been selected
         currentAction()->setChecked(false);
     }
@@ -470,29 +468,26 @@ void KSelectAction::setToolButtonPopupMode(QToolButton::ToolButtonPopupMode mode
 
 void KSelectActionPrivate::_k_comboBoxDeleted(QObject *object)
 {
-    m_comboBoxes.removeAll(static_cast<QComboBox*>(object));
+    m_comboBoxes.removeAll(static_cast<QComboBox *>(object));
 }
 
 void KSelectActionPrivate::_k_comboBoxCurrentIndexChanged(int index)
 {
     Q_Q(KSelectAction);
-    //qCDebug(KWidgetsAddonsLog) << "KSelectActionPrivate::_k_comboBoxCurrentIndexChanged(" << index << ")";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectActionPrivate::_k_comboBoxCurrentIndexChanged(" << index << ")";
 
-    QComboBox *triggeringCombo = qobject_cast <QComboBox *> (q->sender());
+    QComboBox *triggeringCombo = qobject_cast<QComboBox *>(q->sender());
 
     QAction *a = q->action(index);
-    //qCDebug(KWidgetsAddonsLog) << "\ta=" << a;
+    // qCDebug(KWidgetsAddonsLog) << "\ta=" << a;
     if (a) {
-        //qCDebug(KWidgetsAddonsLog) << "\t\tsetting as current action";
+        // qCDebug(KWidgetsAddonsLog) << "\t\tsetting as current action";
         a->trigger();
 
-    } else if (q->isEditable() &&
-               triggeringCombo && triggeringCombo->count() > 0 &&
-               index == triggeringCombo->count() - 1) {
-
+    } else if (q->isEditable() && triggeringCombo && triggeringCombo->count() > 0 && index == triggeringCombo->count() - 1) {
         // User must have added a new item by typing and pressing enter.
         const QString newItemText = triggeringCombo->currentText();
-        //qCDebug(KWidgetsAddonsLog) << "\t\tuser typed new item '" << newItemText << "'";
+        // qCDebug(KWidgetsAddonsLog) << "\t\tuser typed new item '" << newItemText << "'";
 
         // Only 1 combobox contains this and it's not a proper action.
         bool blocked = triggeringCombo->blockSignals(true);
@@ -545,10 +540,8 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
         button->setFocusPolicy(Qt::NoFocus);
         button->setIconSize(toolBar->iconSize());
         button->setToolButtonStyle(toolBar->toolButtonStyle());
-        QObject::connect(toolBar, &QToolBar::iconSizeChanged,
-                         button, &QAbstractButton::setIconSize);
-        QObject::connect(toolBar, &QToolBar::toolButtonStyleChanged,
-                         button, &QToolButton::setToolButtonStyle);
+        QObject::connect(toolBar, &QToolBar::iconSizeChanged, button, &QAbstractButton::setIconSize);
+        QObject::connect(toolBar, &QToolBar::toolButtonStyleChanged, button, &QToolButton::setToolButtonStyle);
         button->setDefaultAction(this);
         QObject::connect(button, &QToolButton::triggered, toolBar, &QToolBar::actionTriggered);
 
@@ -586,7 +579,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
             comboBox->setEnabled(false);
         }
 
-        connect(comboBox, SIGNAL(destroyed(QObject*)), SLOT(_k_comboBoxDeleted(QObject*)));
+        connect(comboBox, SIGNAL(destroyed(QObject *)), SLOT(_k_comboBoxDeleted(QObject *)));
         connect(comboBox, SIGNAL(currentIndexChanged(int)), SLOT(_k_comboBoxCurrentIndexChanged(int)));
         d->m_comboBoxes.append(comboBox);
 
@@ -641,40 +634,40 @@ bool KSelectAction::event(QEvent *event)
 static int TrueCurrentItem(KSelectAction *sa)
 {
     QAction *curAction = sa->currentAction();
-    //qCDebug(KWidgetsAddonsLog) << "\tTrueCurrentItem(" << sa << ") curAction=" << curAction;
+    // qCDebug(KWidgetsAddonsLog) << "\tTrueCurrentItem(" << sa << ") curAction=" << curAction;
 
     const auto actions = sa->actions();
     int i = 0;
     for (QAction *action : actions) {
         if (action->isChecked()) {
-            //qCDebug(KWidgetsAddonsLog) << "\t\taction " << action << " (text=" << action->text () << ") isChecked";
+            // qCDebug(KWidgetsAddonsLog) << "\t\taction " << action << " (text=" << action->text () << ") isChecked";
 
             // 2 actions checked case?
             if (action != curAction) {
-                //qCDebug(KWidgetsAddonsLog) << "\t\t\tmust be newly selected one";
+                // qCDebug(KWidgetsAddonsLog) << "\t\t\tmust be newly selected one";
                 return i;
             }
         }
         ++i;
     }
 
-    //qCDebug(KWidgetsAddonsLog) << "\t\tcurrent action still selected? " << (curAction && curAction->isChecked ());
+    // qCDebug(KWidgetsAddonsLog) << "\t\tcurrent action still selected? " << (curAction && curAction->isChecked ());
     // 1 or 0 actions checked case (in that order)?
     return (curAction && curAction->isChecked()) ? sa->actions().indexOf(curAction) : -1;
 }
 
 bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
 {
-    QComboBox *comboBox = qobject_cast <QComboBox *> (watched);
+    QComboBox *comboBox = qobject_cast<QComboBox *>(watched);
     if (!comboBox) {
-        return false/*propagate event*/;
+        return false /*propagate event*/;
     }
 
     // If focus is lost, replace any edited text with the currently selected
     // item.
     if (event->type() == QEvent::FocusOut) {
-        QFocusEvent *const e = static_cast <QFocusEvent *>(event);
-        //qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(FocusOut)"
+        QFocusEvent *const e = static_cast<QFocusEvent *>(event);
+        // qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(FocusOut)"
         //  << "    comboBox: ptr=" << comboBox
         //  << " reason=" << e->reason ()
         //  << endl;
@@ -683,23 +676,21 @@ bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
             && e->reason() != Qt::PopupFocusReason // menu
             && e->reason() != Qt::OtherFocusReason // inconsistently reproduceable actions...
         ) {
-            //qCDebug(KWidgetsAddonsLog) << "\tkilling text";
+            // qCDebug(KWidgetsAddonsLog) << "\tkilling text";
             comboBox->setEditText(comboBox->itemText(comboBox->currentIndex()));
         }
 
-        return false/*propagate event*/;
+        return false /*propagate event*/;
     }
 
     bool blocked = comboBox->blockSignals(true);
 
     if (event->type() == QEvent::ActionAdded) {
-        QActionEvent *const e = static_cast <QActionEvent *>(event);
+        QActionEvent *const e = static_cast<QActionEvent *>(event);
 
-        const int index = e->before() ?
-                          comboBox->findData(QVariant::fromValue(e->before())) :
-                          comboBox->count();
+        const int index = e->before() ? comboBox->findData(QVariant::fromValue(e->before())) : comboBox->count();
         const int newItem = ::TrueCurrentItem(this);
-        //qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(ActionAdded)"
+        // qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(ActionAdded)"
         //          << "    comboBox: ptr=" << comboBox
         //          << " currentItem=" << comboBox->currentIndex ()
         //          << "    add index=" << index
@@ -709,10 +700,7 @@ bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
         //          << " text=" << e->action ()->text ()
         //          << " currentItem=" << newItem
         //          << endl;
-        comboBox->insertItem(index,
-                             e->action()->icon(),
-                             ::DropAmpersands(e->action()->text()),
-                             QVariant::fromValue(e->action()));
+        comboBox->insertItem(index, e->action()->icon(), ::DropAmpersands(e->action()->text()), QVariant::fromValue(e->action()));
         if (QStandardItemModel *model = qobject_cast<QStandardItemModel *>(comboBox->model())) {
             QStandardItem *item = model->item(index);
             item->setEnabled(e->action()->isEnabled());
@@ -722,11 +710,11 @@ bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
         // make sure the item corresponding to the checked action is selected.
         comboBox->setCurrentIndex(newItem);
     } else if (event->type() == QEvent::ActionChanged) {
-        QActionEvent *const e = static_cast <QActionEvent *>(event);
+        QActionEvent *const e = static_cast<QActionEvent *>(event);
 
         const int index = comboBox->findData(QVariant::fromValue(e->action()));
         const int newItem = ::TrueCurrentItem(this);
-        //qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(ActionChanged)"
+        // qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(ActionChanged)"
         //          << "    comboBox: ptr=" << comboBox
         //          << " currentItem=" << comboBox->currentIndex ()
         //          << "    changed action's index=" << index
@@ -746,11 +734,11 @@ bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
         // make sure the item corresponding to the checked action is selected.
         comboBox->setCurrentIndex(newItem);
     } else if (event->type() == QEvent::ActionRemoved) {
-        QActionEvent *const e = static_cast <QActionEvent *>(event);
+        QActionEvent *const e = static_cast<QActionEvent *>(event);
 
         const int index = comboBox->findData(QVariant::fromValue(e->action()));
         const int newItem = ::TrueCurrentItem(this);
-        //qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(ActionRemoved)"
+        // qCDebug(KWidgetsAddonsLog) << "KSelectAction::eventFilter(ActionRemoved)"
         //          << "    comboBox: ptr=" << comboBox
         //          << " currentItem=" << comboBox->currentIndex ()
         //          << "    delete action index=" << index
@@ -765,7 +753,7 @@ bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
 
     comboBox->blockSignals(blocked);
 
-    return false/*propagate event*/;
+    return false /*propagate event*/;
 }
 
 // END

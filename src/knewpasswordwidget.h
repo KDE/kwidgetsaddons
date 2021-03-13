@@ -75,19 +75,16 @@ class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
      */
     Q_PROPERTY(bool revealPasswordAvailable READ isRevealPasswordAvailable WRITE setRevealPasswordAvailable)
 
-
 public:
-
     /**
      * Status of the password being typed in the widget.
      */
-    enum PasswordStatus
-    {
-        EmptyPasswordNotAllowed,    /**< Both passwords fields empty, but minimum length > 0. */
-        PasswordTooShort,           /**< Password length is too low. */
-        PasswordNotVerified,        /**< Password and verification password don't match. */
-        WeakPassword,               /**< Passwords match but the strength level is not enough. */
-        StrongPassword,             /**< Passwords match and the strength level is good. */
+    enum PasswordStatus {
+        EmptyPasswordNotAllowed, /**< Both passwords fields empty, but minimum length > 0. */
+        PasswordTooShort, /**< Password length is too low. */
+        PasswordNotVerified, /**< Password and verification password don't match. */
+        WeakPassword, /**< Passwords match but the strength level is not enough. */
+        StrongPassword, /**< Passwords match and the strength level is good. */
     };
     Q_ENUM(PasswordStatus)
 
@@ -246,4 +243,3 @@ private:
 };
 
 #endif // KNEWPASSWORDWIDGET_H
-

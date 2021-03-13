@@ -10,10 +10,10 @@
 */
 #include "knewpassworddialog.h"
 
+#include <QMessageBox>
 #include <QPushButton>
 #include <QString>
 #include <QStyleOption>
-#include <QMessageBox>
 
 #include <ktitlewidget.h>
 
@@ -26,7 +26,8 @@ class KNewPasswordDialogPrivate
 public:
     KNewPasswordDialogPrivate(KNewPasswordDialog *parent)
         : q(parent)
-    {}
+    {
+    }
 
     void init();
     void _k_passwordStatusChanged();
@@ -87,7 +88,8 @@ void KNewPasswordDialogPrivate::showMessageWidget(const QString &message, KMessa
  */
 
 KNewPasswordDialog::KNewPasswordDialog(QWidget *parent)
-    : QDialog(parent), d(new KNewPasswordDialogPrivate(this))
+    : QDialog(parent)
+    , d(new KNewPasswordDialogPrivate(this))
 {
     d->init();
 }
@@ -143,16 +145,16 @@ bool KNewPasswordDialog::checkAndGetPassword(QString *pwd)
 
     if (d->ui.pwdWidget->passwordStatus() == KNewPasswordWidget::WeakPassword) {
         QMessageBox::StandardButton selectedButton = QMessageBox::warning(this,
-                tr("Low Password Strength", "@title:window"),
-                tr("The password you have entered has a low strength. "
-                   "To improve the strength of "
-                   "the password, try:\n"
-                   " - using a longer password;\n"
-                   " - using a mixture of upper- and lower-case letters;\n"
-                   " - using numbers or symbols as well as letters.\n"
-                   "\n"
-                   "Would you like to use this password anyway?"),
-                QMessageBox::Yes | QMessageBox::No);
+                                                                          tr("Low Password Strength", "@title:window"),
+                                                                          tr("The password you have entered has a low strength. "
+                                                                             "To improve the strength of "
+                                                                             "the password, try:\n"
+                                                                             " - using a longer password;\n"
+                                                                             " - using a mixture of upper- and lower-case letters;\n"
+                                                                             " - using numbers or symbols as well as letters.\n"
+                                                                             "\n"
+                                                                             "Would you like to use this password anyway?"),
+                                                                          QMessageBox::Yes | QMessageBox::No);
 
         if (selectedButton == QMessageBox::No) {
             return false;
@@ -260,4 +262,3 @@ bool KNewPasswordDialog::checkPassword(const QString &)
 }
 
 #include "moc_knewpassworddialog.cpp"
-

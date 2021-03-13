@@ -66,8 +66,7 @@ QString translateFontName(const QString &name)
     } else {
         // i18n: Filter by which the translators can translate, or otherwise
         // operate on the font names not put up for regular translation.
-        trfont = QCoreApplication::translate("FontHelpers", "%1 [%2]", "@item Font name [foundry]")
-                 .arg(trFamily, trFoundry);
+        trfont = QCoreApplication::translate("FontHelpers", "%1 [%2]", "@item Font name [foundry]").arg(trFamily, trFoundry);
     }
     return trfont;
 }
@@ -77,11 +76,10 @@ static bool localeLessThan(const QString &a, const QString &b)
     return QString::localeAwareCompare(a, b) < 0;
 }
 
-QStringList translateFontNameList(const QStringList &names,
-                                  QHash<QString, QString> *trToRawNames)
+QStringList translateFontNameList(const QStringList &names, QHash<QString, QString> *trToRawNames)
 {
     // Generic fonts, in the inverse of desired order.
-    const QStringList genericNames {
+    const QStringList genericNames{
         QStringLiteral("Monospace"),
         QStringLiteral("Serif"),
         QStringLiteral("Sans Serif"),

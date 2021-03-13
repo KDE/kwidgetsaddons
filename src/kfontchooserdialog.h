@@ -83,8 +83,7 @@ public:
      * @param flags flags to define how the font chooser is displayed
      * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
      */
-    explicit KFontChooserDialog(const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags,
-                                QWidget *parent = nullptr);
+    explicit KFontChooserDialog(const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
     ~KFontChooserDialog();
 
@@ -111,9 +110,7 @@ public:
      * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
      * @return QDialog::result()
      */
-    static int getFont(QFont &theFont,
-                       const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags,
-                       QWidget *parent = nullptr);
+    static int getFont(QFont &theFont, const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
     /**
      * Creates a modal font difference dialog, lets the user choose a selection

@@ -8,10 +8,10 @@
 #include "kratingwidget.h"
 #include "kratingpainter.h"
 
-#include <QPainter>
-#include <QPixmap>
 #include <QIcon>
 #include <QMouseEvent>
+#include <QPainter>
+#include <QPixmap>
 
 class KRatingWidgetPrivate
 {
@@ -24,8 +24,8 @@ public:
 };
 
 KRatingWidget::KRatingWidget(QWidget *parent)
-    : QFrame(parent),
-      d(new KRatingWidgetPrivate())
+    : QFrame(parent)
+    , d(new KRatingWidgetPrivate())
 {
     setMouseTracking(true);
 }
@@ -182,9 +182,7 @@ static inline int adjustedHoverRating(bool halfStep, int hoverRating, int rating
 void KRatingWidget::mousePressEvent(QMouseEvent *e)
 {
     if (e->button() == Qt::LeftButton) {
-        d->hoverRating = adjustedHoverRating(halfStepsEnabled(),
-                                             d->ratingPainter.ratingFromPosition(contentsRect(), e->pos()),
-                                             d->rating);
+        d->hoverRating = adjustedHoverRating(halfStepsEnabled(), d->ratingPainter.ratingFromPosition(contentsRect(), e->pos()), d->rating);
         // avoid set a rating to something less than zero, it may happen if widget is scaled and
         // mouse is clicked outside the star region.
         if (d->hoverRating >= 0) {
@@ -197,9 +195,7 @@ void KRatingWidget::mouseMoveEvent(QMouseEvent *e)
 {
     // when moving the mouse we show the user what the result of clicking will be
     const int prevHoverRating = d->hoverRating;
-    d->hoverRating = adjustedHoverRating(halfStepsEnabled(),
-                                         d->ratingPainter.ratingFromPosition(contentsRect(), e->pos()),
-                                         d->rating);
+    d->hoverRating = adjustedHoverRating(halfStepsEnabled(), d->ratingPainter.ratingFromPosition(contentsRect(), e->pos()), d->rating);
     if (d->hoverRating != prevHoverRating) {
         update();
     }
@@ -231,8 +227,7 @@ QSize KRatingWidget::sizeHint() const
         pixSize = d->ratingPainter.customPixmap().size() / d->ratingPainter.customPixmap().devicePixelRatio();
     }
 
-    return QSize(pixSize.width() * numPix + spacing() * (numPix - 1) + frameWidth() * 2,
-                 pixSize.height() + frameWidth() * 2);
+    return QSize(pixSize.width() * numPix + spacing() * (numPix - 1) + frameWidth() * 2, pixSize.height() + frameWidth() * 2);
 }
 
 void KRatingWidget::resizeEvent(QResizeEvent *e)

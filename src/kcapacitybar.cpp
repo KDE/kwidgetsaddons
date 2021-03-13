@@ -10,14 +10,14 @@
 
 #include <math.h>
 
-#include <QStyle>
-#include <QPainter>
-#include <QPaintEvent>
-#include <QPainterPath>
 #include <QLinearGradient>
+#include <QPaintEvent>
+#include <QPainter>
+#include <QPainterPath>
+#include <QStyle>
 #include <QStyleOptionProgressBar>
 
-#define ROUND_MARGIN     6
+#define ROUND_MARGIN 6
 #define VERTICAL_SPACING 1
 
 static const int LightShade = 100;
@@ -28,7 +28,9 @@ class KCapacityBarPrivate
 {
 public:
     KCapacityBarPrivate(KCapacityBar::DrawTextMode drawTextMode)
-        : drawTextMode(drawTextMode) {}
+        : drawTextMode(drawTextMode)
+    {
+    }
 
     QString text;
     int value = 0;
@@ -181,7 +183,10 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
     QPainterPath outline;
     outline.moveTo(rect.left() + ROUND_MARGIN / 4 + 1, rect.top());
     outline.lineTo(rect.left() + drawRect.width() - ROUND_MARGIN / 4 - 1, rect.top());
-    outline.quadTo(rect.left() + drawRect.width() + ROUND_MARGIN / 2, drawRect.height() / 2 + rect.top(), rect.left() + drawRect.width() - ROUND_MARGIN / 4 - 1, drawRect.height() + rect.top());
+    outline.quadTo(rect.left() + drawRect.width() + ROUND_MARGIN / 2,
+                   drawRect.height() / 2 + rect.top(),
+                   rect.left() + drawRect.width() - ROUND_MARGIN / 4 - 1,
+                   drawRect.height() + rect.top());
     outline.lineTo(rect.left() + ROUND_MARGIN / 4 + 1, drawRect.height() + rect.top());
     outline.quadTo(-ROUND_MARGIN / 2 + rect.left(), drawRect.height() / 2 + rect.top(), rect.left() + ROUND_MARGIN / 4 + 1, rect.top());
     const QColor fillColor = palette().window().color().darker(DarkShade);
@@ -213,20 +218,16 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
     p->setPen(Qt::NoPen);
 
     if (d->continuous || !d->fillFullBlocks) {
-        int start = (layoutDirection() == Qt::LeftToRight) ? -1
-                    : (drawRect.width() + 2) - (drawRect.width() + 2) * (d->value / 100.0);
+        int start = (layoutDirection() == Qt::LeftToRight) ? -1 : (drawRect.width() + 2) - (drawRect.width() + 2) * (d->value / 100.0);
 
         p->setClipRect(QRect(start, 0, (drawRect.width() + 2) * (d->value / 100.0), drawRect.height()), Qt::IntersectClip);
     }
 
-    int left = (layoutDirection() == Qt::LeftToRight) ? 0
-               : drawRect.width();
+    int left = (layoutDirection() == Qt::LeftToRight) ? 0 : drawRect.width();
 
-    int right = (layoutDirection() == Qt::LeftToRight) ? drawRect.width()
-                : 0;
+    int right = (layoutDirection() == Qt::LeftToRight) ? drawRect.width() : 0;
 
-    int roundMargin = (layoutDirection() == Qt::LeftToRight) ? ROUND_MARGIN
-                      : -ROUND_MARGIN;
+    int roundMargin = (layoutDirection() == Qt::LeftToRight) ? ROUND_MARGIN : -ROUND_MARGIN;
 
     int spacing = 2;
     int verticalSpacing = VERTICAL_SPACING;
@@ -254,8 +255,7 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
         int numSlots = (drawRect.width() - ROUND_MARGIN - ((slotWidth + spacing) * 2)) / (slotWidth + spacing);
         int stopSlot = floor((numSlots + 2) * (d->value / 100.0));
 
-        int plusOffset = d->fillFullBlocks ? ((drawRect.width() - ROUND_MARGIN - ((slotWidth + spacing) * 2)) - (numSlots * (slotWidth + spacing))) / 2.0
-                         : 0;
+        int plusOffset = d->fillFullBlocks ? ((drawRect.width() - ROUND_MARGIN - ((slotWidth + spacing) * 2)) - (numSlots * (slotWidth + spacing))) / 2.0 : 0;
 
         if (!d->fillFullBlocks || stopSlot) {
             QPainterPath firstSlot;
@@ -328,9 +328,8 @@ QSize KCapacityBar::minimumSizeHint() const
 {
     int width = fontMetrics().boundingRect(d->text).width() + ((d->drawTextMode == KCapacityBar::DrawTextInline) ? ROUND_MARGIN * 2 : 0);
 
-    int height = (d->drawTextMode == KCapacityBar::DrawTextInline) ?
-                 qMax(fontMetrics().height(), d->barHeight) :
-                 (d->text.isEmpty() ? 0 : fontMetrics().height() + VERTICAL_SPACING * 2) + d->barHeight;
+    int height = (d->drawTextMode == KCapacityBar::DrawTextInline) ? qMax(fontMetrics().height(), d->barHeight)
+                                                                   : (d->text.isEmpty() ? 0 : fontMetrics().height() + VERTICAL_SPACING * 2) + d->barHeight;
 
     if (height % 2) {
         height++;
@@ -347,7 +346,7 @@ void KCapacityBar::paintEvent(QPaintEvent *event)
     p.end();
 }
 
-void KCapacityBar::changeEvent(QEvent* event)
+void KCapacityBar::changeEvent(QEvent *event)
 {
     QWidget::changeEvent(event);
     if (event->type() == QEvent::StyleChange) {

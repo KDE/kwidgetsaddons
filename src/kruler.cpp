@@ -36,16 +36,16 @@
 #define END_MARK_LENGTH (FIX_WIDTH - 6)
 #define END_MARK_X2 LINE_END
 #define END_MARK_X1 (END_MARK_X2 - END_MARK_LENGTH)
-#define BIG_MARK_LENGTH (END_MARK_LENGTH*3/4)
+#define BIG_MARK_LENGTH (END_MARK_LENGTH * 3 / 4)
 #define BIG_MARK_X2 LINE_END
 #define BIG_MARK_X1 (BIG_MARK_X2 - BIG_MARK_LENGTH)
-#define MIDDLE_MARK_LENGTH (END_MARK_LENGTH/2)
+#define MIDDLE_MARK_LENGTH (END_MARK_LENGTH / 2)
 #define MIDDLE_MARK_X2 LINE_END
 #define MIDDLE_MARK_X1 (MIDDLE_MARK_X2 - MIDDLE_MARK_LENGTH)
-#define LITTLE_MARK_LENGTH (MIDDLE_MARK_LENGTH/2)
+#define LITTLE_MARK_LENGTH (MIDDLE_MARK_LENGTH / 2)
 #define LITTLE_MARK_X2 LINE_END
 #define LITTLE_MARK_X1 (LITTLE_MARK_X2 - LITTLE_MARK_LENGTH)
-#define BASE_MARK_LENGTH (LITTLE_MARK_LENGTH/2)
+#define BASE_MARK_LENGTH (LITTLE_MARK_LENGTH / 2)
 #define BASE_MARK_X2 LINE_END
 #define BASE_MARK_X1 (BASE_MARK_X2 - BASE_MARK_LENGTH)
 
@@ -56,13 +56,13 @@
 #undef PROFILING
 
 #ifdef PROFILING
-# include <qdatetime.h>
+#include <qdatetime.h>
 #endif
 
 class KRulerPrivate
 {
 public:
-    int  endOffset_length;  /* marks the offset at the end of the ruler
+    int endOffset_length; /* marks the offset at the end of the ruler
                            * i.e. right side at horizontal and down side
                            * at vertical rulers.
                            * the ruler end mark is moved endOffset_length
@@ -106,8 +106,7 @@ KRuler::KRuler(QWidget *parent)
     setFixedHeight(FIX_WIDTH);
 }
 
-KRuler::KRuler(Qt::Orientation orient,
-               QWidget *parent, Qt::WindowFlags f)
+KRuler::KRuler(Qt::Orientation orient, QWidget *parent, Qt::WindowFlags f)
     : QAbstractSlider(parent)
     , d(new KRulerPrivate)
 {
@@ -123,8 +122,7 @@ KRuler::KRuler(Qt::Orientation orient,
     }
 }
 
-KRuler::KRuler(Qt::Orientation orient, int widgetWidth,
-               QWidget *parent, Qt::WindowFlags f)
+KRuler::KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent, Qt::WindowFlags f)
     : QAbstractSlider(parent)
     , d(new KRulerPrivate)
 {
@@ -164,39 +162,34 @@ void KRuler::initWidget(Qt::Orientation orientation)
 KRuler::~KRuler() = default;
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void
-KRuler::setMinValue(int value)
+void KRuler::setMinValue(int value)
 {
     setMinimum(value);
 }
 #endif
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-int
-KRuler::minValue() const
+int KRuler::minValue() const
 {
     return minimum();
 }
 #endif
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void
-KRuler::setMaxValue(int value)
+void KRuler::setMaxValue(int value)
 {
     setMaximum(value);
 }
 #endif
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-int
-KRuler::maxValue() const
+int KRuler::maxValue() const
 {
     return maximum();
 }
 #endif
 
-void
-KRuler::setTinyMarkDistance(int dist)
+void KRuler::setTinyMarkDistance(int dist)
 {
     if (dist != d->tmDist) {
         d->tmDist = dist;
@@ -204,14 +197,12 @@ KRuler::setTinyMarkDistance(int dist)
     }
 }
 
-int
-KRuler::tinyMarkDistance() const
+int KRuler::tinyMarkDistance() const
 {
     return d->tmDist;
 }
 
-void
-KRuler::setLittleMarkDistance(int dist)
+void KRuler::setLittleMarkDistance(int dist)
 {
     if (dist != d->lmDist) {
         d->lmDist = dist;
@@ -219,14 +210,12 @@ KRuler::setLittleMarkDistance(int dist)
     }
 }
 
-int
-KRuler::littleMarkDistance() const
+int KRuler::littleMarkDistance() const
 {
     return d->lmDist;
 }
 
-void
-KRuler::setMediumMarkDistance(int dist)
+void KRuler::setMediumMarkDistance(int dist)
 {
     if (dist != d->mmDist) {
         d->mmDist = dist;
@@ -234,14 +223,12 @@ KRuler::setMediumMarkDistance(int dist)
     }
 }
 
-int
-KRuler::mediumMarkDistance() const
+int KRuler::mediumMarkDistance() const
 {
     return d->mmDist;
 }
 
-void
-KRuler::setBigMarkDistance(int dist)
+void KRuler::setBigMarkDistance(int dist)
 {
     if (dist != d->bmDist) {
         d->bmDist = dist;
@@ -249,14 +236,12 @@ KRuler::setBigMarkDistance(int dist)
     }
 }
 
-int
-KRuler::bigMarkDistance() const
+int KRuler::bigMarkDistance() const
 {
     return d->bmDist;
 }
 
-void
-KRuler::setShowTinyMarks(bool show)
+void KRuler::setShowTinyMarks(bool show)
 {
     if (show != d->showtm) {
         d->showtm = show;
@@ -264,14 +249,12 @@ KRuler::setShowTinyMarks(bool show)
     }
 }
 
-bool
-KRuler::showTinyMarks() const
+bool KRuler::showTinyMarks() const
 {
     return d->showtm;
 }
 
-void
-KRuler::setShowLittleMarks(bool show)
+void KRuler::setShowLittleMarks(bool show)
 {
     if (show != d->showlm) {
         d->showlm = show;
@@ -279,14 +262,12 @@ KRuler::setShowLittleMarks(bool show)
     }
 }
 
-bool
-KRuler::showLittleMarks() const
+bool KRuler::showLittleMarks() const
 {
     return d->showlm;
 }
 
-void
-KRuler::setShowMediumMarks(bool show)
+void KRuler::setShowMediumMarks(bool show)
 {
     if (show != d->showmm) {
         d->showmm = show;
@@ -294,14 +275,12 @@ KRuler::setShowMediumMarks(bool show)
     }
 }
 
-bool
-KRuler::showMediumMarks() const
+bool KRuler::showMediumMarks() const
 {
     return d->showmm;
 }
 
-void
-KRuler::setShowBigMarks(bool show)
+void KRuler::setShowBigMarks(bool show)
 {
     if (show != d->showbm) {
         d->showbm = show;
@@ -309,14 +288,12 @@ KRuler::setShowBigMarks(bool show)
     }
 }
 
-bool
-KRuler::showBigMarks() const
+bool KRuler::showBigMarks() const
 {
     return d->showbm;
 }
 
-void
-KRuler::setShowEndMarks(bool show)
+void KRuler::setShowEndMarks(bool show)
 {
     if (show != d->showem) {
         d->showem = show;
@@ -324,14 +301,12 @@ KRuler::setShowEndMarks(bool show)
     }
 }
 
-bool
-KRuler::showEndMarks() const
+bool KRuler::showEndMarks() const
 {
     return d->showem;
 }
 
-void
-KRuler::setShowPointer(bool show)
+void KRuler::setShowPointer(bool show)
 {
     if (show != d->showpointer) {
         d->showpointer = show;
@@ -339,21 +314,18 @@ KRuler::setShowPointer(bool show)
     }
 }
 
-bool
-KRuler::showPointer() const
+bool KRuler::showPointer() const
 {
     return d->showpointer;
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void
-KRuler::setFrameStyle(int)
+void KRuler::setFrameStyle(int)
 {
 }
 #endif
 
-void
-KRuler::setShowEndLabel(bool show)
+void KRuler::setShowEndLabel(bool show)
 {
     if (d->showEndL != show) {
         d->showEndL = show;
@@ -361,14 +333,12 @@ KRuler::setShowEndLabel(bool show)
     }
 }
 
-bool
-KRuler::showEndLabel() const
+bool KRuler::showEndLabel() const
 {
     return d->showEndL;
 }
 
-void
-KRuler::setEndLabel(const QString &label)
+void KRuler::setEndLabel(const QString &label)
 {
     d->endlabel = label;
 
@@ -387,8 +357,7 @@ QString KRuler::endLabel() const
     return d->endlabel;
 }
 
-void
-KRuler::setRulerMetricStyle(KRuler::MetricStyle style)
+void KRuler::setRulerMetricStyle(KRuler::MetricStyle style)
 {
     switch (style) {
     default: /* fall through */
@@ -457,29 +426,26 @@ KRuler::setRulerMetricStyle(KRuler::MetricStyle style)
     case Metres:
         setEndLabel(QStringLiteral("m"));
     default: /* never reached, see above switch */
-        /* empty command */;
+             /* empty command */;
     }
     // if the style changes one of the values,
     // update would have been called inside the methods
     // -> no update() call needed here !
 }
 
-void
-KRuler::setPixelPerMark(double rate)
+void KRuler::setPixelPerMark(double rate)
 {
     // never compare floats against each other :)
     d->ppm = rate;
     update(contentsRect());
 }
 
-double
-KRuler::pixelPerMark() const
+double KRuler::pixelPerMark() const
 {
     return d->ppm;
 }
 
-void
-KRuler::setLength(int length)
+void KRuler::setLength(int length)
 {
     int tmp;
     if (d->lengthFix) {
@@ -493,8 +459,7 @@ KRuler::setLength(int length)
     }
 }
 
-int
-KRuler::length() const
+int KRuler::length() const
 {
     if (d->lengthFix) {
         return d->endOffset_length;
@@ -502,20 +467,17 @@ KRuler::length() const
     return (width() - d->endOffset_length);
 }
 
-void
-KRuler::setLengthFixed(bool fix)
+void KRuler::setLengthFixed(bool fix)
 {
     d->lengthFix = fix;
 }
 
-bool
-KRuler::lengthFixed() const
+bool KRuler::lengthFixed() const
 {
     return d->lengthFix;
 }
 
-void
-KRuler::setOffset(int _offset)
+void KRuler::setOffset(int _offset)
 {
     // debug("set offset %i", _offset);
     if (d->offset != _offset) {
@@ -524,14 +486,12 @@ KRuler::setOffset(int _offset)
     }
 }
 
-int
-KRuler::offset() const
+int KRuler::offset() const
 {
     return d->offset;
 }
 
-int
-KRuler::endOffset() const
+int KRuler::endOffset() const
 {
     if (d->lengthFix) {
         return (width() - d->endOffset_length);
@@ -539,8 +499,7 @@ KRuler::endOffset() const
     return d->endOffset_length;
 }
 
-void
-KRuler::slideUp(int count)
+void KRuler::slideUp(int count)
 {
     if (count) {
         d->offset += count;
@@ -548,8 +507,7 @@ KRuler::slideUp(int count)
     }
 }
 
-void
-KRuler::slideDown(int count)
+void KRuler::slideDown(int count)
 {
     if (count) {
         d->offset -= count;
@@ -557,8 +515,7 @@ KRuler::slideDown(int count)
     }
 }
 
-void
-KRuler::slotNewValue(int _value)
+void KRuler::slotNewValue(int _value)
 {
     int oldvalue = value();
     if (oldvalue == _value) {
@@ -582,18 +539,16 @@ KRuler::slotNewValue(int _value)
     }
 }
 
-void
-KRuler::slotNewOffset(int _offset)
+void KRuler::slotNewOffset(int _offset)
 {
     if (d->offset != _offset) {
-        //setOffset(_offset);
+        // setOffset(_offset);
         d->offset = _offset;
         repaint(contentsRect());
     }
 }
 
-void
-KRuler::slotEndOffset(int offset)
+void KRuler::slotEndOffset(int offset)
 {
     int tmp;
     if (d->lengthFix) {
@@ -607,8 +562,7 @@ KRuler::slotEndOffset(int offset)
     }
 }
 
-void
-KRuler::paintEvent(QPaintEvent * /*e*/)
+void KRuler::paintEvent(QPaintEvent * /*e*/)
 {
     //  debug ("KRuler::drawContents, %s",(horizontal==dir)?"horizontal":"vertical");
 
@@ -619,19 +573,13 @@ KRuler::paintEvent(QPaintEvent * /*e*/)
     for (int profile = 0; profile < 10; profile++) {
 #endif
 
-        int value  = this->value(),
-            minval = minimum(),
-            maxval;
+        int value = this->value(), minval = minimum(), maxval;
         if (d->dir == Qt::Horizontal) {
-            maxval = maximum()
-                     + d->offset
-                     - (d->lengthFix ? (height() - d->endOffset_length) : d->endOffset_length);
+            maxval = maximum() + d->offset - (d->lengthFix ? (height() - d->endOffset_length) : d->endOffset_length);
         } else {
-            maxval = maximum()
-                     + d->offset
-                     - (d->lengthFix ? (width() - d->endOffset_length) : d->endOffset_length);
+            maxval = maximum() + d->offset - (d->lengthFix ? (width() - d->endOffset_length) : d->endOffset_length);
         }
-        //ioffsetval = value-offset;
+        // ioffsetval = value-offset;
         //    pixelpm = (int)ppm;
         //    left  = clip.left(),
         //    right = clip.right();
@@ -657,14 +605,13 @@ KRuler::paintEvent(QPaintEvent * /*e*/)
                 p.translate(fontOffset, 0);
                 p.drawText(END_LABEL_X, END_LABEL_Y, d->endlabel);
             } else { // rotate text +pi/2 and move down a bit
-                //QFontMetrics fm(font);
+                // QFontMetrics fm(font);
 #ifdef KRULER_ROTATE_TEST
                 p.rotate(-90.0 + rotate);
-                p.translate(-8.0 - fontOffset - d->fontWidth + xtrans,
-                            ytrans);
+                p.translate(-8.0 - fontOffset - d->fontWidth + xtrans, ytrans);
 #else
-                p.rotate(-90.0);
-                p.translate(-8.0 - fontOffset - d->fontWidth, 0.0);
+            p.rotate(-90.0);
+            p.translate(-8.0 - fontOffset - d->fontWidth, 0.0);
 #endif
                 p.drawText(END_LABEL_X, END_LABEL_Y, d->endlabel);
             }
@@ -730,9 +677,9 @@ KRuler::paintEvent(QPaintEvent * /*e*/)
         if (d->showpointer) {
             QPolygon pa(4);
             if (d->dir == Qt::Horizontal) {
-                pa.setPoints(3, value - 5, 10, value + 5, 10, value/*+0*/, 15);
+                pa.setPoints(3, value - 5, 10, value + 5, 10, value /*+0*/, 15);
             } else {
-                pa.setPoints(3, 10, value - 5, 10, value + 5, 15, value/*+0*/);
+                pa.setPoints(3, 10, value - 5, 10, value + 5, 15, value /*+0*/);
             }
             p.setBrush(p.background().color());
             p.drawPolygon(pa);
@@ -743,6 +690,4 @@ KRuler::paintEvent(QPaintEvent * /*e*/)
     int elapsed = time.elapsed();
     debug("paint time %i", elapsed);
 #endif
-
 }
-

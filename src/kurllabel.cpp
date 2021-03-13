@@ -6,30 +6,32 @@
 
 #include "kurllabel.h"
 
-#include <QTimer>
 #include <QApplication>
 #include <QMouseEvent>
 #include <QPalette>
+#include <QTimer>
 
 class KUrlLabelPrivate
 {
 public:
     KUrlLabelPrivate(const QString &_url, KUrlLabel *_parent)
-        : parent(_parent),
-          url(_url),
-          tipText(url),
-          linkColor(_parent->palette().color(QPalette::Active, QPalette::Link)),
-          highlightedLinkColor(_parent->palette().color(QPalette::Active, QPalette::BrightText)),
-          cursor(nullptr),
-          textUnderlined(true),
-          realUnderlined(true),
-          useTips(false),
-          useCursor(false),
-          glowEnabled(true),
-          floatEnabled(false),
-          timer(new QTimer(parent))
+        : parent(_parent)
+        , url(_url)
+        , tipText(url)
+        , linkColor(_parent->palette().color(QPalette::Active, QPalette::Link))
+        , highlightedLinkColor(_parent->palette().color(QPalette::Active, QPalette::BrightText))
+        , cursor(nullptr)
+        , textUnderlined(true)
+        , realUnderlined(true)
+        , useTips(false)
+        , useCursor(false)
+        , glowEnabled(true)
+        , floatEnabled(false)
+        , timer(new QTimer(parent))
     {
-        QObject::connect(timer, &QTimer::timeout, parent, [this]() { updateColor(); });
+        QObject::connect(timer, &QTimer::timeout, parent, [this]() {
+            updateColor();
+        });
     }
 
     void updateColor()
@@ -69,8 +71,8 @@ public:
 };
 
 KUrlLabel::KUrlLabel(const QString &url, const QString &text, QWidget *parent)
-    : QLabel(!text.isNull() ? text : url, parent),
-      d(new KUrlLabelPrivate(url, this))
+    : QLabel(!text.isNull() ? text : url, parent)
+    , d(new KUrlLabelPrivate(url, this))
 {
     setFont(font());
     setCursor(QCursor(Qt::PointingHandCursor));
@@ -78,8 +80,8 @@ KUrlLabel::KUrlLabel(const QString &url, const QString &text, QWidget *parent)
 }
 
 KUrlLabel::KUrlLabel(QWidget *parent)
-    : QLabel(parent),
-      d(new KUrlLabelPrivate(QString(), this))
+    : QLabel(parent)
+    , d(new KUrlLabelPrivate(QString(), this))
 {
     setFont(font());
     setCursor(QCursor(Qt::PointingHandCursor));
@@ -139,7 +141,7 @@ void KUrlLabel::setUnderline(bool on)
 
 void KUrlLabel::setUrl(const QString &url)
 {
-    if (d->tipText == d->url) {   // update the tip as well
+    if (d->tipText == d->url) { // update the tip as well
         d->tipText = url;
         setUseTips(d->useTips);
     }

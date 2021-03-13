@@ -5,9 +5,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <qapplication.h>
-#include <knewpassworddialog.h>
 #include <iostream>
+#include <knewpassworddialog.h>
+#include <qapplication.h>
 
 int main(int argc, char *argv[])
 {
@@ -25,6 +25,4 @@ int main(int argc, char *argv[])
         std::cout << "No password" << std::endl;
         return -1;
     }
-
 }
-

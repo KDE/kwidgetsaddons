@@ -13,9 +13,9 @@
 #include <QLabel>
 #include <QLayout>
 #include <QPushButton>
+#include <QScreen>
 #include <QStyleOption>
 #include <QTimer>
-#include <QScreen>
 
 #include <ktitlewidget.h>
 
@@ -27,7 +27,8 @@ class KPasswordDialogPrivate
 public:
     KPasswordDialogPrivate(KPasswordDialog *q)
         : q(q)
-    {}
+    {
+    }
 
     void actuallyAccept();
     void activated(const QString &userName);
@@ -44,9 +45,9 @@ public:
     unsigned int commentRow = 0;
 };
 
-KPasswordDialog::KPasswordDialog(QWidget *parent,
-                                 const KPasswordDialogFlags &flags)
-    : QDialog(parent), d(new KPasswordDialogPrivate(this))
+KPasswordDialog::KPasswordDialog(QWidget *parent, const KPasswordDialogFlags &flags)
+    : QDialog(parent)
+    , d(new KPasswordDialogPrivate(this))
 {
     setWindowTitle(tr("Password", "@title:window"));
     setWindowIcon(QIcon::fromTheme(QStringLiteral("dialog-password"), windowIcon()));
@@ -88,8 +89,7 @@ void KPasswordDialogPrivate::init()
     if (m_flags & KPasswordDialog::ShowUsernameLine) {
         ui.userEdit->setFocus();
         ui.credentialsGroup->setFocusProxy(ui.userEdit);
-        QObject::connect(ui.userEdit, &QLineEdit::returnPressed,
-                         ui.passEdit, QOverload<>::of(&QWidget::setFocus));
+        QObject::connect(ui.userEdit, &QLineEdit::returnPressed, ui.passEdit, QOverload<>::of(&QWidget::setFocus));
     } else {
         ui.userNameLabel->hide();
         ui.userEdit->hide();
@@ -97,8 +97,7 @@ void KPasswordDialogPrivate::init()
         ui.domainEdit->hide();
         ui.passEdit->setFocus();
         ui.credentialsGroup->setFocusProxy(ui.passEdit);
-        ui.prompt->setText(QApplication::translate("KPasswordDialog",
-                    "Supply a password below."));
+        ui.prompt->setText(QApplication::translate("KPasswordDialog", "Supply a password below."));
     }
 
     if (!(m_flags & KPasswordDialog::ShowAnonymousLoginCheckBox)) {
@@ -215,8 +214,7 @@ bool KPasswordDialog::keepPassword() const
     return d->ui.keepCheckBox->isChecked();
 }
 
-void KPasswordDialog::addCommentLine(const QString &label,
-                                     const QString &comment)
+void KPasswordDialog::addCommentLine(const QString &label, const QString &comment)
 {
     int gridMarginLeft, gridMarginTop, gridMarginRight, gridMarginBottom;
     d->ui.formLayout->getContentsMargins(&gridMarginLeft, &gridMarginTop, &gridMarginRight, &gridMarginBottom);
@@ -358,16 +356,14 @@ void KPasswordDialog::setKnownLogins(const QMap<QString, QString> &knownLogins)
         setTabOrder(d->ui.anonymousRadioButton, d->ui.domainEdit);
         setTabOrder(d->ui.domainEdit, d->ui.passEdit);
         setTabOrder(d->ui.passEdit, d->ui.keepCheckBox);
-        connect(d->ui.userEdit, &QLineEdit::returnPressed,
-                d->ui.passEdit, QOverload<>::of(&QWidget::setFocus));
+        connect(d->ui.userEdit, &QLineEdit::returnPressed, d->ui.passEdit, QOverload<>::of(&QWidget::setFocus));
     }
 
     d->knownLogins = knownLogins;
     d->userEditCombo->addItems(knownLogins.keys());
     d->userEditCombo->setFocus();
 
-    connect(d->userEditCombo, SIGNAL(activated(QString)),
-            this, SLOT(activated(QString)));
+    connect(d->userEditCombo, SIGNAL(activated(QString)), this, SLOT(activated(QString)));
 }
 
 void KPasswordDialogPrivate::activated(const QString &userName)
@@ -392,7 +388,9 @@ void KPasswordDialog::accept()
 
     // we do this to allow the error message, if any, to go away
     // checkPassword() may block for a period of time
-    QTimer::singleShot(0, this, [this] { d->actuallyAccept(); });
+    QTimer::singleShot(0, this, [this] {
+        d->actuallyAccept();
+    });
 }
 
 void KPasswordDialogPrivate::actuallyAccept()

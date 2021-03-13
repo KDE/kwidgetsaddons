@@ -121,33 +121,33 @@ QSize KColorComboDelegate::sizeHint(const QStyleOptionViewItem &option, const QM
 }
 
 static const uchar standardPalette[][4] = {
-    { 255, 255, 255 }, // white
-    { 192, 192, 192 }, // light gray
-    { 160, 160, 160 }, // gray
-    { 128, 128, 128 }, // dark gray
-    { 0, 0, 0 }, // black
+    {255, 255, 255}, // white
+    {192, 192, 192}, // light gray
+    {160, 160, 160}, // gray
+    {128, 128, 128}, // dark gray
+    {0, 0, 0}, // black
 
-    { 255, 128, 128 }, //light red
-    { 255, 192, 128 }, //light orange
-    { 255, 255, 128 }, //light yellow
-    { 128, 255, 128 }, //light green
-    { 128, 255, 255 }, //cyan blue
-    { 128, 128, 255 }, //light blue
-    { 255, 128, 255 }, //light violet
-    { 255, 0, 0 }, //red
-    { 255, 128, 0 }, //orange
-    { 255, 255, 0 }, //yellow
-    { 0, 255, 0 }, //green
-    { 0, 255, 255 }, //light blue
-    { 0, 0, 255 }, //blue
-    { 255, 0, 255 }, //violet
-    { 128, 0, 0 }, //dark red
-    { 128, 64, 0 }, //dark orange
-    { 128, 128, 0 }, //dark yellow
-    { 0, 128, 0 }, //dark green
-    { 0, 128, 128 }, //dark light blue
-    { 0, 0, 128 }, //dark blue
-    { 128, 0, 128 } //dark violet
+    {255, 128, 128}, // light red
+    {255, 192, 128}, // light orange
+    {255, 255, 128}, // light yellow
+    {128, 255, 128}, // light green
+    {128, 255, 255}, // cyan blue
+    {128, 128, 255}, // light blue
+    {255, 128, 255}, // light violet
+    {255, 0, 0}, // red
+    {255, 128, 0}, // orange
+    {255, 255, 0}, // yellow
+    {0, 255, 0}, // green
+    {0, 255, 255}, // light blue
+    {0, 0, 255}, // blue
+    {255, 0, 255}, // violet
+    {128, 0, 0}, // dark red
+    {128, 64, 0}, // dark orange
+    {128, 128, 0}, // dark yellow
+    {0, 128, 0}, // dark green
+    {0, 128, 128}, // dark light blue
+    {0, 0, 128}, // dark blue
+    {128, 0, 128} // dark violet
 };
 
 #define STANDARD_PALETTE_SIZE (int(sizeof(standardPalette) / sizeof(*standardPalette)))
@@ -177,7 +177,8 @@ public:
 };
 
 KColorComboPrivate::KColorComboPrivate(KColorCombo *qq)
-    : q(qq), customColor(Qt::white)
+    : q(qq)
+    , customColor(Qt::white)
 {
 }
 
@@ -208,7 +209,8 @@ void KColorComboPrivate::setCustomColor(const QColor &color, bool lookupInPreset
 }
 
 KColorCombo::KColorCombo(QWidget *parent)
-    : QComboBox(parent), d(new KColorComboPrivate(this))
+    : QComboBox(parent)
+    , d(new KColorComboPrivate(this))
 {
     setItemDelegate(new KColorComboDelegate(this));
     d->addColors();
@@ -338,5 +340,5 @@ void KColorComboPrivate::addColors()
     }
 }
 
-#include "moc_kcolorcombo.cpp"
 #include "kcolorcombo.moc"
+#include "moc_kcolorcombo.cpp"

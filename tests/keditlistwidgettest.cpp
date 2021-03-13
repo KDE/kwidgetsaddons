@@ -1,16 +1,15 @@
-#include <qapplication.h>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <qapplication.h>
 
-#include <keditlistwidget.h>
 #include <QDebug>
+#include <keditlistwidget.h>
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
-
 
 #if 0
     KEditListWidget::CustomEditor editor(new KComboBox(true, 0));
@@ -26,7 +25,8 @@ int main(int argc, char **argv)
 #else
 
     // code from kexi
-    QStringList list; list << QStringLiteral("one") << QStringLiteral("two");
+    QStringList list;
+    list << QStringLiteral("one") << QStringLiteral("two");
     QDialog dialog;
     dialog.setObjectName(QStringLiteral("stringlist_dialog"));
     dialog.setModal(true);

@@ -7,8 +7,8 @@
 
 #include "kmessagewidgetautotest.h"
 
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 #include <kmessagewidget.h>
 
 QTEST_MAIN(KMessageWidgetTest)
@@ -82,14 +82,14 @@ void KMessageWidgetTest::testHideOnInvisible()
 
     QTRY_VERIFY(!w.isHideAnimationRunning());
     QCOMPARE(hideSignalsSpy.count(), 1);
-    QVERIFY(! w.isVisible()); // Not CHECK_FULLY_NOT_VISIBLE because since it was never shown height is not what it would be otherwise
+    QVERIFY(!w.isVisible()); // Not CHECK_FULLY_NOT_VISIBLE because since it was never shown height is not what it would be otherwise
 }
 
 void KMessageWidgetTest::testOverlappingShowAndHide_data()
 {
     QTest::addColumn<bool>("delay");
     QTest::newRow("instant") << false;
-    QTest::newRow("delay")   << true;
+    QTest::newRow("delay") << true;
 }
 
 void KMessageWidgetTest::testOverlappingShowAndHide()
@@ -109,7 +109,7 @@ void KMessageWidgetTest::testOverlappingShowAndHide()
     }
     w.animatedHide();
 
-    QVERIFY(! w.isShowAnimationRunning());
+    QVERIFY(!w.isShowAnimationRunning());
     QCOMPARE(showSignalsSpy.count(), 1);
 
     QTRY_VERIFY(!w.isHideAnimationRunning());
@@ -121,7 +121,7 @@ void KMessageWidgetTest::testOverlappingHideAndShow_data()
 {
     QTest::addColumn<bool>("delay");
     QTest::newRow("instant") << false;
-    QTest::newRow("delay")   << true;
+    QTest::newRow("delay") << true;
 }
 
 void KMessageWidgetTest::testOverlappingHideAndShow()
@@ -141,7 +141,7 @@ void KMessageWidgetTest::testOverlappingHideAndShow()
     }
     w.animatedShow();
 
-    QVERIFY(! w.isHideAnimationRunning());
+    QVERIFY(!w.isHideAnimationRunning());
     QCOMPARE(hideSignalsSpy.count(), 1);
 
     QTRY_VERIFY(!w.isShowAnimationRunning());
@@ -153,7 +153,7 @@ void KMessageWidgetTest::testOverlappingDoubleShow_data()
 {
     QTest::addColumn<bool>("delay");
     QTest::newRow("instant") << false;
-    QTest::newRow("delay")   << true;
+    QTest::newRow("delay") << true;
 }
 
 void KMessageWidgetTest::testOverlappingDoubleShow()
@@ -179,7 +179,7 @@ void KMessageWidgetTest::testOverlappingDoubleHide_data()
 {
     QTest::addColumn<bool>("delay");
     QTest::newRow("instant") << false;
-    QTest::newRow("delay")   << true;
+    QTest::newRow("delay") << true;
 }
 
 void KMessageWidgetTest::testOverlappingDoubleHide()
@@ -215,7 +215,7 @@ void KMessageWidgetTest::testHideWithNotYetShownParent()
     parent.show();
 
     QCOMPARE(hideSignalsSpy.count(), 1);
-    QVERIFY(! w.isVisible()); // Not CHECK_FULLY_NOT_VISIBLE because since it was never shown height is not what it would be otherwise
+    QVERIFY(!w.isVisible()); // Not CHECK_FULLY_NOT_VISIBLE because since it was never shown height is not what it would be otherwise
 }
 
 void KMessageWidgetTest::testNonAnimatedShowAfterAnimatedHide()

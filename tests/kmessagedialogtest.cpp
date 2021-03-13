@@ -13,8 +13,8 @@
 #include <QApplication>
 #include <QDebug>
 #include <QDialogButtonBox>
-#include <QPushButton>
 #include <QMessageBox>
+#include <QPushButton>
 
 #include <memory>
 
@@ -24,27 +24,24 @@ int main(int argc, char *argv[])
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     app.setApplicationName(QStringLiteral("kmessagedialogtest"));
 
-    const auto types = { KMessageDialog::QuestionYesNo,
-                         KMessageDialog::QuestionYesNoCancel,
-                         KMessageDialog::WarningYesNo,
-                         KMessageDialog::WarningYesNoCancel,
-                         KMessageDialog::WarningContinueCancel,
-                         KMessageDialog::Information,
-                         KMessageDialog::Sorry,
-                         KMessageDialog::Error };
-
+    const auto types = {KMessageDialog::QuestionYesNo,
+                        KMessageDialog::QuestionYesNoCancel,
+                        KMessageDialog::WarningYesNo,
+                        KMessageDialog::WarningYesNoCancel,
+                        KMessageDialog::WarningContinueCancel,
+                        KMessageDialog::Information,
+                        KMessageDialog::Sorry,
+                        KMessageDialog::Error};
 
     for (auto type : types) {
-        auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type,
-                                                                      QStringLiteral("Do you agree to action foo?"),
-                                                                      nullptr));
+        auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type, QStringLiteral("Do you agree to action foo?"), nullptr));
         dlg->setCaption(QString{});
         dlg->setIcon(QIcon{});
         dlg->setButtons();
 
         auto getResult = [&]() {
             const auto result = static_cast<QDialogButtonBox::StandardButton>(dlg->exec());
-            switch(result) {
+            switch (result) {
             case QDialogButtonBox::Ok:
             case QDialogButtonBox::Yes:
                 qDebug() << "Button OK/Yes/Continue clicked."

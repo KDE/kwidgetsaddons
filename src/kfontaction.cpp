@@ -37,8 +37,8 @@ public:
     {
         Q_Q(KFontAction);
 
-//        qCDebug(KWidgetsAddonsLog) << "QFontComboBox - slotFontChanged("
-//                 << font.family() << ") settingFont=" << settingFont;
+        //        qCDebug(KWidgetsAddonsLog) << "QFontComboBox - slotFontChanged("
+        //                 << font.family() << ") settingFont=" << settingFont;
         if (settingFont) {
             return;
         }
@@ -50,7 +50,7 @@ public:
 #endif
         Q_EMIT q->textTriggered(fontFamily);
 
-//        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
+        //        qCDebug(KWidgetsAddonsLog) << "\tslotFontChanged done";
     }
 
     int settingFont = 0;
@@ -141,7 +141,7 @@ QWidget *KFontAction::createWidget(QWidget *parent)
 {
     Q_D(KFontAction);
 
-//    qCDebug(KWidgetsAddonsLog) << "KFontAction::createWidget()";
+    //    qCDebug(KWidgetsAddonsLog) << "KFontAction::createWidget()";
 
     // This is the visual element on the screen.  This method overrides
     // the KSelectAction one, preventing KSelectAction from creating its
@@ -149,13 +149,15 @@ QWidget *KFontAction::createWidget(QWidget *parent)
     QFontComboBox *cb = new QFontComboBox(parent);
     cb->setFontFilters(d->fontFilters);
 
-//    qCDebug(KWidgetsAddonsLog) << "\tset=" << font();
+    //    qCDebug(KWidgetsAddonsLog) << "\tset=" << font();
     // Do this before connecting the signal so that nothing will fire.
     cb->setCurrentFont(QFont(font().toLower()));
-//    qCDebug(KWidgetsAddonsLog) << "\tspit back=" << cb->currentFont().family();
+    //    qCDebug(KWidgetsAddonsLog) << "\tspit back=" << cb->currentFont().family();
 
-    connect(cb, &QFontComboBox::currentFontChanged,
-            this, [this](const QFont &ft) { Q_D(KFontAction); d->_k_slotFontChanged(ft); });
+    connect(cb, &QFontComboBox::currentFontChanged, this, [this](const QFont &ft) {
+        Q_D(KFontAction);
+        d->_k_slotFontChanged(ft);
+    });
     cb->setMinimumWidth(cb->sizeHint().width());
     return cb;
 }
@@ -167,7 +169,7 @@ void KFontAction::setFont(const QString &family)
 {
     Q_D(KFontAction);
 
-//    qCDebug(KWidgetsAddonsLog) << "KFontAction::setFont(" << family << ")";
+    //    qCDebug(KWidgetsAddonsLog) << "KFontAction::setFont(" << family << ")";
 
     // Suppress triggered(QString) signal and prevent recursive call to ourself.
     d->settingFont++;
@@ -175,19 +177,19 @@ void KFontAction::setFont(const QString &family)
     const auto createdWidgets = this->createdWidgets();
     for (QWidget *w : createdWidgets) {
         QFontComboBox *cb = qobject_cast<QFontComboBox *>(w);
-//        qCDebug(KWidgetsAddonsLog) << "\tw=" << w << "cb=" << cb;
+        //        qCDebug(KWidgetsAddonsLog) << "\tw=" << w << "cb=" << cb;
 
         if (!cb) {
             continue;
         }
 
         cb->setCurrentFont(QFont(family.toLower()));
-//        qCDebug(KWidgetsAddonsLog) << "\t\tw spit back=" << cb->currentFont().family();
+        //        qCDebug(KWidgetsAddonsLog) << "\t\tw spit back=" << cb->currentFont().family();
     }
 
     d->settingFont--;
 
-//    qCDebug(KWidgetsAddonsLog) << "\tcalling setCurrentAction()";
+    //    qCDebug(KWidgetsAddonsLog) << "\tcalling setCurrentAction()";
 
     QString lowerName = family.toLower();
     if (setCurrentAction(lowerName, Qt::CaseInsensitive)) {
@@ -210,7 +212,7 @@ void KFontAction::setFont(const QString &family)
 
     // TODO: Inconsistent state if QFontComboBox::setCurrentFont() succeeded
     //       but setCurrentAction() did not and vice-versa.
-//    qCDebug(KWidgetsAddonsLog) << "Font not found " << family.toLower();
+    //    qCDebug(KWidgetsAddonsLog) << "Font not found " << family.toLower();
 }
 
 #include "moc_kfontaction.cpp"

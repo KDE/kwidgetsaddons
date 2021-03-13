@@ -9,7 +9,6 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
-
     KCharSelect selector(nullptr, nullptr);
     selector.setAllPlanesEnabled(true);
     selector.resize(selector.sizeHint());

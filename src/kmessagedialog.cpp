@@ -17,6 +17,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
+#include <QScreen>
 #include <QScrollArea>
 #include <QScrollBar>
 #include <QStyle>
@@ -24,19 +25,18 @@
 #include <QTextBrowser>
 #include <QVBoxLayout>
 #include <QWindow>
-#include <QScreen>
 
 #include <KCollapsibleGroupBox>
 #include <KSqueezedTextLabel>
 
-static const Qt::TextInteractionFlags s_textFlags =
-    Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
+static const Qt::TextInteractionFlags s_textFlags = Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
 
 class KMessageDialogPrivate
 {
 public:
     explicit KMessageDialogPrivate(KMessageDialog::Type type, KMessageDialog *qq)
-        : m_type(type), q(qq)
+        : m_type(type)
+        , q(qq)
     {
     }
 
@@ -54,10 +54,9 @@ public:
     QDialogButtonBox *m_buttonBox = nullptr;
 };
 
-KMessageDialog::KMessageDialog(KMessageDialog::Type type,
-                               const QString &text,
-                               QWidget *parent)
-    : QDialog(parent), d(new KMessageDialogPrivate(type, this))
+KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent)
+    : QDialog(parent)
+    , d(new KMessageDialogPrivate(type, this))
 {
     // Dialog top-level layout
     d->m_topLayout = new QVBoxLayout(this);
@@ -70,7 +69,7 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type,
     // Layout for the main widget
     auto *mainLayout = new QVBoxLayout(d->m_mainWidget);
     QStyle *widgetStyle = d->m_mainWidget->style();
-     // Provide extra spacing
+    // Provide extra spacing
     mainLayout->setSpacing(widgetStyle->pixelMetric(QStyle::PM_LayoutVerticalSpacing) * 2);
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
@@ -168,9 +167,7 @@ static void setMainWindow(QDialog *dialog, WId mainWindowId)
     subWindow->setTransientParent(mainWindow);
 }
 
-KMessageDialog::KMessageDialog(KMessageDialog::Type type,
-                               const QString &text,
-                               WId parent_id)
+KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, WId parent_id)
     : KMessageDialog(type, text)
 {
     QWidget *parent = QWidget::find(parent_id);
@@ -298,8 +295,7 @@ void KMessageDialog::setDetails(const QString &details)
     d->m_detailsTextEdit->setText(details);
 }
 
-void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &buttonNo,
-                                const KGuiItem &buttonCancel)
+void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &buttonNo, const KGuiItem &buttonCancel)
 {
     switch (d->m_type) {
     case KMessageDialog::QuestionYesNo: {
@@ -311,8 +307,7 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
         break;
     }
     case KMessageDialog::QuestionYesNoCancel: {
-        d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No
-                                           | QDialogButtonBox::Cancel);
+        d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No | QDialogButtonBox::Cancel);
         auto *buttonYes = d->m_buttonBox->button(QDialogButtonBox::Yes);
         KGuiItem::assign(buttonYes, buttonAccept);
         buttonYes->setFocus();

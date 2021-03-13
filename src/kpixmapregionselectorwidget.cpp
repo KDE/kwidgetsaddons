@@ -7,29 +7,32 @@
 
 #include "kpixmapregionselectorwidget.h"
 #include <QAction>
-#include <QPainter>
+#include <QApplication>
 #include <QColor>
+#include <QCursor>
+#include <QHBoxLayout>
 #include <QImage>
 #include <QLabel>
 #include <QMenu>
-#include <QRubberBand>
-#include <QCursor>
-#include <QApplication>
 #include <QMouseEvent>
+#include <QPainter>
+#include <QRubberBand>
 #include <QVBoxLayout>
-#include <QHBoxLayout>
 
 class KPixmapRegionSelectorWidgetPrivate
 {
 public:
-    KPixmapRegionSelectorWidgetPrivate(KPixmapRegionSelectorWidget *q): q(q) {}
+    KPixmapRegionSelectorWidgetPrivate(KPixmapRegionSelectorWidget *q)
+        : q(q)
+    {
+    }
 
     KPixmapRegionSelectorWidget *const q;
 
     /**
-    * Recalculates the pixmap that is shown based on the current selected area,
-    * the original image, etc.
-    */
+     * Recalculates the pixmap that is shown based on the current selected area,
+     * the original image, etc.
+     */
     void updatePixmap();
 
     QRect calcSelectionRectangle(const QPoint &startPoint, const QPoint &endPoint);
@@ -40,7 +43,7 @@ public:
     QPixmap m_unzoomedPixmap;
     QPixmap m_originalPixmap;
     QPixmap m_linedPixmap;
-    QRect   m_selectedRegion;
+    QRect m_selectedRegion;
     QLabel *m_label;
 
     QPoint m_tempFirstClick;
@@ -64,7 +67,7 @@ KPixmapRegionSelectorWidget::KPixmapRegionSelectorWidget(QWidget *parent)
 
     vboxLayout->addStretch();
     d->m_label = new QLabel(this);
-    d->m_label->setAttribute(Qt::WA_NoSystemBackground, true); //setBackgroundMode( Qt::NoBackground );
+    d->m_label->setAttribute(Qt::WA_NoSystemBackground, true); // setBackgroundMode( Qt::NoBackground );
     d->m_label->installEventFilter(this);
 
     vboxLayout->addWidget(d->m_label);
@@ -88,7 +91,7 @@ QPixmap KPixmapRegionSelectorWidget::pixmap() const
 
 void KPixmapRegionSelectorWidget::setPixmap(const QPixmap &pixmap)
 {
-    Q_ASSERT(!pixmap.isNull()); //This class isn't designed to deal with null pixmaps.
+    Q_ASSERT(!pixmap.isNull()); // This class isn't designed to deal with null pixmaps.
     d->m_originalPixmap = pixmap;
     d->m_unzoomedPixmap = pixmap;
     d->m_label->setPixmap(pixmap);
@@ -141,8 +144,7 @@ void KPixmapRegionSelectorWidgetPrivate::updatePixmap()
 
     QPixmap pixmap = m_linedPixmap;
     painter.begin(&pixmap);
-    painter.drawPixmap(m_selectedRegion.topLeft(),
-                       m_originalPixmap, m_selectedRegion);
+    painter.drawPixmap(m_selectedRegion.topLeft(), m_originalPixmap, m_selectedRegion);
 
     painter.end();
 
@@ -150,11 +152,10 @@ void KPixmapRegionSelectorWidgetPrivate::updatePixmap()
 
     qApp->sendPostedEvents(nullptr, QEvent::LayoutRequest);
 
-    if (m_selectedRegion == m_originalPixmap.rect()) {//d->m_label->rect()) //### CHECK!
+    if (m_selectedRegion == m_originalPixmap.rect()) { // d->m_label->rect()) //### CHECK!
         m_rubberBand->hide();
     } else {
-        m_rubberBand->setGeometry(QRect(m_selectedRegion.topLeft(),
-                                        m_selectedRegion.size()));
+        m_rubberBand->setGeometry(QRect(m_selectedRegion.topLeft(), m_selectedRegion.size()));
 
         /*        m_rubberBand->setGeometry(QRect(m_label -> mapToGlobal(m_selectedRegion.topLeft()),
                                                 m_selectedRegion.size()));
@@ -171,10 +172,14 @@ QMenu *KPixmapRegionSelectorWidget::createPopupMenu()
     popup->setObjectName(QStringLiteral("PixmapRegionSelectorPopup"));
     popup->addSection(tr("Image Operations", "@title:menu"));
 
-    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-right")), tr("&Rotate Clockwise", "@action:inmenu"),
-                     this, &KPixmapRegionSelectorWidget::rotateClockwise);
-    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-left")), tr("Rotate &Counterclockwise", "@action:inmenu"),
-                     this, &KPixmapRegionSelectorWidget::rotateCounterclockwise);
+    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-right")),
+                     tr("&Rotate Clockwise", "@action:inmenu"),
+                     this,
+                     &KPixmapRegionSelectorWidget::rotateClockwise);
+    popup->addAction(QIcon::fromTheme(QStringLiteral("object-rotate-left")),
+                     tr("Rotate &Counterclockwise", "@action:inmenu"),
+                     this,
+                     &KPixmapRegionSelectorWidget::rotateCounterclockwise);
 
     /*
        I wonder if it would be appropriate to have here an "Open with..." option to
@@ -232,7 +237,8 @@ void KPixmapRegionSelectorWidget::rotate(RotateDirection direction)
             //              qApp->sendPostedEvents(0,QEvent::LayoutRequest);
             //              updatePixmap();
         } break;
-        default: resetSelection();
+        default:
+            resetSelection();
         }
     }
 
@@ -253,7 +259,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
 {
     if (ev->type() == QEvent::MouseButtonPress) {
         QMouseEvent *mev = (QMouseEvent *)(ev);
-        //qCDebug(KWidgetsAddonsLog) << QString("click at  %1,%2").arg( mev->x() ).arg( mev->y() );
+        // qCDebug(KWidgetsAddonsLog) << QString("click at  %1,%2").arg( mev->x() ).arg( mev->y() );
 
         if (mev->button() == Qt::RightButton) {
             QMenu *popup = createPopupMenu();
@@ -264,8 +270,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
 
         QCursor cursor;
 
-        if (d->m_selectedRegion.contains(mev->pos())
-                && d->m_selectedRegion != d->m_originalPixmap.rect()) {
+        if (d->m_selectedRegion.contains(mev->pos()) && d->m_selectedRegion != d->m_originalPixmap.rect()) {
             d->m_state = KPixmapRegionSelectorWidgetPrivate::Moving;
             cursor.setShape(Qt::SizeAllCursor);
             d->m_rubberBand->show();
@@ -283,11 +288,10 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
     if (ev->type() == QEvent::MouseMove) {
         QMouseEvent *mev = (QMouseEvent *)(ev);
 
-        //qCDebug(KWidgetsAddonsLog) << QString("move to  %1,%2").arg( mev->x() ).arg( mev->y() );
+        // qCDebug(KWidgetsAddonsLog) << QString("move to  %1,%2").arg( mev->x() ).arg( mev->y() );
 
         if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Resizing) {
-            setSelectedRegion(
-                d->calcSelectionRectangle(d->m_tempFirstClick, mev->pos()));
+            setSelectedRegion(d->calcSelectionRectangle(d->m_tempFirstClick, mev->pos()));
         } else if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Moving) {
             int mevx = mev->x();
             int mevy = mev->y();
@@ -463,9 +467,7 @@ void KPixmapRegionSelectorWidget::setMaximumWidgetSize(int width, int height)
     //   qCDebug(KWidgetsAddonsLog) << QString(" original Pixmap :") << d->m_originalPixmap.rect();
     //   qCDebug(KWidgetsAddonsLog) << QString(" unzoomed Pixmap : %1 x %2 ").arg(d->m_unzoomedPixmap.width()).arg(d->m_unzoomedPixmap.height());
 
-    if (!d->m_originalPixmap.isNull() &&
-            (d->m_originalPixmap.width() > d->m_maxWidth ||
-             d->m_originalPixmap.height() > d->m_maxHeight)) {
+    if (!d->m_originalPixmap.isNull() && (d->m_originalPixmap.width() > d->m_maxWidth || d->m_originalPixmap.height() > d->m_maxHeight)) {
         /* We have to resize the pixmap to get it complete on the screen */
         QImage image = d->m_originalPixmap.toImage();
         d->m_originalPixmap = QPixmap::fromImage(image.scaled(width, height, Qt::KeepAspectRatio, Qt::SmoothTransformation));
@@ -473,11 +475,10 @@ void KPixmapRegionSelectorWidget::setMaximumWidgetSize(int width, int height)
         d->m_zoomFactor = d->m_originalPixmap.width() / (double)d->m_unzoomedPixmap.width();
 
         if (d->m_selectedRegion.isValid()) {
-            d->m_selectedRegion =
-                QRect((int)(d->m_selectedRegion.x() * d->m_zoomFactor / oldZoomFactor),
-                      (int)(d->m_selectedRegion.y() * d->m_zoomFactor / oldZoomFactor),
-                      (int)(d->m_selectedRegion.width() * d->m_zoomFactor / oldZoomFactor),
-                      (int)(d->m_selectedRegion.height() * d->m_zoomFactor / oldZoomFactor));
+            d->m_selectedRegion = QRect((int)(d->m_selectedRegion.x() * d->m_zoomFactor / oldZoomFactor),
+                                        (int)(d->m_selectedRegion.y() * d->m_zoomFactor / oldZoomFactor),
+                                        (int)(d->m_selectedRegion.width() * d->m_zoomFactor / oldZoomFactor),
+                                        (int)(d->m_selectedRegion.height() * d->m_zoomFactor / oldZoomFactor));
         }
     }
 
@@ -489,4 +490,3 @@ void KPixmapRegionSelectorWidget::setMaximumWidgetSize(int width, int height)
     d->updatePixmap();
     resize(d->m_label->width(), d->m_label->height());
 }
-

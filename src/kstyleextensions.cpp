@@ -11,8 +11,6 @@
 
 namespace KStyleExtensions
 {
-
-
 /*
     Custom Style Element runtime extension:
     We reserve one StyleHint to let the effective style inform widgets whether it supports certain
@@ -72,17 +70,17 @@ static inline int customStyleElement(QStyle::StyleHint type, const QString &elem
 
 QStyle::StyleHint customStyleHint(const QString &element, const QWidget *widget)
 {
-    return (QStyle::StyleHint) customStyleElement(SH_KCustomStyleElement, element, const_cast<QWidget*>(widget));
+    return (QStyle::StyleHint)customStyleElement(SH_KCustomStyleElement, element, const_cast<QWidget *>(widget));
 }
 
 QStyle::ControlElement customControlElement(const QString &element, const QWidget *widget)
 {
-    return (QStyle::ControlElement) customStyleElement(SH_KCustomStyleElement, element, const_cast<QWidget*>(widget));
+    return (QStyle::ControlElement)customStyleElement(SH_KCustomStyleElement, element, const_cast<QWidget *>(widget));
 }
 
 QStyle::SubElement customSubElement(const QString &element, const QWidget *widget)
 {
-    return (QStyle::SubElement) customStyleElement(SH_KCustomStyleElement, element, const_cast<QWidget*>(widget));
+    return (QStyle::SubElement)customStyleElement(SH_KCustomStyleElement, element, const_cast<QWidget *>(widget));
 }
 
 }

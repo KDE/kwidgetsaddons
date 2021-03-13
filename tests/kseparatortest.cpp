@@ -5,8 +5,8 @@
 */
 
 #include <QApplication>
-#include <QWidget>
 #include <QBoxLayout>
+#include <QWidget>
 
 #include "kseparator.h"
 
@@ -29,4 +29,3 @@ int main(int argc, char **argv)
     toplevel.show();
     return app.exec();
 }
-

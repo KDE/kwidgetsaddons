@@ -8,17 +8,17 @@
 #include "kcharselectdata_p.h"
 
 #include <QCoreApplication>
-#include <QRegularExpression>
-#include <QStringList>
 #include <QFile>
-#include <qendian.h>
 #include <QFutureInterface>
+#include <QRegularExpression>
 #include <QRunnable>
+#include <QStringList>
 #include <QThreadPool>
+#include <qendian.h>
 
-#include <string.h>
-#include <qstandardpaths.h>
 #include <../test-config.h>
+#include <qstandardpaths.h>
+#include <string.h>
 
 /* constants for hangul (de)composition, see UAX #15 */
 #define SBase 0xAC00
@@ -35,7 +35,8 @@ class RunIndexCreation : public QFutureInterface<Index>, public QRunnable
 {
 public:
     RunIndexCreation(KCharSelectData *data, const QByteArray &dataFile)
-        : m_data(data), m_dataFile(dataFile)
+        : m_data(data)
+        , m_dataFile(dataFile)
     {
     }
 
@@ -90,7 +91,8 @@ bool KCharSelectData::openDataFile()
         }
         QFile file(fileName);
         if (!file.open(QIODevice::ReadOnly)) {
-            qWarning() << "Couldn't find kf5/kcharselect/kcharselect-data in the install prefix (under GenericDataLocation) nor in the builtin path" << TOP_SRCDIR;
+            qWarning() << "Couldn't find kf5/kcharselect/kcharselect-data in the install prefix (under GenericDataLocation) nor in the builtin path"
+                       << TOP_SRCDIR;
             return false;
         }
         dataFile = file.readAll();
@@ -305,9 +307,7 @@ QString KCharSelectData::name(uint c)
 
     if ((c & 0xFFFE) == 0xFFFE || (c >= 0xFDD0 && c <= 0xFDEF)) {
         return QCoreApplication::translate("KCharSelectData", "<noncharacter>");
-    } else if ((c >= 0x3400 && c <= 0x4DBF)
-            || (c >= 0x4E00 && c <= 0x9FFF)
-            || (c >= 0x20000 && c <= 0x2F7FF)) {
+    } else if ((c >= 0x3400 && c <= 0x4DBF) || (c >= 0x4E00 && c <= 0x9FFF) || (c >= 0x20000 && c <= 0x2F7FF)) {
         return QLatin1String("CJK UNIFIED IDEOGRAPH-") + formatCode(c, 4, QString());
     } else if (c >= 0xAC00 && c <= 0xD7AF) {
         /* compute hangul syllable name as per UAX #15 */
@@ -322,8 +322,8 @@ QString KCharSelectData::name(uint c)
         VIndex = (SIndex % NCount) / TCount;
         TIndex = SIndex % TCount;
 
-        return QLatin1String("HANGUL SYLLABLE ") + QLatin1String(JAMO_L_TABLE[LIndex])
-               + QLatin1String(JAMO_V_TABLE[VIndex]) + QLatin1String(JAMO_T_TABLE[TIndex]);
+        return QLatin1String("HANGUL SYLLABLE ") + QLatin1String(JAMO_L_TABLE[LIndex]) + QLatin1String(JAMO_V_TABLE[VIndex])
+            + QLatin1String(JAMO_T_TABLE[TIndex]);
     } else if (c >= 0xD800 && c <= 0xDB7F) {
         return QCoreApplication::translate("KCharSelectData", "<Non Private Use High Surrogate>");
     } else if (c >= 0xDB80 && c <= 0xDBFF) {
@@ -471,14 +471,14 @@ QStringList KCharSelectData::aliases(uint c)
         return QStringList();
     }
 
-    const quint8 count = * (quint8 *)(udata + detailIndex + 6);
+    const quint8 count = *(quint8 *)(udata + detailIndex + 6);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 2);
 
     QStringList aliases;
     aliases.reserve(count);
 
     const char *data = dataFile.constData();
-    for (int i = 0;  i < count;  i++) {
+    for (int i = 0; i < count; i++) {
         aliases.append(QString::fromUtf8(data + offset));
         offset += qstrlen(data + offset) + 1;
     }
@@ -496,14 +496,14 @@ QStringList KCharSelectData::notes(uint c)
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
-    const quint8 count = * (quint8 *)(udata + detailIndex + 11);
+    const quint8 count = *(quint8 *)(udata + detailIndex + 11);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 7);
 
     QStringList notes;
     notes.reserve(count);
 
     const char *data = dataFile.constData();
-    for (int i = 0;  i < count;  i++) {
+    for (int i = 0; i < count; i++) {
         notes.append(QString::fromUtf8(data + offset));
         offset += qstrlen(data + offset) + 1;
     }
@@ -522,14 +522,14 @@ QVector<uint> KCharSelectData::seeAlso(uint c)
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
-    const quint8 count = * (quint8 *)(udata + detailIndex + 26);
+    const quint8 count = *(quint8 *)(udata + detailIndex + 26);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 22);
 
     QVector<uint> seeAlso;
     seeAlso.reserve(count);
 
-    for (int i = 0;  i < count;  i++) {
-        seeAlso.append(mapDataBaseToCodePoint(qFromLittleEndian<quint16> (udata + offset)));
+    for (int i = 0; i < count; i++) {
+        seeAlso.append(mapDataBaseToCodePoint(qFromLittleEndian<quint16>(udata + offset)));
         offset += 2;
     }
 
@@ -547,14 +547,14 @@ QStringList KCharSelectData::equivalents(uint c)
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
-    const quint8 count = * (quint8 *)(udata + detailIndex + 21);
+    const quint8 count = *(quint8 *)(udata + detailIndex + 21);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 17);
 
     QStringList equivalents;
     equivalents.reserve(count);
 
     const char *data = dataFile.constData();
-    for (int i = 0;  i < count;  i++) {
+    for (int i = 0; i < count; i++) {
         equivalents.append(QString::fromUtf8(data + offset));
         offset += qstrlen(data + offset) + 1;
     }
@@ -573,14 +573,14 @@ QStringList KCharSelectData::approximateEquivalents(uint c)
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
-    const quint8 count = * (quint8 *)(udata + detailIndex + 16);
+    const quint8 count = *(quint8 *)(udata + detailIndex + 16);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 12);
 
     QStringList approxEquivalents;
     approxEquivalents.reserve(count);
 
     const char *data = dataFile.constData();
-    for (int i = 0;  i < count;  i++) {
+    for (int i = 0; i < count; i++) {
         approxEquivalents.append(QString::fromUtf8(data + offset));
         offset += qstrlen(data + offset) + 1;
     }
@@ -588,14 +588,15 @@ QStringList KCharSelectData::approximateEquivalents(uint c)
     return approxEquivalents;
 }
 
-QVector<uint> KCharSelectData::decomposition(uint c) {
+QVector<uint> KCharSelectData::decomposition(uint c)
+{
     // for now, only decompose Hangul Syllable into Hangul Jamo
     uint SIndex = c - SBase;
     if (SIndex >= SCount) {
         return QVector<uint>();
     }
 
-    uint L = LBase + SIndex / NCount;  // Choseong
+    uint L = LBase + SIndex / NCount; // Choseong
     uint V = VBase + (SIndex % NCount) / TCount; // Jungseong
     uint T = TBase + SIndex % TCount; // Jongsung
     QVector<uint> jamoList;
@@ -682,8 +683,8 @@ QChar::Category KCharSelectData::category(uint c)
             quint32 offset = qFromLittleEndian<quint32>(data + offsetBegin + mid * 6 + 2);
             uchar categoryCode = *(data + offset);
             Q_ASSERT(categoryCode > 0);
-            categoryCode--;  /* Qt5 changed QChar::Category enum to start from 0 instead of 1
-                                See QtBase commit d17c76feee9eece4 */
+            categoryCode--; /* Qt5 changed QChar::Category enum to start from 0 instead of 1
+                               See QtBase commit d17c76feee9eece4 */
             return QChar::Category(categoryCode);
         }
     }
@@ -739,7 +740,7 @@ bool KCharSelectData::isIgnorable(uint c)
 bool KCharSelectData::isCombining(uint c)
 {
     return section(c) == QCoreApplication::translate("KCharSelectData", "Combining Diacritics", "KCharSelect section name");
-    //FIXME: this is an imperfect test. There are many combining characters
+    // FIXME: this is an imperfect test. There are many combining characters
     //       that are outside of this section. See Grapheme_Extend in
     //       http://www.unicode.org/Public/UNIDATA/DerivedCoreProperties.txt
 }
@@ -772,45 +773,75 @@ QString KCharSelectData::displayCombining(uint c)
      * Eventually, it would be nice to determine whether the character
      * combines to the left or to the right, etc.
      */
-    QString s = QLatin1String("&nbsp;&#") + QString::number(c) + QLatin1String(";&nbsp;") +
-                QLatin1String(" (ab&#") + QString::number(c) + QLatin1String(";c)");
+    QString s = QLatin1String("&nbsp;&#") + QString::number(c) + QLatin1String(";&nbsp;") + QLatin1String(" (ab&#") + QString::number(c) + QLatin1String(";c)");
     return s;
 }
 
 QString KCharSelectData::categoryText(QChar::Category category)
 {
     switch (category) {
-    case QChar::Other_Control: return QCoreApplication::translate("KCharSelectData", "Other, Control");
-    case QChar::Other_Format: return QCoreApplication::translate("KCharSelectData", "Other, Format");
-    case QChar::Other_NotAssigned: return QCoreApplication::translate("KCharSelectData", "Other, Not Assigned");
-    case QChar::Other_PrivateUse: return QCoreApplication::translate("KCharSelectData", "Other, Private Use");
-    case QChar::Other_Surrogate: return QCoreApplication::translate("KCharSelectData", "Other, Surrogate");
-    case QChar::Letter_Lowercase: return QCoreApplication::translate("KCharSelectData", "Letter, Lowercase");
-    case QChar::Letter_Modifier: return QCoreApplication::translate("KCharSelectData", "Letter, Modifier");
-    case QChar::Letter_Other: return QCoreApplication::translate("KCharSelectData", "Letter, Other");
-    case QChar::Letter_Titlecase: return QCoreApplication::translate("KCharSelectData", "Letter, Titlecase");
-    case QChar::Letter_Uppercase: return QCoreApplication::translate("KCharSelectData", "Letter, Uppercase");
-    case QChar::Mark_SpacingCombining: return QCoreApplication::translate("KCharSelectData", "Mark, Spacing Combining");
-    case QChar::Mark_Enclosing: return QCoreApplication::translate("KCharSelectData", "Mark, Enclosing");
-    case QChar::Mark_NonSpacing: return QCoreApplication::translate("KCharSelectData", "Mark, Non-Spacing");
-    case QChar::Number_DecimalDigit: return QCoreApplication::translate("KCharSelectData", "Number, Decimal Digit");
-    case QChar::Number_Letter: return QCoreApplication::translate("KCharSelectData", "Number, Letter");
-    case QChar::Number_Other: return QCoreApplication::translate("KCharSelectData", "Number, Other");
-    case QChar::Punctuation_Connector: return QCoreApplication::translate("KCharSelectData", "Punctuation, Connector");
-    case QChar::Punctuation_Dash: return QCoreApplication::translate("KCharSelectData", "Punctuation, Dash");
-    case QChar::Punctuation_Close: return QCoreApplication::translate("KCharSelectData", "Punctuation, Close");
-    case QChar::Punctuation_FinalQuote: return QCoreApplication::translate("KCharSelectData", "Punctuation, Final Quote");
-    case QChar::Punctuation_InitialQuote: return QCoreApplication::translate("KCharSelectData", "Punctuation, Initial Quote");
-    case QChar::Punctuation_Other: return QCoreApplication::translate("KCharSelectData", "Punctuation, Other");
-    case QChar::Punctuation_Open: return QCoreApplication::translate("KCharSelectData", "Punctuation, Open");
-    case QChar::Symbol_Currency: return QCoreApplication::translate("KCharSelectData", "Symbol, Currency");
-    case QChar::Symbol_Modifier: return QCoreApplication::translate("KCharSelectData", "Symbol, Modifier");
-    case QChar::Symbol_Math: return QCoreApplication::translate("KCharSelectData", "Symbol, Math");
-    case QChar::Symbol_Other: return QCoreApplication::translate("KCharSelectData", "Symbol, Other");
-    case QChar::Separator_Line: return QCoreApplication::translate("KCharSelectData", "Separator, Line");
-    case QChar::Separator_Paragraph: return QCoreApplication::translate("KCharSelectData", "Separator, Paragraph");
-    case QChar::Separator_Space: return QCoreApplication::translate("KCharSelectData", "Separator, Space");
-    default: return QCoreApplication::translate("KCharSelectData", "Unknown");
+    case QChar::Other_Control:
+        return QCoreApplication::translate("KCharSelectData", "Other, Control");
+    case QChar::Other_Format:
+        return QCoreApplication::translate("KCharSelectData", "Other, Format");
+    case QChar::Other_NotAssigned:
+        return QCoreApplication::translate("KCharSelectData", "Other, Not Assigned");
+    case QChar::Other_PrivateUse:
+        return QCoreApplication::translate("KCharSelectData", "Other, Private Use");
+    case QChar::Other_Surrogate:
+        return QCoreApplication::translate("KCharSelectData", "Other, Surrogate");
+    case QChar::Letter_Lowercase:
+        return QCoreApplication::translate("KCharSelectData", "Letter, Lowercase");
+    case QChar::Letter_Modifier:
+        return QCoreApplication::translate("KCharSelectData", "Letter, Modifier");
+    case QChar::Letter_Other:
+        return QCoreApplication::translate("KCharSelectData", "Letter, Other");
+    case QChar::Letter_Titlecase:
+        return QCoreApplication::translate("KCharSelectData", "Letter, Titlecase");
+    case QChar::Letter_Uppercase:
+        return QCoreApplication::translate("KCharSelectData", "Letter, Uppercase");
+    case QChar::Mark_SpacingCombining:
+        return QCoreApplication::translate("KCharSelectData", "Mark, Spacing Combining");
+    case QChar::Mark_Enclosing:
+        return QCoreApplication::translate("KCharSelectData", "Mark, Enclosing");
+    case QChar::Mark_NonSpacing:
+        return QCoreApplication::translate("KCharSelectData", "Mark, Non-Spacing");
+    case QChar::Number_DecimalDigit:
+        return QCoreApplication::translate("KCharSelectData", "Number, Decimal Digit");
+    case QChar::Number_Letter:
+        return QCoreApplication::translate("KCharSelectData", "Number, Letter");
+    case QChar::Number_Other:
+        return QCoreApplication::translate("KCharSelectData", "Number, Other");
+    case QChar::Punctuation_Connector:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Connector");
+    case QChar::Punctuation_Dash:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Dash");
+    case QChar::Punctuation_Close:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Close");
+    case QChar::Punctuation_FinalQuote:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Final Quote");
+    case QChar::Punctuation_InitialQuote:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Initial Quote");
+    case QChar::Punctuation_Other:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Other");
+    case QChar::Punctuation_Open:
+        return QCoreApplication::translate("KCharSelectData", "Punctuation, Open");
+    case QChar::Symbol_Currency:
+        return QCoreApplication::translate("KCharSelectData", "Symbol, Currency");
+    case QChar::Symbol_Modifier:
+        return QCoreApplication::translate("KCharSelectData", "Symbol, Modifier");
+    case QChar::Symbol_Math:
+        return QCoreApplication::translate("KCharSelectData", "Symbol, Math");
+    case QChar::Symbol_Other:
+        return QCoreApplication::translate("KCharSelectData", "Symbol, Other");
+    case QChar::Separator_Line:
+        return QCoreApplication::translate("KCharSelectData", "Separator, Line");
+    case QChar::Separator_Paragraph:
+        return QCoreApplication::translate("KCharSelectData", "Separator, Paragraph");
+    case QChar::Separator_Space:
+        return QCoreApplication::translate("KCharSelectData", "Separator, Space");
+    default:
+        return QCoreApplication::translate("KCharSelectData", "Unknown");
     }
 }
 
@@ -834,7 +865,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
             } else if (byte == -1) {
                 byte = 0;
             } else if (byte >= 0x00 && byte <= 0xFF) {
-                utf8.append((char) byte);
+                utf8.append((char)byte);
                 byte = 0;
             }
         }
@@ -980,47 +1011,47 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
         const quint16 unicode = qFromLittleEndian<quint16>(udata + detailsOffsetBegin + pos * 27);
 
         // aliases
-        const quint8 aliasCount = * (quint8 *)(udata + detailsOffsetBegin + pos * 27 + 6);
+        const quint8 aliasCount = *(quint8 *)(udata + detailsOffsetBegin + pos * 27 + 6);
         quint32 aliasOffset = qFromLittleEndian<quint32>(udata + detailsOffsetBegin + pos * 27 + 2);
 
-        for (int j = 0;  j < aliasCount;  j++) {
+        for (int j = 0; j < aliasCount; j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + aliasOffset));
             aliasOffset += qstrlen(data + aliasOffset) + 1;
         }
 
         // notes
-        const quint8 notesCount = * (quint8 *)(udata + detailsOffsetBegin + pos * 27 + 11);
+        const quint8 notesCount = *(quint8 *)(udata + detailsOffsetBegin + pos * 27 + 11);
         quint32 notesOffset = qFromLittleEndian<quint32>(udata + detailsOffsetBegin + pos * 27 + 7);
 
-        for (int j = 0;  j < notesCount;  j++) {
+        for (int j = 0; j < notesCount; j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + notesOffset));
             notesOffset += qstrlen(data + notesOffset) + 1;
         }
 
         // approximate equivalents
-        const quint8 apprCount = * (quint8 *)(udata + detailsOffsetBegin + pos * 27 + 16);
+        const quint8 apprCount = *(quint8 *)(udata + detailsOffsetBegin + pos * 27 + 16);
         quint32 apprOffset = qFromLittleEndian<quint32>(udata + detailsOffsetBegin + pos * 27 + 12);
 
-        for (int j = 0;  j < apprCount;  j++) {
+        for (int j = 0; j < apprCount; j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + apprOffset));
             apprOffset += qstrlen(data + apprOffset) + 1;
         }
 
         // equivalents
-        const quint8 equivCount = * (quint8 *)(udata + detailsOffsetBegin + pos * 27 + 21);
+        const quint8 equivCount = *(quint8 *)(udata + detailsOffsetBegin + pos * 27 + 21);
         quint32 equivOffset = qFromLittleEndian<quint32>(udata + detailsOffsetBegin + pos * 27 + 17);
 
-        for (int j = 0;  j < equivCount;  j++) {
+        for (int j = 0; j < equivCount; j++) {
             appendToIndex(&i, unicode, QString::fromUtf8(data + equivOffset));
             equivOffset += qstrlen(data + equivOffset) + 1;
         }
 
         // see also - convert to string (hex)
-        const quint8 seeAlsoCount = * (quint8 *)(udata + detailsOffsetBegin + pos * 27 + 26);
+        const quint8 seeAlsoCount = *(quint8 *)(udata + detailsOffsetBegin + pos * 27 + 26);
         quint32 seeAlsoOffset = qFromLittleEndian<quint32>(udata + detailsOffsetBegin + pos * 27 + 22);
 
-        for (int j = 0;  j < seeAlsoCount;  j++) {
-            quint16 seeAlso = qFromLittleEndian<quint16> (udata + seeAlsoOffset);
+        for (int j = 0; j < seeAlsoCount; j++) {
+            quint16 seeAlso = qFromLittleEndian<quint16>(udata + seeAlsoOffset);
             appendToIndex(&i, unicode, formatCode(seeAlso, 4, QString()));
             equivOffset += qstrlen(data + equivOffset) + 1;
         }

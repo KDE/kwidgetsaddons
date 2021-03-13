@@ -26,8 +26,8 @@ KPageDialog::KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags f
 }
 
 KPageDialog::KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags)
-    : QDialog(parent, flags),
-      d_ptr(&dd)
+    : QDialog(parent, flags)
+    , d_ptr(&dd)
 {
     Q_D(KPageDialog);
     if (widget) {
@@ -53,16 +53,14 @@ void KPageDialog::setFaceType(FaceType faceType)
     // Use zero margins for dialogs with the sidebar style so that the sidebar
     // can be flush with the window edge; margins for the content are added
     // automatically
-    if (faceType == KPageDialog::Auto || faceType == KPageDialog::List){
+    if (faceType == KPageDialog::Auto || faceType == KPageDialog::List) {
         layout()->setContentsMargins(0, 0, 0, 0);
     } else {
         const QStyle *style = d->mPageWidget->style();
-        layout()->setContentsMargins(
-            style->pixelMetric(QStyle::PM_LayoutLeftMargin),
-            style->pixelMetric(QStyle::PM_LayoutTopMargin),
-            style->pixelMetric(QStyle::PM_LayoutRightMargin),
-            style->pixelMetric(QStyle::PM_LayoutBottomMargin)
-        );
+        layout()->setContentsMargins(style->pixelMetric(QStyle::PM_LayoutLeftMargin),
+                                     style->pixelMetric(QStyle::PM_LayoutTopMargin),
+                                     style->pixelMetric(QStyle::PM_LayoutRightMargin),
+                                     style->pixelMetric(QStyle::PM_LayoutBottomMargin));
     }
 }
 
@@ -195,4 +193,3 @@ void KPageDialog::setButtonBox(QDialogButtonBox *box)
     d->mButtonBox = box;
     d->init();
 }
-

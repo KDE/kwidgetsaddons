@@ -34,12 +34,10 @@ TestSplitter::TestSplitter(QWidget *parent)
 KSplitterCollapserButtonTest::KSplitterCollapserButtonTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 KSplitterCollapserButtonTest::~KSplitterCollapserButtonTest()
 {
-
 }
 
 void KSplitterCollapserButtonTest::shouldHaveDefaultValue()
@@ -102,7 +100,6 @@ void KSplitterCollapserButtonTest::shouldRestoreCorrectPosition()
     QTest::mouseClick(splitterCollapser, Qt::LeftButton);
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
     QCOMPARE(edit2->width(), size);
-
 }
 
 void KSplitterCollapserButtonTest::shouldRestoreCorrectPositionForFirstWidget()
@@ -153,7 +150,6 @@ void KSplitterCollapserButtonTest::shouldTestVerticalSplitterFirstWidget()
     QTest::mouseClick(splitterCollapser, Qt::LeftButton);
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
     QCOMPARE(edit1->height(), size);
-
 }
 
 void KSplitterCollapserButtonTest::shouldTestVerticalSplitterSecondWidget()
@@ -179,7 +175,6 @@ void KSplitterCollapserButtonTest::shouldTestVerticalSplitterSecondWidget()
     QTest::mouseClick(splitterCollapser, Qt::LeftButton);
     QVERIFY(!splitterCollapser->isWidgetCollapsed());
     QCOMPARE(edit2->height(), size);
-
 }
 
 void KSplitterCollapserButtonTest::shouldBeVisible_data()
@@ -217,11 +212,10 @@ void KSplitterCollapserButtonTest::shouldBeVisible()
 
 void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle_data()
 {
-    QTest::addColumn<QList<int> >("splitterPosition");
+    QTest::addColumn<QList<int>>("splitterPosition");
     QTest::addColumn<bool>("expectedVisibility");
     QTest::addColumn<Qt::Orientation>("splitterOrientation");
     QTest::addColumn<int>("widgetPosition");
-
 
     QTest::newRow("(Horizontal first widget) middle") << (QList<int>() << 1 << 1) << true << Qt::Horizontal << 0;
     QTest::newRow("(Horizontal first widget) 1/3") << (QList<int>() << 1 << 3) << true << Qt::Horizontal << 0;
@@ -242,7 +236,6 @@ void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle_data()
     QTest::newRow("(Vertical second widget) 1/3") << (QList<int>() << 1 << 3) << true << Qt::Vertical << 1;
     QTest::newRow("(Vertical second widget) editor collapsed") << (QList<int>() << 1 << 0) << true << Qt::Vertical << 1;
     QTest::newRow("(Vertical second widget) first editor collapsed") << (QList<int>() << 0 << 1) << false << Qt::Vertical << 1;
-
 }
 
 void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle()

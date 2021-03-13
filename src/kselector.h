@@ -38,7 +38,6 @@ class KWIDGETSADDONS_EXPORT KSelector : public QAbstractSlider
     Q_PROPERTY(bool indent READ indent WRITE setIndent)
     Q_PROPERTY(Qt::ArrowType arrowDirection READ arrowDirection WRITE setArrowDirection)
 public:
-
     /**
      * Constructs a horizontal one-dimensional selection widget.
      */
@@ -182,7 +181,6 @@ public:
     QString secondText() const;
 
 protected:
-
     void drawContents(QPainter *) override;
     virtual QSize minimumSize() const;
 
@@ -193,4 +191,4 @@ private:
     Q_DISABLE_COPY(KGradientSelector)
 };
 
-#endif      // KSELECTOR_H
+#endif // KSELECTOR_H

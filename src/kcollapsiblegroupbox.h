@@ -8,8 +8,8 @@
 #ifndef KCOLLAPSIBLEGROUPBOX_H
 #define KCOLLAPSIBLEGROUPBOX_H
 
-#include <kwidgetsaddons_export.h>
 #include <QWidget>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 /**
@@ -87,14 +87,14 @@ Q_SIGNALS:
     void expandedChanged();
 
 protected:
-    void paintEvent(QPaintEvent*) override;
+    void paintEvent(QPaintEvent *) override;
 
-    bool event(QEvent*) override;
-    void mousePressEvent(QMouseEvent*) override;
-    void mouseMoveEvent(QMouseEvent*) override;
-    void leaveEvent(QEvent*) override;
-    void keyPressEvent(QKeyEvent*) override;
-    void resizeEvent(QResizeEvent*) override;
+    bool event(QEvent *) override;
+    void mousePressEvent(QMouseEvent *) override;
+    void mouseMoveEvent(QMouseEvent *) override;
+    void leaveEvent(QEvent *) override;
+    void keyPressEvent(QKeyEvent *) override;
+    void resizeEvent(QResizeEvent *) override;
 
 private Q_SLOTS:
     void overrideFocusPolicyOf(QWidget *widget);

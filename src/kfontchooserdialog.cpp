@@ -22,9 +22,9 @@ Boston, MA 02110-1301, USA.
 #include "kfontchooserdialog.h"
 
 #include <QDialogButtonBox>
+#include <QPointer>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QPointer>
 
 class KFontChooserDialogPrivate
 {
@@ -33,8 +33,8 @@ public:
 };
 
 KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, QWidget *parent)
-    : QDialog(parent),
-      d(new KFontChooserDialogPrivate)
+    : QDialog(parent)
+    , d(new KFontChooserDialogPrivate)
 {
     setWindowTitle(tr("Select Font", "@title:window"));
     d->chooser = new KFontChooser(this, flags, QStringList(), 8, nullptr);
@@ -86,8 +86,7 @@ static void stripRegularStyleName(QFont &font)
 }
 
 // static
-int KFontChooserDialog::getFontDiff(QFont &theFont, KFontChooser::FontDiffFlags &diffFlags,
-                             const KFontChooser::DisplayFlags &flags, QWidget *parent)
+int KFontChooserDialog::getFontDiff(QFont &theFont, KFontChooser::FontDiffFlags &diffFlags, const KFontChooser::DisplayFlags &flags, QWidget *parent)
 {
     QPointer<KFontChooserDialog> dialog = new KFontChooserDialog(flags | KFontChooser::ShowDifferences, parent);
     dialog->setObjectName(QStringLiteral("Font Selector"));

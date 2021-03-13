@@ -8,11 +8,11 @@
 
 #include <QAction>
 #include <QApplication>
-#include <QWidget>
-#include <QVBoxLayout>
-#include <QFrame>
 #include <QCheckBox>
+#include <QFrame>
+#include <QVBoxLayout>
 #include <QWhatsThis>
+#include <QWidget>
 
 #include <kmessagewidget.h>
 
@@ -20,9 +20,13 @@ class Receiver : public QObject
 {
     Q_OBJECT
 public:
-    Receiver(QObject *parent) : QObject(parent)
-    {}
-    virtual ~Receiver() {}
+    Receiver(QObject *parent)
+        : QObject(parent)
+    {
+    }
+    virtual ~Receiver()
+    {
+    }
 
 public Q_SLOTS:
     void showWhatsThis(const QString &text)
@@ -43,9 +47,7 @@ int main(int argc, char *argv[])
     KMessageWidget *mw = new KMessageWidget(mainWindow);
     mw->setMessageType(KMessageWidget::Positive);
     mw->setWordWrap(true);
-    mw->setText(
-        QStringLiteral("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default.")
-    );
+    mw->setText(QStringLiteral("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default."));
     mw->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
     KMessageWidget *mw2 = new KMessageWidget(mainWindow);
     mw2->setWordWrap(true);

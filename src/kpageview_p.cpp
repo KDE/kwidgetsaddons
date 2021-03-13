@@ -11,9 +11,9 @@
 #include <QApplication>
 #include <QHeaderView>
 #include <QPainter>
+#include <QScrollBar>
 #include <QTextLayout>
 #include <QVBoxLayout>
-#include <QScrollBar>
 
 #include "kpagemodel.h"
 #include "loggingcategory.h"
@@ -102,7 +102,7 @@ void KPageListView::setModel(QAbstractItemModel *model)
     */
     connect(model, &QAbstractItemModel::layoutChanged, this, &KPageListView::updateWidth);
 
-//  QListView::setModel( proxy );
+    //  QListView::setModel( proxy );
     QListView::setModel(model);
 
     // Set our own selection model, which won't allow our current selection to be cleared
@@ -185,7 +185,7 @@ KPageTabbedView::KPageTabbedView(QWidget *parent)
     // hide the viewport of the QAbstractScrollArea
     const QList<QWidget *> list = findChildren<QWidget *>();
     for (int i = 0; i < list.count(); ++i) {
-        list[ i ]->hide();
+        list[i]->hide();
     }
 
     setFrameShape(NoFrame);
@@ -394,8 +394,7 @@ void KPageListViewDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
     layoutText(&iconTextLayout, maxWidth);
 
     QPen pen = painter->pen();
-    QPalette::ColorGroup cg = option.state & QStyle::State_Enabled
-                              ? QPalette::Normal : QPalette::Disabled;
+    QPalette::ColorGroup cg = option.state & QStyle::State_Enabled ? QPalette::Normal : QPalette::Disabled;
     if (cg == QPalette::Normal && !(option.state & QStyle::State_Active)) {
         cg = QPalette::Inactive;
     }
@@ -466,10 +465,8 @@ void KPageListViewDelegate::drawFocus(QPainter *painter, const QStyleOptionViewI
         o.QStyleOption::operator=(option);
         o.rect = rect;
         o.state |= QStyle::State_KeyboardFocusChange;
-        QPalette::ColorGroup cg = (option.state & QStyle::State_Enabled)
-                                  ? QPalette::Normal : QPalette::Disabled;
-        o.backgroundColor = option.palette.color(cg, (option.state & QStyle::State_Selected)
-                            ? QPalette::Highlight : QPalette::Window);
+        QPalette::ColorGroup cg = (option.state & QStyle::State_Enabled) ? QPalette::Normal : QPalette::Disabled;
+        o.backgroundColor = option.palette.color(cg, (option.state & QStyle::State_Selected) ? QPalette::Highlight : QPalette::Window);
 
         QStyle *style = option.widget ? option.widget->style() : QApplication::style();
         style->drawPrimitive(QStyle::PE_FrameFocusRect, &o, painter, option.widget);
@@ -502,7 +499,7 @@ QModelIndex KPageListViewProxy::index(int row, int column, const QModelIndex &) 
     if (column > 1 || row >= mList.count()) {
         return QModelIndex();
     } else {
-        return createIndex(row, column, mList[ row ].internalPointer());
+        return createIndex(row, column, mList[row].internalPointer());
     }
 }
 
@@ -521,7 +518,7 @@ QVariant KPageListViewProxy::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    return sourceModel()->data(mList[ index.row() ], role);
+    return sourceModel()->data(mList[index.row()], role);
 }
 
 QModelIndex KPageListViewProxy::mapFromSource(const QModelIndex &index) const
@@ -531,7 +528,7 @@ QModelIndex KPageListViewProxy::mapFromSource(const QModelIndex &index) const
     }
 
     for (int i = 0; i < mList.count(); ++i) {
-        if (mList[ i ] == index) {
+        if (mList[i] == index) {
             return createIndex(i, 0, index.internalPointer());
         }
     }
@@ -545,7 +542,7 @@ QModelIndex KPageListViewProxy::mapToSource(const QModelIndex &index) const
         return QModelIndex();
     }
 
-    return mList[ index.row() ];
+    return mList[index.row()];
 }
 
 void KPageListViewProxy::rebuildMap()
@@ -562,7 +559,7 @@ void KPageListViewProxy::rebuildMap()
     }
 
     for (int i = 0; i < mList.count(); ++i) {
-        qCDebug(KWidgetsAddonsLog, "%d:0 -> %d:%d", i, mList[ i ].row(), mList[ i ].column());
+        qCDebug(KWidgetsAddonsLog, "%d:0 -> %d:%d", i, mList[i].row(), mList[i].column());
     }
 
     Q_EMIT layoutChanged();
@@ -607,4 +604,3 @@ void SelectionModel::select(const QItemSelection &selection, QItemSelectionModel
     }
     QItemSelectionModel::select(selection, command);
 }
-

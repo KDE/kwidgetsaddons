@@ -7,8 +7,8 @@
 #ifndef KSEPARATOR_H
 #define KSEPARATOR_H
 
-#include <kwidgetsaddons_export.h>
 #include <QFrame>
+#include <kwidgetsaddons_export.h>
 #include <memory>
 
 /**

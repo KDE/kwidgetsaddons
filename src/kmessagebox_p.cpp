@@ -16,13 +16,13 @@
 
 namespace KMessageBox
 {
-
 class KMessageBoxDontAskAgainQSettingsStorage : public KMessageBoxDontAskAgainInterface
 {
 public:
     KMessageBoxDontAskAgainQSettingsStorage()
     {
-        m_filePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + QCoreApplication::instance()->applicationName() + QLatin1String(".kmessagebox");
+        m_filePath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QLatin1Char('/') + QCoreApplication::instance()->applicationName()
+            + QLatin1String(".kmessagebox");
         QSettings s(m_filePath, QSettings::IniFormat);
         const auto keys = s.allKeys();
         for (const QString &key : keys) {
@@ -81,7 +81,9 @@ private:
 class KMessageBoxNotifyDummy : public KMessageBoxNotifyInterface
 {
 public:
-    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString &/*message*/, QWidget * /*parent*/) override {}
+    void sendNotification(QMessageBox::Icon /*notificationType*/, const QString & /*message*/, QWidget * /*parent*/) override
+    {
+    }
 };
 
 Q_GLOBAL_STATIC(KMessageBoxDontAskAgainQSettingsStorage, s_defaultDontAskAgainInterface)

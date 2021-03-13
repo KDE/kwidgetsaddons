@@ -6,8 +6,8 @@
 */
 
 #include <QApplication>
-#include <kmimetypechooser.h>
 #include <QDebug>
+#include <kmimetypechooser.h>
 
 int main(int argc, char **argv)
 {
@@ -17,7 +17,11 @@ int main(int argc, char **argv)
     const QString text = QStringLiteral("Select the MimeTypes you want for this file type.");
     QStringList list({QStringLiteral("inode/directory"), QStringLiteral("text/plain")});
 
-    KMimeTypeChooserDialog dlg(QStringLiteral("Select Mime Types"), text, list, QStringLiteral("text"), QStringList(),
+    KMimeTypeChooserDialog dlg(QStringLiteral("Select Mime Types"),
+                               text,
+                               list,
+                               QStringLiteral("text"),
+                               QStringList(),
                                KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
                                (QWidget *)nullptr);
 

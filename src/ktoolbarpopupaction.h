@@ -50,7 +50,7 @@ class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
     Q_PROPERTY(QToolButton::ToolButtonPopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
-    //Not all constructors - because we need an icon, since this action only makes
+    // Not all constructors - because we need an icon, since this action only makes
     // sense when being plugged at least in a toolbar.
     /**
      * Create a KToolBarPopupAction, with a text, an icon, a

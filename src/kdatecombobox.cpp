@@ -8,13 +8,13 @@
 
 #include <QAbstractItemView>
 #include <QApplication>
-#include <QKeyEvent>
-#include <QMenu>
-#include <QLineEdit>
-#include <QWidgetAction>
-#include <QVector>
 #include <QDate>
+#include <QKeyEvent>
+#include <QLineEdit>
+#include <QMenu>
 #include <QScreen>
+#include <QVector>
+#include <QWidgetAction>
 
 #include "kdatepicker.h"
 #include "kmessagebox.h"
@@ -22,7 +22,6 @@
 class KDateComboBoxPrivate
 {
 public:
-
     KDateComboBoxPrivate(KDateComboBox *q);
     virtual ~KDateComboBoxPrivate();
 
@@ -39,10 +38,7 @@ public:
     void addMenuAction(const QString &text, const QDate &date);
     void enableMenuDates();
     void updateDateWidget();
-    void setDateRange(const QDate &minDate,
-                      const QDate &maxDate,
-                      const QString &minWarnMsg,
-                      const QString &maxWarnMsg);
+    void setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg, const QString &maxWarnMsg);
     bool isInDateRange(const QDate &date) const;
 
     void clickDate();
@@ -71,18 +67,18 @@ public:
 };
 
 KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *q)
-    : q(q),
-      m_dateMenu(new QMenu(q)),
-      m_datePicker(new KDatePicker(q)),
-      m_datePickerAction(new QWidgetAction(q)),
-      m_warningShown(false),
-      m_edited(false),
-      m_displayFormat(QLocale::ShortFormat)
+    : q(q)
+    , m_dateMenu(new QMenu(q))
+    , m_datePicker(new KDatePicker(q))
+    , m_datePickerAction(new QWidgetAction(q))
+    , m_warningShown(false)
+    , m_edited(false)
+    , m_displayFormat(QLocale::ShortFormat)
 {
     m_options = KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords;
     m_date = QDate::currentDate();
-    //m_minDate = defaultMinDate();
-    //m_maxDate = defaultMaxDate();
+    // m_minDate = defaultMinDate();
+    // m_maxDate = defaultMaxDate();
     m_datePicker->setCloseButton(false);
     m_datePickerAction->setObjectName(QStringLiteral("DatePicker"));
     m_datePickerAction->setDefaultWidget(m_datePicker);
@@ -147,7 +143,6 @@ void KDateComboBoxPrivate::initDateWidget()
     m_actions.clear();
 
     if ((m_options & KDateComboBox::SelectDate) == KDateComboBox::SelectDate) {
-
         if ((m_options & KDateComboBox::DatePicker) == KDateComboBox::DatePicker) {
             m_dateMenu->addAction(m_datePickerAction);
             m_dateMenu->addSeparator();
@@ -155,15 +150,15 @@ void KDateComboBoxPrivate::initDateWidget()
 
         if ((m_options & KDateComboBox::DateKeywords) == KDateComboBox::DateKeywords) {
             if (m_dateMap.isEmpty()) {
-                addMenuAction(KDateComboBox::tr("Next Year",  "@option next year"), m_date.addYears(1));
+                addMenuAction(KDateComboBox::tr("Next Year", "@option next year"), m_date.addYears(1));
                 addMenuAction(KDateComboBox::tr("Next Month", "@option next month"), m_date.addMonths(1));
-                addMenuAction(KDateComboBox::tr("Next Week",  "@option next week"), m_date.addDays(7));
-                addMenuAction(KDateComboBox::tr("Tomorrow",   "@option tomorrow"), m_date.addDays(1));
-                addMenuAction(KDateComboBox::tr("Today",      "@option today"), m_date);
-                addMenuAction(KDateComboBox::tr("Yesterday",  "@option yesterday"), m_date.addDays(-1));
-                addMenuAction(KDateComboBox::tr("Last Week",  "@option last week"), m_date.addDays(-7));
+                addMenuAction(KDateComboBox::tr("Next Week", "@option next week"), m_date.addDays(7));
+                addMenuAction(KDateComboBox::tr("Tomorrow", "@option tomorrow"), m_date.addDays(1));
+                addMenuAction(KDateComboBox::tr("Today", "@option today"), m_date);
+                addMenuAction(KDateComboBox::tr("Yesterday", "@option yesterday"), m_date.addDays(-1));
+                addMenuAction(KDateComboBox::tr("Last Week", "@option last week"), m_date.addDays(-7));
                 addMenuAction(KDateComboBox::tr("Last Month", "@option last month"), m_date.addMonths(-1));
-                addMenuAction(KDateComboBox::tr("Last Year",  "@option last year"), m_date.addYears(-1));
+                addMenuAction(KDateComboBox::tr("Last Year", "@option last year"), m_date.addYears(-1));
                 m_dateMenu->addSeparator();
                 addMenuAction(KDateComboBox::tr("No Date", "@option do not specify a date"), QDate());
 
@@ -216,10 +211,7 @@ void KDateComboBoxPrivate::updateDateWidget()
     q->blockSignals(false);
 }
 
-void KDateComboBoxPrivate::setDateRange(const QDate &minDate,
-                                        const QDate &maxDate,
-                                        const QString &minWarnMsg,
-                                        const QString &maxWarnMsg)
+void KDateComboBoxPrivate::setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg, const QString &maxWarnMsg)
 {
     if (minDate.isValid() && maxDate.isValid() && minDate > maxDate) {
         return;
@@ -292,8 +284,7 @@ void KDateComboBoxPrivate::enterDate(const QDate &date)
 
 void KDateComboBoxPrivate::warnDate()
 {
-    if (!m_warningShown && !q->isValid() &&
-            (m_options & KDateComboBox::WarnOnInvalid) == KDateComboBox::WarnOnInvalid) {
+    if (!m_warningShown && !q->isValid() && (m_options & KDateComboBox::WarnOnInvalid) == KDateComboBox::WarnOnInvalid) {
         QString warnMsg;
         if (!m_date.isValid()) {
             warnMsg = KDateComboBox::tr("The date you entered is invalid", "@info");
@@ -318,8 +309,8 @@ void KDateComboBoxPrivate::warnDate()
 }
 
 KDateComboBox::KDateComboBox(QWidget *parent)
-    : QComboBox(parent),
-      d(new KDateComboBoxPrivate(this))
+    : QComboBox(parent)
+    , d(new KDateComboBoxPrivate(this))
 {
     setEditable(true);
     setMaxVisibleItems(1);
@@ -328,24 +319,27 @@ KDateComboBox::KDateComboBox(QWidget *parent)
     d->initDateWidget();
     d->updateDateWidget();
 
-    connect(d->m_dateMenu, &QMenu::triggered,
-            this, [this](QAction *action) { d->selectDate(action); });
-
-    connect(this, &QComboBox::editTextChanged,
-            this, [this](const QString &text) { d->editDate(text); });
-
-    connect(lineEdit(), &QLineEdit::returnPressed,
-            this, [this]() {
-            if (d->m_edited) {
-                d->enterDate(date());
-                Q_EMIT dateChanged(date());
-            }
+    connect(d->m_dateMenu, &QMenu::triggered, this, [this](QAction *action) {
+        d->selectDate(action);
     });
 
-    connect(d->m_datePicker, &KDatePicker::dateEntered,
-            this, [this](const QDate &date) { d->enterDate(date); });
-    connect(d->m_datePicker, &KDatePicker::tableClicked,
-            this, [this]() { d->clickDate(); });
+    connect(this, &QComboBox::editTextChanged, this, [this](const QString &text) {
+        d->editDate(text);
+    });
+
+    connect(lineEdit(), &QLineEdit::returnPressed, this, [this]() {
+        if (d->m_edited) {
+            d->enterDate(date());
+            Q_EMIT dateChanged(date());
+        }
+    });
+
+    connect(d->m_datePicker, &KDatePicker::dateEntered, this, [this](const QDate &date) {
+        d->enterDate(date);
+    });
+    connect(d->m_datePicker, &KDatePicker::tableClicked, this, [this]() {
+        d->clickDate();
+    });
 }
 
 KDateComboBox::~KDateComboBox() = default;
@@ -432,10 +426,7 @@ void KDateComboBox::resetMaximumDate()
     d->setDateRange(d->m_minDate, QDate(), d->m_minWarnMsg, QString());
 }
 
-void KDateComboBox::setDateRange(const QDate &minDate,
-                                 const QDate &maxDate,
-                                 const QString &minWarnMsg,
-                                 const QString &maxWarnMsg)
+void KDateComboBox::setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg, const QString &maxWarnMsg)
 {
     if (minDate.isValid() && maxDate.isValid()) {
         d->setDateRange(minDate, maxDate, minWarnMsg, maxWarnMsg);

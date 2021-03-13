@@ -12,8 +12,8 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-#include <KNewPasswordWidget>
 #include <KMessageBox>
+#include <KNewPasswordWidget>
 
 // Doxygen will generate code snippets from this file.
 // We can't use i18n() here, but we want it to show up in the apidox.
@@ -85,4 +85,3 @@ int main(int argc, char *argv[])
 
     return app.exec();
 }
-

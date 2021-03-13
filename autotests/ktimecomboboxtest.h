@@ -31,7 +31,6 @@ private Q_SLOTS:
     void testEdit();
 
 private:
-
     KTimeComboBox *m_combo;
 };
 

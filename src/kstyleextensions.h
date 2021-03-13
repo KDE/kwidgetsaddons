@@ -33,7 +33,6 @@
  */
 namespace KStyleExtensions
 {
-
 /**
  * Resolve a dynamic QStyle::ControlElement for eg. QStyle::drawControl()
  *

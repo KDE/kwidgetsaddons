@@ -137,7 +137,7 @@ public Q_SLOTS:
      * Stop drawing the overlay.
      */
     void stop();
-    
+
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
