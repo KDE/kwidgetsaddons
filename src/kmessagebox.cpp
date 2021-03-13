@@ -33,6 +33,7 @@
 // Some i18n filters, that standard button texts are piped through
 // (the new KGuiItem object with filtered text is created from the old one).
 
+// clang-format off
 // Filter for the Yes-button text in standard message dialogs,
 // after the message caption/text have been translated.
 #define I18N_FILTER_BUTTON_YES(src, dst) \
@@ -61,6 +62,7 @@
 // have been filtered by the messages above. Not visible to user.
 #define I18N_POST_BUTTON_FILTER \
     QApplication::translate( "KMessageBox", ".", "@action:button post-filter" );
+// clang-format on
 
 namespace KMessageBox
 {

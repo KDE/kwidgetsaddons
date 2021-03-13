@@ -76,10 +76,10 @@ QFont KFontChooserDialog::font() const
 // https://bugs.kde.org/show_bug.cgi?id=378523
 static void stripRegularStyleName(QFont &font)
 {
-    if (font.weight() == QFont::Normal
-        && (font.styleName() == QLatin1String("Regular")
-            || font.styleName() == QLatin1String("Normal")
-            || font.styleName() == QLatin1String("Book")
+    if (font.weight() == QFont::Normal //
+        && (font.styleName() == QLatin1String("Regular") //
+            || font.styleName() == QLatin1String("Normal") //
+            || font.styleName() == QLatin1String("Book") //
             || font.styleName() == QLatin1String("Roman"))) {
         font.setStyleName(QString());
     }

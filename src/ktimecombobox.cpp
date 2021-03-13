@@ -383,8 +383,8 @@ void KTimeComboBox::setTimeRange(const QTime &minTime, const QTime &maxTime,
         return;
     }
 
-    if (minTime != d->m_minTime || maxTime != d->m_maxTime ||
-            minWarnMsg != d->m_minWarnMsg || maxWarnMsg != d->m_maxWarnMsg) {
+    if (minTime != d->m_minTime || maxTime != d->m_maxTime //
+        || minWarnMsg != d->m_minWarnMsg || maxWarnMsg != d->m_maxWarnMsg) {
         d->m_minTime = minTime;
         d->m_maxTime = maxTime;
         d->m_minWarnMsg = minWarnMsg;

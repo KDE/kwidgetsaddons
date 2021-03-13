@@ -60,6 +60,7 @@ private:
     const QByteArray m_dataFile;
 };
 
+// clang-format off
 static const char JAMO_L_TABLE[][4] = {
     "G", "GG", "N", "D", "DD", "R", "M", "B", "BB",
     "S", "SS", "", "J", "JJ", "C", "K", "T", "P", "H"
@@ -76,6 +77,7 @@ static const char JAMO_T_TABLE[][4] = {
     "LB", "LS", "LT", "LP", "LH", "M", "B", "BS",
     "S", "SS", "NG", "J", "C", "K", "T", "P", "H"
 };
+// clang-format on
 
 bool KCharSelectData::openDataFile()
 {
@@ -722,14 +724,16 @@ bool KCharSelectData::isIgnorable(uint c)
      * property Default_Ignorable_Code_Point.
      */
 
-    //NOTE: not very nice to hardcode these here; is it worth it to modify
+    // NOTE: not very nice to hardcode these here; is it worth it to modify
     //      the binary data file to hold them?
+    // clang-format off
     return c == 0x00AD || c == 0x034F || c == 0x115F || c == 0x1160 ||
            c == 0x17B4 || c == 0x17B5 || (c >= 0x180B && c <= 0x180D) ||
            (c >= 0x200B && c <= 0x200F) || (c >= 0x202A && c <= 0x202E) ||
            (c >= 0x2060 && c <= 0x206F) || c == 0x3164 ||
            (c >= 0xFE00 && c <= 0xFE0F) || c == 0xFEFF || c == 0xFFA0 ||
            (c >= 0xFFF0 && c <= 0xFFF8);
+    // clang-format on
 }
 
 bool KCharSelectData::isCombining(uint c)
@@ -1024,19 +1028,19 @@ Index KCharSelectData::createIndex(const QByteArray &dataFile)
 
     // unihan data
     // temporary disabled due to the huge amount of data
-//     const quint32 unihanOffsetBegin = qFromLittleEndian<quint32>(udata+36);
-//     const quint32 unihanOffsetEnd = dataFile.size();
-//     max = ((unihanOffsetEnd - unihanOffsetBegin) / 30) - 1;
-//
-//     for (int pos = 0; pos <= max; pos++) {
-//         const quint16 unicode = qFromLittleEndian<quint16>(udata + unihanOffsetBegin + pos*30);
-//         for(int j = 0; j < 7; j++) {
-//             quint32 offset = qFromLittleEndian<quint32>(udata + unihanOffsetBegin + pos*30 + 2 + j*4);
-//             if(offset != 0) {
-//                 appendToIndex(&i, unicode, QString::fromUtf8(data + offset));
-//             }
-//         }
-//     }
+    // const quint32 unihanOffsetBegin = qFromLittleEndian<quint32>(udata+36);
+    // const quint32 unihanOffsetEnd = dataFile.size();
+    // max = ((unihanOffsetEnd - unihanOffsetBegin) / 30) - 1;
+    //
+    // for (int pos = 0; pos <= max; pos++) {
+    //     const quint16 unicode = qFromLittleEndian<quint16>(udata + unihanOffsetBegin + pos*30);
+    //     for(int j = 0; j < 7; j++) {
+    //         quint32 offset = qFromLittleEndian<quint32>(udata + unihanOffsetBegin + pos*30 + 2 + j*4);
+    //         if(offset != 0) {
+    //             appendToIndex(&i, unicode, QString::fromUtf8(data + offset));
+    //         }
+    //     }
+    // }
 
     return i;
 }

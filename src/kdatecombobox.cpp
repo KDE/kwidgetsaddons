@@ -129,9 +129,9 @@ void KDateComboBoxPrivate::initDateWidget()
     q->lineEdit()->setReadOnly((m_options & KDateComboBox::EditDate) != KDateComboBox::EditDate);
 
     // If SelectDate then make list items visible
-    if ((m_options & KDateComboBox::SelectDate) == KDateComboBox::SelectDate ||
-            (m_options & KDateComboBox::DatePicker) == KDateComboBox::DatePicker ||
-            (m_options & KDateComboBox::DatePicker) == KDateComboBox::DateKeywords) {
+    if ((m_options & KDateComboBox::SelectDate) == KDateComboBox::SelectDate //
+        || (m_options & KDateComboBox::DatePicker) == KDateComboBox::DatePicker //
+        || (m_options & KDateComboBox::DatePicker) == KDateComboBox::DateKeywords) {
         q->setMaxVisibleItems(1);
     } else {
         q->setMaxVisibleItems(0);
@@ -225,8 +225,8 @@ void KDateComboBoxPrivate::setDateRange(const QDate &minDate,
         return;
     }
 
-    if (minDate != m_minDate || maxDate != m_maxDate ||
-            minWarnMsg != m_minWarnMsg || maxWarnMsg != m_maxWarnMsg) {
+    if (minDate != m_minDate || maxDate != m_maxDate //
+        || minWarnMsg != m_minWarnMsg || maxWarnMsg != m_maxWarnMsg) {
         m_minDate = minDate;
         m_maxDate = maxDate;
         m_minWarnMsg = minWarnMsg;
@@ -237,9 +237,9 @@ void KDateComboBoxPrivate::setDateRange(const QDate &minDate,
 
 bool KDateComboBoxPrivate::isInDateRange(const QDate &date) const
 {
-    return date.isValid() &&
-           (!m_minDate.isValid() || date >= m_minDate) &&
-           (!m_maxDate.isValid() || date <= m_maxDate);
+    return date.isValid() //
+        && (!m_minDate.isValid() || date >= m_minDate) //
+        && (!m_maxDate.isValid() || date <= m_maxDate);
 }
 
 void KDateComboBoxPrivate::selectDate(QAction *action)
@@ -518,9 +518,8 @@ void KDateComboBox::focusOutEvent(QFocusEvent *event)
 
 void KDateComboBox::showPopup()
 {
-    if (!isEditable() ||
-            !d->m_dateMenu ||
-            (d->m_options & KDateComboBox::SelectDate) != KDateComboBox::SelectDate) {
+    if (!isEditable() || !d->m_dateMenu //
+        || (d->m_options & KDateComboBox::SelectDate) != KDateComboBox::SelectDate) {
         return;
     }
 

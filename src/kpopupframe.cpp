@@ -126,8 +126,10 @@ void KPopupFrame::resizeEvent(QResizeEvent *e)
     Q_UNUSED(e);
 
     if (d->main) {
-        d->main->setGeometry(frameWidth(), frameWidth(),
-                             width() - 2 * frameWidth(), height() - 2 * frameWidth());
+        d->main->setGeometry(frameWidth(),
+                             frameWidth(), //
+                             width() - 2 * frameWidth(), //
+                             height() - 2 * frameWidth());
     }
 }
 

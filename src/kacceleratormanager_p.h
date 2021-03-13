@@ -76,8 +76,10 @@ private:
 
     void dump();
 
-    QString        m_pureText,  m_origText;
-    int            m_accel, m_orig_accel;
+    QString m_pureText;
+    QString m_origText;
+    int m_accel;
+    int m_orig_accel;
     QVector<int> m_weight;
 
 };

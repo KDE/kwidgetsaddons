@@ -994,9 +994,9 @@ QString KFontChooserPrivate::styleIdentifier(const QFont &font)
         const QStringList styles = fdb.styles(font.family());
         for (const QString &style : styles) {
             // orderded by commonness, i.e. "Regular" is the most common
-            if (style == QLatin1String("Regular")
-                || style == QLatin1String("Normal")
-                || style == QLatin1String("Book")
+            if (style == QLatin1String("Regular") //
+                || style == QLatin1String("Normal") //
+                || style == QLatin1String("Book") //
                 || style == QLatin1String("Roman")) {
                 styleName = style;
             } else {
@@ -1006,10 +1006,10 @@ QString KFontChooserPrivate::styleIdentifier(const QFont &font)
     }
 
     const QChar comma(QLatin1Char(','));
-    return   QString::number(weight) + comma
-             + QString::number((int)font.style()) + comma
-             + QString::number(font.stretch()) + comma
-             + styleName;
+    return QString::number(weight) + comma //
+        + QString::number((int)font.style()) + comma //
+        + QString::number(font.stretch()) + comma //
+        + styleName;
 }
 
 #include "moc_kfontchooser.cpp"

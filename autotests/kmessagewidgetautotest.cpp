@@ -17,6 +17,7 @@ QTEST_MAIN(KMessageWidgetTest)
 // let's have 7 updates for now, should be save
 const int overlappingWaitingTime = 280;
 
+// clang-format off
 #define CHECK_FULLY_VISIBLE \
     QVERIFY(w.isVisible()); \
     QCOMPARE(w.height(), w.sizeHint().height()); \
@@ -24,7 +25,7 @@ const int overlappingWaitingTime = 280;
 #define CHECK_FULLY_NOT_VISIBLE \
     QCOMPARE(w.height(), 0); \
     QVERIFY(!w.isVisible());
-
+// clang-format on
 
 void KMessageWidgetTest::testAnimationSignals()
 {

@@ -280,9 +280,9 @@ QTimeZone KDateTimeEdit::timeZone() const
 
 bool KDateTimeEdit::isValid() const
 {
-    return d->m_dateTime.isValid() &&
-           (!d->m_minDateTime.isValid() || d->m_dateTime >= d->m_minDateTime) &&
-           (!d->m_maxDateTime.isValid() || d->m_dateTime <= d->m_maxDateTime);
+    return d->m_dateTime.isValid() //
+        && (!d->m_minDateTime.isValid() || d->m_dateTime >= d->m_minDateTime) //
+        && (!d->m_maxDateTime.isValid() || d->m_dateTime <= d->m_maxDateTime);
 }
 
 bool KDateTimeEdit::isNull() const

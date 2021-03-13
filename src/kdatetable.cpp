@@ -253,8 +253,8 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
             workingDay = true;
         }
     } else {
-        if (cellWeekDay >= locale().weekdays().first() ||
-                cellWeekDay <= locale().weekdays().last()) {
+        if (cellWeekDay >= locale().weekdays().first() //
+            || cellWeekDay <= locale().weekdays().last()) {
             workingDay = true;
         }
     }

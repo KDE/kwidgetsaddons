@@ -311,7 +311,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
                 return true;
             };
 
-            d->m_selectedRegion.translate(mev->x() - d->m_tempFirstClick.x(),
+            d->m_selectedRegion.translate(mev->x() - d->m_tempFirstClick.x(), //
                                           mev->y() - d->m_tempFirstClick.y());
 
             // Check that the region has not fallen outside the image

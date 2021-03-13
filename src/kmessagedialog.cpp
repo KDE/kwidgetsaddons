@@ -280,8 +280,8 @@ void KMessageDialog::setListWidgetItems(const QStringList &strlist)
     for (const QString &str : strlist) {
         listWidth = qMax(listWidth, fm.boundingRect(str).width());
     }
-    const int borderWidth = d->m_listWidget->width() - d->m_listWidget->viewport()->width()
-                            + d->m_listWidget->verticalScrollBar()->height();
+    const int borderWidth = (d->m_listWidget->width() - d->m_listWidget->viewport()->width() //
+                             + d->m_listWidget->verticalScrollBar()->height());
     listWidth += borderWidth;
     const auto deskWidthPortion = screen()->geometry().width() * 0.85;
     if (listWidth > deskWidthPortion) { // Limit the list widget size to 85% of screen width

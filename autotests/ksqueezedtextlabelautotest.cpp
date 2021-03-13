@@ -49,8 +49,8 @@ void KSqueezedTextLabelAutotest::testElisionOnResize_data()
     QTest::newRow("whitespace text") << "             ";
     QTest::newRow("normal text") << "Squeeze me";
     QTest::newRow("rich text") << "<h1>Squeeze me!</h1>";
-//     QTest::newRow("multiline text") << "Squeeze me,\nand\nme too.";
-//     QTest::newRow("multiline rich text") << "<i>Squeeze</i> me,\n<b>and\nme</b> too.";
+    // QTest::newRow("multiline text") << "Squeeze me,\nand\nme too.";
+    // QTest::newRow("multiline rich text") << "<i>Squeeze</i> me,\n<b>and\nme</b> too.";
 }
 
 void KSqueezedTextLabelAutotest::testElisionOnResize()

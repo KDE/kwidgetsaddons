@@ -237,11 +237,12 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
         return;
     }
 
-    if (qobject_cast<QComboBox *>(w) || qobject_cast<QLineEdit *>(w) ||
-            w->inherits("Q3TextEdit") ||
-            qobject_cast<QTextEdit *>(w) ||
-            qobject_cast<QAbstractSpinBox *>(w) || w->inherits("KMultiTabBar") ||
-            w->inherits("qdesigner_internal::TextPropertyEditor")) {
+    if (qobject_cast<QComboBox *>(w) || qobject_cast<QLineEdit *>(w) //
+        || w->inherits("Q3TextEdit") //
+        || qobject_cast<QTextEdit *>(w) //
+        || qobject_cast<QAbstractSpinBox *>(w) //
+        || w->inherits("KMultiTabBar") //
+        || w->inherits("qdesigner_internal::TextPropertyEditor")) {
         return;
     }
 
@@ -256,9 +257,8 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
         if (!label->buddy()) {
             return;
         } else {
-            if (label->textFormat() == Qt::RichText ||
-                    (label->textFormat() == Qt::AutoText &&
-                     Qt::mightBeRichText(label->text()))) {
+            if (label->textFormat() == Qt::RichText //
+                || (label->textFormat() == Qt::AutoText && Qt::mightBeRichText(label->text()))) {
                 return;
             }
         }
@@ -390,10 +390,8 @@ void KAcceleratorManagerPrivate::manageMenuBar(QMenuBar *mbar, Item *item)
         if (!s.isEmpty()) {
             Item *it = new Item;
             item->addChild(it);
-            it->m_content =
-                KAccelString(s,
-                             // menu titles are important, so raise the weight
-                             KAccelManagerAlgorithm::MENU_TITLE_WEIGHT);
+            it->m_content = KAccelString(s,
+                                         KAccelManagerAlgorithm::MENU_TITLE_WEIGHT); // menu titles are important, so raise the weight
 
             it->m_widget = mbar;
             it->m_index = i;

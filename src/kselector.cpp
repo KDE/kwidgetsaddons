@@ -76,21 +76,25 @@ QRect KSelector::contentsRect() const
 
     if (orientation() == Qt::Vertical) {
         if (arrowDirection() == Qt::RightArrow) {
-            return QRect(w + ARROWSIZE, iw,
+            return QRect(w + ARROWSIZE, //
+                         iw,
                          width() - w * 2 - ARROWSIZE,
                          height() - iw * 2);
         } else {
-            return QRect(w, iw,
+            return QRect(w, //
+                         iw,
                          width() - w * 2 - ARROWSIZE,
                          height() - iw * 2);
         }
     } else { // Qt::Horizontal
         if (arrowDirection() == Qt::UpArrow) {
-            return QRect(iw, w,
+            return QRect(iw, //
+                         w,
                          width() - 2 * iw,
                          height() - w * 2 - ARROWSIZE);
         } else {
-            return QRect(iw, w + ARROWSIZE,
+            return QRect(iw, //
+                         w + ARROWSIZE,
                          width() - 2 * iw,
                          height() - w * 2 - ARROWSIZE);
         }

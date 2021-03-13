@@ -679,10 +679,10 @@ bool KSelectAction::eventFilter(QObject *watched, QEvent *event)
         //  << " reason=" << e->reason ()
         //  << endl;
 
-        if (e->reason() != Qt::ActiveWindowFocusReason/*switch window*/ &&
-                e->reason() != Qt::PopupFocusReason/*menu*/ &&
-                e->reason() != Qt::OtherFocusReason/*inconsistently reproduceable actions...*/) {
-
+        if (e->reason() != Qt::ActiveWindowFocusReason // switch window
+            && e->reason() != Qt::PopupFocusReason // menu
+            && e->reason() != Qt::OtherFocusReason // inconsistently reproduceable actions...
+        ) {
             //qCDebug(KWidgetsAddonsLog) << "\tkilling text";
             comboBox->setEditText(comboBox->itemText(comboBox->currentIndex()));
         }

@@ -213,11 +213,11 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
 
 void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent *ev)
 {
-    if (QApplication::clipboard()->supportsSelection() &&
-            textInteractionFlags() != Qt::NoTextInteraction &&
-            ev->button() == Qt::LeftButton &&
-            !d->fullText.isEmpty() &&
-            hasSelectedText()) {
+    if (QApplication::clipboard()->supportsSelection() //
+        && textInteractionFlags() != Qt::NoTextInteraction //
+        && ev->button() == Qt::LeftButton //
+        && !d->fullText.isEmpty() //
+        && hasSelectedText()) {
         // Expand "..." when selecting with the mouse
         QString txt = selectedText();
         const QChar ellipsisChar(0x2026); // from qtextengine.cpp
@@ -231,8 +231,8 @@ void KSqueezedTextLabel::mouseReleaseEvent(QMouseEvent *ev)
             int charsAfterSelection = text().length() - start - selectedText().length();
             txt = d->fullText;
             // Strip markup tags
-            if (textFormat() == Qt::RichText
-                    || (textFormat() == Qt::AutoText && Qt::mightBeRichText(txt))) {
+            if (textFormat() == Qt::RichText //
+                || (textFormat() == Qt::AutoText && Qt::mightBeRichText(txt))) {
                 txt.remove(QRegularExpression(QStringLiteral("<[^>]*>")));
                 // account for stripped characters
                 charsAfterSelection -= d->fullText.length() - txt.length();

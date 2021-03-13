@@ -635,10 +635,11 @@ KRuler::paintEvent(QPaintEvent * /*e*/)
         //    pixelpm = (int)ppm;
         //    left  = clip.left(),
         //    right = clip.right();
-        double f, fend,
-               offsetmin = (double)(minval - d->offset),
-               offsetmax = (double)(maxval - d->offset),
-               fontOffset = (((double)minval) > offsetmin) ? (double)minval : offsetmin;
+        double f;
+        double fend;
+        double offsetmin = (double)(minval - d->offset);
+        double offsetmax = (double)(maxval - d->offset);
+        double fontOffset = (((double)minval) > offsetmin) ? (double)minval : offsetmin;
 
         // draw labels
         QFont font = p.font();

@@ -11,9 +11,10 @@
 // followed only by non-alphanumerics, then "(X)" gets removed.
 static QString removeReducedCJKAccMark(const QString &label, int pos)
 {
-    if (pos > 0 && pos + 1 < label.length()
-            && label[pos - 1] == QLatin1Char('(') && label[pos + 1] == QLatin1Char(')')
-            && label[pos].isLetterOrNumber()) {
+    if (pos > 0 && pos + 1 < label.length() //
+        && label[pos - 1] == QLatin1Char('(') //
+        && label[pos + 1] == QLatin1Char(')') //
+        && label[pos].isLetterOrNumber()) {
         // Check if at start or end, ignoring non-alphanumerics.
         int len = label.length();
         int p1 = pos - 2;

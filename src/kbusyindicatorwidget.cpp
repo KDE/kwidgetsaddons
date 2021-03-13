@@ -66,7 +66,7 @@ void KBusyIndicatorWidget::hideEvent(QHideEvent *event)
 void KBusyIndicatorWidget::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
-    d->paintCenter = QPointF(event->size().width() / 2.0,
+    d->paintCenter = QPointF(event->size().width() / 2.0, //
                              event->size().height() / 2.0);
 }
 

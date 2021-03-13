@@ -193,9 +193,9 @@ void KDatePickerPrivate::fillWeeksCombo()
 
         // make sure that the week of the lastDayOfYear is always inserted: in Chinese calendar
         // system, this is not always the case
-        if (day < lastDayOfYear &&
-                day.daysTo(lastDayOfYear) < 7 &&
-                lastDayOfYear.weekNumber() != day.weekNumber()) {
+        if (day < lastDayOfYear //
+            && day.daysTo(lastDayOfYear) < 7 //
+            && lastDayOfYear.weekNumber() != day.weekNumber()) {
             day = lastDayOfYear.addDays(-7);
         }
     }
@@ -343,10 +343,10 @@ bool KDatePicker::eventFilter(QObject *o, QEvent *e)
     if (e->type() == QEvent::KeyPress) {
         QKeyEvent *k = (QKeyEvent *)e;
 
-        if ((k->key() == Qt::Key_PageUp) ||
-                (k->key() == Qt::Key_PageDown) ||
-                (k->key() == Qt::Key_Up) ||
-                (k->key() == Qt::Key_Down)) {
+        if ((k->key() == Qt::Key_PageUp) //
+            || (k->key() == Qt::Key_PageDown) //
+            || (k->key() == Qt::Key_Up) //
+            || (k->key() == Qt::Key_Down)) {
             QApplication::sendEvent(d->table, e);
             d->table->setFocus();
             return true; // eat event

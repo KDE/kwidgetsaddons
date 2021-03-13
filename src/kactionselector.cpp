@@ -342,8 +342,8 @@ void KActionSelector::setButtonsEnabled()
     d->btnAdd->setEnabled(d->selectedRowIndex(d->availableListWidget) > -1);
     d->btnRemove->setEnabled(d->selectedRowIndex(d->selectedListWidget) > -1);
     d->btnUp->setEnabled(d->selectedRowIndex(d->selectedListWidget) > 0);
-    d->btnDown->setEnabled(d->selectedRowIndex(d->selectedListWidget) > -1 &&
-                           d->selectedRowIndex(d->selectedListWidget) < d->selectedListWidget->count() - 1);
+    d->btnDown->setEnabled(d->selectedRowIndex(d->selectedListWidget) > -1 //
+                           && d->selectedRowIndex(d->selectedListWidget) < d->selectedListWidget->count() - 1);
 }
 
 //END Public Slots
