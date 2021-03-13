@@ -53,7 +53,7 @@ public:
         DatePicker       = 0x01000,  /**< Show a date picker */
         DateKeywords     = 0x02000,  /**< Show date keywords */
         ForceTime        = 0x04000,  /**< The entered time can only be a selected time */
-        WarnOnInvalid    = 0x08000   /**< Show a warning on focus out if the date or time is invalid */
+        WarnOnInvalid    = 0x08000,  /**< Show a warning on focus out if the date or time is invalid */
     };
     /**
      * Stores a combination of #Option values.

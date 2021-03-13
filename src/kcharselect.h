@@ -105,7 +105,7 @@ public:
         /**
          * Shows everything
          */
-        AllGuiElements      = 65535
+        AllGuiElements      = 65535,
     };
     /**
      * Stores a combination of #Control values.

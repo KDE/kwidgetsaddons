@@ -88,7 +88,7 @@ public:
          * A dialog with a tab bar above the representation
          * of the contents
          */
-        Tabbed = KPageView::Tabbed
+        Tabbed = KPageView::Tabbed,
     };
 
 public:

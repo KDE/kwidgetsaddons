@@ -40,7 +40,7 @@ public:
         SelectDate       = 0x0002,  /**< Allow the user to select the date from a drop-down menu */
         DatePicker       = 0x0004,  /**< Show a date picker in the drop-down */
         DateKeywords     = 0x0008,  /**< Show date keywords in the drop-down */
-        WarnOnInvalid    = 0x0010   /**< Show a warning on focus out if the date is invalid */
+        WarnOnInvalid    = 0x0010,  /**< Show a warning on focus out if the date is invalid */
     };
     /**
      * Stores a combination of #Option values.

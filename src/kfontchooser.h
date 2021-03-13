@@ -47,7 +47,7 @@ public:
     enum FontColumn {
         FamilyList = 0x01, ///< Identifies the family (leftmost) list.
         StyleList = 0x02,  ///< Identifies the style (center) list.
-        SizeList = 0x04    ///< Identifies the size (rightmost) list.
+        SizeList = 0x04,   ///< Identifies the size (rightmost) list.
     };
 
     /**
@@ -59,7 +59,7 @@ public:
         FontDiffFamily = 1,  ///< Identifies a requested change in the font family.
         FontDiffStyle = 2,   ///< Identifies a requested change in the font style.
         FontDiffSize = 4,    ///< Identifies a requested change in the font size.
-        AllFontDiffs = FontDiffFamily | FontDiffStyle | FontDiffSize
+        AllFontDiffs = FontDiffFamily | FontDiffStyle | FontDiffSize,
     };
     /**
      * Stores an combination of #FontDiff values.

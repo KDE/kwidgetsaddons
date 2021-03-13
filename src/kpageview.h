@@ -81,7 +81,7 @@ public:
         /**
          * A tab widget is used as navigation view
          */
-        Tabbed
+        Tabbed,
     };
     Q_ENUM(FaceType)
 

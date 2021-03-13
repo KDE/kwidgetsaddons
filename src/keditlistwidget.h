@@ -79,7 +79,7 @@ public:
         Add = 0x0001,
         Remove = 0x0002,
         UpDown = 0x0004,
-        All = Add | Remove | UpDown
+        All = Add | Remove | UpDown,
     };
 
     /**

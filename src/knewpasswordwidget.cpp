@@ -118,7 +118,7 @@ int KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
         Upper,
         Vowel,
         Consonant,
-        Special
+        Special,
     };
 
     Category previousCategory = Vowel;

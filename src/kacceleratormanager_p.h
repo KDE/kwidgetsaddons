@@ -115,7 +115,7 @@ public:
         // Default weight for menu titles
         MENU_TITLE_WEIGHT = 250,
         // Additional weight for KDE standard accelerators
-        STANDARD_ACCEL = 300
+        STANDARD_ACCEL = 300,
     };
 
     static void findAccelerators(KAccelStringList &result, QString &used);

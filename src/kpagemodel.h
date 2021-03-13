@@ -72,7 +72,7 @@ public:
          * when true, show the page header, if false don't
          * @since 5.52
          */
-        HeaderVisibleRole
+        HeaderVisibleRole,
     };
 
     /**

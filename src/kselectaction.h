@@ -98,7 +98,7 @@ public:
         MenuMode,
         /// Creates a combo box which contains the actions.
         /// This is the default.
-        ComboBoxMode
+        ComboBoxMode,
     };
     Q_ENUM(ToolBarMode)
 

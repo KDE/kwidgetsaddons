@@ -49,7 +49,7 @@ public:
     enum KMultiTabBarStyle {
         VSNET = 0,     ///< Visual Studio .Net like, always shows icon, only show the text of active tabs
         KDEV3ICON = 2, ///< KDevelop 3 like, always shows the text and icons
-        STYLELAST = 0xffff
+        STYLELAST = 0xffff,
     };
     Q_ENUM(KMultiTabBarStyle)
 

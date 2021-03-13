@@ -76,7 +76,7 @@ public:
      */
     enum ImageAlignment {
         ImageLeft, /**< Display the pixmap on the left */
-        ImageRight /**< Display the pixmap on the right */
+        ImageRight,/**< Display the pixmap on the right */
     };
     Q_ENUM(ImageAlignment)
 
@@ -87,7 +87,7 @@ public:
         PlainMessage, /**< Normal comment */
         InfoMessage, /**< Information the user should be alerted to */
         WarningMessage, /**< A warning the user should be alerted to */
-        ErrorMessage /**< An error message */
+        ErrorMessage, /**< An error message */
     };
 
     /**

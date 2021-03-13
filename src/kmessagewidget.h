@@ -103,7 +103,7 @@ public:
         Positive,
         Information,
         Warning,
-        Error
+        Error,
     };
     Q_ENUM(MessageType)
 

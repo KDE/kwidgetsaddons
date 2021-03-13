@@ -98,7 +98,7 @@ public:
         ButtonAdd,
         ButtonRemove,
         ButtonUp,
-        ButtonDown
+        ButtonDown,
     };
     Q_ENUM(MoveButton)
 
@@ -112,7 +112,7 @@ public:
         BelowCurrent, ///< The item is inserted below the listbox' currentItem() or at the end if there is no current item.
         Sorted,       ///< The listbox is sort()ed after one or more items are inserted.
         AtTop,        ///< The item is inserted at index 0 in the listbox.
-        AtBottom      ///< The item is inserted at the end of the listbox.
+        AtBottom,     ///< The item is inserted at the end of the listbox.
     };
     Q_ENUM(InsertionPolicy)
 

@@ -19,11 +19,11 @@ class KColorComboDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     enum ItemRoles {
-        ColorRole = Qt::UserRole + 1
+        ColorRole = Qt::UserRole + 1,
     };
 
     enum LayoutMetrics {
-        FrameMargin = 3
+        FrameMargin = 3,
     };
 
     KColorComboDelegate(QObject *parent = nullptr);

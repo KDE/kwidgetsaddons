@@ -50,7 +50,7 @@ enum ButtonCode {
     Cancel = 2,
     Yes = 3,
     No = 4,
-    Continue = 5
+    Continue = 5,
 };
 
 enum DialogType {
@@ -62,7 +62,7 @@ enum DialogType {
     // Reserved for: SSLMessageBox = 6
     Sorry = 7,
     Error = 8,
-    QuestionYesNoCancel = 9
+    QuestionYesNoCancel = 9,
 };
 
 /**
@@ -74,7 +74,7 @@ enum Option {
     Dangerous = 4,     ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or No, depending on which is available.
     PlainCaption = 8,  ///< Do not use KApplication::makeStdCaption()
     NoExec = 16,       ///< Do not call exec() in createKMessageBox()
-    WindowModal = 32   ///< The window is to be modal relative to its parent. By default, it is application modal.
+    WindowModal = 32,  ///< The window is to be modal relative to its parent. By default, it is application modal.
 };
 
 /**

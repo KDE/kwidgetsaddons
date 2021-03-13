@@ -20,7 +20,7 @@ enum Direction {
     LeftToRight = 0,
     RightToLeft,
     TopToBottom,
-    BottomToTop
+    BottomToTop,
 };
 
 const static int TIMELINE_DURATION = 500;

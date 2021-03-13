@@ -62,7 +62,7 @@ public:
      *
      * @short LED look.
      */
-    enum Look  { Flat, Raised, Sunken };
+    enum Look  { Flat, Raised, Sunken, };
     Q_ENUM(Look)
 
     /**

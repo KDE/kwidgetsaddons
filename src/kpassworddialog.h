@@ -87,7 +87,7 @@ public:
          * If this flag is set, the domain lineedit will be in read only mode.
          * @since 4.1
          */
-        DomainReadOnly = 0x20
+        DomainReadOnly = 0x20,
     };
     /**
      * Stores a combination of #KPasswordDialogFlag values.
@@ -116,7 +116,7 @@ public:
          * A problem with the domain as entered
          * @since 4.1
          */
-        DomainError
+        DomainError,
     };
 
     /**
