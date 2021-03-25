@@ -30,25 +30,40 @@ class KPageDialogPrivate;
  * Currently, @p Auto, @p Plain, @p List, @p Tree and @p Tabbed face
  * types are available (cmp. KPageView).
  *
+ * By default a QDialogButtonBox is added to the dialog with two buttons,
+ * OK and Cancel, QDialogButtonBox::Ok and QDialogButtonBox::Cancel respectively.
+ * You can customize which buttons are added to the dialog by using any of the
+ * available buttons-related methods.
+ *
  * <b>Example:</b>\n
  *
- * \code
+ * @code
  * UrlDialog::UrlDialog( QWidget *parent )
  *   : KPageDialog( parent )
  * {
- *   setFaceType( List );
+ *   setFaceType(List);
  *
- *   QLabel *label = new QLabel( "Test Page" );
- *   addPage( label, i18n( "My Test Page" ) );
+ *   QLabel *label = new QLabel("Test Page");
+ *   addPage(label, i18n("My Test Page"));
  *
- *   label = new QLabel( "Second Test Page" );
- *   KPageWidgetItem *page = new KPageWidgetItem( label, i18n( "My Second Test Page" ) );
- *   page->setHeader( i18n( "My header string" ) );
- *   page->setIcon( QIcon::fromTheme( "file" ) );
+ *   label = new QLabel("Second Test Page");
+ *   KPageWidgetItem *page = new KPageWidgetItem(label, i18n("My Second Test Page"));
+ *   page->setHeader(i18n("My header string"));
+ *   page->setIcon(QIcon::fromTheme("file"));
  *
- *   addPage( page );
+ *   addPage(page);
+ *
+ *   // Change the buttons added to the dialog
+ *   setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel);
+ *
+ *   // Alternatively you can create a QDialogButtonBox, add the buttons you want to it,
+ *   // then add that button box to the dialog
+ *   QDialogButtonBox *btnBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel,
+ *                                                   Qt::Horizontal,
+ *                                                   this);
+ *   setButtonBox(btnBox);
  * }
- * \endcode
+ * @endcode
  *
  * @author Tobias Koenig (tokoe@kde.org)
  */
