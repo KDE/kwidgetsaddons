@@ -24,6 +24,7 @@ ecm_add_tests(
   kpassworddialogautotest.cpp
   kpasswordlineedittest.cpp
   ksplittercollapserbuttontest.cpp
+  kmultitabbartest.cpp
   LINK_LIBRARIES Qt5::Test KF5::WidgetsAddons
 )
 
