@@ -167,12 +167,12 @@ KGuiItem cancel()
 
 KGuiItem yes()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Yes"), QStringLiteral("dialog-ok"), QApplication::translate("KStandardGuiItem", "Yes"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Yes"), QStringLiteral("dialog-ok"));
 }
 
 KGuiItem no()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&No"), QStringLiteral("dialog-cancel"), QApplication::translate("KStandardGuiItem", "No"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&No"), QStringLiteral("dialog-cancel"));
 }
 
 KGuiItem discard()
