@@ -144,11 +144,7 @@ void KPasswordDialog::setPixmap(const QPixmap &pixmap)
 
 QPixmap KPasswordDialog::pixmap() const
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
     return d->ui.pixmapLabel->pixmap(Qt::ReturnByValue);
-#else
-    return *d->ui.pixmapLabel->pixmap();
-#endif
 }
 #endif
 

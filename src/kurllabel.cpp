@@ -265,7 +265,6 @@ void KUrlLabel::enterEvent(QEvent *event)
 {
     QLabel::enterEvent(event);
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
     if (!d->alternatePixmap.isNull()) {
         const auto currentPixmap = pixmap(Qt::ReturnByValue);
         if (!currentPixmap.isNull()) {
@@ -273,12 +272,6 @@ void KUrlLabel::enterEvent(QEvent *event)
             setPixmap(d->alternatePixmap);
         }
     }
-#else
-    if (!d->alternatePixmap.isNull() && pixmap()) {
-        d->realPixmap = *pixmap();
-        setPixmap(d->alternatePixmap);
-    }
-#endif
 
     if (d->glowEnabled || d->floatEnabled) {
         d->timer->stop();
@@ -301,12 +294,7 @@ void KUrlLabel::leaveEvent(QEvent *event)
 {
     QLabel::leaveEvent(event);
 
-    if (!d->alternatePixmap.isNull() &&
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
-        !pixmap(Qt::ReturnByValue).isNull()) {
-#else
-        pixmap()) {
-#endif
+    if (!d->alternatePixmap.isNull() && !pixmap(Qt::ReturnByValue).isNull()) {
         setPixmap(d->realPixmap);
     }
 
