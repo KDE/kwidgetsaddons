@@ -48,7 +48,7 @@ endif()
 configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
 
 add_definitions(-DQT_NO_FOREACH)
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # Not 050f00 because we need QLabel::pixmap(), in a deprecated method
 
 add_subdirectory(src)
 if (BUILD_TESTING)
