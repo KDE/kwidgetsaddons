@@ -31,9 +31,16 @@ class KPageDialogPrivate;
  * types are available (cmp. KPageView).
  *
  * By default a QDialogButtonBox is added to the dialog with two buttons,
- * OK and Cancel, QDialogButtonBox::Ok and QDialogButtonBox::Cancel respectively.
+ * OK (@c QDialogButtonBox::Ok) and Cancel (@c QDialogButtonBox::Cancel).
  * You can customize which buttons are added to the dialog by using any of the
  * available buttons-related methods.
+ *
+ * Note that if there is a QDialogButtonBox (either the one added by default, or
+ * one you added manually) some logical connections are created:
+ * - @c QDialogButtonBox::accepted() is connected to @c QDialog::accept()
+ * - @c QDialogButtonBox::rejected() is connected to @c QDialog::reject()
+ * this means that you shouldn't create these connections again (otherwise you
+ * would end up receiving two duplicate accepted() signals for example).
  *
  * <b>Example:</b>\n
  *
