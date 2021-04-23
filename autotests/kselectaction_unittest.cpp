@@ -182,6 +182,7 @@ void KSelectAction_UnitTest::testChildActionStateChangeComboMode()
     // Now remove the action
     selectAction.removeAction(childAction);
     QCOMPARE(comboBox->count(), 0);
+    delete childAction;
 }
 
 void KSelectAction_UnitTest::testRequestWidgetComboBoxModeWidgetParent()
