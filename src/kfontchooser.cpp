@@ -22,6 +22,7 @@
 #include <QSplitter>
 #include <QTextEdit>
 
+#include <algorithm>
 #include <cmath>
 
 // When message extraction needs to be avoided.
@@ -503,6 +504,17 @@ QFont KFontChooser::font() const
     return d->selFont;
 }
 
+static bool isDefaultFontStyleName(const QString &style)
+{
+    /* clang-format off */
+    // Ordered by commonness, i.e. "Regular" is the most common
+    return style == QLatin1String("Regular")
+        || style == QLatin1String("Normal")
+        || style == QLatin1String("Book")
+        || style == QLatin1String("Roman");
+    /* clang-format on */
+}
+
 void KFontChooserPrivate::family_chosen_slot(const QString &family)
 {
     if (!signalsAllowed) {
@@ -527,6 +539,17 @@ void KFontChooserPrivate::family_chosen_slot(const QString &family)
         // Avoid extraction, it is in kdeqt.po
         styles.append(TR_NOX("Normal", "QFontDatabase"));
     }
+
+    // Always prepend Regular, Normal, Book or Roman, this way if "selectedStyle"
+    // in the code below is empty, selecting index 0 should work better
+    std::sort(styles.begin(), styles.end(), [](const QString &a, const QString &b) {
+        if (isDefaultFontStyleName(a)) {
+            return true;
+        } else if (isDefaultFontStyleName(b)) {
+            return false;
+        }
+        return false;
+    });
 
     // Filter style strings and add to the listbox.
     QString pureFamily;
@@ -971,12 +994,9 @@ QString KFontChooserPrivate::styleIdentifier(const QFont &font)
         QFontDatabase fdb;
         const QStringList styles = fdb.styles(font.family());
         for (const QString &style : styles) {
-            // orderded by commonness, i.e. "Regular" is the most common
-            if (style == QLatin1String("Regular") //
-                || style == QLatin1String("Normal") //
-                || style == QLatin1String("Book") //
-                || style == QLatin1String("Roman")) {
+            if (isDefaultFontStyleName(style)) {
                 styleName = style;
+                break;
             } else {
                 // nothing more we can do
             }
