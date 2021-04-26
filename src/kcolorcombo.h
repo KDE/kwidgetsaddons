@@ -97,9 +97,6 @@ private:
     std::unique_ptr<class KColorComboPrivate> const d;
 
     Q_DISABLE_COPY(KColorCombo)
-
-    Q_PRIVATE_SLOT(d, void _k_slotActivated(int))
-    Q_PRIVATE_SLOT(d, void _k_slotHighlighted(int))
 };
 
 #endif // KCOLORCOMBO_H

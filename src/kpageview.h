@@ -207,12 +207,6 @@ protected:
 
     KPageView(KPageViewPrivate &dd, QWidget *parent);
     std::unique_ptr<class KPageViewPrivate> const d_ptr;
-
-private:
-    Q_PRIVATE_SLOT(d_func(), void _k_rebuildGui())
-    Q_PRIVATE_SLOT(d_func(), void _k_modelChanged())
-    Q_PRIVATE_SLOT(d_func(), void _k_pageSelected(const QItemSelection &, const QItemSelection &))
-    Q_PRIVATE_SLOT(d_func(), void _k_dataChanged(const QModelIndex &, const QModelIndex &))
 };
 
 #endif

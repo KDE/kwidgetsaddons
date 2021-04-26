@@ -167,8 +167,8 @@ public:
     void setCustomColor(const QColor &color, bool lookupInPresets = true);
 
     // slots
-    void _k_slotActivated(int index);
-    void _k_slotHighlighted(int index);
+    void slotActivated(int index);
+    void slotHighlighted(int index);
 
     KColorCombo *q;
     QList<QColor> colorList;
@@ -215,12 +215,16 @@ KColorCombo::KColorCombo(QWidget *parent)
     setItemDelegate(new KColorComboDelegate(this));
     d->addColors();
 
-    connect(this, SIGNAL(activated(int)), SLOT(_k_slotActivated(int)));
-    connect(this, SIGNAL(highlighted(int)), SLOT(_k_slotHighlighted(int)));
+    connect(this, QOverload<int>::of(&QComboBox::activated), this, [this](int index) {
+        d->slotActivated(index);
+    });
+    connect(this, QOverload<int>::of(&QComboBox::highlighted), this, [this](int index) {
+        d->slotHighlighted(index);
+    });
 
     // select the white color
     setCurrentIndex(1);
-    d->_k_slotActivated(1);
+    d->slotActivated(1);
 
     setMaxVisibleItems(13);
 }
@@ -293,7 +297,7 @@ void KColorCombo::showEmptyList()
     clear();
 }
 
-void KColorComboPrivate::_k_slotActivated(int index)
+void KColorComboPrivate::slotActivated(int index)
 {
     if (index == 0) {
         QColor c = QColorDialog::getColor(customColor, q);
@@ -310,7 +314,7 @@ void KColorComboPrivate::_k_slotActivated(int index)
     Q_EMIT q->activated(internalcolor);
 }
 
-void KColorComboPrivate::_k_slotHighlighted(int index)
+void KColorComboPrivate::slotHighlighted(int index)
 {
     if (index == 0) {
         internalcolor = customColor;

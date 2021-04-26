@@ -237,8 +237,6 @@ Q_SIGNALS:
 private:
     std::unique_ptr<class KNewPasswordWidgetPrivate> const d;
 
-    Q_PRIVATE_SLOT(d, void _k_passwordChanged())
-    Q_PRIVATE_SLOT(d, void _k_toggleEchoMode())
     Q_DISABLE_COPY(KNewPasswordWidget)
 };
 

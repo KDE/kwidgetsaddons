@@ -19,17 +19,14 @@
 #include <QSize>
 #include <QTimer>
 
-void KPageViewPrivate::_k_rebuildGui()
+void KPageViewPrivate::rebuildGui()
 {
     // clean up old view
     Q_Q(KPageView);
 
     QModelIndex currentLastIndex;
     if (view && view->selectionModel()) {
-        QObject::disconnect(view->selectionModel(),
-                            SIGNAL(selectionChanged(QItemSelection, QItemSelection)),
-                            q,
-                            SLOT(_k_pageSelected(QItemSelection, QItemSelection)));
+        QObject::disconnect(m_selectionChangedConnection);
         currentLastIndex = view->selectionModel()->currentIndex();
     }
 
@@ -47,10 +44,12 @@ void KPageViewPrivate::_k_rebuildGui()
 
     // setup new view
     if (view->selectionModel()) {
-        QObject::connect(view->selectionModel(),
-                         SIGNAL(selectionChanged(QItemSelection, QItemSelection)),
-                         q,
-                         SLOT(_k_pageSelected(QItemSelection, QItemSelection)));
+        m_selectionChangedConnection = QObject::connect(view->selectionModel(),
+                                                        &QItemSelectionModel::selectionChanged,
+                                                        q,
+                                                        [this](const QItemSelection &selected, const QItemSelection &deselected) {
+                                                            pageSelected(selected, deselected);
+                                                        });
 
         if (currentLastIndex.isValid()) {
             view->selectionModel()->setCurrentIndex(currentLastIndex, QItemSelectionModel::Select);
@@ -195,7 +194,7 @@ KPageView::FaceType KPageViewPrivate::detectAutoFace() const
     return KPageView::Plain;
 }
 
-void KPageViewPrivate::_k_modelChanged()
+void KPageViewPrivate::modelChanged()
 {
     if (!model) {
         return;
@@ -204,9 +203,9 @@ void KPageViewPrivate::_k_modelChanged()
     // If the face type is Auto, we rebuild the GUI whenever the layout
     // of the model changes.
     if (faceType == KPageView::Auto) {
-        _k_rebuildGui();
+        rebuildGui();
         // If you discover some crashes use the line below instead...
-        // QTimer::singleShot(0, q, SLOT(_k_rebuildGui()));
+        // QTimer::singleShot(0, q, SLOT(rebuildGui()));
     }
 
     // Set the stack to the minimum size of the largest widget.
@@ -223,7 +222,7 @@ void KPageViewPrivate::_k_modelChanged()
     updateSelection();
 }
 
-void KPageViewPrivate::_k_pageSelected(const QItemSelection &index, const QItemSelection &previous)
+void KPageViewPrivate::pageSelected(const QItemSelection &index, const QItemSelection &previous)
 {
     if (!model) {
         return;
@@ -280,7 +279,7 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
     titleWidget->setVisible(q->showPageHeader());
 }
 
-void KPageViewPrivate::_k_dataChanged(const QModelIndex &, const QModelIndex &)
+void KPageViewPrivate::dataChanged(const QModelIndex &, const QModelIndex &)
 {
     // When data has changed we update the header and icon for the currently selected
     // page.
@@ -344,15 +343,19 @@ void KPageView::setModel(QAbstractItemModel *model)
     Q_D(KPageView);
     // clean up old model
     if (d->model) {
-        disconnect(d->model, SIGNAL(layoutChanged()), this, SLOT(_k_modelChanged()));
-        disconnect(d->model, SIGNAL(dataChanged(QModelIndex, QModelIndex)), this, SLOT(_k_dataChanged(QModelIndex, QModelIndex)));
+        disconnect(d->m_layoutChangedConnection);
+        disconnect(d->m_dataChangedConnection);
     }
 
     d->model = model;
 
     if (d->model) {
-        connect(d->model, SIGNAL(layoutChanged()), this, SLOT(_k_modelChanged()));
-        connect(d->model, SIGNAL(dataChanged(QModelIndex, QModelIndex)), this, SLOT(_k_dataChanged(QModelIndex, QModelIndex)));
+        d->m_layoutChangedConnection = connect(d->model, &QAbstractItemModel::layoutChanged, this, [d]() {
+            d->modelChanged();
+        });
+        d->m_dataChangedConnection = connect(d->model, &QAbstractItemModel::dataChanged, this, [d](const QModelIndex &topLeft, const QModelIndex &bottomRight) {
+            d->dataChanged(topLeft, bottomRight);
+        });
 
         // set new model in navigation view
         if (d->view) {
@@ -360,7 +363,7 @@ void KPageView::setModel(QAbstractItemModel *model)
         }
     }
 
-    d->_k_rebuildGui();
+    d->rebuildGui();
 }
 
 QAbstractItemModel *KPageView::model() const
@@ -374,7 +377,7 @@ void KPageView::setFaceType(FaceType faceType)
     Q_D(KPageView);
     d->faceType = faceType;
 
-    d->_k_rebuildGui();
+    d->rebuildGui();
 }
 
 KPageView::FaceType KPageView::faceType() const

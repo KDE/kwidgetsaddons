@@ -99,7 +99,9 @@ public:
     {
         m_updateTimer->setSingleShot(true);
         m_updateTimer->setInterval(0);
-        QObject::connect(m_updateTimer, SIGNAL(timeout()), q, SLOT(updateWidth()));
+        QObject::connect(m_updateTimer, &QTimer::timeout, q, [this]() {
+            updateWidth();
+        });
     }
 
     void scheduleWidthUpdate()

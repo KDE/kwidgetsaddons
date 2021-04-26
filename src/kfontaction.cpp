@@ -33,7 +33,7 @@ public:
     {
     }
 
-    void _k_slotFontChanged(const QFont &font)
+    void slotFontChanged(const QFont &font)
     {
         Q_Q(KFontAction);
 
@@ -57,7 +57,7 @@ public:
     QFontComboBox::FontFilters fontFilters = QFontComboBox::AllFonts;
 };
 
-QStringList _k_fontList(const QFontComboBox::FontFilters &fontFilters = QFontComboBox::AllFonts)
+QStringList fontList(const QFontComboBox::FontFilters &fontFilters = QFontComboBox::AllFonts)
 {
     QFontDatabase dbase;
 
@@ -102,14 +102,14 @@ KFontAction::KFontAction(uint fontListCriteria, QObject *parent)
         d->fontFilters |= QFontComboBox::ScalableFonts;
     }
 
-    KSelectAction::setItems(_k_fontList(d->fontFilters));
+    KSelectAction::setItems(fontList(d->fontFilters));
     setEditable(true);
 }
 
 KFontAction::KFontAction(QObject *parent)
     : KSelectAction(*new KFontActionPrivate(this), parent)
 {
-    KSelectAction::setItems(_k_fontList());
+    KSelectAction::setItems(fontList());
     setEditable(true);
 }
 
@@ -117,7 +117,7 @@ KFontAction::KFontAction(const QString &text, QObject *parent)
     : KSelectAction(*new KFontActionPrivate(this), parent)
 {
     setText(text);
-    KSelectAction::setItems(_k_fontList());
+    KSelectAction::setItems(fontList());
     setEditable(true);
 }
 
@@ -126,7 +126,7 @@ KFontAction::KFontAction(const QIcon &icon, const QString &text, QObject *parent
 {
     setIcon(icon);
     setText(text);
-    KSelectAction::setItems(_k_fontList());
+    KSelectAction::setItems(fontList());
     setEditable(true);
 }
 
@@ -156,7 +156,7 @@ QWidget *KFontAction::createWidget(QWidget *parent)
 
     connect(cb, &QFontComboBox::currentFontChanged, this, [this](const QFont &ft) {
         Q_D(KFontAction);
-        d->_k_slotFontChanged(ft);
+        d->slotFontChanged(ft);
     });
     cb->setMinimumWidth(cb->sizeHint().width());
     return cb;

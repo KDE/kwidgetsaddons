@@ -83,11 +83,6 @@ Q_SIGNALS:
     void showCharRequested(uint c);
 
 private:
-    Q_PRIVATE_SLOT(d, void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected))
-    Q_PRIVATE_SLOT(d, void _k_resizeCells())
-    Q_PRIVATE_SLOT(d, void _k_doubleClicked(const QModelIndex &index))
-
-private:
     friend class KCharSelectTablePrivate;
     std::unique_ptr<class KCharSelectTablePrivate> const d;
 

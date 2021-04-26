@@ -44,9 +44,9 @@ public:
     QVector<uint> chars;
     uint chr;
 
-    void _k_resizeCells();
-    void _k_doubleClicked(const QModelIndex &index);
-    void _k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    void resizeCells();
+    void doubleClicked(const QModelIndex &index);
+    void slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 };
 
 class KCharSelectPrivate
@@ -90,18 +90,18 @@ public:
     void historyAdd(uint c, bool fromSearch, const QString &searchString);
     void showFromHistory(int index);
     void updateBackForwardButtons();
-    void _k_activateSearchLine();
-    void _k_back();
-    void _k_forward();
-    void _k_fontSelected();
-    void _k_charSelected(uint c);
-    void _k_updateCurrentChar(uint c);
-    void _k_slotUpdateUnicode(uint c);
-    void _k_sectionSelected(int index);
-    void _k_blockSelected(int index);
-    void _k_searchEditChanged();
-    void _k_search();
-    void _k_linkClicked(QUrl url);
+    void activateSearchLine();
+    void back();
+    void forward();
+    void fontSelected();
+    void charSelected(uint c);
+    void updateCurrentChar(uint c);
+    void slotUpdateUnicode(uint c);
+    void sectionSelected(int index);
+    void blockSelected(int index);
+    void searchEditChanged();
+    void search();
+    void linkClicked(QUrl url);
 };
 
 /******************************************************************/
@@ -133,9 +133,11 @@ KCharSelectTable::KCharSelectTable(QWidget *parent, const QFont &_font)
     setDragDropMode(QAbstractItemView::DragDrop);
     setTextElideMode(Qt::ElideNone);
 
-    connect(this, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(_k_doubleClicked(QModelIndex)));
+    connect(this, &KCharSelectTable::doubleClicked, this, [this](const QModelIndex &index) {
+        d->doubleClicked(index);
+    });
 
-    d->_k_resizeCells();
+    d->resizeCells();
 }
 
 KCharSelectTable::~KCharSelectTable() = default;
@@ -147,7 +149,7 @@ void KCharSelectTable::setFont(const QFont &_font)
     if (d->model) {
         d->model->setFont(_font);
     }
-    d->_k_resizeCells();
+    d->resizeCells();
 }
 
 uint KCharSelectTable::chr()
@@ -180,10 +182,13 @@ void KCharSelectTable::setContents(const QVector<uint> &chars)
     auto oldModel = d->model;
     d->model = new KCharSelectItemModel(chars, d->font, this);
     setModel(d->model);
-    d->_k_resizeCells();
+    d->resizeCells();
 
     // Setting a model changes the selectionModel. Make sure to always reconnect.
-    connect(selectionModel(), SIGNAL(selectionChanged(QItemSelection, QItemSelection)), this, SLOT(_k_slotSelectionChanged(QItemSelection, QItemSelection)));
+    connect(selectionModel(), &QItemSelectionModel::selectionChanged, this, [this](const QItemSelection &selected, const QItemSelection &deselected) {
+        d->slotSelectionChanged(selected, deselected);
+    });
+
     connect(d->model, &KCharSelectItemModel::showCharRequested, this, &KCharSelectTable::showCharRequested);
 
     delete oldModel; // The selection model is thrown away when the model gets destroyed().
@@ -199,7 +204,7 @@ void KCharSelectTable::scrollTo(const QModelIndex &index, ScrollHint hint)
     }
 }
 
-void KCharSelectTablePrivate::_k_slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+void KCharSelectTablePrivate::slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     Q_UNUSED(deselected);
     if (!model || selected.indexes().isEmpty()) {
@@ -229,14 +234,14 @@ void KCharSelectTable::resizeEvent(QResizeEvent *e)
         auto timer = new QTimer(this);
         timer->setSingleShot(true);
         connect(timer, &QTimer::timeout, [&, timer]() {
-            d->_k_resizeCells();
+            d->resizeCells();
             timer->deleteLater();
         });
         timer->start(0);
     }
 }
 
-void KCharSelectTablePrivate::_k_resizeCells()
+void KCharSelectTablePrivate::resizeCells()
 {
     KCharSelectItemModel *model = static_cast<KCharSelectItemModel *>(q->model());
     if (!model)
@@ -302,7 +307,7 @@ void KCharSelectTablePrivate::_k_resizeCells()
     q->setChar(oldChar);
 }
 
-void KCharSelectTablePrivate::_k_doubleClicked(const QModelIndex &index)
+void KCharSelectTablePrivate::doubleClicked(const QModelIndex &index)
 {
     uint c = model->data(index, KCharSelectItemModel::CharacterRole).toUInt();
     if (s_data()->isPrint(c)) {
@@ -386,15 +391,19 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
 
         QAction *findAction = new QAction(this);
         connect(findAction, &QAction::triggered, this, [this]() {
-            d->_k_activateSearchLine();
+            d->activateSearchLine();
         });
         findAction->setObjectName(QStringLiteral("edit_find"));
         findAction->setText(tr("&Find...", "@action"));
         findAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
         attachToActionParent(findAction, actionParent, QKeySequence::keyBindings(QKeySequence::Find));
 
-        connect(d->searchLine, SIGNAL(textChanged(QString)), this, SLOT(_k_searchEditChanged()));
-        connect(d->searchLine, SIGNAL(returnPressed()), this, SLOT(_k_search()));
+        connect(d->searchLine, &QLineEdit::textChanged, this, [this]() {
+            d->searchEditChanged();
+        });
+        connect(d->searchLine, &QLineEdit::returnPressed, this, [this]() {
+            d->search();
+        });
     }
 
     if ((SearchLine & controls) && ((FontCombo & controls) || (FontSize & controls) || (BlockCombos & controls))) {
@@ -441,10 +450,10 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     }
 
     connect(d->backButton, &QToolButton::clicked, this, [this]() {
-        d->_k_back();
+        d->back();
     });
     connect(d->forwardButton, &QToolButton::clicked, this, [this]() {
-        d->_k_forward();
+        d->forward();
     });
 
     d->sectionCombo = new QComboBox(this);
@@ -459,8 +468,13 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->sectionCombo->addItems(s_data()->sectionList());
     d->blockCombo->setMinimumWidth(QFontMetrics(QWidget::font()).averageCharWidth() * 25);
 
-    connect(d->sectionCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(_k_sectionSelected(int)));
-    connect(d->blockCombo, SIGNAL(currentIndexChanged(int)), this, SLOT(_k_blockSelected(int)));
+    connect(d->sectionCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index) {
+        d->sectionSelected(index);
+    });
+
+    connect(d->blockCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index) {
+        d->blockSelected(index);
+    });
 
     d->fontCombo = new QFontComboBox(this);
     comboLayout->addWidget(d->fontCombo);
@@ -475,8 +489,12 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->fontSizeSpinBox->setSingleStep(1);
     d->fontSizeSpinBox->setToolTip(tr("Set font size", "@info:tooltip"));
 
-    connect(d->fontCombo, SIGNAL(currentIndexChanged(QString)), this, SLOT(_k_fontSelected()));
-    connect(d->fontSizeSpinBox, SIGNAL(valueChanged(int)), this, SLOT(_k_fontSelected()));
+    connect(d->fontCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this]() {
+        d->fontSelected();
+    });
+    connect(d->fontSizeSpinBox, &QSpinBox::valueChanged, this, [this]() {
+        d->fontSelected();
+    });
 
     if ((HistoryButtons & controls) || (FontCombo & controls) || (FontSize & controls) || (BlockCombos & controls)) {
         mainLayout->addLayout(comboLayout);
@@ -517,9 +535,13 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
 
     setCurrentFont(QFont());
 
-    connect(d->charTable, SIGNAL(focusItemChanged(uint)), this, SLOT(_k_updateCurrentChar(uint)));
-    connect(d->charTable, SIGNAL(activated(uint)), this, SLOT(_k_charSelected(uint)));
-    connect(d->charTable, SIGNAL(showCharRequested(uint)), this, SLOT(setCurrentCodePoint(uint)));
+    connect(d->charTable, &KCharSelectTable::focusItemChanged, this, [this](uint c) {
+        d->updateCurrentChar(c);
+    });
+    connect(d->charTable, &KCharSelectTable::activated, this, [this](uint c) {
+        d->charSelected(c);
+    });
+    connect(d->charTable, &KCharSelectTable::showCharRequested, this, &KCharSelect::setCurrentCodePoint);
 
     d->detailBrowser = new QTextBrowser(this);
     if (DetailBrowser & controls) {
@@ -528,7 +550,9 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         d->detailBrowser->hide();
     }
     d->detailBrowser->setOpenLinks(false);
-    connect(d->detailBrowser, SIGNAL(anchorClicked(QUrl)), this, SLOT(_k_linkClicked(QUrl)));
+    connect(d->detailBrowser, &QTextBrowser::anchorClicked, this, [this](const QUrl &url) {
+        d->linkClicked(url);
+    });
 
     setFocusPolicy(Qt::StrongFocus);
     if (SearchLine & controls) {
@@ -537,7 +561,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         setFocusProxy(d->charTable);
     }
 
-    d->_k_sectionSelected(0); // this will also call _k_blockSelected(0)
+    d->sectionSelected(0); // this will also call blockSelected(0)
     setCurrentCodePoint(QChar::Null);
 
     d->historyEnabled = true;
@@ -554,7 +578,7 @@ void KCharSelect::setCurrentFont(const QFont &_font)
 {
     d->fontCombo->setCurrentFont(_font);
     d->fontSizeSpinBox->setValue(_font.pointSize());
-    d->_k_fontSelected();
+    d->fontSelected();
 }
 
 void KCharSelect::setAllPlanesEnabled(bool all)
@@ -685,7 +709,7 @@ void KCharSelectPrivate::showFromHistory(int index)
     if (item.fromSearch) {
         if (searchLine->text() != item.searchString) {
             searchLine->setText(item.searchString);
-            _k_search();
+            search();
         }
         charTable->setChar(item.c);
     } else {
@@ -701,25 +725,25 @@ void KCharSelectPrivate::updateBackForwardButtons()
     forwardButton->setEnabled(inHistory < history.count() - 1);
 }
 
-void KCharSelectPrivate::_k_activateSearchLine()
+void KCharSelectPrivate::activateSearchLine()
 {
     searchLine->setFocus();
     searchLine->selectAll();
 }
 
-void KCharSelectPrivate::_k_back()
+void KCharSelectPrivate::back()
 {
     Q_ASSERT(inHistory > 0);
     showFromHistory(inHistory - 1);
 }
 
-void KCharSelectPrivate::_k_forward()
+void KCharSelectPrivate::forward()
 {
     Q_ASSERT(inHistory + 1 < history.count());
     showFromHistory(inHistory + 1);
 }
 
-void KCharSelectPrivate::_k_fontSelected()
+void KCharSelectPrivate::fontSelected()
 {
     QFont font = fontCombo->currentFont();
     font.setPointSize(fontSizeSpinBox->value());
@@ -727,7 +751,7 @@ void KCharSelectPrivate::_k_fontSelected()
     Q_EMIT q->currentFontChanged(font);
 }
 
-void KCharSelectPrivate::_k_charSelected(uint c)
+void KCharSelectPrivate::charSelected(uint c)
 {
     if (!allPlanesEnabled) {
         Q_EMIT q->charSelected(QChar(c));
@@ -735,7 +759,7 @@ void KCharSelectPrivate::_k_charSelected(uint c)
     Q_EMIT q->codePointSelected(c);
 }
 
-void KCharSelectPrivate::_k_updateCurrentChar(uint c)
+void KCharSelectPrivate::updateCurrentChar(uint c)
 {
     if (!allPlanesEnabled) {
         Q_EMIT q->currentCharChanged(QChar(c));
@@ -757,10 +781,10 @@ void KCharSelectPrivate::_k_updateCurrentChar(uint c)
         historyAdd(c, searchMode, searchLine->text());
     }
 
-    _k_slotUpdateUnicode(c);
+    slotUpdateUnicode(c);
 }
 
-void KCharSelectPrivate::_k_slotUpdateUnicode(uint c)
+void KCharSelectPrivate::slotUpdateUnicode(uint c)
 {
     QString html = QLatin1String("<p>") + tr("Character:") + QLatin1Char(' ') + s_data()->display(c, charTable->font()) + QLatin1Char(' ')
         + s_data()->formatCode(c) + QLatin1String("<br />");
@@ -945,7 +969,7 @@ QString KCharSelectPrivate::createLinks(QString s)
     return s;
 }
 
-void KCharSelectPrivate::_k_sectionSelected(int index)
+void KCharSelectPrivate::sectionSelected(int index)
 {
     blockCombo->clear();
     const QVector<int> blocks = s_data()->sectionContents(index);
@@ -961,7 +985,7 @@ void KCharSelectPrivate::_k_sectionSelected(int index)
     blockCombo->setCurrentIndex(0);
 }
 
-void KCharSelectPrivate::_k_blockSelected(int index)
+void KCharSelectPrivate::blockSelected(int index)
 {
     if (index == -1) {
         // the combo box has been cleared and is about to be filled again (because the section has changed)
@@ -979,7 +1003,7 @@ void KCharSelectPrivate::_k_blockSelected(int index)
     charTable->setChar(contents[0]);
 }
 
-void KCharSelectPrivate::_k_searchEditChanged()
+void KCharSelectPrivate::searchEditChanged()
 {
     if (searchLine->text().isEmpty()) {
         sectionCombo->setEnabled(true);
@@ -990,7 +1014,7 @@ void KCharSelectPrivate::_k_searchEditChanged()
         uint c = charTable->chr();
         bool oldHistoryEnabled = historyEnabled;
         historyEnabled = false;
-        _k_blockSelected(blockCombo->currentIndex());
+        blockSelected(blockCombo->currentIndex());
         historyEnabled = oldHistoryEnabled;
         q->setCurrentCodePoint(c);
     } else {
@@ -999,12 +1023,12 @@ void KCharSelectPrivate::_k_searchEditChanged()
 
         int length = searchLine->text().length();
         if (length >= 3) {
-            _k_search();
+            search();
         }
     }
 }
 
-void KCharSelectPrivate::_k_search()
+void KCharSelectPrivate::search()
 {
     if (searchLine->text().isEmpty()) {
         return;
@@ -1028,7 +1052,7 @@ void KCharSelectPrivate::_k_search()
     }
 }
 
-void KCharSelectPrivate::_k_linkClicked(QUrl url)
+void KCharSelectPrivate::linkClicked(QUrl url)
 {
     QString hex = url.toString();
     if (hex.size() > 6) {

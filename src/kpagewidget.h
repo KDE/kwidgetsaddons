@@ -138,9 +138,6 @@ Q_SIGNALS:
 
 protected:
     KPageWidget(KPageWidgetPrivate &dd, QWidget *parent);
-
-private:
-    Q_PRIVATE_SLOT(d_func(), void _k_slotCurrentPageChanged(const QModelIndex &, const QModelIndex &))
 };
 
 #endif

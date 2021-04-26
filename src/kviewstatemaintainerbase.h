@@ -38,9 +38,6 @@ public:
 private:
     Q_DECLARE_PRIVATE(KViewStateMaintainerBase)
     std::unique_ptr<KViewStateMaintainerBasePrivate> const d_ptr;
-
-    Q_PRIVATE_SLOT(d_func(), void _k_modelAboutToBeReset())
-    Q_PRIVATE_SLOT(d_func(), void _k_modelReset())
 };
 
 #endif

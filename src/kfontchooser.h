@@ -262,12 +262,6 @@ private:
     std::unique_ptr<class KFontChooserPrivate> const d;
 
     Q_DISABLE_COPY(KFontChooser)
-
-    Q_PRIVATE_SLOT(d, void _k_family_chosen_slot(const QString &))
-    Q_PRIVATE_SLOT(d, void _k_size_chosen_slot(const QString &))
-    Q_PRIVATE_SLOT(d, void _k_style_chosen_slot(const QString &))
-    Q_PRIVATE_SLOT(d, void _k_displaySample(const QFont &font))
-    Q_PRIVATE_SLOT(d, void _k_size_value_slot(double))
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KFontChooser::DisplayFlags)

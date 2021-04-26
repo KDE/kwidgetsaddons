@@ -104,8 +104,6 @@ public:
 private:
     std::unique_ptr<class KPixmapRegionSelectorDialogPrivate> const d;
 
-    Q_PRIVATE_SLOT(d, void _k_adjustPixmapSize())
-
     Q_DISABLE_COPY(KPixmapRegionSelectorDialog)
 };
 

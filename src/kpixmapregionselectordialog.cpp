@@ -29,12 +29,14 @@ public:
 
     void init()
     {
-        // When the image is rotated we need to enforce the maximum width&height into the
-        // KPixmapRegionSelectorWidget; in order to avoid the dialog to get out of the screen
-        q->connect(pixmapSelectorWidget, SIGNAL(pixmapRotated()), q, SLOT(_k_adjustPixmapSize()));
+        //When the image is rotated we need to enforce the maximum width&height into the
+        //KPixmapRegionSelectorWidget; in order to avoid the dialog to get out of the screen
+        q->connect(pixmapSelectorWidget, &KPixmapRegionSelectorWidget::pixmapRotated, q, [this]() {
+            adjustPixmapSize();
+        });
     }
 
-    void _k_adjustPixmapSize()
+    void adjustPixmapSize()
     {
         if (pixmapSelectorWidget) {
             // Set maximum size for picture
@@ -79,7 +81,7 @@ KPixmapRegionSelectorWidget *KPixmapRegionSelectorDialog::pixmapRegionSelectorWi
 
 void KPixmapRegionSelectorDialog::adjustRegionSelectorWidgetSizeToFitScreen()
 {
-    d->_k_adjustPixmapSize();
+    d->adjustPixmapSize();
 }
 
 QRect KPixmapRegionSelectorDialog::getSelectedRegion(const QPixmap &pixmap, QWidget *parent)

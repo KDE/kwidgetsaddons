@@ -51,8 +51,8 @@ private Q_SLOTS:
         KDualAction action(INACTIVE_TEXT, ACTIVE_TEXT, nullptr);
         QVERIFY(!action.isActive());
         QCOMPARE(action.text(), INACTIVE_TEXT);
-        QSignalSpy activeChangedSpy(&action, SIGNAL(activeChanged(bool)));
-        QSignalSpy activeChangedByUserSpy(&action, SIGNAL(activeChangedByUser(bool)));
+        QSignalSpy activeChangedSpy(&action, &KDualAction::activeChanged);
+        QSignalSpy activeChangedByUserSpy(&action, &KDualAction::activeChangedByUser);
 
         action.setActive(true);
         QVERIFY(action.isActive());
@@ -74,8 +74,8 @@ private Q_SLOTS:
         KDualAction action(INACTIVE_TEXT, ACTIVE_TEXT, nullptr);
         QVERIFY(!action.isActive());
         QCOMPARE(action.text(), INACTIVE_TEXT);
-        QSignalSpy activeChangedSpy(&action, SIGNAL(activeChanged(bool)));
-        QSignalSpy activeChangedByUserSpy(&action, SIGNAL(activeChangedByUser(bool)));
+        QSignalSpy activeChangedSpy(&action, &KDualAction::activeChanged);
+        QSignalSpy activeChangedByUserSpy(&action, &KDualAction::activeChangedByUser);
 
         action.trigger();
         QVERIFY(action.isActive());

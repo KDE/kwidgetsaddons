@@ -56,8 +56,8 @@ public:
         delete m_actionGroup;
     }
 
-    void _k_comboBoxDeleted(QObject *);
-    void _k_comboBoxCurrentIndexChanged(int);
+    void comboBoxDeleted(QObject *);
+    void comboBoxCurrentIndexChanged(int);
 
     void init();
 

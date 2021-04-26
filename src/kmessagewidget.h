@@ -330,9 +330,6 @@ protected:
 private:
     friend class KMessageWidgetPrivate;
     std::unique_ptr<class KMessageWidgetPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void slotTimeLineChanged(qreal))
-    Q_PRIVATE_SLOT(d, void slotTimeLineFinished())
 };
 
 #endif /* KMESSAGEWIDGET_H */

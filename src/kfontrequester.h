@@ -120,8 +120,6 @@ private:
     friend class KFontRequesterPrivate;
     std::unique_ptr<class KFontRequesterPrivate> const d;
 
-    Q_PRIVATE_SLOT(d, void _k_buttonClicked())
-
     Q_DISABLE_COPY(KFontRequester)
 };
 

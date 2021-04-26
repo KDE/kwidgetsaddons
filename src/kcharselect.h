@@ -273,18 +273,6 @@ Q_SIGNALS:
     void codePointSelected(uint codePoint);
 
 private:
-    Q_PRIVATE_SLOT(d, void _k_back())
-    Q_PRIVATE_SLOT(d, void _k_forward())
-    Q_PRIVATE_SLOT(d, void _k_fontSelected())
-    Q_PRIVATE_SLOT(d, void _k_charSelected(uint c))
-    Q_PRIVATE_SLOT(d, void _k_updateCurrentChar(uint c))
-    Q_PRIVATE_SLOT(d, void _k_slotUpdateUnicode(uint c))
-    Q_PRIVATE_SLOT(d, void _k_sectionSelected(int index))
-    Q_PRIVATE_SLOT(d, void _k_blockSelected(int index))
-    Q_PRIVATE_SLOT(d, void _k_searchEditChanged())
-    Q_PRIVATE_SLOT(d, void _k_search())
-    Q_PRIVATE_SLOT(d, void _k_linkClicked(QUrl))
-
     void initWidget(const Controls, QObject *);
 
 private:

@@ -18,7 +18,7 @@
 class KSqueezedTextLabelPrivate
 {
 public:
-    void _k_copyFullText()
+    void copyFullText()
     {
         QApplication::clipboard()->setText(fullText);
     }
@@ -203,7 +203,7 @@ void KSqueezedTextLabel::contextMenuEvent(QContextMenuEvent *ev)
 
         QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("edit-copy")), tr("&Copy Full Text", "@action:inmenu"), &menu);
         connect(act, &QAction::triggered, this, [this]() {
-            d->_k_copyFullText();
+            d->copyFullText();
         });
         menu.addAction(act);
 

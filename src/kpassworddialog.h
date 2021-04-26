@@ -27,10 +27,11 @@
  * Requesting a simple password, asynchronous
  *
  * \code
- *  KPasswordDialog *dlg = new KPasswordDialog( parent );
+ *  KPasswordDialog *dlg = new KPasswordDialog(parent);
  *  dlg->setPrompt(i18n("Enter a password"));
- *  connect( dlg, SIGNAL( gotPassword( const QString& , bool ) )  , this, SLOT( setPassword( const QString &) ) );
- *  connect( dlg, SIGNAL( rejected() )  , this, SLOT( slotCancel() ) );
+ *  connect(dlg, &KPasswordDialog::gotPassword,
+ *          this, [this](const QString &password) { setPassword(password); });
+ *  connect(dlg, &QDialog::rejected, this, [this]() { slotCancel(); });
  *  dlg->show();
  * \endcode
  *
@@ -39,9 +40,10 @@
  * \code
  *  KPasswordDialog dlg(parent, KPasswordDialog::ShowUsernameLine);
  *  dlg.setPrompt(i18n("Enter a login and a password"));
- *  if( !dlg.exec() )
+ *  if(!dlg.exec()) {
  *      return; //the user canceled
- *  use( dlg.username() , dlg.password() );
+ *  }
+ *  use(dlg.username(), dlg.password());
  * \endcode
  *
  * \image html kpassworddialog.png "KPasswordDialog"
@@ -324,11 +326,6 @@ protected:
      * password is valid, @p false otherwise.
      */
     virtual bool checkPassword();
-
-private:
-    Q_PRIVATE_SLOT(d, void actuallyAccept())
-    Q_PRIVATE_SLOT(d, void activated(const QString &userName))
-    Q_PRIVATE_SLOT(d, void updateFields())
 
 private:
     friend class KPasswordDialogPrivate;

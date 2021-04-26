@@ -41,20 +41,21 @@ SelectActionTest::SelectActionTest(QWidget *parent)
 
     m_comboSelect->setToolBarMode(KSelectAction::ComboBoxMode);
     m_comboSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_comboSelect, SIGNAL(triggered(QAction *)), SLOT(actionTriggered(QAction *)));
-    connect(m_comboSelect, SIGNAL(indexTriggered(int)), SLOT(indexTriggered(int)));
-    connect(m_comboSelect, SIGNAL(textTriggered(QString)), SLOT(textTriggered(QString)));
+
+    connect(m_comboSelect, QOverload<QAction *>::of(&KSelectAction::triggered), this, &SelectActionTest::actionTriggered);
+    connect(m_comboSelect, &KSelectAction::indexTriggered, this, &SelectActionTest::indexTriggered);
+    connect(m_comboSelect, &KSelectAction::textTriggered, this, &SelectActionTest::textTriggered);
 
     m_buttonSelect->setToolBarMode(KSelectAction::MenuMode);
     m_buttonSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_buttonSelect, SIGNAL(triggered(QAction *)), SLOT(actionTriggered(QAction *)));
-    connect(m_buttonSelect, SIGNAL(indexTriggered(int)), SLOT(indexTriggered(int)));
-    connect(m_buttonSelect, SIGNAL(textTriggered(QString)), SLOT(textTriggered(QString)));
+    connect(m_buttonSelect, QOverload<QAction *>::of(&KSelectAction::triggered), this, &SelectActionTest::actionTriggered);
+    connect(m_buttonSelect, &KSelectAction::indexTriggered, this, &SelectActionTest::indexTriggered);
+    connect(m_buttonSelect, &KSelectAction::textTriggered, this, &SelectActionTest::textTriggered);
 
     menuBar()->addAction(m_comboSelect);
     menuBar()->addAction(m_buttonSelect);
-    menuBar()->addAction(QStringLiteral("Add an action"), this, SLOT(addAction()));
-    menuBar()->addAction(QStringLiteral("Remove an action"), this, SLOT(removeAction()));
+    menuBar()->addAction(QStringLiteral("Add an action"), this, &SelectActionTest::addAction);
+    menuBar()->addAction(QStringLiteral("Remove an action"), this, &SelectActionTest::removeAction);
 
     QToolBar *toolBar = addToolBar(QStringLiteral("Test"));
     toolBar->addAction(m_comboSelect);

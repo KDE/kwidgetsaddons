@@ -34,7 +34,7 @@ public:
     QPushButton *finishButton = nullptr;
 
     void init();
-    void _k_slotUpdateButtons();
+    void slotUpdateButtons();
 
     QModelIndex getNext(QModelIndex nextIndex)
     {
@@ -117,7 +117,9 @@ void KAssistantDialogPrivate::init()
 
     q->setFaceType(KPageDialog::Plain);
 
-    q->connect(q, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)), q, SLOT(_k_slotUpdateButtons()));
+    q->connect(q, &KAssistantDialog::currentPageChanged, q, [this]() {
+        slotUpdateButtons();
+    });
 }
 
 void KAssistantDialog::back()
@@ -148,7 +150,7 @@ void KAssistantDialog::setValid(KPageWidgetItem *page, bool enable)
 
     d->valid[page] = enable;
     if (page == currentPage()) {
-        d->_k_slotUpdateButtons();
+        d->slotUpdateButtons();
     }
 }
 
@@ -159,7 +161,7 @@ bool KAssistantDialog::isValid(KPageWidgetItem *page) const
     return d->valid.value(page, true);
 }
 
-void KAssistantDialogPrivate::_k_slotUpdateButtons()
+void KAssistantDialogPrivate::slotUpdateButtons()
 {
     Q_Q(KAssistantDialog);
 
@@ -179,7 +181,7 @@ void KAssistantDialog::showEvent(QShowEvent *event)
 {
     Q_D(KAssistantDialog);
 
-    d->_k_slotUpdateButtons(); // called because last time that function was called is when the first page was added, so the next button show "finish"
+    d->slotUpdateButtons(); // called because last time that function was called is when the first page was added, so the next button show "finish"
     KPageDialog::showEvent(event);
 }
 
@@ -188,7 +190,7 @@ void KAssistantDialog::setAppropriate(KPageWidgetItem *page, bool appropriate)
     Q_D(KAssistantDialog);
 
     d->appropriate[page] = appropriate;
-    d->_k_slotUpdateButtons();
+    d->slotUpdateButtons();
 }
 
 bool KAssistantDialog::isAppropriate(KPageWidgetItem *page) const

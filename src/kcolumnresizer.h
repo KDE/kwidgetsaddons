@@ -108,8 +108,6 @@ protected:
 private:
     std::unique_ptr<class KColumnResizerPrivate> const d;
     Q_DISABLE_COPY(KColumnResizer)
-
-    Q_PRIVATE_SLOT(d, void updateWidth())
 };
 
 #endif /* KCOLUMNRESIZER_H */

@@ -34,19 +34,20 @@ class QWidget;
  *
  * \code
  *  KNewPasswordDialog *dlg = new KNewPasswordDialog( parent );
- *  dlg->setPrompt( i18n( "Enter a password" ) );
- *  connect( dlg, SIGNAL( newPassword(QString) )  , this, SLOT( setPassword(QString) ) );
- *  connect( dlg, SIGNAL( rejected() )  , this, SLOT( slotCancel() ) );
+ *  dlg->setPrompt(i18n("Enter a password"));
+ *  connect(dlg, &KNewPasswordDialog::newPassword, this, [this](const QString &pass) { setPassword(pass); });
+ *  connect(dlg, &QDialog::rejected, this, [this]() { slotCancel(); });
  *  dlg->show();
  * \endcode
  *
  * \subsection synchronous Synchronous
  *
  * \code
- *  KNewPasswordDialog dlg( parent );
- *  dlg.setPrompt( i18n( "Enter a password" ) );
- *  if( dlg.exec() )
- *      setPassword( dlg.password() );
+ *  KNewPasswordDialog dlg(parent);
+ *  dlg.setPrompt(i18n("Enter a password"));
+ *  if(dlg.exec()) {
+ *      setPassword(dlg.password());
+ *  }
  * \endcode
  *
  * \image html knewpassworddialog.png "KNewPasswordDialog"
@@ -256,8 +257,6 @@ Q_SIGNALS:
 
 private:
     std::unique_ptr<class KNewPasswordDialogPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void _k_passwordStatusChanged())
 };
 
 #endif // KNEWPASSWORDDIALOG_H

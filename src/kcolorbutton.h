@@ -104,8 +104,6 @@ protected:
 
 private:
     std::unique_ptr<class KColorButtonPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void _k_colorChosen())
 };
 
 #endif

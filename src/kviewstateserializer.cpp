@@ -75,7 +75,7 @@ public:
         processPendingChanges();
 
         if (!hasPendingChanges()) {
-            q->disconnect(getModel(), SIGNAL(rowsInserted(QModelIndex, int, int)), q, SLOT(rowsInserted(QModelIndex, int, int)));
+            q->disconnect(m_rowsInsertedConnection);
             q->deleteLater();
         }
     }
@@ -90,6 +90,7 @@ public:
     QSet<QString> m_pendingSelections;
     QSet<QString> m_pendingExpansions;
     QString m_pendingCurrent;
+    QMetaObject::Connection m_rowsInsertedConnection;
 };
 
 KViewStateSerializer::KViewStateSerializer(QObject *parent)
@@ -141,8 +142,10 @@ void KViewStateSerializerPrivate::listenToPendingChanges()
     if (hasPendingChanges()) {
         const QAbstractItemModel *model = getModel();
         if (model) {
-            q->disconnect(model, SIGNAL(rowsInserted(QModelIndex, int, int)), q, SLOT(rowsInserted(QModelIndex, int, int)));
-            q->connect(model, SIGNAL(rowsInserted(QModelIndex, int, int)), SLOT(rowsInserted(QModelIndex, int, int)));
+            q->disconnect(m_rowsInsertedConnection);
+            m_rowsInsertedConnection = q->connect(model, &QAbstractItemModel::rowsInserted, q, [this](const QModelIndex &parent, int first, int last) {
+                rowsInserted(parent, first, last);
+            });
             return;
         } else {
             q->deleteLater();
@@ -260,7 +263,9 @@ void KViewStateSerializer::restoreScrollState(int verticalScoll, int horizontalS
     d->m_verticalScrollBarValue = verticalScoll;
     d->m_horizontalScrollBarValue = horizontalScroll;
 
-    QTimer::singleShot(0, this, SLOT(restoreScrollBarState()));
+    QTimer::singleShot(0, this, [d]() {
+        d->restoreScrollBarState();
+    });
 }
 
 void KViewStateSerializerPrivate::restoreSelection()

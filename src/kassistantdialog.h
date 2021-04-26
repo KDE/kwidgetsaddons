@@ -142,8 +142,6 @@ private:
     const void *__kwidgetsaddons_d_do_not_use;
 #endif
 
-    Q_PRIVATE_SLOT(d_func(), void _k_slotUpdateButtons())
-
     Q_DISABLE_COPY(KAssistantDialog)
 };
 

@@ -32,9 +32,9 @@ public:
     void loadMimeTypes(const QStringList &selected = QStringList());
     QVector<const QStandardItem *> getCheckedItems();
 
-    void _k_editMimeType();
-    void _k_slotCurrentChanged(const QModelIndex &index);
-    void _k_slotSycocaDatabaseChanged(const QStringList &);
+    void editMimeType();
+    void slotCurrentChanged(const QModelIndex &index);
+    void slotSycocaDatabaseChanged(const QStringList &);
 
     KMimeTypeChooser *const q;
     QTreeView *mimeTypeTree = nullptr;
@@ -128,14 +128,14 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
         d->btnEditMimeType->setEnabled(false);
 
         connect(d->btnEditMimeType, &QPushButton::clicked, this, [this]() {
-            d->_k_editMimeType();
+            d->editMimeType();
         });
         connect(d->mimeTypeTree, &QAbstractItemView::doubleClicked, this, [this]() {
-            d->_k_editMimeType();
+            d->editMimeType();
         });
 
         connect(d->mimeTypeTree, &QTreeView::activated, this, [this](const QModelIndex &index) {
-            d->_k_slotCurrentChanged(index);
+            d->slotCurrentChanged(index);
         });
 
         d->btnEditMimeType->setToolTip(tr("Launch the MIME type editor", "@info:tooltip"));
@@ -240,7 +240,7 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
     }
 }
 
-void KMimeTypeChooserPrivate::_k_editMimeType()
+void KMimeTypeChooserPrivate::editMimeType()
 {
     QModelIndex mimeIndex = m_proxyModel->mapToSource(mimeTypeTree->currentIndex());
 
@@ -259,12 +259,12 @@ void KMimeTypeChooserPrivate::_k_editMimeType()
 
     // KF5 TODO: use a QFileSystemWatcher on one of the shared-mime-info generated files, instead.
     // q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
-    //            q, SLOT(_k_slotSycocaDatabaseChanged(QStringList)) );
+    //            q, SLOT(slotSycocaDatabaseChanged(QStringList)) );
 #pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a MIME type")
     // or a better idea: a QMimeDatabaseWatcher class in Qt itself
 }
 
-void KMimeTypeChooserPrivate::_k_slotCurrentChanged(const QModelIndex &index)
+void KMimeTypeChooserPrivate::slotCurrentChanged(const QModelIndex &index)
 {
     if (btnEditMimeType) {
         const QModelIndex srcIndex = m_proxyModel->mapToSource(index);
@@ -273,8 +273,8 @@ void KMimeTypeChooserPrivate::_k_slotCurrentChanged(const QModelIndex &index)
     }
 }
 
-// TODO: see _k_editMimeType
-void KMimeTypeChooserPrivate::_k_slotSycocaDatabaseChanged(const QStringList &changedResources)
+// TODO: see editMimeType
+void KMimeTypeChooserPrivate::slotSycocaDatabaseChanged(const QStringList &changedResources)
 {
     if (changedResources.contains(QLatin1String("xdgdata-mime"))) {
         loadMimeTypes();

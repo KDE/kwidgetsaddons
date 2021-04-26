@@ -127,7 +127,7 @@ public:
      */
     QString iconTypeToIconName(KTitleWidget::MessageType type);
 
-    void _k_timeoutFinished()
+    void timeoutFinished()
     {
         q->setVisible(false);
     }
@@ -394,7 +394,7 @@ void KTitleWidget::showEvent(QShowEvent *event)
     Q_UNUSED(event)
     if (d->autoHideTimeout > 0) {
         QTimer::singleShot(d->autoHideTimeout, this, [this] {
-            d->_k_timeoutFinished();
+            d->timeoutFinished();
         });
     }
 }

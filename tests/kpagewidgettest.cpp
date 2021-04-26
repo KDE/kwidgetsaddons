@@ -22,7 +22,7 @@ KPageWidgetTest::KPageWidgetTest(QWidget *parent)
     mWidget = new KPageWidget(this);
     layout->addWidget(mWidget, 0, 0, 7, 1);
 
-    connect(mWidget, SIGNAL(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)), this, SLOT(currentPageChanged(KPageWidgetItem *, KPageWidgetItem *)));
+    connect(mWidget, &KPageWidget::currentPageChanged, this, &KPageWidgetTest::currentPageChanged);
     connect(mWidget, &KPageWidget::pageToggled, this, &KPageWidgetTest::pageToggled);
 
     int rowCount = 0;

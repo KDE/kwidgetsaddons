@@ -15,7 +15,7 @@ KPageWidgetPrivate::KPageWidgetPrivate(KPageWidget *q)
 {
 }
 
-void KPageWidgetPrivate::_k_slotCurrentPageChanged(const QModelIndex &current, const QModelIndex &before)
+void KPageWidgetPrivate::slotCurrentPageChanged(const QModelIndex &current, const QModelIndex &before)
 {
     KPageWidgetItem *currentItem = nullptr;
     if (current.isValid()) {
@@ -35,7 +35,9 @@ KPageWidget::KPageWidget(KPageWidgetPrivate &dd, QWidget *parent)
     : KPageView(dd, parent)
 {
     Q_D(KPageWidget);
-    connect(this, SIGNAL(currentPageChanged(QModelIndex, QModelIndex)), this, SLOT(_k_slotCurrentPageChanged(QModelIndex, QModelIndex)));
+    connect(this, &KPageView::currentPageChanged, this, [d](const QModelIndex &current, const QModelIndex &before) {
+        d->slotCurrentPageChanged(current, before);
+    });
 
     if (!d->KPageViewPrivate::model) {
         setModel(new KPageWidgetModel(this));

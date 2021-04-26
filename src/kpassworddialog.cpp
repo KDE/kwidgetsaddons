@@ -359,7 +359,9 @@ void KPasswordDialog::setKnownLogins(const QMap<QString, QString> &knownLogins)
     d->userEditCombo->addItems(knownLogins.keys());
     d->userEditCombo->setFocus();
 
-    connect(d->userEditCombo, SIGNAL(activated(QString)), this, SLOT(activated(QString)));
+    connect(d->userEditCombo, &QComboBox::textActivated, this, [this](const QString &text) {
+        d->activated(text);
+    });
 }
 
 void KPasswordDialogPrivate::activated(const QString &userName)

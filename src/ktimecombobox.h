@@ -318,10 +318,6 @@ protected:
 private:
     friend class KTimeComboBoxPrivate;
     std::unique_ptr<class KTimeComboBoxPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void selectTime(int index))
-    Q_PRIVATE_SLOT(d, void enterTime(const QTime &))
-    Q_PRIVATE_SLOT(d, void parseTime())
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KTimeComboBox::Options)

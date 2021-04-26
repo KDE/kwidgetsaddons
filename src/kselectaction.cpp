@@ -466,15 +466,15 @@ void KSelectAction::setToolButtonPopupMode(QToolButton::ToolButtonPopupMode mode
     d->m_toolButtonPopupMode = mode;
 }
 
-void KSelectActionPrivate::_k_comboBoxDeleted(QObject *object)
+void KSelectActionPrivate::comboBoxDeleted(QObject *object)
 {
     m_comboBoxes.removeAll(static_cast<QComboBox *>(object));
 }
 
-void KSelectActionPrivate::_k_comboBoxCurrentIndexChanged(int index)
+void KSelectActionPrivate::comboBoxCurrentIndexChanged(int index)
 {
     Q_Q(KSelectAction);
-    // qCDebug(KWidgetsAddonsLog) << "KSelectActionPrivate::_k_comboBoxCurrentIndexChanged(" << index << ")";
+    // qCDebug(KWidgetsAddonsLog) << "KSelectActionPrivate::comboBoxCurrentIndexChanged(" << index << ")";
 
     QComboBox *triggeringCombo = qobject_cast<QComboBox *>(q->sender());
 
@@ -579,8 +579,14 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
             comboBox->setEnabled(false);
         }
 
-        connect(comboBox, SIGNAL(destroyed(QObject *)), SLOT(_k_comboBoxDeleted(QObject *)));
-        connect(comboBox, SIGNAL(currentIndexChanged(int)), SLOT(_k_comboBoxCurrentIndexChanged(int)));
+        connect(comboBox, &QComboBox::destroyed, this, [d](QObject *obj) {
+            d->comboBoxDeleted(obj);
+        });
+
+        connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [d](int value) {
+            d->comboBoxCurrentIndexChanged(value);
+        });
+
         d->m_comboBoxes.append(comboBox);
 
         return comboBox;

@@ -34,7 +34,7 @@
  *
  * QAction *action = new KToolBarLabelAction(action, i18n("Find "), "find_label");
  * action->setShortcut(Qt::Key_F6);
- * connect(action, SIGNAL(triggered()), this, SLOT(slotFocus()));
+ * connect(action, &QAction::triggered, this, [this]() { slotFocus(); });
  *
  * \endcode
  *

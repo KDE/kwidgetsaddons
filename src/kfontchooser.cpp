@@ -91,11 +91,11 @@ public:
     void setupDisplay();
     QString styleIdentifier(const QFont &font);
 
-    void _k_family_chosen_slot(const QString &);
-    void _k_size_chosen_slot(const QString &);
-    void _k_style_chosen_slot(const QString &);
-    void _k_displaySample(const QFont &font);
-    void _k_size_value_slot(double);
+    void family_chosen_slot(const QString &);
+    void size_chosen_slot(const QString &);
+    void style_chosen_slot(const QString &);
+    void displaySample(const QFont &font);
+    void size_value_slot(double);
 
     KFontChooser *q;
 
@@ -195,7 +195,7 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     gridLayout->addWidget(familyListBox, row, 0);
 
     QObject::connect(familyListBox, &QListWidget::currentTextChanged, [this](const QString &family) {
-        _k_family_chosen_slot(family);
+        family_chosen_slot(family);
     });
 
     if (flags & KFontChooser::ShowDifferences) {
@@ -243,7 +243,7 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     styleListBox->setMinimumHeight(minimumListHeight(styleListBox, visibleListSize));
 
     QObject::connect(styleListBox, &QListWidget::currentTextChanged, [this](const QString &style) {
-        _k_style_chosen_slot(style);
+        style_chosen_slot(style);
     });
 
     if (flags & KFontChooser::ShowDifferences) {
@@ -311,11 +311,11 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     sizeListBox->setMinimumHeight(minimumListHeight(sizeListBox, visibleListSize));
 
     QObject::connect(sizeOfFont, QOverload<double>::of(&QDoubleSpinBox::valueChanged), [this](const double size) {
-        _k_size_value_slot(size);
+        size_value_slot(size);
     });
 
     QObject::connect(sizeListBox, &QListWidget::currentTextChanged, [this](const QString &size) {
-        _k_size_chosen_slot(size);
+        size_chosen_slot(size);
     });
 
     if (flags & KFontChooser::ShowDifferences) {
@@ -344,7 +344,7 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     sampleEdit->setWhatsThis(sampleEditWhatsThisText);
 
     QObject::connect(q, &KFontChooser::fontSelected, q, [this](const QFont &font) {
-        _k_displaySample(font);
+        displaySample(font);
     });
 
     mainLayout->addWidget(sampleEdit);
@@ -503,7 +503,7 @@ QFont KFontChooser::font() const
     return d->selFont;
 }
 
-void KFontChooserPrivate::_k_family_chosen_slot(const QString &family)
+void KFontChooserPrivate::family_chosen_slot(const QString &family)
 {
     if (!signalsAllowed) {
         return;
@@ -592,7 +592,7 @@ void KFontChooserPrivate::_k_family_chosen_slot(const QString &family)
     signalsAllowed = true;
 }
 
-void KFontChooserPrivate::_k_style_chosen_slot(const QString &style)
+void KFontChooserPrivate::style_chosen_slot(const QString &style)
 {
     if (!signalsAllowed) {
         return;
@@ -625,7 +625,7 @@ void KFontChooserPrivate::_k_style_chosen_slot(const QString &style)
     signalsAllowed = true;
 }
 
-void KFontChooserPrivate::_k_size_chosen_slot(const QString &size)
+void KFontChooserPrivate::size_chosen_slot(const QString &size)
 {
     if (!signalsAllowed) {
         return;
@@ -657,7 +657,7 @@ void KFontChooserPrivate::_k_size_chosen_slot(const QString &size)
     signalsAllowed = true;
 }
 
-void KFontChooserPrivate::_k_size_value_slot(double dval)
+void KFontChooserPrivate::size_value_slot(double dval)
 {
     if (!signalsAllowed) {
         return;
@@ -716,7 +716,7 @@ void KFontChooserPrivate::_k_size_value_slot(double dval)
     signalsAllowed = true;
 }
 
-void KFontChooserPrivate::_k_displaySample(const QFont &font)
+void KFontChooserPrivate::displaySample(const QFont &font)
 {
     sampleEdit->setFont(font);
     // sampleEdit->setCursorPosition(0);

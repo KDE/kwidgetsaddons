@@ -143,8 +143,6 @@ protected:
 
 private:
     std::unique_ptr<class KPixmapSequenceOverlayPainterPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void _k_timeout())
 };
 
 #endif

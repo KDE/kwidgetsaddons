@@ -25,8 +25,8 @@ class KColorButtonPrivate
 public:
     KColorButtonPrivate(KColorButton *q);
 
-    void _k_chooseColor();
-    void _k_colorChosen();
+    void chooseColor();
+    void colorChosen();
 
     KColorButton *q;
     QColor m_defaultColor;
@@ -44,13 +44,13 @@ public:
 /////////////////////////////////////////////////////////////////////
 // Functions duplicated from KColorMimeData
 // Should be kept in sync
-void _k_populateMimeData(QMimeData *mimeData, const QColor &color)
+void populateMimeData(QMimeData *mimeData, const QColor &color)
 {
     mimeData->setColorData(color);
     mimeData->setText(color.name());
 }
 
-bool _k_canDecode(const QMimeData *mimeData)
+bool canDecode(const QMimeData *mimeData)
 {
     if (mimeData->hasColor()) {
         return true;
@@ -64,22 +64,22 @@ bool _k_canDecode(const QMimeData *mimeData)
     return false;
 }
 
-QColor _k_fromMimeData(const QMimeData *mimeData)
+QColor fromMimeData(const QMimeData *mimeData)
 {
     if (mimeData->hasColor()) {
         return mimeData->colorData().value<QColor>();
     }
-    if (_k_canDecode(mimeData)) {
+    if (canDecode(mimeData)) {
         return QColor(mimeData->text());
     }
     return QColor();
 }
 
-QDrag *_k_createDrag(const QColor &color, QObject *dragsource)
+QDrag *createDrag(const QColor &color, QObject *dragsource)
 {
     QDrag *drag = new QDrag(dragsource);
     QMimeData *mime = new QMimeData;
-    _k_populateMimeData(mime, color);
+    populateMimeData(mime, color);
     drag->setMimeData(mime);
     QPixmap colorpix(25, 20);
     colorpix.fill(color);
@@ -101,7 +101,7 @@ KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
     q->setAcceptDrops(true);
 
     QObject::connect(q, &KColorButton::clicked, q, [this]() {
-        _k_chooseColor();
+        chooseColor();
     });
 }
 
@@ -241,12 +241,12 @@ QSize KColorButton::minimumSizeHint() const
 
 void KColorButton::dragEnterEvent(QDragEnterEvent *event)
 {
-    event->setAccepted(_k_canDecode(event->mimeData()) && isEnabled());
+    event->setAccepted(canDecode(event->mimeData()) && isEnabled());
 }
 
 void KColorButton::dropEvent(QDropEvent *event)
 {
-    QColor c = _k_fromMimeData(event->mimeData());
+    QColor c = fromMimeData(event->mimeData());
     if (c.isValid()) {
         setColor(c);
     }
@@ -258,10 +258,10 @@ void KColorButton::keyPressEvent(QKeyEvent *e)
 
     if (QKeySequence::keyBindings(QKeySequence::Copy).contains(key)) {
         QMimeData *mime = new QMimeData;
-        _k_populateMimeData(mime, color());
+        populateMimeData(mime, color());
         QApplication::clipboard()->setMimeData(mime, QClipboard::Clipboard);
     } else if (QKeySequence::keyBindings(QKeySequence::Paste).contains(key)) {
-        QColor color = _k_fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
+        QColor color = fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
         setColor(color);
     } else {
         QPushButton::keyPressEvent(e);
@@ -276,13 +276,14 @@ void KColorButton::mousePressEvent(QMouseEvent *e)
 
 void KColorButton::mouseMoveEvent(QMouseEvent *e)
 {
-    if ((e->buttons() & Qt::LeftButton) && (e->pos() - d->mPos).manhattanLength() > QApplication::startDragDistance()) {
-        _k_createDrag(color(), this)->exec();
+    if ((e->buttons() & Qt::LeftButton) &&
+            (e->pos() - d->mPos).manhattanLength() > QApplication::startDragDistance()) {
+        createDrag(color(), this)->exec();
         setDown(false);
     }
 }
 
-void KColorButtonPrivate::_k_chooseColor()
+void KColorButtonPrivate::chooseColor()
 {
     QColorDialog *dialog = dialogPtr.data();
     if (dialog) {
@@ -296,12 +297,14 @@ void KColorButtonPrivate::_k_chooseColor()
     dialog->setCurrentColor(q->color());
     dialog->setOption(QColorDialog::ShowAlphaChannel, m_alphaChannel);
     dialog->setAttribute(Qt::WA_DeleteOnClose);
-    QObject::connect(dialog, SIGNAL(accepted()), q, SLOT(_k_colorChosen()));
+    QObject::connect(dialog, &QDialog::accepted, q, [this]() {
+        colorChosen();
+    });
     dialogPtr = dialog;
     dialog->show();
 }
 
-void KColorButtonPrivate::_k_colorChosen()
+void KColorButtonPrivate::colorChosen()
 {
     QColorDialog *dialog = dialogPtr.data();
     if (!dialog) {

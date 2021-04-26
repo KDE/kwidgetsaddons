@@ -294,17 +294,6 @@ protected:
 
 private:
     /**
-     * Moves the item @p item to the other listbox if moveOnDoubleClick is enabled.
-     */
-    Q_PRIVATE_SLOT(d, void itemDoubleClicked(QListWidgetItem *item))
-
-    /**
-     * connected to both list boxes to set the buttons enabled
-     */
-    Q_PRIVATE_SLOT(d, void slotCurrentChanged(QListWidgetItem *))
-
-private:
-    /**
      * @private
      * Private data storage
      */

@@ -75,13 +75,17 @@ protected:
     KPageView::FaceType effectiveFaceType() const;
 
     // private slots
-    void _k_rebuildGui();
-    void _k_modelChanged();
-    void _k_dataChanged(const QModelIndex &, const QModelIndex &);
-    void _k_pageSelected(const QItemSelection &, const QItemSelection &);
+    void rebuildGui();
+    void modelChanged();
+    void dataChanged(const QModelIndex &, const QModelIndex &);
+    void pageSelected(const QItemSelection &, const QItemSelection &);
 
 private:
     void init();
+
+    QMetaObject::Connection m_dataChangedConnection;
+    QMetaObject::Connection m_layoutChangedConnection;
+    QMetaObject::Connection m_selectionChangedConnection;
 };
 
 namespace KDEPrivate

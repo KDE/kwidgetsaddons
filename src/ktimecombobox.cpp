@@ -28,7 +28,7 @@ public:
     void initTimeWidget();
     void updateTimeWidget();
 
-    // Q_PRIVATE_SLOTs
+    // Private slots
     void selectTime(int index);
     void editTime(const QString &text);
     void enterTime(const QTime &time);
@@ -282,8 +282,10 @@ KTimeComboBox::KTimeComboBox(QWidget *parent)
     d->initTimeWidget();
     d->updateTimeWidget();
 
-    connect(this, SIGNAL(activated(int)), this, SLOT(selectTime(int)));
-    connect(this, &KTimeComboBox::editTextChanged, this, [this](const QString &str) {
+    connect(this, QOverload<int>::of(&QComboBox::activated), this, [this](int value) {
+        d->selectTime(value);
+    });
+    connect(this, &QComboBox::editTextChanged, this, [this](const QString &str) {
         d->editTime(str);
     });
 }

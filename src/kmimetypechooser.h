@@ -75,9 +75,6 @@ public:
 
 private:
     std::unique_ptr<class KMimeTypeChooserPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void _k_slotCurrentChanged(const QModelIndex &index))
-    Q_PRIVATE_SLOT(d, void _k_slotSycocaDatabaseChanged(QStringList))
 };
 
 /**

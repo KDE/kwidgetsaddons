@@ -30,7 +30,7 @@ public:
     }
 
     void init();
-    void _k_passwordStatusChanged();
+    void passwordStatusChanged();
     void showMessageWidget(const QString &message, KMessageWidget::MessageType type);
 
     KNewPasswordDialog *const q;
@@ -48,10 +48,12 @@ void KNewPasswordDialogPrivate::init()
 
     ui.statusMsgWidget->hide();
 
-    QObject::connect(ui.pwdWidget, SIGNAL(passwordStatusChanged()), q, SLOT(_k_passwordStatusChanged()));
+    QObject::connect(ui.pwdWidget, &KNewPasswordWidget::passwordStatusChanged, q, [this]() {
+        passwordStatusChanged();
+    });
 }
 
-void KNewPasswordDialogPrivate::_k_passwordStatusChanged()
+void KNewPasswordDialogPrivate::passwordStatusChanged()
 {
     switch (ui.pwdWidget->passwordStatus()) {
     case KNewPasswordWidget::PasswordTooShort:

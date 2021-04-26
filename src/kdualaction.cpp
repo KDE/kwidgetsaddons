@@ -18,7 +18,9 @@ void KDualActionPrivate::init(KDualAction *q_ptr)
     autoToggle = true;
     isActive = false;
 
-    QObject::connect(q, SIGNAL(triggered()), q, SLOT(slotTriggered()));
+    QObject::connect(q, &KDualAction::triggered, q, [this]() {
+        slotTriggered();
+    });
 }
 
 void KDualActionPrivate::updateFromCurrentState()

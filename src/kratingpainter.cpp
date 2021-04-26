@@ -28,7 +28,7 @@ public:
     QPixmap customPixmap;
 };
 
-static void _k_imageToGrayScale(QImage &img, float value);
+static void imageToGrayScale(QImage &img, float value);
 
 QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
 {
@@ -53,7 +53,7 @@ QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
 
     if (toGray) {
         QImage img = p.toImage().convertToFormat(QImage::Format_ARGB32);
-        _k_imageToGrayScale(img, 1.0);
+        imageToGrayScale(img, 1.0);
         return QPixmap::fromImage(img);
     }
     return p;
@@ -146,7 +146,7 @@ void KRatingPainter::setSpacing(int s)
     d->spacing = qMax(0, s);
 }
 
-static void _k_imageToGrayScale(QImage &img, float value)
+static void imageToGrayScale(QImage &img, float value)
 {
     QRgb *data = (QRgb *)img.bits();
     QRgb *end = data + img.width() * img.height();
@@ -163,7 +163,7 @@ static void _k_imageToGrayScale(QImage &img, float value)
     }
 }
 
-static void _k_imageToSemiTransparent(QImage &img)
+static void imageToSemiTransparent(QImage &img)
 {
     QRgb *data = (QRgb *)img.bits();
     QRgb *end = data + img.width() * img.height();
@@ -202,7 +202,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
     if (!d->isEnabled) {
         ratingPix = disabledRatingPix;
 
-        _k_imageToSemiTransparent(disabledRatingImage);
+        imageToSemiTransparent(disabledRatingImage);
         disabledRatingPix = QPixmap::fromImage(disabledRatingImage);
     }
 
@@ -216,7 +216,7 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
         halfHover = d->bHalfSteps && hoverRating % 2;
 
         disabledRatingImage = ratingPix.toImage().convertToFormat(QImage::Format_ARGB32);
-        _k_imageToGrayScale(disabledRatingImage, 0.5);
+        imageToGrayScale(disabledRatingImage, 0.5);
 
         hoverPix = QPixmap::fromImage(disabledRatingImage);
     }

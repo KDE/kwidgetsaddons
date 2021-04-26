@@ -23,7 +23,7 @@ Window::Window()
     resizer->addWidgetsFromLayout(m_ui->formGroupBox2->layout(), 0);
     resizer->addWidgetsFromLayout(m_ui->gridGroupBox2->layout(), 0);
 
-    connect(m_ui->spinBox, SIGNAL(valueChanged(int)), SLOT(updateAdjustableLabel()));
+    connect(m_ui->spinBox, &QSpinBox::valueChanged, this, &Window::updateAdjustableLabel);
     updateAdjustableLabel();
 }
 

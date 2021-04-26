@@ -43,8 +43,7 @@ class QCursor;
  * KUrlLabel *address = new KUrlLabel(this);
  * address->setText("My homepage");
  * address->setUrl("http://www.home.com/~me");
- * connect(address, SIGNAL(leftClickedUrl(const QString&)),
- *                  SLOT(processMyUrl(const QString&)));
+ * connect(address, &KUrlLabel::leftClickedUrl, this, [this](cont QString &url) { processMyUrl(url); };
  * \endcode
  *
  * In this example, the text "My homepage" would be displayed
@@ -353,8 +352,6 @@ protected:
 
 private:
     std::unique_ptr<class KUrlLabelPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void updateColor())
 };
 
 #endif

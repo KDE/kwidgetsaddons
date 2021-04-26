@@ -245,8 +245,12 @@ KDateTimeEdit::KDateTimeEdit(QWidget *parent)
 
     connect(d->ui.m_dateCombo, &KDateComboBox::dateChanged, this, &KDateTimeEdit::setDate);
     connect(d->ui.m_timeCombo, &KTimeComboBox::timeChanged, this, &KDateTimeEdit::setTime);
-    connect(d->ui.m_calendarCombo, SIGNAL(activated(int)), this, SLOT(selectCalendar(int)));
-    connect(d->ui.m_timeZoneCombo, SIGNAL(activated(int)), this, SLOT(selectTimeZone(int)));
+    connect(d->ui.m_calendarCombo, QOverload<int>::of(&QComboBox::activated), this, [this](int index) {
+        d->selectCalendar(index);
+    });
+    connect(d->ui.m_timeZoneCombo, QOverload<int>::of(&QComboBox::activated), this, [this](int index) {
+        d->selectTimeZone(index);
+    });
 }
 
 KDateTimeEdit::~KDateTimeEdit() = default;

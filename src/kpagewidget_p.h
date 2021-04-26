@@ -23,7 +23,7 @@ protected:
         return static_cast<KPageWidgetModel *>(KPageViewPrivate::model);
     }
 
-    void _k_slotCurrentPageChanged(const QModelIndex &, const QModelIndex &);
+    void slotCurrentPageChanged(const QModelIndex &, const QModelIndex &);
 };
 
 #endif // KPAGEWIDGET_P_H

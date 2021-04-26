@@ -188,7 +188,6 @@ Q_SIGNALS:
     void activeChangedByUser(bool);
 
 private:
-    Q_PRIVATE_SLOT(d, void slotTriggered())
     friend class KDualActionPrivate;
     std::unique_ptr<class KDualActionPrivate> const d;
 };

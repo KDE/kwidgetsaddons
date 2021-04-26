@@ -19,8 +19,8 @@ public:
     {
     }
     void initialize();
-    void _k_echoModeToggled();
-    void _k_showToggleEchoModeAction(const QString &text);
+    void echoModeToggled();
+    void showToggleEchoModeAction(const QString &text);
 
     QIcon passwordIcon;
     QIcon visibleIcon;
@@ -40,14 +40,14 @@ void KPasswordLineEditPrivate::initialize()
     toggleEchoModeAction->setVisible(false);
     toggleEchoModeAction->setToolTip(QObject::tr("Change the visibility of the password", "@info:tooltip"));
     q->connect(toggleEchoModeAction, &QAction::triggered, q, [this]() {
-        _k_echoModeToggled();
+        echoModeToggled();
     });
     q->connect(passwordLineEdit, &QLineEdit::textChanged, q, [this](const QString &str) {
-        _k_showToggleEchoModeAction(str);
+        showToggleEchoModeAction(str);
     });
 }
 
-void KPasswordLineEditPrivate::_k_showToggleEchoModeAction(const QString &text)
+void KPasswordLineEditPrivate::showToggleEchoModeAction(const QString &text)
 {
     if (revealPasswordAvailable) {
         toggleEchoModeAction->setVisible(isToggleEchoModeAvailable && (passwordLineEdit->echoMode() == QLineEdit::Normal || !text.isEmpty()));
@@ -56,7 +56,7 @@ void KPasswordLineEditPrivate::_k_showToggleEchoModeAction(const QString &text)
     }
 }
 
-void KPasswordLineEditPrivate::_k_echoModeToggled()
+void KPasswordLineEditPrivate::echoModeToggled()
 {
     if (passwordLineEdit->echoMode() == QLineEdit::Password) {
         passwordLineEdit->setEchoMode(QLineEdit::Normal);
@@ -139,7 +139,7 @@ QLineEdit *KPasswordLineEdit::lineEdit() const
 void KPasswordLineEdit::setRevealPasswordAvailable(bool reveal)
 {
     d->revealPasswordAvailable = reveal;
-    d->_k_showToggleEchoModeAction(password());
+    d->showToggleEchoModeAction(password());
 }
 
 bool KPasswordLineEdit::isRevealPasswordAvailable() const

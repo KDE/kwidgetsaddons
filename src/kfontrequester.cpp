@@ -31,7 +31,7 @@ public:
     void displaySampleText();
     void setToolTip();
 
-    void _k_buttonClicked();
+    void buttonClicked();
 
     KFontRequester *q;
     bool m_onlyFixed;
@@ -61,7 +61,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     layout->addWidget(d->m_button);
 
     connect(d->m_button, &QPushButton::clicked, this, [this] {
-        d->_k_buttonClicked();
+        d->buttonClicked();
     });
 
     d->displaySampleText();
@@ -121,7 +121,7 @@ void KFontRequester::setTitle(const QString &title)
     d->setToolTip();
 }
 
-void KFontRequesterPrivate::_k_buttonClicked()
+void KFontRequesterPrivate::buttonClicked()
 {
     KFontChooser::DisplayFlags flags = m_onlyFixed ? KFontChooser::FixedFontsOnly : KFontChooser::NoDisplayFlags;
 

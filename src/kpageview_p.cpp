@@ -93,16 +93,8 @@ KPageListView::~KPageListView()
 
 void KPageListView::setModel(QAbstractItemModel *model)
 {
-    /*
-      KPageListViewProxy *proxy = new KPageListViewProxy( this );
-      proxy->setSourceModel( model );
-      proxy->rebuildMap();
-
-      connect( model, SIGNAL(layoutChanged()), proxy, SLOT(rebuildMap()) );
-    */
     connect(model, &QAbstractItemModel::layoutChanged, this, &KPageListView::updateWidth);
 
-    //  QListView::setModel( proxy );
     QListView::setModel(model);
 
     // Set our own selection model, which won't allow our current selection to be cleared

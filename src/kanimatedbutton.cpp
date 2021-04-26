@@ -25,9 +25,9 @@ public:
 
     void updateIcons();
     void updateCurrentIcon();
-    void _k_movieFrameChanged(int number);
-    void _k_movieFinished();
-    void _k_timerUpdate();
+    void movieFrameChanged(int number);
+    void movieFinished();
+    void timerUpdate();
 
     KAnimatedButton *const q;
     QMovie *movie = nullptr;
@@ -47,7 +47,7 @@ KAnimatedButton::KAnimatedButton(QWidget *parent)
     , d(new KAnimatedButtonPrivate(this))
 {
     connect(&d->timer, &QTimer::timeout, this, [this]() {
-        d->_k_timerUpdate();
+        d->timerUpdate();
     });
 }
 
@@ -73,7 +73,7 @@ void KAnimatedButton::stop()
     if (d->movie) {
         d->movie->stop();
         d->movie->jumpToFrame(0);
-        d->_k_movieFrameChanged(0);
+        d->movieFrameChanged(0);
     } else {
         d->current_frame = 0;
         d->timer.stop();
@@ -97,7 +97,7 @@ QString KAnimatedButton::animationPath() const
     return d->icon_path;
 }
 
-void KAnimatedButtonPrivate::_k_timerUpdate()
+void KAnimatedButtonPrivate::timerUpdate()
 {
     if (!q->isVisible()) {
         return;
@@ -134,13 +134,13 @@ void KAnimatedButtonPrivate::updateCurrentIcon()
     q->setIcon(QIcon(*frame));
 }
 
-void KAnimatedButtonPrivate::_k_movieFrameChanged(int number)
+void KAnimatedButtonPrivate::movieFrameChanged(int number)
 {
     Q_UNUSED(number);
     q->setIcon(QIcon(movie->currentPixmap()));
 }
 
-void KAnimatedButtonPrivate::_k_movieFinished()
+void KAnimatedButtonPrivate::movieFinished()
 {
     // if not running, make it loop
     if (movie->state() == QMovie::NotRunning) {
@@ -157,8 +157,12 @@ void KAnimatedButtonPrivate::updateIcons()
         newMovie = new QMovie(icon_path);
         frames = 0;
         newMovie->setCacheMode(QMovie::CacheAll);
-        QObject::connect(newMovie, SIGNAL(frameChanged(int)), q, SLOT(_k_movieFrameChanged(int)));
-        QObject::connect(newMovie, SIGNAL(finished()), q, SLOT(_k_movieFinished()));
+        QObject::connect(newMovie, &QMovie::frameChanged, q, [this](int value) {
+            movieFrameChanged(value);
+        });
+        QObject::connect(newMovie, &QMovie::finished, q, [this] {
+            movieFinished();
+        });
     } else {
         const QPixmap pix(icon_path);
         if (pix.isNull()) {
@@ -183,7 +187,7 @@ void KAnimatedButtonPrivate::updateIcons()
 
     if (movie) {
         movie->jumpToFrame(0);
-        _k_movieFrameChanged(0);
+        movieFrameChanged(0);
     } else {
         updateCurrentIcon();
     }

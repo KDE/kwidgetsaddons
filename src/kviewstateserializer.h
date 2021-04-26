@@ -28,69 +28,78 @@ class KViewStateSerializerPrivate;
 
   @brief Object for saving and restoring state in QTreeViews and QItemSelectionModels
 
-  Implement the indexFromConfigString and indexToConfigString methods to
-  handle the model in the view whose state is being saved. These implementations can be quite trivial:
+  Implement the indexFromConfigString and indexToConfigString methods to handle
+  the model in the view whose state is being saved. These implementations can be
+  quite trivial:
 
   @code
-    QModelIndex DynamicTreeStateSaver::indexFromConfigString(const QAbstractItemModel* model, const QString& key) const
+    QModelIndex DynamicTreeStateSaver::indexFromConfigString(const QAbstractItemModel* model,
+                                                             const QString& key) const
     {
-      QModelIndexList list = model->match(model->index(0, 0), DynamicTreeModel::DynamicTreeModelId, key.toInt(), 1, Qt::MatchRecursive);
-      if (list.isEmpty())
-        return QModelIndex();
-      return list.first();
+        QModelIndexList list = model->match(model->index(0, 0),
+                                            DynamicTreeModel::DynamicTreeModelId,
+                                            key.toInt(), 1, Qt::MatchRecursive);
+        if (list.isEmpty()) {
+            return QModelIndex();
+        }
+        return list.first();
     }
 
     QString DynamicTreeStateSaver::indexToConfigString(const QModelIndex& index) const
     {
-      return index.data(DynamicTreeModel::DynamicTreeModelId).toString();
+        return index.data(DynamicTreeModel::DynamicTreeModelId).toString();
     }
   @endcode
 
-  It is possible to restore the state of a QTreeView (that is, the expanded state and selected state of all indexes
-  as well as the horizontal and vertical scroll state) by using setTreeView.
+  It is possible to restore the state of a QTreeView (that is, the expanded state and
+  selected state of all indexes as well as the horizontal and vertical scroll state) by
+  using setTreeView.
 
-  If there is no tree view state to restore (for example if using QML), the selection state of a QItemSelectionModel
-  can be saved or restored instead.
+  If there is no tree view state to restore (for example if using QML), the selection
+  state of a QItemSelectionModel can be saved or restored instead.
 
   The state of any QAbstractScrollArea can also be saved and restored.
 
-  A KViewStateSerializer should be created on the stack when saving and on the heap when restoring. The model may be populated dynamically between several
-  event loops, so it may not be immediate for the indexes that should be selected to be in the model. The saver should *not* be persisted as a
-  member. The saver will destroy itself when it has completed the restoration specified in the config group, or a small amount of time has elapsed.
+  A KViewStateSerializer should be created on the stack when saving and on the heap
+  when restoring. The model may be populated dynamically between several event loops,
+  so it may not be immediate for the indexes that should be selected to be in the model.
+  The saver should *not* be persisted as a member. The saver will destroy itself when it
+  has completed the restoration specified in the config group, or a small amount of time
+  has elapsed.
 
   @code
     MyWidget::MyWidget(Qobject *parent)
       : QWidget(parent)
     {
-      ...
+        ...
 
-      m_view = new QTreeView(splitter);
-      m_view->setModel(model);
+        m_view = new QTreeView(splitter);
+        m_view->setModel(model);
 
-      connect( model, SIGNAL(modelAboutToBeReset()), SLOT(saveState()) );
-      connect( model, SIGNAL(modelReset()), SLOT(restoreState()) );
-      connect( qApp, SIGNAL(aboutToQuit()), SLOT(saveState()) );
+        connect(model, &QAbstractItemModel::modelAboutToBeReset, this, [this]() { saveState(); });
+        connect(model, &QAbstractItemModel::modelReset, [this]() { restoreState(); });
+        connect(qApp, &QApplication::aboutToQuit, this, [this]() { saveState(); });
 
-      restoreState();
+        restoreState();
     }
 
     void StateSaverWidget::saveState()
     {
-      ConcreteStateSaver saver;
-      saver.setTreeView(m_view);
+        ConcreteStateSaver saver;
+        saver.setTreeView(m_view);
 
-      KConfigGroup cfg( KSharedConfig::openConfig(), "ExampleViewState" );
-      saver.saveState( cfg );
-      cfg.sync();
+        KConfigGroup cfg(KSharedConfig::openConfig(), "ExampleViewState");
+        saver.saveState(cfg);
+        cfg.sync();
     }
 
     void StateSaverWidget::restoreState()
     {
-      // Will delete itself.
-      ConcreteTreeStateSaver *saver = new ConcreteStateSaver();
-      saver->setTreeView(m_view);
-      KConfigGroup cfg( KSharedConfig::openConfig(), "ExampleViewState" );
-      saver->restoreState( cfg );
+        // Will delete itself.
+        ConcreteTreeStateSaver *saver = new ConcreteStateSaver();
+        saver->setTreeView(m_view);
+        KConfigGroup cfg(KSharedConfig::openConfig(), "ExampleViewState");
+        saver->restoreState(cfg);
     }
   @endcode
 
@@ -103,30 +112,32 @@ class KViewStateSerializerPrivate;
   @code
     class DynamicTreeStateSaver : public KViewStateSerializer
     {
-      Q_OBJECT
+        Q_OBJECT
     public:
       // ...
 
-      void selectItems(const QList<qint64> &items)
-      {
-        QStringList itemStrings;
-        for (qint64 item : items)
-          itemStrings << QString::number(item);
-        restoreSelection(itemStrings);
-      }
+        void selectItems(const QList<qint64> &items)
+        {
+            QStringList itemStrings;
+            for (qint64 item : items) {
+                itemStrings << QString::number(item);
+            }
+            restoreSelection(itemStrings);
+        }
 
-      void expandItems(const QList<qint64> &items)
-      {
-        QStringList itemStrings;
-        for (qint64 item : items)
-          itemStrings << QString::number(item);
-        restoreSelection(itemStrings);
-      }
-
+        void expandItems(const QList<qint64> &items)
+        {
+            QStringList itemStrings;
+            for (qint64 item : items) {
+                itemStrings << QString::number(item);
+            }
+            restoreSelection(itemStrings);
+        }
     };
   @endcode
 
-  Note that a single instance of this class should be used with only one widget. That is don't do this:
+  Note that a single instance of this class should be used with only one widget.
+  That is don't do this:
 
   @code
     saver->setTreeView(treeView1);
@@ -134,7 +145,8 @@ class KViewStateSerializerPrivate;
     saver->setScrollArea(treeView3);
   @endcode
 
-  To save the state of 3 different widgets, use three savers, even if they operate on the same root model.
+  To save the state of 3 different widgets, use three savers, even if they operate
+  on the same root model.
 
   @code
     saver1->setTreeView(treeView1);
@@ -144,8 +156,9 @@ class KViewStateSerializerPrivate;
 
   @note The KViewStateSerializer does not take ownership of any widgets set on it.
 
-  It is recommended to restore the state on application startup and after the model has been reset, and to
-  save the state on application close and before the model has been reset.
+  It is recommended to restore the state on application startup and after the
+  model has been reset, and to save the state on application close and before
+  the model has been reset.
 
   @see QAbstractItemModel::modelAboutToBeReset QAbstractItemModel::modelReset
 
@@ -244,8 +257,6 @@ private:
     //@cond PRIVATE
     Q_DECLARE_PRIVATE(KViewStateSerializer)
     std::unique_ptr<KViewStateSerializerPrivate> const d_ptr;
-    Q_PRIVATE_SLOT(d_func(), void rowsInserted(const QModelIndex &, int, int))
-    Q_PRIVATE_SLOT(d_func(), void restoreScrollBarState())
     //@endcond
 };
 

@@ -19,7 +19,7 @@ class KPixmapSequenceOverlayPainterPrivate
 {
 public:
     void init(KPixmapSequenceOverlayPainter *p);
-    void _k_timeout();
+    void timeout();
     void paintFrame();
 
     KPixmapSequence &sequence();
@@ -47,10 +47,12 @@ void KPixmapSequenceOverlayPainterPrivate::init(KPixmapSequenceOverlayPainter *p
     m_alignment = Qt::AlignCenter;
     m_started = false;
     q->setInterval(200);
-    QObject::connect(&m_timer, SIGNAL(timeout()), q, SLOT(_k_timeout()));
+    QObject::connect(&m_timer, &QTimer::timeout, q, [this]() {
+        timeout();
+    });
 }
 
-void KPixmapSequenceOverlayPainterPrivate::_k_timeout()
+void KPixmapSequenceOverlayPainterPrivate::timeout()
 {
     if (sequence().isEmpty()) {
         return;

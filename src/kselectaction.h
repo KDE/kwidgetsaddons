@@ -437,9 +437,6 @@ protected:
 
 private:
     Q_DECLARE_PRIVATE(KSelectAction)
-
-    Q_PRIVATE_SLOT(d_func(), void _k_comboBoxDeleted(QObject *))
-    Q_PRIVATE_SLOT(d_func(), void _k_comboBoxCurrentIndexChanged(int))
 };
 
 #endif
