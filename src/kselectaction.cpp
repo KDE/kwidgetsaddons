@@ -84,7 +84,7 @@ void KSelectActionPrivate::init()
 {
     QObject::connect(q_ptr->selectableActionGroup(), &QActionGroup::triggered, q_ptr, &KSelectAction::actionTriggered);
     QObject::connect(q_ptr, &QAction::toggled, q_ptr, &KSelectAction::slotToggled);
-    q_ptr->setMenu(new QMenu());
+    q_ptr->setMenu(new QMenu(q_ptr->parentWidget()));
     q_ptr->setEnabled(false);
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     // forward deprecated signals to undeprecated, to be backward-compatible to unported subclasses
