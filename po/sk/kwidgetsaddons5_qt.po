@@ -1,0 +1,2433 @@
+# translation of kdelibs4.po to Slovak
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004, 2005.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2007, 2010.
+# Michal Gaspar <miguel@portugal.sk>, 2006.
+# Jakub <vatrtj@gmail.com>, 2009.
+# Michal Sulek <misurel@gmail.com>, 2009, 2010, 2011.
+# Richard Frič <Richard.Fric@kdemail.net>, 2011.
+# Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2016.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2021-01-10 14:12+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:16
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:19
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Serif"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers.cpp:22
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Monospace"
+
+#: fonthelpers.cpp:65
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers.cpp:69
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:98
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "Dostupné:"
+
+#: kactionselector.cpp:115
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "Vybrané:"
+
+#: kassistantdialog.cpp:100
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "Späť"
+
+#: kassistantdialog.cpp:102
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "Prejsť dozadu o jeden krok"
+
+#: kassistantdialog.cpp:107
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "Ďalej"
+
+#: kassistantdialog.cpp:114
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "Ukončiť"
+
+#: kcharselect-translation.cpp:11
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Európske skripty"
+
+#: kcharselect-translation.cpp:12
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Africké skripty"
+
+#: kcharselect-translation.cpp:13
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Skripty blízkeho východu"
+
+#: kcharselect-translation.cpp:14
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Stredoázijské skripty"
+
+#: kcharselect-translation.cpp:15
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Juho-ázijské skripty"
+
+#: kcharselect-translation.cpp:16
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Juhovýchodné ázijské skripty"
+
+#: kcharselect-translation.cpp:17
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "Skripty Indonézie a Oceánie"
+
+#: kcharselect-translation.cpp:18
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Východoázijské skripty"
+
+#: kcharselect-translation.cpp:19
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Americké skripty"
+
+#: kcharselect-translation.cpp:20
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Symboly"
+
+#: kcharselect-translation.cpp:21
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Matematické symboly"
+
+#: kcharselect-translation.cpp:22
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Fonetické symboly"
+
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:742
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Zlúčenie diakritických značiek"
+
+#: kcharselect-translation.cpp:24
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Iné"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Základná latinka"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Latinka-1 doplnky"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latinka rozšírené-A"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latinka rozšírené-B"
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "Rozšírenia IPA"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Písmená upravujúce medzery"
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Zlúčenie diakritických značiek"
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Grécke a Koptické"
+
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Cyrilika"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Cyrilika doplnky"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Arménske"
+
+#: kcharselect-translation.cpp:36
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Hebrejské"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arabské"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Sýrske"
+
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Arabské doplnky"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Thaana"
+
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "NKo"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samaritan"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandaic"
+
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Sýrsky doplnok"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Arabské rozšírené-A"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengálske"
+
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gudžarátske"
+
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Uríjske"
+
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamilské"
+
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Telugské"
+
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannadské"
+
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malajálamske"
+
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhalčina"
+
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Thajské"
+
+#: kcharselect-translation.cpp:57
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Laoské"
+
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetské"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Mjanmarské"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Gruzínske"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiópske"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Etiópske doplnky"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Unifikované kanadské domorodé slabiky"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Ogham"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Runské"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhid"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khmérske"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongolské"
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Unifikované kanadské domorodé slabiky rozšírené"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbu"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Nové Tai Lue"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Kmérske symboly"
+
+#: kcharselect-translation.cpp:79
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Buginese"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: kcharselect-translation.cpp:81
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Zlúčenie diakritických značiek"
+
+#: kcharselect-translation.cpp:82
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Balinese"
+
+#: kcharselect-translation.cpp:83
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sundské"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batak"
+
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcha"
+
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: kcharselect-translation.cpp:87
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Cyrilika rozšírené-C"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Gruzínske rozšírené"
+
+#: kcharselect-translation.cpp:89
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Sundánsky Doplnok"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Védske rozšírenia"
+
+#: kcharselect-translation.cpp:91
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Fonetické rozšírenia"
+
+#: kcharselect-translation.cpp:92
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Doplnky fonetických rozšírení"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Doplnky kombinujúcich diakritických značiek"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Latinka rozšírené prídavky"
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Grécke rozšírené"
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Všeobecná interpunkcia"
+
+#: kcharselect-translation.cpp:97
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Horné a dolné indexy"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Symboly meny"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Kombinácia diakritických značiek a symbolov"
+
+#: kcharselect-translation.cpp:100
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Symboly podobné písmu"
+
+#: kcharselect-translation.cpp:101
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Číselné formy"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Šípky"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Matematické operátory"
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Rôzne technické"
+
+#: kcharselect-translation.cpp:105
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Riadiace obrázky"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Optické rozlišovanie znakov"
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Vložené alfanumerické"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Kreslenie rámčekov"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Blokové prvky"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Geometrické tvary"
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Rôzne symboly"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Rôzne matematické symboly-A"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Doplnkové šípky-A"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braillove vzory"
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Doplnkové šípky-B"
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Rôzne matematické symboly-B"
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Doplnkové matematické operátory"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Rôzne symboly a šípky"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Hlaholika"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latinka rozšírené-C"
+
+#: kcharselect-translation.cpp:122
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Koptické"
+
+#: kcharselect-translation.cpp:123
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Gruzínske doplnky"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: kcharselect-translation.cpp:125
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiópske rozšírené"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Cyrilika rozšírené-A"
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Doplnková interpunkcia"
+
+#: kcharselect-translation.cpp:128
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "CJK kmeňové doplnky"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Kangxi kmene"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Znaky popisujúce ideografy"
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK symboly a interpunkcia"
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul kompatibilné Jamo"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo rozšírené"
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK ťahy"
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana fonetické rozšírenia"
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Vložené CJK písmená a mesiace"
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK kompatibilita"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK unifikované ideografy rozšírenie A"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing hexagram symboly"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK unifikované ideografy"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi slabiky"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi kmene"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vai"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Cyrilika rozšírené-B"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Modifikátory písmen tónov"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latinka rozšírené-D"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: kcharselect-translation.cpp:154
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Bežné indické číselné formy"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari rozšírené"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul Jamo rozšírené-A"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Jávske"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Mjanmarské rozšírené-B"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Cham"
+
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Mjanmarské rozšírené-A"
+
+#: kcharselect-translation.cpp:165
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Viet"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei Mayek rozšírenia"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiópske rozšírené-A"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latinka rozšírené-E"
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Cherokee Doplnok"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Hangul slabiky"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul Jamo rozšírené-B"
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Vyššie náhradné"
+
+#: kcharselect-translation.cpp:174
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Vyššie náhradné pre súkromné použitie"
+
+#: kcharselect-translation.cpp:175
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Nižšie náhradné"
+
+#: kcharselect-translation.cpp:176
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Oblasť pre súkromné použitie"
+
+#: kcharselect-translation.cpp:177
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK kompatibilné ideografy"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Formy na prezentáciu abecedy"
+
+#: kcharselect-translation.cpp:179
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Arabské formy na prezentáciu-A"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Selektory variácií"
+
+#: kcharselect-translation.cpp:181
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Vertikálne formy"
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Polovičné značky na kombinovanie"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK kompatibilné formy"
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Varianty malých foriem"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Arabské formy na prezentáciu-B"
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Formy s polovičnou a úplnou šírkou"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Špeciálne"
+
+#: kcharselect-translation.cpp:189
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr "Mahjong dlaždice"
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr "Domino dlaždice"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr "Hracie karty"
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Vložené alfanumerické doplnky"
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Vložené Etiópske doplnky"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Rôzne symboly a šípky"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Emotikony"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr "Okrasné ornamenty"
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr "Mapové a Transportné symboly"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Alchemické symboly"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Geometrické tvary"
+
+#: kcharselect-translation.cpp:200
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Doplnkové šípky-C"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr "Doplnkové symboly a Piktogramy"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Šachové symboly"
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "Symboly a Piktogramy rozšírené-A"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr "Symboly pre staršie výpočty"
+
+#: kcharselect.cpp:383
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "Zadajte hľadaný výraz alebo znak"
+
+#: kcharselect.cpp:385
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "Sem zadajte hľadaný výraz alebo znak"
+
+#: kcharselect.cpp:392
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "Nájsť..."
+
+#: kcharselect.cpp:412
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "Predchádzajúce v histórii"
+
+#: kcharselect.cpp:414
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "Predchádzajúci znak v histórii"
+
+#: kcharselect.cpp:419
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "Nasledujúce v histórii"
+
+#: kcharselect.cpp:421
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "Prejsť na nasledujúci znak v histórii"
+
+#: kcharselect.cpp:426
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "Späť"
+
+#: kcharselect.cpp:433
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "Dopredu"
+
+#: kcharselect.cpp:452
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "Vyberte kategóriu"
+
+#: kcharselect.cpp:456
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "Vyberte blok, ktorý sa zobrazí"
+
+#: kcharselect.cpp:469
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "Nastaviť písmo"
+
+#: kcharselect.cpp:476
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "Nastavte veľkosť písma"
+
+#: kcharselect.cpp:765
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Znak:"
+
+#: kcharselect.cpp:771
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Názov: "
+
+#: kcharselect.cpp:780
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Poznámky a krížové odkazy"
+
+#: kcharselect.cpp:784
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Alternatívne názvy:"
+
+#: kcharselect.cpp:792
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Poznámky:"
+
+#: kcharselect.cpp:800
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Pozri tiež:"
+
+#: kcharselect.cpp:815
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Ekvivalenty:"
+
+#: kcharselect.cpp:823
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Približné ekvivalenty:"
+
+#: kcharselect.cpp:831
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Rozklad:"
+
+#: kcharselect.cpp:843
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "Informácie o ideograme CJK"
+
+#: kcharselect.cpp:846
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Definícia v angličtine: "
+
+#: kcharselect.cpp:853
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Mandarínska výslovnosť: "
+
+#: kcharselect.cpp:860
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Kantonská výslovnosť: "
+
+#: kcharselect.cpp:867
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Japonská On výslovnosť: "
+
+#: kcharselect.cpp:874
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Japonská Kun výslovnosť: "
+
+#: kcharselect.cpp:881
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Tang výslovnosť: "
+
+#: kcharselect.cpp:888
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Kórejská výslovnosť: "
+
+#: kcharselect.cpp:894
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Všeobecné vlastnosti znaku"
+
+#: kcharselect.cpp:895
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Blok: "
+
+#: kcharselect.cpp:896
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Kategória Unicode: "
+
+#: kcharselect.cpp:900
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Rôzne užitočné reprezentácie"
+
+#: kcharselect.cpp:901
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:905
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:912
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "C osmičkové escape UTF-8: "
+
+#: kcharselect.cpp:916
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "Desiatková entita XML:"
+
+#: kcharselect.cpp:1060
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Bod kódu Unicode:"
+
+#: kcharselect.cpp:1060
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "Desiatkovo"
+
+#: kcharselectdata.cpp:309
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "<noncharacter>"
+
+#: kcharselectdata.cpp:328
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Nesúkromné použitie - vysoká náhrada>"
+
+#: kcharselectdata.cpp:330
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Súkromné použitie - vysoká náhrada>"
+
+#: kcharselectdata.cpp:332
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Nízka náhrada>"
+
+#: kcharselectdata.cpp:334
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Súkromné použitie>"
+
+#: kcharselectdata.cpp:366
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<nepriradené>"
+
+#: kcharselectdata.cpp:751
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Netlačiteľné"
+
+#: kcharselectdata.cpp:784
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Ostatné, riadiace"
+
+#: kcharselectdata.cpp:786
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Ostatné, formát"
+
+#: kcharselectdata.cpp:788
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Ostatné, nepridelené"
+
+#: kcharselectdata.cpp:790
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Ostatné, súkromné použitie"
+
+#: kcharselectdata.cpp:792
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Ostatné, náhradné"
+
+#: kcharselectdata.cpp:794
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Písmeno, malé"
+
+#: kcharselectdata.cpp:796
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Písmeno, modifikátor"
+
+#: kcharselectdata.cpp:798
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Písmeno, ostatné"
+
+#: kcharselectdata.cpp:800
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Písmeno, titulkové"
+
+#: kcharselectdata.cpp:802
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Písmeno, veľké"
+
+#: kcharselectdata.cpp:804
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Značka, spájanie medzery"
+
+#: kcharselectdata.cpp:806
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Značka, uzatváracia"
+
+#: kcharselectdata.cpp:808
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Značka, nie medzery"
+
+#: kcharselectdata.cpp:810
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Číslo, desiatková číslica"
+
+#: kcharselectdata.cpp:812
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Číslo, písmeno"
+
+#: kcharselectdata.cpp:814
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Číslo, ostatné"
+
+#: kcharselectdata.cpp:816
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Interpunkcia, spojka"
+
+#: kcharselectdata.cpp:818
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Interpunkcia, pomlčka"
+
+#: kcharselectdata.cpp:820
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Interpunkcia, uzatváranie"
+
+#: kcharselectdata.cpp:822
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Interpunkcia, koncová úvodzovka"
+
+#: kcharselectdata.cpp:824
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Interpunkcia, začiatočná úvodzovka"
+
+#: kcharselectdata.cpp:826
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Interpunkcia, ostatné"
+
+#: kcharselectdata.cpp:828
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Interpunkcia, otváranie"
+
+#: kcharselectdata.cpp:830
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Symbol, mena"
+
+#: kcharselectdata.cpp:832
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Symbol, modifikátor"
+
+#: kcharselectdata.cpp:834
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Symbol, matematika"
+
+#: kcharselectdata.cpp:836
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Symbol, ostatné"
+
+#: kcharselectdata.cpp:838
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Oddeľovač, riadok"
+
+#: kcharselectdata.cpp:840
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Oddeľovač, odstavec"
+
+#: kcharselectdata.cpp:842
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Oddeľovač, medzera"
+
+#: kcharselectdata.cpp:844
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Neznáme"
+
+#: kcolorcombo.cpp:328
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "Vlastné..."
+
+#: kdatecombobox.cpp:153
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Nasledujúci rok"
+
+#: kdatecombobox.cpp:154
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Nasledujúci mesiac"
+
+#: kdatecombobox.cpp:155
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Nasledujúci týždeň"
+
+#: kdatecombobox.cpp:156
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Zajtra"
+
+#: kdatecombobox.cpp:157
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Dnes"
+
+#: kdatecombobox.cpp:158
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Včera"
+
+#: kdatecombobox.cpp:159
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Minulý týždeň"
+
+#: kdatecombobox.cpp:160
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Minulý mesiac"
+
+#: kdatecombobox.cpp:161
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Minulý rok"
+
+#: kdatecombobox.cpp:163
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Žiadny dátum"
+
+#: kdatecombobox.cpp:290
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Zadaný dátum je neplatný"
+
+#: kdatecombobox.cpp:293
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Dátum nemôže byť skôr ako %1"
+
+#: kdatecombobox.cpp:300
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Dátum nemôže byť neskôr ako %1"
+
+#: kdatepicker.cpp:188
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "Týždeň %1"
+
+#: kdatepicker.cpp:296
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "Nasledujúci rok"
+
+#: kdatepicker.cpp:297
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "Predchádzajúci rok"
+
+#: kdatepicker.cpp:298
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "Nasledujúci mesiac"
+
+#: kdatepicker.cpp:299
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "Predchádzajúci mesiac"
+
+#: kdatepicker.cpp:300
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "Vybrať týždeň"
+
+#: kdatepicker.cpp:301
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "Vybrať mesiac"
+
+#: kdatepicker.cpp:302
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "Vybrať rok"
+
+#: kdatepicker.cpp:303
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "Vybrať dnešný deň"
+
+#: kdatepicker.cpp:638
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Zavrieť"
+
+#: kdatetimeedit.cpp:171
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:172
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "Plávajúce"
+
+#: kdatetimeedit.cpp:211
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr "Zadaný dátum a čas je pred minimálnym povoleným dátumom a časom."
+
+#: kdatetimeedit.cpp:221
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr "Zadaný dátum a čas je po minimálnom povolenom dátume a čase."
+
+#: keditlistwidget.cpp:281
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "&Pridať"
+
+#: keditlistwidget.cpp:293
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "O&dstrániť"
+
+#: keditlistwidget.cpp:305
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "Posunúť &vyššie"
+
+#: keditlistwidget.cpp:310
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "Posunúť &nižšie"
+
+#: kfontchooser.cpp:168
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "Požadované písmo"
+
+#: kfontchooser.cpp:182
+msgctxt "KFontChooser|@option:check"
+msgid "Font"
+msgstr "Písmo"
+
+#: kfontchooser.cpp:187
+msgctxt "KFontChooser|@label"
+msgid "Font:"
+msgstr "Písmo:"
+
+#: kfontchooser.cpp:219
+msgctxt "KFontChooser|@option:check"
+msgid "Font style"
+msgstr "Štýl písma"
+
+#: kfontchooser.cpp:224
+msgctxt "KFontChooser|@label"
+msgid "Font style:"
+msgstr "Štýl písma:"
+
+#: kfontchooser.cpp:237
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "Normálne"
+
+#: kfontchooser.cpp:238 kfontchooser.cpp:564
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Kurzíva"
+
+#: kfontchooser.cpp:239 kfontchooser.cpp:565
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Šikmé"
+
+#: kfontchooser.cpp:240
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Tučné"
+
+#: kfontchooser.cpp:241
+msgctxt "KFontChooser|@item font"
+msgid "Bold Italic"
+msgstr "Tučné kurzíva"
+
+#: kfontchooser.cpp:258
+msgctxt "KFontChooser|@option:check"
+msgid "Size"
+msgstr "Veľkosť"
+
+#: kfontchooser.cpp:263
+msgctxt "KFontChooser|@label:listbox Font size"
+msgid "Size:"
+msgstr "Veľkosť:"
+
+#: kfontchooser.cpp:280
+msgctxt "KFontChooser|@item font size"
+msgid "Relative"
+msgstr "Relatívne"
+
+#: kfontchooser.cpp:281
+#, fuzzy
+#| msgctxt "KFontChooser|"
+#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"Veľkosť písma<br /><i>pevná</i> alebo <i>relatívna</i><br />vzhľadom k "
+"prostrediu"
+
+#: kfontchooser.cpp:282
+#, fuzzy
+#| msgctxt "KFontChooser|"
+#| msgid ""
+#| "Here you can switch between fixed font size and font size to be "
+#| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#| "dimensions, paper size)."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Tu môžete prepnúť medzi pevnou veľkosťou písma alebo či sa má jeho veľkosť "
+"počítať dynamicky a upraviť podľa zmeny prostredia (napríklad rozmerov "
+"prvku, veľkosti papiera)."
+
+#: kfontchooser.cpp:338
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr ""
+"Kŕdeľ šťastných ďatľov učí pri kótovanom ústí Váhu mĺkveho koňa obhrýzať "
+"kôru a žrať čerstvé mäso"
+
+#: kfontchooser.cpp:340
+#, fuzzy
+#| msgctxt "KFontChooser|"
+#| msgid ""
+#| "This sample text illustrates the current settings. You may edit it to "
+#| "test special characters."
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Tento vzorový text slúži ako ukážka nastavenia písma. Môžete ho upraviť, ak "
+"chcete vyskúšať špeciálne znaky."
+
+#: kfontchooser.cpp:355
+msgctxt "KFontChooser|@option:check"
+msgid "Show only monospaced fonts"
+msgstr "Zobraziť iba neproporcionálne písma"
+
+#: kfontchooser.cpp:549
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:39
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "Vybrať písmo"
+
+#: kfontrequester.cpp:155
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "Vybrať Písmo..."
+
+#: kfontrequester.cpp:161
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "Náhľad vybraného písma"
+
+#: kfontrequester.cpp:163
+#, fuzzy
+#| msgctxt "KFontRequester|"
+#| msgid ""
+#| "This is a preview of the selected font. You can change it by clicking the "
+#| "\"Choose Font...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Toto je náhľad vybraného písma. Môžete ho zmeniť stlačením \"Vybrať Písmo..."
+"\"."
+
+#: kfontrequester.cpp:167
+#, qt-format
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "Náhľad písma \"%1\""
+
+#: kfontrequester.cpp:168
+#, fuzzy, qt-format
+#| msgctxt "KFontRequester|"
+#| msgid ""
+#| "This is a preview of the \"%1\" font. You can change it by clicking the "
+#| "\"Choose Font...\" button."
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Toto je náhľad písma \"%1\". Môžete ho zmeniť stlačením \"Vybrať Písmo...\"."
+
+#: kled.cpp:172
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "LED zapnuté"
+
+#: kled.cpp:173
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "LED vypnuté"
+
+#: kmessagebox.cpp:64
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:312
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: kmessagebox.cpp:469 kmessagebox.cpp:528
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Otázka"
+
+#: kmessagebox.cpp:485 kmessagebox.cpp:545 kmessagebox.cpp:621
+#: kmessagebox.cpp:690 kmessagebox.cpp:786
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Znovu sa už nepýtať"
+
+#: kmessagebox.cpp:605 kmessagebox.cpp:674 kmessagebox.cpp:769
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Upozornenie"
+
+#: kmessagebox.cpp:824 kmessagebox.cpp:842
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Chyba"
+
+#: kmessagebox.cpp:864 kmessagebox.cpp:892 kmessagebox.cpp:1169
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Ľutujeme"
+
+#: kmessagebox.cpp:932
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Informácia"
+
+#: kmessagebox.cpp:947
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Túto správu už znovu nezobrazovať"
+
+#: kmessagedialog.cpp:132
+msgctxt "KMessageDialog|"
+msgid "Details"
+msgstr "Podrobnosti"
+
+#: kmessagedialog.cpp:195
+msgctxt "KMessageDialog|"
+msgid "Question"
+msgstr "Otázka"
+
+#: kmessagedialog.cpp:200
+msgctxt "KMessageDialog|"
+msgid "Warning"
+msgstr "Upozornenie"
+
+#: kmessagedialog.cpp:203
+msgctxt "KMessageDialog|"
+msgid "Information"
+msgstr "Informácia"
+
+#: kmessagedialog.cpp:206
+msgctxt "KMessageDialog|"
+msgid "Sorry"
+msgstr "Ľutujeme"
+
+#: kmessagedialog.cpp:209
+msgctxt "KMessageDialog|"
+msgid "Error"
+msgstr "Chyba"
+
+#: kmessagewidget.cpp:76
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "&Zavrieť"
+
+#: kmessagewidget.cpp:77
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "Zatvoriť správu"
+
+#: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|"
+#| msgid "Search for file type or filename pattern..."
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr "Hľadať vzor typu alebo názvu súboru..."
+
+#: kmimetypechooser.cpp:89
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "Filter:"
+
+#: kmimetypechooser.cpp:103
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "Typ MIME"
+
+#: kmimetypechooser.cpp:106
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "Komentár"
+
+#: kmimetypechooser.cpp:110
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "Vzorky"
+
+#: kmimetypechooser.cpp:126
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "&Upraviť..."
+
+#: kmimetypechooser.cpp:141
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr "Spustiť MIME type editor"
+
+#: knewpassworddialog.cpp:61
+#, qt-format
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "Heslo musí mať aspoň %n znakov."
+msgstr[1] "Heslo musí mať aspoň %n znakov."
+msgstr[2] "Heslo musí mať aspoň %n znakov."
+
+#: knewpassworddialog.cpp:65
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "Heslo je prázdne."
+
+#: knewpassworddialog.cpp:69
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "Heslá sa nezhodujú."
+
+#: knewpassworddialog.cpp:74
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "Heslá sa zhodujú."
+
+#: knewpassworddialog.cpp:144
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "Nízka kvalita hesla"
+
+#: knewpassworddialog.cpp:145
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Zadané heslo nie je príliš kvalitné.\n"
+"Ak ho chcete zlepšiť, skúste:\n"
+" - použiť dlhšie heslo\n"
+" - použiť veľké aj malé písmená\n"
+" - použiť okrem písmen aj číslice alebo symboly.\n"
+"\n"
+"Chcete heslo použiť aj tak?"
+
+#: knewpasswordwidget.cpp:52
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Meter kvality hesla ukazuje, aké bezpečné heslo ste zadali. Ak chcete "
+"bezpečnosť hesla zlepšiť, skúste:<ul><li>použiť dlhšie heslo</li><li>použiť "
+"veľké aj malé písmená</li><li>použiť okrem písmen aj číslice alebo symboly, "
+"napríklad # alebo písmená</li> </ul>"
+
+#: knewpasswordwidget.ui:19
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "Heslo:"
+
+#: knewpasswordwidget.ui:29
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "O&veriť:"
+
+#: knewpasswordwidget.ui:54
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "Meter kvality hesla:"
+
+#: kpassworddialog.cpp:52
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "Heslo"
+
+#: kpassworddialog.cpp:80
+msgctxt "KPasswordDialog|"
+msgid "Show Contextual Help"
+msgstr "Zobraziť kontextovú nápovedu"
+
+#: kpassworddialog.cpp:100
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Zadajte heslo nižšie."
+
+#: kpassworddialog.ui:33
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Zadajte užívateľské meno a heslo."
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Žiadne heslo, použiť anonymné (alebo hosťovské) prihlásenie"
+
+#: kpassworddialog.ui:77
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "Použiť toto heslo:"
+
+#: kpassworddialog.ui:102
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "Užívateľské meno:"
+
+#: kpassworddialog.ui:127
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "Doména:"
+
+#: kpassworddialog.ui:141
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "Heslo:"
+
+#: kpassworddialog.ui:155
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "Zapamätať heslo"
+
+#: kpasswordlineedit.cpp:41
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr "Zmeniť viditeľnosť hesla"
+
+#: kpixmapregionselectordialog.cpp:54
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "Vybrať oblasť obrázka"
+
+#: kpixmapregionselectordialog.cpp:58
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "Kliknite a ťahajte s myšou v rámci obrázka pre výber oblasti:"
+
+#: kpixmapregionselectorwidget.cpp:173
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "Operácie s obrázkom"
+
+#: kpixmapregionselectorwidget.cpp:176
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "&Otočiť po smere hodinových ručičiek"
+
+#: kpixmapregionselectorwidget.cpp:180
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "Otočiť &proti smeru hodinových ručičiek"
+
+#: krecentfilesmenu.cpp:105
+msgctxt "KRecentFilesMenu|"
+msgid "No Entries"
+msgstr "Žiadne položky"
+
+#: krecentfilesmenu.cpp:108
+msgctxt "KRecentFilesMenu|"
+msgid "Clear List"
+msgstr "Vyčistiť zoznam"
+
+#: krecentfilesmenu.cpp:115
+msgctxt "KRecentFilesMenu|"
+msgid "Recent Files"
+msgstr "Vybrať súbory..."
+
+#: ksqueezedtextlabel.cpp:202
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "&Kopírovať celý text"
+
+#: kstandardguiitem.cpp:160
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&OK"
+
+#: kstandardguiitem.cpp:165
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Zrušiť"
+
+#: kstandardguiitem.cpp:170
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Áno"
+
+#: kstandardguiitem.cpp:175
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Nie"
+
+#: kstandardguiitem.cpp:180
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Zahodiť"
+
+#: kstandardguiitem.cpp:182
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Zahodiť zmeny"
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Stlačením tohto tlačidla zahodíte všetky nedávne zmeny, ktoré ste v tomto "
+"dialógu urobili."
+
+#: kstandardguiitem.cpp:190
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Uložiť"
+
+#: kstandardguiitem.cpp:192
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Uložiť dáta"
+
+#: kstandardguiitem.cpp:197
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Neukladať"
+
+#: kstandardguiitem.cpp:197
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Neukladať dáta"
+
+#: kstandardguiitem.cpp:202
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Uložiť &ako..."
+
+#: kstandardguiitem.cpp:204
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Uložiť súbor pod iným názvom"
+
+#: kstandardguiitem.cpp:209
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Použiť"
+
+#: kstandardguiitem.cpp:211
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Použiť zmeny"
+
+#: kstandardguiitem.cpp:212
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"Ak stlačíte <b>Použiť</b>, nastavenie sa odovzdá programu, ale dialóg sa "
+"nezatvorí.\n"
+"Použite to na vyskúšanie rôznych nastavení."
+
+#: kstandardguiitem.cpp:221
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Režim &administrátora..."
+
+#: kstandardguiitem.cpp:223
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Spustiť režim administrátora"
+
+#: kstandardguiitem.cpp:224
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"Ak stlačíte <b>Režim administrátora</b>, zobrazí sa okno pre zadanie "
+"administrátorského (root) hesla. To je potrebné na získanie práv "
+"administrátora."
+
+#: kstandardguiitem.cpp:232
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "&Vyčistiť"
+
+#: kstandardguiitem.cpp:234
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Vyčistiť vstup"
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Vyčistiť vstupné editačné pole"
+
+#: kstandardguiitem.cpp:240
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Pomocník"
+
+#: kstandardguiitem.cpp:242
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Zobraziť pomocníka"
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Zavrieť"
+
+#: kstandardguiitem.cpp:249
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Zavrieť aktuálne okno alebo dokument"
+
+#: kstandardguiitem.cpp:254
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "&Zavrieť okno"
+
+#: kstandardguiitem.cpp:256
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Zavrieť aktuálne okno."
+
+#: kstandardguiitem.cpp:261
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "&Zavrieť dokument"
+
+#: kstandardguiitem.cpp:263
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Zavrieť aktuálny dokument."
+
+#: kstandardguiitem.cpp:268
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "Š&tandardné"
+
+#: kstandardguiitem.cpp:270
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Obnoviť všetky položky na ich štandardné hodnoty"
+
+#: kstandardguiitem.cpp:276
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&Späť"
+
+#: kstandardguiitem.cpp:276
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Prejsť dozadu o jeden krok"
+
+#: kstandardguiitem.cpp:282
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "Do&predu"
+
+#: kstandardguiitem.cpp:284
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Prejsť dopredu o jeden krok"
+
+#: kstandardguiitem.cpp:294
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "&Tlačiť..."
+
+#: kstandardguiitem.cpp:296
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr "Otvorí tlačový dialóg na tlač aktuálneho dokumentu"
+
+#: kstandardguiitem.cpp:303
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&Pokračovať"
+
+#: kstandardguiitem.cpp:305
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Pokračovať v činnosti"
+
+#: kstandardguiitem.cpp:310
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "Vymazať"
+
+#: kstandardguiitem.cpp:312
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Odstrániť položky"
+
+#: kstandardguiitem.cpp:317
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "&Otvoriť..."
+
+#: kstandardguiitem.cpp:319
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Otvoriť súbor"
+
+#: kstandardguiitem.cpp:324
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Koniec"
+
+#: kstandardguiitem.cpp:326
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Ukončiť aplikáciu"
+
+#: kstandardguiitem.cpp:331
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "Vrátiť &pôvodné"
+
+#: kstandardguiitem.cpp:333
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Obnoviť nastavenie"
+
+#: kstandardguiitem.cpp:338
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Vložiť"
+
+#: kstandardguiitem.cpp:343
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "Nastaviť..."
+
+#: kstandardguiitem.cpp:348
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Nájsť"
+
+#: kstandardguiitem.cpp:353
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Zastaviť"
+
+#: kstandardguiitem.cpp:358
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Pridať"
+
+#: kstandardguiitem.cpp:363
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: kstandardguiitem.cpp:368
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Test"
+
+#: kstandardguiitem.cpp:373
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Vlastnosti"
+
+#: kstandardguiitem.cpp:378
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Prepísať"
+
+#: ktimecombobox.cpp:254
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Zadaný čas je neplatný"
+
+#: ktimecombobox.cpp:257
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Čas nemôže byť skôr ako %1"
+
+#: ktimecombobox.cpp:264
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Čas nemôže byť neskôr ako %1"
+
+#: ktogglefullscreenaction.cpp:39
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Ukončiť režim &celej obrazovky"
+
+#: ktogglefullscreenaction.cpp:40
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Ukončiť režim celej obrazovky"
+
+#: ktogglefullscreenaction.cpp:41
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Opustiť celoobrazovkový režim"
+
+#: ktogglefullscreenaction.cpp:44
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Režim &celej obrazovky"
+
+#: ktogglefullscreenaction.cpp:45
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Celá obrazovka"
+
+#: ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Zobraziť v okno na celú obrazovku"
