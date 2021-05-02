@@ -117,7 +117,7 @@ target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
 
 target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons>")
 
-set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION_STRING}
+set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION}
                                                   SOVERSION ${KWIDGETSADDONS_SOVERSION}
                                                   EXPORT_NAME WidgetsAddons
 )
