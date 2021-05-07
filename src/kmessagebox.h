@@ -811,8 +811,9 @@ KWIDGETSADDONS_EXPORT void setDontShowAgainConfig(KConfig *cfg);
 /**
  * @deprecated since 5.0, use setDontShowAgainConfig()
  */
+KWIDGETSADDONS_EXPORT
 KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KMessageBox::setDontShowAgainConfig(KConfig*)")
-KWIDGETSADDONS_EXPORT inline void setDontShowAskAgainConfig(KConfig *cfg)
+inline void setDontShowAskAgainConfig(KConfig *cfg)
 {
     setDontShowAgainConfig(cfg);
 }
