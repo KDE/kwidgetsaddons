@@ -60,8 +60,8 @@ public:
         delete m_actionGroup;
     }
 
-    void comboBoxDeleted(QObject *);
-    void comboBoxCurrentIndexChanged(int);
+    void comboBoxDeleted(QComboBox *combo);
+    void comboBoxCurrentIndexChanged(int value);
 
     void init();
 

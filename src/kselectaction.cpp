@@ -466,9 +466,9 @@ void KSelectAction::setToolButtonPopupMode(QToolButton::ToolButtonPopupMode mode
     d->m_toolButtonPopupMode = mode;
 }
 
-void KSelectActionPrivate::comboBoxDeleted(QObject *object)
+void KSelectActionPrivate::comboBoxDeleted(QComboBox *combo)
 {
-    m_comboBoxes.removeAll(static_cast<QComboBox *>(object));
+    m_comboBoxes.removeAll(combo);
 }
 
 void KSelectActionPrivate::comboBoxCurrentIndexChanged(int index)
@@ -579,8 +579,8 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
             comboBox->setEnabled(false);
         }
 
-        connect(comboBox, &QComboBox::destroyed, this, [d](QObject *obj) {
-            d->comboBoxDeleted(obj);
+        connect(comboBox, &QComboBox::destroyed, this, [d, comboBox]() {
+            d->comboBoxDeleted(comboBox);
         });
 
         connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [d](int value) {
