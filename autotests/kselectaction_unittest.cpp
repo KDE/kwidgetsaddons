@@ -7,6 +7,7 @@
 
 #include "kselectaction_unittest.h"
 #include <QComboBox>
+#include <QMainWindow>
 #include <QStandardItemModel>
 #include <QTest>
 #include <kselectaction.h>
@@ -183,6 +184,37 @@ void KSelectAction_UnitTest::testChildActionStateChangeComboMode()
     selectAction.removeAction(childAction);
     QCOMPARE(comboBox->count(), 0);
     delete childAction;
+}
+
+// Bug 436808
+void KSelectAction_UnitTest::testCrashComboBoxDestruction()
+{
+    QWidget parentWidget;
+    QMainWindow mainWindow(&parentWidget);
+
+    // Creat a KSelectAction in a QWidget
+    auto *comboSelect = new KSelectAction(QStringLiteral("selectAction"), &mainWindow);
+
+    // Add some actions and create some connections to them
+    for (int i = 0; i < 7; ++i) {
+        QAction *action = comboSelect->addAction(QStringLiteral("Combo Action %1").arg(i));
+        connect(action, &QAction::triggered, &mainWindow, []() {
+            // Empty, just creating a connection to trigger a crash
+        });
+    }
+
+    comboSelect->setToolBarMode(KSelectAction::ComboBoxMode);
+    QToolBar *toolBar = mainWindow.addToolBar(QStringLiteral("Test"));
+
+    // Add the KSelectAction to a toolbar
+    toolBar->addAction(comboSelect);
+    mainWindow.show();
+    mainWindow.activateWindow();
+    // Wait for window to show
+    QVERIFY(QTest::qWaitForWindowActive(&mainWindow));
+
+    // When this method finishes and the QWidget is destroyed, and there
+    // should be no crash in KSelectActionPrivate::comboBoxDeleted()
 }
 
 void KSelectAction_UnitTest::testRequestWidgetComboBoxModeWidgetParent()

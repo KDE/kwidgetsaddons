@@ -43,13 +43,17 @@ public:
         m_actionGroup = new QActionGroup(nullptr);
     }
 
+    // virtual so the derived private class for e.g. KRecentFilesAction can be deleted correctly
+    // and not leaked
     virtual ~KSelectActionPrivate()
     {
         // unhook the event filter, as the deletion of the actiongroup
         // will trigger it
         for (QComboBox *box : qAsConst(m_comboBoxes)) {
             box->removeEventFilter(q_ptr);
+            QObject::disconnect(box, nullptr, q_ptr, nullptr); // To prevent a crash in comboBoxDeleted()
         }
+
         for (QToolButton *button : qAsConst(m_buttons)) {
             button->removeEventFilter(q_ptr);
         }

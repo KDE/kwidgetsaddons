@@ -21,7 +21,8 @@ int main(int argc, char **argv)
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
-    SelectActionTest *test = new SelectActionTest;
+    QWidget parentWidget;
+    SelectActionTest *test = new SelectActionTest(&parentWidget);
     test->show();
 
     return app.exec();

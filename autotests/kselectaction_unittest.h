@@ -30,6 +30,8 @@ private Q_SLOTS:
     // Test for the eventFilter code.
     void testChildActionStateChangeComboMode();
 
+    void testCrashComboBoxDestruction();
+
     // The next 6 are from bug 203114.
     void testRequestWidgetComboBoxModeWidgetParent();
     void testRequestWidgetComboBoxModeWidgetParentSeveralActions();
