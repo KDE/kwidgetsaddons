@@ -63,9 +63,7 @@ QSize KSqueezedTextLabel::sizeHint() const
 {
     int maxWidth = screen()->geometry().width() * 3 / 4;
     QFontMetrics fm(fontMetrics());
-    // Using the boundingRect width instead of horizontalAdvance can cause the
-    // side opposite to the alignment to be clipped off.
-    int textWidth = fm.horizontalAdvance(d->fullText);
+    int textWidth = fm.boundingRect(d->fullText).width();
     if (textWidth > maxWidth) {
         textWidth = maxWidth;
     }
