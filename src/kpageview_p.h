@@ -46,6 +46,10 @@ private:
 class KPageViewPrivate
 {
     Q_DECLARE_PUBLIC(KPageView)
+
+public:
+    virtual ~KPageViewPrivate() = default;
+
 protected:
     KPageViewPrivate(KPageView *);
 
