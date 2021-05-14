@@ -90,7 +90,7 @@ set(kwidgetsaddon_UI
    kpassworddialog.ui
 )
 
-qt5_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
+qt_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
 
 ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
     HEADER loggingcategory.h

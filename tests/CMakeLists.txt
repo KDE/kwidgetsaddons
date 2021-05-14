@@ -54,7 +54,7 @@ target_link_libraries(kdatetabletest Qt5::Widgets)
 ecm_mark_as_test(kdatetabletest)
 
 set(kcolumnresizertestapp_SRCS kcolumnresizertestapp.cpp)
-qt5_wrap_ui(kcolumnresizertestapp_SRCS kcolumnresizertestapp.ui)
+qt_wrap_ui(kcolumnresizertestapp_SRCS kcolumnresizertestapp.ui)
 add_executable(kcolumnresizertestapp ${kcolumnresizertestapp_SRCS})
 target_link_libraries(kcolumnresizertestapp KF5::WidgetsAddons Qt5::Widgets)
 ecm_mark_as_test(kcolumnresizertestapp)
