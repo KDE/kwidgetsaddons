@@ -1,6 +1,5 @@
-set(SRCS main.cpp)
 
-add_executable(kwidgetaddons-example-kmessagebox ${SRCS})
+add_executable(kwidgetaddons-example-kmessagebox main.cpp)
 
 target_link_libraries(kwidgetaddons-example-kmessagebox
     Qt5::Widgets

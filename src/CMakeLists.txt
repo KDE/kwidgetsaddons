@@ -1,7 +1,11 @@
 include(ECMPoQmTools)
-ecm_create_qm_loader(kwidgetsaddons_QM_LOADER kwidgetsaddons5_qt)
 
-set(kwidgetsaddons_SRCS
+add_library(KF5WidgetsAddons)
+add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
+
+ecm_create_qm_loader(KF5WidgetsAddons kwidgetsaddons5_qt)
+
+target_sources(KF5WidgetsAddons PRIVATE
   kacceleratormanager.cpp
   kanimatedbutton.cpp
   kbusyindicatorwidget.cpp
@@ -79,20 +83,20 @@ set(kwidgetsaddons_SRCS
   ksplittercollapserbutton.cpp
   kstyleextensions.cpp
   ktooltipwidget.cpp
+
   icons.qrc
-  ${kwidgetsaddons_QM_LOADER}
 )
 
-set(kwidgetsaddon_UI
+set(kwidgetsaddons_UI_SRCS)
+qt_wrap_ui(kwidgetsaddons_UI_SRCS
    kdatetimeedit.ui
    knewpassworddialog.ui
    knewpasswordwidget.ui
    kpassworddialog.ui
 )
+target_sources(KF5WidgetsAddons PRIVATE ${kwidgetsaddons_UI_SRCS})
 
-qt_wrap_ui(kwidgetsaddons_SRCS ${kwidgetsaddon_UI} )
-
-ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
+ecm_qt_declare_logging_category(KF5WidgetsAddons
     HEADER loggingcategory.h
     IDENTIFIER KWidgetsAddonsLog
     CATEGORY_NAME kf.kwidgetsaddons
@@ -101,9 +105,6 @@ ecm_qt_declare_logging_category(kwidgetsaddons_SRCS
     EXPORT KWIDGETSADDONS
 )
 
-
-add_library(KF5WidgetsAddons ${kwidgetsaddons_SRCS})
-add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
 ecm_generate_export_header(KF5WidgetsAddons
     BASE_NAME KWidgetsAddons
     GROUP_BASE_NAME KF
