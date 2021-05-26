@@ -15,6 +15,7 @@
 class QMenu;
 
 /**
+ * @internal
  * Date selection table.
  * This is a support class for the KDatePicker class.  It just
  * draws the calendar table without titles, but could theoretically
@@ -25,7 +26,6 @@ class QMenu;
  *
  * \image html kdatetable.png "KDE Date Selection Table"
  *
- * @internal
  * @author Tim Gilman, Mirko Boehm
  */
 class KDateTable : public QWidget

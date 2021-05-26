@@ -16,9 +16,9 @@
 class QWidget;
 
 /**
+ * @internal
  * I don't want the eventFilter to be in KCursor, so we have another class
  * for that stuff
- * @internal
  * @author John Firebaugh <jfirebaugh@kde.org>
  * @author Carsten Pfeiffer <pfeiffer@kde.org>
  */

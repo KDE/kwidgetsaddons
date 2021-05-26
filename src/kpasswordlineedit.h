@@ -101,7 +101,8 @@ public:
     bool isRevealPasswordAvailable() const;
 
     /**
-     * Returns the QAction (@internal)
+     * @internal
+     * Returns the QAction
      */
     QAction *toggleEchoModeAction() const;
 
