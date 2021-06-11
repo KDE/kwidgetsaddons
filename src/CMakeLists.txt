@@ -20,7 +20,6 @@ target_sources(KF5WidgetsAddons PRIVATE
   kdatetimeedit.cpp
   kfontaction.cpp
   knewpasswordwidget.cpp
-  fonthelpers.cpp
   kfontsizeaction.cpp
   kpopupframe.cpp
   kselectaction.cpp

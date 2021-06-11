@@ -8,17 +8,26 @@
 
 // i18n-related helpers for fonts, common to KFont* widgets.
 
+#include <QCoreApplication>
 #include <QString>
 #include <QStringList>
 
 #include <map>
 
-static bool fontFamilyCompare(const QString &a, const QString &b)
-{
-    return QString::localeAwareCompare(a, b) < 0;
-}
+#ifdef NEVERDEFINE // never true
+// Font names up for translation, listed for extraction.
 
-using FontFamiliesMap = std::map<QString, QString, decltype(fontFamilyCompare) *>;
+//: Generic sans serif font presented in font choosers. When selected,
+//: the system will choose a real font, mandated by distro settings.
+QT_TRANSLATE_NOOP3("FontHelpers", "Sans Serif", "@item Font name");
+//: Generic serif font presented in font choosers. When selected,
+//: the system will choose a real font, mandated by distro settings.
+QT_TRANSLATE_NOOP3("FontHelpers", "Serif", "@item Font name");
+//: Generic monospace font presented in font choosers. When selected,
+//: the system will choose a real font, mandated by distro settings.
+QT_TRANSLATE_NOOP3("FontHelpers", "Monospace", "@item Font name");
+
+#endif
 
 /**
  * @internal
@@ -29,7 +38,27 @@ using FontFamiliesMap = std::map<QString, QString, decltype(fontFamilyCompare) *
  * @param family the storage for family name
  * @param foundry the storage for foundry name
  */
-void splitFontString(const QString &name, QString *family, QString *foundry = nullptr);
+inline void splitFontString(const QString &name, QString *family, QString *foundry = nullptr)
+{
+    int p1 = name.indexOf(QLatin1Char('['));
+    if (p1 < 0) {
+        if (family) {
+            *family = name.trimmed();
+        }
+        if (foundry) {
+            foundry->clear();
+        }
+    } else {
+        int p2 = name.indexOf(QLatin1Char(']'), p1);
+        p2 = p2 > p1 ? p2 : name.length();
+        if (family) {
+            *family = name.leftRef(p1).trimmed().toString();
+        }
+        if (foundry) {
+            *foundry = name.midRef(p1 + 1, p2 - p1 - 1).trimmed().toString();
+        }
+    }
+}
 
 /**
  * @internal
@@ -40,7 +69,38 @@ void splitFontString(const QString &name, QString *family, QString *foundry = nu
  * @param name the raw font name reported by Qt
  * @return translated font name
  */
-QString translateFontName(const QString &name);
+inline QString translateFontName(const QString &name)
+{
+    QString family, foundry;
+    splitFontString(name, &family, &foundry);
+
+    // Obtain any regular translations for the family and foundry.
+    QString trFamily = QCoreApplication::translate("FontHelpers", family.toUtf8().constData(), "@item Font name");
+    QString trFoundry = foundry;
+    if (!foundry.isEmpty()) {
+        trFoundry = QCoreApplication::translate("FontHelpers", foundry.toUtf8().constData(), "@item Font foundry");
+    }
+
+    // Assemble full translation.
+    QString trfont;
+    if (foundry.isEmpty()) {
+        // i18n: Filter by which the translators can translate, or otherwise
+        // operate on the font names not put up for regular translation.
+        trfont = QCoreApplication::translate("FontHelpers", "%1", "@item Font name").arg(trFamily);
+    } else {
+        // i18n: Filter by which the translators can translate, or otherwise
+        // operate on the font names not put up for regular translation.
+        trfont = QCoreApplication::translate("FontHelpers", "%1 [%2]", "@item Font name [foundry]").arg(trFamily, trFoundry);
+    }
+    return trfont;
+}
+
+static bool fontFamilyCompare(const QString &a, const QString &b)
+{
+    return QString::localeAwareCompare(a, b) < 0;
+}
+
+using FontFamiliesMap = std::map<QString, QString, decltype(fontFamilyCompare) *>;
 
 /**
  * @internal
@@ -53,6 +113,15 @@ QString translateFontName(const QString &name);
  * @param trToRawNames storage for mapping of translated to raw names
  * @return sorted list of translated font names
  */
-FontFamiliesMap translateFontNameList(const QStringList &names);
+inline FontFamiliesMap translateFontNameList(const QStringList &names)
+{
+    FontFamiliesMap trMap(fontFamilyCompare);
+
+    for (const QString &fName : names) {
+        trMap.insert({translateFontName(fName), fName});
+    }
+
+    return trMap;
+}
 
 #endif
