@@ -592,13 +592,13 @@ void KFontChooserPrivate::slotFamilySelected(const QString &family)
         }
     }
     m_styleListBox->setCurrentRow(listPos >= 0 ? listPos : 0);
-    QString currentStyle = m_qtStyles[m_styleListBox->currentItem()->text()];
+    const QString currentStyle = m_qtStyles[m_styleListBox->currentItem()->text()];
 
     // Recompute the size listbox for this family/style.
     qreal currentSize = setupSizeListBox(currentFamily, currentStyle);
     m_fontSizeSpinBox->setValue(currentSize);
 
-    m_selectedFont = dbase.font(currentFamily, currentStyle, int(currentSize));
+    m_selectedFont = dbase.font(currentFamily, currentStyle, static_cast<int>(currentSize));
     if (dbase.isSmoothlyScalable(currentFamily, currentStyle) && m_selectedFont.pointSize() == floor(currentSize)) {
         m_selectedFont.setPointSizeF(currentSize);
     }
@@ -615,19 +615,14 @@ void KFontChooserPrivate::slotStyleSelected(const QString &style)
     m_signalsAllowed = false;
 
     QFontDatabase dbase;
-    QString currentFamily = m_qtFamilies[m_familyListBox->currentItem()->text()];
-    QString currentStyle;
-    if (style.isEmpty()) {
-        currentStyle = m_qtStyles[m_styleListBox->currentItem()->text()];
-    } else {
-        currentStyle = m_qtStyles[style];
-    }
+    const QString currentFamily = m_qtFamilies[m_familyListBox->currentItem()->text()];
+    const QString currentStyle = !style.isEmpty() ? m_qtStyles[style] : m_qtStyles[m_styleListBox->currentItem()->text()];
 
     // Recompute the size listbox for this family/style.
     qreal currentSize = setupSizeListBox(currentFamily, currentStyle);
     m_fontSizeSpinBox->setValue(currentSize);
 
-    m_selectedFont = dbase.font(currentFamily, currentStyle, int(currentSize));
+    m_selectedFont = dbase.font(currentFamily, currentStyle, static_cast<int>(currentSize));
     if (dbase.isSmoothlyScalable(currentFamily, currentStyle) && m_selectedFont.pointSize() == floor(currentSize)) {
         m_selectedFont.setPointSizeF(currentSize);
     }
@@ -682,10 +677,6 @@ void KFontChooserPrivate::slotSizeValue(double dval)
     // We compare with qreal, so convert for platforms where qreal != double.
     qreal val = qreal(dval);
 
-    QFontDatabase dbase;
-    QString family = m_qtFamilies[m_familyListBox->currentItem()->text()];
-    QString style = m_qtStyles[m_styleListBox->currentItem()->text()];
-
     // Reset current size slot in list if it was customized.
     if (m_customSizeRow >= 0 && m_sizeListBox->currentRow() == m_customSizeRow) {
         m_sizeListBox->item(m_customSizeRow)->setText(m_standardSizeAtCustom);
@@ -693,6 +684,10 @@ void KFontChooserPrivate::slotSizeValue(double dval)
     }
 
     bool canCustomize = true;
+
+    QFontDatabase dbase;
+    const QString family = m_qtFamilies[m_familyListBox->currentItem()->text()];
+    const QString style = m_qtStyles[m_styleListBox->currentItem()->text()];
 
     // For Qt-bad-sizes workaround: skip this block unconditionally
     if (!dbase.isSmoothlyScalable(family, style)) {
@@ -819,8 +814,6 @@ qreal KFontChooserPrivate::setupSizeListBox(const QString &family, const QString
 void KFontChooserPrivate::setupDisplay()
 {
     QFontDatabase dbase;
-    QString family = m_selectedFont.family().toLower();
-    QString styleID = styleIdentifier(m_selectedFont);
     qreal size = m_selectedFont.pointSizeF();
     if (size == -1) {
         size = QFontInfo(m_selectedFont).pointSizeF();
@@ -828,6 +821,7 @@ void KFontChooserPrivate::setupDisplay()
 
     int numEntries, i;
 
+    QString family = m_selectedFont.family().toLower();
     // Direct family match.
     numEntries = m_familyListBox->count();
     for (i = 0; i < numEntries; ++i) {
@@ -882,6 +876,7 @@ void KFontChooserPrivate::setupDisplay()
     // Try now to set the current items in the style and size boxes.
 
     // Set current style in the listbox.
+    const QString styleID = styleIdentifier(m_selectedFont);
     numEntries = m_styleListBox->count();
     for (i = 0; i < numEntries; ++i) {
         if (styleID == m_styleIDs[m_styleListBox->item(i)->text()]) {
@@ -897,9 +892,9 @@ void KFontChooserPrivate::setupDisplay()
     // Set current size in the listbox.
     // If smoothly scalable, allow customizing one of the standard size slots,
     // otherwise just select the nearest available size.
-    QString currentFamily = m_qtFamilies[m_familyListBox->currentItem()->text()];
-    QString currentStyle = m_qtStyles[m_styleListBox->currentItem()->text()];
-    bool canCustomize = dbase.isSmoothlyScalable(currentFamily, currentStyle);
+    const QString currentFamily = m_qtFamilies[m_familyListBox->currentItem()->text()];
+    const QString currentStyle = m_qtStyles[m_styleListBox->currentItem()->text()];
+    const bool canCustomize = dbase.isSmoothlyScalable(currentFamily, currentStyle);
     m_sizeListBox->setCurrentRow(nearestSizeRow(size, canCustomize));
 
     // Set current size in the spinbox.
