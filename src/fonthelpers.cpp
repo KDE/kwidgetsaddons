@@ -71,44 +71,13 @@ QString translateFontName(const QString &name)
     return trfont;
 }
 
-static bool localeLessThan(const QString &a, const QString &b)
+FontFamiliesMap translateFontNameList(const QStringList &names)
 {
-    return QString::localeAwareCompare(a, b) < 0;
-}
+    FontFamiliesMap trMap(fontFamilyCompare);
 
-QStringList translateFontNameList(const QStringList &names, QHash<QString, QString> *trToRawNames)
-{
-    // Generic fonts, in the inverse of desired order.
-    const QStringList genericNames{
-        QStringLiteral("Monospace"),
-        QStringLiteral("Serif"),
-        QStringLiteral("Sans Serif"),
-    };
-
-    // Translate fonts, but do not add generics to the list right away.
-    QStringList trNames;
-    QHash<QString, QString> trMap;
-    for (const QString &name : names) {
-        const QString trName = translateFontName(name);
-        if (!genericNames.contains(name)) {
-            trNames.append(trName);
-        }
-        trMap.insert(trName, name);
+    for (const QString &fName : names) {
+        trMap.insert({translateFontName(fName), fName});
     }
 
-    // Sort real fonts alphabetically.
-    std::sort(trNames.begin(), trNames.end(), localeLessThan);
-
-    // Prepend generic fonts, in the predefined order.
-    for (const QString &genericName : genericNames) {
-        const QString trGenericName = translateFontName(genericName);
-        if (trMap.contains(trGenericName)) {
-            trNames.prepend(trGenericName);
-        }
-    }
-
-    if (trToRawNames) {
-        *trToRawNames = trMap;
-    }
-    return trNames;
+    return trMap;
 }

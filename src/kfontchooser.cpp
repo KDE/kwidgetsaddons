@@ -124,10 +124,10 @@ public:
     bool m_usingFixed = false;
 
     // Mappings of translated to Qt originated family and style strings.
-    QHash<QString, QString> m_qtFamilies;
-    QHash<QString, QString> m_qtStyles;
+    FontFamiliesMap m_qtFamilies;
+    std::map<QString, QString> m_qtStyles;
     // Mapping of translated style strings to internal style identifiers.
-    QHash<QString, QString> m_styleIDs;
+    std::map<QString, QString> m_styleIDs;
 };
 
 KFontChooser::KFontChooser(QWidget *parent, const DisplayFlags &flags, const QStringList &fontList, int visibleListSize, Qt::CheckState *sizeIsRelativeState)
@@ -564,8 +564,8 @@ void KFontChooserPrivate::slotFamilySelected(const QString &family)
         QString fstyle = tr("%1", "@item Font style").arg(style);
         if (!filteredStyles.contains(fstyle)) {
             filteredStyles.append(fstyle);
-            m_qtStyles.insert(fstyle, style);
-            m_styleIDs.insert(fstyle, styleIdentifier(testFont));
+            m_qtStyles.insert({fstyle, style});
+            m_styleIDs.insert({fstyle, styleIdentifier(testFont)});
         }
     }
     m_styleListBox->clear();
@@ -948,7 +948,35 @@ void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
     m_signalsAllowed = false;
 
     m_familyListBox->clear();
-    m_familyListBox->addItems(translateFontNameList(fonts, &m_qtFamilies));
+    m_qtFamilies = translateFontNameList(fonts);
+
+    // Generic font names
+    const QStringList genericTranslatedNames{
+        translateFontName(QStringLiteral("Sans Serif")),
+        translateFontName(QStringLiteral("Serif")),
+        translateFontName(QStringLiteral("Monospace")),
+    };
+
+    QStringList list;
+
+    // Add generic family names to the top of the list
+    for (const QString &s : genericTranslatedNames) {
+        auto nIt = m_qtFamilies.find(s);
+        if (nIt != m_qtFamilies.cend()) {
+            list.push_back(s);
+        }
+    }
+
+    for (auto it = m_qtFamilies.cbegin(); it != m_qtFamilies.cend(); ++it) {
+        const QString &name = it->first;
+        if (genericTranslatedNames.contains(name)) {
+            continue;
+        }
+
+        list.push_back(name);
+    }
+
+    m_familyListBox->addItems(list);
 
     m_signalsAllowed = true;
 }

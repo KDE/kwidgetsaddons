@@ -8,9 +8,17 @@
 
 // i18n-related helpers for fonts, common to KFont* widgets.
 
-#include <QHash>
 #include <QString>
 #include <QStringList>
+
+#include <map>
+
+static bool fontFamilyCompare(const QString &a, const QString &b)
+{
+    return QString::localeAwareCompare(a, b) < 0;
+}
+
+using FontFamiliesMap = std::map<QString, QString, decltype(fontFamilyCompare) *>;
 
 /**
  * @internal
@@ -45,6 +53,6 @@ QString translateFontName(const QString &name);
  * @param trToRawNames storage for mapping of translated to raw names
  * @return sorted list of translated font names
  */
-QStringList translateFontNameList(const QStringList &names, QHash<QString, QString> *trToRawNames = nullptr);
+FontFamiliesMap translateFontNameList(const QStringList &names);
 
 #endif
