@@ -14,7 +14,6 @@
 #include <memory>
 
 class QFont;
-class QUrl;
 
 /**
  * @class KCharSelect kcharselect.h KCharSelect

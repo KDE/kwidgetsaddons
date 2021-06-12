@@ -14,7 +14,6 @@
 #include <kwidgetsaddons_export.h>
 
 class QPixmap;
-class QPainter;
 class QMenu;
 class QStyleOptionToolButton;
 
