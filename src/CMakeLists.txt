@@ -82,6 +82,8 @@ target_sources(KF5WidgetsAddons PRIVATE
   ksplittercollapserbutton.cpp
   kstyleextensions.cpp
   ktooltipwidget.cpp
+  ktwofingerswipe.cpp
+  ktwofingertap.cpp
 
   icons.qrc
 )
@@ -197,6 +199,8 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KSplitterCollapserButton
   KStyleExtensions
   KToolTipWidget
+  KTwoFingerTap
+  KTwoFingerSwipe
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
@@ -282,6 +286,8 @@ if (PythonModuleGeneration_FOUND)
       kmessageboxnotifyinterface.h
       ksplittercollapserbutton.h
       kstyleextensions.h
+      ktwofingerswipe.h
+      ktwofingertap.h
   )
 endif()
 
