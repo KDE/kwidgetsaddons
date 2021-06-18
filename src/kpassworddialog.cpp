@@ -364,6 +364,16 @@ void KPasswordDialog::setKnownLogins(const QMap<QString, QString> &knownLogins)
     });
 }
 
+void KPasswordDialog::setRevealPasswordAvailable(bool reveal)
+{
+    d->ui.passEdit->setRevealPasswordAvailable(reveal);
+}
+
+bool KPasswordDialog::isRevealPasswordAvailable() const
+{
+    return d->ui.passEdit->isRevealPasswordAvailable();
+}
+
 void KPasswordDialogPrivate::activated(const QString &userName)
 {
     QMap<QString, QString>::ConstIterator it = knownLogins.constFind(userName);

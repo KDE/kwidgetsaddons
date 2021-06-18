@@ -303,6 +303,23 @@ public:
      */
     void setUsernameContextHelp(const QString &help);
 
+    /**
+     * Whether to show the visibility trailing action in the line edit.
+     * Default is @c true. This can be used to honor the lineedit_reveal_password
+     * kiosk key, for example:
+     * \code
+     * dlg->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
+     * \endcode
+     * @since 5.84
+     */
+    void setRevealPasswordAvailable(bool reveal);
+
+    /**
+     * Whether the visibility trailing action in the line edit is visible.
+     * @since 5.84
+     */
+    bool isRevealPasswordAvailable() const;
+
 Q_SIGNALS:
     /**
      * emitted when the dialog has been accepted
