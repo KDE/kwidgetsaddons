@@ -18,7 +18,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldShowTogglePassword();
-    void shouldNotShowToggleWhenSetPassword();
+    void shouldShowToggleWhenSetPassword();
     void shouldShowRevealPassword();
     void shouldEmitSignalPasswordChanged();
 };

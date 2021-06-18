@@ -49,13 +49,13 @@ void PasswordLineEditTest::shouldShowTogglePassword()
     QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
 }
 
-void PasswordLineEditTest::shouldNotShowToggleWhenSetPassword()
+void PasswordLineEditTest::shouldShowToggleWhenSetPassword()
 {
     KPasswordLineEdit lineEdit;
     lineEdit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));
     lineEdit.setPassword(QStringLiteral("foo"));
-    QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
+    QVERIFY(lineEdit.toggleEchoModeAction()->isVisible());
 }
 
 void PasswordLineEditTest::shouldShowRevealPassword()

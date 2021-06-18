@@ -27,7 +27,6 @@ public:
 
     QLineEdit *passwordLineEdit = nullptr;
     QAction *toggleEchoModeAction = nullptr;
-    bool isToggleEchoModeAvailable = true;
     bool revealPasswordAvailable = true;
     KPasswordLineEdit *const q;
 };
@@ -49,11 +48,7 @@ void KPasswordLineEditPrivate::initialize()
 
 void KPasswordLineEditPrivate::showToggleEchoModeAction(const QString &text)
 {
-    if (revealPasswordAvailable) {
-        toggleEchoModeAction->setVisible(isToggleEchoModeAvailable && (passwordLineEdit->echoMode() == QLineEdit::Normal || !text.isEmpty()));
-    } else {
-        toggleEchoModeAction->setVisible(false);
-    }
+    toggleEchoModeAction->setVisible(revealPasswordAvailable && (passwordLineEdit->echoMode() == QLineEdit::Normal || !text.isEmpty()));
 }
 
 void KPasswordLineEditPrivate::echoModeToggled()
@@ -96,7 +91,6 @@ KPasswordLineEdit::~KPasswordLineEdit() = default;
 void KPasswordLineEdit::setPassword(const QString &password)
 {
     if (d->passwordLineEdit->text() != password) {
-        d->isToggleEchoModeAvailable = password.isEmpty();
         d->passwordLineEdit->setText(password);
     }
 }
