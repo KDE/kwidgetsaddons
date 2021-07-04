@@ -94,6 +94,7 @@ qt_wrap_ui(kwidgetsaddons_UI_SRCS
    knewpassworddialog.ui
    knewpasswordwidget.ui
    kpassworddialog.ui
+   kfontchooserwidget.ui
 )
 target_sources(KF5WidgetsAddons PRIVATE ${kwidgetsaddons_UI_SRCS})
 

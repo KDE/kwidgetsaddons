@@ -15,10 +15,6 @@ int main(int argc, char **argv)
 
     QApplication app(argc, argv);
 
-    app.setFont(QFont(QStringLiteral("Noto Sans"), 11));
-
-    //  QFont font = QFont("Times",18,QFont::Bold);
-
     QFont font;
     qDebug() << "Default use case, all bells and whistles";
     int nRet = KFontChooserDialog::getFont(font);
