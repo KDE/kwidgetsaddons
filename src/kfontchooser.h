@@ -123,57 +123,54 @@ public:
     ~KFontChooser() override;
 
     /**
-     * Enables or disable a font column in the chooser.
+     * Enables or disables a column (family, style, size) in the widget.
      *
-     * Use this
-     * function if your application does not need or supports all font
-     * properties.
+     * Use this function if your application does not need or support all font properties.
      *
-     * @param column Specify the columns. An or'ed combination of
-     *        @p FamilyList, @p StyleList and @p SizeList is possible.
-     * @param state If @p false the columns are disabled.
+     * @param column specify the column(s) to enable/disable, an OR-ed combination of
+     * @c KFontChooser::FontColumn enum values
+     * @param state if @p false the columns are disabled, and vice-versa
      */
     void enableColumn(int column, bool state);
 
     /**
-     * Sets the currently selected font in the chooser.
+     * Sets the currently selected font in the widget.
      *
-     * @param font The font to select.
-     * @param onlyFixed Readjust the font list to display only fixed
-     *        width fonts if @p true, or vice-versa.
+     * @param font the font to select
+     * @param onlyFixed if @c true, the font list will only display fixed-width fonts,
+     * otherwise all fonts are displayed. The default is @c false.
      */
     void setFont(const QFont &font, bool onlyFixed = false);
 
     /**
-     * @return The bitmask corresponding to the attributes the user
-     *         wishes to change.
+     * Returns the bitmask corresponding to the attributes the user wishes to change.
      */
     FontDiffFlags fontDiffFlags() const;
 
     /**
-     * @return The currently selected font in the chooser.
+     * Returns the currently selected font in the chooser.
      */
     QFont font() const;
 
     /**
-     * Sets the color to use in the preview.
+     * Sets the color to use for the font in the preview area.
      */
     void setColor(const QColor &col);
 
     /**
-     * @return The color currently used in the preview (default: the text
-     *         color of the active color group)
+     * Returns the color currently used for the font in the preview
+     * area (default: the text color of the active color group).
      */
     QColor color() const;
 
     /**
-     * Sets the background color to use in the preview.
+     * Sets the background color to use in the preview area.
      */
     void setBackgroundColor(const QColor &col);
 
     /**
-     * @return The background color currently used in the preview (default:
-     *         the base color of the active colorgroup)
+     * Returns the background color currently used in the preview area
+     * (default: the base color of the active colorgroup)
      */
     QColor backgroundColor() const;
 
@@ -197,21 +194,16 @@ public:
     QString sampleText() const;
 
     /**
-     * Sets the sample text.
+     * Sets the sample text in the preview area; this is useful if you
+     * want to use text in your native language.
      *
-     * Normally you should not change this
-     * text, but it can be better to do this if the default text is
-     * too large for the edit area when using the default font of your
-     * application.
-     *
-     * @param text The new sample text. The current will be removed.
+     * @param text the new sample text (it will replace the current text)
      */
     void setSampleText(const QString &text);
 
     /**
-     * Shows or hides the sample text box.
-     *
-     * @param visible Set it to true to show the box, to false to hide it.
+     * If @p visible is @c true the preview area will be shown, and vice-versa
+     * is it's @c false.
      */
     void setSampleBoxVisible(bool visible);
 
@@ -220,20 +212,19 @@ public:
      */
     enum FontListCriteria {
         /**
-         * When included only fixed-width fonts are returned.
-         * The fonts where the width of every character is equal.
+         * If set, only show fixed fixed-width (monospace) fonts.
          */
         FixedWidthFonts = 0x01,
         /**
-         * When included only scalable fonts are returned;
-         * certain configurations allow bitmap fonts to remain unscaled and
-         * thus these fonts have limited number of sizes.
+         * If set, only show scalable fonts.
+         * Certain configurations allow bitmap fonts to remain unscaled
+         * and thus these fonts have limited number of sizes.
          */
         ScalableFonts = 0x02,
         /**
-         * When included only return smooth scalable fonts.
+         * If set, only show smooth scalable fonts.
          * This will return only non-bitmap fonts which are scalable to any size requested.
-         * Setting this option to true will mean the "scalable" flag is irrelevant.
+         * Setting this option means the @c ScalableFonts flag is ignored.
          */
         SmoothScalableFonts = 0x04
     };
@@ -254,7 +245,7 @@ public:
 
 Q_SIGNALS:
     /**
-     * Emitted whenever the selected font changes.
+     * Emitted when the selected font changes.
      */
     void fontSelected(const QFont &font);
 
