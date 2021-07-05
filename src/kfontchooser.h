@@ -37,8 +37,11 @@ class KWIDGETSADDONS_EXPORT KFontChooser : public QWidget
     Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontSelected USER true)
     Q_PROPERTY(QColor color READ color WRITE setColor)
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor)
-    Q_PROPERTY(Qt::CheckState sizeIsRelative READ sizeIsRelative WRITE setSizeIsRelative)
     Q_PROPERTY(QString sampleText READ sampleText WRITE setSampleText)
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
+    Q_PROPERTY(Qt::CheckState sizeIsRelative READ sizeIsRelative WRITE setSizeIsRelative)
+#endif
 
 public:
     /**
@@ -174,19 +177,28 @@ public:
      */
     QColor backgroundColor() const;
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
     /**
      * Sets the state of the checkbox indicating whether the font size
      * is to be interpreted as relative size.
      * @note If parameter @p sizeIsRelative was not set in the constructor
      *       of the widget this setting will be ignored.
+     *
+     * @deprecated Since 5.86, for lack of usage.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 86, "For lack of usage.")
     void setSizeIsRelative(Qt::CheckState relative);
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
     /**
-     * @return Whether the font size is to be interpreted as relative size
-     *         (default: QButton:Off)
+     * @return whether the font size is to be interpreted as relative size
+     *
+     * @deprecated Since 5.86, for lack of usage.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 86, "For lack of usage.")
     Qt::CheckState sizeIsRelative() const;
+#endif
 
     /**
      * @return The current text in the sample text input area.

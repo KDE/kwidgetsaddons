@@ -202,6 +202,7 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
         m_ui->styleCheckBox->hide();
     }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
     if (sizeIsRelativeState) {
         QString sizeIsRelativeCBToolTipText = KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment", "@info:tooltip");
         QString sizeIsRelativeCBWhatsThisText = KFontChooser::tr(
@@ -217,6 +218,9 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     } else {
         m_ui->sizeIsRelativeCheckBox->hide();
     }
+#else
+    m_ui->sizeIsRelativeCheckBox->hide();
+#endif
 
     // Populate with usual sizes, to determine minimum list width;
     // will be replaced later with correct sizes.
@@ -295,6 +299,7 @@ QColor KFontChooser::backgroundColor() const
     return d->m_palette.color(QPalette::Active, QPalette::Base);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
 void KFontChooser::setSizeIsRelative(Qt::CheckState relative)
 {
     // check or uncheck or gray out the "relative" checkbox
@@ -306,11 +311,14 @@ void KFontChooser::setSizeIsRelative(Qt::CheckState relative)
         }
     }
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
 Qt::CheckState KFontChooser::sizeIsRelative() const
 {
     return d->m_ui->sizeIsRelativeCheckBox ? d->m_ui->sizeIsRelativeCheckBox->checkState() : Qt::PartiallyChecked;
 }
+#endif
 
 QString KFontChooser::sampleText() const
 {
