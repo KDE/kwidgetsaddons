@@ -145,19 +145,16 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
 
     const bool isDiffMode = flags & KFontChooser::ShowDifferences;
 
-    if (isDiffMode) {
-        m_ui->familyLabel->hide();
-    } else {
-        m_ui->familyCheckBox->hide();
-    }
-
     QObject::connect(m_ui->familyListWidget, &QListWidget::currentTextChanged, [this](const QString &family) {
         slotFamilySelected(family);
     });
 
     if (isDiffMode) {
+        m_ui->familyLabel->hide();
         m_ui->familyListWidget->setEnabled(false);
         QObject::connect(m_ui->familyCheckBox, &QCheckBox::toggled, m_ui->familyListWidget, &QWidget::setEnabled);
+    } else {
+        m_ui->familyCheckBox->hide();
     }
 
     if (!fontList.isEmpty()) {
@@ -169,10 +166,18 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     m_ui->familyListWidget->setMinimumWidth(minimumListWidth(m_ui->familyListWidget));
     m_ui->familyListWidget->setMinimumHeight(minimumListHeight(m_ui->familyListWidget, visibleListSize));
 
-    if (isDiffMode) {
-        m_ui->styleLabel->hide();
-    } else {
-        m_ui->styleCheckBox->hide();
+    // If the calling app sets FixedFontsOnly, don't show the "show fixed only" checkbox
+    m_ui->onlyFixedCheckBox->setVisible(!m_usingFixed);
+
+    if (!m_ui->onlyFixedCheckBox->isHidden()) {
+        QObject::connect(m_ui->onlyFixedCheckBox, &QCheckBox::toggled, q, [this](const bool state) {
+            q->setFont(m_selectedFont, state);
+        });
+
+        if (isDiffMode) { // In this mode follow the state of the m_ui->familyCheckBox
+            m_ui->onlyFixedCheckBox->setEnabled(false);
+            QObject::connect(m_ui->familyCheckBox, &QCheckBox::toggled, m_ui->onlyFixedCheckBox, &QWidget::setEnabled);
+        }
     }
 
     // Populate usual styles, to determine minimum list width;
@@ -190,14 +195,11 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     });
 
     if (isDiffMode) {
+        m_ui->styleLabel->hide();
         m_ui->styleListWidget->setEnabled(false);
         QObject::connect(m_ui->styleCheckBox, &QCheckBox::toggled, m_ui->styleListWidget, &QWidget::setEnabled);
-    }
-
-    if (isDiffMode) {
-        m_ui->sizeLabel->hide();
     } else {
-        m_ui->sizeCheckBox->hide();
+        m_ui->styleCheckBox->hide();
     }
 
     if (sizeIsRelativeState) {
@@ -210,6 +212,8 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
         m_ui->sizeIsRelativeCheckBox->setTristate(isDiffMode);
         m_ui->sizeIsRelativeCheckBox->setWhatsThis(sizeIsRelativeCBWhatsThisText);
         m_ui->sizeIsRelativeCheckBox->setToolTip(sizeIsRelativeCBToolTipText);
+        // check or uncheck or gray out the "relative" checkbox
+        q->setSizeIsRelative(*sizeIsRelativeState);
     } else {
         m_ui->sizeIsRelativeCheckBox->hide();
     }
@@ -227,10 +231,13 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     });
 
     if (isDiffMode) {
+        m_ui->sizeLabel->hide();
         m_ui->sizeListWidget->setEnabled(false);
         m_ui->sizeSpinBox->setEnabled(false);
         QObject::connect(m_ui->sizeCheckBox, &QCheckBox::toggled, m_ui->sizeListWidget, &QWidget::setEnabled);
         QObject::connect(m_ui->sizeCheckBox, &QCheckBox::toggled, m_ui->sizeSpinBox, &QWidget::setEnabled);
+    } else {
+        m_ui->sizeCheckBox->hide();
     }
 
     QFont tmpFont(q->font().family(), 64, QFont::Black);
@@ -247,30 +254,11 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
         displaySample(font);
     });
 
-    // If the calling app sets FixedFontsOnly, don't show the "show fixed only" checkbox
-    m_ui->onlyFixedCheckBox->setVisible(!m_usingFixed);
-
-    if (!m_ui->onlyFixedCheckBox->isHidden()) {
-        QObject::connect(m_ui->onlyFixedCheckBox, &QCheckBox::toggled, q, [this](const bool state) {
-            q->setFont(m_selectedFont, state);
-        });
-
-        if (isDiffMode) { // In this mode follow the state of the m_ui->familyCheckBox
-            m_ui->onlyFixedCheckBox->setEnabled(false);
-            QObject::connect(m_ui->familyCheckBox, &QCheckBox::toggled, m_ui->onlyFixedCheckBox, &QWidget::setEnabled);
-        }
-    }
-
     // lets initialize the display if possible
     if (m_usingFixed) {
         q->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont), true);
     } else {
         q->setFont(QGuiApplication::font(), false);
-    }
-
-    // check or uncheck or gray out the "relative" checkbox
-    if (sizeIsRelativeState && !m_ui->sizeIsRelativeCheckBox->isHidden()) {
-        q->setSizeIsRelative(*sizeIsRelativeState);
     }
 
     // Set focus to the size list as this is the most commonly changed property
