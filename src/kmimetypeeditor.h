@@ -19,6 +19,10 @@ namespace KMimeTypeEditor
 {
 /**
  * Starts the file types editor for a given MIME type.
+ *
+ * Displays an error message if the mimetype editing tool (keditfiletype)
+ * couldn't be launched.
+ *
  * @param mimeType the MIME type to edit, e.g. "text/plain"
  * @param widget the parent widget
  * @since 5.4

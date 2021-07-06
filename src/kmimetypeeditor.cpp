@@ -6,7 +6,9 @@
 */
 
 #include "kmimetypeeditor.h"
+#include "kmessagedialog.h"
 
+#include <QObject>
 #include <QProcess>
 
 static const char s_keditfiletypeExecutable[] = "keditfiletype5";
@@ -19,5 +21,14 @@ void KMimeTypeEditor::editMimeType(const QString &mimeType, QWidget *widget)
 #endif
     args << mimeType;
 
-    QProcess::startDetached(QString::fromLatin1(s_keditfiletypeExecutable), args);
+    const bool result = QProcess::startDetached(QString::fromLatin1(s_keditfiletypeExecutable), args);
+    if (!result) {
+        auto *dlg = new KMessageDialog(KMessageDialog::Error,
+                                       QObject::tr("Could not start the \"keditfiletype5\" executable, please check your installation."),
+                                       widget);
+        dlg->setAttribute(Qt::WA_DeleteOnClose);
+        dlg->setModal(true);
+        dlg->setButtons();
+        dlg->show();
+    }
 }
