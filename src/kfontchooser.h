@@ -25,6 +25,17 @@ class QFont;
  * it is preferable to use the convenience functions in
  * QFontDialog.
  *
+ * It normally comes up with all font families present on the system; the
+ * getFont method below does allow some more fine-tuning of the selection of fonts
+ * that will be displayed in the dialog.
+ * <p>Consider the following code snippet;
+ * \code
+ *    QStringList list;
+ *    KFontChooser::getFontList(list, KFontChooser::SmoothScalableFonts);
+ *    KFontChooser *chooseFont = new KFontChooser(nullptr, KFontChooser::NoDisplayFlags, list);
+ * \endcode
+ * <p>
+ * The above creates a font chooser dialog with only SmoothScaleble fonts.
  * \image html kfontchooser.png "KFontChooser Widget"
  *
  * @see KFontRequester
@@ -85,19 +96,9 @@ public:
      */
     Q_DECLARE_FLAGS(DisplayFlags, DisplayFlag)
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
     /**
      * Constructs a font picker widget.
-     * It normally comes up with all font families present on the system; the
-     * getFont method below does allow some more fine-tuning of the selection of fonts
-     * that will be displayed in the dialog.
-     * <p>Consider the following code snippet;
-     * \code
-     *    QStringList list;
-     *    KFontChooser::getFontList(list, KFontChooser::SmoothScalableFonts);
-     *    KFontChooser *chooseFont = new KFontChooser(nullptr, KFontChooser::NoDisplayFlags, list);
-     * \endcode
-     * <p>
-     * The above creates a font chooser dialog with only SmoothScaleble fonts.
      *
      * @param parent The parent widget.
      * @param flags Defines how the font chooser is displayed.
@@ -113,15 +114,35 @@ public:
      *        Initial state of this checkbox will be set according to
      *        *sizeIsRelativeState, user choice may be retrieved by
      *        calling sizeIsRelative().
+     *
+     * @deprecated since 5.86, use the KFontChooser(KFontChooser::DisplayFlags, QWidget*) constructor
+     * and the setFontListItems() and setMinVisibleItems() methods.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(
+        5,
+        86,
+        "Use the KFontChooser(KFontChooser::DisplayFlags, QWidget*) constructor and the setFontListItems() and setMinVisibleItems() methods.")
     explicit KFontChooser(QWidget *parent = nullptr,
                           const DisplayFlags &flags = DisplayFrame,
                           const QStringList &fontList = QStringList(),
                           int visibleListSize = 8,
                           Qt::CheckState *sizeIsRelativeState = nullptr);
+#endif
 
     /**
-     * Destructs the font chooser.
+     * Create a font picker widget.
+     *
+     * @param flags a combination of OR-ed values from the @c KFontChooser::DisplayFlags enum,
+     * the default is @c DisplayFonts::NoDisplayFlags
+     * @param parent the parent widget, if not nullptr the windowing system will use it to position
+     * the chooser widget relative to it
+     *
+     * @since 5.86
+     */
+    explicit KFontChooser(const DisplayFlags flags = NoDisplayFlags, QWidget *parent = nullptr);
+
+    /**
+     * Destructor.
      */
     ~KFontChooser() override;
 
@@ -241,14 +262,53 @@ public:
         SmoothScalableFonts = 0x04
     };
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
     /**
      * Creates a list of font strings.
      *
      * @param list The list is returned here.
      * @param fontListCriteria should contain all the restrictions for font selection as OR-ed values
      *        from KFontChooser::FontListCriteria
+     *
+     * @deprecated since 5.86, use createFontList(uint) instead.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 86, "Use KFontChooser::createFontList(uint) instead.")
     static void getFontList(QStringList &list, uint fontListCriteria);
+#endif
+
+    /**
+     * Returns a list of font faimly name strings filtered based on @p fontListCriteria.
+     *
+     * @param fontListCriteria specifies the criteria used to select fonts to add to
+     * the list, a combination of OR-ed values from @ref KFontChooser::FontListCriteria
+     *
+     * @since 5.86
+     */
+    static QStringList createFontList(uint fontListCriteria);
+
+    /**
+     * Uses @p fontList to fill the font family list in the widget.
+     *
+     * You can create a custom list of fonts using the static @c createFontList(uint
+     * criteria) to only include fonts that meet certain criteria (e.g. only
+     * smooth-scalable fonts).
+     *
+     * @see KFontChooser::createFontList(uint), KFontChooser::FontListCriteria
+     *
+     * Note that if @p fontList is empty, the font list in the chooser will show
+     * all the available fonts on the system.
+     * @since 5.86
+     */
+    void setFontListItems(const QStringList &fontList);
+
+    /**
+     * Sets the minimum number of items that should be visible in the
+     * child list widgets; this number will be used to compute and set
+     * the minimum heights for those widgets.
+     *
+     * @since 5.86
+     */
+    void setMinVisibleItems(int visibleItems);
 
     /**
      * Reimplemented for internal reasons.

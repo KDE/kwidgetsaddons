@@ -71,14 +71,15 @@ class KFontChooserPrivate
     Q_DECLARE_TR_FUNCTIONS(KFontChooser)
 
 public:
-    KFontChooserPrivate(KFontChooser *qq)
+    KFontChooserPrivate(KFontChooser::DisplayFlags flags, KFontChooser *qq)
         : q(qq)
+        , m_flags(flags)
     {
         m_palette.setColor(QPalette::Active, QPalette::Text, Qt::black);
         m_palette.setColor(QPalette::Active, QPalette::Base, Qt::white);
     }
 
-    void init(const KFontChooser::DisplayFlags &flags, const QStringList &fontList, int visibleListSize, Qt::CheckState *sizeIsRelativeState);
+    void init();
     void setFamilyBoxItems(const QStringList &fonts);
     void fillFamilyListBox(bool onlyFixedFonts = false);
     int nearestSizeRow(qreal val, bool customize);
@@ -97,6 +98,8 @@ public:
     KFontChooser *q;
 
     std::unique_ptr<Ui_KFontChooserWidget> m_ui;
+
+    KFontChooser::DisplayFlags m_flags = KFontChooser::NoDisplayFlags;
 
     QPalette m_palette;
 
@@ -118,18 +121,34 @@ public:
     std::map<QString, QString> m_styleIDs;
 };
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
 KFontChooser::KFontChooser(QWidget *parent, const DisplayFlags &flags, const QStringList &fontList, int visibleListSize, Qt::CheckState *sizeIsRelativeState)
     : QWidget(parent)
-    , d(new KFontChooserPrivate(this))
+    , d(new KFontChooserPrivate(flags, this))
 {
-    d->init(flags, fontList, visibleListSize, sizeIsRelativeState);
+    d->init();
+    setFontListItems(fontList);
+    setMinVisibleItems(visibleListSize);
+
+    if (sizeIsRelativeState) {
+        // Check or uncheck or gray out the "relative" checkbox
+        setSizeIsRelative(*sizeIsRelativeState);
+    }
+}
+#endif
+
+KFontChooser::KFontChooser(const DisplayFlags flags, QWidget *parent)
+    : QWidget(parent)
+    , d(new KFontChooserPrivate(flags, this))
+{
+    d->init();
 }
 
 KFontChooser::~KFontChooser() = default;
 
-void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QStringList &fontList, int visibleListSize, Qt::CheckState *sizeIsRelativeState)
+void KFontChooserPrivate::init()
 {
-    m_usingFixed = flags & KFontChooser::FixedFontsOnly;
+    m_usingFixed = m_flags & KFontChooser::FixedFontsOnly;
 
     // The main layout is divided horizontally into a top part with
     // the font attribute widgets (family, style, size) and a bottom
@@ -137,13 +156,16 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     QVBoxLayout *mainLayout = new QVBoxLayout(q);
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    QWidget *page = flags & KFontChooser::DisplayFrame ? new QGroupBox(KFontChooser::tr("Requested Font", "@title:group"), q) : new QWidget(q);
+    QWidget *page = m_flags & KFontChooser::DisplayFrame ? new QGroupBox(KFontChooser::tr("Requested Font", "@title:group"), q) : new QWidget(q);
     mainLayout->addWidget(page);
 
     m_ui.reset(new Ui_KFontChooserWidget);
     m_ui->setupUi(page);
 
-    const bool isDiffMode = flags & KFontChooser::ShowDifferences;
+    // Deprecated, we'll call show() if building with deprecated code
+    m_ui->sizeIsRelativeCheckBox->hide();
+
+    const bool isDiffMode = m_flags & KFontChooser::ShowDifferences;
 
     QObject::connect(m_ui->familyListWidget, &QListWidget::currentTextChanged, [this](const QString &family) {
         slotFamilySelected(family);
@@ -157,14 +179,7 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
         m_ui->familyCheckBox->hide();
     }
 
-    if (!fontList.isEmpty()) {
-        setFamilyBoxItems(fontList);
-    } else {
-        fillFamilyListBox(flags & KFontChooser::FixedFontsOnly);
-    }
-
-    m_ui->familyListWidget->setMinimumWidth(minimumListWidth(m_ui->familyListWidget));
-    m_ui->familyListWidget->setMinimumHeight(minimumListHeight(m_ui->familyListWidget, visibleListSize));
+    fillFamilyListBox(m_usingFixed);
 
     // If the calling app sets FixedFontsOnly, don't show the "show fixed only" checkbox
     m_ui->onlyFixedCheckBox->setVisible(!m_usingFixed);
@@ -186,9 +201,8 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     m_ui->styleListWidget->addItem(KFontChooser::tr("Italic", "@item font"));
     m_ui->styleListWidget->addItem(KFontChooser::tr("Oblique", "@item font"));
     m_ui->styleListWidget->addItem(KFontChooser::tr("Bold", "@item font"));
-    m_ui->styleListWidget->addItem(KFontChooser::tr("Bold Italic", "@item font"));
+    m_ui->styleListWidget->addItem(KFontChooser::tr("Bold Condensed Oblique", "@item font"));
     m_ui->styleListWidget->setMinimumWidth(minimumListWidth(m_ui->styleListWidget));
-    m_ui->styleListWidget->setMinimumHeight(minimumListHeight(m_ui->styleListWidget, visibleListSize));
 
     QObject::connect(m_ui->styleListWidget, &QListWidget::currentTextChanged, [this](const QString &style) {
         slotStyleSelected(style);
@@ -201,26 +215,6 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
     } else {
         m_ui->styleCheckBox->hide();
     }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
-    if (sizeIsRelativeState) {
-        QString sizeIsRelativeCBToolTipText = KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment", "@info:tooltip");
-        QString sizeIsRelativeCBWhatsThisText = KFontChooser::tr(
-            "Here you can switch between fixed font size and font size "
-            "to be calculated dynamically and adjusted to changing "
-            "environment (e.g. widget dimensions, paper size).",
-            "@info:whatsthis");
-        m_ui->sizeIsRelativeCheckBox->setTristate(isDiffMode);
-        m_ui->sizeIsRelativeCheckBox->setWhatsThis(sizeIsRelativeCBWhatsThisText);
-        m_ui->sizeIsRelativeCheckBox->setToolTip(sizeIsRelativeCBToolTipText);
-        // check or uncheck or gray out the "relative" checkbox
-        q->setSizeIsRelative(*sizeIsRelativeState);
-    } else {
-        m_ui->sizeIsRelativeCheckBox->hide();
-    }
-#else
-    m_ui->sizeIsRelativeCheckBox->hide();
-#endif
 
     // Populate with usual sizes, to determine minimum list width;
     // will be replaced later with correct sizes.
@@ -265,6 +259,9 @@ void KFontChooserPrivate::init(const KFontChooser::DisplayFlags &flags, const QS
         q->setFont(QGuiApplication::font(), false);
     }
 
+    // Set the minimum height for the list widgets
+    q->setMinVisibleItems(4);
+
     // Set focus to the size list as this is the most commonly changed property
     m_ui->sizeListWidget->setFocus();
 }
@@ -302,14 +299,21 @@ QColor KFontChooser::backgroundColor() const
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
 void KFontChooser::setSizeIsRelative(Qt::CheckState relative)
 {
-    // check or uncheck or gray out the "relative" checkbox
-    if (!d->m_ui->sizeIsRelativeCheckBox->isHidden()) {
-        if (Qt::PartiallyChecked == relative) {
-            d->m_ui->sizeIsRelativeCheckBox->setCheckState(Qt::PartiallyChecked);
-        } else {
-            d->m_ui->sizeIsRelativeCheckBox->setCheckState((Qt::Checked == relative) ? Qt::Checked : Qt::Unchecked);
-        }
-    }
+    d->m_ui->sizeIsRelativeCheckBox->show();
+
+    QString sizeIsRelativeCBToolTipText = KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment", "@info:tooltip");
+    QString sizeIsRelativeCBWhatsThisText = KFontChooser::tr(
+        "Here you can switch between fixed font size and font size "
+        "to be calculated dynamically and adjusted to changing "
+        "environment (e.g. widget dimensions, paper size).",
+        "@info:whatsthis");
+
+    d->m_ui->sizeIsRelativeCheckBox->setTristate(d->m_flags & KFontChooser::ShowDifferences);
+    d->m_ui->sizeIsRelativeCheckBox->setWhatsThis(sizeIsRelativeCBWhatsThisText);
+    d->m_ui->sizeIsRelativeCheckBox->setToolTip(sizeIsRelativeCBToolTipText);
+
+    // Check or uncheck or gray out the "relative" checkbox
+    d->m_ui->sizeIsRelativeCheckBox->setCheckState(relative);
 }
 #endif
 
@@ -802,7 +806,14 @@ void KFontChooserPrivate::setupDisplay()
     m_ui->sizeSpinBox->setValue(QLocale::system().toDouble(m_ui->sizeListWidget->currentItem()->text()));
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
 void KFontChooser::getFontList(QStringList &list, uint fontListCriteria)
+{
+    list = createFontList(fontListCriteria);
+}
+#endif
+
+QStringList KFontChooser::createFontList(uint fontListCriteria)
 {
     QFontDatabase dbase;
     QStringList lstSys(dbase.families());
@@ -836,7 +847,16 @@ void KFontChooser::getFontList(QStringList &list, uint fontListCriteria)
 
     lstSys.sort();
 
-    list = lstSys;
+    return lstSys;
+}
+
+void KFontChooser::setFontListItems(const QStringList &fontList)
+{
+    if (!fontList.isEmpty()) {
+        d->setFamilyBoxItems(fontList);
+    } else {
+        d->fillFamilyListBox(d->m_usingFixed);
+    }
 }
 
 void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
@@ -873,15 +893,21 @@ void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
     }
 
     m_ui->familyListWidget->addItems(list);
+    m_ui->familyListWidget->setMinimumWidth(minimumListWidth(m_ui->familyListWidget));
 
     m_signalsAllowed = true;
 }
 
 void KFontChooserPrivate::fillFamilyListBox(bool onlyFixedFonts)
 {
-    QStringList fontList;
-    KFontChooser::getFontList(fontList, onlyFixedFonts ? KFontChooser::FixedWidthFonts : 0);
-    setFamilyBoxItems(fontList);
+    setFamilyBoxItems(KFontChooser::createFontList(onlyFixedFonts ? KFontChooser::FixedWidthFonts : 0));
+}
+
+void KFontChooser::setMinVisibleItems(int visibleItems)
+{
+    for (auto *widget : {d->m_ui->familyListWidget, d->m_ui->styleListWidget, d->m_ui->sizeListWidget}) {
+        widget->setMinimumHeight(minimumListHeight(widget, visibleItems));
+    }
 }
 
 // Human-readable style identifiers returned by QFontDatabase::styleString()
