@@ -80,8 +80,7 @@ public:
     }
 
     void init();
-    void setFamilyBoxItems(const QStringList &fonts);
-    void fillFamilyListBox(bool onlyFixedFonts = false);
+    void setFamilyBoxItems(const QStringList &fonts = {});
     int nearestSizeRow(qreal val, bool customize);
     qreal fillSizeList(const QList<qreal> &sizes = QList<qreal>());
     qreal setupSizeListBox(const QString &family, const QString &style);
@@ -179,7 +178,7 @@ void KFontChooserPrivate::init()
         m_ui->familyCheckBox->hide();
     }
 
-    fillFamilyListBox(m_usingFixed);
+    setFamilyBoxItems();
 
     // If the calling app sets FixedFontsOnly, don't show the "show fixed only" checkbox
     m_ui->onlyFixedCheckBox->setVisible(!m_usingFixed);
@@ -368,7 +367,7 @@ void KFontChooser::setFont(const QFont &aFont, bool onlyFixed)
 
     if (onlyFixed != d->m_usingFixed) {
         d->m_usingFixed = onlyFixed;
-        d->fillFamilyListBox(d->m_usingFixed);
+        d->setFamilyBoxItems();
     }
     d->setupDisplay();
 }
@@ -813,6 +812,7 @@ void KFontChooser::getFontList(QStringList &list, uint fontListCriteria)
 }
 #endif
 
+// static
 QStringList KFontChooser::createFontList(uint fontListCriteria)
 {
     QFontDatabase dbase;
@@ -852,11 +852,7 @@ QStringList KFontChooser::createFontList(uint fontListCriteria)
 
 void KFontChooser::setFontListItems(const QStringList &fontList)
 {
-    if (!fontList.isEmpty()) {
-        d->setFamilyBoxItems(fontList);
-    } else {
-        d->fillFamilyListBox(d->m_usingFixed);
-    }
+    d->setFamilyBoxItems(fontList);
 }
 
 void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
@@ -864,7 +860,11 @@ void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
     m_signalsAllowed = false;
 
     m_ui->familyListWidget->clear();
-    m_qtFamilies = translateFontNameList(fonts);
+
+    m_qtFamilies = translateFontNameList(!fonts.isEmpty() ? fonts : KFontChooser::createFontList(m_usingFixed ? KFontChooser::FixedWidthFonts : 0));
+
+    QStringList list;
+    list.reserve(m_qtFamilies.size());
 
     // Generic font names
     const QStringList genericTranslatedNames{
@@ -872,8 +872,6 @@ void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
         translateFontName(QStringLiteral("Serif")),
         translateFontName(QStringLiteral("Monospace")),
     };
-
-    QStringList list;
 
     // Add generic family names to the top of the list
     for (const QString &s : genericTranslatedNames) {
@@ -896,11 +894,6 @@ void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
     m_ui->familyListWidget->setMinimumWidth(minimumListWidth(m_ui->familyListWidget));
 
     m_signalsAllowed = true;
-}
-
-void KFontChooserPrivate::fillFamilyListBox(bool onlyFixedFonts)
-{
-    setFamilyBoxItems(KFontChooser::createFontList(onlyFixedFonts ? KFontChooser::FixedWidthFonts : 0));
 }
 
 void KFontChooser::setMinVisibleItems(int visibleItems)
