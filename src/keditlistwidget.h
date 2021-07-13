@@ -219,7 +219,7 @@ public:
     void setCustomEditor(const CustomEditor &editor);
 
     /**
-     * Reimplented for interal reasons. The API is not affected.
+     * Reimplemented for internal reasons. The API is not affected.
      */
     bool eventFilter(QObject *o, QEvent *e) override;
 

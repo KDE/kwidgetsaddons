@@ -26,7 +26,7 @@ class QFont;
  * \image html kcharselect.png "KCharSelect Widget"
  *
  * You can specify the font whose characters should be displayed via
- * setCurrentFont(). Using the Controls argument in the contructor
+ * setCurrentFont(). Using the Controls argument in the constructor
  * you can create a compact version of KCharSelect if there is not enough
  * space and if you don't need all features.
  *

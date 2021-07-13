@@ -192,7 +192,7 @@ void KSelectAction_UnitTest::testCrashComboBoxDestruction()
     QWidget parentWidget;
     QMainWindow mainWindow(&parentWidget);
 
-    // Creat a KSelectAction in a QWidget
+    // Create a KSelectAction in a QWidget
     auto *comboSelect = new KSelectAction(QStringLiteral("selectAction"), &mainWindow);
 
     // Add some actions and create some connections to them

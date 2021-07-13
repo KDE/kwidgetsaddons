@@ -83,7 +83,7 @@ private:
  * @short A dialog to select MIME types from the list of available ones on the system
  *
  * This dialog embeds KMimeTypeChooser widget, presenting a checkable tree list of
- * MIME types, each with its associated icon, and optinally associated glob patterns
+ * MIME types, each with its associated icon, and optionally associated glob patterns
  * (displayed in a separate column); also an optional Edit button to launch a
  * MIME type editor to edit the selected MIME type.
  *

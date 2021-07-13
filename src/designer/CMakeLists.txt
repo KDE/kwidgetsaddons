@@ -19,7 +19,7 @@ ecm_qtdesignerplugin_widget(KCapacityBar
 )
 ecm_qtdesignerplugin_widget(KCharSelect
     TOOLTIP "Character Selection Widget (KF5)"
-    WHATSTHIS "A widget that allows selection a character out ot a table"
+    WHATSTHIS "A widget that allows selecting a character out of a table"
     GROUP "Graphics (KF5)"
 )
 ecm_qtdesignerplugin_widget(KCollapsibleGroupBox

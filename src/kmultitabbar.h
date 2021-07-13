@@ -80,7 +80,7 @@ public:
      * eg for connecting signals to it
      *
      * @param pic a pixmap for the button
-     * @param id an arbitraty ID value. It will be emitted in the clicked signal for identifying the button
+     * @param id an arbitrary ID value. It will be emitted in the clicked signal for identifying the button
      *  if more than one button is connected to a signals.
      * @param popup A popup menu which should be displayed if the button is clicked
      * @param not_used_yet will be used for a popup text in the future

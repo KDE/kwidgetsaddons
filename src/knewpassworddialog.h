@@ -175,7 +175,7 @@ public:
      * non-empty passwords score up to 100, depending on their length and whether they
      * contain numbers, mixed case letters and punctuation.
      *
-     * Default: 1 - warn if the password has no discernable strength whatsoever
+     * Default: 1 - warn if the password has no discernible strength whatsoever
      * @param warningLevel The level below which a warning should be given.
      */
     void setPasswordStrengthWarningLevel(int warningLevel);

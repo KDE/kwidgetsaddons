@@ -89,7 +89,7 @@ public:
 
 Q_SIGNALS:
     /**
-     * This signal is emmitted whenever the text of this action
+     * This signal is emitted whenever the text of this action
      * is changed.
      */
     void textChanged(const QString &newText);

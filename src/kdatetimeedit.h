@@ -250,7 +250,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the date or time has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * The returned date and time may be invalid.
      *
@@ -276,7 +276,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the Calendar Locale has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * @param calendarLocale the new calendar locale
      */
@@ -293,7 +293,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the date has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * The returned date may be invalid.
      *
@@ -321,7 +321,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the time has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * The returned time may be invalid.
      *
@@ -347,7 +347,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the time zone has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * @param zone the new time zone
      */

@@ -235,7 +235,7 @@ QVector<uint> KCharSelectData::blockContents(int block)
         res.append(mapDataBaseToCodePoint(unicodeBegin));
         unicodeBegin++;
     }
-    res.append(mapDataBaseToCodePoint(unicodeBegin)); // Be carefull when unicodeEnd==0xffff
+    res.append(mapDataBaseToCodePoint(unicodeBegin)); // Be careful when unicodeEnd==0xffff
 
     return res;
 }

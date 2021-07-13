@@ -53,7 +53,7 @@ public:
     Q_REQUIRED_RESULT QPointF pos() const;
 
     /**
-     * Sets the position, relativ to the widget.
+     * Sets the position, relative to the widget.
      *
      * @param pos The position.
      */

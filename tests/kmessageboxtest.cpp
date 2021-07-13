@@ -265,7 +265,7 @@ bool testMessageBox(int test)
 
     case 24:
         i = KMessageBox::Ok;
-        KMessageBox::informationList(nullptr, QStringLiteral("The follwoing words have been found:"), list, QString(), QStringLiteral("Search_Words"));
+        KMessageBox::informationList(nullptr, QStringLiteral("The following words have been found:"), list, QString(), QStringLiteral("Search_Words"));
         break;
 
     case 25: {

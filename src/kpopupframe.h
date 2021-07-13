@@ -45,7 +45,7 @@ public Q_SLOTS:
 
 public:
     /**
-     * The contructor. Creates a dialog without buttons.
+     * The constructor. Creates a dialog without buttons.
      */
     KPopupFrame(QWidget *parent = nullptr);
 

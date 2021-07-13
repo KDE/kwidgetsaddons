@@ -29,7 +29,7 @@ class KGuiItem;
  * @brief KMessageDialog creates a message box similar to the ones you get from KMessageBox,
  * but that can be used asynchronously, i.e. you can show the dialog by using show() or open().
  *
- * This class contructs a dialog similar to the dialogs the KMessageBox convenience functions
+ * This class constructs a dialog similar to the dialogs the KMessageBox convenience functions
  * create. The main difference is that the KMessageBox methods typically use exec() to show the
  * dialogs; one of the main disadvantages of using exec(), is that it starts a nested eventloop,
  * which could lead to nasty crashes.

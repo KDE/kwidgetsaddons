@@ -45,7 +45,7 @@ KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString 
 /**
  * Resolve a dynamic QStyle::StyleHint to query QStyle::styleHint()
  *
- * @returns a unique QStyle::StyleHint or 0 in case the style doesn't suuport this element
+ * @returns a unique QStyle::StyleHint or 0 in case the style doesn't support this element
  * @param element a valid element string appname.SH_element, eg. "amarok.SH_Analyzer"
  * @param widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
  * @since 5.3
@@ -54,7 +54,7 @@ KWIDGETSADDONS_EXPORT QStyle::StyleHint customStyleHint(const QString &element, 
 /**
  * Resolve a dynamic QStyle::SubElement for eg. QStyle::subElementRect()
  *
- * @returns a unique QStyle::SubElement or 0 in case the style doesn't suuport this element
+ * @returns a unique QStyle::SubElement or 0 in case the style doesn't support this element
  * @param element a valid element string appname.SE_element, eg. "amarok.SE_AnalyzerCanvas"
  * @param widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
  * @since 5.3

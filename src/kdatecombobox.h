@@ -142,7 +142,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the date has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * The emitted date may be invalid.
      *

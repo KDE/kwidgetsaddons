@@ -176,7 +176,7 @@ Q_SIGNALS:
 
     /**
      * Signal if the time has been changed either manually by the user
-     * or programatically.
+     * or programmatically.
      *
      * The returned time may be invalid.
      *

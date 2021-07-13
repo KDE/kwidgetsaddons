@@ -39,7 +39,7 @@ public:
      * don't disable mouseTracking for a widget while using auto-hide for it.
      *
      * When disabling auto-hide, mouseTracking will be disabled, so if you need
-     * mouseTracking after disabling auto-hide, you have to reenable
+     * mouseTracking after disabling auto-hide, you have to re-enable
      * mouseTracking.
      *
      * If you want to use auto-hiding for widgets that don't take focus, e.g.
