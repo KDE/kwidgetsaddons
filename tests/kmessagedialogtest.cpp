@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
         auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type, QStringLiteral("Do you agree to action foo?"), nullptr));
         dlg->setCaption(QString{});
         dlg->setIcon(QIcon{});
-        dlg->setButtons();
 
         auto getResult = [&]() {
             const auto result = static_cast<QDialogButtonBox::StandardButton>(dlg->exec());
