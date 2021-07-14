@@ -138,9 +138,11 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
 
     detailsHLayout->addWidget(d->m_detailsGroup);
 
-    // Button box, will be set up by setButtons()
+    // Button box
     d->m_buttonBox = new QDialogButtonBox(this);
     d->m_topLayout->addWidget(d->m_buttonBox);
+    // Default buttons
+    setButtons();
 }
 
 // This method has been copied from KWindowSystem to avoid depending on it

@@ -27,18 +27,23 @@ class KGuiItem;
  *
  *
  * @brief KMessageDialog creates a message box similar to the ones you get from KMessageBox,
- * but that can be used asynchronously, i.e. you can show the dialog by using show() or open().
+ * but that can be used asynchronously, i.e. you can show the dialog by using @c show()
+ * or @c open().
  *
- * This class constructs a dialog similar to the dialogs the KMessageBox convenience functions
- * create. The main difference is that the KMessageBox methods typically use exec() to show the
- * dialogs; one of the main disadvantages of using exec(), is that it starts a nested eventloop,
- * which could lead to nasty crashes.
+ * This class contructs a dialog similar to the dialogs the KMessageBox convenience functions
+ * create. The main difference is that the KMessageBox methods typically use @c exec() to show
+ * the dialogs; one of the main disadvantages of using @c exec(), is that it starts a nested
+ * eventloop, which could lead to nasty crashes.
  *
  * Another difference is that the API is supposed to be slightly easier to use as it has
- * various methods to set up the dialog, e.g. setCaption(), setButtons(), setDetails()... etc.
+ * various methods to set up the dialog, e.g. @ref setCaption(), @ref setDetails() ...etc.
  *
- * The QDialog::done() slot is called to set the result of the dialog, which will emit the
- * QDialog::finished() signal with that result. The result is one of the
+ * By default, appropriate buttons based on the dialog type are added (since 5.85) (e.g. an
+ * "OK" button is added to an Information dialog), you can set custom buttons by using the
+ * @ref setButtons() method.
+ *
+ * The @ref QDialog::done() slot is called to set the result of the dialog, which will emit the
+ * @ref QDialog::finished() signal with that result. The result is one of the
  * QDialogButtonBox::StandardButton enum. This is useful as you can tell exactly which button
  * was clicked by the user. E.g.:
  * - the "No" button having been clicked, in which case you may still want to save the status
@@ -53,7 +58,7 @@ class KGuiItem;
  * button will be set as the default one.
  *
  * This class intends to be very flexible with the buttons that can be used, since you can
- * call the setButtons() method with a KGuiItem that has custom text/icon.
+ * call the @ref setButtons() method with a KGuiItem that has custom text/icon.
  *
  * Example:
  * @code
@@ -208,14 +213,18 @@ public:
     void setOpenExternalLinks(bool isAllowed);
 
     /**
+     * Since 5.85 buttons based on the dialog type are added by default, e.g. an OK
+     * button to Information and Sorry dialogs; (before 5.85, if you didn't call this
+     * method no buttons were added to the dialog).
+     *
      * This will add a QDialogButtonBox populated with @p buttonAccept and @p buttonNo,
      * by default KStandardGuiItem::yes() and KStandardGuiItem::no() respectively. For
      * dialog Types that have a Cancel button, @p buttonCancel will be used.
      *
-     * You can use a KGuiItem to get a button with custom text and icon.
+     * Using this method, you can customize the behavior based on your use-case, by
+     * using a KGuiItem to get a button with custom text and icon.
      *
      * @note
-     * - If you don't call this method the dialog will have no buttons
      * - For WarningContinueCancel dialog Type, if buttonAccept has the same text as
      *   KStandardGuiItem::yes(), KStandardGuiItem::cont() will be used instead
      * - For dialog Types: Information, Sorry, and Error only one button
