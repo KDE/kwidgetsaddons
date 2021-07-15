@@ -99,10 +99,17 @@ public:
     QIcon icon() const;
 
 Q_SIGNALS:
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 85)
+    /**
+     * @deprecated Since 5.85, use ratingChanged(int) instead
+     */
+    KWIDGETSADDONS_DEPRECATED_VERSION(5, 85, "use ratingChanged(int) instead")
+    void ratingChanged(unsigned int rating);
+#endif
+
     /**
      * This signal is emitted when the rating is changed.
      */
-    void ratingChanged(unsigned int rating);
     void ratingChanged(int rating);
 
 public Q_SLOTS:

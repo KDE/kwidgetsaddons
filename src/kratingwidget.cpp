@@ -123,7 +123,9 @@ void KRatingWidget::setRating(int rating)
         d->rating = rating;
         d->hoverRating = rating;
         Q_EMIT ratingChanged(rating);
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 85)
         Q_EMIT ratingChanged((unsigned int)rating);
+#endif
         update();
     }
 }
