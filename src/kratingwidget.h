@@ -46,10 +46,17 @@ public:
      */
     ~KRatingWidget() override;
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 85)
     /**
      * \return The current rating.
      */
     unsigned int rating() const;
+#else
+    /**
+     * \return The current rating.
+     */
+    int rating() const;
+#endif
 
     /**
      * \return the maximum possible rating.

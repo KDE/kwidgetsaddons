@@ -95,10 +95,17 @@ void KRatingWidget::setLayoutDirection(Qt::LayoutDirection direction)
     update();
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 85)
 unsigned int KRatingWidget::rating() const
 {
     return d->rating;
 }
+#else
+int KRatingWidget::rating() const
+{
+    return d->rating;
+}
+#endif
 
 int KRatingWidget::maxRating() const
 {
