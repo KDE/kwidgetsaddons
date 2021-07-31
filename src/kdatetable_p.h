@@ -136,14 +136,6 @@ Q_SIGNALS:
     void dateChanged(const QDate &date);
 
     /**
-     * This function behaves essentially like the one above.
-     * The selected date changed.
-     * @param cur The current date
-     * @param old The date before the date was changed
-     */
-    void dateChanged(const QDate &cur, const QDate &old);
-
-    /**
      * A date has been selected by clicking on the table.
      */
     void tableClicked();

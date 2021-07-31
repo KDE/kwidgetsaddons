@@ -629,9 +629,7 @@ bool KDateTable::setDate(const QDate &toDate)
         return true;
     }
 
-    QDate oldDate = date();
     d->setDate(toDate);
-    Q_EMIT dateChanged(date(), oldDate);
     Q_EMIT dateChanged(date());
     update();
 

@@ -318,7 +318,7 @@ void KDatePicker::initWidget(const QDate &date_)
         d->monthBackward->setIcon(QIcon::fromTheme(QStringLiteral("arrow-left")));
     }
 
-    connect(d->table, QOverload<const QDate &>::of(&KDateTable::dateChanged), this, &KDatePicker::dateChangedSlot);
+    connect(d->table, &KDateTable::dateChanged, this, &KDatePicker::dateChangedSlot);
     connect(d->table, &KDateTable::tableClicked, this, &KDatePicker::tableClickedSlot);
     connect(d->monthForward, &QAbstractButton::clicked, this, &KDatePicker::monthForwardClicked);
     connect(d->monthBackward, &QAbstractButton::clicked, this, &KDatePicker::monthBackwardClicked);
