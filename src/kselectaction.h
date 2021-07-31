@@ -322,7 +322,7 @@ Q_SIGNALS:
      * This signal is emitted when an item is selected.
      * @param action indicates the item selected
      */
-    void triggered(QAction *action);
+    void triggered(QAction *action); // clazy:exclude=overloaded-signal
     // TODO KF6:: rename to actionTriggered(QAction *action)
     // We cannot do this in KF5, due to existing slot method with same signature, see below
 
@@ -333,7 +333,7 @@ Q_SIGNALS:
      * @deprecated Since 5.78, use indexTriggered(int)
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 78, "Use KSelectAction::indexTriggered(int)")
-    void triggered(int index);
+    void triggered(int index); // clazy:exclude=overloaded-signal
 #endif
     /**
      * This signal is emitted when an item is selected.
@@ -367,7 +367,7 @@ Q_SIGNALS:
      * @deprecated Since 5.78, use textTriggered(const QString &)
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 78, "Use KSelectAction::textTriggered(const QString &)")
-    void triggered(const QString &text);
+    void triggered(const QString &text); // clazy:exclude=overloaded-signal
 #endif
 
     /**

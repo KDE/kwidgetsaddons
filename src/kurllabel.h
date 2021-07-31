@@ -265,12 +265,13 @@ Q_SIGNALS:
      * @deprecated Since 5.65, use enteredUrl();
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::enteredUrl()")
-    void enteredUrl(const QString &url);
+    void enteredUrl(const QString &url); // clazy:exclude=overloaded-signal
 #endif
     /**
      * Emitted when the mouse has passed over the label.
      */
-    void enteredUrl();
+    void enteredUrl(); // clazy:exclude=overloaded-signal
+
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the mouse is no longer over the label.
@@ -279,13 +280,13 @@ Q_SIGNALS:
      * @param url The URL for this label.
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::leftUrl()")
-    void leftUrl(const QString &url);
+    void leftUrl(const QString &url); // clazy:exclude=overloaded-signal
 #endif
 
     /**
      * Emitted when the mouse is no longer over the label.
      */
-    void leftUrl();
+    void leftUrl(); // clazy:exclude=overloaded-signal
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the user clicked the left mouse button on this label.
@@ -294,12 +295,12 @@ Q_SIGNALS:
      * @deprecated Since 5.65, use leftClickedUrl();
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::leftClickedUrl()")
-    void leftClickedUrl(const QString &url);
+    void leftClickedUrl(const QString &url); // clazy:exclude=overloaded-signal
 #endif
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
-    void leftClickedUrl();
+    void leftClickedUrl(); // clazy:exclude=overloaded-signal
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the user clicked the right mouse button on this label.
@@ -308,12 +309,12 @@ Q_SIGNALS:
      * @deprecated Since 5.65, use rightClickedUrl();
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::rightClickedUrl()")
-    void rightClickedUrl(const QString &url);
+    void rightClickedUrl(const QString &url); // clazy:exclude=overloaded-signal
 #endif
     /**
      * Emitted when the user clicked the right mouse button on this label.
      */
-    void rightClickedUrl();
+    void rightClickedUrl(); // clazy:exclude=overloaded-signal
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 65)
     /**
      * Emitted when the user clicked the middle mouse button on this label.
@@ -322,12 +323,12 @@ Q_SIGNALS:
      * @deprecated Since 5.65, use middleClickedUrl();
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 65, "Use KUrlLabel::middleClickedUrl()")
-    void middleClickedUrl(const QString &url);
+    void middleClickedUrl(const QString &url); // clazy:exclude=overloaded-signal
 #endif
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
-    void middleClickedUrl();
+    void middleClickedUrl(); // clazy:exclude=overloaded-signal
 
 protected:
     /**

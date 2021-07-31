@@ -111,13 +111,13 @@ Q_SIGNALS:
      * @deprecated Since 5.85, use ratingChanged(int) instead
      */
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 85, "use ratingChanged(int) instead")
-    void ratingChanged(unsigned int rating);
+    void ratingChanged(unsigned int rating); // clazy:exclude=overloaded-signal
 #endif
 
     /**
      * This signal is emitted when the rating is changed.
      */
-    void ratingChanged(int rating);
+    void ratingChanged(int rating); // clazy:exclude=overloaded-signal
 
 public Q_SLOTS:
     /**
