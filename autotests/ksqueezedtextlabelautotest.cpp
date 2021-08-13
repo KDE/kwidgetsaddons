@@ -96,7 +96,9 @@ void KSqueezedTextLabelAutotest::testElideMode_data()
     QTest::addColumn<QChar>("postfix");
 
     const QChar ellipsisChar(0x2026);
-    const QChar a(QLatin1Char('a')), b(QLatin1Char('b')), c(QLatin1Char('c'));
+    const QChar a(QLatin1Char('a'));
+    const QChar b(QLatin1Char('b'));
+    const QChar c(QLatin1Char('c'));
 
     QTest::newRow("ElideLeft") << Qt::ElideLeft << ellipsisChar << b << c;
     QTest::newRow("ElideRight") << Qt::ElideRight << a << b << ellipsisChar;

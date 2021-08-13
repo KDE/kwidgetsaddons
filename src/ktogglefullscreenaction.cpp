@@ -97,12 +97,13 @@ bool KToggleFullScreenAction::eventFilter(QObject *object, QEvent *event)
 {
     Q_D(KToggleFullScreenAction);
 
-    if (object == d->window)
+    if (object == d->window) {
         if (event->type() == QEvent::WindowStateChange) {
             if (d->window->isFullScreen() != isChecked()) {
                 activate(QAction::Trigger);
             }
         }
+    }
 
     return false;
 }

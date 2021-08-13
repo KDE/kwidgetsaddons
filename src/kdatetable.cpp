@@ -243,10 +243,12 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
     double h = (height() / (double)d->m_numWeekRows) - 1;
     QRectF cell = QRectF(0, 0, w, h);
     QString cellText;
-    QColor cellBackgroundColor, cellTextColor;
+    QColor cellBackgroundColor;
+    QColor cellTextColor;
     QFont cellFont = QFontDatabase::systemFont(QFontDatabase::GeneralFont);
     bool workingDay = false;
-    int cellWeekDay, pos;
+    int cellWeekDay;
+    int pos;
 
     // Calculate the position of the cell in the grid
     pos = d->m_numDayColumns * (row - 1) + col;
@@ -569,7 +571,9 @@ void KDateTable::mousePressEvent(QMouseEvent *e)
         return;
     }
 
-    int row, col, pos;
+    int row;
+    int col;
+    int pos;
 
     QPoint mouseCoord = e->pos();
     row = mouseCoord.y() * d->m_numWeekRows / height();

@@ -438,7 +438,8 @@ QSize KPageListViewDelegate::sizeHint(const QStyleOptionViewItem &option, const 
     int wt = layoutText(&iconTextLayout, qMax(3 * wp, 8 * fm.height()));
     int ht = iconTextLayout.boundingRect().height();
 
-    int width, height;
+    int width;
+    int height;
     if (text.isEmpty()) {
         height = hp;
     } else {

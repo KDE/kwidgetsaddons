@@ -244,8 +244,9 @@ void KCharSelectTable::resizeEvent(QResizeEvent *e)
 void KCharSelectTablePrivate::resizeCells()
 {
     KCharSelectItemModel *model = static_cast<KCharSelectItemModel *>(q->model());
-    if (!model)
+    if (!model) {
         return;
+    }
 
     const int viewportWidth = q->viewport()->size().width();
 

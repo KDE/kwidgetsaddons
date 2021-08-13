@@ -170,7 +170,8 @@ void KXYSelector::mousePressEvent(QMouseEvent *e)
 
 void KXYSelector::mouseMoveEvent(QMouseEvent *e)
 {
-    int xVal, yVal;
+    int xVal;
+    int yVal;
     int w = style()->pixelMetric(QStyle::PM_DefaultFrameWidth);
     valuesFromPosition(e->pos().x() - w, e->pos().y() - w, xVal, yVal);
     setValues(xVal, yVal);

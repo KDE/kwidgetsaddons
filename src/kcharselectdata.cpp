@@ -312,7 +312,9 @@ QString KCharSelectData::name(uint c)
     } else if (c >= 0xAC00 && c <= 0xD7AF) {
         /* compute hangul syllable name as per UAX #15 */
         int SIndex = c - SBase;
-        int LIndex, VIndex, TIndex;
+        int LIndex;
+        int VIndex;
+        int TIndex;
 
         if (SIndex < 0 || SIndex >= SCount) {
             return QString();

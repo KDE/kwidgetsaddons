@@ -212,7 +212,10 @@ bool KPasswordDialog::keepPassword() const
 
 void KPasswordDialog::addCommentLine(const QString &label, const QString &comment)
 {
-    int gridMarginLeft, gridMarginTop, gridMarginRight, gridMarginBottom;
+    int gridMarginLeft;
+    int gridMarginTop;
+    int gridMarginRight;
+    int gridMarginBottom;
     d->ui.formLayout->getContentsMargins(&gridMarginLeft, &gridMarginTop, &gridMarginRight, &gridMarginBottom);
 
     int spacing = d->ui.formLayout->horizontalSpacing();

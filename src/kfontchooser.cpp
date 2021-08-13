@@ -587,15 +587,17 @@ void KFontChooserPrivate::slotSizeValue(double dval)
         int row = m_ui->sizeListWidget->currentRow();
         int nrow;
         if (val - m_selectedFont.pointSizeF() > 0) {
-            for (nrow = row + 1; nrow < nrows; ++nrow)
+            for (nrow = row + 1; nrow < nrows; ++nrow) {
                 if (QLocale::system().toDouble(m_ui->sizeListWidget->item(nrow)->text()) >= val) {
                     break;
                 }
+            }
         } else {
-            for (nrow = row - 1; nrow >= 0; --nrow)
+            for (nrow = row - 1; nrow >= 0; --nrow) {
                 if (QLocale::system().toDouble(m_ui->sizeListWidget->item(nrow)->text()) <= val) {
                     break;
                 }
+            }
         }
         // Make sure the new row is not out of bounds.
         nrow = nrow < 0 ? 0 : nrow >= nrows ? nrows - 1 : nrow;
@@ -709,7 +711,8 @@ void KFontChooserPrivate::setupDisplay()
         size = QFontInfo(m_selectedFont).pointSizeF();
     }
 
-    int numEntries, i;
+    int numEntries;
+    int i;
 
     QString family = m_selectedFont.family().toLower();
     // Direct family match.

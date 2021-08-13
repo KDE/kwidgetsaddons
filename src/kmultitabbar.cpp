@@ -339,7 +339,8 @@ QSize KMultiTabBarTab::computeSizeHint(bool withText) const
     QStyleOptionToolButton opt;
     initStyleOption(&opt);
 
-    int hMargin, vMargin;
+    int hMargin;
+    int vMargin;
     computeMargins(&hMargin, &vMargin);
 
     // Compute interior size, starting from pixmap..
@@ -416,7 +417,8 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
         style()->drawComplexControl(QStyle::CC_ToolButton, &opt, &painter, this);
     }
 
-    int hMargin, vMargin;
+    int hMargin;
+    int vMargin;
     computeMargins(&hMargin, &vMargin);
 
     // We first figure out how much room we have for the text, based on

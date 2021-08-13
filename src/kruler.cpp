@@ -573,7 +573,9 @@ void KRuler::paintEvent(QPaintEvent * /*e*/)
     for (int profile = 0; profile < 10; profile++) {
 #endif
 
-        int value = this->value(), minval = minimum(), maxval;
+        int value = this->value();
+        int minval = minimum();
+        int maxval;
         if (d->dir == Qt::Horizontal) {
             maxval = maximum() + d->offset - (d->lengthFix ? (height() - d->endOffset_length) : d->endOffset_length);
         } else {

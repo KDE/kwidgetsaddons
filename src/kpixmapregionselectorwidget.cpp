@@ -380,7 +380,8 @@ QRect KPixmapRegionSelectorWidgetPrivate::calcSelectionRectangle(const QPoint &s
         }
     }
 
-    int x, y;
+    int x;
+    int y;
     if (startPoint.x() < endPoint.x()) {
         x = startPoint.x();
     } else {

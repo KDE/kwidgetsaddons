@@ -99,7 +99,8 @@ void KColorComboDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
                 textColor = option.palette.color(QPalette::Text);
             }
         } else {
-            int unused, v;
+            int unused;
+            int v;
             innercolor.getHsv(&unused, &unused, &v);
             if (v > 128) {
                 textColor = Qt::black;

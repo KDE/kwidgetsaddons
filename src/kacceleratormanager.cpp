@@ -587,12 +587,14 @@ int KAccelString::maxWeight(int &index, const QString &used) const
     int max = 0;
     index = -1;
 
-    for (int pos = 0; pos < m_pureText.length(); ++pos)
-        if (used.indexOf(m_pureText[pos], 0, Qt::CaseInsensitive) == -1 && m_pureText[pos].toLatin1() != 0)
+    for (int pos = 0; pos < m_pureText.length(); ++pos) {
+        if (used.indexOf(m_pureText[pos], 0, Qt::CaseInsensitive) == -1 && m_pureText[pos].toLatin1() != 0) {
             if (m_weight[pos] > max) {
                 max = m_weight[pos];
                 index = pos;
             }
+        }
+    }
 
     return max;
 }
@@ -650,7 +652,9 @@ void KAccelManagerAlgorithm::findAccelerators(KAccelStringList &result, QString 
 
     // pick the highest bids
     for (int cnt = 0; cnt < accel_strings.count(); ++cnt) {
-        int max = 0, index = -1, accel = -1;
+        int max = 0;
+        int index = -1;
+        int accel = -1;
 
         // find maximum weight
         for (int i = 0; i < accel_strings.count(); ++i) {

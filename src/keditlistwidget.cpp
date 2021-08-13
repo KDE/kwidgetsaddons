@@ -573,10 +573,11 @@ void KEditListWidget::insertStringList(const QStringList &list, int index)
     QStringList content = d->model->stringList();
     if (index < 0) {
         content += list;
-    } else
+    } else {
         for (int i = 0, j = index; i < list.count(); ++i, ++j) {
             content.insert(j, list[i]);
         }
+    }
 
     d->model->setStringList(content);
 }

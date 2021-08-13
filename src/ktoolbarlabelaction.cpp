@@ -46,10 +46,11 @@ void KToolBarLabelAction::setBuddy(QAction *buddy)
     QList<QLabel *> labels;
     const auto associatedWidgets = this->associatedWidgets();
     for (QWidget *widget : associatedWidgets) {
-        if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget))
+        if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget)) {
             if (QLabel *label = qobject_cast<QLabel *>(toolBar->widgetForAction(this))) {
                 labels.append(label);
             }
+        }
     }
     const auto buddysAssociatedWidgets = buddy->associatedWidgets();
     for (QWidget *widget : buddysAssociatedWidgets) {

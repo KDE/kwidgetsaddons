@@ -58,8 +58,9 @@ static const int X_KdeBase = 0xff000000;
 
 static inline int customStyleElement(QStyle::StyleHint type, const QString &element, QWidget *widget)
 {
-    if (!widget || widget->style()->metaObject()->indexOfClassInfo("X-KDE-CustomElements") < 0)
+    if (!widget || widget->style()->metaObject()->indexOfClassInfo("X-KDE-CustomElements") < 0) {
         return 0;
+    }
 
     const QString originalName = widget->objectName();
     widget->setObjectName(element);

@@ -39,7 +39,8 @@ public:
             // If it does not fit, try to cut only the whole path, though if the
             // name is too long (more than 3/4 of the whole text) we cut it a bit too
             const int displayNameMaxWidth = maxWidthForTitles * 3 / 4;
-            QString cutNameValue, cutValue;
+            QString cutNameValue;
+            QString cutValue;
             if (nameWidth > displayNameMaxWidth) {
                 cutNameValue = fontMetrics.elidedText(displayName, Qt::ElideMiddle, displayNameMaxWidth);
                 cutValue = fontMetrics.elidedText(urlString, Qt::ElideMiddle, maxWidthForTitles - displayNameMaxWidth);
