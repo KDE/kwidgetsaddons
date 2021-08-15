@@ -15,7 +15,7 @@ include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 include(KDEGitCommitHooks)
-set(REQUIRED_QT_VERSION 5.15.0)
+set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
 
@@ -45,7 +45,7 @@ ecm_install_po_files_as_qm(po)
 
 configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # Not 050f00 because we need QLabel::pixmap(), in a deprecated method
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02) # Not 050f00 because we need QLabel::pixmap(), in a deprecated method
 
 add_subdirectory(src)
 if (BUILD_TESTING)
