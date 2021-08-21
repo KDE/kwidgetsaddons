@@ -65,7 +65,7 @@ private Q_SLOTS:
         QFETCH(QStringList, initialTexts);
         QFETCH(QStringList, expectedTexts);
         QMenu menu;
-        for (const QString &text : qAsConst(initialTexts)) {
+        for (const QString &text : std::as_const(initialTexts)) {
             menu.addAction(text);
         }
         // WHEN
@@ -93,7 +93,7 @@ private Q_SLOTS:
         QFETCH(QStringList, initialTexts);
         QFETCH(QStringList, expectedTexts);
         QMenu menu;
-        for (const QString &text : qAsConst(initialTexts)) {
+        for (const QString &text : std::as_const(initialTexts)) {
             menu.addAction(text);
         }
         // WHEN

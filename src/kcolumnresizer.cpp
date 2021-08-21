@@ -112,14 +112,14 @@ public:
     void updateWidth()
     {
         int width = 0;
-        for (QWidget *widget : qAsConst(m_widgets)) {
+        for (QWidget *widget : std::as_const(m_widgets)) {
             width = qMax(widget->sizeHint().width(), width);
         }
-        for (FormLayoutWidgetItem *item : qAsConst(m_formWidgetItemList)) {
+        for (FormLayoutWidgetItem *item : std::as_const(m_formWidgetItemList)) {
             item->setWidth(width);
             item->formLayout()->update();
         }
-        for (const GridColumnInfo &info : qAsConst(m_gridColumnInfoList)) {
+        for (const GridColumnInfo &info : std::as_const(m_gridColumnInfoList)) {
             info.layout->setColumnMinimumWidth(info.column, width);
         }
     }

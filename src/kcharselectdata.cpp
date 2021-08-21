@@ -889,7 +889,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     }
 
     static const QRegularExpression hexExp(QStringLiteral("^(?:|u\\+|U\\+|0x|0X)([A-Fa-f0-9]{4,5})$"));
-    for (const QString &s : qAsConst(searchStrings)) {
+    for (const QString &s : std::as_const(searchStrings)) {
         const QRegularExpressionMatch match = hexExp.match(s);
         if (match.hasMatch()) {
             const QString cap = match.captured(1);
@@ -908,7 +908,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     }
 
     bool firstSubString = true;
-    for (const QString &s : qAsConst(searchStrings)) {
+    for (const QString &s : std::as_const(searchStrings)) {
         QSet<uint> partResult = getMatchingChars(s.toLower());
         if (firstSubString) {
             result = partResult;
@@ -920,13 +920,13 @@ QVector<uint> KCharSelectData::find(const QString &needle)
 
     // remove results found by matching the code point to prevent duplicate results
     // while letting these characters stay at the beginning
-    for (uint c : qAsConst(returnRes)) {
+    for (uint c : std::as_const(returnRes)) {
         result.remove(c);
     }
 
     QVector<uint> sortedResult;
     sortedResult.reserve(result.count());
-    for (auto c : qAsConst(result)) {
+    for (auto c : std::as_const(result)) {
         sortedResult.append(c);
     }
     std::sort(sortedResult.begin(), sortedResult.end());

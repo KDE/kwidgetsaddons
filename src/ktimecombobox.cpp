@@ -189,7 +189,7 @@ void KTimeComboBoxPrivate::initTimeWidget()
         }
         q->addItem(formatTime(endTime), endTime);
     } else {
-        for (const QTime &thisTime : qAsConst(m_timeList)) {
+        for (const QTime &thisTime : std::as_const(m_timeList)) {
             if (thisTime.isValid() && thisTime >= m_minTime && thisTime <= m_maxTime) {
                 q->addItem(formatTime(thisTime), thisTime);
             }
@@ -450,7 +450,7 @@ void KTimeComboBox::setTimeList(QList<QTime> timeList, const QString &minWarnMsg
 {
     if (timeList != d->m_timeList) {
         d->m_timeList.clear();
-        for (const QTime &time : qAsConst(timeList)) {
+        for (const QTime &time : std::as_const(timeList)) {
             if (time.isValid() && !d->m_timeList.contains(time)) {
                 d->m_timeList.append(time);
             }

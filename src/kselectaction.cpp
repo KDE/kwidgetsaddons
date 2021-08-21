@@ -207,7 +207,7 @@ void KSelectAction::setComboWidth(int width)
 
     d->m_comboWidth = width;
 
-    for (QComboBox *box : qAsConst(d->m_comboBoxes)) {
+    for (QComboBox *box : std::as_const(d->m_comboBoxes)) {
         box->setMaximumWidth(d->m_comboWidth);
     }
 
@@ -219,7 +219,7 @@ void KSelectAction::setMaxComboViewCount(int n)
     Q_D(KSelectAction);
     d->m_maxComboViewCount = n;
 
-    for (QComboBox *box : qAsConst(d->m_comboBoxes)) {
+    for (QComboBox *box : std::as_const(d->m_comboBoxes)) {
         if (d->m_maxComboViewCount != -1) {
             box->setMaxVisibleItems(d->m_maxComboViewCount);
         } else
@@ -275,12 +275,12 @@ QAction *KSelectAction::removeAction(QAction *action)
     bool hasActions = selectableActionGroup()->actions().isEmpty();
     setEnabled(!hasActions);
 
-    for (QToolButton *button : qAsConst(d->m_buttons)) {
+    for (QToolButton *button : std::as_const(d->m_buttons)) {
         button->setEnabled(!hasActions);
         button->removeAction(action);
     }
 
-    for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
+    for (QComboBox *comboBox : std::as_const(d->m_comboBoxes)) {
         comboBox->setEnabled(!hasActions);
         comboBox->removeAction(action);
     }
@@ -299,12 +299,12 @@ void KSelectAction::insertAction(QAction *before, QAction *action)
     setEnabled(true);
 
     // Keep in sync with createToolBarWidget()
-    for (QToolButton *button : qAsConst(d->m_buttons)) {
+    for (QToolButton *button : std::as_const(d->m_buttons)) {
         button->setEnabled(true);
         button->insertAction(before, action);
     }
 
-    for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
+    for (QComboBox *comboBox : std::as_const(d->m_comboBoxes)) {
         comboBox->setEnabled(true);
         comboBox->insertAction(before, action);
     }
@@ -421,7 +421,7 @@ void KSelectAction::setEditable(bool edit)
     Q_D(KSelectAction);
     d->m_edit = edit;
 
-    for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
+    for (QComboBox *comboBox : std::as_const(d->m_comboBoxes)) {
         comboBox->setEditable(edit);
     }
 
@@ -611,12 +611,12 @@ bool KSelectAction::event(QEvent *event)
 {
     Q_D(KSelectAction);
     if (event->type() == QEvent::ActionChanged) {
-        for (QComboBox *comboBox : qAsConst(d->m_comboBoxes)) {
+        for (QComboBox *comboBox : std::as_const(d->m_comboBoxes)) {
             comboBox->setToolTip(toolTip());
             comboBox->setWhatsThis(whatsThis());
             comboBox->setStatusTip(statusTip());
         }
-        for (QToolButton *toolButton : qAsConst(d->m_buttons)) {
+        for (QToolButton *toolButton : std::as_const(d->m_buttons)) {
             toolButton->setToolTip(toolTip());
             toolButton->setWhatsThis(whatsThis());
             toolButton->setStatusTip(statusTip());

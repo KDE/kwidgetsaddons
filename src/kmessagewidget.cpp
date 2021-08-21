@@ -129,7 +129,7 @@ void KMessageWidgetPrivate::createLayout()
             // Use an additional layout in row 1 for the buttons.
             QHBoxLayout *buttonLayout = new QHBoxLayout;
             buttonLayout->addStretch();
-            for (QToolButton *button : qAsConst(buttons)) {
+            for (QToolButton *button : std::as_const(buttons)) {
                 // For some reason, calling show() is necessary if wordwrap is true,
                 // otherwise the buttons do not show up. It is not needed if
                 // wordwrap is false.
@@ -144,7 +144,7 @@ void KMessageWidgetPrivate::createLayout()
         layout->addWidget(iconLabel);
         layout->addWidget(textLabel);
 
-        for (QToolButton *button : qAsConst(buttons)) {
+        for (QToolButton *button : std::as_const(buttons)) {
             layout->addWidget(button);
         }
         layout->addWidget(closeButton);

@@ -56,7 +56,7 @@ void KToolBarLabelAction::setBuddy(QAction *buddy)
     for (QWidget *widget : buddysAssociatedWidgets) {
         if (QToolBar *toolBar = qobject_cast<QToolBar *>(widget)) {
             QWidget *newBuddy = toolBar->widgetForAction(buddy);
-            for (QLabel *label : qAsConst(labels)) {
+            for (QLabel *label : std::as_const(labels)) {
                 label->setBuddy(newBuddy);
             }
             return;

@@ -49,12 +49,12 @@ public:
     {
         // unhook the event filter, as the deletion of the actiongroup
         // will trigger it
-        for (QComboBox *box : qAsConst(m_comboBoxes)) {
+        for (QComboBox *box : std::as_const(m_comboBoxes)) {
             box->removeEventFilter(q_ptr);
             QObject::disconnect(box, nullptr, q_ptr, nullptr); // To prevent a crash in comboBoxDeleted()
         }
 
-        for (QToolButton *button : qAsConst(m_buttons)) {
+        for (QToolButton *button : std::as_const(m_buttons)) {
             button->removeEventFilter(q_ptr);
         }
         delete m_actionGroup;

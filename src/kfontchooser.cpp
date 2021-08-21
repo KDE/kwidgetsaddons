@@ -664,7 +664,7 @@ qreal KFontChooserPrivate::fillSizeList(const QList<qreal> &sizes_)
     // Insert sizes into the listbox.
     m_ui->sizeListWidget->clear();
     std::sort(sizes.begin(), sizes.end());
-    for (qreal size : qAsConst(sizes)) {
+    for (qreal size : std::as_const(sizes)) {
         m_ui->sizeListWidget->addItem(formatFontSize(size));
     }
 
@@ -802,7 +802,7 @@ void KFontChooser::getFontList(QStringList &list, uint fontListCriteria)
     // if we have criteria; then check fonts before adding
     if (fontListCriteria) {
         QStringList lstFonts;
-        for (const QString &family : qAsConst(lstSys)) {
+        for (const QString &family : std::as_const(lstSys)) {
             if ((fontListCriteria & FixedWidthFonts) > 0 && !dbase.isFixedPitch(family)) {
                 continue;
             }

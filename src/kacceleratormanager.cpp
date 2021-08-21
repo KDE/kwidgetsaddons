@@ -110,7 +110,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
     // collect the contents
     KAccelStringList contents;
     contents.reserve(item->m_children->size());
-    for (Item *it : qAsConst(*item->m_children)) {
+    for (Item *it : std::as_const(*item->m_children)) {
         contents << it->m_content;
     }
 
@@ -119,7 +119,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
     // write them back into the widgets
     int cnt = -1;
-    for (Item *it : qAsConst(*item->m_children)) {
+    for (Item *it : std::as_const(*item->m_children)) {
         cnt++;
 
         QDockWidget *dock = qobject_cast<QDockWidget *>(it->m_widget);
@@ -168,7 +168,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
     }
 
     // calculate the accelerators for the children
-    for (Item *it : qAsConst(*item->m_children)) {
+    for (Item *it : std::as_const(*item->m_children)) {
         if (it->m_widget && it->m_widget->isVisibleTo(item->m_widget)) {
             calculateAccelerators(it, used);
         }

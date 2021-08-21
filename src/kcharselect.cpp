@@ -954,7 +954,7 @@ QString KCharSelectPrivate::createLinks(QString s)
         chars.insert(match.captured(1));
     }
 
-    for (const QString &c : qAsConst(chars)) {
+    for (const QString &c : std::as_const(chars)) {
         int unicode = c.toInt(nullptr, 16);
         if (!allPlanesEnabled && QChar::requiresSurrogates(unicode)) {
             continue;

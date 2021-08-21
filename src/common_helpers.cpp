@@ -71,7 +71,7 @@ QString removeAcceleratorMarker(const QString &label_)
     // ampersand beforehand.
     if (!accmarkRemoved) {
         bool hasCJK = false;
-        for (const QChar c : qAsConst(label)) {
+        for (const QChar c : std::as_const(label)) {
             if (c.unicode() >= 0x2e00) { // rough, but should be sufficient
                 hasCJK = true;
                 break;

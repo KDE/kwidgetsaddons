@@ -13,7 +13,7 @@ int main(int argc, char **argv)
     QVBoxLayout *layout = new QVBoxLayout(box);
 
     KSqueezedTextLabel *l1 = new KSqueezedTextLabel(QStringLiteral("This is a rather long string"), box);
-    KSqueezedTextLabel *l2 = new KSqueezedTextLabel(QStringLiteral("This is another long string, selectable by mouse"), box);
+    KSqueezedTextLabel *l2 = new KSqueezedTextLabel(QStringLiteral("This is another long string, selectable by mouse\nsdfsdfsfsf\nsdfsdfsdf\n"), box);
     l2->setTextElideMode(Qt::ElideRight);
     l2->setTextInteractionFlags(Qt::TextSelectableByMouse);
     KSqueezedTextLabel *urlLabel = new KSqueezedTextLabel(QStringLiteral("http://www.example.com/this/url/is/selectable/by/mouse"), box);

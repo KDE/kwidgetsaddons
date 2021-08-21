@@ -136,7 +136,7 @@ void KDateTimeEditPrivate::initCalendarWidget()
 {
     ui.m_calendarCombo->blockSignals(true);
     ui.m_calendarCombo->clear();
-    for (const QLocale &calendarLocale : qAsConst(m_calendarLocales)) {
+    for (const QLocale &calendarLocale : std::as_const(m_calendarLocales)) {
         ui.m_calendarCombo->addItem(calendarLocale.name(), calendarLocale);
     }
     ui.m_calendarCombo->setCurrentIndex(ui.m_calendarCombo->findData(q->locale()));
@@ -170,7 +170,7 @@ void KDateTimeEditPrivate::initTimeZoneWidget()
     ui.m_timeZoneCombo->clear();
     ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("UTC", "@item:inlistbox UTC time zone"), QByteArray("UTC"));
     ui.m_timeZoneCombo->addItem(KDateTimeEdit::tr("Floating", "@item:inlistbox No specific time zone"), QByteArray());
-    for (const QTimeZone &zone : qAsConst(m_zones)) {
+    for (const QTimeZone &zone : std::as_const(m_zones)) {
         ui.m_timeZoneCombo->addItem(QString::fromUtf8(zone.id()), zone.id());
     }
     ui.m_timeZoneCombo->setVisible((m_options & KDateTimeEdit::ShowTimeZone) == KDateTimeEdit::ShowTimeZone);
