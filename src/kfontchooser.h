@@ -139,7 +139,7 @@ public:
      *
      * @since 5.86
      */
-    explicit KFontChooser(const DisplayFlags flags = NoDisplayFlags, QWidget *parent = nullptr);
+    explicit KFontChooser(DisplayFlags flags, QWidget *parent = nullptr);
 
     /**
      * Destructor.
