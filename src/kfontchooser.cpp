@@ -35,19 +35,20 @@ static int minimumListWidth(const QListWidget *list)
 {
     QFontMetrics fm = list->fontMetrics();
 
-    int w = 0;
-    for (int i = 0; i < list->count(); i++) {
+    const int extraSpace = fm.horizontalAdvance(QLatin1Char(' ')) * 2;
+
+    // Minimum initial size
+    int width = 40;
+    for (int i = 0, rows = list->count(); i < rows; ++i) {
         int itemWidth = fm.horizontalAdvance(list->item(i)->text());
-        // ...and add a space on both sides for not too tight look.
-        itemWidth += fm.horizontalAdvance(QLatin1Char(' ')) * 2;
-        w = qMax(w, itemWidth);
+        // ...and add a space on both sides for a not too tight look.
+        itemWidth += extraSpace;
+        width = std::max(width, itemWidth);
     }
-    if (w == 0) {
-        w = 40;
-    }
-    w += list->frameWidth() * 2;
-    w += list->verticalScrollBar()->sizeHint().width();
-    return w;
+
+    width += list->frameWidth() * 2;
+    width += list->verticalScrollBar()->sizeHint().width();
+    return width;
 }
 
 static int minimumListHeight(const QListWidget *list, int numVisibleEntry)
