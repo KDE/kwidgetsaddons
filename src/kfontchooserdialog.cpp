@@ -38,10 +38,7 @@ KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, 
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
 
-KFontChooserDialog::~KFontChooserDialog()
-{
-    delete d;
-}
+KFontChooserDialog::~KFontChooserDialog() = default;
 
 void KFontChooserDialog::setFont(const QFont &font, bool onlyFixed)
 {

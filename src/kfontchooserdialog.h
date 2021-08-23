@@ -13,6 +13,8 @@
 
 #include <kfontchooser.h>
 
+#include <memory>
+
 class QFont;
 
 class KFontChooserDialogPrivate;
@@ -153,7 +155,7 @@ Q_SIGNALS:
     void fontSelected(const QFont &font);
 
 private:
-    KFontChooserDialogPrivate *const d;
+    std::unique_ptr<KFontChooserDialogPrivate> const d;
 
     Q_DISABLE_COPY(KFontChooserDialog)
 };
