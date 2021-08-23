@@ -10,7 +10,6 @@
 
 #include <QDialogButtonBox>
 #include <QPointer>
-#include <QPushButton>
 #include <QVBoxLayout>
 
 class KFontChooserDialogPrivate
