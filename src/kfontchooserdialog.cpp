@@ -16,7 +16,7 @@
 class KFontChooserDialogPrivate
 {
 public:
-    KFontChooser *chooser = nullptr;
+    KFontChooser *m_fontChooser = nullptr;
 };
 
 KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, QWidget *parent)
@@ -24,15 +24,15 @@ KFontChooserDialog::KFontChooserDialog(const KFontChooser::DisplayFlags &flags, 
     , d(new KFontChooserDialogPrivate)
 {
     setWindowTitle(tr("Select Font", "@title:window"));
-    d->chooser = new KFontChooser(flags, this);
-    d->chooser->setMinVisibleItems(8);
-    d->chooser->setObjectName(QStringLiteral("fontChooser"));
+    d->m_fontChooser = new KFontChooser(flags, this);
+    d->m_fontChooser->setMinVisibleItems(8);
+    d->m_fontChooser->setObjectName(QStringLiteral("fontChooser"));
 
-    connect(d->chooser, &KFontChooser::fontSelected, this, &KFontChooserDialog::fontSelected);
+    connect(d->m_fontChooser, &KFontChooser::fontSelected, this, &KFontChooserDialog::fontSelected);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->addWidget(d->chooser);
+    mainLayout->addWidget(d->m_fontChooser);
     mainLayout->addWidget(buttonBox);
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
@@ -46,12 +46,12 @@ KFontChooserDialog::~KFontChooserDialog()
 
 void KFontChooserDialog::setFont(const QFont &font, bool onlyFixed)
 {
-    d->chooser->setFont(font, onlyFixed);
+    d->m_fontChooser->setFont(font, onlyFixed);
 }
 
 QFont KFontChooserDialog::font() const
 {
-    return d->chooser->font();
+    return d->m_fontChooser->font();
 }
 
 // If the styleName property is set for a QFont, using setBold(true) would
@@ -82,8 +82,8 @@ int KFontChooserDialog::getFontDiff(QFont &theFont, KFontChooser::FontDiffFlags 
 
     const int result = dialog->exec();
     if (result == Accepted) {
-        theFont = dialog->d->chooser->font();
-        diffFlags = dialog->d->chooser->fontDiffFlags();
+        theFont = dialog->d->m_fontChooser->font();
+        diffFlags = dialog->d->m_fontChooser->fontDiffFlags();
         stripRegularStyleName(theFont);
     }
     delete dialog;
@@ -99,7 +99,7 @@ int KFontChooserDialog::getFont(QFont &theFont, const KFontChooser::DisplayFlags
 
     const int result = dialog->exec();
     if (result == Accepted) {
-        theFont = dialog->d->chooser->font();
+        theFont = dialog->d->m_fontChooser->font();
         stripRegularStyleName(theFont);
     }
     delete dialog;
