@@ -16,6 +16,9 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
 
     QFont font;
+    // Use a font with an unusual styleName
+    font.fromString(QStringLiteral("Noto Sans,13,-1,5,87,1,0,0,0,0,Black Italic"));
+
     qDebug() << "Default use case, all bells and whistles";
     int nRet = KFontChooserDialog::getFont(font);
     qDebug() << font.toString();

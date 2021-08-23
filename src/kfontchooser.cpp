@@ -732,6 +732,10 @@ void KFontChooserPrivate::setupDisplay()
     int numEntries;
     int i;
 
+    // Get the styleID here before familyListWidget->setCurrentRow() is called
+    // as it may change the font style
+    const QString styleID = styleIdentifier(m_selectedFont);
+
     QString family = m_selectedFont.family().toLower();
     // Direct family match.
     numEntries = m_ui->familyListWidget->count();
@@ -787,7 +791,6 @@ void KFontChooserPrivate::setupDisplay()
     // Try now to set the current items in the style and size boxes.
 
     // Set current style in the listbox.
-    const QString styleID = styleIdentifier(m_selectedFont);
     numEntries = m_ui->styleListWidget->count();
     for (i = 0; i < numEntries; ++i) {
         if (styleID == m_styleIDs[m_ui->styleListWidget->item(i)->text()]) {
