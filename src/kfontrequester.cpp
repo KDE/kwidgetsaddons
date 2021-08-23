@@ -23,8 +23,8 @@ class KFontRequesterPrivate
     Q_DECLARE_TR_FUNCTIONS(KFontRequester)
 
 public:
-    KFontRequesterPrivate(KFontRequester *q)
-        : q(q)
+    KFontRequesterPrivate(KFontRequester *qq)
+        : q(qq)
     {
     }
 
