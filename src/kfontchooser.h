@@ -122,12 +122,21 @@ public:
         5,
         86,
         "Use the KFontChooser(KFontChooser::DisplayFlags, QWidget*) constructor and the setFontListItems() and setMinVisibleItems() methods.")
-    explicit KFontChooser(QWidget *parent = nullptr,
-                          const DisplayFlags &flags = DisplayFrame,
+    explicit KFontChooser(QWidget *parent,
+                          const DisplayFlags &flags,
                           const QStringList &fontList = QStringList(),
                           int visibleListSize = 8,
                           Qt::CheckState *sizeIsRelativeState = nullptr);
 #endif
+
+    /**
+     * Constructs a font picker widget.
+     *
+     * @param parent the parent widget
+     *
+     * @since 5.86
+     */
+    explicit KFontChooser(QWidget *parent = nullptr);
 
     /**
      * Create a font picker widget.

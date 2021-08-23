@@ -136,6 +136,13 @@ KFontChooser::KFontChooser(QWidget *parent, const DisplayFlags &flags, const QSt
 }
 #endif
 
+KFontChooser::KFontChooser(QWidget *parent)
+    : QWidget(parent)
+    , d(new KFontChooserPrivate(KFontChooser::DisplayFrame, this))
+{
+    d->init();
+}
+
 KFontChooser::KFontChooser(const DisplayFlags flags, QWidget *parent)
     : QWidget(parent)
     , d(new KFontChooserPrivate(flags, this))
