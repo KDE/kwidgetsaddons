@@ -28,8 +28,8 @@ class KFontActionPrivate : public KSelectActionPrivate
     Q_DECLARE_PUBLIC(KFontAction)
 
 public:
-    KFontActionPrivate(KFontAction *q)
-        : KSelectActionPrivate(q)
+    KFontActionPrivate(KFontAction *qq)
+        : KSelectActionPrivate(qq)
     {
     }
 

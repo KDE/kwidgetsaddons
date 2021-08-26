@@ -21,8 +21,8 @@ class KAssistantDialogPrivate : public KPageDialogPrivate
     Q_DECLARE_TR_FUNCTIONS(KAssistantDialog)
 
 public:
-    KAssistantDialogPrivate(KAssistantDialog *q)
-        : KPageDialogPrivate(q)
+    KAssistantDialogPrivate(KAssistantDialog *qq)
+        : KPageDialogPrivate(qq)
     {
     }
 

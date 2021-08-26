@@ -15,7 +15,7 @@
 class KTimeComboBoxPrivate
 {
 public:
-    KTimeComboBoxPrivate(KTimeComboBox *q);
+    KTimeComboBoxPrivate(KTimeComboBox *qq);
     virtual ~KTimeComboBoxPrivate();
 
     QTime defaultMinTime();
@@ -50,8 +50,8 @@ public:
     QList<QTime> m_timeList;
 };
 
-KTimeComboBoxPrivate::KTimeComboBoxPrivate(KTimeComboBox *q)
-    : q(q)
+KTimeComboBoxPrivate::KTimeComboBoxPrivate(KTimeComboBox *qq)
+    : q(qq)
     , m_time(QTime(0, 0, 0))
     , m_warningShown(false)
     , m_displayFormat(QLocale::ShortFormat)

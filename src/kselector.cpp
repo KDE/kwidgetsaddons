@@ -31,8 +31,8 @@ public:
 class KGradientSelectorPrivate
 {
 public:
-    KGradientSelectorPrivate(KGradientSelector *q)
-        : q(q)
+    KGradientSelectorPrivate(KGradientSelector *qq)
+        : q(qq)
     {
     }
 

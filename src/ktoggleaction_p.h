@@ -25,8 +25,8 @@ class KToggleActionPrivate
     Q_DECLARE_PUBLIC(KToggleAction)
 
 public:
-    explicit KToggleActionPrivate(KToggleAction *q)
-        : q_ptr(q)
+    explicit KToggleActionPrivate(KToggleAction *qq)
+        : q_ptr(qq)
     {
     }
 

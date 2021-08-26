@@ -23,7 +23,7 @@
 class KColorButtonPrivate
 {
 public:
-    KColorButtonPrivate(KColorButton *q);
+    KColorButtonPrivate(KColorButton *qq);
 
     void chooseColor();
     void colorChosen();
@@ -93,8 +93,8 @@ QDrag *createDrag(const QColor &color, QObject *dragsource)
 }
 /////////////////////////////////////////////////////////////////////
 
-KColorButtonPrivate::KColorButtonPrivate(KColorButton *q)
-    : q(q)
+KColorButtonPrivate::KColorButtonPrivate(KColorButton *qq)
+    : q(qq)
 {
     m_bdefaultColor = false;
     m_alphaChannel = false;

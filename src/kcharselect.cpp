@@ -32,8 +32,8 @@ Q_GLOBAL_STATIC(KCharSelectData, s_data)
 class KCharSelectTablePrivate
 {
 public:
-    KCharSelectTablePrivate(KCharSelectTable *q)
-        : q(q)
+    KCharSelectTablePrivate(KCharSelectTable *qq)
+        : q(qq)
     {
     }
 
@@ -62,8 +62,8 @@ public:
 
     enum { MaxHistoryItems = 100 };
 
-    KCharSelectPrivate(KCharSelect *q)
-        : q(q)
+    KCharSelectPrivate(KCharSelect *qq)
+        : q(qq)
     {
     }
 

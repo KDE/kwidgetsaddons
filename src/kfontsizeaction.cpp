@@ -27,8 +27,8 @@ class KFontSizeActionPrivate : public KSelectActionPrivate
     Q_DECLARE_PUBLIC(KFontSizeAction)
 
 public:
-    KFontSizeActionPrivate(KFontSizeAction *q)
-        : KSelectActionPrivate(q)
+    KFontSizeActionPrivate(KFontSizeAction *qq)
+        : KSelectActionPrivate(qq)
     {
     }
 

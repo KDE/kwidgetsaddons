@@ -22,8 +22,8 @@
 class KPixmapRegionSelectorWidgetPrivate
 {
 public:
-    KPixmapRegionSelectorWidgetPrivate(KPixmapRegionSelectorWidget *q)
-        : q(q)
+    KPixmapRegionSelectorWidgetPrivate(KPixmapRegionSelectorWidget *qq)
+        : q(qq)
     {
     }
 

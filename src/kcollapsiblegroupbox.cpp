@@ -18,7 +18,7 @@
 class KCollapsibleGroupBoxPrivate
 {
 public:
-    KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *q);
+    KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *qq);
     void updateChildrenFocus(bool expanded);
     void recalculateHeaderSize();
     QSize contentSize() const;
@@ -34,8 +34,8 @@ public:
     QMap<QWidget *, Qt::FocusPolicy> focusMap; // Used to restore focus policy of widgets.
 };
 
-KCollapsibleGroupBoxPrivate::KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *q)
-    : q(q)
+KCollapsibleGroupBoxPrivate::KCollapsibleGroupBoxPrivate(KCollapsibleGroupBox *qq)
+    : q(qq)
 {
 }
 

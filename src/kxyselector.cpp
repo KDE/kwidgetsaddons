@@ -23,8 +23,8 @@
 class KXYSelectorPrivate
 {
 public:
-    KXYSelectorPrivate(KXYSelector *q)
-        : q(q)
+    KXYSelectorPrivate(KXYSelector *qq)
+        : q(qq)
         , xPos(0)
         , yPos(0)
         , minX(0)

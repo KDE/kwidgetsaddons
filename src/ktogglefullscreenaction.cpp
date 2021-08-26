@@ -26,8 +26,8 @@ class KToggleFullScreenActionPrivate : public KToggleActionPrivate
     Q_DECLARE_PUBLIC(KToggleFullScreenAction)
 
 public:
-    KToggleFullScreenActionPrivate(KToggleFullScreenAction *q)
-        : KToggleActionPrivate(q)
+    KToggleFullScreenActionPrivate(KToggleFullScreenAction *qq)
+        : KToggleActionPrivate(qq)
     {
     }
 

@@ -16,7 +16,7 @@ class KPageWidgetPrivate : public KPageViewPrivate
 {
     Q_DECLARE_PUBLIC(KPageWidget)
 protected:
-    KPageWidgetPrivate(KPageWidget *q);
+    KPageWidgetPrivate(KPageWidget *qq);
 
     KPageWidgetModel *model() const
     {

@@ -29,8 +29,8 @@ class KSelectActionPrivate
     Q_DECLARE_PUBLIC(KSelectAction)
 
 public:
-    KSelectActionPrivate(KSelectAction *q)
-        : q_ptr(q)
+    KSelectActionPrivate(KSelectAction *qq)
+        : q_ptr(qq)
     {
         m_edit = false;
         m_menuAccelsEnabled = true;

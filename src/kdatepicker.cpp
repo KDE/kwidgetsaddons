@@ -117,8 +117,8 @@ class KDatePickerPrivate
     Q_DECLARE_TR_FUNCTIONS(KDatePicker)
 
 public:
-    KDatePickerPrivate(KDatePicker *q)
-        : q(q)
+    KDatePickerPrivate(KDatePicker *qq)
+        : q(qq)
         , closeButton(nullptr)
         , selectWeek(nullptr)
         , todayButton(nullptr)

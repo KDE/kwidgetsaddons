@@ -17,7 +17,7 @@
 class KPopupFramePrivate
 {
 public:
-    KPopupFramePrivate(KPopupFrame *q);
+    KPopupFramePrivate(KPopupFrame *qq);
     ~KPopupFramePrivate();
 
     KPopupFrame *q;
@@ -73,8 +73,8 @@ public:
     }
 };
 
-KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *q)
-    : q(q)
+KPopupFramePrivate::KPopupFramePrivate(KPopupFrame *qq)
+    : q(qq)
     , result(0)
     , // rejected
     main(nullptr)

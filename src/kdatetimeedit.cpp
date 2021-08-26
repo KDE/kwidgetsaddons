@@ -15,7 +15,7 @@
 class KDateTimeEditPrivate
 {
 public:
-    KDateTimeEditPrivate(KDateTimeEdit *q);
+    KDateTimeEditPrivate(KDateTimeEdit *qq);
     virtual ~KDateTimeEditPrivate();
 
     QDateTime defaultMinDateTime();
@@ -52,8 +52,8 @@ public:
     Ui::KDateTimeEdit ui;
 };
 
-KDateTimeEditPrivate::KDateTimeEditPrivate(KDateTimeEdit *q)
-    : q(q)
+KDateTimeEditPrivate::KDateTimeEditPrivate(KDateTimeEdit *qq)
+    : q(qq)
 {
     m_options = KDateTimeEdit::ShowDate | KDateTimeEdit::EditDate | KDateTimeEdit::SelectDate | KDateTimeEdit::ShowTime | KDateTimeEdit::EditTime
         | KDateTimeEdit::SelectTime | KDateTimeEdit::DatePicker | KDateTimeEdit::DateKeywords;

@@ -18,8 +18,8 @@
 class KActionSelectorPrivate
 {
 public:
-    KActionSelectorPrivate(KActionSelector *q)
-        : q(q)
+    KActionSelectorPrivate(KActionSelector *qq)
+        : q(qq)
     {
     }
 

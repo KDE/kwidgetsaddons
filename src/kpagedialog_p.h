@@ -17,8 +17,8 @@ class KPageDialogPrivate
 {
     Q_DECLARE_PUBLIC(KPageDialog)
 public:
-    KPageDialogPrivate(KPageDialog *q)
-        : q_ptr(q)
+    KPageDialogPrivate(KPageDialog *qq)
+        : q_ptr(qq)
         , mPageWidget(nullptr)
         , mButtonBox(nullptr)
     {

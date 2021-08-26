@@ -160,8 +160,8 @@ QModelIndex KEditListWidgetPrivate::selectedIndex()
 class KEditListWidgetCustomEditorPrivate
 {
 public:
-    KEditListWidgetCustomEditorPrivate(KEditListWidget::CustomEditor *q)
-        : q(q)
+    KEditListWidgetCustomEditorPrivate(KEditListWidget::CustomEditor *qq)
+        : q(qq)
         , representationWidget(nullptr)
         , lineEdit(nullptr)
     {

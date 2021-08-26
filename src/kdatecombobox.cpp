@@ -22,7 +22,7 @@
 class KDateComboBoxPrivate
 {
 public:
-    KDateComboBoxPrivate(KDateComboBox *q);
+    KDateComboBoxPrivate(KDateComboBox *qq);
     virtual ~KDateComboBoxPrivate();
 
     // TODO: Find a way to get that from QLocale
@@ -66,11 +66,11 @@ public:
     QMap<QDate, QString> m_dateMap;
 };
 
-KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *q)
-    : q(q)
-    , m_dateMenu(new QMenu(q))
-    , m_datePicker(new KDatePicker(q))
-    , m_datePickerAction(new QWidgetAction(q))
+KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *qq)
+    : q(qq)
+    , m_dateMenu(new QMenu(qq))
+    , m_datePicker(new KDatePicker(qq))
+    , m_datePickerAction(new QWidgetAction(qq))
     , m_warningShown(false)
     , m_edited(false)
     , m_displayFormat(QLocale::ShortFormat)

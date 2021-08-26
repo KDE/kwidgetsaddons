@@ -10,8 +10,8 @@
 
 #include "kpagewidgetmodel.h"
 
-KPageWidgetPrivate::KPageWidgetPrivate(KPageWidget *q)
-    : KPageViewPrivate(q)
+KPageWidgetPrivate::KPageWidgetPrivate(KPageWidget *qq)
+    : KPageViewPrivate(qq)
 {
 }
 

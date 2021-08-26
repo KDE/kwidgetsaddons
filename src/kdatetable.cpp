@@ -24,8 +24,8 @@
 class KDateTable::KDateTablePrivate
 {
 public:
-    KDateTablePrivate(KDateTable *q)
-        : q(q)
+    KDateTablePrivate(KDateTable *qq)
+        : q(qq)
     {
         m_popupMenuEnabled = false;
         m_useCustomColors = false;
