@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         dlg.setPrompt(
             i18n("This is a long prompt line. It is important it to be long so we can test the dialog does not get broken because of multiline labels. Please "
                  "enter a password:"));
-        dlg.addCommentLine(i18n("This is a rather large left comment line"),
+        dlg.addCommentLine(i18n("This is a rather large left comment line:"),
                            i18n("Right part of the comment line has to be long too so be test the layouting works really ok. Please visit http://www.kde.org"));
 
         if (dlg.exec()) {

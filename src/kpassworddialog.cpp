@@ -68,6 +68,10 @@ void KPasswordDialogPrivate::updateFields()
 void KPasswordDialogPrivate::init()
 {
     ui.setupUi(q);
+
+    ui.commentLabel->hide();
+    ui.commentText->hide();
+
     ui.buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     ui.errorMessage->setHidden(true);
 
@@ -210,6 +214,12 @@ bool KPasswordDialog::keepPassword() const
 
 void KPasswordDialog::addCommentLine(const QString &label, const QString &comment)
 {
+    d->ui.commentLabel->show();
+    d->ui.commentLabel->setText(label);
+
+    d->ui.commentText->show();
+    d->ui.commentText->setText(comment);
+
     int gridMarginLeft;
     int gridMarginTop;
     int gridMarginRight;
@@ -221,12 +231,6 @@ void KPasswordDialog::addCommentLine(const QString &label, const QString &commen
         // same inter-column spacing for all rows, see comment in qformlayout.cpp
         spacing = style()->combinedLayoutSpacing(QSizePolicy::Label, QSizePolicy::LineEdit, Qt::Horizontal, nullptr, this);
     }
-
-    QLabel *c = new QLabel(comment, this);
-    c->setWordWrap(true);
-
-    d->ui.formLayout->insertRow(d->commentRow, label, c);
-    ++d->commentRow;
 
     // cycle through column 0 widgets and see the max width so we can set the minimum height of
     // column 2 wordwrapable labels
