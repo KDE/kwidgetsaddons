@@ -281,17 +281,6 @@ void KCollapsibleGroupBox::resizeEvent(QResizeEvent *event)
 
 void KCollapsibleGroupBox::overrideFocusPolicyOf(QWidget *widget)
 {
-    // https://bugs.kde.org/show_bug.cgi?id=396450
-    // A label with word-wrapping enabled will break positioning of the groupbox in the layout.
-    // The cause seems to be the setFocusPolicy() call below, but it's not clear why.
-    // Until a proper fix is found, as workaround we toggle twice the groupbox which fixes the issue.
-    if (auto label = qobject_cast<QLabel *>(widget)) {
-        if (label->wordWrap()) {
-            toggle();
-            toggle();
-        }
-    }
-
     d->focusMap.insert(widget, widget->focusPolicy());
 
     if (!isExpanded()) {
