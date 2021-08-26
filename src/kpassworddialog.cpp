@@ -39,10 +39,8 @@ public:
     KPasswordDialog *const q;
     Ui_KPasswordDialog ui;
     QMap<QString, QString> knownLogins;
-    QComboBox *userEditCombo = nullptr;
     QIcon icon;
     KPasswordDialog::KPasswordDialogFlags m_flags;
-    unsigned int commentRow = 0;
 };
 
 KPasswordDialog::KPasswordDialog(QWidget *parent, const KPasswordDialogFlags &flags)
@@ -60,7 +58,7 @@ KPasswordDialog::~KPasswordDialog() = default;
 void KPasswordDialogPrivate::updateFields()
 {
     if (m_flags & KPasswordDialog::UsernameReadOnly) {
-        ui.userEdit->setReadOnly(true);
+        ui.userEditCombo->lineEdit()->setReadOnly(true);
         ui.credentialsGroup->setFocusProxy(ui.passEdit);
     }
     ui.domainEdit->setReadOnly((m_flags & KPasswordDialog::DomainReadOnly));
@@ -82,17 +80,17 @@ void KPasswordDialogPrivate::init()
     ui.userEditContextHelpButton->setToolTip(description);
     QObject::connect(ui.userEditContextHelpButton, &QPushButton::released, q, [this] {
         QEvent ev(QEvent::WhatsThis);
-        qApp->sendEvent(ui.userEdit, &ev);
+        qApp->sendEvent(ui.userEditCombo, &ev);
     });
 
     // Row 4: Username field
     if (m_flags & KPasswordDialog::ShowUsernameLine) {
-        ui.userEdit->setFocus();
-        ui.credentialsGroup->setFocusProxy(ui.userEdit);
-        QObject::connect(ui.userEdit, &QLineEdit::returnPressed, ui.passEdit, QOverload<>::of(&QWidget::setFocus));
+        ui.userEditCombo->setFocus();
+        ui.credentialsGroup->setFocusProxy(ui.userEditCombo);
+        QObject::connect(ui.userEditCombo, &QComboBox::textActivated, ui.passEdit, QOverload<>::of(&QWidget::setFocus));
     } else {
         ui.userNameLabel->hide();
-        ui.userEdit->hide();
+        ui.userEditCombo->hide();
         ui.domainLabel->hide();
         ui.domainEdit->hide();
         ui.passEdit->setFocus();
@@ -150,20 +148,20 @@ QPixmap KPasswordDialog::pixmap() const
 
 void KPasswordDialog::setUsername(const QString &user)
 {
-    d->ui.userEdit->setText(user);
+    d->ui.userEditCombo->lineEdit()->setText(user);
     if (user.isEmpty()) {
         return;
     }
 
     d->activated(user);
-    if (d->ui.userEdit->isVisibleTo(this)) {
+    if (d->ui.userEditCombo->isVisibleTo(this)) {
         d->ui.passEdit->setFocus();
     }
 }
 
 QString KPasswordDialog::username() const
 {
-    return d->ui.userEdit->text();
+    return d->ui.userEditCombo->currentText();
 }
 
 QString KPasswordDialog::password() const
@@ -270,9 +268,9 @@ void KPasswordDialog::showErrorMessage(const QString &message, const ErrorType t
         d->ui.passEdit->setFocus();
         break;
     case UsernameError:
-        if (d->ui.userEdit->isVisibleTo(this)) {
+        if (d->ui.userEditCombo->isVisibleTo(this)) {
             d->ui.userNameLabel->setFont(bold);
-            d->ui.userEdit->setFocus();
+            d->ui.userEditCombo->setFocus();
         }
         break;
     case DomainError:
@@ -283,7 +281,7 @@ void KPasswordDialog::showErrorMessage(const QString &message, const ErrorType t
         break;
     case FatalError:
         d->ui.userNameLabel->setEnabled(false);
-        d->ui.userEdit->setEnabled(false);
+        d->ui.userEditCombo->setEnabled(false);
         d->ui.passwordLabel->setEnabled(false);
         d->ui.passEdit->setEnabled(false);
         d->ui.keepCheckBox->setEnabled(false);
@@ -298,7 +296,6 @@ void KPasswordDialog::showErrorMessage(const QString &message, const ErrorType t
 void KPasswordDialog::setPrompt(const QString &prompt)
 {
     d->ui.prompt->setText(prompt);
-    d->ui.prompt->setWordWrap(true);
     auto *style = this->style();
     const int leftMarginHint = style->pixelMetric(QStyle::PM_LayoutLeftMargin);
     const int rightMarginHint = style->pixelMetric(QStyle::PM_LayoutRightMargin);
@@ -317,9 +314,9 @@ void KPasswordDialog::setPassword(const QString &p)
 
 void KPasswordDialog::setUsernameReadOnly(bool readOnly)
 {
-    d->ui.userEdit->setReadOnly(readOnly);
+    d->ui.userEditCombo->lineEdit()->setReadOnly(readOnly);
 
-    if (readOnly && d->ui.userEdit->hasFocus()) {
+    if (readOnly && d->ui.userEditCombo->hasFocus()) {
         d->ui.passEdit->setFocus();
     }
 }
@@ -332,37 +329,26 @@ void KPasswordDialog::setKnownLogins(const QMap<QString, QString> &knownLogins)
     }
 
     if (nr == 1) {
-        d->ui.userEdit->setText(knownLogins.begin().key());
-        setPassword(knownLogins.begin().value());
+        const auto it = knownLogins.begin();
+        d->ui.userEditCombo->addItem(it.key());
+        setPassword(it.value());
         return;
     }
 
-    Q_ASSERT(!d->ui.userEdit->isReadOnly());
-    if (!d->userEditCombo) {
-        int row = -1;
-        QFormLayout::ItemRole userEditRole = QFormLayout::FieldRole;
+    d->ui.userEditCombo->setEditable(true);
+    d->ui.userNameLabel->setBuddy(d->ui.userEditCombo);
 
-        d->ui.formLayout->getWidgetPosition(d->ui.userEdit, &row, &userEditRole);
-        d->ui.formLayout->removeWidget(d->ui.userEdit);
-        delete d->ui.userEdit;
-        d->userEditCombo = new QComboBox(d->ui.credentialsGroup);
-        d->userEditCombo->setEditable(true);
-        d->ui.userEdit = d->userEditCombo->lineEdit();
-        d->ui.userNameLabel->setBuddy(d->userEditCombo);
-        d->ui.formLayout->setWidget(row > -1 ? row : 0, userEditRole, d->userEditCombo);
-
-        setTabOrder(d->ui.userEdit, d->ui.anonymousRadioButton);
-        setTabOrder(d->ui.anonymousRadioButton, d->ui.domainEdit);
-        setTabOrder(d->ui.domainEdit, d->ui.passEdit);
-        setTabOrder(d->ui.passEdit, d->ui.keepCheckBox);
-        connect(d->ui.userEdit, &QLineEdit::returnPressed, d->ui.passEdit, QOverload<>::of(&QWidget::setFocus));
-    }
+    setTabOrder(d->ui.userEditCombo, d->ui.anonymousRadioButton);
+    setTabOrder(d->ui.anonymousRadioButton, d->ui.domainEdit);
+    setTabOrder(d->ui.domainEdit, d->ui.passEdit);
+    setTabOrder(d->ui.passEdit, d->ui.keepCheckBox);
+    connect(d->ui.userEditCombo, &QComboBox::textActivated, d->ui.passEdit, QOverload<>::of(&QWidget::setFocus));
 
     d->knownLogins = knownLogins;
-    d->userEditCombo->addItems(knownLogins.keys());
-    d->userEditCombo->setFocus();
+    d->ui.userEditCombo->addItems(knownLogins.keys());
+    d->ui.userEditCombo->setFocus();
 
-    connect(d->userEditCombo, &QComboBox::textActivated, this, [this](const QString &text) {
+    connect(d->ui.userEditCombo, &QComboBox::textActivated, this, [this](const QString &text) {
         d->activated(text);
     });
 }
@@ -413,7 +399,7 @@ void KPasswordDialogPrivate::actuallyAccept()
     bool keep = ui.keepCheckBox->isVisibleTo(q) && ui.keepCheckBox->isChecked();
     Q_EMIT q->gotPassword(q->password(), keep);
 
-    if (ui.userEdit->isVisibleTo(q)) {
+    if (ui.userEditCombo->isVisibleTo(q)) {
         Q_EMIT q->gotUsernameAndPassword(q->username(), q->password(), keep);
     }
 
@@ -433,7 +419,7 @@ QDialogButtonBox *KPasswordDialog::buttonBox() const
 void KPasswordDialog::setUsernameContextHelp(const QString &help)
 {
     d->ui.userEditContextHelpButton->setVisible(true);
-    d->ui.userEdit->setWhatsThis(help);
+    d->ui.userEditCombo->setWhatsThis(help);
 }
 
 #include "moc_kpassworddialog.cpp"
