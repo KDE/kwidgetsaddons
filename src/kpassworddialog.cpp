@@ -25,8 +25,8 @@
 class KPasswordDialogPrivate
 {
 public:
-    KPasswordDialogPrivate(KPasswordDialog *q)
-        : q(q)
+    KPasswordDialogPrivate(KPasswordDialog *qq)
+        : q(qq)
     {
     }
 
