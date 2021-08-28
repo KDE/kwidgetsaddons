@@ -21,6 +21,7 @@ kwidgetsaddons_executable_tests(
   kledtest
   kmessageboxtest
   kmessageboxwidtest
+  kmodifierkeystatustest
   kselectactiontest
   kseparatortest
   ksqueezedtextlabeltest

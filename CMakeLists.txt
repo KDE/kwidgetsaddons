@@ -18,6 +18,13 @@ include(KDEGitCommitHooks)
 set(REQUIRED_QT_VERSION 5.15.2)
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
+if (NOT APPLE AND NOT WIN32)
+    find_package(X11 MODULE)
+    find_package(XCB MODULE COMPONENTS XCB)
+    if (X11_FOUND AND X11_Xkb_FOUND AND XCB_XCB_FOUND)
+        find_package(Qt5X11Extras ${REQUIRED_QT_VERSION} NO_MODULE)
+    endif()
+endif()
 
 include(ECMGenerateExportHeader)
 include(CMakePackageConfigHelpers)

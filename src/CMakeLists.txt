@@ -32,6 +32,8 @@ target_sources(KF5WidgetsAddons PRIVATE
   kled.cpp
   kmessagebox.cpp
   kmessagebox_p.cpp
+  kmodifierkeystatus.cpp
+  kmodifierkeystatusprovider.cpp
   kmultitabbar.cpp
   kstandardguiitem.cpp
   kurllabel.cpp # Not good enough quality. Needs to use QUrl instead of QString and should not inherit QLabel, but hold it as a member instead.
@@ -125,6 +127,25 @@ set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VER
                                                   EXPORT_NAME WidgetsAddons
 )
 
+if (X11_FOUND AND X11_Xkb_FOUND AND Qt5X11Extras_FOUND AND XCB_XCB_FOUND)
+    add_library(kmodifierkey_xcb MODULE kmodifierkeystatusprovider_xcb.cpp)
+    target_include_directories (kmodifierkey_xcb PRIVATE
+        ${X11_Xkb_INCLUDE_PATH}
+        ${X11_Xlib_INCLUDE_PATH}
+        ${XCB_XCB_INCLUDE_DIR}
+    )
+    target_link_libraries(kmodifierkey_xcb PRIVATE
+                          ${X11_LIBRARIES}
+                          ${XCB_XCB_LIBRARY}
+                          Qt5::X11Extras
+                          KF5::WidgetsAddons
+    )
+    set_target_properties(kmodifierkey_xcb PROPERTIES
+                          LIBRARY_OUTPUT_DIRECTORY "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/kf5/kwidgetsaddons/kmodifierkey/"
+    )
+    install(TARGETS kmodifierkey_xcb DESTINATION "${KDE_INSTALL_PLUGINDIR}/kf5/kwidgetsaddons/kmodifierkey/")
+endif ()
+
 ecm_generate_headers(KWidgetsAddons_HEADERS
   HEADER_NAMES
   KAcceleratorManager
@@ -147,6 +168,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KLed
   KMessageBox
   KMessageBoxDontAskAgainInterface
+  KModifierKeyStatus
   KMultiTabBar,KMultiTabBarButton,KMultiTabBarTab
   KNewPasswordWidget
   KPopupFrame
@@ -236,6 +258,7 @@ if (PythonModuleGeneration_FOUND)
       kled.h
       kmessagebox.h
       kmessageboxdontaskagaininterface.h
+      kmodifierkeystatus.h
       kmultitabbar.h
       knewpasswordwidget.h
       kpopupframe.h
@@ -297,6 +320,7 @@ install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TA
 install(FILES
   ${KWidgetsAddons_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_export.h
+  kmodifierkeystatusprovider_p.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons COMPONENT Devel
 )
 
