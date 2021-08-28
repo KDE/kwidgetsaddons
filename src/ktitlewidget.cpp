@@ -157,7 +157,7 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     titleFrame->setAutoFillBackground(true);
     titleFrame->setFrameShape(QFrame::StyledPanel);
     titleFrame->setFrameShadow(QFrame::Plain);
-    titleFrame->setBackgroundRole(QPalette::Base);
+    titleFrame->setBackgroundRole(QPalette::Window);
     titleFrame->setContentsMargins(0, 0, 0, 0);
 
     // default image / text part start
