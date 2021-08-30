@@ -89,7 +89,7 @@ void KPasswordDialogPrivate::init()
     if (m_flags & KPasswordDialog::ShowUsernameLine) {
         ui.userEdit->setFocus();
         ui.credentialsGroup->setFocusProxy(ui.userEdit);
-        QObject::connect(ui.userEdit, &QLineEdit::returnPressed, ui.passEdit, QOverload<>::of(&QWidget::setFocus));
+        QObject::connect(ui.userEdit, &QLineEdit::returnPressed, ui.passEdit, qOverload<>(&QWidget::setFocus));
     } else {
         ui.userNameLabel->hide();
         ui.userEdit->hide();
@@ -355,7 +355,7 @@ void KPasswordDialog::setKnownLogins(const QMap<QString, QString> &knownLogins)
         setTabOrder(d->ui.anonymousRadioButton, d->ui.domainEdit);
         setTabOrder(d->ui.domainEdit, d->ui.passEdit);
         setTabOrder(d->ui.passEdit, d->ui.keepCheckBox);
-        connect(d->ui.userEdit, &QLineEdit::returnPressed, d->ui.passEdit, QOverload<>::of(&QWidget::setFocus));
+        connect(d->ui.userEdit, &QLineEdit::returnPressed, d->ui.passEdit, qOverload<>(&QWidget::setFocus));
     }
 
     d->knownLogins = knownLogins;

@@ -88,8 +88,8 @@ void KSelectActionPrivate::init()
     q_ptr->setEnabled(false);
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
     // forward deprecated signals to undeprecated, to be backward-compatible to unported subclasses
-    QObject::connect(q_ptr, QOverload<int>::of(&KSelectAction::triggered), q_ptr, &KSelectAction::indexTriggered);
-    QObject::connect(q_ptr, QOverload<const QString &>::of(&KSelectAction::triggered), q_ptr, &KSelectAction::textTriggered);
+    QObject::connect(q_ptr, qOverload<int>(&KSelectAction::triggered), q_ptr, &KSelectAction::indexTriggered);
+    QObject::connect(q_ptr, qOverload<const QString &>(&KSelectAction::triggered), q_ptr, &KSelectAction::textTriggered);
 #endif
 }
 
@@ -583,7 +583,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
             d->comboBoxDeleted(comboBox);
         });
 
-        connect(comboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [d](int value) {
+        connect(comboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [d](int value) {
             d->comboBoxCurrentIndexChanged(value);
         });
 

@@ -469,11 +469,11 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->sectionCombo->addItems(s_data()->sectionList());
     d->blockCombo->setMinimumWidth(QFontMetrics(QWidget::font()).averageCharWidth() * 25);
 
-    connect(d->sectionCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index) {
+    connect(d->sectionCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int index) {
         d->sectionSelected(index);
     });
 
-    connect(d->blockCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int index) {
+    connect(d->blockCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int index) {
         d->blockSelected(index);
     });
 
@@ -490,7 +490,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->fontSizeSpinBox->setSingleStep(1);
     d->fontSizeSpinBox->setToolTip(tr("Set font size", "@info:tooltip"));
 
-    connect(d->fontCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this]() {
+    connect(d->fontCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this]() {
         d->fontSelected();
     });
     connect(d->fontSizeSpinBox, &QSpinBox::valueChanged, this, [this]() {

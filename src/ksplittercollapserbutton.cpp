@@ -183,7 +183,7 @@ KSplitterCollapserButton::KSplitterCollapserButton(QWidget *childWidget, QSplitt
 
     d->opacityTimeLine = new QTimeLine(TIMELINE_DURATION, this);
     d->opacityTimeLine->setFrameRange(int(MINIMUM_OPACITY * 1000), 1000);
-    connect(d->opacityTimeLine, &QTimeLine::valueChanged, this, QOverload<>::of(&QWidget::update));
+    connect(d->opacityTimeLine, &QTimeLine::valueChanged, this, qOverload<>(&QWidget::update));
 
     d->childWidget = childWidget;
     d->childWidget->installEventFilter(this);
