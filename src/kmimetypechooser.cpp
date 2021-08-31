@@ -156,7 +156,7 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
         selMimeTypes = q->mimeTypes();
     }
 
-    QMap<QString, QStandardItem *> groupItems;
+    std::vector<QStandardItem *> parentGroups;
     QMimeDatabase db;
     const QList<QMimeType> mimetypes = db.allMimeTypes();
 
@@ -175,8 +175,12 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
         }
 
         QStandardItem *groupItem;
-        QMap<QString, QStandardItem *>::Iterator mit = groupItems.find(maj);
-        if (mit == groupItems.end()) {
+
+        auto it = std::find_if(parentGroups.cbegin(), parentGroups.cend(), [maj](const QStandardItem *item) {
+            return maj == item->text();
+        });
+
+        if (it == parentGroups.cend()) {
             groupItem = new QStandardItem(maj);
             groupItem->setFlags(Qt::ItemIsEnabled);
             // a dud item to fill the patterns column next to "groupItem" and setFlags() on it
@@ -185,12 +189,12 @@ void KMimeTypeChooserPrivate::loadMimeTypes(const QStringList &_selectedMimeType
             QStandardItem *thirdColumn = new QStandardItem();
             thirdColumn->setFlags(Qt::NoItemFlags);
             m_model->appendRow({groupItem, secondColumn, thirdColumn});
-            groupItems.insert(maj, groupItem);
+            parentGroups.push_back(groupItem);
             if (maj == defaultgroup) {
                 idefault = groupItem;
             }
         } else {
-            groupItem = mit.value();
+            groupItem = *it;
         }
 
         // e.g. "html", "plain", "mp4"
