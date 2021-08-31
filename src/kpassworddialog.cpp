@@ -17,6 +17,8 @@
 #include <QStyleOption>
 #include <QTimer>
 
+#include "kmodifierkeystatus.h"
+
 #include <ktitlewidget.h>
 
 #include "ui_kpassworddialog.h"
@@ -35,11 +37,13 @@ public:
 
     void updateFields();
     void init();
+    void setCapsLockText(bool show);
 
     KPasswordDialog *const q;
     Ui_KPasswordDialog ui;
     QMap<QString, QString> knownLogins;
     QComboBox *userEditCombo = nullptr;
+    KModifierKeyStatus *m_modifierKeyStatus = nullptr;
     QIcon icon;
     KPasswordDialog::KPasswordDialogFlags m_flags;
     unsigned int commentRow = 0;
@@ -119,6 +123,25 @@ void KPasswordDialogPrivate::init()
     QRect desktop = q->topLevelWidget()->screen()->geometry();
     q->setMinimumWidth(qMin(1000, qMax(q->sizeHint().width(), desktop.width() / 4)));
     q->setIcon(QIcon::fromTheme(QStringLiteral("dialog-password")));
+
+    m_modifierKeyStatus = new KModifierKeyStatus(q);
+    q->connect(m_modifierKeyStatus, &KModifierKeyStatus::keyLocked, q, [this](Qt::Key key, bool locked) {
+        setCapsLockText(key == Qt::Key_CapsLock && locked);
+    });
+
+    setCapsLockText(m_modifierKeyStatus->isKeyLocked(Qt::Key_CapsLock));
+}
+
+void KPasswordDialogPrivate::setCapsLockText(bool show)
+{
+    if (show) {
+        ui.modifierKeyLabel->setText(QObject::tr("Caps Lock is on!"));
+        QFont font = ui.modifierKeyLabel->font();
+        font.setItalic(true);
+        ui.modifierKeyLabel->setFont(font);
+    } else {
+        ui.modifierKeyLabel->setText(QString());
+    }
 }
 
 void KPasswordDialog::setIcon(const QIcon &icon)

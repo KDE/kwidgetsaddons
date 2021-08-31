@@ -22,6 +22,8 @@
  *
  * A dialog for requesting a password and optionally a login from the end user.
  *
+ * Since 5.87, the dialog also shows a text label if Caps Lock is on.
+ *
  * \section usage Usage Example
  *
  * Requesting a simple password, asynchronous
