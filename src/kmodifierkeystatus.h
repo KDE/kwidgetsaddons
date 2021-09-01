@@ -9,8 +9,9 @@
 
 #include <kwidgetsaddons_export.h>
 
-#include <QExplicitlySharedDataPointer>
 #include <QObject>
+
+#include <memory>
 
 class KModifierKeyStatusProvider;
 
@@ -177,7 +178,7 @@ Q_SIGNALS:
 
 private:
     Q_DISABLE_COPY(KModifierKeyStatus)
-    QExplicitlySharedDataPointer<KModifierKeyStatusProvider> const p; // krazy:exclude=dpointer
+    std::unique_ptr<KModifierKeyStatusProvider> const m_provider;
 };
 
 #endif

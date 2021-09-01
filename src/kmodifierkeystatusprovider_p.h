@@ -18,7 +18,7 @@
  * the different supported platforms.
  * @internal
  */
-class KWIDGETSADDONS_EXPORT KModifierKeyStatusProvider : public QObject, public QSharedData
+class KWIDGETSADDONS_EXPORT KModifierKeyStatusProvider : public QObject
 {
     Q_OBJECT
 
