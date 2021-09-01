@@ -225,29 +225,34 @@ bool KModifierKeyStatusProviderXcb::nativeEventFilter(const QByteArray &eventTyp
 
 void KModifierKeyStatusProviderXcb::xkbModifierStateChanged(unsigned char mods, unsigned char latched_mods, unsigned char locked_mods)
 {
-    // detect keyboard modifiers
-    ModifierFlags newState;
-
     QHash<Qt::Key, unsigned int>::const_iterator it;
     QHash<Qt::Key, unsigned int>::const_iterator end = m_xkbModifiers.constEnd();
     for (it = m_xkbModifiers.constBegin(); it != end; ++it) {
-        if (!m_modifierStates.contains(it.key())) {
+        const auto modifier = it.key();
+        const auto mask = it.value();
+
+        auto modIt = std::find_if(m_modifierStates.cbegin(), m_modifierStates.cend(), [=](const ModifierKeyInfo &info) {
+            return modifier == info.modKey;
+        });
+
+        if (modIt == m_modifierStates.cend()) {
             continue;
         }
-        newState = Nothing;
+
+        ModifierFlags newFlags = Nothing;
 
         // determine the new state
-        if (mods & it.value()) {
-            newState |= Pressed;
+        if (mods & mask) {
+            newFlags |= Pressed;
         }
-        if (latched_mods & it.value()) {
-            newState |= Latched;
+        if (latched_mods & mask) {
+            newFlags |= Latched;
         }
-        if (locked_mods & it.value()) {
-            newState |= Locked;
+        if (locked_mods & mask) {
+            newFlags |= Locked;
         }
 
-        stateUpdated(it.key(), newState);
+        stateUpdated({modifier, newFlags});
     }
 }
 
@@ -315,24 +320,27 @@ void KModifierKeyStatusProviderXcb::xkbUpdateModifierMapping()
 
         if (mask != 0) {
             m_xkbModifiers.insert(it->key, mask);
-            // previously unknown modifier
-            if (!m_modifierStates.contains(it->key)) {
-                m_modifierStates.insert(it->key, Nothing);
+
+            auto modIt = std::find_if(m_modifierStates.cbegin(), m_modifierStates.cend(), [=](const ModifierKeyInfo &info) {
+                return it->key == info.modKey;
+            });
+            if (modIt == m_modifierStates.cend()) { // previously unknown modifier
+                m_modifierStates.push_back({it->key, Nothing});
                 Q_EMIT keyAdded(it->key);
             }
         }
     }
 
-    // remove modifiers which are no longer available
-    QMutableHashIterator<Qt::Key, ModifierFlags> i(m_modifierStates);
-    while (i.hasNext()) {
-        i.next();
-        if (!m_xkbModifiers.contains(i.key())) {
-            Qt::Key key = i.key();
-            i.remove();
-            Q_EMIT keyRemoved(key);
+    // Remove modifiers which are no longer available
+    auto stateIt = std::remove_if(m_modifierStates.begin(), m_modifierStates.end(), [=](const ModifierKeyInfo &info) {
+        if (!m_xkbModifiers.contains(info.modKey)) {
+            Q_EMIT keyRemoved(info.modKey);
+            return true;
+        } else {
+            return false;
         }
-    }
+    });
+    m_modifierStates.erase(stateIt, m_modifierStates.cend());
 
     if (xkb != nullptr) {
         XkbFreeKeyboard(xkb, 0, true);

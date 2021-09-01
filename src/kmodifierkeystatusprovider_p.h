@@ -35,6 +35,8 @@ public:
     KModifierKeyStatusProvider();
     ~KModifierKeyStatusProvider() override;
 
+    bool isFlagSet(Qt::Key key, ModifierFlag flag) const;
+
     /**
      * Detect if a key is pressed.
      * @param key Modifier key to query
@@ -95,10 +97,15 @@ Q_SIGNALS:
     void keyRemoved(Qt::Key key);
 
 protected:
-    void stateUpdated(Qt::Key key, KModifierKeyStatusProvider::ModifierFlags state);
+    struct ModifierKeyInfo {
+        Qt::Key modKey = Qt::Key_unknown;
+        ModifierFlags modFlags = Nothing;
+    };
 
-    // the state of each known modifier
-    QHash<Qt::Key, ModifierFlags> m_modifierStates;
+    void stateUpdated(const ModifierKeyInfo &newInfo);
+
+    // The state of each known modifier
+    std::vector<ModifierKeyInfo> m_modifierStates;
 
     // the state of each known mouse button
     QHash<Qt::MouseButton, bool> m_buttonStates;

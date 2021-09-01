@@ -11,9 +11,7 @@ KModifierKeyStatusProvider::KModifierKeyStatusProvider()
 {
 }
 
-KModifierKeyStatusProvider::~KModifierKeyStatusProvider()
-{
-}
+KModifierKeyStatusProvider::~KModifierKeyStatusProvider() = default;
 
 bool KModifierKeyStatusProvider::setKeyLatched(Qt::Key key, bool latched)
 {
@@ -29,31 +27,28 @@ bool KModifierKeyStatusProvider::setKeyLocked(Qt::Key key, bool locked)
     return false;
 }
 
+bool KModifierKeyStatusProvider::isFlagSet(Qt::Key key, ModifierFlag flag) const
+{
+    auto it = std::find_if(m_modifierStates.cbegin(), m_modifierStates.cend(), [=](const ModifierKeyInfo &info) {
+        return key == info.modKey;
+    });
+
+    return it != m_modifierStates.cend() ? it->modFlags & flag : false;
+}
+
 bool KModifierKeyStatusProvider::isKeyPressed(Qt::Key key) const
 {
-    auto it = m_modifierStates.constFind(key);
-    if (it != m_modifierStates.constEnd()) {
-        return *it & Pressed;
-    }
-    return false;
+    return isFlagSet(key, Pressed);
 }
 
 bool KModifierKeyStatusProvider::isKeyLatched(Qt::Key key) const
 {
-    auto it = m_modifierStates.constFind(key);
-    if (it != m_modifierStates.constEnd()) {
-        return *it & Latched;
-    }
-    return false;
+    return isFlagSet(key, Latched);
 }
 
 bool KModifierKeyStatusProvider::isKeyLocked(Qt::Key key) const
 {
-    auto it = m_modifierStates.constFind(key);
-    if (it != m_modifierStates.constEnd()) {
-        return *it & Locked;
-    }
-    return false;
+    return isFlagSet(key, Locked);
 }
 
 bool KModifierKeyStatusProvider::isButtonPressed(Qt::MouseButton button) const
@@ -66,23 +61,37 @@ bool KModifierKeyStatusProvider::isButtonPressed(Qt::MouseButton button) const
 
 bool KModifierKeyStatusProvider::knowsKey(Qt::Key key) const
 {
-    return m_modifierStates.contains(key);
+    auto it = std::find_if(m_modifierStates.cbegin(), m_modifierStates.cend(), [=](const ModifierKeyInfo &info) {
+        return key == info.modKey;
+    });
+
+    return it != m_modifierStates.cend();
 }
 
-void KModifierKeyStatusProvider::stateUpdated(Qt::Key key, KModifierKeyStatusProvider::ModifierFlags newState)
+void KModifierKeyStatusProvider::stateUpdated(const ModifierKeyInfo &newInfo)
 {
-    auto &state = m_modifierStates[key];
-    if (newState != state) {
-        const auto difference = (newState ^ state);
-        state = newState;
+    auto key = newInfo.modKey;
+    auto newFlags = newInfo.modFlags;
+
+    auto it = std::find_if(m_modifierStates.begin(), m_modifierStates.end(), [=](const ModifierKeyInfo &info) {
+        return key == info.modKey;
+    });
+
+    Q_ASSERT(it != m_modifierStates.cend());
+
+    auto &flags = it->modFlags;
+
+    if (newFlags != flags) {
+        const auto difference = (newFlags ^ flags);
+        flags = newFlags;
         if (difference & Pressed) {
-            Q_EMIT keyPressed(key, newState & Pressed);
+            Q_EMIT keyPressed(key, newFlags & Pressed);
         }
         if (difference & Latched) {
-            Q_EMIT keyLatched(key, newState & Latched);
+            Q_EMIT keyLatched(key, newFlags & Latched);
         }
         if (difference & Locked) {
-            Q_EMIT keyLocked(key, newState & Locked);
+            Q_EMIT keyLocked(key, newFlags & Locked);
         }
     }
 }
