@@ -44,8 +44,13 @@ private:
     // Maps a Qt::Key to a modifier mask
     std::vector<KeyMask> m_xkbModifiers;
 
+    struct MouseButtonMask {
+        Qt::MouseButton mouseButton = Qt::NoButton;
+        unsigned short mask = 0;
+    };
+
     // maps a Qt::MouseButton to a button mask
-    QHash<Qt::MouseButton, unsigned short> m_xkbButtons;
+    std::vector<MouseButtonMask> m_xkbMouseButtons;
 };
 
 #endif

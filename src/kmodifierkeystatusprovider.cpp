@@ -53,10 +53,11 @@ bool KModifierKeyStatusProvider::isKeyLocked(Qt::Key key) const
 
 bool KModifierKeyStatusProvider::isButtonPressed(Qt::MouseButton button) const
 {
-    if (m_buttonStates.contains(button)) {
-        return m_buttonStates[button];
-    }
-    return false;
+    auto it = std::find_if(m_MouseBtnStates.cbegin(), m_MouseBtnStates.cend(), [=](const MouseButtonInfo &info) {
+        return button == info.mouseButton;
+    });
+
+    return it != m_MouseBtnStates.cend() ? it->state : false;
 }
 
 bool KModifierKeyStatusProvider::knowsKey(Qt::Key key) const

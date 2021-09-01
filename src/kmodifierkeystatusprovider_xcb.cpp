@@ -88,11 +88,11 @@ KModifierKeyStatusProviderXcb::KModifierKeyStatusProviderXcb()
     xkbUpdateModifierMapping();
 
     // add known pointer buttons
-    m_xkbButtons.insert(Qt::LeftButton, Button1Mask);
-    m_xkbButtons.insert(Qt::MiddleButton, Button2Mask);
-    m_xkbButtons.insert(Qt::RightButton, Button3Mask);
-    m_xkbButtons.insert(Qt::XButton1, Button4Mask);
-    m_xkbButtons.insert(Qt::XButton2, Button5Mask);
+    m_xkbMouseButtons.push_back({Qt::LeftButton, Button1Mask});
+    m_xkbMouseButtons.push_back({Qt::MiddleButton, Button2Mask});
+    m_xkbMouseButtons.push_back({Qt::RightButton, Button3Mask});
+    m_xkbMouseButtons.push_back({Qt::XButton1, Button4Mask});
+    m_xkbMouseButtons.push_back({Qt::XButton2, Button5Mask});
 
     // get the initial state
     if (m_xkbAvailable) {
@@ -267,13 +267,16 @@ void KModifierKeyStatusProviderXcb::xkbButtonStateChanged(unsigned short ptr_but
     // detect mouse button states
     bool newButtonState;
 
-    QHash<Qt::MouseButton, unsigned short>::const_iterator it;
-    QHash<Qt::MouseButton, unsigned short>::const_iterator end = m_xkbButtons.constEnd();
-    for (it = m_xkbButtons.constBegin(); it != end; ++it) {
-        newButtonState = (ptr_buttons & it.value());
-        if (newButtonState != m_buttonStates[it.key()]) {
-            m_buttonStates[it.key()] = newButtonState;
-            Q_EMIT buttonPressed(it.key(), newButtonState);
+    for (const auto [mouseBtn, mask] : m_xkbMouseButtons) {
+        auto btnIt = std::find_if(m_MouseBtnStates.begin(), m_MouseBtnStates.end(), [=](const MouseButtonInfo &info) {
+            return mouseBtn == info.mouseButton;
+        });
+
+        newButtonState = (ptr_buttons & mask);
+
+        if (btnIt != m_MouseBtnStates.end() && newButtonState != btnIt->state) {
+            btnIt->state = newButtonState;
+            Q_EMIT buttonPressed(mouseBtn, newButtonState);
         }
     }
 }

@@ -107,8 +107,13 @@ protected:
     // The state of each known modifier
     std::vector<ModifierKeyInfo> m_modifierStates;
 
+    struct MouseButtonInfo {
+        Qt::MouseButton mouseButton = Qt::NoButton;
+        bool state = false;
+    };
+
     // the state of each known mouse button
-    QHash<Qt::MouseButton, bool> m_buttonStates;
+    std::vector<MouseButtonInfo> m_MouseBtnStates;
 };
 
 Q_DECLARE_INTERFACE(KModifierKeyStatusProvider, "org.kde.kwidgetsaddons.KModifierKeyStatusProvider")
