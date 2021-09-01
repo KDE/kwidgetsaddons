@@ -14,9 +14,19 @@ class KModifierKeyStatusProviderXcb : public KModifierKeyStatusProvider, public 
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.kwidgetsaddons.KModifierKeyStatusProvider.XCB")
+
 public:
     KModifierKeyStatusProviderXcb();
     ~KModifierKeyStatusProviderXcb();
+
+    struct KeyMask {
+        Qt::Key xkbKey = Qt::Key_unknown;
+        unsigned int mask = 0;
+    };
+
+    using KeyMaskIterator = std::vector<KeyMask>::const_iterator;
+
+    KeyMaskIterator findKey(Qt::Key key) const;
 
     bool setKeyLatched(Qt::Key key, bool latched) override;
     bool setKeyLocked(Qt::Key key, bool locked) override;
@@ -31,8 +41,9 @@ private:
     int m_xkbEv;
     bool m_xkbAvailable;
 
-    // maps a Qt::Key to a modifier mask
-    QHash<Qt::Key, unsigned int> m_xkbModifiers;
+    // Maps a Qt::Key to a modifier mask
+    std::vector<KeyMask> m_xkbModifiers;
+
     // maps a Qt::MouseButton to a button mask
     QHash<Qt::MouseButton, unsigned short> m_xkbButtons;
 };

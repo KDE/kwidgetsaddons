@@ -112,22 +112,33 @@ KModifierKeyStatusProviderXcb::~KModifierKeyStatusProviderXcb()
     }
 }
 
+KModifierKeyStatusProviderXcb::KeyMaskIterator KModifierKeyStatusProviderXcb::findKey(Qt::Key key) const
+{
+    return std::find_if(m_xkbModifiers.cbegin(), m_xkbModifiers.cend(), [=](const KeyMask &km) {
+        return key == km.xkbKey;
+    });
+}
+
 bool KModifierKeyStatusProviderXcb::setKeyLatched(Qt::Key key, bool latched)
 {
-    if (!m_xkbModifiers.contains(key)) {
+    auto it = findKey(key);
+
+    if (it == m_xkbModifiers.cend()) {
         return false;
     }
 
-    return XkbLatchModifiers(QX11Info::display(), XkbUseCoreKbd, m_xkbModifiers[key], latched ? m_xkbModifiers[key] : 0);
+    return XkbLatchModifiers(QX11Info::display(), XkbUseCoreKbd, it->mask, latched ? it->mask : 0);
 }
 
 bool KModifierKeyStatusProviderXcb::setKeyLocked(Qt::Key key, bool locked)
 {
-    if (!m_xkbModifiers.contains(key)) {
+    auto it = findKey(key);
+
+    if (it == m_xkbModifiers.cend()) {
         return false;
     }
 
-    return XkbLockModifiers(QX11Info::display(), XkbUseCoreKbd, m_xkbModifiers[key], locked ? m_xkbModifiers[key] : 0);
+    return XkbLockModifiers(QX11Info::display(), XkbUseCoreKbd, it->mask, locked ? it->mask : 0);
 }
 
 // HACK: xcb-xkb is not yet a public part of xcb. Because of that we have to include the event structure.
@@ -225,14 +236,9 @@ bool KModifierKeyStatusProviderXcb::nativeEventFilter(const QByteArray &eventTyp
 
 void KModifierKeyStatusProviderXcb::xkbModifierStateChanged(unsigned char mods, unsigned char latched_mods, unsigned char locked_mods)
 {
-    QHash<Qt::Key, unsigned int>::const_iterator it;
-    QHash<Qt::Key, unsigned int>::const_iterator end = m_xkbModifiers.constEnd();
-    for (it = m_xkbModifiers.constBegin(); it != end; ++it) {
-        const auto modifier = it.key();
-        const auto mask = it.value();
-
+    for (const auto [key, mask] : m_xkbModifiers) {
         auto modIt = std::find_if(m_modifierStates.cbegin(), m_modifierStates.cend(), [=](const ModifierKeyInfo &info) {
-            return modifier == info.modKey;
+            return key == info.modKey;
         });
 
         if (modIt == m_modifierStates.cend()) {
@@ -252,7 +258,7 @@ void KModifierKeyStatusProviderXcb::xkbModifierStateChanged(unsigned char mods, 
             newFlags |= Locked;
         }
 
-        stateUpdated({modifier, newFlags});
+        stateUpdated({key, newFlags});
     }
 }
 
@@ -319,7 +325,7 @@ void KModifierKeyStatusProviderXcb::xkbUpdateModifierMapping()
         }
 
         if (mask != 0) {
-            m_xkbModifiers.insert(it->key, mask);
+            m_xkbModifiers.push_back({it->key, mask});
 
             auto modIt = std::find_if(m_modifierStates.cbegin(), m_modifierStates.cend(), [=](const ModifierKeyInfo &info) {
                 return it->key == info.modKey;
@@ -333,7 +339,7 @@ void KModifierKeyStatusProviderXcb::xkbUpdateModifierMapping()
 
     // Remove modifiers which are no longer available
     auto stateIt = std::remove_if(m_modifierStates.begin(), m_modifierStates.end(), [=](const ModifierKeyInfo &info) {
-        if (!m_xkbModifiers.contains(info.modKey)) {
+        if (findKey(info.modKey) == m_xkbModifiers.cend()) {
             Q_EMIT keyRemoved(info.modKey);
             return true;
         } else {
