@@ -1037,15 +1037,9 @@ void KCharSelectPrivate::search()
     searchMode = true;
     QVector<uint> contents = s_data()->find(searchLine->text());
     if (!allPlanesEnabled) {
-        QVector<uint>::iterator it = contents.begin();
-        while (it != contents.end()) {
-            if (QChar::requiresSurrogates(*it)) {
-                it = contents.erase(it);
-            } else {
-                ++it;
-            }
-        }
+        contents.erase(std::remove_if(contents.begin(), contents.end(), QChar::requiresSurrogates), contents.end());
     }
+
     charTable->setContents(contents);
     Q_EMIT q->displayedCharsChanged();
     if (!contents.isEmpty()) {
