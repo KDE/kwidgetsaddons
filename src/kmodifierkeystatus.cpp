@@ -43,11 +43,6 @@ bool KModifierKeyStatus::knowsKey(Qt::Key key) const
     return m_provider->knowsKey(key);
 }
 
-const QList<Qt::Key> KModifierKeyStatus::knownKeys() const
-{
-    return m_provider->knownKeys();
-}
-
 bool KModifierKeyStatus::isKeyPressed(Qt::Key key) const
 {
     return m_provider->isKeyPressed(key);

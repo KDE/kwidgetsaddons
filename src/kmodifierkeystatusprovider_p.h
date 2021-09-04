@@ -86,12 +86,6 @@ public:
      */
     bool knowsKey(Qt::Key key) const;
 
-    /**
-     * Get a list of known keys
-     * @return List of known keys.
-     */
-    const QList<Qt::Key> knownKeys() const;
-
 Q_SIGNALS:
     void keyLatched(Qt::Key key, bool state);
     void keyLocked(Qt::Key key, bool state);

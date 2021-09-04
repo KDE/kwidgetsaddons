@@ -69,11 +69,6 @@ bool KModifierKeyStatusProvider::knowsKey(Qt::Key key) const
     return m_modifierStates.contains(key);
 }
 
-const QList<Qt::Key> KModifierKeyStatusProvider::knownKeys() const
-{
-    return m_modifierStates.keys();
-}
-
 void KModifierKeyStatusProvider::stateUpdated(Qt::Key key, KModifierKeyStatusProvider::ModifierFlags newState)
 {
     auto &state = m_modifierStates[key];

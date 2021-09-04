@@ -59,13 +59,6 @@ public:
     bool knowsKey(Qt::Key key) const;
 
     /**
-     * Get a list of known keys.
-     *
-     * @return A list of known keys of which states will be reported.
-     */
-    const QList<Qt::Key> knownKeys() const;
-
-    /**
      * Synchronously check if a key is pressed.
      *
      * @param key the key to check
