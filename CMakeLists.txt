@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(KF_VERSION "5.86.0") # handled by release scripts
+set(KF_VERSION "5.87.0") # handled by release scripts
 project(KWidgetsAddons VERSION ${KF_VERSION})
 
 include(FeatureSummary)
