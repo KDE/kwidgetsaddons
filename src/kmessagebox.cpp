@@ -474,8 +474,6 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog,
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), buttonYes);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), buttonNo);
 
-    buttonBox->button(QDialogButtonBox::Yes)->setDefault(true);
-
     applyOptions(dialog, options);
 
     bool checkboxResult = false;
@@ -535,7 +533,6 @@ static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), buttonYes);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), buttonNo);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Cancel), buttonCancel);
-    buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
 
     applyOptions(dialog, options);
 
@@ -612,7 +609,6 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog,
     buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), buttonYes);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), buttonNo);
-    buttonBox->button(QDialogButtonBox::No)->setDefault(true);
 
     applyOptions(dialog, options);
 
@@ -682,7 +678,6 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog,
     buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), buttonContinue);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), buttonCancel);
-    buttonBox->button(QDialogButtonBox::No)->setDefault(true);
 
     applyOptions(dialog, options);
 
@@ -779,7 +774,6 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog,
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), buttonYes);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), buttonNo);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Cancel), buttonCancel);
-    buttonBox->button(QDialogButtonBox::Cancel)->setDefault(true);
 
     applyOptions(dialog, options);
 
@@ -832,7 +826,6 @@ static void errorListInternal(QDialog *dialog, const QString &text, const QStrin
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok);
-    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
     applyOptions(dialog, options);
 
@@ -852,7 +845,6 @@ static void detailedErrorInternal(QDialog *dialog, const QString &text, const QS
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->addButton(QDialogButtonBox::Ok);
     buttonBox->button(QDialogButtonBox::Ok)->setFocus();
-    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
     applyOptions(dialog, options);
 
@@ -875,7 +867,6 @@ static void sorryInternal(QDialog *dialog, const QString &text, const QString &c
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok);
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
-    buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
     applyOptions(dialog, options);
 
