@@ -466,7 +466,9 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->blockCombo->setToolTip(tr("Select a block to be displayed", "@info:tooltip"));
     d->blockCombo->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     comboLayout->addWidget(d->blockCombo, 1);
-    d->sectionCombo->addItems(s_data()->sectionList());
+    QStringList sectionList = s_data()->sectionList();
+    sectionList << QCoreApplication::translate("KCharSelectData", "All", "KCharSelect section name");
+    d->sectionCombo->addItems(sectionList);
     d->blockCombo->setMinimumWidth(QFontMetrics(QWidget::font()).averageCharWidth() * 25);
 
     connect(d->sectionCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int index) {
@@ -562,7 +564,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         setFocusProxy(d->charTable);
     }
 
-    d->sectionSelected(0); // this will also call blockSelected(0)
+    d->sectionSelected(1); // this will also call blockSelected(0)
     setCurrentCodePoint(QChar::Null);
 
     d->historyEnabled = true;
@@ -766,12 +768,15 @@ void KCharSelectPrivate::updateCurrentChar(uint c)
         Q_EMIT q->currentCharChanged(QChar(c));
     }
     Q_EMIT q->currentCodePointChanged(c);
-    if (searchMode) {
-        // we are in search mode. make the two comboboxes show the section & block for this character.
-        //(when we are not in search mode the current character always belongs to the current section & block.)
+    if (searchMode || sectionCombo->currentIndex() == 0) {
+        // we are in search mode or all characters are shown. make the two comboboxes show the section & block for this character (only the blockCombo for the
+        // all characters mode).
+        //(when we are not in search mode nor in the all characters mode the current character always belongs to the current section & block.)
         int block = s_data()->blockIndex(c);
-        int section = s_data()->sectionIndex(block);
-        sectionCombo->setCurrentIndex(section);
+        if (searchMode) {
+            int section = s_data()->sectionIndex(block);
+            sectionCombo->setCurrentIndex(section);
+        }
         int index = blockCombo->findData(block);
         if (index != -1) {
             blockCombo->setCurrentIndex(index);
@@ -973,6 +978,7 @@ QString KCharSelectPrivate::createLinks(QString s)
 void KCharSelectPrivate::sectionSelected(int index)
 {
     blockCombo->clear();
+    QVector<uint> chars;
     const QVector<int> blocks = s_data()->sectionContents(index);
     for (int block : blocks) {
         if (!allPlanesEnabled) {
@@ -982,8 +988,16 @@ void KCharSelectPrivate::sectionSelected(int index)
             }
         }
         blockCombo->addItem(s_data()->blockName(block), QVariant(block));
+        if (index == 0) {
+            chars << s_data()->blockContents(block);
+        }
     }
-    blockCombo->setCurrentIndex(0);
+    if (index == 0) {
+        charTable->setContents(chars);
+        updateCurrentChar(charTable->chr());
+    } else {
+        blockCombo->setCurrentIndex(0);
+    }
 }
 
 void KCharSelectPrivate::blockSelected(int index)
@@ -996,10 +1010,15 @@ void KCharSelectPrivate::blockSelected(int index)
         // we are in search mode, so don't fill the table with this block.
         return;
     }
-
     int block = blockCombo->itemData(index).toInt();
+    if (sectionCombo->currentIndex() == 0 && block == s_data()->blockIndex(charTable->chr())) {
+        // the selected block already contains the selected character
+        return;
+    }
     const QVector<uint> contents = s_data()->blockContents(block);
-    charTable->setContents(contents);
+    if (sectionCombo->currentIndex() > 0) {
+        charTable->setContents(contents);
+    }
     Q_EMIT q->displayedCharsChanged();
     charTable->setChar(contents[0]);
 }

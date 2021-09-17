@@ -242,6 +242,7 @@ QVector<uint> KCharSelectData::blockContents(int block)
 
 QVector<int> KCharSelectData::sectionContents(int section)
 {
+    section -= 1;
     if (!openDataFile()) {
         return QVector<int>();
     }
@@ -260,7 +261,7 @@ QVector<int> KCharSelectData::sectionContents(int section)
 
     for (int i = 0; i <= max; i++) {
         const quint16 currSection = qFromLittleEndian<quint16>(data + offsetBegin + i * 4);
-        if (currSection == section) {
+        if (currSection == section || section < 0) {
             res.append(qFromLittleEndian<quint16>(data + offsetBegin + i * 4 + 2));
         }
     }
@@ -281,6 +282,7 @@ QStringList KCharSelectData::sectionList()
     const char *data = dataFile.constData();
     QStringList list;
     quint32 i = stringBegin;
+    list.append(QCoreApplication::translate("KCharSelectData", "All", "KCharSelect section name"));
     while (i < stringEnd) {
         list.append(QCoreApplication::translate("KCharSelectData", data + i, "KCharSelect section name"));
         i += qstrlen(data + i) + 1;
@@ -411,7 +413,7 @@ int KCharSelectData::sectionIndex(int block)
 
     for (int i = 0; i <= max; i++) {
         if (qFromLittleEndian<quint16>(data + offsetBegin + i * 4 + 2) == block) {
-            return qFromLittleEndian<quint16>(data + offsetBegin + i * 4);
+            return qFromLittleEndian<quint16>(data + offsetBegin + i * 4) + 1;
         }
     }
 
@@ -442,9 +444,14 @@ QString KCharSelectData::blockName(int index)
 
 QString KCharSelectData::sectionName(int index)
 {
+    if (index == 0) {
+        return QCoreApplication::translate("KCharSelectData", "All", "KCharselect unicode section name");
+    }
     if (!openDataFile()) {
         return QString();
     }
+
+    index -= 1;
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
     const quint32 stringBegin = qFromLittleEndian<quint32>(udata + 24);
