@@ -35,13 +35,13 @@ public:
         qreal factor;
         switch (level) {
         case 1:
-            factor = 1.50;
+            factor = 1.35;
             break;
         case 2:
-            factor = 1.30;
+            factor = 1.20;
             break;
         case 3:
-            factor = 1.20;
+            factor = 1.15;
             break;
         case 4:
             factor = 1.10;
@@ -49,7 +49,7 @@ public:
         default:
             factor = 1;
         }
-        const int fontSize = qRound(QApplication::font().pointSize() * factor);
+        const double fontSize = QApplication::font().pointSize() * factor;
         return QStringLiteral("QLabel { font-size: %1pt; color: %2 }").arg(QString::number(fontSize), q->palette().color(QPalette::WindowText).name());
     }
 
