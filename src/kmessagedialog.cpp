@@ -367,6 +367,12 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
     }
 
     // Button connections
+    // QDialogButtonBox internally creates some default connections, e.g. connecting
+    // OK to accepted(); we emit our own done() signal, so first disconnect the default
+    // ones. Otherwise we end up getting two clicked() signals for one button press,
+    // see bug#442332
+    disconnect(d->m_buttonBox, &QDialogButtonBox::clicked, nullptr, nullptr);
+
     connect(d->m_buttonBox, &QDialogButtonBox::clicked, this, [this](QAbstractButton *button) {
         QDialogButtonBox::StandardButton code = d->m_buttonBox->standardButton(button);
         if (code != QDialogButtonBox::NoButton) {
