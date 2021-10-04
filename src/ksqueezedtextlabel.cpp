@@ -61,6 +61,9 @@ QSize KSqueezedTextLabel::minimumSizeHint() const
 
 QSize KSqueezedTextLabel::sizeHint() const
 {
+    if (!isSqueezed()) {
+        return QLabel::sizeHint();
+    }
     int maxWidth = screen()->geometry().width() * 3 / 4;
     QFontMetrics fm(fontMetrics());
     int textWidth = fm.boundingRect(d->fullText).width();

@@ -16,13 +16,17 @@ namespace
 {
 KSqueezedTextLabel *createLabel(const QString &text = QStringLiteral("Squeeze me"))
 {
-    KSqueezedTextLabel *label = new KSqueezedTextLabel(text, nullptr);
+    KSqueezedTextLabel *label = new KSqueezedTextLabel(QStringLiteral(""), nullptr);
     label->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+    // workaround for a QLabel bug, where the sizing for an empty label
+    // is off, if it was initialized to an empty text.
+    label->setText(QStringLiteral("x"));
+    label->setText(text);
     label->show();
     return label;
 }
 
-void squeezeLabel(KSqueezedTextLabel *label, const int pixels = 1)
+void squeezeLabel(KSqueezedTextLabel *label, const int pixels = 10)
 {
     label->resize(label->size().width() - pixels, label->size().height());
 }
@@ -43,10 +47,11 @@ void KSqueezedTextLabelAutotest::testEmptyText()
 void KSqueezedTextLabelAutotest::testElisionOnResize_data()
 {
     QTest::addColumn<QString>("text");
+    QTest::addColumn<int>("squeezePixels");
 
-    QTest::newRow("whitespace text") << "             ";
-    QTest::newRow("normal text") << "Squeeze me";
-    QTest::newRow("rich text") << "<h1>Squeeze me!</h1>";
+    QTest::newRow("whitespace text") << "             " << 10;
+    QTest::newRow("normal text") << "Squeeze me" << 10;
+    QTest::newRow("rich text") << "<h1>Squeeze me!</h1>" << 80;
     // QTest::newRow("multiline text") << "Squeeze me,\nand\nme too.";
     // QTest::newRow("multiline rich text") << "<i>Squeeze</i> me,\n<b>and\nme</b> too.";
 }
@@ -54,6 +59,7 @@ void KSqueezedTextLabelAutotest::testElisionOnResize_data()
 void KSqueezedTextLabelAutotest::testElisionOnResize()
 {
     QFETCH(QString, text);
+    QFETCH(int, squeezePixels);
 
     const QScopedPointer<KSqueezedTextLabel> label(createLabel(text));
 
@@ -62,14 +68,14 @@ void KSqueezedTextLabelAutotest::testElisionOnResize()
     QVERIFY(label->toolTip().isEmpty());
     QVERIFY(!label->isSqueezed());
 
-    squeezeLabel(label.data());
+    squeezeLabel(label.data(), squeezePixels);
 
     QVERIFY(label->text() != text);
     QVERIFY(label->fullText() == text);
     QVERIFY(label->toolTip() == text);
     QVERIFY(label->isSqueezed());
 
-    squeezeLabel(label.data(), -1);
+    squeezeLabel(label.data(), -squeezePixels);
 
     QVERIFY(label->text() == text);
     QVERIFY(label->fullText() == text);
@@ -155,7 +161,7 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     QVERIFY(!label->isSqueezed());
     QCOMPARE(label->size().width(), labelWidth);
     QCOMPARE(label->minimumSizeHint().width(), -1);
-    QCOMPARE(label->sizeHint().width(), labelWidth);
+    QCOMPARE(label->sizeHint().width(), labelWidth + 2);
 
     const int indent = 40;
     label->setIndent(indent);
@@ -164,7 +170,7 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     QVERIFY(!label->isSqueezed());
     QCOMPARE(label->size().width(), labelWidth + indent);
     QCOMPARE(label->minimumSizeHint().width(), -1);
-    QCOMPARE(label->sizeHint().width(), labelWidth + indent);
+    QCOMPARE(label->sizeHint().width(), labelWidth + indent + 2);
 }
 
 void KSqueezedTextLabelAutotest::testClearing()
@@ -192,9 +198,9 @@ void KSqueezedTextLabelAutotest::testChrome_data()
     QTest::addColumn<int>("amount");
     QTest::addColumn<int>("widthDifference");
 
-    QTest::newRow("indent") << "indent" << 20 << 20;
-    QTest::newRow("margin") << "margin" << 20 << 40;
-    QTest::newRow("frame") << "lineWidth" << 20 << 40 + xWidth;
+    QTest::newRow("indent") << "indent" << 20 << 18;
+    QTest::newRow("margin") << "margin" << 20 << 38;
+    QTest::newRow("frame") << "lineWidth" << 20 << 38 + xWidth;
 }
 
 void KSqueezedTextLabelAutotest::testChrome()
