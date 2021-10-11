@@ -38,12 +38,12 @@ QT_TRANSLATE_NOOP3("FontHelpers", "Monospace", "@item Font name");
  * @param family the storage for family name
  * @param foundry the storage for foundry name
  */
-inline void splitFontString(const QString &name, QString *family, QString *foundry = nullptr)
+inline void splitFontString(QStringView name, QString *family, QString *foundry = nullptr)
 {
     int p1 = name.indexOf(QLatin1Char('['));
     if (p1 < 0) {
         if (family) {
-            *family = name.trimmed();
+            *family = name.trimmed().toString();
         }
         if (foundry) {
             foundry->clear();
@@ -52,10 +52,10 @@ inline void splitFontString(const QString &name, QString *family, QString *found
         int p2 = name.indexOf(QLatin1Char(']'), p1);
         p2 = p2 > p1 ? p2 : name.length();
         if (family) {
-            *family = name.leftRef(p1).trimmed().toString();
+            *family = name.left(p1).trimmed().toString();
         }
         if (foundry) {
-            *foundry = name.midRef(p1 + 1, p2 - p1 - 1).trimmed().toString();
+            *foundry = name.mid(p1 + 1, p2 - p1 - 1).trimmed().toString();
         }
     }
 }
@@ -69,9 +69,10 @@ inline void splitFontString(const QString &name, QString *family, QString *found
  * @param name the raw font name reported by Qt
  * @return translated font name
  */
-inline QString translateFontName(const QString &name)
+inline QString translateFontName(QStringView name)
 {
-    QString family, foundry;
+    QString family;
+    QString foundry;
     splitFontString(name, &family, &foundry);
 
     // Obtain any regular translations for the family and foundry.

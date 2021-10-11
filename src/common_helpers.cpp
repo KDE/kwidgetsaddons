@@ -28,10 +28,11 @@ static QString removeReducedCJKAccMark(const QString &label, int pos)
         }
         --p2;
 
+        const QStringView sview{label};
         if (p1 == 0) {
-            return label.leftRef(pos - 1) + label.midRef(p2 + 1);
+            return sview.left(pos - 1) + sview.mid(p2 + 1);
         } else if (p2 + 1 == len) {
-            return label.leftRef(p1) + label.midRef(pos + 2);
+            return sview.left(p1) + sview.mid(pos + 2);
         }
     }
     return label;
@@ -49,18 +50,18 @@ QString removeAcceleratorMarker(const QString &label_)
             break;
         }
 
-        if (label[p + 1].isLetterOrNumber()) {
+        if (label.at(p + 1).isLetterOrNumber()) {
             // Valid accelerator.
-            label = QString(label.leftRef(p) + label.midRef(p + 1));
+            label.remove(p, 1);
 
             // May have been an accelerator in CJK-style "(&X)"
             // at the start or end of text.
             label = removeReducedCJKAccMark(label, p);
 
             accmarkRemoved = true;
-        } else if (label[p + 1] == QLatin1Char('&')) {
+        } else if (label.at(p + 1) == QLatin1Char('&')) {
             // Escaped accelerator marker.
-            label = QString(label.leftRef(p) + label.midRef(p + 1));
+            label.remove(p, 1);
         }
 
         ++p;

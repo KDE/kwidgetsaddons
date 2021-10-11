@@ -753,7 +753,7 @@ void KFontChooserPrivate::setupDisplay()
     if (i == numEntries) {
         const int bracketPos = family.indexOf(QLatin1Char('['));
         if (bracketPos != -1) {
-            family = family.leftRef(bracketPos).trimmed().toString();
+            family = QStringView(family).left(bracketPos).trimmed().toString();
             for (i = 0; i < numEntries; ++i) {
                 if (family == m_qtFamilies[m_ui->familyListWidget->item(i)->text()].toLower()) {
                     m_ui->familyListWidget->setCurrentRow(i);

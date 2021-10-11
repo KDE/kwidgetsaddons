@@ -27,7 +27,7 @@ public:
     void init();
     void passwordChanged();
     void toggleEchoMode();
-    int effectivePasswordLength(const QString &password);
+    int effectivePasswordLength(QStringView password);
     void updatePasswordStatus(KNewPasswordWidget::PasswordStatus status);
 
     KNewPasswordWidget *const q;
@@ -120,7 +120,7 @@ void KNewPasswordWidgetPrivate::toggleEchoMode()
     passwordChanged();
 }
 
-int KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
+int KNewPasswordWidgetPrivate::effectivePasswordLength(QStringView password)
 {
     enum Category {
         Digit,
@@ -131,12 +131,13 @@ int KNewPasswordWidgetPrivate::effectivePasswordLength(const QString &password)
     };
 
     Category previousCategory = Vowel;
-    QString vowels(QStringLiteral("aeiou"));
+    static const QLatin1String vowels("aeiou");
     int count = 0;
 
-    for (int i = 0; i < password.length(); ++i) {
-        QChar currentChar = password.at(i);
-        if (!password.leftRef(i).contains(currentChar)) {
+    const int len = password.length();
+    for (int i = 0; i < len; ++i) {
+        const QChar currentChar = password.at(i);
+        if (!password.left(i).contains(currentChar)) {
             Category currentCategory;
             switch (currentChar.category()) {
             case QChar::Letter_Uppercase:
