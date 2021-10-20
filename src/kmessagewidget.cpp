@@ -141,13 +141,13 @@ void KMessageWidgetPrivate::createLayout()
         }
     } else {
         QHBoxLayout *layout = new QHBoxLayout(q);
-        layout->addWidget(iconLabel);
+        layout->addWidget(iconLabel, 0, Qt::AlignTop);
         layout->addWidget(textLabel);
 
         for (QToolButton *button : std::as_const(buttons)) {
-            layout->addWidget(button);
+            layout->addWidget(button, 0, Qt::AlignTop);
         }
-        layout->addWidget(closeButton);
+        layout->addWidget(closeButton, 0, Qt::AlignTop);
     };
     // Add bordersize to the margin so it starts from the inner border and doesn't look too cramped
     q->layout()->setContentsMargins(q->layout()->contentsMargins() + borderSize);

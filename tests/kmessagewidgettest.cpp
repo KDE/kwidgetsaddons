@@ -49,6 +49,11 @@ int main(int argc, char *argv[])
     mw->setWordWrap(true);
     mw->setText(QStringLiteral("Test KMessageWidget is properly sized when <a href=\"this is the contents\">word-wrap</a> is enabled by default."));
     mw->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
+    KMessageWidget *mw1 = new KMessageWidget(mainWindow);
+    mw1->setMessageType(KMessageWidget::Positive);
+    mw1->setWordWrap(true);
+    mw1->setText(QStringLiteral("Test KMessageWidget icon alignemnt<br />with pre-wrapped<br />content<br />like<br />this.<br />Please test with word wrap enabled and disabled."));
+    mw1->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
     KMessageWidget *mw2 = new KMessageWidget(mainWindow);
     mw2->setWordWrap(true);
     mw2->setText(QStringLiteral("A KMessageWidget with an icon and two additional buttons"));
@@ -72,6 +77,7 @@ int main(int argc, char *argv[])
     QCheckBox *wordWrapCb = new QCheckBox(QStringLiteral("wordWrap"), mainWindow);
     wordWrapCb->setChecked(true);
     QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw, &KMessageWidget::setWordWrap);
+    QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw1, &KMessageWidget::setWordWrap);
     QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw2, &KMessageWidget::setWordWrap);
     QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw3, &KMessageWidget::setWordWrap);
     QObject::connect(wordWrapCb, &QAbstractButton::toggled, mw4, &KMessageWidget::setWordWrap);
@@ -79,6 +85,7 @@ int main(int argc, char *argv[])
     QCheckBox *closeButtonCb = new QCheckBox(QStringLiteral("closeButton"), mainWindow);
     closeButtonCb->setChecked(true);
     QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw, &KMessageWidget::setCloseButtonVisible);
+    QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw1, &KMessageWidget::setCloseButtonVisible);
     QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw2, &KMessageWidget::setCloseButtonVisible);
     QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw3, &KMessageWidget::setCloseButtonVisible);
     QObject::connect(closeButtonCb, &QAbstractButton::toggled, mw4, &KMessageWidget::setCloseButtonVisible);
@@ -86,6 +93,7 @@ int main(int argc, char *argv[])
     l->addWidget(wordWrapCb);
     l->addWidget(closeButtonCb);
     l->addWidget(mw);
+    l->addWidget(mw1);
     l->addWidget(mw2);
     l->addWidget(mw3);
     l->addWidget(mw4);
