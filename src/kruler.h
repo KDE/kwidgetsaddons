@@ -114,7 +114,7 @@ public:
     /**
      * Destructor.
      */
-    ~KRuler();
+    ~KRuler() override;
 
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
     /**

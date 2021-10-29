@@ -41,7 +41,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~KAnimatedButton();
+    ~KAnimatedButton() override;
 
     /**
      * Returns the path used to load the animation

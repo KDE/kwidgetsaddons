@@ -48,7 +48,7 @@ public:
     /**
      * Destructs the lineedit password widget.
      */
-    ~KPasswordLineEdit();
+    ~KPasswordLineEdit() override;
 
     /**
      * Assign password

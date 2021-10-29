@@ -26,7 +26,7 @@ class KSplitterCollapserButtonTest : public QObject
     Q_OBJECT
 public:
     explicit KSplitterCollapserButtonTest(QObject *parent = nullptr);
-    ~KSplitterCollapserButtonTest();
+    ~KSplitterCollapserButtonTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

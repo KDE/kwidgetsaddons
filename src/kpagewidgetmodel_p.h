@@ -52,7 +52,7 @@ protected:
     {
     }
 
-    ~KPageWidgetModelPrivate()
+    ~KPageWidgetModelPrivate() override
     {
         delete rootItem;
         rootItem = nullptr;

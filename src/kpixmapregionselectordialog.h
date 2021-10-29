@@ -49,7 +49,7 @@ public:
     /**
      * The destructor of the dialog
      */
-    ~KPixmapRegionSelectorDialog();
+    ~KPixmapRegionSelectorDialog() override;
 
     /**
      * @returns the KPixmapRegionSelectorWidget widget so that additional

@@ -30,7 +30,7 @@ public:
         }
     }
 
-    virtual ~KMessageBoxDontAskAgainQSettingsStorage()
+    ~KMessageBoxDontAskAgainQSettingsStorage() override
     {
         QSettings s(m_filePath, QSettings::IniFormat);
         for (auto it = m_saved.constBegin(); it != m_saved.constEnd(); ++it) {

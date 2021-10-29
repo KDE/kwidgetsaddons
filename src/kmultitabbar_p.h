@@ -15,7 +15,7 @@ class KMultiTabBarInternal : public QFrame
     Q_OBJECT
 public:
     KMultiTabBarInternal(QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos);
-    virtual ~KMultiTabBarInternal();
+    ~KMultiTabBarInternal() override;
     int appendTab(const QIcon &, int = -1, const QString & = QString());
     int appendTab(const QPixmap &, int = -1, const QString & = QString());
     KMultiTabBarTab *tab(int) const;

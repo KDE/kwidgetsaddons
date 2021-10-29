@@ -18,7 +18,7 @@ class KPageWidgetTest : public QWidget
 
 public:
     KPageWidgetTest(QWidget *parent = nullptr);
-    ~KPageWidgetTest();
+    ~KPageWidgetTest() override;
 
 private Q_SLOTS:
     void setAutoFace();

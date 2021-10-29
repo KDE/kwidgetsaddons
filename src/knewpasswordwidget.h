@@ -98,7 +98,7 @@ public:
     /**
      * Destructs the password widget.
      */
-    virtual ~KNewPasswordWidget();
+    ~KNewPasswordWidget() override;
 
     /**
      * The current status of the password in the widget.

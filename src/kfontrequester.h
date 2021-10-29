@@ -48,7 +48,7 @@ public:
      */
     explicit KFontRequester(QWidget *parent = nullptr, bool onlyFixed = false);
 
-    ~KFontRequester();
+    ~KFontRequester() override;
 
     /**
      * @return The currently selected font in the requester.

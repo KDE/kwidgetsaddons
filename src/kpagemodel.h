@@ -83,7 +83,7 @@ public:
     /**
      * Destroys the page model.
      */
-    virtual ~KPageModel();
+    ~KPageModel() override;
 
 protected:
     KPageModel(KPageModelPrivate &dd, QObject *parent);

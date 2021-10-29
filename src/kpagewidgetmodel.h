@@ -72,7 +72,7 @@ public:
     /**
      * Destroys the page widget item.
      */
-    ~KPageWidgetItem();
+    ~KPageWidgetItem() override;
 
     /**
      * Returns the widget of the page widget item.

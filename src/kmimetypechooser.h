@@ -62,7 +62,7 @@ public:
                               const QStringList &groupsToShow = QStringList(),
                               int visuals = Comments | Patterns | EditButton,
                               QWidget *parent = nullptr);
-    ~KMimeTypeChooser();
+    ~KMimeTypeChooser() override;
 
     /**
      * @return a list of all selected MIME type names
@@ -146,7 +146,7 @@ public:
                            const QString &defaultGroup,
                            QWidget *parent = nullptr);
 
-    ~KMimeTypeChooserDialog();
+    ~KMimeTypeChooserDialog() override;
 
     /**
      * @return a pointer to the KMimeTypeChooser widget

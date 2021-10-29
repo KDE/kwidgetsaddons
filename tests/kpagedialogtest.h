@@ -16,7 +16,7 @@ class KPageDialogTest : public KPageDialog
 
 public:
     KPageDialogTest(QWidget *parent = nullptr);
-    ~KPageDialogTest();
+    ~KPageDialogTest() override;
 };
 
 #endif

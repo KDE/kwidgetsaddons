@@ -37,7 +37,7 @@ public:
     /**
      * Destroys the page widget.
      */
-    ~KPageWidget();
+    ~KPageWidget() override;
 
     /**
      * Adds a new top level page to the widget.

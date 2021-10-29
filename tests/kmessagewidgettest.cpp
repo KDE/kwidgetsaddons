@@ -24,7 +24,7 @@ public:
         : QObject(parent)
     {
     }
-    virtual ~Receiver()
+    ~Receiver() override
     {
     }
 

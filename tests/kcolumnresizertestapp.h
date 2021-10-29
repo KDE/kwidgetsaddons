@@ -16,7 +16,7 @@ class Window : public QWidget
     Q_OBJECT
 public:
     Window();
-    ~Window();
+    ~Window() override;
 
 public Q_SLOTS:
     void updateAdjustableLabel();

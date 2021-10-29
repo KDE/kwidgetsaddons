@@ -93,7 +93,7 @@ public:
     /**
      * Destroys the page view.
      */
-    virtual ~KPageView();
+    ~KPageView() override;
 
     /**
      * Sets the @p model of the page view.

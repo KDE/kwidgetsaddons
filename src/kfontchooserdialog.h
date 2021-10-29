@@ -88,7 +88,7 @@ public:
      */
     explicit KFontChooserDialog(const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
-    ~KFontChooserDialog();
+    ~KFontChooserDialog() override;
 
     /**
      * Sets the currently selected font in the dialog.

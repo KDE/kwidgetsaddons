@@ -40,7 +40,7 @@ public:
      */
     KCharSelectTable(QWidget *parent, const QFont &_font);
 
-    ~KCharSelectTable();
+    ~KCharSelectTable() override;
 
     void resizeEvent(QResizeEvent *) override;
 

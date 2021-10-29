@@ -62,7 +62,7 @@ public:
      */
     KDualAction(const QString &inactiveText, const QString &activeText, QObject *parent);
 
-    ~KDualAction();
+    ~KDualAction() override;
 
     /**
      * Sets the KGuiItem for the active state

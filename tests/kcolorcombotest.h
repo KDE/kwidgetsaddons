@@ -12,7 +12,7 @@ class KColorComboTest : public QWidget
 
 public:
     KColorComboTest(QWidget *parent = nullptr);
-    ~KColorComboTest();
+    ~KColorComboTest() override;
 
 private Q_SLOTS:
     void quitApp();

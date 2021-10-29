@@ -60,7 +60,7 @@ public:
     explicit KMultiTabBar(QWidget *parent = nullptr);
 
     explicit KMultiTabBar(KMultiTabBarPosition pos, QWidget *parent = nullptr);
-    virtual ~KMultiTabBar();
+    ~KMultiTabBar() override;
 
     /**
      * append  a new button to the button area. The button can later on be accessed with button(ID)

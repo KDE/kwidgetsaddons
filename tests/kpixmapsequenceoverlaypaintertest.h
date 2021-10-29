@@ -14,7 +14,7 @@ class TestWidget : public QWidget
 
 public:
     TestWidget();
-    ~TestWidget();
+    ~TestWidget() override;
 
     bool eventFilter(QObject *, QEvent *) override;
 

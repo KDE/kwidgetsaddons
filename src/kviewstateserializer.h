@@ -177,7 +177,7 @@ public:
     /**
      * Destructor
      */
-    ~KViewStateSerializer();
+    ~KViewStateSerializer() override;
 
     /**
      * The view whose state is persisted.

@@ -74,7 +74,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~KToggleAction();
+    ~KToggleAction() override;
 
     /**
      * Defines the text (and icon, tooltip, whatsthis) that should be displayed

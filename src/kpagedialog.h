@@ -121,7 +121,7 @@ public:
     /**
      * Destroys the page dialog.
      */
-    ~KPageDialog();
+    ~KPageDialog() override;
 
     /**
      * Sets the face type of the dialog.
