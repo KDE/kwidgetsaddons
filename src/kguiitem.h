@@ -24,7 +24,7 @@ class QPushButton;
  * @class KGuiItem kguiitem.h KGuiItem
  *
  * @short An abstract class for setting the text, icon, tooltip and WhatsThis data
- * on a GUI item (e.g. a QPushButton).
+ * on a GUI item (e.g.\ a QPushButton).
  *
  * @author Holger Freyther <freyher@yahoo.com>
  * @see KStandardGuiItem
@@ -86,9 +86,11 @@ public:
     void setText(const QString &text);
 
     /**
-     * Returns the text used by this GUI item; this may contain '&' characters which
-     * denote a keyboard accelerator shortcut that can be used to invoke the GUI item,
-     * e.g. Alt + 'O' for button "&OK". (Note that the '&' is not visible to the user).
+     * Returns the text used by this GUI item.
+     *
+     * This may contain '&' characters which denote a keyboard accelerator shortcut that
+     * can be used to invoke the GUI item, e.g. Alt + 'O' for button "&OK".
+     * (Note that the '&' is not visible to the user).
      *
      * You can get the plain text without the accelerator denoting character '&', by
      * using plainText().
