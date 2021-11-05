@@ -94,9 +94,8 @@ void KAcceleratorManagerPrivate::manage(QWidget *widget)
 
     Item *root = new Item;
 
-    manageWidget(widget, root);
-
     QString used;
+    manageWidget(widget, root, used);
     calculateAccelerators(root, used);
     delete root;
 }
@@ -175,7 +174,7 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
     }
 }
 
-void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item)
+void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item, QString &used)
 {
     const QList<QWidget *> childList = widget->findChildren<QWidget *>();
     for (QWidget *w : childList) {
@@ -192,12 +191,29 @@ void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item)
             continue;
         }
 
-        manageWidget(w, item);
+        manageWidget(w, item, used);
     }
 }
 
-void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
+void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item, QString &used)
 {
+    // If the widget has any action whose shortcuts contain keystrokes in the
+    // form of Alt+X we need to mark X as used, otherwise we may assign it as accelerator
+    // and there will be a conflict when trying to use it
+    const QList<QAction *> widgetActions = w->actions();
+    for (QAction *action : widgetActions) {
+        const QList<QKeySequence> actionShortcuts = action->shortcuts();
+        for (const QKeySequence &sequence : actionShortcuts) {
+            const QString sequenceAsText = sequence.toString(QKeySequence::PortableText);
+            const QStringList splitSequence = sequenceAsText.split(QStringLiteral(", "));
+            for (const QString &shortcut : splitSequence) {
+                if (shortcut.length() == 5 && shortcut.startsWith(QStringLiteral("Alt+"))) {
+                    used.append(shortcut.right(1));
+                }
+            }
+        }
+    }
+
     // first treat the special cases
 
     QTabBar *tabBar = qobject_cast<QTabBar *>(w);
@@ -247,7 +263,7 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
     }
 
     if (w->inherits("KUrlRequester")) {
-        traverseChildren(w, item);
+        traverseChildren(w, item, used);
         return;
     }
 
@@ -316,7 +332,7 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item)
             item->addChild(i);
         }
     }
-    traverseChildren(w, item);
+    traverseChildren(w, item, used);
 }
 
 void KAcceleratorManagerPrivate::manageTabBar(QTabBar *bar, Item *item)

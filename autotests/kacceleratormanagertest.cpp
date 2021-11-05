@@ -8,6 +8,7 @@
 #include <kacceleratormanager.h>
 
 #include <QMenu>
+#include <QPushButton>
 #include <QTest>
 
 #define QSL QStringLiteral
@@ -73,6 +74,26 @@ private Q_SLOTS:
         // THEN
         const QStringList texts = extractActionTexts(menu, &QAction::text);
         QCOMPARE(texts, expectedTexts);
+    }
+
+    void testExistingActionsShortcutsAreTakenIntoAccount()
+    {
+        std::unique_ptr<QWidget> w(new QWidget());
+
+        QPushButton *pb = new QPushButton(QSL("Open"), w.get());
+
+        KAcceleratorManager::manage(w.get());
+        QCOMPARE(pb->text(), QSL("&Open"));
+
+        delete pb;
+        pb = new QPushButton(QSL("Open"), w.get());
+
+        QAction *a = new QAction();
+        a->setShortcut(QSL("Alt+O"));
+        w->addAction(a);
+
+        KAcceleratorManager::manage(w.get());
+        QCOMPARE(pb->text(), QSL("O&pen"));
     }
 
     void testActionIconTexts_data()

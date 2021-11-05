@@ -227,9 +227,9 @@ public:
     typedef QList<Item *> ItemList;
 
 private:
-    static void traverseChildren(QWidget *widget, Item *item);
+    static void traverseChildren(QWidget *widget, Item *item, QString &used);
 
-    static void manageWidget(QWidget *widget, Item *item);
+    static void manageWidget(QWidget *widget, Item *item, QString &used);
     static void manageMenuBar(QMenuBar *mbar, Item *item);
     static void manageTabBar(QTabBar *bar, Item *item);
     static void manageDockWidget(QDockWidget *dock, Item *item);
