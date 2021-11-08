@@ -298,7 +298,7 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
 
         // Draw the day number in the cell, if the date is not valid then we don't want to show it
         if (validDay) {
-            cellText = QString::number(cellDate.day());
+            cellText = locale().toString(cellDate.day());
         } else {
             cellText = QString();
         }

@@ -109,7 +109,7 @@ int KDatePickerPrivateYearSelector::year()
 
 void KDatePickerPrivateYearSelector::setYear(int year)
 {
-    setText(QString::number(year));
+    setText(locale().toString(year));
 }
 
 class KDatePickerPrivate
@@ -185,7 +185,7 @@ void KDatePickerPrivate::fillWeeksCombo()
         // e.g. 1st day of this year may fall in week 53 of previous year
         int weekYear = thisYear;
         const int week = day.weekNumber(&weekYear);
-        QString weekString = tr("Week %1").arg(QString::number(week));
+        QString weekString = tr("Week %1").arg(q->locale().toString(week));
 
         // show that this is a week from a different year
         if (weekYear != thisYear) {
@@ -382,7 +382,7 @@ void KDatePicker::dateChangedSlot(const QDate &date_)
     // the earliestValidDate as the first day.
     // In particular covers the case of Gregorian where 1/1/-4713 is not a valid QDate
     d->selectWeek->setCurrentIndex((date_.dayOfYear() + firstDay.dayOfWeek() - 2) / 7);
-    d->selectYear->setText(QString::number(date_.year()).rightJustified(4, QLatin1Char('0')));
+    d->selectYear->setText(locale().toString(date_.year()).rightJustified(4, QLatin1Char('0')));
 
     Q_EMIT dateChanged(date_);
 }
