@@ -209,9 +209,9 @@ ecm_generate_export_header(KF5WidgetsAddons
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_link_libraries(KF5WidgetsAddons PUBLIC Qt5::Widgets)
+target_link_libraries(KF5WidgetsAddons PUBLIC Qt${QT_MAJOR_VERSION}::Widgets)
 
-target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons>")
+target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons>")
 
 set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION}
                                                   SOVERSION ${KWIDGETSADDONS_SOVERSION}
@@ -390,10 +390,10 @@ install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TA
 install(FILES
   ${KWidgetsAddons_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_export.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons COMPONENT Devel
 )
 
-install(FILES kcharselect-data  DESTINATION  ${KDE_INSTALL_DATADIR_KF5}/kcharselect)
+install(FILES kcharselect-data  DESTINATION  ${KDE_INSTALL_DATADIR_KF}/kcharselect)
 
 if (BUILD_QCH)
     ecm_add_qch(
@@ -434,5 +434,5 @@ ecm_qt_install_logging_categories(
 )
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KWidgetsAddons)
+ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

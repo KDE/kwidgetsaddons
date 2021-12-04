@@ -261,7 +261,11 @@ const QPixmap *KUrlLabel::alternatePixmap() const
     return &d->alternatePixmap;
 }
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+void KUrlLabel::enterEvent(QEnterEvent *event)
+#else
 void KUrlLabel::enterEvent(QEvent *event)
+#endif
 {
     QLabel::enterEvent(event);
 

@@ -226,7 +226,11 @@ bool KSplitterCollapserButton::eventFilter(QObject *object, QEvent *event)
     return QToolButton::eventFilter(object, event);
 }
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+void KSplitterCollapserButton::enterEvent(QEnterEvent *event)
+#else
 void KSplitterCollapserButton::enterEvent(QEvent *event)
+#endif
 {
     Q_UNUSED(event)
     d->updateOpacity();
