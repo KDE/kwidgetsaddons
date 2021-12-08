@@ -313,6 +313,13 @@ public:
     bool menuAccelsEnabled() const;
 
     /**
+     * You should delete KSelectAction::menu() before calling setMenu(). KSelectAction
+     * will take the @param menu ownership and it will be deleted when KSelectAction is
+     * destroyed.
+     */
+    using QWidgetAction::setMenu;
+
+    /**
      * Changes the text of item @param index to @param text .
      */
     void changeItem(int index, const QString &text);
