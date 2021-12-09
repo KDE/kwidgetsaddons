@@ -236,3 +236,12 @@ void KMessageWidgetTest::testNonAnimatedShowAfterAnimatedHide()
     w.show();
     CHECK_FULLY_VISIBLE
 }
+
+void KMessageWidgetTest::testResizeFlickerOnAnimatedShow()
+{
+    KMessageWidget w(QStringLiteral("Hello world"));
+
+    w.animatedShow();
+
+    QCOMPARE(w.height(), 0);
+}

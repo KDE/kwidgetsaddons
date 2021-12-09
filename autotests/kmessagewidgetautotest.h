@@ -27,6 +27,7 @@ private Q_SLOTS:
     void testOverlappingDoubleHide();
     void testHideWithNotYetShownParent();
     void testNonAnimatedShowAfterAnimatedHide();
+    void testResizeFlickerOnAnimatedShow();
 };
 
 #endif

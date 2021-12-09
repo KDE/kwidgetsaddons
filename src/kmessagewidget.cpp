@@ -38,7 +38,7 @@ public:
     QToolButton *closeButton = nullptr;
     QTimeLine *timeLine = nullptr;
     QIcon icon;
-    bool ignoreShowEventDoingAnimatedShow = false;
+    bool ignoreShowAndResizeEventDoingAnimatedShow = false;
 
     KMessageWidget::MessageType messageType;
     bool wordWrap;
@@ -285,7 +285,7 @@ bool KMessageWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::Polish && !layout()) {
         d->createLayout();
-    } else if (event->type() == QEvent::Show && !d->ignoreShowEventDoingAnimatedShow) {
+    } else if (event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow) {
         setFixedHeight(d->bestContentHeight());
     } else if (event->type() == QEvent::ParentChange) {
         d->setPalette();
@@ -296,7 +296,7 @@ bool KMessageWidget::event(QEvent *event)
 void KMessageWidget::resizeEvent(QResizeEvent *event)
 {
     QFrame::resizeEvent(event);
-    if (d->timeLine->state() == QTimeLine::NotRunning) {
+    if (d->timeLine->state() == QTimeLine::NotRunning && d->ignoreShowAndResizeEventDoingAnimatedShow) {
         setFixedHeight(d->bestContentHeight());
     }
 }
@@ -391,9 +391,9 @@ void KMessageWidget::animatedShow()
         return;
     }
 
-    d->ignoreShowEventDoingAnimatedShow = true;
+    d->ignoreShowAndResizeEventDoingAnimatedShow = true;
     show();
-    d->ignoreShowEventDoingAnimatedShow = false;
+    d->ignoreShowAndResizeEventDoingAnimatedShow = false;
     setFixedHeight(0);
 
     d->timeLine->setDirection(QTimeLine::Forward);
