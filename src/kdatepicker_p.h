@@ -26,7 +26,7 @@ class KDatePickerPrivateYearSelector : public QLineEdit
 public:
     explicit KDatePickerPrivateYearSelector(const QDate &currentDate, QWidget *parent = nullptr);
     int year();
-    void setYear(int year);
+    void setYear(const QDate &year);
 
 public Q_SLOTS:
     void yearEnteredSlot();

@@ -107,9 +107,9 @@ int KDatePickerPrivateYearSelector::year()
     return result;
 }
 
-void KDatePickerPrivateYearSelector::setYear(int year)
+void KDatePickerPrivateYearSelector::setYear(const QDate &year)
 {
-    setText(locale().toString(year));
+    setText(locale().toString(year, QStringLiteral("yyyy")).rightJustified(4, QLatin1Char('0')));
 }
 
 class KDatePickerPrivate
@@ -382,7 +382,7 @@ void KDatePicker::dateChangedSlot(const QDate &date_)
     // the earliestValidDate as the first day.
     // In particular covers the case of Gregorian where 1/1/-4713 is not a valid QDate
     d->selectWeek->setCurrentIndex((date_.dayOfYear() + firstDay.dayOfWeek() - 2) / 7);
-    d->selectYear->setText(locale().toString(date_.year()).rightJustified(4, QLatin1Char('0')));
+    d->selectYear->setText(locale().toString(date_, QStringLiteral("yyyy")).rightJustified(4, QLatin1Char('0')));
 
     Q_EMIT dateChanged(date_);
 }
@@ -497,7 +497,7 @@ void KDatePicker::selectYearClicked()
     KPopupFrame *popup = new KPopupFrame(this);
     KDatePickerPrivateYearSelector *picker = new KDatePickerPrivateYearSelector(date(), popup);
     picker->resize(picker->sizeHint());
-    picker->setYear(thisDate.year());
+    picker->setYear(thisDate);
     picker->selectAll();
     popup->setMainWidget(picker);
     connect(picker, &KDatePickerPrivateYearSelector::closeMe, popup, &KPopupFrame::close);
