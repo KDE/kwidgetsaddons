@@ -284,6 +284,19 @@ bool KMessageWidget::event(QEvent *event)
         d->createLayout();
     } else if (event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow) {
         setFixedHeight(d->bestContentHeight());
+
+        // if we are displaying this when application first starts, there's
+        // a possibility that the layout is not properly updated with the
+        // rest of the application because the setFixedHeight call above has
+        // the same height that was set beforehand, when we lacked a parent
+        // and thus, the layout() geometry is bogus. so we pass a bogus
+        // value to it, just to trigger a recalculation, and revert to the
+        // best content height.
+        if (geometry().height() < layout()->geometry().height()) {
+            setFixedHeight(d->bestContentHeight() + 2); // this triggers a recalculation.
+            setFixedHeight(d->bestContentHeight()); // this actually sets the correct values.
+        }
+
     } else if (event->type() == QEvent::ParentChange) {
         d->setPalette();
     } else if (event->type() == QEvent::ApplicationPaletteChange) {
