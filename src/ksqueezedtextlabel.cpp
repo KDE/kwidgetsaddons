@@ -66,7 +66,9 @@ QSize KSqueezedTextLabel::sizeHint() const
     }
     int maxWidth = screen()->geometry().width() * 3 / 4;
     QFontMetrics fm(fontMetrics());
-    int textWidth = fm.boundingRect(d->fullText).width();
+    // Do exactly like qlabel.cpp to avoid slight differences in results
+    // (see https://invent.kde.org/frameworks/kwidgetsaddons/-/merge_requests/100)
+    int textWidth = fm.boundingRect(0, 0, 2000, 2000, Qt::AlignAbsolute | Qt::TextExpandTabs | Qt::AlignLeft, d->fullText).width();
     if (textWidth > maxWidth) {
         textWidth = maxWidth;
     }

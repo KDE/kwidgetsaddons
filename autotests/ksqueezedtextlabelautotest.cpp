@@ -148,20 +148,19 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     QCOMPARE(label->sizeHint().width(), 0);
 
     const QString text = QStringLiteral("Squeeze me");
-    const int labelWidth = label->fontMetrics().boundingRect(text).width(); // no chrome set
     label->setText(text);
+    const int labelWidth = label->sizeHint().width();
 
     QVERIFY(label->isSqueezed());
     QCOMPARE(label->size().width(), 0);
     QCOMPARE(label->minimumSizeHint().width(), -1);
-    QCOMPARE(label->sizeHint().width(), labelWidth);
 
     label->adjustSize();
 
     QVERIFY(!label->isSqueezed());
     QCOMPARE(label->size().width(), labelWidth);
     QCOMPARE(label->minimumSizeHint().width(), -1);
-    QCOMPARE(label->sizeHint().width(), labelWidth + 2);
+    QCOMPARE(label->sizeHint().width(), labelWidth);
 
     const int indent = 40;
     label->setIndent(indent);
@@ -170,7 +169,7 @@ void KSqueezedTextLabelAutotest::testSizeHints()
     QVERIFY(!label->isSqueezed());
     QCOMPARE(label->size().width(), labelWidth + indent);
     QCOMPARE(label->minimumSizeHint().width(), -1);
-    QCOMPARE(label->sizeHint().width(), labelWidth + indent + 2);
+    QCOMPARE(label->sizeHint().width(), labelWidth + indent);
 }
 
 void KSqueezedTextLabelAutotest::testClearing()
@@ -198,9 +197,9 @@ void KSqueezedTextLabelAutotest::testChrome_data()
     QTest::addColumn<int>("amount");
     QTest::addColumn<int>("widthDifference");
 
-    QTest::newRow("indent") << "indent" << 20 << 18;
-    QTest::newRow("margin") << "margin" << 20 << 38;
-    QTest::newRow("frame") << "lineWidth" << 20 << 38 + xWidth;
+    QTest::newRow("indent") << "indent" << 20 << 20;
+    QTest::newRow("margin") << "margin" << 20 << 40;
+    QTest::newRow("frame") << "lineWidth" << 20 << 40 + xWidth;
 }
 
 void KSqueezedTextLabelAutotest::testChrome()
