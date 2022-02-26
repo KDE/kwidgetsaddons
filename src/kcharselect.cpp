@@ -492,7 +492,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->fontSizeSpinBox->setSingleStep(1);
     d->fontSizeSpinBox->setToolTip(tr("Set font size", "@info:tooltip"));
 
-    connect(d->fontCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this]() {
+    connect(d->fontCombo, &QFontComboBox::currentFontChanged, this, [this]() {
         d->fontSelected();
     });
     connect(d->fontSizeSpinBox, &QSpinBox::valueChanged, this, [this]() {
