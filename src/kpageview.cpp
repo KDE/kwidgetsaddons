@@ -15,7 +15,9 @@
 #include <ktitlewidget.h>
 
 #include <QAbstractItemView>
+#include <QAction>
 #include <QGridLayout>
+#include <QKeySequence>
 #include <QSize>
 #include <QTimer>
 
@@ -321,6 +323,30 @@ void KPageViewPrivate::init()
     // stack should use most space
     layout->setColumnStretch(1, 1);
     layout->setRowStretch(2, 1);
+
+    auto goPageAction = [this, q](int delta, const QList<QKeySequence> &shortcuts) {
+        QAction *action = new QAction(q);
+        action->setShortcuts(shortcuts);
+        action->setShortcutContext(Qt::WidgetWithChildrenShortcut);
+
+        QObject::connect(action, &QAction::triggered, q, [this, q, delta] {
+            const auto faceType = effectiveFaceType();
+            if (faceType == KPageView::List || faceType == KPageView::Tabbed) {
+                int newRow = q->currentPage().row() + delta;
+                if (newRow >= q->model()->rowCount()) {
+                    newRow = 0;
+                } else if (newRow < 0) {
+                    newRow = q->model()->rowCount() - 1;
+                }
+                q->setCurrentPage(q->model()->index(newRow, 0));
+            }
+        });
+
+        return action;
+    };
+
+    q->addAction(goPageAction(-1, {QKeySequence(QKeySequence::PreviousChild), QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Tab)}));
+    q->addAction(goPageAction(+1, {QKeySequence(QKeySequence::NextChild), QKeySequence(Qt::CTRL | Qt::Key_Tab)}));
 }
 
 // KPageView Implementation
