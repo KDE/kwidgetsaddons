@@ -54,7 +54,7 @@ void KPageDialog::setFaceType(FaceType faceType)
     // can be flush with the window edge; margins for the content are added
     // automatically
     if (faceType == KPageDialog::Auto || faceType == KPageDialog::List) {
-        layout()->setContentsMargins(0, 0, 0, 0);
+        layout()->setContentsMargins(0, 1, 0, 0);
     } else {
         const QStyle *style = d->mPageWidget->style();
         layout()->setContentsMargins(style->pixelMetric(QStyle::PM_LayoutLeftMargin),
