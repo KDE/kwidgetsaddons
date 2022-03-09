@@ -176,13 +176,9 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
 void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item, QString &used)
 {
-    const QList<QWidget *> childList = widget->findChildren<QWidget *>();
+    // we are only interested in direct child widgets
+    const QList<QWidget *> childList = widget->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly);
     for (QWidget *w : childList) {
-        // Ignore unless we have the direct parent
-        if (qobject_cast<QWidget *>(w->parent()) != widget) {
-            continue;
-        }
-
         if (!w->isVisibleTo(widget) || (w->isTopLevel() && qobject_cast<QMenu *>(w) == nullptr)) {
             continue;
         }
