@@ -510,8 +510,13 @@ QAbstractItemView *KPageView::createView()
     if (faceType == Plain) {
         return new KDEPrivate::KPagePlainView(this);
     }
-    if (faceType == List) {
+    if (faceType == FlatList) {
         return new KDEPrivate::KPageListView(this);
+    }
+    if (faceType == List) {
+        auto view = new KDEPrivate::KPageListView(this);
+        view->setItemDelegate(new KDEPrivate::KPageListViewDelegate(this));
+        return view;
     }
     if (faceType == Tree) {
         return new KDEPrivate::KPageTreeView(this);

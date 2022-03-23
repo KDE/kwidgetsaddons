@@ -110,6 +110,11 @@ public:
          * of the contents
          */
         Tabbed = KPageView::Tabbed,
+        /**
+         * A dialog with an flat list with small icons on the left side
+         * and a representation of the contents on the right side
+         */
+        FlatList = KPageView::FlatList,
     };
 
 public:

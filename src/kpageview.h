@@ -82,6 +82,10 @@ public:
          * A tab widget is used as navigation view
          */
         Tabbed,
+        /**
+         * A flat list with small icons is used as navigation view
+         */
+        FlatList,
     };
     Q_ENUM(FaceType)
 

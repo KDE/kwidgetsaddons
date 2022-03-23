@@ -26,6 +26,7 @@ private Q_SLOTS:
     void setListFace();
     void setTreeFace();
     void setTabbedFace();
+    void setFlatListFace();
 
     void addPage();
     void addSubPage();

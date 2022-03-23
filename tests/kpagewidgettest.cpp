@@ -41,6 +41,11 @@ KPageWidgetTest::KPageWidgetTest(QWidget *parent)
     connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setListFace);
     rowCount++;
 
+    button = new QPushButton(QStringLiteral("Flat List"), this);
+    layout->addWidget(button, rowCount, 1);
+    connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setFlatListFace);
+    rowCount++;
+
     button = new QPushButton(QStringLiteral("Tree"), this);
     layout->addWidget(button, rowCount, 1);
     connect(button, &QAbstractButton::clicked, this, &KPageWidgetTest::setTreeFace);
@@ -106,6 +111,11 @@ void KPageWidgetTest::setTreeFace()
 void KPageWidgetTest::setTabbedFace()
 {
     mWidget->setFaceType(KPageWidget::Tabbed);
+}
+
+void KPageWidgetTest::setFlatListFace()
+{
+    mWidget->setFaceType(KPageWidget::FlatList);
 }
 
 void KPageWidgetTest::addPage()

@@ -83,8 +83,6 @@ KPageListView::KPageListView(QWidget *parent)
     QFont boldFont(font());
     boldFont.setBold(true);
     setFont(boldFont);
-
-    setItemDelegate(new KPageListViewDelegate(this));
 }
 
 KPageListView::~KPageListView()
