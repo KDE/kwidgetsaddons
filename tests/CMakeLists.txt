@@ -17,6 +17,7 @@ kwidgetsaddons_executable_tests(
   kcharselecttest
   kcollapsiblegroupboxtest
   kdatepicktest
+  kdatepickerpopuptest
   kdatetimeedittestapp
   kledtest
   kmessageboxtest

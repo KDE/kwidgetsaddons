@@ -45,6 +45,8 @@ target_sources(KF5WidgetsAddons PRIVATE
     kdatepicker.cpp
     kdatepicker.h
     kdatepicker_p.h
+    kdatepickerpopup.cpp
+    kdatepickerpopup.h
     kdatetable.cpp
     kdatetable_p.h
     kdatetimeedit.cpp
@@ -229,6 +231,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KColumnResizer
   KDateComboBox
   KDatePicker
+  KDatePickerPopup
   KDateTimeEdit
   KDragWidgetDecorator
   KDualAction
