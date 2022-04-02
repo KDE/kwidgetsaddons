@@ -8,6 +8,7 @@
 #include "kdaterangecontrol_p.h"
 
 #include <QDateTime>
+#include <QLocale>
 #include <QWidgetAction>
 
 class KDatePickerAction : public QWidgetAction
@@ -57,6 +58,7 @@ public:
     KDatePickerPopup *const q;
     KDatePicker *mDatePicker = nullptr;
     KDatePickerPopup::Modes mModes;
+    QMap<QDate, QString> m_dateMap;
 };
 
 void KDatePickerPopupPrivate::addMenuAction(const QString &text, const QDate &date)
@@ -89,16 +91,28 @@ void KDatePickerPopupPrivate::buildMenu()
     }
 
     if (mModes & KDatePickerPopup::Words) {
-        const QDate today = QDate::currentDate();
-        addMenuAction(KDatePickerPopup::tr("Next Year", "@option next year"), today.addYears(1));
-        addMenuAction(KDatePickerPopup::tr("Next Month", "@option next month"), today.addMonths(1));
-        addMenuAction(KDatePickerPopup::tr("Next Week", "@option next week"), today.addDays(7));
-        addMenuAction(KDatePickerPopup::tr("Tomorrow", "@option tomorrow"), today.addDays(1));
-        addMenuAction(KDatePickerPopup::tr("Today", "@option today"), today);
-        addMenuAction(KDatePickerPopup::tr("Yesterday", "@option yesterday"), today.addDays(-1));
-        addMenuAction(KDatePickerPopup::tr("Last Week", "@option last week"), today.addDays(-7));
-        addMenuAction(KDatePickerPopup::tr("Last Month", "@option last month"), today.addMonths(-1));
-        addMenuAction(KDatePickerPopup::tr("Last Year", "@option last year"), today.addYears(-1));
+        if (m_dateMap.isEmpty()) {
+            const QDate today = QDate::currentDate();
+            addMenuAction(KDatePickerPopup::tr("Next Year", "@option next year"), today.addYears(1));
+            addMenuAction(KDatePickerPopup::tr("Next Month", "@option next month"), today.addMonths(1));
+            addMenuAction(KDatePickerPopup::tr("Next Week", "@option next week"), today.addDays(7));
+            addMenuAction(KDatePickerPopup::tr("Tomorrow", "@option tomorrow"), today.addDays(1));
+            addMenuAction(KDatePickerPopup::tr("Today", "@option today"), today);
+            addMenuAction(KDatePickerPopup::tr("Yesterday", "@option yesterday"), today.addDays(-1));
+            addMenuAction(KDatePickerPopup::tr("Last Week", "@option last week"), today.addDays(-7));
+            addMenuAction(KDatePickerPopup::tr("Last Month", "@option last month"), today.addMonths(-1));
+            addMenuAction(KDatePickerPopup::tr("Last Year", "@option last year"), today.addYears(-1));
+        } else {
+            for (auto it = m_dateMap.constBegin(); it != m_dateMap.constEnd(); ++it) {
+                if (it.value().isEmpty()) {
+                    addMenuAction(QLocale().toString(it.key()), it.key());
+                } else if (it.value().toLower() == QLatin1String("separator")) {
+                    q->addSeparator();
+                } else {
+                    addMenuAction(it.value(), it.key());
+                }
+            }
+        }
 
         if (mModes & KDatePickerPopup::NoDate) {
             q->addSeparator();
@@ -164,6 +178,16 @@ void KDatePickerPopup::setModes(KDatePickerPopup::Modes modes)
 void KDatePickerPopup::setDateRange(const QDate &minDate, const QDate &maxDate)
 {
     d->setDateRange(minDate, maxDate);
+}
+
+QMap<QDate, QString> KDatePickerPopup::dateMap() const
+{
+    return d->m_dateMap;
+}
+
+void KDatePickerPopup::setDateMap(const QMap<QDate, QString> &dateMap)
+{
+    d->m_dateMap = dateMap;
 }
 
 #include "moc_kdatepickerpopup.cpp"

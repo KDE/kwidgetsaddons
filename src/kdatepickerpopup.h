@@ -91,6 +91,35 @@ public:
     void setDateRange(const QDate &minDate, const QDate &maxDate);
 
     /**
+     * Return the map of dates listed in the drop-down and their displayed
+     * string forms.
+     *
+     * @return the select date map
+     *
+     * @see setDateMap()
+     */
+    QMap<QDate, QString> dateMap() const;
+
+    /**
+     * Sets the list of dates in the drop-down menu that the user can select from
+     * and the text string to display for each date, e.g. "2010-01-01" and "Yesterday".
+     *
+     * The list of date/string pairs is used as-is (invalid or duplicate dates aren't removed),
+     * and the order will not be changed (the map is sorted by key); also and the minimum and
+     * maximum dates will not be affected.
+     *
+     * The @p dateMap is keyed by the date to be listed and the value is the
+     * string to be displayed.  If you want the date to be displayed in the
+     * default date format then the string should be null.  If you want a
+     * separator to be displayed then set the string to "separator".
+     *
+     * @param dateMap the map of dates the user can select from
+     *
+     * @see dateMap()
+     */
+    void setDateMap(const QMap<QDate, QString> &dateMap);
+
+    /**
      * Returns the used KDatePicker object.
      */
     Q_REQUIRED_RESULT KDatePicker *datePicker() const;

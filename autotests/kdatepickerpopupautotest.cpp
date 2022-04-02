@@ -85,6 +85,32 @@ private Q_SLOTS:
         QCOMPARE(p.actions().count(), 9);
         p.hide();
     }
+
+    void testDateMap()
+    {
+        KDatePickerPopup p(KDatePickerPopup::Words);
+
+        QMap<QDate, QString> m;
+        m.insert(QDate(1996, 10, 14), QStringLiteral("KDE's birthday"));
+        m.insert(QDate(1997, 1, 1), QStringLiteral("separator"));
+        m.insert(QDate(2017, 9, 10), {});
+
+        p.setDateMap(m);
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 3);
+        QCOMPARE(p.actions()[0]->data().toDate(), QDate(1996, 10, 14));
+        QCOMPARE(p.actions()[0]->text(), QStringLiteral("KDE's birthday"));
+        QCOMPARE(p.actions()[1]->data().toDate(), QDate());
+        QCOMPARE(p.actions()[1]->isSeparator(), true);
+        QCOMPARE(p.actions()[2]->data().toDate(), QDate(2017, 9, 10));
+        QCOMPARE(p.actions()[2]->text().isEmpty(), false);
+        p.hide();
+
+        p.setDateMap({});
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 9);
+        p.hide();
+    }
 };
 
 QTEST_MAIN(KDatePickerPopupTest)
