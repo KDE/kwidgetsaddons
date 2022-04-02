@@ -27,6 +27,35 @@ private Q_SLOTS:
         QCOMPARE(p.actions()[6]->data().toDate(), QDate::currentDate());
         QCOMPARE(p.actions()[12]->data().toDate(), QDate());
     }
+
+    void testModes()
+    {
+        KDatePickerPopup p;
+        QCOMPARE(p.modes(), KDatePickerPopup::DatePicker);
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 1); // only the date picker
+        p.hide();
+
+        p.setModes(KDatePickerPopup::NoDate);
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 1);
+        p.hide();
+
+        p.setModes(KDatePickerPopup::Words);
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 9);
+        p.hide();
+
+        p.setModes(KDatePickerPopup::DatePicker | KDatePickerPopup::NoDate);
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 3);
+        p.hide();
+
+        p.setModes(KDatePickerPopup::Words | KDatePickerPopup::NoDate);
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 11);
+        p.hide();
+    }
 };
 
 QTEST_MAIN(KDatePickerPopupTest)

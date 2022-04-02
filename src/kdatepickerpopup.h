@@ -36,6 +36,7 @@ class KDatePickerPopupPrivate;
 class KWIDGETSADDONS_EXPORT KDatePickerPopup : public QMenu
 {
     Q_OBJECT
+    Q_PROPERTY(Modes modes READ modes WRITE setModes)
 
 public:
     /**
@@ -65,6 +66,16 @@ public:
      * Destroys the date picker popup.
      */
     ~KDatePickerPopup() override;
+
+    /**
+     * Returns the currently used selection modes.
+     */
+    Modes modes() const;
+
+    /**
+     * Set the selection modes to use.
+     */
+    void setModes(Modes modes);
 
     /**
      * Returns the used KDatePicker object.

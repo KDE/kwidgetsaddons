@@ -144,4 +144,14 @@ void KDatePickerPopup::setDate(QDate date)
     d->mDatePicker->setDate(date);
 }
 
+KDatePickerPopup::Modes KDatePickerPopup::modes() const
+{
+    return d->mModes;
+}
+
+void KDatePickerPopup::setModes(KDatePickerPopup::Modes modes)
+{
+    d->mModes = modes;
+}
+
 #include "moc_kdatepickerpopup.cpp"
