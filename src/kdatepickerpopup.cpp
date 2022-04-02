@@ -48,19 +48,26 @@ public:
     {
     }
 
+    void addMenuAction(const QString &text, const QDate &date);
     void buildMenu();
-
+    void menuActionTriggered(QAction *action);
     void slotDateChanged(QDate);
-    void slotToday();
-    void slotTomorrow();
-    void slotNextWeek();
-    void slotNextMonth();
-    void slotNoDate();
 
     KDatePickerPopup *const q;
     KDatePicker *mDatePicker = nullptr;
     KDatePickerPopup::Modes mModes;
 };
+
+void KDatePickerPopupPrivate::addMenuAction(const QString &text, const QDate &date)
+{
+    QAction *action = new QAction(q);
+    action->setText(text);
+    action->setData(date);
+    QObject::connect(action, &QAction::triggered, q, [this, action]() {
+        Q_EMIT q->dateChanged(action->data().toDate());
+    });
+    q->addAction(action);
+}
 
 void KDatePickerPopupPrivate::buildMenu()
 {
@@ -75,18 +82,16 @@ void KDatePickerPopupPrivate::buildMenu()
     }
 
     if (mModes & KDatePickerPopup::Words) {
-        q->addAction(KDatePickerPopup::tr("&Today", "@option today"), q, [this]() {
-            slotToday();
-        });
-        q->addAction(KDatePickerPopup::tr("To&morrow", "@option tomorrow"), q, [this]() {
-            slotTomorrow();
-        });
-        q->addAction(KDatePickerPopup::tr("Next &Week", "@option next week"), q, [this]() {
-            slotNextWeek();
-        });
-        q->addAction(KDatePickerPopup::tr("Next M&onth", "@option next month"), q, [this]() {
-            slotNextMonth();
-        });
+        const QDate today = QDate::currentDate();
+        addMenuAction(KDatePickerPopup::tr("Next Year", "@option next year"), today.addYears(1));
+        addMenuAction(KDatePickerPopup::tr("Next Month", "@option next month"), today.addMonths(1));
+        addMenuAction(KDatePickerPopup::tr("Next Week", "@option next week"), today.addDays(7));
+        addMenuAction(KDatePickerPopup::tr("Tomorrow", "@option tomorrow"), today.addDays(1));
+        addMenuAction(KDatePickerPopup::tr("Today", "@option today"), today);
+        addMenuAction(KDatePickerPopup::tr("Yesterday", "@option yesterday"), today.addDays(-1));
+        addMenuAction(KDatePickerPopup::tr("Last Week", "@option last week"), today.addDays(-7));
+        addMenuAction(KDatePickerPopup::tr("Last Month", "@option last month"), today.addMonths(-1));
+        addMenuAction(KDatePickerPopup::tr("Last Year", "@option last year"), today.addYears(-1));
 
         if (mModes & KDatePickerPopup::NoDate) {
             q->addSeparator();
@@ -94,9 +99,7 @@ void KDatePickerPopupPrivate::buildMenu()
     }
 
     if (mModes & KDatePickerPopup::NoDate) {
-        q->addAction(KDatePickerPopup::tr("No Date", "@option do not specify a date"), q, [this]() {
-            slotNoDate();
-        });
+        addMenuAction(KDatePickerPopup::tr("No Date", "@option do not specify a date"), QDate());
     }
 }
 
@@ -104,31 +107,6 @@ void KDatePickerPopupPrivate::slotDateChanged(QDate date)
 {
     Q_EMIT q->dateChanged(date);
     q->hide();
-}
-
-void KDatePickerPopupPrivate::slotToday()
-{
-    Q_EMIT q->dateChanged(QDate::currentDate());
-}
-
-void KDatePickerPopupPrivate::slotTomorrow()
-{
-    Q_EMIT q->dateChanged(QDate::currentDate().addDays(1));
-}
-
-void KDatePickerPopupPrivate::slotNoDate()
-{
-    Q_EMIT q->dateChanged(QDate());
-}
-
-void KDatePickerPopupPrivate::slotNextWeek()
-{
-    Q_EMIT q->dateChanged(QDate::currentDate().addDays(7));
-}
-
-void KDatePickerPopupPrivate::slotNextMonth()
-{
-    Q_EMIT q->dateChanged(QDate::currentDate().addMonths(1));
 }
 
 KDatePickerPopup::KDatePickerPopup(Modes modes, QDate date, QWidget *parent)

@@ -16,12 +16,16 @@ private Q_SLOTS:
     void testWordActions()
     {
         KDatePickerPopup p(KDatePickerPopup::DatePicker | KDatePickerPopup::Words | KDatePickerPopup::NoDate);
-        // picker, 4 words, no date, 2 separators
+        // picker, 9 words, no date, 2 separators
         p.popup(QPoint());
-        QCOMPARE(p.actions().count(), 8);
+        QCOMPARE(p.actions().count(), 13);
         p.hide();
         p.popup(QPoint());
-        QCOMPARE(p.actions().count(), 8);
+        QCOMPARE(p.actions().count(), 13);
+
+        QCOMPARE(p.actions()[2]->data().toDate(), QDate::currentDate().addYears(1));
+        QCOMPARE(p.actions()[6]->data().toDate(), QDate::currentDate());
+        QCOMPARE(p.actions()[12]->data().toDate(), QDate());
     }
 };
 
