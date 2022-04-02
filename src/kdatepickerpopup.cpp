@@ -64,10 +64,6 @@ public:
 
 void KDatePickerPopupPrivate::buildMenu()
 {
-    if (q->isVisible()) {
-        return;
-    }
-
     q->clear();
 
     if (mModes & KDatePickerPopup::DatePicker) {
@@ -153,7 +149,9 @@ KDatePickerPopup::KDatePickerPopup(Modes modes, QDate date, QWidget *parent)
 
     d->mDatePicker->setDate(date);
 
-    d->buildMenu();
+    connect(this, &QMenu::aboutToShow, this, [this]() {
+        d->buildMenu();
+    });
 }
 
 KDatePickerPopup::~KDatePickerPopup() = default;
