@@ -47,6 +47,8 @@ target_sources(KF5WidgetsAddons PRIVATE
     kdatepicker_p.h
     kdatepickerpopup.cpp
     kdatepickerpopup.h
+    kdaterangecontrol.cpp
+    kdaterangecontrol_p.h
     kdatetable.cpp
     kdatetable_p.h
     kdatetimeedit.cpp

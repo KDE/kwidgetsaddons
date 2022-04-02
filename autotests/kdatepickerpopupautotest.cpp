@@ -56,6 +56,35 @@ private Q_SLOTS:
         QCOMPARE(p.actions().count(), 11);
         p.hide();
     }
+
+    void testDateRange()
+    {
+        KDatePickerPopup p(KDatePickerPopup::Words);
+        const auto today = QDate::currentDate();
+
+        p.setDateRange(today.addDays(-1), today.addDays(1));
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 3);
+        QCOMPARE(p.actions()[1]->data().toDate(), today);
+        p.hide();
+
+        p.setDateRange(QDate(), today.addDays(1));
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 6);
+        QCOMPARE(p.actions()[1]->data().toDate(), today);
+        p.hide();
+
+        p.setDateRange(today.addDays(-2), {});
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 6);
+        QCOMPARE(p.actions()[4]->data().toDate(), today);
+        p.hide();
+
+        p.setDateRange({}, {});
+        p.popup(QPoint());
+        QCOMPARE(p.actions().count(), 9);
+        p.hide();
+    }
 };
 
 QTEST_MAIN(KDatePickerPopupTest)

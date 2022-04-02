@@ -5,6 +5,7 @@
 
 #include "kdatepickerpopup.h"
 #include "kdatepicker.h"
+#include "kdaterangecontrol_p.h"
 
 #include <QDateTime>
 #include <QWidgetAction>
@@ -40,7 +41,7 @@ private:
     QWidget *const mOriginalParent;
 };
 
-class KDatePickerPopupPrivate
+class KDatePickerPopupPrivate : public KDateRangeControlPrivate
 {
 public:
     explicit KDatePickerPopupPrivate(KDatePickerPopup *qq)
@@ -60,6 +61,12 @@ public:
 
 void KDatePickerPopupPrivate::addMenuAction(const QString &text, const QDate &date)
 {
+    // skip out-of-range dates
+    // an invalid date is ok though, that's for the "No Date" action
+    if (date.isValid() && !isInDateRange(date)) {
+        return;
+    }
+
     QAction *action = new QAction(q);
     action->setText(text);
     action->setData(date);
@@ -152,6 +159,11 @@ KDatePickerPopup::Modes KDatePickerPopup::modes() const
 void KDatePickerPopup::setModes(KDatePickerPopup::Modes modes)
 {
     d->mModes = modes;
+}
+
+void KDatePickerPopup::setDateRange(const QDate &minDate, const QDate &maxDate)
+{
+    d->setDateRange(minDate, maxDate);
 }
 
 #include "moc_kdatepickerpopup.cpp"

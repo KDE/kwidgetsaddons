@@ -5,6 +5,7 @@
 */
 
 #include "kdatecombobox.h"
+#include "kdaterangecontrol_p.h"
 
 #include <QAbstractItemView>
 #include <QApplication>
@@ -19,7 +20,7 @@
 #include "kdatepicker.h"
 #include "kmessagebox.h"
 
-class KDateComboBoxPrivate
+class KDateComboBoxPrivate : public KDateRangeControlPrivate
 {
 public:
     KDateComboBoxPrivate(KDateComboBox *qq);
@@ -38,7 +39,7 @@ public:
     void enableMenuDates();
     void updateDateWidget();
     void setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg, const QString &maxWarnMsg);
-    bool isInDateRange(const QDate &date) const;
+    using KDateRangeControlPrivate::setDateRange;
 
     void clickDate();
     void selectDate(QAction *action);
@@ -55,8 +56,6 @@ public:
 
     QDate m_date;
     KDateComboBox::Options m_options;
-    QDate m_minDate;
-    QDate m_maxDate;
     QString m_minWarnMsg;
     QString m_maxWarnMsg;
     bool m_warningShown;
@@ -208,25 +207,13 @@ void KDateComboBoxPrivate::updateDateWidget()
 
 void KDateComboBoxPrivate::setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg, const QString &maxWarnMsg)
 {
-    if (minDate.isValid() && maxDate.isValid() && minDate > maxDate) {
+    if (!setDateRange(minDate, maxDate)) {
         return;
     }
 
-    if (minDate != m_minDate || maxDate != m_maxDate //
-        || minWarnMsg != m_minWarnMsg || maxWarnMsg != m_maxWarnMsg) {
-        m_minDate = minDate;
-        m_maxDate = maxDate;
-        m_minWarnMsg = minWarnMsg;
-        m_maxWarnMsg = maxWarnMsg;
-    }
+    m_minWarnMsg = minWarnMsg;
+    m_maxWarnMsg = maxWarnMsg;
     enableMenuDates();
-}
-
-bool KDateComboBoxPrivate::isInDateRange(const QDate &date) const
-{
-    return date.isValid() //
-        && (!m_minDate.isValid() || date >= m_minDate) //
-        && (!m_maxDate.isValid() || date <= m_maxDate);
 }
 
 void KDateComboBoxPrivate::selectDate(QAction *action)

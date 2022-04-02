@@ -78,6 +78,19 @@ public:
     void setModes(Modes modes);
 
     /**
+     * Sets the range of dates that can be accepted.
+     *
+     * Invalid dates can be used to define open-ended ranges.
+     * If both values are valid, the minimum date must be less than
+     * or equal to the maximum date, otherwise the date range will
+     * not be set.
+     *
+     * @param minDate the minimum date
+     * @param maxDate the maximum date
+     */
+    void setDateRange(const QDate &minDate, const QDate &maxDate);
+
+    /**
      * Returns the used KDatePicker object.
      */
     Q_REQUIRED_RESULT KDatePicker *datePicker() const;
