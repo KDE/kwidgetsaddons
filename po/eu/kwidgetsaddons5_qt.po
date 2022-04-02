@@ -1,0 +1,2522 @@
+# Translation for kwidgetsaddons5_qt.po to Euskara/Basque (eu).
+# Copyright (C) 1999-2018, Free Software Foundation.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the original file.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos <marcos@euskalgnu.org>, 2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
+# Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-03-23 01:50+0000\n"
+"PO-Revision-Date: 2021-09-22 19:20+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Qt-Contexts: true\n"
+
+#. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers_p.h:22
+msgctxt "FontHelpers|@item Font name"
+msgid "Sans Serif"
+msgstr "Sans Serif"
+
+#. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers_p.h:25
+msgctxt "FontHelpers|@item Font name"
+msgid "Serif"
+msgstr "Serif"
+
+#. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
+#: fonthelpers_p.h:28
+msgctxt "FontHelpers|@item Font name"
+msgid "Monospace"
+msgstr "Zabalera-finkoa"
+
+#: fonthelpers_p.h:90
+#, qt-format
+msgctxt "FontHelpers|@item Font name"
+msgid "%1"
+msgstr "%1"
+
+#: fonthelpers_p.h:94
+#, qt-format
+msgctxt "FontHelpers|@item Font name [foundry]"
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kactionselector.cpp:98
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Available:"
+msgstr "&Erabilgarri:"
+
+#: kactionselector.cpp:115
+msgctxt "KActionSelector|@label:listbox"
+msgid "&Selected:"
+msgstr "&Hautatuta:"
+
+#: kassistantdialog.cpp:100
+msgctxt "KAssistantDialog|@action:button go back"
+msgid "&Back"
+msgstr "&Atzera"
+
+#: kassistantdialog.cpp:102
+msgctxt "KAssistantDialog|@info:tooltip"
+msgid "Go back one step"
+msgstr "Joan urrats bat atzera"
+
+#: kassistantdialog.cpp:107
+msgctxt "KAssistantDialog|@action:button Opposite to Back"
+msgid "Next"
+msgstr "Hurrengoa"
+
+#: kassistantdialog.cpp:114
+msgctxt "KAssistantDialog|@action:button"
+msgid "Finish"
+msgstr "Amaitu"
+
+#: kcharselect-translation.cpp:11 kcharselect.cpp:470 kcharselectdata.cpp:285
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "All"
+msgstr "Guztia"
+
+#: kcharselect-translation.cpp:12
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "European Scripts"
+msgstr "Europako idazkerak"
+
+#: kcharselect-translation.cpp:13
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "African Scripts"
+msgstr "Afrikako idazkerak"
+
+#: kcharselect-translation.cpp:14
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Middle Eastern Scripts"
+msgstr "Ekialde Hurbileko idazkerak"
+
+#: kcharselect-translation.cpp:15
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Central Asian Scripts"
+msgstr "Asia Erdiko idazkerak"
+
+#: kcharselect-translation.cpp:16
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "South Asian Scripts"
+msgstr "Asia Hegoaldeko idazkerak"
+
+#: kcharselect-translation.cpp:17
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Southeast Asian Scripts"
+msgstr "Asia Hego Ekialdeko idazkerak"
+
+#: kcharselect-translation.cpp:18
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Indonesia and Oceania Scripts"
+msgstr "Indonesia eta Ozeaniako idazkerak"
+
+#: kcharselect-translation.cpp:19
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "East Asian Scripts"
+msgstr "Asia Ekialdeko idazkerak"
+
+#: kcharselect-translation.cpp:20
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "American Scripts"
+msgstr "Amerikako idazkerak"
+
+#: kcharselect-translation.cpp:21
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Symbols"
+msgstr "Ikurrak"
+
+#: kcharselect-translation.cpp:22
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Mathematical Symbols"
+msgstr "Matematika-ikurrak"
+
+#: kcharselect-translation.cpp:23
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Phonetic Symbols"
+msgstr "Fonetika-ikurrak"
+
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Combining Diacritics"
+msgstr "Konbinatzeko diakritikoak"
+
+#: kcharselect-translation.cpp:25
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "Other"
+msgstr "Bestelakoak"
+
+#: kcharselect-translation.cpp:26
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Basic Latin"
+msgstr "Latin arrunta"
+
+#: kcharselect-translation.cpp:27
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin-1 Supplement"
+msgstr "Latin-1 gehigarria"
+
+#: kcharselect-translation.cpp:28
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-A"
+msgstr "Latin hedatua-A"
+
+#: kcharselect-translation.cpp:29
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-B"
+msgstr "Latin hedatua-B"
+
+#: kcharselect-translation.cpp:30
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "IPA Extensions"
+msgstr "IPA hedapenak"
+
+#: kcharselect-translation.cpp:31
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Spacing Modifier Letters"
+msgstr "Tarteak aldatzeko letrak"
+
+#: kcharselect-translation.cpp:32
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks"
+msgstr "Konbinatzeko marka diakritikoak"
+
+# Harluxet.
+#: kcharselect-translation.cpp:33
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek and Coptic"
+msgstr "Grekoa eta Koptoera"
+
+#: kcharselect-translation.cpp:34
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic"
+msgstr "Zirilikoa"
+
+#: kcharselect-translation.cpp:35
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Supplement"
+msgstr "Zirilikoa gehigarria"
+
+# Harluxet.
+#: kcharselect-translation.cpp:36
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Armenian"
+msgstr "Armeniera"
+
+#: kcharselect-translation.cpp:37
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hebrew"
+msgstr "Hebreera"
+
+#: kcharselect-translation.cpp:38
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic"
+msgstr "Arabiera"
+
+# siriako (Harluxet):
+#
+# iz. eta izond. 1. Arameratik eratorritako antzinako hizkuntza semitikoa, Ekialde Hurbilean hizkuntza liturgiko gisa gorde dena. 2. ERL. Beren erritoetan hizkuntza siriakoa erabiltzen duten kristauez esaten da.
+#: kcharselect-translation.cpp:39
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac"
+msgstr "Siriako"
+
+#: kcharselect-translation.cpp:40
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Supplement"
+msgstr "Arabiera gehigarria"
+
+# Maldivera Thaana idazkeran idazten da (eu.wikipedia.org).
+#: kcharselect-translation.cpp:41
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thaana"
+msgstr "Taana"
+
+#: kcharselect-translation.cpp:42
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "NKo"
+msgstr "N'Ko"
+
+#: kcharselect-translation.cpp:43
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Samaritan"
+msgstr "Samariera"
+
+# xalba 2017-10-16 ar:
+# Hizkuntza familia:
+# - Afro-asiarra
+#  - Semitikoa
+#   - "Central" Semitikoa
+#    - Ipar-mendebaldeko Semitikoa
+#     - Aramera
+#      - Ekialdeko Aramera
+#       - en "Mandaic", ca "Llengua mandea", es "mandeo", fr "mandéen", de "Mandäische Sprache", ...
+# Ez det lortu Interneten, hiztegietan, wikipedian, euskaraz ingeleseko "Mandaic" nola idazten den. Aurreko itzulpenetik "Mandeikera" gisa agertzen zen eta horrela utziko dut. Aurrerago aurkitu litezkeen erreferentzien zain.
+#: kcharselect-translation.cpp:44
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mandaic"
+msgstr "Mandeikera"
+
+#: kcharselect-translation.cpp:45
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syriac Supplement"
+msgstr "Siriako gehigarria"
+
+#: kcharselect-translation.cpp:46
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Extended-A"
+msgstr "Arabiera hedatua-A"
+
+# devanagari (Harluxet):
+#
+# iz. HIZKL. Hizkuntza vedikoak eta sanskritoak, eta gaur egun indiar hizkuntza moderno batzuek (hindiak, bengalierak, etab.ek), erabilitako idazkera.
+#: kcharselect-translation.cpp:47
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari"
+msgstr "Devanagaria"
+
+# bengaliera (Harluxet):
+# iz. Sanskritotik eratorritako hizkuntza indoarioa, Bangladesh-en eta Bengalan hitz egiten dena.
+#: kcharselect-translation.cpp:48
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bengali"
+msgstr "Bengaliera"
+
+#: kcharselect-translation.cpp:49
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gurmukhi"
+msgstr "Gurmukhia"
+
+# gujaratera (Harluxet):
+# iz. Indiako Gujarat, Maharashtra eta Rajastan estatuetan hitz egiten den hizkuntza indoarioa. Gujarat estatuko hizkuntza ofiziala da.
+#: kcharselect-translation.cpp:50
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Gujarati"
+msgstr "Gujaratera"
+
+# oriya (Harluxet):
+# iz. Orissan mintzatzen den hizkuntza indoarioa.
+#: kcharselect-translation.cpp:51
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Oriya"
+msgstr "Oriya"
+
+# tamilera (Harluxet):
+# iz. Indiako hegoaldean eta Sri Lankan mintzatzen den dravida taldeko hizkuntza. Indiako Tamil Nadu estatuko hizkuntza ofiziala eta Sri Lankako bi hizkuntza ofizialetako bat da.
+#: kcharselect-translation.cpp:52
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tamil"
+msgstr "Tamilera"
+
+# teluguera (Harluxet):
+# iz. Andra Pradesh-en mintzatzen den dravida taldeko hizkuntza.
+#: kcharselect-translation.cpp:53
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Telugu"
+msgstr "Teluguera"
+
+# kannadera (Harlauxet):
+# iz. Indiako Karnataka estatuan hitz egiten den dravida hizkuntza. Estatu horretako hizkuntza ofiziala da.
+#: kcharselect-translation.cpp:54
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kannada"
+msgstr "Kannadera"
+
+# Malabarera (eu.wikipedia.org): Indian hitz egiten den hizkuntza.
+#: kcharselect-translation.cpp:55
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Malayalam"
+msgstr "Malabarera"
+
+# Elhuyar.
+#: kcharselect-translation.cpp:56
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: kcharselect-translation.cpp:57
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Thai"
+msgstr "Thailandiera"
+
+# laosera (Harluxet):
+# iz. Tai taldeko hizkuntza, Laosen eta Tailandiako ekialdean hitz egiten dena. Laosko hizkuntza ofiziala da.
+#: kcharselect-translation.cpp:58
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lao"
+msgstr "Laosera"
+
+#: kcharselect-translation.cpp:59
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tibetan"
+msgstr "Tibetera"
+
+#: kcharselect-translation.cpp:60
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar"
+msgstr "Birmaniera"
+
+#: kcharselect-translation.cpp:61
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian"
+msgstr "Georgiera"
+
+#: kcharselect-translation.cpp:62
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo"
+msgstr "Hangul-Jamoa"
+
+#: kcharselect-translation.cpp:63
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic"
+msgstr "Etiopiarra"
+
+#: kcharselect-translation.cpp:64
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Supplement"
+msgstr "Etiopiarra gehigarria"
+
+#: kcharselect-translation.cpp:65
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee"
+msgstr "Txerokia"
+
+#: kcharselect-translation.cpp:66
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Kanadako aborigenen silabiko batua"
+
+#: kcharselect-translation.cpp:67
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ogham"
+msgstr "Oghamikoa"
+
+#: kcharselect-translation.cpp:68
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Runic"
+msgstr "Errunikoa"
+
+#: kcharselect-translation.cpp:69
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagalog"
+msgstr "Tagaloa"
+
+#: kcharselect-translation.cpp:70
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hanunoo"
+msgstr "Hanunooa"
+
+#: kcharselect-translation.cpp:71
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buhid"
+msgstr "Buhida"
+
+#: kcharselect-translation.cpp:72
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: kcharselect-translation.cpp:73
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer"
+msgstr "Khemerera"
+
+#: kcharselect-translation.cpp:74
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mongolian"
+msgstr "Mongoliera"
+
+#: kcharselect-translation.cpp:75
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Kanadako aborigenen silabiko batua gehigarria"
+
+#: kcharselect-translation.cpp:76
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Limbu"
+msgstr "Limbua"
+
+#: kcharselect-translation.cpp:77
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Le"
+msgstr "Tai Lea"
+
+#: kcharselect-translation.cpp:78
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "New Tai Lue"
+msgstr "Tai Lue berria"
+
+#: kcharselect-translation.cpp:79
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Khmer Symbols"
+msgstr "Ikur khemerrak"
+
+#: kcharselect-translation.cpp:80
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Buginese"
+msgstr "Bugia"
+
+#: kcharselect-translation.cpp:81
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: kcharselect-translation.cpp:82
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Extended"
+msgstr "Konbinatzeko marka diakritikoak gehigarria"
+
+# xalba 2017-10-16 ar:
+# en "Madaic" --> eu "Mandeikera" itzulpenarekin bezala ez dut aurkitu oinarri sendorik itzulpen honetarako.
+# Aurretik zegoen itzulpena eta horrelako beste fitxategi baten itzulpena (<https://github.com/TheRyuu/ffdshow/blob/master/bin/languages/ffdshow.1069.eu>) salbu ez dut beste ezer aurkitu.
+#: kcharselect-translation.cpp:83
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Balinese"
+msgstr "Balinera"
+
+#: kcharselect-translation.cpp:84
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese"
+msgstr "Sundanera"
+
+# batak <http://www1.euskadi.net/harluxet/hiztegia1.asp?sarrera=batak>
+#
+# iz. Sumatrako talde etniko indonesiarra. Islam-ak eragindako tradiziozko sinesmenak gorde dituzte.
+#
+# ------------------------------
+#
+# Batak herria <https://eu.wikipedia.org/wiki/Batak_herria>
+#
+# Batak herria Hego-ekialdeko Asiako talde etnolinguistikoa da, jatorria Indonesiako Sumatra uhartearen iparraldean duena, Toba aintziraren inguruan. Zazpi multzo nagusitan banaturik daude: Angkola, Dairi, Karo, Pakpak, Silindung, Simalungun eta Toba. Beren hizkuntza, batak deitua halaber, malaysiar-polinesiar hizkuntzen familiakoa da. Kristautasuna da gehienen erlijioa[2].
+#
+#: kcharselect-translation.cpp:85
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Batak"
+msgstr "Batak"
+
+# xalba 2017-10-17 ar:
+#
+# Ez det euskaraz aurkitu
+#
+# Lepcha edo Róng Ring hizkuntza eta idazkerari dagokion euskarazko izena. Bere horretan utziko dut informazio berria aurkitu arte.
+#: kcharselect-translation.cpp:86
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lepcha"
+msgstr "Lepcha"
+
+# xalba 2017-10-17 ar:
+# Ez det aurkitu euskaraz honi buruzkorik. Bere horretan utziko det informazio berria aurkitu arte, itzuli duten hizkuntza gehienetan egin duten bezala.
+#: kcharselect-translation.cpp:87
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: kcharselect-translation.cpp:88
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-C"
+msgstr "Ziriliko hedatua-C"
+
+#: kcharselect-translation.cpp:89
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Extended"
+msgstr "Georgiera hedatua"
+
+#: kcharselect-translation.cpp:90
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Sundanese Supplement"
+msgstr "Sudanera gehigarria"
+
+#: kcharselect-translation.cpp:91
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vedic Extensions"
+msgstr "Vediko hedapenak"
+
+#: kcharselect-translation.cpp:92
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions"
+msgstr "Fonetika hedapenak"
+
+#: kcharselect-translation.cpp:93
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phonetic Extensions Supplement"
+msgstr "Fonetika hedapenak gehigarria"
+
+#: kcharselect-translation.cpp:94
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Konbinatzeko ikur diakritikoen gehigarria"
+
+#: kcharselect-translation.cpp:95
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended Additional"
+msgstr "Latin hedatua osagarria"
+
+#: kcharselect-translation.cpp:96
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Greek Extended"
+msgstr "Grekoa hedatua"
+
+#: kcharselect-translation.cpp:97
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "General Punctuation"
+msgstr "Puntuazio orokorra"
+
+#: kcharselect-translation.cpp:98
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Superscripts and Subscripts"
+msgstr "Goi-indizeak eta azpiindizeak"
+
+#: kcharselect-translation.cpp:99
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Currency Symbols"
+msgstr "Moneta ikurrak"
+
+#: kcharselect-translation.cpp:100
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Konbinatzeko ikur diakritikoa ikurrentzako"
+
+#: kcharselect-translation.cpp:101
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Letterlike Symbols"
+msgstr "Letra gisako ikurrak"
+
+#: kcharselect-translation.cpp:102
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Number Forms"
+msgstr "Zenbaki-ikurrak"
+
+#: kcharselect-translation.cpp:103
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arrows"
+msgstr "Geziak"
+
+#: kcharselect-translation.cpp:104
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mathematical Operators"
+msgstr "Matematika eragileak"
+
+#: kcharselect-translation.cpp:105
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Technical"
+msgstr "Hainbat ikur tekniko"
+
+#: kcharselect-translation.cpp:106
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Control Pictures"
+msgstr "Kontrolerako irudiak"
+
+#: kcharselect-translation.cpp:107
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Optical Character Recognition"
+msgstr "Karaktere-ezagutze optikoa"
+
+#: kcharselect-translation.cpp:108
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumerics"
+msgstr "Inguratutako alfazenbakizkoak"
+
+#: kcharselect-translation.cpp:109
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Box Drawing"
+msgstr "Kutxen marrazkia"
+
+#: kcharselect-translation.cpp:110
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Block Elements"
+msgstr "Bloke elementuak"
+
+#: kcharselect-translation.cpp:111
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes"
+msgstr "Forma geometrikoak"
+
+#: kcharselect-translation.cpp:112
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols"
+msgstr "Hainbat ikur"
+
+#: kcharselect-translation.cpp:113
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Dingbats"
+msgstr "Dingbat-ak"
+
+#: kcharselect-translation.cpp:114
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Hainbat matematika ikur-A"
+
+#: kcharselect-translation.cpp:115
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-A"
+msgstr "Gezi gehigarriak-A"
+
+#: kcharselect-translation.cpp:116
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Braille Patterns"
+msgstr "Braille ereduak"
+
+#: kcharselect-translation.cpp:117
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-B"
+msgstr "Gezi gehigarriak-B"
+
+#: kcharselect-translation.cpp:118
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Hainbat matematika ikur-B"
+
+#: kcharselect-translation.cpp:119
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Mathematical Operators"
+msgstr "Matematikako eragile gehigarriak"
+
+#: kcharselect-translation.cpp:120
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Hainbat ikur eta gezi"
+
+#: kcharselect-translation.cpp:121
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Glagolitic"
+msgstr "Glagolitikoa"
+
+#: kcharselect-translation.cpp:122
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-C"
+msgstr "Latin hedatua-C"
+
+#: kcharselect-translation.cpp:123
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Coptic"
+msgstr "Koptoera"
+
+#: kcharselect-translation.cpp:124
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Georgian Supplement"
+msgstr "Georgiera gehigarria"
+
+#: kcharselect-translation.cpp:125
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tifinagh"
+msgstr "Tifinagha"
+
+#: kcharselect-translation.cpp:126
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended"
+msgstr "Etiopiar hedatua"
+
+#: kcharselect-translation.cpp:127
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-A"
+msgstr "Ziriliko hedatua-A"
+
+#: kcharselect-translation.cpp:128
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Punctuation"
+msgstr "Puntuazio gehigarriak"
+
+#: kcharselect-translation.cpp:129
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Radicals Supplement"
+msgstr "CJK erradikalak gehigarria"
+
+#: kcharselect-translation.cpp:130
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kangxi Radicals"
+msgstr "Kangxi erradikalak"
+
+#: kcharselect-translation.cpp:131
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ideographic Description Characters"
+msgstr "Deskribapen ideografikorako karaktereak"
+
+#: kcharselect-translation.cpp:132
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK ikurrak eta puntuazioa"
+
+#: kcharselect-translation.cpp:133
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: kcharselect-translation.cpp:134
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana"
+msgstr "Katakana"
+
+#: kcharselect-translation.cpp:135
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: kcharselect-translation.cpp:136
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul-Jamo bateragarritasuna"
+
+#: kcharselect-translation.cpp:137
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kanbun"
+msgstr "Kanbuna"
+
+#: kcharselect-translation.cpp:138
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bopomofo Extended"
+msgstr "Bopomofo hedatua"
+
+#: kcharselect-translation.cpp:139
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Strokes"
+msgstr "CJK trazuak"
+
+#: kcharselect-translation.cpp:140
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana hedapen fonetikoak"
+
+#: kcharselect-translation.cpp:141
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed CJK Letters and Months"
+msgstr "Inguratutako CJK letrak eta hilabeteak"
+
+#: kcharselect-translation.cpp:142
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility"
+msgstr "CJK bateragarritasuna"
+
+#: kcharselect-translation.cpp:143
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK ideograma bateratuen A hedapena"
+
+#: kcharselect-translation.cpp:144
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing hexagramen ikurrak"
+
+#: kcharselect-translation.cpp:145
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Unified Ideographs"
+msgstr "CJK ideograma bateratuak"
+
+#: kcharselect-translation.cpp:146
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Syllables"
+msgstr "Yi silabak"
+
+#: kcharselect-translation.cpp:147
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Yi Radicals"
+msgstr "Yi erradikalak"
+
+# xalba 2017-10-17 ar:
+# Ez det aurkitu hizkuntzari edo idazteko sistemari buruz euskaraz idatzitako artikulurik Interneten. Bai ordea talde etnikoari buruzkoa wikipedian. Bere horretan utziko det.
+#
+# Lisu Etnia <https://eu.wikipedia.org/wiki/Lisu_etnia>
+#
+# Lisu etnia (txineraz: 傈僳族; pinyineraz: Lìsù Zú; tailandieraz: ลีสู่), Txinako Herri Errepublikan bizi diren 56 talde etnikoetako bat da.
+# Azken erroldaren arabera, Lisu etniako 634.912 pertsona bizi ziren Txinan, batez ere, Txina hegoaldeko Yunnan probintziaren mendebaldean.
+# Txinako Herri Errepublikaz gain, Myanmar (350.000) eta Thailandian (55.000) ere bizi dira.
+#: kcharselect-translation.cpp:148
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Lisu"
+msgstr "Lisu"
+
+#: kcharselect-translation.cpp:149
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vai"
+msgstr "Vai"
+
+#: kcharselect-translation.cpp:150
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cyrillic Extended-B"
+msgstr "Ziriliko hedatua-B"
+
+# xalba 2017-10-17 ar:
+# Ez det aurkitu hizkuntzari edo idazteko sistemari buruz euskaraz idatzitako artikulurik Interneten. Bai ordea talde etnikoari buruzkoa wikipedian. Bere horretan utziko det.
+# mum edo bamum <http://www1.euskadi.net/harluxet/hiztegia1.asp?sarrera=mumedobamum>
+# iz. Kamerungo talde etnikoa, bantuen familiakoa.
+#: kcharselect-translation.cpp:151
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Bamum"
+msgstr "Bamum"
+
+#: kcharselect-translation.cpp:152
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Modifier Tone Letters"
+msgstr "Tonua aldatzeko letrak"
+
+#: kcharselect-translation.cpp:153
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-D"
+msgstr "Latin hedatua-D"
+
+#: kcharselect-translation.cpp:154
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Syloti Nagri"
+msgstr "Syloti Nagria"
+
+#: kcharselect-translation.cpp:155
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Common Indic Number Forms"
+msgstr "Bareko zenbaki forma arruntak"
+
+#: kcharselect-translation.cpp:156
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+# xalba 2017-10-17 ar:
+# Ez det aurkitu hizkuntzari edo idazteko sistemari buruz euskaraz idatzitako artikulurik Interneten. Itzuli duten gainontzeko hizkuntzatan bere horretan utzi dute. Hala egingo det informazio berria aurkitu arte.
+# Saurashtra India inguruko estatua da, eskualde bat, hizkuntza, alfabetoa eta Unicode bloke bat.
+#: kcharselect-translation.cpp:157
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: kcharselect-translation.cpp:158
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Devanagari Extended"
+msgstr "Devanagari hedatua"
+
+#: kcharselect-translation.cpp:159
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: kcharselect-translation.cpp:160
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Rejang"
+msgstr "Rejang"
+
+#: kcharselect-translation.cpp:161
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul-Jamo hedatua A"
+
+#: kcharselect-translation.cpp:162
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Javanese"
+msgstr "Javera"
+
+#: kcharselect-translation.cpp:163
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-B"
+msgstr "Birmaniera hedatua-A"
+
+# cham, sham tiam <http://www1.euskadi.net/harluxet/hiztegia1.asp?sarrera=cham,sha>
+#
+# iz. Kanboia eta Vietnamgo talde etnikoa. Mongol arrazakoak dira.
+#
+# Cham (Unicode blokea) <https://en.wikipedia.org/wiki/Cham_(Unicode_block)>
+#: kcharselect-translation.cpp:164
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cham"
+msgstr "Cham"
+
+#: kcharselect-translation.cpp:165
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Myanmar Extended-A"
+msgstr "Birmaniera hedatua-A"
+
+#: kcharselect-translation.cpp:166
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Tai Viet"
+msgstr "Tai Viet"
+
+#: kcharselect-translation.cpp:167
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei Mayek hedapenak"
+
+#: kcharselect-translation.cpp:168
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ethiopic Extended-A"
+msgstr "Etiopiar hedatua-A"
+
+#: kcharselect-translation.cpp:169
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Latin Extended-E"
+msgstr "Latin hedatua-E"
+
+#: kcharselect-translation.cpp:170
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Cherokee Supplement"
+msgstr "Txeroki gehigarria"
+
+#: kcharselect-translation.cpp:171
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: kcharselect-translation.cpp:172
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Syllables"
+msgstr "Hangul silabak"
+
+#: kcharselect-translation.cpp:173
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul-Jamo hedatua B"
+
+#: kcharselect-translation.cpp:174
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Surrogates"
+msgstr "Ordezko altuak"
+
+#: kcharselect-translation.cpp:175
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "High Private Use Surrogates"
+msgstr "Erabilera pribatuko ordezko altuak"
+
+#: kcharselect-translation.cpp:176
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Low Surrogates"
+msgstr "Ordezko baxuak"
+
+#: kcharselect-translation.cpp:177
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Private Use Area"
+msgstr "Erabilera pribatuko eremua"
+
+#: kcharselect-translation.cpp:178
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK bateragarritasun ideogramak"
+
+#: kcharselect-translation.cpp:179
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alphabetic Presentation Forms"
+msgstr "Aurkezpen alfabetikoaren formak"
+
+#: kcharselect-translation.cpp:180
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-A"
+msgstr "Aurkezpen arabiarraren formak-A"
+
+#: kcharselect-translation.cpp:181
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Variation Selectors"
+msgstr "Aldaeren hautatzaileak"
+
+#: kcharselect-translation.cpp:182
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Vertical Forms"
+msgstr "Forma bertikalak"
+
+#: kcharselect-translation.cpp:183
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Combining Half Marks"
+msgstr "Marka-erdi konbinatuak"
+
+#: kcharselect-translation.cpp:184
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "CJK Compatibility Forms"
+msgstr "CJK bateragarritasun formak"
+
+#: kcharselect-translation.cpp:185
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Small Form Variants"
+msgstr "Forma txikiko aldaerak"
+
+#: kcharselect-translation.cpp:186
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Arabic Presentation Forms-B"
+msgstr "Aurkezpen arabiarraren formak-B"
+
+#: kcharselect-translation.cpp:187
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Zabalera erdiko eta osoko formak"
+
+#: kcharselect-translation.cpp:188
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Specials"
+msgstr "Bereziak"
+
+#: kcharselect-translation.cpp:190
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Mahjong Tiles"
+msgstr "Mahjong fitxak"
+
+#: kcharselect-translation.cpp:191
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Domino Tiles"
+msgstr "Domino fitxak"
+
+#: kcharselect-translation.cpp:192
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Playing Cards"
+msgstr "Karta jokoak"
+
+#: kcharselect-translation.cpp:193
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Inguratutako alfazenbakizkoa"
+
+#: kcharselect-translation.cpp:194
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Enclosed Ideographic Supplement"
+msgstr "Inguratutako ideografia gehigarria"
+
+#: kcharselect-translation.cpp:195
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Miscellaneous Symbols and Pictographs"
+msgstr "Hainbat ikur eta piktografia"
+
+#: kcharselect-translation.cpp:196
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Emoticons"
+msgstr "Aurpegierak"
+
+#: kcharselect-translation.cpp:197
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Ornamental Dingbats"
+msgstr "Dingbat apaingarriak"
+
+#: kcharselect-translation.cpp:198
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Transport and Map Symbols"
+msgstr "Garraio eta mapa ikurrak"
+
+#: kcharselect-translation.cpp:199
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Alchemical Symbols"
+msgstr "Alkimia ikurrak"
+
+#: kcharselect-translation.cpp:200
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Geometric Shapes Extended"
+msgstr "Forma geometrikoak hedatua"
+
+#: kcharselect-translation.cpp:201
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Arrows-C"
+msgstr "Gezi gehigarriak-A"
+
+#: kcharselect-translation.cpp:202
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Supplemental Symbols and Pictographs"
+msgstr "Ikur eta piktografia gehigarriak"
+
+#: kcharselect-translation.cpp:203
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Chess Symbols"
+msgstr "Xake ikurrak"
+
+#: kcharselect-translation.cpp:204
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols and Pictographs Extended-A"
+msgstr "Ikur eta piktografia gehigarriak-A"
+
+#: kcharselect-translation.cpp:205
+msgctxt "KCharSelectData|KCharselect unicode block name"
+msgid "Symbols for Legacy Computing"
+msgstr "Informatika zaharreko ikurrak"
+
+#: kcharselect.cpp:389
+msgctxt "KCharSelect|@info:placeholder"
+msgid "Enter a search term or character..."
+msgstr "Sartu bilatu beharreko termino bat edo karaktere bat..."
+
+#: kcharselect.cpp:391
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Enter a search term or character here"
+msgstr "Sartu hemen bilatu beharreko termino bat edo karaktere bat"
+
+#: kcharselect.cpp:398
+msgctxt "KCharSelect|@action"
+msgid "&Find..."
+msgstr "&Aurkitu..."
+
+#: kcharselect.cpp:422
+msgctxt "KCharSelect|@action:button Goes to previous character"
+msgid "Previous in History"
+msgstr "Aurrekoa historian"
+
+#: kcharselect.cpp:424
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Go to previous character in history"
+msgstr "Joan historian aurreko karakterera"
+
+#: kcharselect.cpp:429
+msgctxt "KCharSelect|@action:button Goes to next character"
+msgid "Next in History"
+msgstr "Hurrengoa historian"
+
+#: kcharselect.cpp:431
+msgctxt "KCharSelect|info:tooltip"
+msgid "Go to next character in history"
+msgstr "Joan historian hurrengo karakterera"
+
+#: kcharselect.cpp:436
+msgctxt "KCharSelect|@action go back"
+msgid "&Back"
+msgstr "&Atzera"
+
+#: kcharselect.cpp:443
+msgctxt "KCharSelect|@action go forward"
+msgid "&Forward"
+msgstr "A&urrera"
+
+#: kcharselect.cpp:462
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a category"
+msgstr "Hautatu kategoria bat"
+
+#: kcharselect.cpp:466
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Select a block to be displayed"
+msgstr "Hautatu erakutsi beharreko bloke bat"
+
+#: kcharselect.cpp:486
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font"
+msgstr "Ezarri letra-tipoa"
+
+#: kcharselect.cpp:493
+msgctxt "KCharSelect|@info:tooltip"
+msgid "Set font size"
+msgstr "Ezarri letra-tipoaren neurria"
+
+#: kcharselect.cpp:795
+msgctxt "KCharSelect|"
+msgid "Character:"
+msgstr "Karakterea:"
+
+#: kcharselect.cpp:801
+msgctxt "KCharSelect|"
+msgid "Name: "
+msgstr "Izena: "
+
+#: kcharselect.cpp:810
+msgctxt "KCharSelect|"
+msgid "Annotations and Cross References"
+msgstr "Oharrak eta erreferentzia gurutzatuak"
+
+#: kcharselect.cpp:814
+msgctxt "KCharSelect|"
+msgid "Alias names:"
+msgstr "Ezizenak:"
+
+#: kcharselect.cpp:822
+msgctxt "KCharSelect|"
+msgid "Notes:"
+msgstr "Oharrak:"
+
+#: kcharselect.cpp:830
+msgctxt "KCharSelect|"
+msgid "See also:"
+msgstr "Begiratu ere:"
+
+#: kcharselect.cpp:845
+msgctxt "KCharSelect|"
+msgid "Equivalents:"
+msgstr "Baliokideak:"
+
+#: kcharselect.cpp:853
+msgctxt "KCharSelect|"
+msgid "Approximate equivalents:"
+msgstr "Baliokide hurbilak:"
+
+#: kcharselect.cpp:861
+msgctxt "KCharSelect|"
+msgid "Decomposition:"
+msgstr "Deskonposatzea:"
+
+#: kcharselect.cpp:873
+msgctxt "KCharSelect|"
+msgid "CJK Ideograph Information"
+msgstr "CJK ideogramen informazioa"
+
+#: kcharselect.cpp:876
+msgctxt "KCharSelect|"
+msgid "Definition in English: "
+msgstr "Definizioa ingelesez: "
+
+#: kcharselect.cpp:883
+msgctxt "KCharSelect|"
+msgid "Mandarin Pronunciation: "
+msgstr "Mandarin ahoskera: "
+
+#: kcharselect.cpp:890
+msgctxt "KCharSelect|"
+msgid "Cantonese Pronunciation: "
+msgstr "Kantoniera ahoskera:"
+
+#: kcharselect.cpp:897
+msgctxt "KCharSelect|"
+msgid "Japanese On Pronunciation: "
+msgstr "Japoniera On ahoskera: "
+
+#: kcharselect.cpp:904
+msgctxt "KCharSelect|"
+msgid "Japanese Kun Pronunciation: "
+msgstr "Japoniera Kun ahoskera: "
+
+#: kcharselect.cpp:911
+msgctxt "KCharSelect|"
+msgid "Tang Pronunciation: "
+msgstr "Tang ahoskera: "
+
+#: kcharselect.cpp:918
+msgctxt "KCharSelect|"
+msgid "Korean Pronunciation: "
+msgstr "Koreera ahoskera: "
+
+#: kcharselect.cpp:924
+msgctxt "KCharSelect|"
+msgid "General Character Properties"
+msgstr "Karaktere ezaugarri orokorrak"
+
+#: kcharselect.cpp:925
+msgctxt "KCharSelect|"
+msgid "Block: "
+msgstr "Blokea: "
+
+#: kcharselect.cpp:926
+msgctxt "KCharSelect|"
+msgid "Unicode category: "
+msgstr "Unicode kategoria: "
+
+#: kcharselect.cpp:930
+msgctxt "KCharSelect|"
+msgid "Various Useful Representations"
+msgstr "Irudikapen erabilgarri batzuk"
+
+#: kcharselect.cpp:931
+msgctxt "KCharSelect|"
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: kcharselect.cpp:935
+msgctxt "KCharSelect|"
+msgid "UTF-16: "
+msgstr "UTF-16: "
+
+#: kcharselect.cpp:942
+msgctxt "KCharSelect|"
+msgid "C octal escaped UTF-8: "
+msgstr "C, UTF-8 zortzitar ihestuan: "
+
+#: kcharselect.cpp:946
+msgctxt "KCharSelect|"
+msgid "XML decimal entity:"
+msgstr "XML entitatea hamartarra:"
+
+#: kcharselect.cpp:1098
+msgctxt "KCharSelectItemModel|"
+msgid "Unicode code point:"
+msgstr "Unicode kodearen puntua:"
+
+#: kcharselect.cpp:1098
+msgctxt "KCharSelectItemModel|Character"
+msgid "In decimal"
+msgstr "Hamartarrean"
+
+#: kcharselectdata.cpp:311
+msgctxt "KCharSelectData|"
+msgid "<noncharacter>"
+msgstr "<ez da karakterea>"
+
+#: kcharselectdata.cpp:332
+msgctxt "KCharSelectData|"
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Ordezko altu erabilera ez pribatua>"
+
+#: kcharselectdata.cpp:334
+msgctxt "KCharSelectData|"
+msgid "<Private Use High Surrogate>"
+msgstr "<Ordezko altu erabilera pribatua>"
+
+#: kcharselectdata.cpp:336
+msgctxt "KCharSelectData|"
+msgid "<Low Surrogate>"
+msgstr "<Ordezko baxuak>"
+
+#: kcharselectdata.cpp:338
+msgctxt "KCharSelectData|"
+msgid "<Private Use>"
+msgstr "<Erabilera pribatua>"
+
+#: kcharselectdata.cpp:370
+msgctxt "KCharSelectData|"
+msgid "<not assigned>"
+msgstr "<esleitu gabe>"
+
+#: kcharselectdata.cpp:448
+msgctxt "KCharSelectData|KCharselect unicode section name"
+msgid "All"
+msgstr "Guztia"
+
+#: kcharselectdata.cpp:760
+msgctxt "KCharSelectData|"
+msgid "Non-printable"
+msgstr "Ez-inprimagarria"
+
+#: kcharselectdata.cpp:793
+msgctxt "KCharSelectData|"
+msgid "Other, Control"
+msgstr "Bestelakoa, kontrola"
+
+#: kcharselectdata.cpp:795
+msgctxt "KCharSelectData|"
+msgid "Other, Format"
+msgstr "Bestelakoa, formatua"
+
+#: kcharselectdata.cpp:797
+msgctxt "KCharSelectData|"
+msgid "Other, Not Assigned"
+msgstr "Bestelakoa, esleitu gabe"
+
+#: kcharselectdata.cpp:799
+msgctxt "KCharSelectData|"
+msgid "Other, Private Use"
+msgstr "Bestelakoa, erabilera pribatua"
+
+#: kcharselectdata.cpp:801
+msgctxt "KCharSelectData|"
+msgid "Other, Surrogate"
+msgstr "Bestelakoak, ordezkoa"
+
+#: kcharselectdata.cpp:803
+msgctxt "KCharSelectData|"
+msgid "Letter, Lowercase"
+msgstr "Letra, minuskula"
+
+#: kcharselectdata.cpp:805
+msgctxt "KCharSelectData|"
+msgid "Letter, Modifier"
+msgstr "Letra, aldatzailea"
+
+#: kcharselectdata.cpp:807
+msgctxt "KCharSelectData|"
+msgid "Letter, Other"
+msgstr "Letra, bestelakoa"
+
+#: kcharselectdata.cpp:809
+msgctxt "KCharSelectData|"
+msgid "Letter, Titlecase"
+msgstr "Letra, titulua"
+
+#: kcharselectdata.cpp:811
+msgctxt "KCharSelectData|"
+msgid "Letter, Uppercase"
+msgstr "Letra, maiuskula"
+
+#: kcharselectdata.cpp:813
+msgctxt "KCharSelectData|"
+msgid "Mark, Spacing Combining"
+msgstr "Marka, tarteak konbinatzea"
+
+#: kcharselectdata.cpp:815
+msgctxt "KCharSelectData|"
+msgid "Mark, Enclosing"
+msgstr "Marka, inguratzailea"
+
+#: kcharselectdata.cpp:817
+msgctxt "KCharSelectData|"
+msgid "Mark, Non-Spacing"
+msgstr "Marka, tarterik ez"
+
+#: kcharselectdata.cpp:819
+msgctxt "KCharSelectData|"
+msgid "Number, Decimal Digit"
+msgstr "Zenbakia, digitu hamartarra"
+
+#: kcharselectdata.cpp:821
+msgctxt "KCharSelectData|"
+msgid "Number, Letter"
+msgstr "Zenbakia, letra"
+
+#: kcharselectdata.cpp:823
+msgctxt "KCharSelectData|"
+msgid "Number, Other"
+msgstr "Zenbakia, bestelakoa"
+
+#: kcharselectdata.cpp:825
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Connector"
+msgstr "Puntuazioa, lokailua"
+
+#: kcharselectdata.cpp:827
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Dash"
+msgstr "Puntuazioa, marratxoa"
+
+#: kcharselectdata.cpp:829
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Close"
+msgstr "Puntuazioa, amaiera"
+
+#: kcharselectdata.cpp:831
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Final Quote"
+msgstr "Puntuazioa, amaierako komatxoak"
+
+#: kcharselectdata.cpp:833
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Initial Quote"
+msgstr "Puntuazioa, hasierako komatxoak"
+
+#: kcharselectdata.cpp:835
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Other"
+msgstr "Puntuazioa, bestelakoa"
+
+#: kcharselectdata.cpp:837
+msgctxt "KCharSelectData|"
+msgid "Punctuation, Open"
+msgstr "Puntuazioa, hasiera"
+
+#: kcharselectdata.cpp:839
+msgctxt "KCharSelectData|"
+msgid "Symbol, Currency"
+msgstr "Ikurra, moneta"
+
+#: kcharselectdata.cpp:841
+msgctxt "KCharSelectData|"
+msgid "Symbol, Modifier"
+msgstr "Ikurra, aldatzailea"
+
+#: kcharselectdata.cpp:843
+msgctxt "KCharSelectData|"
+msgid "Symbol, Math"
+msgstr "Ikurra, matematika"
+
+#: kcharselectdata.cpp:845
+msgctxt "KCharSelectData|"
+msgid "Symbol, Other"
+msgstr "Ikurra, bestelakoa"
+
+#: kcharselectdata.cpp:847
+msgctxt "KCharSelectData|"
+msgid "Separator, Line"
+msgstr "Bereizlea, marra"
+
+#: kcharselectdata.cpp:849
+msgctxt "KCharSelectData|"
+msgid "Separator, Paragraph"
+msgstr "Bereizlea, paragrafoa"
+
+#: kcharselectdata.cpp:851
+msgctxt "KCharSelectData|"
+msgid "Separator, Space"
+msgstr "Bereizlea, zuriunea"
+
+#: kcharselectdata.cpp:853
+msgctxt "KCharSelectData|"
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: kcolorcombo.cpp:333
+msgctxt "KColorCombo|@item:inlistbox Custom color"
+msgid "Custom..."
+msgstr "Norberak finkatua..."
+
+#: kdatecombobox.cpp:153
+msgctxt "KDateComboBox|@option next year"
+msgid "Next Year"
+msgstr "Hurrengo urtea"
+
+#: kdatecombobox.cpp:154
+msgctxt "KDateComboBox|@option next month"
+msgid "Next Month"
+msgstr "Hurrengo hilabetea"
+
+#: kdatecombobox.cpp:155
+msgctxt "KDateComboBox|@option next week"
+msgid "Next Week"
+msgstr "Hurrengo astea"
+
+#: kdatecombobox.cpp:156
+msgctxt "KDateComboBox|@option tomorrow"
+msgid "Tomorrow"
+msgstr "Bihar"
+
+#: kdatecombobox.cpp:157
+msgctxt "KDateComboBox|@option today"
+msgid "Today"
+msgstr "Gaur"
+
+#: kdatecombobox.cpp:158
+msgctxt "KDateComboBox|@option yesterday"
+msgid "Yesterday"
+msgstr "Atzo"
+
+#: kdatecombobox.cpp:159
+msgctxt "KDateComboBox|@option last week"
+msgid "Last Week"
+msgstr "Aurreko astea"
+
+#: kdatecombobox.cpp:160
+msgctxt "KDateComboBox|@option last month"
+msgid "Last Month"
+msgstr "Aurreko hilabetea"
+
+#: kdatecombobox.cpp:161
+msgctxt "KDateComboBox|@option last year"
+msgid "Last Year"
+msgstr "Aurreko urtea"
+
+#: kdatecombobox.cpp:163
+msgctxt "KDateComboBox|@option do not specify a date"
+msgid "No Date"
+msgstr "Datarik ez"
+
+#: kdatecombobox.cpp:290
+msgctxt "KDateComboBox|@info"
+msgid "The date you entered is invalid"
+msgstr "Sartu duzun data baliogabea da"
+
+#: kdatecombobox.cpp:293
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be earlier than %1"
+msgstr "Data ezin da %1 baino lehenagokoa izan"
+
+#: kdatecombobox.cpp:300
+#, qt-format
+msgctxt "KDateComboBox|@info"
+msgid "Date cannot be later than %1"
+msgstr "Data ezin da %1 baino beranduagokoa izan"
+
+#: kdatepicker.cpp:188
+#, qt-format
+msgctxt "KDatePicker|"
+msgid "Week %1"
+msgstr "%1. astea"
+
+#: kdatepicker.cpp:296
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next year"
+msgstr "Hurrengo urtea"
+
+#: kdatepicker.cpp:297
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous year"
+msgstr "Aurreko urtea"
+
+#: kdatepicker.cpp:298
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Next month"
+msgstr "Hurrengo hilabetea"
+
+#: kdatepicker.cpp:299
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Previous month"
+msgstr "Aurreko hilabetea"
+
+#: kdatepicker.cpp:300
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a week"
+msgstr "Hautatu aste bat"
+
+#: kdatepicker.cpp:301
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a month"
+msgstr "Hautatu hilabete bat"
+
+#: kdatepicker.cpp:302
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select a year"
+msgstr "Hautatu urte bat"
+
+#: kdatepicker.cpp:303
+msgctxt "KDatePicker|@info:tooltip"
+msgid "Select the current day"
+msgstr "Hautatu gaurko eguna"
+
+#: kdatepicker.cpp:638
+msgctxt "KDatePicker|@action:button"
+msgid "Close"
+msgstr "Itxi"
+
+#: kdatetimeedit.cpp:171
+msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
+msgid "UTC"
+msgstr "UTC"
+
+#: kdatetimeedit.cpp:172
+msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
+msgid "Floating"
+msgstr "Higikorra"
+
+#: kdatetimeedit.cpp:211
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is before the minimum allowed date and time."
+msgstr ""
+"Sartutako data eta ordua onartutako gutxieneko data eta orduaren aurrekoa da."
+
+#: kdatetimeedit.cpp:221
+msgctxt "KDateTimeEdit|@info"
+msgid "The entered date and time is after the maximum allowed date and time."
+msgstr ""
+"Sartutako data eta ordua onartutako gehienezko data eta orduaren ondorengoa "
+"da."
+
+#: keditlistwidget.cpp:281
+msgctxt "KEditListWidget|@action:button"
+msgid "&Add"
+msgstr "&Gehitu"
+
+#: keditlistwidget.cpp:293
+msgctxt "KEditListWidget|@action:button"
+msgid "&Remove"
+msgstr "&Kendu"
+
+#: keditlistwidget.cpp:305
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Up"
+msgstr "Eraman &gora"
+
+#: keditlistwidget.cpp:310
+msgctxt "KEditListWidget|@action:button"
+msgid "Move &Down"
+msgstr "Eraman &behera"
+
+#: kfontchooser.cpp:168
+msgctxt "KFontChooser|@title:group"
+msgid "Requested Font"
+msgstr "Eskatutako letra-tipoa"
+
+#: kfontchooser.cpp:209
+msgctxt "KFontChooser|@item font"
+msgid "Normal"
+msgstr "Arrunta"
+
+#: kfontchooser.cpp:210 kfontchooser.cpp:489
+msgctxt "KFontChooser|@item font"
+msgid "Italic"
+msgstr "Etzana"
+
+#: kfontchooser.cpp:211 kfontchooser.cpp:490
+msgctxt "KFontChooser|@item font"
+msgid "Oblique"
+msgstr "Zeiharra"
+
+#: kfontchooser.cpp:212
+msgctxt "KFontChooser|@item font"
+msgid "Bold"
+msgstr "Lodia"
+
+#: kfontchooser.cpp:213
+msgctxt "KFontChooser|@item font"
+msgid "Bold Condensed Oblique"
+msgstr "Lodi kondentsatu zeiharra"
+
+# Hizkuntza bakoitzak mezu hau egokitu egiten du.
+#: kfontchooser.cpp:257
+msgctxt "KFontChooser|"
+msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
+msgstr "Urruneko eltzea urrez, harat orduko lurrez."
+
+#: kfontchooser.cpp:313
+msgctxt "KFontChooser|@info:tooltip"
+msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+msgstr ""
+"Letra-tipoaren neurri<br /><i>finkoa</i> edo <i>erlatiboa</i><br /"
+">(ingurunearekiko)"
+
+#: kfontchooser.cpp:314
+msgctxt "KFontChooser|@info:whatsthis"
+msgid ""
+"Here you can switch between fixed font size and font size to be calculated "
+"dynamically and adjusted to changing environment (e.g. widget dimensions, "
+"paper size)."
+msgstr ""
+"Hemen neurri finkoko letra-tipoen eta dinamikoki kalkulatu eta ingurune "
+"aldakorretara egokitzen direnen artean alda dezakezu (trepeten dimentsioak, "
+"paper neurria adib.)."
+
+#: kfontchooser.cpp:474
+#, qt-format
+msgctxt "KFontChooser|@item Font style"
+msgid "%1"
+msgstr "%1"
+
+#: kfontchooserdialog.cpp:25
+msgctxt "KFontChooserDialog|@title:window"
+msgid "Select Font"
+msgstr "Hautatu letra-tipoa"
+
+#: kfontchooserwidget.ui:14
+msgctxt "KFontChooserWidget|"
+msgid "KFontChooserWidget"
+msgstr "KFontChooserWidget"
+
+#: kfontchooserwidget.ui:31
+msgctxt "KFontChooserWidget|"
+msgid "Font"
+msgstr "Letra-tipoa"
+
+#: kfontchooserwidget.ui:38
+msgctxt "KFontChooserWidget|"
+msgid "Font:"
+msgstr "Letra-tipoa:"
+
+#: kfontchooserwidget.ui:56
+msgctxt "KFontChooserWidget|"
+msgid "Font style"
+msgstr "Letra-tipoaren estiloa"
+
+#: kfontchooserwidget.ui:63
+msgctxt "KFontChooserWidget|"
+msgid "Font style:"
+msgstr "Letra-tipoaren estiloa:"
+
+#: kfontchooserwidget.ui:81
+msgctxt "KFontChooserWidget|"
+msgid "Size"
+msgstr "Neurria"
+
+#: kfontchooserwidget.ui:88
+msgctxt "KFontChooserWidget|"
+msgid "Size:"
+msgstr "Neurria:"
+
+#: kfontchooserwidget.ui:97
+msgctxt "KFontChooserWidget|"
+msgid "Relative"
+msgstr "Erlatiboa"
+
+#: kfontchooserwidget.ui:123
+msgctxt "KFontChooserWidget|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+"Testu lagin honek uneko ezarpenak irudiz azaltzen ditu. Karaktere bereziak "
+"probatzeko editatu dezakezu."
+
+#: kfontchooserwidget.ui:135
+msgctxt "KFontChooserWidget|"
+msgid "Show only monospaced fonts"
+msgstr "Erakutsi soilik zabalera-finkoko letra-tipoak"
+
+#: kfontrequester.cpp:155
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Choose font..."
+msgstr "Hautatu letra-tipoa..."
+
+#: kfontrequester.cpp:161
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the selected font"
+msgstr "Hautatutako letra-tipoaren aurreikuspegia"
+
+#: kfontrequester.cpp:163
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the selected font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Hau hautatutako letra-tipoaren aurreikuspegi bat da. «Hautatu letra-"
+"tipoa...» botoiari klik eginez alda dezakezu."
+
+#: kfontrequester.cpp:167
+#, qt-format
+msgctxt "KFontRequester|@info:tooltip"
+msgid "Preview of the \"%1\" font"
+msgstr "«%1» letra-tipoaren aurreikuspegia"
+
+#: kfontrequester.cpp:168
+#, qt-format
+msgctxt "KFontRequester|@info:whatsthis"
+msgid ""
+"This is a preview of the \"%1\" font. You can change it by clicking the "
+"\"Choose Font...\" button."
+msgstr ""
+"Hau «%1» letra-tipoaren aurreikuspegi bat da. «Hautatu letra-tipoa...» "
+"botoiari klik eginez alda dezakezu."
+
+#: kled.cpp:172
+msgctxt "KLed|Accessible name of a Led whose state is on"
+msgid "LED on"
+msgstr "LED aktibatuta"
+
+#: kled.cpp:173
+msgctxt "KLed|Accessible name of a Led whose state is off"
+msgid "LED off"
+msgstr "LED desaktibatuta"
+
+#: kmessagebox.cpp:64
+msgctxt "KMessageBox|@action:button post-filter"
+msgid "."
+msgstr "."
+
+#: kmessagebox.cpp:312
+msgctxt "KMessageBox|"
+msgid "Details"
+msgstr "Xehetasunak"
+
+#: kmessagebox.cpp:469 kmessagebox.cpp:528
+msgctxt "KMessageBox|"
+msgid "Question"
+msgstr "Galdera"
+
+#: kmessagebox.cpp:485 kmessagebox.cpp:545 kmessagebox.cpp:621
+#: kmessagebox.cpp:690 kmessagebox.cpp:786
+msgctxt "KMessageBox|"
+msgid "Do not ask again"
+msgstr "Ez galdetu berriz"
+
+#: kmessagebox.cpp:605 kmessagebox.cpp:674 kmessagebox.cpp:769
+msgctxt "KMessageBox|"
+msgid "Warning"
+msgstr "Abisua"
+
+#: kmessagebox.cpp:824 kmessagebox.cpp:842
+msgctxt "KMessageBox|"
+msgid "Error"
+msgstr "Errorea"
+
+#: kmessagebox.cpp:864 kmessagebox.cpp:892 kmessagebox.cpp:1169
+msgctxt "KMessageBox|"
+msgid "Sorry"
+msgstr "Barkatu"
+
+#: kmessagebox.cpp:932
+msgctxt "KMessageBox|"
+msgid "Information"
+msgstr "Informazioa"
+
+#: kmessagebox.cpp:947
+msgctxt "KMessageBox|"
+msgid "Do not show this message again"
+msgstr "Ez erakutsi mezu hau berriz"
+
+#: kmessagedialog.cpp:133
+msgctxt "KMessageDialog|"
+msgid "Details"
+msgstr "Xehetasunak"
+
+#: kmessagedialog.cpp:198
+msgctxt "KMessageDialog|"
+msgid "Question"
+msgstr "Galdera"
+
+#: kmessagedialog.cpp:203
+msgctxt "KMessageDialog|"
+msgid "Warning"
+msgstr "Abisua"
+
+#: kmessagedialog.cpp:206
+msgctxt "KMessageDialog|"
+msgid "Information"
+msgstr "Informazioa"
+
+#: kmessagedialog.cpp:209
+msgctxt "KMessageDialog|"
+msgid "Sorry"
+msgstr "Barkatu"
+
+#: kmessagedialog.cpp:212
+msgctxt "KMessageDialog|"
+msgid "Error"
+msgstr "Errorea"
+
+#: kmessagewidget.cpp:80
+msgctxt "KMessageWidget|@action:button"
+msgid "&Close"
+msgstr "&Itxi"
+
+#: kmessagewidget.cpp:81
+msgctxt "KMessageWidget|@info:tooltip"
+msgid "Close message"
+msgstr "Itxi mezua"
+
+#: kmimetypechooser.cpp:88
+msgctxt "KMimeTypeChooser|@info:placeholder"
+msgid "Search for file type or filename pattern..."
+msgstr "Bilatu fitxategi mota edo fitxategi-izen eredua..."
+
+#: kmimetypechooser.cpp:89
+msgctxt "KMimeTypeChooser|@label:textbox"
+msgid "&Filter:"
+msgstr "&Iragazkia:"
+
+#: kmimetypechooser.cpp:103
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "MIME Type"
+msgstr "MIME-mota"
+
+#: kmimetypechooser.cpp:106
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Comment"
+msgstr "Iruzkina"
+
+#: kmimetypechooser.cpp:110
+msgctxt "KMimeTypeChooser|@title:column"
+msgid "Patterns"
+msgstr "Ereduak"
+
+#: kmimetypechooser.cpp:126
+msgctxt "KMimeTypeChooser|@action:button"
+msgid "&Edit..."
+msgstr "&Editatu..."
+
+#: kmimetypechooser.cpp:141
+msgctxt "KMimeTypeChooser|@info:tooltip"
+msgid "Launch the MIME type editor"
+msgstr "Abiarazi MIME-mota editorea"
+
+#: kmimetypeeditor.cpp:27
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid ""
+#| "Could not start the \"keditfiletype5\" executable, please check your "
+#| "installation."
+msgctxt "QObject|"
+msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgstr ""
+"Ezin izan du \"keditfiletype5\" exekutagarria abiarazi, mesedez, ikuskatu "
+"zure instalazioa."
+
+#: kmimetypeeditor.cpp:37
+msgctxt "QObject|"
+msgid ""
+"Could not start the \"keditfiletype5\" executable, please check your "
+"installation."
+msgstr ""
+"Ezin izan du \"keditfiletype5\" exekutagarria abiarazi, mesedez, ikuskatu "
+"zure instalazioa."
+
+#: knewpassworddialog.cpp:63
+#, qt-format
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password must be at least %n character(s) long."
+msgid_plural "Password must be at least %n character(s) long."
+msgstr[0] "Pasahitzak gutxienez karaktere %neko luzera izan behar du."
+msgstr[1] "Pasahitzak gutxienez %n karaktereko luzera izan behar du."
+
+#: knewpassworddialog.cpp:67
+msgctxt "KNewPasswordDialog|@info"
+msgid "Password is empty."
+msgstr "Pasahitza hutsik dago."
+
+#: knewpassworddialog.cpp:71
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords do not match."
+msgstr "Pasahitzak ez datoz bat."
+
+#: knewpassworddialog.cpp:76
+msgctxt "KNewPasswordDialog|@info"
+msgid "Passwords match."
+msgstr "Pasahitzak bat datoz."
+
+#: knewpassworddialog.cpp:146
+msgctxt "KNewPasswordDialog|@title:window"
+msgid "Low Password Strength"
+msgstr "Sendotasun urriko pasahitza"
+
+#: knewpassworddialog.cpp:147
+msgctxt "KNewPasswordDialog|"
+msgid ""
+"The password you have entered has a low strength. To improve the strength of "
+"the password, try:\n"
+" - using a longer password;\n"
+" - using a mixture of upper- and lower-case letters;\n"
+" - using numbers or symbols as well as letters.\n"
+"\n"
+"Would you like to use this password anyway?"
+msgstr ""
+"Sartu duzun pasahitzaren sendotasuna txikia da. Pasahitzaren sendotasuna "
+"handitzeko:\n"
+" - erabili pasahitz luzeagoa;\n"
+" - erabili maiuskulak eta minuskulak nahastuta;\n"
+" - erabili letrekin batera zenbakiak edo ikurrak.\n"
+"\n"
+" Hala ere pasahitz hau erabili nahi zenuke?"
+
+#: knewpasswordwidget.cpp:52
+msgctxt "KNewPasswordWidget|@info:whatsthis"
+msgid ""
+"The password strength meter gives an indication of the security of the "
+"password you have entered. To improve the strength of the password, try:"
+"<ul><li>using a longer password;</li><li>using a mixture of upper- and lower-"
+"case letters;</li><li>using numbers or symbols, such as #, as well as "
+"letters.</li></ul>"
+msgstr ""
+"Pasahitzaren sendotasunaren neurgailuak sartu duzun pasahitzaren segurtasun "
+"adierazpen bat ematen du. Pasahitzaren sendotasuna hobetzeko: "
+"<ul><li>erabili pasahitz luzeagoa;</li><li>erabili maiuskulak eta minuskulak "
+"nahastuta;</li><li>erabili letrekin batera zenbakiak edo ikurrak, # "
+"esaterako, letrekin batera.</li></ul>"
+
+#: knewpasswordwidget.ui:19
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "Password:"
+msgstr "Pasahitza:"
+
+#: knewpasswordwidget.ui:29
+msgctxt "KNewPasswordWidget|@label:textbox"
+msgid "&Verify:"
+msgstr "&Egiaztatu:"
+
+#: knewpasswordwidget.ui:54
+msgctxt "KNewPasswordWidget|@label"
+msgid "Password strength &meter:"
+msgstr "Pasahitzaren sendotasun &neurgailua:"
+
+#: kpassworddialog.cpp:52
+msgctxt "KPasswordDialog|@title:window"
+msgid "Password"
+msgstr "Pasahitza"
+
+#: kpassworddialog.cpp:80
+msgctxt "KPasswordDialog|"
+msgid "Show Contextual Help"
+msgstr "Erakutsi testuinguru-laguntza"
+
+#: kpassworddialog.cpp:100
+msgctxt "KPasswordDialog|"
+msgid "Supply a password below."
+msgstr "Hornitu pasahitz bat azpian."
+
+#: kpassworddialog.ui:33
+msgctxt "KPasswordDialog|"
+msgid "Supply a username and password below."
+msgstr "Eman erabiltzaile-izen bat eta pasahitza behean."
+
+#: kpassworddialog.ui:70
+msgctxt "KPasswordDialog|@option:radio"
+msgid "No password, use anonymous (or &guest) login"
+msgstr "Pasahitzik ez, erabili saio-haste anonimoa (edo &gonbidatua)"
+
+#: kpassworddialog.ui:77
+msgctxt "KPasswordDialog|@option:radio"
+msgid "Use this password:"
+msgstr "Erabili pasahitz hau:"
+
+#: kpassworddialog.ui:102
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Username:"
+msgstr "Erabiltzaile-izena:"
+
+#: kpassworddialog.ui:127
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Domain:"
+msgstr "Domeinua:"
+
+#: kpassworddialog.ui:141
+msgctxt "KPasswordDialog|@label:textbox"
+msgid "Password:"
+msgstr "Pasahitza:"
+
+#: kpassworddialog.ui:155
+msgctxt "KPasswordDialog|@option:check"
+msgid "Remember password"
+msgstr "Gogoratu pasahitza"
+
+#: kpasswordlineedit.cpp:41
+msgctxt "QObject|@info:tooltip"
+msgid "Change the visibility of the password"
+msgstr "Aldatu pasahitzaren ikusgaitasuna"
+
+#: kpixmapregionselectordialog.cpp:56
+msgctxt "KPixmapRegionSelectorDialog|@title:window"
+msgid "Select Region of Image"
+msgstr "Hautatu irudiaren eskualdea"
+
+#: kpixmapregionselectordialog.cpp:60
+msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
+msgid "Please click and drag on the image to select the region of interest:"
+msgstr "Egin klik eta arrastatu irudian interesatzen eskualdea hautatzeko:"
+
+#: kpixmapregionselectorwidget.cpp:173
+msgctxt "KPixmapRegionSelectorWidget|@title:menu"
+msgid "Image Operations"
+msgstr "Irudiekiko eragiketak"
+
+#: kpixmapregionselectorwidget.cpp:176
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "&Rotate Clockwise"
+msgstr "&Biratu erloju-orratzen noranzkoan"
+
+#: kpixmapregionselectorwidget.cpp:180
+msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
+msgid "Rotate &Counterclockwise"
+msgstr "Biratu erloju-orratzen &aurkako noranzkoan"
+
+#: krecentfilesmenu.cpp:94
+msgctxt "KRecentFilesMenu|"
+msgid "No Entries"
+msgstr "Sarrerarik ez"
+
+#: krecentfilesmenu.cpp:97
+msgctxt "KRecentFilesMenu|"
+msgid "Clear List"
+msgstr "Garbitu zerrenda"
+
+#: krecentfilesmenu.cpp:104
+msgctxt "KRecentFilesMenu|"
+msgid "Recent Files"
+msgstr "Azken aldiko fitxategiak"
+
+#: ksqueezedtextlabel.cpp:207
+msgctxt "KSqueezedTextLabel|@action:inmenu"
+msgid "&Copy Full Text"
+msgstr "&Kopiatu testu osoa"
+
+#: kstandardguiitem.cpp:160
+msgctxt "KStandardGuiItem|"
+msgid "&OK"
+msgstr "&Ados"
+
+#: kstandardguiitem.cpp:165
+msgctxt "KStandardGuiItem|"
+msgid "&Cancel"
+msgstr "&Utzi"
+
+#: kstandardguiitem.cpp:170
+msgctxt "KStandardGuiItem|"
+msgid "&Yes"
+msgstr "&Bai"
+
+#: kstandardguiitem.cpp:175
+msgctxt "KStandardGuiItem|"
+msgid "&No"
+msgstr "&Ez"
+
+#: kstandardguiitem.cpp:180
+msgctxt "KStandardGuiItem|"
+msgid "&Discard"
+msgstr "&Baztertu"
+
+#: kstandardguiitem.cpp:182
+msgctxt "KStandardGuiItem|"
+msgid "Discard changes"
+msgstr "Baztertu aldaketak"
+
+#: kstandardguiitem.cpp:183
+msgctxt "KStandardGuiItem|"
+msgid ""
+"Pressing this button will discard all recent changes made in this dialog."
+msgstr ""
+"Botoi hau sakatzean elkarrizketa-koadroan oraintsu egin diren aldaketa "
+"guztiak baztertuko dira."
+
+#: kstandardguiitem.cpp:190
+msgctxt "KStandardGuiItem|"
+msgid "&Save"
+msgstr "&Gorde"
+
+#: kstandardguiitem.cpp:192
+msgctxt "KStandardGuiItem|"
+msgid "Save data"
+msgstr "Gorde datuak"
+
+#: kstandardguiitem.cpp:197
+msgctxt "KStandardGuiItem|"
+msgid "&Do Not Save"
+msgstr "&Ez gorde"
+
+#: kstandardguiitem.cpp:197
+msgctxt "KStandardGuiItem|"
+msgid "Do not save data"
+msgstr "Ez gorde daturik"
+
+#: kstandardguiitem.cpp:202
+msgctxt "KStandardGuiItem|"
+msgid "Save &As..."
+msgstr "Gorde &honela..."
+
+#: kstandardguiitem.cpp:204
+msgctxt "KStandardGuiItem|"
+msgid "Save file with another name"
+msgstr "Gorde fitxategia beste izen batekin"
+
+#: kstandardguiitem.cpp:209
+msgctxt "KStandardGuiItem|"
+msgid "&Apply"
+msgstr "&Aplikatu"
+
+#: kstandardguiitem.cpp:211
+msgctxt "KStandardGuiItem|"
+msgid "Apply changes"
+msgstr "Aplikatu aldaketak"
+
+#: kstandardguiitem.cpp:212
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Apply</b>, the settings will be handed over to the "
+"program, but the dialog will not be closed.\n"
+"Use this to try different settings."
+msgstr ""
+"<b>Aplikatu</b> botoiri klik egitean, ezarpenak programari pasatuko zaizkio, "
+"baino elkarrizketa ez da itxiko.\n"
+"Erabili hau ezarpen desberdinak probatzeko."
+
+#: kstandardguiitem.cpp:221
+msgctxt "KStandardGuiItem|"
+msgid "Administrator &Mode..."
+msgstr "Administratzaile &modua..."
+
+#: kstandardguiitem.cpp:223
+msgctxt "KStandardGuiItem|"
+msgid "Enter Administrator Mode"
+msgstr "Sartu administratzaile modura"
+
+#: kstandardguiitem.cpp:224
+msgctxt "KStandardGuiItem|"
+msgid ""
+"When you click <b>Administrator Mode</b> you will be prompted for the "
+"administrator (root) password in order to make changes which require root "
+"privileges."
+msgstr ""
+"<b>Administratzaile modua</b>ri klik egitean administratzailearen (root) "
+"pasahitza eskatuko zaizu root ahalmenak behar dituzten aldaketak egiteko."
+
+#: kstandardguiitem.cpp:232
+msgctxt "KStandardGuiItem|"
+msgid "C&lear"
+msgstr "&Garbitu"
+
+#: kstandardguiitem.cpp:234
+msgctxt "KStandardGuiItem|"
+msgid "Clear input"
+msgstr "Garbitu sarrera"
+
+#: kstandardguiitem.cpp:235
+msgctxt "KStandardGuiItem|"
+msgid "Clear the input in the edit field"
+msgstr "Garbitu editatzeko eremuko sarrera"
+
+#: kstandardguiitem.cpp:240
+msgctxt "KStandardGuiItem|show help"
+msgid "&Help"
+msgstr "&Laguntza"
+
+#: kstandardguiitem.cpp:242
+msgctxt "KStandardGuiItem|"
+msgid "Show help"
+msgstr "Erakutsi laguntza"
+
+#: kstandardguiitem.cpp:247
+msgctxt "KStandardGuiItem|"
+msgid "&Close"
+msgstr "&Itxi"
+
+#: kstandardguiitem.cpp:249
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window or document"
+msgstr "Itxi uneko leihoa edo dokumentua"
+
+#: kstandardguiitem.cpp:254
+msgctxt "KStandardGuiItem|"
+msgid "&Close Window"
+msgstr "&Itxi leihoa"
+
+#: kstandardguiitem.cpp:256
+msgctxt "KStandardGuiItem|"
+msgid "Close the current window."
+msgstr "Itxi uneko leihoa."
+
+#: kstandardguiitem.cpp:261
+msgctxt "KStandardGuiItem|"
+msgid "&Close Document"
+msgstr "&Itxi dokumentua"
+
+#: kstandardguiitem.cpp:263
+msgctxt "KStandardGuiItem|"
+msgid "Close the current document."
+msgstr "Itxi uneko dokumentua."
+
+#: kstandardguiitem.cpp:268
+msgctxt "KStandardGuiItem|"
+msgid "&Defaults"
+msgstr "&Lehenespenak"
+
+#: kstandardguiitem.cpp:270
+msgctxt "KStandardGuiItem|"
+msgid "Reset all items to their default values"
+msgstr "Berrezarri elementu guztiak balio lehenetsietara"
+
+#: kstandardguiitem.cpp:276
+msgctxt "KStandardGuiItem|go back"
+msgid "&Back"
+msgstr "&Atzera"
+
+#: kstandardguiitem.cpp:276
+msgctxt "KStandardGuiItem|"
+msgid "Go back one step"
+msgstr "Joan urrats bat atzera"
+
+#: kstandardguiitem.cpp:282
+msgctxt "KStandardGuiItem|go forward"
+msgid "&Forward"
+msgstr "A&urrera"
+
+#: kstandardguiitem.cpp:284
+msgctxt "KStandardGuiItem|"
+msgid "Go forward one step"
+msgstr "Joan urrats bat aurrera"
+
+#: kstandardguiitem.cpp:294
+msgctxt "KStandardGuiItem|"
+msgid "&Print..."
+msgstr "In&primatu..."
+
+#: kstandardguiitem.cpp:296
+msgctxt "KStandardGuiItem|"
+msgid "Opens the print dialog to print the current document"
+msgstr ""
+"Inprimatzeko elkarrizketa-koadroa irekitzen du uneko dokumentua inprimatzeko."
+
+#: kstandardguiitem.cpp:303
+msgctxt "KStandardGuiItem|"
+msgid "C&ontinue"
+msgstr "&Jarraitu"
+
+#: kstandardguiitem.cpp:305
+msgctxt "KStandardGuiItem|"
+msgid "Continue operation"
+msgstr "Jarraitu eragiketarekin"
+
+#: kstandardguiitem.cpp:310
+msgctxt "KStandardGuiItem|"
+msgid "&Delete"
+msgstr "&Ezabatu"
+
+#: kstandardguiitem.cpp:312
+msgctxt "KStandardGuiItem|"
+msgid "Delete item(s)"
+msgstr "Ezabatu elementua(k)"
+
+#: kstandardguiitem.cpp:317
+msgctxt "KStandardGuiItem|"
+msgid "&Open..."
+msgstr "I&reki..."
+
+#: kstandardguiitem.cpp:319
+msgctxt "KStandardGuiItem|"
+msgid "Open file"
+msgstr "Ireki fitxategia"
+
+#: kstandardguiitem.cpp:324
+msgctxt "KStandardGuiItem|"
+msgid "&Quit"
+msgstr "&Irten"
+
+#: kstandardguiitem.cpp:326
+msgctxt "KStandardGuiItem|"
+msgid "Quit application"
+msgstr "Irten aplikaziotik"
+
+#: kstandardguiitem.cpp:331
+msgctxt "KStandardGuiItem|"
+msgid "&Reset"
+msgstr "&Berrezarri"
+
+#: kstandardguiitem.cpp:333
+msgctxt "KStandardGuiItem|"
+msgid "Reset configuration"
+msgstr "Berrezarri konfigurazioa"
+
+#: kstandardguiitem.cpp:338
+msgctxt "KStandardGuiItem|Verb"
+msgid "&Insert"
+msgstr "&Txertatu"
+
+#: kstandardguiitem.cpp:343
+msgctxt "KStandardGuiItem|"
+msgid "Confi&gure..."
+msgstr "Konfi&guratu..."
+
+#: kstandardguiitem.cpp:348
+msgctxt "KStandardGuiItem|"
+msgid "&Find"
+msgstr "&Bilatu"
+
+#: kstandardguiitem.cpp:353
+msgctxt "KStandardGuiItem|"
+msgid "Stop"
+msgstr "Gelditu"
+
+#: kstandardguiitem.cpp:358
+msgctxt "KStandardGuiItem|"
+msgid "Add"
+msgstr "Gehitu"
+
+#: kstandardguiitem.cpp:363
+msgctxt "KStandardGuiItem|"
+msgid "Remove"
+msgstr "Kendu"
+
+#: kstandardguiitem.cpp:368
+msgctxt "KStandardGuiItem|"
+msgid "Test"
+msgstr "Probatu"
+
+#: kstandardguiitem.cpp:373
+msgctxt "KStandardGuiItem|"
+msgid "Properties"
+msgstr "Propietateak"
+
+#: kstandardguiitem.cpp:378
+msgctxt "KStandardGuiItem|"
+msgid "&Overwrite"
+msgstr "&Gainidatzi"
+
+#: ktimecombobox.cpp:254
+msgctxt "KTimeComboBox|@info"
+msgid "The time you entered is invalid"
+msgstr "Sartu duzun ordua baliogabea da"
+
+#: ktimecombobox.cpp:257
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be earlier than %1"
+msgstr "Ordua ezin da %1 baino lehenagokoa izan"
+
+#: ktimecombobox.cpp:264
+#, qt-format
+msgctxt "KTimeComboBox|@info"
+msgid "Time cannot be later than %1"
+msgstr "Ordua ezin da %1 baino beranduagokoa izan"
+
+#: ktogglefullscreenaction.cpp:39
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "Exit F&ull Screen Mode"
+msgstr "Irten &pantaila-bete modutik"
+
+#: ktogglefullscreenaction.cpp:40
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Exit Full Screen"
+msgstr "Irten pantaila-betetik"
+
+#: ktogglefullscreenaction.cpp:41
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Exit full screen mode"
+msgstr "Irten pantaila-bete modutik"
+
+#: ktogglefullscreenaction.cpp:44
+msgctxt "KToggleFullScreenAction|@action:inmenu"
+msgid "F&ull Screen Mode"
+msgstr "Pantaila-bete modua"
+
+#: ktogglefullscreenaction.cpp:45
+msgctxt "KToggleFullScreenAction|@action:intoolbar"
+msgid "Full Screen"
+msgstr "Pantaila-betea"
+
+#: ktogglefullscreenaction.cpp:46
+msgctxt "KToggleFullScreenAction|@info:tooltip"
+msgid "Display the window in full screen"
+msgstr "Bistaratu leihoa pantaila-betean"
