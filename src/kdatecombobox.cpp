@@ -23,7 +23,6 @@ class KDateComboBoxPrivate
 {
 public:
     KDateComboBoxPrivate(KDateComboBox *qq);
-    virtual ~KDateComboBoxPrivate();
 
     // TODO: Find a way to get that from QLocale
 #if 0
@@ -82,10 +81,6 @@ KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *qq)
     m_datePicker->setCloseButton(false);
     m_datePickerAction->setObjectName(QStringLiteral("DatePicker"));
     m_datePickerAction->setDefaultWidget(m_datePicker);
-}
-
-KDateComboBoxPrivate::~KDateComboBoxPrivate()
-{
 }
 
 #if 0
