@@ -23,9 +23,9 @@ void KColorButtonTest::testWaitForWindowExposed()
     qDebug() << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible(); // for Windows (immediate)
 #ifdef Q_OS_WIN
     if (!a.isExposed()) {
-        a.move(0, 0);
-        qDebug() << "moved:"
-                 << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible();
+        a.setGeometry(QRect(0, 0, 1000, 1000));
+        qDebug() << "with updated geometry:"
+                 << "isExposed=" << a.isExposed() << "geometry=" << a.geometry();
     }
 #endif
     QVERIFY(QTest::qWaitForWindowExposed(&a));
