@@ -20,9 +20,16 @@ void KColorButtonTest::testWaitForWindowExposed()
     a.setVisible(true);
     // Docu says: Note that a window that is mapped to screen may still not be considered exposed if the window client
     // area is completely covered by other windows, or if the window is otherwise not visible.
-    qDebug() << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible();
+    qDebug() << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible(); // for Windows (immediate)
+#ifdef Q_OS_WIN
+    if (!a.isExposed()) {
+        a.move(0, 0);
+        qDebug() << "moved:"
+                 << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible();
+    }
+#endif
     QVERIFY(QTest::qWaitForWindowExposed(&a));
-    qDebug() << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible();
+    qDebug() << "isExposed=" << a.isExposed() << "geometry=" << a.geometry() << "visible=" << a.isVisible(); // for X11 (delayed)
 }
 
 void KColorButtonTest::testOpenDialog()
