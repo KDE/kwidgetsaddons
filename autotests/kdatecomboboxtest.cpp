@@ -1,5 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2011 John Layt <john@layt.net>
+    SPDX-FileCopyrightText: 2022 g10 Code GmbH
+    SPDX-FileContributor: Ingo Klöcker <dev@ingo-kloecker.de>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -9,6 +11,8 @@
 #include <QDate>
 
 #include "kdatecombobox.h"
+#include "kdatepickerpopup.h"
+
 #include <QLineEdit>
 #include <QSignalSpy>
 #include <QTest>
@@ -220,4 +224,24 @@ void KDateComboBoxTest::testSignals()
     QCOMPARE(spyDateEntered.count(), 1);
     QCOMPARE(spyDateChanged.count(), 1);
     clearSpies();
+}
+
+void KDateComboBoxTest::testDatePickerIntegration()
+{
+    // GIVEN
+    QScopedPointer<KDateComboBox> combo{new KDateComboBox};
+    const QDate minimumDate{2001, 1, 1};
+    const QDate maximumDate{2106, 1, 1};
+    combo->setDateRange(minimumDate, maximumDate);
+    const QDate originalDate{2021, 6, 23};
+    combo->setDate(originalDate);
+
+    // WHEN the date picker emits dateChanged signal with an invalid date
+    auto datePicker = combo->findChild<KDatePickerPopup *>();
+    QVERIFY(datePicker);
+    const QDate dateOutsideTheAllowedRange{1921, 6, 23};
+    Q_EMIT datePicker->dateChanged(dateOutsideTheAllowedRange);
+
+    // THEN the combo still has the original date
+    QCOMPARE(combo->date(), originalDate);
 }

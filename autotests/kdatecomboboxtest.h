@@ -23,6 +23,7 @@ private Q_SLOTS:
     void testOptions();
     void testDisplayFormat();
     void testSignals();
+    void testDatePickerIntegration();
 };
 
 #endif // KDATECOMBOBOXTEST_H
