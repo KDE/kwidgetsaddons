@@ -54,6 +54,7 @@ private Q_SLOTS:
         auto lineEdit = p.findChild<QLineEdit *>();
         QVERIFY(lineEdit);
 
+#ifndef Q_OS_WIN
         {
             // short date format
             lineEdit->setText(QStringLiteral("5/15/22"));
@@ -67,6 +68,7 @@ private Q_SLOTS:
             QCOMPARE(emittedDate.year() % 100, expectedDate.year() % 100);
             spyDateEntered.clear();
         }
+#endif
         {
             // long date format
             lineEdit->setText(QStringLiteral("Sunday, May 15, 2022"));
