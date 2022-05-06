@@ -34,7 +34,7 @@ class DatePickerValidator : public QValidator
 {
     Q_OBJECT
 public:
-    DatePickerValidator(KDatePicker *parent)
+    explicit DatePickerValidator(KDatePicker *parent)
         : QValidator(parent)
         , picker(parent)
     {
@@ -80,9 +80,8 @@ KDatePickerPrivateYearSelector::KDatePickerPrivateYearSelector(const QDate &curr
     : QLineEdit(parent)
     , val(new QIntValidator(this))
     , result(0)
+    , oldDate{currentDate}
 {
-    oldDate = currentDate;
-
     setFont(QFontDatabase::systemFont(QFontDatabase::GeneralFont));
 
     setFrame(false);
@@ -131,12 +130,8 @@ class KDatePickerPrivate
     Q_DECLARE_TR_FUNCTIONS(KDatePicker)
 
 public:
-    KDatePickerPrivate(KDatePicker *qq)
+    explicit KDatePickerPrivate(KDatePicker *qq)
         : q(qq)
-        , closeButton(nullptr)
-        , selectWeek(nullptr)
-        , todayButton(nullptr)
-        , navigationLayout(nullptr)
     {
     }
 
@@ -146,34 +141,34 @@ public:
     /// the date table
     KDatePicker *q;
 
-    QToolButton *closeButton;
-    QComboBox *selectWeek;
-    QToolButton *todayButton;
-    QBoxLayout *navigationLayout;
+    QToolButton *closeButton = nullptr;
+    QComboBox *selectWeek = nullptr;
+    QToolButton *todayButton = nullptr;
+    QBoxLayout *navigationLayout = nullptr;
 
     /// the year forward button
-    QToolButton *yearForward;
+    QToolButton *yearForward = nullptr;
     /// the year backward button
-    QToolButton *yearBackward;
+    QToolButton *yearBackward = nullptr;
     /// the month forward button
-    QToolButton *monthForward;
+    QToolButton *monthForward = nullptr;
     /// the month backward button
-    QToolButton *monthBackward;
+    QToolButton *monthBackward = nullptr;
     /// the button for selecting the month directly
-    QToolButton *selectMonth;
+    QToolButton *selectMonth = nullptr;
     /// the button for selecting the year directly
-    QToolButton *selectYear;
+    QToolButton *selectYear = nullptr;
     /// the line edit to enter the date directly
-    QLineEdit *line;
+    QLineEdit *line = nullptr;
     /// the validator for the line edit:
-    DatePickerValidator *val;
+    DatePickerValidator *val = nullptr;
     /// the date table
-    KDateTable *table;
+    KDateTable *table = nullptr;
     /// the widest month string in pixels:
     QSize maxMonthRect;
 
     /// the font size for the widget
-    int fontsize;
+    int fontsize = -1;
 };
 
 void KDatePickerPrivate::fillWeeksCombo()
