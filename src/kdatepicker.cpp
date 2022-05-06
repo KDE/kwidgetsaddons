@@ -3,12 +3,16 @@
     SPDX-FileCopyrightText: 1997 Tim D. Gilman <tdgilman@best.org>
     SPDX-FileCopyrightText: 1998-2001 Mirko Boehm (mirko@kde.org)
     SPDX-FileCopyrightText: 2007 John Layt <john@layt.net>
+    SPDX-FileCopyrightText: 2022 g10 Code GmbH
+    SPDX-FileContributor: Ingo Klöcker <dev@ingo-kloecker.de>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "kdatepicker.h"
 #include "kdatepicker_p.h"
+
+#include "common_helpers_p.h"
 #include "kdatetable_p.h"
 #include <kpopupframe.h>
 
@@ -22,6 +26,7 @@
 #include <QStyle>
 #include <QToolButton>
 
+#include "loggingcategory.h"
 #include "moc_kdatepicker.cpp"
 #include "moc_kdatepicker_p.cpp"
 
@@ -42,15 +47,23 @@ public:
 
     QDate toDate(const QString &text) const
     {
-        QLocale::FormatType formats[] = {QLocale::LongFormat, QLocale::ShortFormat, QLocale::NarrowFormat};
         QLocale locale = picker->locale();
+        const QList<QString> formats{
+            locale.dateFormat(QLocale::LongFormat),
+            locale.dateFormat(QLocale::ShortFormat),
+            locale.dateFormat(QLocale::NarrowFormat),
+            dateFormatWith4DigitYear(locale, QLocale::ShortFormat),
+        };
 
         QDate date;
-        for (int i = 0; i < 3; i++) {
-            date = locale.toDate(text, formats[i]);
+        for (const auto &format : formats) {
+            date = locale.toDate(text, format);
             if (date.isValid()) {
                 break;
             }
+        }
+        if (!date.isValid()) {
+            qCDebug(KWidgetsAddonsLog) << "Could not parse text as date:" << text;
         }
         return date;
     }
@@ -371,7 +384,7 @@ void KDatePicker::resizeEvent(QResizeEvent *e)
 
 void KDatePicker::dateChangedSlot(const QDate &date_)
 {
-    d->line->setText(locale().toString(date_, QLocale::ShortFormat));
+    d->line->setText(locale().toString(date_, dateFormatWith4DigitYear(locale(), QLocale::ShortFormat)));
     d->selectMonth->setText(locale().standaloneMonthName(date_.month(), QLocale::LongFormat));
     d->fillWeeksCombo();
 
