@@ -53,6 +53,7 @@ public:
             locale.dateFormat(QLocale::ShortFormat),
             locale.dateFormat(QLocale::NarrowFormat),
             dateFormatWith4DigitYear(locale, QLocale::ShortFormat),
+            QStringLiteral("yyyy-MM-dd"),
         };
 
         QDate date;

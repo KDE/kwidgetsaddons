@@ -87,6 +87,16 @@ private Q_SLOTS:
             QCOMPARE(emittedDate, expectedDate);
             spyDateEntered.clear();
         }
+        {
+            // ISO date format
+            lineEdit->setText(QStringLiteral("2022-05-15"));
+            QTest::keyClick(lineEdit, Qt::Key_Return);
+            QCOMPARE(spyDateEntered.count(), 1);
+            const auto emittedDate = spyDateEntered.first().at(0).toDate();
+            const QDate expectedDate{2022, 5, 15};
+            QCOMPARE(emittedDate, expectedDate);
+            spyDateEntered.clear();
+        }
     }
 };
 
