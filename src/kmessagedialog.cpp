@@ -142,8 +142,15 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
     // Button box
     d->m_buttonBox = new QDialogButtonBox(this);
     d->m_topLayout->addWidget(d->m_buttonBox);
+
     // Default buttons
     setButtons();
+
+    // If the dialog is rejected, e.g. by pressing Esc, done() signal connected to the button box
+    // won't be emitted
+    connect(this, &QDialog::rejected, this, [this]() {
+        done(QDialogButtonBox::Cancel);
+    });
 }
 
 // This method has been copied from KWindowSystem to avoid depending on it
