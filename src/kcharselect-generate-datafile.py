@@ -133,6 +133,7 @@ SECTION Middle Eastern Scripts
 Arabic
 Arabic Supplement
 Arabic Extended-A
+Arabic Extended-B
 Arabic Presentation Forms-A
 Arabic Presentation Forms-B
 Hebrew
