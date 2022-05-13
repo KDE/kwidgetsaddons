@@ -886,6 +886,8 @@ QList<uint> KCharSelectData::find(const QString &needle)
         if (ucs4.size() == 1) {
             // search for hex representation of the character
             searchStrings = QStringList(formatCode(ucs4.at(0)));
+        } else {
+            searchStrings = splitString(simplified);
         }
     } else {
         searchStrings = splitString(simplified);
