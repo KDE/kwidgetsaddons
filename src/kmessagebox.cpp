@@ -385,7 +385,10 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
         *checkboxReturn = checkbox->isChecked();
     }
 
-    delete guardedDialog;
+    if (!guardedDialog.isNull()) {
+        // BUG 454060: don't delete immediately to avoid a crash because the paint event can be still running
+        guardedDialog->deleteLater();
+    }
     return result;
 }
 
