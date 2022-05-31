@@ -261,10 +261,10 @@ void KMimeTypeChooserPrivate::editMimeType()
     const QString mt = (item->parent())->text() + QLatin1Char('/') + item->text();
     KMimeTypeEditor::editMimeType(mt, q);
 
-    // KF5 TODO: use a QFileSystemWatcher on one of the shared-mime-info generated files, instead.
+    // TODO: use a QFileSystemWatcher on one of the shared-mime-info generated files, instead.
     // q->connect( KSycoca::self(), SIGNAL(databaseChanged(QStringList)),
     //            q, SLOT(slotSycocaDatabaseChanged(QStringList)) );
-#pragma message("KF5 TODO: use QFileSystemWatcher to be told when keditfiletype changed a MIME type")
+    // TODO: use QFileSystemWatcher to be told when keditfiletype changed a MIME type
     // or a better idea: a QMimeDatabaseWatcher class in Qt itself
 }
 
