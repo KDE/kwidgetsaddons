@@ -156,8 +156,8 @@ public:
     int autoHideTimeout() const;
 
     /**
-     * @return The level of this title: it influences the font size following the guidelines at
-     *         https://hig.kde.org/style/typography.html
+     * @return The level of this title: it influences the font size following the guidelines in
+     *         the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
      *         It also corresponds to the level api of Kirigami Heading for QML applications
      * @since 5.53
      */
@@ -267,7 +267,7 @@ public Q_SLOTS:
 
     /**
      * Sets the level of this title, similar to HTML's h1 h2 h3...
-     * follows KDE HIG https://hig.kde.org/style/typography.html
+     * Follows the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
      * @param level the level of the title, 1 is the biggest font and most important, descending
      * @since 5.53
      */
