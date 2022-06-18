@@ -358,7 +358,7 @@ QSize KMultiTabBarTab::computeSizeHint(bool withText) const
     size.setWidth(size.width() + 2 * majorMargin);
     size.setHeight(size.height() + 2 * minorMargin);
 
-    if (withText)
+    if (withText && !text().isEmpty())
     // Add enough room for the text, and an extra major margin.
     {
         size.setWidth(size.width() + textSize.width() + majorMargin);
