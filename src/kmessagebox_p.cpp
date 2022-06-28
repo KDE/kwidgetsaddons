@@ -38,10 +38,14 @@ public:
         }
     }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
     bool shouldBeShownYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) override
+#else
+    bool shouldBeShownTwoActions(const QString &dontShowAgainName, KMessageBox::ButtonCode &result) override
+#endif
     {
         KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::ButtonCode(0));
-        if (code == KMessageBox::Yes || code == KMessageBox::No) {
+        if (code == KMessageBox::PrimaryAction || code == KMessageBox::SecondaryAction) {
             result = code;
             return false;
         }
@@ -49,16 +53,20 @@ public:
     }
     bool shouldBeShownContinue(const QString &dontShowAgainName) override
     {
-        KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::Yes);
-        return code == KMessageBox::Yes;
+        KMessageBox::ButtonCode code = m_saved.value(dontShowAgainName, KMessageBox::PrimaryAction);
+        return code == KMessageBox::PrimaryAction;
     }
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
     void saveDontShowAgainYesNo(const QString &dontShowAgainName, KMessageBox::ButtonCode result) override
+#else
+    void saveDontShowAgainTwoActions(const QString &dontShowAgainName, KMessageBox::ButtonCode result) override
+#endif
     {
         m_saved[dontShowAgainName] = result;
     }
     void saveDontShowAgainContinue(const QString &dontShowAgainName) override
     {
-        m_saved[dontShowAgainName] = KMessageBox::No;
+        m_saved[dontShowAgainName] = KMessageBox::SecondaryAction;
     }
     void enableAllMessages() override
     {

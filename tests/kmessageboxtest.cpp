@@ -45,11 +45,11 @@ void showResult(int test, int i)
     case KMessageBox::Cancel:
         printf("(%s)\n", "Cancel");
         break;
-    case KMessageBox::Yes:
-        printf("(%s)\n", "Yes");
+    case KMessageBox::PrimaryAction:
+        printf("(%s)\n", "PrimaryAction");
         break;
-    case KMessageBox::No:
-        printf("(%s)\n", "No");
+    case KMessageBox::SecondaryAction:
+        printf("(%s)\n", "SecondaryAction");
         break;
     case KMessageBox::Continue:
         printf("(%s)\n", "Continue");
@@ -87,29 +87,33 @@ bool testMessageBox(int test)
                                                KStandardGuiItem::cancel(),
                                                QStringLiteral("dontask"),
                                                KMessageBox::AllowLink);
-        i = KMessageBox::questionYesNo(nullptr,
-                                       QStringLiteral("<p>Do you have a printer? thisisaverylongdkldhklghklghklashgkllasghkdlsghkldfghklsabla bla bbla bla. It "
-                                                      "also has <a href=http://www.kde.org>this URL</a>.</p>"),
-                                       QStringLiteral("Bla"),
-                                       KGuiItem(QStringLiteral("Yes")),
-                                       KGuiItem(QStringLiteral("No")),
-                                       QStringLiteral("bla"),
-                                       KMessageBox::AllowLink);
+        i = KMessageBox::questionTwoActions(
+            nullptr,
+            QStringLiteral("<p>Do you have a printer? thisisaverylongdkldhklghklghklashgkllasghkdlsghkldfghklsabla bla bbla bla. It "
+                           "also has <a href=http://www.kde.org>this URL</a>.</p>"),
+            QStringLiteral("Bla"),
+            KGuiItem(QStringLiteral("Scan")),
+            KGuiItem(QStringLiteral("Select")),
+            QStringLiteral("bla"),
+            KMessageBox::AllowLink);
         break;
     }
     case 2:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
         i = KMessageBox::questionYesNo(nullptr, QStringLiteral("Do you have a printer?"), QStringLiteral("Printer setup"));
+#endif
         break;
 
     case 3:
-        i = KMessageBox::questionYesNo(nullptr,
-                                       QStringLiteral("Does your printer support color or only black and white?"),
-                                       QStringLiteral("Printer setup"),
-                                       KGuiItem(QStringLiteral("&Color")),
-                                       KGuiItem(QLatin1String("&Black & White")));
+        i = KMessageBox::questionTwoActions(nullptr,
+                                            QStringLiteral("Does your printer support color or only black and white?"),
+                                            QStringLiteral("Printer setup"),
+                                            KGuiItem(QStringLiteral("Print Color")),
+                                            KGuiItem(QLatin1String("Print Black & White")));
         break;
 
     case 4:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
         i = KMessageBox::warningYesNo(nullptr,
                                       QString::fromLatin1("KDVI could not locate the program 'dvipdfm' on your computer. That program is "
                                                           "absolutely needed by the export function. You can, however, convert "
@@ -119,13 +123,16 @@ bool testMessageBox(int test)
                                                           "TeX distribution which includes the 'dvipdfm' program.\n"
                                                           "Hint to the perplexed system administrator: KDVI uses the shell's PATH variable "
                                                           "when looking for programs."));
+#endif
         break;
 
     case 5:
-        i = KMessageBox::warningYesNo(nullptr,
-                                      QString::fromLatin1("Your printer has been added.\n"
+        i = KMessageBox::warningTwoActions(nullptr,
+                                           QStringLiteral("Your printer has been added.\n"
                                                           "Do you want to update your configuration?"),
-                                      QStringLiteral("Printer Setup"));
+                                           QStringLiteral("Printer Setup"),
+                                           KGuiItem(QStringLiteral("Update")),
+                                           KGuiItem(QStringLiteral("Skip")));
         break;
 
     case 6:
@@ -153,25 +160,29 @@ bool testMessageBox(int test)
         break;
 
     case 8:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
         i = KMessageBox::warningYesNoCancel(nullptr,
                                             QString::fromLatin1("Your document contains unsaved changes.\n"
                                                                 "Do you want to save your changes?\n"));
+#endif
         break;
 
     case 9:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
         i = KMessageBox::warningYesNoCancel(nullptr,
                                             QString::fromLatin1("Your document contains unsaved changes.\n"
                                                                 "Do you want to save your changes?\n"),
                                             QStringLiteral("Close"));
+#endif
         break;
 
     case 10:
-        i = KMessageBox::warningYesNoCancel(nullptr,
-                                            QString::fromLatin1("Your document contains unsaved changes.\n"
-                                                                "Do you want to save or discard your changes?\n"),
-                                            QStringLiteral("Close"),
-                                            KGuiItem(QStringLiteral("&Save")),
-                                            KGuiItem(QStringLiteral("&Discard")));
+        i = KMessageBox::warningTwoActionsCancel(nullptr,
+                                                 QString::fromLatin1("Your document contains unsaved changes.\n"
+                                                                     "Do you want to save or discard your changes?\n"),
+                                                 QStringLiteral("Close"),
+                                                 KGuiItem(QStringLiteral("&Save")),
+                                                 KGuiItem(QStringLiteral("&Discard")));
         break;
 
     case 11:
@@ -245,7 +256,12 @@ bool testMessageBox(int test)
                        "long/file/name/which/is/in/a/really/deep/directory/in/a/really/large/"
                        "hard/disk/of/your/system")
                 << QStringLiteral("/and/another/one");
-        i = KMessageBox::questionYesNoList(nullptr, QStringLiteral("Do you want to delete the following files?"), strlist);
+        i = KMessageBox::questionTwoActionsList(nullptr,
+                                                QStringLiteral("Do you want to delete the following files?"),
+                                                strlist,
+                                                QStringLiteral("Delete Files"),
+                                                KGuiItem(QStringLiteral("Delete")),
+                                                KGuiItem(QStringLiteral("Move to Trash")));
     } break;
     case 21: {
         QStringList strlist;
@@ -254,7 +270,12 @@ bool testMessageBox(int test)
             strlist.append(QStringLiteral("/tmp/tmp.%1").arg(j));
         }
         printf("Completed...\n");
-        i = KMessageBox::questionYesNoList(nullptr, QStringLiteral("Do you want to delete the following files?"), strlist);
+        i = KMessageBox::questionTwoActionsList(nullptr,
+                                                QStringLiteral("Do you want to delete the following files?"),
+                                                strlist,
+                                                QStringLiteral("Delete Files"),
+                                                KGuiItem(QStringLiteral("Delete")),
+                                                KGuiItem(QStringLiteral("Move to Trash")));
     } break;
 
     case 22:

@@ -48,16 +48,22 @@ namespace KMessageBox
 enum ButtonCode {
     Ok = 1,
     Cancel = 2,
-    Yes = 3,
-    No = 4,
+    PrimaryAction = 3, ///< @since 5.100
+    SecondaryAction = 4, ///< @since 5.100
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+    /// @deprecated Since 5.100, use PrimaryAction.
+    Yes KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use PrimaryAction.") = PrimaryAction,
+    /// @deprecated Since 5.100, use SecondaryAction.
+    No KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use SecondaryAction.") = SecondaryAction,
+#endif
     Continue = 5,
 };
 
 enum DialogType {
-    QuestionYesNo = 1,
-    WarningYesNo = 2,
+    QuestionTwoActions = 1, ///< @since 5.100
+    WarningTwoActions = 2, ///< @since 5.100
     WarningContinueCancel = 3,
-    WarningYesNoCancel = 4,
+    WarningTwoActionsCancel = 4, ///< @since 5.100
     Information = 5,
 // Reserved for: SSLMessageBox = 6
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
@@ -65,7 +71,17 @@ enum DialogType {
         KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 97, "Use Error.") = 7,
 #endif
     Error = 8,
-    QuestionYesNoCancel = 9,
+    QuestionTwoActionsCancel = 9, ///< @since 5.100
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+    /// @deprecated Since 5.100, use QuestionTwoActions.
+    QuestionYesNo KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use QuestionTwoActions.") = QuestionTwoActions,
+    /// @deprecated Since 5.100, use WarningTwoActions.
+    WarningYesNo KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use WarningTwoActions.") = WarningTwoActions,
+    /// @deprecated Since 5.100, use WarningTwoActionsCancel.
+    WarningYesNoCancel KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use WarningTwoActionsCancel.") = WarningTwoActionsCancel,
+    /// @deprecated Since 5.100, use QuestionTwoActionsCancel.
+    QuestionYesNoCancel KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use QuestionTwoActionsCancel.") = QuestionTwoActionsCancel,
+#endif
 };
 
 /**
@@ -92,6 +108,7 @@ Q_DECLARE_FLAGS(Options, Option)
 // This declaration must be defined before first Option is used in method signatures
 Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a simple "question" dialog.
  *
@@ -118,14 +135,56 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  * To be used for questions like "Do you have a printer?"
  *
  * The default button is "Yes". Pressing "Esc" selects "No".
+ *
+ * @deprecated Since 5.100, use questionTwoActions()
  */
-KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
-                                               const QString &text,
-                                               const QString &title = QString(),
-                                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                               const QString &dontAskAgainName = QString(),
-                                               Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use questionTwoActions()")
+ButtonCode questionYesNo(QWidget *parent,
+                         const QString &text,
+                         const QString &title = QString(),
+                         const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                         const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                         const QString &dontAskAgainName = QString(),
+                         Options options = Notify);
+#endif
+
+/**
+ * Display a "question" dialog with two action buttons.
+ *
+ * To be used for questions like "Do you want to save the message for later or discard it?".
+ *
+ * The default button is the primary button. Pressing "Esc" triggers the secondary button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param title   the message box title. If an empty string, defaults to i18n("Question").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options see Option
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode questionTwoActions(QWidget *parent,
+                              const QString &text,
+                              const QString &title,
+                              const KGuiItem &primaryAction,
+                              const KGuiItem &secondaryAction,
+                              const QString &dontAskAgainName = QString(),
+                              Options options = Notify);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a simple "question" dialog.
  *
@@ -154,16 +213,59 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
  * To be used for questions like "Do you want to discard the message or save it for later?",
  *
  * The default button is "Yes". Pressing "Esc" selects "Cancel".
+ *
+ * @deprecated Since 5.100, use questionTwoActionsCancel()
  */
-KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
-                                                     const QString &text,
-                                                     const QString &title = QString(),
-                                                     const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                                     const QString &dontAskAgainName = QString(),
-                                                     Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use questionTwoActionsCancel()")
+ButtonCode questionYesNoCancel(QWidget *parent,
+                               const QString &text,
+                               const QString &title = QString(),
+                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                               const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                               const QString &dontAskAgainName = QString(),
+                               Options options = Notify);
+#endif
 
+/**
+ * Display a "question" dialog with two action buttons and a cancel button.
+ *
+ * To be used for questions like "Do you want to save the message for later or discard it?".
+ *
+ * The default button is the primary button. Pressing "Esc" triggers the cancel button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param title   the message box title. If an empty string, defaults to i18n("Question").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param cancelAction the action for the cancel button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options  see Option
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode questionTwoActionsCancel(QWidget *parent,
+                                    const QString &text,
+                                    const QString &title,
+                                    const KGuiItem &primaryAction,
+                                    const KGuiItem &secondaryAction,
+                                    const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                                    const QString &dontAskAgainName = QString(),
+                                    Options options = Notify);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a "question" dialog with a listbox to show information to the user
  *
@@ -194,16 +296,62 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
  * he presses "Yes"
  *
  * The default button is "Yes". Pressing "Esc" selects "No".
+ *
+ * @deprecated Since 5.100, use questionTwoActionsList()
  */
-KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
-                                                   const QString &text,
-                                                   const QStringList &strlist,
-                                                   const QString &title = QString(),
-                                                   const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                   const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                   const QString &dontAskAgainName = QString(),
-                                                   Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use questionTwoActionsList()")
+ButtonCode questionYesNoList(QWidget *parent,
+                             const QString &text,
+                             const QStringList &strlist,
+                             const QString &title = QString(),
+                             const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                             const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                             const QString &dontAskAgainName = QString(),
+                             Options options = Notify);
+#endif
 
+/**
+ * Display a "question" dialog with a listbox to show information to the user
+ * and two action buttons.
+ *
+ * To be used for questions like "Do you really want to delete these files?"
+ * and show the user exactly which files are going to be deleted in case.
+ *
+ * The default button is the primary button. Pressing "Esc" triggers the secondary button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param strlist List of strings to be written in the listbox. If the list is
+ *                empty, it doesn't show any listbox, working as questionTwoActions().
+ * @param title   the message box title. If an empty string, defaults to i18n("Question").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options  see Option
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode questionTwoActionsList(QWidget *parent,
+                                  const QString &text,
+                                  const QStringList &strlist,
+                                  const QString &title,
+                                  const KGuiItem &primaryAction,
+                                  const KGuiItem &secondaryAction,
+                                  const QString &dontAskAgainName = QString(),
+                                  Options options = Notify);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a "warning" dialog.
  *
@@ -231,15 +379,57 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
  * The text should explain the implication of both options.
  *
  * The default button is "No". Pressing "Esc" selects "No".
+ *
+ * @deprecated Since 5.100, use warningTwoActions()
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
-                                              const QString &text,
-                                              const QString &title = QString(),
-                                              const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                              const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                              const QString &dontAskAgainName = QString(),
-                                              Options options = Options(Notify | Dangerous));
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActions()")
+ButtonCode warningYesNo(QWidget *parent,
+                        const QString &text,
+                        const QString &title = QString(),
+                        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                        const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                        const QString &dontAskAgainName = QString(),
+                        Options options = Options(Notify | Dangerous));
+#endif
 
+/**
+ * Display a "warning" dialog with two action buttons.
+ *
+ * To be used for questions like "Shall I update your configuration?".
+ * The text should explain the implication of both actions.
+ *
+ * The default button is the secondary button. Pressing "Esc" triggers the secondary button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param title   the message box title. If an empty string, defaults to i18n("Warning").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options see Options
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActions(QWidget *parent,
+                             const QString &text,
+                             const QString &title,
+                             const KGuiItem &primaryAction,
+                             const KGuiItem &secondaryAction,
+                             const QString &dontAskAgainName = QString(),
+                             Options options = Options(Notify | Dangerous));
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a "warning" dialog with a listbox to show information to the user
  *
@@ -270,15 +460,60 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
  * he presses "Yes"
  *
  * The default button is "No". Pressing "Esc" selects "No".
+ *
+ * @deprecated Since 5.100, use warningTwoActionsList()
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
-                                                  const QString &text,
-                                                  const QStringList &strlist,
-                                                  const QString &title = QString(),
-                                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                  const QString &dontAskAgainName = QString(),
-                                                  Options options = Options(Notify | Dangerous));
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsList()")
+ButtonCode warningYesNoList(QWidget *parent,
+                            const QString &text,
+                            const QStringList &strlist,
+                            const QString &title = QString(),
+                            const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                            const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                            const QString &dontAskAgainName = QString(),
+                            Options options = Options(Notify | Dangerous));
+#endif
+
+/**
+ * Display a "warning" dialog with a listbox to show information to the user
+ * and two action buttons.
+ *
+ * To be used for questions like "Shall I update your configuration?".
+ * The text should explain the implication of both actions.
+ *
+ * The default button is the secondary button. Pressing "Esc" triggers the secondary button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param strlist List of strings to be written in the listbox. If the list is
+ *                empty, it doesn't show any listbox, working as questionYesNo.
+ * @param title   the message box title. If an empty string, defaults to i18n("Warning").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options see Options
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsList(QWidget *parent,
+                                 const QString &text,
+                                 const QStringList &strlist,
+                                 const QString &title,
+                                 const KGuiItem &primaryAction,
+                                 const KGuiItem &secondaryAction,
+                                 const QString &dontAskAgainName = QString(),
+                                 Options options = Options(Notify | Dangerous));
 
 /**
  * Display a "warning" dialog.
@@ -371,6 +606,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
                                                            const QString &dontAskAgainName = QString(),
                                                            Options options = Notify);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a Yes/No/Cancel "warning" dialog.
  *
@@ -403,16 +639,60 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  * The text should explain the implication of choosing 'No'.
  *
  * The default button is "Yes". Pressing "Esc" selects "Cancel"
+ *
+ * @deprecated Since 5.100, use warningTwoActionsCancel()
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
-                                                    const QString &text,
-                                                    const QString &title = QString(),
-                                                    const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                    const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                    const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                                    const QString &dontAskAgainName = QString(),
-                                                    Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsCancel()")
+ButtonCode warningYesNoCancel(QWidget *parent,
+                              const QString &text,
+                              const QString &title = QString(),
+                              const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                              const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                              const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                              const QString &dontAskAgainName = QString(),
+                              Options options = Notify);
+#endif
 
+/**
+ * Display a "warning" dialog with two action buttons and a cancel button.
+ *
+ * To be used for questions like "Shall I update your configuration?".
+ * The text should explain the implication of both actions.
+ *
+ * The default button is the cancel button. Pressing "Esc" triggers the cancel button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param title   the message box title. If an empty string, defaults to i18n("Warning").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param cancelAction the action for the cancel button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options see Options
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsCancel(QWidget *parent,
+                                   const QString &text,
+                                   const QString &title,
+                                   const KGuiItem &primaryAction,
+                                   const KGuiItem &secondaryAction,
+                                   const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                                   const QString &dontAskAgainName = QString(),
+                                   Options options = Options(Notify | Dangerous));
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Display a Yes/No/Cancel "warning" dialog with a listbox to show information
  * to the user.
@@ -449,16 +729,64 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
  * The text should explain the implication of choosing 'No'.
  *
  * The default button is "Yes". Pressing "Esc" selects "Cancel"
+ *
+ * @deprecated Since 5.100, use warningTwoActionsCancelList()
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
-                                                        const QString &text,
-                                                        const QStringList &strlist,
-                                                        const QString &title = QString(),
-                                                        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                                        const QString &dontAskAgainName = QString(),
-                                                        Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsCancelList()")
+ButtonCode warningYesNoCancelList(QWidget *parent,
+                                  const QString &text,
+                                  const QStringList &strlist,
+                                  const QString &title = QString(),
+                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                  const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                  const QString &dontAskAgainName = QString(),
+                                  Options options = Notify);
+#endif
+
+/**
+ * Display a "warning" dialog with a listbox to show information
+ * to the user, two action buttons and a cancel button.
+ *
+ * To be used for questions like "Shall I update your configuration?".
+ * The text should explain the implication of both actions.
+ *
+ * The default button is the cancel button. Pressing "Esc" triggers the cancel button.
+ *
+ * @param parent  the parent widget
+ * @param text    the message string
+ * @param strlist a List of strings to be written in the listbox. If the
+ *                list is empty, it doesn't show any listbox, working
+ *                as warningTwoActionsCancel().
+ * @param title   the message box title. If an empty string, defaults to i18n("Warning").
+ * @param primaryAction the action for the primary button
+ * @param secondaryAction the action for the secondary button
+ * @param cancelAction the action for the cancel button
+ * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ *                further confirmation can be turned off.
+ *                The string is used to lookup and store the setting
+ *                in the applications config file.
+ *                The setting is stored in the "Notification Messages" group.
+ *                If @p dontAskAgainName starts with a ':' then the setting
+ *                is stored in the global config file.
+ * @param options see Options
+ *
+ * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
+ *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsCancelList(QWidget *parent,
+                                       const QString &text,
+                                       const QStringList &strlist,
+                                       const QString &title,
+                                       const KGuiItem &primaryAction,
+                                       const KGuiItem &secondaryAction,
+                                       const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                                       const QString &dontAskAgainName = QString(),
+                                       Options options = Options(Notify | Dangerous));
 
 /**
  * Display an "Error" dialog.
@@ -778,7 +1106,7 @@ KWIDGETSADDONS_EXPORT void enableAllMessages();
 /**
  * Re-enable a specific @p dontShowAgainName messages that had
  * previously been turned off.
- * @see saveDontShowAgainYesNo()
+ * @see saveDontShowAgainTwoActions()
  * @see saveDontShowAgainContinue()
  */
 KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
@@ -812,15 +1140,15 @@ void about(QWidget *parent, const QString &text, const QString &title = QString(
  * Alternate method to show a messagebox:
  *
  * @param parent Parent widget.
- * @param type type of message box: QuestionYesNo, WarningYesNo, WarningContinueCancel...
+ * @param type type of message box: QuestionTwoActions, WarningTwoActions, WarningContinueCancel...
  * @param text Message string.
  * @param title Message box title.
- * @param buttonYes The text for the first button.
- *                  The default is KStandardGuiItem::yes().
- * @param buttonNo  The text for the second button.
- *                  The default is KStandardGuiItem::no().
- * @param buttonCancel  The text for the third button.
- *                  The default is KStandardGuiItem::cancel().
+ * @param primaryAction The KGuiItem for the first button.
+ *                      The default (deprecated since 5.100) is KStandardGuiItem::yes().
+ * @param secondaryAction The KGuiItem for the second button.
+ *                         The default (deprecated since 5.100) is KStandardGuiItem::no().
+ * @param cancelAction The text for the third button.
+ *                     The default is KStandardGuiItem::cancel().
  * @param dontShowAskAgainName If provided, a checkbox is added with which
  *                further questions/information can be turned off. If turned off
  *                all questions will be automatically answered with the
@@ -832,16 +1160,24 @@ void about(QWidget *parent, const QString &text, const QString &title = QString(
  *       and for Information, none is used.
  * @return a button code, as defined in KMessageBox.
  */
-KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent,
-                                            DialogType type,
-                                            const QString &text,
-                                            const QString &title = QString(),
-                                            const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                            const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                            const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                            const QString &dontShowAskAgainName = QString(),
-                                            Options options = Notify);
+KWIDGETSADDONS_EXPORT
+ButtonCode messageBox(QWidget *parent,
+                      DialogType type,
+                      const QString &text,
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+                      const QString &title = QString(),
+                      const KGuiItem &primaryAction = KStandardGuiItem::yes(),
+                      const KGuiItem &secondaryAction = KStandardGuiItem::no(),
+#else
+                      const QString &title,
+                      const KGuiItem &primaryAction,
+                      const KGuiItem &secondaryAction,
+#endif
+                      const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                      const QString &dontShowAskAgainName = QString(),
+                      Options options = Notify);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * @return true if the corresponding yes/no message box should be shown.
  * @param dontShowAgainName the name that identify the message box. If
@@ -849,8 +1185,27 @@ KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent,
  * @param result is set to the result (Yes or No) that was chosen the last
  * time the message box was shown. Only meaningful, if the message box
  * should not be shown.
+ *
+ * @deprecated Since 5.100, use shouldBeShownTwoActions()
  */
-KWIDGETSADDONS_EXPORT bool shouldBeShownYesNo(const QString &dontShowAgainName, ButtonCode &result);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use shouldBeShownTwoActions()")
+bool shouldBeShownYesNo(const QString &dontShowAgainName, ButtonCode &result);
+#endif
+
+/**
+ * @param dontShowAgainName the name that identifies the message box.
+ *                          If empty, @c true is always returned.
+ * @param result reference to a variable to be set to the choice (@c PrimaryAction or @c SecondaryAction)
+ *               that was chosen the last time the message box was shown.
+ *               Only meaningful if the message box should not be shown.
+ * @returns @c true if the corresponding two actions message box should be shown, @c false otherwise.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+bool shouldBeShownTwoActions(const QString &dontShowAgainName, ButtonCode &result);
+
 /**
  * @return true if the corresponding continue/cancel message box should be
  * shown.
@@ -859,14 +1214,33 @@ KWIDGETSADDONS_EXPORT bool shouldBeShownYesNo(const QString &dontShowAgainName, 
  */
 KWIDGETSADDONS_EXPORT bool shouldBeShownContinue(const QString &dontShowAgainName);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Save the fact that the yes/no message box should not be shown again.
  * @param dontShowAgainName the name that identify the message box. If
  * empty, this method does nothing.
  * @param result the value (Yes or No) that should be used as the result
  * for the message box.
+ *
+ * @deprecated Since 5.100, use saveDontShowAgainTwoActions()
  */
-KWIDGETSADDONS_EXPORT void saveDontShowAgainYesNo(const QString &dontShowAgainName, ButtonCode result);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use saveDontShowAgainTwoActions()")
+void saveDontShowAgainYesNo(const QString &dontShowAgainName, ButtonCode result);
+#endif
+
+/**
+ * Save the fact that a two actions message box should not be shown again.
+ *
+ * @param dontShowAgainName the name that identifies the message box.
+ *                          If empty, this method does nothing.
+ * @param result the value (@c PrimaryAction or @c SecondaryAction) that should be used
+ *               as the result for the message box.
+ *
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+void saveDontShowAgainTwoActions(const QString &dontShowAgainName, ButtonCode result);
 
 /**
  * Save the fact that the continue/cancel message box should not be shown
@@ -928,7 +1302,7 @@ KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notify
  * @return A QDialogButtonBox::StandardButton button code, not a KMessageBox
  *         button code, based on the buttonmask given to the constructor of
  *         the @p dialog (ie. will return QDialogButtonBox::Yes instead of
- *         KMessageBox::Yes). Will return QDialogButtonBox::NoButton if the
+ *         KMessageBox::PrimaryAction). Will return QDialogButtonBox::NoButton if the
  *         message box is queued for display instead of exec()ed immediately
  *         or if the option NoExec is set.
  * @note   Unless NoExec is used,
@@ -966,7 +1340,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  * @return A QDialogButtonBox::StandardButton button code, not a KMessageBox
  *         button code, based on the buttonmask given to the constructor of
  *         the @p dialog (ie. will return QDialogButtonBox::Yes instead of
- *         KMessageBox::Yes). Will return QDialogButtonBox::NoButton if the
+ *         KMessageBox::PrimaryAction). Will return QDialogButtonBox::NoButton if the
  *         message box is queued for display instead of exec()ed immediately
  *         or if the option NoExec is set.
  * @note   Unless NoExec is used,
@@ -984,68 +1358,181 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
                                                                          const QString &details = QString(),
                                                                          QMessageBox::Icon notifyType = QMessageBox::Information); // krazy:exclude=qclasses
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use questionTwoActionsWId()
  */
-KWIDGETSADDONS_EXPORT ButtonCode questionYesNoWId(WId parent_id,
-                                                  const QString &text,
-                                                  const QString &title = QString(),
-                                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                  const QString &dontAskAgainName = QString(),
-                                                  Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use questionTwoActionsWId()")
+ButtonCode questionYesNoWId(WId parent_id,
+                            const QString &text,
+                            const QString &title = QString(),
+                            const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                            const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                            const QString &dontAskAgainName = QString(),
+                            Options options = Notify);
+#endif
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @see questionTwoActions()
+ * @since 5.100
  */
-KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancelWId(WId parent_id,
-                                                        const QString &text,
-                                                        const QString &title = QString(),
-                                                        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                        const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                                        const QString &dontAskAgainName = QString(),
-                                                        Options options = Notify);
+KWIDGETSADDONS_EXPORT
+ButtonCode questionTwoActionsWId(WId parent_id,
+                                 const QString &text,
+                                 const QString &title,
+                                 const KGuiItem &primaryAction,
+                                 const KGuiItem &secondaryAction,
+                                 const QString &dontAskAgainName = QString(),
+                                 Options options = Notify);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use questionTwoActionsCancelWId()
+ */
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use questionTwoActionsCancelWId()")
+ButtonCode questionYesNoCancelWId(WId parent_id,
+                                  const QString &text,
+                                  const QString &title = QString(),
+                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                  const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                  const QString &dontAskAgainName = QString(),
+                                  Options options = Notify);
+#endif
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @see questionTwoActionsCancel()
+ * @since 5.100
  */
-KWIDGETSADDONS_EXPORT ButtonCode questionYesNoListWId(WId parent_id,
-                                                      const QString &text,
-                                                      const QStringList &strlist,
-                                                      const QString &title = QString(),
-                                                      const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                      const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                      const QString &dontAskAgainName = QString(),
-                                                      Options options = Notify);
+KWIDGETSADDONS_EXPORT
+ButtonCode questionTwoActionsCancelWId(WId parent_id,
+                                       const QString &text,
+                                       const QString &title,
+                                       const KGuiItem &primaryAction,
+                                       const KGuiItem &secondaryAction,
+                                       const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                                       const QString &dontAskAgainName = QString(),
+                                       Options options = Notify);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use questionTwoActionsListWId()
+ */
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use questionTwoActionsListWId()")
+ButtonCode questionYesNoListWId(WId parent_id,
+                                const QString &text,
+                                const QStringList &strlist,
+                                const QString &title = QString(),
+                                const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                const QString &dontAskAgainName = QString(),
+                                Options options = Notify);
+#endif
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @see questionTwoActionsList()
+ * @since 5.100
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoWId(WId parent_id,
-                                                 const QString &text,
-                                                 const QString &title = QString(),
-                                                 const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                 const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                 const QString &dontAskAgainName = QString(),
-                                                 Options options = Options(Notify | Dangerous));
+KWIDGETSADDONS_EXPORT
+ButtonCode questionTwoActionsListWId(WId parent_id,
+                                     const QString &text,
+                                     const QStringList &strlist,
+                                     const QString &title,
+                                     const KGuiItem &primaryAction,
+                                     const KGuiItem &secondaryAction,
+                                     const QString &dontAskAgainName = QString(),
+                                     Options options = Notify);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use warningTwoActionsWId()
+ */
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsWId()")
+ButtonCode warningYesNoWId(WId parent_id,
+                           const QString &text,
+                           const QString &title = QString(),
+                           const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                           const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                           const QString &dontAskAgainName = QString(),
+                           Options options = Options(Notify | Dangerous));
+#endif
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @see warningTwoActions()
+ * @since 5.100
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoListWId(WId parent_id,
-                                                     const QString &text,
-                                                     const QStringList &strlist,
-                                                     const QString &title = QString(),
-                                                     const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                     const QString &dontAskAgainName = QString(),
-                                                     Options options = Options(Notify | Dangerous));
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsWId(WId parent_id,
+                                const QString &text,
+                                const QString &title,
+                                const KGuiItem &primaryAction,
+                                const KGuiItem &secondaryAction,
+                                const QString &dontAskAgainName = QString(),
+                                Options options = Options(Notify | Dangerous));
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use warningTwoActionsListWId()
+ */
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsListWId()")
+ButtonCode warningYesNoListWId(WId parent_id,
+                               const QString &text,
+                               const QStringList &strlist,
+                               const QString &title = QString(),
+                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                               const QString &dontAskAgainName = QString(),
+                               Options options = Options(Notify | Dangerous));
+#endif
+
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @see warningTwoActionsList()
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsListWId(WId parent_id,
+                                    const QString &text,
+                                    const QStringList &strlist,
+                                    const QString &title,
+                                    const KGuiItem &primaryAction,
+                                    const KGuiItem &secondaryAction,
+                                    const QString &dontAskAgainName = QString(),
+                                    Options options = Options(Notify | Dangerous));
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1072,32 +1559,79 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelListWId(WId parent_id,
                                                               const QString &dontAskAgainName = QString(),
                                                               Options options = Notify);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use warningTwoActionsCancelWId()
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelWId(WId parent_id,
-                                                       const QString &text,
-                                                       const QString &title = QString(),
-                                                       const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                       const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                       const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                                       const QString &dontAskAgainName = QString(),
-                                                       Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsCancelWId()")
+ButtonCode warningYesNoCancelWId(WId parent_id,
+                                 const QString &text,
+                                 const QString &title = QString(),
+                                 const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                 const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                 const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                 const QString &dontAskAgainName = QString(),
+                                 Options options = Notify);
+#endif
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
+ *
+ * @see warningTwoActionsCancel()
+ * @since 5.100
  */
-KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelListWId(WId parent_id,
-                                                           const QString &text,
-                                                           const QStringList &strlist,
-                                                           const QString &title = QString(),
-                                                           const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                                           const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                                           const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                                           const QString &dontAskAgainName = QString(),
-                                                           Options options = Notify);
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsCancelWId(WId parent_id,
+                                      const QString &text,
+                                      const QString &title,
+                                      const KGuiItem &primaryAction,
+                                      const KGuiItem &secondaryAction,
+                                      const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                                      const QString &dontAskAgainName = QString(),
+                                      Options options = Options(Notify | Dangerous));
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @deprecated Since 5.100, use warningTwoActionsCancelListWId()
+ */
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use warningTwoActionsCancelListWId()")
+ButtonCode warningYesNoCancelListWId(WId parent_id,
+                                     const QString &text,
+                                     const QStringList &strlist,
+                                     const QString &title = QString(),
+                                     const KGuiItem &buttonYes = KStandardGuiItem::yes(),
+                                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
+                                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
+                                     const QString &dontAskAgainName = QString(),
+                                     Options options = Notify);
+#endif
+
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ *
+ * @see warningTwoActionsCancelList()
+ * @since 5.100
+ */
+KWIDGETSADDONS_EXPORT
+ButtonCode warningTwoActionsCancelListWId(WId parent_id,
+                                          const QString &text,
+                                          const QStringList &strlist,
+                                          const QString &title,
+                                          const KGuiItem &primaryAction,
+                                          const KGuiItem &secondaryAction,
+                                          const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                                          const QString &dontAskAgainName = QString(),
+                                          Options options = Options(Notify | Dangerous));
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1193,15 +1727,22 @@ KWIDGETSADDONS_EXPORT void informationListWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT ButtonCode messageBoxWId(WId parent_id,
-                                               DialogType type,
-                                               const QString &text,
-                                               const QString &title = QString(),
-                                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
-                                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                                               const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
-                                               const QString &dontShowAskAgainName = QString(),
-                                               Options options = Notify);
+KWIDGETSADDONS_EXPORT
+ButtonCode messageBoxWId(WId parent_id,
+                         DialogType type,
+                         const QString &text,
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+                         const QString &title = QString(),
+                         const KGuiItem &primaryAction = KStandardGuiItem::yes(),
+                         const KGuiItem &secondaryAction = KStandardGuiItem::no(),
+#else
+                         const QString &title,
+                         const KGuiItem &primaryAction,
+                         const KGuiItem &secondaryAction,
+#endif
+                         const KGuiItem &cancelAction = KStandardGuiItem::cancel(),
+                         const QString &dontShowAskAgainName = QString(),
+                         Options options = Notify);
 }
 
 #endif
