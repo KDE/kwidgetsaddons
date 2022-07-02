@@ -94,7 +94,7 @@ KRecentFilesMenu::KRecentFilesMenu(const QString &title, QWidget *parent)
     d->m_noEntriesAction = new QAction(tr("No Entries"));
     d->m_noEntriesAction->setDisabled(true);
 
-    d->m_clearAction = new QAction(tr("Clear List"));
+    d->m_clearAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-clear-history")), tr("Clear List"));
 
     readFromFile();
     rebuildMenu();
