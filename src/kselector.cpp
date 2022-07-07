@@ -112,11 +112,6 @@ void KSelector::paintEvent(QPaintEvent *)
 
     painter.begin(this);
 
-    drawContents(&painter);
-
-    QPoint pos = calcArrowPos(value());
-    drawArrow(&painter, pos);
-
     if (indent()) {
         QStyleOptionFrame opt;
         opt.initFrom(this);
@@ -131,6 +126,11 @@ void KSelector::paintEvent(QPaintEvent *)
         style()->drawPrimitive(QStyle::PE_Frame, &opt, &painter, this);
         painter.setBrush(oldBrush);
     }
+
+    drawContents(&painter);
+
+    QPoint pos = calcArrowPos(value());
+    drawArrow(&painter, pos);
 
     painter.end();
 }
