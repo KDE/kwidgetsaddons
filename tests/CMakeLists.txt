@@ -20,6 +20,7 @@ kwidgetsaddons_executable_tests(
   kdatepicktest
   kdatepickerpopuptest
   kdatetimeedittestapp
+  kgradientselectortest
   kledtest
   kmessageboxtest
   kmessageboxwidtest
