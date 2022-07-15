@@ -73,7 +73,10 @@ enum Option {
     AllowLink = 2, ///< The message may contain links.
     Dangerous = 4, ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or No, depending on
                    ///< which is available.
-    PlainCaption = 8, ///< Do not use KApplication::makeStdCaption()
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
+    PlainCaption ///< @deprecated Since 5.0 this option is ignored.
+        KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 97, 5, 0, "This option is ignored..") = 8,
+#endif
     NoExec = 16, ///< Do not call exec() in createKMessageBox()
     WindowModal = 32, ///< The window is to be modal relative to its parent. By default, it is application modal.
 };
