@@ -963,6 +963,7 @@ void informationList(QWidget *parent,
     informationListInternal(new QDialog(parent), text, strlist, caption, dontShowAgainName, options);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void about(QWidget *parent, const QString &text, const QString &caption, Options options)
 {
     QDialog *dialog = new QDialog(parent, Qt::Dialog);
@@ -983,6 +984,7 @@ void about(QWidget *parent, const QString &text, const QString &caption, Options
 
     createKMessageBox(dialog, buttonBox, qApp->windowIcon(), text, QStringList(), QString(), nullptr, options);
 }
+#endif
 
 static ButtonCode messageBoxInternal(QDialog *dialog,
                                      DialogType type,

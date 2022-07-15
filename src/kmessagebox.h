@@ -714,6 +714,7 @@ KWIDGETSADDONS_EXPORT void enableAllMessages();
  */
 KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
 /**
  * Display an "About" dialog.
  *
@@ -730,8 +731,13 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
  * The default button is "&OK".
  *
  *  @note The OK button will always have the i18n'ed text '&OK'.
+ *
+ * @deprecated Since 5.0, use QMessageBox::about(). No known users of the extre features here.
  */
-KWIDGETSADDONS_EXPORT void about(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION_BELATED(5, 97, 5, 0, "Use QMessageBox::about()")
+void about(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
+#endif
 
 /**
  * Alternate method to show a messagebox:
