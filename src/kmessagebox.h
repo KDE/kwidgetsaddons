@@ -479,6 +479,28 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
 KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QString &title = QString(), Options options = Notify);
 
 /**
+ * Display an "Error" dialog.
+ *
+ * @param parent  Parent widget.
+ * @param text    Message string.
+ * @param title   Message box title. The application name is added to
+ *                the title. The default title is i18n("Error").
+ * @param buttonOk The text for the only button.
+ *                 The default is KStandardGuiItem::ok().
+ * @param options  see Options
+ *
+ * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
+ *
+ * @since 5.97
+ */
+KWIDGETSADDONS_EXPORT
+void error(QWidget *parent,
+           const QString &text,
+           const QString &title /*= QString()*/,
+           const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+           Options options = Notify); // TODO KF6 merge with previous overload
+
+/**
  * Display an "Error" dialog with a listbox.
  *
  * @param parent  Parent widget.
@@ -522,6 +544,36 @@ errorList(QWidget *parent, const QString &text, const QStringList &strlist, cons
  */
 KWIDGETSADDONS_EXPORT void
 detailedError(QWidget *parent, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
+
+/**
+ * Displays an "Error" dialog with a "Details >>" button.
+ *
+ * @param parent  Parent widget.
+ * @param text    Message string.
+ * @param details Detailed message string.
+ * @param title   Message box title. The application name is added to
+ *                the title. The default title is i18n("Error").
+ * @param buttonOk The text for the only button.
+ *                 The default is KStandardGuiItem::ok().
+ * @param options  see Options
+ *
+ * Your program messed up and now it's time to inform the user.
+ * To be used for important things like "Sorry, I deleted your hard disk."
+ *
+ * The @p details message can contain additional information about
+ * the problem and can be shown on request to advanced/interested users.
+ *
+ * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
+ *
+ * @since 5.97
+ */
+KWIDGETSADDONS_EXPORT
+void detailedError(QWidget *parent,
+                   const QString &text,
+                   const QString &details,
+                   const QString &title /*= QString()*/,
+                   const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+                   Options options = Notify); // TODO KF6 merge with previous overload
 
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
 /**
@@ -1066,6 +1118,19 @@ errorListWId(WId parent_id, const QString &text, const QStringList &strlist, con
  */
 KWIDGETSADDONS_EXPORT void
 detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
+
+/**
+ * This function accepts the window id of the parent window, instead
+ * of QWidget*. It should be used only when necessary.
+ * @since 5.97
+ */
+KWIDGETSADDONS_EXPORT
+void detailedErrorWId(WId parent_id,
+                      const QString &text,
+                      const QString &details,
+                      const QString &title /*= QString()*/,
+                      const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
+                      Options options = Notify); // TODO KF6 merge with previous overload
 
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
 /**

@@ -806,9 +806,31 @@ ButtonCode warningYesNoCancelList(QWidget *parent,
     return warningYesNoCancelListInternal(new QDialog(parent), text, strlist, title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
+static void errorInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk_, Options options)
+{
+    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
+    I18N_POST_BUTTON_FILTER
+
+    dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Error") : title);
+    dialog->setObjectName(QStringLiteral("error"));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
+    buttonBox->setStandardButtons(QDialogButtonBox::Ok);
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
+
+    applyOptions(dialog, options);
+
+    createKMessageBox(dialog, buttonBox, QMessageBox::Critical, text, QStringList(), QString(), nullptr, options);
+}
+
 void error(QWidget *parent, const QString &text, const QString &title, Options options)
 {
-    errorList(parent, text, QStringList(), title, options);
+    errorInternal(new QDialog(parent), text, title, KStandardGuiItem::ok(), options);
+}
+
+void error(QWidget *parent, const QString &text, const QString &title, const KGuiItem &buttonOk, Options options)
+{
+    errorInternal(new QDialog(parent), text, title, buttonOk, options);
 }
 
 static void errorListInternal(QDialog *dialog, const QString &text, const QStringList &strlist, const QString &title, Options options)
@@ -829,13 +851,18 @@ void errorList(QWidget *parent, const QString &text, const QStringList &strlist,
     errorListInternal(new QDialog(parent), text, strlist, title, options);
 }
 
-static void detailedErrorInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, Options options)
+static void
+detailedErrorInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
+    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
+    I18N_POST_BUTTON_FILTER
+
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Error") : title);
     dialog->setObjectName(QStringLiteral("error"));
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
     buttonBox->addButton(QDialogButtonBox::Ok);
+    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
     buttonBox->button(QDialogButtonBox::Ok)->setFocus();
 
     applyOptions(dialog, options);
@@ -845,7 +872,12 @@ static void detailedErrorInternal(QDialog *dialog, const QString &text, const QS
 
 void detailedError(QWidget *parent, const QString &text, const QString &details, const QString &title, Options options)
 {
-    detailedErrorInternal(new QDialog(parent), text, details, title, options);
+    detailedErrorInternal(new QDialog(parent), text, details, title, KStandardGuiItem::ok(), options);
+}
+
+void detailedError(QWidget *parent, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
+{
+    detailedErrorInternal(new QDialog(parent), text, details, title, buttonOk, options);
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
@@ -1162,7 +1194,12 @@ void errorListWId(WId parent_id, const QString &text, const QStringList &strlist
 
 void detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &title, Options options)
 {
-    detailedErrorInternal(createWIdDialog(parent_id), text, details, title, options);
+    detailedErrorInternal(createWIdDialog(parent_id), text, details, title, KStandardGuiItem::ok(), options);
+}
+
+void detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
+{
+    detailedErrorInternal(createWIdDialog(parent_id), text, details, title, buttonOk, options);
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
