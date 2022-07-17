@@ -1062,17 +1062,6 @@ KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id, const QString &text, const QS
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
- * @since 5.63
- */
-KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
-                                    const QString &text,
-                                    const QString &title /*= QString()*/,
-                                    const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
-                                    Options options = Notify); // TODO KF6 merge with previous overload
-
-/**
- * This function accepts the window id of the parent window, instead
- * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void
 detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
