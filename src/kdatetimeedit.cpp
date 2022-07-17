@@ -224,7 +224,7 @@ void KDateTimeEditPrivate::warnDateTime()
                 warnMsg.replace(QLatin1String("%1"), q->locale().toString(m_maxDateTime));
             }
         }
-        KMessageBox::sorry(q, warnMsg);
+        KMessageBox::error(q, warnMsg);
     }
 }
 

@@ -189,16 +189,20 @@ bool testMessageBox(int test)
 
     case 13:
         i = KMessageBox::Ok;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
         KMessageBox::sorry(nullptr, QStringLiteral("Sorry, Your harddisk appears to be empty."), QString(), KGuiItem(QStringLiteral("Abort")));
+#endif
         break;
 
     case 14:
         i = KMessageBox::Ok;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
         KMessageBox::detailedSorry(nullptr,
                                    QStringLiteral("Sorry, Your harddisk appears to be empty."),
                                    QStringLiteral("We don't know more yet."),
                                    QStringLiteral("Oops"),
                                    KGuiItem(QStringLiteral("Abort")));
+#endif
         break;
 
     case 15:
@@ -270,11 +274,13 @@ bool testMessageBox(int test)
 
     case 25: {
         i = KMessageBox::Ok;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
         QString msg;
         for (int j = 0; j < 200; ++j) {
             msg.append("LongMessageWithoutAnyBreaksShouldAppearSqueezed.");
         }
         KMessageBox::sorry(nullptr, msg);
+#endif
         break;
     }
 

@@ -848,6 +848,7 @@ void detailedError(QWidget *parent, const QString &text, const QString &details,
     detailedErrorInternal(new QDialog(parent), text, details, title, options);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 static void sorryInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
     I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
@@ -864,17 +865,23 @@ static void sorryInternal(QDialog *dialog, const QString &text, const QString &t
 
     createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void sorry(QWidget *parent, const QString &text, const QString &title, Options options)
 {
     sorryInternal(new QDialog(parent), text, title, KStandardGuiItem::ok(), options);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void sorry(QWidget *parent, const QString &text, const QString &title, const KGuiItem &item, Options options)
 {
     sorryInternal(new QDialog(parent), text, title, item, options);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 static void
 detailedSorryInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
@@ -893,16 +900,21 @@ detailedSorryInternal(QDialog *dialog, const QString &text, const QString &detai
 
     createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options, details);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &title, Options options)
 {
     detailedSorryInternal(new QDialog(parent), text, details, title, KStandardGuiItem::ok(), options);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
 {
     detailedSorryInternal(new QDialog(parent), text, details, title, buttonOk, options);
 }
+#endif
 
 void information(QWidget *parent, const QString &text, const QString &title, const QString &dontShowAgainName, Options options)
 {
@@ -1002,9 +1014,11 @@ static ButtonCode messageBoxInternal(QDialog *dialog,
         errorListInternal(dialog, text, QStringList(), title, options);
         return KMessageBox::Ok;
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
     case Sorry:
         sorryInternal(dialog, text, title, KStandardGuiItem::ok(), options);
         return KMessageBox::Ok;
+#endif
     }
     return KMessageBox::Cancel;
 }
@@ -1151,6 +1165,7 @@ void detailedErrorWId(WId parent_id, const QString &text, const QString &details
     detailedErrorInternal(createWIdDialog(parent_id), text, details, title, options);
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void sorryWId(WId parent_id, const QString &text, const QString &title, Options options)
 {
     QWidget *parent = QWidget::find(parent_id);
@@ -1168,16 +1183,21 @@ void sorryWId(WId parent_id, const QString &text, const QString &title, Options 
 
     createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title, Options options)
 {
     detailedSorryInternal(createWIdDialog(parent_id), text, details, title, KStandardGuiItem::ok(), options);
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
 {
     detailedSorryInternal(createWIdDialog(parent_id), text, details, title, buttonOk, options);
 }
+#endif
 
 void informationWId(WId parent_id, const QString &text, const QString &title, const QString &dontShowAgainName, Options options)
 {

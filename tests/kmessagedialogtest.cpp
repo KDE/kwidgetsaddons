@@ -24,14 +24,18 @@ int main(int argc, char *argv[])
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     app.setApplicationName(QStringLiteral("kmessagedialogtest"));
 
-    const auto types = {KMessageDialog::QuestionYesNo,
-                        KMessageDialog::QuestionYesNoCancel,
-                        KMessageDialog::WarningYesNo,
-                        KMessageDialog::WarningYesNoCancel,
-                        KMessageDialog::WarningContinueCancel,
-                        KMessageDialog::Information,
-                        KMessageDialog::Sorry,
-                        KMessageDialog::Error};
+    const auto types = {
+        KMessageDialog::QuestionYesNo,
+        KMessageDialog::QuestionYesNoCancel,
+        KMessageDialog::WarningYesNo,
+        KMessageDialog::WarningYesNoCancel,
+        KMessageDialog::WarningContinueCancel,
+        KMessageDialog::Information,
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
+        KMessageDialog::Sorry,
+#endif
+        KMessageDialog::Error
+    };
 
     for (auto type : types) {
         auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type, QStringLiteral("Do you agree to action foo?"), nullptr));

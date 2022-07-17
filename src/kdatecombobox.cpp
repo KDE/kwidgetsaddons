@@ -204,7 +204,7 @@ void KDateComboBoxPrivate::warnDate()
             }
         }
         m_warningShown = true;
-        KMessageBox::sorry(q, warnMsg);
+        KMessageBox::error(q, warnMsg);
     }
 }
 

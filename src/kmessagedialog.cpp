@@ -212,9 +212,11 @@ void KMessageDialog::setCaption(const QString &caption)
     case KMessageDialog::Information:
         title = QApplication::translate("KMessageDialog", "Information");
         break;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
     case KMessageDialog::Sorry:
         title = QApplication::translate("KMessageDialog", "Sorry");
         break;
+#endif
     case KMessageDialog::Error: {
         title = QApplication::translate("KMessageDialog", "Error");
         break;
@@ -239,7 +241,9 @@ void KMessageDialog::setIcon(const QIcon &icon)
         case KMessageDialog::WarningYesNo:
         case KMessageDialog::WarningYesNoCancel:
         case KMessageDialog::WarningContinueCancel:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
         case KMessageDialog::Sorry:
+#endif
             effectiveIcon = style->standardIcon(QStyle::SP_MessageBoxWarning, nullptr, this);
             break;
         case KMessageDialog::Information:
@@ -362,7 +366,9 @@ void KMessageDialog::setButtons(const KGuiItem &buttonAccept, const KGuiItem &bu
         break;
     }
     case KMessageDialog::Information:
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
     case KMessageDialog::Sorry:
+#endif
     case KMessageDialog::Error: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Ok);
         auto *okButton = d->m_buttonBox->button(QDialogButtonBox::Ok);

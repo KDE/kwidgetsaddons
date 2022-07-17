@@ -111,13 +111,16 @@ class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
 public:
     enum Type {
         QuestionYesNo = 1,
-        QuestionYesNoCancel,
-        WarningYesNo,
-        WarningYesNoCancel,
-        WarningContinueCancel,
-        Information,
-        Sorry,
-        Error,
+        QuestionYesNoCancel = 2,
+        WarningYesNo = 3,
+        WarningYesNoCancel = 4,
+        WarningContinueCancel = 5,
+        Information = 6,
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
+        Sorry ///< @deprecated Since 5.97, use Error.
+            KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 97, "Use Error.") = 7,
+#endif
+        Error = 8,
     };
 
     /**
