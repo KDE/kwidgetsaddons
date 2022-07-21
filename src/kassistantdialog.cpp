@@ -166,7 +166,7 @@ void KAssistantDialogPrivate::slotUpdateButtons()
     Q_Q(KAssistantDialog);
 
     QModelIndex currentIndex = pageModel->index(q->currentPage());
-    // change the caption of the next/finish button
+    // change the title of the next/finish button
     QModelIndex nextIndex = getNext(currentIndex);
     finishButton->setEnabled(!nextIndex.isValid() && q->isValid(q->currentPage()));
     nextButton->setEnabled(nextIndex.isValid() && q->isValid(q->currentPage()));

@@ -91,7 +91,7 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Question").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -115,7 +115,7 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
                                                const QString &text,
-                                               const QString &caption = QString(),
+                                               const QString &title = QString(),
                                                const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                const QString &dontAskAgainName = QString(),
@@ -125,7 +125,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Question").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -151,7 +151,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNo(QWidget *parent,
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
                                                      const QString &text,
-                                                     const QString &caption = QString(),
+                                                     const QString &title = QString(),
                                                      const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                      const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                      const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -165,7 +165,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
  * @param text    Message string.
  * @param strlist List of strings to be written in the listbox. If the list is
  *                empty, it doesn't show any listbox, working as questionYesNo.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Question").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -192,7 +192,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancel(QWidget *parent,
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
                                                    const QString &text,
                                                    const QStringList &strlist,
-                                                   const QString &caption = QString(),
+                                                   const QString &title = QString(),
                                                    const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                    const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                    const QString &dontAskAgainName = QString(),
@@ -203,7 +203,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -228,7 +228,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoList(QWidget *parent,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
                                               const QString &text,
-                                              const QString &caption = QString(),
+                                              const QString &title = QString(),
                                               const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                               const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                               const QString &dontAskAgainName = QString(),
@@ -241,7 +241,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
  * @param text    Message string.
  * @param strlist List of strings to be written in the listbox. If the list is
  *                empty, it doesn't show any listbox, working as questionYesNo.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Question").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -268,7 +268,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNo(QWidget *parent,
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
                                                   const QString &text,
                                                   const QStringList &strlist,
-                                                  const QString &caption = QString(),
+                                                  const QString &title = QString(),
                                                   const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                   const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                   const QString &dontAskAgainName = QString(),
@@ -279,7 +279,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
  * @param buttonContinue The text for the first button.
  *                       The default is KStandardGuiItem::cont().
@@ -304,7 +304,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoList(QWidget *parent,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancel(QWidget *parent,
                                                        const QString &text,
-                                                       const QString &caption = QString(),
+                                                       const QString &title = QString(),
                                                        const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
                                                        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
                                                        const QString &dontAskAgainName = QString(),
@@ -317,7 +317,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancel(QWidget *parent,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
                                                                const QString &text,
-                                                               const QString &caption = QString(),
+                                                               const QString &title = QString(),
                                                                const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
                                                                const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
                                                                const QString &dontAskAgainName = QString(),
@@ -332,7 +332,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
  * @param strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as warningContinueCancel.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
  * @param buttonContinue The text for the first button.
  *                       The default is KStandardGuiItem::cont().
@@ -359,7 +359,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
                                                            const QString &text,
                                                            const QStringList &strlist,
-                                                           const QString &caption = QString(),
+                                                           const QString &title = QString(),
                                                            const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
                                                            const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
                                                            const QString &dontAskAgainName = QString(),
@@ -370,7 +370,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -400,7 +400,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
                                                     const QString &text,
-                                                    const QString &caption = QString(),
+                                                    const QString &title = QString(),
                                                     const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -416,7 +416,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
  * @param strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as warningYesNoCancel.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
@@ -447,7 +447,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancel(QWidget *parent,
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
                                                         const QString &text,
                                                         const QStringList &strlist,
-                                                        const QString &caption = QString(),
+                                                        const QString &title = QString(),
                                                         const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                         const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                         const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -459,7 +459,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
  * @param options  see Options
  *
@@ -474,7 +474,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelList(QWidget *parent,
  *
  * @note The OK button will always have the i18n'ed text '&OK'.
  */
-KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
+KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QString &title = QString(), Options options = Notify);
 
 /**
  * Display an "Error" dialog with a listbox.
@@ -484,7 +484,7 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QSt
  * @param strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as error().
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
  * @param options  see Options
  *
@@ -500,7 +500,7 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QSt
  * @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void
-errorList(QWidget *parent, const QString &text, const QStringList &strlist, const QString &caption = QString(), Options options = Notify);
+errorList(QWidget *parent, const QString &text, const QStringList &strlist, const QString &title = QString(), Options options = Notify);
 
 /**
  * Displays an "Error" dialog with a "Details >>" button.
@@ -508,7 +508,7 @@ errorList(QWidget *parent, const QString &text, const QStringList &strlist, cons
  * @param parent  Parent widget.
  * @param text    Message string.
  * @param details Detailed message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
  * @param options  see Options
  *
@@ -527,14 +527,14 @@ errorList(QWidget *parent, const QString &text, const QStringList &strlist, cons
  * @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void
-detailedError(QWidget *parent, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
+detailedError(QWidget *parent, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
 
 /**
  * Display a "Sorry" dialog.
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Sorry").
  * @param options  see OptionsType
  *
@@ -549,14 +549,14 @@ detailedError(QWidget *parent, const QString &text, const QString &details, cons
  * @note The OK button will always have the i18n'ed text '&OK'.
  * See the overload with a KGuiItem argument to change that.
  */
-KWIDGETSADDONS_EXPORT void sorry(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
+KWIDGETSADDONS_EXPORT void sorry(QWidget *parent, const QString &text, const QString &title = QString(), Options options = Notify);
 
 /**
  * Display a "Sorry" dialog.
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Sorry").
  * @param buttonOk The text for the only button.
  *                 The default is KStandardGuiItem::ok().
@@ -575,7 +575,7 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent, const QString &text, const QSt
  */
 KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
                                  const QString &text,
-                                 const QString &caption /*= QString()*/,
+                                 const QString &title /*= QString()*/,
                                  const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
                                  Options options = Notify); // TODO KF6 merge with previous overload
 
@@ -585,7 +585,7 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
  * @param parent  Parent widget.
  * @param text    Message string.
  * @param details Detailed message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Sorry").
  * @param options  see Options
  *
@@ -606,7 +606,7 @@ KWIDGETSADDONS_EXPORT void sorry(QWidget *parent,
  * See the overload with a KGuiItem argument to change that.
  */
 KWIDGETSADDONS_EXPORT void
-detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
+detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
 
 /**
  * Displays a "Sorry" dialog with a "Details >>" button.
@@ -614,7 +614,7 @@ detailedSorry(QWidget *parent, const QString &text, const QString &details, cons
  * @param parent  Parent widget.
  * @param text    Message string.
  * @param details Detailed message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Sorry").
  * @param buttonOk The text for the only button.
  *                 The default is KStandardGuiItem::ok().
@@ -637,7 +637,7 @@ detailedSorry(QWidget *parent, const QString &text, const QString &details, cons
 KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
                                          const QString &text,
                                          const QString &details,
-                                         const QString &caption /* = QString() */,
+                                         const QString &title /* = QString() */,
                                          const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
                                          Options options = Notify); // TODO KF6: merge with previous overload
 
@@ -646,7 +646,7 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Information").
  * @param dontShowAgainName If provided, a checkbox is added with which
  *                further notifications can be turned off.
@@ -665,7 +665,7 @@ KWIDGETSADDONS_EXPORT void detailedSorry(QWidget *parent,
  *  @note The OK button will always have the i18n'ed text '&OK'.
  */
 KWIDGETSADDONS_EXPORT void
-information(QWidget *parent, const QString &text, const QString &caption = QString(), const QString &dontShowAgainName = QString(), Options options = Notify);
+information(QWidget *parent, const QString &text, const QString &title = QString(), const QString &dontShowAgainName = QString(), Options options = Notify);
 
 /**
  * Display an "Information" dialog with a listbox.
@@ -675,7 +675,7 @@ information(QWidget *parent, const QString &text, const QString &caption = QStri
  * @param strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as information.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("Information").
  * @param dontShowAgainName If provided, a checkbox is added with which
  *                further notifications can be turned off.
@@ -696,7 +696,7 @@ information(QWidget *parent, const QString &text, const QString &caption = QStri
 KWIDGETSADDONS_EXPORT void informationList(QWidget *parent,
                                            const QString &text,
                                            const QStringList &strlist,
-                                           const QString &caption = QString(),
+                                           const QString &title = QString(),
                                            const QString &dontShowAgainName = QString(),
                                            Options options = Notify);
 
@@ -720,7 +720,7 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
  *
  * @param parent  Parent widget.
  * @param text    Message string.
- * @param caption Message box title. The application name is added to
+ * @param title   Message box title. The application name is added to
  *                the title. The default title is i18n("About \<appname\>").
  * @param options  see Options
  *
@@ -736,7 +736,7 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
  */
 KWIDGETSADDONS_EXPORT
 KWIDGETSADDONS_DEPRECATED_VERSION_BELATED(5, 97, 5, 0, "Use QMessageBox::about()")
-void about(QWidget *parent, const QString &text, const QString &caption = QString(), Options options = Notify);
+void about(QWidget *parent, const QString &text, const QString &title = QString(), Options options = Notify);
 #endif
 
 /**
@@ -745,7 +745,7 @@ void about(QWidget *parent, const QString &text, const QString &caption = QStrin
  * @param parent Parent widget.
  * @param type type of message box: QuestionYesNo, WarningYesNo, WarningContinueCancel...
  * @param text Message string.
- * @param caption Message box title.
+ * @param title Message box title.
  * @param buttonYes The text for the first button.
  *                  The default is KStandardGuiItem::yes().
  * @param buttonNo  The text for the second button.
@@ -766,7 +766,7 @@ void about(QWidget *parent, const QString &text, const QString &caption = QStrin
 KWIDGETSADDONS_EXPORT ButtonCode messageBox(QWidget *parent,
                                             DialogType type,
                                             const QString &text,
-                                            const QString &caption = QString(),
+                                            const QString &title = QString(),
                                             const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                             const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                             const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -921,7 +921,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoWId(WId parent_id,
                                                   const QString &text,
-                                                  const QString &caption = QString(),
+                                                  const QString &title = QString(),
                                                   const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                   const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                   const QString &dontAskAgainName = QString(),
@@ -933,7 +933,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoWId(WId parent_id,
  */
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancelWId(WId parent_id,
                                                         const QString &text,
-                                                        const QString &caption = QString(),
+                                                        const QString &title = QString(),
                                                         const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                         const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                         const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -947,7 +947,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoCancelWId(WId parent_id,
 KWIDGETSADDONS_EXPORT ButtonCode questionYesNoListWId(WId parent_id,
                                                       const QString &text,
                                                       const QStringList &strlist,
-                                                      const QString &caption = QString(),
+                                                      const QString &title = QString(),
                                                       const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                       const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                       const QString &dontAskAgainName = QString(),
@@ -959,7 +959,7 @@ KWIDGETSADDONS_EXPORT ButtonCode questionYesNoListWId(WId parent_id,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoWId(WId parent_id,
                                                  const QString &text,
-                                                 const QString &caption = QString(),
+                                                 const QString &title = QString(),
                                                  const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                  const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                  const QString &dontAskAgainName = QString(),
@@ -972,7 +972,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoWId(WId parent_id,
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoListWId(WId parent_id,
                                                      const QString &text,
                                                      const QStringList &strlist,
-                                                     const QString &caption = QString(),
+                                                     const QString &title = QString(),
                                                      const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                      const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                      const QString &dontAskAgainName = QString(),
@@ -984,7 +984,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoListWId(WId parent_id,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelWId(WId parent_id,
                                                           const QString &text,
-                                                          const QString &caption = QString(),
+                                                          const QString &title = QString(),
                                                           const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
                                                           const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
                                                           const QString &dontAskAgainName = QString(),
@@ -997,7 +997,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelWId(WId parent_id,
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelListWId(WId parent_id,
                                                               const QString &text,
                                                               const QStringList &strlist,
-                                                              const QString &caption = QString(),
+                                                              const QString &title = QString(),
                                                               const KGuiItem &buttonContinue = KStandardGuiItem::cont(),
                                                               const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
                                                               const QString &dontAskAgainName = QString(),
@@ -1009,7 +1009,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelListWId(WId parent_id,
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelWId(WId parent_id,
                                                        const QString &text,
-                                                       const QString &caption = QString(),
+                                                       const QString &title = QString(),
                                                        const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                        const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                        const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -1023,7 +1023,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelWId(WId parent_id,
 KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelListWId(WId parent_id,
                                                            const QString &text,
                                                            const QStringList &strlist,
-                                                           const QString &caption = QString(),
+                                                           const QString &title = QString(),
                                                            const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                            const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                            const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
@@ -1034,27 +1034,27 @@ KWIDGETSADDONS_EXPORT ButtonCode warningYesNoCancelListWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void errorWId(WId parent_id, const QString &text, const QString &caption = QString(), Options options = Notify);
+KWIDGETSADDONS_EXPORT void errorWId(WId parent_id, const QString &text, const QString &title = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void
-errorListWId(WId parent_id, const QString &text, const QStringList &strlist, const QString &caption = QString(), Options options = Notify);
+errorListWId(WId parent_id, const QString &text, const QStringList &strlist, const QString &title = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void
-detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
+detailedErrorWId(WId parent_id, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  */
-KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id, const QString &text, const QString &caption = QString(), Options options = Notify);
+KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id, const QString &text, const QString &title = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1063,7 +1063,7 @@ KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id, const QString &text, const QS
  */
 KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
                                     const QString &text,
-                                    const QString &caption /*= QString()*/,
+                                    const QString &title /*= QString()*/,
                                     const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
                                     Options options = Notify); // TODO KF6 merge with previous overload
 
@@ -1072,7 +1072,7 @@ KWIDGETSADDONS_EXPORT void sorryWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void
-detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &caption = QString(), Options options = Notify);
+detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1082,7 +1082,7 @@ detailedSorryWId(WId parent_id, const QString &text, const QString &details, con
 KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
                                             const QString &text,
                                             const QString &details,
-                                            const QString &caption /*= QString()*/,
+                                            const QString &title /*= QString()*/,
                                             const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
                                             Options options = Notify); // TODO KF6 merge with previous overload
 
@@ -1091,7 +1091,7 @@ KWIDGETSADDONS_EXPORT void detailedSorryWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  */
 KWIDGETSADDONS_EXPORT void
-informationWId(WId parent_id, const QString &text, const QString &caption = QString(), const QString &dontShowAgainName = QString(), Options options = Notify);
+informationWId(WId parent_id, const QString &text, const QString &title = QString(), const QString &dontShowAgainName = QString(), Options options = Notify);
 
 /**
  * This function accepts the window id of the parent window, instead
@@ -1100,7 +1100,7 @@ informationWId(WId parent_id, const QString &text, const QString &caption = QStr
 KWIDGETSADDONS_EXPORT void informationListWId(WId parent_id,
                                               const QString &text,
                                               const QStringList &strlist,
-                                              const QString &caption = QString(),
+                                              const QString &title = QString(),
                                               const QString &dontShowAgainName = QString(),
                                               Options options = Notify);
 
@@ -1111,13 +1111,12 @@ KWIDGETSADDONS_EXPORT void informationListWId(WId parent_id,
 KWIDGETSADDONS_EXPORT ButtonCode messageBoxWId(WId parent_id,
                                                DialogType type,
                                                const QString &text,
-                                               const QString &caption = QString(),
+                                               const QString &title = QString(),
                                                const KGuiItem &buttonYes = KStandardGuiItem::yes(),
                                                const KGuiItem &buttonNo = KStandardGuiItem::no(),
                                                const KGuiItem &buttonCancel = KStandardGuiItem::cancel(),
                                                const QString &dontShowAskAgainName = QString(),
                                                Options options = Notify);
-
 }
 
 #endif
