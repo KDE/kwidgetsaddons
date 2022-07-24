@@ -60,6 +60,9 @@ class KGuiItem;
  * This class intends to be very flexible with the buttons that can be used, since you can
  * call the @ref setButtons() method with a KGuiItem that has custom text/icon.
  *
+ * Since Frameworks 5.97 a notification sound is played when the dialog opens like KMessageBox
+ * does, this can be controlled using the @ref setNotifyEnabled() method.
+ *
  * Example:
  * @code
  * auto *dlg = new KMessageDialog(KMessageDialog::QuestionYesNoCancel,
@@ -216,6 +219,26 @@ public:
     void setOpenExternalLinks(bool isAllowed);
 
     /**
+     * Whether a KNotification is emitted when the dialog is shown.
+     *
+     * This typically plays a notification sound. Default is true.
+     *
+     * @since 5.97
+     * @sa KMessageBox::Notify
+     */
+    bool isNotifyEnabled() const;
+
+    /**
+     * Whether to emit a KNotification when the dialog is shown.
+     *
+     * This typically plays a notification sound.
+     *
+     * @since 5.97
+     * @sa KMessageBox::Notify
+     */
+    void setNotifyEnabled(bool enable);
+
+    /**
      * Since 5.85 buttons based on the dialog type are added by default, e.g. an OK
      * button to Information and Sorry dialogs; (before 5.85, if you didn't call this
      * method no buttons were added to the dialog).
@@ -236,6 +259,11 @@ public:
     void setButtons(const KGuiItem &buttonAccept = KStandardGuiItem::yes(),
                     const KGuiItem &buttonNo = KStandardGuiItem::no(),
                     const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+protected:
+    void showEvent(QShowEvent *event) override;
+#endif
 
 private:
     std::unique_ptr<KMessageDialogPrivate> const d;

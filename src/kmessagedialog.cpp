@@ -6,6 +6,7 @@
 */
 
 #include "kmessagedialog.h"
+#include "kmessagebox_p.h"
 
 #include "loggingcategory.h"
 
@@ -31,13 +32,55 @@
 
 static const Qt::TextInteractionFlags s_textFlags = Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
 
-class KMessageDialogPrivate
+// TODO KF6 remove QObject inheritance again
+class KMessageDialogPrivate : public QObject
 {
+    Q_OBJECT
+
 public:
     explicit KMessageDialogPrivate(KMessageDialog::Type type, KMessageDialog *qq)
         : m_type(type)
         , q(qq)
     {
+    }
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (event->type() == QEvent::Show && watched == q) {
+            Q_ASSERT(m_notifyEnabled);
+            doNotify();
+        }
+        return false;
+    }
+#endif
+
+    void doNotify()
+    {
+#ifndef Q_OS_WIN // FIXME problems with KNotify on Windows
+        QMessageBox::Icon notifyType = QMessageBox::NoIcon;
+        switch (m_type) {
+        case KMessageDialog::QuestionYesNo:
+        case KMessageDialog::QuestionYesNoCancel:
+            notifyType = QMessageBox::Question;
+            break;
+        case KMessageDialog::WarningYesNo:
+        case KMessageDialog::WarningYesNoCancel:
+        case KMessageDialog::WarningContinueCancel:
+        case KMessageDialog::Sorry:
+            notifyType = QMessageBox::Warning;
+            break;
+        case KMessageDialog::Information:
+            notifyType = QMessageBox::Information;
+            break;
+        case KMessageDialog::Error:
+            notifyType = QMessageBox::Critical;
+            break;
+        }
+
+        // TODO include m_listWidget items
+        KMessageBox::notifyInterface()->sendNotification(notifyType, m_messageLabel->text(), q->topLevelWidget());
+#endif
     }
 
     KMessageDialog::Type m_type;
@@ -53,6 +96,7 @@ public:
     QCheckBox *m_dontAskAgainCB = nullptr;
     QDialogButtonBox *m_buttonBox = nullptr;
     QMetaObject::Connection m_buttonBoxConnection;
+    bool m_notifyEnabled = true;
 };
 
 KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent)
@@ -145,6 +189,8 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
 
     // Default buttons
     setButtons();
+    
+    setNotifyEnabled(true);
 
     // If the dialog is rejected, e.g. by pressing Esc, done() signal connected to the button box
     // won't be emitted
@@ -189,6 +235,7 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, W
 
 KMessageDialog::~KMessageDialog()
 {
+    removeEventFilter(d.get());
 }
 
 void KMessageDialog::setCaption(const QString &caption)
@@ -426,3 +473,32 @@ void KMessageDialog::setOpenExternalLinks(bool isAllowed)
     d->m_messageLabel->setOpenExternalLinks(isAllowed);
     d->m_detailsTextEdit->setOpenExternalLinks(isAllowed);
 }
+
+bool KMessageDialog::isNotifyEnabled() const
+{
+    return d->m_notifyEnabled;
+}
+
+void KMessageDialog::setNotifyEnabled(bool enable)
+{
+    d->m_notifyEnabled = enable;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    if (enable) {
+        installEventFilter(d.get());
+    } else {
+        removeEventFilter(d.get());
+    }
+#endif
+}
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+void KMessageDialog::showEvent(QShowEvent *event)
+{
+    if (d->m_notifyEnabled) {
+        d->doNotify();
+    }
+    QDialog::showEvent(event);
+}
+#endif
+
+#include "kmessagedialog.moc"
