@@ -48,7 +48,9 @@ namespace KStyleExtensions
     So this is imho unlikely causing any trouble, ever.
 */
 
+/// @private Prevent kapidox's doxygen config to pick up this namespace variable
 static const QStyle::StyleHint SH_KCustomStyleElement = (QStyle::StyleHint)0xff000001;
+/// @private Prevent kapidox's doxygen config to pick up this namespace variable
 static const int X_KdeBase = 0xff000000;
 
 /*
@@ -56,6 +58,7 @@ static const int X_KdeBase = 0xff000000;
     Collected in a static inline function due to similarity.
 */
 
+/// @private Prevent kapidox's doxygen config to pick up this namespace method
 static inline int customStyleElement(QStyle::StyleHint type, const QString &element, QWidget *widget)
 {
     if (!widget || widget->style()->metaObject()->indexOfClassInfo("X-KDE-CustomElements") < 0) {

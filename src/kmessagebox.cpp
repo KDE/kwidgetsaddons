@@ -66,7 +66,8 @@
 
 namespace KMessageBox
 {
-/*
+/**
+ * @private Prevent kapidox's doxygen config to pick up this namespace variable
  * this static is used by the createKMessageBox function to enqueue dialogs
  * FIXME what should we do about this static?
  */
