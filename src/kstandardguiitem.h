@@ -19,7 +19,7 @@ class QString;
 /**
  * @short Provides a set of standardized KGuiItems.
  *
- * The various KWIDGETSADDONS_EXPORT methods returns standardized @ref KGuiItem's
+ * The various methods return standardized KGuiItem's
  * conforming to the KDE UI Standards. Use them instead of creating
  * your own.
  *
