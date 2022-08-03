@@ -72,6 +72,7 @@ namespace KMessageBox
  */
 QDialogButtonBox::StandardButton KWIDGETSADDONS_EXPORT (*KMessageBox_exec_hook)(QDialog *) = nullptr;
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void applyOptions(QDialog *dialog, KMessageBox::Options options)
 {
     if (options & KMessageBox::WindowModal) {
@@ -80,6 +81,7 @@ static void applyOptions(QDialog *dialog, KMessageBox::Options options)
     dialog->setModal(true);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 // This method has been copied from KWindowSystem to avoid depending on it
 static void setMainWindow(QWidget *subWidget, WId mainWindowId)
 {
@@ -105,6 +107,7 @@ static void setMainWindow(QWidget *subWidget, WId mainWindowId)
 }
 
 /**
+ * @private Prevent kapidox's doxygen config pick up this namespace method
  * Create a QDialog whose parent is a foreign window
  */
 static QDialog *createWIdDialog(WId parent_id)
@@ -447,6 +450,7 @@ void setDontShowAgainConfig(KConfig *cfg)
     dontAskAgainInterface()->setConfig(cfg);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode questionYesNoListInternal(QDialog *dialog,
                                             const QString &text,
                                             const QStringList &strlist,
@@ -505,6 +509,7 @@ ButtonCode questionYesNoList(QWidget *parent,
     return questionYesNoListInternal(new QDialog(parent), text, strlist, title, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
                                               const QString &text,
                                               const QString &title,
@@ -583,6 +588,7 @@ ButtonCode warningYesNo(QWidget *parent,
     return warningYesNoList(parent, text, QStringList(), title, buttonYes, buttonNo, dontAskAgainName, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode warningYesNoListInternal(QDialog *dialog,
                                            const QString &text,
                                            const QStringList &strlist,
@@ -652,6 +658,7 @@ ButtonCode warningContinueCancel(QWidget *parent,
     return warningContinueCancelList(parent, text, QStringList(), title, buttonContinue, buttonCancel, dontAskAgainName, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode warningContinueCancelListInternal(QDialog *dialog,
                                                     const QString &text,
                                                     const QStringList &strlist,
@@ -737,6 +744,7 @@ ButtonCode warningYesNoCancel(QWidget *parent,
     return warningYesNoCancelList(parent, text, QStringList(), title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode warningYesNoCancelListInternal(QDialog *dialog,
                                                  const QString &text,
                                                  const QStringList &strlist,
@@ -806,6 +814,7 @@ ButtonCode warningYesNoCancelList(QWidget *parent,
     return warningYesNoCancelListInternal(new QDialog(parent), text, strlist, title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void errorInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
     I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
@@ -833,6 +842,7 @@ void error(QWidget *parent, const QString &text, const QString &title, const KGu
     errorInternal(new QDialog(parent), text, title, buttonOk, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void errorListInternal(QDialog *dialog, const QString &text, const QStringList &strlist, const QString &title, Options options)
 {
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Error") : title);
@@ -851,6 +861,7 @@ void errorList(QWidget *parent, const QString &text, const QStringList &strlist,
     errorListInternal(new QDialog(parent), text, strlist, title, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void
 detailedErrorInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
@@ -881,6 +892,7 @@ void detailedError(QWidget *parent, const QString &text, const QString &details,
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void sorryInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
     I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
@@ -914,6 +926,7 @@ void sorry(QWidget *parent, const QString &text, const QString &title, const KGu
 #endif
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void
 detailedSorryInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk_, Options options)
 {
@@ -953,6 +966,7 @@ void information(QWidget *parent, const QString &text, const QString &title, con
     informationList(parent, text, QStringList(), title, dontShowAgainName, options);
 }
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static void informationListInternal(QDialog *dialog,
                                     const QString &text,
                                     const QStringList &strlist,
@@ -1017,6 +1031,7 @@ void about(QWidget *parent, const QString &text, const QString &title, Options o
 }
 #endif
 
+/// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode messageBoxInternal(QDialog *dialog,
                                      DialogType type,
                                      const QString &text,
