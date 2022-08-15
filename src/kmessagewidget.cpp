@@ -109,6 +109,8 @@ void KMessageWidgetPrivate::createLayout()
         QToolButton *button = new QToolButton(q);
         button->setDefaultAction(action);
         button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        auto previous = buttons.isEmpty() ? static_cast<QWidget *>(textLabel) : buttons.back();
+        QWidget::setTabOrder(previous, button);
         buttons.append(button);
     }
 
