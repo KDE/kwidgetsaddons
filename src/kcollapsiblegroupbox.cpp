@@ -208,7 +208,10 @@ bool KCollapsibleGroupBox::event(QEvent *event)
             // Needs to be called asynchronously because at this point the widget is likely a "real" QWidget,
             // i.e. the QWidget base class whose constructor sets the focus policy to NoPolicy.
             // But the constructor of the child class (not yet called) could set a different focus policy later.
-            QMetaObject::invokeMethod(this, "overrideFocusPolicyOf", Qt::QueuedConnection, Q_ARG(QWidget *, widget));
+            auto focusFunc = [this, widget]() {
+                overrideFocusPolicyOf(widget);
+            };
+            QMetaObject::invokeMethod(this, focusFunc, Qt::QueuedConnection);
         }
         break;
     }
