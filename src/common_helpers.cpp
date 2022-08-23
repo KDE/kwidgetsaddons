@@ -93,3 +93,14 @@ QString removeAcceleratorMarker(const QString &label_)
 
     return label;
 }
+
+QString dateFormatWith4DigitYear(const QLocale &locale, QLocale::FormatType format)
+{
+    // Clearly a workaround for QLocale using "yy" way too often for years
+    // and so you get no way to distinguish between 1913 and 2013 anymore...
+    // bummer.
+    QString res = locale.dateFormat(format);
+    res.replace(QLatin1String("yy"), QLatin1String("yyyy"));
+    res.replace(QLatin1String("yyyyyyyy"), QLatin1String("yyyy"));
+    return res;
+}

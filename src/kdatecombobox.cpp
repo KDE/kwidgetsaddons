@@ -5,6 +5,8 @@
 */
 
 #include "kdatecombobox.h"
+
+#include "common_helpers_p.h"
 #include "kdatepickerpopup.h"
 #include "kdaterangecontrol_p.h"
 
@@ -84,13 +86,7 @@ QDate KDateComboBoxPrivate::defaultMaxDate()
 
 QString KDateComboBoxPrivate::dateFormat(QLocale::FormatType format)
 {
-    // Clearly a workaround for QLocale using "yy" way too often for years
-    // and so you get no way to distinguish between 1913 and 2013 anymore...
-    // bummer.
-    QString res = q->locale().dateFormat(format);
-    res.replace(QLatin1String("yy"), QLatin1String("yyyy"));
-    res.replace(QLatin1String("yyyyyyyy"), QLatin1String("yyyy"));
-    return res;
+    return dateFormatWith4DigitYear(q->locale(), format);
 }
 
 QString KDateComboBoxPrivate::formatDate(const QDate &date)
