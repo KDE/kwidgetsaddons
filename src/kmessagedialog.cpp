@@ -67,15 +67,17 @@ public:
         case KMessageDialog::WarningYesNo:
         case KMessageDialog::WarningYesNoCancel:
         case KMessageDialog::WarningContinueCancel:
-        case KMessageDialog::Sorry:
-            notifyType = QMessageBox::Warning;
-            break;
         case KMessageDialog::Information:
             notifyType = QMessageBox::Information;
             break;
         case KMessageDialog::Error:
             notifyType = QMessageBox::Critical;
             break;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
+        case KMessageDialog::Sorry:
+            notifyType = QMessageBox::Warning;
+            break;
+#endif
         }
 
         // TODO include m_listWidget items
