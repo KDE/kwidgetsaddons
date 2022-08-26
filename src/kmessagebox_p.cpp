@@ -129,6 +129,11 @@ KMessageBoxNotifyInterface *notifyInterface()
     return s_notifyInterface;
 }
 
+bool isNotifyInterfaceLoaded()
+{
+    return s_notifyInterface;
+}
+
 void setDontShowAgainInterface(KMessageBoxDontAskAgainInterface *dontAskAgainInterface)
 {
     Q_ASSERT(dontAskAgainInterface != nullptr);

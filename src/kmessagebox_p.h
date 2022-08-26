@@ -16,6 +16,8 @@ KMessageBoxDontAskAgainInterface *dontAskAgainInterface();
 
 KMessageBoxNotifyInterface *notifyInterface();
 
+bool isNotifyInterfaceLoaded();
+
 } // KMessageBox
 
 #endif /* KMESSAGEBOX_P_H */

@@ -197,6 +197,26 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
                                                    const QString &details,
                                                    QMessageBox::Icon notifyType)
 {
+    if (!isNotifyInterfaceLoaded()) {
+        // This is annoying. Loading the interface later (or at any point) will
+        // install the qm translation of the knotifications library which will cause a LanguageChange event to be sent
+        // Which will end up in QDialogButtonBoxPrivate::retranslateStrings and will overwrite the texts
+        // we have just set. So here we save our texts, force load the interface and reset the texts
+        // For people wondering if they can remove this bit of code later, this seems to only be an issue
+        // in non Plasma desktops, emulate by running something like XDG_CURRENT_DESKTOP=X-Cinnamon okular
+        // on plasma desktops the platform plugin already uses knotifications so it's qm has been loaded on startup
+        const QList<QAbstractButton *> buttonList = buttons->buttons();
+        QStringList buttonTexts;
+        for (QAbstractButton *b : buttonList) {
+            buttonTexts << b->text();
+        }
+        notifyInterface();
+        QApplication::processEvents(); // We need to force the LanguageChange to be processed
+        for (int i = 0; i < buttonList.count(); ++i) {
+            buttonList.at(i)->setText(buttonTexts.at(i));
+        }
+    }
+
     DialogButtonsHelper *buttonsHelper = new DialogButtonsHelper(dialog, buttons);
 
     QWidget *mainWidget = new QWidget(dialog);
