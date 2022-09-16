@@ -303,7 +303,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
-install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${KWidgetsAddons_HEADERS}
