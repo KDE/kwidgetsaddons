@@ -25,10 +25,10 @@ int main(int argc, char *argv[])
     app.setApplicationName(QStringLiteral("kmessagedialogtest"));
 
     const auto types = {
-        KMessageDialog::QuestionYesNo,
-        KMessageDialog::QuestionYesNoCancel,
-        KMessageDialog::WarningYesNo,
-        KMessageDialog::WarningYesNoCancel,
+        KMessageDialog::QuestionTwoActions,
+        KMessageDialog::QuestionTwoActionsCancel,
+        KMessageDialog::WarningTwoActions,
+        KMessageDialog::WarningTwoActionsCancel,
         KMessageDialog::WarningContinueCancel,
         KMessageDialog::Information,
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
@@ -38,23 +38,30 @@ int main(int argc, char *argv[])
     };
 
     for (auto type : types) {
-        auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type, QStringLiteral("Do you agree to action foo?"), nullptr));
+        auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type, QStringLiteral("Message in a box."), nullptr));
         dlg->setCaption(QString{});
         dlg->setIcon(QIcon{});
+        if ((type != KMessageDialog::Information) &&
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
+            (type != KMessageDialog::Sorry) &&
+#endif
+            (type != KMessageDialog::Error)) {
+            dlg->setButtons(KGuiItem(QStringLiteral("Primary Action")), KGuiItem(QStringLiteral("Secondary Action")), KStandardGuiItem::cancel());
+        }
 
         auto getResult = [&]() {
-            const auto result = static_cast<QDialogButtonBox::StandardButton>(dlg->exec());
+            const auto result = static_cast<KMessageDialog::ButtonType>(dlg->exec());
             switch (result) {
-            case QDialogButtonBox::Ok:
-            case QDialogButtonBox::Yes:
-                qDebug() << "Button OK/Yes/Continue clicked."
+            case KMessageDialog::Ok:
+            case KMessageDialog::PrimaryAction:
+                qDebug() << "Button OK/Primary clicked."
                          << "Don't ask again status:" << (dlg->isDontAskAgainChecked() ? "Checked" : "Unchecked");
                 break;
-            case QDialogButtonBox::No:
-                qDebug() << "Button No clicked"
+            case KMessageDialog::SecondaryAction:
+                qDebug() << "Button Secondary clicked"
                          << "Don't ask again status:" << (dlg->isDontAskAgainChecked() ? "Checked" : "Unchecked");
                 break;
-            case QDialogButtonBox::Cancel:
+            case KMessageDialog::Cancel:
                 qDebug() << "Button Cancel clicked";
                 break;
             default:

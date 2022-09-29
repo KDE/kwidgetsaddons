@@ -12,12 +12,13 @@
 
 #include <KStandardGuiItem>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QDialogButtonBox>
+#endif
 #include <QDialog>
 #include <QMessageBox>
 
 #include <memory>
-
-class QDialogButtonBox;
 
 class KMessageDialogPrivate;
 class KGuiItem;
@@ -44,18 +45,16 @@ class KGuiItem;
  *
  * The @ref QDialog::done() slot is called to set the result of the dialog, which will emit the
  * @ref QDialog::finished() signal with that result. The result is one of the
- * QDialogButtonBox::StandardButton enum. This is useful as you can tell exactly which button
+ * KMessageDialog::ButtonType enum. This is useful as you can tell exactly which button
  * was clicked by the user. E.g.:
- * - the "No" button having been clicked, in which case you may still want to save the status
+ * - the secondary action button having been clicked, in which case you may still want to save the status
  *   of the "Do not ask again" CheckBox
  * - the "Cancel" button having been clicked, in which case you ideally will ignore the status
  *   of the "Do not ask again" CheckBox
  *
  * For "warning" dialogs, i.e. dialogs with a potentially destructive action, the default
- * button is set to a button with the QDialogButtonBox::RejectRole, typically either button
- * "No" or "Cancel" depending on which one is shown in the dialog. If both of them are shown
- * (as is the case with KMessageDialog::WarningYesNoCancel dialog Type) then the "Cancel"
- * button will be set as the default one.
+ * button is set to a button with the QDialogButtonBox::RejectRole. If the "Cancel" button
++ * is used, it will be the default, otherwise the secondary action button.
  *
  * This class intends to be very flexible with the buttons that can be used, since you can
  * call the @ref setButtons() method with a KGuiItem that has custom text/icon.
@@ -65,12 +64,12 @@ class KGuiItem;
  *
  * Example:
  * @code
- * auto *dlg = new KMessageDialog(KMessageDialog::QuestionYesNoCancel,
- *                                QStringLiteral("Do you agree?"),
+ * auto *dlg = new KMessageDialog(KMessageDialog::QuestionTwoActionsCancel,
+ *                                QStringLiteral("Back or forward?"),
  *                                nullptr);
  *
  * dlg->setCaption(QStringLiteral("Window Title"));
- * dlg->setButtons(KStandardGuiItem::yes(), KStandardGuiItem::no(), KStandardGuiItem::cancel());
+ * dlg->setButtons(KStandardGuiItem::back(), KStandardGuiItem::forward(), KStandardGuiItem::cancel());
  * dlg->setListWidgetItems(QStringList{QStringLiteral("file1"), QStringLiteral("file2")});
  * dlg->setDetails(QStringLiteral("Some more details."));
  * dlg->setDontAskAgainText(QStringLiteral("Do not ask again"));
@@ -82,18 +81,18 @@ class KGuiItem;
  *  dlg->setWindowModality(Qt::WindowModal);
  *
  *  QObject::connect(dlg, &QDialog::finished, &app, [dlg](int result) {
- *      auto button = static_cast<QDialogButtonBox::StandardButton>(result);
+ *      auto button = static_cast<KMessageDialog::ButtonType>(result);
  *      switch(button) {
- *      case QDialogButtonBox::Ok:
- *      case QDialogButtonBox::Yes:
- *          // The user clicked OK, handle the result...
+ *      case KMessageDialog::Ok:
+ *      case KMessageDialog::PrimaryAction:
+ *          // The user clicked the primary action, handle the result...
  *          // save the "do not ask again" box status...
  *          break;
- *      case QDialogButtonBox::No:
- *          // The user clicked no, reject the changes...
+ *      case KMessageDialog::SecondaryAction:
+ *          // The user clicked the secondary action, handle the result...
  *          // save the "do not ask again" box status...
  *          break;
- *      case QDialogButtonBox::Cancel:
+ *      case KMessageDialog::Cancel:
  *          // The user clicked cancel, reject the changes...
  *          break;
  *      default:
@@ -112,11 +111,33 @@ class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
     Q_OBJECT
 
 public:
+    /**
+     * Button types
+     * @since 5.100
+     */
+    enum ButtonType {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+        /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::Ok.
+        Ok = QDialogButtonBox::Ok,
+        /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::Cancel.
+        Cancel = QDialogButtonBox::Cancel,
+        /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::Yes.
+        PrimaryAction = QDialogButtonBox::Yes,
+        /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::No.
+        SecondaryAction = QDialogButtonBox::No,
+#else
+        Ok = 1,
+        Cancel = 2,
+        PrimaryAction = 3,
+        SecondaryAction = 4,
+#endif
+    };
+
     enum Type {
-        QuestionYesNo = 1,
-        QuestionYesNoCancel = 2,
-        WarningYesNo = 3,
-        WarningYesNoCancel = 4,
+        QuestionTwoActions = 1, ///< @since 5.100
+        QuestionTwoActionsCancel = 2, ///< @since 5.100
+        WarningTwoActions = 3, ///< @since 5.100
+        WarningTwoActionsCancel = 4, ///< @since 5.100
         WarningContinueCancel = 5,
         Information = 6,
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
@@ -124,10 +145,33 @@ public:
             KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 97, "Use Error.") = 7,
 #endif
         Error = 8,
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+        /// @deprecated Since 5.100, use QuestionTwoActions.
+        QuestionYesNo KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use QuestionTwoActions.") = QuestionTwoActions,
+        /// @deprecated Since 5.100, use QuestionTwoActionsCancel.
+        QuestionYesNoCancel KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use QuestionTwoActionsCancel.") = QuestionTwoActionsCancel,
+        /// @deprecated Since 5.100, use WarningTwoActions.
+        WarningYesNo KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use WarningTwoActions.") = WarningTwoActions,
+        /// @deprecated Since 5.100, use WarningTwoActionsCancel.
+        WarningYesNoCancel KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use WarningTwoActionsCancel.") = WarningTwoActionsCancel,
+#endif
     };
 
     /**
      * Constructs a KMessageDialog.
+     *
+     * Since 5.85 buttons based on the dialog type are set by default in some cases,
+     * using KStandardGuiItem instances. For the dialog types Information, Sorry & Error
+     * the button is set to KStandardGuiItem::ok(). For the type WarningContinueCancel
+     * the buttons are set to  KStandardGuiItem::cont() & KStandardGuiItem::cancel().
+     *
+     * For the other Quesion* and Warning* types the buttons are to be set explicitly.
+     * Since 5.85 and if KWidgetsAddons is built with support for deprecated API including 5.100,
+     * also for these types the buttons are set by default, using KStandardGuiItem instances.
+     * - QuestionTwoActions: KStandardGuiItem::yes(), KStandardGuiItem::no()
+     * - QuestionTwoActionsCancel:  KStandardGuiItem::yes(), KStandardGuiItem::no()
+     * - WarningTwoActions:  KStandardGuiItem::yes(), KStandardGuiItem::no()
+     * - WarningTwoActionsCancel:  KStandardGuiItem::yes(), KStandardGuiItem::no()
      *
      * @param type the dialog Type, one of KMessageDialog::Type enum
      * @param text the text message that is going to be displayed in the dialog
@@ -151,14 +195,14 @@ public:
     /**
      * This can be used to set the title of the dialog window. If you pass an
      * empty QString(), a generic title will be used depending on the dialog
-     * Type. E.g. for KMessageDialog::WarningYesNo, "Warning" will be used.
+     * Type. E.g. for KMessageDialog::WarningTwoActions, "Warning" will be used.
      */
     void setCaption(const QString &caption);
 
     /**
      * This can be used to set an icon that will be shown next to the main
      * text message. If you pass a null QIcon() a generic icon based on the dialog
-     * Type will be used. E.g. for KMessageDialog::QuestionYesNo, QMessageBox::Question
+     * Type will be used. E.g. for KMessageDialog::QuestionTwoActions, QMessageBox::Question
      * will be used.
      */
     void setIcon(const QIcon &icon);
@@ -239,26 +283,39 @@ public:
     void setNotifyEnabled(bool enable);
 
     /**
-     * Since 5.85 buttons based on the dialog type are added by default, e.g. an OK
-     * button to Information and Sorry dialogs; (before 5.85, if you didn't call this
-     * method no buttons were added to the dialog).
-     *
-     * This will add a QDialogButtonBox populated with @p buttonAccept and @p buttonNo,
-     * by default KStandardGuiItem::yes() and KStandardGuiItem::no() respectively. For
-     * dialog Types that have a Cancel button, @p buttonCancel will be used.
+     * Sets the buttons in the buttom box.
      *
      * Using this method, you can customize the behavior based on your use-case, by
      * using a KGuiItem to get a button with custom text and icon.
      *
+     * Since 5.85 buttons based on the dialog type are added by default (see
+     * KMessageDialog(KMessageDialog::Type, const QString &, QWidget *) for details).
+     * Before, this method had to be called explicitly to have any buttons added to the dialog.
+     *
      * @note
-     * - For WarningContinueCancel dialog Type, if buttonAccept has the same text as
-     *   KStandardGuiItem::yes(), KStandardGuiItem::cont() will be used instead
-     * - For dialog Types: Information, Sorry, and Error only one button
+     * - For WarningContinueCancel dialog Type, if primaryAction has the same text as
+     *   KStandardGuiItem::yes(), KStandardGuiItem::cont() will be used instead (as long
+     *   as KWidgetsAddons is built with the deprecated KStandardGuiItem::yes()).
+     * - For dialog types Information, Sorry, and Error only one button
      *   (KStandardGuiItem::ok()) is added to the dialog.
+     *
+     * @param primaryAction the action for the primary button.
+     *                      Reported in the result for dialog types Information, Sorry, and Error
+     *                      as KMessageDialog::Ok enum value, otherwise as KMessageDialog::PrimaryAction.
+     * @param secondaryAction the action for the secondary button.
+     *                        Reported in the result as KMessageDialog::SecondaryAction enum value.
+     *                        Ignored with all dialog types without a "secondary" action.
+     * @param cancelAction the action for the cancel button.
+     *                     Reported in the result as KMessageDialog::Cancel enum value.
+     *                     Ignored with all dialog types without a Cancel button.
      */
-    void setButtons(const KGuiItem &buttonAccept = KStandardGuiItem::yes(),
-                    const KGuiItem &buttonNo = KStandardGuiItem::no(),
-                    const KGuiItem &buttonCancel = KStandardGuiItem::cancel());
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+    void setButtons(const KGuiItem &primaryAction = KStandardGuiItem::yes(),
+                    const KGuiItem &secondaryAction = KStandardGuiItem::no(),
+                    const KGuiItem &cancelAction = KStandardGuiItem::cancel());
+#else
+    void setButtons(const KGuiItem &primaryAction = KGuiItem(), const KGuiItem &secondaryAction = KGuiItem(), const KGuiItem &cancelAction = KGuiItem());
+#endif
 
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 protected:
