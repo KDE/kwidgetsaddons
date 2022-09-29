@@ -37,8 +37,15 @@ enum BidiMode { UseRTL = 0, IgnoreRTL };
 enum StandardItem {
     Ok = 1,
     Cancel,
-    Yes,
-    No,
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
+    /// @deprecated Since 5.100, use an action verb to indicate the available option.
+    Yes KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use an action verb to indicate the available option."),
+    /// @deprecated Since 5.100, use an action verb to indicate the available option.
+    No KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use an action verb to indicate the available option."),
+#elif KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
+    Yes_DEPRECATED_DO_NOT_USE,
+    No_DEPRECATED_DO_NOT_USE,
+#endif
     Discard,
     Save,
     DontSave,
@@ -94,15 +101,27 @@ KWIDGETSADDONS_EXPORT KGuiItem ok();
  */
 KWIDGETSADDONS_EXPORT KGuiItem cancel();
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Returns the 'Yes' gui item.
+ *
+ * @deprecated Since 5.100, use an action verb to indicate the available option..
  */
-KWIDGETSADDONS_EXPORT KGuiItem yes();
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use an action verb to indicate the available option.")
+KGuiItem yes();
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
 /**
  * Returns the 'No' gui item.
+ *
+ * @deprecated Since 5.100, use an action verb to indicate the available option..
  */
-KWIDGETSADDONS_EXPORT KGuiItem no();
+KWIDGETSADDONS_EXPORT
+KWIDGETSADDONS_DEPRECATED_VERSION(5, 100, "Use an action verb to indicate the available option.")
+KGuiItem no();
+#endif
 
 /**
  * Returns the 'Insert' gui item.

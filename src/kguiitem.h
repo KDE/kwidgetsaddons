@@ -180,13 +180,13 @@ public:
      * properties from @p item on @p button.
      *
      * @code
-     * // Create a QDialogButtonBox with two buttons, Yes and No
+     * // Create a QDialogButtonBox with two buttons, of Yes and No standard type
      * auto *buttonBox = new QDialogButtonBox({QDialogButtonBox::Yes | QDialogButtonBox::No}, this);
      *
-     * // Assign the text and icon from KStandardGuiItem::yes()/no() to the buttons in the
+     * // Assign the text and icon from KStandardGuiItem::quit()/continue() to the buttons in the
      * // button dialog box
-     * KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), KStandardGuiItem::yes());
-     * KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), KStandardGuiItem::no());
+     * KGuiItem::assign(buttonBox->button(QDialogButtonBox::Yes), KStandardGuiItem::quit());
+     * KGuiItem::assign(buttonBox->button(QDialogButtonBox::No), KStandardGuiItem::continue());
      * @endcode
      */
     static void assign(QPushButton *button, const KGuiItem &item);

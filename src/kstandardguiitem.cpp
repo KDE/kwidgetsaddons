@@ -18,10 +18,12 @@ KGuiItem guiItem(StandardItem ui_enum)
         return ok();
     case Cancel:
         return cancel();
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
     case Yes:
         return yes();
     case No:
         return no();
+#endif
     case Discard:
         return discard();
     case Save:
@@ -92,10 +94,12 @@ QString standardItem(StandardItem ui_enum)
         return QStringLiteral("ok");
     case Cancel:
         return QStringLiteral("cancel");
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
     case Yes:
         return QStringLiteral("yes");
     case No:
         return QStringLiteral("no");
+#endif
     case Discard:
         return QStringLiteral("discard");
     case Save:
@@ -165,15 +169,19 @@ KGuiItem cancel()
     return KGuiItem(QApplication::translate("KStandardGuiItem", "&Cancel"), QStringLiteral("dialog-cancel"));
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
 KGuiItem yes()
 {
     return KGuiItem(QApplication::translate("KStandardGuiItem", "&Yes"), QStringLiteral("dialog-ok"));
 }
+#endif
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
 KGuiItem no()
 {
     return KGuiItem(QApplication::translate("KStandardGuiItem", "&No"), QStringLiteral("dialog-cancel"));
 }
+#endif
 
 KGuiItem discard()
 {
