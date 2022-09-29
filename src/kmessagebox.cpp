@@ -30,39 +30,6 @@
 #include <ksqueezedtextlabel.h>
 
 #include <KCollapsibleGroupBox>
-// Some i18n filters, that standard button texts are piped through
-// (the new KGuiItem object with filtered text is created from the old one).
-
-// clang-format off
-// Filter for the Yes-button text in standard message dialogs,
-// after the message title/text have been translated.
-#define I18N_FILTER_BUTTON_YES(src, dst) \
-    KGuiItem dst(src); \
-    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-yes" ) );
-
-// Filter for the No-button text in standard message dialogs,
-// after the message title/text have been translated.
-#define I18N_FILTER_BUTTON_NO(src, dst) \
-    KGuiItem dst(src); \
-    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-no" ) );
-
-// Filter for the Continue-button text in standard message dialogs,
-// after the message title/text have been translated.
-#define I18N_FILTER_BUTTON_CONTINUE(src, dst) \
-    KGuiItem dst(src); \
-    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-continue" ) );
-
-// Filter for the Cancel-button text in standard message dialogs,
-// after the message title/text have been translated.
-#define I18N_FILTER_BUTTON_CANCEL(src, dst) \
-    KGuiItem dst(src); \
-    dst.setText( QApplication::translate( "KMessageBox", src.text().toUtf8().constData(), "@action:button filter-cancel" ) );
-
-// Called after the button texts in standard message dialogs
-// have been filtered by the messages above. Not visible to user.
-#define I18N_POST_BUTTON_FILTER \
-    QApplication::translate( "KMessageBox", ".", "@action:button post-filter" );
-// clang-format on
 
 namespace KMessageBox
 {
@@ -476,8 +443,8 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog,
                                             const QString &text,
                                             const QStringList &strlist,
                                             const QString &title,
-                                            const KGuiItem &buttonYes_,
-                                            const KGuiItem &buttonNo_,
+                                            const KGuiItem &buttonYes,
+                                            const KGuiItem &buttonNo,
                                             const QString &dontAskAgainName,
                                             Options options)
 {
@@ -486,10 +453,6 @@ static ButtonCode questionYesNoListInternal(QDialog *dialog,
         delete dialog;
         return res;
     }
-
-    I18N_FILTER_BUTTON_YES(buttonYes_, buttonYes)
-    I18N_FILTER_BUTTON_NO(buttonNo_, buttonNo)
-    I18N_POST_BUTTON_FILTER
 
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Question") : title);
     dialog->setObjectName(QStringLiteral("questionYesNo"));
@@ -534,9 +497,9 @@ ButtonCode questionYesNoList(QWidget *parent,
 static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
                                               const QString &text,
                                               const QString &title,
-                                              const KGuiItem &buttonYes_,
-                                              const KGuiItem &buttonNo_,
-                                              const KGuiItem &buttonCancel_,
+                                              const KGuiItem &buttonYes,
+                                              const KGuiItem &buttonNo,
+                                              const KGuiItem &buttonCancel,
                                               const QString &dontAskAgainName,
                                               Options options)
 {
@@ -545,11 +508,6 @@ static ButtonCode questionYesNoCancelInternal(QDialog *dialog,
         delete dialog;
         return res;
     }
-
-    I18N_FILTER_BUTTON_YES(buttonYes_, buttonYes)
-    I18N_FILTER_BUTTON_NO(buttonNo_, buttonNo)
-    I18N_FILTER_BUTTON_CANCEL(buttonCancel_, buttonCancel)
-    I18N_POST_BUTTON_FILTER
 
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Question") : title);
     dialog->setObjectName(QStringLiteral("questionYesNoCancel"));
@@ -614,8 +572,8 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog,
                                            const QString &text,
                                            const QStringList &strlist,
                                            const QString &title,
-                                           const KGuiItem &buttonYes_,
-                                           const KGuiItem &buttonNo_,
+                                           const KGuiItem &buttonYes,
+                                           const KGuiItem &buttonNo,
                                            const QString &dontAskAgainName,
                                            Options options)
 {
@@ -624,10 +582,6 @@ static ButtonCode warningYesNoListInternal(QDialog *dialog,
         delete dialog;
         return res;
     }
-
-    I18N_FILTER_BUTTON_YES(buttonYes_, buttonYes)
-    I18N_FILTER_BUTTON_NO(buttonNo_, buttonNo)
-    I18N_POST_BUTTON_FILTER
 
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Warning") : title);
     dialog->setObjectName(QStringLiteral("warningYesNoList"));
@@ -684,8 +638,8 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog,
                                                     const QString &text,
                                                     const QStringList &strlist,
                                                     const QString &title,
-                                                    const KGuiItem &buttonContinue_,
-                                                    const KGuiItem &buttonCancel_,
+                                                    const KGuiItem &buttonContinue,
+                                                    const KGuiItem &buttonCancel,
                                                     const QString &dontAskAgainName,
                                                     Options options,
                                                     const QString &details)
@@ -694,10 +648,6 @@ static ButtonCode warningContinueCancelListInternal(QDialog *dialog,
         delete dialog;
         return Continue;
     }
-
-    I18N_FILTER_BUTTON_CONTINUE(buttonContinue_, buttonContinue)
-    I18N_FILTER_BUTTON_CANCEL(buttonCancel_, buttonCancel)
-    I18N_POST_BUTTON_FILTER
 
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Warning") : title);
     dialog->setObjectName(QStringLiteral("warningYesNo"));
@@ -770,9 +720,9 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog,
                                                  const QString &text,
                                                  const QStringList &strlist,
                                                  const QString &title,
-                                                 const KGuiItem &buttonYes_,
-                                                 const KGuiItem &buttonNo_,
-                                                 const KGuiItem &buttonCancel_,
+                                                 const KGuiItem &buttonYes,
+                                                 const KGuiItem &buttonNo,
+                                                 const KGuiItem &buttonCancel,
                                                  const QString &dontAskAgainName,
                                                  Options options)
 {
@@ -781,11 +731,6 @@ static ButtonCode warningYesNoCancelListInternal(QDialog *dialog,
         delete dialog;
         return res;
     }
-
-    I18N_FILTER_BUTTON_YES(buttonYes_, buttonYes)
-    I18N_FILTER_BUTTON_NO(buttonNo_, buttonNo)
-    I18N_FILTER_BUTTON_CANCEL(buttonCancel_, buttonCancel)
-    I18N_POST_BUTTON_FILTER
 
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Warning") : title);
     dialog->setObjectName(QStringLiteral("warningYesNoCancel"));
@@ -836,11 +781,8 @@ ButtonCode warningYesNoCancelList(QWidget *parent,
 }
 
 /// @private Prevent kapidox's doxygen config pick up this namespace method
-static void errorInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk_, Options options)
+static void errorInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk, Options options)
 {
-    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
-    I18N_POST_BUTTON_FILTER
-
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Error") : title);
     dialog->setObjectName(QStringLiteral("error"));
 
@@ -883,12 +825,8 @@ void errorList(QWidget *parent, const QString &text, const QStringList &strlist,
 }
 
 /// @private Prevent kapidox's doxygen config pick up this namespace method
-static void
-detailedErrorInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk_, Options options)
+static void detailedErrorInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
 {
-    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
-    I18N_POST_BUTTON_FILTER
-
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Error") : title);
     dialog->setObjectName(QStringLiteral("error"));
 
@@ -914,11 +852,8 @@ void detailedError(QWidget *parent, const QString &text, const QString &details,
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 /// @private Prevent kapidox's doxygen config pick up this namespace method
-static void sorryInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk_, Options options)
+static void sorryInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk, Options options)
 {
-    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
-    I18N_POST_BUTTON_FILTER
-
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : title);
     dialog->setObjectName(QStringLiteral("sorry"));
 
@@ -948,12 +883,8 @@ void sorry(QWidget *parent, const QString &text, const QString &title, const KGu
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
 /// @private Prevent kapidox's doxygen config pick up this namespace method
-static void
-detailedSorryInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk_, Options options)
+static void detailedSorryInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
 {
-    I18N_FILTER_BUTTON_YES(buttonOk_, buttonOk)
-    I18N_POST_BUTTON_FILTER
-
     dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : title);
     dialog->setObjectName(QStringLiteral("sorry"));
 
