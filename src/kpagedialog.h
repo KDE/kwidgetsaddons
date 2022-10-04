@@ -293,6 +293,10 @@ protected:
 
 protected:
     std::unique_ptr<class KPageDialogPrivate> const d_ptr;
+
+private:
+    void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
 };
 
 #endif

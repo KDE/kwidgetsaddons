@@ -13,6 +13,8 @@
 
 #include <QLayout>
 #include <QStyle>
+#include <qevent.h>
+#include <qnamespace.h>
 
 KPageDialog::KPageDialog(QWidget *parent, Qt::WindowFlags flags)
     : KPageDialog(*new KPageDialogPrivate(this), nullptr, parent, flags)
@@ -192,4 +194,21 @@ void KPageDialog::setButtonBox(QDialogButtonBox *box)
     delete d->mButtonBox;
     d->mButtonBox = box;
     d->init();
+}
+
+void KPageDialog::keyPressEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape) {
+        return;
+    }
+    QDialog::keyPressEvent(event);
+}
+
+void KPageDialog::keyReleaseEvent(QKeyEvent *event)
+{
+    if (event->key() == Qt::Key_Escape) {
+        QDialog::reject();
+        return;
+    }
+    QDialog::keyReleaseEvent(event);
 }
