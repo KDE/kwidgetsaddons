@@ -1606,7 +1606,7 @@ msgstr ""
 #: keditlistwidget.cpp:281
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
-msgstr "&Afig"
+msgstr "Afi&g"
 
 #: keditlistwidget.cpp:293
 msgctxt "KEditListWidget|@action:button"
@@ -2107,7 +2107,7 @@ msgstr "D'ac&ord"
 #: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
-msgstr "&Cancel·la"
+msgstr "C&ancel·la"
 
 #: kstandardguiitem.cpp:170
 msgctxt "KStandardGuiItem|"
@@ -2160,7 +2160,7 @@ msgstr "No guardes les dades"
 #: kstandardguiitem.cpp:202
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
-msgstr "&Anomena i guarda..."
+msgstr "Anomena i gu&arda..."
 
 #: kstandardguiitem.cpp:204
 msgctxt "KStandardGuiItem|"
@@ -2297,7 +2297,7 @@ msgstr "Va un pas avant"
 #: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
-msgstr "&Imprimix..."
+msgstr "Im&primix..."
 
 #: kstandardguiitem.cpp:296
 msgctxt "KStandardGuiItem|"
@@ -2327,7 +2327,7 @@ msgstr "Suprimix els elements"
 #: kstandardguiitem.cpp:317
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
-msgstr "&Obri..."
+msgstr "O&bri..."
 
 #: kstandardguiitem.cpp:319
 msgctxt "KStandardGuiItem|"
