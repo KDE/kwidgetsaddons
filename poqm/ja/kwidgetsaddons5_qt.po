@@ -2749,7 +2749,3 @@ msgstr "フルスクリーン"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "ウインドウをフルスクリーンで表示します"
-
-#~ msgctxt "KFontChooser|@item font"
-#~ msgid "Bold Italic"
-#~ msgstr "ボールドイタリック"
