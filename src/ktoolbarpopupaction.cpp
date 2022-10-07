@@ -136,4 +136,11 @@ QToolButton::ToolButtonPopupMode KToolBarPopupAction::popupMode() const
 void KToolBarPopupAction::setPopupMode(QToolButton::ToolButtonPopupMode popupMode)
 {
     d->m_popupMode = popupMode;
+
+    const auto widgets = createdWidgets();
+    for (QWidget *widget : widgets) {
+        if (auto *button = qobject_cast<QToolButton *>(widget)) {
+            button->setPopupMode(d->m_popupMode);
+        }
+    }
 }
