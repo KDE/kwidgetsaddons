@@ -2592,65 +2592,57 @@ msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
 msgstr ""
 
-#: kmessagebox.cpp:64
-#, fuzzy
-#| msgctxt "@action:button post-filter"
-#| msgid "."
-msgctxt "KMessageBox|@action:button post-filter"
-msgid "."
-msgstr "."
-
-#: kmessagebox.cpp:336
+#: kmessagebox.cpp:303
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "विवरन"
 
-#: kmessagebox.cpp:494 kmessagebox.cpp:554
+#: kmessagebox.cpp:457 kmessagebox.cpp:512
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "प्रस्न"
 
-#: kmessagebox.cpp:510 kmessagebox.cpp:571 kmessagebox.cpp:648
-#: kmessagebox.cpp:718 kmessagebox.cpp:807
+#: kmessagebox.cpp:473 kmessagebox.cpp:529 kmessagebox.cpp:602
+#: kmessagebox.cpp:668 kmessagebox.cpp:752
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "दुबारा मत पूछव"
 
-#: kmessagebox.cpp:632 kmessagebox.cpp:702 kmessagebox.cpp:790
+#: kmessagebox.cpp:586 kmessagebox.cpp:652 kmessagebox.cpp:735
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "चेतावनी"
 
-#: kmessagebox.cpp:844 kmessagebox.cpp:869 kmessagebox.cpp:892
+#: kmessagebox.cpp:786 kmessagebox.cpp:811 kmessagebox.cpp:830
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "गलती"
 
-#: kmessagebox.cpp:922 kmessagebox.cpp:957 kmessagebox.cpp:1246
+#: kmessagebox.cpp:857 kmessagebox.cpp:888 kmessagebox.cpp:1177
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "खेद हे"
 
-#: kmessagebox.cpp:1003
+#: kmessagebox.cpp:934
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "जानकारी"
 
-#: kmessagebox.cpp:1018
+#: kmessagebox.cpp:949
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
@@ -3444,6 +3436,13 @@ msgstr "पूरा स्क्रीन"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:button post-filter"
+#~| msgid "."
+#~ msgctxt "KMessageBox|@action:button post-filter"
+#~ msgid "."
+#~ msgstr "."
 
 #, fuzzy
 #~| msgctxt "@item font"
