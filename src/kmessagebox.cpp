@@ -172,15 +172,16 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
         // For people wondering if they can remove this bit of code later, this seems to only be an issue
         // in non Plasma desktops, emulate by running something like XDG_CURRENT_DESKTOP=X-Cinnamon okular
         // on plasma desktops the platform plugin already uses knotifications so it's qm has been loaded on startup
-        const QList<QAbstractButton *> buttonList = buttons->buttons();
-        QStringList buttonTexts;
-        for (QAbstractButton *b : buttonList) {
-            buttonTexts << b->text();
+        QMap<QPointer<QAbstractButton>, QString> buttonTexts;
+        for (QAbstractButton *b : buttons->buttons()) {
+            buttonTexts[b] = b->text();
         }
         notifyInterface();
         QApplication::processEvents(); // We need to force the LanguageChange to be processed
-        for (int i = 0; i < buttonList.count(); ++i) {
-            buttonList.at(i)->setText(buttonTexts.at(i));
+        for (auto it = buttonTexts.constBegin(); it != buttonTexts.constEnd(); ++it) {
+            if (it.key()) {
+                it.key()->setText(it.value());
+            }
         }
     }
 
