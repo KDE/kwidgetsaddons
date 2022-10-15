@@ -2241,43 +2241,43 @@ msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
 msgstr "Ανενεργό LED"
 
-#: kmessagebox.cpp:303
+#: kmessagebox.cpp:304
 msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
-#: kmessagebox.cpp:457 kmessagebox.cpp:512
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Ερώτηση"
 
-#: kmessagebox.cpp:473 kmessagebox.cpp:529 kmessagebox.cpp:602
-#: kmessagebox.cpp:668 kmessagebox.cpp:752
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Να μην ξαναγίνει η ερώτηση"
 
-#: kmessagebox.cpp:586 kmessagebox.cpp:652 kmessagebox.cpp:735
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
-#: kmessagebox.cpp:786 kmessagebox.cpp:811 kmessagebox.cpp:830
+#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: kmessagebox.cpp:857 kmessagebox.cpp:888 kmessagebox.cpp:1177
+#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "Λυπούμαστε"
 
-#: kmessagebox.cpp:934
+#: kmessagebox.cpp:935
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Πληροφορίες"
 
-#: kmessagebox.cpp:949
+#: kmessagebox.cpp:950
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Να μην εμφανιστεί ξανά αυτό το μήνυμα"

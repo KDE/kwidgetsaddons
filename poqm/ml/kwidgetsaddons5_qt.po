@@ -2084,50 +2084,50 @@ msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
 msgstr ""
 
-#: kmessagebox.cpp:303
+#: kmessagebox.cpp:304
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "വിശദാംശങ്ങള്‍"
 
-#: kmessagebox.cpp:457 kmessagebox.cpp:512
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "ചോദ്യം"
 
-#: kmessagebox.cpp:473 kmessagebox.cpp:529 kmessagebox.cpp:602
-#: kmessagebox.cpp:668 kmessagebox.cpp:752
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "ഇനി ചോദിക്കരുതു്"
 
-#: kmessagebox.cpp:586 kmessagebox.cpp:652 kmessagebox.cpp:735
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "മുന്നറിയിപ്പു്"
 
-#: kmessagebox.cpp:786 kmessagebox.cpp:811 kmessagebox.cpp:830
+#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "തെറ്റ്"
 
-#: kmessagebox.cpp:857 kmessagebox.cpp:888 kmessagebox.cpp:1177
+#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "ക്ഷമിക്കണം"
 
-#: kmessagebox.cpp:934
+#: kmessagebox.cpp:935
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "വിവരം"
 
-#: kmessagebox.cpp:949
+#: kmessagebox.cpp:950
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
