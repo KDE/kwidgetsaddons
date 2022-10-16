@@ -1785,38 +1785,38 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Подробиці"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Питання"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Більше не питати"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Попередження"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Помилка"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "Вибачте"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Інформація"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Не показувати більше це повідомлення"
@@ -1826,27 +1826,27 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Подробиці"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Питання"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Попередження"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Інформація"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Вибачте"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Помилка"
@@ -2091,83 +2091,83 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Копіювати весь текст"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&Гаразд"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Скасувати"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "&Так"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "&Ні"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Відкинути"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Відкинути зміни"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr "Натиснувши цю кнопку ви скасуєте всі зміни, зроблені в цьому вікні."
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "З&берегти"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Зберегти дані"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Не зберігати"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Не зберігати дані"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Зберегти &як…"
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Зберегти файл з іншою назвою"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Застосувати"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Застосувати зміни"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2178,17 +2178,17 @@ msgstr ""
 "програму, але діалогове вікно закрито не буде.\n"
 "Ви зможете спробувати інші параметри."
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "Режим &адміністратора…"
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Увійти у режим адміністратора"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2199,194 +2199,194 @@ msgstr ""
 "пароль адміністратора (root) для того, щоб мати можливість внести зміни, які "
 "потребують прав користувача root."
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "О&чистити"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Спорожнити поле вводу"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Вилучити текст, введений до поля редагування"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Довідка"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Показати довідку"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "&Закрити"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Закрити поточне вікно або документ"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "&Закрити вікно"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Закрити поточне вікно."
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "&Закрити документ"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Закрити поточний документ."
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Типові значення"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Скинути всі елементи до типових значень"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Назад"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Один крок назад"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Вперед"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Один крок вперед"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&Друкувати…"
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr ""
 "Відкриває діалогове вікно друку, за допомогою якого ви зможете надрукувати "
 "поточний документ"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "Пр&одовжити"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Продовжити дію"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "В&илучити"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Вилучити елемент(и)"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Відкрити…"
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Відкрити файл"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "Ви&йти"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Вийти з програми"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&Скинути"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Скинути налаштування"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Вставити"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "Нала&штувати…"
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Пошук"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Зупинити"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Додати"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Вилучити"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Тест"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Властивості"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "&Перезаписати"

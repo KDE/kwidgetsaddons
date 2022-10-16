@@ -1795,38 +1795,38 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Details"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Vraag"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Deze vraag niet meer stellen"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Fout"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "Helaas"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Informatie"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Dit bericht niet meer tonen"
@@ -1836,27 +1836,27 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Details"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Vraag"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Waarschuwing"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informatie"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Helaas"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Fout"
@@ -2097,37 +2097,37 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "Volledige tekst &kopiëren"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&OK"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Annuleren"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "&Ja"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "&Nee"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Verwerpen"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Wijzigingen verwerpen"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
@@ -2135,47 +2135,47 @@ msgstr ""
 "Als u op deze knop drukt, dan worden alle recente wijzigingen die in deze "
 "dialoog zijn gemaakt verworpen."
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "Op&slaan"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Gegevens opslaan"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Niet opslaan"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Gegevens niet opslaan"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Opslaan &als..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Bestand met een andere naam opslaan"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Toepassen"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Wijzigingen toepassen"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2186,17 +2186,17 @@ msgstr ""
 "programma, maar het dialoogvenster blijft geopend.\n"
 "U kunt zo meerdere instellingen uitproberen."
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "&Systeembeheerdermodus..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Systeembeheerdermodus openen"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2207,192 +2207,192 @@ msgstr ""
 "het wachtwoord van de systeembeheerder (root), zodat er wijzigingen gemaakt "
 "kunnen worden die rootprivileges vereisen."
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "W&issen"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Invoer wissen"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Wis de inhoud van het bewerkveld"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Help"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Help tonen"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "Sl&uiten"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Sluit het huidige venster of document"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "Venster &sluiten"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Sluit het huidige venster."
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "Document &sluiten"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Het huidige document sluiten."
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Standaard"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Zet alle items terug naar hun standaardwaarden"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Terug"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Ga een stap terug"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Vooruit"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Ga een stap vooruit"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "Af&drukken..."
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Opent het printerdialoogvenster om het huidige document af te drukken"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "&Doorgaan"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Operatie vervolgen"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "Verwij&deren"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Item(s) verwijderen"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Openen..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Bestand openen"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "A&fsluiten"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Toepassing afsluiten"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&Resetten"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Instellingen terugzetten"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Invoegen"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "&Instellen..."
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Zoeken"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Stoppen"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Toevoegen"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Test"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "&Overschrijven"

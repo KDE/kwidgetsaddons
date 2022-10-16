@@ -1781,38 +1781,38 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Chi tiết"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Câu hỏi"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Đừng hỏi lại"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Cảnh báo"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Lỗi"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "Rất tiếc"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Thông tin"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Đừng hiện lại thông điệp này"
@@ -1822,27 +1822,27 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Chi tiết"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Câu hỏi"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Cảnh báo"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Thông tin"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Rất tiếc"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Lỗi"
@@ -2080,37 +2080,37 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Chép toàn văn bản"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&OK"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "H&uỷ"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "&Có"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "&Không"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "Loại &bỏ"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Loại bỏ các thay đổi"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
@@ -2118,47 +2118,47 @@ msgstr ""
 "Nhấn nút này sẽ loại bỏ tất cả các thay đổi được tạo gần đây trong hộp thoại "
 "này."
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Lưu"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Lưu dữ liệu"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "Đừng lư&u"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Đừng lưu dữ liệu"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Lưu thà&nh..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Lưu tệp với một tên khác"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "Á&p dụng"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Áp dụng các thay đổi"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2169,17 +2169,17 @@ msgstr ""
 "nhưng hộp thoại sẽ không bị đóng.\n"
 "Dùng cách này để thử các thiết lập khác nhau."
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "Chế độ &Quản trị viên..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Vào chế độ Quản trị viên"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2189,192 +2189,192 @@ msgstr ""
 "Khi bạn bấm <b>Chế độ Quản trị viên</b>, bạn sẽ được hỏi mật khẩu quản trị "
 "viên (người dùng gốc) để thực hiện các thay đổi mà yêu cầu đặc quyền gốc."
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "Làm t&rống"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Làm trống đầu vào"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Làm trống đầu vào trong trường biên tập."
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "Trợ &giúp"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Hiện trợ giúp"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "Đón&g"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Đóng cửa sổ hay tài liệu hiện tại"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "Đón&g cửa sổ"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Đóng cửa sổ hiện tại."
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "Đón&g tài liệu"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Đóng tài liệu hiện tại."
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Mặc định"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Đặt lại tất cả các mục về giá trị mặc định"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Lùi"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Đi lùi một bước"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Tiến"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Đi tiến một bước"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&In..."
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Mở hộp thoại in để in tài liệu hiện tại"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "&Tiếp tục"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Tiếp tục thao tác"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Xoá"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Xoá (các) mục"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Mở..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Mở tệp"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "Th&oát"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Thoát khỏi ứng dụng"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "Đặt lạ&i"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Đặt lại cấu hình"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "Chè&n"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "&Cấu hình..."
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Tìm"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Dừng"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Thêm"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Xoá"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Kiểm thử"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Thuộc tính"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "G&hi đè"

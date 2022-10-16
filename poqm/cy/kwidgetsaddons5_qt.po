@@ -2375,50 +2375,50 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr " Manylion"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Cwestiwn"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Peidiwch a gofyn eto"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Rhybudd"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Gwall"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "Ymddiheuriad"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Gwybodaeth"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
@@ -2432,35 +2432,35 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr " Manylion"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Cwestiwn"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Rhybudd"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Gwybodaeth"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Ymddiheuriad"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"
@@ -2772,49 +2772,49 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Copïo Testun"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 #, fuzzy
 #| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&Iawn"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 #, fuzzy
 #| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Diddymu"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 #, fuzzy
 #| msgid "&Yes"
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "&Ie"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 #, fuzzy
 #| msgid "&No"
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "&Nage"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 #, fuzzy
 #| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Taflu"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 #, fuzzy
 #| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Taflu newidiadau"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -2823,62 +2823,62 @@ msgstr ""
 " Bydd gwthio'r botwm yma yn taflu pob newid diweddar a wnaethpwyd yn y blwch "
 "dewis"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 #, fuzzy
 #| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Cadw"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 #, fuzzy
 #| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Cadw'r data"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Peidiwch â Chadw"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Peidio a chadw'r data"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 #, fuzzy
 #| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Cadw &Fel..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 #, fuzzy
 #| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Cadw'r ffeil efo enw arall"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 #, fuzzy
 #| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Gosod"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 #, fuzzy
 #| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Cymhwyso'r newidiadau"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -2890,21 +2890,21 @@ msgstr ""
 "y blwch dewis.\n"
 " Defnyddiwch hwn i arbrofi dewisiadau gwahanol."
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "Modd G&weinyddwr..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 #, fuzzy
 #| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Newid i Fodd Gweinyddwr"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -2915,108 +2915,108 @@ msgstr ""
 "Ar ôl clicio <b>Modd Gweinyddwr</b> byddwch yn eich gofyn am y cyfrinair "
 "gweinyddwr (gwraidd) er mwyn gwneud newidiadau sydd angen breintiau gwraidd."
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 #, fuzzy
 #| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "C&lirio"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 #, fuzzy
 #| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Clirio'r mewnbwn"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 #, fuzzy
 #| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Clirio'r mewnbwn yn y maes golygu"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 #, fuzzy
 #| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Cymorth"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 #, fuzzy
 #| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Dangos cymorth"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "&Cau"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 #, fuzzy
 #| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Cau'r ffenest neu ddogfen cyfredol"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "Cau'r ffenest?"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Cau'r ffenest neu ddogfen cyfredol"
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "Cau Dogfen"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Cau'r ffenest neu ddogfen cyfredol"
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 #, fuzzy
 #| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Rhagosodiadau"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 #, fuzzy
 #| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Ailosod pob eitem i'w werth rhagosodol"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Yn ôl"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 #| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Ewch cam yn ôl"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 #, fuzzy
 #| msgctxt "go forward"
 #| msgid "&Forward"
@@ -3024,154 +3024,154 @@ msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Ymlaen"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 #, fuzzy
 #| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Ewch cam ymlaen"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 #, fuzzy
 #| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&Argraffu"
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 #, fuzzy
 #| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Agor y blwch dewisiadau argraffu er mwyn argraffu'r ddogfen gyfredol"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 #, fuzzy
 #| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "&Mynd ymlaen"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 #, fuzzy
 #| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Ewch ymlaen a'r gweithrediad"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 #, fuzzy
 #| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Dileu"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 #, fuzzy
 #| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr " Dileu eitem(au)"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 #, fuzzy
 #| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Agor..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 #, fuzzy
 #| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Agor ffeil"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 #, fuzzy
 #| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Gorffen"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 #, fuzzy
 #| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Gadael y cymhwysiant"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 #, fuzzy
 #| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "A&ilosod"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 #, fuzzy
 #| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Ailodosd ffurfweddiad"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 #, fuzzy
 #| msgid "&Insert"
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Mewnosod"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 #, fuzzy
 #| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "Ffurf&weddu..."
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Canfod"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 #, fuzzy
 #| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Aros"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 #, fuzzy
 #| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Ychwanegu"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 #, fuzzy
 #| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Tynnu ymaith"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 #, fuzzy
 #| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Profi"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 #, fuzzy
 #| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Priodweddau"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"

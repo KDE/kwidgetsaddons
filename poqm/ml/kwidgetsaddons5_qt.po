@@ -2090,44 +2090,44 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "വിശദാംശങ്ങള്‍"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "ചോദ്യം"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "ഇനി ചോദിക്കരുതു്"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "മുന്നറിയിപ്പു്"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "തെറ്റ്"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "ക്ഷമിക്കണം"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "വിവരം"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 #, fuzzy
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
@@ -2139,31 +2139,31 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "വിശദാംശങ്ങള്‍"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "ചോദ്യം"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "മുന്നറിയിപ്പു്"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "വിവരം"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "ക്ഷമിക്കണം"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Error"
@@ -2428,98 +2428,98 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "പൂര്‍ണ്ണ വാചകം &പകര്‍ത്തുക"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&ശരി"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&റദ്ദാക്കുക"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "&ശരി"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "&വേണ്ട"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&വേണ്ടെന്നു് വയ്ക്കുക"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "മാറ്റങ്ങള്‍ വേണ്ടെന്നു് വയ്ക്കുക"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr "ഈ ബട്ടണമര്‍ത്തിയാല്‍ ഈ ഡയലോഗില്‍ അടുത്തിടെ വരുത്തിയ മാറ്റങ്ങള്‍ വേണ്ടെന്ന് വയ്ക്കും."
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&സൂക്ഷിയ്ക്കുക"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "ഡാറ്റ സൂക്ഷിയ്ക്കുക"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "സൂക്ഷിയ്ക്ക&രുത്"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "ഡാറ്റ സൂക്ഷിയ്ക്കരുത്"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "പേരു് &മാറ്റി സൂക്ഷിയ്ക്കുക..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "മറ്റൊരു പേരില്‍ ഫയല്‍ സൂക്ഷിയ്ക്കുക"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&നടപ്പിലാക്കുക"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "മാറ്റങ്ങള്‍ നടപ്പിലാക്കുക"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2527,19 +2527,19 @@ msgid ""
 "Use this to try different settings."
 msgstr ""
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "പരിപാലക &ദശ..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "പരിപാലകദശയില്‍ പ്രവേശിക്കുക"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2547,228 +2547,228 @@ msgid ""
 "privileges."
 msgstr ""
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "വൃത്തിയാക്കുക &l"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "വെടിപ്പാക്കുക"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "തിരുത്താനുള്ള കളത്തിലെ ഇന്‍പുട്ട് വൃത്തിയാക്കുക"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "സഹായം (&H)"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "സഹായം കാണിയ്ക്കുക"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "അടയ്ക്കുക &c"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "ഇപ്പോഴുള്ള രചനയോ ജാലകമോ അടയ്ക്കുക"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "ജാലകം &അടയ്ക്കുക"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "ഇപ്പോഴുള്ള ജാലകം അടയ്ക്കുക."
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "രേഖ &അടയ്ക്കുക"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "ഇപ്പോഴുള്ള രേഖ അടയ്ക്കുക."
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&സഹജവിലകള്‍"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "എല്ലാ ഇനങ്ങളും അവയുടെ സഹജമായ വിലകളിലേയ്ക്കു് തരികെ വയ്ക്കുക"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "പുറകിലേയ്ക്ക് &b"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "ഒരു പടി പുറകോട്ടു് പോകുക"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 #, fuzzy
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&മുമ്പോട്ടു്"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "ഒരു പടി മുമ്പോട്ടു് പോകുക"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&അച്ചടിയ്ക്കുക..."
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "ഇപ്പോഴത്തെ രേഖ അച്ചടിയ്ക്കാനായി അച്ചടിയ്ക്കുന്നതിനുള്ള സംഭാഷണം തുറക്കുന്നു"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "&തുടരുക"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "പ്രവര്‍ത്തനം തുടരുക"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&നീക്കം ചെയ്യുക"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "വസ്തു(ക്കള്‍) നീക്കം ചെയ്യുക"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&തുറക്കുക..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "ഫയല്‍ തുറക്കുക"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "പുറത്ത് &കടക്കുക"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "പ്രയോഗത്തില്‍ നിന്നും പുറത്ത് കടക്കുക"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&വീണ്ടും സജ്ജമാക്കുക"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "ക്രമീകരണം വീണ്ടും സജ്ജമാക്കുക"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 #, fuzzy
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&ചേര്‍ക്കുക"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "ക്രമീകരിയ്ക്കുക... &g"
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "കണ്ടുപിടിയ്ക്കുക &f"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "നിര്‍ത്തുക"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "കൂട്ടിച്ചേര്‍ക്കുക"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "നീക്കുക"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "പരീക്ഷിയ്ക്കുക"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "ഗുണഗണങ്ങള്‍"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"

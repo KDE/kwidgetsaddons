@@ -2664,50 +2664,50 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "សេចក្ដី​លម្អិត"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "សំណួរ"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "កុំ​សួរ​ម្ដង​ទៀត"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "ព្រមាន"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "កំហុស"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "សូមទោស"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "ព័ត៌មាន"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
@@ -2721,35 +2721,35 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "សេចក្ដី​លម្អិត"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "សំណួរ"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "ព្រមាន"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "ព័ត៌មាន"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "សូមទោស"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"
@@ -3073,49 +3073,49 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "ចម្លង​អត្ថបទ​ពេញលេញ"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 #, fuzzy
 #| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "យល់ព្រម"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 #, fuzzy
 #| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "បោះបង់"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 #, fuzzy
 #| msgid "&Yes"
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "បាទ/ចាស"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 #, fuzzy
 #| msgid "&No"
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "ទេ"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 #, fuzzy
 #| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "មិនរក្សាទុក"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 #, fuzzy
 #| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "មិនរក្សាទុក​​ការ​ផ្លាស់ប្ដូរ"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 #, fuzzy
 #| msgid ""
 #| "Pressing this button will discard all recent changes made in this dialog."
@@ -3124,63 +3124,63 @@ msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr "ចុច​ប៊ូតុង​នេះ​នឹង​បោះបង់​ការ​ផ្លាស់ប្តូរ​ទាំងអស់​ដែល​បាន​ធ្វើ​ក្នុងប្រអប់​នេះ នាពេលថ្មីៗ​នេះ ។​"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 #, fuzzy
 #| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "រក្សាទុក"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 #, fuzzy
 #| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "រក្សាទុក​ទិន្នន័យ"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "កុំ​រក្សាទុក"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "Do not save data"
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "កុំ​រក្សាទុក​ទិន្នន័យ"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 #, fuzzy
 #| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "រក្សាទុក​ជា..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 #, fuzzy
 #| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "រក្សាទុក​ឯកសារ ដោយ​ប្រើ​ឈ្មោះ​មួយ​ផ្សេង"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 #, fuzzy
 #| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "អនុវត្ត"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 #, fuzzy
 #| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "អនុវត្តការ​ផ្លាស់ប្ដូរ"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 #, fuzzy
 #| msgid ""
 #| "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -3195,21 +3195,21 @@ msgstr ""
 "នៅ​ពេល​អ្នក​​ចុច <b>អនុវត្ត</b> ការ​កំណត់​នឹង​ត្រូវ​បាន​ផ្ដល់​ដល់​កម្មវិធី ប៉ុន្តែ​ប្រអប់នឹង​មិន​ត្រូវ​បានបិទ​ទេ ។\n"
 "ប្រើ​វា ដើម្បី​ព្យាយាម​កា​រកំណត់​ផ្សេងៗ​ទៀត ។"
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "របៀប​អ្នក​គ្រប់គ្រង..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 #, fuzzy
 #| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "ចូល​របៀប​អ្នក​គ្រប់គ្រង"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 #, fuzzy
 #| msgid ""
 #| "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -3224,210 +3224,210 @@ msgstr ""
 "នៅពេល​អ្នក​ចុច <b>របៀប​អ្នក​គ្រប់គ្រង</b> នឹង​ត្រូវ​បាន​សួរ​រក​ពាក្យ​សម្ងាត់​របស់​អ្នក​គ្រប់គ្រង (root) ដើម្បី​"
 "ផ្លាស់ ដែល​ទាមទារ​សិទ្ធិ​ជា root ។"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 #, fuzzy
 #| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "ជម្រះ"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 #, fuzzy
 #| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "ជម្រះ​ព័ត៌មាន​បញ្ចូល"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 #, fuzzy
 #| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "ជម្រះ​ព័ត៌មាន​បញ្ចូល​ក្នុង​វាល​កែសម្រួល"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 #, fuzzy
 #| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "ជំនួយ"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 #, fuzzy
 #| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "បង្ហាញ​ជំនួយ"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "បិទ"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 #, fuzzy
 #| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "បិទ​បង្អួច ឬ​ឯកសារ​បច្ចុប្បន្ន"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 #, fuzzy
 #| msgid "&Close Window"
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "បិទ​បង្អួច"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 #, fuzzy
 #| msgid "Close the current window."
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "បិទ​បង្អួច​​បច្ចុប្បន្ន ។"
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 #, fuzzy
 #| msgid "&Close Document"
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "បិទ​ឯកសារ"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 #, fuzzy
 #| msgid "Close the current document."
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "បិទ​ឯកសារ​បច្ចុប្បន្ន ។"
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 #, fuzzy
 #| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "លំនាំដើម"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 #, fuzzy
 #| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "កំណត់​ធាតុ​ទាំងអស់​ទៅ​តម្លៃ​លំនាំដើម​របស់​ពួក​វា​វិញ"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "ថយ​ក្រោយ"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 #| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "ថយក្រោយ​មួយ​ជំហាន"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 #, fuzzy
 #| msgid "&Forward"
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "ទៅ​មុខ"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 #, fuzzy
 #| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "ទៅ​មុខ​មួយ​ជំហាន"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 #, fuzzy
 #| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "បោះពុម្ព..."
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 #, fuzzy
 #| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "បើក​ប្រអប់​បោះពុម្ព ដើម្បី​បោះពុម្ព​ឯកសារ​បច្ចុប្បន្ន"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 #, fuzzy
 #| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "បន្ត"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 #, fuzzy
 #| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "បន្ត​ប្រតិបត្តិការ"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 #, fuzzy
 #| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "លុប"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 #, fuzzy
 #| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "លុប​ធាតុ"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 #, fuzzy
 #| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "បើក..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 #, fuzzy
 #| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "បើក​ឯកសារ"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 #, fuzzy
 #| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "ចេញ"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 #, fuzzy
 #| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "បិទ​​​កម្មវិធី"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 #, fuzzy
 #| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "កំណត់​ឡើង​វិញ"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 #, fuzzy
 #| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ​ឡើង​វិញ"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 #, fuzzy
 #| msgctxt "Verb"
 #| msgid "&Insert"
@@ -3435,56 +3435,56 @@ msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "បញ្ចូល"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 #, fuzzy
 #| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "រក"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 #, fuzzy
 #| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "ឈប់"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 #, fuzzy
 #| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "បន្ថែម"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 #, fuzzy
 #| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "យកចេញ"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 #, fuzzy
 #| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "សាកល្បង"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 #, fuzzy
 #| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "លក្ខណៈសម្បត្តិ"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"

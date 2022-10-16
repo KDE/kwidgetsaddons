@@ -2603,50 +2603,50 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "विवरण"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "प्रश्न"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "फेरि नसोध्नुहोस्"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "चेतावनी"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "त्रुटि"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "माफ गर्नुहोस्"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "सूचना"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
@@ -2660,35 +2660,35 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "विवरण"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "प्रश्न"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "चेतावनी"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "सूचना"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "माफ गर्नुहोस्"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"
@@ -3009,112 +3009,112 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "पाठको प्रतिलिपि बनाउनुहोस्"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 #, fuzzy
 #| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "ठीक छ"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 #, fuzzy
 #| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "रद्द गर्नुहोस्"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 #, fuzzy
 #| msgid "&Yes"
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "हो"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 #, fuzzy
 #| msgid "&No"
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "होइन"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 #, fuzzy
 #| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "छोड्नुहोस्"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 #, fuzzy
 #| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "परिवर्तन छोड्नुहोस्"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr "यो बटनमा थिच्दा यो संवादमा हालै गरिएका सबै परिवर्तन छोडिन्छ"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 #, fuzzy
 #| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "बचत गर्नुहोस्"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 #, fuzzy
 #| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "डेटा बचत गर्नुहोस्"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "बचत नगर्नुहोस्"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "Do not save data"
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "डेटा बचत नगर्नुहोस्"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 #, fuzzy
 #| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "यस रूपमा बचत गर्नुहोस्..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 #, fuzzy
 #| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "अर्को नाममा फाइल बचत गर्नुहोस्"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 #, fuzzy
 #| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "लागू गर्नुहोस्"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 #, fuzzy
 #| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "परिवर्तन लागू गर्नुहोस्"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -3125,21 +3125,21 @@ msgstr ""
 "<b>लागू गर्नुहोस्</b> क्लिक गर्दा, सेटिङ कार्यक्रममा दिइन्छ, तर संवाद बन्द गरिँदैन ।\n"
 "फरक सेटिङ प्रयास गर्न यसको प्रयोग गर्नुहोस् ।"
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "प्रशासक मोड..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 #, fuzzy
 #| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "प्रशासक मोड प्रविष्ट गर्नुहोस्"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -3150,108 +3150,108 @@ msgstr ""
 "<b>प्रशासक मोड</b> क्लिक गर्दा, रूट विशेषाधिकार आवश्यक पर्नेलाई परिवर्तन गर्न तपाईँलाई "
 "प्रशासनिक (रूट) पासवर्डका लागि प्रोम्ट गरिन्छ ।"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 #, fuzzy
 #| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "खाली गर्नुहोस्"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 #, fuzzy
 #| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "आगत खाली गर्नुहोस्"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 #, fuzzy
 #| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "सम्पादन फिल्डमा आगत खाली गर्नुहोस्"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 #, fuzzy
 #| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "मद्दत"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 #, fuzzy
 #| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "मद्दत देखाउनुहोस्"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "बन्द गर्नुहोस्"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 #, fuzzy
 #| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "हालको सञ्झ्याल वा कागजात बन्द गर्नुहोस्"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "सञ्झ्याल बन्द गर्नुहुन्छ ?"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "हालको सञ्झ्याल वा कागजात बन्द गर्नुहोस्"
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "कागजात बन्द गर्नुहोस्"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "हालको सञ्झ्याल वा कागजात बन्द गर्नुहोस्"
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 #, fuzzy
 #| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "पूर्वनिर्धारित"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 #, fuzzy
 #| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "सबै वस्तुलाई तिनीहरूको पूर्वनिर्धारित मानमा फेरि सेट गर्नुहोस्"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "पछाडि"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 #, fuzzy
 #| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "एक चरण पछाडि फर्कनुहोस्"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 #, fuzzy
 #| msgctxt "go forward"
 #| msgid "&Forward"
@@ -3259,98 +3259,98 @@ msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "अगाडि"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 #, fuzzy
 #| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "एक चरण अगाडि जानुहोस्"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 #, fuzzy
 #| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "मुद्रण गर्नुहोस्..."
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 #, fuzzy
 #| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "हालको कागजात मुद्रण गर्न मुद्रण संवाद खोल्दछ"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 #, fuzzy
 #| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "जारी राख्नुहोस्"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 #, fuzzy
 #| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "सञ्चालन जारी राख्नुहोस्"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 #, fuzzy
 #| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "मेट्नुहोस्"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 #, fuzzy
 #| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "वस्तु(हरू) मेट्नुहोस्"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 #, fuzzy
 #| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "खोल्नुहोस्..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 #, fuzzy
 #| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "फाइल खोल्नुहोस्"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 #, fuzzy
 #| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "अन्त्य गर्नुहोस्"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 #, fuzzy
 #| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "अनुप्रयोग अन्त्य गर्नुहोस्"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 #, fuzzy
 #| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "फेरि सेट गर्नुहोस्"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 #, fuzzy
 #| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "कन्फिगरेसन फेरि सेट गर्नुहोस्"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 #, fuzzy
 #| msgctxt "Verb"
 #| msgid "&Insert"
@@ -3358,56 +3358,56 @@ msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "घुसाउनुहोस्"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 #, fuzzy
 #| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "कन्फिगर गर्नुहोस्..."
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "फेला पार्नुहोस्"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 #, fuzzy
 #| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "रोक्नुहोस्"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 #, fuzzy
 #| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "थप्नुहोस्"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 #, fuzzy
 #| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "हटाउनुहोस्"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 #, fuzzy
 #| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "परीक्षण"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 #, fuzzy
 #| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "गुण"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"

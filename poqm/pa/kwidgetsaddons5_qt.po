@@ -2389,38 +2389,38 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "ਵੇਰਵੇ"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:499 kmessagebox.cpp:568
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "ਸਵਾਲ"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
+#: kmessagebox.cpp:765 kmessagebox.cpp:863
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "ਮੁੜ ਨਾ ਪੁੱਛੋ"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: kmessagebox.cpp:787 kmessagebox.cpp:812 kmessagebox.cpp:831
+#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "ਗਲਤੀ"
 
-#: kmessagebox.cpp:858 kmessagebox.cpp:889 kmessagebox.cpp:1178
+#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "ਅਫ਼ਸੋਸ"
 
-#: kmessagebox.cpp:935
+#: kmessagebox.cpp:1068
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: kmessagebox.cpp:950
+#: kmessagebox.cpp:1083
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "ਮੁੜ ਇਹ ਸੁਨੇਹਾ ਨਾ ਵੇਖੋ"
@@ -2433,7 +2433,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "ਵੇਰਵੇ"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:264
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2441,7 +2441,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "ਸਵਾਲ"
 
-#: kmessagedialog.cpp:259
+#: kmessagedialog.cpp:269
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2449,7 +2449,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: kmessagedialog.cpp:262
+#: kmessagedialog.cpp:272
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2457,7 +2457,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: kmessagedialog.cpp:266
+#: kmessagedialog.cpp:276
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Sorry"
@@ -2465,7 +2465,7 @@ msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "ਅਫ਼ਸੋਸ"
 
-#: kmessagedialog.cpp:270
+#: kmessagedialog.cpp:280
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"
@@ -2817,83 +2817,83 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "ਪੂਰੀ ਲਿਖਤ ਕਾਪੀ ਕਰੋ(&C)"
 
-#: kstandardguiitem.cpp:160
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "ਠੀਕ ਹੈ(&O)"
 
-#: kstandardguiitem.cpp:165
+#: kstandardguiitem.cpp:169
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "ਰੱਦ ਕਰੋ(&C)"
 
-#: kstandardguiitem.cpp:170
+#: kstandardguiitem.cpp:175
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "ਹਾਂ(&Y)"
 
-#: kstandardguiitem.cpp:175
+#: kstandardguiitem.cpp:182
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "ਨਹੀਂ(&N)"
 
-#: kstandardguiitem.cpp:180
+#: kstandardguiitem.cpp:188
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "ਅਣਡਿੱਠਾ(&D)"
 
-#: kstandardguiitem.cpp:182
+#: kstandardguiitem.cpp:190
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "ਬਦਲਾਅ ਅਣਡਿੱਠੇ ਕਰੋ"
 
-#: kstandardguiitem.cpp:183
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr "ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਉਣ ਨਾਲ ਹੁਣੇ ਕੀਤੀਆਂ ਤਬਦੀਲੀਆਂ ਅਣਡਿੱਠੀਆਂ ਕਰ ਦਿੱਤੀਆਂ ਜਾਣਗੀਆਂ।"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:198
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "ਸੰਭਾਲੋ(&S)"
 
-#: kstandardguiitem.cpp:192
+#: kstandardguiitem.cpp:200
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "ਡਾਟਾ ਸੰਭਾਲੋ"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "ਨਾ ਸੰਭਾਲੋ(&D)"
 
-#: kstandardguiitem.cpp:197
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "ਡਾਟਾ ਨਾ ਸੰਭਾਲੋ"
 
-#: kstandardguiitem.cpp:202
+#: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "ਇੰਝ ਸੰਭਾਲੋ(&A)..."
 
-#: kstandardguiitem.cpp:204
+#: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "ਫਾਇਲ ਨੂੰ ਹੋਰ ਨਾਂ ਨਾਲ ਸੰਭਾਲੋ"
 
-#: kstandardguiitem.cpp:209
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "ਲਾਗੂ ਕਰੋ(&A)"
 
-#: kstandardguiitem.cpp:211
+#: kstandardguiitem.cpp:219
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "ਤਬਦੀਲੀਆਂ ਲਾਗੂ ਕਰੋ"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:220
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2904,17 +2904,17 @@ msgstr ""
 "ਨਹੀਂ ਹੋਵੇਗੇ।\n"
 "ਇਸ ਨੂੰ ਵੱਖਰੀ ਸੈਟਿੰਗ ਵਰਤਣ ਲਈ ਵਰਤੋਂ।"
 
-#: kstandardguiitem.cpp:221
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "ਪਰਸ਼ਾਸਕੀ ਮੋਡ(&M)..."
 
-#: kstandardguiitem.cpp:223
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "ਪਰਸ਼ਾਸਕੀ ਮੋਡ ਵਿੱਚ ਜਾਓ"
 
-#: kstandardguiitem.cpp:224
+#: kstandardguiitem.cpp:232
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2924,192 +2924,192 @@ msgstr ""
 "ਜਦੋਂ ਤੁਸੀਂ <b>ਪਰਸ਼ਾਸਕੀ ਮੋਡ</b> ਨੂੰ ਦਬਾਇਆ ਤਾਂ ਤੁਹਾਨੂੰ ਪਰਸ਼ਾਸ਼ਕੀ (root) ਦੇ ਪਾਸਵਰਡ ਦੀ ਮੰਗ ਕੀਤੀ "
 "ਜਾਵੇਗੀ ਤਾਂ ਤਬਦੀਲੀ ਕੀਤੀ ਜਾ ਸਕੇ।"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:240
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "ਸਾਫ਼ ਕਰੋ(&l)"
 
-#: kstandardguiitem.cpp:234
+#: kstandardguiitem.cpp:242
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "ਇੰਪੁੱਟ ਸਾਫ਼ ਕਰੋ"
 
-#: kstandardguiitem.cpp:235
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "ਸੋਧਯੋਗ ਖੇਤਰ ਵਿੱਚੋਂ ਇੰਪੁੱਟ ਸਾਫ਼ ਕਰੋ।"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:248
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "ਮਦਦ(&H)"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "ਮਦਦ ਵੇਖੋ"
 
-#: kstandardguiitem.cpp:247
+#: kstandardguiitem.cpp:255
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "ਬੰਦ ਕਰੋ(&C)"
 
-#: kstandardguiitem.cpp:249
+#: kstandardguiitem.cpp:257
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "ਮੌਜੂਦਾ ਵਿੰਡੋ ਜਾਂ ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ"
 
-#: kstandardguiitem.cpp:254
+#: kstandardguiitem.cpp:262
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "ਵਿੰਡੋ ਬੰਦ ਕਰਨੀ ਹੈ(&C)"
 
-#: kstandardguiitem.cpp:256
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "ਮੌਜੂਦਾ ਵਿੰਡੋ ਬੰਦ ਕਰੋ।"
 
-#: kstandardguiitem.cpp:261
+#: kstandardguiitem.cpp:269
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ(&C)"
 
-#: kstandardguiitem.cpp:263
+#: kstandardguiitem.cpp:271
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "ਮੌਜੂਦਾ ਡੌਕੂਮੈਂਟ ਬੰਦ ਕਰੋ।"
 
-#: kstandardguiitem.cpp:268
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "ਡਿਫਾਲਟ(&D)"
 
-#: kstandardguiitem.cpp:270
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "ਸਭ ਆਈਟਮਾਂ ਨੂੰ ਉਹਨਾਂ ਦੇ ਡਿਫਾਲਟ ਮੁੱਲ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ।"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "ਪਿੱਛੇ(&B)"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:284
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "ਇੱਕ ਸਟੈਪ ਪਿੱਛੇ ਜਾਓ"
 
-#: kstandardguiitem.cpp:282
+#: kstandardguiitem.cpp:290
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "ਅੱਗੇ(&F)"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "ਇੱਕ ਸਟੈਪ ਅੱਗੇ ਜਾਓ"
 
-#: kstandardguiitem.cpp:294
+#: kstandardguiitem.cpp:302
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "ਪਰਿੰਟ ਕਰੋ(&P)..."
 
-#: kstandardguiitem.cpp:296
+#: kstandardguiitem.cpp:304
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "ਮੌਜੂਦਾ ਡੌਕੂਮੈਂਟ ਨੂੰ ਪਰਿੰਟ ਕਰਨ ਲਈ ਪਰਿੰਟ ਡਾਈਲਾਗ ਖੋਲ੍ਹੋ।"
 
-#: kstandardguiitem.cpp:303
+#: kstandardguiitem.cpp:311
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "ਜਾਰੀ ਰੱਖੋ(&o)"
 
-#: kstandardguiitem.cpp:305
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "ਓਪਰੇਸ਼ਨ ਜਾਰੀ ਰੱਖੋ"
 
-#: kstandardguiitem.cpp:310
+#: kstandardguiitem.cpp:318
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "ਹਟਾਓ(&D)"
 
-#: kstandardguiitem.cpp:312
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "ਆਈਟਮਾਂ ਹਟਾਓ"
 
-#: kstandardguiitem.cpp:317
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "ਖੋਲ੍ਹੋ(&O)..."
 
-#: kstandardguiitem.cpp:319
+#: kstandardguiitem.cpp:327
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "ਫਾਈਲ ਖੋਲ੍ਹੋ"
 
-#: kstandardguiitem.cpp:324
+#: kstandardguiitem.cpp:332
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "ਬਾਹਰ ਜਾਓ(&Q)"
 
-#: kstandardguiitem.cpp:326
+#: kstandardguiitem.cpp:334
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: kstandardguiitem.cpp:331
+#: kstandardguiitem.cpp:339
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "ਮੁੜ-ਸੈੱਟ(&R)"
 
-#: kstandardguiitem.cpp:333
+#: kstandardguiitem.cpp:341
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "ਸੰਰਚਨਾ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
-#: kstandardguiitem.cpp:338
+#: kstandardguiitem.cpp:346
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "ਸ਼ਾਮਲ(&I)"
 
-#: kstandardguiitem.cpp:343
+#: kstandardguiitem.cpp:351
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "ਸੰਰਚਨਾ(&g)..."
 
-#: kstandardguiitem.cpp:348
+#: kstandardguiitem.cpp:356
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "ਖੋਜ(&F)"
 
-#: kstandardguiitem.cpp:353
+#: kstandardguiitem.cpp:361
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "ਰੋਕੋ"
 
-#: kstandardguiitem.cpp:358
+#: kstandardguiitem.cpp:366
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "ਜੋੜੋ"
 
-#: kstandardguiitem.cpp:363
+#: kstandardguiitem.cpp:371
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
 
-#: kstandardguiitem.cpp:368
+#: kstandardguiitem.cpp:376
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "ਟੈਸਟ"
 
-#: kstandardguiitem.cpp:373
+#: kstandardguiitem.cpp:381
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
 
-#: kstandardguiitem.cpp:378
+#: kstandardguiitem.cpp:386
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "ਉੱਤੇ ਲਿਖੋ(&O)"
