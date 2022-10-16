@@ -163,6 +163,7 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     // default image / text part start
     d->headerLayout = new QGridLayout(titleFrame);
     d->headerLayout->setContentsMargins(0, 0, 0, 0);
+    d->headerLayout->setSizeConstraint(QLayout::SetFixedSize);
 
     d->textLabel = new QLabel(titleFrame);
     d->textLabel->setVisible(false);
