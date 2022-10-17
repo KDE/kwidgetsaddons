@@ -1065,12 +1065,12 @@ msgstr "Símbols de computació antiga"
 #: kcharselect.cpp:389
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
-msgstr "Introduïu un terme que cal buscar o un caràcter..."
+msgstr "Introduïu un terme que calga buscar o un caràcter..."
 
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
-msgstr "Introduïu ací un terme que cal buscar o un caràcter"
+msgstr "Introduïu ací un terme que calga buscar o un caràcter"
 
 #: kcharselect.cpp:398
 msgctxt "KCharSelect|@action"
@@ -1115,7 +1115,7 @@ msgstr "Seleccioneu una categoria"
 #: kcharselect.cpp:466
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "Seleccioneu un bloc que cal mostrar"
+msgstr "Seleccioneu un bloc que s'haja de mostrar"
 
 #: kcharselect.cpp:486
 msgctxt "KCharSelect|@info:tooltip"
@@ -2440,7 +2440,3 @@ msgstr "Pantalla completa"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Mostra la finestra en pantalla completa"
-
-#~ msgctxt "KMessageBox|@action:button post-filter"
-#~ msgid "."
-#~ msgstr "."
