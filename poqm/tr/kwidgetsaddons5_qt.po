@@ -1232,7 +1232,7 @@ msgstr "Unicode kategorisi: "
 #: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
-msgstr "Çeşitli Kullanışlı Gösterimler"
+msgstr "Çeşitli Kullanışlı Temsiller"
 
 #: kcharselect.cpp:931
 msgctxt "KCharSelect|"
@@ -2438,7 +2438,3 @@ msgstr "Tam Ekran"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Pencereyi tam ekran olarak göster"
-
-#~ msgctxt "KMessageBox|@action:button post-filter"
-#~ msgid "."
-#~ msgstr "."
