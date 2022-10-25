@@ -1757,7 +1757,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia del tipus de lletra seleccionat. El podeu canviar "
-"clicant el botó «Selecciona el tipus de lletra...»."
+"clicant en el botó «Selecciona el tipus de lletra...»."
 
 #: kfontrequester.cpp:167
 #, qt-format
@@ -1773,7 +1773,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia del tipus de lletra «%1». El podeu canviar clicant "
-"el botó «Selecciona el tipus de lletra...»."
+"en el botó «Selecciona el tipus de lletra...»."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -2179,7 +2179,7 @@ msgid ""
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
-"Quan feu clic a <b>Aplica</b>, es transferirà la configuració al programa i "
+"Quan feu clic en <b>Aplica</b>, es transferirà la configuració al programa i "
 "es tancarà el diàleg.\n"
 "Utilitzeu-ho per a provar configuracions diferents."
 
