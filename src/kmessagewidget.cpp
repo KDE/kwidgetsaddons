@@ -26,6 +26,7 @@
 // KMessageWidgetPrivate
 //---------------------------------------------------------------------
 
+constexpr int borderSize = 1;
 constexpr int leftBorderSize = 4;
 
 class KMessageWidgetPrivate
@@ -156,9 +157,13 @@ void KMessageWidgetPrivate::createLayout()
     auto margins = q->layout()->contentsMargins();
     if (q->layoutDirection() == Qt::RightToLeft) {
         margins.setRight(margins.right() + leftBorderSize);
+        margins.setLeft(margins.left() + borderSize);
     } else {
         margins.setLeft(margins.left() + leftBorderSize);
+        margins.setRight(margins.right() + borderSize);
     }
+    margins.setTop(margins.top() + borderSize);
+    margins.setBottom(margins.bottom() + borderSize);
     q->layout()->setContentsMargins(margins);
     if (q->isVisible()) {
         q->setFixedHeight(q->sizeHint().height());
@@ -325,53 +330,50 @@ void KMessageWidget::paintEvent(QPaintEvent *event)
         painter.setOpacity(d->timeLine->currentValue() * d->timeLine->currentValue());
     }
     constexpr float radius = 4;
+    const QRect innerRect = rect().marginsRemoved(QMargins() + borderSize / 2);
     const QColor color = palette().color(QPalette::Window);
     constexpr float alpha = 0.1;
     const QColor parentWindowColor = (parentWidget() ? parentWidget()->palette() : qApp->palette()).color(QPalette::Window);
     const int newRed = (color.red() * alpha) + (parentWindowColor.red() * (1 - alpha));
     const int newGreen = (color.green() * alpha) + (parentWindowColor.green() * (1 - alpha));
     const int newBlue = (color.blue() * alpha) + (parentWindowColor.blue() * (1 - alpha));
+
     const QColor background = QColor(newRed, newGreen, newBlue);
-    painter.setPen(QPen(background, 0));
+    painter.setPen(QPen(color, borderSize));
     painter.setBrush(background);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.drawRoundedRect(rect(), radius, radius);
+    painter.drawRoundedRect(innerRect, radius, radius);
+
+    QPainterPath path;
+    const int y0 = 0;
+    const int y1 = rect().height();
 
     if (layoutDirection() == Qt::RightToLeft) {
         // Draw right border
         const int x0 = rect().width();
-        const int y0 = 0;
         const int x1 = rect().width() - leftBorderSize;
-        const int y1 = rect().height();
 
-        QPainterPath path(QPoint(x0 - radius, y0));
+        path.moveTo(QPoint(x0 - radius, y0));
         path.quadTo(QPoint(x0, y0), QPoint(x0, y0 + radius));
         path.lineTo(QPoint(x0, y1 - radius));
         path.quadTo(QPoint(x0, y1), QPoint(x0 - radius, y1));
         path.lineTo(x1, y1);
         path.lineTo(x1, y0);
-
-        painter.setBrush(color);
-        painter.setRenderHint(QPainter::Antialiasing);
-        painter.drawPath(path);
     } else {
         // Draw left border
         const int x0 = 0;
-        const int y0 = 0;
         const int x1 = leftBorderSize;
-        const int y1 = rect().height();
 
-        QPainterPath path(QPoint(x0 + radius, y0));
+        path.moveTo(QPoint(x0 + radius, y0));
         path.quadTo(QPoint(x0, y0), QPoint(x0, y0 + radius));
         path.lineTo(QPoint(x0, y1 - radius));
         path.quadTo(QPoint(x0, y1), QPoint(x0 + radius, y1));
         path.lineTo(x1, y1);
         path.lineTo(x1, y0);
-
-        painter.setBrush(color);
-        painter.setRenderHint(QPainter::Antialiasing);
-        painter.drawPath(path);
     }
+
+    painter.setRenderHint(QPainter::Antialiasing);
+    painter.fillPath(path, QBrush(color));
 }
 
 bool KMessageWidget::wordWrap() const
