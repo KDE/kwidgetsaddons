@@ -39,7 +39,6 @@ public:
     QTimeLine *timeLine = nullptr;
     QIcon icon;
     bool ignoreShowAndResizeEventDoingAnimatedShow = false;
-
     KMessageWidget::MessageType messageType;
     bool wordWrap;
     QList<QToolButton *> buttons;
@@ -371,6 +370,15 @@ void KMessageWidget::addAction(QAction *action)
 void KMessageWidget::removeAction(QAction *action)
 {
     QFrame::removeAction(action);
+    d->updateLayout();
+}
+
+void KMessageWidget::clearActions()
+{
+    const auto ourActions = actions();
+    for (auto *action : ourActions) {
+        removeAction(action);
+    }
     d->updateLayout();
 }
 

@@ -173,6 +173,13 @@ public:
     void removeAction(QAction *action);
 
     /**
+     * Clears all actions from the message widget.
+     * @see KMessageWidget::MessageType, addAction() and removeAction()
+     * @since 5.100
+     */
+    void clearActions();
+
+    /**
      * Returns the preferred size of the message widget.
      */
     QSize sizeHint() const override;
