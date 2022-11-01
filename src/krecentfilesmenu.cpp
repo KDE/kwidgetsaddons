@@ -4,7 +4,6 @@
 
 #include "krecentfilesmenu.h"
 
-#include <QFile>
 #include <QGuiApplication>
 #include <QIcon>
 #include <QScreen>
@@ -127,12 +126,6 @@ void KRecentFilesMenu::readFromFile()
         d->m_settings->setArrayIndex(i);
 
         const QUrl url = d->m_settings->value(QStringLiteral("url")).toUrl();
-
-        // Don't restore if file doesn't exist anymore
-        if (url.isLocalFile() && !QFile::exists(url.toLocalFile())) {
-            continue;
-        }
-
         RecentFilesEntry *entry = new RecentFilesEntry(url, d->m_settings->value(QStringLiteral("displayName")).toString(), this);
         d->m_entries.push_back(entry);
     }
