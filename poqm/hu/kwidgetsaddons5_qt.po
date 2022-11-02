@@ -1880,12 +1880,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Hiba"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Bezárás"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Üzenet bezárása"

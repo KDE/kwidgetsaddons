@@ -2426,14 +2426,14 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Imposiso"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Vala"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 #, fuzzy
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"

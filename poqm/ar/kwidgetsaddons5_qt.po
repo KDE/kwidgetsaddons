@@ -1837,12 +1837,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "خطأ"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "أ&غلق"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "أغلق الرّسالة"

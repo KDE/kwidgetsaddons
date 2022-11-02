@@ -1937,12 +1937,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Erro"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "Fe&char"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Fechar a mensagem"

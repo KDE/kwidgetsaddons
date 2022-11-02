@@ -2492,14 +2492,14 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "錯誤"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "關閉(&C)"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"

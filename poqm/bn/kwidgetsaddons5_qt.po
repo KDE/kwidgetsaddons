@@ -2732,14 +2732,14 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "সমস্যা"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&বন্ধ করো"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"

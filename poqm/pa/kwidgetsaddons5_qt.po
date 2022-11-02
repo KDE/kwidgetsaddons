@@ -2473,7 +2473,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "ਗਲਤੀ"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2481,7 +2481,7 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "ਬੰਦ ਕਰੋ(&C)"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"

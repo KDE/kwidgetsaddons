@@ -1845,12 +1845,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Error"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Claude"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Claude message"
