@@ -3054,21 +3054,21 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "سولغا ئايلاندۇر(&C)"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 #, fuzzy
 #| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "تۈر يوق"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "تىزىملىكنى تازىلا"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

@@ -2542,19 +2542,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Soat &koʻrsatgichiga qarshi burish"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Xossalari"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Kiritishni tozalash"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"

@@ -2111,17 +2111,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Pasukti p&rieš laikrodžio rodyklę"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Nėra įrašų"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Išvalyti sąrašą"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Paskiausiai naudoti failai"

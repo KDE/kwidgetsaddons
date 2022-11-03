@@ -3031,21 +3031,21 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "ಅಪ್ರದಕ್ಷಿಣಾಕಾರದಲ್ಲಿ ತಿರುಗಿಸು(&C)"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 #, fuzzy
 #| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "ನಮೂದುಗಳಿಲ್ಲ"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "ಪಟ್ಟಿಯನ್ನು ತೆರವುಗೊಳಿಸು "
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

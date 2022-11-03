@@ -2067,17 +2067,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Rotasikan &Lawan Arah Jarum Jam"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Tidak Ada Entri"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Hapus Senarai"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "File Baru-baru ini"

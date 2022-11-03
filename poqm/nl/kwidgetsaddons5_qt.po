@@ -2077,17 +2077,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "&Linksom draaien"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Geen items"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Lijst wissen"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Recente bestanden"

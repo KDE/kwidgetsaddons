@@ -2951,19 +2951,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "घड़ी के उलटा दिसा मं घुमाव (&C)"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "कोई प्रविस्टि नइ"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "इनपुट साफ करव"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 #, fuzzy
 #| msgid "Delete Files"
 msgctxt "KRecentFilesMenu|"

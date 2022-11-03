@@ -2784,17 +2784,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "&இடதுபுறமாக திருப்பு"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "பதிவுகள் ஏதுமில்லை"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "பட்டியலை காலியாக்கு"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "சமீப கோப்புகள்"

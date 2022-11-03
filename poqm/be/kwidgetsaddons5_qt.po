@@ -2847,19 +2847,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Павярнуць па гадзіннай стрэлцы"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Няма элементаў"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Ачысціць поле"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 #, fuzzy
 #| msgid "Delete Files"
 msgctxt "KRecentFilesMenu|"
