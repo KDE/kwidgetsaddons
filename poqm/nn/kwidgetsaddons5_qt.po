@@ -1850,12 +1850,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Feilmelding"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:79
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Lukk"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Lukk melding"
@@ -2065,17 +2065,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Drei til &venstre"
 
-#: krecentfilesmenu.cpp:94
+#: krecentfilesmenu.cpp:93
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Ingen oppføringar"
 
-#: krecentfilesmenu.cpp:97
+#: krecentfilesmenu.cpp:96
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Tøm liste"
 
-#: krecentfilesmenu.cpp:104
+#: krecentfilesmenu.cpp:103
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Nyleg brukte filer"
