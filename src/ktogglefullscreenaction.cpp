@@ -35,17 +35,10 @@ public:
     {
         Q_Q(KToggleFullScreenAction);
 
-        if (q->isChecked()) {
-            q->setText(KToggleFullScreenAction::tr("Exit F&ull Screen Mode", "@action:inmenu"));
-            q->setIconText(KToggleFullScreenAction::tr("Exit Full Screen", "@action:intoolbar"));
-            q->setToolTip(KToggleFullScreenAction::tr("Exit full screen mode", "@info:tooltip"));
-            q->setIcon(QIcon::fromTheme(QStringLiteral("view-restore")));
-        } else {
-            q->setText(KToggleFullScreenAction::tr("F&ull Screen Mode", "@action:inmenu"));
-            q->setIconText(KToggleFullScreenAction::tr("Full Screen", "@action:intoolbar"));
-            q->setToolTip(KToggleFullScreenAction::tr("Display the window in full screen", "@info:tooltip"));
-            q->setIcon(QIcon::fromTheme(QStringLiteral("view-fullscreen")));
-        }
+        q->setText(KToggleFullScreenAction::tr("F&ull Screen Mode", "@action:inmenu"));
+        q->setIconText(KToggleFullScreenAction::tr("Full Screen", "@action:intoolbar"));
+        q->setToolTip(KToggleFullScreenAction::tr("Display the window in full screen", "@info:tooltip"));
+        q->setIcon(QIcon::fromTheme(QStringLiteral("view-fullscreen")));
     }
 
     QWidget *window = nullptr;
@@ -83,14 +76,6 @@ void KToggleFullScreenAction::setWindow(QWidget *window)
     if (d->window) {
         d->window->installEventFilter(this);
     }
-}
-
-void KToggleFullScreenAction::slotToggled(bool checked)
-{
-    Q_D(KToggleFullScreenAction);
-
-    KToggleAction::slotToggled(checked);
-    d->updateTextsAndIcon();
 }
 
 bool KToggleFullScreenAction::eventFilter(QObject *object, QEvent *event)
