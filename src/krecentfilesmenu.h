@@ -75,6 +75,27 @@ public:
      */
     void setMaximumItems(size_t maximumItems);
 
+    /**
+     * List of URLs of recent files.
+     *
+     * See \ref clearRecentFiles
+     * See \ref recentFilesChanged
+     *
+     * @since 5.101
+     */
+    QList<QUrl> recentFiles() const;
+
+public Q_SLOTS:
+    /**
+     * Clear recent files list.
+     *
+     * See \ref recentFiles
+     * See \ref recentFilesChanged
+     *
+     * @since 5.101
+     */
+    void clearRecentFiles();
+
 Q_SIGNALS:
     /**
      * emitted when the user clicks on a file action.
@@ -84,10 +105,22 @@ Q_SIGNALS:
      */
     void urlTriggered(const QUrl &url);
 
+    /**
+     * Emitted when the recent files list has been changed.
+     *
+     * See \ref recentFiles
+     * See \ref clearRecentFiles
+     *
+     * @since 5.101
+     */
+    void recentFilesChanged();
+
 private:
     void readFromFile();
     void writeToFile();
     void rebuildMenu();
+
+    friend class KRecentFilesMenuPrivate;
 
     std::unique_ptr<KRecentFilesMenuPrivate> const d;
 };

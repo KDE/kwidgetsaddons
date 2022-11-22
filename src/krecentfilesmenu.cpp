@@ -71,19 +71,40 @@ public:
 class KRecentFilesMenuPrivate
 {
 public:
+    explicit KRecentFilesMenuPrivate(KRecentFilesMenu *q_ptr);
+
+    std::vector<RecentFilesEntry *>::iterator findEntry(const QUrl &url);
+    void recentFilesChanged() const;
+
+    KRecentFilesMenu *const q;
     QString m_group = QStringLiteral("RecentFiles");
     std::vector<RecentFilesEntry *> m_entries;
     QSettings *m_settings;
     size_t m_maximumItems = 10;
     QAction *m_noEntriesAction;
     QAction *m_clearAction;
-
-    std::vector<RecentFilesEntry *>::iterator findEntry(const QUrl &url);
 };
+
+KRecentFilesMenuPrivate::KRecentFilesMenuPrivate(KRecentFilesMenu *q_ptr)
+    : q(q_ptr)
+{}
+
+std::vector<RecentFilesEntry *>::iterator KRecentFilesMenuPrivate::findEntry(const QUrl &url)
+{
+    return std::find_if(m_entries.begin(), m_entries.end(), [url](RecentFilesEntry *entry) {
+        return entry->url == url;
+    });
+}
+
+void KRecentFilesMenuPrivate::recentFilesChanged() const
+{
+    q->rebuildMenu();
+    Q_EMIT q->recentFilesChanged();
+}
 
 KRecentFilesMenu::KRecentFilesMenu(const QString &title, QWidget *parent)
     : QMenu(title, parent)
-    , d(new KRecentFilesMenuPrivate)
+    , d(new KRecentFilesMenuPrivate(this))
 {
     setIcon(QIcon::fromTheme(QStringLiteral("document-open-recent")));
     const QString fileName =
@@ -96,7 +117,6 @@ KRecentFilesMenu::KRecentFilesMenu(const QString &title, QWidget *parent)
     d->m_clearAction = new QAction(QIcon::fromTheme(QStringLiteral("edit-clear-history")), tr("Clear List"));
 
     readFromFile();
-    rebuildMenu();
 }
 
 KRecentFilesMenu::KRecentFilesMenu(QWidget *parent)
@@ -132,6 +152,8 @@ void KRecentFilesMenu::readFromFile()
 
     d->m_settings->endArray();
     d->m_settings->endGroup();
+
+    d->recentFilesChanged();
 }
 
 void KRecentFilesMenu::addUrl(const QUrl &url, const QString &name)
@@ -156,7 +178,8 @@ void KRecentFilesMenu::addUrl(const QUrl &url, const QString &name)
 
     RecentFilesEntry *entry = new RecentFilesEntry(url, displayName, this);
     d->m_entries.insert(d->m_entries.begin(), entry);
-    rebuildMenu();
+
+    d->recentFilesChanged();
 }
 
 void KRecentFilesMenu::removeUrl(const QUrl &url)
@@ -169,7 +192,8 @@ void KRecentFilesMenu::removeUrl(const QUrl &url)
 
     delete *it;
     d->m_entries.erase(it);
-    rebuildMenu();
+
+    d->recentFilesChanged();
 }
 
 void KRecentFilesMenu::rebuildMenu()
@@ -188,11 +212,8 @@ void KRecentFilesMenu::rebuildMenu()
     addSeparator();
     addAction(d->m_clearAction);
 
-    connect(d->m_clearAction, &QAction::triggered, this, [this] {
-        qDeleteAll(d->m_entries);
-        d->m_entries.clear();
-        rebuildMenu();
-    });
+    // reconnect d->m_clearAction, since it was disconnected in clear()
+    connect(d->m_clearAction, &QAction::triggered, this, &KRecentFilesMenu::clearRecentFiles);
 }
 
 void KRecentFilesMenu::writeToFile()
@@ -214,13 +235,6 @@ void KRecentFilesMenu::writeToFile()
     d->m_settings->sync();
 }
 
-std::vector<RecentFilesEntry *>::iterator KRecentFilesMenuPrivate::findEntry(const QUrl &url)
-{
-    return std::find_if(m_entries.begin(), m_entries.end(), [url](RecentFilesEntry *entry) {
-        return entry->url == url;
-    });
-}
-
 QString KRecentFilesMenu::group() const
 {
     return d->m_group;
@@ -230,7 +244,6 @@ void KRecentFilesMenu::setGroup(const QString &group)
 {
     d->m_group = group;
     readFromFile();
-    rebuildMenu();
 }
 
 int KRecentFilesMenu::maximumItems() const
@@ -246,6 +259,26 @@ void KRecentFilesMenu::setMaximumItems(size_t maximumItems)
     if (d->m_entries.size() > maximumItems) {
         qDeleteAll(d->m_entries.begin() + maximumItems, d->m_entries.end());
         d->m_entries.erase(d->m_entries.begin() + maximumItems, d->m_entries.end());
-        rebuildMenu();
+
+        d->recentFilesChanged();
     }
+}
+
+QList<QUrl> KRecentFilesMenu::recentFiles() const
+{
+    QList<QUrl> urls;
+    urls.reserve(d->m_entries.size());
+    std::transform(d->m_entries.cbegin(), d->m_entries.cend(), std::back_inserter(urls), [](const RecentFilesEntry *entry) {
+        return entry->url;
+    });
+
+    return urls;
+}
+
+void KRecentFilesMenu::clearRecentFiles()
+{
+    qDeleteAll(d->m_entries);
+    d->m_entries.clear();
+
+    d->recentFilesChanged();
 }
