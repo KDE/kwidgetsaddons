@@ -3051,21 +3051,21 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "С&әгать йөреше каршына бору"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 #, fuzzy
 #| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Язмасыз"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Исемлекне чистарту"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

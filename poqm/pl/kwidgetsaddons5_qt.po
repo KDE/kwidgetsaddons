@@ -2072,17 +2072,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "&Obróć w lewo"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Brak wpisów"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Wyczyść listę"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Ostatnie pliki"

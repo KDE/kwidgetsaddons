@@ -2103,17 +2103,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Forgatás &balra"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Nincs bejegyzés"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "A lista törlése"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Legutóbbi fájlok"

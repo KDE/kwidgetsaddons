@@ -2577,19 +2577,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Rotacion &antiorària"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Nòtas :"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Escafar la picada"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 #| msgid "Delete File"
 msgctxt "KRecentFilesMenu|"

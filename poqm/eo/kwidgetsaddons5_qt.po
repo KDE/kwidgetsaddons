@@ -2475,21 +2475,21 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Turni &kontraŭhorloĝdirekte"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 #, fuzzy
 #| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Neniuj eroj"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Forviŝi liston"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

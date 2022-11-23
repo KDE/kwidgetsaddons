@@ -2950,19 +2950,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "বাওঁফালে ঘোৰাওক (&C)"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "কোনো নিবেশ উপস্থিত নাই"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "নিবেশ কৰা তথ্য আঁতৰুৱা হ'ব"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

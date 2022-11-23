@@ -2418,12 +2418,12 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Okreni &suprotno smjeru kazaljke na satu"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr ""
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 #, fuzzy
 #| msgctxt "KStandardGuiItem|"
 #| msgid "Clear input"
@@ -2431,7 +2431,7 @@ msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Očisti unos"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr ""

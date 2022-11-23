@@ -2979,19 +2979,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "ବାମାବର୍ତ୍ତୀ ଘୁରାନ୍ତୁ (&C)"
 
-#: krecentfilesmenu.cpp:93
+#: krecentfilesmenu.cpp:114
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "କୌଣସି ଭରଣ ନାହିଁ"
 
-#: krecentfilesmenu.cpp:96
+#: krecentfilesmenu.cpp:117
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "ନିବେଶ ସଫାକରନ୍ତୁ"
 
-#: krecentfilesmenu.cpp:103
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"
