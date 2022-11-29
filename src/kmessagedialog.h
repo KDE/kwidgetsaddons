@@ -112,20 +112,20 @@ public:
      * @since 5.100
      */
     enum ButtonType {
-        Ok = 1,
-        Cancel = 2,
-        PrimaryAction = 3,
-        SecondaryAction = 4,
+        Ok = 1, ///< Ok button
+        Cancel = 2, ///< Cancel button
+        PrimaryAction = 3, ///< Primary action button
+        SecondaryAction = 4, ///< Secondary action button
     };
 
     enum Type {
-        QuestionTwoActions = 1, ///< @since 5.100
-        QuestionTwoActionsCancel = 2, ///< @since 5.100
-        WarningTwoActions = 3, ///< @since 5.100
-        WarningTwoActionsCancel = 4, ///< @since 5.100
-        WarningContinueCancel = 5,
-        Information = 6,
-        Error = 8,
+        QuestionTwoActions = 1, ///< Question dialog with two buttons; @since 5.100
+        QuestionTwoActionsCancel = 2, ///< Question dialog with two buttons and Cancel; @since 5.100
+        WarningTwoActions = 3, ///< Warning dialog with two buttons; @since 5.100
+        WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; @since 5.100
+        WarningContinueCancel = 5, ///< Warning dialog with Continue and Cancel
+        Information = 6, ///< Information dialog
+        Error = 8, ///< Error dialog
     };
 
     /**

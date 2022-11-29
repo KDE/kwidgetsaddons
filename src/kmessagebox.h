@@ -46,22 +46,22 @@ namespace KMessageBox
  * Button types.
  */
 enum ButtonCode {
-    Ok = 1,
-    Cancel = 2,
-    PrimaryAction = 3, ///< @since 5.100
-    SecondaryAction = 4, ///< @since 5.100
-    Continue = 5,
+    Ok = 1, ///< Ok button
+    Cancel = 2, ///< Cancel button
+    PrimaryAction = 3, ///< Primary action button; @since 5.100
+    SecondaryAction = 4, ///< Secondary action button; @since 5.100
+    Continue = 5, ///< Continue button
 };
 
 enum DialogType {
-    QuestionTwoActions = 1, ///< @since 5.100
-    WarningTwoActions = 2, ///< @since 5.100
-    WarningContinueCancel = 3,
-    WarningTwoActionsCancel = 4, ///< @since 5.100
-    Information = 5,
+    QuestionTwoActions = 1, ///< Question dialog with two buttons; @since 5.100
+    WarningTwoActions = 2, ///< Warning dialog with two buttons; @since 5.100
+    WarningContinueCancel = 3, ///< Warning dialog with Continue and Cancel
+    WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; @since 5.100
+    Information = 5, ///< Information dialog
     // Reserved for: SSLMessageBox = 6
-    Error = 8,
-    QuestionTwoActionsCancel = 9, ///< @since 5.100
+    Error = 8, ///< Error dialog
+    QuestionTwoActionsCancel = 9, ///< Question dialog with two buttons and Cancel; @since 5.100
 };
 
 /**
