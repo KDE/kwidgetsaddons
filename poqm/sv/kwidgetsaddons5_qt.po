@@ -2392,35 +2392,32 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "Tid får inte vara senare än %1"
 
-#: ktogglefullscreenaction.cpp:39
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "Avsluta f&ullskärmsläge"
-
-#: ktogglefullscreenaction.cpp:40
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "Avsluta fullskärm"
-
-#: ktogglefullscreenaction.cpp:41
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "Avsluta fullskärmsläge"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "F&ullskärmsläge"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Fullskärm"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Visa fönstret i fullskärmsläge"
+
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "Avsluta f&ullskärmsläge"
+
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "Avsluta fullskärm"
+
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "Avsluta fullskärmsläge"
 
 #~ msgctxt "KMessageBox|@action:button post-filter"
 #~ msgid "."

@@ -2442,35 +2442,32 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "Az idő nem lehet későbbi mint %1"
 
-#: ktogglefullscreenaction.cpp:39
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "Kilépés a &teljes képernyős módból"
-
-#: ktogglefullscreenaction.cpp:40
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "Kilépés a teljes képernyős módból"
-
-#: ktogglefullscreenaction.cpp:41
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "Kilépés a &teljes képernyős módból"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "&Teljes képernyős mód"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Teljes képernyős mód"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Ablak megjelenítése teljes képernyős módban"
+
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "Kilépés a &teljes képernyős módból"
+
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "Kilépés a teljes képernyős módból"
+
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "Kilépés a &teljes képernyős módból"
 
 #~ msgctxt "KMessageBox|@action:button post-filter"
 #~ msgid "."

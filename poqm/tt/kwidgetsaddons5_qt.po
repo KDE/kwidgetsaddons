@@ -3524,45 +3524,42 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "Вакыт моннан соңрак була алмый: %1"
 
-#: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "&Тулы экранлы режимнан чыгу"
-
-#: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgid "Exit Full Screen"
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "Тулы экраннан чыгу"
-
-#: ktogglefullscreenaction.cpp:41
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "&Тулы экранлы режимнан чыгу"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 #, fuzzy
 #| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "&Тулы экранлы режим"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 #, fuzzy
 #| msgid "Full Screen"
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Тулы экран"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "&Тулы экранлы режимнан чыгу"
+
+#, fuzzy
+#~| msgid "Exit Full Screen"
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "Тулы экраннан чыгу"
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "&Тулы экранлы режимнан чыгу"
 
 #, fuzzy
 #~| msgctxt "@action:button post-filter"

@@ -2411,35 +2411,32 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "La hora no puede ser posterior a %1"
 
-#: ktogglefullscreenaction.cpp:39
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "Salir del &modo de pantalla completa"
-
-#: ktogglefullscreenaction.cpp:40
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "Salir de pantalla completa"
-
-#: ktogglefullscreenaction.cpp:41
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "Salir del modo de pantalla completa"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "&Modo de pantalla completa"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Pantalla completa"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Mostrar la ventana a pantalla completa"
+
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "Salir del &modo de pantalla completa"
+
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "Salir de pantalla completa"
+
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "Salir del modo de pantalla completa"
 
 #~ msgctxt "KMessageBox|@action:button post-filter"
 #~ msgid "."

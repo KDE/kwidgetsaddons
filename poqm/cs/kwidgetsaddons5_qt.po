@@ -2398,35 +2398,32 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "Čas nemůže být později než %1"
 
-#: ktogglefullscreenaction.cpp:39
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "&Ukončit celoobrazovkový režim"
-
-#: ktogglefullscreenaction.cpp:40
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "Ukončit celoobrazovkový režim"
-
-#: ktogglefullscreenaction.cpp:41
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "Ukončit celoobrazovkový režim"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "Celoobrazovkový reži&m"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Celá obrazovka"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Zobrazit okno na celou obrazovku"
+
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "&Ukončit celoobrazovkový režim"
+
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "Ukončit celoobrazovkový režim"
+
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "Ukončit celoobrazovkový režim"
 
 #~ msgctxt "KMessageBox|@action:button post-filter"
 #~ msgid "."

@@ -3540,45 +3540,42 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "Datum ne može biti kasniji od %1"
 
-#: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "Izlaz iz p&unog zaslona"
-
-#: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgid "Exit Full Screen"
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "Izlaz iz punog zaslona"
-
-#: ktogglefullscreenaction.cpp:41
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "Izlaz iz p&unog zaslona"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 #, fuzzy
 #| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "Preko punog &zaslona"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 #, fuzzy
 #| msgid "Full Screen"
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Preko punog zaslona"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "Izlaz iz p&unog zaslona"
+
+#, fuzzy
+#~| msgid "Exit Full Screen"
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "Izlaz iz punog zaslona"
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "Izlaz iz p&unog zaslona"
 
 #, fuzzy
 #~| msgctxt "@action:button post-filter"

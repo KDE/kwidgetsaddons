@@ -3431,35 +3431,14 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr ""
 
-#: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "पूरा पर्दा मोडबाट निस्कनुहोस्"
-
-#: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "पूरा पर्दा मोडबाट निस्कनुहोस्"
-
-#: ktogglefullscreenaction.cpp:41
-#, fuzzy
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "पूरा पर्दा मोडबाट निस्कनुहोस्"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 #, fuzzy
 #| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "पूरा पर्दा मोड"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Full Screen Mode"
@@ -3467,10 +3446,28 @@ msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "पूरा पर्दा मोड"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "पूरा पर्दा मोडबाट निस्कनुहोस्"
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "पूरा पर्दा मोडबाट निस्कनुहोस्"
+
+#, fuzzy
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "पूरा पर्दा मोडबाट निस्कनुहोस्"
 
 #, fuzzy
 #~| msgctxt "@item font"

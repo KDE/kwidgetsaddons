@@ -3528,38 +3528,14 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "ۋاقىت %1 دىن كېيىن بولسا بولمايدۇ"
 
-#: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "پۈتۈن ئېكران ھالىتىنى ئاخىرلاشتۇر(&U)"
-
-#: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Exit Full Screen"
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "پۈتۈن ئېكراننى ئاخىرلاشتۇر"
-
-#: ktogglefullscreenaction.cpp:41
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Exit full screen mode"
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "پۈتۈن ئېكران ھالىتىدىن چېكىنىدۇ"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 #, fuzzy
 #| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "پۈتۈن ئېكران ھالىتى(&U)"
 
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Full Screen"
@@ -3567,13 +3543,34 @@ msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "پۈتۈن ئېكران"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Display the window in full screen"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
+
+#, fuzzy
+#~| msgctxt "@action:inmenu"
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "پۈتۈن ئېكران ھالىتىنى ئاخىرلاشتۇر(&U)"
+
+#, fuzzy
+#~| msgctxt "@action:intoolbar"
+#~| msgid "Exit Full Screen"
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "پۈتۈن ئېكراننى ئاخىرلاشتۇر"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Exit full screen mode"
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "پۈتۈن ئېكران ھالىتىدىن چېكىنىدۇ"
 
 #, fuzzy
 #~| msgctxt "@action:button post-filter"

@@ -3526,32 +3526,7 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "زمان نمیتواند از %1 دیرتر باشد"
 
-#: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgctxt "@action:inmenu"
-#| msgid "Exit F&ull Screen Mode"
-msgctxt "KToggleFullScreenAction|@action:inmenu"
-msgid "Exit F&ull Screen Mode"
-msgstr "خروج از حالت &تمام صفحه‌"
-
-# Exit Full Screen
-#: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Exit Full Screen"
-msgctxt "KToggleFullScreenAction|@action:intoolbar"
-msgid "Exit Full Screen"
-msgstr "خروج از تمام‌صفحه"
-
-#: ktogglefullscreenaction.cpp:41
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Exit full screen mode"
-msgctxt "KToggleFullScreenAction|@info:tooltip"
-msgid "Exit full screen mode"
-msgstr "خروج از حالت تمام صفحه‌"
-
-#: ktogglefullscreenaction.cpp:44
+#: ktogglefullscreenaction.cpp:38
 #, fuzzy
 #| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
@@ -3559,7 +3534,7 @@ msgid "F&ull Screen Mode"
 msgstr "حالت &تمام صفحه‌"
 
 # Full Screen
-#: ktogglefullscreenaction.cpp:45
+#: ktogglefullscreenaction.cpp:39
 #, fuzzy
 #| msgctxt "@action:intoolbar"
 #| msgid "Full Screen"
@@ -3567,10 +3542,32 @@ msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "تمام‌صفحه"
 
-#: ktogglefullscreenaction.cpp:46
+#: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "@action:inmenu"
+#~| msgid "Exit F&ull Screen Mode"
+#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
+#~ msgid "Exit F&ull Screen Mode"
+#~ msgstr "خروج از حالت &تمام صفحه‌"
+
+# Exit Full Screen
+#, fuzzy
+#~| msgctxt "@action:intoolbar"
+#~| msgid "Exit Full Screen"
+#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
+#~ msgid "Exit Full Screen"
+#~ msgstr "خروج از تمام‌صفحه"
+
+#, fuzzy
+#~| msgctxt "@info:tooltip"
+#~| msgid "Exit full screen mode"
+#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
+#~ msgid "Exit full screen mode"
+#~ msgstr "خروج از حالت تمام صفحه‌"
 
 # .
 #, fuzzy
