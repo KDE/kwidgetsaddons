@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-11-24 17:06+0300\n"
+"PO-Revision-Date: 2022-12-11 14:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -292,7 +292,7 @@ msgstr "Gurmukhi Dili"
 #: kcharselect-translation.cpp:51
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
-msgstr "Gujarati Dili"
+msgstr "Güceratça"
 
 #: kcharselect-translation.cpp:52
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -307,12 +307,12 @@ msgstr "Tamilce"
 #: kcharselect-translation.cpp:54
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
-msgstr "Telugu"
+msgstr "Teluguca"
 
 #: kcharselect-translation.cpp:55
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
-msgstr "Kannada Dili"
+msgstr "Kannadaca"
 
 #: kcharselect-translation.cpp:56
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -327,7 +327,7 @@ msgstr "Sinhala Dili"
 #: kcharselect-translation.cpp:58
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
-msgstr "Tai Dili"
+msgstr "Tayca"
 
 #: kcharselect-translation.cpp:59
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -407,7 +407,7 @@ msgstr "Tagbanwa"
 #: kcharselect-translation.cpp:74
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer"
-msgstr "Kimerce"
+msgstr "Kmerce"
 
 #: kcharselect-translation.cpp:75
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -437,7 +437,7 @@ msgstr "New Tai Lue"
 #: kcharselect-translation.cpp:80
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer Symbols"
-msgstr "Khmer Sembolleri"
+msgstr "Kmerce Sembolleri"
 
 #: kcharselect-translation.cpp:81
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -487,7 +487,7 @@ msgstr "Genişletilmiş Kiril-C"
 #: kcharselect-translation.cpp:90
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "Gürcüce Ek"
+msgstr "Genişletilmiş Gürcüce"
 
 #: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
