@@ -1,22 +1,22 @@
 # Traducerea kdelibs4.po în Română
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2008, 2009.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2014, 2020.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2014, 2020, 2022.
 # Cristian Oneț <onet.cristian@gmail.com>, 2010, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2020-10-05 23:17+0100\n"
+"PO-Revision-Date: 2022-12-28 21:02+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -80,12 +80,9 @@ msgid "Finish"
 msgstr "Termină"
 
 #: kcharselect-translation.cpp:11 kcharselect.cpp:470 kcharselectdata.cpp:285
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr "To&ate"
+msgstr "Toate"
 
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -469,17 +466,11 @@ msgid "Combining Diacritical Marks Extended"
 msgstr "Semne diacritice combinatorii"
 
 #: kcharselect-translation.cpp:84
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Balinese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
-msgstr "Balinese"
+msgstr "Balineză"
 
 #: kcharselect-translation.cpp:85
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Sundanese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
 msgstr "Sudaneză"
@@ -509,20 +500,14 @@ msgid "Ol Chiki"
 msgstr "Ol Chiki"
 
 #: kcharselect-translation.cpp:89
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
-msgstr "Chirilic extins-A"
+msgstr "Chirilic extins-C"
 
 #: kcharselect-translation.cpp:90
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Geometric Shapes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "Forme geometrice"
+msgstr "Georgian extins"
 
 #: kcharselect-translation.cpp:91
 #, fuzzy
