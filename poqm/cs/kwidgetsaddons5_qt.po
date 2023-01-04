@@ -3,7 +3,7 @@
 # Lukáš Tinkl <lukas@kde.org>, 2010, 2011, 2012.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
 msgid ""
 msgstr ""
@@ -2412,19 +2412,3 @@ msgstr "Celá obrazovka"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Zobrazit okno na celou obrazovku"
-
-#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
-#~ msgid "Exit F&ull Screen Mode"
-#~ msgstr "&Ukončit celoobrazovkový režim"
-
-#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
-#~ msgid "Exit Full Screen"
-#~ msgstr "Ukončit celoobrazovkový režim"
-
-#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
-#~ msgid "Exit full screen mode"
-#~ msgstr "Ukončit celoobrazovkový režim"
-
-#~ msgctxt "KMessageBox|@action:button post-filter"
-#~ msgid "."
-#~ msgstr "."
