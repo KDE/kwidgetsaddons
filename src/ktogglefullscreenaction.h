@@ -81,6 +81,10 @@ public:
 protected:
     bool eventFilter(QObject *object, QEvent *event) override;
 
+    // KF6 TODO: remove
+protected Q_SLOTS:
+    void slotToggled(bool checked) override;
+
 private:
     Q_DECLARE_PRIVATE_D(KToggleAction::d, KToggleFullScreenAction)
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
