@@ -78,6 +78,11 @@ void KToggleFullScreenAction::setWindow(QWidget *window)
     }
 }
 
+void KToggleFullScreenAction::slotToggled(bool checked)
+{
+    KToggleAction::slotToggled(checked);
+}
+
 bool KToggleFullScreenAction::eventFilter(QObject *object, QEvent *event)
 {
     Q_D(KToggleFullScreenAction);
