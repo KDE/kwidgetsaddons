@@ -29,7 +29,7 @@ ecm_add_tests(
   kmultitabbartest.cpp
   ktwofingertaptest.cpp
   ktwofingerswipetest.cpp
-  LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF5::WidgetsAddons
+  LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF6::WidgetsAddons
 )
 
 set (CMAKE_AUTOUIC TRUE)
@@ -40,5 +40,5 @@ ecm_add_test(
   kcolumnresizertest-grid-and-form.ui
   TEST_NAME kcolumnresizertest
   NAME_PREFIX "kwidgetsaddons-"
-  LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF5::WidgetsAddons
+  LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF6::WidgetsAddons
 )

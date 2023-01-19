@@ -33,8 +33,8 @@ include(CMakeDependentOption)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KWIDGETSADDONS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5WidgetsAddonsConfigVersion.cmake"
-                        SOVERSION 5)
+                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6WidgetsAddonsConfigVersion.cmake"
+                        SOVERSION 6)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
@@ -61,29 +61,29 @@ if (BUILD_TESTING)
 endif()
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5WidgetsAddons")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6WidgetsAddons")
 
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5WidgetsAddons_QCH
-        FILE KF5WidgetsAddonsQchTargets.cmake
+        TARGETS KF6WidgetsAddons_QCH
+        FILE KF6WidgetsAddonsQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5WidgetsAddonsQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6WidgetsAddonsQchTargets.cmake\")")
 endif()
 
-configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/KF5WidgetsAddonsConfig.cmake.in"
-                              "${CMAKE_CURRENT_BINARY_DIR}/KF5WidgetsAddonsConfig.cmake"
+configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/KF6WidgetsAddonsConfig.cmake.in"
+                              "${CMAKE_CURRENT_BINARY_DIR}/KF6WidgetsAddonsConfig.cmake"
                               INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
                               )
 
-install(FILES  "${CMAKE_CURRENT_BINARY_DIR}/KF5WidgetsAddonsConfig.cmake"
-               "${CMAKE_CURRENT_BINARY_DIR}/KF5WidgetsAddonsConfigVersion.cmake"
+install(FILES  "${CMAKE_CURRENT_BINARY_DIR}/KF6WidgetsAddonsConfig.cmake"
+               "${CMAKE_CURRENT_BINARY_DIR}/KF6WidgetsAddonsConfigVersion.cmake"
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel )
 
-install(EXPORT KF5WidgetsAddonsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5WidgetsAddonsTargets.cmake NAMESPACE KF5:: )
+install(EXPORT KF6WidgetsAddonsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6WidgetsAddonsTargets.cmake NAMESPACE KF6:: )
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h

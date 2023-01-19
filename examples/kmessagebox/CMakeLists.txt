@@ -3,7 +3,7 @@ add_executable(kwidgetaddons-example-kmessagebox main.cpp)
 
 target_link_libraries(kwidgetaddons-example-kmessagebox
     Qt${QT_MAJOR_VERSION}::Widgets
-    KF5::WidgetsAddons
+    KF6::WidgetsAddons
 )
 
 # We don't want to install the tutorial

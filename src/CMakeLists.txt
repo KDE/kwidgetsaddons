@@ -1,11 +1,11 @@
 include(ECMPoQmTools)
 
-add_library(KF5WidgetsAddons)
-add_library(KF5::WidgetsAddons ALIAS KF5WidgetsAddons)
+add_library(KF6WidgetsAddons)
+add_library(KF6::WidgetsAddons ALIAS KF6WidgetsAddons)
 
-ecm_create_qm_loader(KF5WidgetsAddons kwidgetsaddons5_qt)
+ecm_create_qm_loader(KF6WidgetsAddons kwidgetsaddons5_qt)
 
-target_sources(KF5WidgetsAddons PRIVATE
+target_sources(KF6WidgetsAddons PRIVATE
     common_helpers.cpp
     common_helpers_p.h
     fonthelpers_p.h
@@ -193,9 +193,9 @@ qt_wrap_ui(kwidgetsaddons_UI_SRCS
    kpassworddialog.ui
    kfontchooserwidget.ui
 )
-target_sources(KF5WidgetsAddons PRIVATE ${kwidgetsaddons_UI_SRCS})
+target_sources(KF6WidgetsAddons PRIVATE ${kwidgetsaddons_UI_SRCS})
 
-ecm_qt_declare_logging_category(KF5WidgetsAddons
+ecm_qt_declare_logging_category(KF6WidgetsAddons
     HEADER loggingcategory.h
     IDENTIFIER KWidgetsAddonsLog
     CATEGORY_NAME kf.kwidgetsaddons
@@ -204,7 +204,7 @@ ecm_qt_declare_logging_category(KF5WidgetsAddons
     EXPORT KWIDGETSADDONS
 )
 
-ecm_generate_export_header(KF5WidgetsAddons
+ecm_generate_export_header(KF6WidgetsAddons
     BASE_NAME KWidgetsAddons
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
@@ -213,11 +213,11 @@ ecm_generate_export_header(KF5WidgetsAddons
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
-target_link_libraries(KF5WidgetsAddons PUBLIC Qt${QT_MAJOR_VERSION}::Widgets)
+target_link_libraries(KF6WidgetsAddons PUBLIC Qt${QT_MAJOR_VERSION}::Widgets)
 
-target_include_directories(KF5WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons>")
+target_include_directories(KF6WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons>")
 
-set_target_properties(KF5WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION}
+set_target_properties(KF6WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION}
                                                   SOVERSION ${KWIDGETSADDONS_SOVERSION}
                                                   EXPORT_NAME WidgetsAddons
 )
@@ -303,7 +303,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
-install(TARGETS KF5WidgetsAddons EXPORT KF5WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF6WidgetsAddons EXPORT KF6WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${KWidgetsAddons_HEADERS}
@@ -315,9 +315,9 @@ install(FILES kcharselect-data  DESTINATION  ${KDE_INSTALL_DATADIR_KF}/kcharsele
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5WidgetsAddons_QCH
+        KF6WidgetsAddons_QCH
         NAME KWidgetsAddons
-        BASE_NAME KF5WidgetsAddons
+        BASE_NAME KF6WidgetsAddons
         VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -355,5 +355,5 @@ ecm_qt_install_logging_categories(
 )
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF5WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons)
+ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF6WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

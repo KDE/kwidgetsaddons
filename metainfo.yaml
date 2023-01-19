@@ -13,8 +13,8 @@ deprecated: false
 release: true
 libraries:
  - qmake: KWidgetsAddons
-   cmake: "KF5::WidgetsAddons"
-cmakename: KF5WidgetsAddons
+   cmake: "KF6::WidgetsAddons"
+cmakename: KF6WidgetsAddons
 
 public_lib: true
 group: Frameworks
