@@ -13,19 +13,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017, 2018.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2020-05-14 23:42+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-01-20 00:54+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -265,12 +266,9 @@ msgid "Syriac Supplement"
 msgstr "敘利亞補集"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "阿拉伯延伸 A"
+msgstr "阿拉伯延伸 B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1536,81 +1534,51 @@ msgid "Close"
 msgstr "關閉"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "明年"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "下個月"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "下週"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "明天"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "今天"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "昨天"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "上週"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "上個月"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "去年"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "沒有日期"
@@ -1722,67 +1690,41 @@ msgid "KFontChooserWidget"
 msgstr ""
 
 #: kfontchooserwidget.ui:31
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "字型"
 
 #: kfontchooserwidget.ui:38
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "字型："
 
 #: kfontchooserwidget.ui:56
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "字型樣式"
 
 #: kfontchooserwidget.ui:63
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "字型樣式："
 
 #: kfontchooserwidget.ui:81
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "大小"
 
 #: kfontchooserwidget.ui:88
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "大小："
 
 #: kfontchooserwidget.ui:97
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相對"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@info:whatsthis"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1790,9 +1732,6 @@ msgid ""
 msgstr "此段範例文字顯示目前的設定。您可以編輯這段文字來測試特殊字符。"
 
 #: kfontchooserwidget.ui:135
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Show only monospaced fonts"
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "僅顯示等寬字型"
@@ -1880,49 +1819,31 @@ msgid "Do not show this message again"
 msgstr "不要再顯示此訊息"
 
 #: kmessagedialog.cpp:179
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "詳細資料"
 
 #: kmessagedialog.cpp:264
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "問題"
 
 #: kmessagedialog.cpp:269
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
 #: kmessagedialog.cpp:272
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "資訊"
 
 #: kmessagedialog.cpp:276
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "抱歉"
 
 #: kmessagedialog.cpp:280
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "錯誤"
