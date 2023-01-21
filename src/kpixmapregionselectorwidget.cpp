@@ -263,7 +263,7 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
 
         if (mev->button() == Qt::RightButton) {
             QMenu *popup = createPopupMenu();
-            popup->exec(mev->globalPos());
+            popup->exec(mev->globalPosition().toPoint());
             delete popup;
             return true;
         }
@@ -293,8 +293,8 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
         if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Resizing) {
             setSelectedRegion(d->calcSelectionRectangle(d->m_tempFirstClick, mev->pos()));
         } else if (d->m_state == KPixmapRegionSelectorWidgetPrivate::Moving) {
-            int mevx = mev->x();
-            int mevy = mev->y();
+            int mevx = mev->position().x();
+            int mevy = mev->position().y();
             bool mouseOutside = false;
             if (mevx < 0) {
                 d->m_selectedRegion.translate(-d->m_selectedRegion.x(), 0);
@@ -315,8 +315,8 @@ bool KPixmapRegionSelectorWidget::eventFilter(QObject *obj, QEvent *ev)
                 return true;
             };
 
-            d->m_selectedRegion.translate(mev->x() - d->m_tempFirstClick.x(), //
-                                          mev->y() - d->m_tempFirstClick.y());
+            d->m_selectedRegion.translate(mev->position().x() - d->m_tempFirstClick.x(), //
+                                          mev->position().y() - d->m_tempFirstClick.y());
 
             // Check that the region has not fallen outside the image
             if (d->m_selectedRegion.x() < 0) {

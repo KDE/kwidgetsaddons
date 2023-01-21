@@ -54,11 +54,11 @@ QGestureRecognizer::Result KTwoFingerSwipeRecognizer::recognize(QGesture *gestur
     case QEvent::TouchBegin: {
         d->mTouchBeginnTimestamp = touchEvent->timestamp();
         d->mGestureAlreadyFinished = false;
-        const QTouchEvent::TouchPoint tp = touchEvent->touchPoints().first();
-        kTwoFingerSwipe->setHotSpot(tp.startScreenPos());
-        kTwoFingerSwipe->setPos(tp.startPos());
-        kTwoFingerSwipe->setScreenPos(tp.startScreenPos());
-        kTwoFingerSwipe->setScenePos(tp.startScenePos());
+        const QTouchEvent::TouchPoint tp = touchEvent->points().first();
+        kTwoFingerSwipe->setHotSpot(tp.globalPressPosition());
+        kTwoFingerSwipe->setPos(tp.pressPosition());
+        kTwoFingerSwipe->setScreenPos(tp.globalPressPosition());
+        kTwoFingerSwipe->setScenePos(tp.scenePressPosition());
         kTwoFingerSwipe->setSwipeAngle(0.0);
         return MayBeGesture;
     }
@@ -71,9 +71,9 @@ QGestureRecognizer::Result KTwoFingerSwipeRecognizer::recognize(QGesture *gestur
 
         const qint64 now = touchEvent->timestamp();
         const qint64 elapsedTime = now - d->mTouchBeginnTimestamp;
-        const QLineF ql = QLineF(touchEvent->touchPoints().first().startPos(), touchEvent->touchPoints().first().pos());
+        const QLineF ql = QLineF(touchEvent->points().first().pressPosition(), touchEvent->points().first().position());
         const qreal length = ql.length();
-        const int touchPointSize = touchEvent->touchPoints().size();
+        const int touchPointSize = touchEvent->points().size();
 
         kTwoFingerSwipe->setSwipeAngle(ql.angle());
 

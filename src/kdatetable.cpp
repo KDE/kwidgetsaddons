@@ -532,12 +532,12 @@ bool KDateTable::event(QEvent *ev)
     switch (ev->type()) {
     case QEvent::HoverMove: {
         QHoverEvent *e = static_cast<QHoverEvent *>(ev);
-        const int row = e->pos().y() * d->m_numWeekRows / height();
+        const int row = e->position().y() * d->m_numWeekRows / height();
         int col;
         if (layoutDirection() == Qt::RightToLeft) {
-            col = d->m_numDayColumns - (e->pos().x() * d->m_numDayColumns / width()) - 1;
+            col = d->m_numDayColumns - (e->position().x() * d->m_numDayColumns / width()) - 1;
         } else {
-            col = e->pos().x() * d->m_numDayColumns / width();
+            col = e->position().x() * d->m_numDayColumns / width();
         }
 
         const int pos = row < 1 ? -1 : (d->m_numDayColumns * (row - 1)) + col;
@@ -611,7 +611,7 @@ void KDateTable::mousePressEvent(QMouseEvent *e)
         QMenu *menu = new QMenu();
         menu->addSection(locale().toString(d->m_date));
         Q_EMIT aboutToShowContextMenu(menu, clickedDate);
-        menu->popup(e->globalPos());
+        menu->popup(e->globalPosition().toPoint());
     }
 }
 

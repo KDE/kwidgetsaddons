@@ -51,11 +51,11 @@ QGestureRecognizer::Result KTwoFingerTapRecognizer::recognize(QGesture *gesture,
 
     switch (event->type()) {
     case QEvent::TouchBegin: {
-        const QTouchEvent::TouchPoint tp = touchEvent->touchPoints().first();
-        ktwoFingerTap->setHotSpot(tp.startScreenPos());
-        ktwoFingerTap->setPos(tp.startPos());
-        ktwoFingerTap->setScreenPos(tp.startScreenPos());
-        ktwoFingerTap->setScenePos(tp.startScenePos());
+        const QTouchEvent::TouchPoint tp = touchEvent->points().first();
+        ktwoFingerTap->setHotSpot(tp.globalPressPosition());
+        ktwoFingerTap->setPos(tp.pressPosition());
+        ktwoFingerTap->setScreenPos(tp.globalPressPosition());
+        ktwoFingerTap->setScenePos(tp.scenePressPosition());
         d->mLastState = Qt::NoGesture;
         return MayBeGesture;
     }
@@ -66,7 +66,7 @@ QGestureRecognizer::Result KTwoFingerTapRecognizer::recognize(QGesture *gesture,
             return Ignore;
         }
 
-        const int touchPointSize = touchEvent->touchPoints().size();
+        const int touchPointSize = touchEvent->points().size();
 
         if (touchPointSize > 2) {
             d->mLastState = Qt::GestureCanceled;
@@ -74,11 +74,11 @@ QGestureRecognizer::Result KTwoFingerTapRecognizer::recognize(QGesture *gesture,
         }
 
         if (touchPointSize == 2) {
-            if ((touchEvent->touchPoints().first().startPos() - touchEvent->touchPoints().first().pos()).manhattanLength() > d->mTapRadius) {
+            if ((touchEvent->points().first().pressPosition() - touchEvent->points().first().position()).manhattanLength() > d->mTapRadius) {
                 d->mLastState = Qt::GestureCanceled;
                 return CancelGesture;
             }
-            if ((touchEvent->touchPoints().at(1).startPos() - touchEvent->touchPoints().at(1).pos()).manhattanLength() > d->mTapRadius) {
+            if ((touchEvent->points().at(1).pressPosition() - touchEvent->points().at(1).position()).manhattanLength() > d->mTapRadius) {
                 d->mLastState = Qt::GestureCanceled;
                 return CancelGesture;
             }
