@@ -56,24 +56,22 @@ public:
 
 QStringList fontList(const QFontComboBox::FontFilters &fontFilters = QFontComboBox::AllFonts)
 {
-    QFontDatabase dbase;
-
     QStringList families;
     if (fontFilters == QFontComboBox::AllFonts) {
-        families = dbase.families();
+        families = QFontDatabase::families();
     } else {
         const QFontComboBox::FontFilters scalableMask = (QFontComboBox::ScalableFonts | QFontComboBox::NonScalableFonts);
         const QFontComboBox::FontFilters spacingMask = (QFontComboBox::ProportionalFonts | QFontComboBox::MonospacedFonts);
 
-        const auto allFamilies = dbase.families();
+        const auto allFamilies = QFontDatabase::families();
         for (const QString &family : allFamilies) {
             if ((fontFilters & scalableMask) && (fontFilters & scalableMask) != scalableMask) {
-                if (bool(fontFilters & QFontComboBox::ScalableFonts) != dbase.isSmoothlyScalable(family)) {
+                if (bool(fontFilters & QFontComboBox::ScalableFonts) != QFontDatabase::isSmoothlyScalable(family)) {
                     continue;
                 }
             }
             if ((fontFilters & spacingMask) && (fontFilters & spacingMask) != spacingMask) {
-                if (bool(fontFilters & QFontComboBox::MonospacedFonts) != dbase.isFixedPitch(family)) {
+                if (bool(fontFilters & QFontComboBox::MonospacedFonts) != QFontDatabase::isFixedPitch(family)) {
                     continue;
                 }
             }

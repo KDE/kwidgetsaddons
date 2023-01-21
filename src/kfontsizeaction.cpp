@@ -70,8 +70,7 @@ void KFontSizeActionPrivate::init()
     Q_Q(KFontSizeAction);
 
     q->setEditable(true);
-    QFontDatabase fontDB;
-    const QList<int> sizes = fontDB.standardSizes();
+    const QList<int> sizes = QFontDatabase::standardSizes();
     QStringList lst;
     lst.reserve(sizes.count());
     for (QList<int>::ConstIterator it = sizes.begin(), total = sizes.end(); it != total; ++it) {
