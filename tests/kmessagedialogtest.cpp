@@ -24,28 +24,19 @@ int main(int argc, char *argv[])
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     app.setApplicationName(QStringLiteral("kmessagedialogtest"));
 
-    const auto types = {
-        KMessageDialog::QuestionTwoActions,
-        KMessageDialog::QuestionTwoActionsCancel,
-        KMessageDialog::WarningTwoActions,
-        KMessageDialog::WarningTwoActionsCancel,
-        KMessageDialog::WarningContinueCancel,
-        KMessageDialog::Information,
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-        KMessageDialog::Sorry,
-#endif
-        KMessageDialog::Error
-    };
+    const auto types = {KMessageDialog::QuestionTwoActions,
+                        KMessageDialog::QuestionTwoActionsCancel,
+                        KMessageDialog::WarningTwoActions,
+                        KMessageDialog::WarningTwoActionsCancel,
+                        KMessageDialog::WarningContinueCancel,
+                        KMessageDialog::Information,
+                        KMessageDialog::Error};
 
     for (auto type : types) {
         auto dlg = std::unique_ptr<KMessageDialog>(new KMessageDialog(type, QStringLiteral("Message in a box."), nullptr));
         dlg->setCaption(QString{});
         dlg->setIcon(QIcon{});
-        if ((type != KMessageDialog::Information) &&
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-            (type != KMessageDialog::Sorry) &&
-#endif
-            (type != KMessageDialog::Error)) {
+        if ((type != KMessageDialog::Information) && (type != KMessageDialog::Error)) {
             dlg->setButtons(KGuiItem(QStringLiteral("Primary Action")), KGuiItem(QStringLiteral("Secondary Action")), KStandardGuiItem::cancel());
         }
 

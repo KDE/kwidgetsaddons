@@ -161,34 +161,6 @@ void KRuler::initWidget(Qt::Orientation orientation)
 
 KRuler::~KRuler() = default;
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRuler::setMinValue(int value)
-{
-    setMinimum(value);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-int KRuler::minValue() const
-{
-    return minimum();
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRuler::setMaxValue(int value)
-{
-    setMaximum(value);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-int KRuler::maxValue() const
-{
-    return maximum();
-}
-#endif
-
 void KRuler::setTinyMarkDistance(int dist)
 {
     if (dist != d->tmDist) {
@@ -318,12 +290,6 @@ bool KRuler::showPointer() const
 {
     return d->showpointer;
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRuler::setFrameStyle(int)
-{
-}
-#endif
 
 void KRuler::setShowEndLabel(bool show)
 {

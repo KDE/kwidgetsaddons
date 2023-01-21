@@ -140,10 +140,6 @@ public:
         WarningTwoActionsCancel = 4, ///< @since 5.100
         WarningContinueCancel = 5,
         Information = 6,
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-        Sorry ///< @deprecated Since 5.97, use Error.
-            KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 97, "Use Error.") = 7,
-#endif
         Error = 8,
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
         /// @deprecated Since 5.100, use QuestionTwoActions.

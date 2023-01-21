@@ -46,17 +46,10 @@ public:
      */
     ~KRatingWidget() override;
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 85)
-    /**
-     * \return The current rating.
-     */
-    unsigned int rating() const;
-#else
     /**
      * \return The current rating.
      */
     int rating() const;
-#endif
 
     /**
      * \return the maximum possible rating.
@@ -106,14 +99,6 @@ public:
     QIcon icon() const;
 
 Q_SIGNALS:
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 85)
-    /**
-     * @deprecated Since 5.85, use ratingChanged(int) instead
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 85, "use ratingChanged(int) instead")
-    void ratingChanged(unsigned int rating); // clazy:exclude=overloaded-signal
-#endif
-
     /**
      * This signal is emitted when the rating is changed.
      */
@@ -126,14 +111,6 @@ public Q_SLOTS:
      */
     void setRating(int rating);
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * \deprecated Since 5.0, use setRating(int rating)
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setRating(int)")
-    void setRating(unsigned int rating);
-#endif
-
     /**
      * Set the maximum allowed rating value. The default is 10 which means
      * that a rating from 1 to 10 is selectable. If \a max is uneven steps
@@ -141,27 +118,11 @@ public Q_SLOTS:
      */
     void setMaxRating(int max);
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * \deprecated Since 5.0, use setMaxRating( int max )
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setMaxRating(int)")
-    void setMaxRating(unsigned int max);
-#endif
-
     /**
      * If half steps are enabled (the default) then
      * one rating step corresponds to half a star.
      */
     void setHalfStepsEnabled(bool enabled);
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * \deprecated Since 5.0, use setHalfStepsEnabled(bool).
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setHalfStepsEnabled(bool)")
-    void setOnlyPaintFullSteps(bool);
-#endif
 
     /**
      * Set the spacing between the pixmaps. The default is 0.
@@ -188,17 +149,6 @@ public Q_SLOTS:
      * Set a custom pixmap.
      */
     void setCustomPixmap(const QPixmap &pixmap);
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Set the pixap to be used to display a rating step.
-     * By default the "rating" pixmap is loaded.
-     *
-     * \deprecated Since 5.0, use setCustomPixmap()
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRatingWidget::setCustomPixmap(const QPixmap&)")
-    void setPixmap(const QPixmap &);
-#endif
 
     /**
      * Set the recommended size of the pixmaps. This is

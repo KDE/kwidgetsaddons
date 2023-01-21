@@ -43,10 +43,6 @@ class QMenu;
 class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
 {
     Q_OBJECT
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    Q_PROPERTY(bool delayed READ delayed WRITE setDelayed)
-    Q_PROPERTY(bool stickyMenu READ stickyMenu WRITE setStickyMenu)
-#endif
     Q_PROPERTY(QToolButton::ToolButtonPopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
@@ -66,63 +62,6 @@ public:
      * Destroys the toolbar popup action.
      */
     ~KToolBarPopupAction() override;
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * The popup menu that is shown when clicking (some time) on the toolbar
-     * button. You may want to plug items into it on creation, or connect to
-     * aboutToShow for a more dynamic menu.
-     *
-     * \deprecated Since 5.0, use menu() instead
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KToolBarPopupAction::menu()")
-    QMenu *popupMenu() const;
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    /**
-     * Returns true if this action creates a delayed popup menu
-     * when plugged in a KToolBar.
-     *
-     * @deprecated Since 5.78, use popupMode() instead.
-     */
-    bool delayed() const;
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    /**
-     * If set to true, this action will create a delayed popup menu
-     * when plugged in a KToolBar. Otherwise it creates a normal popup.
-     * Default: delayed.
-     *
-     * @deprecated Since 5.78, use setPopupMode() instead.
-     */
-    void setDelayed(bool delayed);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    /**
-     * Returns true if this action creates a sticky popup menu.
-     * @see setStickyMenu().
-     * @deprecated Since 5.78, use popupMode() instead.
-     */
-    bool stickyMenu() const;
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    /**
-     * If set to true, this action will create a sticky popup menu
-     * when plugged in a KToolBar.
-     * "Sticky", means it's visible until a selection is made or the mouse is
-     * clicked elsewhere. This feature allows you to make a selection without
-     * having to press and hold down the mouse while making a selection.
-     * Only available if delayed() is true.
-     * Default: sticky.
-     *
-     * @deprecated Since 5.78, use setPopupMode() instead.
-     */
-    void setStickyMenu(bool sticky);
-#endif
 
     /**
      * The popup mode of the toolbar button.

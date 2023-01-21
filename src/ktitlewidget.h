@@ -61,10 +61,6 @@ class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
     /// @since 5.72
     Q_PROPERTY(QSize iconSize READ iconSize WRITE setIconSize)
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-    /// @deprecated Since 5.72, use property icon instead
-    Q_PROPERTY(QPixmap pixmap READ pixmap WRITE setPixmap)
-#endif
     Q_PROPERTY(int autoHideTimeout READ autoHideTimeout WRITE setAutoHideTimeout)
 
 public:
@@ -113,16 +109,6 @@ public:
      * @see setComment()
      */
     QString comment() const;
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
-    /**
-     * @return the pixmap displayed in the title
-     * @see setPixmap()
-     * @deprecated Since 5.72, use icon()
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use KTitleWidget::icon()")
-    const QPixmap *pixmap() const;
-#endif
 
     /**
      * @return the icon displayed in the title
@@ -195,40 +181,6 @@ public Q_SLOTS:
      */
     void setIcon(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
-    /**
-     * Sets the icon to the @p pixmap and also the icon size to the size of the @p pixmap.
-     * @param pixmap Pixmap displayed in the header. The pixmap is by default right, but
-     * @param alignment can be used to display it also left.
-     * @see pixmap()
-     * @deprecated Since 5.72, use setIcon(const QIcon &, ImageAlignment)
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use KTitleWidget::setIcon(const QIcon &, ImageAlignment)")
-    void setPixmap(const QPixmap &pixmap, ImageAlignment alignment = ImageRight);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 63)
-    /**
-     * @param icon name of the icon to display in the header. The pixmap is by default right, but
-     * @param alignment can be used to display it also left.
-     * @see pixmap()
-     * @deprecated since 5.63 use setIcon() instead
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KTitleWidget::setIcon(const QIcon &, ImageAlignment)")
-    void setPixmap(const QString &icon, ImageAlignment alignment = ImageRight);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 63)
-    /**
-     * @param icon the icon to display in the header. The pixmap is by default right, but
-     * @param alignment can be used to display it also left.
-     * @see pixmap()
-     * @deprecated since 5.63 use setIcon() instead
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KTitleWidget::setIcon(const QIcon &, ImageAlignment)")
-    void setPixmap(const QIcon &icon, ImageAlignment alignment = ImageRight);
-#endif
-
     /**
      * @param type the type of message icon to display in the header
      * @param alignment alignment of the icon (default is right aligned).
@@ -236,17 +188,6 @@ public Q_SLOTS:
      * @since 5.72
      */
     void setIcon(MessageType type, ImageAlignment alignment = ImageRight);
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
-    /**
-     * @param type the type of message icon to display in the header. The pixmap is by default right, but
-     * @param alignment can be used to display it also left.
-     * @see pixmap()
-     * @deprecated Since 5.72 use setIcon(MessageType, ImageAlignment) instead
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use KTitleWidget::setIcon(MessageType, ImageAlignment)")
-    void setPixmap(MessageType type, ImageAlignment alignment = ImageRight);
-#endif
 
     /**
      * Set the size of the icon to display in the header.

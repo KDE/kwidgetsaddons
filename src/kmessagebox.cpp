@@ -984,69 +984,6 @@ void detailedError(QWidget *parent, const QString &text, const QString &details,
     detailedErrorInternal(new QDialog(parent), text, details, title, buttonOk, options);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-/// @private Prevent kapidox's doxygen config pick up this namespace method
-static void sorryInternal(QDialog *dialog, const QString &text, const QString &title, const KGuiItem &buttonOk, Options options)
-{
-    dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : title);
-    dialog->setObjectName(QStringLiteral("sorry"));
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->setStandardButtons(QDialogButtonBox::Ok);
-    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
-
-    applyOptions(dialog, options);
-
-    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void sorry(QWidget *parent, const QString &text, const QString &title, Options options)
-{
-    sorryInternal(new QDialog(parent), text, title, KStandardGuiItem::ok(), options);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void sorry(QWidget *parent, const QString &text, const QString &title, const KGuiItem &item, Options options)
-{
-    sorryInternal(new QDialog(parent), text, title, item, options);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-/// @private Prevent kapidox's doxygen config pick up this namespace method
-static void detailedSorryInternal(QDialog *dialog, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
-{
-    dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : title);
-    dialog->setObjectName(QStringLiteral("sorry"));
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->addButton(QDialogButtonBox::Ok);
-    buttonBox->button(QDialogButtonBox::Ok)->setFocus();
-    KGuiItem::assign(buttonBox->button(QDialogButtonBox::Ok), buttonOk);
-
-    applyOptions(dialog, options);
-
-    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options, details);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &title, Options options)
-{
-    detailedSorryInternal(new QDialog(parent), text, details, title, KStandardGuiItem::ok(), options);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
-{
-    detailedSorryInternal(new QDialog(parent), text, details, title, buttonOk, options);
-}
-#endif
-
 void information(QWidget *parent, const QString &text, const QString &title, const QString &dontShowAgainName, Options options)
 {
     informationList(parent, text, QStringList(), title, dontShowAgainName, options);
@@ -1094,29 +1031,6 @@ void informationList(QWidget *parent, const QString &text, const QStringList &st
     informationListInternal(new QDialog(parent), text, strlist, title, dontShowAgainName, options);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void about(QWidget *parent, const QString &text, const QString &title, Options options)
-{
-    QDialog *dialog = new QDialog(parent, Qt::Dialog);
-    if (!title.isEmpty()) {
-        dialog->setWindowTitle(title);
-    }
-    dialog->setObjectName(QStringLiteral("about"));
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->setStandardButtons(QDialogButtonBox::Ok);
-
-    applyOptions(dialog, options);
-
-    if (qApp->windowIcon().isNull()) {
-        QPixmap ret = QMessageBox::standardIcon(QMessageBox::Information);
-        dialog->setWindowIcon(ret);
-    }
-
-    createKMessageBox(dialog, buttonBox, qApp->windowIcon(), text, QStringList(), QString(), nullptr, options);
-}
-#endif
-
 /// @private Prevent kapidox's doxygen config pick up this namespace method
 static ButtonCode messageBoxInternal(QDialog *dialog,
                                      DialogType type,
@@ -1154,12 +1068,6 @@ static ButtonCode messageBoxInternal(QDialog *dialog,
     case Error:
         errorListInternal(dialog, text, QStringList(), title, options);
         return KMessageBox::Ok;
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-    case Sorry:
-        sorryInternal(dialog, text, title, KStandardGuiItem::ok(), options);
-        return KMessageBox::Ok;
-#endif
     }
     return KMessageBox::Cancel;
 }
@@ -1415,40 +1323,6 @@ void detailedErrorWId(WId parent_id, const QString &text, const QString &details
 {
     detailedErrorInternal(createWIdDialog(parent_id), text, details, title, buttonOk, options);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void sorryWId(WId parent_id, const QString &text, const QString &title, Options options)
-{
-    QWidget *parent = QWidget::find(parent_id);
-    QDialog *dialog = new QDialog(parent, Qt::Dialog);
-    dialog->setWindowTitle(title.isEmpty() ? QApplication::translate("KMessageBox", "Sorry") : title);
-    dialog->setObjectName(QStringLiteral("sorry"));
-
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(dialog);
-    buttonBox->setStandardButtons(QDialogButtonBox::Ok);
-
-    applyOptions(dialog, options);
-    if (parent == nullptr && parent_id) {
-        setMainWindow(dialog, parent_id);
-    }
-
-    createKMessageBox(dialog, buttonBox, QMessageBox::Warning, text, QStringList(), QString(), nullptr, options);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title, Options options)
-{
-    detailedSorryInternal(createWIdDialog(parent_id), text, details, title, KStandardGuiItem::ok(), options);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 97)
-void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title, const KGuiItem &buttonOk, Options options)
-{
-    detailedSorryInternal(createWIdDialog(parent_id), text, details, title, buttonOk, options);
-}
-#endif
 
 void informationWId(WId parent_id, const QString &text, const QString &title, const QString &dontShowAgainName, Options options)
 {

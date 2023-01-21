@@ -65,11 +65,7 @@ enum DialogType {
     WarningContinueCancel = 3,
     WarningTwoActionsCancel = 4, ///< @since 5.100
     Information = 5,
-// Reserved for: SSLMessageBox = 6
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-    Sorry ///< @deprecated Since 5.97, use Error.
-        KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 97, "Use Error.") = 7,
-#endif
+    // Reserved for: SSLMessageBox = 6
     Error = 8,
     QuestionTwoActionsCancel = 9, ///< @since 5.100
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
@@ -92,10 +88,6 @@ enum Option {
     AllowLink = 2, ///< The message may contain links.
     Dangerous = 4, ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or No, depending on
                    ///< which is available.
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-    PlainCaption ///< @deprecated Since 5.0 this option is ignored.
-        KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 97, 5, 0, "This option is ignored..") = 8,
-#endif
     NoExec = 16, ///< Do not call exec() in createKMessageBox()
     WindowModal = 32, ///< The window is to be modal relative to its parent. By default, it is application modal.
 };
@@ -903,141 +895,6 @@ void detailedError(QWidget *parent,
                    const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
                    Options options = Notify); // TODO KF6 merge with previous overload
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * Display a "Sorry" dialog.
- *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
- *                the title. The default title is i18n("Sorry").
- * @param options  see OptionsType
- *
- * Either your program messed up and asks for understanding
- * or your user did something stupid.
- *
- * To be used for small problems like
- * "Sorry, I can't find the file you specified."
- *
- * The default button is "&OK". Pressing "Esc" selects the OK-button.
- *
- * @note The OK button will always have the i18n'ed text '&OK'.
- * See the overload with a KGuiItem argument to change that.
- *
- * @deprecated Since 5.97, use error().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use error().")
-void sorry(QWidget *parent, const QString &text, const QString &title = QString(), Options options = Notify);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * Display a "Sorry" dialog.
- *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
- *                the title. The default title is i18n("Sorry").
- * @param buttonOk The text for the only button.
- *                 The default is KStandardGuiItem::ok().
- * @param options  see OptionsType
- *
- * Either your program messed up and asks for understanding
- * or your user did something stupid.
- *
- * To be used for small problems like
- * "Sorry, I can't find the file you specified."
- *
- * The default button is "&OK". Pressing "Esc" selects the OK-button.
- *
- * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
- * @since 5.63
- *
- * @deprecated Since 5.97 use error().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use error().")
-void sorry(QWidget *parent,
-           const QString &text,
-           const QString &title /*= QString()*/,
-           const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
-           Options options = Notify);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * Displays a "Sorry" dialog with a "Details >>" button.
- *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param details Detailed message string.
- * @param title   Message box title. The application name is added to
- *                the title. The default title is i18n("Sorry").
- * @param options  see Options
- *
- * Either your program messed up and asks for understanding
- * or your user did something stupid.
- *
- * To be used for small problems like
- * "Sorry, I can't find the file you specified."
- *
- * And then @p details can contain something like
- * "foobar.txt was not found in any of
- *  the following directories:
- *  /usr/bin,/usr/local/bin,/usr/sbin"
- *
- * The default button is "&OK". Pressing "Esc" selects the OK-button.
- *
- * @note The OK button will always have the i18n'ed text '&OK'.
- * See the overload with a KGuiItem argument to change that.
- *
- * @deprecated Since 5.97 use detailedError().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use detailedError().")
-void detailedSorry(QWidget *parent, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * Displays a "Sorry" dialog with a "Details >>" button.
- *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param details Detailed message string.
- * @param title   Message box title. The application name is added to
- *                the title. The default title is i18n("Sorry").
- * @param buttonOk The text for the only button.
- *                 The default is KStandardGuiItem::ok().
- * @param options  see Options
- *
- * Either your program messed up and asks for understanding
- * or your user did something stupid.
- *
- * To be used for small problems like
- * "Sorry, I can't find the file you specified."
- *
- * And then @p details can contain something like
- * "foobar.txt was not found in any of
- *  the following directories:
- *  /usr/bin,/usr/local/bin,/usr/sbin"
- *
- * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
- * @since 5.63
- *
- * @deprecated Since 5.97 use detailedError().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use detailedError().")
-void detailedSorry(QWidget *parent,
-                   const QString &text,
-                   const QString &details,
-                   const QString &title /* = QString() */,
-                   const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
-                   Options options = Notify);
-#endif
-
 /**
  * Display an "Information" dialog.
  *
@@ -1110,31 +967,6 @@ KWIDGETSADDONS_EXPORT void enableAllMessages();
  * @see saveDontShowAgainContinue()
  */
 KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * Display an "About" dialog.
- *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
- *                the title. The default title is i18n("About \<appname\>").
- * @param options  see Options
- *
- *
- * Your program wants to show some general information about the application
- * like the authors's names and email addresses.
- *
- * The default button is "&OK".
- *
- *  @note The OK button will always have the i18n'ed text '&OK'.
- *
- * @deprecated Since 5.0, use QMessageBox::about(). No known users of the extre features here.
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION_BELATED(5, 97, 5, 0, "Use QMessageBox::about()")
-void about(QWidget *parent, const QString &text, const QString &title = QString(), Options options = Notify);
-#endif
 
 /**
  * Alternate method to show a messagebox:
@@ -1665,45 +1497,6 @@ void detailedErrorWId(WId parent_id,
                       const QString &title /*= QString()*/,
                       const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
                       Options options = Notify); // TODO KF6 merge with previous overload
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * This function accepts the window id of the parent window, instead
- * of QWidget*. It should be used only when necessary.
- * @deprecated Since 5.97 use errorWId().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use errorWId().")
-void sorryWId(WId parent_id, const QString &text, const QString &title = QString(), Options options = Notify);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * This function accepts the window id of the parent window, instead
- * of QWidget*. It should be used only when necessary.
- * @deprecated Since 5.97 use detailedErrorWId().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use detailedErrorWId().")
-void detailedSorryWId(WId parent_id, const QString &text, const QString &details, const QString &title = QString(), Options options = Notify);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
-/**
- * This function accepts the window id of the parent window, instead
- * of QWidget*. It should be used only when necessary.
- * @since 5.63
- * @deprecated Since 5.97 use detailedErrorWId().
- */
-KWIDGETSADDONS_EXPORT
-KWIDGETSADDONS_DEPRECATED_VERSION(5, 97, "Use detailedErrorWId().")
-void detailedSorryWId(WId parent_id,
-                      const QString &text,
-                      const QString &details,
-                      const QString &title /*= QString()*/,
-                      const KGuiItem &buttonOk /*= KStandardGuiItem::ok()*/,
-                      Options options = Notify);
-#endif
 
 /**
  * This function accepts the window id of the parent window, instead

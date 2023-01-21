@@ -38,10 +38,6 @@ class QMenu;
 class KWIDGETSADDONS_EXPORT KActionMenu : public QWidgetAction
 {
     Q_OBJECT
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
-    Q_PROPERTY(bool delayed READ delayed WRITE setDelayed)
-    Q_PROPERTY(bool stickyMenu READ stickyMenu WRITE setStickyMenu)
-#endif
     Q_PROPERTY(QToolButton::ToolButtonPopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
@@ -49,14 +45,6 @@ public:
     KActionMenu(const QString &text, QObject *parent);
     KActionMenu(const QIcon &icon, const QString &text, QObject *parent);
     ~KActionMenu() override;
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * @deprecated Since 5.0.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KActionMenu::removeAction(QAction*)")
-    void remove(QAction *);
-#endif
 
     /**
      * Adds @p action to this KActionMenu.
@@ -67,75 +55,6 @@ public:
     void insertAction(QAction *before, QAction *action);
     QAction *insertSeparator(QAction *before);
     void removeAction(QAction *action);
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Returns this action's menu as a KMenu, if it is one.
-     * If none exists, one will be created.
-     * @deprecated Since 5.0, use menu() instead.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KActionMenu::menu()")
-    inline QMenu *popupMenu()
-    {
-        return menu();
-    }
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
-    /**
-     * Returns true if this action creates a delayed popup menu
-     * when plugged in a KToolBar.
-     *
-     * @deprecated Since 5.77, use popupMode() instead.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::popupMode()")
-    bool delayed() const;
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
-    /**
-     * If set to true, this action will create a delayed popup menu
-     * when plugged in a KToolBar. Otherwise it creates a normal popup.
-     * Default: true
-     *
-     * Remember that if the "main" action (the toolbar button itself)
-     * cannot be clicked, then you should call setDelayed(false).
-     *
-     * In the other case, if the main action can be clicked, it can only happen
-     * in a toolbar: in a menu, the parent of a submenu can't be activated.
-     * To get a "normal" menu item when plugged a menu (and no submenu)
-     * use KToolBarPopupAction.
-     *
-     * @deprecated Since 5.77, use setPopupMode() instead.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::setPopupMode()")
-    void setDelayed(bool delayed);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
-    /**
-     * Returns true if this action creates a sticky popup menu.
-     * @see setStickyMenu().
-     * @deprecated Since 5.77, use popupMode() instead.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::popupMode()")
-    bool stickyMenu() const;
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 77)
-    /**
-     * If set to true, this action will create a sticky popup menu
-     * when plugged in a KToolBar.
-     * "Sticky", means it's visible until a selection is made or the mouse is
-     * clicked elsewhere. This feature allows you to make a selection without
-     * having to press and hold down the mouse while making a selection.
-     * Default: sticky.
-     *
-     * @deprecated Since 5.77, use setPopupMode() instead.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 77, "Use KActionMenu::setPopupMode()")
-    void setStickyMenu(bool sticky);
-#endif
 
     /**
      * The currently used popup mode when plugged in a KToolBar.

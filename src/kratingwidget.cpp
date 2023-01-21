@@ -32,13 +32,6 @@ KRatingWidget::KRatingWidget(QWidget *parent)
 
 KRatingWidget::~KRatingWidget() = default;
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRatingWidget::setPixmap(const QPixmap &pix)
-{
-    setCustomPixmap(pix);
-}
-#endif
-
 void KRatingWidget::setCustomPixmap(const QPixmap &pix)
 {
     d->ratingPainter.setCustomPixmap(pix);
@@ -95,11 +88,7 @@ void KRatingWidget::setLayoutDirection(Qt::LayoutDirection direction)
     update();
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 85)
-unsigned int KRatingWidget::rating() const
-#else
 int KRatingWidget::rating() const
-#endif
 {
     return d->rating;
 }
@@ -114,32 +103,15 @@ bool KRatingWidget::halfStepsEnabled() const
     return d->ratingPainter.halfStepsEnabled();
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRatingWidget::setRating(unsigned int rating)
-{
-    setRating((int)rating);
-}
-#endif
-
 void KRatingWidget::setRating(int rating)
 {
     if (rating != d->rating) {
         d->rating = rating;
         d->hoverRating = rating;
         Q_EMIT ratingChanged(rating);
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 85)
-        Q_EMIT ratingChanged((unsigned int)rating);
-#endif
         update();
     }
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRatingWidget::setMaxRating(unsigned int max)
-{
-    setMaxRating((int)max);
-}
-#endif
 
 void KRatingWidget::setMaxRating(int max)
 {
@@ -152,13 +124,6 @@ void KRatingWidget::setHalfStepsEnabled(bool enabled)
     d->ratingPainter.setHalfStepsEnabled(enabled);
     update();
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KRatingWidget::setOnlyPaintFullSteps(bool fs)
-{
-    setHalfStepsEnabled(!fs);
-}
-#endif
 
 static inline int adjustedHoverRating(bool halfStep, int hoverRating, int rating)
 {

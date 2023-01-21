@@ -50,10 +50,6 @@ class KWIDGETSADDONS_EXPORT KFontChooser : public QWidget
     Q_PROPERTY(QColor backgroundColor READ backgroundColor WRITE setBackgroundColor)
     Q_PROPERTY(QString sampleText READ sampleText WRITE setSampleText)
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
-    Q_PROPERTY(Qt::CheckState sizeIsRelative READ sizeIsRelative WRITE setSizeIsRelative)
-#endif
-
 public:
     /**
      * Displayed columns.
@@ -95,39 +91,6 @@ public:
      * Stores a combination of #DisplayFlag values.
      */
     Q_DECLARE_FLAGS(DisplayFlags, DisplayFlag)
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
-    /**
-     * Constructs a font picker widget.
-     *
-     * @param parent The parent widget.
-     * @param flags Defines how the font chooser is displayed.
-     * @param fontList A list of fonts to display, in XLFD format.  If
-     *        no list is formatted, the internal KDE font list is used.
-     *        If that has not been created, X is queried, and all fonts
-     *        available on the system are displayed.
-     * @param visibleListSize The minimum number of visible entries in the
-     *        fontlists.
-     * @param sizeIsRelativeState If not zero the widget will show a
-     *        checkbox where the user may choose whether the font size
-     *        is to be interpreted as relative size.
-     *        Initial state of this checkbox will be set according to
-     *        *sizeIsRelativeState, user choice may be retrieved by
-     *        calling sizeIsRelative().
-     *
-     * @deprecated since 5.86, use the KFontChooser(KFontChooser::DisplayFlags, QWidget*) constructor
-     * and the setFontListItems() and setMinVisibleItems() methods.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(
-        5,
-        86,
-        "Use the KFontChooser(KFontChooser::DisplayFlags, QWidget*) constructor and the setFontListItems() and setMinVisibleItems() methods.")
-    explicit KFontChooser(QWidget *parent,
-                          const DisplayFlags &flags,
-                          const QStringList &fontList = QStringList(),
-                          int visibleListSize = 8,
-                          Qt::CheckState *sizeIsRelativeState = nullptr);
-#endif
 
     /**
      * Constructs a font picker widget.
@@ -207,29 +170,6 @@ public:
      */
     QColor backgroundColor() const;
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
-    /**
-     * Sets the state of the checkbox indicating whether the font size
-     * is to be interpreted as relative size.
-     * @note If parameter @p sizeIsRelative was not set in the constructor
-     *       of the widget this setting will be ignored.
-     *
-     * @deprecated Since 5.86, for lack of usage.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 86, "For lack of usage.")
-    void setSizeIsRelative(Qt::CheckState relative);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
-    /**
-     * @return whether the font size is to be interpreted as relative size
-     *
-     * @deprecated Since 5.86, for lack of usage.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 86, "For lack of usage.")
-    Qt::CheckState sizeIsRelative() const;
-#endif
-
     /**
      * @return The current text in the sample text input area.
      */
@@ -270,20 +210,6 @@ public:
          */
         SmoothScalableFonts = 0x04
     };
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 86)
-    /**
-     * Creates a list of font strings.
-     *
-     * @param list The list is returned here.
-     * @param fontListCriteria should contain all the restrictions for font selection as OR-ed values
-     *        from KFontChooser::FontListCriteria
-     *
-     * @deprecated since 5.86, use createFontList(uint) instead.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 86, "Use KFontChooser::createFontList(uint) instead.")
-    static void getFontList(QStringList &list, uint fontListCriteria);
-#endif
 
     /**
      * Returns a list of font faimly name strings filtered based on @p fontListCriteria.

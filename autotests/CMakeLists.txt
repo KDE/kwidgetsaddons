@@ -5,7 +5,6 @@ find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 ecm_add_tests(
   kacceleratormanagertest.cpp
-  kactionmenutest.cpp
   kcharselect_unittest.cpp
   kcollapsiblegroupbox_test.cpp
   kcolorbuttontest.cpp
@@ -19,7 +18,6 @@ ecm_add_tests(
   kselectaction_unittest.cpp
   ksqueezedtextlabelautotest.cpp
   ktimecomboboxtest.cpp
-  ktoolbarpopupactiontest.cpp
   ktooltipwidgettest.cpp
   kmessagewidgetautotest.cpp
   kpagedialogautotest.cpp

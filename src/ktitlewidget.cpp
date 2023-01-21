@@ -217,17 +217,6 @@ QString KTitleWidget::comment() const
     return d->commentLabel->text();
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-const QPixmap *KTitleWidget::pixmap() const
-{
-    QT_WARNING_PUSH
-    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
-    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
-    return d->imageLabel->pixmap();
-    QT_WARNING_POP
-}
-#endif
-
 QIcon KTitleWidget::icon() const
 {
     return d->icon;
@@ -333,41 +322,6 @@ void KTitleWidget::setIconSize(const QSize &iconSize)
         d->updatePixmap();
     }
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-void KTitleWidget::setPixmap(const QPixmap &pixmap, ImageAlignment alignment)
-{
-    d->icon = QIcon(pixmap);
-    d->iconSize = pixmap.size();
-
-    d->imageLabel->setVisible(!d->icon.isNull());
-
-    d->updateIconAlignment(alignment);
-
-    d->updatePixmap();
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
-void KTitleWidget::setPixmap(const QString &icon, ImageAlignment alignment)
-{
-    setIcon(QIcon::fromTheme(icon), alignment);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
-void KTitleWidget::setPixmap(const QIcon &icon, ImageAlignment alignment)
-{
-    setIcon(icon, alignment);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-void KTitleWidget::setPixmap(MessageType type, ImageAlignment alignment)
-{
-    setIcon(type, alignment);
-}
-#endif
 
 void KTitleWidget::setIcon(MessageType type, ImageAlignment alignment)
 {

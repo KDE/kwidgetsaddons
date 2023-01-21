@@ -149,23 +149,6 @@ KMultiTabBarButton::KMultiTabBarButton(const QIcon &icon, const QString &text, i
     Q_UNUSED(d);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-KMultiTabBarButton::KMultiTabBarButton(const QPixmap &pic, const QString &text, int id, QWidget *parent)
-    : QPushButton(QIcon(pic), text, parent)
-    , m_id(id)
-    , d(nullptr)
-{
-    connect(this, &QPushButton::clicked, this, &KMultiTabBarButton::slotClicked);
-
-    // we can't see the focus, so don't take focus. #45557
-    // If keyboard navigation is wanted, then only the bar should take focus,
-    // and arrows could change the focused button; but generally, tabbars don't take focus anyway.
-    setFocusPolicy(Qt::NoFocus);
-    setAttribute(Qt::WA_LayoutUsesWidgetRect);
-    Q_UNUSED(d);
-}
-#endif
-
 KMultiTabBarButton::~KMultiTabBarButton()
 {
 }
@@ -236,25 +219,6 @@ KMultiTabBarTab::KMultiTabBarTab(const QIcon &icon,
     setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-KMultiTabBarTab::KMultiTabBarTab(const QPixmap &pic,
-                                 const QString &text,
-                                 int id,
-                                 QWidget *parent,
-                                 KMultiTabBar::KMultiTabBarPosition pos,
-                                 KMultiTabBar::KMultiTabBarStyle style)
-    : KMultiTabBarButton(pic, text, id, parent)
-    , m_style(style)
-    , d(nullptr)
-{
-    m_position = pos;
-    setToolTip(text);
-    setCheckable(true);
-    // shrink down to icon only, but prefer to show text if it's there
-    setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-}
-#endif
-
 KMultiTabBarTab::~KMultiTabBarTab()
 {
 }
@@ -270,13 +234,6 @@ void KMultiTabBarTab::setStyle(KMultiTabBar::KMultiTabBarStyle style)
     m_style = style;
     updateGeometry();
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-QPixmap KMultiTabBarTab::iconPixmap() const
-{
-    return icon().pixmap(iconSize());
-}
-#endif
 
 void KMultiTabBarTab::initStyleOption(QStyleOptionToolButton *opt) const
 {
@@ -377,21 +334,6 @@ void KMultiTabBarTab::setState(bool newState)
     setChecked(newState);
     updateGeometry();
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-void KMultiTabBarTab::setIcon(const QString &icon)
-{
-    const QIcon i = QIcon::fromTheme(icon);
-    setIcon(i);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 72)
-void KMultiTabBarTab::setIcon(const QPixmap &icon)
-{
-    QPushButton::setIcon(icon);
-}
-#endif
 
 bool KMultiTabBarTab::shouldDrawText() const
 {
@@ -582,14 +524,6 @@ int KMultiTabBar::appendButton(const QIcon &icon, int id, QMenu *popup, const QS
     return 0;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 13)
-int KMultiTabBar::appendButton(const QPixmap &pic, int id, QMenu *popup, const QString &x)
-{
-    // reuse icon variant
-    return appendButton(QIcon(pic), id, popup, x);
-}
-#endif
-
 void KMultiTabBar::updateSeparator()
 {
     bool hideSep = true;
@@ -612,14 +546,6 @@ int KMultiTabBar::appendTab(const QIcon &icon, int id, const QString &text)
     d->m_internal->appendTab(icon, id, text);
     return 0;
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 13)
-int KMultiTabBar::appendTab(const QPixmap &pic, int id, const QString &text)
-{
-    d->m_internal->appendTab(pic, id, text);
-    return 0;
-}
-#endif
 
 KMultiTabBarButton *KMultiTabBar::button(int id) const
 {

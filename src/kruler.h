@@ -116,52 +116,6 @@ public:
      */
     ~KRuler() override;
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Sets the minimal value of the ruler pointer (default is 0).
-     *
-     * This method calls update() so that the widget is painted after leaving
-     * to the main event loop.
-     *
-     * @deprecated Since 5.0, use setMinimum(int).
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRuler::setMinimum(int)")
-    void setMinValue(int);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Returns the minimal value of the ruler pointer.
-     *
-     * @deprecated Since 5.0, use minimum().
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRuler::minimum()")
-    int minValue() const;
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Sets the maximum value of the ruler pointer (default is 100).
-     *
-     * This method calls update() so that the widget is painted after leaving
-     * to the main event loop.
-     *
-     * @deprecated Since 5.0, use setMaximum().
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRuler::setMaximum(int)")
-    void setMaxValue(int);
-#endif
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Returns the maximal value of the ruler pointer.
-     *
-     * @deprecated Since 5.0, use maximum().
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "Use KRuler::maximum()")
-    int maxValue() const;
-#endif
-
     /**
      * Sets the distance between tiny marks.
      *
@@ -235,15 +189,6 @@ public:
      */
     void setShowPointer(bool);
     bool showPointer() const;
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * Is a no-op.
-     * @deprecated Since 5.0.
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 0, "No longer a feature")
-    void setFrameStyle(int);
-#endif
 
     /**
      * Show/hide number values of the end marks.

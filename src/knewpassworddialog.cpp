@@ -124,19 +124,6 @@ QIcon KNewPasswordDialog::icon() const
     return d->icon;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
-void KNewPasswordDialog::setPixmap(const QPixmap &pixmap)
-{
-    d->ui.labelIcon->setPixmap(pixmap);
-    d->ui.labelIcon->setFixedSize(d->ui.labelIcon->sizeHint());
-}
-
-QPixmap KNewPasswordDialog::pixmap() const
-{
-    return d->ui.labelIcon->pixmap(Qt::ReturnByValue);
-}
-#endif
-
 bool KNewPasswordDialog::checkAndGetPassword(QString *pwd)
 {
     pwd->clear();

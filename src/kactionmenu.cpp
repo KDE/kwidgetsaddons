@@ -28,9 +28,6 @@ public:
     ~KActionMenuPrivate()
     {
     }
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
-    bool m_stickyMenu = true;
-#endif
     QToolButton::ToolButtonPopupMode m_popupMode = QToolButton::DelayedPopup;
 };
 
@@ -86,15 +83,6 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     return button;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 0)
-void KActionMenu::remove(QAction *cmd)
-{
-    if (cmd) {
-        menu()->removeAction(cmd);
-    }
-}
-#endif
-
 void KActionMenu::addAction(QAction *action)
 {
     menu()->addAction(action);
@@ -125,56 +113,6 @@ void KActionMenu::removeAction(QAction *action)
 {
     menu()->removeAction(action);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
-bool KActionMenu::delayed() const
-{
-    return popupMode() == QToolButton::DelayedPopup;
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
-void KActionMenu::setDelayed(bool _delayed)
-{
-    if (_delayed) {
-        setPopupMode(QToolButton::DelayedPopup);
-    } else {
-        if (d->m_stickyMenu) {
-            setPopupMode(QToolButton::InstantPopup);
-        } else {
-            setPopupMode(QToolButton::MenuButtonPopup);
-        }
-    }
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
-bool KActionMenu::stickyMenu() const
-{
-    if (popupMode() == QToolButton::DelayedPopup) {
-        return d->m_stickyMenu;
-    } else if (popupMode() == QToolButton::InstantPopup) {
-        return true;
-    } else { // MenuButtonPopup
-        return false;
-    }
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 77)
-void KActionMenu::setStickyMenu(bool sticky)
-{
-    if (popupMode() != QToolButton::DelayedPopup) {
-        if (sticky) {
-            setPopupMode(QToolButton::InstantPopup);
-        } else {
-            setPopupMode(QToolButton::MenuButtonPopup);
-        }
-    }
-
-    d->m_stickyMenu = sticky;
-}
-#endif
 
 QToolButton::ToolButtonPopupMode KActionMenu::popupMode() const
 {

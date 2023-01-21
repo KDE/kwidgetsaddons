@@ -123,22 +123,6 @@ public:
     std::map<QString, QString> m_styleIDs;
 };
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
-KFontChooser::KFontChooser(QWidget *parent, const DisplayFlags &flags, const QStringList &fontList, int visibleListSize, Qt::CheckState *sizeIsRelativeState)
-    : QWidget(parent)
-    , d(new KFontChooserPrivate(flags, this))
-{
-    d->init();
-    setFontListItems(fontList);
-    setMinVisibleItems(visibleListSize);
-
-    if (sizeIsRelativeState) {
-        // Check or uncheck or gray out the "relative" checkbox
-        setSizeIsRelative(*sizeIsRelativeState);
-    }
-}
-#endif
-
 KFontChooser::KFontChooser(QWidget *parent)
     : QWidget(parent)
     , d(new KFontChooserPrivate(KFontChooser::DisplayFrame, this))
@@ -304,34 +288,6 @@ QColor KFontChooser::backgroundColor() const
 {
     return d->m_palette.color(QPalette::Active, QPalette::Base);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
-void KFontChooser::setSizeIsRelative(Qt::CheckState relative)
-{
-    d->m_ui->sizeIsRelativeCheckBox->show();
-
-    QString sizeIsRelativeCBToolTipText = KFontChooser::tr("Font size<br /><i>fixed</i> or <i>relative</i><br />to environment", "@info:tooltip");
-    QString sizeIsRelativeCBWhatsThisText = KFontChooser::tr(
-        "Here you can switch between fixed font size and font size "
-        "to be calculated dynamically and adjusted to changing "
-        "environment (e.g. widget dimensions, paper size).",
-        "@info:whatsthis");
-
-    d->m_ui->sizeIsRelativeCheckBox->setTristate(d->m_flags & KFontChooser::ShowDifferences);
-    d->m_ui->sizeIsRelativeCheckBox->setWhatsThis(sizeIsRelativeCBWhatsThisText);
-    d->m_ui->sizeIsRelativeCheckBox->setToolTip(sizeIsRelativeCBToolTipText);
-
-    // Check or uncheck or gray out the "relative" checkbox
-    d->m_ui->sizeIsRelativeCheckBox->setCheckState(relative);
-}
-#endif
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
-Qt::CheckState KFontChooser::sizeIsRelative() const
-{
-    return d->m_ui->sizeIsRelativeCheckBox ? d->m_ui->sizeIsRelativeCheckBox->checkState() : Qt::PartiallyChecked;
-}
-#endif
 
 QString KFontChooser::sampleText() const
 {
@@ -817,13 +773,6 @@ void KFontChooserPrivate::setupDisplay()
     // Set current size in the spinbox.
     m_ui->sizeSpinBox->setValue(QLocale::system().toDouble(m_ui->sizeListWidget->currentItem()->text()));
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 86)
-void KFontChooser::getFontList(QStringList &list, uint fontListCriteria)
-{
-    list = createFontList(fontListCriteria);
-}
-#endif
 
 // static
 QStringList KFontChooser::createFontList(uint fontListCriteria)

@@ -136,18 +136,6 @@ QIcon KPasswordDialog::icon() const
     return d->icon;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 63)
-void KPasswordDialog::setPixmap(const QPixmap &pixmap)
-{
-    d->ui.pixmapLabel->setPixmap(pixmap);
-}
-
-QPixmap KPasswordDialog::pixmap() const
-{
-    return d->ui.pixmapLabel->pixmap(Qt::ReturnByValue);
-}
-#endif
-
 void KPasswordDialog::setUsername(const QString &user)
 {
     d->ui.userEdit->setText(user);

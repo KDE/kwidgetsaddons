@@ -333,15 +333,6 @@ Q_SIGNALS:
     // TODO KF6:: rename to actionTriggered(QAction *action)
     // We cannot do this in KF5, due to existing slot method with same signature, see below
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    /**
-     * This signal is emitted when an item is selected.
-     * @param index indicates the item selected
-     * @deprecated Since 5.78, use indexTriggered(int)
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 78, "Use KSelectAction::indexTriggered(int)")
-    void triggered(int index); // clazy:exclude=overloaded-signal
-#endif
     /**
      * This signal is emitted when an item is selected.
      * @param index indicates the item selected
@@ -366,16 +357,6 @@ Q_SIGNALS:
      * @since 5.78
      */
     void indexTriggered(int index);
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 78)
-    /**
-     * This signal is emitted when an item is selected.
-     * @param text indicates the item selected
-     * @deprecated Since 5.78, use textTriggered(const QString &)
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 78, "Use KSelectAction::textTriggered(const QString &)")
-    void triggered(const QString &text); // clazy:exclude=overloaded-signal
-#endif
 
     /**
      * This signal is emitted when an item is selected.

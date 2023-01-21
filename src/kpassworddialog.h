@@ -155,20 +155,6 @@ public:
      */
     QIcon icon() const;
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 63)
-    /**
-     * set an image that appears next to the prompt.
-     * @deprecated since 5.63 use setIcon()
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KPasswordDialog::setIcon(const QIcon &)")
-    void setPixmap(const QPixmap &);
-    /**
-     * @deprecated since 5.63 use icon()
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KPasswordDialog::icon()")
-    QPixmap pixmap() const;
-#endif
-
     /**
      * Adds a comment line to the dialog.
      *

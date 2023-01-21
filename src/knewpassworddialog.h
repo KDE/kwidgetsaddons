@@ -94,25 +94,6 @@ public:
      */
     QIcon icon() const;
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 63)
-    /**
-     * Sets the pixmap that appears next to the prompt in the dialog. The default pixmap represents a simple key.
-     *
-     * the recommended size is KIconLoader::SizeHuge
-     *
-     * @deprecated since 5.63 use setIcon()
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KNewPasswordDialog::setIcon(const QIcon &)")
-    void setPixmap(const QPixmap &);
-
-    /**
-     * Returns the pixmap that appears next to the prompt in the dialog
-     * @deprecated since 5.63 use icon()
-     */
-    KWIDGETSADDONS_DEPRECATED_VERSION(5, 63, "Use KNewPasswordDialog::icon()")
-    QPixmap pixmap() const;
-#endif
-
     /**
      * Allow empty passwords? - Default: true
      *

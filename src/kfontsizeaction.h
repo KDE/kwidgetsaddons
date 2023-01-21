@@ -53,10 +53,6 @@ protected Q_SLOTS:
 
 private:
     Q_DECLARE_PRIVATE(KFontSizeAction)
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
-    // Unused, kept for ABI compatibility
-    const void *__kwidgetsaddons_d_do_not_use;
-#endif
 };
 
 #endif
