@@ -37,9 +37,9 @@ static QBrush k_colorcombodelegate_brush(const QModelIndex &index, int role)
 {
     QBrush brush;
     QVariant v = index.data(role);
-    if (v.type() == QVariant::Brush) {
+    if (v.userType() == QMetaType::QBrush) {
         brush = v.value<QBrush>();
-    } else if (v.type() == QVariant::Color) {
+    } else if (v.userType() == QMetaType::QColor) {
         brush = QBrush(v.value<QColor>());
     }
     return brush;
@@ -73,7 +73,7 @@ void KColorComboDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
     QRect innerrect = option.rect.adjusted(FrameMargin, FrameMargin, -FrameMargin, -FrameMargin);
     // inner color
     QVariant cv = index.data(ColorRole);
-    if (cv.type() == QVariant::Color) {
+    if (cv.userType() == QMetaType::QColor) {
         QColor tmpcolor = cv.value<QColor>();
         if (tmpcolor.isValid()) {
             innercolor = tmpcolor;
@@ -89,7 +89,7 @@ void KColorComboDelegate::paint(QPainter *painter, const QStyleOptionViewItem &o
     }
     // text
     QVariant tv = index.data(Qt::DisplayRole);
-    if (tv.type() == QVariant::String) {
+    if (tv.userType() == QMetaType::QString) {
         QString text = tv.toString();
         QColor textColor;
         if (paletteBrush) {

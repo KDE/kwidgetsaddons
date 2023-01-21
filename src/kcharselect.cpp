@@ -211,7 +211,7 @@ void KCharSelectTablePrivate::slotSelectionChanged(const QItemSelection &selecte
         return;
     }
     QVariant temp = model->data(selected.indexes().at(0), KCharSelectItemModel::CharacterRole);
-    if (temp.type() != QVariant::UInt) {
+    if (temp.userType() != QMetaType::UInt) {
         return;
     }
     uint c = temp.toUInt();
