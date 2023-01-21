@@ -12,7 +12,6 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KActionSelector actionSelector(nullptr);
     actionSelector.availableListWidget()->addItems(QStringList() << QStringLiteral("A") << QStringLiteral("B") << QStringLiteral("C") << QStringLiteral("D")

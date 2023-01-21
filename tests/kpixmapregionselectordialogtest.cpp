@@ -15,7 +15,6 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     if (argc <= 1) {
         std::cerr << "Usage: kpixmapregionselectordialogtest <imageFile>" << std::endl;

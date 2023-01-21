@@ -125,7 +125,6 @@ void KLedTest::timeout()
 
 int main(int argc, char **argv)
 {
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication a(argc, argv);
     KLedTest widget;
     // -----

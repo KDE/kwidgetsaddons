@@ -12,7 +12,6 @@
 
 int main(int argc, char **argv)
 {
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
     QWidget toplevel;

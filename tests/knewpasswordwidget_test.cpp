@@ -77,7 +77,6 @@ void MyPasswordDialog::slotPasswordStatusChanged()
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     MyPasswordDialog dialog;
     QObject::connect(&dialog, &QDialog::finished, &app, &QCoreApplication::quit);

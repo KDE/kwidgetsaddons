@@ -6,7 +6,6 @@
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("test"));
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
     QWidget *box = new QWidget();

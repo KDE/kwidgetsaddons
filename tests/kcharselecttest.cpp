@@ -7,7 +7,6 @@ int main(int argc, char **argv)
     QApplication::setApplicationName(QStringLiteral("kcharselecttest"));
 
     QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     KCharSelect selector(nullptr, nullptr);
     selector.setAllPlanesEnabled(true);

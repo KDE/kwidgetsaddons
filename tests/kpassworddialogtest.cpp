@@ -18,7 +18,6 @@
 int main(int argc, char *argv[])
 {
     QApplication::setApplicationName(QStringLiteral("KNewPasswordDialogTest"));
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication a(argc, argv);
 
     // step 1  simple password

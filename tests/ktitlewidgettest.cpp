@@ -57,7 +57,6 @@ public:
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("ktitlewidgettest"));
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
     KTitleWidgetTestWidget *mainWidget = new KTitleWidgetTestWidget;

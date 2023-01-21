@@ -18,7 +18,6 @@
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("kselectactiontest"));
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
 
     QWidget parentWidget;

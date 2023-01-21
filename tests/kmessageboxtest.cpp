@@ -286,7 +286,6 @@ bool testMessageBox(int test)
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     app.setApplicationName(QStringLiteral("kmessageboxtest"));
 
     // Syntax: kmessageboxtest <test_number>

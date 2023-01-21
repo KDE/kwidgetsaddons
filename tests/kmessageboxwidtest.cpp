@@ -13,7 +13,6 @@
 int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("kmessageboxwidtest"));
-    QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps, true);
     QApplication app(argc, argv);
     if (argc != 2) {
         std::cerr << "Usage: " << qPrintable(QApplication::applicationName()) << " <window id>\n";

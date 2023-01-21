@@ -61,7 +61,6 @@ int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("kanimatedbuttontest"));
     QApplication app(argc, argv);
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
     MainWindow *window = new MainWindow();
     window->show();
