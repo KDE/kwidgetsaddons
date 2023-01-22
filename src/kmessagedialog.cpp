@@ -174,9 +174,6 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
     d->m_topLayout->addWidget(d->m_buttonBox);
 
     // Default buttons
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-    setButtons();
-#else
     if ((d->m_type == KMessageDialog::Information) || (d->m_type != KMessageDialog::Error)) {
         // set Ok button
         setButtons();
@@ -184,7 +181,6 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
         // set Continue & Cancel buttons
         setButtons(KStandardGuiItem::cont(), KGuiItem(), KStandardGuiItem::cancel());
     }
-#endif
 
     setNotifyEnabled(true);
 
@@ -388,15 +384,7 @@ void KMessageDialog::setButtons(const KGuiItem &primaryAction, const KGuiItem &s
     case KMessageDialog::WarningContinueCancel: {
         d->m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::Cancel);
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-        KGuiItem continueItem = primaryAction;
-        if (continueItem.text() == KStandardGuiItem::yes().text()) {
-            continueItem = KStandardGuiItem::cont();
-        }
-        KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), continueItem);
-#else
         KGuiItem::assign(d->m_buttonBox->button(QDialogButtonBox::Yes), primaryAction);
-#endif
 
         auto *cancelButton = d->m_buttonBox->button(QDialogButtonBox::Cancel);
         KGuiItem::assign(cancelButton, cancelAction);

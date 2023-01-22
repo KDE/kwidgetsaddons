@@ -80,7 +80,6 @@ class KGuiItem;
  *  QObject::connect(dlg, &QDialog::finished, &app, [dlg](int result) {
  *      auto button = static_cast<KMessageDialog::ButtonType>(result);
  *      switch(button) {
- *      case KMessageDialog::Ok:
  *      case KMessageDialog::PrimaryAction:
  *          // The user clicked the primary action, handle the result...
  *          // save the "do not ask again" box status...
@@ -127,33 +126,17 @@ public:
         WarningContinueCancel = 5,
         Information = 6,
         Error = 8,
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
-        /// @deprecated Since 5.100, use QuestionTwoActions.
-        QuestionYesNo KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use QuestionTwoActions.") = QuestionTwoActions,
-        /// @deprecated Since 5.100, use QuestionTwoActionsCancel.
-        QuestionYesNoCancel KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use QuestionTwoActionsCancel.") = QuestionTwoActionsCancel,
-        /// @deprecated Since 5.100, use WarningTwoActions.
-        WarningYesNo KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use WarningTwoActions.") = WarningTwoActions,
-        /// @deprecated Since 5.100, use WarningTwoActionsCancel.
-        WarningYesNoCancel KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(5, 100, "Use WarningTwoActionsCancel.") = WarningTwoActionsCancel,
-#endif
     };
 
     /**
      * Constructs a KMessageDialog.
      *
-     * Since 5.85 buttons based on the dialog type are set by default in some cases,
+     * Buttons based on the dialog type are set by default in some cases,
      * using KStandardGuiItem instances. For the dialog types Information, Sorry & Error
      * the button is set to KStandardGuiItem::ok(). For the type WarningContinueCancel
      * the buttons are set to  KStandardGuiItem::cont() & KStandardGuiItem::cancel().
      *
      * For the other Quesion* and Warning* types the buttons are to be set explicitly.
-     * Since 5.85 and if KWidgetsAddons is built with support for deprecated API including 5.100,
-     * also for these types the buttons are set by default, using KStandardGuiItem instances.
-     * - QuestionTwoActions: KStandardGuiItem::yes(), KStandardGuiItem::no()
-     * - QuestionTwoActionsCancel:  KStandardGuiItem::yes(), KStandardGuiItem::no()
-     * - WarningTwoActions:  KStandardGuiItem::yes(), KStandardGuiItem::no()
-     * - WarningTwoActionsCancel:  KStandardGuiItem::yes(), KStandardGuiItem::no()
      *
      * @param type the dialog Type, one of KMessageDialog::Type enum
      * @param text the text message that is going to be displayed in the dialog
@@ -274,13 +257,6 @@ public:
      * KMessageDialog(KMessageDialog::Type, const QString &, QWidget *) for details).
      * Before, this method had to be called explicitly to have any buttons added to the dialog.
      *
-     * @note
-     * - For WarningContinueCancel dialog Type, if primaryAction has the same text as
-     *   KStandardGuiItem::yes(), KStandardGuiItem::cont() will be used instead (as long
-     *   as KWidgetsAddons is built with the deprecated KStandardGuiItem::yes()).
-     * - For dialog types Information, Sorry, and Error only one button
-     *   (KStandardGuiItem::ok()) is added to the dialog.
-     *
      * @param primaryAction the action for the primary button.
      *                      Reported in the result for dialog types Information, Sorry, and Error
      *                      as KMessageDialog::Ok enum value, otherwise as KMessageDialog::PrimaryAction.
@@ -291,13 +267,7 @@ public:
      *                     Reported in the result as KMessageDialog::Cancel enum value.
      *                     Ignored with all dialog types without a Cancel button.
      */
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 100)
-    void setButtons(const KGuiItem &primaryAction = KStandardGuiItem::yes(),
-                    const KGuiItem &secondaryAction = KStandardGuiItem::no(),
-                    const KGuiItem &cancelAction = KStandardGuiItem::cancel());
-#else
     void setButtons(const KGuiItem &primaryAction = KGuiItem(), const KGuiItem &secondaryAction = KGuiItem(), const KGuiItem &cancelAction = KGuiItem());
-#endif
 
 protected:
     void showEvent(QShowEvent *event) override;

@@ -381,19 +381,6 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
     return result;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode questionYesNo(QWidget *parent,
-                         const QString &text,
-                         const QString &title,
-                         const KGuiItem &buttonYes,
-                         const KGuiItem &buttonNo,
-                         const QString &dontAskAgainName,
-                         Options options)
-{
-    return questionYesNoList(parent, text, QStringList(), title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode questionTwoActions(QWidget *parent,
                               const QString &text,
                               const QString &title,
@@ -405,26 +392,12 @@ ButtonCode questionTwoActions(QWidget *parent,
     return questionTwoActionsList(parent, text, QStringList(), title, primaryAction, secondaryAction, dontAskAgainName, options);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-bool shouldBeShownYesNo(const QString &dontShowAgainName, ButtonCode &result)
-{
-    if (dontShowAgainName.isEmpty()) {
-        return true;
-    }
-    return dontAskAgainInterface()->shouldBeShownYesNo(dontShowAgainName, result);
-}
-#endif
-
 bool shouldBeShownTwoActions(const QString &dontShowAgainName, ButtonCode &result)
 {
     if (dontShowAgainName.isEmpty()) {
         return true;
     }
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-    return dontAskAgainInterface()->shouldBeShownYesNo(dontShowAgainName, result);
-#else
     return dontAskAgainInterface()->shouldBeShownTwoActions(dontShowAgainName, result);
-#endif
 }
 
 bool shouldBeShownContinue(const QString &dontShowAgainName)
@@ -435,26 +408,12 @@ bool shouldBeShownContinue(const QString &dontShowAgainName)
     return dontAskAgainInterface()->shouldBeShownContinue(dontShowAgainName);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-void saveDontShowAgainYesNo(const QString &dontShowAgainName, ButtonCode result)
-{
-    if (dontShowAgainName.isEmpty()) {
-        return;
-    }
-    dontAskAgainInterface()->saveDontShowAgainYesNo(dontShowAgainName, result);
-}
-#endif
-
 void saveDontShowAgainTwoActions(const QString &dontShowAgainName, ButtonCode result)
 {
     if (dontShowAgainName.isEmpty()) {
         return;
     }
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-    dontAskAgainInterface()->saveDontShowAgainYesNo(dontShowAgainName, result);
-#else
     dontAskAgainInterface()->saveDontShowAgainTwoActions(dontShowAgainName, result);
-#endif
 }
 
 void saveDontShowAgainContinue(const QString &dontShowAgainName)
@@ -523,20 +482,6 @@ static ButtonCode questionTwoActionsListInternal(QDialog *dialog,
     return res;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode questionYesNoList(QWidget *parent,
-                             const QString &text,
-                             const QStringList &strlist,
-                             const QString &title,
-                             const KGuiItem &buttonYes,
-                             const KGuiItem &buttonNo,
-                             const QString &dontAskAgainName,
-                             Options options)
-{
-    return questionTwoActionsListInternal(new QDialog(parent), text, strlist, title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode questionTwoActionsList(QWidget *parent,
                                   const QString &text,
                                   const QStringList &strlist,
@@ -600,20 +545,6 @@ static ButtonCode questionTwoActionsCancelInternal(QDialog *dialog,
     return res;
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode questionYesNoCancel(QWidget *parent,
-                               const QString &text,
-                               const QString &title,
-                               const KGuiItem &buttonYes,
-                               const KGuiItem &buttonNo,
-                               const KGuiItem &buttonCancel,
-                               const QString &dontAskAgainName,
-                               Options options)
-{
-    return questionTwoActionsCancelInternal(new QDialog(parent), text, title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode questionTwoActionsCancel(QWidget *parent,
                                     const QString &text,
                                     const QString &title,
@@ -625,19 +556,6 @@ ButtonCode questionTwoActionsCancel(QWidget *parent,
 {
     return questionTwoActionsCancelInternal(new QDialog(parent), text, title, primaryAction, secondaryAction, cancelAction, dontAskAgainName, options);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNo(QWidget *parent,
-                        const QString &text,
-                        const QString &title,
-                        const KGuiItem &buttonYes,
-                        const KGuiItem &buttonNo,
-                        const QString &dontAskAgainName,
-                        Options options)
-{
-    return warningYesNoList(parent, text, QStringList(), title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
 
 ButtonCode warningTwoActions(QWidget *parent,
                              const QString &text,
@@ -692,20 +610,6 @@ static ButtonCode warningTwoActionsListInternal(QDialog *dialog,
     }
     return res;
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoList(QWidget *parent,
-                            const QString &text,
-                            const QStringList &strlist,
-                            const QString &title,
-                            const KGuiItem &buttonYes,
-                            const KGuiItem &buttonNo,
-                            const QString &dontAskAgainName,
-                            Options options)
-{
-    return warningTwoActionsListInternal(new QDialog(parent), text, strlist, title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
 
 ButtonCode warningTwoActionsList(QWidget *parent,
                                  const QString &text,
@@ -800,20 +704,6 @@ ButtonCode warningContinueCancelDetailed(QWidget *parent,
     return warningContinueCancelListInternal(new QDialog(parent), text, QStringList(), title, buttonContinue, buttonCancel, dontAskAgainName, options, details);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoCancel(QWidget *parent,
-                              const QString &text,
-                              const QString &title,
-                              const KGuiItem &buttonYes,
-                              const KGuiItem &buttonNo,
-                              const KGuiItem &buttonCancel,
-                              const QString &dontAskAgainName,
-                              Options options)
-{
-    return warningYesNoCancelList(parent, text, QStringList(), title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode warningTwoActionsCancel(QWidget *parent,
                                    const QString &text,
                                    const QString &title,
@@ -877,21 +767,6 @@ static ButtonCode warningTwoActionsCancelListInternal(QDialog *dialog,
     }
     return res;
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoCancelList(QWidget *parent,
-                                  const QString &text,
-                                  const QStringList &strlist,
-                                  const QString &title,
-                                  const KGuiItem &buttonYes,
-                                  const KGuiItem &buttonNo,
-                                  const KGuiItem &buttonCancel,
-                                  const QString &dontAskAgainName,
-                                  Options options)
-{
-    return warningTwoActionsCancelListInternal(new QDialog(parent), text, strlist, title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
-}
-#endif
 
 ButtonCode warningTwoActionsCancelList(QWidget *parent,
                                        const QString &text,
@@ -1085,19 +960,6 @@ ButtonCode messageBox(QWidget *parent,
     return messageBoxInternal(new QDialog(parent), type, text, title, primaryAction, secondaryAction, buttonCancel, dontShow, options);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode questionYesNoWId(WId parent_id,
-                            const QString &text,
-                            const QString &title,
-                            const KGuiItem &buttonYes,
-                            const KGuiItem &buttonNo,
-                            const QString &dontAskAgainName,
-                            Options options)
-{
-    return questionYesNoListWId(parent_id, text, QStringList(), title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode questionTwoActionsWId(WId parent_id,
                                  const QString &text,
                                  const QString &title,
@@ -1108,20 +970,6 @@ ButtonCode questionTwoActionsWId(WId parent_id,
 {
     return questionTwoActionsListWId(parent_id, text, QStringList(), title, primaryAction, secondaryAction, dontAskAgainName, options);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode questionYesNoListWId(WId parent_id,
-                                const QString &text,
-                                const QStringList &strlist,
-                                const QString &title,
-                                const KGuiItem &buttonYes,
-                                const KGuiItem &buttonNo,
-                                const QString &dontAskAgainName,
-                                Options options)
-{
-    return questionTwoActionsListInternal(createWIdDialog(parent_id), text, strlist, title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
 
 ButtonCode questionTwoActionsListWId(WId parent_id,
                                      const QString &text,
@@ -1135,20 +983,6 @@ ButtonCode questionTwoActionsListWId(WId parent_id,
     return questionTwoActionsListInternal(createWIdDialog(parent_id), text, strlist, title, primaryAction, secondaryAction, dontAskAgainName, options);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode questionYesNoCancelWId(WId parent_id,
-                                  const QString &text,
-                                  const QString &title,
-                                  const KGuiItem &buttonYes,
-                                  const KGuiItem &buttonNo,
-                                  const KGuiItem &buttonCancel,
-                                  const QString &dontAskAgainName,
-                                  Options options)
-{
-    return questionTwoActionsCancelInternal(createWIdDialog(parent_id), text, title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode questionTwoActionsCancelWId(WId parent_id,
                                        const QString &text,
                                        const QString &title,
@@ -1161,19 +995,6 @@ ButtonCode questionTwoActionsCancelWId(WId parent_id,
     return questionTwoActionsCancelInternal(createWIdDialog(parent_id), text, title, primaryAction, secondaryAction, cancelAction, dontAskAgainName, options);
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoWId(WId parent_id,
-                           const QString &text,
-                           const QString &title,
-                           const KGuiItem &buttonYes,
-                           const KGuiItem &buttonNo,
-                           const QString &dontAskAgainName,
-                           Options options)
-{
-    return warningYesNoListWId(parent_id, text, QStringList(), title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode warningTwoActionsWId(WId parent_id,
                                 const QString &text,
                                 const QString &title,
@@ -1184,20 +1005,6 @@ ButtonCode warningTwoActionsWId(WId parent_id,
 {
     return warningTwoActionsListWId(parent_id, text, QStringList(), title, primaryAction, secondaryAction, dontAskAgainName, options);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoListWId(WId parent_id,
-                               const QString &text,
-                               const QStringList &strlist,
-                               const QString &title,
-                               const KGuiItem &buttonYes,
-                               const KGuiItem &buttonNo,
-                               const QString &dontAskAgainName,
-                               Options options)
-{
-    return warningTwoActionsListInternal(createWIdDialog(parent_id), text, strlist, title, buttonYes, buttonNo, dontAskAgainName, options);
-}
-#endif
 
 ButtonCode warningTwoActionsListWId(WId parent_id,
                                     const QString &text,
@@ -1242,20 +1049,6 @@ ButtonCode warningContinueCancelListWId(WId parent_id,
                                              QString());
 }
 
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoCancelWId(WId parent_id,
-                                 const QString &text,
-                                 const QString &title,
-                                 const KGuiItem &buttonYes,
-                                 const KGuiItem &buttonNo,
-                                 const KGuiItem &buttonCancel,
-                                 const QString &dontAskAgainName,
-                                 Options options)
-{
-    return warningYesNoCancelListWId(parent_id, text, QStringList(), title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
-}
-#endif
-
 ButtonCode warningTwoActionsCancelWId(WId parent_id,
                                       const QString &text,
                                       const QString &title,
@@ -1267,21 +1060,6 @@ ButtonCode warningTwoActionsCancelWId(WId parent_id,
 {
     return warningTwoActionsCancelListWId(parent_id, text, QStringList(), title, primaryAction, secondaryAction, buttonCancel, dontAskAgainName, options);
 }
-
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-ButtonCode warningYesNoCancelListWId(WId parent_id,
-                                     const QString &text,
-                                     const QStringList &strlist,
-                                     const QString &title,
-                                     const KGuiItem &buttonYes,
-                                     const KGuiItem &buttonNo,
-                                     const KGuiItem &buttonCancel,
-                                     const QString &dontAskAgainName,
-                                     Options options)
-{
-    return warningYesNoCancelList(createWIdDialog(parent_id), text, strlist, title, buttonYes, buttonNo, buttonCancel, dontAskAgainName, options);
-}
-#endif
 
 ButtonCode warningTwoActionsCancelListWId(WId parent_id,
                                           const QString &text,

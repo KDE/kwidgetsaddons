@@ -99,9 +99,6 @@ bool testMessageBox(int test)
         break;
     }
     case 2:
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-        i = KMessageBox::questionYesNo(nullptr, QStringLiteral("Do you have a printer?"), QStringLiteral("Printer setup"));
-#endif
         break;
 
     case 3:
@@ -113,17 +110,6 @@ bool testMessageBox(int test)
         break;
 
     case 4:
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-        i = KMessageBox::warningYesNo(nullptr,
-                                      QString::fromLatin1("KDVI could not locate the program 'dvipdfm' on your computer. That program is "
-                                                          "absolutely needed by the export function. You can, however, convert "
-                                                          "the DVI-file to PDF using the print function of KDVI, but that will often "
-                                                          "produce files which print ok, but are of inferior quality if viewed in the "
-                                                          "Acrobat Reader. It may be wise to upgrade to a more recent version of your "
-                                                          "TeX distribution which includes the 'dvipdfm' program.\n"
-                                                          "Hint to the perplexed system administrator: KDVI uses the shell's PATH variable "
-                                                          "when looking for programs."));
-#endif
         break;
 
     case 5:
@@ -160,20 +146,9 @@ bool testMessageBox(int test)
         break;
 
     case 8:
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-        i = KMessageBox::warningYesNoCancel(nullptr,
-                                            QString::fromLatin1("Your document contains unsaved changes.\n"
-                                                                "Do you want to save your changes?\n"));
-#endif
         break;
 
     case 9:
-#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 100)
-        i = KMessageBox::warningYesNoCancel(nullptr,
-                                            QString::fromLatin1("Your document contains unsaved changes.\n"
-                                                                "Do you want to save your changes?\n"),
-                                            QStringLiteral("Close"));
-#endif
         break;
 
     case 10:
