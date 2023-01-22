@@ -160,7 +160,7 @@ ecm_qtdesignerplugin_widget(KUrlLabel
 
 ecm_add_qtdesignerplugin(kwidgetsaddonswidgets
     NAME KWidgetsAddonsWidgets
-    OUTPUT_NAME kwidgetsaddons5widgets
+    OUTPUT_NAME kwidgetsaddons6widgets
     WIDGETS
         KActionSelector
         KAnimatedButton
