@@ -1,12 +1,12 @@
 
 include(ECMMarkAsTest)
 
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
+find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 macro(kwidgetsaddons_executable_tests)
   foreach(_testname ${ARGN})
     add_executable(${_testname} ${_testname}.cpp)
-    target_link_libraries(${_testname} Qt${QT_MAJOR_VERSION}::Test KF6::WidgetsAddons)
+    target_link_libraries(${_testname} Qt6::Test KF6::WidgetsAddons)
     ecm_mark_as_test(${_testname})
   endforeach(_testname)
 endmacro()
@@ -55,12 +55,12 @@ kwidgetsaddons_executable_tests(
 
 add_executable(kdatetabletest kdatetabletest.cpp ../src/kdatetable.cpp)
 target_include_directories(kdatetabletest PRIVATE ../src)
-target_link_libraries(kdatetabletest Qt${QT_MAJOR_VERSION}::Widgets)
+target_link_libraries(kdatetabletest Qt6::Widgets)
 ecm_mark_as_test(kdatetabletest)
 
 add_executable(kcolumnresizertestapp)
 set(kcolumnresizertestapp_UI_SRCS)
 qt_wrap_ui(kcolumnresizertestapp_UI_SRCS kcolumnresizertestapp.ui)
 target_sources(kcolumnresizertestapp PRIVATE ${kcolumnresizertestapp_UI_SRCS} kcolumnresizertestapp.cpp)
-target_link_libraries(kcolumnresizertestapp KF6::WidgetsAddons Qt${QT_MAJOR_VERSION}::Widgets)
+target_link_libraries(kcolumnresizertestapp KF6::WidgetsAddons Qt6::Widgets)
 ecm_mark_as_test(kcolumnresizertestapp)

@@ -16,11 +16,7 @@ class KTwoFingerSwipeTest : public QObject
 {
     Q_OBJECT
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     QPointingDevice *mDev = nullptr;
-#else
-    QTouchDevice *mDev = nullptr;
-#endif
 
     QMainWindow mMainWindow;
     QWidget mWidget;

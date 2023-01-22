@@ -199,11 +199,7 @@ void KToolTipWidget::setHideDelay(int delay)
     d->hideTimer.setInterval(delay);
 }
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 void KToolTipWidget::enterEvent(QEnterEvent *)
-#else
-void KToolTipWidget::enterEvent(QEvent *)
-#endif
 {
     // Ignore hide delay and leave tooltip visible.
     if (hideDelay() > 0) {

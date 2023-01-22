@@ -99,12 +99,7 @@ Q_SIGNALS:
     void hidden();
 
 protected:
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     void enterEvent(QEnterEvent *event) override;
-#else
-    void enterEvent(QEvent *event) override;
-#endif
-
     void hideEvent(QHideEvent *) override;
     void leaveEvent(QEvent *) override;
     void paintEvent(QPaintEvent *event) override;

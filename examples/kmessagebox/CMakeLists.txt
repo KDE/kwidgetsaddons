@@ -2,7 +2,7 @@
 add_executable(kwidgetaddons-example-kmessagebox main.cpp)
 
 target_link_libraries(kwidgetaddons-example-kmessagebox
-    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt6::Widgets
     KF6::WidgetsAddons
 )
 

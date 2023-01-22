@@ -1,7 +1,7 @@
 
 include(ECMAddTests)
 
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
+find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
 ecm_add_tests(
   kacceleratormanagertest.cpp
@@ -27,7 +27,7 @@ ecm_add_tests(
   kmultitabbartest.cpp
   ktwofingertaptest.cpp
   ktwofingerswipetest.cpp
-  LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF6::WidgetsAddons
+  LINK_LIBRARIES Qt6::Test KF6::WidgetsAddons
 )
 
 set (CMAKE_AUTOUIC TRUE)
@@ -38,5 +38,5 @@ ecm_add_test(
   kcolumnresizertest-grid-and-form.ui
   TEST_NAME kcolumnresizertest
   NAME_PREFIX "kwidgetsaddons-"
-  LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF6::WidgetsAddons
+  LINK_LIBRARIES Qt6::Test KF6::WidgetsAddons
 )

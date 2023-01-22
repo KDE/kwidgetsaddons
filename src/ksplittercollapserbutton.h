@@ -67,13 +67,7 @@ private Q_SLOTS:
 protected:
     bool eventFilter(QObject *, QEvent *) override;
     void paintEvent(QPaintEvent *) override;
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     void enterEvent(QEnterEvent *event) override;
-#else
-    void enterEvent(QEvent *event) override;
-#endif
-
     void leaveEvent(QEvent *event) override;
     void showEvent(QShowEvent *event) override;
 
