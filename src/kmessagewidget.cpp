@@ -89,10 +89,6 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
     closeButton->setDefaultAction(closeAction);
 
     q->setMessageType(KMessageWidget::Information);
-
-    q->connect(qApp, &QApplication::paletteChanged, q, [this] {
-        KMessageWidgetPrivate::setPalette();
-    });
 }
 
 void KMessageWidgetPrivate::createLayout()
@@ -289,6 +285,8 @@ bool KMessageWidget::event(QEvent *event)
     } else if (event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow) {
         setFixedHeight(d->bestContentHeight());
     } else if (event->type() == QEvent::ParentChange) {
+        d->setPalette();
+    } else if (event->type() == QEvent::ApplicationPaletteChange) {
         d->setPalette();
     }
     return QFrame::event(event);

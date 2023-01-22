@@ -179,7 +179,7 @@ void KAcceleratorManagerPrivate::traverseChildren(QWidget *widget, Item *item, Q
     // we are only interested in direct child widgets
     const QList<QWidget *> childList = widget->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly);
     for (QWidget *w : childList) {
-        if (!w->isVisibleTo(widget) || (w->isTopLevel() && qobject_cast<QMenu *>(w) == nullptr)) {
+        if (!w->isVisibleTo(widget) || (w->isWindow() && qobject_cast<QMenu *>(w) == nullptr)) {
             continue;
         }
 

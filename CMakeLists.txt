@@ -50,7 +50,7 @@ ecm_install_po_files_as_qm(poqm)
 configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
 
 ecm_set_disabled_deprecation_versions(
-    QT 5.14 # QLabel::pixmap(), cannot be ported, but in a deprecated method
+    QT 6.4
 )
 
 add_subdirectory(src)

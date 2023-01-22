@@ -145,7 +145,7 @@ public:
             return nullptr;
         }
         QMimeData *mimeData = new QMimeData();
-        uint character = data(indexes[0], CharacterRole).toUInt();
+        char32_t character = data(indexes[0], CharacterRole).toUInt();
         mimeData->setText(QString::fromUcs4(&character, 1));
         return mimeData;
     }

@@ -258,7 +258,7 @@ void KCharSelectTablePrivate::resizeCells()
     int maxCharWidth = 0;
     const QVector<uint> chars = model->chars();
     for (int i = 0; i < chars.size(); ++i) {
-        uint thisChar = chars.at(i);
+        char32_t thisChar = chars.at(i);
         if (s_data()->isPrint(thisChar)) {
             maxCharWidth = qMax(maxCharWidth, fontMetrics.boundingRect(QString::fromUcs4(&thisChar, 1)).width());
         }
@@ -925,7 +925,7 @@ void KCharSelectPrivate::slotUpdateUnicode(uint c)
     html += tr("Block: ") + s_data()->block(c) + QLatin1String("<br>");
     html += tr("Unicode category: ") + s_data()->categoryText(s_data()->category(c)) + QLatin1String("</p>");
 
-    const QByteArray utf8 = QString::fromUcs4(&c, 1).toUtf8();
+    const QByteArray utf8 = QString::fromUcs4(reinterpret_cast<char32_t *>(&c), 1).toUtf8();
 
     html += QLatin1String("<p><b>") + tr("Various Useful Representations") + QLatin1String("</b><br>");
     html += tr("UTF-8:");
@@ -1092,7 +1092,7 @@ QVariant KCharSelectItemModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    uint c = m_chars[pos];
+    char32_t c = m_chars[pos];
     if (role == Qt::ToolTipRole) {
         QString result = s_data()->display(c, m_font) + QLatin1String("<br />") + s_data()->name(c).toHtmlEscaped() + QLatin1String("<br />")
             + tr("Unicode code point:") + QLatin1Char(' ') + s_data()->formatCode(c) + QLatin1String("<br />") + tr("In decimal", "Character")
