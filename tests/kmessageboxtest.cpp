@@ -99,20 +99,13 @@ bool testMessageBox(int test)
         break;
     }
     case 2:
-        break;
-
-    case 3:
         i = KMessageBox::questionTwoActions(nullptr,
                                             QStringLiteral("Does your printer support color or only black and white?"),
                                             QStringLiteral("Printer setup"),
                                             KGuiItem(QStringLiteral("Print Color")),
                                             KGuiItem(QLatin1String("Print Black & White")));
         break;
-
-    case 4:
-        break;
-
-    case 5:
+    case 3:
         i = KMessageBox::warningTwoActions(nullptr,
                                            QStringLiteral("Your printer has been added.\n"
                                                           "Do you want to update your configuration?"),
@@ -121,14 +114,15 @@ bool testMessageBox(int test)
                                            KGuiItem(QStringLiteral("Skip")));
         break;
 
-    case 6:
+    case 4:
         i = KMessageBox::warningContinueCancel(nullptr,
                                                QString::fromLatin1("You are about to print.\n"
                                                                    "Are you sure?"),
                                                QStringLiteral("Print"),
                                                KGuiItem(QStringLiteral("&Print")));
         break;
-    case 7:
+
+    case 5:
         i = KMessageBox::warningContinueCancel(nullptr,
                                                QString::fromLatin1("You are about to <Print>.\n"
                                                                    "Are you sure?"),
@@ -145,13 +139,7 @@ bool testMessageBox(int test)
                                                QStringLiteral("dontask"));
         break;
 
-    case 8:
-        break;
-
-    case 9:
-        break;
-
-    case 10:
+    case 6:
         i = KMessageBox::warningTwoActionsCancel(nullptr,
                                                  QString::fromLatin1("Your document contains unsaved changes.\n"
                                                                      "Do you want to save or discard your changes?\n"),
@@ -160,12 +148,12 @@ bool testMessageBox(int test)
                                                  KGuiItem(QStringLiteral("&Discard")));
         break;
 
-    case 11:
+    case 7:
         i = KMessageBox::Ok;
         KMessageBox::error(nullptr, QStringLiteral("Oops, Your harddisk is unreadable."));
         break;
 
-    case 12:
+    case 8:
         i = KMessageBox::Ok;
         KMessageBox::detailedError(nullptr,
                                    QStringLiteral("Oops, Your harddisk is unreadable."),
@@ -173,14 +161,14 @@ bool testMessageBox(int test)
                                    QStringLiteral("Uh ooh"));
         break;
 
-    case 15:
+    case 9:
         i = KMessageBox::Ok;
         KMessageBox::information(nullptr,
                                  QString::fromLatin1("You can enable the menubar again "
                                                      "with the right mouse button menu."));
         break;
 
-    case 16:
+    case 10:
         i = KMessageBox::Ok;
         KMessageBox::information(nullptr,
                                  QString::fromLatin1("You can enable the menubar again "
@@ -188,7 +176,7 @@ bool testMessageBox(int test)
                                  QStringLiteral("Menubar Info"));
         break;
 
-    case 17:
+    case 11:
         i = KMessageBox::Ok;
         KMessageBox::information(nullptr,
                                  QStringLiteral("You can enable the menubar again\nwith the right mouse button menu."),
@@ -196,16 +184,16 @@ bool testMessageBox(int test)
                                  QStringLiteral("Enable_Menubar"));
         break;
 
-    case 18:
+    case 12:
         i = KMessageBox::Ok;
         KMessageBox::enableAllMessages();
         break;
 
-    case 19:
+    case 13:
         i = KMessageBox::Ok;
         KMessageBox::information(nullptr, QStringLiteral("Return of the annoying popup message."), QString(), QStringLiteral("Enable_Menubar"));
         break;
-    case 20: {
+    case 14: {
         QStringList strlist;
         strlist << QStringLiteral("/dev/hda") << QStringLiteral("/etc/inittab") << QStringLiteral("/usr/somefile")
                 << QString::fromLatin1(
@@ -220,7 +208,7 @@ bool testMessageBox(int test)
                                                 KGuiItem(QStringLiteral("Delete")),
                                                 KGuiItem(QStringLiteral("Move to Trash")));
     } break;
-    case 21: {
+    case 15: {
         QStringList strlist;
         printf("Filling StringList...\n");
         for (int j = 1; j <= 6000; j++) {
@@ -235,17 +223,17 @@ bool testMessageBox(int test)
                                                 KGuiItem(QStringLiteral("Move to Trash")));
     } break;
 
-    case 22:
+    case 16:
         i = KMessageBox::Ok;
         KMessageBox::informationList(nullptr, QStringLiteral("The following words have been found:"), list);
         break;
 
-    case 23:
+    case 17:
         i = KMessageBox::Ok;
         KMessageBox::informationList(nullptr, QStringLiteral("The following words have been found:"), list, QStringLiteral("Search Words"));
         break;
 
-    case 24:
+    case 18:
         i = KMessageBox::Ok;
         KMessageBox::informationList(nullptr, QStringLiteral("The following words have been found:"), list, QString(), QStringLiteral("Search_Words"));
         break;
