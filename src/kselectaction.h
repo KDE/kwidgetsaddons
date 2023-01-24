@@ -40,6 +40,15 @@ class KSelectActionPrivate;
  *  this item will automatically be checked,
  *  the formerly checked item becomes unchecked.
  *  There can be only one item checked at a time.
+ *
+ *  Porting from KF5 to KF6:
+ *
+ *  <!-- Using '%' before the old symbol to prevent auto linking here and below -->
+ *  The overloaded signal %KSelectAction::triggered(QAction *action) was renamed
+ *  to KSelectAction::actionTriggered(QAction *action).
+ *
+ *  The protected virtual method %KSelectAction::actionTriggered(QAction *action) was renamed
+ *  to KSelectAction::slotActionTriggered(QAction *action).
  */
 class KWIDGETSADDONS_EXPORT KSelectAction : public QWidgetAction
 {
@@ -329,9 +338,7 @@ Q_SIGNALS:
      * This signal is emitted when an item is selected.
      * @param action indicates the item selected
      */
-    void triggered(QAction *action); // clazy:exclude=overloaded-signal
-    // TODO KF6:: rename to actionTriggered(QAction *action)
-    // We cannot do this in KF5, due to existing slot method with same signature, see below
+    void actionTriggered(QAction *action);
 
     /**
      * This signal is emitted when an item is selected.
@@ -386,11 +393,9 @@ protected Q_SLOTS:
     /**
      * This function is called whenever an action from the selections is triggered.
      * The default implementation calls trigger() if isCheckable() is @c true, then emits
-     * the signals triggered(QAction *), triggered(int) and triggered(const QString &)
-     * as well as since 5.78 the signals indexTriggered(int) and textTriggered(const QString &).
+     * the signals actionTriggered(QAction *), indexTriggered(int) and textTriggered(const QString &).
      */
-    virtual void actionTriggered(QAction *action);
-    // TODO KF6:: rename to handleActionTriggered, to release name to signal
+    virtual void slotActionTriggered(QAction *action);
 
     /**
      * For structured menu building. Deselects all items if the action was unchecked by the top menu

@@ -129,8 +129,8 @@ int KFontSizeAction::fontSize() const
     return currentText().toInt();
 }
 
-void KFontSizeAction::actionTriggered(QAction *action)
+void KFontSizeAction::slotActionTriggered(QAction *action)
 {
     Q_EMIT fontSizeChanged(action->text().toInt());
-    KSelectAction::actionTriggered(action);
+    KSelectAction::slotActionTriggered(action);
 }

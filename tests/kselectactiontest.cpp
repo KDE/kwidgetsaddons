@@ -42,13 +42,13 @@ SelectActionTest::SelectActionTest(QWidget *parent)
     m_comboSelect->setToolBarMode(KSelectAction::ComboBoxMode);
     m_comboSelect->setWhatsThis(QStringLiteral("What's this?"));
 
-    connect(m_comboSelect, qOverload<QAction *>(&KSelectAction::triggered), this, &SelectActionTest::actionTriggered);
+    connect(m_comboSelect, qOverload<QAction *>(&KSelectAction::actionTriggered), this, &SelectActionTest::actionTriggered);
     connect(m_comboSelect, &KSelectAction::indexTriggered, this, &SelectActionTest::indexTriggered);
     connect(m_comboSelect, &KSelectAction::textTriggered, this, &SelectActionTest::textTriggered);
 
     m_buttonSelect->setToolBarMode(KSelectAction::MenuMode);
     m_buttonSelect->setWhatsThis(QStringLiteral("What's this?"));
-    connect(m_buttonSelect, qOverload<QAction *>(&KSelectAction::triggered), this, &SelectActionTest::actionTriggered);
+    connect(m_buttonSelect, qOverload<QAction *>(&KSelectAction::actionTriggered), this, &SelectActionTest::actionTriggered);
     connect(m_buttonSelect, &KSelectAction::indexTriggered, this, &SelectActionTest::indexTriggered);
     connect(m_buttonSelect, &KSelectAction::textTriggered, this, &SelectActionTest::textTriggered);
 

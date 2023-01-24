@@ -82,7 +82,7 @@ KSelectAction::~KSelectAction()
 
 void KSelectActionPrivate::init()
 {
-    QObject::connect(q_ptr->selectableActionGroup(), &QActionGroup::triggered, q_ptr, &KSelectAction::actionTriggered);
+    QObject::connect(q_ptr->selectableActionGroup(), &QActionGroup::triggered, q_ptr, &KSelectAction::slotActionTriggered);
     QObject::connect(q_ptr, &QAction::toggled, q_ptr, &KSelectAction::slotToggled);
     q_ptr->setMenu(new QMenu());
     q_ptr->setEnabled(false);
@@ -307,20 +307,20 @@ void KSelectAction::insertAction(QAction *before, QAction *action)
     menu()->insertAction(before, action);
 }
 
-void KSelectAction::actionTriggered(QAction *action)
+void KSelectAction::slotActionTriggered(QAction *action)
 {
     // cache values so we don't need access to members in the action
     // after we've done an emit()
     const QString text = ::DropAmpersands(action->text());
     const int index = selectableActionGroup()->actions().indexOf(action);
-    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::actionTriggered(" << action << ") text=" << text
+    // qCDebug(KWidgetsAddonsLog) << "KSelectAction::slotActionTriggered(" << action << ") text=" << text
     //          << " index=" << index  << " emitting triggered()" << endl;
 
     if (isCheckable()) { // if this is subsidiary of other KSelectAction-derived class
         trigger(); // then imitate usual QAction behaviour so that other submenus (and their items) become unchecked
     }
 
-    Q_EMIT triggered(action);
+    Q_EMIT actionTriggered(action);
     Q_EMIT indexTriggered(index);
     Q_EMIT textTriggered(text);
 }
