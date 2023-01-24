@@ -1896,11 +1896,12 @@ msgstr ""
 "ფაილები."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
 msgstr[0] "პაროლი მინიმუმ %n სიმბოლოს უნდა შეიცავდეს."
+msgstr[1] "პაროლი მინიმუმ %n სიმბოლოს უნდა შეიცავდეს."
 
 #: knewpassworddialog.cpp:67
 msgctxt "KNewPasswordDialog|@info"
