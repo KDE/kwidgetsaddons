@@ -270,7 +270,7 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
         return;
     }
     QString header = model->data(index, KPageModel::HeaderRole).toString();
-    if (header.isNull()) { // TODO KF6 remove that ugly logic, see also doxy-comments in KPageWidgetItem::setHeader()
+    if (header.isEmpty()) {
         header = model->data(index, Qt::DisplayRole).toString();
     }
 

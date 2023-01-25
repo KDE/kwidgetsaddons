@@ -97,10 +97,6 @@ public:
      * does not got set explicit, then the defined name() will also be used
      * for the header.
      *
-     * For backward-compatibility, if setHeader("") is used, the header will be hidden
-     * even if the @a KPageView::FaceType is something else then Tabbed.
-     * This feature is deprecated since 5.52. use @c setHeaderVisible(false) instead.
-     *
      * @param header Header of the page widget item.
      */
     void setHeader(const QString &header);
