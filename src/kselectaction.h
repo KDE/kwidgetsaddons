@@ -344,23 +344,6 @@ Q_SIGNALS:
      * This signal is emitted when an item is selected.
      * @param index indicates the item selected
      *
-     * In your KSelectAction subclass to be backward-compatible to KF < 5.78, emit instead
-     * just the deprecated signal triggered(int). That will also
-     * automatically emit indexTriggered(int) because this signal
-     * is connected to the deprecated one in the KSelectAction constructor.
-     * Only if you compile against a variant of KWidgetsAddons built without all API
-     * deprecated up to version 5.78, then emit this signal directly.
-     * Your code would be like this:
-     * @code
-     *     const int index = selectableActionGroup()->actions().indexOf(action);
-     * #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
-     *     // will also indirectly emit indexTriggered since 5.78
-     *     Q_EMIT triggered(index);
-     * #else
-     *     Q_EMIT indexTriggered(index);
-     * #endif
-     * @endcode
-     *
      * @since 5.78
      */
     void indexTriggered(int index);
@@ -368,22 +351,6 @@ Q_SIGNALS:
     /**
      * This signal is emitted when an item is selected.
      * @param text indicates the item selected
-     *
-     * In your KSelectAction subclass to be backward-compatible to KF < 5.78, emit instead
-     * just the deprecated signal triggered(const QString &). That will also
-     * automatically emit textTriggered(const QString &) because this signal
-     * is connected to the deprecated one in the KSelectAction constructor.
-     * Only if you compile against a variant of KWidgetsAddons built without all API
-     * deprecated up to version 5.78, then emit this signal directly.
-     * Your code would be like this:
-     * @code
-     * #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 78)
-     *     // will also indirectly emit textTriggered since 5.78
-     *     Q_EMIT triggered(action->text());
-     * #else
-     *     Q_EMIT textTriggered(action->text());
-     * #endif
-     * @endcode
      *
      * @since 5.78
      */
