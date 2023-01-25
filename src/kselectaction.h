@@ -337,6 +337,8 @@ Q_SIGNALS:
     /**
      * This signal is emitted when an item is selected.
      * @param action indicates the item selected
+     *
+     * @since 6.0
      */
     void actionTriggered(QAction *action);
 
@@ -361,6 +363,8 @@ protected Q_SLOTS:
      * This function is called whenever an action from the selections is triggered.
      * The default implementation calls trigger() if isCheckable() is @c true, then emits
      * the signals actionTriggered(QAction *), indexTriggered(int) and textTriggered(const QString &).
+     *
+     * @since 6.0
      */
     virtual void slotActionTriggered(QAction *action);
 
