@@ -86,7 +86,7 @@ protected Q_SLOTS:
     void slotToggled(bool checked) override;
 
 private:
-    Q_DECLARE_PRIVATE_D(KToggleAction::d, KToggleFullScreenAction)
+    Q_DECLARE_PRIVATE(KToggleFullScreenAction)
 };
 
 #endif

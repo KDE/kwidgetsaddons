@@ -94,11 +94,11 @@ protected Q_SLOTS:
 protected:
     KToggleAction(KToggleActionPrivate &dd, QObject *parent);
 
+protected:
+    std::unique_ptr<class KToggleActionPrivate> const d_ptr;
+
 private:
-    friend class KToggleFullScreenAction;
-    Q_DECLARE_PRIVATE_D(d, KToggleAction)
-    std::unique_ptr<class KToggleActionPrivate> const d;
-    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
+    Q_DECLARE_PRIVATE(KToggleAction)
 };
 
 #endif

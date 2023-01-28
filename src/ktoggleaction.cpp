@@ -24,7 +24,7 @@ KToggleAction::KToggleAction(QObject *parent)
 
 KToggleAction::KToggleAction(KToggleActionPrivate &dd, QObject *parent)
     : QAction(parent)
-    , d(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KToggleAction);
 
@@ -33,7 +33,7 @@ KToggleAction::KToggleAction(KToggleActionPrivate &dd, QObject *parent)
 
 KToggleAction::KToggleAction(const QString &text, QObject *parent)
     : QAction(parent)
-    , d(new KToggleActionPrivate(this))
+    , d_ptr(new KToggleActionPrivate(this))
 {
     Q_D(KToggleAction);
 
@@ -43,7 +43,7 @@ KToggleAction::KToggleAction(const QString &text, QObject *parent)
 
 KToggleAction::KToggleAction(const QIcon &icon, const QString &text, QObject *parent)
     : QAction(parent)
-    , d(new KToggleActionPrivate(this))
+    , d_ptr(new KToggleActionPrivate(this))
 {
     Q_D(KToggleAction);
 
