@@ -179,8 +179,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kviewstateserializer.h
     kxyselector.cpp
     kxyselector.h
-    lineediturldropeventfilter.cpp
-    lineediturldropeventfilter.h
+    klineediturldropeventfilter.cpp
+    klineediturldropeventfilter.h
 
     icons.qrc
 )
@@ -285,7 +285,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KMessageWidget
   KMessageDialog
   KNewPasswordDialog
-  LineEditUrlDropEventFilter
+  KLineEditUrlDropEventFilter
   KPasswordLineEdit
   KPixmapSequence
   KPixmapSequenceOverlayPainter
