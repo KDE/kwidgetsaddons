@@ -1446,7 +1446,7 @@ msgstr "Unknown"
 #: kcolorcombo.cpp:333
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
-msgstr "გა_მართვა..."
+msgstr "ხელით..."
 
 #: kdatecombobox.cpp:186
 msgctxt "KDateComboBox|@info"
@@ -2334,7 +2334,7 @@ msgstr "შეჩერება"
 #: kstandardguiitem.cpp:366
 msgctxt "KStandardGuiItem|"
 msgid "Add"
-msgstr "_დამატება"
+msgstr "დამატება"
 
 #: kstandardguiitem.cpp:371
 msgctxt "KStandardGuiItem|"

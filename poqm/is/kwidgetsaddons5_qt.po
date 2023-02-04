@@ -7,2478 +7,1639 @@
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Arnar Leósson <leosson@frisurf.no>, 2003, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# gummi <gudmundure@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2013-05-13 22:40+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2023-02-03 11:31+0000\n"
+"Last-Translator: gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Sans Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
 msgstr "Serif"
 
 #. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:28
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Monospace"
 msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
-msgstr "Jafnbreitt"
+msgstr "Jafnbreitt (monospace)"
 
 #: fonthelpers_p.h:90
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
 #: fonthelpers_p.h:94
-#, fuzzy, qt-format
-#| msgctxt "dictionary name. %1-language and %2-variant name"
-#| msgid "%1 [%2]"
+#, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
-msgstr "&Tiltækar:"
+msgstr "&Tiltækt:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&Valið:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "Til &baka"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
-msgstr "Fara aftur um eitt skref"
+msgstr "Fara eitt skref til baka"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Næst"
 
 #: kassistantdialog.cpp:114
-#, fuzzy
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Ljúka"
 
 #: kcharselect-translation.cpp:11 kcharselect.cpp:470 kcharselectdata.cpp:285
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr "&Öllu"
+msgstr "Allt"
 
 #: kcharselect-translation.cpp:12
-#, fuzzy
-#| msgid "Open Script"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
-msgstr "Opna skriftu"
+msgstr "Evrópsk letur"
 
 #: kcharselect-translation.cpp:13
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "African Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
-msgstr "Afrískar skriftur"
+msgstr "Afrísk letur"
 
 #: kcharselect-translation.cpp:14
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Middle Eastern Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
-msgstr "Miðausturlenskar skriftur"
+msgstr "Miðausturlensk letur"
 
 #: kcharselect-translation.cpp:15
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Central Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
-msgstr "Mið-asískar skriftur"
+msgstr "Miðasísk letur"
 
 #: kcharselect-translation.cpp:16
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "South Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
-msgstr "Suður-asískar skriftur"
+msgstr "Suðurasísk letur"
 
 #: kcharselect-translation.cpp:17
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "South East Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
-msgstr "Suðaustur-asískar skriftur"
+msgstr "Suðausturasísk letur"
 
 #: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
-msgstr ""
+msgstr "Letur frá Indónesíu og Eyjaálfu"
 
 #: kcharselect-translation.cpp:19
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "East Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
-msgstr "Austur-asískar skriftur"
+msgstr "Austurasísk letur"
 
 #: kcharselect-translation.cpp:20
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "African Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
-msgstr "Afrískar skriftur"
+msgstr "Amerísk letur"
 
 #: kcharselect-translation.cpp:21
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Symbols"
 msgstr "Tákn"
 
 #: kcharselect-translation.cpp:22
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Mathematical Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Mathematical Symbols"
 msgstr "Stærðfræðitákn"
 
 #: kcharselect-translation.cpp:23
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Phonetic Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Hljóðfræðitákn"
 
 #: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
-msgstr "Samsetningarmerki"
+msgstr "Yfir-og undirsett áherslumerki"
 
 #: kcharselect-translation.cpp:25
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Other"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "Annað"
 
 #: kcharselect-translation.cpp:26
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Basic Latin"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
-msgstr "Grunn-latneskt"
+msgstr "Latneskt, grunnur"
 
 #: kcharselect-translation.cpp:27
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin-1 Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin-1 Supplement"
-msgstr "Latína-1 viðbótar"
+msgstr "Latneskt-1 viðbót"
 
 #: kcharselect-translation.cpp:28
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
-msgstr "Latínuviðauki-A"
+msgstr "Latneskt aukið-A"
 
 #: kcharselect-translation.cpp:29
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
-msgstr "Latínuviðauki-B"
+msgstr "Latneskt aukið-B"
 
 #: kcharselect-translation.cpp:30
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "IPA Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "IPA Extensions"
-msgstr "IPA framlengingar"
+msgstr "IPA viðaukar"
 
 #: kcharselect-translation.cpp:31
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Spacing Modifier Letters"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
-msgstr "Bilbreytar"
+msgstr "Ákvæðistákn (Spacing Modifier Letters)"
 
 #: kcharselect-translation.cpp:32
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
-msgstr "Samsetningarmerki"
+msgstr "Yfir- og undirsett stafmerki"
 
 #: kcharselect-translation.cpp:33
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Greek and Coptic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek and Coptic"
 msgstr "Grískt og Koptískt"
 
 #: kcharselect-translation.cpp:34
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Cyrillic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic"
-msgstr "Kýrílskt"
+msgstr "Kýrilískt"
 
 #: kcharselect-translation.cpp:35
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Supplement"
-msgstr "Kýrílskt viðbótar"
+msgstr "Kýrilískt, viðbót"
 
 #: kcharselect-translation.cpp:36
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Armenian"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Armenian"
 msgstr "Armenskt"
 
 #: kcharselect-translation.cpp:37
-#, fuzzy
-#| msgctxt "@item Spelling dictionary"
-#| msgid "Hebrew"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hebrew"
 msgstr "Hebreskt"
 
 #: kcharselect-translation.cpp:38
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Arabic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
 msgstr "Arabískt"
 
 #: kcharselect-translation.cpp:39
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Syriac"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac"
-msgstr "Syriac"
+msgstr "Sýrlenskt"
 
 #: kcharselect-translation.cpp:40
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arabic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
-msgstr "Arabískt viðbótar"
+msgstr "Arabískt, viðbót"
 
 #: kcharselect-translation.cpp:41
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Thaana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
 msgstr "Thaana"
 
 #: kcharselect-translation.cpp:42
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "NKo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "NKo"
 
 #: kcharselect-translation.cpp:43
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Samaritan"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
-msgstr "Samaritan"
+msgstr "Samverskt"
 
 #: kcharselect-translation.cpp:44
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Mandaic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mandaic"
-msgstr "Mandaic"
+msgstr "Mandaískt"
 
 #: kcharselect-translation.cpp:45
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac Supplement"
-msgstr "Kýrílskt viðbótar"
+msgstr "Sýrlenskt, viðbót"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "Latínuviðauki-A"
+msgstr "Arabískt aukið-B"
 
 #: kcharselect-translation.cpp:47
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
-msgstr "Latínuviðauki-A"
+msgstr "Arabískt aukið-A"
 
 #: kcharselect-translation.cpp:48
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Devanagari"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
 msgstr "Devanagarí"
 
 #: kcharselect-translation.cpp:49
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Bengali"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bengali"
 msgstr "Bengalskt"
 
 #: kcharselect-translation.cpp:50
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Gurmukhi"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
-msgstr "Gurmukískt"
+msgstr "Gurmúkískt"
 
 #: kcharselect-translation.cpp:51
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Gujarati"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
 msgstr "Gujaratískt"
 
 #: kcharselect-translation.cpp:52
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Oriya"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
-msgstr "Oryanskt"
+msgstr "Oriya"
 
 #: kcharselect-translation.cpp:53
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Tamil"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tamil"
-msgstr "Tamilskt"
+msgstr "Tamílskt"
 
 #: kcharselect-translation.cpp:54
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Telugu"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
 msgstr "Telúgú"
 
 #: kcharselect-translation.cpp:55
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Kannada"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
 msgstr "Kannadískt"
 
 #: kcharselect-translation.cpp:56
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Malayalam"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
-msgstr "Malaíalamskt"
+msgstr "Malajalam"
 
 #: kcharselect-translation.cpp:57
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Sinhala"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
-msgstr "Sinhala"
+msgstr "Singalískt"
 
 #: kcharselect-translation.cpp:58
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Thai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
 msgstr "Tælenskt"
 
 #: kcharselect-translation.cpp:59
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lao"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lao"
-msgstr "Laó"
+msgstr "Laóskt"
 
 #: kcharselect-translation.cpp:60
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tibetan"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tibetan"
 msgstr "Tíbetskt"
 
 #: kcharselect-translation.cpp:61
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Myanmar"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar"
-msgstr "Mayanmar"
+msgstr "Mjanmarskt"
 
 #: kcharselect-translation.cpp:62
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Georgian"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian"
 msgstr "Georgískt"
 
 #: kcharselect-translation.cpp:63
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Jamo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
 msgstr "Hangul Jamo"
 
 #: kcharselect-translation.cpp:64
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic"
 msgstr "Eþíópískt"
 
 #: kcharselect-translation.cpp:65
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
-msgstr "Eþíópískt viðbótar"
+msgstr "Eþíópískt, viðbót"
 
 #: kcharselect-translation.cpp:66
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cherokee"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee"
 msgstr "Cherokee"
 
 #: kcharselect-translation.cpp:67
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Unified Canadian Aboriginal Syllabics"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "Sameinuð sérhljóðamál kanadískra frumbyggja"
+msgstr "Samræmd atkvæðaskrift kanadískra frumbyggja"
 
 #: kcharselect-translation.cpp:68
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ogham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ogham"
-msgstr "Ogham"
+msgstr "Ogham-letur"
 
 #: kcharselect-translation.cpp:69
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Runic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Runic"
-msgstr "Rúnir"
+msgstr "Rúnaletur"
 
 #: kcharselect-translation.cpp:70
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tagalog"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagalog"
 msgstr "Tagalog"
 
 #: kcharselect-translation.cpp:71
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hanunoo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hanunoo"
-msgstr "Hanunoo"
+msgstr "Hanunú"
 
 #: kcharselect-translation.cpp:72
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Buhid"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
 msgstr "Buhid"
 
 #: kcharselect-translation.cpp:73
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tagbanwa"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
-msgstr "Tagbanwa"
+msgstr "Tagbanva-letur"
 
 #: kcharselect-translation.cpp:74
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Khmer"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer"
-msgstr "Khmerískt"
+msgstr "Khmer"
 
 #: kcharselect-translation.cpp:75
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Mongolian"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mongolian"
 msgstr "Mongólskt"
 
 #: kcharselect-translation.cpp:76
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
-msgstr "Sameinuð sérhljóðamál kanadískra frumbyggja - viðauki"
+msgstr "Samræmd atkvæðaskrift kanadískra frumbyggja, aukið"
 
 #: kcharselect-translation.cpp:77
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Limbu"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
-msgstr "Limbu"
+msgstr "Limbu-letur"
 
 #: kcharselect-translation.cpp:78
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Le"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
-msgstr "Tai Le"
+msgstr "Tai Le-letur"
 
 #: kcharselect-translation.cpp:79
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "New Tai Lue"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "Nýja Tai Lue"
 
 #: kcharselect-translation.cpp:80
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Khmer Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer Symbols"
 msgstr "Khmer-tákn"
 
 #: kcharselect-translation.cpp:81
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Buginese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
-msgstr "Buginískt"
+msgstr "Bugínesískt"
 
 #: kcharselect-translation.cpp:82
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Tham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
-msgstr "Tai Tham"
+msgstr "Tai Tham-letur"
 
 #: kcharselect-translation.cpp:83
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "Samsetningarmerki"
+msgstr "Yfir- og undirsett áherslumerki, aukið"
 
 #: kcharselect-translation.cpp:84
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Balinese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
 msgstr "Balískt"
 
 #: kcharselect-translation.cpp:85
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Sundanese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
-msgstr "Sundaneskt"
+msgstr "Sundískt"
 
 #: kcharselect-translation.cpp:86
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Batak"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
 msgstr "Batak"
 
 #: kcharselect-translation.cpp:87
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lepcha"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
 msgstr "Lepcha"
 
 #: kcharselect-translation.cpp:88
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ol Chiki"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
 msgstr "Ol Chiki"
 
 #: kcharselect-translation.cpp:89
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
-msgstr "Kyrilískt viðauki-A"
+msgstr "Kýrilliskt aukið-C"
 
 #: kcharselect-translation.cpp:90
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Geometric Shapes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "Rúmfræðitákn"
+msgstr "Georgískt aukið"
 
 #: kcharselect-translation.cpp:91
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin-1 Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
-msgstr "Latína-1 viðbótar"
+msgstr "Sundískt, viðbót"
 
 #: kcharselect-translation.cpp:92
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Vedic Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
-msgstr "Vedískar viðbætur"
+msgstr "Vedískt aukið"
 
 #: kcharselect-translation.cpp:93
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phonetic Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions"
-msgstr "Hljóðfræðiviðbætur"
+msgstr "Hljóðritunarviðaukar"
 
 #: kcharselect-translation.cpp:94
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phonetic Extensions Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
-msgstr "Hljóðfræðiviðbætur auknar"
+msgstr "Hljóðritunarviðaukar, viðbót"
 
 #: kcharselect-translation.cpp:95
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Combining Diacritical Marks Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
-msgstr "Viðbótar samsett stafmerki"
+msgstr "Yfir- og undirsett áherslumerki, viðbót"
 
 #: kcharselect-translation.cpp:96
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended Additional"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended Additional"
-msgstr "Aukalegar latneskar útvíkkanir"
+msgstr "Latneskt aukið, viðbót"
 
 #: kcharselect-translation.cpp:97
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Greek Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
-msgstr "Grískt útvíkkað"
+msgstr "Grískt aukið"
 
 #: kcharselect-translation.cpp:98
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "General Punctuation"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "General Punctuation"
 msgstr "Almenn greinamerki"
 
 #: kcharselect-translation.cpp:99
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Superscripts and Subscripts"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Superscripts and Subscripts"
 msgstr "Yfir- og undirskrift"
 
 #: kcharselect-translation.cpp:100
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Currency Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Currency Symbols"
-msgstr "Gjaldmiðilstákn"
+msgstr "Gjaldmiðlatákn"
 
 #: kcharselect-translation.cpp:101
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Combining Diacritical Marks for Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks for Symbols"
-msgstr "Samsett stafmerki fyrir tákn"
+msgstr "Yfir- og undirsett áherslumerki fyrir tákn"
 
 #: kcharselect-translation.cpp:102
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Letterlike Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
-msgstr "Staflík tákn"
+msgstr "Skrifstafleg tákn"
 
 #: kcharselect-translation.cpp:103
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Number Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Number Forms"
-msgstr "Talnasnið"
+msgstr "Tölutákn"
 
 #: kcharselect-translation.cpp:104
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arrows"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
 msgstr "Örvar"
 
 #: kcharselect-translation.cpp:105
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Mathematical Operators"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
-msgstr "Stærðfræðiaðgerðatákn"
+msgstr "Stærðfræðivirkjar"
 
 #: kcharselect-translation.cpp:106
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Technical"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
-msgstr "Ýmislegt tæknilegt"
+msgstr "Ýmis tæknileg tákn"
 
 #: kcharselect-translation.cpp:107
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Control Pictures"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
-msgstr "Myndstýringar"
+msgstr "Stjórnmyndir"
 
 #: kcharselect-translation.cpp:108
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Optical Character Recognition"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Optical Character Recognition"
-msgstr "Myndlestur (OCR)"
+msgstr "Stafakennsl (OCR)"
 
 #: kcharselect-translation.cpp:109
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Enclosed Alphanumerics"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
-msgstr "Umluktar tölur og bókstafir"
+msgstr "Umluktir bók- og tölustafir"
 
 #: kcharselect-translation.cpp:110
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Box Drawing"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Box Drawing"
-msgstr "Kassateikning"
+msgstr "Rammateikning"
 
 #: kcharselect-translation.cpp:111
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Block Elements"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
-msgstr "Blokkareiningar"
+msgstr "Kubbaeiningar"
 
 #: kcharselect-translation.cpp:112
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Geometric Shapes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes"
-msgstr "Rúmfræðitákn"
+msgstr "Rúmfræðiform"
 
 #: kcharselect-translation.cpp:113
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols"
 msgstr "Ýmis tákn"
 
 #: kcharselect-translation.cpp:114
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Dingbats"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Dingbats"
-msgstr "Dingbats tákn"
+msgstr "Dingbats-tákn"
 
 #: kcharselect-translation.cpp:115
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Mathematical Symbols-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Ýmis stærðfræðitákn-A"
 
 #: kcharselect-translation.cpp:116
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Arrows-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
-msgstr "Örvar-A auknar"
+msgstr "Aukaörvar-A"
 
 #: kcharselect-translation.cpp:117
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Braille Patterns"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
-msgstr "Braille blindraletursmynstur"
+msgstr "Braille-mynstur"
 
 #: kcharselect-translation.cpp:118
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Arrows-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
-msgstr "Örvar-B auknar"
+msgstr "Aukaörvar-B"
 
 #: kcharselect-translation.cpp:119
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Mathematical Symbols-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "Ýmis stærðfræðitákn-B"
 
 #: kcharselect-translation.cpp:120
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Mathematical Operators"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Mathematical Operators"
-msgstr "Viðbótar stærðfræðiaðgerðatákn"
+msgstr "Viðbótar stærðfræðivirkjar"
 
 #: kcharselect-translation.cpp:121
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Symbols and Arrows"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "Ýmis tákn og örvar"
 
 #: kcharselect-translation.cpp:122
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Glagolitic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Glagolitic"
 msgstr "Glagolitískt"
 
 #: kcharselect-translation.cpp:123
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-C"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-C"
-msgstr "Latínuviðauki-C"
+msgstr "Latneskt aukið-C"
 
 #: kcharselect-translation.cpp:124
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Coptic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Coptic"
 msgstr "Koptískt"
 
 #: kcharselect-translation.cpp:125
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Georgian Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Supplement"
-msgstr "Georgískt viðbótar"
+msgstr "Georgískt, viðbót"
 
 #: kcharselect-translation.cpp:126
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tifinagh"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
-msgstr "Tifinagh"
+msgstr "Tifinagh-letur"
 
 #: kcharselect-translation.cpp:127
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended"
-msgstr "Eþíópískt útvíkkað"
+msgstr "Eþíópískt aukið"
 
 #: kcharselect-translation.cpp:128
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-A"
-msgstr "Kyrilískt viðauki-A"
+msgstr "Kýrilliskt aukið-A"
 
 #: kcharselect-translation.cpp:129
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Punctuation"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Punctuation"
-msgstr "Auka greinamerki"
+msgstr "Viðbótar greinamerki"
 
 #: kcharselect-translation.cpp:130
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Radicals Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
-msgstr "CJK stofnviðbót (radicals)"
+msgstr "CJK-rótartákn, viðbót"
 
 #: kcharselect-translation.cpp:131
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kangxi Radicals"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
-msgstr "Kangxi stofnar"
+msgstr "Kangxi-rótartákn"
 
 #: kcharselect-translation.cpp:132
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ideographic Description Characters"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ideographic Description Characters"
-msgstr "Stafir til lýsingar myndleturs"
+msgstr "Lýsingartákn fyrir myndletur"
 
 #: kcharselect-translation.cpp:133
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Symbols and Punctuation"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Symbols and Punctuation"
-msgstr "CJK tákn og greinarmerki"
+msgstr "CJK-tákn og greinarmerki"
 
 #: kcharselect-translation.cpp:134
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hiragana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hiragana"
 msgstr "Hiragana"
 
 #: kcharselect-translation.cpp:135
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Katakana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana"
 msgstr "Katakana"
 
 #: kcharselect-translation.cpp:136
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bopomofo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
 #: kcharselect-translation.cpp:137
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Compatibility Jamo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
-msgstr "Hangúl samhæfanlegt Jamo"
+msgstr "Hangúl-samhæft Jamó"
 
 #: kcharselect-translation.cpp:138
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kanbun"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "Kanbun"
 
 #: kcharselect-translation.cpp:139
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bopomofo Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
-msgstr "Bopomofo útvíkkað"
+msgstr "Bopomofo-letur, aukið"
 
 #: kcharselect-translation.cpp:140
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Strokes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Strokes"
-msgstr "CJK strokur"
+msgstr "CJK-strokur"
 
 #: kcharselect-translation.cpp:141
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Katakana Phonetic Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana Phonetic Extensions"
-msgstr "Katakana hljóðfræðiviðbætur"
+msgstr "Katakana hljóðritunarviðaukar"
 
 #: kcharselect-translation.cpp:142
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Enclosed CJK Letters and Months"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed CJK Letters and Months"
-msgstr "Umlykjandi CJK stafir og mánuðir"
+msgstr "Umluktir CJK stafir og mánuðir"
 
 #: kcharselect-translation.cpp:143
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Compatibility"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility"
-msgstr "CJK samhæfni"
+msgstr "CJK samhæfistákn"
 
 #: kcharselect-translation.cpp:144
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Unified Ideographs Extension A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
-msgstr "CJK samræmt myndletur útvíkkun A"
+msgstr "CJK samræmt myndletur, viðauki A"
 
 #: kcharselect-translation.cpp:145
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Yijing Hexagram Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
-msgstr "Yijing Hexagram tákn"
+msgstr "Yijing sexlínutákn"
 
 #: kcharselect-translation.cpp:146
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Unified Ideographs"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
 msgstr "CJK samræmt myndletur"
 
 #: kcharselect-translation.cpp:147
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Yi Syllables"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Syllables"
-msgstr "Yi atkvæði"
+msgstr "Yi atkvæðatákn"
 
 #: kcharselect-translation.cpp:148
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Yi Radicals"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Radicals"
-msgstr "Yi sérhljóðar"
+msgstr "Yi rótartákn"
 
 #: kcharselect-translation.cpp:149
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lisu"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
 msgstr "Lisu"
 
 #: kcharselect-translation.cpp:150
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Vai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "Vai"
 
 #: kcharselect-translation.cpp:151
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Extended-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-B"
-msgstr "Kyrilískt viðauki-B"
+msgstr "Kýrilliskt aukið-B"
 
 #: kcharselect-translation.cpp:152
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bamum"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
 msgstr "Bamum"
 
 #: kcharselect-translation.cpp:153
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Modifier Tone Letters"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
-msgstr "Tónbreytar"
+msgstr "Tónbreytistafir"
 
 #: kcharselect-translation.cpp:154
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-D"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-D"
-msgstr "Latínuviðauki-D"
+msgstr "Latneskt aukið-D"
 
 #: kcharselect-translation.cpp:155
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Syloti Nagri"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr "Syloti Nagri"
 
 #: kcharselect-translation.cpp:156
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Common Indic Number Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
 msgstr "Algeng indversk talnasnið"
 
 #: kcharselect-translation.cpp:157
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phags-pa"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
 msgstr "Phags-pa"
 
 #: kcharselect-translation.cpp:158
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Saurashtra"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
 msgstr "Saurashtra"
 
 #: kcharselect-translation.cpp:159
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Devanagari Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
-msgstr "Devanagari útvíkkað"
+msgstr "Devanagari aukið"
 
 #: kcharselect-translation.cpp:160
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kayah Li"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
 msgstr "Kayah Li"
 
 #: kcharselect-translation.cpp:161
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Rejang"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
 msgstr "Rejang"
 
 #: kcharselect-translation.cpp:162
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Jamo Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
-msgstr "Hangul Jamo viðauki-A"
+msgstr "Hangul Jamo aukið-A"
 
 #: kcharselect-translation.cpp:163
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Javanese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
-msgstr "Javaneskt"
+msgstr "Javanskt"
 
 #: kcharselect-translation.cpp:164
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Myanmar Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
-msgstr "Myanmar viðauki-A"
+msgstr "Mjanmarskt aukið-B"
 
 #: kcharselect-translation.cpp:165
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
 msgstr "Cham"
 
 #: kcharselect-translation.cpp:166
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Myanmar Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
-msgstr "Myanmar viðauki-A"
+msgstr "Mjanmarskt aukið-A"
 
 #: kcharselect-translation.cpp:167
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Viet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
 msgstr "Tai Viet"
 
 #: kcharselect-translation.cpp:168
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Meetei Mayek"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek Extensions"
-msgstr "Meetei Mayek"
+msgstr "Meetei Mayek, viðaukar"
 
 #: kcharselect-translation.cpp:169
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
-msgstr "Eþíópískt viðauki-A"
+msgstr "Eþíópískt aukið-A"
 
 #: kcharselect-translation.cpp:170
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-E"
-msgstr "Latínuviðauki-A"
+msgstr "Latneskt aukið-E"
 
 #: kcharselect-translation.cpp:171
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee Supplement"
-msgstr "Kýrílskt viðbótar"
+msgstr "Cherokee, viðbót"
 
 #: kcharselect-translation.cpp:172
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Meetei Mayek"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek"
 msgstr "Meetei Mayek"
 
 #: kcharselect-translation.cpp:173
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Syllables"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Syllables"
-msgstr "Hangul atkvæði"
+msgstr "Hangul-atkvæði"
 
 #: kcharselect-translation.cpp:174
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Jamo Extended-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
-msgstr "Hangul Jamo viðauki-B"
+msgstr "Hangul Jamo aukið-B"
 
 #: kcharselect-translation.cpp:175
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "High Surrogates"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
-msgstr "Háir Staðgenglar"
+msgstr "Háir staðgenglar"
 
 #: kcharselect-translation.cpp:176
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "High Private Use Surrogates"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
 msgstr "Háir staðgenglar til einkanota"
 
 #: kcharselect-translation.cpp:177
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Low Surrogates"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
-msgstr "Lágir Staðgenglar"
+msgstr "Lágir staðgenglar"
 
 #: kcharselect-translation.cpp:178
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Private Use Area"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Private Use Area"
 msgstr "Svæði til einkanota"
 
 #: kcharselect-translation.cpp:179
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Compatibility Ideographs"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Ideographs"
-msgstr "CJK samhæft myndletur"
+msgstr "CJK myndletur til samhæfingar"
 
 #: kcharselect-translation.cpp:180
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Alphabetic Presentation Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
-msgstr "Framsetningarform í stafrófsröð"
+msgstr "Form fyrir framsetningu bókstafa"
 
 #: kcharselect-translation.cpp:181
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arabic Presentation Forms-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-A"
 msgstr "Arabísk framsetningarform-A"
 
 #: kcharselect-translation.cpp:182
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Variation Selectors"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
 msgstr "Tilbrigðaveljarar"
 
 #: kcharselect-translation.cpp:183
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Vertical Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vertical Forms"
 msgstr "Lóðrétt form"
 
 #: kcharselect-translation.cpp:184
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Combining Half Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
-msgstr "Samsetning hálfmerkja"
+msgstr "Yfir- og undirsett hálf merki"
 
 #: kcharselect-translation.cpp:185
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Compatibility Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Forms"
 msgstr "CJK samræmingarform"
 
 #: kcharselect-translation.cpp:186
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Small Form Variants"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Small Form Variants"
 msgstr "Smá formtilbrigði"
 
 #: kcharselect-translation.cpp:187
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arabic Presentation Forms-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-B"
 msgstr "Arabísk framsetningarform-B"
 
 #: kcharselect-translation.cpp:188
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Halfwidth and Fullwidth Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Halfwidth and Fullwidth Forms"
 msgstr "Hálfbreið og fullbreið form"
 
 #: kcharselect-translation.cpp:189
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Specials"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Specials"
-msgstr "Sérstök"
+msgstr "Sértæk tákn"
 
 #: kcharselect-translation.cpp:191
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mahjong Tiles"
-msgstr ""
+msgstr "Mahjong-kubbar"
 
 #: kcharselect-translation.cpp:192
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Domino Tiles"
-msgstr ""
+msgstr "Dómínókubbar"
 
 #: kcharselect-translation.cpp:193
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Playing Cards"
-msgstr ""
+msgstr "Spil"
 
 #: kcharselect-translation.cpp:194
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Enclosed Alphanumerics"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
-msgstr "Umluktar tölur og bókstafir"
+msgstr "Umluktar tölur og bókstafir, viðbót"
 
 #: kcharselect-translation.cpp:195
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
-msgstr "Eþíópískt viðbótar"
+msgstr "Umlukt myndletur, viðbót"
 
 #: kcharselect-translation.cpp:196
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Symbols and Arrows"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
-msgstr "Ýmis tákn og örvar"
+msgstr "Ýmis tákn og myndtákn"
 
 #: kcharselect-translation.cpp:197
-#, fuzzy
-#| msgid "Emoticons"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Emoticons"
-msgstr "Tjáningartákn"
+msgstr "Tjákn"
 
 #: kcharselect-translation.cpp:198
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ornamental Dingbats"
-msgstr ""
+msgstr "Skrautlegt Dingbats-letur"
 
 #: kcharselect-translation.cpp:199
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Transport and Map Symbols"
-msgstr ""
+msgstr "Flutninga- og kortatákn"
 
 #: kcharselect-translation.cpp:200
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Mathematical Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alchemical Symbols"
-msgstr "Stærðfræðitákn"
+msgstr "Alkemísk tákn"
 
 #: kcharselect-translation.cpp:201
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Geometric Shapes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
-msgstr "Rúmfræðitákn"
+msgstr "Rúmfræðiform, aukið"
 
 #: kcharselect-translation.cpp:202
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Arrows-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
-msgstr "Örvar-A auknar"
+msgstr "Aukaörvar-C"
 
 #: kcharselect-translation.cpp:203
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Symbols and Pictographs"
-msgstr ""
+msgstr "Aukatákn og myndtákn"
 
 #: kcharselect-translation.cpp:204
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Khmer Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
-msgstr "Khmer-tákn"
+msgstr "Skáktákn"
 
 #: kcharselect-translation.cpp:205
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Symbols and Arrows"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "Ýmis tákn og örvar"
+msgstr "Tákn og myndtákn, aukið-A"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
-msgstr ""
+msgstr "Tákn fyrir eldri tölvuvinnslu"
 
 #: kcharselect.cpp:389
-#, fuzzy
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
-msgstr "Sláðu inn leitarstreng eða staf hér"
+msgstr "Sláðu inn leitarorð eða staf..."
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
-msgstr "Sláðu inn leitarstreng eða staf hér"
+msgstr "Sláðu inn leitarorð eða staf hér"
 
 #: kcharselect.cpp:398
-#, fuzzy
-#| msgid "&Find..."
 msgctxt "KCharSelect|@action"
 msgid "&Find..."
 msgstr "&Finna..."
 
 #: kcharselect.cpp:422
-#, fuzzy
-#| msgctxt "Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
-msgstr "Fyrri í ferli"
+msgstr "Fyrra atriði í ferli"
 
 #: kcharselect.cpp:424
-#, fuzzy
-#| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "Fyrri bókstafur í ferli"
+msgstr "Fara á fyrri bókstaf í ferli"
 
 #: kcharselect.cpp:429
-#, fuzzy
-#| msgctxt "Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
-msgstr "Næsti liður í ferli"
+msgstr "Næsta atriði í ferli"
 
 #: kcharselect.cpp:431
-#, fuzzy
-#| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "Næsti bókstafur í ferli"
+msgstr "Fara á næsta bókstaf í ferli"
 
 #: kcharselect.cpp:436
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "Til &baka"
 
 #: kcharselect.cpp:443
-#, fuzzy
-#| msgid "&Forward"
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "Á&fram"
 
 #: kcharselect.cpp:462
-#, fuzzy
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Velja flokk"
 
 #: kcharselect.cpp:466
-#, fuzzy
-#| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "Veldu blokk til að sýna"
+msgstr "Velja blokk til að sýna"
 
 #: kcharselect.cpp:486
-#, fuzzy
-#| msgid "Set font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
-msgstr "Velja letur"
+msgstr "Velja leturgerð"
 
 #: kcharselect.cpp:493
-#, fuzzy
-#| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Stilla leturstærð"
 
 #: kcharselect.cpp:795
-#, fuzzy
-#| msgid "Character:"
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Stafur:"
 
 #: kcharselect.cpp:801
-#, fuzzy
-#| msgid "Name: "
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Heiti: "
 
 #: kcharselect.cpp:810
-#, fuzzy
-#| msgid "Annotations and Cross References"
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Skýringar og tilvísanir"
 
 #: kcharselect.cpp:814
-#, fuzzy
-#| msgid "Alias names:"
 msgctxt "KCharSelect|"
 msgid "Alias names:"
-msgstr "Samheiti:"
+msgstr "Samnefni:"
 
 #: kcharselect.cpp:822
-#, fuzzy
-#| msgid "Notes:"
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Athugasemdir:"
 
 #: kcharselect.cpp:830
-#, fuzzy
-#| msgid "See also:"
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Sjá einnig:"
 
 #: kcharselect.cpp:845
-#, fuzzy
-#| msgid "Equivalents:"
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
-msgstr "Sambærilegt:"
+msgstr "Jafngildi:"
 
 #: kcharselect.cpp:853
-#, fuzzy
-#| msgid "Approximate equivalents:"
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
-msgstr "Áætlaðar samsvaranir:"
+msgstr "Nálæg jafngildi:"
 
 #: kcharselect.cpp:861
-#, fuzzy
-#| msgid "Description:"
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
-msgstr "Lýsing:"
+msgstr "Niðurbrot:"
 
 #: kcharselect.cpp:873
-#, fuzzy
-#| msgid "CJK Ideograph Information"
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
-msgstr "CJK Ideograph upplýsingar"
+msgstr "CJK myndletur, upplýsingar"
 
 #: kcharselect.cpp:876
-#, fuzzy
-#| msgid "Definition in English: "
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Skilgreining á ensku: "
 
 #: kcharselect.cpp:883
-#, fuzzy
-#| msgid "Mandarin Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Framburður á mandarín: "
 
 #: kcharselect.cpp:890
-#, fuzzy
-#| msgid "Cantonese Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Framburður á kantonsku: "
 
 #: kcharselect.cpp:897
-#, fuzzy
-#| msgid "Japanese On Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Japanskur On framburður: "
 
 #: kcharselect.cpp:904
-#, fuzzy
-#| msgid "Japanese Kun Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Japanskur Kun framburður: "
 
 #: kcharselect.cpp:911
-#, fuzzy
-#| msgid "Tang Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Tang framburður: "
 
 #: kcharselect.cpp:918
-#, fuzzy
-#| msgid "Korean Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Kóreanskur framburður: "
 
 #: kcharselect.cpp:924
-#, fuzzy
-#| msgid "General Character Properties"
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Almennir eiginleikar stafa"
 
 #: kcharselect.cpp:925
-#, fuzzy
-#| msgid "Block: "
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Blokk: "
 
 #: kcharselect.cpp:926
-#, fuzzy
-#| msgid "Unicode category: "
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
-msgstr "Unicode flokkur: "
+msgstr "Unicode-flokkur: "
 
 #: kcharselect.cpp:930
-#, fuzzy
-#| msgid "Various Useful Representations"
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
-msgstr "Ýmsar nytsamlegar framsetningar"
+msgstr "Ýmsar gagnlegar framsetningar"
 
 #: kcharselect.cpp:931
-#, fuzzy
-#| msgid "UTF-8:"
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
 #: kcharselect.cpp:935
-#, fuzzy
-#| msgid "UTF-16: "
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
 #: kcharselect.cpp:942
-#, fuzzy
-#| msgid "C octal escaped UTF-8: "
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C octal escaped UTF-8: "
 
 #: kcharselect.cpp:946
-#, fuzzy
-#| msgid "XML decimal entity:"
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
-msgstr "XML tugagildiseining:"
+msgstr "XML-tugagildiseining:"
 
 #: kcharselect.cpp:1098
-#, fuzzy
-#| msgid "Unicode code point:"
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
-msgstr "Unicode kóðapunktur:"
+msgstr "Unicode-kóðapunktur:"
 
 #: kcharselect.cpp:1098
-#, fuzzy
-#| msgctxt "Character"
-#| msgid "In decimal:"
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Í tugagildi:"
 
 #: kcharselectdata.cpp:311
-#, fuzzy
-#| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
-msgstr "Hvaða staf sem er"
+msgstr "<ekkistafur>"
 
 #: kcharselectdata.cpp:332
-#, fuzzy
-#| msgid "<Non Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
-msgstr "<Ekki-einkanota há-staðgengil>"
+msgstr "<hár staðgengill ekki til einkanota>"
 
 #: kcharselectdata.cpp:334
-#, fuzzy
-#| msgid "<Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
-msgstr "<Einkanota há-staðgengill>"
+msgstr "<hár staðgengill til einkanota>"
 
 #: kcharselectdata.cpp:336
-#, fuzzy
-#| msgid "<Low Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
-msgstr "<Lág-staðgengill>"
+msgstr "<lágur staðgengill>"
 
 #: kcharselectdata.cpp:338
-#, fuzzy
-#| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
-msgstr "<Persónuleg not>"
+msgstr "<einkanot>"
 
 #: kcharselectdata.cpp:370
-#, fuzzy
-#| msgid "<not assigned>"
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<ekki úthlutað>"
 
 #: kcharselectdata.cpp:448
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr "&Öllu"
+msgstr "&Allt"
 
 #: kcharselectdata.cpp:760
-#, fuzzy
-#| msgid "Non-printable"
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
-msgstr "Ekki prentanlegur"
+msgstr "Ekki prentanlegt"
 
 #: kcharselectdata.cpp:793
-#, fuzzy
-#| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Annað, stýring"
 
 #: kcharselectdata.cpp:795
-#, fuzzy
-#| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Annað, snið"
 
 #: kcharselectdata.cpp:797
-#, fuzzy
-#| msgid "Other, Not Assigned"
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Annað, ekki skilgreint"
 
 #: kcharselectdata.cpp:799
-#, fuzzy
-#| msgid "Other, Private Use"
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Annað, einkanot"
 
 #: kcharselectdata.cpp:801
-#, fuzzy
-#| msgid "Other, Surrogate"
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Annað, staðgengill"
 
 #: kcharselectdata.cpp:803
-#, fuzzy
-#| msgid "Letter, Lowercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Bókstafur, lágstafur"
 
 #: kcharselectdata.cpp:805
-#, fuzzy
-#| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
-msgstr "Bókstafur, breyta"
+msgstr "Bókstafur, ákvæði"
 
 #: kcharselectdata.cpp:807
-#, fuzzy
-#| msgid "Letter, Other"
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Bókstafur, annað"
 
 #: kcharselectdata.cpp:809
-#, fuzzy
-#| msgid "Letter, Titlecase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Bókstafur, höfuðstafur"
 
 #: kcharselectdata.cpp:811
-#, fuzzy
-#| msgid "Letter, Uppercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Bókstafur, hástafur"
 
 #: kcharselectdata.cpp:813
-#, fuzzy
-#| msgid "Mark, Spacing Combining"
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
-msgstr "Merki, tengibil"
+msgstr "Samsetningartákn (Spacing Combining)"
 
 #: kcharselectdata.cpp:815
-#, fuzzy
-#| msgid "Mark, Enclosing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
-msgstr "Merki, afmörkun"
+msgstr "Merki, umlukt"
 
 #: kcharselectdata.cpp:817
-#, fuzzy
-#| msgid "Mark, Non-Spacing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
-msgstr "Merki, ekki-bil"
+msgstr "Merki, án bils"
 
 #: kcharselectdata.cpp:819
-#, fuzzy
-#| msgid "Number, Decimal Digit"
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Tölustafur, tugagildi"
 
 #: kcharselectdata.cpp:821
-#, fuzzy
-#| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
-msgstr "Tölustafur, stafur"
+msgstr "Tölustafur, bókstafur"
 
 #: kcharselectdata.cpp:823
-#, fuzzy
-#| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Tölustafur, annað"
 
 #: kcharselectdata.cpp:825
-#, fuzzy
-#| msgid "Punctuation, Connector"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
-msgstr "Greinarmerki, tengi"
+msgstr "Greinarmerki, tengill"
 
 #: kcharselectdata.cpp:827
-#, fuzzy
-#| msgid "Punctuation, Dash"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "Greinarmerki, strik"
 
 #: kcharselectdata.cpp:829
-#, fuzzy
-#| msgid "Punctuation, Close"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "Greinarmerki, loka"
 
 #: kcharselectdata.cpp:831
-#, fuzzy
-#| msgid "Punctuation, Final Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
-msgstr "Greinarmerki, endagæsalappir"
+msgstr "Greinarmerki, lokagæsalappir"
 
 #: kcharselectdata.cpp:833
-#, fuzzy
-#| msgid "Punctuation, Initial Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "Greinarmerki, upphafsgæsalappir"
 
 #: kcharselectdata.cpp:835
-#, fuzzy
-#| msgid "Punctuation, Other"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "Greinarmerki, annað"
 
 #: kcharselectdata.cpp:837
-#, fuzzy
-#| msgid "Punctuation, Open"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "Greinarmerki, opið"
 
 #: kcharselectdata.cpp:839
-#, fuzzy
-#| msgid "Symbol, Currency"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Tákn, gjaldmiðill"
 
 #: kcharselectdata.cpp:841
-#, fuzzy
-#| msgid "Symbol, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
-msgstr "Tákn, breyta"
+msgstr "Tákn, ákvæði"
 
 #: kcharselectdata.cpp:843
-#, fuzzy
-#| msgid "Symbol, Math"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
-msgstr "Tákn, útreikningur"
+msgstr "Tákn, stærðfræði"
 
 #: kcharselectdata.cpp:845
-#, fuzzy
-#| msgid "Symbol, Other"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Tákn, annað"
 
 #: kcharselectdata.cpp:847
-#, fuzzy
-#| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "Skiltákn, lína"
 
 #: kcharselectdata.cpp:849
-#, fuzzy
-#| msgid "Separator, Paragraph"
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
-msgstr "Skiltákn, málsgrein"
+msgstr "Skiltákn, efnisgrein"
 
 #: kcharselectdata.cpp:851
-#, fuzzy
-#| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Skiltákn, bil"
 
 #: kcharselectdata.cpp:853
-#, fuzzy
-#| msgid "Unknown"
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Óþekkt"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "Sérsniðið..."
 
 #: kdatecombobox.cpp:186
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The date you entered is invalid"
 msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"
 msgstr "Dagsetningin sem þú slóst inn er ógild"
 
 #: kdatecombobox.cpp:189
-#, fuzzy, qt-format
-#| msgctxt "@info"
-#| msgid "Date cannot be earlier than %1"
+#, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be earlier than %1"
 msgstr "Dagsetning má ekki vera fyrir %1"
 
 #: kdatecombobox.cpp:196
-#, fuzzy, qt-format
-#| msgctxt "@info"
-#| msgid "Date cannot be later than %1"
+#, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be later than %1"
 msgstr "Dagsetning má ekki vera síðar en %1"
 
 #: kdatepicker.cpp:197
-#, fuzzy, qt-format
-#| msgid "Week %1"
+#, qt-format
 msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Vika %1"
 
 #: kdatepicker.cpp:305
-#, fuzzy
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Næsta ár"
 
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Fyrra ár"
 
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Næsti mánuður"
 
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Fyrri mánuður"
 
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Velja viku"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Velja mánuð"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Velja ár"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
-msgstr "Veldu núverandi dag"
+msgstr "Velja núverandi dag"
 
 #: kdatepicker.cpp:647
-#, fuzzy
-#| msgid "Close"
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Loka"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "Næsta ár"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "Næsti mánuður"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "Næsta vika"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "Á morgun"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Í dag"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "Í gær"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
-msgstr "Síðasta vika"
+msgstr "Í síðustu viku"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
-msgstr "Síðasti mánuður"
+msgstr "Í síðasta mánuði"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
-msgstr "Síðasta ár"
+msgstr "Á síðasta ári"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Engin dagsetning"
 
 #: kdatetimeedit.cpp:171
-#, fuzzy
-#| msgctxt "UTC time zone"
-#| msgid "UTC"
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgctxt "No specific time zone"
-#| msgid "Floating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Fljótandi"
 
 #: kdatetimeedit.cpp:211
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The entered date and time is before the minimum allowed date and time."
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
 msgstr ""
-"Tíma- og dagsetningin eru á undan lágmarkstíma- og dagsetningu sem leyfð er."
+"Tíma- og dagsetningin eru á undan lágmarkstíma- og dagsetningu sem leyfð eru."
 
 #: kdatetimeedit.cpp:221
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The entered date and time is after the maximum allowed date and time."
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
 msgstr ""
-"Tíma- og dagsetningin eru á eftir hámarkstíma- og dagsetningu sem leyfð er."
+"Tíma- og dagsetningin eru á eftir hámarkstíma- og dagsetningu sem leyfð eru."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "&Bæta við"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
 msgstr "&Fjarlægja"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
-#| msgid "Move &Up"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
 msgstr "Færa &upp"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
-#| msgid "Move &Down"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Færa &niður"
 
 #: kfontchooser.cpp:168
-#, fuzzy
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Umbeðið letur"
 
 #: kfontchooser.cpp:209
-#, fuzzy
-#| msgctxt "normal severity"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Venjulegt"
 
 #: kfontchooser.cpp:210 kfontchooser.cpp:489
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Italic"
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Skáletrað"
 
 #: kfontchooser.cpp:211 kfontchooser.cpp:490
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Oblique"
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Hallandi"
 
 #: kfontchooser.cpp:212
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Bold"
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Feitletrað"
@@ -2486,28 +1647,20 @@ msgstr "Feitletrað"
 #: kfontchooser.cpp:213
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "Feitletrað þétt hallandi"
 
 #: kfontchooser.cpp:257
-#, fuzzy
-#| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Öll dýrin í skóginum ættu að vera vinir"
 
 #: kfontchooser.cpp:313
-#, fuzzy
-#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr "Leturstærð<br /><i>föst</i> eða <i>háð</i><br />umhverfi"
+msgstr ""
+"Leturstærð<br /><i>föst</i> eða <i>hlutfallsleg</i><br />eftir umhverfi"
 
 #: kfontchooser.cpp:314
-#, fuzzy
-#| msgid ""
-#| "Here you can switch between fixed font size and font size to be "
-#| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#| "dimensions, paper size)."
 msgctxt "KFontChooser|@info:whatsthis"
 msgid ""
 "Here you can switch between fixed font size and font size to be calculated "
@@ -2515,19 +1668,15 @@ msgid ""
 "paper size)."
 msgstr ""
 "Hér getur þú valið á milli þess að hafa fasta leturstærð eða breytilega "
-"eftir umhverfi (stærð hnappa, pappírsstærð)."
+"eftir umhverfi (þ.e. stærð hnappa, pappírsstærð)."
 
 #: kfontchooser.cpp:474
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgid "Select Font"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Velja letur"
@@ -2535,68 +1684,44 @@ msgstr "Velja letur"
 #: kfontchooserwidget.ui:14
 msgctxt "KFontChooserWidget|"
 msgid "KFontChooserWidget"
-msgstr ""
+msgstr "KFontChooserWidget"
 
 #: kfontchooserwidget.ui:31
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Letur"
 
 #: kfontchooserwidget.ui:38
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Letur:"
 
 #: kfontchooserwidget.ui:56
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Leturstíll"
 
 #: kfontchooserwidget.ui:63
-#, fuzzy
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Leturstíll:"
 
 #: kfontchooserwidget.ui:81
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Stærð"
 
 #: kfontchooserwidget.ui:88
-#, fuzzy
-#| msgctxt "@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Stærð:"
 
 #: kfontchooserwidget.ui:97
-#, fuzzy
-#| msgctxt "@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Hlutfallslegt"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -2608,174 +1733,130 @@ msgstr ""
 #: kfontchooserwidget.ui:135
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr ""
+msgstr "Sýna aðeins jafnbreitt letur (monospaced)"
 
 #: kfontrequester.cpp:155
-#, fuzzy
-#| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
-msgstr "Velja..."
+msgstr "Velja leturgerð..."
 
 #: kfontrequester.cpp:161
-#, fuzzy
-#| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
-msgstr "Forsýn af valda letrinu"
+msgstr "Forskoðun á valda letrinu"
 
 #: kfontrequester.cpp:163
-#, fuzzy
-#| msgid ""
-#| "This is a preview of the selected font. You can change it by clicking the "
-#| "\"Choose...\" button."
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Þetta er forsýn af letrinu sem valið var. Þú getur breytt því með því að "
-"smella á \"Velja...\" hnappinn."
+"Þetta er forskoðun á letrinu sem var valið var. Þú getur breytt því með því "
+"að smella á hnappinn \"Velja...\"."
 
 #: kfontrequester.cpp:167
-#, fuzzy, qt-format
-#| msgid "Preview of the \"%1\" font"
+#, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
-msgstr "Forsýn af letrinu \"%1\""
+msgstr "Forskoðun á letrinu \"%1\""
 
 #: kfontrequester.cpp:168
-#, fuzzy, qt-format
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Þetta er forsýn af letrinu \"%1\". Þú getur breytt því með því að smella á "
-"\"Velja...\" hnappinn."
+"Þetta er forskoðun á letrinu \"%1\". Þú getur breytt því með því að smella á "
+"hnappinn \"Velja...\"."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
 msgid "LED on"
-msgstr ""
+msgstr "LED-ljós kveikt"
 
 #: kled.cpp:173
 msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
-msgstr ""
+msgstr "LED-ljós slökkt"
 
 #: kmessagebox.cpp:304
-#, fuzzy
-#| msgid "Details"
 msgctxt "KMessageBox|"
 msgid "Details"
-msgstr "Nánar"
+msgstr "Ítarlegt"
 
 #: kmessagebox.cpp:499 kmessagebox.cpp:568
-#, fuzzy
-#| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Spurning"
 
 #: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
 #: kmessagebox.cpp:765 kmessagebox.cpp:863
-#, fuzzy
-#| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Ekki spyrja aftur"
 
 #: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
-#, fuzzy
-#| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Aðvörun"
 
 #: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
-#, fuzzy
-#| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Villa"
 
 #: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-#, fuzzy
-#| msgid "Sorry"
 msgctxt "KMessageBox|"
 msgid "Sorry"
 msgstr "Því miður"
 
 #: kmessagebox.cpp:1068
-#, fuzzy
-#| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Upplýsingar"
 
 #: kmessagebox.cpp:1083
-#, fuzzy
-#| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ekki sýna þessi skilaboð aftur"
 
 #: kmessagedialog.cpp:179
-#, fuzzy
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
-msgstr "Nánar"
+msgstr "Ítarlegt"
 
 #: kmessagedialog.cpp:264
-#, fuzzy
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Spurning"
 
 #: kmessagedialog.cpp:269
-#, fuzzy
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Aðvörun"
 
 #: kmessagedialog.cpp:272
-#, fuzzy
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Upplýsingar"
 
 #: kmessagedialog.cpp:276
-#, fuzzy
-#| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Því miður"
 
 #: kmessagedialog.cpp:280
-#, fuzzy
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Villa"
 
 #: kmessagewidget.cpp:79
-#, fuzzy
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Loka"
 
 #: kmessagewidget.cpp:80
-#, fuzzy
-#| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Loka skeytinu"
@@ -2783,55 +1864,42 @@ msgstr "Loka skeytinu"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern..."
-msgstr ""
+msgstr "Leita að skrárgerð eða skráarheitismynstri..."
 
 #: kmimetypechooser.cpp:89
-#, fuzzy
-#| msgid "Filter"
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr "Sía"
+msgstr "&Sía:"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
-#| msgid "Mime types"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
-msgstr "MIME tegundir"
+msgstr "MIME-gerðir"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
 msgstr "Athugasemd"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Braille Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
-msgstr "Braille blindraletursmynstur"
+msgstr "Mynstur"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit..."
-msgstr "Sýs&l..."
+msgstr "Br&eyta..."
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
 msgid "Launch the MIME type editor"
-msgstr ""
+msgstr "Opna MIME-gerðaritilinn"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
-msgstr "Fann ekki keyrsluskrána '%1'."
+msgstr "Keyrsluskráin \"keditfiletype5\" fannst ekki í PATH."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -2839,55 +1907,38 @@ msgid ""
 "Could not start the \"keditfiletype5\" executable, please check your "
 "installation."
 msgstr ""
+"Tókst ekki að opna keyrsluskrána \"keditfiletype5\", athugaðu hvort "
+"uppsetningin sé í lagi."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
-#| msgid "Password must be at least 1 character long"
-#| msgid_plural "Password must be at least %1 characters long"
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
-msgstr[0] "Lykilorðið verður að minnsta kosti að innihalda einn staf"
-msgstr[1] "Lykilorðið verður að minnsta kosti að innihalda einn staf"
+msgstr[0] "Lykilorðið verður að innihalda a.m.k. %n staf(i)."
+msgstr[1] "Lykilorðið verður að innihalda a.m.k. %n staf(i)."
 
 #: knewpassworddialog.cpp:67
-#, fuzzy
-#| msgid "Password is empty"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password is empty."
-msgstr "Lykilorð vantar"
+msgstr "Lykilorð vantar."
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgid "Passwords do not match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
 msgstr "Lykilorðin stemma ekki"
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgid "Passwords match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "Lykilorðin stemma"
 
 #: knewpassworddialog.cpp:146
-#, fuzzy
-#| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
-msgstr "Lágur styrkur lykilorðs"
+msgstr "Lítill styrkleiki lykilorðs"
 
 #: knewpassworddialog.cpp:147
-#, fuzzy
-#| msgid ""
-#| "The password you have entered has a low strength. To improve the strength "
-#| "of the password, try:\n"
-#| " - using a longer password;\n"
-#| " - using a mixture of upper- and lower-case letters;\n"
-#| " - using numbers or symbols as well as letters.\n"
-#| "\n"
-#| "Would you like to use this password anyway?"
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2898,22 +1949,15 @@ msgid ""
 "\n"
 "Would you like to use this password anyway?"
 msgstr ""
-"Styrkur lykilorðsins er lágur. Til að auka styrkinn, prófaðu:\n"
+"Styrkleiki lykilorðsins er lítill. Til að auka styrkleika lykilorðsins "
+"geturðu prófað:\n"
 " - að nota lengra lykilorð;\n"
-" - að nota blöndu af há og lágstöfum;\n"
+" - að nota blöndu af há- og lágstöfum;\n"
 " - að nota tölustafi eða tákn ásamt bókstöfum.\n"
 "\n"
-"Viltu nota þetta lykilorð?"
+"Viltu nota þetta lykilorð samt sem áður?"
 
 #: knewpasswordwidget.cpp:52
-#, fuzzy
-#| msgid ""
-#| "The password strength meter gives an indication of the security of the "
-#| "password you have entered.  To improve the strength of the password, "
-#| "try:\n"
-#| " - using a longer password;\n"
-#| " - using a mixture of upper- and lower-case letters;\n"
-#| " - using numbers or symbols, such as #, as well as letters."
 msgctxt "KNewPasswordWidget|@info:whatsthis"
 msgid ""
 "The password strength meter gives an indication of the security of the "
@@ -2922,36 +1966,28 @@ msgid ""
 "case letters;</li><li>using numbers or symbols, such as #, as well as "
 "letters.</li></ul>"
 msgstr ""
-"Styrkur lykilorðs gefur til kynna hve örugt lykilorðið sem þú slóst inn er. "
-"Til að auka öryggi lykilorðsins, prófaðu:\n"
+"Styrkleiki lykilorðsins gefur til kynna hve öruggt lykilorðið er sem þú "
+"slóst inn. Til að auka öryggi lykilorðsins geturðu prófað:\n"
 " - að nota lengra lykilorð;\n"
-" - að nota blöndu af há og lágstöfum;\n"
+" - að nota blöndu af há- og lágstöfum;\n"
 " - að nota tölustafi eða tákn, t.d. #, ásamt bókstöfum."
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "Lykilorð:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
-msgstr "&Sannreyna:"
+msgstr "&Sannprófa:"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgid "Password strength meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
-msgstr "Styrkur lykilorðs:"
+msgstr "Styrkleika&mælir lykilorðs:"
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Lykilorð"
@@ -2959,58 +1995,44 @@ msgstr "Lykilorð"
 #: kpassworddialog.cpp:80
 msgctxt "KPasswordDialog|"
 msgid "Show Contextual Help"
-msgstr ""
+msgstr "Sýna efnistengda hjálp"
 
 #: kpassworddialog.cpp:100
-#, fuzzy
-#| msgid "Supply a username and password below."
 msgctxt "KPasswordDialog|"
 msgid "Supply a password below."
-msgstr "Gefðu upp notandanafn og lykilorð hér að neðan."
+msgstr "Gefðu upp lykilorð fyrir neðan."
 
 #: kpassworddialog.ui:33
-#, fuzzy
-#| msgid "Supply a username and password below."
 msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
-msgstr "Gefðu upp notandanafn og lykilorð hér að neðan."
+msgstr "Gefðu upp notandanafn og lykilorð fyrir neðan."
 
 #: kpassworddialog.ui:70
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr ""
+msgstr "Ekker lykilorð, notað nafnlausa (eða &gesta) innskráningu"
 
 #: kpassworddialog.ui:77
-#, fuzzy
-#| msgid "&Keep password"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
-msgstr "&Geyma lykilorð"
+msgstr "Nota þetta lykilorð:"
 
 #: kpassworddialog.ui:102
-#, fuzzy
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
-msgstr "Notandi:"
+msgstr "Notandanafn:"
 
 #: kpassworddialog.ui:127
-#, fuzzy
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Lén:"
 
 #: kpassworddialog.ui:141
-#, fuzzy
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Lykilorð:"
 
 #: kpassworddialog.ui:155
-#, fuzzy
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Muna lykilorð"
@@ -3018,537 +2040,381 @@ msgstr "Muna lykilorð"
 #: kpasswordlineedit.cpp:41
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
-msgstr ""
+msgstr "Breyta sýnileika lykilorðsins"
 
 #: kpixmapregionselectordialog.cpp:56
-#, fuzzy
-#| msgid "Select Region of Image"
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
-msgstr "Veldu svæði á mynd"
+msgstr "Velja svæði á mynd"
 
 #: kpixmapregionselectordialog.cpp:60
-#, fuzzy
-#| msgid "Please click and drag on the image to select the region of interest:"
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
-msgstr "Smelltu og dragðu yfir svæðið sem þú vilt vinna með:"
+msgstr "Smelltu og dragðu yfir myndina til að velja svæðið sem þú vilt nota:"
 
 #: kpixmapregionselectorwidget.cpp:173
-#, fuzzy
-#| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Myndaaðgerðir"
 
 #: kpixmapregionselectorwidget.cpp:176
-#, fuzzy
-#| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "Snúa &réttsælis"
 
 #: kpixmapregionselectorwidget.cpp:180
-#, fuzzy
-#| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Snúa rang&sælis"
 
 #: krecentfilesmenu.cpp:114
-#, fuzzy
-#| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Engar færslur"
 
 #: krecentfilesmenu.cpp:117
-#, fuzzy
-#| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Hreinsa lista"
 
 #: krecentfilesmenu.cpp:123
-#, fuzzy
-#| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
-msgstr "Velja skrár..."
+msgstr "Nýlegar skrár"
 
 #: ksqueezedtextlabel.cpp:207
-#, fuzzy
-#| msgid "&Copy Full Text"
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Afrita allan textann"
 
 #: kstandardguiitem.cpp:164
-#, fuzzy
-#| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "Í &lagi"
 
 #: kstandardguiitem.cpp:169
-#, fuzzy
-#| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Hætta við"
 
 #: kstandardguiitem.cpp:175
-#, fuzzy
-#| msgid "&Yes"
 msgctxt "KStandardGuiItem|"
 msgid "&Yes"
 msgstr "&Já"
 
 #: kstandardguiitem.cpp:182
-#, fuzzy
-#| msgid "&No"
 msgctxt "KStandardGuiItem|"
 msgid "&No"
 msgstr "&Nei"
 
 #: kstandardguiitem.cpp:188
-#, fuzzy
-#| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Henda"
 
 #: kstandardguiitem.cpp:190
-#, fuzzy
-#| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
-msgstr "Hætta við breytingar"
+msgstr "Henda breytingum"
 
 #: kstandardguiitem.cpp:191
-#, fuzzy
-#| msgid ""
-#| "Pressing this button will discard all recent changes made in this dialog."
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr ""
-"Ef ýtt er á þennan hnapp hættir þú við allar breytingar sem kunna að hafa "
-"verið gerðar í þessum glugga."
+"Ef ýtt er á þennan hnapp verður hætt við allar nýlegar breytingar í þessum "
+"glugga."
 
 #: kstandardguiitem.cpp:198
-#, fuzzy
-#| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "Vi&sta"
 
 #: kstandardguiitem.cpp:200
-#, fuzzy
-#| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Vista gögn"
 
 #: kstandardguiitem.cpp:205
-#, fuzzy
-#| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Ekki vista"
 
 #: kstandardguiitem.cpp:205
-#, fuzzy
-#| msgid "Do not save data"
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Ekki vista gögn"
 
 #: kstandardguiitem.cpp:210
-#, fuzzy
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Vista &sem..."
 
 #: kstandardguiitem.cpp:212
-#, fuzzy
-#| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Vista skrá með öðru heiti"
 
 #: kstandardguiitem.cpp:217
-#, fuzzy
-#| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Virkja"
 
 #: kstandardguiitem.cpp:219
-#, fuzzy
-#| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Virkja stillingar"
 
 #: kstandardguiitem.cpp:220
-#, fuzzy
-#| msgid ""
-#| "When you click <b>Apply</b>, the settings will be handed over to the "
-#| "program, but the dialog will not be closed.\n"
-#| "Use this to try different settings."
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
-"Ef þú ýtir á <b>Virkja</b> þá verða breytingarnar sem þú gerðir virkjaðar en "
-"valmyndin lokast ekki.\n"
-"Þannig má prófa mismunandi stillingar án þess að þurfa að opna gluggann "
-"aftur og aftur."
+"Þegar þú ýtir á <b>Virkja</b> verða breytingarnar sem þú gerðir virkjaðar en "
+"svarglugginn lokast ekki.\n"
+"Notaðu þetta til að prófa mismunandi stillingar."
 
 #: kstandardguiitem.cpp:229
-#, fuzzy
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
-msgstr "&Kerfisstjórahamur..."
+msgstr "&Kerfisstjórasnið..."
 
 #: kstandardguiitem.cpp:231
-#, fuzzy
-#| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
-msgstr "Fara í kerfisstjóraham"
+msgstr "Fara í kerfisstjórasnið"
 
 #: kstandardguiitem.cpp:232
-#, fuzzy
-#| msgid ""
-#| "When you click <b>Administrator Mode</b> you will be prompted for the "
-#| "administrator (root) password in order to make changes which require root "
-#| "privileges."
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
 "administrator (root) password in order to make changes which require root "
 "privileges."
 msgstr ""
-"Þegar þú smellir á <b>Kerfisstjórahamur</b> mun kerfið biðja um lykilorð "
-"kefisstjóra (root) til þess að hægt sé að gera þær breytingar sem þurfa "
-"nánari heimildir."
+"Þegar þú smellir á <b>Kerfisstjórasnið</b> biður kerfið um lykilorð "
+"kerfisstjóra (root) til þess að hægt sé að gera þær breytingar sem þurfa "
+"rótarréttindi."
 
 #: kstandardguiitem.cpp:240
-#, fuzzy
-#| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "Hr&einsa"
 
 #: kstandardguiitem.cpp:242
-#, fuzzy
-#| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Hreinsa inntakssvæði"
 
 #: kstandardguiitem.cpp:243
-#, fuzzy
-#| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
-msgstr "Hreinsa gögn í inntakssvæði"
+msgstr "Hreinsa gögnin í textareitnum"
 
 #: kstandardguiitem.cpp:248
-#, fuzzy
-#| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Hjálp"
 
 #: kstandardguiitem.cpp:250
-#, fuzzy
-#| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Sýna hjálp"
 
 #: kstandardguiitem.cpp:255
-#, fuzzy
-#| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "&Loka"
 
 #: kstandardguiitem.cpp:257
-#, fuzzy
-#| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Loka núverandi glugga eða skjali"
 
 #: kstandardguiitem.cpp:262
-#, fuzzy
-#| msgid "&Close Window"
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "&Loka glugga"
 
 #: kstandardguiitem.cpp:264
-#, fuzzy
-#| msgid "Close the current window."
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Loka núverandi glugga."
 
 #: kstandardguiitem.cpp:269
-#, fuzzy
-#| msgid "&Close Document"
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "&Loka skjali"
 
 #: kstandardguiitem.cpp:271
-#, fuzzy
-#| msgid "Close the current document."
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Loka núverandi skjali"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Sjálfgefin gildi"
 
 #: kstandardguiitem.cpp:278
-#, fuzzy
-#| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
-msgstr "Frumstilla öll gildi"
+msgstr "Endurstilla öll atriði á sjálfgefin gildi"
 
 #: kstandardguiitem.cpp:284
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "Til &baka"
 
 #: kstandardguiitem.cpp:284
-#, fuzzy
-#| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
-msgstr "Fara aftur um eitt skref"
+msgstr "Fara til baka um eitt skref"
 
 #: kstandardguiitem.cpp:290
-#, fuzzy
-#| msgid "&Forward"
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "Á&fram"
 
 #: kstandardguiitem.cpp:292
-#, fuzzy
-#| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Fara áfram um eitt skref"
 
 #: kstandardguiitem.cpp:302
-#, fuzzy
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&Prenta..."
 
 #: kstandardguiitem.cpp:304
-#, fuzzy
-#| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
-msgstr "Opnar glugga til að prenta núverandi skjal"
+msgstr "Opnar prentgluggann til að prenta núverandi skjal"
 
 #: kstandardguiitem.cpp:311
-#, fuzzy
-#| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
-msgstr "Á&fram"
+msgstr "Hal&da áfram"
 
 #: kstandardguiitem.cpp:313
-#, fuzzy
-#| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Halda áfram aðgerð"
 
 #: kstandardguiitem.cpp:318
-#, fuzzy
-#| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Eyða"
 
 #: kstandardguiitem.cpp:320
-#, fuzzy
-#| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Eyða hlut(um)"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Opna..."
 
 #: kstandardguiitem.cpp:327
-#, fuzzy
-#| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Opna skrá"
 
 #: kstandardguiitem.cpp:332
-#, fuzzy
-#| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Hætta"
 
 #: kstandardguiitem.cpp:334
-#, fuzzy
-#| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
-msgstr "Loka forrit"
+msgstr "Loka forriti"
 
 #: kstandardguiitem.cpp:339
-#, fuzzy
-#| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
-msgstr "&Frumstilla"
+msgstr "&Endurstilla"
 
 #: kstandardguiitem.cpp:341
-#, fuzzy
-#| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
-msgstr "Frumstilla uppsetningu"
+msgstr "Endurstilla uppsetningu"
 
 #: kstandardguiitem.cpp:346
-#, fuzzy
-#| msgctxt "Verb"
-#| msgid "&Insert"
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "Setja &inn"
 
 #: kstandardguiitem.cpp:351
-#, fuzzy
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
-msgstr "&Stilla..."
+msgstr "&Grunnstilla..."
 
 #: kstandardguiitem.cpp:356
-#, fuzzy
-#| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Finna"
 
 #: kstandardguiitem.cpp:361
-#, fuzzy
-#| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Stöðva"
 
 #: kstandardguiitem.cpp:366
-#, fuzzy
-#| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Bæta við"
 
 #: kstandardguiitem.cpp:371
-#, fuzzy
-#| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Fjarlægja"
 
 #: kstandardguiitem.cpp:376
-#, fuzzy
-#| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
-msgstr "Prufa"
+msgstr "Prófa"
 
 #: kstandardguiitem.cpp:381
-#, fuzzy
-#| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Eiginleikar"
 
 #: kstandardguiitem.cpp:386
-#, fuzzy
-#| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
-msgstr "Skrifa &yfir"
+msgstr "Skr&ifa yfir"
 
 #: ktimecombobox.cpp:254
-#, fuzzy
-#| msgctxt "@info"
-#| msgid "The time you entered is invalid"
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "Tímasetningin sem þú slóst inn er ógild"
 
 #: ktimecombobox.cpp:257
-#, fuzzy, qt-format
-#| msgctxt "@info"
-#| msgid "Time cannot be earlier than %1"
+#, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr "Tímasetning má ekki vera fyrir %1"
 
 #: ktimecombobox.cpp:264
-#, fuzzy, qt-format
-#| msgctxt "@info"
-#| msgid "Time cannot be later than %1"
+#, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
 msgstr "Tímasetning má ekki vera síðar en %1"
 
 #: ktogglefullscreenaction.cpp:38
-#, fuzzy
-#| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
-msgstr "Skjá&fyllihamur"
+msgstr "F&ylla skjá"
 
 #: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Full Screen"
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Skjáfylli"
 
 #: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Display the window in full screen"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Birta glugga á öllum skjánum"
