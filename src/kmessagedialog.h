@@ -257,6 +257,10 @@ public:
      * KMessageDialog(KMessageDialog::Type, const QString &, QWidget *) for details).
      * Before, this method had to be called explicitly to have any buttons added to the dialog.
      *
+     * @note
+     * - For dialog types Information and Error only one button
+     *   (KStandardGuiItem::ok()) is added to the dialog.
+     *
      * @param primaryAction the action for the primary button.
      *                      Reported in the result for dialog types Information, Sorry, and Error
      *                      as KMessageDialog::Ok enum value, otherwise as KMessageDialog::PrimaryAction.

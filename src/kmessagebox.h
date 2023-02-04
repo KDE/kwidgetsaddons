@@ -640,9 +640,7 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
  * @param text Message string.
  * @param title Message box title.
  * @param primaryAction The KGuiItem for the first button.
- *                      The default (deprecated since 5.100) is KStandardGuiItem::yes().
  * @param secondaryAction The KGuiItem for the second button.
- *                         The default (deprecated since 5.100) is KStandardGuiItem::no().
  * @param cancelAction The text for the third button.
  *                     The default is KStandardGuiItem::cancel().
  * @param dontShowAskAgainName If provided, a checkbox is added with which
