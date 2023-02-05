@@ -90,8 +90,8 @@ enum DialogType {
 enum Option {
     Notify = 1, ///< Emit a KNotify event
     AllowLink = 2, ///< The message may contain links.
-    Dangerous = 4, ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or No, depending on
-                   ///< which is available.
+    Dangerous = 4, ///< The action to be confirmed by the dialog is a potentially destructive one. The default button will be set to Cancel or SecondaryAction,
+                   ///< depending on which is available.
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 97)
     PlainCaption ///< @deprecated Since 5.0 this option is ignored.
         KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION_BELATED(5, 97, 5, 0, "This option is ignored..") = 8,
@@ -487,7 +487,7 @@ ButtonCode warningYesNoList(QWidget *parent,
  * @param parent  the parent widget
  * @param text    the message string
  * @param strlist List of strings to be written in the listbox. If the list is
- *                empty, it doesn't show any listbox, working as questionYesNo.
+ *                empty, it doesn't show any listbox, working as warningTwoActions.
  * @param title   the message box title. If an empty string, defaults to i18n("Warning").
  * @param primaryAction the action for the primary button
  * @param secondaryAction the action for the secondary button
@@ -1152,11 +1152,12 @@ void about(QWidget *parent, const QString &text, const QString &title = QString(
  * @param dontShowAskAgainName If provided, a checkbox is added with which
  *                further questions/information can be turned off. If turned off
  *                all questions will be automatically answered with the
- *                last answer (either Yes or No), if the message box needs an answer.
+ *                last answer (either PrimaryAction or SecondaryAction),
+ *                if the message box needs an answer.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  * @param options  see Options
- * Note: for ContinueCancel, buttonYes is the continue button and buttonNo is unused.
+ * Note: for ContinueCancel, primaryAction is the continue button and secondaryAction is unused.
  *       and for Information, none is used.
  * @return a button code, as defined in KMessageBox.
  */
