@@ -5,7 +5,8 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-#pragma once
+#ifndef KTWOFINGERSWIPE_TEST_H
+#define KTWOFINGERSWIPE_TEST_H
 
 #include <QMainWindow>
 class QCheckBox;
@@ -40,3 +41,5 @@ private:
     QSpinBox *mGSwipeTime = nullptr;
     QSpinBox *mGSwipeDistance = nullptr;
 };
+
+#endif
