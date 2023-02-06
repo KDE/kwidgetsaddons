@@ -5,7 +5,8 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-#pragma once
+#ifndef KTWOFINGERSWIPE_H
+#define KTWOFINGERSWIPE_H
 
 #include <kwidgetsaddons_export.h>
 
@@ -172,3 +173,5 @@ private:
     std::unique_ptr<class KTwoFingerSwipeRecognizerPrivate> const d;
     Q_DISABLE_COPY(KTwoFingerSwipeRecognizer)
 };
+
+#endif
