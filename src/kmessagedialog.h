@@ -132,7 +132,7 @@ public:
      * Constructs a KMessageDialog.
      *
      * Buttons based on the dialog type are set by default in some cases,
-     * using KStandardGuiItem instances. For the dialog types Information, Sorry & Error
+     * using KStandardGuiItem instances. For the dialog types Information and Error
      * the button is set to KStandardGuiItem::ok(). For the type WarningContinueCancel
      * the buttons are set to  KStandardGuiItem::cont() & KStandardGuiItem::cancel().
      *
@@ -262,7 +262,7 @@ public:
      *   (KStandardGuiItem::ok()) is added to the dialog.
      *
      * @param primaryAction the action for the primary button.
-     *                      Reported in the result for dialog types Information, Sorry, and Error
+     *                      Reported in the result for dialog types Information and Error
      *                      as KMessageDialog::Ok enum value, otherwise as KMessageDialog::PrimaryAction.
      * @param secondaryAction the action for the secondary button.
      *                        Reported in the result as KMessageDialog::SecondaryAction enum value.
