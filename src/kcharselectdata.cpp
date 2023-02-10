@@ -85,7 +85,7 @@ bool KCharSelectData::openDataFile()
     if (!dataFile.isEmpty()) {
         return true;
     } else {
-        const QString kcharselectDataPath = QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/kcharselect/kcharselect-data");
+        const QString kcharselectDataPath = QStringLiteral("kf6/kcharselect/kcharselect-data");
         QString fileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, kcharselectDataPath);
         if (fileName.isEmpty()) {
             fileName = QStringLiteral(TOP_SRCDIR "/src/kcharselect-data"); // for autotests before installation
