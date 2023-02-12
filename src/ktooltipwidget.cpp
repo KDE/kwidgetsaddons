@@ -79,6 +79,9 @@ void KToolTipWidgetPrivate::show(const QPoint &pos, QWindow *transientParent)
     q->createWinId();
     q->windowHandle()->setProperty("ENABLE_BLUR_BEHIND_HINT", true);
     q->windowHandle()->setTransientParent(transientParent);
+
+    QObject::connect(transientParent, &QWindow::activeChanged, q, &QWidget::hide);
+
     q->show();
 }
 
@@ -212,6 +215,9 @@ void KToolTipWidget::enterEvent(QEnterEvent *)
 void KToolTipWidget::hideEvent(QHideEvent *)
 {
     d->removeWidget();
+
+    QObject::disconnect(windowHandle()->transientParent(), &QWindow::activeChanged, this, &QWidget::hide);
+
     // Give time to the content widget to get his own hide event.
     QTimer::singleShot(0, this, &KToolTipWidget::hidden);
 }
