@@ -986,12 +986,12 @@ msgstr "კარტის თამაში"
 #: kcharselect-translation.cpp:194
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
-msgstr ""
+msgstr "დამატებით შემოსაზღვრული ციფრები და სიმბოლოები"
 
 #: kcharselect-translation.cpp:195
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
-msgstr ""
+msgstr "დამატებით შემოსაზღვრული იეროგლიფები"
 
 #: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1634,7 +1634,7 @@ msgstr "მუქი"
 #: kfontchooser.cpp:213
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "ნახევრადსქელი შეკუმშული დახრილი"
 
 #: kfontchooser.cpp:257
 msgctxt "KFontChooser|"
@@ -1654,6 +1654,9 @@ msgid ""
 "dynamically and adjusted to changing environment (e.g. widget dimensions, "
 "paper size)."
 msgstr ""
+"აქ შეგიძლიათ გადართოთ ფონტის ფიქსირებულ ზომასა და მისი ზომის დინამიკურ "
+"გამოთვლასა და გარემოს ცვლილებებზე დამკიდებულებით ცვილებებს შორის (მაგ; "
+"ვიჯეტის ზომები, ფურცლის ზომა)."
 
 #: kfontchooser.cpp:474
 #, qt-format
@@ -1934,6 +1937,12 @@ msgid ""
 "\n"
 "Would you like to use this password anyway?"
 msgstr ""
+"თქვენი შეყვანილი პაროლი სუსტია. მის გასაძლიერებლად სცადეთ:\n"
+"- გამოიყენოთ უფრო გრძელი პაროლი\n"
+"- გამოიყენოთ მაღალი და დაბალი რეგისტრის სიმბოლოები\n"
+"- გამოიყენოთ ციფრები და სიმბოლოები, ასოებთან ერთად.\n"
+"\n"
+"მაინც გნებავთ, ეს პაროლი გამოიყენოთ?"
 
 #: knewpasswordwidget.cpp:52
 msgctxt "KNewPasswordWidget|@info:whatsthis"
@@ -2024,6 +2033,7 @@ msgstr "აირჩიეთ გამოსახულების რეგ�
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr ""
+"დააწკაპუნეთ და გადაათრიეთ გამოსახულებაზე საინტერესო რეგიონის მოსანიშნად:"
 
 #: kpixmapregionselectorwidget.cpp:173
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
@@ -2165,6 +2175,9 @@ msgid ""
 "administrator (root) password in order to make changes which require root "
 "privileges."
 msgstr ""
+"როცა დააწკაპუნებთ <b>ადმინისტრატორის რეჟიმზე</b>, თქვენ გკითხავენ "
+"ადმინისტრატორის (root)-ის პაროლს, რათა მოხდეს ცვლილებები, რომლებსაც root-ის "
+"უფლებები სჭირდება."
 
 #: kstandardguiitem.cpp:240
 msgctxt "KStandardGuiItem|"
