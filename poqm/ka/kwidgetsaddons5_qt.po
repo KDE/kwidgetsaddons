@@ -1953,6 +1953,11 @@ msgid ""
 "case letters;</li><li>using numbers or symbols, such as #, as well as "
 "letters.</li></ul>"
 msgstr ""
+"პაროლის სიძლიერის მზომავი გაჩვენებთ შეყვანილი პაროლის სირთულეს გაჩვენებთ. თუ "
+"გნებავთ ის გააძლიეროთ, სცადეთ:<ul><li>უფრო გრძელი პაროლი "
+"გამოიყენოთ<ul><li>შეურიოთ დაბალი და მაღალი რეგისტრის "
+"სიმბოლოები<ul><li>გამოიყენოთ ციფრები და სიმბოლოები, როგორიცაა, მაგალითად #</"
+"li></ul>"
 
 #: knewpasswordwidget.ui:19
 msgctxt "KNewPasswordWidget|@label:textbox"
