@@ -2392,14 +2392,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Pārcelt uz &leju"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Prasītais fonts"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2407,7 +2407,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normāla"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2415,7 +2415,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Ieslīpraksts"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2423,7 +2423,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Slīpraksts"
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2431,42 +2431,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Treknraksts"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Glāžšķūņa ŗūķēļī aŗ šķērēm griež šķiņķi"
 
-#: kfontchooser.cpp:313
-#, fuzzy
-#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr "Fonta izmērs<br /><i>fiksēts</i> vai <i>relatīvs</i><br /> pret vidi"
-
-#: kfontchooser.cpp:314
-#, fuzzy
-#| msgid ""
-#| "Here you can switch between fixed font size and font size to be "
-#| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#| "dimensions, paper size)."
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-"Šeit jūs varat pārslēgt starp fiksētu fonta izmēru un fonta izmēru, kas tiek "
-"dinamiski aprēķināts un regulēts mainīgām vidēm (piem., logdaļu izmēri, "
-"papīra izmērs)."
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2623,92 +2600,78 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Detaļas"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Jautājums"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Vairs nejautāt"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Brīdinājums"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Kļūda"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-#, fuzzy
-#| msgid "Sorry"
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "Atvainojiet"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Informācija"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Vairs nerādīt šo ziņojumu"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:163
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detaļas"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:244
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Jautājums"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:249
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Brīdinājums"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informācija"
 
-#: kmessagedialog.cpp:276
-#, fuzzy
-#| msgid "Sorry"
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "Atvainojiet"
-
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:255
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"
@@ -2821,14 +2784,14 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "Paroles sakrīt"
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 #, fuzzy
 #| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Vāja parole"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 #, fuzzy
 #| msgid ""
 #| "The password you have entered has a low strength. To improve the strength "
@@ -3033,49 +2996,35 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Kopēt pilnu tekstu"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 #, fuzzy
 #| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&Labi"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 #, fuzzy
 #| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Atcelt"
 
-#: kstandardguiitem.cpp:175
-#, fuzzy
-#| msgid "&Yes"
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "&Jā"
-
-#: kstandardguiitem.cpp:182
-#, fuzzy
-#| msgid "&No"
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "&Nē"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 #, fuzzy
 #| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Izmest"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 #, fuzzy
 #| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Izmest izmaiņas"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 #, fuzzy
 #| msgid ""
 #| "Pressing this button will discard all recent changes made in this dialog."
@@ -3086,63 +3035,63 @@ msgstr ""
 "Nospiežot šo pogu, visas nesenās izmaiņas, kas veiktas šajā dialogā, tiks "
 "izmestas."
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 #, fuzzy
 #| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Saglabāt"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 #, fuzzy
 #| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Saglabāt datus"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 #, fuzzy
 #| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Izmest"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 #, fuzzy
 #| msgid "Do not save data"
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Nesaglabāt datus"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 #, fuzzy
 #| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Saglabāt &kā..."
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 #, fuzzy
 #| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Saglabāt failu ar citu vārdu"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 #, fuzzy
 #| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Pielietot"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 #, fuzzy
 #| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Pielietot izmaiņas"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 #, fuzzy
 #| msgid ""
 #| "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -3158,21 +3107,21 @@ msgstr ""
 "logs netiks aizvērts.\n"
 "Izmantojiet to, lai izmēģinātu dažādus iestatījumus."
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "Administratora &režīms..."
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Ieiet administratora režīmā"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 #, fuzzy
 #| msgid ""
 #| "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -3188,112 +3137,112 @@ msgstr ""
 "(root) parole un tad varēsiet veikt izmaiņas, kuru izdarīšanai ir "
 "nepieciešamas root privilēģijas."
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 #, fuzzy
 #| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "T&īrīt"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 #, fuzzy
 #| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Notīrīt ievadīto"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 #, fuzzy
 #| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Notīrīt ievadīto rediģēšanas laukā"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 #, fuzzy
 #| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Palīdzība"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 #, fuzzy
 #| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Rādīt palīdzību"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "&Aizvērt"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 #, fuzzy
 #| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Aizvērt aktīvo logu vai dokumentu"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 #, fuzzy
 #| msgid "&Close Window"
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "Ai&zvērt logu"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 #, fuzzy
 #| msgid "Close the current window."
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Aizvērt aktīvo logu."
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 #, fuzzy
 #| msgid "&Close Document"
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "Ai&zvērt dokumentu"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 #, fuzzy
 #| msgid "Close the current document."
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Aizvērt aktīvo dokumentu."
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 #, fuzzy
 #| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Noklusējumi"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 #, fuzzy
 #| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Atjaunot visus elementus uz to noklusētajām vērtībām"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Atpakaļ"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 #, fuzzy
 #| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Iet vienu soli atpakaļ"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 #, fuzzy
 #| msgctxt "go forward"
 #| msgid "&Forward"
@@ -3301,98 +3250,98 @@ msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "Uz &priekšu"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 #, fuzzy
 #| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Iet vienu soli uz priekšu"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 #, fuzzy
 #| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&Drukāt..."
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 #, fuzzy
 #| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Atver drukas dialogu, lai drukātu aktīvo dokumentu"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 #, fuzzy
 #| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "T&urpināt"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 #, fuzzy
 #| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Turpināt darbību"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 #, fuzzy
 #| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Dzēst"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 #, fuzzy
 #| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Dzēst vienības"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 #, fuzzy
 #| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Atvērt..."
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 #, fuzzy
 #| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Atvērt failu"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 #, fuzzy
 #| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Iziet"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 #, fuzzy
 #| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Iziet no programas"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 #, fuzzy
 #| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "A&tstatīt"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 #, fuzzy
 #| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Atstatīt konfigurāciju"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 #, fuzzy
 #| msgctxt "Verb"
 #| msgid "&Insert"
@@ -3400,56 +3349,56 @@ msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Ievietot"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 #, fuzzy
 #| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "&Konfigurēt..."
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Meklēt"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 #, fuzzy
 #| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Apturēt"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 #, fuzzy
 #| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Pievienot"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 #, fuzzy
 #| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Noņemt"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 #, fuzzy
 #| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Pārbaudīt"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 #, fuzzy
 #| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Īpašības"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"
@@ -3498,6 +3447,52 @@ msgstr "Pilnekrāna režīms"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+#~ msgctxt "KFontChooser|@info:tooltip"
+#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+#~ msgstr ""
+#~ "Fonta izmērs<br /><i>fiksēts</i> vai <i>relatīvs</i><br /> pret vidi"
+
+#, fuzzy
+#~| msgid ""
+#~| "Here you can switch between fixed font size and font size to be "
+#~| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~| "dimensions, paper size)."
+#~ msgctxt "KFontChooser|@info:whatsthis"
+#~ msgid ""
+#~ "Here you can switch between fixed font size and font size to be "
+#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~ "dimensions, paper size)."
+#~ msgstr ""
+#~ "Šeit jūs varat pārslēgt starp fiksētu fonta izmēru un fonta izmēru, kas "
+#~ "tiek dinamiski aprēķināts un regulēts mainīgām vidēm (piem., logdaļu "
+#~ "izmēri, papīra izmērs)."
+
+#, fuzzy
+#~| msgid "Sorry"
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "Atvainojiet"
+
+#, fuzzy
+#~| msgid "Sorry"
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "Atvainojiet"
+
+#, fuzzy
+#~| msgid "&Yes"
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "&Jā"
+
+#, fuzzy
+#~| msgid "&No"
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "&Nē"
 
 #, fuzzy
 #~| msgid "Exit F&ull Screen Mode"

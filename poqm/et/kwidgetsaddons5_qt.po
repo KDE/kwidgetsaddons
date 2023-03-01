@@ -1656,32 +1656,32 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Liiguta &alla"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Soovitud font"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Tavaline"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kaldkiri"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Viltune (obliikva)"
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Rasvane"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Book Oblique"
@@ -1689,29 +1689,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Viltune (obliikva) Book"
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Põdur Zagrebi tšellomängija-följetonist Ciqo külmetas kehvas garaažis"
 
-#: kfontchooser.cpp:313
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr ""
-"Fondi suurus keskkonna suhtes:<br /><i>fikseeritud</i> või <i>suhteline</i>"
-
-#: kfontchooser.cpp:314
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-"Siin saab lülitada kahe valiku vahel: fontide suurus on kas fikseeritud või "
-"arvutatakse see vastavalt keskkonnale (nt. kasutajaliidese elementide või "
-"paberi suurus)."
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1855,43 +1838,38 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Üksikasjad"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Küsimus"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Rohkem ei küsita"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Hoiatus"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Tõrge"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "Vabandust"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Teave"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Seda teadet rohkem ei näidata"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:163
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -1899,7 +1877,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Üksikasjad"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:244
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -1907,7 +1885,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Küsimus"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:249
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -1915,7 +1893,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Hoiatus"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -1923,15 +1901,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Teave"
 
-#: kmessagedialog.cpp:276
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Sorry"
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "Vabandust"
-
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:255
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"
@@ -2021,12 +1991,12 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "Paroolid kattuvad."
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Parooli kesine tugevus"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2172,37 +2142,27 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Kopeeri täielik tekst"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&OK"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Loobu"
 
-#: kstandardguiitem.cpp:175
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "&Jah"
-
-#: kstandardguiitem.cpp:182
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "&Ei"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Unusta"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Unusta muudatused"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
@@ -2210,47 +2170,47 @@ msgstr ""
 "Sellele nupule vajutamisel unustatakse kõik viimati tehtud muudatused selles "
 "dialoogis."
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Salvesta"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Andmete salvestamine"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "Ä&ra salvesta"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Andmeid ei salvestata"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Salvesta &kui ..."
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Faili salvestamine teise nimega"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Rakenda"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Rakenda muudatused"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2261,17 +2221,17 @@ msgstr ""
 "dialoogi ei suleta.\n"
 "Kasuta seda erinevate seadistuste proovimiseks."
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "A&dministraatori režiim..."
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Mine administraatori režiimi"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2282,192 +2242,192 @@ msgstr ""
 "administraatori (root) parool, et saaks võtta ette muudatusi, mis nõuavad "
 "administraatori õigusi."
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "Pu&hasta"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Puhasta sisendväli"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Eemaldab kogu sisendi redigeerimisväljalt"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Abi"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Näitab abi"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "S&ulge"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Aktiivse akna või dokumendi sulgemine"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "&Sulge aken"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Aktiivse akna sulgemine."
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "&Sulge dokument"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Aktiivse dokumendi sulgemine."
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Vaikeväärtused"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Kõigi elementide väärtuste ennistamine vaikeväärtustele."
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "Ta&gasi"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Mine sammu võrra tagasi"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Edasi"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Mine sammu võrra edasi"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&Trüki..."
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Trükkimisdialoogi avamine aktiivse dokumendi trükkimiseks"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "&Jätka"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Jätka tegevust"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Kustuta"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Kustuta elemendid"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Ava..."
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Faili avamine"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Välju"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Rakendusest väljumine"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&Lähtesta"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Seadistuse lähtestamine"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Lisa"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "Sea&dista..."
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Otsi"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Peata"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Lisa"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Eemalda"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Test"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Omadused"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "K&irjuta üle"
@@ -2503,6 +2463,41 @@ msgstr "Täisekraan"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Akna näitamine täisekraanirežiimis"
+
+#~ msgctxt "KFontChooser|@info:tooltip"
+#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+#~ msgstr ""
+#~ "Fondi suurus keskkonna suhtes:<br /><i>fikseeritud</i> või <i>suhteline</"
+#~ "i>"
+
+#~ msgctxt "KFontChooser|@info:whatsthis"
+#~ msgid ""
+#~ "Here you can switch between fixed font size and font size to be "
+#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~ "dimensions, paper size)."
+#~ msgstr ""
+#~ "Siin saab lülitada kahe valiku vahel: fontide suurus on kas fikseeritud "
+#~ "või arvutatakse see vastavalt keskkonnale (nt. kasutajaliidese elementide "
+#~ "või paberi suurus)."
+
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "Vabandust"
+
+#, fuzzy
+#~| msgctxt "KMessageBox|"
+#~| msgid "Sorry"
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "Vabandust"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "&Jah"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "&Ei"
 
 #~ msgctxt "KToggleFullScreenAction|@action:inmenu"
 #~ msgid "Exit F&ull Screen Mode"

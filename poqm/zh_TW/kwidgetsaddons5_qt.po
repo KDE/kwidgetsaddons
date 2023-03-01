@@ -13,19 +13,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017, 2018.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2020-05-14 23:42+0800\n"
-"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-01-20 00:54+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -265,12 +266,9 @@ msgid "Syriac Supplement"
 msgstr "敘利亞補集"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "阿拉伯延伸 A"
+msgstr "阿拉伯延伸 B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1536,81 +1534,51 @@ msgid "Close"
 msgstr "關閉"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "明年"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "下個月"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "下週"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "明天"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "今天"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "昨天"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "上週"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "上個月"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "去年"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "沒有日期"
@@ -1655,57 +1623,42 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "下移(&D)"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "要求的字型"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "一般"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "斜體"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "傾斜體"
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "粗體"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog 廣角空房亮滑沒過麵以化骨"
 
-#: kfontchooser.cpp:313
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr "字型大小<br />「<b>固定</b>」或「<b>相對</b>」<br />於環境"
-
-#: kfontchooser.cpp:314
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-"在此您可以選擇使用固定大小字型，或根據環境動態計算調整字型大小 (例如根據部件"
-"大小、紙張大小等)。"
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1722,67 +1675,41 @@ msgid "KFontChooserWidget"
 msgstr ""
 
 #: kfontchooserwidget.ui:31
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "字型"
 
 #: kfontchooserwidget.ui:38
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "字型："
 
 #: kfontchooserwidget.ui:56
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "字型樣式"
 
 #: kfontchooserwidget.ui:63
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "字型樣式："
 
 #: kfontchooserwidget.ui:81
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "大小"
 
 #: kfontchooserwidget.ui:88
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "大小："
 
 #: kfontchooserwidget.ui:97
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相對"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@info:whatsthis"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1790,9 +1717,6 @@ msgid ""
 msgstr "此段範例文字顯示目前的設定。您可以編輯這段文字來測試特殊字符。"
 
 #: kfontchooserwidget.ui:135
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Show only monospaced fonts"
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "僅顯示等寬字型"
@@ -1843,86 +1767,58 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "詳細資料"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "問題"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "不要再詢問"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "錯誤"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "抱歉"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "資訊"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "不要再顯示此訊息"
 
-#: kmessagedialog.cpp:179
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
+#: kmessagedialog.cpp:163
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "詳細資料"
 
-#: kmessagedialog.cpp:264
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
+#: kmessagedialog.cpp:244
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "問題"
 
-#: kmessagedialog.cpp:269
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
+#: kmessagedialog.cpp:249
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:272
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
+#: kmessagedialog.cpp:252
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "資訊"
 
-#: kmessagedialog.cpp:276
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Sorry"
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "抱歉"
-
-#: kmessagedialog.cpp:280
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
+#: kmessagedialog.cpp:255
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "錯誤"
@@ -2006,12 +1902,12 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "密碼相符。"
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "密碼不夠安全"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2159,83 +2055,73 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "複製完整文字(&C)"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "確定(&O)"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "取消(&C)"
 
-#: kstandardguiitem.cpp:175
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "是(&Y)"
-
-#: kstandardguiitem.cpp:182
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "否(&N)"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "丟棄(&D)"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "丟棄變更"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr "按下該按鈕將放棄在這個對話方塊中最近所做的修改。"
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "儲存(&S)"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "儲存資料"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "不儲存(&D)"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "不儲存資料"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "另存新檔(&A)..."
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "以另一個檔名儲存檔案"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "套用(&A)"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "套用設定"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2245,17 +2131,17 @@ msgstr ""
 "當按下 <b>套用</b> 後，設定會被程式使用，但對話方塊不會關閉。\n"
 "可以用這個方法來嘗試不同的設定。"
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "管理員模式(&M)..."
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "進入管理員模式"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2265,192 +2151,192 @@ msgstr ""
 "當您按下<b>進入管理員模式</b>後，您需要輸入管理員(root) 密碼來取得 root 的權"
 "限。"
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "清除(&L)"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "清除輸入"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "清除編輯區的輸入"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "說明(&H)"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "顯示說明"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "關閉(&C)"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "關閉目前的視窗或文件"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "關閉視窗(&C)"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "關閉目前的視窗"
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "關閉文件(&C)"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "關閉目前的文件"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "預設值(&D)"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "把所有項目重設為預設值"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "返回(&B)"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "返回上一個步驟"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "往前(&F)"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "前進到下一個步驟"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "列印(&P)..."
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "開啟列印對話方塊來列印目前的文件"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "繼續(&O)"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "繼續作業"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "刪除(&D)"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "刪除項目"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "開啟(&O)..."
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "開啟檔案"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "離開(&Q)"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "結束應用程式"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "重設(&R)"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "重設設定"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "插入(&I)"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "設定(&G)..."
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "尋找(&F)"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "停止"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "新增"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "移除"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "測試"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "內容"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "覆寫(&O)"
@@ -2486,6 +2372,35 @@ msgstr "全螢幕"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "將視窗放大到全畫面"
+
+#~ msgctxt "KFontChooser|@info:tooltip"
+#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+#~ msgstr "字型大小<br />「<b>固定</b>」或「<b>相對</b>」<br />於環境"
+
+#~ msgctxt "KFontChooser|@info:whatsthis"
+#~ msgid ""
+#~ "Here you can switch between fixed font size and font size to be "
+#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~ "dimensions, paper size)."
+#~ msgstr ""
+#~ "在此您可以選擇使用固定大小字型，或根據環境動態計算調整字型大小 (例如根據部"
+#~ "件大小、紙張大小等)。"
+
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "抱歉"
+
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "抱歉"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "是(&Y)"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "否(&N)"
 
 #~ msgctxt "KToggleFullScreenAction|@action:inmenu"
 #~ msgid "Exit F&ull Screen Mode"

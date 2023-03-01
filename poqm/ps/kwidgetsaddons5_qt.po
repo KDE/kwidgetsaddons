@@ -2324,14 +2324,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "ښکته &خوځول"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "غوښتل شوې ليکبڼه"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2339,7 +2339,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "لېوی"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2347,7 +2347,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "کوږ"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2355,7 +2355,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "رېونده"
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2363,32 +2363,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ډبل"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "چټک نسواري ګيدړ په لټ سپي ټوپ وهي"
 
-#: kfontchooser.cpp:313
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr ""
-
-#: kfontchooser.cpp:314
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2528,92 +2515,78 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "خبرتياوې"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "پوښتنه"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "بيا نه پوښتل"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "خبرتيا"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "تېروتنه"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-#, fuzzy
-#| msgid "Sorry"
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "بښنه غواړو"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "خبرتيا"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "دا استوزه بيا نه ښودل"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:163
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "خبرتياوې"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:244
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "پوښتنه"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:249
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "خبرتيا"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "خبرتيا"
 
-#: kmessagedialog.cpp:276
-#, fuzzy
-#| msgid "Sorry"
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "بښنه غواړو"
-
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:255
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"
@@ -2724,14 +2697,14 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "تېرنويې ساري دي"
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 #, fuzzy
 #| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "د تېرنويې ټيټ کلکوالی"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2906,111 +2879,97 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "ټوله ليکنه لمېسل"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 #, fuzzy
 #| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "هوکې"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 #, fuzzy
 #| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "بندول"
 
-#: kstandardguiitem.cpp:175
-#, fuzzy
-#| msgid "&Yes"
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "هو"
-
-#: kstandardguiitem.cpp:182
-#, fuzzy
-#| msgid "&No"
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "نه"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 #, fuzzy
 #| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "پرېښودل"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 #, fuzzy
 #| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "بدلونونه پرېښودل"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr ""
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 #, fuzzy
 #| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "ساتل"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 #, fuzzy
 #| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "اومتوک ساتل"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 #, fuzzy
 #| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "نه ساتل"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 #, fuzzy
 #| msgid "Do not save data"
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "اومتوک نه ساتل"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 #, fuzzy
 #| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "...ساتل &په"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 #, fuzzy
 #| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "دوتنه په بل نوم ساتل"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 #, fuzzy
 #| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "کارول"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 #, fuzzy
 #| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "بدلونونه کارول"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -3018,21 +2977,21 @@ msgid ""
 "Use this to try different settings."
 msgstr ""
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "...پازوال &اکر"
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "پازوال اکر ته ننوتل"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -3040,108 +2999,108 @@ msgid ""
 "privileges."
 msgstr ""
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 #, fuzzy
 #| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "پ&اکول"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 #, fuzzy
 #| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "ننوتۍ پاکول"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 #, fuzzy
 #| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "د سمون ډګر ننوتۍ پاکول"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 #, fuzzy
 #| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "مرسته"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 #, fuzzy
 #| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "مرسته ښودل"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "بندول"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 #, fuzzy
 #| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "اوسنۍ کړکۍ يا لاسوند بندول"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "کړکۍ بندول غواړﺉ؟"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "اوسنۍ کړکۍ يا لاسوند بندول"
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "لاسوند بندول"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "اوسنۍ کړکۍ يا لاسوند بندول"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 #, fuzzy
 #| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "تلوالې"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 #, fuzzy
 #| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "ټول توکي خپل تلواله ارزښتونو ته ګرځول"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "شاته"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 #, fuzzy
 #| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "يو پړاو شاته ورتلل"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 #, fuzzy
 #| msgctxt "go forward"
 #| msgid "&Forward"
@@ -3149,98 +3108,98 @@ msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "مخکې&"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 #, fuzzy
 #| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "يو پړاو مخکې ورتلل"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 #, fuzzy
 #| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "...چاپول"
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 #, fuzzy
 #| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "د اوسني لاسوند د چاپولو لپاره د چاپ کړکۍ پرانيزي"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 #, fuzzy
 #| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "پ&رمختلل"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 #, fuzzy
 #| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "چلښت پرمخبيول"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 #, fuzzy
 #| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "ړنګول"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 #, fuzzy
 #| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "توکي ړنګول"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 #, fuzzy
 #| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "...پرانيستل"
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 #, fuzzy
 #| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "دوتنه پرانيستل"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 #, fuzzy
 #| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "وتل"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 #, fuzzy
 #| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "کاريال بندول"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 #, fuzzy
 #| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "بياټاکل"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 #, fuzzy
 #| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "سازونه بياټاکل"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 #, fuzzy
 #| msgctxt "Verb"
 #| msgid "&Insert"
@@ -3248,56 +3207,56 @@ msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "ورننويستل"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 #, fuzzy
 #| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "...ساز&ول"
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "لټول"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 #, fuzzy
 #| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "تمول"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 #, fuzzy
 #| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "زياتول"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 #, fuzzy
 #| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "ړنګول"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 #, fuzzy
 #| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "ازموېل"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 #, fuzzy
 #| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "ځانتياوې"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"
@@ -3339,6 +3298,30 @@ msgstr "ټوله پرده"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Sorry"
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "بښنه غواړو"
+
+#, fuzzy
+#~| msgid "Sorry"
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "بښنه غواړو"
+
+#, fuzzy
+#~| msgid "&Yes"
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "هو"
+
+#, fuzzy
+#~| msgid "&No"
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "نه"
 
 #, fuzzy
 #~| msgid "Exit F&ull Screen Mode"

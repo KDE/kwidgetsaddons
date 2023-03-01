@@ -1981,14 +1981,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "&Davalar"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Poliça causida"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -1996,7 +1996,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normal"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2004,12 +2004,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Italic"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2017,38 +2017,17 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Gras"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 
-#: kfontchooser.cpp:313
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr ""
-
-#: kfontchooser.cpp:314
-#, fuzzy
-#| msgid ""
-#| "Here you can switch between fixed font size and font size to be "
-#| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#| "dimensions, paper size)."
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-"Podètz caplevar aicí entre de poliças de talha fixa e de poliças que la "
-"talha es determinada automaticament e reajustada en foncion de "
-"l'environament (talha dels objèctes, format de papièr)."
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2205,92 +2184,78 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Detalhs"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Question"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Repausar pas la question"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Alèrta"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Error"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-#, fuzzy
-#| msgid "Sorry"
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "O planhèm"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Entresenhas"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Visualizar pas mai lo messatge"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:163
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detalhs"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:244
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Question"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:249
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Alèrta"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Entresenhas"
 
-#: kmessagedialog.cpp:276
-#, fuzzy
-#| msgid "Sorry"
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "O planhèm"
-
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:255
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"
@@ -2396,14 +2361,14 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "Los senhals correspondon"
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 #, fuzzy
 #| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Resisténcia del senhal febla"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 #, fuzzy
 #| msgid ""
 #| "The password you have entered has a low strength. To improve the strength "
@@ -2603,49 +2568,35 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Copiar lo tèxt"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 #, fuzzy
 #| msgid "&OK"
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&Validar"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 #, fuzzy
 #| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Anullar"
 
-#: kstandardguiitem.cpp:175
-#, fuzzy
-#| msgid "&Yes"
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "&Òc"
-
-#: kstandardguiitem.cpp:182
-#, fuzzy
-#| msgid "&No"
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "&Non"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 #, fuzzy
 #| msgid "&Discard"
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Abandonar"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 #, fuzzy
 #| msgid "Discard changes"
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Abandonar las modificacions"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -2654,63 +2605,63 @@ msgstr ""
 "Un clic sus aqueste boton entraïnarà l'anullacion de totas las modificacions "
 "recentas efectuadas dins aquesta bóstia de dialòg."
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 #, fuzzy
 #| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Enregistrar"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 #, fuzzy
 #| msgid "Save data"
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Enregistrar las donadas"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 #, fuzzy
 #| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Enregistrar pas"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Repausar pas la question"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 #, fuzzy
 #| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Enregistrar &jos..."
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 #, fuzzy
 #| msgid "Save file with another name"
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Enregistrar lo fichièr jos un autre nom"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 #, fuzzy
 #| msgid "&Apply"
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Aplicar"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 #, fuzzy
 #| msgid "Apply changes"
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Aplicar las modificacions"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -2722,21 +2673,21 @@ msgstr ""
 "mas la bóstia de dialòg demorarà doberta.\n"
 "D'utilizar per ensajar diferents paramètres."
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "&Mòde administrator..."
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 #, fuzzy
 #| msgid "Enter Administrator Mode"
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Entrar dins lo mòde administrator"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid ""
@@ -2748,108 +2699,108 @@ msgstr ""
 "vos serà demandat, per efectuar las modificacions necessitant los privilègis "
 "del superutilizaire."
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 #, fuzzy
 #| msgid "C&lear"
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "Netejar"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 #, fuzzy
 #| msgid "Clear input"
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Escafar la picada"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 #, fuzzy
 #| msgid "Clear the input in the edit field"
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Escafar la picada dins lo camp d'edicion"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 #, fuzzy
 #| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Ajuda"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 #, fuzzy
 #| msgid "Show help"
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Afichar l'ajuda"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "&Tampar"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 #, fuzzy
 #| msgid "Close the current window or document"
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Tampar la fenèstra o lo document actual"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "Tampar la fenèstra ?"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Tampar la fenèstra o lo document actual"
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "Tampar lo document"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Tampar la fenèstra o lo document actual"
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 #, fuzzy
 #| msgid "&Defaults"
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "Per &defaut"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 #, fuzzy
 #| msgid "Reset all items to their default values"
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Reïnicializar totes los elements a lor valor per defaut"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Precedent"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 #, fuzzy
 #| msgid "Go back one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Recuolar d'una etapa"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Forward"
@@ -2857,98 +2808,98 @@ msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "Trasmetre"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 #, fuzzy
 #| msgid "Go forward one step"
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Avançar d'una etapa"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 #, fuzzy
 #| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "&Estampar..."
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 #, fuzzy
 #| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Dobrís la fenèstra d'impression per imprimir lo document en cors"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 #, fuzzy
 #| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "C&ontunhar"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 #, fuzzy
 #| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Perseguir l'operacion"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 #, fuzzy
 #| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Suprimir"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 #, fuzzy
 #| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Escafar lo(s) fichièr(s)"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 #, fuzzy
 #| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Dobrir..."
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 #, fuzzy
 #| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Dobrir un fichièr"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 #, fuzzy
 #| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Sortir"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 #, fuzzy
 #| msgid "Quit application"
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Quitar l'aplicacion"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 #, fuzzy
 #| msgid "&Reset"
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&Reïnicializar"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 #, fuzzy
 #| msgid "Reset configuration"
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Reïnicializar la configuracion"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 #, fuzzy
 #| msgctxt "Verb"
 #| msgid "&Insert"
@@ -2956,56 +2907,56 @@ msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Inserir"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 #, fuzzy
 #| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "Confi&gurar..."
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Recercar"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 #, fuzzy
 #| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Arrestar"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 #, fuzzy
 #| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Apondre"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 #, fuzzy
 #| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Suprimir"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 #, fuzzy
 #| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Tèst"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 #, fuzzy
 #| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Propietats"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 #, fuzzy
 #| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"
@@ -3047,6 +2998,45 @@ msgstr "Ecran complet"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "Here you can switch between fixed font size and font size to be "
+#~| "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~| "dimensions, paper size)."
+#~ msgctxt "KFontChooser|@info:whatsthis"
+#~ msgid ""
+#~ "Here you can switch between fixed font size and font size to be "
+#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~ "dimensions, paper size)."
+#~ msgstr ""
+#~ "Podètz caplevar aicí entre de poliças de talha fixa e de poliças que la "
+#~ "talha es determinada automaticament e reajustada en foncion de "
+#~ "l'environament (talha dels objèctes, format de papièr)."
+
+#, fuzzy
+#~| msgid "Sorry"
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "O planhèm"
+
+#, fuzzy
+#~| msgid "Sorry"
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "O planhèm"
+
+#, fuzzy
+#~| msgid "&Yes"
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "&Òc"
+
+#, fuzzy
+#~| msgid "&No"
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "&Non"
 
 #, fuzzy
 #~| msgid "Exit F&ull Screen Mode"

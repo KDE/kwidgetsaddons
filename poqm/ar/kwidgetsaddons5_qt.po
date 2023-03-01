@@ -1610,57 +1610,42 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "انقل لأ&سفل"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "الخط المطلوب"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "عادي"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "مائل"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "مائل قليلا"
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ثخين"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "مائل جريء مكثف"
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "نص حكيم له سر قاطع وذو شأن عظيم مكتوب على ثوب أخضر ومغلف بجلد أزرق"
 
-#: kfontchooser.cpp:313
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr "حجم الخط<br /><i>ثابت</i> or <i>نسبي</i><br /> للبيئة"
-
-#: kfontchooser.cpp:314
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-"هنا يمكنك التبديل بين حجم الخط الثابت وحجم الخط ليتم حسابه ديناميكيًا وتعديله "
-"وفقًا للبيئة المتغيرة (مثل أبعاد الأداة وحجم الورق)."
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1771,68 +1756,58 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "التفاصيل"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "سؤال"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "لا تسأل مجدّدًا"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "تحذير"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "خطأ"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "اسف"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "معلومات"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "لا تعرض هذه الرّسالة مجدّدًا"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:163
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "التفاصيل"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:244
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "سؤال"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:249
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "تحذير"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:252
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "معلومات"
 
-#: kmessagedialog.cpp:276
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "اسف"
-
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:255
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "خطأ"
@@ -1921,12 +1896,12 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "كلمات السر تطابقت"
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "قوة كلمة السر ضعيفة"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2072,84 +2047,74 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "ا&نسخ كلّ النصّ"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&حسنًا"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "أل&غِ"
 
-#: kstandardguiitem.cpp:175
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "ن&عم"
-
-#: kstandardguiitem.cpp:182
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "&لا"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "ار&فض"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "ارفض التّعديلات"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
 msgstr ""
 "الضغط على هذا الزر سيهمل كل التغييرات الحديثة التي طبقت على هذا الحواري"
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "ا&حفظ"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "احفظ البيانات"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "لا تحف&ظ"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "لا تحفظ البيانات"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "احفظ &ك‍..."
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "احفظ الملفّ باسم آخر"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&طبّق"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "طبقّ التّعديلات"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2160,17 +2125,17 @@ msgstr ""
 "الحوار. \n"
 "استخدم هذا لتجربة إعدادات مختلفة."
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "و&ضع الإدارة..."
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "ادخل وضع المدير"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2180,192 +2145,192 @@ msgstr ""
 "عند النقر فوق <b> وضع المسؤول </b> ، ستتم مطالبتك بكلمة سر المسؤول (الجذر) "
 "لإجراء التغييرات التي تتطلب امتيازات الجذر."
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "ام&ح"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "امح الدّخل"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "امح الدخل من حقل التحرير"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "م&ساعدة"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "اعرض المساعدة"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "أ&غلق"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "أغلق النافذة أو المستند الحالي"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "أ&غلق النّافذة"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "أغلق النّافذة الحاليّة."
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "أ&غلق المستند"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "أغلق المستند الحاليّ."
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "الا&فتراضيّات"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "أعد كلّ الإعدادات إلى قيمها الافتراضيّة"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&عُد"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "ارجع للخلف خطوة واحدة"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "ت&قدّم"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "اذهب للأمام خطوة واحدة"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "ا&طبع..."
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "افتح حواريّ الطّباعة لطباعة المستند الحاليّ"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "&تابع"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "تابع العملية"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "ا&حذف"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "احذف العنصر (العناصر)"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "ا&فتح..."
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "افتح ملفًا"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "أن&هِ"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "أنهِ التطبيق"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&صفّر"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "أعد الضبط"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "أ&درج"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "ا&ضبط..."
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "ا&بحث"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "أوقف"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "أضف"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "أزل"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "اختبر"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "الخصائص"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "ا&ستبدل"
@@ -2401,6 +2366,35 @@ msgstr "ملء الشاشة"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "اعرض النافذة بملء الشاشة"
+
+#~ msgctxt "KFontChooser|@info:tooltip"
+#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+#~ msgstr "حجم الخط<br /><i>ثابت</i> or <i>نسبي</i><br /> للبيئة"
+
+#~ msgctxt "KFontChooser|@info:whatsthis"
+#~ msgid ""
+#~ "Here you can switch between fixed font size and font size to be "
+#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~ "dimensions, paper size)."
+#~ msgstr ""
+#~ "هنا يمكنك التبديل بين حجم الخط الثابت وحجم الخط ليتم حسابه ديناميكيًا "
+#~ "وتعديله وفقًا للبيئة المتغيرة (مثل أبعاد الأداة وحجم الورق)."
+
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "اسف"
+
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "اسف"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "ن&عم"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "&لا"
 
 #~ msgctxt "KToggleFullScreenAction|@action:inmenu"
 #~ msgid "Exit F&ull Screen Mode"

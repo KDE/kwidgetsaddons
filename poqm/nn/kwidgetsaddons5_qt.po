@@ -2,21 +2,21 @@
 #
 # Gaute Hvoslef Kvalnes <gaute@verdsveven.com>, 2003, 2004, 2005, 2006.
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2003, 2005.
-# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2004, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-02-28 03:44+0000\n"
-"PO-Revision-Date: 2022-08-12 19:29+0200\n"
+"PO-Revision-Date: 2023-02-09 21:38+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -1616,60 +1616,43 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Flytt &ned"
 
-#: kfontchooser.cpp:168
+#: kfontchooser.cpp:152
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Ønskt skrift"
 
-#: kfontchooser.cpp:209
+#: kfontchooser.cpp:193
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normalt"
 
-#: kfontchooser.cpp:210 kfontchooser.cpp:489
+#: kfontchooser.cpp:194 kfontchooser.cpp:444
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursiv"
 
-#: kfontchooser.cpp:211 kfontchooser.cpp:490
+# Dette er ikkje det same som kursiv!
+#: kfontchooser.cpp:195 kfontchooser.cpp:445
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Skråstilt"
 
-#: kfontchooser.cpp:212
+#: kfontchooser.cpp:196
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Halvfeit"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:197
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "Halvfeit, smal, skråstilt"
 
-#: kfontchooser.cpp:257
+#: kfontchooser.cpp:241
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog æøå ÆØÅ"
 
-#: kfontchooser.cpp:313
-msgctxt "KFontChooser|@info:tooltip"
-msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr ""
-"Skriftstorleik<br /><i>Fast</i> eller <i>relativ</i><br/> eller i høve "
-"til<br/> omgjevnadene"
-
-#: kfontchooser.cpp:314
-msgctxt "KFontChooser|@info:whatsthis"
-msgid ""
-"Here you can switch between fixed font size and font size to be calculated "
-"dynamically and adjusted to changing environment (e.g. widget dimensions, "
-"paper size)."
-msgstr ""
-"Her kan du byta mellom fast skriftstorleik og storleik som skal reknast ut "
-"dynamisk og tilpassast ulike omgjevnadar (for eksempel skjermelement og "
-"papirstorleik)."
-
-#: kfontchooser.cpp:474
+#: kfontchooser.cpp:429
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1784,68 +1767,58 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Detaljar"
 
-#: kmessagebox.cpp:499 kmessagebox.cpp:568
+#: kmessagebox.cpp:458 kmessagebox.cpp:513
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Spørsmål"
 
-#: kmessagebox.cpp:515 kmessagebox.cpp:585 kmessagebox.cpp:685
-#: kmessagebox.cpp:765 kmessagebox.cpp:863
+#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
+#: kmessagebox.cpp:669 kmessagebox.cpp:753
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Ikkje spør igjen"
 
-#: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
+#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Åtvaring"
 
-#: kmessagebox.cpp:920 kmessagebox.cpp:945 kmessagebox.cpp:964
+#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Feil"
 
-#: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
-msgctxt "KMessageBox|"
-msgid "Sorry"
-msgstr "Beklagar"
-
-#: kmessagebox.cpp:1068
+#: kmessagebox.cpp:880
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Informasjon"
 
-#: kmessagebox.cpp:1083
+#: kmessagebox.cpp:895
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ikkje vis denne meldinga igjen"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:163
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detaljar"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:244
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Spørsmål"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:249
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Åtvaring"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:252
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informasjon"
 
-#: kmessagedialog.cpp:276
-msgctxt "KMessageDialog|"
-msgid "Sorry"
-msgstr "Beklagar"
-
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:255
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Feilmelding"
@@ -1898,7 +1871,7 @@ msgstr "Start redigering av MIME-type"
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
-msgstr ""
+msgstr "Fann ikkje programfila «keditfiletype5» i søkjestien PATH:"
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -1906,6 +1879,8 @@ msgid ""
 "Could not start the \"keditfiletype5\" executable, please check your "
 "installation."
 msgstr ""
+"Klarte ikkje starta programfila «keditfiletype5». Sjå til at programmet er "
+"installert."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -1930,12 +1905,12 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "Passorda er like."
 
-#: knewpassworddialog.cpp:146
+#: knewpassworddialog.cpp:133
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Usikkert passord"
 
-#: knewpassworddialog.cpp:147
+#: knewpassworddialog.cpp:134
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2085,37 +2060,27 @@ msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Kopier fulltekst"
 
-#: kstandardguiitem.cpp:164
+#: kstandardguiitem.cpp:152
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
 msgstr "&OK"
 
-#: kstandardguiitem.cpp:169
+#: kstandardguiitem.cpp:157
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Avbryt"
 
-#: kstandardguiitem.cpp:175
-msgctxt "KStandardGuiItem|"
-msgid "&Yes"
-msgstr "&Ja"
-
-#: kstandardguiitem.cpp:182
-msgctxt "KStandardGuiItem|"
-msgid "&No"
-msgstr "&Nei"
-
-#: kstandardguiitem.cpp:188
+#: kstandardguiitem.cpp:162
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
 msgstr "&Forkast"
 
-#: kstandardguiitem.cpp:190
+#: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
 msgstr "Forkast endringar"
 
-#: kstandardguiitem.cpp:191
+#: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
@@ -2123,47 +2088,47 @@ msgstr ""
 "Om du trykkjer denne knappen, forkastar du alle dei siste endringane i dette "
 "dialogvindauget."
 
-#: kstandardguiitem.cpp:198
+#: kstandardguiitem.cpp:172
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Lagra"
 
-#: kstandardguiitem.cpp:200
+#: kstandardguiitem.cpp:174
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
 msgstr "Lagra informasjon"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Ikkje lagra"
 
-#: kstandardguiitem.cpp:205
+#: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
 msgstr "Ikkje lagra data"
 
-#: kstandardguiitem.cpp:210
+#: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
 msgstr "Lagra &som …"
 
-#: kstandardguiitem.cpp:212
+#: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
 msgid "Save file with another name"
 msgstr "Lagra fila med eit anna namn"
 
-#: kstandardguiitem.cpp:217
+#: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
 msgstr "&Bruk"
 
-#: kstandardguiitem.cpp:219
+#: kstandardguiitem.cpp:193
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
 msgstr "Bruk innstillingane"
 
-#: kstandardguiitem.cpp:220
+#: kstandardguiitem.cpp:194
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Apply</b>, the settings will be handed over to the "
@@ -2174,17 +2139,17 @@ msgstr ""
 "dialog­vindauget vert ikkje lukka.\n"
 "Bruk dette for å prøva ulike innstillingar."
 
-#: kstandardguiitem.cpp:229
+#: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
 msgstr "Administrator&modus …"
 
-#: kstandardguiitem.cpp:231
+#: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
 msgstr "Gå til administratormodus"
 
-#: kstandardguiitem.cpp:232
+#: kstandardguiitem.cpp:206
 msgctxt "KStandardGuiItem|"
 msgid ""
 "When you click <b>Administrator Mode</b> you will be prompted for the "
@@ -2194,192 +2159,192 @@ msgstr ""
 "Når du trykkjer på <b>Administratormodus</b>, vert du spurd om rotpassordet "
 "slik at du kan gjera endringar som krev administratortilgang."
 
-#: kstandardguiitem.cpp:240
+#: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
 msgstr "&Tøm"
 
-#: kstandardguiitem.cpp:242
+#: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
 msgstr "Tøm skrivefelt"
 
-#: kstandardguiitem.cpp:243
+#: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
 msgstr "Fjern innhaldet i skrivefeltet"
 
-#: kstandardguiitem.cpp:248
+#: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Hjelp"
 
-#: kstandardguiitem.cpp:250
+#: kstandardguiitem.cpp:224
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
 msgstr "Vis hjelp"
 
-#: kstandardguiitem.cpp:255
+#: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
 msgstr "&Lukk"
 
-#: kstandardguiitem.cpp:257
+#: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
 msgstr "Lukk vindauget eller dokumentet"
 
-#: kstandardguiitem.cpp:262
+#: kstandardguiitem.cpp:236
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
 msgstr "&Lukk vindauget"
 
-#: kstandardguiitem.cpp:264
+#: kstandardguiitem.cpp:238
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window."
 msgstr "Lukk vindauget."
 
-#: kstandardguiitem.cpp:269
+#: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
 msgstr "&Lukk dokumentet"
 
-#: kstandardguiitem.cpp:271
+#: kstandardguiitem.cpp:245
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
 msgstr "Lukk dokumentet."
 
-#: kstandardguiitem.cpp:276
+#: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
 msgstr "&Standard"
 
-#: kstandardguiitem.cpp:278
+#: kstandardguiitem.cpp:252
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
 msgstr "Tilbakestill alle element til standardverdiane"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
 msgstr "&Tilbake"
 
-#: kstandardguiitem.cpp:284
+#: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|"
 msgid "Go back one step"
 msgstr "Gå eitt steg tilbake"
 
-#: kstandardguiitem.cpp:290
+#: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Fram"
 
-#: kstandardguiitem.cpp:292
+#: kstandardguiitem.cpp:266
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
 msgstr "Gå eitt steg fram"
 
-#: kstandardguiitem.cpp:302
+#: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
 msgstr "Skriv &ut …"
 
-#: kstandardguiitem.cpp:304
+#: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
 msgstr "Opnar eit dialogvindauge for å skriva ut dokumentet"
 
-#: kstandardguiitem.cpp:311
+#: kstandardguiitem.cpp:285
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "Hald &fram"
 
-#: kstandardguiitem.cpp:313
+#: kstandardguiitem.cpp:287
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Hald fram med handlinga"
 
-#: kstandardguiitem.cpp:318
+#: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Slett"
 
-#: kstandardguiitem.cpp:320
+#: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Slett element"
 
-#: kstandardguiitem.cpp:325
+#: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
 msgstr "&Opna …"
 
-#: kstandardguiitem.cpp:327
+#: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Opna fil"
 
-#: kstandardguiitem.cpp:332
+#: kstandardguiitem.cpp:306
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Avslutt"
 
-#: kstandardguiitem.cpp:334
+#: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
 msgstr "Avslutt program"
 
-#: kstandardguiitem.cpp:339
+#: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
 msgstr "&Tilbakestill"
 
-#: kstandardguiitem.cpp:341
+#: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
 msgid "Reset configuration"
 msgstr "Tilbakestill oppsett"
 
-#: kstandardguiitem.cpp:346
+#: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "Set &inn"
 
-#: kstandardguiitem.cpp:351
+#: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
 msgstr "&Set opp …"
 
-#: kstandardguiitem.cpp:356
+#: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
 msgstr "&Finn"
 
-#: kstandardguiitem.cpp:361
+#: kstandardguiitem.cpp:335
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Stopp"
 
-#: kstandardguiitem.cpp:366
+#: kstandardguiitem.cpp:340
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Legg til"
 
-#: kstandardguiitem.cpp:371
+#: kstandardguiitem.cpp:345
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Fjern"
 
-#: kstandardguiitem.cpp:376
+#: kstandardguiitem.cpp:350
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Test"
 
-#: kstandardguiitem.cpp:381
+#: kstandardguiitem.cpp:355
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
 msgstr "Eigenskapar"
 
-#: kstandardguiitem.cpp:386
+#: kstandardguiitem.cpp:360
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "Skriv &over"
@@ -2415,3 +2380,35 @@ msgstr "Fullskjerm"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Vis vindauget over heile skjermen"
+
+#~ msgctxt "KFontChooser|@info:tooltip"
+#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
+#~ msgstr ""
+#~ "Skriftstorleik<br /><i>Fast</i> eller <i>relativ</i><br/> eller i høve "
+#~ "til<br/> omgjevnadene"
+
+#~ msgctxt "KFontChooser|@info:whatsthis"
+#~ msgid ""
+#~ "Here you can switch between fixed font size and font size to be "
+#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
+#~ "dimensions, paper size)."
+#~ msgstr ""
+#~ "Her kan du byta mellom fast skriftstorleik og storleik som skal reknast "
+#~ "ut dynamisk og tilpassast ulike omgjevnadar (for eksempel skjermelement "
+#~ "og papirstorleik)."
+
+#~ msgctxt "KMessageBox|"
+#~ msgid "Sorry"
+#~ msgstr "Beklagar"
+
+#~ msgctxt "KMessageDialog|"
+#~ msgid "Sorry"
+#~ msgstr "Beklagar"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Yes"
+#~ msgstr "&Ja"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&No"
+#~ msgstr "&Nei"
