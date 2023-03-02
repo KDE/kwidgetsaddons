@@ -64,7 +64,7 @@ class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
     Q_PROPERTY(QChar currentChar READ currentChar WRITE setCurrentChar)
     Q_PROPERTY(uint currentCodePoint READ currentCodePoint WRITE setCurrentCodePoint NOTIFY currentCodePointChanged)
     Q_PROPERTY(QList<QChar> displayedChars READ displayedChars)
-    Q_PROPERTY(QVector<uint> displayedCodePoints READ displayedCodePoints)
+    Q_PROPERTY(QList<uint> displayedCodePoints READ displayedCodePoints)
     Q_PROPERTY(bool allPlanesEnabled READ allPlanesEnabled WRITE setAllPlanesEnabled DESIGNABLE true)
 
 public:
@@ -204,7 +204,7 @@ public:
      * Returns a list of Unicode code points of the currently displayed characters.
      * @since 5.25
      */
-    QVector<uint> displayedCodePoints() const;
+    QList<uint> displayedCodePoints() const;
 
 public Q_SLOTS:
     /**

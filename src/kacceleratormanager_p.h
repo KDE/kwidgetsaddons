@@ -8,9 +8,9 @@
 #ifndef KACCELERATORMANAGER_PRIVATE_H
 #define KACCELERATORMANAGER_PRIVATE_H
 
+#include <QList>
 #include <QObject>
 #include <QString>
-#include <QVector>
 
 class QStackedWidget;
 class QMenu;
@@ -83,7 +83,7 @@ private:
     QString m_origText;
     int m_accel;
     int m_orig_accel;
-    QVector<int> m_weight;
+    QList<int> m_weight;
 };
 
 typedef QList<KAccelString> KAccelStringList;

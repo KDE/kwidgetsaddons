@@ -37,7 +37,7 @@ public:
     QPixmap pixmap;
     QTimer timer;
     QString icon_path;
-    QVector<QPixmap *> framesCache; // We keep copies of each frame so that
+    QList<QPixmap *> framesCache; // We keep copies of each frame so that
     // the icon code can properly cache them in QPixmapCache,
     // and not fill it up with dead copies
 };

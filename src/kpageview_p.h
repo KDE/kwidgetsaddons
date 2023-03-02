@@ -176,7 +176,7 @@ protected:
 private Q_SLOTS:
     void currentPageChanged(int);
     void layoutChanged();
-    void dataChanged(const QModelIndex &, const QModelIndex &, const QVector<int> &roles) override;
+    void dataChanged(const QModelIndex &, const QModelIndex &, const QList<int> &roles) override;
 
 private:
     QTabWidget *mTabWidget;

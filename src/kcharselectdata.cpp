@@ -210,10 +210,10 @@ QString KCharSelectData::formatCode(uint code, int length, const QString &prefix
     return s;
 }
 
-QVector<uint> KCharSelectData::blockContents(int block)
+QList<uint> KCharSelectData::blockContents(int block)
 {
     if (!openDataFile()) {
-        return QVector<uint>();
+        return QList<uint>();
     }
 
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
@@ -222,7 +222,7 @@ QVector<uint> KCharSelectData::blockContents(int block)
 
     int max = ((offsetEnd - offsetBegin) / 4) - 1;
 
-    QVector<uint> res;
+    QList<uint> res;
 
     if (block > max) {
         return res;
@@ -240,11 +240,11 @@ QVector<uint> KCharSelectData::blockContents(int block)
     return res;
 }
 
-QVector<int> KCharSelectData::sectionContents(int section)
+QList<int> KCharSelectData::sectionContents(int section)
 {
     section -= 1;
     if (!openDataFile()) {
-        return QVector<int>();
+        return QList<int>();
     }
 
     const uchar *data = reinterpret_cast<const uchar *>(dataFile.constData());
@@ -253,7 +253,7 @@ QVector<int> KCharSelectData::sectionContents(int section)
 
     int max = ((offsetEnd - offsetBegin) / 4) - 1;
 
-    QVector<int> res;
+    QList<int> res;
 
     if (section > max) {
         return res;
@@ -520,21 +520,21 @@ QStringList KCharSelectData::notes(uint c)
     return notes;
 }
 
-QVector<uint> KCharSelectData::seeAlso(uint c)
+QList<uint> KCharSelectData::seeAlso(uint c)
 {
     if (!openDataFile()) {
-        return QVector<uint>();
+        return QList<uint>();
     }
     const int detailIndex = getDetailIndex(c);
     if (detailIndex == 0) {
-        return QVector<uint>();
+        return QList<uint>();
     }
 
     const uchar *udata = reinterpret_cast<const uchar *>(dataFile.constData());
     const quint8 count = *(quint8 *)(udata + detailIndex + 26);
     quint32 offset = qFromLittleEndian<quint32>(udata + detailIndex + 22);
 
-    QVector<uint> seeAlso;
+    QList<uint> seeAlso;
     seeAlso.reserve(count);
 
     for (int i = 0; i < count; i++) {
@@ -597,18 +597,18 @@ QStringList KCharSelectData::approximateEquivalents(uint c)
     return approxEquivalents;
 }
 
-QVector<uint> KCharSelectData::decomposition(uint c)
+QList<uint> KCharSelectData::decomposition(uint c)
 {
     // for now, only decompose Hangul Syllable into Hangul Jamo
     uint SIndex = c - SBase;
     if (SIndex >= SCount) {
-        return QVector<uint>();
+        return QList<uint>();
     }
 
     uint L = LBase + SIndex / NCount; // Choseong
     uint V = VBase + (SIndex % NCount) / TCount; // Jungseong
     uint T = TBase + SIndex % TCount; // Jongsung
-    QVector<uint> jamoList;
+    QList<uint> jamoList;
     jamoList.append(L);
     jamoList.append(V);
     if (T != TBase) {
@@ -854,11 +854,11 @@ QString KCharSelectData::categoryText(QChar::Category category)
     }
 }
 
-QVector<uint> KCharSelectData::find(const QString &needle)
+QList<uint> KCharSelectData::find(const QString &needle)
 {
     QSet<uint> result;
 
-    QVector<uint> returnRes;
+    QList<uint> returnRes;
     QString simplified = needle.length() > 1 ? needle.simplified() : needle;
     QStringList searchStrings;
 
@@ -882,7 +882,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
     }
 
     if (simplified.length() <= 2) {
-        QVector<uint> ucs4 = simplified.toUcs4();
+        QList<uint> ucs4 = simplified.toUcs4();
         if (ucs4.size() == 1) {
             // search for hex representation of the character
             searchStrings = QStringList(formatCode(ucs4.at(0)));
@@ -931,7 +931,7 @@ QVector<uint> KCharSelectData::find(const QString &needle)
         result.remove(c);
     }
 
-    QVector<uint> sortedResult;
+    QList<uint> sortedResult;
     sortedResult.reserve(result.count());
     for (auto c : std::as_const(result)) {
         sortedResult.append(c);

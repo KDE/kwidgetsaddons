@@ -312,7 +312,7 @@ void KPageTabbedView::layoutChanged()
     mTabWidget->setCurrentIndex(pos);
 }
 
-void KPageTabbedView::dataChanged(const QModelIndex &index, const QModelIndex &, const QVector<int> &roles)
+void KPageTabbedView::dataChanged(const QModelIndex &index, const QModelIndex &, const QList<int> &roles)
 {
     if (!index.isValid()) {
         return;

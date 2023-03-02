@@ -15,9 +15,9 @@
 #include <QDate>
 #include <QKeyEvent>
 #include <QLineEdit>
+#include <QList>
 #include <QMenu>
 #include <QScreen>
-#include <QVector>
 #include <QWidgetAction>
 
 #include "kdatepicker.h"

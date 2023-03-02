@@ -50,7 +50,7 @@ public:
     /** Set the highlighted character to @p c . */
     void setChar(uint c);
     /** Set the contents of the table to @p chars . */
-    void setContents(const QVector<uint> &chars);
+    void setContents(const QList<uint> &chars);
 
     /** @return Currently highlighted character. */
     uint chr();
@@ -63,7 +63,7 @@ public:
     /**
      * Returns a list of currently displayed characters.
      */
-    QVector<uint> displayedChars() const;
+    QList<uint> displayedChars() const;
 
     /**
      * Reimplemented.
@@ -95,7 +95,7 @@ class KCharSelectItemModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    KCharSelectItemModel(const QVector<uint> &chars, const QFont &font, QObject *parent)
+    KCharSelectItemModel(const QList<uint> &chars, const QFont &font, QObject *parent)
         : QAbstractTableModel(parent)
         , m_chars(chars)
         , m_font(font)
@@ -161,13 +161,13 @@ public:
 
     void setColumnCount(int columns);
 
-    QVector<uint> chars() const
+    QList<uint> chars() const
     {
         return m_chars;
     }
 
 private:
-    QVector<uint> m_chars;
+    QList<uint> m_chars;
     QFont m_font;
     int m_columns;
 

@@ -11,21 +11,21 @@
 #include <QChar>
 #include <QFont>
 #include <QFuture>
+#include <QList>
 #include <QString>
 #include <QStringList>
-#include <QVector>
 
 // Internal class used by KCharSelect
 
-typedef QMap<QString, QVector<quint16>> Index;
+typedef QMap<QString, QList<quint16>> Index;
 
 class KCharSelectData
 {
 public:
     QString formatCode(uint code, int length = 4, const QString &prefix = QStringLiteral("U+"), int base = 16);
 
-    QVector<uint> blockContents(int block);
-    QVector<int> sectionContents(int section);
+    QList<uint> blockContents(int block);
+    QList<int> sectionContents(int section);
 
     QStringList sectionList();
 
@@ -41,10 +41,10 @@ public:
 
     QStringList aliases(uint c);
     QStringList notes(uint c);
-    QVector<uint> seeAlso(uint c);
+    QList<uint> seeAlso(uint c);
     QStringList equivalents(uint c);
     QStringList approximateEquivalents(uint c);
-    QVector<uint> decomposition(uint c);
+    QList<uint> decomposition(uint c);
 
     QStringList unihanInfo(uint c);
 
@@ -58,7 +58,7 @@ public:
 
     QString categoryText(QChar::Category category);
 
-    QVector<uint> find(const QString &s);
+    QList<uint> find(const QString &s);
 
 private:
     bool openDataFile();

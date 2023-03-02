@@ -41,7 +41,7 @@ public:
 
     QFont font;
     KCharSelectItemModel *model = nullptr;
-    QVector<uint> chars;
+    QList<uint> chars;
     uint chr;
 
     void resizeCells();
@@ -162,7 +162,7 @@ QFont KCharSelectTable::font() const
     return d->font;
 }
 
-QVector<uint> KCharSelectTable::displayedChars() const
+QList<uint> KCharSelectTable::displayedChars() const
 {
     return d->chars;
 }
@@ -175,7 +175,7 @@ void KCharSelectTable::setChar(uint c)
     }
 }
 
-void KCharSelectTable::setContents(const QVector<uint> &chars)
+void KCharSelectTable::setContents(const QList<uint> &chars)
 {
     d->chars = chars;
 
@@ -256,7 +256,7 @@ void KCharSelectTablePrivate::resizeCells()
     // fontMetrics.maxWidth() doesn't help because of font fallbacks
     // (testcase: Malayalam characters)
     int maxCharWidth = 0;
-    const QVector<uint> chars = model->chars();
+    const QList<uint> chars = model->chars();
     for (int i = 0; i < chars.size(); ++i) {
         char32_t thisChar = chars.at(i);
         if (s_data()->isPrint(thisChar)) {
@@ -626,7 +626,7 @@ QList<QChar> KCharSelect::displayedChars() const
     return result;
 }
 
-QVector<uint> KCharSelect::displayedCodePoints() const
+QList<uint> KCharSelect::displayedCodePoints() const
 {
     return d->charTable->displayedChars();
 }
@@ -802,10 +802,10 @@ void KCharSelectPrivate::slotUpdateUnicode(uint c)
     }
     const QStringList aliases = s_data()->aliases(c);
     const QStringList notes = s_data()->notes(c);
-    const QVector<uint> seeAlso = s_data()->seeAlso(c);
+    const QList<uint> seeAlso = s_data()->seeAlso(c);
     const QStringList equivalents = s_data()->equivalents(c);
     const QStringList approxEquivalents = s_data()->approximateEquivalents(c);
-    const QVector<uint> decomposition = s_data()->decomposition(c);
+    const QList<uint> decomposition = s_data()->decomposition(c);
     if (!(aliases.isEmpty() && notes.isEmpty() && seeAlso.isEmpty() && equivalents.isEmpty() && approxEquivalents.isEmpty() && decomposition.isEmpty())) {
         html += QLatin1String("<p><b>") + tr("Annotations and Cross References") + QLatin1String("</b></p>");
     }
@@ -978,11 +978,11 @@ QString KCharSelectPrivate::createLinks(QString s)
 void KCharSelectPrivate::sectionSelected(int index)
 {
     blockCombo->clear();
-    QVector<uint> chars;
-    const QVector<int> blocks = s_data()->sectionContents(index);
+    QList<uint> chars;
+    const QList<int> blocks = s_data()->sectionContents(index);
     for (int block : blocks) {
         if (!allPlanesEnabled) {
-            const QVector<uint> contents = s_data()->blockContents(block);
+            const QList<uint> contents = s_data()->blockContents(block);
             if (!contents.isEmpty() && QChar::requiresSurrogates(contents.at(0))) {
                 continue;
             }
@@ -1015,7 +1015,7 @@ void KCharSelectPrivate::blockSelected(int index)
         // the selected block already contains the selected character
         return;
     }
-    const QVector<uint> contents = s_data()->blockContents(block);
+    const QList<uint> contents = s_data()->blockContents(block);
     if (sectionCombo->currentIndex() > 0) {
         charTable->setContents(contents);
     }
@@ -1054,7 +1054,7 @@ void KCharSelectPrivate::search()
         return;
     }
     searchMode = true;
-    QVector<uint> contents = s_data()->find(searchLine->text());
+    QList<uint> contents = s_data()->find(searchLine->text());
     if (!allPlanesEnabled) {
         contents.erase(std::remove_if(contents.begin(), contents.end(), QChar::requiresSurrogates), contents.end());
     }

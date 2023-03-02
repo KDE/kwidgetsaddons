@@ -9,13 +9,13 @@
 
 #include "loggingcategory.h"
 
+#include <QList>
 #include <QPixmap>
-#include <QVector>
 
 class KPixmapSequencePrivate : public QSharedData
 {
 public:
-    QVector<QPixmap> mFrames;
+    QList<QPixmap> mFrames;
 
     void loadSequence(const QPixmap &bigPixmap, const QSize &frameSize);
 };

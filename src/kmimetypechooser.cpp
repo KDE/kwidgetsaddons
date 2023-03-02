@@ -30,7 +30,7 @@ public:
     }
 
     void loadMimeTypes(const QStringList &selected = QStringList());
-    QVector<const QStandardItem *> getCheckedItems();
+    QList<const QStandardItem *> getCheckedItems();
 
     void editMimeType();
     void slotCurrentChanged(const QModelIndex &index);
@@ -285,9 +285,9 @@ void KMimeTypeChooserPrivate::slotSycocaDatabaseChanged(const QStringList &chang
     }
 }
 
-QVector<const QStandardItem *> KMimeTypeChooserPrivate::getCheckedItems()
+QList<const QStandardItem *> KMimeTypeChooserPrivate::getCheckedItems()
 {
-    QVector<const QStandardItem *> lst;
+    QList<const QStandardItem *> lst;
     const int rowCount = m_model->rowCount();
     for (int i = 0; i < rowCount; ++i) {
         const QStandardItem *groupItem = m_model->item(i);
@@ -305,7 +305,7 @@ QVector<const QStandardItem *> KMimeTypeChooserPrivate::getCheckedItems()
 QStringList KMimeTypeChooser::mimeTypes() const
 {
     QStringList mimeList;
-    const QVector<const QStandardItem *> checkedItems = d->getCheckedItems();
+    const QList<const QStandardItem *> checkedItems = d->getCheckedItems();
     mimeList.reserve(checkedItems.size());
     for (const QStandardItem *item : checkedItems) {
         mimeList.append(item->parent()->text() + QLatin1Char('/') + item->text());
@@ -316,7 +316,7 @@ QStringList KMimeTypeChooser::mimeTypes() const
 QStringList KMimeTypeChooser::patterns() const
 {
     QStringList patternList;
-    const QVector<const QStandardItem *> checkedItems = d->getCheckedItems();
+    const QList<const QStandardItem *> checkedItems = d->getCheckedItems();
     QMimeDatabase db;
     for (const QStandardItem *item : checkedItems) {
         QMimeType mime = db.mimeTypeForName(item->parent()->text() + QLatin1Char('/') + item->text());
