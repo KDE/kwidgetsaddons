@@ -2588,8 +2588,3 @@ msgstr "Dievasšearbmamodus"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Čájet láse meahttá šearpma"
-
-#, fuzzy
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&No"
-#~ msgstr "NKo"

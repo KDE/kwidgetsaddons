@@ -485,7 +485,7 @@ msgstr "سكربتات سودانية"
 #: kcharselect-translation.cpp:92
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
-msgstr "امتدادات ڤيدية"
+msgstr "امتدادات فيدية"
 
 #: kcharselect-translation.cpp:93
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -775,7 +775,7 @@ msgstr "ليسو"
 #: kcharselect-translation.cpp:150
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
-msgstr "ڤاي"
+msgstr "فاي"
 
 #: kcharselect-translation.cpp:151
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -820,7 +820,7 @@ msgstr "سوراشترا"
 #: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
-msgstr "دڤنيجري ممتدّ"
+msgstr "دفنيجري ممتدّ"
 
 #: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -860,7 +860,7 @@ msgstr "ميانمار ممتدّ-أ"
 #: kcharselect-translation.cpp:167
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
-msgstr "ڤيت تايلندي"
+msgstr "فيت تايلندي"
 
 #: kcharselect-translation.cpp:168
 msgctxt "KCharSelectData|KCharselect unicode block name"
