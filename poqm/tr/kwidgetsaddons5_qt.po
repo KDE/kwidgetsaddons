@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-03-05 12:39+0300\n"
+"PO-Revision-Date: 2023-03-07 20:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -2172,12 +2172,12 @@ msgstr "&Temizle"
 #: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
-msgstr "Girdiyi temizle"
+msgstr "Girişi temizle"
 
 #: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
-msgstr "Düzenleme alanındaki girdiyi temizle"
+msgstr "Düzenleme alanındaki girişi temizle"
 
 #: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
