@@ -1677,7 +1677,7 @@ msgstr "On sangen hauskaa, että polkupyörä on maanteiden jokapäiväinen ilmi
 msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgstr ""
-"Fonttikoko<br /><i>kiinteä</i> tai <i>suhteellinen</i></br>(suhteessa "
+"Fonttikoko<br /><i>kiinteä</i> tai <i>suhteellinen</i><br />(suhteessa "
 "ympäristöön)"
 
 #: kfontchooser.cpp:314
