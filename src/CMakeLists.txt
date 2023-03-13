@@ -3,7 +3,7 @@ include(ECMPoQmTools)
 add_library(KF6WidgetsAddons)
 add_library(KF6::WidgetsAddons ALIAS KF6WidgetsAddons)
 
-ecm_create_qm_loader(KF6WidgetsAddons kwidgetsaddons5_qt)
+ecm_create_qm_loader(KF6WidgetsAddons kwidgetsaddons6_qt)
 
 target_sources(KF6WidgetsAddons PRIVATE
     common_helpers.cpp
