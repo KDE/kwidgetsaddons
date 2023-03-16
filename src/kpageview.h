@@ -209,7 +209,9 @@ protected:
      */
     virtual Qt::Alignment viewPosition() const;
 
-    KPageView(KPageViewPrivate &dd, QWidget *parent);
+    KWIDGETSADDONS_NO_EXPORT KPageView(KPageViewPrivate &dd, QWidget *parent);
+
+protected:
     std::unique_ptr<class KPageViewPrivate> const d_ptr;
 };
 

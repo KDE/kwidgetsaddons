@@ -137,7 +137,7 @@ Q_SIGNALS:
     void pageRemoved(KPageWidgetItem *page);
 
 protected:
-    KPageWidget(KPageWidgetPrivate &dd, QWidget *parent);
+    KWIDGETSADDONS_NO_EXPORT KPageWidget(KPageWidgetPrivate &dd, QWidget *parent);
 };
 
 #endif

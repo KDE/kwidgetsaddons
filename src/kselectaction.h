@@ -395,7 +395,7 @@ protected:
      * @param dd the private d member
      * @param parent The action's parent object.
      */
-    KSelectAction(KSelectActionPrivate &dd, QObject *parent);
+    KWIDGETSADDONS_NO_EXPORT KSelectAction(KSelectActionPrivate &dd, QObject *parent);
 
     std::unique_ptr<class KSelectActionPrivate> const d_ptr;
 
