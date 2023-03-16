@@ -95,7 +95,7 @@ public:
     static void autoHideEventFilter(QObject *, QEvent *);
 
 private:
-    KCursor(); // forbidden
+    KCursor() = delete;
 };
 
 #endif // _KCURSOR_H
