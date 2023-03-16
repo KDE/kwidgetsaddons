@@ -92,7 +92,7 @@ protected Q_SLOTS:
     virtual void slotToggled(bool checked);
 
 protected:
-    KToggleAction(KToggleActionPrivate &dd, QObject *parent);
+    KWIDGETSADDONS_NO_EXPORT KToggleAction(KToggleActionPrivate &dd, QObject *parent);
 
 private:
     friend class KToggleFullScreenAction;

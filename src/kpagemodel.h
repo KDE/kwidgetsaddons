@@ -86,7 +86,8 @@ public:
     ~KPageModel() override;
 
 protected:
-    KPageModel(KPageModelPrivate &dd, QObject *parent);
+    KWIDGETSADDONS_NO_EXPORT KPageModel(KPageModelPrivate &dd, QObject *parent);
+
     std::unique_ptr<class KPageModelPrivate> const d_ptr;
 };
 
