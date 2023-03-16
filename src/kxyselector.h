@@ -126,7 +126,7 @@ protected:
     void valuesFromPosition(int x, int y, int &xVal, int &yVal) const;
 
 private:
-    void setPosition(int xp, int yp);
+    KWIDGETSADDONS_NO_EXPORT void setPosition(int xp, int yp);
 
 private:
     friend class KXYSelectorPrivate;

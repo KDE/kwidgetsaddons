@@ -272,7 +272,7 @@ Q_SIGNALS:
     void codePointSelected(uint codePoint);
 
 private:
-    void initWidget(const Controls, QObject *);
+    KWIDGETSADDONS_NO_EXPORT void initWidget(const Controls, QObject *);
 
 private:
     std::unique_ptr<class KCharSelectPrivate> const d;

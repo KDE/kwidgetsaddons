@@ -234,14 +234,14 @@ protected:
     void paintEvent(QPaintEvent *) override;
     void resizeEvent(QResizeEvent *) override;
 
+private:
     /**
      * @internal
      * invalidates caches after property changes and calls update()
      */
-    void updateCachedPixmap();
+    KWIDGETSADDONS_NO_EXPORT void updateCachedPixmap();
 
-private:
-    void updateAccessibleName();
+    KWIDGETSADDONS_NO_EXPORT void updateAccessibleName();
 
 private:
     std::unique_ptr<class KLedPrivate> const d;

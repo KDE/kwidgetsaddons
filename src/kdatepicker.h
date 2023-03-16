@@ -160,8 +160,8 @@ Q_SIGNALS:
     void tableClicked();
 
 private:
-    KDateTable *dateTable() const;
-    void initWidget(const QDate &date);
+    KWIDGETSADDONS_NO_EXPORT KDateTable *dateTable() const;
+    KWIDGETSADDONS_NO_EXPORT void initWidget(const QDate &date);
 
 private:
     friend class KDatePickerPrivate;
