@@ -116,9 +116,9 @@ Q_SIGNALS:
     void recentFilesChanged();
 
 private:
-    void readFromFile();
-    void writeToFile();
-    void rebuildMenu();
+    KWIDGETSADDONS_NO_EXPORT void readFromFile();
+    KWIDGETSADDONS_NO_EXPORT void writeToFile();
+    KWIDGETSADDONS_NO_EXPORT void rebuildMenu();
 
     friend class KRecentFilesMenuPrivate;
 

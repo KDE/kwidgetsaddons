@@ -99,8 +99,8 @@ protected:
     void wheelEvent(QWheelEvent *) override;
 
 private:
-    QPoint calcArrowPos(int val);
-    void moveArrow(const QPoint &pos);
+    KWIDGETSADDONS_NO_EXPORT QPoint calcArrowPos(int val);
+    KWIDGETSADDONS_NO_EXPORT void moveArrow(const QPoint &pos);
 
 private:
     friend class KSelectorPrivate;

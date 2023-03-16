@@ -380,7 +380,7 @@ protected:
     void paintEvent(QPaintEvent *) override;
 
 private:
-    void initWidget(Qt::Orientation orientation);
+    KWIDGETSADDONS_NO_EXPORT void initWidget(Qt::Orientation orientation);
 
 private:
     std::unique_ptr<class KRulerPrivate> const d;
