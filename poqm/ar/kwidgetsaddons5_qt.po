@@ -705,7 +705,7 @@ msgstr "كتاكانا"
 #: kcharselect-translation.cpp:136
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
-msgstr "بوپوموفو"
+msgstr "بوبوموفو"
 
 #: kcharselect-translation.cpp:137
 msgctxt "KCharSelectData|KCharselect unicode block name"
