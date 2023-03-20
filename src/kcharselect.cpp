@@ -42,7 +42,7 @@ public:
     QFont font;
     KCharSelectItemModel *model = nullptr;
     QList<uint> chars;
-    uint chr;
+    uint chr = 0;
 
     void resizeCells();
     void doubleClicked(const QModelIndex &index);
