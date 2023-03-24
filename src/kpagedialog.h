@@ -249,7 +249,7 @@ protected:
      * it without parent and you are not allowed to delete it.
      */
     KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = Qt::WindowFlags());
-    KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = Qt::WindowFlags());
+    KWIDGETSADDONS_NO_EXPORT KPageDialog(KPageDialogPrivate &dd, KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = Qt::WindowFlags());
 
     /**
      * Returns the page widget of the dialog or a null pointer if no page widget is set.
