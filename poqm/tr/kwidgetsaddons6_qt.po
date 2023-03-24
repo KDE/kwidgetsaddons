@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-03-07 20:50+0300\n"
+"PO-Revision-Date: 2023-03-23 13:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1595,12 +1595,14 @@ msgstr "Kayan"
 #: kdatetimeedit.cpp:211
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
-msgstr "Girilen tarih ve saat, izin verilen asgari tarih ve saatten daha önce."
+msgstr ""
+"Girilen tarih ve zaman, izin verilen en erken tarih ve zamandan daha önce."
 
 #: kdatetimeedit.cpp:221
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
-msgstr "Girilen tarih ve saat, izin verilen azami tarih ve saatten daha sonra."
+msgstr ""
+"Girilen tarih ve zaman, izin verilen en geç tarih ve zamandan daha sonra."
 
 #: keditlistwidget.cpp:281
 msgctxt "KEditListWidget|@action:button"
