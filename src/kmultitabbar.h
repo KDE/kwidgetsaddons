@@ -227,17 +227,18 @@ private:
     KMultiTabBar::KMultiTabBarPosition m_position;
     KMultiTabBar::KMultiTabBarStyle m_style;
 
-    void computeMargins(int *hMargin, int *vMargin) const;
-    QSize computeSizeHint(bool withText) const;
-    bool shouldDrawText() const;
-    bool isVertical() const;
+    KWIDGETSADDONS_EXPORT void computeMargins(int *hMargin, int *vMargin) const;
+    KWIDGETSADDONS_EXPORT QSize computeSizeHint(bool withText) const;
+    KWIDGETSADDONS_EXPORT bool shouldDrawText() const;
+    KWIDGETSADDONS_EXPORT bool isVertical() const;
 
-    void initStyleOption(QStyleOptionToolButton *opt) const;
+    KWIDGETSADDONS_EXPORT void initStyleOption(QStyleOptionToolButton *opt) const;
 
     friend class KMultiTabBarInternal;
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
+    KWIDGETSADDONS_EXPORT
     KMultiTabBarTab(const QIcon &icon, const QString &, int id, QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
 
     std::unique_ptr<class KMultiTabBarTabPrivate> const d;
