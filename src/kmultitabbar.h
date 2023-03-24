@@ -273,25 +273,27 @@ private:
     KMultiTabBar::KMultiTabBarPosition m_position;
     KMultiTabBar::KMultiTabBarStyle m_style;
 
-    void computeMargins(int *hMargin, int *vMargin) const;
-    QSize computeSizeHint(bool withText) const;
-    bool shouldDrawText() const;
-    bool isVertical() const;
+    KWIDGETSADDONS_NO_EXPORT void computeMargins(int *hMargin, int *vMargin) const;
+    KWIDGETSADDONS_NO_EXPORT QSize computeSizeHint(bool withText) const;
+    KWIDGETSADDONS_NO_EXPORT bool shouldDrawText() const;
+    KWIDGETSADDONS_NO_EXPORT bool isVertical() const;
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
-    QPixmap iconPixmap() const;
+    KWIDGETSADDONS_NO_EXPORT QPixmap iconPixmap() const;
 #endif
 
-    void initStyleOption(QStyleOptionToolButton *opt) const;
+    KWIDGETSADDONS_NO_EXPORT void initStyleOption(QStyleOptionToolButton *opt) const;
 
     friend class KMultiTabBarInternal;
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
+    KWIDGETSADDONS_NO_EXPORT
     KMultiTabBarTab(const QIcon &icon, const QString &, int id, QWidget *parent, KMultiTabBar::KMultiTabBarPosition pos, KMultiTabBar::KMultiTabBarStyle style);
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 72)
     /**
      * This class should never be created except with the appendTab call of KMultiTabBar
      */
+    KWIDGETSADDONS_NO_EXPORT
     KWIDGETSADDONS_DEPRECATED_VERSION(5, 72, "Use overload with QIcon")
     KMultiTabBarTab(const QPixmap &pic,
                     const QString &,
