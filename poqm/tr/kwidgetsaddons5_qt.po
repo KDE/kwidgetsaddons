@@ -12,13 +12,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-12-31 18:47+0300\n"
+"PO-Revision-Date: 2023-03-23 14:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1595,12 +1595,14 @@ msgstr "Kayan"
 #: kdatetimeedit.cpp:211
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
-msgstr "Girilen tarih ve saat, izin verilen asgari tarih ve saatten daha önce."
+msgstr ""
+"Girilen tarih ve zaman, izin verilen en erken tarihten ve zamandan daha önce."
 
 #: kdatetimeedit.cpp:221
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
-msgstr "Girilen tarih ve saat, izin verilen azami tarih ve saatten daha sonra."
+msgstr ""
+"Girilen tarih ve zaman, izin verilen en geç tarihten ve zamandan daha sonra."
 
 #: keditlistwidget.cpp:281
 msgctxt "KEditListWidget|@action:button"
