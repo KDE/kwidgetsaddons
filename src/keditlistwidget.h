@@ -239,13 +239,13 @@ Q_SIGNALS:
     void removed(const QString &text);
 
 private Q_SLOTS:
-    void moveItemUp();
-    void moveItemDown();
-    void addItem();
-    void removeItem();
-    void enableMoveButtons(const QModelIndex &, const QModelIndex &);
-    void typedSomething(const QString &text);
-    void slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    KWIDGETSADDONS_NO_EXPORT void moveItemUp();
+    KWIDGETSADDONS_NO_EXPORT void moveItemDown();
+    KWIDGETSADDONS_NO_EXPORT void addItem();
+    KWIDGETSADDONS_NO_EXPORT void removeItem();
+    KWIDGETSADDONS_NO_EXPORT void enableMoveButtons(const QModelIndex &, const QModelIndex &);
+    KWIDGETSADDONS_NO_EXPORT void typedSomething(const QString &text);
+    KWIDGETSADDONS_NO_EXPORT void slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
 private:
     friend class KEditListWidgetPrivate;

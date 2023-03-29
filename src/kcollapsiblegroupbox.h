@@ -97,7 +97,7 @@ protected:
     void resizeEvent(QResizeEvent *) override;
 
 private Q_SLOTS:
-    void overrideFocusPolicyOf(QWidget *widget);
+    KWIDGETSADDONS_NO_EXPORT void overrideFocusPolicyOf(QWidget *widget);
 
 private:
     std::unique_ptr<class KCollapsibleGroupBoxPrivate> const d;
