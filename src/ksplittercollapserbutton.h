@@ -62,7 +62,7 @@ public Q_SLOTS:
     void setCollapsed(bool collapsed);
 
 private Q_SLOTS:
-    void slotClicked();
+    KWIDGETSADDONS_NO_EXPORT void slotClicked();
 
 protected:
     bool eventFilter(QObject *, QEvent *) override;
