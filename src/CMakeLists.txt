@@ -3,6 +3,12 @@ include(ECMPoQmTools)
 add_library(KF6WidgetsAddons)
 add_library(KF6::WidgetsAddons ALIAS KF6WidgetsAddons)
 
+set_target_properties(KF6WidgetsAddons PROPERTIES
+    VERSION     ${KWIDGETSADDONS_VERSION}
+    SOVERSION   ${KWIDGETSADDONS_SOVERSION}
+    EXPORT_NAME WidgetsAddons
+)
+
 ecm_create_qm_loader(KF6WidgetsAddons kwidgetsaddons6_qt)
 
 target_sources(KF6WidgetsAddons PRIVATE
@@ -216,11 +222,6 @@ ecm_generate_export_header(KF6WidgetsAddons
 target_link_libraries(KF6WidgetsAddons PUBLIC Qt6::Widgets)
 
 target_include_directories(KF6WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons>")
-
-set_target_properties(KF6WidgetsAddons PROPERTIES VERSION   ${KWIDGETSADDONS_VERSION}
-                                                  SOVERSION ${KWIDGETSADDONS_SOVERSION}
-                                                  EXPORT_NAME WidgetsAddons
-)
 
 ecm_generate_headers(KWidgetsAddons_HEADERS
   HEADER_NAMES
