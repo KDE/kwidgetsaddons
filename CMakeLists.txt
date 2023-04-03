@@ -31,8 +31,9 @@ include(ECMPoQmTools)
 include(ECMQtDeclareLoggingCategory)
 include(CMakeDependentOption)
 
+set(kwidgetsaddons_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kwidgetsaddons_version.h")
 ecm_setup_version(PROJECT VARIABLE_PREFIX KWIDGETSADDONS
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h"
+                        VERSION_HEADER "${kwidgetsaddons_version_header}"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6WidgetsAddonsConfigVersion.cmake"
                         SOVERSION 6)
 
@@ -86,7 +87,7 @@ install(FILES  "${CMAKE_CURRENT_BINARY_DIR}/KF6WidgetsAddonsConfig.cmake"
 install(EXPORT KF6WidgetsAddonsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6WidgetsAddonsTargets.cmake NAMESPACE KF6:: )
 
 install(FILES
-  ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_version.h
+  ${kwidgetsaddons_version_header}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons COMPONENT Devel
 )
 
