@@ -5,6 +5,7 @@
 */
 
 #include "klineediteventhandler.h"
+#include "klineediturldropeventfilter.h"
 
 #include <QKeyEvent>
 #include <QLineEdit>
@@ -13,7 +14,7 @@ class LineEditCatchReturnKey : public QObject
 {
     Q_OBJECT
 public:
-    explicit LineEditCatchReturnKey(QLineEdit *lineEdit);
+    explicit LineEditCatchReturnKey(QObject *lineEdit);
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -22,9 +23,9 @@ private:
     QLineEdit *const m_lineEdit;
 };
 
-LineEditCatchReturnKey::LineEditCatchReturnKey(QLineEdit *lineEdit)
+LineEditCatchReturnKey::LineEditCatchReturnKey(QObject *lineEdit)
     : QObject(lineEdit)
-    , m_lineEdit(lineEdit)
+    , m_lineEdit(qobject_cast<QLineEdit *>(lineEdit))
 {
     m_lineEdit->installEventFilter(this);
 }
@@ -46,9 +47,15 @@ bool LineEditCatchReturnKey::eventFilter(QObject *obj, QEvent *event)
     return QObject::eventFilter(obj, event);
 }
 
-void KLineEditEventHandler::catchReturnKey(QLineEdit *lineEdit)
+void KLineEditEventHandler::catchReturnKey(QObject *lineEdit)
 {
     new LineEditCatchReturnKey(lineEdit);
+}
+
+void KLineEditEventHandler::handleUrlDrops(QObject *lineEdit)
+{
+    auto filter = new KLineEditUrlDropEventFilter(lineEdit);
+    lineEdit->installEventFilter(filter);
 }
 
 #include "klineediteventhandler.moc"

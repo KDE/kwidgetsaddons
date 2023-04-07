@@ -8,7 +8,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-class QLineEdit;
+class QObject;
 
 /**
  * Event-handling utilities for QLineEdit instances.
@@ -23,8 +23,13 @@ namespace KLineEditEventHandler
  *  key event isn't propagated further up the widget hierarchy. This is
  *  useful to prevent closing a dialog for example.
  */
-KWIDGETSADDONS_EXPORT void catchReturnKey(QLineEdit *lineEdit);
+KWIDGETSADDONS_EXPORT void catchReturnKey(QObject *lineEdit);
 
+/**
+ * Handle drop events with URLs and replace the current line edit with the
+ * dropped URL.
+ */
+KWIDGETSADDONS_EXPORT void handleUrlDrops(QObject *lineEdit);
 };
 
 #endif
