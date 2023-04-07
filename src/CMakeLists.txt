@@ -80,6 +80,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kguiitem.h
     kled.cpp
     kled.h
+    klineediteventhandler.h
+    klineediteventhandler.cpp
     kmessagebox.cpp
     kmessageboxdontaskagaininterface.h
     kmessagebox.h
