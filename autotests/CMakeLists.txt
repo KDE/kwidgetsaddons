@@ -27,6 +27,7 @@ ecm_add_tests(
   kmultitabbartest.cpp
   ktwofingertaptest.cpp
   ktwofingerswipetest.cpp
+  klineediteventhandlertest.cpp
   LINK_LIBRARIES Qt6::Test KF6::WidgetsAddons
 )
 
