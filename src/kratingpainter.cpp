@@ -29,10 +29,11 @@ public:
 };
 
 static void imageToGrayScale(QImage &img, float value);
+static void imageToSemiTransparent(QImage &img);
 
 QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
 {
-    bool toGray = (state == QIcon::Off);
+    bool transformToOffState = (state == QIcon::Off);
     QPixmap p;
 
     if (!customPixmap.isNull()) {
@@ -40,20 +41,23 @@ QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
     } else {
         QIcon _icon(icon);
         if (_icon.isNull()) {
-            if (state == QIcon::Off && QIcon::hasThemeIcon(QStringLiteral("rating-unrated"))) {
-                _icon = QIcon::fromTheme(QStringLiteral("rating-unrated"));
-                // our theme provided a separate icon, no need to desaturate
-                toGray = false;
-            } else {
+            if (state == QIcon::On) {
                 _icon = QIcon::fromTheme(QStringLiteral("rating"));
+            } else if (QIcon::hasThemeIcon(QStringLiteral("rating-unrated"))) {
+                _icon = QIcon::fromTheme(QStringLiteral("rating-unrated"));
+                transformToOffState = false; // no need because we already have the perfect icon
+            } else {
+                _icon = QIcon::fromTheme(QStringLiteral("rating")); // will be transformed to the "off" state
             }
         }
         p = _icon.pixmap(size);
     }
 
-    if (toGray) {
+    if (transformToOffState) {
         QImage img = p.toImage().convertToFormat(QImage::Format_ARGB32);
         imageToGrayScale(img, 1.0);
+        // The icon might have already been monochrome, so we also need to make it semi-transparent to see a difference.
+        imageToSemiTransparent(img);
         return QPixmap::fromImage(img);
     }
     return p;
