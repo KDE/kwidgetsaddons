@@ -10,14 +10,84 @@
 #include "kpageview_p.h"
 
 #include "kpagemodel.h"
+#include "kpagewidgetmodel.h"
 #include "loggingcategory.h"
 
 #include <ktitlewidget.h>
 
+#include <QAbstractButton>
 #include <QAbstractItemView>
+#include <QCheckBox>
+#include <QComboBox>
+#include <QEvent>
 #include <QGridLayout>
+#include <QLabel>
+#include <QPaintEvent>
+#include <QPainter>
 #include <QSize>
 #include <QTimer>
+
+// Helper class that draws a rect over a matched widget
+class SearchMatchOverlay : public QWidget
+{
+public:
+    SearchMatchOverlay(QWidget *parent, int tabIdx = -1)
+        : QWidget(parent)
+        , m_tabIdx(tabIdx)
+    {
+        setAttribute(Qt::WA_TransparentForMouseEvents, true);
+        resize_impl();
+        parent->installEventFilter(this);
+
+        show();
+        raise();
+    }
+
+private:
+    void doResize()
+    {
+        QMetaObject::invokeMethod(this, &SearchMatchOverlay::resize_impl, Qt::QueuedConnection);
+    }
+
+    void resize_impl()
+    {
+        if (m_tabIdx >= 0) {
+            auto tabBar = qobject_cast<QTabBar *>(parentWidget());
+            if (!tabBar) {
+                setVisible(false);
+                return;
+            }
+            const QRect r = tabBar->tabRect(m_tabIdx);
+            if (geometry() != r) {
+                setGeometry(r);
+            }
+            return;
+        }
+
+        if (parentWidget() && size() != parentWidget()->size()) {
+            resize(parentWidget()->size());
+        }
+    }
+
+    bool eventFilter(QObject *o, QEvent *e) override
+    {
+        if (parentWidget() && o == parentWidget() && (e->type() == QEvent::Resize || e->type() == QEvent::Show)) {
+            doResize();
+        }
+        return QWidget::eventFilter(o, e);
+    }
+
+    void paintEvent(QPaintEvent *e) override
+    {
+        QPainter p(this);
+        p.setClipRegion(e->region());
+        QColor c = palette().brush(QPalette::Active, QPalette::Highlight).color();
+        c.setAlpha(110);
+        p.fillRect(rect(), c);
+    }
+
+    int m_tabIdx = -1;
+};
 
 void KPageViewPrivate::rebuildGui()
 {
@@ -66,6 +136,14 @@ void KPageViewPrivate::rebuildGui()
         stack->setVisible(true);
     }
 
+    if (!hasSearchableView()) {
+        layout->removeWidget(searchLineEdit);
+        searchLineEdit->setVisible(false);
+    } else {
+        searchLineEdit->setVisible(true);
+        searchLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
+    }
+
     layout->removeWidget(titleWidget);
 
     if (pageHeader) {
@@ -91,11 +169,19 @@ void KPageViewPrivate::rebuildGui()
     if (alignment & Qt::AlignTop) {
         layout->addWidget(view, 2, 1);
     } else if (alignment & Qt::AlignRight) {
-        layout->addWidget(view, 1, 2, 4, 1);
+        // search line
+        searchLineEdit->setContentsMargins(4, 0, 4, 0);
+        layout->addWidget(searchLineEdit, 1, 2, Qt::AlignVCenter);
+        // item view below the search line
+        layout->addWidget(view, 2, 2, 3, 1);
     } else if (alignment & Qt::AlignBottom) {
         layout->addWidget(view, 4, 1);
     } else if (alignment & Qt::AlignLeft) {
-        layout->addWidget(view, 1, 0, 4, 1);
+        // search line
+        searchLineEdit->setContentsMargins(4, 0, 4, 0);
+        layout->addWidget(searchLineEdit, 1, 0, Qt::AlignVCenter);
+        // item view below the search line
+        layout->addWidget(view, 2, 0, 3, 1);
     }
 }
 
@@ -302,6 +388,7 @@ KPageViewPrivate::KPageViewPrivate(KPageView *_parent)
     , layout(nullptr)
     , stack(nullptr)
     , titleWidget(nullptr)
+    , searchLineEdit(new QLineEdit())
     , view(nullptr)
 {
 }
@@ -312,7 +399,12 @@ void KPageViewPrivate::init()
     layout = new QGridLayout(q);
     stack = new KPageStackedWidget(q);
     titleWidget = new KTitleWidget(q);
+
+    // search line edit at the top with a separator underneath
+
+    // list view under it to the left
     layout->addWidget(titleWidget, 1, 1, 1, 2);
+    // and then the actual page on the right
     layout->addWidget(stack, 2, 1);
 
     defaultWidget = new QWidget(q);
@@ -321,6 +413,198 @@ void KPageViewPrivate::init()
     // stack should use most space
     layout->setColumnStretch(1, 1);
     layout->setRowStretch(2, 1);
+
+    searchTimer.setInterval(400);
+    searchTimer.setSingleShot(true);
+    searchTimer.callOnTimeout(q, [this] {
+        onSearchTextChanged();
+    });
+    q->setFocusProxy(searchLineEdit);
+    searchLineEdit->setPlaceholderText(KPageView::tr("Search..."));
+    searchLineEdit->setClearButtonEnabled(true);
+    q->connect(searchLineEdit, &QLineEdit::textChanged, &searchTimer, QOverload<>::of(&QTimer::start));
+}
+
+static QList<KPageWidgetItem *> getAllPages(KPageWidgetModel *model, const QModelIndex &parent)
+{
+    const int rc = model->rowCount(parent);
+    QList<KPageWidgetItem *> ret;
+    for (int i = 0; i < rc; ++i) {
+        auto child = model->index(i, 0, parent);
+        auto item = model->item(child);
+        if (child.isValid() && item) {
+            ret << item;
+            ret << getAllPages(model, child);
+        }
+    }
+    return ret;
+}
+
+template<typename WidgetType>
+static QVector<QWidget *> hasMatchingText(const QString &text, QWidget *page)
+{
+    QVector<QWidget *> ret;
+    const auto widgets = page->findChildren<WidgetType *>();
+    for (auto label : widgets) {
+        if (label->text().contains(text, Qt::CaseInsensitive)) {
+            ret << label;
+        }
+    }
+    return ret;
+}
+
+template<>
+QVector<QWidget *> hasMatchingText<QComboBox>(const QString &text, QWidget *page)
+{
+    QVector<QWidget *> ret;
+    const auto comboxBoxes = page->findChildren<QComboBox *>();
+    for (auto cb : comboxBoxes) {
+        if (cb->findText(text, Qt::MatchFlag::MatchContains) != -1) {
+            ret << cb;
+        }
+    }
+    return ret;
+}
+
+template<typename...>
+struct FindChildrenHelper {
+    static QVector<QWidget *> hasMatchingTextForTypes(const QString &, QWidget *)
+    {
+        return {};
+    }
+};
+
+template<typename First, typename... Rest>
+struct FindChildrenHelper<First, Rest...> {
+    static QVector<QWidget *> hasMatchingTextForTypes(const QString &text, QWidget *page)
+    {
+        return hasMatchingText<First>(text, page) << FindChildrenHelper<Rest...>::hasMatchingTextForTypes(text, page);
+    }
+};
+
+static QModelIndex walkTreeAndHideItems(QTreeView *tree, const QString &searchText, const QSet<QString> &pagesToHide, const QModelIndex &parent)
+{
+    QModelIndex current;
+    auto model = tree->model();
+    const int rows = model->rowCount(parent);
+    for (int i = 0; i < rows; ++i) {
+        const auto index = model->index(i, 0, parent);
+        const auto itemName = index.data().toString();
+        tree->setRowHidden(i, parent, pagesToHide.contains(itemName) && !itemName.contains(searchText, Qt::CaseInsensitive));
+        if (!searchText.isEmpty() && !tree->isRowHidden(i, parent) && !current.isValid()) {
+            current = model->index(i, 0, parent);
+        }
+        auto curr = walkTreeAndHideItems(tree, searchText, pagesToHide, index);
+        if (!current.isValid()) {
+            current = curr;
+        }
+    }
+    return current;
+}
+
+bool KPageViewPrivate::hasSearchableView() const
+{
+    // We support search for only these two types as they can hide rows
+    return qobject_cast<KDEPrivate::KPageListView *>(view) || qobject_cast<KDEPrivate::KPageTreeView *>(view);
+}
+
+void KPageViewPrivate::onSearchTextChanged()
+{
+    if (!hasSearchableView()) {
+        return;
+    }
+
+    const QString text = searchLineEdit->text();
+    QSet<QString> pagesToHide;
+    std::vector<QWidget *> matchedWidgets;
+    if (!text.isEmpty()) {
+        const auto pages = getAllPages(static_cast<KPageWidgetModel *>(model), {});
+        for (auto item : pages) {
+            const auto matchingWidgets = FindChildrenHelper<QLabel, QAbstractButton, QComboBox>::hasMatchingTextForTypes(text, item->widget());
+            if (matchingWidgets.isEmpty()) {
+                pagesToHide << item->name();
+            }
+            matchedWidgets.insert(matchedWidgets.end(), matchingWidgets.begin(), matchingWidgets.end());
+        }
+    }
+
+    if (model) {
+        QModelIndex current;
+        if (auto list = qobject_cast<QListView *>(view)) {
+            for (int i = 0; i < model->rowCount(); ++i) {
+                const auto itemName = model->index(i, 0).data().toString();
+                list->setRowHidden(i, pagesToHide.contains(itemName) && !itemName.contains(text, Qt::CaseInsensitive));
+                if (!text.isEmpty() && !list->isRowHidden(i) && !current.isValid()) {
+                    current = model->index(i, 0);
+                }
+            }
+        } else if (auto tree = qobject_cast<QTreeView *>(view)) {
+            current = walkTreeAndHideItems(tree, text, pagesToHide, {});
+            auto parent = current.parent();
+            while (parent.isValid()) {
+                tree->setRowHidden(parent.row(), parent.parent(), false);
+                parent = parent.parent();
+            }
+        } else {
+            qWarning() << "Unreacheable, unknown view:" << view;
+            Q_UNREACHABLE();
+        }
+
+        if (current.isValid()) {
+            view->setCurrentIndex(current);
+        }
+    }
+
+    qDeleteAll(m_searchMatchOverlays);
+    m_searchMatchOverlays.clear();
+
+    using TabWidgetAndPage = QPair<QTabWidget *, QWidget *>;
+    auto tabWidgetParent = [](QWidget *w) {
+        // Finds if @p w is in a QTabWidget and returns
+        // The QTabWidget + the widget in the stack where
+        // @p w lives
+        auto parent = w->parentWidget();
+        TabWidgetAndPage p = {nullptr, nullptr};
+        if (auto tw = qobject_cast<QTabWidget *>(parent)) {
+            p.first = tw;
+        }
+        QVarLengthArray<QWidget *, 8> parentChain;
+        while (parent) {
+            if (!p.first) {
+                if (auto tw = qobject_cast<QTabWidget *>(parent)) {
+                    if (parentChain.size() >= 3) {
+                        // last == QTabWidget
+                        // second last == QStackedWidget of QTabWidget
+                        // third last => the widget we want
+                        p.second = parentChain.value((parentChain.size() - 1) - 2);
+                    }
+                    p.first = tw;
+                    break;
+                }
+            }
+            parent = parent->parentWidget();
+            parentChain << parent;
+        }
+        return p;
+    };
+
+    for (auto w : matchedWidgets) {
+        if (w) {
+            m_searchMatchOverlays << new SearchMatchOverlay(w);
+            if (!w->isVisible()) {
+                const auto [tabWidget, page] = tabWidgetParent(w);
+                if (!tabWidget && !page) {
+                    continue;
+                }
+                const int idx = tabWidget->indexOf(page);
+                if (idx < 0) {
+                    // qDebug() << page << tabWidget << "not found" << w;
+                    continue;
+                }
+                m_searchMatchOverlays << new SearchMatchOverlay(tabWidget->tabBar(), idx);
+            }
+        }
+    }
 }
 
 // KPageView Implementation

@@ -14,9 +14,11 @@
 #include <QAbstractItemDelegate>
 #include <QAbstractProxyModel>
 #include <QGridLayout>
+#include <QLineEdit>
 #include <QListView>
 #include <QPointer>
 #include <QStackedWidget>
+#include <QTimer>
 #include <QTreeView>
 #include <ktitlewidget.h>
 
@@ -64,6 +66,8 @@ protected:
     KPageStackedWidget *stack;
     KTitleWidget *titleWidget;
     QWidget *defaultWidget;
+    QLineEdit *searchLineEdit;
+    QTimer searchTimer;
 
     QAbstractItemView *view;
 
@@ -83,13 +87,16 @@ protected:
     void modelChanged();
     void dataChanged(const QModelIndex &, const QModelIndex &);
     void pageSelected(const QItemSelection &, const QItemSelection &);
+    bool hasSearchableView() const;
 
 private:
+    void onSearchTextChanged();
     void init();
 
     QMetaObject::Connection m_dataChangedConnection;
     QMetaObject::Connection m_layoutChangedConnection;
     QMetaObject::Connection m_selectionChangedConnection;
+    QList<class SearchMatchOverlay *> m_searchMatchOverlays;
 };
 
 namespace KDEPrivate
