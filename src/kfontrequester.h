@@ -116,6 +116,9 @@ Q_SIGNALS:
      */
     void fontSelected(const QFont &font);
 
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
 private:
     friend class KFontRequesterPrivate;
     std::unique_ptr<class KFontRequesterPrivate> const d;

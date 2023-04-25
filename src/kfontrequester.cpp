@@ -10,10 +10,12 @@
 #include <KFontChooserDialog>
 
 #include <QCoreApplication>
+#include <QEvent>
 #include <QFontDatabase>
 #include <QFontInfo>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QMouseEvent>
 #include <QPushButton>
 
 #include <cmath>
@@ -66,6 +68,8 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
 
     d->displaySampleText();
     d->setToolTip();
+
+    d->m_sampleLabel->installEventFilter(this);
 }
 
 KFontRequester::~KFontRequester() = default;
@@ -119,6 +123,31 @@ void KFontRequester::setTitle(const QString &title)
 {
     d->m_title = title;
     d->setToolTip();
+}
+
+bool KFontRequester::eventFilter(QObject *watched, QEvent *event)
+{
+    if (watched == d->m_sampleLabel) {
+        switch (event->type()) {
+        case QEvent::MouseButtonPress:
+        case QEvent::MouseButtonRelease: {
+            auto *e = static_cast<QMouseEvent *>(event);
+
+            if (e->button() == Qt::LeftButton && rect().contains(e->pos())) {
+                if (e->type() == QEvent::MouseButtonRelease) {
+                    d->buttonClicked();
+                }
+                e->accept();
+                return true;
+            }
+            break;
+        }
+        default:
+            break;
+        }
+    }
+
+    return QWidget::eventFilter(watched, event);
 }
 
 void KFontRequesterPrivate::buttonClicked()
