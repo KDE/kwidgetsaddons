@@ -14,7 +14,7 @@ class LineEditCatchReturnKey : public QObject
 {
     Q_OBJECT
 public:
-    explicit LineEditCatchReturnKey(QObject *lineEdit);
+    explicit LineEditCatchReturnKey(QLineEdit *lineEdit);
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -23,9 +23,9 @@ private:
     QLineEdit *const m_lineEdit;
 };
 
-LineEditCatchReturnKey::LineEditCatchReturnKey(QObject *lineEdit)
+LineEditCatchReturnKey::LineEditCatchReturnKey(QLineEdit *lineEdit)
     : QObject(lineEdit)
-    , m_lineEdit(qobject_cast<QLineEdit *>(lineEdit))
+    , m_lineEdit(lineEdit)
 {
     m_lineEdit->installEventFilter(this);
 }
@@ -49,7 +49,9 @@ bool LineEditCatchReturnKey::eventFilter(QObject *obj, QEvent *event)
 
 void KLineEditEventHandler::catchReturnKey(QObject *lineEdit)
 {
-    new LineEditCatchReturnKey(lineEdit);
+    if (auto le = qobject_cast<QLineEdit *>(lineEdit)) {
+        new LineEditCatchReturnKey(le);
+    }
 }
 
 void KLineEditEventHandler::handleUrlDrops(QObject *lineEdit)
