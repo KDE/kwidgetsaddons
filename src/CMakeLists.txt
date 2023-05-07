@@ -290,6 +290,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KMessageDialog
   KNewPasswordDialog
   KLineEditUrlDropEventFilter
+  KLineEditEventHandler
   KPasswordLineEdit
   KPixmapSequence
   KPixmapSequenceOverlayPainter
