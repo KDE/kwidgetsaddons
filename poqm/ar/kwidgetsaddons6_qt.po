@@ -1,4 +1,4 @@
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٦.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
