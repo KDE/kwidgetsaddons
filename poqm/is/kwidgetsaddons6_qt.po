@@ -1719,17 +1719,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Sýna aðeins jafnbreitt letur (monospaced)"
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "Velja leturgerð..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Forskoðun á valda letrinu"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1738,13 +1738,13 @@ msgstr ""
 "Þetta er forskoðun á letrinu sem var valið var. Þú getur breytt því með því "
 "að smella á hnappinn \"Velja...\"."
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Forskoðun á letrinu \"%1\""
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

@@ -2145,17 +2145,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Arată numai fonturi monospațiate"
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "Alege fontul..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Previzualizarea fontului ales"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2168,13 +2168,13 @@ msgstr ""
 "Aceasta este o previzualizare a fontului selectat. Îl puteți schimba dacă "
 "dați clic pe butonul \"Alege...\"."
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Previzualizarea fontului „%1”"
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "

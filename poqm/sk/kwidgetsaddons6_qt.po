@@ -1760,17 +1760,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Zobraziť iba neproporcionálne písma"
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "Vybrať Písmo..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Náhľad vybraného písma"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -1784,13 +1784,13 @@ msgstr ""
 "Toto je náhľad vybraného písma. Môžete ho zmeniť stlačením \"Vybrať Písmo..."
 "\"."
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Náhľad písma \"%1\""
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""

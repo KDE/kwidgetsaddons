@@ -1713,17 +1713,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "고정폭 글꼴만 표시"
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "글꼴 선택..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "선택한 글꼴의 미리 보기입니다"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1732,13 +1732,13 @@ msgstr ""
 "이것은 선택한 글꼴의 미리 보기입니다. \"글꼴 선택...\" 단추를 클릭해서 변경"
 "할 수 있습니다."
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "\"%1\" 글꼴 미리 보기"
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

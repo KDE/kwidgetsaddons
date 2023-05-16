@@ -1713,17 +1713,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Показване само на моноспейс шрифтове"
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "Избор на шрифт..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Предварителен преглед на избрания шрифт"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1732,13 +1732,13 @@ msgstr ""
 "Това е визуализация на избрания шрифт. Можете да го промените, като щракнете "
 "върху бутон \"Избор на шрифт... \"."
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Визуализация на шрифт \"%1\""
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

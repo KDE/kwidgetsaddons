@@ -2411,17 +2411,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "சம‍அகல எழுத்துருக்களை மட்டும் காட்டு"
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "எழுத்துருவை தேர்வு செய்..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "தேர்ந்தெடுக்கப்பட்ட எழுத்துருவின் முன்னோட்டம்"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -2430,13 +2430,13 @@ msgstr ""
 "தேர்வு செய்த எழுத்துருவின் முன்னோட்டம் இது. \"எழுத்துருவை தேர்வு செய்...\" என்ற பட்டனை "
 "அழுத்தி இதை நீங்கள் மாற்றலாம்."
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "\"%1\" எழுத்துருவின் முன்னோட்டம்"
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

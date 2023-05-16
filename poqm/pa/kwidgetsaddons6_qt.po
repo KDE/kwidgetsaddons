@@ -2303,7 +2303,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
 
-#: kfontrequester.cpp:155
+#: kfontrequester.cpp:184
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
@@ -2311,7 +2311,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "ਚੁਣੋ..."
 
-#: kfontrequester.cpp:161
+#: kfontrequester.cpp:190
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the selected font"
@@ -2319,7 +2319,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "ਚੁਣੇ ਫੋਂਟਾਂ ਦੀ ਝਲਕ"
 
-#: kfontrequester.cpp:163
+#: kfontrequester.cpp:192
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -2331,7 +2331,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr "ਇਹ ਚੁਣੇ ਫੋਂਟ ਦੀ ਝਲਕ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ \"ਚੋਣ...\" ਬਟਨ ਨੂੰ ਦਬਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।"
 
-#: kfontrequester.cpp:167
+#: kfontrequester.cpp:196
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the \"%1\" font"
@@ -2339,7 +2339,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "ਫੋਂਟ \"%1\" ਦੀ ਝਲਕ"
 
-#: kfontrequester.cpp:168
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""
