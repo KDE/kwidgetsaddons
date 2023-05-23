@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:57\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -12,8 +12,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/kwidgetsaddons/kwidgetsaddons5_qt.pot\n"
-"X-Crowdin-File-ID: 5534\n"
+"X-Crowdin-File: /kf6-trunk/messages/kwidgetsaddons/kwidgetsaddons6_qt.pot\n"
+"X-Crowdin-File-ID: 42405\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
@@ -2357,32 +2357,3 @@ msgstr "全屏"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "全屏显示窗口"
-
-#~ msgctxt "KFontChooser|@info:tooltip"
-#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-#~ msgstr "选择字体大小<br />为<b>固定</b>或<b>相对</b><br />于环境"
-
-#~ msgctxt "KFontChooser|@info:whatsthis"
-#~ msgid ""
-#~ "Here you can switch between fixed font size and font size to be "
-#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
-#~ "dimensions, paper size)."
-#~ msgstr ""
-#~ "您可以将字体大小设为固定值，也可以设为根据环境参数 (例如，窗口部件大小、纸"
-#~ "张尺寸等) 进行动态计算的相对值。"
-
-#~ msgctxt "KMessageBox|"
-#~ msgid "Sorry"
-#~ msgstr "很抱歉"
-
-#~ msgctxt "KMessageDialog|"
-#~ msgid "Sorry"
-#~ msgstr "很抱歉"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&Yes"
-#~ msgstr "是(&Y)"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&No"
-#~ msgstr "否(&N)"
