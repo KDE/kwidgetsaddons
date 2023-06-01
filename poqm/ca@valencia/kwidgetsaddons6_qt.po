@@ -1656,7 +1656,7 @@ msgstr "Negreta condensada obliqua"
 #: kfontchooser.cpp:241
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
-msgstr "Jove xef, porte ací per beure whisky amb quinze glaçons d'hidrogen"
+msgstr "Jove xef, porte ací per a beure whisky amb quinze glaçons d'hidrogen"
 
 #: kfontchooser.cpp:429
 #, qt-format
