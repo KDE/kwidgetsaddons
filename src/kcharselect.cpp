@@ -467,7 +467,6 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->blockCombo->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     comboLayout->addWidget(d->blockCombo, 1);
     QStringList sectionList = s_data()->sectionList();
-    sectionList << QCoreApplication::translate("KCharSelectData", "All", "KCharSelect section name");
     d->sectionCombo->addItems(sectionList);
     d->blockCombo->setMinimumWidth(QFontMetrics(QWidget::font()).averageCharWidth() * 25);
 
