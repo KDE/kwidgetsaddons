@@ -1616,12 +1616,12 @@ msgstr "&Elimina"
 #: keditlistwidget.cpp:305
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
-msgstr "Mou am&unt"
+msgstr "Mou cap am&unt"
 
 #: keditlistwidget.cpp:310
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
-msgstr "Mou a&vall"
+msgstr "Mou cap a&vall"
 
 #: kfontchooser.cpp:152
 msgctxt "KFontChooser|@title:group"
