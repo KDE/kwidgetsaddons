@@ -12,7 +12,7 @@
 #include <QProcess>
 #include <QStandardPaths>
 
-static const char s_keditfiletypeExecutable[] = "keditfiletype5";
+static const char s_keditfiletypeExecutable[] = "keditfiletype";
 
 void KMimeTypeEditor::editMimeType(const QString &mimeType, QWidget *widget)
 {
@@ -24,7 +24,7 @@ void KMimeTypeEditor::editMimeType(const QString &mimeType, QWidget *widget)
 
     const QString exec = QStandardPaths::findExecutable(QLatin1String(s_keditfiletypeExecutable));
     if (exec.isEmpty()) {
-        auto *dlg = new KMessageDialog(KMessageDialog::Error, QObject::tr("Could not find the \"keditfiletype5\" executable in PATH."), widget);
+        auto *dlg = new KMessageDialog(KMessageDialog::Error, QObject::tr("Could not find the \"keditfiletype\" executable in PATH."), widget);
         dlg->setAttribute(Qt::WA_DeleteOnClose);
         dlg->setModal(true);
         dlg->show();
@@ -33,9 +33,8 @@ void KMimeTypeEditor::editMimeType(const QString &mimeType, QWidget *widget)
 
     const bool result = QProcess::startDetached(exec, args);
     if (!result) {
-        auto *dlg = new KMessageDialog(KMessageDialog::Error,
-                                       QObject::tr("Could not start the \"keditfiletype5\" executable, please check your installation."),
-                                       widget);
+        auto *dlg =
+            new KMessageDialog(KMessageDialog::Error, QObject::tr("Could not start the \"keditfiletype\" executable, please check your installation."), widget);
         dlg->setAttribute(Qt::WA_DeleteOnClose);
         dlg->setModal(true);
         dlg->show();

@@ -49,7 +49,7 @@ public:
 };
 // END
 
-static const char s_keditfiletypeExecutable[] = "keditfiletype5";
+static const char s_keditfiletypeExecutable[] = "keditfiletype";
 
 // BEGIN KMimeTypeChooser
 KMimeTypeChooser::KMimeTypeChooser(const QString &text,
