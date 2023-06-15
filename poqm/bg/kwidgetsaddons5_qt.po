@@ -80,7 +80,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Край"
 
-#: kcharselect-translation.cpp:11 kcharselect.cpp:470 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "Всички"
@@ -1110,147 +1110,147 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Избиране на блок за показване"
 
-#: kcharselect.cpp:486
+#: kcharselect.cpp:485
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Избор на шрифт"
 
-#: kcharselect.cpp:493
+#: kcharselect.cpp:492
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Размер на шрифта"
 
-#: kcharselect.cpp:795
+#: kcharselect.cpp:794
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Знак:"
 
-#: kcharselect.cpp:801
+#: kcharselect.cpp:800
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Име: "
 
-#: kcharselect.cpp:810
+#: kcharselect.cpp:809
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Анотации и препратки"
 
-#: kcharselect.cpp:814
+#: kcharselect.cpp:813
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Псевдоними:"
 
-#: kcharselect.cpp:822
+#: kcharselect.cpp:821
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Бележки:"
 
-#: kcharselect.cpp:830
+#: kcharselect.cpp:829
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Виж също:"
 
-#: kcharselect.cpp:845
+#: kcharselect.cpp:844
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Еквиваленти:"
 
-#: kcharselect.cpp:853
+#: kcharselect.cpp:852
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Приблизителни еквиваленти:"
 
-#: kcharselect.cpp:861
+#: kcharselect.cpp:860
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Декомпозиране:"
 
-#: kcharselect.cpp:873
+#: kcharselect.cpp:872
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "Информация за идеограми от CJK"
 
-#: kcharselect.cpp:876
+#: kcharselect.cpp:875
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Определение на английски: "
 
-#: kcharselect.cpp:883
+#: kcharselect.cpp:882
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Произнасяне на мандарин: "
 
-#: kcharselect.cpp:890
+#: kcharselect.cpp:889
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Произнасяне на кантонски: "
 
-#: kcharselect.cpp:897
+#: kcharselect.cpp:896
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Японско произнасяне Он: "
 
-#: kcharselect.cpp:904
+#: kcharselect.cpp:903
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Японско произнасяне Кун: "
 
-#: kcharselect.cpp:911
+#: kcharselect.cpp:910
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Произнасяне Танг: "
 
-#: kcharselect.cpp:918
+#: kcharselect.cpp:917
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Корейско произнасяне: "
 
-#: kcharselect.cpp:924
+#: kcharselect.cpp:923
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Общи свойства на знака"
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:924
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Блок: "
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:925
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Категория в Уникод: "
 
-#: kcharselect.cpp:930
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Разни полезни представяния"
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:935
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:942
+#: kcharselect.cpp:941
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "UTF-8, осмично екраниран в C: "
 
-#: kcharselect.cpp:946
+#: kcharselect.cpp:945
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "Десетичен указател към знак в XML:"
 
-#: kcharselect.cpp:1098
+#: kcharselect.cpp:1097
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Unicode кодова точка:"
 
-#: kcharselect.cpp:1098
+#: kcharselect.cpp:1097
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "В десетични"

@@ -87,7 +87,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Terminar"
 
-#: kcharselect-translation.cpp:11 kcharselect.cpp:470 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "Todo"
@@ -1117,147 +1117,147 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Seleccione un bloque a mostrar"
 
-#: kcharselect.cpp:486
+#: kcharselect.cpp:485
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Definir tipo de letra"
 
-#: kcharselect.cpp:493
+#: kcharselect.cpp:492
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Definir tamaño del tipo de letra"
 
-#: kcharselect.cpp:795
+#: kcharselect.cpp:794
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Carácter:"
 
-#: kcharselect.cpp:801
+#: kcharselect.cpp:800
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Nombre: "
 
-#: kcharselect.cpp:810
+#: kcharselect.cpp:809
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Anotaciones y referencias cruzadas"
 
-#: kcharselect.cpp:814
+#: kcharselect.cpp:813
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Nombres alternativos:"
 
-#: kcharselect.cpp:822
+#: kcharselect.cpp:821
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Notas:"
 
-#: kcharselect.cpp:830
+#: kcharselect.cpp:829
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Vea también:"
 
-#: kcharselect.cpp:845
+#: kcharselect.cpp:844
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Equivalentes:"
 
-#: kcharselect.cpp:853
+#: kcharselect.cpp:852
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Equivalentes aproximados:"
 
-#: kcharselect.cpp:861
+#: kcharselect.cpp:860
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Descomposición:"
 
-#: kcharselect.cpp:873
+#: kcharselect.cpp:872
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "Información de ideogramas CJK"
 
-#: kcharselect.cpp:876
+#: kcharselect.cpp:875
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Definición en inglés: "
 
-#: kcharselect.cpp:883
+#: kcharselect.cpp:882
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Pronunciación en mandarín: "
 
-#: kcharselect.cpp:890
+#: kcharselect.cpp:889
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Pronunciación en cantonés: "
 
-#: kcharselect.cpp:897
+#: kcharselect.cpp:896
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Pronunciación en japonés On: "
 
-#: kcharselect.cpp:904
+#: kcharselect.cpp:903
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Pronunciación en japonés Kun: "
 
-#: kcharselect.cpp:911
+#: kcharselect.cpp:910
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Pronunciación Tang: "
 
-#: kcharselect.cpp:918
+#: kcharselect.cpp:917
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Pronunciación coreana: "
 
-#: kcharselect.cpp:924
+#: kcharselect.cpp:923
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Propiedades generales del carácter"
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:924
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Bloque: "
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:925
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Categoría Unicode: "
 
-#: kcharselect.cpp:930
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Diversas representaciones útiles"
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:935
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:942
+#: kcharselect.cpp:941
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "UTF-8 escapado en octal para C: "
 
-#: kcharselect.cpp:946
+#: kcharselect.cpp:945
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "Entidad XML en decimal:"
 
-#: kcharselect.cpp:1098
+#: kcharselect.cpp:1097
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Punto de código Unicode:"
 
-#: kcharselect.cpp:1098
+#: kcharselect.cpp:1097
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "En decimal"
