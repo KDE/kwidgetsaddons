@@ -2723,15 +2723,17 @@ msgstr ""
 #, fuzzy
 #| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr "'%1' এক্সেকিউটেবল পোৱা নাযায় ।"
 
 #: kmimetypeeditor.cpp:37
+#, fuzzy
+#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
-msgstr ""
+msgstr "'%1' এক্সেকিউটেবল পোৱা নাযায় ।"
 
 #: knewpassworddialog.cpp:63
 #, fuzzy, qt-format

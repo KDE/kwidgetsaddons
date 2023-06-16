@@ -1865,14 +1865,22 @@ msgid "Launch the MIME type editor"
 msgstr "MIME 형식 편집기를 엽니다"
 
 #: kmimetypeeditor.cpp:27
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr "\"keditfiletype5\" 실행 파일을 PATH에서 찾을 수 없습니다."
 
 #: kmimetypeeditor.cpp:37
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid ""
+#| "Could not start the \"keditfiletype5\" executable, please check your "
+#| "installation."
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
 "\"keditfiletype5\" 실행 파일을 시작할 수 없습니다. 설치 상태를 확인하십시오."

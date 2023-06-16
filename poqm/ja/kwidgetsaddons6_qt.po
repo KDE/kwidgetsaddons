@@ -2107,13 +2107,13 @@ msgstr ""
 
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr ""
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
 

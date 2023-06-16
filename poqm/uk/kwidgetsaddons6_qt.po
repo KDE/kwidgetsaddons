@@ -1870,15 +1870,23 @@ msgid "Launch the MIME type editor"
 msgstr "Запустити редактор типів MIME KDE."
 
 #: kmimetypeeditor.cpp:27
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr ""
 "Не вдалося знайти файл програми «keditfiletype5» у каталогах зі змінної PATH."
 
 #: kmimetypeeditor.cpp:37
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid ""
+#| "Could not start the \"keditfiletype5\" executable, please check your "
+#| "installation."
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
 "Не вдалося запустити виконуваний файл «keditfiletype5». Будь ласка, "

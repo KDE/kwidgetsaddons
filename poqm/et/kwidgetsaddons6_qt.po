@@ -1958,15 +1958,17 @@ msgstr "KDE MIME tüübi redaktori käivitamine."
 #, fuzzy
 #| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr "Käivitatavat faili '%1' ei leitud."
 
 #: kmimetypeeditor.cpp:37
+#, fuzzy
+#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
-msgstr ""
+msgstr "Käivitatavat faili '%1' ei leitud."
 
 #: knewpassworddialog.cpp:63
 #, qt-format

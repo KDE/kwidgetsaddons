@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-01-22 21:20+0100\n"
+"PO-Revision-Date: 2023-06-15 21:20+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1070,7 +1070,7 @@ msgstr "Enigu serĉterminon aŭ signon..."
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
-msgstr "Enigu serĉendan terminon aŭ karaktron ĉi tie"
+msgstr "Enigu serĉendan terminon aŭ signon ĉi tie"
 
 #: kcharselect.cpp:398
 msgctxt "KCharSelect|@action"
@@ -1085,7 +1085,7 @@ msgstr "Antaŭa en Historio"
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "Iru al antaŭa karaktro en historio"
+msgstr "Iru al antaŭa signo en historio"
 
 #: kcharselect.cpp:429
 msgctxt "KCharSelect|@action:button Goes to next character"
@@ -1095,7 +1095,7 @@ msgstr "Sekva en Historio"
 #: kcharselect.cpp:431
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "Iru al la sekva karaktro en la historio"
+msgstr "Iru al la sekva signo en la historio"
 
 #: kcharselect.cpp:436
 msgctxt "KCharSelect|@action go back"
@@ -1215,7 +1215,7 @@ msgstr "Korea Elparolo: "
 #: kcharselect.cpp:923
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
-msgstr "Ĝeneralaj Karaktrotrajtoj"
+msgstr "Ĝeneralaj signotrajtoj"
 
 #: kcharselect.cpp:924
 msgctxt "KCharSelect|"
@@ -1265,7 +1265,7 @@ msgstr "Dekume"
 #: kcharselectdata.cpp:311
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
-msgstr "<nekaraktro>"
+msgstr "<nesigno>"
 
 #: kcharselectdata.cpp:332
 msgctxt "KCharSelectData|"
@@ -1874,14 +1874,22 @@ msgid "Launch the MIME type editor"
 msgstr "Lanĉi la MIME-tipan redaktilon"
 
 #: kmimetypeeditor.cpp:27
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr "Ne eblis trovi la \"keditfiletype5\" plenumeblan en PATH."
 
 #: kmimetypeeditor.cpp:37
+#, fuzzy
+#| msgctxt "QObject|"
+#| msgid ""
+#| "Could not start the \"keditfiletype5\" executable, please check your "
+#| "installation."
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
 "Ne eblis lanĉi la plenumeblan \"keditfiletype5\", bonvolu kontroli vian "

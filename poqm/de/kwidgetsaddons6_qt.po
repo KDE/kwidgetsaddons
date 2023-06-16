@@ -1877,15 +1877,17 @@ msgstr "MIME-Typ-Editor starten"
 #, fuzzy
 #| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
-msgid "Could not find the \"keditfiletype5\" executable in PATH."
+msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr "Ausführbare Datei „%1“ ist nicht auffindbar."
 
 #: kmimetypeeditor.cpp:37
+#, fuzzy
+#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid ""
-"Could not start the \"keditfiletype5\" executable, please check your "
+"Could not start the \"keditfiletype\" executable, please check your "
 "installation."
-msgstr ""
+msgstr "Ausführbare Datei „%1“ ist nicht auffindbar."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
