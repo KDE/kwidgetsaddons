@@ -5,7 +5,7 @@
 # Pablo de Vicente <vicente@oan.es>, 2000-2002,2003, 2004.
 # Pablo de Vicente <vicnte@oan.es>, 2003.
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Pablo de Vicente <pablo.devicente@gmail.com>, 2005, 2006, 2007.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Jaime Robles <jaime@kde.org>, 2007.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-05-31 03:46+0200\n"
+"PO-Revision-Date: 2023-06-17 01:23+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -1876,25 +1876,17 @@ msgid "Launch the MIME type editor"
 msgstr "Lanzar el editor de tipos MIME"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "No se ha podido encontrar el ejecutable «keditfiletype5» en PATH."
+msgstr "No se ha podido encontrar el ejecutable «keditfiletype» en el PATH."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"No se ha podido iniciar el ejecutable «keditfiletype5». Compruebe su "
+"No se ha podido iniciar el ejecutable «keditfiletype». Compruebe su "
 "instalación."
 
 #: knewpassworddialog.cpp:63

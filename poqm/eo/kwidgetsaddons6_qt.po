@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-06-15 21:20+0100\n"
+"PO-Revision-Date: 2023-06-16 08:09+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1874,25 +1874,17 @@ msgid "Launch the MIME type editor"
 msgstr "Lanĉi la MIME-tipan redaktilon"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "Ne eblis trovi la \"keditfiletype5\" plenumeblan en PATH."
+msgstr "Ne eblis trovi la \"keditfiletype\" plenumeblan en PATH."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"Ne eblis lanĉi la plenumeblan \"keditfiletype5\", bonvolu kontroli vian "
+"Ne eblis lanĉi la plenumeblan \"keditfiletype\", bonvolu kontroli vian "
 "instaladon."
 
 #: knewpassworddialog.cpp:63
@@ -2392,33 +2384,3 @@ msgstr "Plenekrane"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Montri la fenestron en plena ekrano"
-
-#~ msgctxt "KFontChooser|@info:tooltip"
-#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-#~ msgstr "Tipargrandeco<br /><i>fiksa</i> aŭ <i>relativa</i><br />al medio"
-
-#~ msgctxt "KFontChooser|@info:whatsthis"
-#~ msgid ""
-#~ "Here you can switch between fixed font size and font size to be "
-#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
-#~ "dimensions, paper size)."
-#~ msgstr ""
-#~ "Ĉi tie vi povas ŝanĝi inter fiksita tiparo kaj tiparo kalkulenda dinamike "
-#~ "kaj ĝustigenda al ŝanĝiĝanta medio (ekz. fenestraĵgrandeco, papera "
-#~ "grandeco)."
-
-#~ msgctxt "KMessageBox|"
-#~ msgid "Sorry"
-#~ msgstr "Pardonu"
-
-#~ msgctxt "KMessageDialog|"
-#~ msgid "Sorry"
-#~ msgstr "Pardonu"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&Yes"
-#~ msgstr "&Jes"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&No"
-#~ msgstr "&Ne"

@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-06-06 05:32+0300\n"
+"PO-Revision-Date: 2023-06-16 12:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -947,7 +947,7 @@ msgstr "Arapça Sunum Biçimleri-A"
 #: kcharselect-translation.cpp:182
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
-msgstr "Dönüşüm Seçiciler"
+msgstr "Varyasyon Seçiciler"
 
 #: kcharselect-translation.cpp:183
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1876,25 +1876,17 @@ msgid "Launch the MIME type editor"
 msgstr "MIME türü düzenleyicisini çalıştırın"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "PATH üzerinde \"keditfiletype5\" uygulaması bulunamadı."
+msgstr "PATH üzerinde \"keditfiletype\" yürütülebiliri bulunamadı."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"\"keditfiletype5\" yürütülebiliri başlatılamadı, lütfen kurulumunuzu "
+"\"keditfiletype\" yürütülebiliri başlatılamadı, lütfen kurulumunuzu "
 "denetleyin."
 
 #: knewpassworddialog.cpp:63
