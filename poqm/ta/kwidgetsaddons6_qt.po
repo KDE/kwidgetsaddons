@@ -4,13 +4,13 @@
 # Sivakumar Shanmugasundaram <sshanmu@yahoo.com>, 2000.
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000-2001.
 # ம. ஸ்ரீ ராமதாஸ் | Sri Ramadoss M <amachu@yavarkkum.org>, 2007-2012.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-09-20 21:38+0530\n"
+"PO-Revision-Date: 2023-06-18 13:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,35 +18,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Sans Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Sans Serif"
-msgstr "Sans Serif"
+msgstr ""
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
-msgstr "Serif"
+msgstr ""
 
 #. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:28
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Monospace"
 msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
-msgstr "Monospace"
+msgstr ""
 
 #: fonthelpers_p.h:90
 #, qt-format
@@ -169,9 +160,6 @@ msgid "Mathematical Symbols"
 msgstr "கணிதக் குறியீடுகள்"
 
 #: kcharselect-translation.cpp:23
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Phonetic Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "ஓசைக் குறியீடுகள்"
@@ -190,9 +178,6 @@ msgid "Other"
 msgstr "மற்றவை"
 
 #: kcharselect-translation.cpp:26
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Basic Latin"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
 msgstr "அடிப்படை இலத்தீன்"
@@ -286,9 +271,6 @@ msgid "Hebrew"
 msgstr "எபிரேயம்"
 
 #: kcharselect-translation.cpp:38
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Arabic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
 msgstr "அரேபிய"
@@ -772,9 +754,6 @@ msgid "Number Forms"
 msgstr "எண் வடிவங்கள்"
 
 #: kcharselect-translation.cpp:104
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arrows"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
 msgstr "அம்புக்குறிகள்"
@@ -1587,34 +1566,24 @@ msgid "&Find..."
 msgstr "&தேடுக..."
 
 #: kcharselect.cpp:422
-#, fuzzy
-#| msgctxt "Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
-msgstr "கடந்தவைகளுள் முந்தையது"
+msgstr "வரலாற்றில் முந்தையது"
 
 #: kcharselect.cpp:424
-#, fuzzy
-#| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "வரலாற்றில் முந்தைய எழுத்து"
+msgstr "வரலாற்றிலுள்ள முந்தைய எழுத்து"
 
 #: kcharselect.cpp:429
-#, fuzzy
-#| msgctxt "Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
-msgstr "வரலாற்றில் அடுத்து வருவது."
+msgstr "வரலாற்றில் அடுத்த‍து"
 
 #: kcharselect.cpp:431
-#, fuzzy
-#| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "வரலாற்றில் அடுத்த எழுத்து"
+msgstr "வரலாற்றிலுள்ள அடுத்த எழுத்து"
 
 #: kcharselect.cpp:436
 msgctxt "KCharSelect|@action go back"
@@ -1627,11 +1596,9 @@ msgid "&Forward"
 msgstr "&முன்னே"
 
 #: kcharselect.cpp:462
-#, fuzzy
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
-msgstr "வகையொன்றினைத் தேர்வு செய்க"
+msgstr "வகையொன்றினைத் தேர்வு செய்"
 
 #: kcharselect.cpp:466
 #, fuzzy
@@ -1685,18 +1652,14 @@ msgid "See also:"
 msgstr "இதனையும் காணவும்:"
 
 #: kcharselect.cpp:844
-#, fuzzy
-#| msgid "Equivalents:"
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "நிகரானவை:"
 
 #: kcharselect.cpp:852
-#, fuzzy
-#| msgid "Approximate equivalents:"
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
-msgstr "தோராயமானவை:"
+msgstr "தோராயமாக நிகரானவை:"
 
 #: kcharselect.cpp:860
 #, fuzzy
@@ -1772,11 +1735,9 @@ msgid "Block: "
 msgstr "பாகம்:"
 
 #: kcharselect.cpp:925
-#, fuzzy
-#| msgid "Unicode category: "
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
-msgstr "யுனிகோடு வகை:"
+msgstr "யூனிகோடு பகுப்பு:"
 
 #: kcharselect.cpp:929
 #, fuzzy
@@ -2170,81 +2131,51 @@ msgid "Close"
 msgstr "மூடு"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "அடுத்த ஆண்டு"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "அடுத்த மாதம்"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "அடுத்த வாரம்"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "நாளை"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "இன்று"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "நேற்று"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "சென்ற வாரம்"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "சென்ற மாதம்"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "சென்ற ஆண்டு"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "தேதியில்லை"
@@ -2297,11 +2228,9 @@ msgid "Move &Down"
 msgstr "&கீழே நகர்த்து"
 
 #: kfontchooser.cpp:152
-#, fuzzy
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
-msgstr "கோரப்பட்ட மின்னெழுத்து"
+msgstr "கோரப்பட்ட எழுத்துரு"
 
 #: kfontchooser.cpp:193
 msgctxt "KFontChooser|@item font"
@@ -2393,18 +2322,13 @@ msgid "Relative"
 msgstr "தொடர்புடைய"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@info:whatsthis"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
 "special characters."
 msgstr ""
-"இவ் வுதாரண உரை, தற்போதைய அமைப்புக்களை எடுத்துக்காட்டுகிறது. விதிவிலக்கான எழுத்துக்ளை "
-"சோதிக்க, நீங்கள் இதனை மாற்றியமைக்க முடியும். "
+"இவ்வுதாரண உரை, தற்போதைய அமைப்புகளை எடுத்துக்காட்டுகிறது. பிற எழுத்துகளைப் பார்க்க, "
+"இவ்வுரையை திருத்தலாம்."
 
 #: kfontchooserwidget.ui:135
 msgctxt "KFontChooserWidget|"
@@ -2563,20 +2487,16 @@ msgid "Launch the MIME type editor"
 msgstr "மைம் (MIME) வகை திருத்தியை இயக்கு"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "இயக்கவல்ல '%1' தனை இயக்க இயலவில்லை."
+msgstr "PATH-இல் \"keditfiletype\" நிரலைக் கண்டுபிடிக்க முடியவில்லை."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
-msgstr "இயக்கவல்ல '%1' தனை இயக்க இயலவில்லை."
+msgstr "\"keditfiletype\" நிரலைத் துவக்க முடியவில்லை. உங்கள் இயங்குதளத்தை சரிபாருங்கள்."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -2607,15 +2527,6 @@ msgid "Low Password Strength"
 msgstr "பாதுகாப்பாக இல்லாத கடவுச்சொல்"
 
 #: knewpassworddialog.cpp:134
-#, fuzzy
-#| msgid ""
-#| "The password you have entered has a low strength. To improve the strength "
-#| "of the password, try:\n"
-#| " - using a longer password;\n"
-#| " - using a mixture of upper- and lower-case letters;\n"
-#| " - using numbers or symbols as well as letters.\n"
-#| "\n"
-#| "Would you like to use this password anyway?"
 msgctxt "KNewPasswordDialog|"
 msgid ""
 "The password you have entered has a low strength. To improve the strength of "
@@ -2626,23 +2537,15 @@ msgid ""
 "\n"
 "Would you like to use this password anyway?"
 msgstr ""
-"நீங்கள் உள்ளிட்ட கடவுச்சொல் திராணியற்றது. கடவுச்சொல்லின் திறனை அதிகரிக்க கீழ்க்கண்ட "
-"பரிந்துரைகளின்படி செய்யவும், :\n"
-"- நீண்ட கடவுச்சொல்லை பயன்படுத்தவும்;\n"
-"- பெரிய மற்றும் சிறிய எழுத்துகளின் கலவையை பயன்படுத்தவும்;\n"
-"- எண்களையோ குறிகளையோ எழுத்துகளோடு பயன்படுத்தவும்.\n"
+"நீங்கள் உள்ளிட்டக் கடவுச்சொல் எளிதில் ஊகிக்கக்கூடியது. கடவுச்சொல்லின் பாதுகாப்பை அதிகரிக்க "
+"கீழ்க்கண்டவற்றை முயற்சிக்கலாம்:\n"
+"- இதைவிட நீண்ட கடவுச்சொல்லை பயன்படுத்தலாம்;\n"
+"- பெரிய மற்றும் சிறிய எழுத்துகளை கலந்து பயன்படுத்தலாம்;\n"
+"- எண்களையோ குறிகளையோ எழுத்துகளோடு கலந்து பயன்படுத்தலாம்.\n"
 "\n"
-"இக்கடவுச்சொல்லைத் தான் நீங்கள் பயன்படுத்த விரும்புகிறீர்களா?"
+"இருப்பினும் இக்கடவுச்சொல்லையே பயன்படுத்த விரும்புகிறீர்களா?"
 
 #: knewpasswordwidget.cpp:52
-#, fuzzy
-#| msgid ""
-#| "The password strength meter gives an indication of the security of the "
-#| "password you have entered.  To improve the strength of the password, "
-#| "try:\n"
-#| " - using a longer password;\n"
-#| " - using a mixture of upper- and lower-case letters;\n"
-#| " - using numbers or symbols, such as #, as well as letters."
 msgctxt "KNewPasswordWidget|@info:whatsthis"
 msgid ""
 "The password strength meter gives an indication of the security of the "
@@ -2651,11 +2554,10 @@ msgid ""
 "case letters;</li><li>using numbers or symbols, such as #, as well as "
 "letters.</li></ul>"
 msgstr ""
-"கடவுச்சொல் திறன் மீட்டர் நீங்கள் உள்ளிட்ட கடவுச்சொல்லின் பாதுகாப்பு அறிவிப்பை தருகிறது. "
-"கடவுச்சொல்லின் திறனை அதிகரிக்க :\n"
-" ஒரு நீண்ட கடவுச்சொல்லை பயன்படுத்துவதன் மூலமும்;\n"
-"- பெரிய மற்றும் சிறிய எழுத்துகளின் கலவையை பயன்படுத்துவதன்்ன் மூலமும்;\n"
-"- எண்கள் அல்ல# முதலிய து குறியீடைப்துகளையும் பயன்படுத்துவதன் மூலமும் முயற்சிக்கலாம்."
+"கடவுச்சொல் பாதுகாப்பு அளவுகோல், நீங்கள் உள்ளிட்ட கடவுச்சொல் எளிதில் ஊகிக்கக்கூடியதா என்பதைக் "
+"காட்டும். கடவுச்சொல்லின் பாதுகாப்பை அதிகரிக்க:<ul><li>இதைவிட நீண்ட கடவுச்சொல்லை "
+"பயன்படுத்தலாம்;</li><li>பெரிய மற்றும் சிறிய எழுத்துகளைக் கலந்து பயன்படுத்தலாம்;</"
+"li><li>எண்கள் மற்றும் # போன்ற குறிகளை எழுத்துகளுடன் கலந்து பயன்படுத்தலாம்.</li></ul>"
 
 #: knewpasswordwidget.ui:19
 msgctxt "KNewPasswordWidget|@label:textbox"
