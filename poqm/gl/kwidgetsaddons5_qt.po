@@ -2017,7 +2017,7 @@ msgstr "Información"
 #: kmessagebox.cpp:1083
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
-msgstr "Non volver mostrar esta mensaxe."
+msgstr "Non volver amosar esta mensaxe."
 
 #: kmessagedialog.cpp:179
 #, fuzzy
@@ -2216,7 +2216,7 @@ msgid ""
 "case letters;</li><li>using numbers or symbols, such as #, as well as "
 "letters.</li></ul>"
 msgstr ""
-"O medidor da resistencia do contrasinal dá unha indicación da seguranza do "
+"O medidor da resistencia do contrasinal dá unha indicación da seguridade do "
 "contrasinal que inseriu. Para mellorar a resistencia do contrasinal, intente:"
 "<ul><li>usar un contrasinal máis longo;</li><li>usar unha mestura de letras "
 "maiúsculas e minúsculas;</li><li>usar números ou símbolos, como #, ademais "
@@ -2527,7 +2527,7 @@ msgstr "&Axuda"
 #: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "Show help"
-msgstr "Mostrar axuda"
+msgstr "Amosar axuda"
 
 #: kstandardguiitem.cpp:255
 msgctxt "KStandardGuiItem|"
