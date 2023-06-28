@@ -48,3 +48,5 @@ int main(int argc, char **argv)
     window.show();
     return app.exec();
 }
+
+#include "moc_kcolumnresizertestapp.cpp"

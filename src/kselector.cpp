@@ -410,3 +410,5 @@ QString KGradientSelector::secondText() const
 {
     return d->text2;
 }
+
+#include "moc_kselector.cpp"

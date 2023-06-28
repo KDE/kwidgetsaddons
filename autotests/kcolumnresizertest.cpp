@@ -72,3 +72,5 @@ void KColumnResizerTest::test()
 
     delete parent;
 }
+
+#include "moc_kcolumnresizertest.cpp"

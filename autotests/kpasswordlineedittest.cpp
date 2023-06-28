@@ -88,3 +88,5 @@ void PasswordLineEditTest::shouldEmitSignalPasswordChanged()
 }
 
 QTEST_MAIN(PasswordLineEditTest)
+
+#include "moc_kpasswordlineedittest.cpp"

@@ -139,3 +139,5 @@ int main(int argc, char **argv)
 
     return app.exec();
 }
+
+#include "moc_ktwofingertap_test.cpp"

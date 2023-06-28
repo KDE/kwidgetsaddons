@@ -101,3 +101,5 @@ void SelectActionTest::slotActionTriggered(bool state)
 {
     qDebug() << sender() << " state " << state;
 }
+
+#include "moc_kselectactiontest.cpp"

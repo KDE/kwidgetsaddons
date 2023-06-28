@@ -310,3 +310,5 @@ void KNewPasswordWidgetTest::shouldHideVerificationLineEditInPlaintextMode()
     visibilityAction->trigger();
     QVERIFY(!lineVerifyPassword->isVisible());
 }
+
+#include "moc_knewpasswordwidgettest.cpp"

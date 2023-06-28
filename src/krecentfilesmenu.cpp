@@ -282,3 +282,5 @@ void KRecentFilesMenu::clearRecentFiles()
 
     d->recentFilesChanged();
 }
+
+#include "moc_krecentfilesmenu.cpp"

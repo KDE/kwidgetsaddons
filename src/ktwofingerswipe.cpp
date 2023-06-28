@@ -204,3 +204,5 @@ qreal KTwoFingerSwipe::swipeAngle() const
 {
     d->mSwipeAngle = _swipeAngle;
 }
+
+#include "moc_ktwofingerswipe.cpp"

@@ -89,3 +89,5 @@ bool KBusyIndicatorWidget::event(QEvent *event)
     // the vtable or not.
     return QWidget::event(event);
 }
+
+#include "moc_kbusyindicatorwidget.cpp"

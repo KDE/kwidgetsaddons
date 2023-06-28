@@ -26,3 +26,5 @@ KPageModel::KPageModel(KPageModelPrivate &dd, QObject *parent)
 }
 
 KPageModel::~KPageModel() = default;
+
+#include "moc_kpagemodel.cpp"

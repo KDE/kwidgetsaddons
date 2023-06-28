@@ -51,3 +51,5 @@ bool LineEditUrlDropEventFilter::eventFilter(QObject *obj, QEvent *ev)
     ev->accept();
     return true;
 }
+
+#include "moc_lineediturldropeventfilter.cpp"

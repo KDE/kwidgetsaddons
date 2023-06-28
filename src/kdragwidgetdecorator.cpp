@@ -82,3 +82,5 @@ void KDragWidgetDecoratorBase::startDrag()
         drag->exec(Qt::CopyAction);
     }
 }
+
+#include "moc_kdragwidgetdecorator.cpp"

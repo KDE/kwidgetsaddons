@@ -210,3 +210,5 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
 }
 
 QTEST_MAIN(KToolTipWidgetTest)
+
+#include "moc_ktooltipwidgettest.cpp"

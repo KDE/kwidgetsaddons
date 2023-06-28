@@ -524,3 +524,4 @@ void KMessageDialog::showEvent(QShowEvent *event)
 #endif
 
 #include "kmessagedialog.moc"
+#include "moc_kmessagedialog.cpp"

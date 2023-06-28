@@ -89,3 +89,5 @@ int main(int argc, char **argv)
     window->show();
     return testapp.exec();
 }
+
+#include "moc_kpixmapsequenceoverlaypaintertest.cpp"

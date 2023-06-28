@@ -693,3 +693,5 @@ void KRuler::paintEvent(QPaintEvent * /*e*/)
     debug("paint time %i", elapsed);
 #endif
 }
+
+#include "moc_kruler.cpp"

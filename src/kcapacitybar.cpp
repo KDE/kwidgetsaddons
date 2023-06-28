@@ -353,3 +353,5 @@ void KCapacityBar::changeEvent(QEvent *event)
         d->ce_capacityBar = KStyleExtensions::customControlElement(QStringLiteral("CE_CapacityBar"), this);
     }
 }
+
+#include "moc_kcapacitybar.cpp"
