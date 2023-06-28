@@ -331,3 +331,5 @@ void KSplitterCollapserButton::paintEvent(QPaintEvent *)
     initStyleOption(&opt2);
     painter.drawControl(QStyle::CE_ToolButtonLabel, opt2);
 }
+
+#include "moc_ksplittercollapserbutton.cpp"

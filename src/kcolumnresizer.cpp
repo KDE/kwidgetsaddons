@@ -231,5 +231,6 @@ void KColumnResizer::addWidgetsFromLayout(QLayout *layout, int column)
     }
 }
 
-#include <moc_kcolumnresizer.cpp>
+#include "moc_kcolumnresizer.cpp"
+
 // vi: ts=4 sw=4 et

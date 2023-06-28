@@ -268,3 +268,5 @@ void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle()
 }
 
 QTEST_MAIN(KSplitterCollapserButtonTest)
+
+#include "moc_ksplittercollapserbuttontest.cpp"

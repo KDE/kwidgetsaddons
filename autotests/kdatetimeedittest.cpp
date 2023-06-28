@@ -245,3 +245,5 @@ void KDateTimeEditTest::testDateMenu()
     nextMonthAction->trigger();
     QCOMPARE(m_edit->date(), QDate::currentDate().addMonths(1));
 }
+
+#include "moc_kdatetimeedittest.cpp"

@@ -123,3 +123,5 @@ void KActionMenu::setPopupMode(QToolButton::ToolButtonPopupMode popupMode)
 {
     d->m_popupMode = popupMode;
 }
+
+#include "moc_kactionmenu.cpp"

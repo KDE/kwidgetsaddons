@@ -257,3 +257,5 @@ void KLed::paintEvent(QPaintEvent *)
     painter.drawPixmap(1, 1, d->cachedPixmap[d->state]);
     painter.end();
 }
+
+#include "moc_kled.cpp"

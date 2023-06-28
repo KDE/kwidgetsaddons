@@ -34,3 +34,5 @@ void KPasswordDialogAutotest::shouldNotHideVisibilityActionInPlaintextMode()
     linePassword->clear();
     QVERIFY(visibilityAction->isVisible());
 }
+
+#include "moc_kpassworddialogautotest.cpp"

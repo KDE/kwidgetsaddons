@@ -134,3 +134,5 @@ void KFontSizeAction::slotActionTriggered(QAction *action)
     Q_EMIT fontSizeChanged(action->text().toInt());
     KSelectAction::slotActionTriggered(action);
 }
+
+#include "moc_kfontsizeaction.cpp"

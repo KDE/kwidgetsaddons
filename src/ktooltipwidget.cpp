@@ -233,3 +233,5 @@ void KToolTipWidget::paintEvent(QPaintEvent *event)
 
     QWidget::paintEvent(event);
 }
+
+#include "moc_ktooltipwidget.cpp"

@@ -245,3 +245,5 @@ void KDateComboBoxTest::testDatePickerIntegration()
     // THEN the combo still has the original date
     QCOMPARE(combo.date(), originalDate);
 }
+
+#include "moc_kdatecomboboxtest.cpp"

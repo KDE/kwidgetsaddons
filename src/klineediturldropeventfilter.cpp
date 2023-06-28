@@ -47,3 +47,5 @@ bool KLineEditUrlDropEventFilter::eventFilter(QObject *object, QEvent *event)
     event->accept();
     return true;
 }
+
+#include "moc_klineediturldropeventfilter.cpp"

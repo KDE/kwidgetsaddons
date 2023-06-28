@@ -43,3 +43,5 @@ void KColorButtonTest::testOpenDialog()
     QVERIFY(QTest::qWaitForWindowExposed(dialog));
     QCOMPARE(dialog->currentColor(), QColor(Qt::red));
 }
+
+#include "moc_kcolorbuttontest.cpp"

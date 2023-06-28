@@ -101,3 +101,5 @@ int KFontChooserDialog::getFont(QFont &theFont, const KFontChooser::DisplayFlags
     delete dialog;
     return result;
 }
+
+#include "moc_kfontchooserdialog.cpp"

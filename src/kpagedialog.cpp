@@ -193,3 +193,5 @@ void KPageDialog::setButtonBox(QDialogButtonBox *box)
     d->mButtonBox = box;
     d->init();
 }
+
+#include "moc_kpagedialog.cpp"

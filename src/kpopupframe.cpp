@@ -189,3 +189,4 @@ int KPopupFrame::exec(int x, int y)
 }
 
 #include "kpopupframe.moc"
+#include "moc_kpopupframe.cpp"

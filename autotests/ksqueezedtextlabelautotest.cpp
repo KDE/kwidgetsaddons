@@ -238,3 +238,5 @@ QTEST_MAIN(KSqueezedTextLabelAutotest)
 // - Qt::TextInteractionFlags, keyboard/mouse interaction
 // - linkHovered/linkActivated
 // - setPixmap
+
+#include "moc_ksqueezedtextlabelautotest.cpp"

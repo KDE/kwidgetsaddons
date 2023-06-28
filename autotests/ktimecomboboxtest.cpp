@@ -244,3 +244,5 @@ void KTimeComboBoxTest::testEdit()
 
     QLocale::setDefault(currentLocale);
 }
+
+#include "moc_ktimecomboboxtest.cpp"

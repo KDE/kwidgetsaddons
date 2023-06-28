@@ -93,3 +93,5 @@ void KCollapsibleGroupBoxTest::childShouldGetFocus()
     collapsible.expand();
     QCOMPARE(spinBox->focusPolicy(), Qt::StrongFocus);
 }
+
+#include "moc_kcollapsiblegroupbox_test.cpp"

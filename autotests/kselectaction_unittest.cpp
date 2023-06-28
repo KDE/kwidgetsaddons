@@ -348,3 +348,5 @@ void KSelectAction_UnitTest::testRequestWidgetMenuModeWidgetParentRemoveActions(
     QCOMPARE(widget->actions().count(), 1);
     QCOMPARE(widget->actions().at(0)->text(), QStringLiteral("selectAction"));
 }
+
+#include "moc_kselectaction_unittest.cpp"

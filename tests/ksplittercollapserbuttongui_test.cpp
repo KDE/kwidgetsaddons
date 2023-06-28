@@ -67,3 +67,5 @@ int main(int argc, char **argv)
     delete w4;
     return 0;
 }
+
+#include "moc_ksplittercollapserbuttongui_test.cpp"

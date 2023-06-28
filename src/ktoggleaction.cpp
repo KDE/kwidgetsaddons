@@ -82,3 +82,5 @@ void KToggleAction::slotToggled(bool)
         }
     }
 }
+
+#include "moc_ktoggleaction.cpp"

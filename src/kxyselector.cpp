@@ -244,3 +244,5 @@ void KXYSelector::drawMarker(QPainter *p, int xp, int yp)
     */
     p->drawEllipse(xp - 4, yp - 4, 8, 8);
 }
+
+#include "moc_kxyselector.cpp"

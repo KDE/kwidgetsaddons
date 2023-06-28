@@ -135,3 +135,5 @@ int main(int argc, char **argv)
     t->show();
     return a.exec();
 }
+
+#include "moc_kcolorcombotest.cpp"

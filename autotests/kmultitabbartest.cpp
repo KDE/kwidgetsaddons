@@ -77,3 +77,5 @@ void KMultiTabBarTest::shouldEmitClicked()
 }
 
 QTEST_MAIN(KMultiTabBarTest)
+
+#include "moc_kmultitabbartest.cpp"

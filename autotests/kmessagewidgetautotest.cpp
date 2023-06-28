@@ -245,3 +245,5 @@ void KMessageWidgetTest::testResizeFlickerOnAnimatedShow()
 
     QCOMPARE(w.height(), 0);
 }
+
+#include "moc_kmessagewidgetautotest.cpp"

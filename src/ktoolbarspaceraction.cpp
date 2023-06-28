@@ -31,3 +31,5 @@ QWidget *KToolBarSpacerAction::createWidget(QWidget *parent)
     spacer->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     return spacer;
 }
+
+#include "moc_ktoolbarspaceraction.cpp"

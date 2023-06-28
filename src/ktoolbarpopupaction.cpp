@@ -81,3 +81,5 @@ void KToolBarPopupAction::setPopupMode(QToolButton::ToolButtonPopupMode popupMod
         }
     }
 }
+
+#include "moc_ktoolbarpopupaction.cpp"

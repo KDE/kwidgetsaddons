@@ -177,3 +177,5 @@ void KTwoFingerTap::setScenePos(QPointF _scenePos)
 {
     d->mScenePos = _scenePos;
 }
+
+#include "moc_ktwofingertap.cpp"
