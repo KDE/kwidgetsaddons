@@ -47,8 +47,11 @@ public:
 private:
     Q_DECLARE_PRIVATE(KFontAction)
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(5, 79)
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wunused-private-field")
     // Unused, kept for ABI compatibility
     const void *__kwidgetsaddons_d_do_not_use;
+    QT_WARNING_POP
 #endif
 };
 
