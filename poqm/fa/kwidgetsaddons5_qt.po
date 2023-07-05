@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -2853,6 +2853,7 @@ msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
 msgstr[0] "اسم رمز باید حداقل به‌ طول  %1 نویسه باشد"
+msgstr[1] ""
 
 #: knewpassworddialog.cpp:67
 #, fuzzy
