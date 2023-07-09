@@ -189,6 +189,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kxyselector.h
     klineediturldropeventfilter.cpp
     klineediturldropeventfilter.h
+    kjobwidgets.cpp
+    kjobwidgets.h
 
     icons.qrc
 )
@@ -305,6 +307,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KToolTipWidget
   KTwoFingerTap
   KTwoFingerSwipe
+  KJobWidgets
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
