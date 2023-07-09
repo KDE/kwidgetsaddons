@@ -102,7 +102,7 @@ Q_SIGNALS:
     /**
      * This signal is emitted when the rating is changed.
      */
-    void ratingChanged(int rating); // clazy:exclude=overloaded-signal
+    void ratingChanged(int rating);
 
 public Q_SLOTS:
     /**

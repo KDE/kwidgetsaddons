@@ -260,27 +260,27 @@ Q_SIGNALS:
     /**
      * Emitted when the mouse has passed over the label.
      */
-    void enteredUrl(); // clazy:exclude=overloaded-signal
+    void enteredUrl();
 
     /**
      * Emitted when the mouse is no longer over the label.
      */
-    void leftUrl(); // clazy:exclude=overloaded-signal
+    void leftUrl();
 
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
-    void leftClickedUrl(); // clazy:exclude=overloaded-signal
+    void leftClickedUrl();
 
     /**
      * Emitted when the user clicked the right mouse button on this label.
      */
-    void rightClickedUrl(); // clazy:exclude=overloaded-signal
+    void rightClickedUrl();
 
     /**
      * Emitted when the user clicked the left mouse button on this label.
      */
-    void middleClickedUrl(); // clazy:exclude=overloaded-signal
+    void middleClickedUrl();
 
 protected:
     /**
