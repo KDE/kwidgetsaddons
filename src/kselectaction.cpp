@@ -572,7 +572,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
             d->comboBoxDeleted(comboBox);
         });
 
-        connect(comboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [d](int value) {
+        connect(comboBox, &QComboBox::currentIndexChanged, this, [d](int value) {
             d->comboBoxCurrentIndexChanged(value);
         });
 

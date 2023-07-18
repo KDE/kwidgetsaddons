@@ -216,10 +216,10 @@ KColorCombo::KColorCombo(QWidget *parent)
     setItemDelegate(new KColorComboDelegate(this));
     d->addColors();
 
-    connect(this, qOverload<int>(&QComboBox::activated), this, [this](int index) {
+    connect(this, &QComboBox::activated, this, [this](int index) {
         d->slotActivated(index);
     });
-    connect(this, qOverload<int>(&QComboBox::highlighted), this, [this](int index) {
+    connect(this, &QComboBox::highlighted, this, [this](int index) {
         d->slotHighlighted(index);
     });
 

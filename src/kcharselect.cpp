@@ -470,11 +470,11 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
     d->sectionCombo->addItems(sectionList);
     d->blockCombo->setMinimumWidth(QFontMetrics(QWidget::font()).averageCharWidth() * 25);
 
-    connect(d->sectionCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int index) {
+    connect(d->sectionCombo, &QComboBox::currentIndexChanged, this, [this](int index) {
         d->sectionSelected(index);
     });
 
-    connect(d->blockCombo, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int index) {
+    connect(d->blockCombo, &QComboBox::currentIndexChanged, this, [this](int index) {
         d->blockSelected(index);
     });
 

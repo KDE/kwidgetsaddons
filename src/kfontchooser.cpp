@@ -213,7 +213,7 @@ void KFontChooserPrivate::init()
     // will be replaced later with correct sizes.
     fillSizeList();
 
-    QObject::connect(m_ui->sizeSpinBox, qOverload<double>(&QDoubleSpinBox::valueChanged), [this](const double size) {
+    QObject::connect(m_ui->sizeSpinBox, &QDoubleSpinBox::valueChanged, [this](const double size) {
         slotSizeValue(size);
     });
 

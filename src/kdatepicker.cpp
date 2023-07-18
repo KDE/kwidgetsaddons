@@ -333,7 +333,7 @@ void KDatePicker::initWidget(const QDate &date_)
     connect(d->monthBackward, &QAbstractButton::clicked, this, &KDatePicker::monthBackwardClicked);
     connect(d->yearForward, &QAbstractButton::clicked, this, &KDatePicker::yearForwardClicked);
     connect(d->yearBackward, &QAbstractButton::clicked, this, &KDatePicker::yearBackwardClicked);
-    connect(d->selectWeek, qOverload<int>(&QComboBox::activated), this, &KDatePicker::weekSelected);
+    connect(d->selectWeek, &QComboBox::activated, this, &KDatePicker::weekSelected);
     connect(d->todayButton, &QAbstractButton::clicked, this, &KDatePicker::todayButtonClicked);
     connect(d->selectMonth, &QAbstractButton::clicked, this, &KDatePicker::selectMonthClicked);
     connect(d->selectYear, &QAbstractButton::toggled, this, &KDatePicker::selectYearClicked);

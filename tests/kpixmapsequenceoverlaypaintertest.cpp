@@ -41,9 +41,9 @@ TestWidget::TestWidget()
     m_alignment->addItem(QStringLiteral("Bottom-left"), QVariant::fromValue(Qt::Alignment(Qt::AlignLeft | Qt::AlignBottom)));
     m_alignment->addItem(QStringLiteral("Left"), QVariant::fromValue(Qt::Alignment(Qt::AlignLeft | Qt::AlignVCenter)));
 
-    connect(m_alignment, qOverload<int>(&QComboBox::activated), this, &TestWidget::alignementChanged);
-    connect(m_offsetX, qOverload<int>(&QSpinBox::valueChanged), this, &TestWidget::offsetChanged);
-    connect(m_offsetY, qOverload<int>(&QSpinBox::valueChanged), this, &TestWidget::offsetChanged);
+    connect(m_alignment, &QComboBox::activated, this, &TestWidget::alignementChanged);
+    connect(m_offsetX, &QSpinBox::valueChanged, this, &TestWidget::offsetChanged);
+    connect(m_offsetY, &QSpinBox::valueChanged, this, &TestWidget::offsetChanged);
 
     m_painter = new KPixmapSequenceOverlayPainter(KPixmapSequence(QFINDTESTDATA("kpixmap-animation.png"), 22), this);
     m_painter->setWidget(m_widget);

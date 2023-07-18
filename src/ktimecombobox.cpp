@@ -282,7 +282,7 @@ KTimeComboBox::KTimeComboBox(QWidget *parent)
     d->initTimeWidget();
     d->updateTimeWidget();
 
-    connect(this, qOverload<int>(&QComboBox::activated), this, [this](int value) {
+    connect(this, &QComboBox::activated, this, [this](int value) {
         d->selectTime(value);
     });
     connect(this, &QComboBox::editTextChanged, this, [this](const QString &str) {
