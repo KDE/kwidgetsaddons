@@ -2132,8 +2132,8 @@ msgid ""
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
-"<b>적용</b>단추를 클릭하면, 설정을 프로그램에 적용하면서 대화 상자는 닫히지 "
-"않습니다.\n"
+"<b>적용</b>단추를 클릭하면, 설정을 앱에 적용하면서 대화 상자는 닫히지 않습니"
+"다.\n"
 "다른 설정을 시도하시려면 이것을 사용하십시오."
 
 #: kstandardguiitem.cpp:203
@@ -2289,7 +2289,7 @@ msgstr "끝내기(&Q)"
 #: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
-msgstr "프로그램 끝내기"
+msgstr "앱 끝내기"
 
 #: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
