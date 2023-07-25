@@ -1,7 +1,7 @@
 # Korean messages for kdelibs.
 # Copyright (C) Free Software Foundation, Inc.
 # Cho Sung Jae <cho.sungjae@gmail.com>, 2007.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # DaeHyun Sung <sungdh86@gmail.com>, 2017.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-07-13 15:41+0200\n"
+"PO-Revision-Date: 2023-07-25 01:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1865,25 +1865,17 @@ msgid "Launch the MIME type editor"
 msgstr "MIME 형식 편집기를 엽니다"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "\"keditfiletype5\" 실행 파일을 PATH에서 찾을 수 없습니다."
+msgstr "\"keditfiletype\" 실행 파일을 PATH에서 찾을 수 없습니다."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"\"keditfiletype5\" 실행 파일을 시작할 수 없습니다. 설치 상태를 확인하십시오."
+"\"keditfiletype\" 실행 파일을 시작할 수 없습니다. 설치 상태를 확인하십시오."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
