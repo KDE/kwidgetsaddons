@@ -99,10 +99,10 @@ public:
      * The background colors are chosen depending on the message type.
      */
     enum MessageType {
-        Positive,
-        Information,
-        Warning,
-        Error,
+        Positive, ///< Positive message type
+        Information, ///< Information message type
+        Warning, ///< Warning message type
+        Error, ///< Error message type
     };
     Q_ENUM(MessageType)
 
