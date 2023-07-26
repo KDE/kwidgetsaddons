@@ -39,6 +39,8 @@ class QMenu;
  * Use cases include Back/Forward, and Undo/Redo. Simple click is what's most commonly
  * used, and enough for menus, but in toolbars there is \e also an optional popup
  * to go back N steps or undo N steps.
+ *
+ * @note Add actions to the popupMenu(), don't use setMenu().
  */
 class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
 {
@@ -62,6 +64,18 @@ public:
      * Destroys the toolbar popup action.
      */
     ~KToolBarPopupAction() override;
+
+    /**
+     * The popup menu that is shown when clicking (some time) on the toolbar
+     * button. You may want to plug items into it on creation, or connect to
+     * aboutToShow for a more dynamic menu.
+     *
+     * @note menu() is null on this action by default and using setMenu()
+     * will effectively turn this action into a regular action with a submenu.
+     *
+     * @since 6.0
+     */
+    QMenu *popupMenu() const;
 
     /**
      * The popup mode of the toolbar button.
