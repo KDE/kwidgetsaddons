@@ -24,10 +24,12 @@ class KToolBarPopupActionPrivate
 public:
     KToolBarPopupActionPrivate()
         : m_popupMode(QToolButton::MenuButtonPopup)
+        , m_popupMenu(new QMenu())
     {
     }
 
     QToolButton::ToolButtonPopupMode m_popupMode;
+    QMenu *m_popupMenu;
 };
 
 KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent)
@@ -36,12 +38,11 @@ KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text,
 {
     setIcon(icon);
     setText(text);
-    setMenu(new QMenu);
 }
 
 KToolBarPopupAction::~KToolBarPopupAction()
 {
-    delete menu();
+    delete d->m_popupMenu;
 }
 
 QWidget *KToolBarPopupAction::createWidget(QWidget *_parent)
@@ -57,6 +58,7 @@ QWidget *KToolBarPopupAction::createWidget(QWidget *_parent)
     button->setToolButtonStyle(parent->toolButtonStyle());
     button->setDefaultAction(this);
     button->setPopupMode(d->m_popupMode);
+    button->setMenu(d->m_popupMenu);
 
     connect(parent, &QToolBar::iconSizeChanged, button, &QAbstractButton::setIconSize);
     connect(parent, &QToolBar::toolButtonStyleChanged, button, &QToolButton::setToolButtonStyle);
@@ -80,6 +82,11 @@ void KToolBarPopupAction::setPopupMode(QToolButton::ToolButtonPopupMode popupMod
             button->setPopupMode(d->m_popupMode);
         }
     }
+}
+
+QMenu *KToolBarPopupAction::popupMenu() const
+{
+    return d->m_popupMenu;
 }
 
 #include "moc_ktoolbarpopupaction.cpp"
