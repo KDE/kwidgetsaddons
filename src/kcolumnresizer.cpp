@@ -90,6 +90,8 @@ struct GridColumnInfo {
     int column;
 };
 
+Q_DECLARE_TYPEINFO(GridColumnInfo, Q_PRIMITIVE_TYPE);
+
 class KColumnResizerPrivate
 {
 public:

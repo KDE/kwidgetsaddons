@@ -86,6 +86,8 @@ private:
     QList<int> m_weight;
 };
 
+Q_DECLARE_TYPEINFO(KAccelString, Q_RELOCATABLE_TYPE);
+
 typedef QList<KAccelString> KAccelStringList;
 
 /**

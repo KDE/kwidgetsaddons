@@ -104,6 +104,8 @@ public:
     void linkClicked(QUrl url);
 };
 
+Q_DECLARE_TYPEINFO(KCharSelectPrivate::HistoryItem, Q_RELOCATABLE_TYPE);
+
 /******************************************************************/
 /* Class: KCharSelectTable                                        */
 /******************************************************************/
