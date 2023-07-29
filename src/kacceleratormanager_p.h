@@ -86,6 +86,8 @@ private:
     QVector<int> m_weight;
 };
 
+Q_DECLARE_TYPEINFO(KAccelString, Q_MOVABLE_TYPE);
+
 typedef QList<KAccelString> KAccelStringList;
 
 /**
