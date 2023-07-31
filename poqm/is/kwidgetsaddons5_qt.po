@@ -1059,202 +1059,202 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr "Tákn fyrir eldri tölvuvinnslu"
 
-#: kcharselect.cpp:389
+#: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
 msgstr "Sláðu inn leitarorð eða staf..."
 
-#: kcharselect.cpp:391
+#: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Sláðu inn leitarorð eða staf hér"
 
-#: kcharselect.cpp:398
+#: kcharselect.cpp:400
 msgctxt "KCharSelect|@action"
 msgid "&Find..."
 msgstr "&Finna..."
 
-#: kcharselect.cpp:422
+#: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Fyrra atriði í ferli"
 
-#: kcharselect.cpp:424
+#: kcharselect.cpp:426
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "Fara á fyrri bókstaf í ferli"
 
-#: kcharselect.cpp:429
+#: kcharselect.cpp:431
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Næsta atriði í ferli"
 
-#: kcharselect.cpp:431
+#: kcharselect.cpp:433
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "Fara á næsta bókstaf í ferli"
 
-#: kcharselect.cpp:436
+#: kcharselect.cpp:438
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "Til &baka"
 
-#: kcharselect.cpp:443
+#: kcharselect.cpp:445
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "Á&fram"
 
-#: kcharselect.cpp:462
+#: kcharselect.cpp:464
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Velja flokk"
 
-#: kcharselect.cpp:466
+#: kcharselect.cpp:468
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Velja blokk til að sýna"
 
-#: kcharselect.cpp:485
+#: kcharselect.cpp:487
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Velja leturgerð"
 
-#: kcharselect.cpp:492
+#: kcharselect.cpp:494
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Stilla leturstærð"
 
-#: kcharselect.cpp:794
+#: kcharselect.cpp:796
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Stafur:"
 
-#: kcharselect.cpp:800
+#: kcharselect.cpp:802
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Heiti: "
 
-#: kcharselect.cpp:809
+#: kcharselect.cpp:811
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Skýringar og tilvísanir"
 
-#: kcharselect.cpp:813
+#: kcharselect.cpp:815
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Samnefni:"
 
-#: kcharselect.cpp:821
+#: kcharselect.cpp:823
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Athugasemdir:"
 
-#: kcharselect.cpp:829
+#: kcharselect.cpp:831
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Sjá einnig:"
 
-#: kcharselect.cpp:844
+#: kcharselect.cpp:846
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Jafngildi:"
 
-#: kcharselect.cpp:852
+#: kcharselect.cpp:854
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Nálæg jafngildi:"
 
-#: kcharselect.cpp:860
+#: kcharselect.cpp:862
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Niðurbrot:"
 
-#: kcharselect.cpp:872
+#: kcharselect.cpp:874
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK myndletur, upplýsingar"
 
-#: kcharselect.cpp:875
+#: kcharselect.cpp:877
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Skilgreining á ensku: "
 
-#: kcharselect.cpp:882
+#: kcharselect.cpp:884
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Framburður á mandarín: "
 
-#: kcharselect.cpp:889
+#: kcharselect.cpp:891
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Framburður á kantonsku: "
 
-#: kcharselect.cpp:896
+#: kcharselect.cpp:898
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Japanskur On framburður: "
 
-#: kcharselect.cpp:903
+#: kcharselect.cpp:905
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Japanskur Kun framburður: "
 
-#: kcharselect.cpp:910
+#: kcharselect.cpp:912
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Tang framburður: "
 
-#: kcharselect.cpp:917
+#: kcharselect.cpp:919
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Kóreanskur framburður: "
 
-#: kcharselect.cpp:923
+#: kcharselect.cpp:925
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Almennir eiginleikar stafa"
 
-#: kcharselect.cpp:924
+#: kcharselect.cpp:926
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Blokk: "
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:927
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Unicode-flokkur: "
 
-#: kcharselect.cpp:929
+#: kcharselect.cpp:931
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Ýmsar gagnlegar framsetningar"
 
-#: kcharselect.cpp:930
+#: kcharselect.cpp:932
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:934
+#: kcharselect.cpp:936
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:941
+#: kcharselect.cpp:943
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C octal escaped UTF-8: "
 
-#: kcharselect.cpp:945
+#: kcharselect.cpp:947
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML-tugagildiseining:"
 
-#: kcharselect.cpp:1097
+#: kcharselect.cpp:1099
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Unicode-kóðapunktur:"
 
-#: kcharselect.cpp:1097
+#: kcharselect.cpp:1099
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Í tugagildi:"
