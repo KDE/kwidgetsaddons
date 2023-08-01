@@ -44,7 +44,6 @@ public:
     {
     }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     bool eventFilter(QObject *watched, QEvent *event) override
     {
         if (event->type() == QEvent::Show && watched == q) {
@@ -53,7 +52,6 @@ public:
         }
         return false;
     }
-#endif
 
     void doNotify()
     {
@@ -504,24 +502,12 @@ bool KMessageDialog::isNotifyEnabled() const
 void KMessageDialog::setNotifyEnabled(bool enable)
 {
     d->m_notifyEnabled = enable;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     if (enable) {
         installEventFilter(d.get());
     } else {
         removeEventFilter(d.get());
     }
-#endif
 }
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-void KMessageDialog::showEvent(QShowEvent *event)
-{
-    if (d->m_notifyEnabled) {
-        d->doNotify();
-    }
-    QDialog::showEvent(event);
-}
-#endif
 
 #include "kmessagedialog.moc"
 #include "moc_kmessagedialog.cpp"

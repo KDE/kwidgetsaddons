@@ -12,10 +12,8 @@
 
 #include <KStandardGuiItem>
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QDialogButtonBox>
-#endif
 #include <QDialog>
+#include <QDialogButtonBox>
 #include <QMessageBox>
 
 #include <memory>
@@ -116,7 +114,6 @@ public:
      * @since 5.100
      */
     enum ButtonType {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::Ok.
         Ok = QDialogButtonBox::Ok,
         /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::Cancel.
@@ -125,12 +122,6 @@ public:
         PrimaryAction = QDialogButtonBox::Yes,
         /// For backward-compatibility with KF < 5.100 only, use @c QDialogButtonBox::No.
         SecondaryAction = QDialogButtonBox::No,
-#else
-        Ok = 1,
-        Cancel = 2,
-        PrimaryAction = 3,
-        SecondaryAction = 4,
-#endif
     };
 
     enum Type {
@@ -315,11 +306,6 @@ public:
                     const KGuiItem &cancelAction = KStandardGuiItem::cancel());
 #else
     void setButtons(const KGuiItem &primaryAction = KGuiItem(), const KGuiItem &secondaryAction = KGuiItem(), const KGuiItem &cancelAction = KGuiItem());
-#endif
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-protected:
-    void showEvent(QShowEvent *event) override;
 #endif
 
 private:
