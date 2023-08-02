@@ -133,31 +133,26 @@ void KPageViewPrivate::rebuildGui()
         stack->setVisible(false);
         layout->removeWidget(stack);
     } else {
-        layout->addWidget(stack, 2, 1);
+        layout->addWidget(stack, 3, 1);
         stack->setVisible(true);
     }
 
     titleWidget->setPalette(qApp->palette(titleWidget));
 
     if (!hasSearchableView()) {
-        layout->removeWidget(searchLineEditContainer);
-        searchLineEditContainer->setVisible(false);
+        layout->removeWidget(searchLineEdit);
+        searchLineEdit->setVisible(false);
         titleWidget->setAutoFillBackground(false);
         layout->setSpacing(4);
+        separatorLine->setVisible(false);
     } else {
-        searchLineEditContainer->setVisible(true);
-        searchLineEditContainer->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
+        searchLineEdit->setVisible(true);
+        searchLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
+        separatorLine->setVisible(true);
 
         // Adjust the search + title background so that it merges into the titlebar
         layout->setSpacing(0);
         layout->setContentsMargins({});
-        titleWidget->setAutoFillBackground(true);
-        auto p = titleWidget->palette();
-        auto inactiveBrush = p.window();
-        auto activeBrush = p.brush(QPalette::Active, QPalette::Button);
-        p.setBrush(QPalette::ColorGroup::Inactive, QPalette::Window, inactiveBrush);
-        p.setBrush(QPalette::ColorGroup::Active, QPalette::Window, activeBrush);
-        titleWidget->setPalette(p);
     }
 
     layout->removeWidget(titleWidget);
@@ -186,16 +181,16 @@ void KPageViewPrivate::rebuildGui()
         layout->addWidget(view, 2, 1);
     } else if (alignment & Qt::AlignRight) {
         // search line
-        layout->addWidget(searchLineEditContainer, 1, 2, Qt::AlignVCenter);
+        layout->addWidget(searchLineEdit, 1, 2, Qt::AlignVCenter);
         // item view below the search line
         layout->addWidget(view, 2, 2, 3, 1);
     } else if (alignment & Qt::AlignBottom) {
         layout->addWidget(view, 4, 1);
     } else if (alignment & Qt::AlignLeft) {
         // search line
-        layout->addWidget(searchLineEditContainer, 1, 0, Qt::AlignVCenter);
+        layout->addWidget(searchLineEdit, 1, 0, Qt::AlignVCenter);
         // item view below the search line
-        layout->addWidget(view, 2, 0, 3, 1);
+        layout->addWidget(view, 3, 0, 3, 1);
     }
 }
 
@@ -403,7 +398,6 @@ KPageViewPrivate::KPageViewPrivate(KPageView *_parent)
     , stack(nullptr)
     , titleWidget(nullptr)
     , searchLineEdit(new QLineEdit())
-    , searchLineEditContainer(new QWidget())
     , view(nullptr)
 {
 }
@@ -414,11 +408,18 @@ void KPageViewPrivate::init()
     layout = new QGridLayout(q);
     stack = new KPageStackedWidget(q);
     titleWidget = new KTitleWidget(q);
+    titleWidget->setObjectName("KPageView::TitleWidget");
+
+    separatorLine = new QFrame(q);
+    separatorLine->setFrameShape(QFrame::HLine);
+    separatorLine->setFrameShadow(QFrame::Sunken);
 
     // list view under it to the left
     layout->addWidget(titleWidget, 1, 1, 1, 2);
+    // separator
+    layout->addWidget(separatorLine, 2, 0, 1, 3);
     // and then the actual page on the right
-    layout->addWidget(stack, 2, 1);
+    layout->addWidget(stack, 3, 1);
 
     defaultWidget = new QWidget(q);
     stack->addWidget(defaultWidget);
@@ -433,22 +434,14 @@ void KPageViewPrivate::init()
         onSearchTextChanged();
     });
     q->setFocusProxy(searchLineEdit);
+    searchLineEdit->setObjectName("KPageView::Search");
     searchLineEdit->setPlaceholderText(KPageView::tr("Search..."));
     searchLineEdit->setClearButtonEnabled(true);
+    auto a = new QAction(q);
+    a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
+    searchLineEdit->addAction(a, QLineEdit::LeadingPosition);
     q->connect(searchLineEdit, &QLineEdit::textChanged, &searchTimer, QOverload<>::of(&QTimer::start));
-    auto hlayout = new QHBoxLayout();
-    searchLineEditContainer->setLayout(hlayout);
-    hlayout->setSpacing(0);
-    hlayout->setContentsMargins(4, 0, 4, 4);
-    hlayout->addWidget(searchLineEdit);
-
-    auto p = searchLineEditContainer->palette();
-    searchLineEditContainer->setAutoFillBackground(true);
-    auto inactiveBrush = p.brush(QPalette::Active, QPalette::Window);
-    auto activeBrush = p.brush(QPalette::Active, QPalette::Button);
-    p.setBrush(QPalette::ColorGroup::Inactive, QPalette::Window, inactiveBrush);
-    p.setBrush(QPalette::ColorGroup::Active, QPalette::Window, activeBrush);
-    searchLineEditContainer->setPalette(p);
+    searchLineEdit->setContentsMargins(4, 4, 4, 4);
 }
 
 static QList<KPageWidgetItem *> getAllPages(KPageWidgetModel *model, const QModelIndex &parent)
@@ -803,7 +796,7 @@ void KPageView::setPageFooter(QWidget *footer)
 
     if (footer) {
         d->pageFooter->setContentsMargins(4, 4, 4, 4);
-        d->layout->addWidget(d->pageFooter, 3, 1);
+        d->layout->addWidget(d->pageFooter, 4, 1);
     }
 }
 

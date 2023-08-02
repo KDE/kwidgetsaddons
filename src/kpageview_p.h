@@ -67,7 +67,7 @@ protected:
     KTitleWidget *titleWidget;
     QWidget *defaultWidget;
     QLineEdit *searchLineEdit;
-    QWidget *searchLineEditContainer;
+    QFrame *separatorLine;
     QTimer searchTimer;
 
     QAbstractItemView *view;
