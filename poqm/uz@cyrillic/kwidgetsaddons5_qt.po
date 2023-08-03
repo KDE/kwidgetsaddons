@@ -2272,42 +2272,42 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Бу хабар бошқа кўрсатилмасин"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:177
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Тафсилотлар"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:262
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Сўроқ"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:267
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Диққат"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:270
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Маълумот"
 
-#: kmessagedialog.cpp:276
+#: kmessagedialog.cpp:274
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Узр"
 
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:278
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

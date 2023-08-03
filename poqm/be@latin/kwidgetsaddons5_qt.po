@@ -2584,42 +2584,42 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Bolej nie pakazvaj hetkich paviedamleńniaŭ"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:177
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detali"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:262
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pytańnie"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:267
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Papiaredžańnie"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:270
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Infarmacyja"
 
-#: kmessagedialog.cpp:276
+#: kmessagedialog.cpp:274
 #, fuzzy
 #| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Vybačeńnie"
 
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:278
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

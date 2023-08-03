@@ -1809,32 +1809,32 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Bu ismarıcı bir daha göstərmə"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:177
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Təfərrüatlar"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:262
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Sual"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:267
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Xəbərdarlıq"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:270
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Məlumat"
 
-#: kmessagedialog.cpp:276
+#: kmessagedialog.cpp:274
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Təəssüf"
 
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:278
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Xəta"

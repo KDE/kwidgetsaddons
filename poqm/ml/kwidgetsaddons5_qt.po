@@ -2133,37 +2133,37 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "ഈ സന്ദേശം ഇനി കാണിക്കരുതു്"
 
-#: kmessagedialog.cpp:179
+#: kmessagedialog.cpp:177
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "വിശദാംശങ്ങള്‍"
 
-#: kmessagedialog.cpp:264
+#: kmessagedialog.cpp:262
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "ചോദ്യം"
 
-#: kmessagedialog.cpp:269
+#: kmessagedialog.cpp:267
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "മുന്നറിയിപ്പു്"
 
-#: kmessagedialog.cpp:272
+#: kmessagedialog.cpp:270
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "വിവരം"
 
-#: kmessagedialog.cpp:276
+#: kmessagedialog.cpp:274
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "ക്ഷമിക്കണം"
 
-#: kmessagedialog.cpp:280
+#: kmessagedialog.cpp:278
 #, fuzzy
 msgctxt "KMessageDialog|"
 msgid "Error"
