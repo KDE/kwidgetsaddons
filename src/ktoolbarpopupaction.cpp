@@ -25,8 +25,9 @@
 class KToolBarPopupActionPrivate
 {
 public:
-    KToolBarPopupActionPrivate()
-        : m_popupMode(KToolBarPopupAction::MenuButtonPopup)
+    KToolBarPopupActionPrivate(KToolBarPopupAction *q)
+        : q(q)
+        , m_popupMode(KToolBarPopupAction::MenuButtonPopup)
         , m_popupMenu(new QMenu())
     {
     }
@@ -37,18 +38,23 @@ public:
             button->setMenu(nullptr);
             button->setPopupMode(QToolButton::InstantPopup);
         } else {
-            button->setMenu(m_popupMenu.get());
+            // In case the menu is explicitly overridden, use it.
+            // QAction::menu() is automatically applied thanks to QToolButton::setDefaultAction().
+            if (!q->menu()) {
+                button->setMenu(m_popupMenu.get());
+            }
             button->setPopupMode(static_cast<QToolButton::ToolButtonPopupMode>(mode));
         }
     }
 
+    KToolBarPopupAction *q;
     KToolBarPopupAction::PopupMode m_popupMode;
     std::unique_ptr<QMenu> m_popupMenu;
 };
 
 KToolBarPopupAction::KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent)
     : QWidgetAction(parent)
-    , d(new KToolBarPopupActionPrivate)
+    , d(new KToolBarPopupActionPrivate(this))
 {
     setIcon(icon);
     setText(text);
