@@ -85,16 +85,8 @@ bool KCharSelectData::openDataFile()
     if (!dataFile.isEmpty()) {
         return true;
     } else {
-        const QString kcharselectDataPath = QStringLiteral("kf6/kcharselect/kcharselect-data");
-        QString fileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, kcharselectDataPath);
-        if (fileName.isEmpty()) {
-            fileName = QStringLiteral(TOP_SRCDIR "/src/kcharselect-data"); // for autotests before installation
-        }
-        QFile file(fileName);
-        if (!file.open(QIODevice::ReadOnly)) {
-            qWarning() << "Couldn't find " << kcharselectDataPath << " in the install prefix (under GenericDataLocation) nor in the builtin path" << TOP_SRCDIR;
-            return false;
-        }
+        QFile file(QStringLiteral(":/kf6/kcharselect/kcharselect-data"));
+        file.open(QIODevice::ReadOnly);
         dataFile = file.readAll();
         file.close();
         if (dataFile.size() < 40) {
