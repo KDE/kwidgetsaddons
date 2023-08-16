@@ -183,7 +183,7 @@ void KPageViewPrivate::rebuildGui()
         // search line
         layout->addWidget(searchLineEdit, 1, 2, Qt::AlignVCenter);
         // item view below the search line
-        layout->addWidget(view, 2, 2, 3, 1);
+        layout->addWidget(view, 3, 2, 3, 1);
     } else if (alignment & Qt::AlignBottom) {
         layout->addWidget(view, 4, 1);
     } else if (alignment & Qt::AlignLeft) {
