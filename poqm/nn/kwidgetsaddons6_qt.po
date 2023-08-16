@@ -1960,6 +1960,11 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Styrke&målar for passord:"
 
+#: kpageview.cpp:438
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr ""
+
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"

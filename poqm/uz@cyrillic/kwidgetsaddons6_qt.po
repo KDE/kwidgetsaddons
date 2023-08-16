@@ -2437,6 +2437,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Махфий сўз ишончлиги:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Қидириш"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -6334,9 +6341,6 @@ msgstr ""
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "%1%"
-
-#~ msgid "Search"
-#~ msgstr "Қидириш"
 
 #~ msgid " Stalled "
 #~ msgstr " Тўхтаб қолди "

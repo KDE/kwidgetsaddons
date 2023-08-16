@@ -1966,6 +1966,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Medidor de la fuerza de la contraseña:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Buscar"
+
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
@@ -6535,9 +6542,6 @@ msgstr "Mostrar la ventana a pantalla completa"
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Search"
-#~ msgstr "Buscar"
 
 #~ msgid " Stalled "
 #~ msgstr " Atascado "

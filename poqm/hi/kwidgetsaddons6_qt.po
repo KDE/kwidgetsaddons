@@ -1997,6 +1997,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "पासवर्ड बल मीटर: (&m)"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "ढूंढें"
+
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
@@ -6035,9 +6042,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Search"
-#~ msgstr "ढूंढें"
 
 #~ msgid " Stalled "
 #~ msgstr "रुका हुआ"

@@ -2306,6 +2306,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Wieser för de Passwoortgööd:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Söken"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
@@ -6905,9 +6912,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Search"
-#~ msgstr "Söken"
 
 #~ msgid " Stalled "
 #~ msgstr " Töövt "

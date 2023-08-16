@@ -2000,6 +2000,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Jelszóerősség-&jelző:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Keresés"
+
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
@@ -6532,9 +6539,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Search"
-#~ msgstr "Keresés"
 
 #~ msgid " Stalled "
 #~ msgstr " Akadozik "

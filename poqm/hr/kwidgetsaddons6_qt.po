@@ -2924,6 +2924,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Pokazivač kakvoće zaporke:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Traži"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -8076,9 +8083,6 @@ msgstr ""
 #~ msgctxt "@item Font style"
 #~ msgid "%1"
 #~ msgstr "%1"
-
-#~ msgid "Search"
-#~ msgstr "Traži"
 
 #~ msgid " Stalled "
 #~ msgstr "Zastoj"

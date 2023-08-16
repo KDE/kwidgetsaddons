@@ -2861,6 +2861,12 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Wskôzywôcz bezpiekù parolë:"
 
+#: kpageview.cpp:438
+#, fuzzy
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "&Szëkba"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -7466,10 +7472,6 @@ msgstr ""
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#, fuzzy
-#~ msgid "Search"
-#~ msgstr "&Szëkba"
 
 #~ msgid " Stalled "
 #~ msgstr " Wstrzëmóné "

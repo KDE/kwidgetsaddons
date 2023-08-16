@@ -2905,6 +2905,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "ឧបករណ៍​វាស់​ប្រសិទ្ធិភាព​​​របស់​ពាក្យ​សម្ងាត់ ៖"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "ស្វែង​រក"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -7582,9 +7589,6 @@ msgstr "បង្ហាញ​បង្អួច​ពេញ​អេក្រង
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "១"
-
-#~ msgid "Search"
-#~ msgstr "ស្វែង​រក"
 
 #~ msgid " Stalled "
 #~ msgstr " អាក់ "

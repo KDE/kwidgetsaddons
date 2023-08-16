@@ -2534,6 +2534,12 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Igama eligqithisiweyo"
 
+#: kpageview.cpp:438
+#, fuzzy
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Phendla"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 msgctxt "KPasswordDialog|@title:window"
@@ -6362,10 +6368,6 @@ msgstr ""
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "%1"
-
-#, fuzzy
-#~ msgid "Search"
-#~ msgstr "Phendla"
 
 #, fuzzy
 #~ msgid " %1/s "

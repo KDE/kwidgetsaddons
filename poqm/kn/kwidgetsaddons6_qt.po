@@ -2890,6 +2890,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "ಗುಪ್ತಪದ ಸುರಕ್ಷತಾ ಮಾಪಕ:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "ಹುಡುಕು"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -7454,9 +7461,6 @@ msgstr ""
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "೧"
-
-#~ msgid "Search"
-#~ msgstr "ಹುಡುಕು"
 
 #~ msgid " Stalled "
 #~ msgstr " ಸ್ಥಗಿತಗೊಂಡಿದೆ "

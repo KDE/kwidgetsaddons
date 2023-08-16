@@ -2405,6 +2405,11 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "מד בטיחות הסיסמה:"
 
+#: kpageview.cpp:438
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr ""
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgctxt "KPasswordDialog|"

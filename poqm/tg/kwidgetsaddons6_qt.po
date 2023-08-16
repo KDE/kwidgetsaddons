@@ -2214,6 +2214,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Санҷиши қувваи ниҳонвожа:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "Поиск"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
@@ -6739,9 +6746,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Search"
-#~ msgstr "Поиск"
 
 #~ msgid " Stalled "
 #~ msgstr " Манъ шуд "

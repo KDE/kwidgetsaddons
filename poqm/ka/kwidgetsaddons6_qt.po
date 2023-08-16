@@ -1947,6 +1947,11 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "პაროლის &სირთულის მზომი:"
 
+#: kpageview.cpp:438
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr ""
+
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"

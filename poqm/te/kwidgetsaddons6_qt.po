@@ -2917,6 +2917,13 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "సంకేతపదము శక్తి కొలమానము:"
 
+#: kpageview.cpp:438
+#, fuzzy
+#| msgid "Search"
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "(&S) అన్వెషణ "
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -7534,9 +7541,6 @@ msgstr "గవాక్షమును పూర్తి తెర లొ చ�
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#~ msgid "Search"
-#~ msgstr "(&S) అన్వెషణ "
 
 #~ msgid " Stalled "
 #~ msgstr " నిలిపిన "

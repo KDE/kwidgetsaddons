@@ -2816,6 +2816,12 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "গুপ্তশব্দ শক্তিৰ মাপকাঠি:"
 
+#: kpageview.cpp:438
+#, fuzzy
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr "অনুসন্ধান (&S)"
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgid "Password"
@@ -7067,10 +7073,6 @@ msgstr ""
 #~ msgctxt "Numeric IDs of scripts for font previews"
 #~ msgid "1"
 #~ msgstr "1"
-
-#, fuzzy
-#~ msgid "Search"
-#~ msgstr "অনুসন্ধান (&S)"
 
 #~ msgid " Stalled "
 #~ msgstr " স্থগিত "

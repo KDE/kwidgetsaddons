@@ -2223,6 +2223,11 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Мерач јачине лозинке:"
 
+#: kpageview.cpp:438
+msgctxt "KPageView|"
+msgid "Search..."
+msgstr ""
+
 #: kpassworddialog.cpp:52
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
