@@ -426,7 +426,7 @@ void KPageViewPrivate::init()
 
     // stack should use most space
     layout->setColumnStretch(1, 1);
-    layout->setRowStretch(2, 1);
+    layout->setRowStretch(3, 1);
 
     searchTimer.setInterval(400);
     searchTimer.setSingleShot(true);
