@@ -93,6 +93,7 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
     Q_PROPERTY(bool closeButtonVisible READ isCloseButtonVisible WRITE setCloseButtonVisible)
     Q_PROPERTY(MessageType messageType READ messageType WRITE setMessageType)
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
+    Q_PROPERTY(Position position READ position WRITE setPosition)
 public:
     /**
      * Available message types.
@@ -105,6 +106,19 @@ public:
         Error, ///< Error message type
     };
     Q_ENUM(MessageType)
+
+    /**
+     * Position of the KMessageWidget
+     *
+     * This will update the look of the KMessageWidget to be appropriate to the position.
+     * @since 6.0
+     */
+    enum Position {
+        Inline, ///< The message widget is display inside the content.
+        Header, ///< The message widget is displayed as header.
+        Footer, ///< The message widget is displayed as footer.
+    };
+    Q_ENUM(Position);
 
     /**
      * Constructs a KMessageWidget with the specified @p parent.
@@ -121,6 +135,8 @@ public:
      * Destructor.
      */
     ~KMessageWidget() override;
+
+    Position position() const;
 
     /**
      * Get the text of this message widget.
@@ -230,6 +246,8 @@ public Q_SLOTS:
      * @see text()
      */
     void setText(const QString &text);
+
+    void setPosition(Position position);
 
     /**
      * Set word wrap to @p wordWrap. If word wrap is enabled, the text()

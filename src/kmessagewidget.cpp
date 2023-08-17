@@ -40,6 +40,7 @@ public:
     QIcon icon;
     bool ignoreShowAndResizeEventDoingAnimatedShow = false;
     KMessageWidget::MessageType messageType;
+    KMessageWidget::Position position = KMessageWidget::Inline;
     bool wordWrap;
     QList<QToolButton *> buttons;
 
@@ -334,10 +335,25 @@ void KMessageWidget::paintEvent(QPaintEvent *event)
     const int newRed = (color.red() * alpha) + (parentWindowColor.red() * (1 - alpha));
     const int newGreen = (color.green() * alpha) + (parentWindowColor.green() * (1 - alpha));
     const int newBlue = (color.blue() * alpha) + (parentWindowColor.blue() * (1 - alpha));
-    painter.setPen(QPen(color, borderSize));
-    painter.setBrush(QColor(newRed, newGreen, newBlue));
+
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.drawRoundedRect(innerRect, radius, radius);
+    painter.setBrush(QColor(newRed, newGreen, newBlue));
+    if (d->position == Position::Inline) {
+        painter.setPen(QPen(color, borderSize));
+        painter.drawRoundedRect(innerRect, radius, radius);
+        return;
+    }
+
+    painter.setPen(QPen(Qt::NoPen));
+    painter.drawRect(rect());
+
+    if (d->position == Position::Header) {
+        painter.setPen(QPen(color, 1));
+        painter.drawLine(0, rect().height(), rect().width(), rect().height());
+    } else {
+        painter.setPen(QPen(color, 1));
+        painter.drawLine(0, 0, rect().width(), 0);
+    }
 }
 
 bool KMessageWidget::wordWrap() const
@@ -359,6 +375,17 @@ void KMessageWidget::setWordWrap(bool wordWrap)
     if (wordWrap) {
         setMinimumHeight(0);
     }
+}
+
+KMessageWidget::Position KMessageWidget::position() const
+{
+    return d->position;
+}
+
+void KMessageWidget::setPosition(KMessageWidget::Position position)
+{
+    d->position = position;
+    updateGeometry();
 }
 
 bool KMessageWidget::isCloseButtonVisible() const
