@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
@@ -1950,7 +1950,7 @@ msgstr "პაროლის &სირთულის მზომი:"
 #: kpageview.cpp:438
 msgctxt "KPageView|"
 msgid "Search..."
-msgstr ""
+msgstr "ძებნა..."
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
