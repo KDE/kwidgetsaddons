@@ -56,6 +56,8 @@ public:
         case KMessageDialog::WarningTwoActions:
         case KMessageDialog::WarningTwoActionsCancel:
         case KMessageDialog::WarningContinueCancel:
+            notifyType = QMessageBox::Warning;
+            break;
         case KMessageDialog::Information:
             notifyType = QMessageBox::Information;
             break;
