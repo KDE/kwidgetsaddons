@@ -138,6 +138,7 @@ public:
 protected:
     friend class KMultiTabBarButton;
     virtual void fontChange(const QFont &);
+    void paintEvent(class QPaintEvent *) override;
     void updateSeparator();
 
 private:

@@ -13,6 +13,7 @@
 #include <QPainter>
 #include <QStyle>
 #include <QStyleOptionButton>
+#include <QStylePainter>
 
 #include <math.h>
 
@@ -128,6 +129,7 @@ void KMultiTabBarInternal::setPosition(enum KMultiTabBar::KMultiTabBarPosition p
     for (int i = 0; i < m_tabs.count(); i++) {
         m_tabs.at(i)->setPosition(m_position);
     }
+
     updateGeometry();
 }
 
@@ -616,6 +618,23 @@ void KMultiTabBar::setPosition(KMultiTabBarPosition pos)
 {
     d->m_position = pos;
     d->m_internal->setPosition(pos);
+
+    const auto splitterWidth = style()->pixelMetric(QStyle::PM_SplitterWidth, nullptr, this);
+    const auto frameWidth = style()->pixelMetric(QStyle::PM_DefaultFrameWidth, nullptr, this);
+
+    if (splitterWidth == 0) {
+        return;
+    }
+
+    int left = frameWidth, right = frameWidth;
+    if ((d->m_position == KMultiTabBar::Left && layoutDirection() == Qt::LeftToRight)
+        || (d->m_position == KMultiTabBar::Right && layoutDirection() == Qt::RightToLeft)) {
+        right += splitterWidth;
+    } else if ((d->m_position == KMultiTabBar::Right && layoutDirection() == Qt::LeftToRight)
+               || (d->m_position == KMultiTabBar::Left && layoutDirection() == Qt::RightToLeft)) {
+        left += splitterWidth;
+    }
+    setContentsMargins(left, frameWidth, right, frameWidth);
 }
 
 KMultiTabBar::KMultiTabBarPosition KMultiTabBar::position() const
@@ -626,4 +645,36 @@ KMultiTabBar::KMultiTabBarPosition KMultiTabBar::position() const
 void KMultiTabBar::fontChange(const QFont & /* oldFont */)
 {
     updateGeometry();
+}
+
+void KMultiTabBar::paintEvent(class QPaintEvent *)
+{
+    QStyleOption opt;
+    opt.initFrom(this);
+    if (opt.rect.height() <= contentsMargins().top() + contentsMargins().bottom() || opt.rect.width() <= contentsMargins().left() + contentsMargins().right()) {
+        return;
+    }
+
+    const auto splitterWidth = style()->pixelMetric(QStyle::PM_SplitterWidth, nullptr, this);
+
+    if (splitterWidth == 0) {
+        return;
+    }
+
+    QStylePainter painter(this);
+
+    opt.rect.setWidth(splitterWidth);
+
+    if ((d->m_position == KMultiTabBar::Left && layoutDirection() == Qt::LeftToRight)
+        || (d->m_position == KMultiTabBar::Right && layoutDirection() == Qt::RightToLeft)) {
+        opt.rect.setX(opt.rect.width() - splitterWidth);
+        opt.state = QStyle::State_Horizontal;
+    } else if ((d->m_position == KMultiTabBar::Right && layoutDirection() == Qt::LeftToRight)
+               || (d->m_position == KMultiTabBar::Left && layoutDirection() == Qt::RightToLeft)) {
+        opt.state = QStyle::State_Horizontal;
+    } else {
+        return;
+    }
+
+    painter.drawPrimitive(QStyle::PE_IndicatorToolBarSeparator, opt);
 }
