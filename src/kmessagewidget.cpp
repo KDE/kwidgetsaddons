@@ -286,7 +286,7 @@ bool KMessageWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::Polish && !layout()) {
         d->createLayout();
-    } else if (event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow) {
+    } else if ((event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow) || (event->type() == QEvent::LayoutRequest)) {
         setFixedHeight(d->bestContentHeight());
     } else if (event->type() == QEvent::ParentChange) {
         d->setPalette();
