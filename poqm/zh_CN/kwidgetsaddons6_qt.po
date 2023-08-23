@@ -1785,27 +1785,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "不再显示此消息"
 
-#: kmessagedialog.cpp:163
+#: kmessagedialog.cpp:165
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "详情"
 
-#: kmessagedialog.cpp:244
+#: kmessagedialog.cpp:246
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "问题"
 
-#: kmessagedialog.cpp:249
+#: kmessagedialog.cpp:251
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:254
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "信息"
 
-#: kmessagedialog.cpp:255
+#: kmessagedialog.cpp:257
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "错误"

@@ -1800,27 +1800,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ekki sýna þessi skilaboð aftur"
 
-#: kmessagedialog.cpp:163
+#: kmessagedialog.cpp:165
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Ítarlegt"
 
-#: kmessagedialog.cpp:244
+#: kmessagedialog.cpp:246
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Spurning"
 
-#: kmessagedialog.cpp:249
+#: kmessagedialog.cpp:251
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Aðvörun"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:254
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Upplýsingar"
 
-#: kmessagedialog.cpp:255
+#: kmessagedialog.cpp:257
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Villa"

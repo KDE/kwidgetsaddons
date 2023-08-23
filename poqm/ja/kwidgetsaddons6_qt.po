@@ -2003,7 +2003,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "次回からこのメッセージを表示しない"
 
-#: kmessagedialog.cpp:163
+#: kmessagedialog.cpp:165
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -2011,7 +2011,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "詳細"
 
-#: kmessagedialog.cpp:244
+#: kmessagedialog.cpp:246
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2019,7 +2019,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "質問"
 
-#: kmessagedialog.cpp:249
+#: kmessagedialog.cpp:251
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2027,7 +2027,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:254
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2035,7 +2035,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "情報"
 
-#: kmessagedialog.cpp:255
+#: kmessagedialog.cpp:257
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"

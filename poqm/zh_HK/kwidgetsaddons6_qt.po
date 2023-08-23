@@ -2421,35 +2421,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "不要再顯示這個訊息"
 
-#: kmessagedialog.cpp:163
+#: kmessagedialog.cpp:165
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "詳細資料"
 
-#: kmessagedialog.cpp:244
+#: kmessagedialog.cpp:246
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "問題"
 
-#: kmessagedialog.cpp:249
+#: kmessagedialog.cpp:251
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:254
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "資料"
 
-#: kmessagedialog.cpp:255
+#: kmessagedialog.cpp:257
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

@@ -2643,35 +2643,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Vairs nerādīt šo ziņojumu"
 
-#: kmessagedialog.cpp:163
+#: kmessagedialog.cpp:165
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detaļas"
 
-#: kmessagedialog.cpp:244
+#: kmessagedialog.cpp:246
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Jautājums"
 
-#: kmessagedialog.cpp:249
+#: kmessagedialog.cpp:251
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Brīdinājums"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:254
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informācija"
 
-#: kmessagedialog.cpp:255
+#: kmessagedialog.cpp:257
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

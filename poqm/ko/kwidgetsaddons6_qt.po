@@ -1794,27 +1794,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "이 메시지를 다시 표시하지 않기"
 
-#: kmessagedialog.cpp:163
+#: kmessagedialog.cpp:165
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "자세히"
 
-#: kmessagedialog.cpp:244
+#: kmessagedialog.cpp:246
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "질문"
 
-#: kmessagedialog.cpp:249
+#: kmessagedialog.cpp:251
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "경고"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:254
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "정보"
 
-#: kmessagedialog.cpp:255
+#: kmessagedialog.cpp:257
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "오류"
