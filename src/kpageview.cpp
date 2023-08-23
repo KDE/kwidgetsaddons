@@ -150,6 +150,10 @@ void KPageViewPrivate::rebuildGui()
         searchLineEdit->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
         separatorLine->setVisible(true);
 
+        // Adjust margins for a better alignment
+        searchLineEdit->setContentsMargins(2, 4, 0, 2);
+        titleWidget->setContentsMargins(5, 4, 4, 2);
+
         // Adjust the search + title background so that it merges into the titlebar
         layout->setSpacing(0);
         layout->setContentsMargins({});
