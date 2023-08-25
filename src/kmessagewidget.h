@@ -136,6 +136,11 @@ public:
      */
     ~KMessageWidget() override;
 
+    /**
+     * Get the position of this message
+     * @see setPosition()
+     * @since 6.0
+     */
     Position position() const;
 
     /**
@@ -247,6 +252,11 @@ public Q_SLOTS:
      */
     void setText(const QString &text);
 
+    /**
+     * Set the position of this message
+     * @see position()
+     * @since 6.0
+     */
     void setPosition(Position position);
 
     /**
