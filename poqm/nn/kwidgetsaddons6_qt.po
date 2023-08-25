@@ -1823,12 +1823,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Feilmelding"
 
-#: kmessagewidget.cpp:79
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Lukk"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Lukk melding"

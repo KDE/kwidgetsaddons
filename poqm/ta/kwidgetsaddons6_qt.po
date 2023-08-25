@@ -2420,12 +2420,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "சிக்கல்"
 
-#: kmessagewidget.cpp:79
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&மூடு"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "தகவலை மூடு"

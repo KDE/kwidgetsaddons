@@ -1852,12 +1852,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "त्रुटि"
 
-#: kmessagewidget.cpp:79
+#: kmessagewidget.cpp:80
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "बंद करें (&C)"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "संदेश बंद करें"

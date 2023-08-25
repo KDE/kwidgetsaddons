@@ -2290,7 +2290,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: kmessagewidget.cpp:79
+#: kmessagewidget.cpp:80
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2298,7 +2298,7 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Κλείσιμο"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"

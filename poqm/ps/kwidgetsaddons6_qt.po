@@ -2593,14 +2593,14 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "تېروتنه"
 
-#: kmessagewidget.cpp:79
+#: kmessagewidget.cpp:80
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "بندول"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
