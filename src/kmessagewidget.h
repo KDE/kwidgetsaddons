@@ -137,7 +137,7 @@ public:
     ~KMessageWidget() override;
 
     /**
-     * Get the position of this message
+     * Get the position of this message. By default this is KMessageWidget::Inline.
      * @see setPosition()
      * @since 6.0
      */
