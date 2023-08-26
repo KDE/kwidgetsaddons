@@ -2534,7 +2534,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Igama eligqithisiweyo"
 
-#: kpageview.cpp:438
+#: kpageview.cpp:442
 #, fuzzy
 msgctxt "KPageView|"
 msgid "Search..."

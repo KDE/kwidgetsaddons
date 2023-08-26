@@ -2924,7 +2924,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Pokazivač kakvoće zaporke:"
 
-#: kpageview.cpp:438
+#: kpageview.cpp:442
 #, fuzzy
 #| msgid "Search"
 msgctxt "KPageView|"
