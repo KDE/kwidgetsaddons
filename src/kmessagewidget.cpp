@@ -293,7 +293,8 @@ bool KMessageWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::Polish && !layout()) {
         d->createLayout();
-    } else if ((event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow) || (event->type() == QEvent::LayoutRequest)) {
+    } else if ((event->type() == QEvent::Show && !d->ignoreShowAndResizeEventDoingAnimatedShow)
+               || (event->type() == QEvent::LayoutRequest && d->timeLine->state() == QTimeLine::NotRunning)) {
         setFixedHeight(d->bestContentHeight());
 
         // if we are displaying this when application first starts, there's
