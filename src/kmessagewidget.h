@@ -89,6 +89,7 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
     Q_OBJECT
 
     Q_PROPERTY(QString text READ text WRITE setText)
+    Q_PROPERTY(Qt::TextFormat textFormat READ textFormat WRITE setTextFormat)
     Q_PROPERTY(bool wordWrap READ wordWrap WRITE setWordWrap)
     Q_PROPERTY(bool closeButtonVisible READ isCloseButtonVisible WRITE setCloseButtonVisible)
     Q_PROPERTY(MessageType messageType READ messageType WRITE setMessageType)
@@ -148,6 +149,20 @@ public:
      * @see setText()
      */
     QString text() const;
+
+    /**
+     * Get the text format of the message widget's label.
+     * @see QLabel::textFormat()
+     * @since 6.0
+     */
+    Qt::TextFormat textFormat() const;
+
+    /**
+     * Set the text format of the message widget's label.
+     * @see QLabel::setTextFormat()
+     * @since 6.0
+     */
+    void setTextFormat(Qt::TextFormat textFormat);
 
     /**
      * Check whether word wrap is enabled.

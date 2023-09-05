@@ -256,6 +256,16 @@ void KMessageWidget::setText(const QString &text)
     updateGeometry();
 }
 
+Qt::TextFormat KMessageWidget::textFormat() const
+{
+    return d->textLabel->textFormat();
+}
+
+void KMessageWidget::setTextFormat(Qt::TextFormat textFormat)
+{
+    d->textLabel->setTextFormat(textFormat);
+}
+
 KMessageWidget::MessageType KMessageWidget::messageType() const
 {
     return d->messageType;
