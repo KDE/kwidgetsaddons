@@ -1672,7 +1672,7 @@ msgid ""
 "paper size)."
 msgstr ""
 "Ací podeu canviar entre mida del tipus de lletra fixa i mida del tipus de "
-"lletra calculable dinàmicament i ajustable a l'entorn canviant (p. ex. "
+"lletra calculable dinàmicament i ajustable a l'entorn canviant (p. ex., "
 "dimensions del giny, mida del paper)."
 
 #: kfontchooser.cpp:474
