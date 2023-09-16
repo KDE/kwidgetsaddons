@@ -1,5 +1,6 @@
 # translation of kdelibs4.po to Français
 # translation of kdelibs4.po to
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Matthieu Robin <kde@macolu.org>, 2002,2003, 2004.
 # Robert Jacolin <rjacolin@ifrance.com>, 2003,2004.
 # Gilles Caulier <caulier.gilles@free.fr>, 2003.
@@ -18,22 +19,21 @@
 # Sebastien Renard <renard@kde.org>, 2013, 2014.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2017, 2018, 2019, 2020.
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-02-17 17:25+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
+"PO-Revision-Date: 2023-09-14 15:54+0200\n"
+"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.08.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
@@ -1888,28 +1888,20 @@ msgid "Launch the MIME type editor"
 msgstr "Lancer l'éditeur de type MIME"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
 msgstr ""
-"Impossible de trouver le programme « keditfiletype5 » dans la variable "
+"Impossible de trouver le programme « keditfiletype » avec la variable "
 "d'environnement « PATH »."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"Impossible de lancer le programme « keditfiletype5 ». Veuillez vérifier "
-"votre installation."
+"Impossible de lancer le programme « keditfiletype ». Veuillez vérifier votre "
+"installation."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -1991,11 +1983,9 @@ msgid "Password strength &meter:"
 msgstr "&Mesure de la robustesse du mot de passe :"
 
 #: kpageview.cpp:442
-#, fuzzy
-#| msgid "Search"
 msgctxt "KPageView|"
 msgid "Search..."
-msgstr "Chercher"
+msgstr "Rechercher…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
