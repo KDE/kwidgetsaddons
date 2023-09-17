@@ -104,14 +104,13 @@ KDateTable::KDateTable(const QDate &date, QWidget *parent)
 
 KDateTable::KDateTable(QWidget *parent)
     : QWidget(parent)
-    , d(new KDateTablePrivate(this))
+    , d(std::make_unique<KDateTablePrivate>(this))
 {
     initWidget(QDate::currentDate());
 }
 
 KDateTable::~KDateTable()
 {
-    delete d;
 }
 
 void KDateTable::initWidget(const QDate &date)

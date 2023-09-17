@@ -11,6 +11,7 @@
 #define KDATETABLE_H
 
 #include <QWidget>
+#include <memory>
 
 class QMenu;
 
@@ -150,7 +151,7 @@ Q_SIGNALS:
 private:
     class KDateTablePrivate;
     friend class KDateTablePrivate;
-    KDateTablePrivate *const d;
+    std::unique_ptr<KDateTablePrivate> const d;
 
     void initWidget(const QDate &date);
     void initAccels();
