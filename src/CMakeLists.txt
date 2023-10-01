@@ -361,7 +361,3 @@ ecm_qt_install_logging_categories(
     FILE kwidgetsaddons.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
-
-include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KWidgetsAddons LIB_NAME KF6WidgetsAddons DEPS "widgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons)
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
