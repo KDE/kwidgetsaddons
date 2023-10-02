@@ -61,7 +61,7 @@ public:
 
 KDateComboBoxPrivate::KDateComboBoxPrivate(KDateComboBox *qq)
     : q(qq)
-    , m_dateMenu(new KDatePickerPopup(KDatePickerPopup::DatePicker | KDatePickerPopup::Words | KDatePickerPopup::NoDate, QDate::currentDate(), qq))
+    , m_dateMenu(new KDatePickerPopup(KDatePickerPopup::DatePicker | KDatePickerPopup::Words, QDate::currentDate(), qq))
     , m_warningShown(false)
     , m_edited(false)
     , m_displayFormat(QLocale::ShortFormat)
@@ -122,7 +122,7 @@ void KDateComboBoxPrivate::initDateWidget()
         modes |= KDatePickerPopup::DatePicker;
     }
     if (m_options & KDateComboBox::DateKeywords) {
-        modes |= KDatePickerPopup::Words | KDatePickerPopup::NoDate;
+        modes |= KDatePickerPopup::Words;
     }
     m_dateMenu->setModes(modes);
 }
