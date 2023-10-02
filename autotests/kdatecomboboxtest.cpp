@@ -137,11 +137,15 @@ void KDateComboBoxTest::testDateList()
 void KDateComboBoxTest::testOptions()
 {
     KDateComboBox combo;
+    auto datePicker = combo.findChild<KDatePickerPopup *>();
+    QVERIFY(datePicker);
     KDateComboBox::Options options = KDateComboBox::EditDate | KDateComboBox::SelectDate | KDateComboBox::DatePicker | KDateComboBox::DateKeywords;
     QCOMPARE(combo.options(), options);
+    QCOMPARE(datePicker->modes(), KDatePickerPopup::DatePicker | KDatePickerPopup::Words);
     options = KDateComboBox::EditDate | KDateComboBox::WarnOnInvalid;
     combo.setOptions(options);
     QCOMPARE(combo.options(), options);
+    QCOMPARE(datePicker->modes(), 0);
 }
 
 void KDateComboBoxTest::testDisplayFormat()
