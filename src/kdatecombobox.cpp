@@ -124,6 +124,7 @@ void KDateComboBoxPrivate::initDateWidget()
     if (m_options & KDateComboBox::DateKeywords) {
         modes |= KDatePickerPopup::Words | KDatePickerPopup::NoDate;
     }
+    m_dateMenu->setModes(modes);
 }
 
 void KDateComboBoxPrivate::updateDateWidget()
