@@ -6,21 +6,21 @@
 # Richard Allen <ra@ra.is>, 1998-2004.
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Arnar Leósson <leosson@frisurf.no>, 2003, 2005.
-# Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2023.
 # gummi <gudmundure@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-02-03 11:31+0000\n"
-"Last-Translator: gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-10-03 10:28+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -1871,26 +1871,18 @@ msgid "Launch the MIME type editor"
 msgstr "Opna MIME-gerðaritilinn"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "Keyrsluskráin \"keditfiletype5\" fannst ekki í PATH."
+msgstr "Keyrsluskráin \"keditfiletype\" fannst ekki í PATH."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"Tókst ekki að opna keyrsluskrána \"keditfiletype5\", athugaðu hvort "
-"uppsetningin sé í lagi."
+"Tókst ekki að opna keyrsluskrána \"keditfiletype\", athugaðu hvort "
+"uppsetningin þín sé í lagi."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -1970,11 +1962,9 @@ msgid "Password strength &meter:"
 msgstr "Styrkleika&mælir lykilorðs:"
 
 #: kpageview.cpp:442
-#, fuzzy
-#| msgid "Search"
 msgctxt "KPageView|"
 msgid "Search..."
-msgstr "Leita"
+msgstr "Leita..."
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
