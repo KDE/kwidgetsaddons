@@ -1784,18 +1784,18 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "Προσαρμοσμένο..."
 
-#: kdatecombobox.cpp:186
+#: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"
 msgstr "Η ημερομηνία που καταχωρήσατε δεν είναι έγκυρη"
 
-#: kdatecombobox.cpp:189
+#: kdatecombobox.cpp:190
 #, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be earlier than %1"
 msgstr "Η ημερομηνία δεν μπορεί να είναι πριν από τις %1"
 
-#: kdatecombobox.cpp:196
+#: kdatecombobox.cpp:197
 #, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be later than %1"

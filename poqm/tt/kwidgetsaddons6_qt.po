@@ -2201,7 +2201,7 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "Башка..."
 
-#: kdatecombobox.cpp:186
+#: kdatecombobox.cpp:187
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "The date you entered is invalid"
@@ -2209,7 +2209,7 @@ msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"
 msgstr "Хаталы вакыт кертелгән"
 
-#: kdatecombobox.cpp:189
+#: kdatecombobox.cpp:190
 #, fuzzy, qt-format
 #| msgctxt "@info"
 #| msgid "Date cannot be earlier than %1"
@@ -2217,7 +2217,7 @@ msgctxt "KDateComboBox|@info"
 msgid "Date cannot be earlier than %1"
 msgstr "Көн моннан иртәрәк була алмый: %1"
 
-#: kdatecombobox.cpp:196
+#: kdatecombobox.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "@info"
 #| msgid "Date cannot be later than %1"
