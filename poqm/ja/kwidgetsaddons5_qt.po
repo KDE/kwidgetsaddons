@@ -1540,18 +1540,18 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "カスタム..."
 
-#: kdatecombobox.cpp:186
+#: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"
 msgstr "入力した日付が無効です"
 
-#: kdatecombobox.cpp:189
+#: kdatecombobox.cpp:190
 #, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be earlier than %1"
 msgstr "日付は %1 より前でなければなりません"
 
-#: kdatecombobox.cpp:196
+#: kdatecombobox.cpp:197
 #, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be later than %1"

@@ -2106,7 +2106,7 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "Ułasny..."
 
-#: kdatecombobox.cpp:186
+#: kdatecombobox.cpp:187
 #, fuzzy
 #| msgctxt "SSL error"
 #| msgid "The certificate is invalid"
@@ -2114,13 +2114,13 @@ msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"
 msgstr "Niasłušny sertyfikat."
 
-#: kdatecombobox.cpp:189
+#: kdatecombobox.cpp:190
 #, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be earlier than %1"
 msgstr ""
 
-#: kdatecombobox.cpp:196
+#: kdatecombobox.cpp:197
 #, qt-format
 msgctxt "KDateComboBox|@info"
 msgid "Date cannot be later than %1"
