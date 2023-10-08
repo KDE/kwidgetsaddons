@@ -1462,12 +1462,12 @@ msgstr "Puntuación, pechar"
 #: kcharselectdata.cpp:831
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
-msgstr "Puntuación, aspas finais"
+msgstr "Puntuación, comiñas finais"
 
 #: kcharselectdata.cpp:833
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
-msgstr "Puntuación, aspas iniciais"
+msgstr "Puntuación, comiñas iniciais"
 
 #: kcharselectdata.cpp:835
 msgctxt "KCharSelectData|"
