@@ -94,6 +94,14 @@ private:
     }
 
 private Q_SLOTS:
+    void cleanupTestCase()
+    {
+        delete mSpyTapFinished;
+        delete mSpyTapCanceled;
+        delete mSpyTapUpdated;
+        delete mSpyTapStarted;
+    }
+
     void initTestCase()
     {
         mDev = QTest::createTouchDevice();
