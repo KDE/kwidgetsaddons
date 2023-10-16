@@ -441,6 +441,7 @@ void KPageViewPrivate::init()
     searchLineEdit->setObjectName("KPageView::Search");
     searchLineEdit->setPlaceholderText(KPageView::tr("Search..."));
     searchLineEdit->setClearButtonEnabled(true);
+    searchLineEdit->setParent(defaultWidget);
     auto a = new QAction(q);
     a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
     searchLineEdit->addAction(a, QLineEdit::LeadingPosition);
