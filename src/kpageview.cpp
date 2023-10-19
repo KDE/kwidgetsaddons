@@ -465,9 +465,9 @@ static QList<KPageWidgetItem *> getAllPages(KPageWidgetModel *model, const QMode
 }
 
 template<typename WidgetType>
-static QVector<QWidget *> hasMatchingText(const QString &text, QWidget *page)
+static QList<QWidget *> hasMatchingText(const QString &text, QWidget *page)
 {
-    QVector<QWidget *> ret;
+    QList<QWidget *> ret;
     const auto widgets = page->findChildren<WidgetType *>();
     for (auto label : widgets) {
         if (label->text().contains(text, Qt::CaseInsensitive)) {
@@ -478,9 +478,9 @@ static QVector<QWidget *> hasMatchingText(const QString &text, QWidget *page)
 }
 
 template<>
-QVector<QWidget *> hasMatchingText<QComboBox>(const QString &text, QWidget *page)
+QList<QWidget *> hasMatchingText<QComboBox>(const QString &text, QWidget *page)
 {
-    QVector<QWidget *> ret;
+    QList<QWidget *> ret;
     const auto comboxBoxes = page->findChildren<QComboBox *>();
     for (auto cb : comboxBoxes) {
         if (cb->findText(text, Qt::MatchFlag::MatchContains) != -1) {
@@ -492,7 +492,7 @@ QVector<QWidget *> hasMatchingText<QComboBox>(const QString &text, QWidget *page
 
 template<typename...>
 struct FindChildrenHelper {
-    static QVector<QWidget *> hasMatchingTextForTypes(const QString &, QWidget *)
+    static QList<QWidget *> hasMatchingTextForTypes(const QString &, QWidget *)
     {
         return {};
     }
@@ -500,7 +500,7 @@ struct FindChildrenHelper {
 
 template<typename First, typename... Rest>
 struct FindChildrenHelper<First, Rest...> {
-    static QVector<QWidget *> hasMatchingTextForTypes(const QString &text, QWidget *page)
+    static QList<QWidget *> hasMatchingTextForTypes(const QString &text, QWidget *page)
     {
         return hasMatchingText<First>(text, page) << FindChildrenHelper<Rest...>::hasMatchingTextForTypes(text, page);
     }
