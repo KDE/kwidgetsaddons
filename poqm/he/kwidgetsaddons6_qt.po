@@ -18,16 +18,18 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-05-16 06:50-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2023-10-22 00:21+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Qt-Contexts: true\n"
@@ -113,7 +115,7 @@ msgstr "סיום"
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr ""
+msgstr "הכול"
 
 #: kcharselect-translation.cpp:12
 #, fuzzy
@@ -2614,12 +2616,12 @@ msgstr "שמירת הקובץ בשם אחר"
 #: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
-msgstr "&החל"
+msgstr "ה&חלה"
 
 #: kstandardguiitem.cpp:193
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
-msgstr "החל שינויים"
+msgstr "החלת שינויים"
 
 #: kstandardguiitem.cpp:194
 msgctxt "KStandardGuiItem|"
@@ -2635,12 +2637,12 @@ msgstr ""
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
-msgstr "&מצב מנהל..."
+msgstr "&מצב ניהול…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
-msgstr "כניסה למצב מנהל"
+msgstr "כניסה למצב ניהול"
 
 #: kstandardguiitem.cpp:206
 msgctxt "KStandardGuiItem|"
@@ -2649,28 +2651,28 @@ msgid ""
 "administrator (root) password in order to make changes which require root "
 "privileges."
 msgstr ""
-"בעת לחיצה על <b>מצב מנהל</b>, תתבקש לספק את סיסמת המנהל (root) כדי לבצע "
-"שינויים הדורשים הרשאות של root."
+"בעת לחיצה על <b>מצב ניהול</b>, תופיע דרישה לסיסמת המנהל (root) כדי לבצע "
+"שינויים הדורשים הרשאות של משתמש על (root)."
 
 #: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
-msgstr "נ&קה"
+msgstr "&פינוי"
 
 #: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
-msgstr "נקה קלט"
+msgstr "פינוי קלט"
 
 #: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
-msgstr "ניקוי הקלט שבשדה העריכה"
+msgstr "פינוי הקלט שבשדה העריכה"
 
 #: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
-msgstr "&עזרה"
+msgstr "ע&זרה"
 
 #: kstandardguiitem.cpp:224
 msgctxt "KStandardGuiItem|"
@@ -2680,17 +2682,17 @@ msgstr "הצגת עזרה"
 #: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
-msgstr "&סגור"
+msgstr "&סגירה"
 
 #: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
-msgstr "סגור את החלון או המסמך הנוכחיים"
+msgstr "סגירת החלון או המסמך הנוכחיים"
 
 #: kstandardguiitem.cpp:236
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
-msgstr "&סגור את החלון"
+msgstr "&סגירת החלון"
 
 #: kstandardguiitem.cpp:238
 msgctxt "KStandardGuiItem|"
@@ -2700,7 +2702,7 @@ msgstr "סגירת החלון הנוכחי."
 #: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
-msgstr "&סגור את המסמך"
+msgstr "&סגירת המסמך"
 
 #: kstandardguiitem.cpp:245
 msgctxt "KStandardGuiItem|"
@@ -2735,7 +2737,7 @@ msgstr "&קדימה"
 #: kstandardguiitem.cpp:266
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
-msgstr "מעבר צעד אחד קדימה"
+msgstr "התקדמות צעד אחד קדימה"
 
 #: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
@@ -2745,7 +2747,7 @@ msgstr "&הדפסה..."
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
-msgstr "פתיחת דו־שיח ההדפסה כדי להדפיס את המסמך הנוכחי"
+msgstr "פתיחת חלונית ההדפסה כדי להדפיס את המסמך הנוכחי"
 
 #: kstandardguiitem.cpp:285
 msgctxt "KStandardGuiItem|"
@@ -2755,12 +2757,12 @@ msgstr "ה&משך"
 #: kstandardguiitem.cpp:287
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
-msgstr "ממשיך את הפעולה"
+msgstr "המשך הפעולה"
 
 #: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
-msgstr "&מחק"
+msgstr "מ&חיקה"
 
 #: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
@@ -2790,7 +2792,7 @@ msgstr "יציאה מהתוכנית"
 #: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
-msgstr "&אפס"
+msgstr "&איפוס"
 
 #: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
@@ -2800,7 +2802,7 @@ msgstr "איפוס ההגדרות"
 #: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
-msgstr "&הוסף"
+msgstr "הוס&פה"
 
 #: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
@@ -2815,17 +2817,17 @@ msgstr "&חפש"
 #: kstandardguiitem.cpp:335
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
-msgstr "עצור"
+msgstr "עצירה"
 
 #: kstandardguiitem.cpp:340
 msgctxt "KStandardGuiItem|"
 msgid "Add"
-msgstr "הוסף"
+msgstr "הוספה"
 
 #: kstandardguiitem.cpp:345
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
 #: kstandardguiitem.cpp:350
 msgctxt "KStandardGuiItem|"
@@ -2840,12 +2842,12 @@ msgstr "מאפיינים"
 #: kstandardguiitem.cpp:360
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
-msgstr "&שכתב"
+msgstr "&שכתוב"
 
 #: ktimecombobox.cpp:254
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
-msgstr "התאריך שהכנסת אינו תקין"
+msgstr "התאריך שהכנסת שגוי"
 
 #: ktimecombobox.cpp:257
 #, qt-format
