@@ -1085,7 +1085,7 @@ msgstr "Anterior en l'historial"
 #: kcharselect.cpp:426
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "Va al caràcter anterior de l'historial"
+msgstr "Va fins al caràcter anterior en l'historial"
 
 #: kcharselect.cpp:431
 msgctxt "KCharSelect|@action:button Goes to next character"
@@ -1095,7 +1095,7 @@ msgstr "Següent en l'historial"
 #: kcharselect.cpp:433
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "Va al caràcter següent de l'historial"
+msgstr "Va fins al caràcter següent en l'historial"
 
 #: kcharselect.cpp:438
 msgctxt "KCharSelect|@action go back"
@@ -2179,8 +2179,8 @@ msgid ""
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
-"Quan feu clic en <b>Aplica</b>, es transferirà la configuració al programa i "
-"es tancarà el diàleg.\n"
+"Quan feu clic en <b>Aplica</b>, es transferirà la configuració cap al "
+"programa i es tancarà el diàleg.\n"
 "Utilitzeu-ho per a provar configuracions diferents."
 
 #: kstandardguiitem.cpp:229
