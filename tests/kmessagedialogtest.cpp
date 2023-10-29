@@ -71,4 +71,5 @@ int main(int argc, char *argv[])
         dlg->setDetails(QStringLiteral("Some more details."));
         getResult();
     }
+    return app.exec();
 }
