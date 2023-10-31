@@ -4,14 +4,14 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2007-2014.
 # Xosé <xosecalvo@gmail.com>, 2010.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-08-06 05:48+0200\n"
+"PO-Revision-Date: 2023-10-30 20:05+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.2\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -53,60 +53,39 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
 msgstr "&Dispoñíbel:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "E&scollidas:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "&Atrás"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
 msgstr "Retroceder un paso"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "KAssistantDialog|Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Seguinte"
 
 #: kassistantdialog.cpp:114
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Finalizar"
 
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr "&Todas"
+msgstr "Todo"
 
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -279,12 +258,9 @@ msgid "Syriac Supplement"
 msgstr "Suplemento siríaco"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "Árabe ampliado-A"
+msgstr "Árabe ampliado-B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1060,7 +1036,7 @@ msgstr "Formas xeométricas ampliadas"
 #: kcharselect-translation.cpp:202
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
-msgstr "Frechas adicionais - C"
+msgstr "Frechas adicionais — C"
 
 #: kcharselect-translation.cpp:203
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1075,113 +1051,74 @@ msgstr "Símbolos de xadrez"
 #: kcharselect-translation.cpp:205
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "Símbolos e pictogramas ampliado-A"
+msgstr "Símbolos e pictogramas ampliado — A"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
-msgstr ""
+msgstr "Símbolos de computación obsoleta"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
-msgstr "Insira aquí un termo ou carácter para buscalo"
+msgstr "Insira un termo de busca ou carácter…"
 
 #: kcharselect.cpp:393
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
-msgstr "Insira aquí un termo ou carácter para buscalo"
+msgstr "Insira aquí un termo de busca ou carácter"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
 msgctxt "KCharSelect|@action"
 msgid "&Find..."
-msgstr "&Atopar…"
+msgstr "&Atopar..."
 
 #: kcharselect.cpp:424
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Anterior no historial"
 
 #: kcharselect.cpp:426
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "Carácter anterior no historial"
 
 #: kcharselect.cpp:431
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Seguinte no historial"
 
 #: kcharselect.cpp:433
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "Carácter seguinte no historial"
+msgstr "Ir ao seguinte carácter no historial"
 
 #: kcharselect.cpp:438
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&Atrás"
 
 #: kcharselect.cpp:445
-#, fuzzy
-#| msgctxt "KCharSelect|go forward"
-#| msgid "&Forward"
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "A&diante"
 
 #: kcharselect.cpp:464
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Escoller unha categoría"
 
 #: kcharselect.cpp:468
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "Escoller un bloque para mostralo"
+msgstr "Escoller un bloque para amosalo"
 
 #: kcharselect.cpp:487
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Definir a fonte"
 
 #: kcharselect.cpp:494
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Escoller o tamaño do tipo de letra"
@@ -1352,12 +1289,9 @@ msgid "<not assigned>"
 msgstr "<non asignado>"
 
 #: kcharselectdata.cpp:448
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr "&Todas"
+msgstr "Todo"
 
 #: kcharselectdata.cpp:760
 msgctxt "KCharSelectData|"
@@ -1520,9 +1454,6 @@ msgid "Unknown"
 msgstr "Descoñecido"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "Personalizado…"
@@ -1551,65 +1482,41 @@ msgid "Week %1"
 msgstr "Semana %1"
 
 #: kdatepicker.cpp:305
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
-msgstr "O próximo ano"
+msgstr "Seguinte ano"
 
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
-msgstr "O ano anterior"
+msgstr "Ano anterior"
 
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
-msgstr "O mes que ven"
+msgstr "Seguinte mes"
 
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
-msgstr "O mes anterior"
+msgstr "Mes anterior"
 
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Escoller una semana"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Escoller un mes"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Escoller un ano"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Escolla o día de hoxe"
@@ -1620,97 +1527,61 @@ msgid "Close"
 msgstr "Pechar"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
-msgstr "O ano vindeiro"
+msgstr "Seguinte ano"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
-msgstr "O mes vindeiro"
+msgstr "Seguinte mes"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
-msgstr "A vindeira semana"
+msgstr "Seguinte semana"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "Mañá"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Hoxe"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "Onte"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "A semana pasada"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "O mes pasado"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "O ano pasado"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Sen data"
 
 #: kdatetimeedit.cpp:171
-#, fuzzy
-#| msgctxt "KDateTimeEdit|UTC time zone"
-#| msgid "UTC"
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgctxt "KDateTimeEdit|No specific time zone"
-#| msgid "Floating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Flutuante"
@@ -1726,49 +1597,31 @@ msgid "The entered date and time is after the maximum allowed date and time."
 msgstr "A data e hora que inseriu é posterior á máxima permitida."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "Eng&adir"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
 msgstr "&Retirar"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Up"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
 msgstr "&Subir"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Down"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "&Baixar"
 
 #: kfontchooser.cpp:168
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Fonte solicitada"
 
 #: kfontchooser.cpp:209
-#, fuzzy
-#| msgctxt "KFontChooser|QFontDatabase"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normal"
@@ -1791,7 +1644,7 @@ msgstr "Grosa"
 #: kfontchooser.cpp:213
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "Oblicua condensada negra"
 
 #: kfontchooser.cpp:257
 msgctxt "KFontChooser|"
@@ -1799,21 +1652,12 @@ msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Fíxate, o mesquiño bacharel pide vinganza"
 
 #: kfontchooser.cpp:313
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgstr ""
 "Tamaño de tipo de letra <br/><i>fixo</i> ou <i>relativo</i><br/> ao ambiente"
 
 #: kfontchooser.cpp:314
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "Here you can switch between fixed font size and font size to be "
-#| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#| "dimensions, paper size)."
 msgctxt "KFontChooser|@info:whatsthis"
 msgid ""
 "Here you can switch between fixed font size and font size to be calculated "
@@ -1830,79 +1674,51 @@ msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgid "Select Font"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
-msgstr "Escoller o tipo de letra"
+msgstr "Escoller a fonte"
 
 #: kfontchooserwidget.ui:14
 msgctxt "KFontChooserWidget|"
 msgid "KFontChooserWidget"
-msgstr ""
+msgstr "KFontChooserWidget"
 
 #: kfontchooserwidget.ui:31
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Fonte"
 
 #: kfontchooserwidget.ui:38
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Fonte:"
 
 #: kfontchooserwidget.ui:56
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Estilo da fonte"
 
 #: kfontchooserwidget.ui:63
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Estilo da fonte:"
 
 #: kfontchooserwidget.ui:81
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Tamaño"
 
 #: kfontchooserwidget.ui:88
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Tamaño:"
 
 #: kfontchooserwidget.ui:97
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativo"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1914,30 +1730,19 @@ msgstr ""
 #: kfontchooserwidget.ui:135
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr ""
+msgstr "Amosar só os tipos de letra monoespazo."
 
 #: kfontrequester.cpp:155
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Choose Font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
 msgstr "Escoller a fonte…"
 
 #: kfontrequester.cpp:161
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Vista previa da fonte seleccionada"
 
 #: kfontrequester.cpp:163
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the selected font. You can change it by clicking the "
-#| "\"Choose Font...\" button."
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1947,19 +1752,13 @@ msgstr ""
 "botón «Escoller a fonte…»."
 
 #: kfontrequester.cpp:167
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the \"%1\" font"
+#, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Vista previa da fonte «%1»"
 
 #: kfontrequester.cpp:168
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose Font...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
@@ -2020,65 +1819,41 @@ msgid "Do not show this message again"
 msgstr "Non volver amosar esta mensaxe."
 
 #: kmessagedialog.cpp:177
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detalles"
 
 #: kmessagedialog.cpp:262
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pregunta"
 
 #: kmessagedialog.cpp:267
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Aviso"
 
 #: kmessagedialog.cpp:270
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Información"
 
 #: kmessagedialog.cpp:274
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
 msgstr "Desculpe"
 
 #: kmessagedialog.cpp:278
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Erro"
 
 #: kmessagewidget.cpp:79
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Pechar"
 
 #: kmessagewidget.cpp:80
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Pechar a mensaxe"
@@ -2086,43 +1861,29 @@ msgstr "Pechar a mensaxe"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern..."
-msgstr ""
+msgstr "Buscar un tipo de ficheiro ou un padrón de nome de ficheiro…"
 
 #: kmimetypechooser.cpp:89
-#, fuzzy
-#| msgid "Filter"
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr "Filtrar"
+msgstr "&Filtro:"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Mime Type"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
 msgstr "Tipo MIME"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
 msgstr "Comentario"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
 msgstr "Padróns"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit..."
 msgstr "&Editar…"
@@ -2130,14 +1891,12 @@ msgstr "&Editar…"
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
 msgid "Launch the MIME type editor"
-msgstr ""
+msgstr "Iniciar o editor de tipos MIME."
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
-msgstr "Non foi posíbel atopar o executábel «%1»."
+msgstr "Non se puido atopar o executábel «keditfiletype5» en PATH."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -2145,49 +1904,35 @@ msgid ""
 "Could not start the \"keditfiletype5\" executable, please check your "
 "installation."
 msgstr ""
+"Non se puido iniciar o executábel «keditfiletype5». Comprobe a instalación."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password must be at least %n character(s) long."
-#| msgid_plural "Password must be at least %n character(s) long."
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
-msgstr[0] "O contrasinal debe ter unha lonxitude de polo menos %n caracter."
+msgstr[0] "O contrasinal debe ter unha lonxitude de polo menos %n carácter."
 msgstr[1] "O contrasinal debe ter unha lonxitude de polo menos %n caracteres."
 
 #: knewpassworddialog.cpp:67
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password is empty."
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password is empty."
 msgstr "O contrasinal está baleiro."
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords do not match."
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
 msgstr "Os contrasinais non coinciden."
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords match."
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
 msgstr "Os contrasinais coinciden."
 
 #: knewpassworddialog.cpp:146
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
-msgstr "Contrasinal de pouca seguranza"
+msgstr "Contrasinal de pouca seguridade"
 
 #: knewpassworddialog.cpp:147
 msgctxt "KNewPasswordDialog|"
@@ -2223,33 +1968,21 @@ msgstr ""
 "de letras.</li></ul>"
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "Contrasinal:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
 msgstr "&Verificar:"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password strength &meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
-msgstr "&Medidor da seguranza do contrasinal:"
+msgstr "&Medidor da seguridade do contrasinal:"
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Contrasinal"
@@ -2257,7 +1990,7 @@ msgstr "Contrasinal"
 #: kpassworddialog.cpp:80
 msgctxt "KPasswordDialog|"
 msgid "Show Contextual Help"
-msgstr ""
+msgstr "Amosar a axuda contextual"
 
 #: kpassworddialog.cpp:100
 msgctxt "KPasswordDialog|"
@@ -2270,126 +2003,81 @@ msgid "Supply a username and password below."
 msgstr "Indique en baixo un nome de usuaria e o contrasinal."
 
 #: kpassworddialog.ui:70
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "No password, use anonymous (or &guest) login"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Sen contrasinal, usar o acceso anónimo (ou &convidado)"
 
 #: kpassworddialog.ui:77
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Use this password:"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Usar este contrasinal:"
 
 #: kpassworddialog.ui:102
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
-msgstr "Nome de usuario:"
+msgstr "Nome de usuaria:"
 
 #: kpassworddialog.ui:127
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Dominio:"
 
 #: kpassworddialog.ui:141
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Contrasinal:"
 
 #: kpassworddialog.ui:155
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Lembrar o contrasinal"
 
 #: kpasswordlineedit.cpp:41
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Cambiar a visibilidade do contrasinal"
 
 #: kpixmapregionselectordialog.cpp:56
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Select Region of Image"
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
 msgstr "Escolla unha rexión da imaxe"
 
 #: kpixmapregionselectordialog.cpp:60
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Please click and drag on the image to select the region of interest:"
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "Prema e arrastre na imaxe para escoller a rexión de interese:"
 
 #: kpixmapregionselectorwidget.cpp:173
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Operacións coa imaxe"
 
 #: kpixmapregionselectorwidget.cpp:176
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "Rotar en sentido &horario"
 
 #: kpixmapregionselectorwidget.cpp:180
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Rotar en sentido &antihorario"
 
 #: krecentfilesmenu.cpp:114
-#, fuzzy
-#| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Sen entradas"
 
 #: krecentfilesmenu.cpp:117
-#, fuzzy
-#| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
-msgstr "Limpar a lista"
+msgstr "Baleirar a lista"
 
 #: krecentfilesmenu.cpp:123
-#, fuzzy
-#| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
-msgstr "Escoller os ficheiros..."
+msgstr "Ficheiros recentes"
 
 #: ksqueezedtextlabel.cpp:207
-#, fuzzy
-#| msgctxt "KSqueezedTextLabel|"
-#| msgid "&Copy Full Text"
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Copiar todo o texto"
