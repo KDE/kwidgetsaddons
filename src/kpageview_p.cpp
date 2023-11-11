@@ -76,6 +76,7 @@ QRegion KPagePlainView::visualRegionForSelection(const QItemSelection &) const
 KPageListView::KPageListView(QWidget *parent)
     : QListView(parent)
 {
+    setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::RightEdge}));
     setViewMode(QListView::ListMode);
     setMovement(QListView::Static);
     setVerticalScrollMode(QListView::ScrollPerPixel);
