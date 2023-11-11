@@ -76,7 +76,11 @@ QRegion KPagePlainView::visualRegionForSelection(const QItemSelection &) const
 KPageListView::KPageListView(QWidget *parent)
     : QListView(parent)
 {
-    setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::RightEdge}));
+    if (layoutDirection() == Qt::RightToLeft) {
+        setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::LeftEdge}));
+    } else {
+        setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::RightEdge}));
+    }
     setViewMode(QListView::ListMode);
     setMovement(QListView::Static);
     setVerticalScrollMode(QListView::ScrollPerPixel);
@@ -124,6 +128,11 @@ void KPageListView::updateWidth()
 KPageTreeView::KPageTreeView(QWidget *parent)
     : QTreeView(parent)
 {
+    if (layoutDirection() == Qt::RightToLeft) {
+        setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::LeftEdge}));
+    } else {
+        setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::RightEdge}));
+    }
     header()->hide();
 }
 
