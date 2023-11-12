@@ -115,12 +115,21 @@ void KPageListView::changeEvent(QEvent *event)
     }
 }
 
+void KPageListView::setFlexibleWidth(bool flexibleWidth)
+{
+    m_flexibleWidth = flexibleWidth;
+}
+
 void KPageListView::updateWidth()
 {
     if (!model()) {
         return;
     }
-    setFixedWidth(sizeHintForColumn(0) + verticalScrollBar()->sizeHint().width() + 5);
+    if (m_flexibleWidth) {
+        setFixedWidth(sizeHintForColumn(0) + verticalScrollBar()->sizeHint().width() + 5);
+    } else {
+        setFixedWidth(300);
+    }
 }
 
 // KPageTreeView

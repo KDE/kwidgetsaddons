@@ -30,18 +30,18 @@ class QAbstractItemModel;
  * pages and allows the user to switch between these pages in
  * different ways.
  *
- * Currently, @p Auto, @p Plain, @p List, @p Tree and @p Tabbed face
- * types are available (cmp. KPageWidget).
+ * Currently, @p Auto, @p Plain, @p List, @p Tree, @p FlatList and
+ * @p Tabbed face types are available (cmp. KPageWidget).
  *
  * <b>Example:</b>\n
  *
  * \code
  *  KPageModel *model = new MyPageModel();
  *
- *  KPageView *view = new KPageView( this );
- *  view->setModel( model );
+ *  auto view = new KPageView(this);
+ *  view->setModel(model);
  *
- *  view->setFaceType( KPageView::List );
+ *  view->setFaceType(KPageView::List);
  * \endcode
  *
  * @author Tobias Koenig (tokoe@kde.org)

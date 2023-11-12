@@ -66,6 +66,7 @@ protected:
     KPageStackedWidget *stack;
     KTitleWidget *titleWidget;
     QWidget *defaultWidget;
+    QWidget *searchLineEditContainer;
     QLineEdit *searchLineEdit;
     QFrame *separatorLine;
     QTimer searchTimer;
@@ -133,12 +134,16 @@ public:
     ~KPageListView() override;
 
     void setModel(QAbstractItemModel *model) override;
+    void setFlexibleWidth(bool flexibleWidth);
 
 protected:
     void changeEvent(QEvent *event) override;
 
 private Q_SLOTS:
     void updateWidth();
+
+private:
+    bool m_flexibleWidth = false;
 };
 
 class KPageTreeView : public QTreeView
