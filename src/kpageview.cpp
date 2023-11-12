@@ -143,9 +143,15 @@ void KPageViewPrivate::rebuildGui()
         layout->removeWidget(searchLineEditContainer);
         searchLineEditContainer->setVisible(false);
         titleWidget->setAutoFillBackground(false);
-        layout->setSpacing(4);
+        layout->setSpacing(0);
         separatorLine->setVisible(false);
+        titleWidget->setObjectName("KPageView::TitleWidgetNonSearchable");
+        titleWidget->setContentsMargins(q_ptr->style()->pixelMetric(QStyle::PM_LayoutLeftMargin),
+                                        q_ptr->style()->pixelMetric(QStyle::PM_LayoutTopMargin),
+                                        q_ptr->style()->pixelMetric(QStyle::PM_LayoutRightMargin),
+                                        q_ptr->style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
     } else {
+        titleWidget->setObjectName("KPageView::TitleWidget");
         searchLineEditContainer->setVisible(true);
         searchLineEditContainer->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
         separatorLine->setVisible(true);
