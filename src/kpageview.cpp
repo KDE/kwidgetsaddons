@@ -417,6 +417,7 @@ void KPageViewPrivate::init()
 
     separatorLine = new QFrame(q);
     separatorLine->setFrameShape(QFrame::HLine);
+    separatorLine->setFixedHeight(1);
     separatorLine->setFrameShadow(QFrame::Sunken);
 
     // list view under it to the left
