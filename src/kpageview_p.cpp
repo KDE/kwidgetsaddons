@@ -18,6 +18,8 @@
 #include "kpagemodel.h"
 #include "loggingcategory.h"
 
+constexpr const auto viewWidth = 300;
+
 using namespace KDEPrivate;
 
 // KPagePlainView
@@ -128,7 +130,7 @@ void KPageListView::updateWidth()
     if (m_flexibleWidth) {
         setFixedWidth(sizeHintForColumn(0) + verticalScrollBar()->sizeHint().width() + 5);
     } else {
-        setFixedWidth(300);
+        setFixedWidth(viewWidth);
     }
 }
 
@@ -173,7 +175,7 @@ void KPageTreeView::updateWidth()
         width = qMax(width, sizeHintForColumn(i));
     }
 
-    setFixedWidth(width + 25);
+    setFixedWidth(qMax(viewWidth, width + 25));
 }
 
 void KPageTreeView::expandItems(const QModelIndex &index)

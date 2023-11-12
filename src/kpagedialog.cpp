@@ -53,7 +53,7 @@ void KPageDialog::setFaceType(FaceType faceType)
     // Use zero margins for dialogs with the sidebar style so that the sidebar
     // can be flush with the window edge; margins for the content are added
     // automatically
-    if (faceType == KPageDialog::Auto || faceType == KPageDialog::List || faceType == KPageDialog::FlatList) {
+    if (faceType == KPageDialog::Auto || faceType == KPageDialog::List || faceType == KPageDialog::FlatList || faceType == KPageDialog::Tree) {
         layout()->setContentsMargins(0, 0, 0, 0);
     } else {
         const QStyle *style = d->mPageWidget->style();
