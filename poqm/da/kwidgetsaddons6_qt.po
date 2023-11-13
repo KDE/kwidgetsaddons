@@ -1997,7 +1997,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Styrke&måling af adgangskode:"
 
-#: kpageview.cpp:442
+#: kpageview.cpp:443
 #, fuzzy
 #| msgid "Search"
 msgctxt "KPageView|"

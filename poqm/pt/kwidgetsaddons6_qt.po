@@ -2054,7 +2054,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Medição da eficácia da senha:"
 
-#: kpageview.cpp:442
+#: kpageview.cpp:443
 msgctxt "KPageView|"
 msgid "Search..."
 msgstr ""
