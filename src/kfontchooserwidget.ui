@@ -10,9 +10,6 @@
     <height>838</height>
    </rect>
   </property>
-  <property name="windowTitle">
-   <string>KFontChooserWidget</string>
-  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0">
