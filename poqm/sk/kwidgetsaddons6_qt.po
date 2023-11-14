@@ -2015,7 +2015,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Meter kvality hesla:"
 
-#: kpageview.cpp:443
+#: kpageview.cpp:449
 #, fuzzy
 #| msgid "Search"
 msgctxt "KPageView|"

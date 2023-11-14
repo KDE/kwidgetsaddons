@@ -1982,7 +1982,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Mesure de la robustesse du mot de passe :"
 
-#: kpageview.cpp:443
+#: kpageview.cpp:449
 msgctxt "KPageView|"
 msgid "Search..."
 msgstr "Rechercher…"

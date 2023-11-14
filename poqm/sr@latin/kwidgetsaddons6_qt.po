@@ -2222,7 +2222,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Merač jačine lozinke:"
 
-#: kpageview.cpp:443
+#: kpageview.cpp:449
 msgctxt "KPageView|"
 msgid "Search..."
 msgstr ""
