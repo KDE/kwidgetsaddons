@@ -13,11 +13,8 @@
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <layout class="QGridLayout" name="gridLayout" rowstretch="1,0,0">
-     <property name="verticalSpacing">
-      <number>12</number>
-     </property>
      <item row="0" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1,0">
+      <layout class="QHBoxLayout" name="mainHorizontalLayout" stretch="1,1,0">
        <item>
         <layout class="QVBoxLayout" name="fontLayout">
          <item>
@@ -113,7 +110,17 @@
       </layout>
      </item>
      <item row="1" column="0">
-      <layout class="QHBoxLayout" name="sampleTextEditLayout">
+      <layout class="QVBoxLayout" name="sampleTextEditLayout">
+       <item>
+        <widget class="QLabel" name="previewLabel">
+         <property name="text">
+          <string>Sample:</string>
+         </property>
+         <property name="buddy">
+          <cstring>sampleTextEdit</cstring>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QTextEdit" name="sampleTextEdit">
          <property name="whatsThis">
@@ -124,14 +131,14 @@
          </property>
         </widget>
        </item>
+       <item row="2" column="0">
+        <widget class="QCheckBox" name="onlyFixedCheckBox">
+         <property name="text">
+          <string>Show only monospaced fonts</string>
+         </property>
+        </widget>
+       </item>
       </layout>
-     </item>
-     <item row="2" column="0">
-      <widget class="QCheckBox" name="onlyFixedCheckBox">
-       <property name="text">
-        <string>Show only monospaced fonts</string>
-       </property>
-      </widget>
      </item>
     </layout>
    </item>

@@ -154,6 +154,12 @@ void KFontChooserPrivate::init()
 
     m_ui.reset(new Ui_KFontChooserWidget);
     m_ui->setupUi(page);
+    // Increase spacing on top of the preview field and then reset the other layouts
+    // back to a standard value.
+    m_ui->sampleTextEditLayout->setSpacing(q->style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing));
+    m_ui->mainHorizontalLayout->setSpacing(q->style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing));
+    m_ui->gridLayout->setVerticalSpacing(q->style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing) * 2);
+    m_ui->gridLayout->setHorizontalSpacing(q->style()->pixelMetric(QStyle::PM_LayoutHorizontalSpacing));
 
     // Deprecated, we'll call show() if building with deprecated code
     m_ui->sizeIsRelativeCheckBox->hide();
