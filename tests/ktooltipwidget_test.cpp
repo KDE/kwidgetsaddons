@@ -37,7 +37,7 @@ TestDialog::TestDialog(QWidget *parent)
     layout->addWidget(&m_view);
 
     //! [show_tooltip_widget]
-    connect(&m_view, &QAbstractItemView::entered, this, [=](const QModelIndex &index) {
+    connect(&m_view, &QAbstractItemView::entered, this, [this](const QModelIndex &index) {
         auto rect = m_view.visualRect(index);
         const auto pos = m_view.viewport()->mapToGlobal(rect.topLeft());
         rect.moveTo(pos);
