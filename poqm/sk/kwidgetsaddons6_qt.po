@@ -1698,47 +1698,42 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Vybrať písmo"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Písmo"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Písmo:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Štýl písma"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Štýl písma:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Veľkosť"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Veľkosť:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatívne"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid ""
@@ -1752,7 +1747,7 @@ msgstr ""
 "Tento vzorový text slúži ako ukážka nastavenia písma. Môžete ho upraviť, ak "
 "chcete vyskúšať špeciálne znaky."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Show only monospaced fonts"

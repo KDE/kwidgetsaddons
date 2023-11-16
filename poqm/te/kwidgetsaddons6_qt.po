@@ -2513,12 +2513,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "అక్షరరూపము ఎంచుకొనుము"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2526,7 +2521,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "అక్షర రూపము"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2534,7 +2529,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "అక్షర రూపము:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2542,14 +2537,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "అక్షర శైలి"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "అక్షర శైలి:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2557,7 +2552,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "పరిమాణము"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2565,7 +2560,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "పరిమాణము:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2573,7 +2568,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "సంబంధిత"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2585,7 +2580,7 @@ msgid ""
 msgstr ""
 "ఈ మాదిరి వచనం ప్రస్తుత అమరికలు చూపును. మీరు దినిని ప్రత్యేక అక్షరాలని పరీక్షించడానికి మార్చవచ్చు."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

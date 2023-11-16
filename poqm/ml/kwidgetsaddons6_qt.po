@@ -1969,61 +1969,56 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "ലിപി തെരഞ്ഞെടുക്കുക"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "ലിപി"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "ലിപി:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "അക്ഷരസഞ്ചയത്തിന്റെ രീതി"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "അക്ഷരസഞ്ചയത്തിന്റെ രീതി:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "വലിപ്പം"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "വ്യാപ്തി:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "താരതമ്യേനയുള്ള"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
 "special characters."
 msgstr ""
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

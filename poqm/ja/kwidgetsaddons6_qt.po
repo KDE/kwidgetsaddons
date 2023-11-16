@@ -1825,12 +1825,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "月を選択"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Font"
@@ -1838,7 +1833,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "フォント"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgctxt "KFontChooser|@label"
 #| msgid "Font:"
@@ -1846,7 +1841,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "フォント:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Font style"
@@ -1854,7 +1849,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "フォントスタイル"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid "Font style:"
@@ -1862,7 +1857,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "フォントスタイル:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Size"
@@ -1870,7 +1865,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "サイズ"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgctxt "KFontChooser|@label:listbox Font size"
 #| msgid "Size:"
@@ -1878,7 +1873,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "サイズ:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgctxt "KFontChooser|@item font size"
 #| msgid "Relative"
@@ -1886,7 +1881,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相対的"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid ""
@@ -1900,7 +1895,7 @@ msgstr ""
 "このサンプルテキストは現在の設定を示しています。テキストを編集して他の文字で"
 "テストすることもできます。"
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

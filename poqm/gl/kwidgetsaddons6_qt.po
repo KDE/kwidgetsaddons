@@ -1662,47 +1662,42 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Escoller a fonte"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr "KFontChooserWidget"
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Fonte"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Fonte:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Estilo da fonte"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Estilo da fonte:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Tamaño"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Tamaño:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativo"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1711,7 +1706,7 @@ msgstr ""
 "Este texto de exemplo ilustra a configuración actual. Pode editalo para "
 "probar con caracteres especiais."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Amosar só os tipos de letra monoespazo."
@@ -2382,6 +2377,10 @@ msgstr "Pantalla completa"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Mostra a xanela a pantalla completa."
+
+#~ msgctxt "KFontChooserWidget|"
+#~ msgid "KFontChooserWidget"
+#~ msgstr "KFontChooserWidget"
 
 #, fuzzy
 #~| msgctxt "KFontChooser|"

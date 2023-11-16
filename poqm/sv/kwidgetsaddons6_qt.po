@@ -1652,47 +1652,42 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Välj teckensnitt"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr "Grafisk teckensnittsväljarkomponent"
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Teckensnitt"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Teckensnitt:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Teckenstil"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Teckenstil:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Storlek"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Storlek:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativ"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1701,7 +1696,7 @@ msgstr ""
 "Det här exemplet visar de aktuella inställningarna. Du kan redigera dem för "
 "att testa specialtecken."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Visa bara teckensnitt med fast bredd"
@@ -2382,6 +2377,10 @@ msgstr "Fullskärm"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Visa fönstret i fullskärmsläge"
+
+#~ msgctxt "KFontChooserWidget|"
+#~ msgid "KFontChooserWidget"
+#~ msgstr "Grafisk teckensnittsväljarkomponent"
 
 #~ msgctxt "KFontChooser|@info:tooltip"
 #~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"

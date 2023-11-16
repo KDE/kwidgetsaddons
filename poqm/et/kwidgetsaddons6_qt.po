@@ -1705,12 +1705,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Fondi valimine"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Font"
@@ -1718,7 +1713,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Font"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgctxt "KFontChooser|@label"
 #| msgid "Font:"
@@ -1726,7 +1721,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Font:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Font style"
@@ -1734,7 +1729,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Fondi stiil"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgctxt "KFontChooser|@label"
 #| msgid "Font style:"
@@ -1742,7 +1737,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Fondi stiil:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Size"
@@ -1750,7 +1745,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Suurus"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgctxt "KFontChooser|@label:listbox Font size"
 #| msgid "Size:"
@@ -1758,7 +1753,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Suurus:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgctxt "KFontChooser|@item font size"
 #| msgid "Relative"
@@ -1766,7 +1761,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Suhteline"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgctxt "KFontChooser|@info:whatsthis"
 #| msgid ""
@@ -1780,7 +1775,7 @@ msgstr ""
 "See näide illustreerib aktiivseid seadistusi. Sa võid seda teksti muuta, et "
 "testida vajalikke erisümboleid."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Show only monospaced fonts"

@@ -2248,61 +2248,56 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "選擇字型"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "字型"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "字型："
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "字型樣式"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "字型樣式："
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "大小"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "大小："
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相對"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2313,7 +2308,7 @@ msgid ""
 "special characters."
 msgstr "此段範例文字顯示目前的設定。你可以編輯這段文字來測試特殊字符。"
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

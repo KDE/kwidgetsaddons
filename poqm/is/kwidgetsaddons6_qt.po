@@ -1665,47 +1665,42 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Velja letur"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr "KFontChooserWidget"
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Letur"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Letur:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Leturstíll"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Leturstíll:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Stærð"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Stærð:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Hlutfallslegt"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1714,7 +1709,7 @@ msgstr ""
 "Þetta sýnishorn sýnir núverandi stillingar.  Þú getur breytt því til að "
 "prófa ákveðna stafi."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Sýna aðeins jafnbreitt letur (monospaced)"
@@ -2387,6 +2382,10 @@ msgstr "Skjáfylli"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Birta glugga á öllum skjánum"
+
+#~ msgctxt "KFontChooserWidget|"
+#~ msgid "KFontChooserWidget"
+#~ msgstr "KFontChooserWidget"
 
 #~ msgctxt "KFontChooser|@info:tooltip"
 #~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"

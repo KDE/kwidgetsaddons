@@ -2483,12 +2483,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "ಲಿಪಿಶೈಲಿಯನ್ನು ಆರಿಸಿ"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2496,7 +2491,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "ಅಕ್ಷರಶೈಲಿ"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2504,7 +2499,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "ಲಿಪಿಶೈಲಿ:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2512,14 +2507,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "ಲಿಪಿಶೈಲಿ ವಿನ್ಯಾಸ"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "ಲಿಪಿಶೈಲಿ ವಿನ್ಯಾಸ:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2527,7 +2522,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "ಗಾತ್ರ"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2535,7 +2530,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "ಗಾತ್ರ:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2543,7 +2538,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "ಸಾಪೇಕ್ಷ (relative)"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2556,7 +2551,7 @@ msgstr ""
 "ಈ ಮಾದರಿ ಪಠ್ಯವು ಪ್ರಸಕ್ತ ಸಂಯೋಜನೆಗಳನ್ನು ವಿಶದಗೊಳಿಸುತ್ತದೆ. ವಿಶೇಷ ಸನ್ನೆಗಳನ್ನು ಪರೀಕ್ಷಿಸಲು "
 "ನೀವು ಇದನ್ನು ಬದಲಾಯಿಸಬಹುದು."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

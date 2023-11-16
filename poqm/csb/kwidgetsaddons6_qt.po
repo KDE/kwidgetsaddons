@@ -2455,12 +2455,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Wëbierzë fònt"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2468,7 +2463,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Fònt"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2476,7 +2471,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Fònt:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2484,14 +2479,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Sztél fòntu"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Sztél fòntu:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2499,7 +2494,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Miara"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2507,7 +2502,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Miara:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2515,7 +2510,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatiwny"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2528,7 +2523,7 @@ msgstr ""
 "Przëmiarowi tekst, chtëren pòkazëjë aktualné ùstôwë. Mòżesz gò zmienic bë "
 "sprôwdzëc wëzdrzatk specjalnëch céchów."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

@@ -2067,12 +2067,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Шрифтни танлаш"
 
-#: kfontchooserwidget.ui:14
-msgctxt "KFontChooserWidget|"
-msgid "KFontChooserWidget"
-msgstr ""
-
-#: kfontchooserwidget.ui:31
+#: kfontchooserwidget.ui:28
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2080,7 +2075,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Шрифт"
 
-#: kfontchooserwidget.ui:38
+#: kfontchooserwidget.ui:35
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2088,7 +2083,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Шрифт:"
 
-#: kfontchooserwidget.ui:56
+#: kfontchooserwidget.ui:53
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2096,21 +2091,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Шрифтнинг услуби"
 
-#: kfontchooserwidget.ui:63
+#: kfontchooserwidget.ui:60
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Шрифтнинг услуби:"
 
-#: kfontchooserwidget.ui:81
+#: kfontchooserwidget.ui:78
 #, fuzzy
 #| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Ўлчами"
 
-#: kfontchooserwidget.ui:88
+#: kfontchooserwidget.ui:85
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2118,7 +2113,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Ўлчами:"
 
-#: kfontchooserwidget.ui:97
+#: kfontchooserwidget.ui:94
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2126,7 +2121,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Нисбий"
 
-#: kfontchooserwidget.ui:123
+#: kfontchooserwidget.ui:120
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2139,7 +2134,7 @@ msgstr ""
 "Ушбу матн жорий мосламаларни тасвирлайди. Махсус белгиларни текшириш учун "
 "уни таҳрирлашингиз мумкин."
 
-#: kfontchooserwidget.ui:135
+#: kfontchooserwidget.ui:132
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
