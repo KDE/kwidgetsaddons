@@ -164,7 +164,7 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
         opt.state |= QStyle::State_Horizontal;
         opt.text = d->text;
         opt.textAlignment = Qt::AlignCenter;
-        opt.textVisible = true;
+        opt.textVisible = !d->text.isEmpty();
         style()->drawControl(d->ce_capacityBar, &opt, p, this);
 
         return;
