@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2023-11-11 07:19\n"
+"PO-Revision-Date: 2023-11-19 03:37\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -2013,12 +2013,12 @@ msgstr "图像操作"
 #: kpixmapregionselectorwidget.cpp:176
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
-msgstr "顺时针旋转(&R)"
+msgstr "旋转 (顺时针)(&R)"
 
 #: kpixmapregionselectorwidget.cpp:180
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
-msgstr "逆时针旋转(&C)"
+msgstr "旋转 (逆时针)(&C)"
 
 #: krecentfilesmenu.cpp:114
 msgctxt "KRecentFilesMenu|"
@@ -2357,7 +2357,3 @@ msgstr "全屏"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "全屏显示窗口"
-
-#~ msgctxt "KFontChooserWidget|"
-#~ msgid "KFontChooserWidget"
-#~ msgstr "KFontChooserWidget"
