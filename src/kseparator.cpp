@@ -32,12 +32,10 @@ void KSeparator::setOrientation(Qt::Orientation orientation)
 {
     if (orientation == Qt::Vertical) {
         setFrameShape(QFrame::VLine);
-        setFrameShadow(QFrame::Sunken);
-        setMinimumSize(2, 0);
+        setFixedWidth(1);
     } else {
         setFrameShape(QFrame::HLine);
-        setFrameShadow(QFrame::Sunken);
-        setMinimumSize(0, 2);
+        setFixedHeight(1);
     }
     updateGeometry();
 }
