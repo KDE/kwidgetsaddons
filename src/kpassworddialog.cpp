@@ -214,6 +214,7 @@ void KPasswordDialog::addCommentLine(const QString &label, const QString &commen
 
     QLabel *c = new QLabel(comment, this);
     c->setWordWrap(true);
+    c->setTextInteractionFlags(Qt::TextBrowserInteraction);
 
     d->ui.formLayout->insertRow(d->commentRow, label, c);
     ++d->commentRow;
