@@ -2239,7 +2239,7 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Номи корбар ва ниҳонвожаеро таъмин намоед."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "No password, use anonymous (or &guest) login"
@@ -2247,7 +2247,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Бе ниҳонвожа, воридшавӣ бо корбари беном (ё &меҳмон)"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Use this password:"
@@ -2255,7 +2255,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Ниҳонвожаи зеринро истифода баред:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Username:"
@@ -2263,7 +2263,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Номи корбар:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Domain:"
@@ -2271,7 +2271,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Домен:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 #, fuzzy
 #| msgctxt "KNewPasswordWidget|"
 #| msgid "Password:"
@@ -2279,7 +2279,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Ниҳонвожа:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Remember password"

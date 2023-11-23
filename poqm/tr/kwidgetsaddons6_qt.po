@@ -1986,32 +1986,32 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Aşağıya bir kullanıcı adı ve parola girin."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Parola yok, anonim (veya &misafir) oturumunu kullanın"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Bu parolayı kullan:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Kullanıcı adı:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Alan adı:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Parola:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Parolayı anımsa"

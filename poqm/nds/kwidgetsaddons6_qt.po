@@ -2334,7 +2334,7 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Giff bitte nerrn Brukernaam un Passwoort in."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "No password, use anonymous (or guest) login"
@@ -2342,7 +2342,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Keen Passwoort, anonüm oder Gast-Togang bruken"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Use this password:"
@@ -2350,7 +2350,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Dit Passwoort bruken:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Username:"
@@ -2358,7 +2358,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Bruker:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Domain:"
@@ -2366,7 +2366,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domään:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 #, fuzzy
 #| msgctxt "KNewPasswordDialog|"
 #| msgid "Password:"
@@ -2374,7 +2374,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Passwoort:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Remember password"

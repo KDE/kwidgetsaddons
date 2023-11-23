@@ -2450,34 +2450,34 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Furnizați un nume de utilizator și o parolă mai jos."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 #, fuzzy
 #| msgid "No password, use anonymous (or guest) login"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Fără parolă, folosește autentificare anonimă (sau ca oaspete)"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Folosește această parolă:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Nume de utilizator:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domeniu:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Parolă:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Ține minte parola"

@@ -1983,32 +1983,32 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Enigu uzantnomon kaj pasvorton malsupre."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Neniu pasvorto, uzi anoniman (aŭ &gastan) ensaluton"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Uzi ĉi tiun pasvorton:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Uzantnomo:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domajno:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Pasvorto:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Memori pasvorton"

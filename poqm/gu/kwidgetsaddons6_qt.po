@@ -2917,40 +2917,40 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "વપરાશકર્તાનામ અને પાસવર્ડ નીચે દાખલ કરો."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr ""
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 #, fuzzy
 #| msgid "&Keep password"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "પાસવર્ડ સાચવો (&K)"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 #, fuzzy
 #| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "વપરાશકર્તાનામ:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 #, fuzzy
 #| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "ડોમેઇન:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 #, fuzzy
 #| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "પાસવર્ડ:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 #, fuzzy
 #| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"

@@ -1981,32 +1981,32 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Gefðu upp notandanafn og lykilorð fyrir neðan."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Ekker lykilorð, notað nafnlausa (eða &gesta) innskráningu"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Nota þetta lykilorð:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Notandanafn:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Lén:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Lykilorð:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Muna lykilorð"

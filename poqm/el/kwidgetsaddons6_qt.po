@@ -2503,7 +2503,7 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Εισάγετε παρακάτω ένα όνομα χρήστη και κωδικό."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "No password, use anonymous (or guest) login"
@@ -2511,7 +2511,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Χωρίς κωδικό πρόσβασης, χρήση σύνδεσης ως ανώνυμος ή επισκέπτης"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Use this password:"
@@ -2519,7 +2519,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Χρήση του κωδικού πρόσβασης:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Username:"
@@ -2527,7 +2527,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Domain:"
@@ -2535,7 +2535,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Τομέας:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 #, fuzzy
 #| msgctxt "KNewPasswordWidget|"
 #| msgid "Password:"
@@ -2543,7 +2543,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Κωδικός πρόσβασης:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Remember password"

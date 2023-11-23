@@ -2002,32 +2002,32 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Saisissez ci-dessous un nom d'utilisateur et un mot de passe."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Aucun mot de passe, utilisation d'une connexion anonyme (ou &invité)"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Utiliser ce mot de passe : "
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Nom d'utilisateur :"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domaine :"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Mot de passe :"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Se souvenir du mot de passe"

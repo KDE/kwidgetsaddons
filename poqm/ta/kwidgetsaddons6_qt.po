@@ -2573,32 +2573,32 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "பயனர் பெயரையும் கடவுச்சொல்லையும் கீழே உள்ளிடவும்."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "கடவுச்சொல் இல்லாமல், பெயரில்லாத (அல்லது &விருந்தினர்) நுழைவை பயன்படுத்து"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "இந்த கடவுச்சொல்லை பயன்படுத்து:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "பயனர் பெயர்:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "ஆள்களம்:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "கடவுச்சொல்:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "கடவுச்சொல்லை நினைவில் கொள்"

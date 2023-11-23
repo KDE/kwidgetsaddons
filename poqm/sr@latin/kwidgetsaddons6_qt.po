@@ -2245,7 +2245,7 @@ msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
 msgstr "Navedite ispod korisničko ime i lozinku."
 
-#: kpassworddialog.ui:70
+#: kpassworddialog.ui:73
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "No password, use anonymous (or &guest) login"
@@ -2253,7 +2253,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Bez lozinke, anonimna (ili &gostinska) prijava"
 
-#: kpassworddialog.ui:77
+#: kpassworddialog.ui:80
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Use this password:"
@@ -2261,7 +2261,7 @@ msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Ova lozinka:"
 
-#: kpassworddialog.ui:102
+#: kpassworddialog.ui:105
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Username:"
@@ -2269,7 +2269,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Korisničko ime:"
 
-#: kpassworddialog.ui:127
+#: kpassworddialog.ui:130
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Domain:"
@@ -2277,7 +2277,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domen:"
 
-#: kpassworddialog.ui:141
+#: kpassworddialog.ui:144
 #, fuzzy
 #| msgctxt "KNewPasswordWidget|"
 #| msgid "Password:"
@@ -2285,7 +2285,7 @@ msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Lozinka:"
 
-#: kpassworddialog.ui:155
+#: kpassworddialog.ui:158
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Remember password"
