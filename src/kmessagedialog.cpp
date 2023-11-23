@@ -79,6 +79,7 @@ public:
     QLabel *m_iconLabel = nullptr;
     QLabel *m_messageLabel = nullptr;
     QListWidget *m_listWidget = nullptr;
+    QLabel *m_detailsLabel = nullptr;
     QTextBrowser *m_detailsTextEdit = nullptr;
     KCollapsibleGroupBox *m_detailsGroup = nullptr;
     QCheckBox *m_dontAskAgainCB = nullptr;
@@ -164,6 +165,11 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
     d->m_detailsGroup->setVisible(false);
     d->m_detailsGroup->setTitle(QApplication::translate("KMessageDialog", "Details"));
     QVBoxLayout *detailsLayout = new QVBoxLayout(d->m_detailsGroup);
+
+    d->m_detailsLabel = new QLabel();
+    d->m_detailsLabel->setTextInteractionFlags(s_textFlags);
+    d->m_detailsLabel->setWordWrap(true);
+    detailsLayout->addWidget(d->m_detailsLabel);
 
     d->m_detailsTextEdit = new QTextBrowser{};
     d->m_detailsTextEdit->setMinimumHeight(d->m_detailsTextEdit->fontMetrics().lineSpacing() * 11);
@@ -339,7 +345,20 @@ void KMessageDialog::setListWidgetItems(const QStringList &strlist)
 void KMessageDialog::setDetails(const QString &details)
 {
     d->m_detailsGroup->setVisible(!details.isEmpty());
-    d->m_detailsTextEdit->setText(details);
+
+    if (details.length() < 512) { // random number KMessageBox uses.
+        d->m_detailsLabel->setText(details);
+        d->m_detailsLabel->show();
+
+        d->m_detailsTextEdit->setText(QString());
+        d->m_detailsTextEdit->hide();
+    } else {
+        d->m_detailsLabel->setText(QString());
+        d->m_detailsLabel->hide();
+
+        d->m_detailsTextEdit->setText(details);
+        d->m_detailsTextEdit->show();
+    }
 }
 
 void KMessageDialog::setButtons(const KGuiItem &primaryAction, const KGuiItem &secondaryAction, const KGuiItem &cancelAction)
@@ -456,6 +475,7 @@ bool KMessageDialog::isDontAskAgainChecked() const
 void KMessageDialog::setOpenExternalLinks(bool isAllowed)
 {
     d->m_messageLabel->setOpenExternalLinks(isAllowed);
+    d->m_detailsLabel->setOpenExternalLinks(isAllowed);
     d->m_detailsTextEdit->setOpenExternalLinks(isAllowed);
 }
 
