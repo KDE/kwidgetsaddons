@@ -2400,35 +2400,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Moet nie weer hierdie boodskap vertoon nie"
 
-#: kmessagedialog.cpp:165
+#: kmessagedialog.cpp:166
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Details"
 
-#: kmessagedialog.cpp:246
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Vraag"
 
-#: kmessagedialog.cpp:251
+#: kmessagedialog.cpp:257
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Waarskuwing"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:260
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informasie"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:263
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

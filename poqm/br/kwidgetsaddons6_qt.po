@@ -2184,35 +2184,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "&Ne ziskouezit ket ar c'hemennad-mañ adarre"
 
-#: kmessagedialog.cpp:165
+#: kmessagedialog.cpp:166
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Munudoù"
 
-#: kmessagedialog.cpp:246
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Goulenn"
 
-#: kmessagedialog.cpp:251
+#: kmessagedialog.cpp:257
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Diwallit"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:260
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Titouroù"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:263
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

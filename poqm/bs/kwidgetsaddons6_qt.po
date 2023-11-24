@@ -2049,22 +2049,22 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr ""
 
-#: kmessagedialog.cpp:165
+#: kmessagedialog.cpp:166
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr ""
 
-#: kmessagedialog.cpp:246
+#: kmessagedialog.cpp:252
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr ""
 
-#: kmessagedialog.cpp:251
+#: kmessagedialog.cpp:257
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr ""
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:260
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "CJK Ideograph Information"
@@ -2072,7 +2072,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Podaci o CJK ideografu"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:263
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr ""

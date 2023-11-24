@@ -2245,7 +2245,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Να μην εμφανιστεί ξανά αυτό το μήνυμα"
 
-#: kmessagedialog.cpp:165
+#: kmessagedialog.cpp:166
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -2253,7 +2253,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
-#: kmessagedialog.cpp:246
+#: kmessagedialog.cpp:252
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2261,7 +2261,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Ερώτηση"
 
-#: kmessagedialog.cpp:251
+#: kmessagedialog.cpp:257
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2269,7 +2269,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:260
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2277,7 +2277,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Πληροφορίες"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:263
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"

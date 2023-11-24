@@ -1801,27 +1801,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Não mostrar esta mensagem novamente"
 
-#: kmessagedialog.cpp:165
+#: kmessagedialog.cpp:166
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detalhes"
 
-#: kmessagedialog.cpp:246
+#: kmessagedialog.cpp:252
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pergunta"
 
-#: kmessagedialog.cpp:251
+#: kmessagedialog.cpp:257
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Aviso"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:260
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informação"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:263
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Erro"

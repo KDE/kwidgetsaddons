@@ -1789,27 +1789,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Изключване на съобщението"
 
-#: kmessagedialog.cpp:165
+#: kmessagedialog.cpp:166
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Подробности"
 
-#: kmessagedialog.cpp:246
+#: kmessagedialog.cpp:252
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Въпрос"
 
-#: kmessagedialog.cpp:251
+#: kmessagedialog.cpp:257
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Предупреждение"
 
-#: kmessagedialog.cpp:254
+#: kmessagedialog.cpp:260
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Информация"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:263
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Грешка"
