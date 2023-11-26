@@ -205,6 +205,7 @@ KPageTabbedView::KPageTabbedView(QWidget *parent)
     layout->setContentsMargins(0, 0, 0, 0);
 
     mTabWidget = new QTabWidget(this);
+    mTabWidget->setDocumentMode(true);
     connect(mTabWidget, &QTabWidget::currentChanged, this, &KPageTabbedView::currentPageChanged);
 
     layout->addWidget(mTabWidget);
@@ -324,6 +325,7 @@ void KPageTabbedView::layoutChanged()
         if (page) {
             QWidget *widget = new QWidget(this);
             QVBoxLayout *layout = new QVBoxLayout(widget);
+            layout->setContentsMargins({});
             layout->addWidget(page);
             page->setVisible(true);
             mTabWidget->addTab(widget, icon, title);
