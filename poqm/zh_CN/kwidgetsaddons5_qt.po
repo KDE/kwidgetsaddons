@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2023-11-19 03:40\n"
+"PO-Revision-Date: 2023-11-25 02:29\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -1853,7 +1853,7 @@ msgstr "搜索文件类型或者文件名模式..."
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr "筛选(&F)："
+msgstr "过滤(&F)："
 
 #: kmimetypechooser.cpp:103
 msgctxt "KMimeTypeChooser|@title:column"
