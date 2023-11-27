@@ -1627,37 +1627,37 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Żądana czcionka"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normalna"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursywa"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Pochylona"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Pogrubiona"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Pogrubiona ścieśniona pochylona "
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Pójdź, kińże tę chmurność w głąb flaszy"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1668,42 +1668,47 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Wybierz czcionkę"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Czcionka"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Czcionka:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Krój czcionki"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Krój czcionki:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Rozmiar"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Rozmiar:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Względny"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1712,7 +1717,7 @@ msgstr ""
 "Tekst przykładowy pokazuje bieżące ustawienia. Możesz go zmienić, by "
 "sprawdzić wygląd znaków specjalnych."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Pokaż czcionki tylko o stałej szerokości"

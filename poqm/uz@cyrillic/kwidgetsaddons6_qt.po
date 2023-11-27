@@ -2007,7 +2007,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Талаб қилинган шрифт"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2015,7 +2015,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Оддий"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2023,7 +2023,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Қия"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2031,7 +2031,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Ярим қия"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2039,7 +2039,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Қалин"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Book Oblique"
@@ -2047,14 +2047,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Ярим қия китоб"
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Оқ чойнакга оқ қапқоқ кўк чойнакга кўк қапқоқ"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -2067,7 +2067,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Шрифтни танлаш"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2075,7 +2075,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Шрифт"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2083,7 +2083,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Шрифт:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2091,21 +2091,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Шрифтнинг услуби"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Шрифтнинг услуби:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Ўлчами"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2113,7 +2113,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Ўлчами:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2121,7 +2121,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Нисбий"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+#, fuzzy
+#| msgid "Simple"
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr "Оддий"
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2134,7 +2141,7 @@ msgstr ""
 "Ушбу матн жорий мосламаларни тасвирлайди. Махсус белгиларни текшириш учун "
 "уни таҳрирлашингиз мумкин."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
@@ -13225,9 +13232,6 @@ msgstr ""
 
 #~ msgid "TLS"
 #~ msgstr "TLS"
-
-#~ msgid "Simple"
-#~ msgstr "Оддий"
 
 #~ msgid "SASL"
 #~ msgstr "SASL"

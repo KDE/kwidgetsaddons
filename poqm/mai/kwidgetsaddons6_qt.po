@@ -2416,7 +2416,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "निवेदित फोन्ट "
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2424,7 +2424,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "सामान्य"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2432,7 +2432,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "तिरछा"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2440,7 +2440,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "तिर्यक"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2448,19 +2448,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "मोट"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "सारे जहाँ सँ अच्छा हिंदोस्ताँ हमारा"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2475,7 +2475,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "फोन्ट चुनू"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2483,7 +2483,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "फौन्ट"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2491,7 +2491,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "फोन्ट:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2499,14 +2499,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "फाँट शैली"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "फोन्ट शैली"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2514,7 +2514,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "आकार"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2522,7 +2522,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "आकार:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2530,7 +2530,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "सापेक्ष"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2543,7 +2548,7 @@ msgstr ""
 "ई पाठ नमूना अहाँक मोजुदा बिन्यास (सेटिंग) केँ स्पस्ट करैत अछि. विशिष्ट अक्षर केँ परीक्षित "
 "करने क' लेल एकरा अहाँ संपादित कए सकैत छी."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

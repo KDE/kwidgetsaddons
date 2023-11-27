@@ -2434,7 +2434,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Fonte dimandêye"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2442,7 +2442,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normå"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2450,7 +2450,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Clintcheyes"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2458,7 +2458,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Oblike"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2466,12 +2466,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Cråsses"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
@@ -2479,7 +2479,7 @@ msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 "Mi trûte a les balzins, co pés ki l' grijhe cawe di m' pôve fayé vexhåd!"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2494,7 +2494,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Tchoezi fonte"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2502,7 +2502,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Fonte"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2510,7 +2510,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Fonte:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2518,14 +2518,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Stîle del fonte"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Stîle del fonte:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2533,7 +2533,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Grandeu"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2541,7 +2541,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Grandeu:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2549,7 +2549,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Candjante"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2562,7 +2567,7 @@ msgstr ""
 "Li hansion di tecse vaici vs mostere l' apontiaedje come il est pol moumint. "
 "Vos poloz bén scrire do tecse po sayî des caracteres sipeciås."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

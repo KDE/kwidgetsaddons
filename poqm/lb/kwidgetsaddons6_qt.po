@@ -2170,7 +2170,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Gewënscht Schrëft"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2178,14 +2178,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normal"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgid "Italic"
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursiv"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Oblique"
@@ -2193,14 +2193,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Schif"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgid "Bold"
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Fett"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Book Oblique"
@@ -2208,7 +2208,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Normal schif"
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
@@ -2216,7 +2216,7 @@ msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 "Ëch hätt gär dräi Wirschtercher mat Fritten a Ketchup, ouni Zalot a Geméis"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgid "%1%"
 msgctxt "KFontChooser|@item Font style"
@@ -2230,56 +2230,63 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Schrëft auswielen"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Schrëft"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Schrëft:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Schrëftstil"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Schrëftstil:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Gréisst"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Gréisst:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativ"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+#, fuzzy
+#| msgid "Simple"
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr "Einfach"
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2292,7 +2299,7 @@ msgstr ""
 "Dëse Beispilltext illustréiert déi momentan Astellungen. Dir kënnt e "
 "veränneren fir d'Duerstellung vu speziellen Zeechen ze kucken."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
@@ -14422,9 +14429,6 @@ msgstr ""
 
 #~ msgid "TLS"
 #~ msgstr "TLS"
-
-#~ msgid "Simple"
-#~ msgstr "Einfach"
 
 #~ msgid "SASL"
 #~ msgstr "SASL"

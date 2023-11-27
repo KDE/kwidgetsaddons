@@ -2451,7 +2451,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "قلم درخواست‌شده"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2459,7 +2459,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "عادی"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2468,7 +2468,7 @@ msgid "Italic"
 msgstr "کج"
 
 # Oblique
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2476,7 +2476,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "مایل"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2484,12 +2484,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "توپر"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
@@ -2499,7 +2499,7 @@ msgstr ""
 "ژاله‌هایش خرمن گلهای صنوبر و ثعلب را می‌لرزاند، و چشمم را ضیایی، دوست دارم."
 
 # %1
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2514,7 +2514,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "برگزیدن قلم"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2522,7 +2522,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "قلم"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2530,7 +2530,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "قلم:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2538,14 +2538,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "سبک قلم"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "سبک قلم:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2554,7 +2554,7 @@ msgid "Size"
 msgstr "اندازه"
 
 # Size:
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2562,7 +2562,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "اندازه:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2570,7 +2570,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "نسبی"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2583,7 +2588,7 @@ msgstr ""
 "این متن ساده تنظیمات جاری را با مثال روشن می‌کند. ممکن است شما آن را برای "
 "آزمایش نویسه‌های ویژه ویرایش کنید."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

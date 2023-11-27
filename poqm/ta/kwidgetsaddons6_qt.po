@@ -2211,17 +2211,17 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "கோரப்பட்ட எழுத்துரு"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "சாதாரணம்"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "சாய்வெழுத்து"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2229,24 +2229,24 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "வளைந்த"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "தடித்தது"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 "The Quick Brown Fox Jumps Over The Lazy Dog. யாதும் ஊரே யாவரும் கேளிர்; தீதும் "
 "நன்றும் பிறர் தர வாரா. சையெனத் திரியேல், சொற் சோர்வு படேல்"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -2257,37 +2257,37 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "எழுத்துருவை தேர்வு செய்தல்"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "எழுத்துரு"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "எழுத்துரு:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "எழுத்துரு வகை"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "எழுத்துரு வகை:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "அளவு"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "அளவு:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2295,7 +2295,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "தொடர்புடைய"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -2304,7 +2309,7 @@ msgstr ""
 "இவ்வுதாரண உரை, தற்போதைய அமைப்புகளை எடுத்துக்காட்டுகிறது. பிற எழுத்துகளைப் பார்க்க, "
 "இவ்வுரையை திருத்தலாம்."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "சம‍அகல எழுத்துருக்களை மட்டும் காட்டு"

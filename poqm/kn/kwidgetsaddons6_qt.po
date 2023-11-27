@@ -2422,7 +2422,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ಕೋರಿದ ಲಿಪಿಶೈಲಿ"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2430,7 +2430,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "ಸಾಧಾರಣ"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2438,7 +2438,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ಓರೆ"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2446,7 +2446,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "ವಕ್ರಾದ (ಆಬ್ಲೀಕ್)"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2454,12 +2454,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ದಟ್ಟ (ಬೋಲ್ಡ್)"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
@@ -2468,7 +2468,7 @@ msgstr ""
 "ಗಾಢಾಂಧಕಾರದೊಳು ನಟನ ಪಟು ಮೇಘ ಸಖಿಸಞ್ಚಲಿಸೆ, ಬೆಳಕು ಝರಿಯಂತೆ ಹರಿದಾಡಿ ಮೂಡಿಜೀವ ಭಙ್ಗಿಯ "
 "ಜಾಣ್ಮೆ ಕಥಿಸೆ ಕೌಶಲ ಕೇಳಿಫಲವೊ ಛಲರಹಿತ ರಸನಿಷ್ಠೈಕ ಮೋದಕೃತಿಯೇ"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2483,7 +2483,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "ಲಿಪಿಶೈಲಿಯನ್ನು ಆರಿಸಿ"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2491,7 +2491,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "ಅಕ್ಷರಶೈಲಿ"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2499,7 +2499,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "ಲಿಪಿಶೈಲಿ:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2507,14 +2507,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "ಲಿಪಿಶೈಲಿ ವಿನ್ಯಾಸ"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "ಲಿಪಿಶೈಲಿ ವಿನ್ಯಾಸ:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2522,7 +2522,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "ಗಾತ್ರ"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2530,7 +2530,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "ಗಾತ್ರ:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2538,7 +2538,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "ಸಾಪೇಕ್ಷ (relative)"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2551,7 +2556,7 @@ msgstr ""
 "ಈ ಮಾದರಿ ಪಠ್ಯವು ಪ್ರಸಕ್ತ ಸಂಯೋಜನೆಗಳನ್ನು ವಿಶದಗೊಳಿಸುತ್ತದೆ. ವಿಶೇಷ ಸನ್ನೆಗಳನ್ನು ಪರೀಕ್ಷಿಸಲು "
 "ನೀವು ಇದನ್ನು ಬದಲಾಯಿಸಬಹುದು."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

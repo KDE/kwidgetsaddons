@@ -2445,7 +2445,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ពុម្ពអក្សរ​ដែល​បាន​ស្នើ"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2453,7 +2453,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "ធម្មតា"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2461,7 +2461,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ទ្រេត"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2469,7 +2469,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "បញ្ឆៀង​"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2477,19 +2477,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ដិត"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "កញ្ជ្រោង​ប្រផេះ​ដ៏​រហ័ស លោត​រំលង​ឆ្កែ​កម្ជិល"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2504,7 +2504,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "ជ្រើស​ពុម្ពអក្សរ"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2512,7 +2512,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "ពុម្ពអក្សរ"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2520,7 +2520,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "ពុម្ពអក្សរ ៖"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2528,14 +2528,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "រចនាប័ទ្ម​ពុម្ពអក្សរ"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "រចនាប័ទ្ម​ពុម្ពអក្សរ ៖"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2543,7 +2543,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "ទំហំ"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2551,7 +2551,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "ទំហំ ៖"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2559,7 +2559,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "ប្រែប្រួល"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2570,7 +2575,7 @@ msgid ""
 "special characters."
 msgstr "អត្ថបទ​គំរូ​នេះ ពន្យល់​អំពី​​ការកំណត់​បច្ចុប្បន្ន ។ អ្នក​អាច​កែសម្រួល​វា ដើម្បី​សាកល្បង​តួអក្សរ​ពិសេស ។"
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

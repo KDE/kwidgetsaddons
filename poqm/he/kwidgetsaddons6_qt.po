@@ -1633,37 +1633,37 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "הגופן המבוקש"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "רגיל"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "נטוי"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "כתב נטוי"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "מודגש"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "מודגש דחוס משופע"
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "דג סקרן שט לו בים זך ולפתע מצא חבורה נחמדה"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1674,42 +1674,47 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "בחירת גופן"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "גופן"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "גופן:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "סגנון גופן"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "סגנון גופן:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "גודל"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "גודל:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "יחסי"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1718,7 +1723,7 @@ msgstr ""
 "טקסט דוגמה זה מציג את ההגדרות הנוכחיות. אפשר לערוך אותו כדי לבדוק תווים "
 "מיוחדים."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "הצגת גופנים ברוחב אחיד בלבד"

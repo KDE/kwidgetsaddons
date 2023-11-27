@@ -1655,39 +1655,39 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Požadované písmo"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normálne"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kurzíva"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Šikmé"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Tučné"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 "Kŕdeľ šťastných ďatľov učí pri kótovanom ústí Váhu mĺkveho koňa obhrýzať "
 "kôru a žrať čerstvé mäso"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1698,42 +1698,47 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Vybrať písmo"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Písmo"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Písmo:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Štýl písma"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Štýl písma:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Veľkosť"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Veľkosť:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatívne"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid ""
@@ -1747,7 +1752,7 @@ msgstr ""
 "Tento vzorový text slúži ako ukážka nastavenia písma. Môžete ho upraviť, ak "
 "chcete vyskúšať špeciálne znaky."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Show only monospaced fonts"

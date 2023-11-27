@@ -1643,37 +1643,37 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Pyydetty fontti"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Tavallinen"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursiivi"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Kallistettu"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Lihavoitu"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Lihavoitu tiivistetty vino"
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "On sangen hauskaa, että polkupyörä on maanteiden jokapäiväinen ilmiö."
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1684,42 +1684,47 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Valitse fontti"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Fontti"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Fontti:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Fonttityyli"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Fonttityyli:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Koko"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Koko:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Suhteellinen"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1728,7 +1733,7 @@ msgstr ""
 "Tämä näyteteksti havainnollistaa nykyisiä asetuksia. Voit kokeilla "
 "erikoismerkkejä muokkaamalla tekstiä."
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Näytä vain tasalevyiset fontit"

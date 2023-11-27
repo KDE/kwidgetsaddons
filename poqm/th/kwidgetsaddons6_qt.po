@@ -2426,7 +2426,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "แบบอักษรที่ต้องการ"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2434,7 +2434,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "ธรรมดา"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2442,7 +2442,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ตัวเอียง"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2450,7 +2450,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "ตัวเฉียง"
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2458,12 +2458,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ตัวหนา"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
@@ -2473,7 +2473,7 @@ msgstr ""
 "เป็นมนุษย์สุดประเสริฐเลิศคุณค่า กว่าบรรดาฝูงสัตว์เดรัจฉาน\n"
 "จงฝ่าฟันพัฒนาวิชาการ อย่าล้างผลาญฤๅเข่นฆ่าบีฑาใคร"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2488,7 +2488,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "เลือกแบบอักษร"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2496,7 +2496,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "แบบอักษร"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2504,7 +2504,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "แบบอักษร:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2512,14 +2512,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "ลักษณะแบบอักษร"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "ลักษณะแบบอักษร:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2527,7 +2527,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "ขนาด"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2535,7 +2535,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "ขนาด:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
@@ -2543,7 +2543,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "ขนาดสัมพัทธ์"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgid ""
 #| "This sample text illustrates the current settings. You may edit it to "
@@ -2556,7 +2561,7 @@ msgstr ""
 "นี่เป็นข้อความตัวอย่างที่แสดงให้เห็นลักษณะการตั้งค่าในปัจจุบัน "
 "คุณอาจจะแก้ไขมันเพื่อทดสอบอักขระพิเศษก็ได้เช่นกัน"
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""

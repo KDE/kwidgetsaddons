@@ -2177,7 +2177,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ਲੋੜੀਦੇ ਫੋਂਟ"
 
-#: kfontchooser.cpp:193
+#: kfontchooser.cpp:199
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2185,32 +2185,32 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "ਸਧਾਰਨ"
 
-#: kfontchooser.cpp:194 kfontchooser.cpp:444
+#: kfontchooser.cpp:200 kfontchooser.cpp:450
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ਤਿਰਛੇ"
 
-#: kfontchooser.cpp:195 kfontchooser.cpp:445
+#: kfontchooser.cpp:201 kfontchooser.cpp:451
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:196
+#: kfontchooser.cpp:202
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ਗੂੜ੍ਹੇ"
 
-#: kfontchooser.cpp:197
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:241
+#: kfontchooser.cpp:247
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
-#: kfontchooser.cpp:429
+#: kfontchooser.cpp:435
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -2223,7 +2223,7 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "ਫੋਂਟ ਚੁਣੋ"
 
-#: kfontchooserwidget.ui:28
+#: kfontchooserwidget.ui:25
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2231,7 +2231,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "ਫੋਂਟ"
 
-#: kfontchooserwidget.ui:35
+#: kfontchooserwidget.ui:32
 #, fuzzy
 #| msgctxt "KFontChooser|@label"
 #| msgid "Font:"
@@ -2239,7 +2239,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "ਫੋਂਟ:"
 
-#: kfontchooserwidget.ui:53
+#: kfontchooserwidget.ui:50
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2247,7 +2247,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "ਫੋਂਟ ਸਟਾਇਲ"
 
-#: kfontchooserwidget.ui:60
+#: kfontchooserwidget.ui:57
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid "Font style:"
@@ -2255,7 +2255,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "ਫੋਂਟ ਸਟਾਇਲ:"
 
-#: kfontchooserwidget.ui:78
+#: kfontchooserwidget.ui:75
 #, fuzzy
 #| msgctxt "KFontChooser|@option:check"
 #| msgid "Size"
@@ -2263,7 +2263,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "ਆਕਾਰ"
 
-#: kfontchooserwidget.ui:85
+#: kfontchooserwidget.ui:82
 #, fuzzy
 #| msgctxt "KFontChooser|@label:listbox Font size"
 #| msgid "Size:"
@@ -2271,7 +2271,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "ਆਕਾਰ:"
 
-#: kfontchooserwidget.ui:94
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "KFontChooser|@item font size"
 #| msgid "Relative"
@@ -2279,7 +2279,12 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "ਅਨੁਸਾਰੀ"
 
-#: kfontchooserwidget.ui:120
+#: kfontchooserwidget.ui:117
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:127
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid ""
@@ -2293,7 +2298,7 @@ msgstr ""
 "ਇਸ ਸਧਾਰਨ ਟੈਕਸਟ ਤੁਹਾਡੀ ਸੈਟਿੰਗ ਨੂੰ ਪੇਸ਼ ਕਰ ਰਿਹਾ ਹੈ। ਤੁਸੀ ਇਸ ਨੂੰ ਖਾਸ ਅੱਖਰ ਜਾਂਚਣ ਲਈ ਸੋਧ ਵੀ ਸਕਦੇ "
 "ਹੋ।"
 
-#: kfontchooserwidget.ui:132
+#: kfontchooserwidget.ui:137
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
