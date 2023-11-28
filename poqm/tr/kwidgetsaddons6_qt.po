@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-08-16 14:05+0300\n"
+"PO-Revision-Date: 2023-11-27 17:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -157,7 +157,7 @@ msgstr "Fonetik Semboller"
 #: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
-msgstr "Aksanlar Birleştiriliyor"
+msgstr "Birleştirici Aksanlar"
 
 #: kcharselect-translation.cpp:25
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -197,7 +197,7 @@ msgstr "Aralık Niteleyici Harfler"
 #: kcharselect-translation.cpp:32
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
-msgstr "Aksan İşaretleri Birleştiriliyor"
+msgstr "Birleştirici Aksan İmleri"
 
 #: kcharselect-translation.cpp:33
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -452,7 +452,7 @@ msgstr "Tai Tham Dili"
 #: kcharselect-translation.cpp:83
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "Aksanlı İşaretlerin Birleştirilmesi Genişletildi"
+msgstr "Genişletilmiş Birleştirici Aksan İmleri"
 
 #: kcharselect-translation.cpp:84
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -512,7 +512,7 @@ msgstr "Fonetik Uzantılar Tamamlayıcısı"
 #: kcharselect-translation.cpp:95
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
-msgstr "Birleşici Temyiz İşaretleri Tamamlayıcısı"
+msgstr "Ek Birleştirici Aksan İmleri"
 
 #: kcharselect-translation.cpp:96
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -542,7 +542,7 @@ msgstr "Para Birimi Sembolleri"
 #: kcharselect-translation.cpp:101
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks for Symbols"
-msgstr "Semboller için Birleştirici İki Eğilimli İşaretler"
+msgstr "Semboller için Birleştirici Aksan İmleri"
 
 #: kcharselect-translation.cpp:102
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -957,7 +957,7 @@ msgstr "Dikey Biçimler"
 #: kcharselect-translation.cpp:184
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
-msgstr "Tamamlayıcı Yarı İşaretler"
+msgstr "Birleştirici Yarım İmler"
 
 #: kcharselect-translation.cpp:185
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1182,37 +1182,37 @@ msgstr "ÇJK Ideograph Bilgisi"
 #: kcharselect.cpp:877
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
-msgstr "İngilizce Açıklaması: "
+msgstr "İngilizce tanımı: "
 
 #: kcharselect.cpp:884
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
-msgstr "Mandarin Telaffuzu: "
+msgstr "Mandarin telaffuzu: "
 
 #: kcharselect.cpp:891
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
-msgstr "Cantonese Telaffuzu: "
+msgstr "Kantonca telaffuzu: "
 
 #: kcharselect.cpp:898
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
-msgstr "Japonca Telaffuzu: "
+msgstr "Japonca On telaffuzu: "
 
 #: kcharselect.cpp:905
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
-msgstr "Japonca Kun Telaffuzu: "
+msgstr "Japonca Kun telaffuzu: "
 
 #: kcharselect.cpp:912
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
-msgstr "Tang Telaffuzu: "
+msgstr "Tang telaffuzu: "
 
 #: kcharselect.cpp:919
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
-msgstr "Korece Telaffuz: "
+msgstr "Korece telaffuzu: "
 
 #: kcharselect.cpp:925
 msgctxt "KCharSelect|"
@@ -1357,17 +1357,17 @@ msgstr "Harf, Büyük Harf"
 #: kcharselectdata.cpp:813
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
-msgstr "İşaret, Aralık Birleştirme"
+msgstr "İm, Boşluk Birleştirici"
 
 #: kcharselectdata.cpp:815
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
-msgstr "İşaret, Kapsama"
+msgstr "İm, Kapsama"
 
 #: kcharselectdata.cpp:817
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
-msgstr "İşaret, Aralıksız"
+msgstr "İm, Boşluklandırmayan"
 
 #: kcharselectdata.cpp:819
 msgctxt "KCharSelectData|"
@@ -1708,7 +1708,7 @@ msgstr "Göreceli"
 #: kfontchooserwidget.ui:117
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Örnek:"
 
 #: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
