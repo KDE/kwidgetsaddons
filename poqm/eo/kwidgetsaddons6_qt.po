@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-08-20 19:52+0100\n"
+"PO-Revision-Date: 2023-11-28 20:59+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1706,7 +1706,7 @@ msgstr "Relativa"
 #: kfontchooserwidget.ui:117
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Specimeno:"
 
 #: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"

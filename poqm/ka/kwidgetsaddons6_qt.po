@@ -1690,7 +1690,7 @@ msgstr "ფარდობითი"
 #: kfontchooserwidget.ui:117
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "მაგალითი:"
 
 #: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
