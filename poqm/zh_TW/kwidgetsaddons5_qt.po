@@ -13,20 +13,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017, 2018.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-01-20 00:54+0900\n"
+"PO-Revision-Date: 2023-12-02 20:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -93,7 +93,7 @@ msgstr "完成"
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -1298,7 +1298,7 @@ msgstr "<未指定>"
 #: kcharselectdata.cpp:448
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr ""
+msgstr "全部"
 
 #: kcharselectdata.cpp:760
 msgctxt "KCharSelectData|"
@@ -1651,7 +1651,7 @@ msgstr "粗體"
 #: kfontchooser.cpp:213
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "粗體、濃縮體、傾斜體"
 
 #: kfontchooser.cpp:257
 msgctxt "KFontChooser|"
@@ -1896,14 +1896,14 @@ msgstr "啟動 MIME 類型編輯器"
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
-msgstr ""
+msgstr "在 PATH 中找不到 \"keditfiletype5\" 執行檔。"
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype5\" executable, please check your "
 "installation."
-msgstr ""
+msgstr "無法啟動 \"keditfiletype5\" 執行檔，請檢查您的安裝。"
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -1985,7 +1985,7 @@ msgstr "密碼"
 #: kpassworddialog.cpp:80
 msgctxt "KPasswordDialog|"
 msgid "Show Contextual Help"
-msgstr ""
+msgstr "顯示內文說明"
 
 #: kpassworddialog.cpp:100
 msgctxt "KPasswordDialog|"
@@ -2060,20 +2060,17 @@ msgstr "逆時針方向旋轉(&C)"
 #: krecentfilesmenu.cpp:114
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
-msgstr ""
+msgstr "沒有項目"
 
 #: krecentfilesmenu.cpp:117
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Clear input"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
-msgstr "清除輸入"
+msgstr "清除清單"
 
 #: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
-msgstr ""
+msgstr "最近使用的檔案"
 
 #: ksqueezedtextlabel.cpp:207
 msgctxt "KSqueezedTextLabel|@action:inmenu"
