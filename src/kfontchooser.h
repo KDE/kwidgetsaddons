@@ -25,17 +25,6 @@ class QFont;
  * it is preferable to use the convenience functions in
  * QFontDialog.
  *
- * It normally comes up with all font families present on the system; the
- * getFont method below does allow some more fine-tuning of the selection of fonts
- * that will be displayed in the dialog.
- * <p>Consider the following code snippet;
- * \code
- *    QStringList list;
- *    KFontChooser::getFontList(list, KFontChooser::SmoothScalableFonts);
- *    KFontChooser *chooseFont = new KFontChooser(nullptr, KFontChooser::NoDisplayFlags, list);
- * \endcode
- * <p>
- * The above creates a font chooser dialog with only SmoothScaleble fonts.
  * \image html kfontchooser.png "KFontChooser Widget"
  *
  * @see KFontRequester
