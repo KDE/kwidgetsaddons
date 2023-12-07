@@ -49,6 +49,8 @@ class QAbstractItemModel;
 class KWIDGETSADDONS_EXPORT KPageView : public QWidget
 {
     Q_OBJECT
+    Q_PROPERTY(QWidget *pageHeader READ pageHeader WRITE setPageHeader)
+    Q_PROPERTY(QWidget *pageFooter READ pageFooter WRITE setPageFooter)
     Q_PROPERTY(FaceType faceType READ faceType WRITE setFaceType)
     Q_DECLARE_PRIVATE(KPageView)
 
