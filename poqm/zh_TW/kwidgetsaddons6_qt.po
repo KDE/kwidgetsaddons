@@ -2,6 +2,7 @@
 # Copyright (C) 2001, 2002, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 # Eric Cheng <ericc@shinewave.com.tw>, unknown.
 # This file referenced zh_CN translations at 2002.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 # Chih-Wei Huang <cwhuang@linux.org.tw>, 2001.
 # Kenduest Lee <kenduest@i18n.linux.org.tw>, 2001, 2002.
 # Jouston Huang (Huang, Jiun-Jeng) <jouston@housediy.com>, 2002.
@@ -13,20 +14,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017, 2018.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-11-29 17:50+0900\n"
+"PO-Revision-Date: 2023-12-15 19:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -1468,7 +1469,7 @@ msgstr "自訂..."
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"
-msgstr "您輸入的日期不合法"
+msgstr "您輸入的日期無效"
 
 #: kdatecombobox.cpp:190
 #, qt-format
@@ -2346,7 +2347,7 @@ msgstr "覆寫(&O)"
 #: ktimecombobox.cpp:254
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
-msgstr "您輸入的時間不合法"
+msgstr "您輸入的時間無效"
 
 #: ktimecombobox.cpp:257
 #, qt-format
