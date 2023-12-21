@@ -293,7 +293,7 @@ KPageView::FaceType KPageViewPrivate::detectAutoFace() const
     }
 
     if (model->rowCount() > 1) {
-        return KPageView::List;
+        return KPageView::FlatList;
     }
 
     return KPageView::Plain;
