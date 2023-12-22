@@ -80,7 +80,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr ""
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr ""
@@ -153,7 +153,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Fonehtalaš symbolat"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr ""
@@ -1439,221 +1439,221 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Desimálavuohkkin:"
 
-#: kcharselectdata.cpp:311
+#: kcharselectdata.cpp:303
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr ""
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:324
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "Alla surrogáhtat, priváhta geavaheapmái"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:326
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "Alla surrogáhtat, priváhta geavaheapmái"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:328
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "Vuollegaš surrogáhtat"
 
-#: kcharselectdata.cpp:338
+#: kcharselectdata.cpp:330
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Priváhta mearkkat>"
 
-#: kcharselectdata.cpp:370
+#: kcharselectdata.cpp:362
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr ""
 
-#: kcharselectdata.cpp:448
+#: kcharselectdata.cpp:440
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr ""
 
-#: kcharselectdata.cpp:760
+#: kcharselectdata.cpp:752
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "Ii-čálihahtti"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:785
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Eará, kontrolla"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:787
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Eará, formáhtta"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:789
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr ""
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:791
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Eará, priváhta geavahus"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:793
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Eará, surrogáhtat"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:795
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Bustávva, smávva"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:797
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Bustávva, modifikáhtor"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:799
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Bustávva, eará"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:801
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Bustávva, stuorra ovdabustávva"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:803
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Stuorra bustávva"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:805
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr ""
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:807
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr ""
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:809
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr ""
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:811
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Lohku, desimálasiffar"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:813
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "Nummir, bustávva"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:815
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Nummir, eará"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:817
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr ""
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:819
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr ""
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:821
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr ""
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:823
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr ""
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:825
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr ""
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:827
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr ""
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:829
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr ""
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:831
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Symbola, valuhta"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:833
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "Symbola, modifikáhtor"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:835
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "Symbola, matematihkka"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:837
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Symbola, eará"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:839
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "Earromearka, linnjá"
 
-#: kcharselectdata.cpp:849
+#: kcharselectdata.cpp:841
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "Earromearka, teakstabihttá"
 
-#: kcharselectdata.cpp:851
+#: kcharselectdata.cpp:843
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Earromearka, gaskamearka"
 
-#: kcharselectdata.cpp:853
+#: kcharselectdata.cpp:845
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Unknown"

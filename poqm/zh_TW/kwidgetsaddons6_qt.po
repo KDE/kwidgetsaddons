@@ -91,7 +91,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "完成"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "全部"
@@ -156,7 +156,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "音標符號"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "組合區別發音符號"
@@ -1266,197 +1266,197 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "十進位"
 
-#: kcharselectdata.cpp:311
+#: kcharselectdata.cpp:303
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "<無字元>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:324
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<非個人使用高度代理人>"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:326
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<個人使用高度代理人>"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:328
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<低度代理人>"
 
-#: kcharselectdata.cpp:338
+#: kcharselectdata.cpp:330
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<個人使用>"
 
-#: kcharselectdata.cpp:370
+#: kcharselectdata.cpp:362
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<未指定>"
 
-#: kcharselectdata.cpp:448
+#: kcharselectdata.cpp:440
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "全部"
 
-#: kcharselectdata.cpp:760
+#: kcharselectdata.cpp:752
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "不可列印的"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:785
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "其他，控制"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:787
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "其他，格式"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:789
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "其他，未指定"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:791
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "其他，個人使用"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:793
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "其他，代理人"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:795
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "字母，小寫"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:797
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "字母，修飾"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:799
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "字母，其他"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:801
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "字母，標題"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:803
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "字母，大寫"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:805
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "標記，間隔組合"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:807
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "標記，封裝"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:809
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "標記，無間隔"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:811
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "數字，十進位數字"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:813
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "數字，字母"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:815
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "數字，其他"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:817
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "標點，連接器"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:819
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "標點，破折號"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:821
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "標點，關閉"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:823
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "標點，結束引號"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:825
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "標點，開始引號"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:827
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "標點，其他"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:829
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "標點，開啟"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:831
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "符號，貨幣"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:833
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "符號，修飾"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:835
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "符號，數學"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:837
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "符號，其他"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:839
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "分隔器，線條"
 
-#: kcharselectdata.cpp:849
+#: kcharselectdata.cpp:841
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "分隔器，段落"
 
-#: kcharselectdata.cpp:851
+#: kcharselectdata.cpp:843
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "分隔器，空白"
 
-#: kcharselectdata.cpp:853
+#: kcharselectdata.cpp:845
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "未知"

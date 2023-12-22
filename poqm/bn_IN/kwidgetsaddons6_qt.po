@@ -107,7 +107,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "সমাপ্ত"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -207,7 +207,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "ধ্বনিগত প্রতীকচিহ্ন"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 #, fuzzy
 #| msgctxt "KCharSelect section name"
 #| msgid "Combining Diacritical Marks"
@@ -1924,49 +1924,49 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "দশমিকে:"
 
-#: kcharselectdata.cpp:311
+#: kcharselectdata.cpp:303
 #, fuzzy
 #| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "যে কোনো অক্ষর"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:324
 #, fuzzy
 #| msgid "<Non Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Non Private Use High Surrogate>"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:326
 #, fuzzy
 #| msgid "<Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<Private Use High Surrogate>"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:328
 #, fuzzy
 #| msgid "<Low Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<Low Surrogate>"
 
-#: kcharselectdata.cpp:338
+#: kcharselectdata.cpp:330
 #, fuzzy
 #| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Private Use>"
 
-#: kcharselectdata.cpp:370
+#: kcharselectdata.cpp:362
 #, fuzzy
 #| msgid "<not assigned>"
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<not assigned>"
 
-#: kcharselectdata.cpp:448
+#: kcharselectdata.cpp:440
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -1974,224 +1974,224 @@ msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "সমগ্র (&A)"
 
-#: kcharselectdata.cpp:760
+#: kcharselectdata.cpp:752
 #, fuzzy
 #| msgid "Non-printable"
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "প্রিন্ট করারযোগ্য নয়"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:785
 #, fuzzy
 #| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "অন্যান্য, নিয়ন্ত্রণ"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:787
 #, fuzzy
 #| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "অন্যান্য, বিন্যাস"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:789
 #, fuzzy
 #| msgid "Other, Not Assigned"
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "অন্যান, বরাদ্দ করা হয়নি"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:791
 #, fuzzy
 #| msgid "Other, Private Use"
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "অন্যান্য, ব্যক্তিগত ব্যবহার"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:793
 #, fuzzy
 #| msgid "Other, Surrogate"
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "অন্যান্য, বিকল্প"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:795
 #, fuzzy
 #| msgid "Letter, Lowercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "অক্ষর, ছোট হরফ"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:797
 #, fuzzy
 #| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "অক্ষর, পরিবর্তক"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:799
 #, fuzzy
 #| msgid "Letter, Other"
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "অক্ষর, অন্যান্য"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:801
 #, fuzzy
 #| msgid "Letter, Titlecase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "অক্ষর, প্রারম্ভিক অক্ষর বড় হরফে"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:803
 #, fuzzy
 #| msgid "Letter, Uppercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "অক্ষর, বড় হরফ"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:805
 #, fuzzy
 #| msgid "Mark, Spacing Combining"
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "চিহ্ন, শূণ্যস্থান সংযুক্তকারী"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:807
 #, fuzzy
 #| msgid "Mark, Enclosing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "চিহ্ন, আবদ্ধকারী"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:809
 #, fuzzy
 #| msgid "Mark, Non-Spacing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "চিহ্ন, শূণ্যস্থানবিহীন"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:811
 #, fuzzy
 #| msgid "Number, Decimal Digit"
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "সংখ্যা, দশমিক সংখ্যা"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:813
 #, fuzzy
 #| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "সংখ্যা, বর্ণ"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:815
 #, fuzzy
 #| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "সংখ্যা, অন্যান্য"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:817
 #, fuzzy
 #| msgid "Punctuation, Connector"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "যতিচিহ্ন, সংযুক্তকারী"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:819
 #, fuzzy
 #| msgid "Punctuation, Dash"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "যতিচিহ্ন, ড্যাশ"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:821
 #, fuzzy
 #| msgid "Punctuation, Close"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "যতিচিহ্ন, বন্ধ"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:823
 #, fuzzy
 #| msgid "Punctuation, Final Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "যতিচিহ্ন, উদ্ধৃতি সমাপ্তি"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:825
 #, fuzzy
 #| msgid "Punctuation, Initial Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "যতিচিহ্ন, উদ্ধৃতি প্রারম্ভ"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:827
 #, fuzzy
 #| msgid "Punctuation, Other"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "যতিচিহ্ন, অন্যান্য"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:829
 #, fuzzy
 #| msgid "Punctuation, Open"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "যতিচিহ্ন, খোলা"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:831
 #, fuzzy
 #| msgid "Symbol, Currency"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "চিহ্ন, মুদ্রা"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:833
 #, fuzzy
 #| msgid "Symbol, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "চিহ্ন, পরিবর্তক"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:835
 #, fuzzy
 #| msgid "Symbol, Math"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "চিহ্ন, গাণিতিক"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:837
 #, fuzzy
 #| msgid "Symbol, Other"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "চিহ্ন, অন্যান্য"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:839
 #, fuzzy
 #| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "বিভাকজ, রেখা"
 
-#: kcharselectdata.cpp:849
+#: kcharselectdata.cpp:841
 #, fuzzy
 #| msgid "Separator, Paragraph"
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "বিভাজক, অনুচ্ছেদ"
 
-#: kcharselectdata.cpp:851
+#: kcharselectdata.cpp:843
 #, fuzzy
 #| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "বিভাজক, শূণ্যস্থান"
 
-#: kcharselectdata.cpp:853
+#: kcharselectdata.cpp:845
 #, fuzzy
 #| msgid "Unknown"
 msgctxt "KCharSelectData|"

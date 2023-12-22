@@ -91,7 +91,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "പൂര്‍ത്തിയാക്കുക"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -170,7 +170,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "ശബ്ദാത്മക ചിഹ്നങ്ങള്‍"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 #, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
@@ -1489,43 +1489,43 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "ദശാംശ സംഖ്യയായി:"
 
-#: kcharselectdata.cpp:311
+#: kcharselectdata.cpp:303
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "ഏതെങ്കിലും അക്ഷരരൂപം"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:324
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Non Private Use High Surrogate>"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:326
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<Private Use High Surrogate>"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:328
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<Low Surrogate>"
 
-#: kcharselectdata.cpp:338
+#: kcharselectdata.cpp:330
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Private Use>"
 
-#: kcharselectdata.cpp:370
+#: kcharselectdata.cpp:362
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<not assigned>"
 
-#: kcharselectdata.cpp:448
+#: kcharselectdata.cpp:440
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -1533,193 +1533,193 @@ msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "&എല്ലാം"
 
-#: kcharselectdata.cpp:760
+#: kcharselectdata.cpp:752
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "പ്രിന്റ് ചെയ്യുവാന്‍ സാധ്യമല്ലാത്തവ"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:785
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "മറ്റുളളവ, നിയന്ത്രണം"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:787
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "മറ്റുളളവ, ഫോര്‍മാറ്റ്"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:789
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "മറ്റുളളവ, ഏല്‍പ്പിച്ചിട്ടില്ലാത്തവ"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:791
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "മറ്റുളളവ, തനിയാവശ്യം"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:793
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "മറ്റുളളവ, പകരക്കാര്‍"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:795
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "അക്ഷരം, ചെറിയക്ഷരം"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:797
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "അക്ഷരം, മാറ്റുന്നവ"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:799
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "മറ്റുളള അക്ഷരം"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:801
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "അക്ഷരം, ശീര്‍ഷക്ഷരം"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:803
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "അക്ഷരം, വലിയക്ഷരം"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:805
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "അടയാളം, വിടവ് ഒരുമിച്ചുചേര്‍ത്തത്"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:807
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "അടയാളം, ഉള്ളിലാക്കുന്നത്"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:809
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "അടയാളം, വിടവില്ലാത്തത്"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:811
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "നംബര്‍, ദശാംശ സംഖ്യ"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:813
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "നംബര്‍, അക്ഷരം"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:815
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "നംബര്‍, മറ്റുളളവ"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:817
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "ചിഹ്നനം, കൂട്ടിച്ചേര്‍ക്കുന്നത്"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:819
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "ചിഹ്നനം, ഡാഷ്"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:821
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "ചിഹ്നനം, അടയ്ക്കുക"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:823
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "ചിഹ്നനം, അന്ത്യ ക്വോട്ട്"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:825
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "ചിഹ്നനം, ആദ്യ ക്വോട്ട്"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:827
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "ചിഹ്നനം, മറ്റുളളവ"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:829
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "ചിഹ്നനം, തുറക്കുക"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:831
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "നാണയ ചിഹ്നം"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:833
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "വ്യത്യാസ ചിഹ്നം"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:835
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "ഗണിത ചിഹ്നം"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:837
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "മറ്റുളള ചിഹ്നം"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:839
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "വിടവടയാളം, വരി"
 
-#: kcharselectdata.cpp:849
+#: kcharselectdata.cpp:841
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "വിടവടയാളം, ഖണ്ഡിക"
 
-#: kcharselectdata.cpp:851
+#: kcharselectdata.cpp:843
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "വിടവടയാളം, സ്പെയിസ്"
 
-#: kcharselectdata.cpp:853
+#: kcharselectdata.cpp:845
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Unknown"

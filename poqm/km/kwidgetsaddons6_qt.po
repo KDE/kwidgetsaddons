@@ -103,7 +103,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "បញ្ចប់"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -203,7 +203,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "សញ្ញា​នៃ​ការ​បញ្ចេញ​សំឡេង"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 #, fuzzy
 #| msgctxt "KCharSelect section name"
 #| msgid "Combining Diacritical Marks"
@@ -1920,49 +1920,49 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "គិត​ជា​គោលដប់ ៖"
 
-#: kcharselectdata.cpp:311
+#: kcharselectdata.cpp:303
 #, fuzzy
 #| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "តួអក្សរ​ណាមួយ"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:324
 #, fuzzy
 #| msgid "<Non Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<ប្រើ​ការ​ជំនួស​ខ្ពស់​មិនជា​ឯកជន>"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:326
 #, fuzzy
 #| msgid "<Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<ប្រើ​ការ​ជំនួស​ខ្ពស់​ជា​ឯកជន>"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:328
 #, fuzzy
 #| msgid "<Low Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<ការ​ជំនួស​ទាប>"
 
-#: kcharselectdata.cpp:338
+#: kcharselectdata.cpp:330
 #, fuzzy
 #| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<ការ​ប្រើប្រាស់​ជា​ឯកជន>"
 
-#: kcharselectdata.cpp:370
+#: kcharselectdata.cpp:362
 #, fuzzy
 #| msgid "<not assigned>"
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<មិនបាន​ផ្ដល់>"
 
-#: kcharselectdata.cpp:448
+#: kcharselectdata.cpp:440
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -1970,224 +1970,224 @@ msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "ទាំងអស់"
 
-#: kcharselectdata.cpp:760
+#: kcharselectdata.cpp:752
 #, fuzzy
 #| msgid "Non-printable"
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "មិន​អាច​បោះពុម្ព​បាន"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:785
 #, fuzzy
 #| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "ផ្សេងទៀត ត្រួតពិនិត្យ"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:787
 #, fuzzy
 #| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "ផ្សេងទៀត ទ្រង់ទ្រាយ"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:789
 #, fuzzy
 #| msgid "Other, Not Assigned"
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "ផ្សេងទៀត មិនបាន​ផ្ដល់"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:791
 #, fuzzy
 #| msgid "Other, Private Use"
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "ផ្សេងទៀត ការ​ប្រើប្រាស់​ជា​ឯកជន"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:793
 #, fuzzy
 #| msgid "Other, Surrogate"
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "ផ្សេងទៀត អក្សរ​ជំនួស"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:795
 #, fuzzy
 #| msgid "Letter, Lowercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "តួអក្សរ តូច"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:797
 #, fuzzy
 #| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "តួអក្សរ កែប្រែ"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:799
 #, fuzzy
 #| msgid "Letter, Other"
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "តួអក្សរ ផ្សេងទៀត"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:801
 #, fuzzy
 #| msgid "Letter, Titlecase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "តួអក្សរ ចំណងជើង"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:803
 #, fuzzy
 #| msgid "Letter, Uppercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "តួអក្សរ ពុម្ព​ធំ"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:805
 #, fuzzy
 #| msgid "Mark, Spacing Combining"
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "សម្គាល់ ការ​បន្សំ​ចន្លោះ"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:807
 #, fuzzy
 #| msgid "Mark, Enclosing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "សម្គាល់ បិទជិត"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:809
 #, fuzzy
 #| msgid "Mark, Non-Spacing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "សម្គាល់ គ្មាន​ចន្លោះ"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:811
 #, fuzzy
 #| msgid "Number, Decimal Digit"
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "លេខ ទសភាគ"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:813
 #, fuzzy
 #| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "លេខ តួអក្សរ"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:815
 #, fuzzy
 #| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "លេខ ផ្សេងទៀត"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:817
 #, fuzzy
 #| msgid "Punctuation, Connector"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "វណ្ណយុត្តិ ឧបករណ៍​តភ្ជាប់"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:819
 #, fuzzy
 #| msgid "Punctuation, Dash"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "វណ្ណយុត្តិ សញ្ញា​ដាច់ៗ"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:821
 #, fuzzy
 #| msgid "Punctuation, Close"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "វណ្ណយុត្តិ បិទ"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:823
 #, fuzzy
 #| msgid "Punctuation, Final Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "វណ្ណយុត្តិ សម្រង់​ចុងក្រោយ"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:825
 #, fuzzy
 #| msgid "Punctuation, Initial Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "វណ្ណយុត្តិ សម្រង់​ចប់ផ្ដើម"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:827
 #, fuzzy
 #| msgid "Punctuation, Other"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "វណ្ណយុត្តិ ផ្សេងទៀត"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:829
 #, fuzzy
 #| msgid "Punctuation, Open"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "វណ្ណយុត្ត បើក"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:831
 #, fuzzy
 #| msgid "Symbol, Currency"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "និមិត្ត​សញ្ញា រូបិយប័ណ្ណ"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:833
 #, fuzzy
 #| msgid "Symbol, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "និមិត្ត​សញ្ញា កែប្រែ"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:835
 #, fuzzy
 #| msgid "Symbol, Math"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "និមិត្ត​សញ្ញា គណិតវិទ្យា"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:837
 #, fuzzy
 #| msgid "Symbol, Other"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "និមិត្ត​សញ្ញា ផ្សេងទៀត"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:839
 #, fuzzy
 #| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "អ្នក​ខណ្ឌ​ចែក បន្ទាត់"
 
-#: kcharselectdata.cpp:849
+#: kcharselectdata.cpp:841
 #, fuzzy
 #| msgid "Separator, Paragraph"
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "អ្នក​ខណ្ឌ​ចែក កថាខណ្ឌ"
 
-#: kcharselectdata.cpp:851
+#: kcharselectdata.cpp:843
 #, fuzzy
 #| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "អ្នក​ខណ្ឌ​ចែក ចន្លោះ"
 
-#: kcharselectdata.cpp:853
+#: kcharselectdata.cpp:845
 #, fuzzy
 #| msgid "Unknown"
 msgctxt "KCharSelectData|"

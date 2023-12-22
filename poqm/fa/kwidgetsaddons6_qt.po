@@ -110,7 +110,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "پایان"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -213,7 +213,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "نمادهای آوایی"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 #, fuzzy
 #| msgctxt "KCharSelect section name"
 #| msgid "Combining Diacritical Marks"
@@ -1934,49 +1934,49 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "به‌صورت دهدهی:"
 
-#: kcharselectdata.cpp:311
+#: kcharselectdata.cpp:303
 #, fuzzy
 #| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "هر نویسه"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:324
 #, fuzzy
 #| msgid "<Non Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<جانشین بالا با استفادهٔ غیرخصوصی>"
 
-#: kcharselectdata.cpp:334
+#: kcharselectdata.cpp:326
 #, fuzzy
 #| msgid "<Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<جانشین بالا با استفادهٔ خصوصی>"
 
-#: kcharselectdata.cpp:336
+#: kcharselectdata.cpp:328
 #, fuzzy
 #| msgid "<Low Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<Low Surrogate>"
 
-#: kcharselectdata.cpp:338
+#: kcharselectdata.cpp:330
 #, fuzzy
 #| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<استفاده خصوصی>"
 
-#: kcharselectdata.cpp:370
+#: kcharselectdata.cpp:362
 #, fuzzy
 #| msgid "<not assigned>"
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<انتساب نشده>"
 
-#: kcharselectdata.cpp:448
+#: kcharselectdata.cpp:440
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -1984,224 +1984,224 @@ msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "&همه‌"
 
-#: kcharselectdata.cpp:760
+#: kcharselectdata.cpp:752
 #, fuzzy
 #| msgid "Non-printable"
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "غیر قابل چاپ"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:785
 #, fuzzy
 #| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "دیگر، کنترل"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:787
 #, fuzzy
 #| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "دیگر، قالب"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:789
 #, fuzzy
 #| msgid "Other, Not Assigned"
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "دیگر، انتساب‌نشده"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:791
 #, fuzzy
 #| msgid "Other, Private Use"
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "دیگر، استفاده خصوصی"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:793
 #, fuzzy
 #| msgid "Other, Surrogate"
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "دیگر، جانشین"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:795
 #, fuzzy
 #| msgid "Letter, Lowercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "حرف، پایینی"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:797
 #, fuzzy
 #| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "حرف، تغییردهنده"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:799
 #, fuzzy
 #| msgid "Letter, Other"
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "حرف، دیگر"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:801
 #, fuzzy
 #| msgid "Letter, Titlecase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "حرف، کوچکی و بزرگی عنوان"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:803
 #, fuzzy
 #| msgid "Letter, Uppercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "حرف، بالایی"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:805
 #, fuzzy
 #| msgid "Mark, Spacing Combining"
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "نشان، ترکیب فاصله گذاری"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:807
 #, fuzzy
 #| msgid "Mark, Enclosing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "علامت، بسته‌شدن"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:809
 #, fuzzy
 #| msgid "Mark, Non-Spacing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "نشان، بدون فاصله‌گذاری"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:811
 #, fuzzy
 #| msgid "Number, Decimal Digit"
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "عدد، رقم ده‌دهی"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:813
 #, fuzzy
 #| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "عدد، حرف"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:815
 #, fuzzy
 #| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "عدد، دیگر"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:817
 #, fuzzy
 #| msgid "Punctuation, Connector"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "نقطه گذاری، بست"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:819
 #, fuzzy
 #| msgid "Punctuation, Dash"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "نقطه‌گذاری، خط تیره"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:821
 #, fuzzy
 #| msgid "Punctuation, Close"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "نقطه‌گذاری، بستن"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:823
 #, fuzzy
 #| msgid "Punctuation, Final Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "نقطه‌گذاری، نقل قول پایانی"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:825
 #, fuzzy
 #| msgid "Punctuation, Initial Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "نقطه‌گذاری، نقل قول آغازین"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:827
 #, fuzzy
 #| msgid "Punctuation, Other"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "نقطه گذاری، دیگر"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:829
 #, fuzzy
 #| msgid "Punctuation, Open"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "نقطه‌گذاری، باز"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:831
 #, fuzzy
 #| msgid "Symbol, Currency"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "نماد، پول"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:833
 #, fuzzy
 #| msgid "Symbol, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "نماد، تغییردهنده"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:835
 #, fuzzy
 #| msgid "Symbol, Math"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "نماد، ریاضی"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:837
 #, fuzzy
 #| msgid "Symbol, Other"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "نماد، دیگر"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:839
 #, fuzzy
 #| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "جداساز، خط"
 
-#: kcharselectdata.cpp:849
+#: kcharselectdata.cpp:841
 #, fuzzy
 #| msgid "Separator, Paragraph"
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "جداساز، بند"
 
-#: kcharselectdata.cpp:851
+#: kcharselectdata.cpp:843
 #, fuzzy
 #| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "جداساز، فاصله"
 
-#: kcharselectdata.cpp:853
+#: kcharselectdata.cpp:845
 #, fuzzy
 #| msgid "Unknown"
 msgctxt "KCharSelectData|"
