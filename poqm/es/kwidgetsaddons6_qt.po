@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-11-28 00:02+0100\n"
+"PO-Revision-Date: 2023-12-24 12:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -1115,7 +1115,7 @@ msgstr "Seleccione una categoría"
 #: kcharselect.cpp:468
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "Seleccione un bloque a mostrar"
+msgstr "Seleccione un bloque para mostrar"
 
 #: kcharselect.cpp:487
 msgctxt "KCharSelect|@info:tooltip"
@@ -1508,22 +1508,22 @@ msgstr "Mes anterior"
 #: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
-msgstr "Seleccione una semana"
+msgstr "Seleccionar una semana"
 
 #: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
-msgstr "Seleccione un mes"
+msgstr "Seleccionar un mes"
 
 #: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
-msgstr "Seleccione un año"
+msgstr "Seleccionar un año"
 
 #: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
-msgstr "Seleccione el día actual"
+msgstr "Seleccionar el día actual"
 
 #: kdatepicker.cpp:647
 msgctxt "KDatePicker|@action:button"
