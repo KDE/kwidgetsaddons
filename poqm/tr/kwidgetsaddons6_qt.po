@@ -12,13 +12,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-12-09 22:16+0300\n"
+"PO-Revision-Date: 2023-12-27 13:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.01.85\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -802,7 +802,7 @@ msgstr "Bamum"
 #: kcharselect-translation.cpp:153
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
-msgstr "Değiştirici Ses Harfleri"
+msgstr "Niteleyici Ses Harfleri"
 
 #: kcharselect-translation.cpp:154
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -912,17 +912,17 @@ msgstr "Genişletilmiş Hangul Jamo-B"
 #: kcharselect-translation.cpp:175
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
-msgstr "Yüksek Suretler"
+msgstr "Yüksek Vekiller"
 
 #: kcharselect-translation.cpp:176
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
-msgstr "Büyük Özel Kullanımlı Suretler"
+msgstr "Yüksek Özel Kullanım Vekiller"
 
 #: kcharselect-translation.cpp:177
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
-msgstr "Küçük Suretler"
+msgstr "Düşük Vekiller"
 
 #: kcharselect-translation.cpp:178
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1272,17 +1272,17 @@ msgstr "<karakterolmayan>"
 #: kcharselectdata.cpp:324
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
-msgstr "<Özel Kullanım için Olmayan Büyük Suretler>"
+msgstr "<Özel Kullanım Olmayan Yüksek Vekiller>"
 
 #: kcharselectdata.cpp:326
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
-msgstr "<Özel Kullanım için Büyük Vekiller>"
+msgstr "<Özel Kullanım Yüksek Vekiller>"
 
 #: kcharselectdata.cpp:328
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
-msgstr "<Küçük Suretler>"
+msgstr "<Düşük Vekiller>"
 
 #: kcharselectdata.cpp:330
 msgctxt "KCharSelectData|"
@@ -1302,7 +1302,7 @@ msgstr "Tümü"
 #: kcharselectdata.cpp:752
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
-msgstr "Yazdırılabilir-olmayan"
+msgstr "Yazdırılamaz"
 
 #: kcharselectdata.cpp:785
 msgctxt "KCharSelectData|"
@@ -1327,7 +1327,7 @@ msgstr "Diğer, Özel Kullanım"
 #: kcharselectdata.cpp:793
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
-msgstr "Diğer, Suret"
+msgstr "Diğer, Vekil"
 
 #: kcharselectdata.cpp:795
 msgctxt "KCharSelectData|"
@@ -1337,7 +1337,7 @@ msgstr "Harf, Küçük harf"
 #: kcharselectdata.cpp:797
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
-msgstr "Harf, Değiştirici"
+msgstr "Harf, Niteleyici"
 
 #: kcharselectdata.cpp:799
 msgctxt "KCharSelectData|"
@@ -1427,7 +1427,7 @@ msgstr "Sembol, Para birimi"
 #: kcharselectdata.cpp:833
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
-msgstr "Sembol, Değiştirici"
+msgstr "Sembol, Niteleyici"
 
 #: kcharselectdata.cpp:835
 msgctxt "KCharSelectData|"
@@ -1485,7 +1485,7 @@ msgstr "Tarih %1 tarihinden daha sonra olamaz"
 #, qt-format
 msgctxt "KDatePicker|"
 msgid "Week %1"
-msgstr "%1. Hafta"
+msgstr "%1. hafta"
 
 #: kdatepicker.cpp:305
 msgctxt "KDatePicker|@info:tooltip"
@@ -1510,22 +1510,22 @@ msgstr "Geçen ay"
 #: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
-msgstr "Bir hafta seçin"
+msgstr "Bir hafta seç"
 
 #: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
-msgstr "Bir ay seçin"
+msgstr "Bir ay seç"
 
 #: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
-msgstr "Bir yıl seçin"
+msgstr "Bir yıl seç"
 
 #: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
-msgstr "Geçerli günü seçin"
+msgstr "Geçerli günü seç"
 
 #: kdatepicker.cpp:647
 msgctxt "KDatePicker|@action:button"
