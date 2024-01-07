@@ -12,13 +12,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-12-27 13:12+0300\n"
+"PO-Revision-Date: 2024-01-07 00:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -967,7 +967,7 @@ msgstr "ÇJK Uyumluluk Biçimleri"
 #: kcharselect-translation.cpp:186
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Small Form Variants"
-msgstr "Küçük Biçim Çeşitlemeleri"
+msgstr "Küçük Biçimli Varyantlar"
 
 #: kcharselect-translation.cpp:187
 msgctxt "KCharSelectData|KCharselect unicode block name"
