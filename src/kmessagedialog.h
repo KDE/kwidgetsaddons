@@ -19,6 +19,7 @@
 
 class KMessageDialogPrivate;
 class KGuiItem;
+class QWidget;
 
 /**
  * @class KMessageDialog kmessagedialog.h <KMessageDialog>
@@ -272,6 +273,22 @@ public:
      *                     Ignored with all dialog types without a Cancel button.
      */
     void setButtons(const KGuiItem &primaryAction = KGuiItem(), const KGuiItem &secondaryAction = KGuiItem(), const KGuiItem &cancelAction = KGuiItem());
+
+    /**
+     * Manually play the notification sound
+     *
+     * When implementing your entirely own message box, not using KMessageDialog,
+     * you can call this function to play the relevant notification sound (if enabled).
+     *
+     * @note You don't need to call this when using KMessageDialog, it plays the sound automatically.
+     *
+     * @param type The message box type
+     * @param text The message box contents, for accessibility purposes.
+     * @param dialog The dialog that was displayed
+     * @since 6.0
+     * @sa setNotifyEnabled
+     */
+    static void beep(KMessageDialog::Type type, const QString &text = QString(), QWidget *dialog = nullptr);
 
 protected:
     void showEvent(QShowEvent *event) override;

@@ -44,33 +44,6 @@ public:
     {
     }
 
-    void doNotify()
-    {
-#ifndef Q_OS_WIN // FIXME problems with KNotify on Windows
-        QMessageBox::Icon notifyType = QMessageBox::NoIcon;
-        switch (m_type) {
-        case KMessageDialog::QuestionTwoActions:
-        case KMessageDialog::QuestionTwoActionsCancel:
-            notifyType = QMessageBox::Question;
-            break;
-        case KMessageDialog::WarningTwoActions:
-        case KMessageDialog::WarningTwoActionsCancel:
-        case KMessageDialog::WarningContinueCancel:
-            notifyType = QMessageBox::Warning;
-            break;
-        case KMessageDialog::Information:
-            notifyType = QMessageBox::Information;
-            break;
-        case KMessageDialog::Error:
-            notifyType = QMessageBox::Critical;
-            break;
-        }
-
-        // TODO include m_listWidget items
-        KMessageBox::notifyInterface()->sendNotification(notifyType, m_messageLabel->text(), q->topLevelWidget());
-#endif
-    }
-
     KMessageDialog::Type m_type;
     KMessageDialog *const q;
 
@@ -492,9 +465,36 @@ void KMessageDialog::setNotifyEnabled(bool enable)
 void KMessageDialog::showEvent(QShowEvent *event)
 {
     if (d->m_notifyEnabled) {
-        d->doNotify();
+        // TODO include m_listWidget items
+        beep(d->m_type, d->m_messageLabel->text(), topLevelWidget());
     }
     QDialog::showEvent(event);
+}
+
+void KMessageDialog::beep(Type type, const QString &text, QWidget *widget)
+{
+#ifndef Q_OS_WIN // FIXME problems with KNotify on Windows
+    QMessageBox::Icon notifyType = QMessageBox::NoIcon;
+    switch (type) {
+    case KMessageDialog::QuestionTwoActions:
+    case KMessageDialog::QuestionTwoActionsCancel:
+        notifyType = QMessageBox::Question;
+        break;
+    case KMessageDialog::WarningTwoActions:
+    case KMessageDialog::WarningTwoActionsCancel:
+    case KMessageDialog::WarningContinueCancel:
+        notifyType = QMessageBox::Warning;
+        break;
+    case KMessageDialog::Information:
+        notifyType = QMessageBox::Information;
+        break;
+    case KMessageDialog::Error:
+        notifyType = QMessageBox::Critical;
+        break;
+    }
+
+    KMessageBox::notifyInterface()->sendNotification(notifyType, text, widget);
+#endif
 }
 
 #include "kmessagedialog.moc"
