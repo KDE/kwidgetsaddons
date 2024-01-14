@@ -2079,35 +2079,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "हा संदेश पुन्हा दर्शवू नका"
 
-#: kmessagedialog.cpp:166
+#: kmessagedialog.cpp:139
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "तपशील"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:225
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "प्रश्न"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:230
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "इशारा"
 
-#: kmessagedialog.cpp:260
+#: kmessagedialog.cpp:233
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "माहिती"
 
-#: kmessagedialog.cpp:263
+#: kmessagedialog.cpp:236
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

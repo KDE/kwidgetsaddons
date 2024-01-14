@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
-"PO-Revision-Date: 2024-01-06 03:31\n"
+"PO-Revision-Date: 2024-01-13 05:59\n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -1785,27 +1785,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "不再显示此消息"
 
-#: kmessagedialog.cpp:166
+#: kmessagedialog.cpp:139
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "详情"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:225
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "问题"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:230
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:260
+#: kmessagedialog.cpp:233
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "信息"
 
-#: kmessagedialog.cpp:263
+#: kmessagedialog.cpp:236
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "错误"

@@ -1992,7 +1992,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ин паём аз нав нишон дода нашавад"
 
-#: kmessagedialog.cpp:166
+#: kmessagedialog.cpp:139
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -2000,7 +2000,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Тафсилот"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:225
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2008,7 +2008,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Савол"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:230
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2016,7 +2016,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Огоҳӣ"
 
-#: kmessagedialog.cpp:260
+#: kmessagedialog.cpp:233
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2024,7 +2024,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Иттилоот"
 
-#: kmessagedialog.cpp:263
+#: kmessagedialog.cpp:236
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"

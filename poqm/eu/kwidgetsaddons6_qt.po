@@ -1877,27 +1877,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ez erakutsi mezu hau berriz"
 
-#: kmessagedialog.cpp:166
+#: kmessagedialog.cpp:139
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Xehetasunak"
 
-#: kmessagedialog.cpp:252
+#: kmessagedialog.cpp:225
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Galdera"
 
-#: kmessagedialog.cpp:257
+#: kmessagedialog.cpp:230
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Abisua"
 
-#: kmessagedialog.cpp:260
+#: kmessagedialog.cpp:233
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informazioa"
 
-#: kmessagedialog.cpp:263
+#: kmessagedialog.cpp:236
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Errorea"
