@@ -2381,7 +2381,3 @@ msgstr "Цял екран"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Показване прозореца на пълен екран"
-
-#~ msgctxt "KFontChooserWidget|"
-#~ msgid "KFontChooserWidget"
-#~ msgstr "KFontChooserWidget"
