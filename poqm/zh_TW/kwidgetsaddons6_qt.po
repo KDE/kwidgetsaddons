@@ -2,7 +2,7 @@
 # Copyright (C) 2001, 2002, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 # Eric Cheng <ericc@shinewave.com.tw>, unknown.
 # This file referenced zh_CN translations at 2002.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 # Chih-Wei Huang <cwhuang@linux.org.tw>, 2001.
 # Kenduest Lee <kenduest@i18n.linux.org.tw>, 2001, 2002.
 # Jouston Huang (Huang, Jiun-Jeng) <jouston@housediy.com>, 2002.
@@ -20,14 +20,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-12-15 19:52+0900\n"
+"PO-Revision-Date: 2024-01-24 22:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.01.90\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -299,7 +299,7 @@ msgstr "古吉拉特語"
 #: kcharselect-translation.cpp:52
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
-msgstr "Oriya"
+msgstr "奧里亞語"
 
 #: kcharselect-translation.cpp:53
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -324,7 +324,7 @@ msgstr "馬來亞拉姆語"
 #: kcharselect-translation.cpp:57
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
-msgstr "Sinhala"
+msgstr "僧伽羅語"
 
 #: kcharselect-translation.cpp:58
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -354,7 +354,7 @@ msgstr "喬治亞語"
 #: kcharselect-translation.cpp:63
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
-msgstr "Hangul Jamo"
+msgstr "韓文字母"
 
 #: kcharselect-translation.cpp:64
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -374,7 +374,7 @@ msgstr "Cherokee"
 #: kcharselect-translation.cpp:67
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "統一加拿大土著音節"
+msgstr "統一加拿大原住民音節文字"
 
 #: kcharselect-translation.cpp:68
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -419,7 +419,7 @@ msgstr "蒙古語"
 #: kcharselect-translation.cpp:76
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
-msgstr "統一加拿大土著音節延伸"
+msgstr "統一加拿大原住民音節文字延伸"
 
 #: kcharselect-translation.cpp:77
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -429,12 +429,12 @@ msgstr "Limbu"
 #: kcharselect-translation.cpp:78
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
-msgstr "Tai Le"
+msgstr "傣那文 (Tai Le)"
 
 #: kcharselect-translation.cpp:79
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
-msgstr "New Tai Lue"
+msgstr "新傣仂文"
 
 #: kcharselect-translation.cpp:80
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -449,7 +449,7 @@ msgstr "Buginese"
 #: kcharselect-translation.cpp:82
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
-msgstr "Tai Tham"
+msgstr "傣曇文 (Tai Tham)"
 
 #: kcharselect-translation.cpp:83
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -489,7 +489,7 @@ msgstr "斯拉夫延伸 C"
 #: kcharselect-translation.cpp:90
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "Georgian 擴充"
+msgstr "喬治亞語擴充"
 
 #: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -724,7 +724,7 @@ msgstr "注音符號"
 #: kcharselect-translation.cpp:137
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
-msgstr "韓語相容"
+msgstr "韓文相容字母"
 
 #: kcharselect-translation.cpp:138
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -759,17 +759,17 @@ msgstr "中日韓相容"
 #: kcharselect-translation.cpp:144
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
-msgstr "中日韓象形文字延伸 A"
+msgstr "中日韓統一表意文字延伸 A"
 
 #: kcharselect-translation.cpp:145
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
-msgstr "Yijing Hexagram Symbols"
+msgstr "易經六十四掛符號"
 
 #: kcharselect-translation.cpp:146
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
-msgstr "中日韓象形文字"
+msgstr "中日韓統一表意文字"
 
 #: kcharselect-translation.cpp:147
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -819,7 +819,7 @@ msgstr "Syloti Nagri"
 #: kcharselect-translation.cpp:156
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
-msgstr "Common Indic Number Forms"
+msgstr "印度語系通用數字"
 
 #: kcharselect-translation.cpp:157
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -849,7 +849,7 @@ msgstr "Rejang"
 #: kcharselect-translation.cpp:162
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
-msgstr "Hangul Jamo Extended-A"
+msgstr "韓文字母擴充 A"
 
 #: kcharselect-translation.cpp:163
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -859,7 +859,7 @@ msgstr "爪哇語"
 #: kcharselect-translation.cpp:164
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
-msgstr "Myanmar Extended-B"
+msgstr "緬甸擴充 B"
 
 #: kcharselect-translation.cpp:165
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -869,12 +869,12 @@ msgstr "Cham"
 #: kcharselect-translation.cpp:166
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
-msgstr "Myanmar Extended-A"
+msgstr "緬甸擴充 A"
 
 #: kcharselect-translation.cpp:167
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
-msgstr "Tai Viet"
+msgstr "傣越文"
 
 #: kcharselect-translation.cpp:168
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -884,7 +884,7 @@ msgstr "Meetei Mayek 延伸"
 #: kcharselect-translation.cpp:169
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
-msgstr "Ethiopic Extended-A"
+msgstr "衣索匹亞延伸 A"
 
 #: kcharselect-translation.cpp:170
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -909,22 +909,22 @@ msgstr "韓文音節"
 #: kcharselect-translation.cpp:174
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
-msgstr "Hangul Jamo Extended-B"
+msgstr "韓文字母擴充 B"
 
 #: kcharselect-translation.cpp:175
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
-msgstr "高度替代"
+msgstr "高代用區"
 
 #: kcharselect-translation.cpp:176
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
-msgstr "個人使用高度代理"
+msgstr "高私人代用區"
 
 #: kcharselect-translation.cpp:177
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
-msgstr "低度代理"
+msgstr "低代用區"
 
 #: kcharselect-translation.cpp:178
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -934,12 +934,12 @@ msgstr "個人使用區"
 #: kcharselect-translation.cpp:179
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Ideographs"
-msgstr "中日韓相容象形文字"
+msgstr "中日韓相容表意文字"
 
 #: kcharselect-translation.cpp:180
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
-msgstr "字母形式"
+msgstr "字母表現形式"
 
 #: kcharselect-translation.cpp:181
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1014,7 +1014,7 @@ msgstr "框起來的表意文字補集"
 #: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
-msgstr "雜項符號與象形文字"
+msgstr "雜項符號與圖符"
 
 #: kcharselect-translation.cpp:197
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1049,7 +1049,7 @@ msgstr "補集箭號 C"
 #: kcharselect-translation.cpp:203
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Symbols and Pictographs"
-msgstr "補充符號與象形文字"
+msgstr "補充符號與圖符"
 
 #: kcharselect-translation.cpp:204
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1059,7 +1059,7 @@ msgstr "國際象棋符號"
 #: kcharselect-translation.cpp:205
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "補充符號與擴充象形文字 A"
+msgstr "補充符號與圖符擴充 A"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1179,7 +1179,7 @@ msgstr "分解："
 #: kcharselect.cpp:874
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
-msgstr "中日韓象形文字資訊"
+msgstr "中日韓表意文字資訊"
 
 #: kcharselect.cpp:877
 msgctxt "KCharSelect|"
@@ -1274,17 +1274,17 @@ msgstr "<無字元>"
 #: kcharselectdata.cpp:324
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
-msgstr "<非個人使用高度代理人>"
+msgstr "<非私人高代用區>"
 
 #: kcharselectdata.cpp:326
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
-msgstr "<個人使用高度代理人>"
+msgstr "<私人高代用區>"
 
 #: kcharselectdata.cpp:328
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
-msgstr "<低度代理人>"
+msgstr "<低代用區>"
 
 #: kcharselectdata.cpp:330
 msgctxt "KCharSelectData|"
@@ -1329,7 +1329,7 @@ msgstr "其他，個人使用"
 #: kcharselectdata.cpp:793
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
-msgstr "其他，代理人"
+msgstr "其他，代用"
 
 #: kcharselectdata.cpp:795
 msgctxt "KCharSelectData|"
@@ -2374,7 +2374,7 @@ msgstr "全螢幕"
 #: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
-msgstr "將視窗放大到全畫面"
+msgstr "將視窗放大到全全螢幕"
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
