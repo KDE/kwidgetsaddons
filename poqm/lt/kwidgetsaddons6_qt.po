@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2021-09-06 22:30+0300\n"
+"PO-Revision-Date: 2024-01-25 13:27+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -88,7 +88,7 @@ msgstr "Užbaigti"
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr ""
+msgstr "Visi"
 
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -261,12 +261,9 @@ msgid "Syriac Supplement"
 msgstr "Sirų priedas"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "Arabų išplėstiniai A"
+msgstr "Arabų išplėstiniai B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1296,7 +1293,7 @@ msgstr "<nepriskirta>"
 #: kcharselectdata.cpp:440
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr ""
+msgstr "Visi"
 
 #: kcharselectdata.cpp:752
 msgctxt "KCharSelectData|"
@@ -1532,84 +1529,54 @@ msgid "Close"
 msgstr "Užverti"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "Kiti metai"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "Kitas mėnuo"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "Kita savaitė"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "Rytoj"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Šiandien"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "Vakar"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "Praeita savaitė"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "Praeitas mėnuo"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "Praeiti metai"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
-msgstr "Nėra datos"
+msgstr "Be datos"
 
 #: kdatetimeedit.cpp:171
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
@@ -1737,7 +1704,7 @@ msgstr "Santykinis"
 #: kfontchooserwidget.ui:117
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Pavyzdys:"
 
 #: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
@@ -1905,28 +1872,17 @@ msgid "Launch the MIME type editor"
 msgstr "Paleisti MIME tipų redaktorių"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr ""
-"Nepavyko paleisti „keditfiletype5“ vykdomojo, patikrinkite savo diegimą."
+msgstr "Nepavyko KELYJE rasti „keditfiletype“ vykdomojo."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"Nepavyko paleisti „keditfiletype5“ vykdomojo, patikrinkite savo diegimą."
+"Nepavyko paleisti „keditfiletype“ vykdomojo, patikrinkite savo diegimą."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -2010,7 +1966,7 @@ msgstr "Slaptažodžio stiprumo &matuoklis:"
 #: kpageview.cpp:449
 msgctxt "KPageView|"
 msgid "Search..."
-msgstr ""
+msgstr "Ieškoti..."
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
