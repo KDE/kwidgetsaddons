@@ -39,6 +39,26 @@ class KWIDGETSADDONS_EXPORT KPasswordLineEdit : public QWidget
     Q_PROPERTY(QLineEdit::EchoMode echoMode READ echoMode WRITE setEchoMode NOTIFY echoModeChanged)
 public:
     /**
+     * This enum describe when the reveal password button is visible.
+     * @since 6.0
+     */
+    enum class RevealPasswordMode {
+        /**
+         * Display the button when entering a new password, but doesn't let you see a
+         * previously entered password. This is the default.
+         */
+        Normal,
+        /**
+         * Never display the reveal button.
+         */
+        Never,
+        /**
+         * Always display the reveal button. Usefull in a password manager for example.
+         */
+        Always,
+    };
+
+    /**
      * Constructs a lineedit password widget.
      * @since 5.37
      *
@@ -98,6 +118,30 @@ public:
     bool isReadOnly() const;
 
     /**
+     * Return when the reveal password button is visible.
+     */
+    RevealPasswordMode revealPasswordMode() const;
+
+    /**
+     * Set when the reveal password button will be visible.
+     *
+     * The default is RevealPasswordMode::Normal and the reveal password button will
+     * only be visible when entering a new password.
+     *
+     * This can be used to honor the lineedit_reveal_password kiosk key, for example:
+     *
+     * \code{.cpp}
+     * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
+     *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Normal);
+     * } else {
+     *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Never);
+     * }
+     * \endcode
+     */
+    void setRevealPasswordMode(RevealPasswordMode revealPasswordMode);
+
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 249)
+    /**
      * Whether to show the visibility trailing action in the line edit.
      * Default is true. This can be used to honor the lineedit_reveal_password
      * kiosk key, for example:
@@ -105,12 +149,13 @@ public:
      * passwordLineEdit.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
      */
-    void setRevealPasswordAvailable(bool reveal);
+    [[deprecated("Use setRevealPasswordMode")]] void setRevealPasswordAvailable(bool reveal);
 
     /**
      * Whether the visibility trailing action in the line edit is visible.
      */
-    bool isRevealPasswordAvailable() const;
+    [[deprecated("Use revealPasswordMode")]] bool isRevealPasswordAvailable() const;
+#endif
 
     /**
      * @internal
