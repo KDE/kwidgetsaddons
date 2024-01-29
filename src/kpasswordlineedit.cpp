@@ -8,8 +8,10 @@
 #include "kpasswordlineedit.h"
 
 #include <QAction>
+#include <QContextMenuEvent>
 #include <QHBoxLayout>
 #include <QIcon>
+#include <QMenu>
 
 class KPasswordLineEditPrivate
 {
@@ -21,6 +23,7 @@ public:
     void initialize();
     void echoModeToggled();
     void showToggleEchoModeAction(const QString &text);
+    void slotCustomContextMenuRequested(const QPoint &pos);
 
     QIcon passwordIcon;
     QIcon visibleIcon;
@@ -74,6 +77,21 @@ void KPasswordLineEditPrivate::echoModeToggled()
     Q_EMIT q->echoModeChanged(passwordLineEdit->echoMode());
 }
 
+void KPasswordLineEditPrivate::slotCustomContextMenuRequested(const QPoint &pos)
+{
+    auto popup = std::unique_ptr<QMenu>(passwordLineEdit->createStandardContextMenu());
+    if (popup) {
+        if (toggleEchoModeAction->isVisible()) {
+            popup->addSeparator();
+
+            toggleEchoModeAction->setText(passwordLineEdit->echoMode() == QLineEdit::Password ? QObject::tr("Show Password", "@action:inmenu")
+                                                                                              : QObject::tr("Hide Password", "@action:inmenu"));
+            popup->addAction(toggleEchoModeAction);
+        }
+        popup->exec(pos);
+    }
+}
+
 KPasswordLineEdit::KPasswordLineEdit(QWidget *parent)
     : QWidget(parent)
     , d(new KPasswordLineEditPrivate(this))
@@ -84,6 +102,10 @@ KPasswordLineEdit::KPasswordLineEdit(QWidget *parent)
     d->passwordLineEdit = new QLineEdit(this);
     d->passwordLineEdit->setObjectName(QStringLiteral("passwordlineedit"));
     d->passwordLineEdit->setEchoMode(QLineEdit::Password);
+    d->passwordLineEdit->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(d->passwordLineEdit, &QWidget::customContextMenuRequested, this, [this](const QPoint &pos) {
+        d->slotCustomContextMenuRequested(pos);
+    });
     connect(d->passwordLineEdit, &QLineEdit::textChanged, this, &KPasswordLineEdit::passwordChanged);
     setFocusProxy(d->passwordLineEdit);
     setFocusPolicy(d->passwordLineEdit->focusPolicy());
