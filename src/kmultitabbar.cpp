@@ -389,7 +389,7 @@ void KMultiTabBarTab::paintEvent(QPaintEvent *)
     }
 
     const QIcon::Mode iconMode = (opt.state & QStyle::State_MouseOver) ? QIcon::Active : QIcon::Normal;
-    const QPixmap iconPixmap = icon().pixmap(opt.iconSize, iconMode, QIcon::On);
+    const QPixmap iconPixmap = icon().pixmap(opt.iconSize, devicePixelRatioF(), iconMode, QIcon::On);
 
     // Label time.... Simple case: no text, so just plop down the icon right in the center
     // We only do this when the button never draws the text, to avoid jumps in icon position
