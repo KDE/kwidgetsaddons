@@ -57,6 +57,7 @@ public:
          */
         Always,
     };
+    Q_ENUM(RevealPasswordMode)
 
     /**
      * Constructs a lineedit password widget.
@@ -119,6 +120,7 @@ public:
 
     /**
      * Return when the reveal password button is visible.
+     * @since 6.0
      */
     RevealPasswordMode revealPasswordMode() const;
 
@@ -130,17 +132,18 @@ public:
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
-     * \code{.cpp}
+     * @code{.cpp}
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
      *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Normal);
      * } else {
      *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Never);
      * }
-     * \endcode
+     * @endcode
+     * @since 6.0
      */
     void setRevealPasswordMode(RevealPasswordMode revealPasswordMode);
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 249)
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
     /**
      * Whether to show the visibility trailing action in the line edit.
      * Default is true. This can be used to honor the lineedit_reveal_password
@@ -154,7 +157,7 @@ public:
     /**
      * Whether the visibility trailing action in the line edit is visible.
      */
-    [[deprecated("Use revealPasswordMode")]] bool isRevealPasswordAvailable() const;
+    [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
 #endif
 
     /**

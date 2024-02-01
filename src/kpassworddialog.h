@@ -121,6 +121,27 @@ public:
     };
 
     /**
+     * This enum describe when the reveal password button is visible.
+     * @since 6.0
+     */
+    enum class RevealPasswordMode {
+        /**
+         * Display the button when entering a new password, but doesn't let you see a
+         * previously entered password. This is the default.
+         */
+        Normal,
+        /**
+         * Never display the reveal button.
+         */
+        Never,
+        /**
+         * Always display the reveal button. Usefull in a password manager for example.
+         */
+        Always,
+    };
+    Q_ENUM(RevealPasswordMode)
+
+    /**
      * create a password dialog
      *
      * @param parent the parent widget
@@ -289,6 +310,7 @@ public:
      */
     void setUsernameContextHelp(const QString &help);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
     /**
      * Whether to show the visibility trailing action in the line edit.
      * Default is @c true. This can be used to honor the lineedit_reveal_password
@@ -298,13 +320,39 @@ public:
      * \endcode
      * @since 5.84
      */
-    void setRevealPasswordAvailable(bool reveal);
+    [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
 
     /**
      * Whether the visibility trailing action in the line edit is visible.
      * @since 5.84
      */
-    bool isRevealPasswordAvailable() const;
+    [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
+#endif
+
+    /**
+     * Return when the reveal password button is visible.
+     * @since 6.0
+     */
+    RevealPasswordMode revealPasswordMode() const;
+
+    /**
+     * Set when the reveal password button will be visible.
+     *
+     * The default is RevealPasswordMode::Normal and the reveal password button will
+     * only be visible when entering a new password.
+     *
+     * This can be used to honor the lineedit_reveal_password kiosk key, for example:
+     *
+     * @code{.cpp}
+     * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
+     *     passwordDialog.setRevealPasswordMode(KPasswordDialog::RevealPasswordMode::Normal);
+     * } else {
+     *     passwordDialog.setRevealPasswordMode(KPasswordDialog::RevealPasswordMode::Never);
+     * }
+     * @endcode
+     * @since 6.0
+     */
+    void setRevealPasswordMode(RevealPasswordMode revealPasswordMode);
 
 Q_SIGNALS:
     /**

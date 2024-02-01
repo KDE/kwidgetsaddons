@@ -68,11 +68,17 @@ void PasswordLineEditTest::shouldShowRevealPassword()
     edit->setText(QStringLiteral("FOO"));
     QVERIFY(lineEdit.toggleEchoModeAction()->isVisible());
 
-    lineEdit.setRevealPasswordAvailable(false);
+    lineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Never);
     QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
 
-    lineEdit.setRevealPasswordAvailable(true);
+    lineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Always);
     QVERIFY(lineEdit.toggleEchoModeAction()->isVisible());
+
+    lineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Normal);
+    QVERIFY(lineEdit.toggleEchoModeAction()->isVisible());
+
+    lineEdit.setPassword(QStringLiteral("FOO2"));
+    QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
 
     edit->clear();
     QVERIFY(!lineEdit.toggleEchoModeAction()->isVisible());
