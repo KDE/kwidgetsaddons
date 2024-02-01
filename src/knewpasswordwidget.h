@@ -101,7 +101,7 @@ public:
          * Display the button when entering a new password, but doesn't let you see a
          * previously entered password. This is the default.
          */
-        Normal,
+        OnlyNew,
         /**
          * Never display the reveal button.
          */
@@ -265,14 +265,14 @@ public Q_SLOTS:
     /**
      * Set when the reveal password button will be visible.
      *
-     * The default is RevealPasswordMode::Normal and the reveal password button will
+     * The default is RevealPasswordMode::OnlyNew and the reveal password button will
      * only be visible when entering a new password.
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
      * @code{.cpp}
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
-     *     newPasswordWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::Normal);
+     *     newPasswordWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::OnlyNew);
      * } else {
      *     newPasswordWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::Never);
      * }

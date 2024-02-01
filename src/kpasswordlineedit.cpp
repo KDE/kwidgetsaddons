@@ -28,7 +28,7 @@ public:
     QLineEdit *passwordLineEdit = nullptr;
     QAction *toggleEchoModeAction = nullptr;
     bool isToggleEchoModeAvailable = true;
-    KPasswordLineEdit::RevealPasswordMode revealPasswordMode = KPasswordLineEdit::RevealPasswordMode::Normal;
+    KPasswordLineEdit::RevealPasswordMode revealPasswordMode = KPasswordLineEdit::RevealPasswordMode::OnlyNew;
     KPasswordLineEdit *const q;
 };
 
@@ -96,7 +96,7 @@ KPasswordLineEdit::~KPasswordLineEdit() = default;
 void KPasswordLineEdit::setPassword(const QString &password)
 {
     if (d->passwordLineEdit->text() != password) {
-        if (d->revealPasswordMode == KPasswordLineEdit::RevealPasswordMode::Normal) {
+        if (d->revealPasswordMode == KPasswordLineEdit::RevealPasswordMode::OnlyNew) {
             d->isToggleEchoModeAvailable = password.isEmpty();
         }
         d->passwordLineEdit->setText(password);
@@ -151,7 +151,7 @@ QLineEdit *KPasswordLineEdit::lineEdit() const
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 249)
 void KPasswordLineEdit::setRevealPasswordAvailable(bool reveal)
 {
-    d->revealPasswordMode = reveal ? KPasswordLineEdit::RevealPasswordMode::Normal : KPasswordLineEdit::RevealPasswordMode::Never;
+    d->revealPasswordMode = reveal ? KPasswordLineEdit::RevealPasswordMode::OnlyNew : KPasswordLineEdit::RevealPasswordMode::Never;
     d->showToggleEchoModeAction(password());
 }
 
