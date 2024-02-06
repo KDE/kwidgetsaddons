@@ -28,7 +28,7 @@ public:
     QLineEdit *passwordLineEdit = nullptr;
     QAction *toggleEchoModeAction = nullptr;
     bool isToggleEchoModeAvailable = true;
-    KPasswordLineEdit::RevealPasswordMode revealPasswordMode = KPasswordLineEdit::RevealPasswordMode::OnlyNew;
+    KPassword::RevealMode revealPasswordMode = KPassword::RevealMode::OnlyNew;
     KPasswordLineEdit *const q;
 };
 
@@ -49,7 +49,7 @@ void KPasswordLineEditPrivate::initialize()
 
 void KPasswordLineEditPrivate::showToggleEchoModeAction(const QString &text)
 {
-    if (revealPasswordMode != KPasswordLineEdit::RevealPasswordMode::Never) {
+    if (revealPasswordMode != KPassword::RevealMode::Never) {
         toggleEchoModeAction->setVisible(isToggleEchoModeAvailable && (passwordLineEdit->echoMode() == QLineEdit::Normal || !text.isEmpty()));
     } else {
         toggleEchoModeAction->setVisible(false);
@@ -96,7 +96,7 @@ KPasswordLineEdit::~KPasswordLineEdit() = default;
 void KPasswordLineEdit::setPassword(const QString &password)
 {
     if (d->passwordLineEdit->text() != password) {
-        if (d->revealPasswordMode == KPasswordLineEdit::RevealPasswordMode::OnlyNew) {
+        if (d->revealPasswordMode == KPassword::RevealMode::OnlyNew) {
             d->isToggleEchoModeAvailable = password.isEmpty();
         }
         d->passwordLineEdit->setText(password);
@@ -151,23 +151,23 @@ QLineEdit *KPasswordLineEdit::lineEdit() const
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 249)
 void KPasswordLineEdit::setRevealPasswordAvailable(bool reveal)
 {
-    d->revealPasswordMode = reveal ? KPasswordLineEdit::RevealPasswordMode::OnlyNew : KPasswordLineEdit::RevealPasswordMode::Never;
+    d->revealPasswordMode = reveal ? KPassword::RevealMode::OnlyNew : KPassword::RevealMode::Never;
     d->showToggleEchoModeAction(password());
 }
 
 bool KPasswordLineEdit::isRevealPasswordAvailable() const
 {
-    return d->revealPasswordMode != KPasswordLineEdit::RevealPasswordMode::Never;
+    return d->revealPasswordMode != KPassword::RevealMode::Never;
 }
 #endif
 
-void KPasswordLineEdit::setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode mode)
+void KPasswordLineEdit::setRevealPasswordMode(KPassword::RevealMode mode)
 {
     d->revealPasswordMode = mode;
     d->showToggleEchoModeAction(password());
 }
 
-KPasswordLineEdit::RevealPasswordMode KPasswordLineEdit::revealPasswordMode() const
+KPassword::RevealMode KPasswordLineEdit::revealPasswordMode() const
 {
     return d->revealPasswordMode;
 }

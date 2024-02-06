@@ -371,14 +371,14 @@ bool KPasswordDialog::isRevealPasswordAvailable() const
 #pragma GCC diagnostic pop
 #endif
 
-KPasswordDialog::RevealPasswordMode KPasswordDialog::revealPasswordMode() const
+KPassword::RevealMode KPasswordDialog::revealPasswordMode() const
 {
-    return static_cast<KPasswordDialog::RevealPasswordMode>(d->ui.passEdit->revealPasswordMode());
+    return d->ui.passEdit->revealPasswordMode();
 }
 
-void KPasswordDialog::setRevealPasswordMode(RevealPasswordMode revealPasswordMode)
+void KPasswordDialog::setRevealPasswordMode(KPassword::RevealMode revealPasswordMode)
 {
-    d->ui.passEdit->setRevealPasswordMode(static_cast<KPasswordLineEdit::RevealPasswordMode>(revealPasswordMode));
+    d->ui.passEdit->setRevealPasswordMode(revealPasswordMode);
 }
 
 void KPasswordDialogPrivate::activated(const QString &userName)

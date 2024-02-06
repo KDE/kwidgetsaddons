@@ -8,6 +8,7 @@
 #ifndef KPASSWORDLINEEDIT_H
 #define KPASSWORDLINEEDIT_H
 
+#include <KPassword>
 #include <QLineEdit>
 #include <QWidget>
 #include <kwidgetsaddons_export.h>
@@ -38,27 +39,6 @@ class KWIDGETSADDONS_EXPORT KPasswordLineEdit : public QWidget
     Q_PROPERTY(bool clearButtonEnabled READ isClearButtonEnabled WRITE setClearButtonEnabled)
     Q_PROPERTY(QLineEdit::EchoMode echoMode READ echoMode WRITE setEchoMode NOTIFY echoModeChanged)
 public:
-    /**
-     * This enum describe when the reveal password button is visible.
-     * @since 6.0
-     */
-    enum class RevealPasswordMode {
-        /**
-         * Display the button when entering a new password, but doesn't let you see a
-         * previously entered password. This is the default.
-         */
-        OnlyNew,
-        /**
-         * Never display the reveal button.
-         */
-        Never,
-        /**
-         * Always display the reveal button. Usefull in a password manager for example.
-         */
-        Always,
-    };
-    Q_ENUM(RevealPasswordMode)
-
     /**
      * Constructs a lineedit password widget.
      * @since 5.37
@@ -122,7 +102,7 @@ public:
      * Return when the reveal password button is visible.
      * @since 6.0
      */
-    RevealPasswordMode revealPasswordMode() const;
+    KPassword::RevealMode revealPasswordMode() const;
 
     /**
      * Set when the reveal password button will be visible.
@@ -141,7 +121,7 @@ public:
      * @endcode
      * @since 6.0
      */
-    void setRevealPasswordMode(RevealPasswordMode revealPasswordMode);
+    void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
     /**

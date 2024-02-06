@@ -268,15 +268,15 @@ void KNewPasswordWidgetTest::disablingRevealPasswordShouldHideVisibilityAction()
 
     linePassword->lineEdit()->setText(QStringLiteral("1234"));
     QVERIFY(visibilityAction->isVisible());
-    QCOMPARE(pwdWidget.revealPasswordMode(), KNewPasswordWidget::RevealPasswordMode::OnlyNew);
+    QCOMPARE(pwdWidget.revealPasswordMode(), KPassword::RevealMode::OnlyNew);
 
-    pwdWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::Never);
+    pwdWidget.setRevealPasswordMode(KPassword::RevealMode::Never);
     QVERIFY(!visibilityAction->isVisible());
-    QCOMPARE(pwdWidget.revealPasswordMode(), KNewPasswordWidget::RevealPasswordMode::Never);
+    QCOMPARE(pwdWidget.revealPasswordMode(), KPassword::RevealMode::Never);
 
-    pwdWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::Always);
+    pwdWidget.setRevealPasswordMode(KPassword::RevealMode::Always);
     QVERIFY(visibilityAction->isVisible());
-    QCOMPARE(pwdWidget.revealPasswordMode(), KNewPasswordWidget::RevealPasswordMode::Always);
+    QCOMPARE(pwdWidget.revealPasswordMode(), KPassword::RevealMode::Always);
 }
 
 void KNewPasswordWidgetTest::shouldNotHideVisibilityActionInPlaintextMode()

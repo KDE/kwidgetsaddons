@@ -11,6 +11,7 @@
 #ifndef KPASSWORDDIALOG_H
 #define KPASSWORDDIALOG_H
 
+#include <KPassword>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <memory>
@@ -119,27 +120,6 @@ public:
          */
         DomainError,
     };
-
-    /**
-     * This enum describe when the reveal password button is visible.
-     * @since 6.0
-     */
-    enum class RevealPasswordMode {
-        /**
-         * Display the button when entering a new password, but doesn't let you see a
-         * previously entered password. This is the default.
-         */
-        OnlyNew,
-        /**
-         * Never display the reveal button.
-         */
-        Never,
-        /**
-         * Always display the reveal button. Usefull in a password manager for example.
-         */
-        Always,
-    };
-    Q_ENUM(RevealPasswordMode)
 
     /**
      * create a password dialog
@@ -333,26 +313,26 @@ public:
      * Return when the reveal password button is visible.
      * @since 6.0
      */
-    RevealPasswordMode revealPasswordMode() const;
+    KPassword::RevealMode revealPasswordMode() const;
 
     /**
      * Set when the reveal password button will be visible.
      *
-     * The default is RevealPasswordMode::OnlyNew and the reveal password button will
+     * The default is RevealMode::OnlyNew and the reveal password button will
      * only be visible when entering a new password.
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
      * @code{.cpp}
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
-     *     passwordDialog.setRevealPasswordMode(KPasswordDialog::RevealPasswordMode::OnlyNew);
+     *     passwordDialog.setRevealPasswordMode(KPassword::RevealMode::OnlyNew);
      * } else {
-     *     passwordDialog.setRevealPasswordMode(KPasswordDialog::RevealPasswordMode::Never);
+     *     passwordDialog.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
      * @endcode
      * @since 6.0
      */
-    void setRevealPasswordMode(RevealPasswordMode revealPasswordMode);
+    void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 
 Q_SIGNALS:
     /**

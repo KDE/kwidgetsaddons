@@ -249,9 +249,9 @@ bool KNewPasswordWidget::isRevealPasswordAvailable() const
 #pragma GCC diagnostic pop
 #endif
 
-KNewPasswordWidget::RevealPasswordMode KNewPasswordWidget::revealPasswordMode() const
+KPassword::RevealMode KNewPasswordWidget::revealPasswordMode() const
 {
-    return static_cast<KNewPasswordWidget::RevealPasswordMode>(d->ui.linePassword->revealPasswordMode());
+    return d->ui.linePassword->revealPasswordMode();
 }
 
 QString KNewPasswordWidget::password() const
@@ -315,9 +315,9 @@ void KNewPasswordWidget::setRevealPasswordAvailable(bool reveal)
 #pragma GCC diagnostic pop
 #endif
 
-void KNewPasswordWidget::setRevealPasswordMode(RevealPasswordMode revealPasswordMode)
+void KNewPasswordWidget::setRevealPasswordMode(KPassword::RevealMode revealPasswordMode)
 {
-    d->ui.linePassword->setRevealPasswordMode(static_cast<KPasswordLineEdit::RevealPasswordMode>(revealPasswordMode));
+    d->ui.linePassword->setRevealPasswordMode(revealPasswordMode);
 }
 
 #include "moc_knewpasswordwidget.cpp"

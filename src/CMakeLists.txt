@@ -119,6 +119,7 @@ target_sources(KF6WidgetsAddons PRIVATE
     kpagewidgetmodel.h
     kpagewidgetmodel_p.h
     kpagewidget_p.h
+    kpassword.h
     kpassworddialog.cpp
     kpassworddialog.h
     kpasswordlineedit.cpp
@@ -293,6 +294,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KNewPasswordDialog
   KLineEditUrlDropEventFilter
   KLineEditEventHandler
+  KPassword
   KPasswordLineEdit
   KPixmapSequence
   KPixmapSequenceOverlayPainter

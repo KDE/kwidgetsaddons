@@ -12,6 +12,7 @@
 #ifndef KNEWPASSWORDWIDGET_H
 #define KNEWPASSWORDWIDGET_H
 
+#include <KPassword>
 #include <KPasswordLineEdit>
 #include <QWidget>
 #include <memory>
@@ -77,7 +78,7 @@ class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
     Q_PROPERTY(bool revealPasswordAvailable READ isRevealPasswordAvailable WRITE setRevealPasswordAvailable)
 #endif
-    Q_PROPERTY(RevealPasswordMode revealPasswordMode READ revealPasswordMode WRITE setRevealPasswordMode)
+    Q_PROPERTY(KPassword::RevealMode revealPasswordMode READ revealPasswordMode WRITE setRevealPasswordMode)
 
 public:
     /**
@@ -179,7 +180,7 @@ public:
      * Whether the visibility trailing action in the line edit is visible.
      * @since 6.0
      */
-    RevealPasswordMode revealPasswordMode() const;
+    KPassword::RevealMode revealPasswordMode() const;
 
     /**
      * Returns the password entered.
@@ -272,14 +273,14 @@ public Q_SLOTS:
      *
      * @code{.cpp}
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
-     *     newPasswordWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::OnlyNew);
+     *     newPasswordWidget.setRevealPasswordMode(KPassword::RevealMode::OnlyNew);
      * } else {
-     *     newPasswordWidget.setRevealPasswordMode(KNewPasswordWidget::RevealPasswordMode::Never);
+     *     newPasswordWidget.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
      * @endcode
      * @since 6.0
      */
-    void setRevealPasswordMode(RevealPasswordMode revealPasswordMode);
+    void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 
 Q_SIGNALS:
 
