@@ -86,6 +86,18 @@ public:
     QLineEdit::EchoMode echoMode() const;
 
     /**
+     * Set whether the line edit is read only.
+     * @since 6.0
+     */
+    void setReadOnly(bool readOnly);
+
+    /**
+     * Return whether the line edit is read only.
+     * @since 6.0
+     */
+    bool isReadOnly() const;
+
+    /**
      * Whether to show the visibility trailing action in the line edit.
      * Default is true. This can be used to honor the lineedit_reveal_password
      * kiosk key, for example:

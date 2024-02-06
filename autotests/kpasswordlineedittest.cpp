@@ -87,6 +87,19 @@ void PasswordLineEditTest::shouldEmitSignalPasswordChanged()
     QCOMPARE(spy.count(), 1);
 }
 
+void PasswordLineEditTest::testReadOnly()
+{
+    KPasswordLineEdit lineEdit;
+    lineEdit.show();
+    lineEdit.setReadOnly(true);
+    QSignalSpy spy(&lineEdit, &KPasswordLineEdit::passwordChanged);
+    lineEdit.setPassword(QStringLiteral("foo"));
+    QCOMPARE(spy.count(), 1);
+    QTest::keyClick(&lineEdit, Qt::Key_A);
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(lineEdit.password(), QStringLiteral("foo"));
+}
+
 QTEST_MAIN(PasswordLineEditTest)
 
 #include "moc_kpasswordlineedittest.cpp"

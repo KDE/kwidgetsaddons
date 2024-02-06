@@ -131,6 +131,16 @@ QLineEdit::EchoMode KPasswordLineEdit::echoMode() const
     return d->passwordLineEdit->echoMode();
 }
 
+void KPasswordLineEdit::setReadOnly(bool readOnly)
+{
+    d->passwordLineEdit->setReadOnly(readOnly);
+}
+
+bool KPasswordLineEdit::isReadOnly() const
+{
+    return d->passwordLineEdit->isReadOnly();
+}
+
 QLineEdit *KPasswordLineEdit::lineEdit() const
 {
     return d->passwordLineEdit;
