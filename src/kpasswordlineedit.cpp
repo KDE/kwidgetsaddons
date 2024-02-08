@@ -148,7 +148,7 @@ QLineEdit *KPasswordLineEdit::lineEdit() const
     return d->passwordLineEdit;
 }
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(5, 249)
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
 void KPasswordLineEdit::setRevealPasswordAvailable(bool reveal)
 {
     d->revealPasswordMode = reveal ? KPassword::RevealMode::OnlyNew : KPassword::RevealMode::Never;
