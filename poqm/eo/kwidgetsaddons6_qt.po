@@ -2018,10 +2018,26 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Memori pasvorton"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Ŝanĝi la videblecon de la pasvorto"
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgctxt "KPasswordDialog|@title:window"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Pasvorto"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgctxt "KPasswordDialog|@title:window"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Pasvorto"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"

@@ -2556,13 +2556,29 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Διατήρηση κωδικού πρόσβασης"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 #, fuzzy
 #| msgctxt "KNewPasswordWidget|"
 #| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Τροποποίηση της ορατότητας του κωδικού πρόσβασης"
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Κωδικός πρόσβασης"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Κωδικός πρόσβασης"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy

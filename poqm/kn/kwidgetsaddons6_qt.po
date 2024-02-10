@@ -2963,10 +2963,24 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "ಗುಪ್ತಪದವನ್ನು ನೆನಪಿಡು"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "ಗುಪ್ತಪದ (ಪಾಸ್ ವರ್ಡ್)"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "ಗುಪ್ತಪದ (ಪಾಸ್ ವರ್ಡ್)"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy

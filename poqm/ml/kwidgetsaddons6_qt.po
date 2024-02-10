@@ -2350,10 +2350,22 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "അടയാളവാക്ക് ഓര്‍ത്ത് വയ്ക്കുക"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "അടസാളവാക്കു്"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "അടസാളവാക്കു്"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy

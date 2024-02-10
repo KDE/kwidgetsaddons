@@ -2008,10 +2008,26 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "記住密碼"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "變更密碼的可見度"
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgctxt "KPasswordDialog|@title:window"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "密碼"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgctxt "KPasswordDialog|@title:window"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "密碼"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"

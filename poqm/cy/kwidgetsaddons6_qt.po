@@ -2678,10 +2678,22 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "&Cadw cyfrinair"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Cyfrinair:"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "&Cadw cyfrinair"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy
@@ -13347,10 +13359,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Enter a description"
 #~ msgstr "Disgrifiad:"
-
-#, fuzzy
-#~ msgid "Keep Password"
-#~ msgstr "&Cadw cyfrinair"
 
 #~ msgid "Release:"
 #~ msgstr "Rhyddhâd:"

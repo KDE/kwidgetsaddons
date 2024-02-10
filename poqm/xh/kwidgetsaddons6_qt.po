@@ -2600,10 +2600,22 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "&Gcina igama lokugqitha"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Igama &lokugqitha:"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "&Gcina igama lokugqitha"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy
@@ -12258,10 +12270,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Enter a description"
 #~ msgstr "Uchazo:"
-
-#, fuzzy
-#~ msgid "Keep Password"
-#~ msgstr "&Gcina igama lokugqitha"
 
 #, fuzzy
 #~ msgid "Release:"

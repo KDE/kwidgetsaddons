@@ -2292,13 +2292,29 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Ниҳонвожаро дар хотир доштан"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 #, fuzzy
 #| msgctxt "QObject|"
 #| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Тағйир додани қобили намоиш ниҳонвожа"
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Ниҳонвожа"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Ниҳонвожа"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy

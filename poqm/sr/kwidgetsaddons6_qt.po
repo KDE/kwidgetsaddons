@@ -2299,13 +2299,29 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Запамти лозинку"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 #, fuzzy
 #| msgctxt "QObject|"
 #| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Промени видљивост лозинке"
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Лозинка"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Лозинка"
 
 # >> @title:window
 #: kpixmapregionselectordialog.cpp:56

@@ -2447,10 +2447,23 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Derc'hel an tremenger"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Tremenger"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "&Derc'hel an tremenger"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy
@@ -11669,10 +11682,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Enter a description"
 #~ msgstr "Deskrivadur :"
-
-#, fuzzy
-#~ msgid "Keep Password"
-#~ msgstr "&Derc'hel an tremenger"
 
 #~ msgid "Browse local network"
 #~ msgstr "Furchal ar rouedad lec'hel"

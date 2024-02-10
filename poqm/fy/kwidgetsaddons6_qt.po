@@ -2967,10 +2967,24 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Wachtwurd ûnthâlde"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Wachtwurd"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Wachtwurd"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy

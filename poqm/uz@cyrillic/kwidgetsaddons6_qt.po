@@ -2512,10 +2512,23 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Махфий сўзни эслаб қолиш"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Махфий сўз"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Махфий сўзни &эслаб қолиш"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy
@@ -12538,10 +12551,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Enter a description"
 #~ msgstr "Таърифи:"
-
-#, fuzzy
-#~ msgid "Keep Password"
-#~ msgstr "Махфий сўзни &эслаб қолиш"
 
 #~ msgid "Release:"
 #~ msgstr "Релиз:"

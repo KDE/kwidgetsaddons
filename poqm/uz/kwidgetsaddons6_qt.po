@@ -2487,10 +2487,23 @@ msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Maxfiy soʻzni eslab qolish"
 
-#: kpasswordlineedit.cpp:41
+#: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr ""
+
+#: kpasswordlineedit.cpp:87
+#, fuzzy
+#| msgid "Password"
+msgctxt "QObject|@action:inmenu"
+msgid "Show Password"
+msgstr "Maxfiy soʻz"
+
+#: kpasswordlineedit.cpp:88
+#, fuzzy
+msgctxt "QObject|@action:inmenu"
+msgid "Hide Password"
+msgstr "Maxfiy soʻzni &eslab qolish"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy
@@ -12605,10 +12618,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Enter a description"
 #~ msgstr "Taʼrifi:"
-
-#, fuzzy
-#~ msgid "Keep Password"
-#~ msgstr "Maxfiy soʻzni &eslab qolish"
 
 #~ msgid "Release:"
 #~ msgstr "Reliz:"
