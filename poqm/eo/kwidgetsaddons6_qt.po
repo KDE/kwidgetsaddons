@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2023-11-28 20:59+0100\n"
+"PO-Revision-Date: 2024-02-10 06:42+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -2024,20 +2024,14 @@ msgid "Change the visibility of the password"
 msgstr "Ŝanĝi la videblecon de la pasvorto"
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Pasvorto"
+msgstr "Montri Pasvorton"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Pasvorto"
+msgstr "Kaŝi Pasvorton"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
@@ -2405,7 +2399,3 @@ msgstr "Plenekrane"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Montri la fenestron en plena ekrano"
-
-#~ msgctxt "KFontChooserWidget|"
-#~ msgid "KFontChooserWidget"
-#~ msgstr "KFontChooserWidget"

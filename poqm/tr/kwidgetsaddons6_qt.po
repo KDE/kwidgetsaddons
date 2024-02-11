@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-01-07 00:07+0300\n"
+"PO-Revision-Date: 2024-02-10 16:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 24.01.95\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1067,7 +1067,7 @@ msgstr "Eski Tür Bilişim Sembolleri"
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
-msgstr "Aranacak terimi veya karakteri girin..."
+msgstr "Aranacak terimi veya karakteri gir…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1077,7 +1077,7 @@ msgstr "Buraya aranacak terimi veya karakteri girin"
 #: kcharselect.cpp:400
 msgctxt "KCharSelect|@action"
 msgid "&Find..."
-msgstr "&Bul..."
+msgstr "&Bul…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1462,7 +1462,7 @@ msgstr "Bilinmeyen"
 #: kcolorcombo.cpp:333
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
-msgstr "Özel..."
+msgstr "Özel…"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1727,7 +1727,7 @@ msgstr "Yalnızca eş aralıklı yazıtiplerini göster"
 #: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
-msgstr "Yazıtipi seç..."
+msgstr "Yazıtipi seç…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1740,14 +1740,14 @@ msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, seçilen yazıtipinin bir önizlemesidir. \"Yazıtipi Seç\" düğmesine "
-"basarak onu değiştirebilirsiniz."
+"Bu, seçili yazıtipinin bir önizlemesidir. ‘Yazıtipi seç…’ düğmesine basarak "
+"onu değiştirebilirsiniz."
 
 #: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
-msgstr "\"%1\" yazıtipinin önizlemesi"
+msgstr "‘%1’ yazıtipinin önizlemesi"
 
 #: kfontrequester.cpp:197
 #, qt-format
@@ -1756,7 +1756,7 @@ msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, %1 yazıtipinin önizlemesidir. \"Yazıtipi Seç...\" düğmesine tıklayarak "
+"Bu, %1 yazıtipinin önizlemesidir. ‘Yazıtipi seç…’ düğmesine tıklayarak "
 "değiştirebilirsiniz."
 
 #: kled.cpp:172
@@ -1843,7 +1843,7 @@ msgstr "İletiyi kapat"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern..."
-msgstr "Dosya türü veya dosya adı dizgisi ara..."
+msgstr "Dosya türü veya dosya adı dizgisi ara…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1868,7 +1868,7 @@ msgstr "Desenler"
 #: kmimetypechooser.cpp:126
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit..."
-msgstr "Dü&zenle..."
+msgstr "Dü&zenle…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1878,7 +1878,7 @@ msgstr "MIME türü düzenleyicisini çalıştırın"
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "PATH üzerinde \"keditfiletype\" yürütülebiliri bulunamadı."
+msgstr "PATH üzerinde ‘keditfiletype’ yürütülebiliri bulunamadı."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -1886,8 +1886,7 @@ msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"\"keditfiletype\" yürütülebiliri başlatılamadı, lütfen kurulumunuzu "
-"denetleyin."
+"‘keditfiletype’ yürütülebiliri başlatılamadı, lütfen kurulumunuzu denetleyin."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -1969,7 +1968,7 @@ msgstr "Parola güvenilirlik &göstergesi:"
 #: kpageview.cpp:449
 msgctxt "KPageView|"
 msgid "Search..."
-msgstr "Ara..."
+msgstr "Ara…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2027,20 +2026,14 @@ msgid "Change the visibility of the password"
 msgstr "Parolanın görünürlüğünü değiştir"
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Parola"
+msgstr "Parolayı Göster"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Parola"
+msgstr "Parolayı Gizle"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
@@ -2138,7 +2131,7 @@ msgstr "Veriyi kaydetme"
 #: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
-msgstr "&Farklı Kaydet..."
+msgstr "&Farklı Kaydet…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2169,7 +2162,7 @@ msgstr ""
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
-msgstr "&Yönetici Kipi..."
+msgstr "&Yönetici Kipi…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2275,7 +2268,7 @@ msgstr "Bir adım ileri git"
 #: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
-msgstr "Ya&zdır..."
+msgstr "Ya&zdır…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2305,7 +2298,7 @@ msgstr "Öge(ler)i sil"
 #: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
-msgstr "&Aç..."
+msgstr "&Aç…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2340,7 +2333,7 @@ msgstr "&Ekle"
 #: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
-msgstr "&Yapılandır..."
+msgstr "&Yapılandır…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"

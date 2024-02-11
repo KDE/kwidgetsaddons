@@ -2022,16 +2022,12 @@ msgstr "Endra om passordet skal vera synleg"
 
 #: kpasswordlineedit.cpp:87
 #, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
 msgstr "Passord"
 
 #: kpasswordlineedit.cpp:88
 #, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
 msgstr "Passord"
