@@ -231,21 +231,6 @@ QString KNewPasswordDialog::password() const
     return d->pass;
 }
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-void KNewPasswordDialog::setRevealPasswordAvailable(bool reveal)
-{
-    d->ui.pwdWidget->setRevealPasswordAvailable(reveal);
-}
-
-bool KNewPasswordDialog::isRevealPasswordAvailable() const
-{
-    return d->ui.pwdWidget->isRevealPasswordAvailable();
-}
-#pragma GCC diagnostic pop
-#endif
-
 KPassword::RevealMode KNewPasswordDialog::revealPasswordMode() const
 {
     return d->ui.pwdWidget->revealPasswordMode();

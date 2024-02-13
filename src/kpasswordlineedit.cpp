@@ -170,19 +170,6 @@ QLineEdit *KPasswordLineEdit::lineEdit() const
     return d->passwordLineEdit;
 }
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
-void KPasswordLineEdit::setRevealPasswordAvailable(bool reveal)
-{
-    d->revealPasswordMode = reveal ? KPassword::RevealMode::OnlyNew : KPassword::RevealMode::Never;
-    d->showToggleEchoModeAction(password());
-}
-
-bool KPasswordLineEdit::isRevealPasswordAvailable() const
-{
-    return d->revealPasswordMode != KPassword::RevealMode::Never;
-}
-#endif
-
 void KPasswordLineEdit::setRevealPasswordMode(KPassword::RevealMode mode)
 {
     d->revealPasswordMode = mode;

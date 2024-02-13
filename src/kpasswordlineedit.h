@@ -132,12 +132,18 @@ public:
      * passwordLineEdit.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
      */
-    [[deprecated("Use setRevealPasswordMode")]] void setRevealPasswordAvailable(bool reveal);
+    [[deprecated("Use setRevealPasswordMode")]] inline void setRevealPasswordAvailable(bool reveal)
+    {
+        setRevealPasswordMode(reveal ? KPassword::RevealMode::OnlyNew : KPassword::RevealMode::Never);
+    }
 
     /**
      * Whether the visibility trailing action in the line edit is visible.
      */
-    [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
+    [[deprecated("Use revealPasswordMode instead.")]] inline bool isRevealPasswordAvailable() const
+    {
+        return revealPasswordMode() != KPassword::RevealMode::Never;
+    }
 #endif
 
     /**

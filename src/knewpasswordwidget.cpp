@@ -239,16 +239,6 @@ bool KNewPasswordWidget::isPasswordStrengthMeterVisible() const
     return d->ui.labelStrengthMeter->isVisible() && d->ui.strengthBar->isVisible();
 }
 
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-bool KNewPasswordWidget::isRevealPasswordAvailable() const
-{
-    return d->ui.linePassword->isRevealPasswordAvailable();
-}
-#pragma GCC diagnostic pop
-#endif
-
 KPassword::RevealMode KNewPasswordWidget::revealPasswordMode() const
 {
     return d->ui.linePassword->revealPasswordMode();
@@ -304,16 +294,6 @@ void KNewPasswordWidget::setPasswordStrengthMeterVisible(bool visible)
     d->ui.labelStrengthMeter->setVisible(visible);
     d->ui.strengthBar->setVisible(visible);
 }
-
-#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-void KNewPasswordWidget::setRevealPasswordAvailable(bool reveal)
-{
-    d->ui.linePassword->setRevealPasswordAvailable(reveal);
-}
-#pragma GCC diagnostic pop
-#endif
 
 void KNewPasswordWidget::setRevealPasswordMode(KPassword::RevealMode revealPasswordMode)
 {

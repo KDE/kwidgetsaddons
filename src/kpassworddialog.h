@@ -300,13 +300,19 @@ public:
      * \endcode
      * @since 5.84
      */
-    [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
+    [[deprecated("Use setRevealPasswordMode instead.")]] inline void setRevealPasswordAvailable(bool reveal)
+    {
+        setRevealPasswordMode(reveal ? KPassword::RevealMode::OnlyNew : KPassword::RevealMode::Never);
+    }
 
     /**
      * Whether the visibility trailing action in the line edit is visible.
      * @since 5.84
      */
-    [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
+    [[deprecated("Use revealPasswordMode instead.")]] inline bool isRevealPasswordAvailable() const
+    {
+        return revealPasswordMode() != KPassword::RevealMode::Never;
+    }
 #endif
 
     /**
