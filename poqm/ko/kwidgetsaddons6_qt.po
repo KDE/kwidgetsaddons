@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-02-10 00:11+0100\n"
+"PO-Revision-Date: 2024-02-17 15:09+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -2012,20 +2012,14 @@ msgid "Change the visibility of the password"
 msgstr "암호 표시 여부 변경"
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "암호"
+msgstr "암호 표시"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "암호"
+msgstr "암호 숨기기"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
