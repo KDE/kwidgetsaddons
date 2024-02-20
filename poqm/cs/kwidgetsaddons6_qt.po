@@ -3,15 +3,15 @@
 # Lukáš Tinkl <lukas@kde.org>, 2010, 2011, 2012.
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-01-19 15:51+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2024-02-19 17:05+0100\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -2018,12 +2018,12 @@ msgstr "Změnit viditelnost hesla"
 #: kpasswordlineedit.cpp:87
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr ""
+msgstr "Zobrazit heslo"
 
 #: kpasswordlineedit.cpp:88
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr ""
+msgstr "Skrýt heslo"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
