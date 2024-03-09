@@ -18,16 +18,18 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-05-16 06:50-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Project-Id-Version: \n"
+"PO-Revision-Date: 2024-03-08 07:00+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -35,13 +37,13 @@ msgstr ""
 #: fonthelpers_p.h:22
 msgctxt "FontHelpers|@item Font name"
 msgid "Sans Serif"
-msgstr ""
+msgstr "בלי עיטורים"
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
-msgstr ""
+msgstr "עם עיטורים"
 
 #. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:28
@@ -62,49 +64,31 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
 msgstr "&זמין:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&נבחר:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "&אחורה"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
 msgstr "חזרה צעד אחד אחורה"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "KAssistantDialog|Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "הבא"
 
 #: kassistantdialog.cpp:114
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "סיום"
@@ -112,1061 +96,892 @@ msgstr "סיום"
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:285
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr ""
+msgstr "הכול"
 
 #: kcharselect-translation.cpp:12
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
-msgstr "פתח תסריט"
+msgstr "סוגי כתב אירופאיים"
 
 #: kcharselect-translation.cpp:13
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
-msgstr "כתבים אפריקאים"
+msgstr "סוגי כתב אפריקאיים"
 
 #: kcharselect-translation.cpp:14
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
-msgstr "כתבים מזרח תיכוניים"
+msgstr "סוגי כתב מזרח תיכוניים"
 
 #: kcharselect-translation.cpp:15
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
-msgstr "כתבים מרכז אסיאתיים"
+msgstr "סוגי כתב מרכז אסיאתיים"
 
 #: kcharselect-translation.cpp:16
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
-msgstr "סימנים דרום אסיאתיים"
+msgstr "סוגי כתב דרום אסיאתיים"
 
 #: kcharselect-translation.cpp:17
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
-msgstr "כתבים דרום מזרח אסיאתיים"
+msgstr "סוגי כתב דרום מזרח אסיאתיים"
 
 #: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
-msgstr ""
+msgstr "סוגי כתב של אינדונזיה ואוקיאניה"
 
 #: kcharselect-translation.cpp:19
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
-msgstr "כתבים מזרח אסיאתיים"
+msgstr "סוגי כתב מזרח אסיאתיים"
 
 #: kcharselect-translation.cpp:20
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
-msgstr "כתבים אפריקאים"
+msgstr "סוגי כתב אמריקאיים"
 
 #: kcharselect-translation.cpp:21
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Symbols"
 msgstr "סמלים"
 
 #: kcharselect-translation.cpp:22
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Mathematical Symbols"
 msgstr "סמלים מתמטיים"
 
 #: kcharselect-translation.cpp:23
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "סמלים פונטיים"
 
 #: kcharselect-translation.cpp:24 kcharselectdata.cpp:751
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
-msgstr "סימני ניקוד מחברים"
+msgstr "סימנים מבחינים מתחברים"
 
 #: kcharselect-translation.cpp:25
-#, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "אחר"
 
 #: kcharselect-translation.cpp:26
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
 msgstr "לטינית בסיסית"
 
 #: kcharselect-translation.cpp:27
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin-1 Supplement"
-msgstr "תוספות ללטינית־1"
+msgstr "השלמה של לטינית 1"
 
 #: kcharselect-translation.cpp:28
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
-msgstr "לטינית מורחבת - א'"
+msgstr "לטינית מורחבת א׳"
 
 #: kcharselect-translation.cpp:29
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
-msgstr "לטינית מורחבת - ב'"
+msgstr "לטינית מורחבת ב׳"
 
 #: kcharselect-translation.cpp:30
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "IPA Extensions"
-msgstr "הרחבות IPA"
+msgstr "הרחבות לאלפבית הפונטי הבינלאומי"
 
 #: kcharselect-translation.cpp:31
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
-msgstr "אותיות משנות ריווח"
+msgstr "תווים משני מרווח"
 
 #: kcharselect-translation.cpp:32
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
-msgstr "סימני ניקוד מחברים"
+msgstr "סימנים מבחינים מתחברים"
 
 #: kcharselect-translation.cpp:33
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek and Coptic"
 msgstr "יוונית וקופטית"
 
 #: kcharselect-translation.cpp:34
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic"
-msgstr "קירילי"
+msgstr "קירילית"
 
 #: kcharselect-translation.cpp:35
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Supplement"
-msgstr "תוספות לקירילית"
+msgstr "השלמה של קירילית"
 
 #: kcharselect-translation.cpp:36
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Armenian"
 msgstr "ארמנית"
 
 #: kcharselect-translation.cpp:37
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hebrew"
 msgstr "עברית"
 
 #: kcharselect-translation.cpp:38
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
-msgstr "ערבי"
+msgstr "ערבית"
 
 #: kcharselect-translation.cpp:39
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac"
 msgstr "סורית"
 
 #: kcharselect-translation.cpp:40
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
-msgstr "תוספות לערבית"
+msgstr "השלמה של ערבית"
 
 #: kcharselect-translation.cpp:41
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
-msgstr "טאנה"
+msgstr "ת׳אנה"
 
 #: kcharselect-translation.cpp:42
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
-msgstr "נקו"
+msgstr "נ׳קו"
 
 #: kcharselect-translation.cpp:43
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
-msgstr "שומרונים"
+msgstr "עברית שומרונית"
 
 #: kcharselect-translation.cpp:44
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mandaic"
-msgstr "מנדעית"
+msgstr "מנדאית"
 
 #: kcharselect-translation.cpp:45
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac Supplement"
-msgstr "תוספות לקירילית"
+msgstr "השלמה של קירילית"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "לטינית מורחבת - א'"
+msgstr "ערבית מורחבת ב׳"
 
 #: kcharselect-translation.cpp:47
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
-msgstr "לטינית מורחבת - א'"
+msgstr "ערבית מורחבת א׳"
 
 #: kcharselect-translation.cpp:48
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
-msgstr "דוונגארי"
+msgstr "דוונאגרי"
 
 #: kcharselect-translation.cpp:49
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bengali"
 msgstr "בנגלית"
 
 #: kcharselect-translation.cpp:50
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
-msgstr "גורמוקי"
+msgstr "גורמוקהי"
 
 #: kcharselect-translation.cpp:51
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
-msgstr "גוג'ראטית"
+msgstr "גוג׳ראטית"
 
 #: kcharselect-translation.cpp:52
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
 msgstr "אורייה"
 
 #: kcharselect-translation.cpp:53
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tamil"
-msgstr "Tamil"
+msgstr "טמילית"
 
 #: kcharselect-translation.cpp:54
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
 msgstr "טלוגו"
 
 #: kcharselect-translation.cpp:55
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
-msgstr "קנאדה"
+msgstr "קאנדה"
 
 #: kcharselect-translation.cpp:56
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
-msgstr "מליאלאם"
+msgstr "מלאיאלאם"
 
 #: kcharselect-translation.cpp:57
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
 msgstr "סינהלה"
 
 #: kcharselect-translation.cpp:58
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
-msgstr "תאילנדי"
+msgstr "תאית"
 
 #: kcharselect-translation.cpp:59
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lao"
 msgstr "לאו"
 
 #: kcharselect-translation.cpp:60
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tibetan"
 msgstr "טיבטית"
 
 #: kcharselect-translation.cpp:61
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar"
 msgstr "מיאנמר"
 
 #: kcharselect-translation.cpp:62
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian"
 msgstr "גאורגית"
 
 #: kcharselect-translation.cpp:63
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
-msgstr "ג'אמו של האנגול"
+msgstr "ג׳אמו (יסודות מתחברים) של הנגול"
 
 #: kcharselect-translation.cpp:64
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic"
 msgstr "אתיופית"
 
 #: kcharselect-translation.cpp:65
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
-msgstr "תוספות לאתיופית"
+msgstr "השלמות של אתיופית"
 
 #: kcharselect-translation.cpp:66
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee"
-msgstr "צ'רוקי"
+msgstr "צ׳רוקי"
 
 #: kcharselect-translation.cpp:67
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "הברות קנדיות ילידיות מאוחדות"
 
 #: kcharselect-translation.cpp:68
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ogham"
-msgstr "אוגהם"
+msgstr "אוגם"
 
 #: kcharselect-translation.cpp:69
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Runic"
-msgstr "רונות"
+msgstr "רונית"
 
 #: kcharselect-translation.cpp:70
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagalog"
-msgstr "טגאלוג"
+msgstr "טאגאלוג"
 
 #: kcharselect-translation.cpp:71
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hanunoo"
-msgstr "האנונו"
+msgstr "הנונואו"
 
 #: kcharselect-translation.cpp:72
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
 msgstr "בוהיד"
 
 #: kcharselect-translation.cpp:73
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
 msgstr "טגבאנווה"
 
 #: kcharselect-translation.cpp:74
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer"
-msgstr "חמר"
+msgstr "חמרית"
 
 #: kcharselect-translation.cpp:75
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mongolian"
 msgstr "מונגולית"
 
 #: kcharselect-translation.cpp:76
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
-msgstr "Syllabics אבוריג'ינים קנדית מאוחדת ה מורחבת"
+msgstr "הברות קנדיות ילידיות מאוחדות מורחב"
 
 #: kcharselect-translation.cpp:77
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
 msgstr "לימבו"
 
 #: kcharselect-translation.cpp:78
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
 msgstr "טאי לה"
 
 #: kcharselect-translation.cpp:79
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "טאי לה חדש"
 
 #: kcharselect-translation.cpp:80
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer Symbols"
-msgstr "סמלים בחמר"
+msgstr "סמלים בחמרית"
 
 #: kcharselect-translation.cpp:81
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
 msgstr "בוגינית"
 
 #: kcharselect-translation.cpp:82
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
 msgstr "טאי טם"
 
 #: kcharselect-translation.cpp:83
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "סימני ניקוד מחברים"
+msgstr "סימנים מבחינים מתחברים מורחב"
 
 #: kcharselect-translation.cpp:84
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
 msgstr "באלית"
 
 #: kcharselect-translation.cpp:85
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
-msgstr "יום ראשון"
+msgstr "סונדנית"
 
 #: kcharselect-translation.cpp:86
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
-msgstr "קטקאנה"
+msgstr "בטאק"
 
 #: kcharselect-translation.cpp:87
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
-msgstr "לפצ'ה"
+msgstr "לפצ׳ה"
 
 #: kcharselect-translation.cpp:88
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
-msgstr ""
+msgstr "אול צ׳יקי"
 
 #: kcharselect-translation.cpp:89
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
-msgstr "קירילית מורחבת - א'"
+msgstr "קירילית מורחבת ג׳"
 
 #: kcharselect-translation.cpp:90
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "צורות הנדסיות"
+msgstr "הרחבה של גאורגית"
 
 #: kcharselect-translation.cpp:91
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
-msgstr "תוספות ללטינית־1"
+msgstr "תוספות לסונדנית"
 
 #: kcharselect-translation.cpp:92
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
 msgstr "הרחבות ודיות"
 
 #: kcharselect-translation.cpp:93
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions"
 msgstr "הרחבות פונטיות"
 
 #: kcharselect-translation.cpp:94
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
-msgstr "תוספות להרחבות פונטיות"
+msgstr "השלמה של הרחבות פונטיות"
 
 #: kcharselect-translation.cpp:95
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
-msgstr "תוספות לסימני ניקוד מחברים"
+msgstr "השלמה של סימנים מבחינים מתחברים"
 
 #: kcharselect-translation.cpp:96
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended Additional"
-msgstr "תוספות להרחבות ללטינית"
+msgstr "הרחבות לטיניות נוספות"
 
 #: kcharselect-translation.cpp:97
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
 msgstr "הרחבות ליוונית"
 
 #: kcharselect-translation.cpp:98
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "General Punctuation"
 msgstr "סימני פיסוק כלליים"
 
 #: kcharselect-translation.cpp:99
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Superscripts and Subscripts"
-msgstr "ציונים עיליים ותחתיים"
+msgstr "תווים עיליים ותחתיים"
 
 #: kcharselect-translation.cpp:100
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Currency Symbols"
 msgstr "סמלי מטבע"
 
 #: kcharselect-translation.cpp:101
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks for Symbols"
-msgstr "סימני ניקוד מחברים עבור סמלים"
+msgstr "סימנים מבחינים מתחברים בשביל סמלים"
 
 #: kcharselect-translation.cpp:102
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
 msgstr "סמלים דמויי אותיות"
 
 #: kcharselect-translation.cpp:103
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Number Forms"
 msgstr "צורות מספרים"
 
 #: kcharselect-translation.cpp:104
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
-msgstr "חצים"
+msgstr "חיצים"
 
 #: kcharselect-translation.cpp:105
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
 msgstr "אופרטורים מתמטיים"
 
 #: kcharselect-translation.cpp:106
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
 msgstr "סימנים טכניים שונים"
 
 #: kcharselect-translation.cpp:107
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
-msgstr "תמונות תווי בקרה"
+msgstr "תמונות של תווי בקרה"
 
 #: kcharselect-translation.cpp:108
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Optical Character Recognition"
-msgstr "זיהוי תווים אופטי"
+msgstr "סימנים לסורקי כתב (OCR)"
 
 #: kcharselect-translation.cpp:109
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
-msgstr "תווים אלפאנומריים תחומים"
+msgstr "תווים אלפאנומריים ממוסגרים"
 
 #: kcharselect-translation.cpp:110
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Box Drawing"
-msgstr "שרטוט תיבות"
+msgstr "שרטוט קופסאות"
 
 #: kcharselect-translation.cpp:111
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
-msgstr "מרכיבי בלוקים"
+msgstr "יסודות לבנים"
 
 #: kcharselect-translation.cpp:112
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes"
 msgstr "צורות הנדסיות"
 
 #: kcharselect-translation.cpp:113
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols"
 msgstr "סמלים שונים"
 
 #: kcharselect-translation.cpp:114
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Dingbats"
 msgstr "קישוטים"
 
 #: kcharselect-translation.cpp:115
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
-msgstr "סמלים מתמטיים שונים - א'"
+msgstr "סמלים מתמטיים שונים א׳"
 
 #: kcharselect-translation.cpp:116
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
-msgstr "חצים נוספים - א'"
+msgstr "השלמה של חיצים א׳"
 
 #: kcharselect-translation.cpp:117
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
-msgstr "דפוסי ברייל"
+msgstr "תרשימי כתב ברייל"
 
 #: kcharselect-translation.cpp:118
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
-msgstr "חצים נוספים - ב'"
+msgstr "השלמה של חיצים ב׳"
 
 #: kcharselect-translation.cpp:119
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-B"
-msgstr "סמלים מתמטיים שונים - ב'"
+msgstr "סמלים מתמטיים שונים ב׳"
 
 #: kcharselect-translation.cpp:120
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Mathematical Operators"
-msgstr "אופרטורים מתמטיים נוספים"
+msgstr "השלמה של סמלים מתמטיים"
 
 #: kcharselect-translation.cpp:121
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Arrows"
-msgstr "סמלים וחצים נוספים"
+msgstr "סמלים וחיצים שונים"
 
 #: kcharselect-translation.cpp:122
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Glagolitic"
 msgstr "גלגוליטי"
 
 #: kcharselect-translation.cpp:123
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-C"
-msgstr "לטינית מורחבת - ג'"
+msgstr "לטינית מורחבת ג׳"
 
 #: kcharselect-translation.cpp:124
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Coptic"
 msgstr "קופטית"
 
 #: kcharselect-translation.cpp:125
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Supplement"
-msgstr "תוספות לגאורגית"
+msgstr "השלמה לגאורגית"
 
 #: kcharselect-translation.cpp:126
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
-msgstr "טיפינאג"
+msgstr "תיפינאג"
 
 #: kcharselect-translation.cpp:127
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended"
 msgstr "אתיופית מורחבת"
 
 #: kcharselect-translation.cpp:128
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-A"
-msgstr "קירילית מורחבת - א'"
+msgstr "קירילית מורחבת א׳"
 
 #: kcharselect-translation.cpp:129
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Punctuation"
-msgstr "סימני פיסוק נוספים"
+msgstr "השלמה של סימני פיסוק"
 
 #: kcharselect-translation.cpp:130
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
-msgstr "שורשים נוספים בסינית/יפנית/קוריאנית"
+msgstr "שורשים נוספים בסינית, יפנית וקוריאנית"
 
 #: kcharselect-translation.cpp:131
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
-msgstr "שורשי קאנגשי"
+msgstr "שורשי קנגשי"
 
 #: kcharselect-translation.cpp:132
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ideographic Description Characters"
 msgstr "תווים לתיאור אידיאוגרפי"
 
 #: kcharselect-translation.cpp:133
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Symbols and Punctuation"
-msgstr "סמלים וסימני פיסוק סינים/יפנים/קוריאנים"
+msgstr "סמלים וסימני פיסוק לסינית, יפנית וקוריאנית"
 
 #: kcharselect-translation.cpp:134
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hiragana"
 msgstr "היראגאנה"
 
 #: kcharselect-translation.cpp:135
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana"
-msgstr "קטקאנה"
+msgstr "קאטאקאנה"
 
 #: kcharselect-translation.cpp:136
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "בופומופו"
 
 #: kcharselect-translation.cpp:137
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
-msgstr "ג'אמו של האנגול לתאימות"
+msgstr "ג׳אמו של הנגול לתאימות"
 
 #: kcharselect-translation.cpp:138
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "קאנבון"
 
 #: kcharselect-translation.cpp:139
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
 msgstr "בופומופו מורחב"
 
 #: kcharselect-translation.cpp:140
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Strokes"
-msgstr "קווים בסינית/יפנית/קוריאנית"
+msgstr "קווים בסינית, יפנית וקוריאנית"
 
 #: kcharselect-translation.cpp:141
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana Phonetic Extensions"
-msgstr "הרחבות פונטיות לקטקאנה"
+msgstr "הרחבות פונטיות לקאטאקאנה"
 
 #: kcharselect-translation.cpp:142
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed CJK Letters and Months"
-msgstr "אותיות וחודשים תחומים לסינית/יפנית/קוריאנית"
+msgstr "תווים וחודשים תחומים לסינית/יפנית/קוריאנית"
 
 #: kcharselect-translation.cpp:143
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility"
-msgstr "תאימות סינית/יפנית/קוריאנית"
+msgstr "תאימות לסינית/יפנית/קוריאנית"
 
 #: kcharselect-translation.cpp:144
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
-msgstr "הרחבת אידאוגרמות מאוחדת סינית/יפנית/קוריאנית -א'A"
+msgstr "אידאוגרמות סינית/יפנית/קוריאנית מאוחדות, הרחבה א׳"
 
 #: kcharselect-translation.cpp:145
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
-msgstr "סמלי הקסגרמה של איצ'ינג"
+msgstr "סמלים משושים של אי צ׳ינג"
 
 #: kcharselect-translation.cpp:146
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
 msgstr "אידיאוגרמות מאוחדות של סינית/יפנית/קוריאנית"
 
 #: kcharselect-translation.cpp:147
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Syllables"
-msgstr "הברות אי"
+msgstr "הברות יי"
 
 #: kcharselect-translation.cpp:148
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Radicals"
-msgstr "שורשי אי"
+msgstr "שורשי יי"
 
 #: kcharselect-translation.cpp:149
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
-msgstr "לימבו"
+msgstr "ליסו"
 
 #: kcharselect-translation.cpp:150
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "ואי"
 
 #: kcharselect-translation.cpp:151
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-B"
-msgstr "קירילית מורחבת - ב'"
+msgstr "קירילית מורחבת ב׳"
 
 #: kcharselect-translation.cpp:152
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
-msgstr ""
+msgstr "באמום"
 
 #: kcharselect-translation.cpp:153
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
 msgstr "אותיות שינוי טון"
 
 #: kcharselect-translation.cpp:154
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-D"
-msgstr "לטינית מורחבת - ד'"
+msgstr "לטינית מורחבת ד׳"
 
 #: kcharselect-translation.cpp:155
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr "סילוטי נאגרי"
 
 #: kcharselect-translation.cpp:156
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
-msgstr "צורות המספרים ההודית המקובלת"
+msgstr "צורות מספרים משותפות לשפות הודו אירופאיות"
 
 #: kcharselect-translation.cpp:157
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
-msgstr "פאגספה"
+msgstr "פאגס-פה"
 
 #: kcharselect-translation.cpp:158
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
-msgstr ""
+msgstr "סאורשטרה"
 
 #: kcharselect-translation.cpp:159
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
-msgstr "דוונגארי מורחבת"
+msgstr "הרחבה של דוונגארי"
 
 #: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
-msgstr ""
+msgstr "קאיה לי"
 
 #: kcharselect-translation.cpp:161
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
-msgstr ""
+msgstr "רג׳אנג"
 
 #: kcharselect-translation.cpp:162
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
-msgstr "ג'אמו של האנגול  מורחבת - א'"
+msgstr "ג׳אמו (יסודות מתחברים) של הנגול מורחבת א׳"
 
 #: kcharselect-translation.cpp:163
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
-msgstr "ג'אווה"
+msgstr "ג׳אווה"
 
 #: kcharselect-translation.cpp:164
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
-msgstr "מיאנמרית מורחבת - א'"
+msgstr "מיאנמרית מורחבת ב׳"
 
 #: kcharselect-translation.cpp:165
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
-msgstr ""
+msgstr "צ׳אם"
 
 #: kcharselect-translation.cpp:166
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
-msgstr "מיאנמרית מורחבת - א'"
+msgstr "מיאנמרית מורחבת א׳"
 
 #: kcharselect-translation.cpp:167
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
-msgstr "טאי לה"
+msgstr "טאי וייט"
 
 #: kcharselect-translation.cpp:168
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek Extensions"
-msgstr "הרחבות ודיות"
+msgstr "הרחבות של מיטיי מאייק"
 
 #: kcharselect-translation.cpp:169
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
-msgstr "אתיופית מורחבת - א'"
+msgstr "אתיופית מורחבת א׳"
 
 #: kcharselect-translation.cpp:170
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-E"
-msgstr "לטינית מורחבת - א'"
+msgstr "לטינית מורחבת ה"
 
 #: kcharselect-translation.cpp:171
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee Supplement"
-msgstr "תוספות לקירילית"
+msgstr "השלמות לצ׳רוקי"
 
 #: kcharselect-translation.cpp:172
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek"
-msgstr ""
+msgstr "מיטיי מאייק"
 
 #: kcharselect-translation.cpp:173
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Syllables"
-msgstr "הברות האנגול"
+msgstr "הברות הנגול"
 
 #: kcharselect-translation.cpp:174
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
-msgstr "ג'אמו של האנגול  מורחבת - ב'"
+msgstr "ג׳אמו (יסודות מתחברים) של הנגול מורחבת ב׳"
 
 #: kcharselect-translation.cpp:175
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
 msgstr "ממלאי מקום גבוהים"
 
 #: kcharselect-translation.cpp:176
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
 msgstr "ממלאי מקום גבוהים לשימוש פרטי"
 
 #: kcharselect-translation.cpp:177
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
 msgstr "ממלאי מקום נמוכים"
 
 #: kcharselect-translation.cpp:178
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Private Use Area"
-msgstr "תחום לשימוש פרטי"
+msgstr "אזור שימוש פרטי"
 
 #: kcharselect-translation.cpp:179
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Ideographs"
-msgstr "אידיאוגרמות סינית/יפנית/קוריאנית לתאימות"
+msgstr "אידיאוגרמות סיניות, יפנית וקוריאנית לתאימות"
 
 #: kcharselect-translation.cpp:180
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
-msgstr "צורות ייצוג אלפביתיות"
+msgstr "צורות תצוגה לאלפבית"
 
 #: kcharselect-translation.cpp:181
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-A"
-msgstr "צורות ייצוג ערבית - A"
+msgstr "צורות תצוגה לערבית א׳"
 
 #: kcharselect-translation.cpp:182
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
 msgstr "בוררי צורות משנה"
 
 #: kcharselect-translation.cpp:183
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vertical Forms"
 msgstr "צורות אנכיות"
 
 #: kcharselect-translation.cpp:184
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
-msgstr "חצאי סימנים מחברים"
+msgstr "חצאי סימנים מתחברים"
 
 #: kcharselect-translation.cpp:185
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Forms"
-msgstr "סימני תאימות לסינית/יפנית/קוריאנית"
+msgstr "צורות תאימות לסינית, יפנית וקוריאנית"
 
 #: kcharselect-translation.cpp:186
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Small Form Variants"
 msgstr "צורות משנה קטנות"
 
 #: kcharselect-translation.cpp:187
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-B"
-msgstr "צורות ייצוג ערבית - ב'"
+msgstr "צורות תצוגה לערבית ב׳"
 
 #: kcharselect-translation.cpp:188
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Halfwidth and Fullwidth Forms"
-msgstr "צורות ברוחב מלא וחצי רוחב"
+msgstr "צורות לרוחב חצוי ורוחב מלא"
 
 #: kcharselect-translation.cpp:189
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1176,193 +991,147 @@ msgstr "מיוחדים"
 #: kcharselect-translation.cpp:191
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mahjong Tiles"
-msgstr ""
+msgstr "אריחי מה־ג׳ונג"
 
 #: kcharselect-translation.cpp:192
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Domino Tiles"
-msgstr ""
+msgstr "אריחי דומינו"
 
 #: kcharselect-translation.cpp:193
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Playing Cards"
-msgstr ""
+msgstr "קלפי משחק"
 
 #: kcharselect-translation.cpp:194
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
-msgstr "תווים אלפאנומריים תחומים"
+msgstr "תווים אלפאנומריים ממוסגרים"
 
 #: kcharselect-translation.cpp:195
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
-msgstr "תוספות לאתיופית"
+msgstr "השלמה של אידיאוגרמות ממוסגרות"
 
 #: kcharselect-translation.cpp:196
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
-msgstr "סמלים וחצים נוספים"
+msgstr "סמלים וסימנים גרפיים תמונתיים שונים"
 
 #: kcharselect-translation.cpp:197
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Emoticons"
-msgstr "אמוטיקונים"
+msgstr "פרצופונים"
 
 #: kcharselect-translation.cpp:198
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ornamental Dingbats"
-msgstr ""
+msgstr "קישוטים עיטוריים"
 
 #: kcharselect-translation.cpp:199
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Transport and Map Symbols"
-msgstr ""
+msgstr "סימני תעבורה ומיפוי"
 
 #: kcharselect-translation.cpp:200
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alchemical Symbols"
-msgstr "סמלים מתמטיים"
+msgstr "סמלים אלכימיים"
 
 #: kcharselect-translation.cpp:201
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
-msgstr "צורות הנדסיות"
+msgstr "הרחבה של צורות הנדסיות"
 
 #: kcharselect-translation.cpp:202
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
-msgstr "חצים נוספים - א'"
+msgstr "השלמה של חצים ג׳"
 
 #: kcharselect-translation.cpp:203
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Symbols and Pictographs"
-msgstr ""
+msgstr "השלמה של סמלים וסימנים גרפים תמונתיים"
 
 #: kcharselect-translation.cpp:204
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
-msgstr "סמלים בחמר"
+msgstr "סימני שח"
 
 #: kcharselect-translation.cpp:205
-#, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "סמלים וחצים נוספים"
+msgstr "סמלים וסימנים גרפיים תמונתיים הרחבה א׳"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
-msgstr ""
+msgstr "צורות למחשוב מיושן"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
-msgstr "הזן כאן מונח או תו לחיפוש"
+msgstr "נא למלא כאן ביטוי או תו לחיפוש…"
 
 #: kcharselect.cpp:393
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
-msgstr "הזן כאן מונח או תו לחיפוש"
+msgstr "נא למלא כאן ביטוי או תו לחיפוש"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
 msgctxt "KCharSelect|@action"
 msgid "&Find..."
-msgstr "&חיפוש..."
+msgstr "&איתור…"
 
 #: kcharselect.cpp:424
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
-msgstr "הפריט הקודם ברשימה"
+msgstr "הקודם בהיסטוריה"
 
 #: kcharselect.cpp:426
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "התו הקודם ברשימה"
+msgstr "מעבר לתו הקודם בהיסטוריה"
 
 #: kcharselect.cpp:431
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
-msgstr "הפריט הבא ברשימה"
+msgstr "הבא בהיסטוריה"
 
 #: kcharselect.cpp:433
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "התו הבא ברשימה"
+msgstr "מעבר לתו הבא בהיסטוריה"
 
 #: kcharselect.cpp:438
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&אחורה"
 
 #: kcharselect.cpp:445
-#, fuzzy
-#| msgctxt "KCharSelect|go forward"
-#| msgid "&Forward"
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&קדימה"
 
 #: kcharselect.cpp:464
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
-msgstr "בחר קטגוריה"
+msgstr "בחירת קטגוריה"
 
 #: kcharselect.cpp:468
-#, fuzzy
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "בחר קטע להצגה"
+msgstr "בחירת מקטע להצגה"
 
 #: kcharselect.cpp:487
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
-msgstr "הגדר גופן"
+msgstr "הגדרת גופן"
 
 #: kcharselect.cpp:494
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
-msgstr "הגדר גודל גופן"
+msgstr "הגדרת גודל גופן"
 
 #: kcharselect.cpp:796
 msgctxt "KCharSelect|"
@@ -1375,10 +1144,9 @@ msgid "Name: "
 msgstr "שם: "
 
 #: kcharselect.cpp:811
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
-msgstr "הערות והפניות"
+msgstr "פירושים והפניות"
 
 #: kcharselect.cpp:815
 msgctxt "KCharSelect|"
@@ -1393,7 +1161,7 @@ msgstr "הערות:"
 #: kcharselect.cpp:831
 msgctxt "KCharSelect|"
 msgid "See also:"
-msgstr "ראה גם:"
+msgstr "ר׳ גם:"
 
 #: kcharselect.cpp:846
 msgctxt "KCharSelect|"
@@ -1401,85 +1169,71 @@ msgid "Equivalents:"
 msgstr "מקבילים:"
 
 #: kcharselect.cpp:854
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
-msgstr "מקבילים מקורבים:"
+msgstr "שקולים מקורבים:"
 
 #: kcharselect.cpp:862
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
-msgstr "תיאור:"
+msgstr "פירוק תווים:"
 
 #: kcharselect.cpp:874
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
-msgstr "מידע אידאוגרמת סינית/יפנית/קוריאנית"
+msgstr "פרטי אידאוגרמות סינית/יפנית/קוריאנית"
 
 #: kcharselect.cpp:877
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "הגדרה באנגלית: "
 
 #: kcharselect.cpp:884
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
-msgstr "הגייה במנדרינית: "
+msgstr "הגייה מנדרינית: "
 
 #: kcharselect.cpp:891
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
-msgstr "הגייה בקנטונית: "
+msgstr "הגייה קנטונית: "
 
 #: kcharselect.cpp:898
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
-msgstr "הגייה ביפנית (און): "
+msgstr "הגייה יפנית (און): "
 
 #: kcharselect.cpp:905
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
-msgstr "הגייה ביפנית (קון): "
+msgstr "הגייה יפנית (קון): "
 
 #: kcharselect.cpp:912
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "הגיית טאנג: "
 
 #: kcharselect.cpp:919
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
-msgstr "הגייה בקוריאנית: "
+msgstr "הגייה קוריאנית: "
 
 #: kcharselect.cpp:925
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "מאפייני תו כלליים"
 
 #: kcharselect.cpp:926
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Block: "
-msgstr "בלוק: "
+msgstr "מקטע: "
 
 #: kcharselect.cpp:927
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
-msgstr "קטגוריית יוניקוד:"
+msgstr "קטגוריית יוניקוד: "
 
 #: kcharselect.cpp:931
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "ייצוגים שימושיים שונים"
@@ -1495,22 +1249,19 @@ msgid "UTF-16: "
 msgstr "‏UTF-16: "
 
 #: kcharselect.cpp:943
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
-msgstr "‏UTF-8 מפורש אוקטלי ב־C: "
+msgstr "UTF-8 עם מילוט אוקטלי ב־C: "
 
 #: kcharselect.cpp:947
-#, fuzzy
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
-msgstr "יישות עשרונית של XML:"
+msgstr "ישות עשרונית של XML:"
 
 #: kcharselect.cpp:1099
-#, fuzzy
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
-msgstr "קוד נקודת יוניקוד:"
+msgstr "נקודת קוד יוניקוד:"
 
 #: kcharselect.cpp:1099
 msgctxt "KCharSelectItemModel|Character"
@@ -1518,37 +1269,31 @@ msgid "In decimal"
 msgstr "בעשרוני:"
 
 #: kcharselectdata.cpp:311
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
-msgstr "כל תו שהוא"
+msgstr "<לא תו>"
 
 #: kcharselectdata.cpp:332
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<ממלאי מקום גבוהים לא לשימוש פרטי>"
 
 #: kcharselectdata.cpp:334
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<ממלאי מקום גבוהים לשימוש פרטי>"
 
 #: kcharselectdata.cpp:336
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<ממלאי מקום נמוכים>"
 
 #: kcharselectdata.cpp:338
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<שימוש פרטי>"
 
 #: kcharselectdata.cpp:370
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<לא מוקצה>"
@@ -1556,55 +1301,47 @@ msgstr "<לא מוקצה>"
 #: kcharselectdata.cpp:448
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr ""
+msgstr "הכול"
 
 #: kcharselectdata.cpp:760
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
-msgstr "לא מוצג"
+msgstr "לא להצגה"
 
 #: kcharselectdata.cpp:793
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "אחר, בקרה"
 
 #: kcharselectdata.cpp:795
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "אחר, עיצוב"
 
 #: kcharselectdata.cpp:797
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "אחר, לא מוקצה"
 
 #: kcharselectdata.cpp:799
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "אחר, שימוש פרטי"
 
 #: kcharselectdata.cpp:801
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "אחר, ממלא מקום"
 
 #: kcharselectdata.cpp:803
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "אות, לא רישית"
 
 #: kcharselectdata.cpp:805
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
-msgstr "אות, משנה מצב"
+msgstr "אות, מחליפת מצב"
 
 #: kcharselectdata.cpp:807
 msgctxt "KCharSelectData|"
@@ -1612,10 +1349,9 @@ msgid "Letter, Other"
 msgstr "אות, אחרת"
 
 #: kcharselectdata.cpp:809
-#, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
-msgstr "אות, ברישיות כותרת"
+msgstr "אות, ברישיות תחילת מילה"
 
 #: kcharselectdata.cpp:811
 msgctxt "KCharSelectData|"
@@ -1728,12 +1464,9 @@ msgid "Unknown"
 msgstr "לא ידוע"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
-msgstr "מותאם אישית..."
+msgstr "התאמה אישית…"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1759,68 +1492,44 @@ msgid "Week %1"
 msgstr "שבוע %1"
 
 #: kdatepicker.cpp:305
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "השנה הבאה"
 
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "השנה הקודמת"
 
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "החודש הבא"
 
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "החודש הקודם"
 
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
-msgstr "בחר שבוע"
+msgstr "בחירת שבוע"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
-msgstr "בחר חודש"
+msgstr "בחירת חודש"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
-msgstr "בחר שנה"
+msgstr "בחירת שנה"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
-msgstr "בחר את היום הנוכחי"
+msgstr "בחירת היום הנוכחי"
 
 #: kdatepicker.cpp:647
 msgctxt "KDatePicker|@action:button"
@@ -1828,98 +1537,64 @@ msgid "Close"
 msgstr "סגור"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "השנה הבאה"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "החודש הבא"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
-msgstr "השנה הבאה"
+msgstr "השבוע הבא"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "מחר"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "היום"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "אתמול"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "שבוע שעבר"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "החודש הקודם"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "השנה הקודמת"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "אין תאריך"
 
 #: kdatetimeedit.cpp:171
-#, fuzzy
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
-msgstr "זמן יקום מתואם - UTC"
+msgstr "זמן אוניברסלי מתואם - UTC"
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgctxt "KDateTimeEdit|No specific time zone"
-#| msgid "Floating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
-msgstr "צף"
+msgstr "ציפה"
 
 #: kdatetimeedit.cpp:211
 msgctxt "KDateTimeEdit|@info"
@@ -1932,45 +1607,31 @@ msgid "The entered date and time is after the maximum allowed date and time."
 msgstr "התאריך שהכנסת מאוחר מהתאריך האפשרי."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
-msgstr "&הוסף"
+msgstr "הו&ספה"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
-msgstr "&הסר"
+msgstr "הס&רה"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
-msgstr "הזז מ&עלה"
+msgstr "העלאה מ&עלה"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
-msgstr "&הורד"
+msgstr "הורדה מ&טה"
 
 #: kfontchooser.cpp:168
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "הגופן המבוקש"
 
 #: kfontchooser.cpp:209
-#, fuzzy
-#| msgctxt "KFontChooser|QFontDatabase"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "רגיל"
@@ -1993,7 +1654,7 @@ msgstr "מודגש"
 #: kfontchooser.cpp:213
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "מודגש דחוס משופע"
 
 #: kfontchooser.cpp:257
 msgctxt "KFontChooser|"
@@ -2001,28 +1662,19 @@ msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "דג סקרן שט לו בים זך ולפתע מצא חבורה נחמדה."
 
 #: kfontchooser.cpp:313
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-msgstr "גודל הגופן<br /><i>קבוע</i> או <i>יחסי</i><br />לסביבה"
+msgstr "גודל גופן<br /><i>קבוע</i> או <i>יחסי</i><br />לסביבה"
 
 #: kfontchooser.cpp:314
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "Here you can switch between fixed font size and font size to be "
-#| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#| "dimensions, paper size)."
 msgctxt "KFontChooser|@info:whatsthis"
 msgid ""
 "Here you can switch between fixed font size and font size to be calculated "
 "dynamically and adjusted to changing environment (e.g. widget dimensions, "
 "paper size)."
 msgstr ""
-"כאן באפשרותך להחליף בין גודל גופנים קבוע לבין גודל גופנים שיחושב בצורה "
-"דינמית ויותאם לסביבה המשתנה (לדוגמה ממדי פריטים גרפיים, גודל דף)."
+"כאן אפשר להחליף בין גודל גופן קבוע וגודל גופן לחישוב דינמי והתאמה לסביבה "
+"המשתנה (למשל: ממדי וידג׳טים, גודל נייר)."
 
 #: kfontchooser.cpp:474
 #, qt-format
@@ -2031,154 +1683,106 @@ msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
-msgstr "בחר חודש"
+msgstr "בחירת גופן"
 
 #: kfontchooserwidget.ui:14
 msgctxt "KFontChooserWidget|"
 msgid "KFontChooserWidget"
-msgstr ""
+msgstr "KFontChooserWidget"
 
 #: kfontchooserwidget.ui:31
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "גופן"
 
 #: kfontchooserwidget.ui:38
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "גופן:"
 
 #: kfontchooserwidget.ui:56
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "סגנון גופן"
 
 #: kfontchooserwidget.ui:63
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "סגנון גופן:"
 
 #: kfontchooserwidget.ui:81
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "גודל"
 
 #: kfontchooserwidget.ui:88
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "גודל:"
 
 #: kfontchooserwidget.ui:97
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "יחסי"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
 "special characters."
 msgstr ""
-"טקסט דוגמה זה מציג את ההגדרות הנוכחיות. באפשרותך לערוך אותו כדי לבדוק תווים "
+"טקסט דוגמה זה מציג את ההגדרות הנוכחיות. אפשר לערוך אותו כדי לבדוק תווים "
 "מיוחדים."
 
 #: kfontchooserwidget.ui:135
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr ""
+msgstr "הצגת גופנים ברוחב אחיד בלבד"
 
 #: kfontrequester.cpp:155
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
-msgstr "בחר..."
+msgstr "בחירת גופן…"
 
 #: kfontrequester.cpp:161
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "תצוגה מקדימה של הגופן הנבחר"
 
 #: kfontrequester.cpp:163
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the selected font. You can change it by clicking the "
-#| "\"Choose...\" button."
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"זוהי תצוגה מקדימה של הגופן הנבחר. באפשרותך לשנותה על ידי לחיצה על הכפתור "
-"\"בחר...\"."
+"זו תצוגה מקדימה של הגופן הנבחר. אפשר לשנותה בלחיצה על הכפתור „בחירת גופן…”."
 
 #: kfontrequester.cpp:167
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the \"%1\" font"
+#, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
-msgstr "תצוגה מקדימה של הגופן \"%1\""
+msgstr "תצוגה מקדימה של הגופן „%1”"
 
 #: kfontrequester.cpp:168
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"זוהי תצוגה מקדימה של הגופן \"%1\". באפשרותך לשנותה על ידי לחיצה על הכפתור "
-"\"בחר...\"."
+"זו תצוגה מקדימה של הגופן „%1”. אפשר לשנותה בלחיצה על הכפתור „בחירת גופן…”."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
 msgid "LED on"
-msgstr ""
+msgstr "נורית פעילה"
 
 #: kled.cpp:173
 msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
-msgstr ""
+msgstr "נורית כבויה"
 
 #: kmessagebox.cpp:304
 msgctxt "KMessageBox|"
@@ -2194,7 +1798,7 @@ msgstr "שאלה"
 #: kmessagebox.cpp:765 kmessagebox.cpp:863
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
-msgstr "אל תשאל שוב"
+msgstr "לא לשאול שוב"
 
 #: kmessagebox.cpp:669 kmessagebox.cpp:749 kmessagebox.cpp:846
 msgctxt "KMessageBox|"
@@ -2209,7 +1813,7 @@ msgstr "שגיאה"
 #: kmessagebox.cpp:991 kmessagebox.cpp:1022 kmessagebox.cpp:1424
 msgctxt "KMessageBox|"
 msgid "Sorry"
-msgstr "מצטערים"
+msgstr "מחילה"
 
 #: kmessagebox.cpp:1068
 msgctxt "KMessageBox|"
@@ -2219,168 +1823,119 @@ msgstr "מידע"
 #: kmessagebox.cpp:1083
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
-msgstr "אל תציג הודעה זו שנית"
+msgstr "לא להציג הודעה זו שנית"
 
 #: kmessagedialog.cpp:177
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "פרטים"
 
 #: kmessagedialog.cpp:262
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "שאלה"
 
 #: kmessagedialog.cpp:267
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "אזהרה"
 
 #: kmessagedialog.cpp:270
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
-msgstr "מידע"
+msgstr "פרטים"
 
 #: kmessagedialog.cpp:274
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Sorry"
 msgctxt "KMessageDialog|"
 msgid "Sorry"
-msgstr "מצטערים"
+msgstr "מחילה"
 
 #: kmessagedialog.cpp:278
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "שגיאה"
 
 #: kmessagewidget.cpp:79
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
-msgstr "&סגור"
+msgstr "&סגירה"
 
 #: kmessagewidget.cpp:80
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
-msgstr "סגור הודעה"
+msgstr "סגירת הודעה"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern..."
-msgstr ""
+msgstr "חיפוש אחר סוג קובץ או תבנית שם קובץ…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr ""
+msgstr "&סינון:"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
-msgstr "טיפוסי Mime"
+msgstr "סוג Mime"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
 msgstr "הערה"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
-msgstr "דפוסים"
+msgstr "תבניות"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit..."
-msgstr "&עריכה..."
+msgstr "ע&ריכה…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
 msgid "Launch the MIME type editor"
-msgstr ""
+msgstr "הפעלת עורך טיפוסי ה־MIME"
 
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
-msgstr ""
+msgstr "קובץ ההפעלה „keditfiletype” לא נמצא ב־PATH."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype5\" executable, please check your "
 "installation."
-msgstr ""
+msgstr "קובץ ההפעלה „keditfiletype” לא עובד, נא לבדוק שההתקנה תקינה."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password must be at least %n character(s) long"
-#| msgid_plural "Password must be at least %n character(s) long"
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
-msgstr[0] "הסיסמה חייבת להיות בת תו אחד לפחות."
-msgstr[1] "הסיסמה חייבת להיות בת תו אחד לפחות."
+msgstr[0] "הסיסמה חייבת להיות באורך של תו אחד לפחות."
+msgstr[1] "הסיסמה חייבת להיות באורך של %n תווים לפחות."
 
 #: knewpassworddialog.cpp:67
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password is empty"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password is empty."
-msgstr "הסיסמה ריקה"
+msgstr "הסיסמה ריקה."
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords do not match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
-msgstr "הסיסמאות לא תואמות"
+msgstr "הסיסמאות לא תואמות."
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
-msgstr "הסיסמאות תואמות"
+msgstr "הסיסמאות תואמות."
 
 #: knewpassworddialog.cpp:146
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "סיסמה חלשה"
@@ -2396,12 +1951,13 @@ msgid ""
 "\n"
 "Would you like to use this password anyway?"
 msgstr ""
-"רמת הבטיחות של הסיסמה שהזנת נמוכה. כדי לשפר את בטיחות הסיסמה שלך, נסה:\n"
+"רמת הבטיחות של הסיסמה שהזנת נמוכה. כדי לשפר את בטיחות הסיסמה שלך, כדאי "
+"לנסות:\n"
 " - להשתמש בסיסמה ארוכה יותר;\n"
 " - להשתמש בתערובת של אותיות רישיות ואותיות רגילות;\n"
-" - להשתמש במספר סמלים כגון #, בנוסף לאותיות.\n"
+" - להשתמש במספר סימנים כגון #, בנוסף לאותיות.\n"
 "\n"
-"האם ברצונך להשתמש בסיסמה זו בכל זאת?"
+"להשתמש בסיסמה שבחרת בכל זאת?"
 
 #: knewpasswordwidget.cpp:52
 msgctxt "KNewPasswordWidget|@info:whatsthis"
@@ -2412,40 +1968,28 @@ msgid ""
 "case letters;</li><li>using numbers or symbols, such as #, as well as "
 "letters.</li></ul>"
 msgstr ""
-"מד בטיחות הסיסמה מספק לך אינדיקציה לגבי רמת האבטחה של הסיסמה שהזנת. כדי לשפר "
-"את בטיחות הסיסמה שלך, נסה:\n"
+"מד בטיחות הסיסמה מספק לך חיווי לגבי רמת האבטחה של הסיסמה שבחרת. כדי לשפר את "
+"בטיחות הסיסמה שלך, כדאי לנסות:\n"
 " - להשתמש בסיסמה ארוכה יותר;\n"
 " - להשתמש בתערובת של אותיות  ואותיות רגילות;\n"
 " - להשתמש במספר סמלים כגון #, בנוסף לאותיות."
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "סיסמה:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
-msgstr "&וודא:"
+msgstr "&אימות:"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password strength &meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
-msgstr "מד בטיחות הסיסמה:"
+msgstr "מ&ד סיבוכיות הסיסמה:"
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "סיסמה"
@@ -2453,136 +1997,97 @@ msgstr "סיסמה"
 #: kpassworddialog.cpp:80
 msgctxt "KPasswordDialog|"
 msgid "Show Contextual Help"
-msgstr ""
+msgstr "הצגת עזרה לפי הקשר"
 
 #: kpassworddialog.cpp:100
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Supply a username and password below."
 msgctxt "KPasswordDialog|"
 msgid "Supply a password below."
-msgstr "הזן להלן שם משתמש וסיסמה."
+msgstr "נא לספק סיסמה להלן."
 
 #: kpassworddialog.ui:33
 msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
-msgstr "הזן להלן שם משתמש וסיסמה."
+msgstr "נא לספק שם משתמש וסיסמה להלן."
 
 #: kpassworddialog.ui:70
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr ""
+msgstr "אין סיסמה, להשתמש בכניסה אלמונית (או כ&אורח)"
 
 #: kpassworddialog.ui:77
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Use this password:"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
-msgstr "&שמור סיסמה"
+msgstr "להשתמש בסיסמה הזאת:"
 
 #: kpassworddialog.ui:102
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
-msgstr "שם־משתמש:"
+msgstr "שם משתמש:"
 
 #: kpassworddialog.ui:127
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
-msgstr "מתחם:"
+msgstr "שם תחום:"
 
 #: kpassworddialog.ui:141
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "סיסמה:"
 
 #: kpassworddialog.ui:155
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
-msgstr "זכור סיסמה"
+msgstr "שמירת הסיסמה"
 
 #: kpasswordlineedit.cpp:41
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
-msgstr ""
+msgstr "שינוי חשיפת הסיסמה"
 
 #: kpixmapregionselectordialog.cpp:56
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Select Region of Image"
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
-msgstr "בחר את אזור התמונה"
+msgstr "בחירת אזור בתמונה"
 
 #: kpixmapregionselectordialog.cpp:60
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Please click and drag on the image to select the region of interest:"
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
-msgstr "מתח מלבן על גבי התמונה באמצעות לחיצה וגרירה כדי לבחור את האזור."
+msgstr "נא ללחוץ ולגרור על התמונה כדי לבחור את האזור המבוקש:"
 
 #: kpixmapregionselectorwidget.cpp:173
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "פעולות על תמונה"
 
 #: kpixmapregionselectorwidget.cpp:176
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
-msgstr "&סובב עם כיוון השעון"
+msgstr "&סיבוב עם כיוון השעון"
 
 #: kpixmapregionselectorwidget.cpp:180
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
-msgstr "סובב &נגד כיוון השעון"
+msgstr "סיבוב &נגד כיוון השעון"
 
 #: krecentfilesmenu.cpp:114
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
-msgstr ""
+msgstr "אין רשומות"
 
 #: krecentfilesmenu.cpp:117
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Clear input"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
-msgstr "נקה קלט"
+msgstr "פינוי הרשימה"
 
 #: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
-msgstr ""
+msgstr "קבצים אחרונים"
 
 #: ksqueezedtextlabel.cpp:207
-#, fuzzy
-#| msgctxt "KSqueezedTextLabel|"
-#| msgid "&Copy Full Text"
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
-msgstr "&העתק את כל טקסט"
+msgstr "ה&עתקת הטקסט במלואו"
 
 #: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
@@ -2607,43 +2112,43 @@ msgstr "&לא"
 #: kstandardguiitem.cpp:188
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
-msgstr "בטל &שינויים"
+msgstr "התלעמות מה&שינויים"
 
 #: kstandardguiitem.cpp:190
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
-msgstr "ביטול השינויים"
+msgstr "התעלמות מהשינויים"
 
 #: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
 msgid ""
 "Pressing this button will discard all recent changes made in this dialog."
-msgstr "לחיצה על כפתור זה תביא לביטול כל השינויים האחרונים שבוצעו בדו־שיח זה"
+msgstr "לחיצה על כפתור זה תתעלם מכל השינויים האחרונים שבוצעו בחלונית הזאת."
 
 #: kstandardguiitem.cpp:198
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
-msgstr "&שמור"
+msgstr "ל&שמור"
 
 #: kstandardguiitem.cpp:200
 msgctxt "KStandardGuiItem|"
 msgid "Save data"
-msgstr "שמור נתונים"
+msgstr "שמירת נתונים"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
-msgstr "&אל תשמור"
+msgstr "&לא לשמור"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Do not save data"
-msgstr "אל תשמור את הנתונים"
+msgstr "לא לשמור את הנתונים"
 
 #: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
-msgstr "שמירה &בשם..."
+msgstr "שמירה &בשם…"
 
 #: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
@@ -2653,12 +2158,12 @@ msgstr "שמירת הקובץ בשם אחר"
 #: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "&Apply"
-msgstr "&החל"
+msgstr "ה&חלה"
 
 #: kstandardguiitem.cpp:219
 msgctxt "KStandardGuiItem|"
 msgid "Apply changes"
-msgstr "החל שינויים"
+msgstr "החלת השינויים"
 
 #: kstandardguiitem.cpp:220
 msgctxt "KStandardGuiItem|"
@@ -2667,19 +2172,18 @@ msgid ""
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
-"בעת לחיצה על <b>החל</b>, ההגדרות יועברו אל התוכנית, אך תיבת הדו־שיח לא "
-"תסגר.\n"
+"לחיצה על <b>החלה</b> תעביר את ההגדרות לתוכנית, אך החלונית לא תיסגר.\n"
 "אפשרות זו יכולה לשמש לצורך ניסוי הגדרות שונות."
 
 #: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
-msgstr "&מצב מנהל..."
+msgstr "&מצב ניהול…"
 
 #: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
-msgstr "כניסה למצב מנהל"
+msgstr "כניסה למצב ניהול"
 
 #: kstandardguiitem.cpp:232
 msgctxt "KStandardGuiItem|"
@@ -2688,28 +2192,28 @@ msgid ""
 "administrator (root) password in order to make changes which require root "
 "privileges."
 msgstr ""
-"בעת לחיצה על <b>מצב מנהל</b>, תתבקש לספק את סיסמת המנהל (root) כדי לבצע "
+"לחיצה על <b>מצב ניהול</b> תדרוש ממך לספק את סיסמת הניהול (root) כדי לבצע "
 "שינויים הדורשים הרשאות של root."
 
 #: kstandardguiitem.cpp:240
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
-msgstr "נ&קה"
+msgstr "&פינוי"
 
 #: kstandardguiitem.cpp:242
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
-msgstr "נקה קלט"
+msgstr "פינוי הקלט"
 
 #: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
-msgstr "ניקוי הקלט שבשדה העריכה"
+msgstr "פינוי הקלט שבשדה העריכה"
 
 #: kstandardguiitem.cpp:248
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
-msgstr "&עזרה"
+msgstr "ע&זרה"
 
 #: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
@@ -2719,17 +2223,17 @@ msgstr "הצגת עזרה"
 #: kstandardguiitem.cpp:255
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
-msgstr "&סגור"
+msgstr "&סגירה"
 
 #: kstandardguiitem.cpp:257
 msgctxt "KStandardGuiItem|"
 msgid "Close the current window or document"
-msgstr "סגור את החלון או המסמך הנוכחיים"
+msgstr "סגירת החלון או המסמך הנוכחיים"
 
 #: kstandardguiitem.cpp:262
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
-msgstr "&סגור את החלון"
+msgstr "&סגירת החלון"
 
 #: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|"
@@ -2739,12 +2243,12 @@ msgstr "סגירת החלון הנוכחי."
 #: kstandardguiitem.cpp:269
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
-msgstr "&סגור את המסמך"
+msgstr "&סגירת המסמך"
 
 #: kstandardguiitem.cpp:271
 msgctxt "KStandardGuiItem|"
 msgid "Close the current document."
-msgstr "סגירת המסמך הנוכחי,"
+msgstr "סגירת המסמך הנוכחי."
 
 #: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
@@ -2774,32 +2278,32 @@ msgstr "&קדימה"
 #: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "Go forward one step"
-msgstr "מעבר צעד אחד קדימה"
+msgstr "התקדמות צעד אחד קדימה"
 
 #: kstandardguiitem.cpp:302
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
-msgstr "&הדפסה..."
+msgstr "ה&דפסה…"
 
 #: kstandardguiitem.cpp:304
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
-msgstr "פתיחת דו־שיח ההדפסה כדי להדפיס את המסמך הנוכחי"
+msgstr "פתיחת חלונית ההדפסה כדי להדפיס את המסמך הנוכחי"
 
 #: kstandardguiitem.cpp:311
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
-msgstr "ה&משך"
+msgstr "המ&שך"
 
 #: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
-msgstr "ממשיך את הפעולה"
+msgstr "המשך בפעולה"
 
 #: kstandardguiitem.cpp:318
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
-msgstr "&מחק"
+msgstr "&מחיקה"
 
 #: kstandardguiitem.cpp:320
 msgctxt "KStandardGuiItem|"
@@ -2809,7 +2313,7 @@ msgstr "מחיקת פריט/ים"
 #: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
-msgstr "&פתיחה..."
+msgstr "&פתיחה…"
 
 #: kstandardguiitem.cpp:327
 msgctxt "KStandardGuiItem|"
@@ -2819,17 +2323,17 @@ msgstr "פתיחת קובץ"
 #: kstandardguiitem.cpp:332
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
-msgstr "&יציאה"
+msgstr "י&ציאה"
 
 #: kstandardguiitem.cpp:334
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
-msgstr "יציאה מהתוכנית"
+msgstr "יציאה מהיישום"
 
 #: kstandardguiitem.cpp:339
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
-msgstr "&אפס"
+msgstr "&איפוס"
 
 #: kstandardguiitem.cpp:341
 msgctxt "KStandardGuiItem|"
@@ -2839,37 +2343,37 @@ msgstr "איפוס ההגדרות"
 #: kstandardguiitem.cpp:346
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
-msgstr "&הוסף"
+msgstr "הוס&פה"
 
 #: kstandardguiitem.cpp:351
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
-msgstr "הגד&רות..."
+msgstr "ה&גדרה…"
 
 #: kstandardguiitem.cpp:356
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
-msgstr "&חפש"
+msgstr "&איתור"
 
 #: kstandardguiitem.cpp:361
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
-msgstr "עצור"
+msgstr "עצירה"
 
 #: kstandardguiitem.cpp:366
 msgctxt "KStandardGuiItem|"
 msgid "Add"
-msgstr "הוסף"
+msgstr "הוספה"
 
 #: kstandardguiitem.cpp:371
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
-msgstr "הסר"
+msgstr "הסרה"
 
 #: kstandardguiitem.cpp:376
 msgctxt "KStandardGuiItem|"
 msgid "Test"
-msgstr "ניסיון"
+msgstr "בדיקה"
 
 #: kstandardguiitem.cpp:381
 msgctxt "KStandardGuiItem|"
@@ -2879,24 +2383,24 @@ msgstr "מאפיינים"
 #: kstandardguiitem.cpp:386
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
-msgstr "&שכתב"
+msgstr "&שכתוב"
 
 #: ktimecombobox.cpp:254
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
-msgstr "התאריך שהכנסת אינו תקין"
+msgstr "השעה שמילאת שגויה"
 
 #: ktimecombobox.cpp:257
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
-msgstr "הזמן לא יכול להיות מוקדם מאשר %1"
+msgstr "השעה לא יכולה להיות לפני %1"
 
 #: ktimecombobox.cpp:264
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
-msgstr "הזמן לא יכול להיות מאוחר מאשר %1"
+msgstr "השעה לא יכולה להיות אחרי %1"
 
 #: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
@@ -2909,10 +2413,9 @@ msgid "Full Screen"
 msgstr "מסך מלא"
 
 #: ktogglefullscreenaction.cpp:40
-#, fuzzy
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
-msgstr "הצג את החלון במסך מלא"
+msgstr "הצגת החלון במסך מלא"
 
 #~ msgctxt "KToggleFullScreenAction|@action:inmenu"
 #~ msgid "Exit F&ull Screen Mode"
