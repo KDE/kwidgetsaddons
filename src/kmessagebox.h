@@ -74,6 +74,7 @@ enum Option {
                    ///< depending on which is available.
     NoExec = 16, ///< Do not call exec() in createKMessageBox()
     WindowModal = 32, ///< The window is to be modal relative to its parent. By default, it is application modal.
+    PlainText = 64, ///< @since 6.9 The label content should be considered as plain text. This should be used when the text comes from untrusted user input.
 };
 
 /**

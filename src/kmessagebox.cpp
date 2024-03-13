@@ -218,6 +218,9 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
 
     QLabel *messageLabel = new QLabel(text, mainWidget);
     messageLabel->setOpenExternalLinks(options & KMessageBox::AllowLink);
+    if (options & Option::PlainText) {
+        messageLabel->setTextFormat(Qt::PlainText);
+    }
     Qt::TextInteractionFlags flags = Qt::TextSelectableByMouse;
     if (options & KMessageBox::AllowLink) {
         flags |= Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
