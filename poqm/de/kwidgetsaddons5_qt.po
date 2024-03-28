@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2010, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2004, 2005.
 # Stefan Winter <swinter@kde.org>, 2004.
 # Thomas Fischer <thomas.fischer@t-fischer.net>, 2004.
@@ -6,7 +7,6 @@
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2022.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
 # Rolf Eike Beer <kde@opensource.sf-tec.de>, 2012.
 msgid ""
@@ -14,15 +14,15 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-07-23 23:21+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-03-26 19:17+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1687,7 +1687,7 @@ msgstr "Schriftart auswählen"
 #: kfontchooserwidget.ui:14
 msgctxt "KFontChooserWidget|"
 msgid "KFontChooserWidget"
-msgstr ""
+msgstr "KFontChooser-Miniprogramm"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
@@ -1900,11 +1900,10 @@ msgid "Launch the MIME type editor"
 msgstr "MIME-Typ-Editor starten"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
-msgstr "Ausführbare Datei „%1“ ist nicht auffindbar."
+msgstr ""
+"Das ausführbare Programm „keditfiletype5“ kann in PATH nicht gefunden werden."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -1912,6 +1911,8 @@ msgid ""
 "Could not start the \"keditfiletype5\" executable, please check your "
 "installation."
 msgstr ""
+"Das ausführbare Programm „keditfiletype5“ kann nicht gestartet werden. Bitte "
+"überprüfen Sie die korrekte Installation."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
