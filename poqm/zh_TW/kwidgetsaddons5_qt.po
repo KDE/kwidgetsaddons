@@ -19,14 +19,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-02-13 20:18+0900\n"
+"PO-Revision-Date: 2024-04-06 01:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -298,7 +298,7 @@ msgstr "古吉拉特語"
 #: kcharselect-translation.cpp:52
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
-msgstr "奧里亞語"
+msgstr "歐利亞語"
 
 #: kcharselect-translation.cpp:53
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -308,17 +308,17 @@ msgstr "坦米爾文"
 #: kcharselect-translation.cpp:54
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
-msgstr "特拉古語"
+msgstr "泰盧固語"
 
 #: kcharselect-translation.cpp:55
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
-msgstr "坎那達語"
+msgstr "卡納達語"
 
 #: kcharselect-translation.cpp:56
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
-msgstr "馬來亞拉姆語"
+msgstr "馬拉雅拉姆語"
 
 #: kcharselect-translation.cpp:57
 msgctxt "KCharSelectData|KCharselect unicode block name"
