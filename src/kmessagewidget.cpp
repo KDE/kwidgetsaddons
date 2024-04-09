@@ -180,7 +180,6 @@ void KMessageWidgetPrivate::setPalette()
     palette.setColor(QPalette::Window, bgBaseColor);
     const QColor parentTextColor = (q->parentWidget() ? q->parentWidget()->palette() : qApp->palette()).color(QPalette::WindowText);
     palette.setColor(QPalette::WindowText, parentTextColor);
-    q->setPalette(palette);
     // Explicitly set the palettes of the labels because some apps use stylesheets which break the
     // palette propagation
     iconLabel->setPalette(palette);
@@ -311,7 +310,7 @@ bool KMessageWidget::event(QEvent *event)
 
     } else if (event->type() == QEvent::ParentChange) {
         d->setPalette();
-    } else if (event->type() == QEvent::ApplicationPaletteChange) {
+    } else if (event->type() == QEvent::PaletteChange) {
         d->setPalette();
     }
     return QFrame::event(event);
