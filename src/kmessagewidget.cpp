@@ -117,7 +117,7 @@ void KMessageWidgetPrivate::createLayout()
     if (wordWrap) {
         QGridLayout *layout = new QGridLayout(q);
         // Set alignment to make sure icon does not move down if text wraps
-        layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignHCenter | Qt::AlignTop);
+        layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignCenter);
         layout->addWidget(textLabel, 0, 1);
 
         if (buttons.isEmpty()) {
@@ -139,7 +139,7 @@ void KMessageWidgetPrivate::createLayout()
         }
     } else {
         QHBoxLayout *layout = new QHBoxLayout(q);
-        layout->addWidget(iconLabel, 0, Qt::AlignTop);
+        layout->addWidget(iconLabel, 0, Qt::AlignVCenter);
         layout->addWidget(textLabel);
 
         for (QToolButton *button : std::as_const(buttons)) {
