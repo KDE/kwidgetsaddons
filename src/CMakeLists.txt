@@ -43,6 +43,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kcolorcombo.h
     kcolumnresizer.cpp
     kcolumnresizer.h
+    kcontextualhelpbutton.cpp
+    kcontextualhelpbutton.h
     kcursor.cpp
     kcursor.h
     kcursor_p.h
@@ -238,6 +240,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   KCollapsibleGroupBox
   KColorButton
   KColumnResizer
+  KContextualHelpButton
   KDateComboBox
   KDatePicker
   KDatePickerPopup

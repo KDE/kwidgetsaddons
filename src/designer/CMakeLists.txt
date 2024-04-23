@@ -36,6 +36,11 @@ ecm_qtdesignerplugin_widget(KColorCombo
     TOOLTIP "Color Combo Box (KF6)"
     GROUP "Graphics (KF6)"
 )
+ecm_qtdesignerplugin_widget(KContextualHelpButton
+    TOOLTIP "A button for showing helpful texts (KF6)"
+    WHATSTHIS "An icon-only button for showing contextually relevant help or explanations"
+    GROUP "Display (KF6)"
+)
 ecm_qtdesignerplugin_widget(KDatePicker
     TOOLTIP "A date selection widget (KF6)"
     WHATSTHIS "Provides a widget for calendar date input"
@@ -170,6 +175,7 @@ ecm_add_qtdesignerplugin(kwidgetsaddonswidgets
         KCollapsibleGroupBox
         KColorButton
         KColorCombo
+        KContextualHelpButton
         KDateComboBox
         KDatePicker
         KDateTimeEdit
