@@ -1455,6 +1455,14 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "사용자 정의..."
 
+#: kcontextualhelpbutton.cpp:80
+#, fuzzy
+#| msgctxt "KPasswordDialog|"
+#| msgid "Show Contextual Help"
+msgctxt "QObject|@action:button accessible name"
+msgid "Contextual Help"
+msgstr "문맥 도움말 표시"
+
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
 msgid "The date you entered is invalid"

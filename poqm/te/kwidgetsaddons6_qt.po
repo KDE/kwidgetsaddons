@@ -2213,6 +2213,11 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
 msgstr "నిర్దేశితమైన..."
 
+#: kcontextualhelpbutton.cpp:80
+msgctxt "QObject|@action:button accessible name"
+msgid "Contextual Help"
+msgstr ""
+
 #: kdatecombobox.cpp:187
 #, fuzzy
 #| msgctxt "@info"
