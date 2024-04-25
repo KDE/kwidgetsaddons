@@ -1451,12 +1451,9 @@ msgid "Custom..."
 msgstr "自定义..."
 
 #: kcontextualhelpbutton.cpp:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Show Contextual Help"
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "显示相关帮助"
+msgstr ""
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"

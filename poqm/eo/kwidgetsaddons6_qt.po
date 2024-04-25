@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-02-10 06:42+0100\n"
+"PO-Revision-Date: 2024-04-24 19:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1463,12 +1463,9 @@ msgid "Custom..."
 msgstr "Propra..."
 
 #: kcontextualhelpbutton.cpp:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Show Contextual Help"
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "Montri Kuntekstan Helpon"
+msgstr "Kunteksta Helpon"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
