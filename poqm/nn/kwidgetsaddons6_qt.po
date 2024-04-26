@@ -1459,8 +1459,6 @@ msgstr "Tilpassa …"
 
 #: kcontextualhelpbutton.cpp:80
 #, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Show Contextual Help"
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
 msgstr "Vis emnehjelp"
