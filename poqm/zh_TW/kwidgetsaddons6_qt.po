@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-06 01:04+0900\n"
+"PO-Revision-Date: 2024-04-29 18:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -99,47 +99,47 @@ msgstr "全部"
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
-msgstr "歐洲文稿"
+msgstr "歐洲文字"
 
 #: kcharselect-translation.cpp:13
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
-msgstr "非洲文稿"
+msgstr "非洲文字"
 
 #: kcharselect-translation.cpp:14
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
-msgstr "中東文稿"
+msgstr "中東文字"
 
 #: kcharselect-translation.cpp:15
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
-msgstr "中亞文稿"
+msgstr "中亞文字"
 
 #: kcharselect-translation.cpp:16
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
-msgstr "南非文稿"
+msgstr "南非文字"
 
 #: kcharselect-translation.cpp:17
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
-msgstr "東南亞文稿"
+msgstr "東南亞文字"
 
 #: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
-msgstr "印度尼西亞與大洋洲文稿"
+msgstr "印度尼西亞與大洋洲文字"
 
 #: kcharselect-translation.cpp:19
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
-msgstr "東亞文稿"
+msgstr "東亞文字"
 
 #: kcharselect-translation.cpp:20
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
-msgstr "美洲文稿"
+msgstr "美洲文字"
 
 #: kcharselect-translation.cpp:21
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -1467,12 +1467,9 @@ msgid "Custom..."
 msgstr "自訂..."
 
 #: kcontextualhelpbutton.cpp:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Show Contextual Help"
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "顯示內文說明"
+msgstr "內文說明"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
