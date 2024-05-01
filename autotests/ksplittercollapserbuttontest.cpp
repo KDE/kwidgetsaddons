@@ -12,6 +12,8 @@
 #include <qtest.h>
 #include <qtestmouse.h>
 
+#include "windowscheck.h"
+
 Q_DECLARE_METATYPE(Qt::Orientation)
 
 TestSplitter::TestSplitter(QWidget *parent)
@@ -42,6 +44,10 @@ KSplitterCollapserButtonTest::~KSplitterCollapserButtonTest()
 
 void KSplitterCollapserButtonTest::shouldHaveDefaultValue()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     TestSplitter testSplitter;
 
     KSplitterCollapserButton *collapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
@@ -63,6 +69,10 @@ void KSplitterCollapserButtonTest::shouldHaveDefaultValue()
 
 void KSplitterCollapserButtonTest::shouldCollapseWhenClickOnButton()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     TestSplitter testSplitter;
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
 
@@ -79,6 +89,10 @@ void KSplitterCollapserButtonTest::shouldCollapseWhenClickOnButton()
 
 void KSplitterCollapserButtonTest::shouldRestoreCorrectPosition()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     TestSplitter testSplitter;
 
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
@@ -104,6 +118,10 @@ void KSplitterCollapserButtonTest::shouldRestoreCorrectPosition()
 
 void KSplitterCollapserButtonTest::shouldRestoreCorrectPositionForFirstWidget()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     TestSplitter testSplitter;
 
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit1, testSplitter.splitter);
@@ -129,6 +147,10 @@ void KSplitterCollapserButtonTest::shouldRestoreCorrectPositionForFirstWidget()
 
 void KSplitterCollapserButtonTest::shouldTestVerticalSplitterFirstWidget()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     TestSplitter testSplitter;
     testSplitter.splitter->setOrientation(Qt::Vertical);
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit1, testSplitter.splitter);
@@ -154,6 +176,10 @@ void KSplitterCollapserButtonTest::shouldTestVerticalSplitterFirstWidget()
 
 void KSplitterCollapserButtonTest::shouldTestVerticalSplitterSecondWidget()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     TestSplitter testSplitter;
     testSplitter.splitter->setOrientation(Qt::Vertical);
     KSplitterCollapserButton *splitterCollapser = new KSplitterCollapserButton(testSplitter.edit2, testSplitter.splitter);
@@ -190,6 +216,10 @@ void KSplitterCollapserButtonTest::shouldBeVisible_data()
 
 void KSplitterCollapserButtonTest::shouldBeVisible()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     QFETCH(Qt::Orientation, splitterOrientation);
     QFETCH(int, widgetPosition);
 
@@ -240,6 +270,10 @@ void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle_data()
 
 void KSplitterCollapserButtonTest::shouldBeVisibleWhenMovingHandle()
 {
+    if (isWindowsCI()) {
+        QSKIP("GUI Tests on Windows CI are not supported");
+    }
+
     QFETCH(QList<int>, splitterPosition);
     QFETCH(bool, expectedVisibility);
     QFETCH(Qt::Orientation, splitterOrientation);

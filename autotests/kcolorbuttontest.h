@@ -14,7 +14,6 @@ class KColorButtonTest : public QObject
     Q_OBJECT
 
 private Q_SLOTS:
-    void testWaitForWindowExposed();
     void testOpenDialog();
 };
 
