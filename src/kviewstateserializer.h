@@ -53,7 +53,7 @@ class KViewStateSerializerPrivate;
 
   It is possible to restore the state of a QTreeView (that is, the expanded state and
   selected state of all indexes as well as the horizontal and vertical scroll state) by
-  using setTreeView.
+  using setView.
 
   If there is no tree view state to restore (for example if using QML), the selection
   state of a QItemSelectionModel can be saved or restored instead.
@@ -86,7 +86,7 @@ class KViewStateSerializerPrivate;
     void StateSaverWidget::saveState()
     {
         ConcreteStateSaver saver;
-        saver.setTreeView(m_view);
+        saver.setView(m_view);
 
         KConfigGroup cfg(KSharedConfig::openConfig(), "ExampleViewState");
         saver.saveState(cfg);
@@ -97,7 +97,7 @@ class KViewStateSerializerPrivate;
     {
         // Will delete itself.
         ConcreteTreeStateSaver *saver = new ConcreteStateSaver();
-        saver->setTreeView(m_view);
+        saver->setView(m_view);
         KConfigGroup cfg(KSharedConfig::openConfig(), "ExampleViewState");
         saver->restoreState(cfg);
     }
@@ -140,7 +140,7 @@ class KViewStateSerializerPrivate;
   That is don't do this:
 
   @code
-    saver->setTreeView(treeView1);
+    saver->setView(treeView1);
     saver->setSelectionModel(treeView2->selectionModel());
     saver->setScrollArea(treeView3);
   @endcode
@@ -149,7 +149,7 @@ class KViewStateSerializerPrivate;
   on the same root model.
 
   @code
-    saver1->setTreeView(treeView1);
+    saver1->setView(treeView1);
     saver2->setSelectionModel(treeView2->selectionModel());
     saver3->setScrollArea(treeView3);
   @endcode
