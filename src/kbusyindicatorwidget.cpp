@@ -59,7 +59,8 @@ void KBusyIndicatorWidget::showEvent(QShowEvent *event)
 void KBusyIndicatorWidget::hideEvent(QHideEvent *event)
 {
     QWidget::hideEvent(event);
-    d->animation.pause();
+    if (d->animation.state() == QAbstractAnimation::Running) // avoid warning if never started yet
+        d->animation.pause();
 }
 
 void KBusyIndicatorWidget::resizeEvent(QResizeEvent *event)
