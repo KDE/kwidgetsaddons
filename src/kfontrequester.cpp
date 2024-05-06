@@ -181,7 +181,7 @@ void KFontRequesterPrivate::displaySampleText()
 
 void KFontRequesterPrivate::setToolTip()
 {
-    m_button->setToolTip(tr("Choose font...", "@info:tooltip"));
+    m_button->setToolTip(tr("Choose font…", "@info:tooltip"));
 
     m_sampleLabel->setToolTip(QString());
     m_sampleLabel->setWhatsThis(QString());

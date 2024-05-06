@@ -446,7 +446,7 @@ void KPageViewPrivate::init()
         onSearchTextChanged();
     });
     q->setFocusProxy(searchLineEdit);
-    searchLineEdit->setPlaceholderText(KPageView::tr("Search..."));
+    searchLineEdit->setPlaceholderText(KPageView::tr("Search…", "@info:placeholder"));
     searchLineEdit->setClearButtonEnabled(true);
     searchLineEdit->setParent(defaultWidget);
     auto a = new QAction(q);

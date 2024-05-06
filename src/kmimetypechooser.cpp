@@ -85,7 +85,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     d->mimeTypeTree->setModel(d->m_proxyModel);
 
     d->m_filterLineEdit = new QLineEdit(this);
-    d->m_filterLineEdit->setPlaceholderText(tr("Search for file type or filename pattern...", "@info:placeholder"));
+    d->m_filterLineEdit->setPlaceholderText(tr("Search for file type or filename pattern…", "@info:placeholder"));
     QLabel *filterLabel = new QLabel(tr("&Filter:", "@label:textbox"));
     filterLabel->setBuddy(d->m_filterLineEdit);
     connect(d->m_filterLineEdit, &QLineEdit::textChanged, this, [this](const QString &text) {
@@ -123,7 +123,7 @@ KMimeTypeChooser::KMimeTypeChooser(const QString &text,
     if (visuals & EditButton) {
         QHBoxLayout *buttonLayout = new QHBoxLayout();
         buttonLayout->addStretch(1);
-        d->btnEditMimeType = new QPushButton(tr("&Edit...", "@action:button"), this);
+        d->btnEditMimeType = new QPushButton(tr("&Edit…", "@action:button"), this);
         buttonLayout->addWidget(d->btnEditMimeType);
         d->btnEditMimeType->setEnabled(false);
 

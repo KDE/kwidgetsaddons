@@ -181,7 +181,7 @@ KGuiItem dontSave()
 
 KGuiItem saveAs()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "Save &As..."),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Save &As…"),
                     QStringLiteral("document-save-as"),
                     QApplication::translate("KStandardGuiItem", "Save file with another name"));
 }
@@ -200,7 +200,7 @@ KGuiItem apply()
 
 KGuiItem adminMode()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "Administrator &Mode..."),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Administrator &Mode…"),
                     QString(),
                     QApplication::translate("KStandardGuiItem", "Enter Administrator Mode"),
                     QApplication::translate("KStandardGuiItem",
@@ -273,7 +273,7 @@ QPair<KGuiItem, KGuiItem> backAndForward()
 
 KGuiItem print()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Print..."),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Print…"),
                     QStringLiteral("document-print"),
                     QApplication::translate("KStandardGuiItem",
                                             "Opens the print dialog to print "
@@ -296,7 +296,7 @@ KGuiItem del()
 
 KGuiItem open()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Open..."),
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "&Open…"),
                     QStringLiteral("document-open"),
                     QApplication::translate("KStandardGuiItem", "Open file"));
 }
@@ -322,7 +322,7 @@ KGuiItem insert()
 
 KGuiItem configure()
 {
-    return KGuiItem(QApplication::translate("KStandardGuiItem", "Confi&gure..."), QStringLiteral("configure"));
+    return KGuiItem(QApplication::translate("KStandardGuiItem", "Confi&gure…"), QStringLiteral("configure"));
 }
 
 KGuiItem find()

@@ -388,7 +388,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
         mainLayout->addLayout(searchLayout);
         d->searchLine = new QLineEdit(this);
         searchLayout->addWidget(d->searchLine);
-        d->searchLine->setPlaceholderText(tr("Enter a search term or character...", "@info:placeholder"));
+        d->searchLine->setPlaceholderText(tr("Enter a search term or character…", "@info:placeholder"));
         d->searchLine->setClearButtonEnabled(true);
         d->searchLine->setToolTip(tr("Enter a search term or character here", "@info:tooltip"));
 
@@ -397,7 +397,7 @@ void KCharSelect::initWidget(const Controls controls, QObject *actionParent)
             d->activateSearchLine();
         });
         findAction->setObjectName(QStringLiteral("edit_find"));
-        findAction->setText(tr("&Find...", "@action"));
+        findAction->setText(tr("&Find…", "@action"));
         findAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-find")));
         attachToActionParent(findAction, actionParent, QKeySequence::keyBindings(QKeySequence::Find));
 
