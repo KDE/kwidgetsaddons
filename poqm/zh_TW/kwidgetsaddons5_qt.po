@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-06 01:04+0900\n"
+"PO-Revision-Date: 2024-05-07 17:45+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -463,7 +463,7 @@ msgstr "Balinese"
 #: kcharselect-translation.cpp:85
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
-msgstr "Sundanese語"
+msgstr "巽他語"
 
 #: kcharselect-translation.cpp:86
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -493,7 +493,7 @@ msgstr "喬治亞語擴充"
 #: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
-msgstr "Sundanese 語補集"
+msgstr "巽他語補集"
 
 #: kcharselect-translation.cpp:92
 msgctxt "KCharSelectData|KCharselect unicode block name"
