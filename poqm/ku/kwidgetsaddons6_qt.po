@@ -1607,7 +1607,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Gotinek an tîpa e lêgerînê têkeve virê"
 
 #: kcharselect.cpp:393
@@ -1619,10 +1619,10 @@ msgstr "Gotinek an tîpa e lêgerînê têkeve virê"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Bibîne..."
+msgid "&Find…"
+msgstr "&Bibîne"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2154,11 +2154,11 @@ msgstr "Nayê zanîn"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Taybet..."
+msgid "Custom…"
+msgstr "Taybet"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2515,7 +2515,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Hilbijêre..."
 
 #: kfontrequester.cpp:190
@@ -2669,7 +2669,7 @@ msgstr "Peyamê Bigire"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2700,10 +2700,10 @@ msgstr ""
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Sererastkirin..."
+msgid "&Edit…"
+msgstr "Sere&rastkirin"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2809,10 +2809,10 @@ msgstr "Pîvana hêza şîfreyê:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Lêgerîn"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Lê Bigere:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3027,10 +3027,10 @@ msgstr "Daneyê tomar neke"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Cuda &Tomarkirin..."
+msgid "Save &As…"
+msgstr "Cuda tomar bike"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3073,7 +3073,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Moda Gerînende..."
 
 #: kstandardguiitem.cpp:205
@@ -3221,10 +3221,10 @@ msgstr "Gavekê pêş de biçe"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Çap bike..."
+msgid "&Print…"
+msgstr "Bide nivîsandin"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3263,10 +3263,11 @@ msgstr "Hêmanan jê bibe"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Veke..."
+msgid "&Open…"
+msgstr "&Veke"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3313,10 +3314,10 @@ msgstr "&Lêzêdekirin"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Veavakirin..."
+msgid "Confi&gure…"
+msgstr "Veavakirin"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3405,6 +3406,55 @@ msgstr "Moda Dîmender Tije"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Bibîne..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Taybet..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Sererastkirin..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Lêgerîn"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Cuda &Tomarkirin..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Çap bike..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Veke..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Veavakirin..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4517,10 +4567,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Lîsansa Gelempera Giştî ya Biçûktir a GNU, Guhertoya 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Taybet"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6526,9 +6572,6 @@ msgstr ""
 #~ "Tu dixwazî peyama sererastkirî\n"
 #~ "piştguh bikî?"
 
-#~ msgid "Configure"
-#~ msgstr "Veavakirin"
-
 #~ msgid "Job"
 #~ msgstr "Kar"
 
@@ -6856,9 +6899,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Rurteriyan Veava Bike"
-
-#~ msgid "Print"
-#~ msgstr "Bide nivîsandin"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Bizivire Standardan"
@@ -8269,9 +8309,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Lîstik"
 
-#~ msgid "&Edit"
-#~ msgstr "Sere&rastkirin"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Guhestin"
@@ -8955,9 +8992,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Cuda tomar bike"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10180,9 +10214,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "Rêz bike li gorî:"
 
-#~ msgid "Search:"
-#~ msgstr "Lê Bigere:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Malper</a>"
 
@@ -10459,10 +10490,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Veke bi"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Veke"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

@@ -1106,8 +1106,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Устаревшие компьютерные символы"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Введите критерий поиска или символ..."
 
 #: kcharselect.cpp:393
@@ -1115,10 +1118,14 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Введите критерий поиска или символ"
 
+# BUGME: where does this show up? May be change to "Найти"? --aspotashev
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Найти..."
+msgid "&Find…"
+msgstr "&Поиск"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1505,9 +1512,12 @@ msgid "Unknown"
 msgstr "неизвестный"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Другой цвет..."
+msgid "Custom…"
+msgstr "Другая лицензия"
 
 #: kcontextualhelpbutton.cpp:80
 #, fuzzy
@@ -1789,8 +1799,11 @@ msgid "Show only monospaced fonts"
 msgstr "Показывать только моноширинные шрифты"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Выбрать шрифт..."
 
 #: kfontrequester.cpp:190
@@ -1905,8 +1918,11 @@ msgid "Close message"
 msgstr "Закрыть сообщение"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Введите тип файла или расширение файла..."
 
 #: kmimetypechooser.cpp:89
@@ -1930,9 +1946,11 @@ msgid "Patterns"
 msgstr "Шаблоны"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Изменить..."
+msgid "&Edit…"
+msgstr "&Правка"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2032,9 +2050,11 @@ msgid "Password strength &meter:"
 msgstr "&Датчик надёжности пароля:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Поиск…"
+#, fuzzy
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Поиск:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2196,9 +2216,11 @@ msgid "Do not save data"
 msgstr "Не сохранять данные"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Сохранить &как..."
+msgid "Save &As…"
+msgstr "Сохранить как"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2227,8 +2249,11 @@ msgstr ""
 "Благодаря этому вы можете попробовать различные варианты настройки."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Режим администратора..."
 
 #: kstandardguiitem.cpp:205
@@ -2334,9 +2359,11 @@ msgid "Go forward one step"
 msgstr "Перейти на шаг вперёд"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "Пе&чать..."
+msgid "&Print…"
+msgstr "Печать"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2364,9 +2391,12 @@ msgid "Delete item(s)"
 msgstr "Удалить элементы"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Открыть..."
+msgid "&Open…"
+msgstr "&Открыть"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2399,9 +2429,11 @@ msgid "&Insert"
 msgstr "&Вставить"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Настроить..."
+msgid "Confi&gure…"
+msgstr "Настройка"
 
 # BUGME: where does this show up? May be change to "Найти"? --aspotashev
 #: kstandardguiitem.cpp:330
@@ -2470,6 +2502,38 @@ msgstr "Полноэкранный режим"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Перейти из оконного режима в полноэкранный режим"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Найти..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Другой цвет..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Изменить..."
+
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Поиск…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Сохранить &как..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "Пе&чать..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Открыть..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Настроить..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3555,10 +3619,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License, версия 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Другая лицензия"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5769,9 +5829,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ "Закрыть и отменить\n"
 #~ "введённое сообщение?"
 
-#~ msgid "Configure"
-#~ msgstr "Настройка"
-
 #~ msgid "Job"
 #~ msgstr "Задание"
 
@@ -6128,9 +6185,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Настройка комбинаций клавиш"
-
-#~ msgid "Print"
-#~ msgstr "Печать"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "По умолчанию"
@@ -7727,9 +7781,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ msgid "&Game"
 #~ msgstr "&Игра"
 
-#~ msgid "&Edit"
-#~ msgstr "&Правка"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Ход"
@@ -8449,9 +8500,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 
 #~ msgid " - BCC: "
 #~ msgstr " - Скрытая копия: "
-
-#~ msgid "Save As"
-#~ msgstr "Сохранить как"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9720,9 +9768,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ msgid "Order by:"
 #~ msgstr "Выше ставить:"
 
-#~ msgid "Search:"
-#~ msgstr "Поиск:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Домашняя страница</a>"
 
@@ -10025,10 +10070,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Открыть с помощью..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Открыть"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

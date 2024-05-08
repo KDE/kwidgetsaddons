@@ -1063,8 +1063,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Pärandarvutussümbolid"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Kirjuta siia otsingumõiste või märk ..."
 
 #: kcharselect.cpp:393
@@ -1073,9 +1076,12 @@ msgid "Enter a search term or character here"
 msgstr "Kirjuta siia otsingumõiste või märk"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Otsi ..."
+msgid "&Find…"
+msgstr "&Otsi"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1460,9 +1466,12 @@ msgid "Unknown"
 msgstr "Tundmatu"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Kohandatud ..."
+msgid "Custom…"
+msgstr "Kohandatud"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1796,8 +1805,11 @@ msgid "Show only monospaced fonts"
 msgstr "Ainult püsisammfontide näitamine"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Vali font ..."
 
 #: kfontrequester.cpp:190
@@ -1927,8 +1939,11 @@ msgid "Close message"
 msgstr "Sulge teade"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Otsimine failitüübi või failinime mustri järgi ..."
 
 #: kmimetypechooser.cpp:89
@@ -1952,9 +1967,11 @@ msgid "Patterns"
 msgstr "Mustrid"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Muuda ..."
+msgid "&Edit…"
+msgstr "&Redigeerimine"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2053,10 +2070,10 @@ msgstr "Paroolitugevuse &mõõdik:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Otsi"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Otsing:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2223,9 +2240,11 @@ msgid "Do not save data"
 msgstr "Andmeid ei salvestata"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Salvesta &kui ..."
+msgid "Save &As…"
+msgstr "Salvestamine"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2254,8 +2273,11 @@ msgstr ""
 "Kasuta seda erinevate seadistuste proovimiseks."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "A&dministraatori režiim..."
 
 #: kstandardguiitem.cpp:205
@@ -2360,9 +2382,11 @@ msgid "Go forward one step"
 msgstr "Mine sammu võrra edasi"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Trüki..."
+msgid "&Print…"
+msgstr "Trükkimine"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2390,9 +2414,12 @@ msgid "Delete item(s)"
 msgstr "Kustuta elemendid"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Ava..."
+msgid "&Open…"
+msgstr "&Ava"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2425,9 +2452,11 @@ msgid "&Insert"
 msgstr "&Lisa"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Sea&dista..."
+msgid "Confi&gure…"
+msgstr "Seadistamine"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2495,6 +2524,40 @@ msgstr "Täisekraan"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Akna näitamine täisekraanirežiimis"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Otsi ..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Kohandatud ..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Muuda ..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Otsi"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Salvesta &kui ..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Trüki..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Ava..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Sea&dista..."
 
 #~ msgctxt "KFontChooser|@info:tooltip"
 #~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -3610,10 +3673,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Vähem Üldine Avalik Litsents, versioon 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Kohandatud"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5829,9 +5888,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 #~ "Kas sulgeda ja unustada\n"
 #~ "muudetud teade?"
 
-#~ msgid "Configure"
-#~ msgstr "Seadistamine"
-
 #~ msgid "Job"
 #~ msgstr "Töö"
 
@@ -6190,9 +6246,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Kiirklahvide seadistamine"
-
-#~ msgid "Print"
-#~ msgstr "Trükkimine"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Vaikeväärtused"
@@ -7743,9 +7796,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 #~ msgid "&Game"
 #~ msgstr "&Mäng"
 
-#~ msgid "&Edit"
-#~ msgstr "&Redigeerimine"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Liikumine"
@@ -8466,9 +8516,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Salvestamine"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9728,9 +9775,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 #~ msgid "Order by:"
 #~ msgstr "Järjekorra alus:"
 
-#~ msgid "Search:"
-#~ msgstr "Otsing:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Kodulehekülg</a>"
 
@@ -10017,10 +10061,6 @@ msgstr "Akna näitamine täisekraanirežiimis"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Ava rakendusega"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Ava"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

@@ -1650,7 +1650,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Մուտքագրեք որոնման չափանիշ կամ սիմվոլ"
 
 #: kcharselect.cpp:393
@@ -1662,10 +1662,10 @@ msgstr "Մուտքագրեք որոնման չափանիշ կամ սիմվոլ"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Որոնել..."
+msgid "&Find…"
+msgstr "&Որոնում"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2205,11 +2205,11 @@ msgstr "Անհայտ"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Նշել սեփականը..."
+msgid "Custom…"
+msgstr "Այլ լիցենզիա"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2598,7 +2598,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Ընտրել..."
 
 #: kfontrequester.cpp:190
@@ -2749,7 +2749,7 @@ msgstr "Փակել հաղորդագրությունը"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2783,10 +2783,10 @@ msgstr "Բրայլի այբենարան"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Փոփոխել..."
+msgid "&Edit…"
+msgstr "&Տեղեկություն"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2922,10 +2922,10 @@ msgstr "Գաղտնաբառի հուսալիության ցուցիչ:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Որոնում"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Փնտրել:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3148,10 +3148,10 @@ msgstr "Չպահպանել տվյալները"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "&Պահպանել ինչպես..."
+msgid "Save &As…"
+msgstr "Պահպանել ինչպես"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3194,7 +3194,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Ադմինիստրատորի ռեժիմ..."
 
 #: kstandardguiitem.cpp:205
@@ -3341,10 +3341,10 @@ msgstr "Անցնել մի քայլ առաջ"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Տպել..."
+msgid "&Print…"
+msgstr "Տպել"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3383,10 +3383,11 @@ msgstr "Ջնջել տարրերը"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Բացել..."
+msgid "&Open…"
+msgstr "&Բացել"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3433,10 +3434,10 @@ msgstr "&Տեղադրել"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Կարգավորել..."
+msgid "Confi&gure…"
+msgstr "Կարգավորում"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3530,6 +3531,55 @@ msgstr "Լրիվ էկրան"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Որոնել..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Նշել սեփականը..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Փոփոխել..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Որոնում"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "&Պահպանել ինչպես..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Տպել..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Բացել..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Կարգավորել..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4694,10 +4744,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License, версия 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Այլ լիցենզիա"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6895,9 +6941,6 @@ msgstr ""
 #~ "մուտքագրված\n"
 #~ "հաղորդագրությունը։"
 
-#~ msgid "Configure"
-#~ msgstr "Կարգավորում"
-
 #~ msgid "Job"
 #~ msgstr "Առաջադրանք"
 
@@ -7258,9 +7301,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Կոճակների համադրության կարգավորում"
-
-#~ msgid "Print"
-#~ msgstr "Տպել"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Լռելյայն"
@@ -8850,9 +8890,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Խաղ"
 
-#~ msgid "&Edit"
-#~ msgstr "&Տեղեկություն"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Քայլ"
@@ -9573,9 +9610,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - Թաքնված կրկնօրինակ: "
-
-#~ msgid "Save As"
-#~ msgstr "Պահպանել ինչպես"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10843,9 +10877,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "Վերոնշյալ:"
 
-#~ msgid "Search:"
-#~ msgstr "Փնտրել:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Նախնական էջ</a>"
 
@@ -11150,10 +11181,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Բացել ըստ..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Բացել"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

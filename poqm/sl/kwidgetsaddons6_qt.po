@@ -1067,8 +1067,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Simboli za starejše računalnike"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Sem vnesite iskani pojem ali znak..."
 
 #: kcharselect.cpp:393
@@ -1077,9 +1080,12 @@ msgid "Enter a search term or character here"
 msgstr "Sem vnesite iskani pojem ali znak"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "Najdi..."
+msgid "&Find…"
+msgstr "&Najdi"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1462,9 +1468,12 @@ msgid "Unknown"
 msgstr "Neznan"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Po meri..."
+msgid "Custom…"
+msgstr "Po meri"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1732,8 +1741,11 @@ msgid "Show only monospaced fonts"
 msgstr "Prikaži samo pisave stalne širine"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Izberi pisavo..."
 
 #: kfontrequester.cpp:190
@@ -1848,8 +1860,11 @@ msgid "Close message"
 msgstr "Zapri sporočilo"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Poišči datoteko ali vzorec imena datoteke..."
 
 #: kmimetypechooser.cpp:89
@@ -1873,9 +1888,11 @@ msgid "Patterns"
 msgstr "Vzorci"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "Ur&edi..."
+msgid "&Edit…"
+msgstr "&Uredi"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1974,9 +1991,11 @@ msgid "Password strength &meter:"
 msgstr "Kazalnik &moči gesla:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Poišči..."
+#, fuzzy
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Išči:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2136,9 +2155,11 @@ msgid "Do not save data"
 msgstr "Ne shrani podatkov"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Shrani &kot ..."
+msgid "Save &As…"
+msgstr "Shrani kot"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2167,8 +2188,11 @@ msgstr ""
 "Tako lahko preizkušate različne nastavitve."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Skr&bniški način ..."
 
 #: kstandardguiitem.cpp:205
@@ -2273,9 +2297,11 @@ msgid "Go forward one step"
 msgstr "Pojdi naprej za en korak"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "Na&tisni ..."
+msgid "&Print…"
+msgstr "Natisni"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2303,9 +2329,12 @@ msgid "Delete item(s)"
 msgstr "Izbriši predmet(e)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Odpri ..."
+msgid "&Open…"
+msgstr "&Odpri"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2338,9 +2367,11 @@ msgid "&Insert"
 msgstr "Vstav&i"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Nas&tavi ..."
+msgid "Confi&gure…"
+msgstr "Nastavi"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2408,6 +2439,38 @@ msgstr "Celozaslonski način"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Pokaži okno v celozaslonskem načinu"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "Najdi..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Po meri..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "Ur&edi..."
+
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Poišči..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Shrani &kot ..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "Na&tisni ..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Odpri ..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Nas&tavi ..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3504,10 +3567,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Manj splošno dovoljenje GNU različica 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Po meri"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5751,9 +5810,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 #~ "Zaprem in zavržem\n"
 #~ "urejevano sporočilo?"
 
-#~ msgid "Configure"
-#~ msgstr "Nastavi"
-
 #~ msgid "Job"
 #~ msgstr "Opravilo"
 
@@ -6113,9 +6169,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Nastavi bližnjice"
-
-#~ msgid "Print"
-#~ msgstr "Natisni"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Ponastavi na privzete vrednosti"
@@ -7688,9 +7741,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 #~ msgid "&Game"
 #~ msgstr "&Igra"
 
-#~ msgid "&Edit"
-#~ msgstr "&Uredi"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Premakni"
@@ -8417,9 +8467,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 
 #~ msgid " - BCC: "
 #~ msgstr " - Skp: "
-
-#~ msgid "Save As"
-#~ msgstr "Shrani kot"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9687,9 +9734,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 #~ msgid "Order by:"
 #~ msgstr "Razvrsti po:"
 
-#~ msgid "Search:"
-#~ msgstr "Išči:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Domača stran</a>"
 
@@ -9990,10 +10034,6 @@ msgstr "Pokaži okno v celozaslonskem načinu"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Odpri z"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Odpri"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

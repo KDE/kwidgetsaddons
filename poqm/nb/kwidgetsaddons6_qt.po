@@ -1063,7 +1063,7 @@ msgstr ""
 
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr ""
 
 #: kcharselect.cpp:393
@@ -1072,9 +1072,12 @@ msgid "Enter a search term or character here"
 msgstr ""
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr ""
+msgid "&Find…"
+msgstr "&Finn"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1458,7 +1461,7 @@ msgstr "Ukjent"
 
 #: kcolorcombo.cpp:333
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr ""
 
 #: kcontextualhelpbutton.cpp:80
@@ -1726,7 +1729,7 @@ msgstr ""
 
 #: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr ""
 
 #: kfontrequester.cpp:190
@@ -1838,7 +1841,7 @@ msgstr ""
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -1863,7 +1866,7 @@ msgstr ""
 
 #: kmimetypechooser.cpp:126
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr ""
 
 #: kmimetypechooser.cpp:141
@@ -1956,8 +1959,8 @@ msgid "Password strength &meter:"
 msgstr ""
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr ""
 
 #: kpassworddialog.cpp:52
@@ -2119,8 +2122,11 @@ msgid "Do not save data"
 msgstr "Ikke lagre informasjon"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Lagre &som …"
 
 #: kstandardguiitem.cpp:186
@@ -2150,8 +2156,11 @@ msgstr ""
 "innstillinger."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Administrator&modus …"
 
 #: kstandardguiitem.cpp:205
@@ -2255,8 +2264,11 @@ msgid "Go forward one step"
 msgstr "Gå ett skritt fram"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "Sk&riv ut …"
 
 #: kstandardguiitem.cpp:278
@@ -2285,8 +2297,11 @@ msgid "Delete item(s)"
 msgstr "Slett element(er)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Åpne …"
 
 #: kstandardguiitem.cpp:301
@@ -2320,8 +2335,11 @@ msgid "&Insert"
 msgstr "&Sett inn"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "Sett &opp …"
 
 #: kstandardguiitem.cpp:330

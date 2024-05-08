@@ -1616,7 +1616,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "অনুসন্ধানৰ বাবে কোনো অভিব্যক্তি বা অক্ষৰ ইয়াত লিখক"
 
 #: kcharselect.cpp:393
@@ -1628,10 +1628,10 @@ msgstr "অনুসন্ধানৰ বাবে কোনো অভিব্
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "অনুসন্ধান...(&F)"
+msgid "&Find…"
+msgstr "অনুসন্ধান (&F)"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2169,11 +2169,11 @@ msgstr "অজ্ঞাত"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "স্বনিৰ্ধাৰিত..."
+msgid "Custom…"
+msgstr "স্বনিৰ্ধাৰিত"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2527,7 +2527,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "নিৰ্ব্বাচন কৰক..."
 
 #: kfontrequester.cpp:190
@@ -2681,7 +2681,7 @@ msgstr "বাৰ্তা বন্ধ কৰা হ'ব"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2714,10 +2714,10 @@ msgstr "ব্ৰেইল চিহ্ন"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "সম্পাদনা...(&E)"
+msgid "&Edit…"
+msgstr "সম্পাদন (&E)"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2823,9 +2823,9 @@ msgstr "গুপ্তশব্দ শক্তিৰ মাপকাঠি:"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "অনুসন্ধান (&S)"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "অনুসন্ধান:(&e)"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3038,10 +3038,10 @@ msgstr "তথ্য সংৰক্ষণ কৰা ন'হ'ব"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "নতুন ৰূপে সংৰক্ষণ...(&A)"
+msgid "Save &As…"
+msgstr "নতুন ৰূপে সংৰক্ষণ"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3080,7 +3080,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "প্ৰশাসনিক মোড...(&M)"
 
 #: kstandardguiitem.cpp:205
@@ -3219,10 +3219,10 @@ msgstr "এটা পদক্ষেপ আগলৈ যাওক"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "মূদ্ৰণ কৰক...(&P)"
+msgid "&Print…"
+msgstr "মূদ্ৰণ কৰক"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3261,10 +3261,9 @@ msgstr "বস্তু(সমূহ) আঁতৰাওঁক"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "খোলক...(&O)"
+msgid "&Open…"
+msgstr "খোলক (&O)"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3311,10 +3310,10 @@ msgstr "সন্নিবেশ কৰক (&I)"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "বিন্যাস কৰক...(&g)"
+msgid "Confi&gure…"
+msgstr "বিন্যাস কৰক"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3400,6 +3399,54 @@ msgstr "সম্পূৰ্ণ পৰ্দ্দাত প্ৰদৰ্শ�
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "অনুসন্ধান...(&F)"
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "স্বনিৰ্ধাৰিত..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "সম্পাদনা...(&E)"
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "অনুসন্ধান (&S)"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "নতুন ৰূপে সংৰক্ষণ...(&A)"
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "মূদ্ৰণ কৰক...(&P)"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "খোলক...(&O)"
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "বিন্যাস কৰক...(&g)"
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4452,10 +4499,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "স্বনিৰ্ধাৰিত"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6400,9 +6443,6 @@ msgstr ""
 #~ "পৰিবৰ্তিত বাৰ্তা বন্ধ\n"
 #~ "কৰি বৰ্জন কৰা হ'ব নেকি ?"
 
-#~ msgid "Configure"
-#~ msgstr "বিন্যাস কৰক"
-
 #~ msgid "Job"
 #~ msgstr "কাৰ্য্য"
 
@@ -6727,9 +6767,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "চমুপথ বিন্যাস কৰক"
-
-#~ msgid "Print"
-#~ msgstr "মূদ্ৰণ কৰক"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "অবিকল্পিত মান পুনঃ স্থাপন কৰা হ'ব"
@@ -8071,9 +8108,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "ক্ৰীড়া (&G)"
 
-#~ msgid "&Edit"
-#~ msgstr "সম্পাদন (&E)"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "লৰাওক (&M)"
@@ -8633,9 +8667,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "নতুন ৰূপে সংৰক্ষণ"
 
 #~ msgid "Follow"
 #~ msgstr "অনুসৰণ কৰক"
@@ -9685,10 +9716,6 @@ msgstr ""
 #~ msgstr "&Order by:"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "অনুসন্ধান:(&e)"
-
-#, fuzzy
 #~ msgid "Details for %1"
 #~ msgstr "মন্তব্য"
 
@@ -9918,11 +9945,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "চিহ্নিত সামগ্ৰী সহ খোলক...(&O)"
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "খোলক (&O)"
 
 #, fuzzy
 #~ msgctxt "@label File name"

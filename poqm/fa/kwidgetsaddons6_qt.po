@@ -1655,7 +1655,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "اصطلاح یا حرف جستجو را در اینجا وارد کنید"
 
 #: kcharselect.cpp:393
@@ -1667,10 +1667,10 @@ msgstr "اصطلاح یا حرف جستجو را در اینجا وارد کنی
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&یافتن...‌"
+msgid "&Find…"
+msgstr "&یافتن‌"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2208,13 +2208,14 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "ناشناخته"
 
+# Custom
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "سفارشی..."
+msgid "Custom…"
+msgstr "سفارشی"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2602,7 +2603,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "انتخاب..."
 
 #: kfontrequester.cpp:190
@@ -2756,7 +2757,7 @@ msgstr "بستن پیام"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2790,10 +2791,10 @@ msgstr "الگوهای بریل"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&ویرایش...‌"
+msgid "&Edit…"
+msgstr "&ویرایش‌"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2928,10 +2929,10 @@ msgstr "میزان استحکام اسم رمز:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "جستجو"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "جستجو:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3150,10 +3151,10 @@ msgstr "داده ذخیره نشود"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "ذخیره &به عنوان...‌"
+msgid "Save &As…"
+msgstr "ذخیره به عنوان"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3192,7 +3193,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr " &حالت سرپرست...‌"
 
 #: kstandardguiitem.cpp:205
@@ -3335,10 +3336,10 @@ msgstr "بک گام به پیش برو"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&چاپ...‌"
+msgid "&Print…"
+msgstr "چاپ"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3377,10 +3378,11 @@ msgstr "حذف فقره)ها("
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&باز کردن...‌"
+msgid "&Open…"
+msgstr "&باز کردن‌"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3427,10 +3429,10 @@ msgstr "&درج‌"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&پیکربندی...‌"
+msgid "Confi&gure…"
+msgstr "پیکربندی"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3525,6 +3527,55 @@ msgstr "تمام‌صفحه"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&یافتن...‌"
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "سفارشی..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&ویرایش...‌"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "جستجو"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "ذخیره &به عنوان...‌"
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&چاپ...‌"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&باز کردن...‌"
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&پیکربندی...‌"
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4715,11 +4766,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU مجوز کمتر عمومی گنو نسخه ۳"
-
-# Custom
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "سفارشی"
 
 # Not specified
 #~ msgctxt "@item license"
@@ -6987,9 +7033,6 @@ msgstr ""
 #~ "بستن و دور انداختن \n"
 #~ "پیام ویرایش‌شده؟"
 
-#~ msgid "Configure"
-#~ msgstr "پیکربندی"
-
 #~ msgid "Job"
 #~ msgstr "کار"
 
@@ -7343,9 +7386,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "پیکربندی میان‌برها"
-
-#~ msgid "Print"
-#~ msgstr "چاپ"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "برگردان به پیش‌فرضها‌"
@@ -8832,9 +8872,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&بازی‌"
 
-#~ msgid "&Edit"
-#~ msgstr "&ویرایش‌"
-
 #  msgid "&Move"
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
@@ -9538,9 +9575,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - ر.ن.م:"
-
-#~ msgid "Save As"
-#~ msgstr "ذخیره به عنوان"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10792,9 +10826,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "مرتب‌سازی بر اساس:"
 
-#~ msgid "Search:"
-#~ msgstr "جستجو:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">صفحه آغازه</a>"
 
@@ -11055,10 +11086,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&باز کردن با"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&باز کردن‌"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

@@ -1642,7 +1642,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "অনুসন্ধানের জন্য কোনো অভিব্যক্তি অথবা অক্ষর এখানে লিখুন"
 
 #: kcharselect.cpp:393
@@ -1654,10 +1654,10 @@ msgstr "অনুসন্ধানের জন্য কোনো অভিব
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "অনুসন্ধান...(&F)"
+msgid "&Find…"
+msgstr "অনুসন্ধান (&F)"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2200,11 +2200,11 @@ msgstr "অজানা"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "স্বনির্ধারিত..."
+msgid "Custom…"
+msgstr "স্বনির্ধারিত"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2556,7 +2556,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "নির্বাচন করুন..."
 
 #: kfontrequester.cpp:190
@@ -2710,7 +2710,7 @@ msgstr "বার্তা বন্ধ করা হবে"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2744,10 +2744,10 @@ msgstr "ব্রেইল চিহ্ন"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "সম্পাদনা...(&E)"
+msgid "&Edit…"
+msgstr "সম্পাদনা (&E)"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2853,10 +2853,10 @@ msgstr "পাসওয়ার্ডের দৃঢ়তার মান:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "অনুসন্ধান"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "অনুসন্ধান:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3071,10 +3071,10 @@ msgstr "তথ্য সংরক্ষণ করা হবে না"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "নতুন রূপে সংরক্ষণ...(&A)"
+msgid "Save &As…"
+msgstr "নতুন রূপে সংরক্ষণ"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3113,7 +3113,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "প্রশাসনিক মোড...(&M)"
 
 #: kstandardguiitem.cpp:205
@@ -3256,10 +3256,10 @@ msgstr "এক ধাপ এগিয়ে চলুন"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "প্রিন্ট করুন...(&P)"
+msgid "&Print…"
+msgstr "প্রিন্ট করুন"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3298,10 +3298,11 @@ msgstr "বস্তু(গুলি) মুছে ফেলুন"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "খুলুন...(&O)"
+msgid "&Open…"
+msgstr "খুলুন (&O)"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3348,10 +3349,10 @@ msgstr "সন্নিবেশ করুন (&I)"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "কনফিগার করুন...(&g)"
+msgid "Confi&gure…"
+msgstr "কনফিগার করুন"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3440,6 +3441,55 @@ msgstr "সম্পূর্ণ পর্দাজুড়ে প্রদর্�
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "অনুসন্ধান...(&F)"
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "স্বনির্ধারিত..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "সম্পাদনা...(&E)"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "অনুসন্ধান"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "নতুন রূপে সংরক্ষণ...(&A)"
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "প্রিন্ট করুন...(&P)"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "খুলুন...(&O)"
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "কনফিগার করুন...(&g)"
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4506,10 +4556,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU লেসার জেনারেল পাবলিক লাইসেন্স, সংস্করণ ৩"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "স্বনির্ধারিত"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6481,9 +6527,6 @@ msgstr ""
 #~ "পরিবর্তিত বার্তা বন্ধ\n"
 #~ "করে বর্জন করা হবে কি?"
 
-#~ msgid "Configure"
-#~ msgstr "কনফিগার করুন"
-
 #~ msgid "Job"
 #~ msgstr "কর্ম"
 
@@ -6813,9 +6856,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "শর্টকাট কনফিগার করুন"
-
-#~ msgid "Print"
-#~ msgstr "প্রিন্ট করুন"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "ডিফল্ট মান পুনরায় স্থাপন করা হবে"
@@ -8091,9 +8131,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "খেলা (&G)"
 
-#~ msgid "&Edit"
-#~ msgstr "সম্পাদনা (&E)"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "স্থানান্তরণ (&M)"
@@ -8643,9 +8680,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - বার্তা প্রাপকদের নাম লিখুন: "
-
-#~ msgid "Save As"
-#~ msgstr "নতুন রূপে সংরক্ষণ"
 
 #~ msgid "Follow"
 #~ msgstr "অনুসরণ করুন"
@@ -9686,9 +9720,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "ক্রমবিন্যাসের প্রণালী:"
 
-#~ msgid "Search:"
-#~ msgstr "অনুসন্ধান:"
-
 #, fuzzy
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">হোম পেজ পরিদর্শন করুন</a>"
@@ -9918,10 +9949,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "চিহ্নিত সামগ্রী সহ খুলুন (&O)"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "খুলুন (&O)"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

@@ -1643,7 +1643,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "ئىزدىمەكچى بولغان ئاتالغۇ ياكى ھەرپنى كىرگۈزۈڭ:"
 
 #: kcharselect.cpp:393
@@ -1655,10 +1655,10 @@ msgstr "ئىزدىمەكچى بولغان ئاتالغۇ ياكى ھەرپنى �
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "ئىزدە(&F)…"
+msgid "&Find…"
+msgstr "ئىزدە(&F)"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2198,11 +2198,11 @@ msgstr "نامەلۇم"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "ئادەت..."
+msgid "Custom…"
+msgstr "ئىختىيارى"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2595,7 +2595,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "تاللا…"
 
 #: kfontrequester.cpp:190
@@ -2749,7 +2749,7 @@ msgstr "ئۇچۇرنى ياپ"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2783,10 +2783,10 @@ msgstr "ئەمالار يېزىقى"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "تەھرىر(&E)…"
+msgid "&Edit…"
+msgstr "تەھرىر(&E)"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2918,10 +2918,10 @@ msgstr "ئىم كۈچلۈكلۈك ئۆلچىگۈچ."
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "ئىزدە"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "ئىزدە:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3140,10 +3140,10 @@ msgstr "سانلىق-مەلۇماتلارنى ساقلىمايدۇ"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "باشقا ئاتتا ساقلا(&A)…"
+msgid "Save &As…"
+msgstr "باشقا ئاتتا ساقلا"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3186,7 +3186,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "باشقۇرغۇچى ھالىتى(&M)..."
 
 #: kstandardguiitem.cpp:205
@@ -3333,10 +3333,10 @@ msgstr "بىر قەدەم ئىلگىرىلەيدۇ"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "باس(&P)…"
+msgid "&Print…"
+msgstr "بېسىپ چىقار"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3375,10 +3375,11 @@ msgstr "تۇر(لەر)نى ئۆچۈرىدۇ"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "ئاچ(&O)…"
+msgid "&Open…"
+msgstr "ئاچ(&O)"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3425,10 +3426,10 @@ msgstr "قىستۇر(&I)"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "سەپلىمە(&G)…"
+msgid "Confi&gure…"
+msgstr "سەپلە"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3525,6 +3526,55 @@ msgstr "پۈتۈن ئېكران"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "ئىزدە(&F)…"
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "ئادەت..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "تەھرىر(&E)…"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "ئىزدە"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "باشقا ئاتتا ساقلا(&A)…"
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "باس(&P)…"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "ئاچ(&O)…"
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "سەپلىمە(&G)…"
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4702,10 +4752,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU كەڭرىرەك ئادەتتىكى ئاممىۋى ئىجازەت كېلىشىمى 3- نەشرى"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "ئىختىيارى"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6908,9 +6954,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 #~ "يېپىپ، تەھرىرلىگەن \n"
 #~ "خەتنى تاشلىۋېتەمسىز؟"
 
-#~ msgid "Configure"
-#~ msgstr "سەپلە"
-
 #~ msgid "Job"
 #~ msgstr "ۋەزىپە"
 
@@ -7271,9 +7314,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "تېزلەتمە سەپلىمە"
-
-#~ msgid "Print"
-#~ msgstr "بېسىپ چىقار"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "كۆڭۈلدىكىگە قايتۇر"
@@ -8798,9 +8838,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 #~ msgid "&Game"
 #~ msgstr "ئويۇن(&G)"
 
-#~ msgid "&Edit"
-#~ msgstr "تەھرىر(&E)"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "يۆتكە(&M)"
@@ -9513,9 +9550,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 
 #~ msgid " - BCC: "
 #~ msgstr " - يوشۇرۇن: "
-
-#~ msgid "Save As"
-#~ msgstr "باشقا ئاتتا ساقلا"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10774,9 +10808,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 #~ msgid "Order by:"
 #~ msgstr "تەرتىپى:"
 
-#~ msgid "Search:"
-#~ msgstr "ئىزدە:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">باش بەت</a>"
 
@@ -11061,10 +11092,6 @@ msgstr "كۆزنەكنى پۈتۈن ئېكراندا كۆرسەت"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "ئاچقۇز(&O)"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "ئاچ(&O)"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

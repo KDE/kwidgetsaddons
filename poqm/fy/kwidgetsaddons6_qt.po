@@ -1651,7 +1651,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Fier hjir in sykterm of teken yn"
 
 #: kcharselect.cpp:393
@@ -1663,10 +1663,10 @@ msgstr "Fier hjir in sykterm of teken yn"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Sykje..."
+msgid "&Find…"
+msgstr "&Sykje"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2207,11 +2207,11 @@ msgstr "Unbekend"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Oanpast..."
+msgid "Custom…"
+msgstr "Oanpast"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2574,7 +2574,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Kies..."
 
 #: kfontrequester.cpp:190
@@ -2728,7 +2728,7 @@ msgstr "Berjocht slúte"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2762,10 +2762,10 @@ msgstr "Braillepatroanen"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "Be&wurkje..."
+msgid "&Edit…"
+msgstr "Be&wurkje"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2901,10 +2901,10 @@ msgstr "Wachtwurd sterkte mjiter:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Sykje"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Sykje:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3124,10 +3124,10 @@ msgstr "Gegevens net bewarje"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Bewarje &as..."
+msgid "Save &As…"
+msgstr "Bewarje as"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3170,7 +3170,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Systeembehearder&modus..."
 
 #: kstandardguiitem.cpp:205
@@ -3318,10 +3318,10 @@ msgstr "Ien stap foarút"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Printsje..."
+msgid "&Print…"
+msgstr "Printsje"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3360,10 +3360,11 @@ msgstr "Item(s) wiskje"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Iepenje..."
+msgid "&Open…"
+msgstr "&Iepenje"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3410,10 +3411,10 @@ msgstr "&Ynfoegje"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Ynstelle..."
+msgid "Confi&gure…"
+msgstr "Konfigurearje"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3502,6 +3503,55 @@ msgstr "Folslein skerm"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Sykje..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Oanpast..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "Be&wurkje..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Sykje"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Bewarje &as..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Printsje..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Iepenje..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Ynstelle..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4653,10 +4703,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Oanpast"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6758,9 +6804,6 @@ msgstr ""
 #~ "It bewurke berjocht negeare\n"
 #~ "en slúte?"
 
-#~ msgid "Configure"
-#~ msgstr "Konfigurearje"
-
 #~ msgid "Job"
 #~ msgstr "Taak"
 
@@ -7100,9 +7143,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Fluchtoetsen ynstelle"
-
-#~ msgid "Print"
-#~ msgstr "Printsje"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Nei standert weromsette"
@@ -8576,9 +8616,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Spultsje"
 
-#~ msgid "&Edit"
-#~ msgstr "Be&wurkje"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "Fer&pleatse"
@@ -9288,9 +9325,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Bewarje as"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10494,9 +10528,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "Sortearje neffens:"
 
-#~ msgid "Search:"
-#~ msgstr "Sykje:"
-
 #~ msgid "Become a Fan"
 #~ msgstr "Wurd in Fan"
 
@@ -10736,10 +10767,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Iepenje mei"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Iepenje"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

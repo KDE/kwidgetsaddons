@@ -1481,7 +1481,7 @@ msgstr ""
 #: kcharselect.cpp:391
 #, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "網絡搜尋"
 
 #: kcharselect.cpp:393
@@ -1491,10 +1491,10 @@ msgstr ""
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "尋找(&F)..."
+msgid "&Find…"
+msgstr "尋找(&F)"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1972,10 +1972,9 @@ msgstr "無法識別"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "自訂..."
+msgid "Custom…"
+msgstr "自訂(&U)"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2329,7 +2328,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "選擇..."
 
 #: kfontrequester.cpp:190
@@ -2479,7 +2478,7 @@ msgstr "關閉訊息"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2512,10 +2511,10 @@ msgstr "布拉耶點字法"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "編輯(&E)..."
+msgid "&Edit…"
+msgstr "編輯(&E)"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2645,9 +2644,9 @@ msgstr "密碼安全測量器："
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "搜尋"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "搜尋(&S)："
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2850,10 +2849,10 @@ msgstr "不儲存資料"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "另存新檔(&A)..."
+msgid "Save &As…"
+msgstr "另存新檔"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -2891,7 +2890,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "管理員模式(&M)..."
 
 #: kstandardguiitem.cpp:205
@@ -3029,10 +3028,10 @@ msgstr "前進到下一個步驟"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "列印(&P)..."
+msgid "&Print…"
+msgstr "列印"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3071,10 +3070,9 @@ msgstr "刪除項目"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "開啟(&O)..."
+msgid "&Open…"
+msgstr "開啟(&O)"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3120,10 +3118,10 @@ msgstr "插入(&I)"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "設定(&G)..."
+msgid "Confi&gure…"
+msgstr "設定"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3209,6 +3207,53 @@ msgstr "全螢幕模式"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "尋找(&F)..."
+
+#, fuzzy
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "自訂..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "編輯(&E)..."
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "搜尋"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "另存新檔(&A)..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "列印(&P)..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "開啟(&O)..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "設定(&G)..."
 
 #, fuzzy
 #~| msgid "Font size<br><i>fixed</i> or <i>relative</i><br>to environment"
@@ -4233,11 +4278,6 @@ msgstr ""
 #~ msgctxt "@item license (short name)"
 #~ msgid "LGPL v3"
 #~ msgstr "LGPL"
-
-#, fuzzy
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "自訂(&U)"
 
 #, fuzzy
 #~ msgctxt "@item license"
@@ -6162,9 +6202,6 @@ msgstr ""
 #~ "關閉並放棄\n"
 #~ "已編輯的訊息？"
 
-#~ msgid "Configure"
-#~ msgstr "設定"
-
 #, fuzzy
 #~ msgid "Job"
 #~ msgstr "Jom"
@@ -6473,9 +6510,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "設定快速鍵"
-
-#~ msgid "Print"
-#~ msgstr "列印"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -8001,9 +8035,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "遊戲(&G)"
 
-#~ msgid "&Edit"
-#~ msgstr "編輯(&E)"
-
 #, fuzzy
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
@@ -8665,9 +8696,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - 密件副本："
-
-#~ msgid "Save As"
-#~ msgstr "另存新檔"
 
 #, fuzzy
 #~ msgid ""
@@ -9626,10 +9654,6 @@ msgstr ""
 #~ msgstr "安裝"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "搜尋(&S)："
-
-#, fuzzy
 #~ msgid "Become a Fan"
 #~ msgstr "家用傳真"
 
@@ -9855,11 +9879,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "開啟用(&O)..."
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "開啟(&O)"
 
 #, fuzzy
 #~ msgctxt "@label File name"

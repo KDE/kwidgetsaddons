@@ -1613,7 +1613,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "खोजी शब्द यहाँ प्रविष्ट गर्नुहोस्"
 
 #: kcharselect.cpp:393
@@ -1625,10 +1625,10 @@ msgstr "खोजी शब्द यहाँ प्रविष्ट गर�
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "फेला पार्नुहोस्..."
+msgid "&Find…"
+msgstr "फेला पार्नुहोस्"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2166,11 +2166,11 @@ msgstr "अज्ञात"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "अनुकूल..."
+msgid "Custom…"
+msgstr "अनुकूल"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2526,7 +2526,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "रोज्नुहोस्..."
 
 #: kfontrequester.cpp:190
@@ -2680,7 +2680,7 @@ msgstr "सन्देश बन्द गर्नुहोस्"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2713,10 +2713,10 @@ msgstr "ब्रेलि बाँन्की"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "सम्पादन गर्नुहोस्..."
+msgid "&Edit…"
+msgstr "सम्पादन"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2850,10 +2850,10 @@ msgstr "पासवर्ड शक्ति मिटर:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "खोजी गर्नुहोस्"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "खोजी:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3066,10 +3066,10 @@ msgstr "डेटा बचत नगर्नुहोस्"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "यस रूपमा बचत गर्नुहोस्..."
+msgid "Save &As…"
+msgstr "यस रूपमा बचत गर्नुहोस्"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3107,7 +3107,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "प्रशासक मोड..."
 
 #: kstandardguiitem.cpp:205
@@ -3246,10 +3246,10 @@ msgstr "एक चरण अगाडि जानुहोस्"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "मुद्रण गर्नुहोस्..."
+msgid "&Print…"
+msgstr "मुद्रण गर्नुहोस्"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3288,10 +3288,9 @@ msgstr "वस्तु(हरू) मेट्नुहोस्"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "खोल्नुहोस्..."
+msgid "&Open…"
+msgstr "खोल्नुहोस्"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3338,10 +3337,10 @@ msgstr "घुसाउनुहोस्"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "कन्फिगर गर्नुहोस्..."
+msgid "Confi&gure…"
+msgstr "कन्फिगर गर्नुहोस्"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3428,6 +3427,55 @@ msgstr "पूरा पर्दा मोड"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "फेला पार्नुहोस्..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "अनुकूल..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "सम्पादन गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "खोजी गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "यस रूपमा बचत गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "मुद्रण गर्नुहोस्..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "खोल्नुहोस्..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "कन्फिगर गर्नुहोस्..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4553,10 +4601,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU साधारण सार्वजनिक इजाजतपत्र संस्करण 2"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "अनुकूल"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6655,9 +6699,6 @@ msgstr ""
 #~ "सम्पादन गरिएका सन्देश\n"
 #~ "बन्द गरेर छाड्नुहुन्छ ?"
 
-#~ msgid "Configure"
-#~ msgstr "कन्फिगर गर्नुहोस्"
-
 #, fuzzy
 #~ msgid "Job"
 #~ msgstr "Jom"
@@ -6974,9 +7015,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "सर्टकट कन्फिगर गर्नुहोस्"
-
-#~ msgid "Print"
-#~ msgstr "मुद्रण गर्नुहोस्"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -8487,9 +8525,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "खेल"
 
-#~ msgid "&Edit"
-#~ msgstr "सम्पादन"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "सार्नुहोस्"
@@ -9191,9 +9226,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr "गुप्त बोधार्थ प्रतिलिपि: "
-
-#~ msgid "Save As"
-#~ msgstr "यस रूपमा बचत गर्नुहोस्"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10441,9 +10473,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "मागकर्ता:"
 
-#~ msgid "Search:"
-#~ msgstr "खोजी:"
-
 #, fuzzy
 #~ msgid "Details for %1"
 #~ msgstr "सुझाव सूची"
@@ -10672,11 +10701,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "यससँग खोल्नुहोस्..."
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "खोल्नुहोस्"
 
 #, fuzzy
 #~ msgctxt "@label File name"

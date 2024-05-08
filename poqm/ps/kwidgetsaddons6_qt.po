@@ -1569,7 +1569,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "پلټون ويې يا لوښته دلته وليکﺉ"
 
 #: kcharselect.cpp:393
@@ -1581,10 +1581,10 @@ msgstr "پلټون ويې يا لوښته دلته وليکﺉ"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "...لټول"
+msgid "&Find…"
+msgstr "لټول"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2113,11 +2113,11 @@ msgstr "ناپېژندلی"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "...دوديز"
+msgid "Custom…"
+msgstr "دوديز"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2471,7 +2471,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "ټاکل..."
 
 #: kfontrequester.cpp:190
@@ -2614,7 +2614,7 @@ msgstr "استوزه بندول"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2647,10 +2647,10 @@ msgstr "برېلي بېلګې"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "...سمول"
+msgid "&Edit…"
+msgstr "سمون"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2756,10 +2756,9 @@ msgstr ":د تېرنويې د کلکوالي ميټر"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "پلټون"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr ":پ&لټون"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2971,10 +2970,10 @@ msgstr "اومتوک نه ساتل"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "...ساتل &په"
+msgid "Save &As…"
+msgstr "ساتل په"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3009,7 +3008,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "...پازوال &اکر"
 
 #: kstandardguiitem.cpp:205
@@ -3145,10 +3144,10 @@ msgstr "يو پړاو مخکې ورتلل"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "...چاپول"
+msgid "&Print…"
+msgstr "چاپول"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3187,10 +3186,9 @@ msgstr "توکي ړنګول"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "...پرانيستل"
+msgid "&Open…"
+msgstr "پرانيستل&"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3237,10 +3235,10 @@ msgstr "ورننويستل"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "...ساز&ول"
+msgid "Confi&gure…"
+msgstr "سازول"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3326,6 +3324,55 @@ msgstr "ټوله پرده"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "...لټول"
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "...دوديز"
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "...سمول"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "پلټون"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "...ساتل &په"
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "...چاپول"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "...پرانيستل"
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "...ساز&ول"
 
 #, fuzzy
 #~| msgid "Sorry"
@@ -4222,10 +4269,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "د ج.ن.ي کوچنی ټولګړی منښتليک ۳مه نسخه"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "دوديز"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6023,9 +6066,6 @@ msgstr ""
 #~ "سمول شوې استوزه\n"
 #~ "بندول او پرېښودل"
 
-#~ msgid "Configure"
-#~ msgstr "سازول"
-
 #~ msgid "Job"
 #~ msgstr "دنده"
 
@@ -6357,9 +6397,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "لنډلارې سازول"
-
-#~ msgid "Print"
-#~ msgstr "چاپول"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -7694,9 +7731,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "لوبه"
 
-#~ msgid "&Edit"
-#~ msgstr "سمون"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "خوځول"
@@ -8293,9 +8327,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr "  :پ.ل - "
-
-#~ msgid "Save As"
-#~ msgstr "ساتل په"
 
 #~ msgid "Follow"
 #~ msgstr "ورتلل"
@@ -9264,10 +9295,6 @@ msgstr ""
 #~ msgstr ":اوډونول پر&"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr ":پ&لټون"
-
-#, fuzzy
 #~ msgid "Details for %1"
 #~ msgstr "وړانديزونه"
 
@@ -9497,11 +9524,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "...پرانيستل په&"
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "پرانيستل&"
 
 #, fuzzy
 #~ msgctxt "@label File name"

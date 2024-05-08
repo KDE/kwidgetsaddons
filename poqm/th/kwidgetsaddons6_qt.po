@@ -1640,7 +1640,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "ป้อนคำหรือตัวอักษรที่จะใช้ค้นหาได้ที่นี่"
 
 #: kcharselect.cpp:393
@@ -1652,10 +1652,10 @@ msgstr "ป้อนคำหรือตัวอักษรที่จะใ
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "ค้น&หา..."
+msgid "&Find…"
+msgstr "&ค้นหา"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2196,11 +2196,11 @@ msgstr "ไม่รู้จัก"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "กำหนดเอง..."
+msgid "Custom…"
+msgstr "กำหนดเอง"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2575,7 +2575,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "เลือก..."
 
 #: kfontrequester.cpp:190
@@ -2727,7 +2727,7 @@ msgstr "ปิดข้อความ"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2761,10 +2761,10 @@ msgstr "รูปแบบอักษรเบรลล์"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "แ&ก้ไข..."
+msgid "&Edit…"
+msgstr "แ&ก้ไข"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2896,10 +2896,10 @@ msgstr "ระดับความแข็งแกร่งของรหั
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "ค้นหา"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "ค้นหา:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3116,10 +3116,10 @@ msgstr "ไม่ต้องบันทึกข้อมูล"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "บัน&ทึกเป็น..."
+msgid "Save &As…"
+msgstr "บันทึกเป็น"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3161,7 +3161,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "โ&หมดผู้บริหารระบบ..."
 
 #: kstandardguiitem.cpp:205
@@ -3308,10 +3308,10 @@ msgstr "ทำต่อไปหนึ่งขั้น"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&พิมพ์..."
+msgid "&Print…"
+msgstr "พิมพ์"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3350,10 +3350,11 @@ msgstr "ลบรายการ"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "เ&ปิด..."
+msgid "&Open…"
+msgstr "เ&ปิด"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3400,10 +3401,10 @@ msgstr "แ&ทรก"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "ป&รับแต่ง..."
+msgid "Confi&gure…"
+msgstr "ปรับแต่งค่า"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3492,6 +3493,55 @@ msgstr "เต็มหน้าจอ"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "ค้น&หา..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "กำหนดเอง..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "แ&ก้ไข..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "ค้นหา"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "บัน&ทึกเป็น..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&พิมพ์..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "เ&ปิด..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "ป&รับแต่ง..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4633,10 +4683,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "สัญญาอนุญาตแบบ GNU - LGPL รุ่น 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "กำหนดเอง"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6789,9 +6835,6 @@ msgstr ""
 #~ "edited message?"
 #~ msgstr "ปิดและละทิ้งข้อความที่ได้แก้ไขไปหรือไม่ ?"
 
-#~ msgid "Configure"
-#~ msgstr "ปรับแต่งค่า"
-
 #~ msgid "Job"
 #~ msgstr "งานพิมพ์"
 
@@ -7147,9 +7190,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "ปรับแต่งปุ่มพิมพ์ลัด"
-
-#~ msgid "Print"
-#~ msgstr "พิมพ์"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "กลับไปใช้ค่าปริยาย"
@@ -8653,9 +8693,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "เ&กม"
 
-#~ msgid "&Edit"
-#~ msgstr "แ&ก้ไข"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&ย้าย"
@@ -9361,9 +9398,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - สำเนาถึง (ซ่อน): "
-
-#~ msgid "Save As"
-#~ msgstr "บันทึกเป็น"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10605,9 +10639,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "เรียงลำดับตาม:"
 
-#~ msgid "Search:"
-#~ msgstr "ค้นหา:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">หน้าเว็บหลัก</a>"
 
@@ -10886,10 +10917,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "เ&ปิดด้วย"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "เ&ปิด"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

@@ -1077,8 +1077,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Vanhentuneet ATK-symbolit"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Syötä hakusana tai merkki…"
 
 #: kcharselect.cpp:393
@@ -1087,9 +1090,12 @@ msgid "Enter a search term or character here"
 msgstr "Syötä tähän hakusana tai merkki"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Etsi…"
+msgid "&Find…"
+msgstr "&Etsi"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1472,9 +1478,12 @@ msgid "Unknown"
 msgstr "Tuntematon"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Mukautettu…"
+msgid "Custom…"
+msgstr "Oma"
 
 #: kcontextualhelpbutton.cpp:80
 #, fuzzy
@@ -1747,8 +1756,11 @@ msgid "Show only monospaced fonts"
 msgstr "Näytä vain tasalevyiset fontit"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Valitse fontti…"
 
 #: kfontrequester.cpp:190
@@ -1863,8 +1875,11 @@ msgid "Close message"
 msgstr "Sulje viesti"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Etsi tiedoston tyyppiä tai tiedostonimikuviota…"
 
 #: kmimetypechooser.cpp:89
@@ -1888,9 +1903,11 @@ msgid "Patterns"
 msgstr "Kuviot"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Muokkaa…"
+msgid "&Edit…"
+msgstr "&Muokkaa"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1985,9 +2002,11 @@ msgid "Password strength &meter:"
 msgstr "Salasanan vahvuus&mittari:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Etsi…"
+#, fuzzy
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Haku:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2148,9 +2167,11 @@ msgid "Do not save data"
 msgstr "Älä tallenna tietoja"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Tallenna &nimellä…"
+msgid "Save &As…"
+msgstr "Tallenna nimellä"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2179,8 +2200,11 @@ msgstr ""
 "Tällä painikkeella voit kokeilla asetuksia."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Pääkäyttäjän tila…"
 
 #: kstandardguiitem.cpp:205
@@ -2284,9 +2308,11 @@ msgid "Go forward one step"
 msgstr "Siirry yksi askel eteenpäin"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "T&ulosta…"
+msgid "&Print…"
+msgstr "Tulosta"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2314,9 +2340,12 @@ msgid "Delete item(s)"
 msgstr "Poista kohteet"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Avaa…"
+msgid "&Open…"
+msgstr "&Avaa"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2349,9 +2378,11 @@ msgid "&Insert"
 msgstr "&Lisää"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Asetukset…"
+msgid "Confi&gure…"
+msgstr "Asetukset"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2419,6 +2450,38 @@ msgstr "Koko näyttö"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Näytä ikkuna koko näytön tilassa"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Etsi…"
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Mukautettu…"
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Muokkaa…"
+
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Etsi…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Tallenna &nimellä…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "T&ulosta…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Avaa…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Asetukset…"
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3515,10 +3578,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License (LGPL), versio 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Oma"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5735,9 +5794,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 #~ "Sulje ja hylkää\n"
 #~ "muokattu viesti?"
 
-#~ msgid "Configure"
-#~ msgstr "Asetukset"
-
 #~ msgid "Job"
 #~ msgstr "Työ"
 
@@ -6096,9 +6152,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Muokkaa pikanäppäimiä"
-
-#~ msgid "Print"
-#~ msgstr "Tulosta"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Palauta oletukset"
@@ -7641,9 +7694,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 #~ msgid "&Game"
 #~ msgstr "&Peli"
 
-#~ msgid "&Edit"
-#~ msgstr "&Muokkaa"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Siirto"
@@ -8364,9 +8414,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 
 #~ msgid " - BCC: "
 #~ msgstr " - Piilokopio: "
-
-#~ msgid "Save As"
-#~ msgstr "Tallenna nimellä"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9628,9 +9675,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 #~ msgid "Order by:"
 #~ msgstr "Järjestys:"
 
-#~ msgid "Search:"
-#~ msgstr "Haku:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org/\">Kotisivu</a>"
 
@@ -9918,10 +9962,6 @@ msgstr "Näytä ikkuna koko näytön tilassa"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Avaa ohjelmalla"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Avaa"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

@@ -1364,7 +1364,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Introduceți aici termenul sau caracterul de căutat"
 
 #: kcharselect.cpp:393
@@ -1375,9 +1375,11 @@ msgid "Enter a search term or character here"
 msgstr "Introduceți aici termenul sau caracterul de căutat"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "C&aută..."
+msgid "&Find…"
+msgstr "C&aută"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1817,9 +1819,12 @@ msgid "Unknown"
 msgstr "Necunoscut"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Personalizat..."
+msgid "Custom…"
+msgstr "Personalizată"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2151,8 +2156,11 @@ msgid "Show only monospaced fonts"
 msgstr "Arată numai fonturi monospațiate"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Alege fontul..."
 
 #: kfontrequester.cpp:190
@@ -2289,8 +2297,11 @@ msgid "Close message"
 msgstr "Închide mesajul"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Caută tip de fișier sau model de denumire..."
 
 #: kmimetypechooser.cpp:89
@@ -2314,9 +2325,11 @@ msgid "Patterns"
 msgstr "Modele"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "Modificar&e..."
+msgid "&Edit…"
+msgstr "&Editare"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2435,10 +2448,10 @@ msgstr "&Măsurător de siguranță a parolei:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Caută"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Caută:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2611,9 +2624,11 @@ msgid "Do not save data"
 msgstr "Nu salva datele"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "S&alvează ca..."
+msgid "Save &As…"
+msgstr "Salvează ca"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2647,8 +2662,11 @@ msgstr ""
 "Utilizați-l pentru a încerca diferite configurări."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Regim de ad&ministrator..."
 
 #: kstandardguiitem.cpp:205
@@ -2760,9 +2778,11 @@ msgid "Go forward one step"
 msgstr "Mergi cu un pas înainte"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "Ti&părește..."
+msgid "&Print…"
+msgstr "Tipărește"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2790,9 +2810,12 @@ msgid "Delete item(s)"
 msgstr "Șterge element(e)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Deschide..."
+msgid "&Open…"
+msgstr "&Deschide"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2825,9 +2848,11 @@ msgid "&Insert"
 msgstr "&Inserează"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Confi&gurează..."
+msgid "Confi&gure…"
+msgstr "Configurează"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -2897,6 +2922,40 @@ msgstr "Ecran complet"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Afișează fereastra pe tot ecranul"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "C&aută..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Personalizat..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "Modificar&e..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Caută"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "S&alvează ca..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "Ti&părește..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Deschide..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Confi&gurează..."
 
 #~ msgctxt "KFontChooser|@info:tooltip"
 #~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4057,10 +4116,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Licența „GNU Lesser General Public License Version 3”"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Personalizată"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6312,9 +6367,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 #~ "Închid și elimin\n"
 #~ "mesajul editat?"
 
-#~ msgid "Configure"
-#~ msgstr "Configurează"
-
 #~ msgid "Job"
 #~ msgstr "Lucrare"
 
@@ -6677,9 +6729,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Configurare acceleratori"
-
-#~ msgid "Print"
-#~ msgstr "Tipărește"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Restabilire implicite"
@@ -8250,9 +8299,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 #~ msgid "&Game"
 #~ msgstr "&Joc"
 
-#~ msgid "&Edit"
-#~ msgstr "&Editare"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Mutare"
@@ -8983,9 +9029,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Salvează ca"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10262,9 +10305,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 #~ msgid "Order by:"
 #~ msgstr "Ordonează după:"
 
-#~ msgid "Search:"
-#~ msgstr "Caută:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Pagina de pornire</a>"
 
@@ -10565,10 +10605,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Deschide cu"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Deschide"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

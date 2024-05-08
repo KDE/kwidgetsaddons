@@ -1254,7 +1254,7 @@ msgstr ""
 #: kcharselect.cpp:391
 #, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "തെരച്ചില്‍ പദമോ അക്ഷരരൂപമോ ഇവിടെ നല്‍കുക"
 
 #: kcharselect.cpp:393
@@ -1266,8 +1266,8 @@ msgstr "തെരച്ചില്‍ പദമോ അക്ഷരരൂപമ�
 #: kcharselect.cpp:400
 #, fuzzy
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&കണ്ടുപിടിക്കുക..."
+msgid "&Find…"
+msgstr "കണ്ടുപിടിയ്ക്കുക &f"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1727,9 +1727,11 @@ msgstr "അപരിചിതം"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "ഇഷ്ടപ്പെട്ട..."
+msgid "Custom…"
+msgstr "സ്വന്തമായുള്ള"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2036,7 +2038,7 @@ msgstr ""
 #: kfontrequester.cpp:184
 #, fuzzy
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "തെരഞ്ഞെടുക്കുക..."
 
 #: kfontrequester.cpp:190
@@ -2163,7 +2165,7 @@ msgstr "സന്ദേശം അടയ്ക്കുക"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2193,9 +2195,10 @@ msgstr "ബ്രെയിലി മാതൃകകള്‍"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&മാറ്റം വരുത്തുക..."
+msgid "&Edit…"
+msgstr "&തിരുത്തുക"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2292,10 +2295,10 @@ msgstr "അടയാളവാക്കുകളുടെ ശക്തി കാ�
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "തെരയുക"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "തെരയുക:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2486,9 +2489,10 @@ msgstr "ഡാറ്റ സൂക്ഷിയ്ക്കരുത്"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "പേരു് &മാറ്റി സൂക്ഷിയ്ക്കുക..."
+msgid "Save &As…"
+msgstr "പേരു് മാറ്റി സൂക്ഷിക്കുക"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -2519,7 +2523,7 @@ msgstr ""
 #: kstandardguiitem.cpp:203
 #, fuzzy
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "പരിപാലക &ദശ..."
 
 #: kstandardguiitem.cpp:205
@@ -2639,9 +2643,10 @@ msgstr "ഒരു പടി മുമ്പോട്ടു് പോകുക"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&അച്ചടിയ്ക്കുക..."
+msgid "&Print…"
+msgstr "അച്ചടിയ്ക്കുക"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -2675,9 +2680,11 @@ msgstr "വസ്തു(ക്കള്‍) നീക്കം ചെയ്യ�
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&തുറക്കുക..."
+msgid "&Open…"
+msgstr "&തുറക്കുക"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -2717,9 +2724,10 @@ msgstr "&ചേര്‍ക്കുക"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "ക്രമീകരിയ്ക്കുക... &g"
+msgid "Confi&gure…"
+msgstr "ക്രമീകരിയ്ക്കുക"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -2797,6 +2805,47 @@ msgstr "സ്ക്രീന്‍ പരമാവധി വലിപ്പത�
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&കണ്ടുപിടിക്കുക..."
+
+#, fuzzy
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "ഇഷ്ടപ്പെട്ട..."
+
+#, fuzzy
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&മാറ്റം വരുത്തുക..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "തെരയുക"
+
+#, fuzzy
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "പേരു് &മാറ്റി സൂക്ഷിയ്ക്കുക..."
+
+#, fuzzy
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&അച്ചടിയ്ക്കുക..."
+
+#, fuzzy
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&തുറക്കുക..."
+
+#, fuzzy
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "ക്രമീകരിയ്ക്കുക... &g"
 
 #, fuzzy
 #~ msgctxt "KMessageBox|"
@@ -3772,10 +3821,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "ഗ്നു ലെസ്സര്‍ ജനറല്‍ പബ്ലിക് ലൈസന്‍സ് ലക്കം 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "സ്വന്തമായുള്ള"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5738,9 +5783,6 @@ msgstr ""
 #~ "മാറ്റം വരുത്തിയ സന്ദേശം \n"
 #~ "വേണ്ടെന്നു് വയ്ക്കണമോ?"
 
-#~ msgid "Configure"
-#~ msgstr "ക്രമീകരിയ്ക്കുക"
-
 #~ msgid "Job"
 #~ msgstr "ജോബ്"
 
@@ -6070,9 +6112,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "കുറുക്കുവഴികള്‍ ക്രമീകരിക്കുക"
-
-#~ msgid "Print"
-#~ msgstr "അച്ചടിയ്ക്കുക"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "&സഹജവിലകളാക്കുക"
@@ -7395,9 +7434,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&കളി"
 
-#~ msgid "&Edit"
-#~ msgstr "&തിരുത്തുക"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&മാറ്റുക"
@@ -7946,9 +7982,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - ബിസിസി: "
-
-#~ msgid "Save As"
-#~ msgstr "പേരു് മാറ്റി സൂക്ഷിക്കുക"
 
 #~ msgid "Follow"
 #~ msgstr "പിന്തുടരുക"
@@ -8937,9 +8970,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "ക്രമത്തിലാക്കേണ്ടതു്:"
 
-#~ msgid "Search:"
-#~ msgstr "തെരയുക:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">പൂമുഖം</a>"
 
@@ -9176,10 +9206,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&തുറക്കേണ്ട പ്രയോഗം"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&തുറക്കുക"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

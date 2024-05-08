@@ -1332,7 +1332,7 @@ msgstr ""
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Εισάγετε εδώ έναν όρο αναζήτησης ή χαρακτήρα"
 
 #: kcharselect.cpp:393
@@ -1345,11 +1345,11 @@ msgstr "Εισάγετε εδώ έναν όρο αναζήτησης ή χαρα
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "Ανα&ζήτηση..."
+msgid "&Find…"
+msgstr "&Αναζήτηση"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1778,11 +1778,11 @@ msgstr "Άγνωστο"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Προσαρμοσμένο..."
+msgid "Custom…"
+msgstr "Προσαρμοσμένο"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2162,7 +2162,7 @@ msgstr ""
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Επιλογή..."
 
 #: kfontrequester.cpp:190
@@ -2313,7 +2313,7 @@ msgstr "Κλείσιμο μηνύματος"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2349,11 +2349,10 @@ msgstr "Μοτίβα"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Επεξεργασία..."
+msgid "&Edit…"
+msgstr "&Επεξεργασία"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2482,10 +2481,10 @@ msgstr "Μέτρο ισ&χύος κωδικού πρόσβασης:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Αναζήτηση"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Αναζήτηση:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2705,9 +2704,11 @@ msgid "Do not save data"
 msgstr "Να μην πραγματοποιηθεί αποθήκευση δεδομένων"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Αποθήκευση &ως..."
+msgid "Save &As…"
+msgstr "Αποθήκευση ως"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2736,8 +2737,11 @@ msgstr ""
 "Μπορείτε έτσι να δοκιμάσετε διάφορες ρυθμίσεις."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Λειτουργία διαχειριστή..."
 
 #: kstandardguiitem.cpp:205
@@ -2842,9 +2846,11 @@ msgid "Go forward one step"
 msgstr "Ένα βήμα μπροστά"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Εκτύπωση..."
+msgid "&Print…"
+msgstr "Εκτύπωση"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2872,9 +2878,12 @@ msgid "Delete item(s)"
 msgstr "Διαγραφή αντικειμένου(ων)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "Ά&νοιγμα..."
+msgid "&Open…"
+msgstr "Άν&οιγμα"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2907,9 +2916,11 @@ msgid "&Insert"
 msgstr "Ε&ισαγωγή"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Διαμόρ&φωση..."
+msgid "Confi&gure…"
+msgstr "Διαμόρφωση"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2977,6 +2988,49 @@ msgstr "Πλήρης οθόνη"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
+
+#, fuzzy
+#~| msgctxt "KCharSelect|"
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "Ανα&ζήτηση..."
+
+#, fuzzy
+#~| msgctxt "KColorCombo|Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Προσαρμοσμένο..."
+
+#, fuzzy
+#~| msgctxt "KMimeTypeChooser|"
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Επεξεργασία..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Αναζήτηση"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Αποθήκευση &ως..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Εκτύπωση..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "Ά&νοιγμα..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Διαμόρ&φωση..."
 
 #, fuzzy
 #~| msgctxt "KFontChooser|"
@@ -4102,10 +4156,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Γενική κατώτερη δημόσια άδεια GNU έκδοση 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Προσαρμοσμένο"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6356,9 +6406,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ "Κλείσιμο και απόρριψη\n"
 #~ "επεξεργασμένου μηνύματος;"
 
-#~ msgid "Configure"
-#~ msgstr "Διαμόρφωση"
-
 #~ msgid "Job"
 #~ msgstr "Εργασία"
 
@@ -6722,9 +6769,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Διαμόρφωση συντομεύσεων"
-
-#~ msgid "Print"
-#~ msgstr "Εκτύπωση"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Επαναφορά στα προκαθορισμένα"
@@ -8285,9 +8329,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ msgid "&Game"
 #~ msgstr "Παιχ&νίδι"
 
-#~ msgid "&Edit"
-#~ msgstr "&Επεξεργασία"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Μετακίνηση"
@@ -9018,9 +9059,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Αποθήκευση ως"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10308,9 +10346,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ msgid "Order by:"
 #~ msgstr "Ταξινόμηση κατά:"
 
-#~ msgid "Search:"
-#~ msgstr "Αναζήτηση:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Αρχική Σελίδα</a>"
 
@@ -10605,10 +10640,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Άνοιγμα &με..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "Άν&οιγμα"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

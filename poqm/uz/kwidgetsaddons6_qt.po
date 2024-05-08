@@ -1313,7 +1313,7 @@ msgstr ""
 #: kcharselect.cpp:391
 #, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Internetdan qidirish"
 
 #: kcharselect.cpp:393
@@ -1323,9 +1323,9 @@ msgstr ""
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
+msgid "&Find…"
 msgstr "&Qidirish"
 
 #: kcharselect.cpp:424
@@ -1772,8 +1772,8 @@ msgstr "Nomaʼlum"
 #: kcolorcombo.cpp:333
 #, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Boshqa..."
+msgid "Custom…"
+msgstr "&Tanlash"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2134,7 +2134,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Tanlash"
 
 #: kfontrequester.cpp:190
@@ -2288,7 +2288,7 @@ msgstr "Xabarni yopish"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2319,9 +2319,9 @@ msgstr "Brayl shrifti"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Tahrirlash"
 
 #: kmimetypechooser.cpp:141
@@ -2425,10 +2425,9 @@ msgstr "Maxfiy soʻz ishonchligi:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Qidirish"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Q&idirish:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2634,10 +2633,10 @@ msgstr "Maʼlumot saqlanmasin"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "...sifatida s&aqlash"
+msgid "Save &As…"
+msgstr "Saqlash"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -2676,7 +2675,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Boshqaruvchi usuli"
 
 #: kstandardguiitem.cpp:205
@@ -2815,10 +2814,10 @@ msgstr "Bir qadam oldinga"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Bosib chiqarish"
+msgid "&Print…"
+msgstr "Bosib chiqarish"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -2857,10 +2856,9 @@ msgstr "Band(lar)ni oʻchirish"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Ochish..."
+msgid "&Open…"
+msgstr "&Ochish"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -2905,10 +2903,10 @@ msgstr "Qoʻy&ish"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Moslash..."
+msgid "Confi&gure…"
+msgstr "Moslash"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -2994,6 +2992,53 @@ msgstr "Butun ekranga"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Qidirish"
+
+#, fuzzy
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Boshqa..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Tahrirlash"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Qidirish"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "...sifatida s&aqlash"
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Bosib chiqarish"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Ochish..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Moslash..."
 
 #, fuzzy
 #~ msgctxt "KFontChooser|@info:tooltip"
@@ -3897,11 +3942,6 @@ msgstr ""
 #~ msgctxt "@item license (short name)"
 #~ msgid "LGPL v3"
 #~ msgstr "LGPL"
-
-#, fuzzy
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "&Tanlash"
 
 #, fuzzy
 #~ msgctxt "@item license"
@@ -5775,9 +5815,6 @@ msgstr ""
 #~ "Yopib xabardan\n"
 #~ "voz kechaymi?"
 
-#~ msgid "Configure"
-#~ msgstr "Moslash"
-
 #~ msgid "Job"
 #~ msgstr "Vazifa"
 
@@ -6060,9 +6097,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Tugmalar birikmasini moslash"
-
-#~ msgid "Print"
-#~ msgstr "Bosib chiqarish"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -7408,9 +7442,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Oʻyin"
 
-#~ msgid "&Edit"
-#~ msgstr "&Tahrirlash"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "Koʻchi&rish"
@@ -8049,9 +8080,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Saqlash"
 
 #, fuzzy
 #~ msgid ""
@@ -8912,10 +8940,6 @@ msgstr ""
 #~ msgstr "Oʻrnatish"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "Q&idirish:"
-
-#, fuzzy
 #~ msgid "Become a Fan"
 #~ msgstr "Faks (uy)"
 
@@ -9142,11 +9166,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "...bilan &ochish"
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Ochish"
 
 #, fuzzy
 #~ msgctxt "@label File name"

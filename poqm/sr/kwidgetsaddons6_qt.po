@@ -1093,7 +1093,7 @@ msgstr ""
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Унесите израз или знак за тражење"
 
 #: kcharselect.cpp:393
@@ -1106,11 +1106,11 @@ msgstr "Унесите израз или знак за тражење"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Нађи..."
+msgid "&Find…"
+msgstr "&Нађи"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1530,7 +1530,7 @@ msgstr "непознато"
 #| msgctxt "KColorCombo|Custom color"
 #| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Посебна..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1920,7 +1920,7 @@ msgstr ""
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Изабери..."
 
 #: kfontrequester.cpp:190
@@ -2071,7 +2071,7 @@ msgstr "Затвори поруку"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2108,7 +2108,7 @@ msgstr "Обрасци"
 #| msgctxt "KMimeTypeChooser|"
 #| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Уреди..."
 
 #: kmimetypechooser.cpp:141
@@ -2229,8 +2229,8 @@ msgid "Password strength &meter:"
 msgstr "&Мерач јачине лозинке:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr ""
 
 #: kpassworddialog.cpp:52
@@ -2442,8 +2442,11 @@ msgid "Do not save data"
 msgstr "Немој да сачуваш податке"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Сачувај &као..."
 
 #: kstandardguiitem.cpp:186
@@ -2473,8 +2476,11 @@ msgstr ""
 "Користите ово када испробавате различите вредности."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Администраторски &режим..."
 
 #: kstandardguiitem.cpp:205
@@ -2579,8 +2585,11 @@ msgid "Go forward one step"
 msgstr "Иди корак напред"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "&Штампај..."
 
 #: kstandardguiitem.cpp:278
@@ -2609,8 +2618,11 @@ msgid "Delete item(s)"
 msgstr "Обриши ставке"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Отвори..."
 
 #: kstandardguiitem.cpp:301
@@ -2644,8 +2656,11 @@ msgid "&Insert"
 msgstr "&Уметни"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "&Подеси..."
 
 #: kstandardguiitem.cpp:330
@@ -2714,6 +2729,13 @@ msgstr "Цео екран"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Развуци прозор преко целог екрана"
+
+#, fuzzy
+#~| msgctxt "KCharSelect|"
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Нађи..."
 
 #~ msgctxt "KFontChooser|@item font"
 #~ msgid "Bold Italic"

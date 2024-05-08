@@ -1050,7 +1050,7 @@ msgstr ""
 
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr ""
 
 #: kcharselect.cpp:393
@@ -1060,7 +1060,7 @@ msgstr ""
 
 #: kcharselect.cpp:400
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
+msgid "&Find…"
 msgstr ""
 
 #: kcharselect.cpp:424
@@ -1445,7 +1445,7 @@ msgstr ""
 
 #: kcolorcombo.cpp:333
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr ""
 
 #: kcontextualhelpbutton.cpp:80
@@ -1711,7 +1711,7 @@ msgstr ""
 
 #: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr ""
 
 #: kfontrequester.cpp:190
@@ -1823,7 +1823,7 @@ msgstr ""
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -1848,7 +1848,7 @@ msgstr "Patrones"
 
 #: kmimetypechooser.cpp:126
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr ""
 
 #: kmimetypechooser.cpp:141
@@ -1934,8 +1934,8 @@ msgid "Password strength &meter:"
 msgstr ""
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr ""
 
 #: kpassworddialog.cpp:52
@@ -2096,7 +2096,7 @@ msgstr ""
 
 #: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr ""
 
 #: kstandardguiitem.cpp:186
@@ -2124,7 +2124,7 @@ msgstr ""
 
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr ""
 
 #: kstandardguiitem.cpp:205
@@ -2227,7 +2227,7 @@ msgstr ""
 
 #: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr ""
 
 #: kstandardguiitem.cpp:278
@@ -2257,7 +2257,7 @@ msgstr ""
 
 #: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr ""
 
 #: kstandardguiitem.cpp:301
@@ -2292,7 +2292,7 @@ msgstr ""
 
 #: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr ""
 
 #: kstandardguiitem.cpp:330

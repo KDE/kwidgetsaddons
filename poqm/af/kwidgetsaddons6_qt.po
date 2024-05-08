@@ -1459,7 +1459,7 @@ msgstr ""
 #: kcharselect.cpp:391
 #, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Internet Soektog"
 
 #: kcharselect.cpp:393
@@ -1469,10 +1469,10 @@ msgstr ""
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "Soek..."
+msgid "&Find…"
+msgstr "Soek"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1950,10 +1950,9 @@ msgstr "Onbekend"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Pasmaak..."
+msgid "Custom…"
+msgstr "Pasmaak"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2309,7 +2308,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Kies..."
 
 #: kfontrequester.cpp:190
@@ -2463,7 +2462,7 @@ msgstr "Maak Boodskap Toe"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2496,10 +2495,10 @@ msgstr "Braïlle"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "Redigeer..."
+msgid "&Edit…"
+msgstr "Redigeer"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2631,9 +2630,9 @@ msgstr "Wagwoorde sterkte meter:"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Soek"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Soek:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2838,10 +2837,10 @@ msgstr "Moet nie stoor data"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Stoor As..."
+msgid "Save &As…"
+msgstr "Stoor As"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -2880,7 +2879,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Administrasie Mode..."
 
 #: kstandardguiitem.cpp:205
@@ -3020,10 +3019,10 @@ msgstr "Gaan vorentoe een step"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "Druk..."
+msgid "&Print…"
+msgstr "Druk"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3062,10 +3061,9 @@ msgstr "Vee item(me) uit"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "Maak oop..."
+msgid "&Open…"
+msgstr "Maak oop"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3111,10 +3109,10 @@ msgstr "Voeg in"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Stel op..."
+msgid "Confi&gure…"
+msgstr "Stel op"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3200,6 +3198,53 @@ msgstr "Volskerm Modus"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "Soek..."
+
+#, fuzzy
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Pasmaak..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "Redigeer..."
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Soek"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Stoor As..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "Druk..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "Maak oop..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Stel op..."
 
 #, fuzzy
 #~| msgid "Font size<br><i>fixed</i> or <i>relative</i><br>to environment"
@@ -4257,11 +4302,6 @@ msgstr ""
 #~ msgctxt "@item license (short name)"
 #~ msgid "LGPL v3"
 #~ msgstr "LGPL"
-
-#, fuzzy
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Pasmaak"
 
 #, fuzzy
 #~ msgctxt "@item license"
@@ -6226,9 +6266,6 @@ msgstr ""
 #~ "Maak toe en gooi weg\n"
 #~ "geredigeerde boodskap?"
 
-#~ msgid "Configure"
-#~ msgstr "Stel op"
-
 #, fuzzy
 #~ msgid "Job"
 #~ msgstr "Jom"
@@ -6544,9 +6581,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Stel Kortpaaie Op"
-
-#~ msgid "Print"
-#~ msgstr "Druk"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -8098,9 +8132,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "Speletjie"
 
-#~ msgid "&Edit"
-#~ msgstr "Redigeer"
-
 #, fuzzy
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
@@ -8780,9 +8811,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - Bcc: "
-
-#~ msgid "Save As"
-#~ msgstr "Stoor As"
 
 #, fuzzy
 #~ msgid ""
@@ -9768,10 +9796,6 @@ msgstr ""
 #~ msgstr "Installeer"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "Soek:"
-
-#, fuzzy
 #~ msgid "Become a Fan"
 #~ msgstr "Huis Faks"
 
@@ -9998,11 +10022,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Maak oop met..."
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "Maak oop"
 
 #, fuzzy
 #~ msgctxt "@label File name"

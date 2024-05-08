@@ -1063,8 +1063,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Symboly pre staršie výpočty"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Zadajte hľadaný výraz alebo znak"
 
 #: kcharselect.cpp:393
@@ -1073,9 +1076,12 @@ msgid "Enter a search term or character here"
 msgstr "Sem zadajte hľadaný výraz alebo znak"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "Nájsť..."
+msgid "&Find…"
+msgstr "&Nájsť"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1458,9 +1464,12 @@ msgid "Unknown"
 msgstr "Neznáme"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Vlastné..."
+msgid "Custom…"
+msgstr "Vlastná"
 
 #: kcontextualhelpbutton.cpp:80
 #, fuzzy
@@ -1769,8 +1778,11 @@ msgid "Show only monospaced fonts"
 msgstr "Zobraziť iba neproporcionálne písma"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Vybrať Písmo..."
 
 #: kfontrequester.cpp:190
@@ -1897,7 +1909,7 @@ msgstr "Zatvoriť správu"
 #| msgctxt "KMimeTypeChooser|"
 #| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Hľadať vzor typu alebo názvu súboru..."
 
 #: kmimetypechooser.cpp:89
@@ -1921,9 +1933,11 @@ msgid "Patterns"
 msgstr "Vzorky"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Upraviť..."
+msgid "&Edit…"
+msgstr "&Upraviť"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2025,10 +2039,10 @@ msgstr "Meter kvality hesla:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Hľadať"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Hľadať:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2195,9 +2209,11 @@ msgid "Do not save data"
 msgstr "Neukladať dáta"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Uložiť &ako..."
+msgid "Save &As…"
+msgstr "Uložiť ako"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2226,8 +2242,11 @@ msgstr ""
 "Použite to na vyskúšanie rôznych nastavení."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Režim &administrátora..."
 
 #: kstandardguiitem.cpp:205
@@ -2332,9 +2351,11 @@ msgid "Go forward one step"
 msgstr "Prejsť dopredu o jeden krok"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Tlačiť..."
+msgid "&Print…"
+msgstr "Tlačiť"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2362,9 +2383,12 @@ msgid "Delete item(s)"
 msgstr "Odstrániť položky"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Otvoriť..."
+msgid "&Open…"
+msgstr "&Otvoriť"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2397,9 +2421,11 @@ msgid "&Insert"
 msgstr "&Vložiť"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Nastaviť..."
+msgid "Confi&gure…"
+msgstr "Nastaviť"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2467,6 +2493,40 @@ msgstr "Celá obrazovka"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Zobraziť v okno na celú obrazovku"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "Nájsť..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Vlastné..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Upraviť..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Hľadať"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Uložiť &ako..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Tlačiť..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Otvoriť..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Nastaviť..."
 
 #, fuzzy
 #~| msgctxt "KFontChooser|"
@@ -3559,10 +3619,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License verzia 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Vlastná"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5785,9 +5841,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 #~ "Zatvoriť a zahodiť\n"
 #~ "upravovanú správu?"
 
-#~ msgid "Configure"
-#~ msgstr "Nastaviť"
-
 #~ msgid "Job"
 #~ msgstr "Úloha"
 
@@ -6147,9 +6200,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Nastaviť klávesové skratky"
-
-#~ msgid "Print"
-#~ msgstr "Tlačiť"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Štandardné"
@@ -7710,9 +7760,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 #~ msgid "&Game"
 #~ msgstr "&Hra"
 
-#~ msgid "&Edit"
-#~ msgstr "&Upraviť"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "Ťa&h"
@@ -8436,9 +8483,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Uložiť ako"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9692,9 +9736,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 #~ msgid "Order by:"
 #~ msgstr "Zoradiť podľa:"
 
-#~ msgid "Search:"
-#~ msgstr "Hľadať:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Domovská stránka</a>"
 
@@ -9989,10 +10030,6 @@ msgstr "Zobraziť v okno na celú obrazovku"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Otvoriť pomocou..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Otvoriť"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

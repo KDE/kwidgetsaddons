@@ -1058,8 +1058,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Symbol for eldre datamaskiner"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Skriv inn ein søkjetekst eller eit teikn …"
 
 #: kcharselect.cpp:393
@@ -1068,9 +1071,12 @@ msgid "Enter a search term or character here"
 msgstr "Skriv inn ein søkjetekst eller eit teikn her"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Finn …"
+msgid "&Find…"
+msgstr "&Finn"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1453,8 +1459,11 @@ msgid "Unknown"
 msgstr "Ukjend"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Tilpassa …"
 
 #: kcontextualhelpbutton.cpp:80
@@ -1723,8 +1732,11 @@ msgid "Show only monospaced fonts"
 msgstr "Vis berre fastbreiddeskrifter"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Vel skrift …"
 
 #: kfontrequester.cpp:190
@@ -1839,8 +1851,11 @@ msgid "Close message"
 msgstr "Lukk melding"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Søk etter filtype eller filnamnmønster …"
 
 #: kmimetypechooser.cpp:89
@@ -1864,8 +1879,11 @@ msgid "Patterns"
 msgstr "Mønster"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Rediger …"
 
 #: kmimetypechooser.cpp:141
@@ -1966,8 +1984,11 @@ msgid "Password strength &meter:"
 msgstr "Styrke&målar for passord:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "Søk …"
 
 #: kpassworddialog.cpp:52
@@ -2129,8 +2150,11 @@ msgid "Do not save data"
 msgstr "Ikkje lagra data"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Lagra &som …"
 
 #: kstandardguiitem.cpp:186
@@ -2160,8 +2184,11 @@ msgstr ""
 "Bruk dette for å prøva ulike innstillingar."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Administrator&modus …"
 
 #: kstandardguiitem.cpp:205
@@ -2265,8 +2292,11 @@ msgid "Go forward one step"
 msgstr "Gå eitt steg fram"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "Skriv &ut …"
 
 #: kstandardguiitem.cpp:278
@@ -2295,8 +2325,11 @@ msgid "Delete item(s)"
 msgstr "Slett element"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Opna …"
 
 #: kstandardguiitem.cpp:301
@@ -2330,8 +2363,11 @@ msgid "&Insert"
 msgstr "Set &inn"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "&Set opp …"
 
 #: kstandardguiitem.cpp:330
@@ -2400,3 +2436,7 @@ msgstr "Fullskjerm"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Vis vindauget over heile skjermen"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Finn …"

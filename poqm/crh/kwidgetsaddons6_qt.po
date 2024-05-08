@@ -1622,7 +1622,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Bir qıdıruv şartını yaki remizini mında kirsetiñiz"
 
 #: kcharselect.cpp:393
@@ -1634,10 +1634,10 @@ msgstr "Bir qıdıruv şartını yaki remizini mında kirsetiñiz"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Tap..."
+msgid "&Find…"
+msgstr "&Tap"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2181,7 +2181,7 @@ msgstr "Bilinmegen"
 #| msgctxt "@item license"
 #| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Mahsus"
 
 #: kcontextualhelpbutton.cpp:80
@@ -2544,7 +2544,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Sayla..."
 
 #: kfontrequester.cpp:190
@@ -2698,7 +2698,7 @@ msgstr "Risaleni Qapat"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2731,10 +2731,10 @@ msgstr "Qabartma Yazı Örnekleri"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Tarir..."
+msgid "&Edit…"
+msgstr "&Tarir"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2841,8 +2841,8 @@ msgstr "Sır-söz küç ölçemi:"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "&Qıdır"
 
 #: kpassworddialog.cpp:52
@@ -3057,10 +3057,10 @@ msgstr "Berüvlerni saqlama"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Şö&yle Saqla..."
+msgid "Save &As…"
+msgstr "Şöyle Saqla"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3095,7 +3095,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Müdir &Nizamı"
 
 #: kstandardguiitem.cpp:205
@@ -3236,10 +3236,10 @@ msgstr "Bir adım ileri bar"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Bastır..."
+msgid "&Print…"
+msgstr "Bastır"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3278,10 +3278,9 @@ msgstr "Unsur(lar)nı sil"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Aç..."
+msgid "&Open…"
+msgstr "&Aç"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3328,10 +3327,10 @@ msgstr "&Qıstır"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Ayarla..."
+msgid "Confi&gure…"
+msgstr "Ayarla"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3417,6 +3416,54 @@ msgstr "Tam Ekran"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Tap..."
+
+#, fuzzy
+#~| msgctxt "@item license"
+#~| msgid "Custom"
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Mahsus"
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Tarir..."
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "&Qıdır"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Şö&yle Saqla..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Bastır..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Aç..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Ayarla..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4311,10 +4358,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Daa Kiçik Umumiy Aleniy Litsenziyası Sürüm 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Mahsus"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6096,9 +6139,6 @@ msgstr ""
 #~ "edited message?"
 #~ msgstr "Tarir etilgen risale qapatılıp taşlansınmı?"
 
-#~ msgid "Configure"
-#~ msgstr "Ayarla"
-
 #~ msgid "Job"
 #~ msgstr "İş"
 
@@ -6422,9 +6462,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Qısqa-yollarnı Ayarla"
-
-#~ msgid "Print"
-#~ msgstr "Bastır"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "&Ög-belgilemelerge keri dön"
@@ -7794,9 +7831,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Oyun"
 
-#~ msgid "&Edit"
-#~ msgstr "&Tarir"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Avuştır"
@@ -8468,9 +8502,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - KKK (BCC): "
-
-#~ msgid "Save As"
-#~ msgstr "Şöyle Saqla"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9538,10 +9569,6 @@ msgstr ""
 #~ msgstr "Buña köre &sırala:"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "&Qıdır"
-
-#, fuzzy
 #~ msgid "Details for %1"
 #~ msgstr "Telqinler"
 
@@ -9771,11 +9798,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Bunıñnen &Aç..."
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Aç"
 
 #, fuzzy
 #~ msgctxt "@label File name"

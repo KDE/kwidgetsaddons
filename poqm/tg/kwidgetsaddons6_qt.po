@@ -1086,7 +1086,7 @@ msgstr ""
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Вожа ё аломати ҷустуҷӯиро дар ин ҷо ворид намоед"
 
 #: kcharselect.cpp:393
@@ -1099,11 +1099,11 @@ msgstr "Вожа ё аломати ҷустуҷӯиро дар ин ҷо вор�
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Ёфтан..."
+msgid "&Find…"
+msgstr "&Ёфтан"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1520,11 +1520,11 @@ msgstr "Номаълум"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Фармоишӣ..."
+msgid "Custom…"
+msgstr "Дигар"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1904,7 +1904,7 @@ msgstr ""
 #| msgctxt "KFontRequester|"
 #| msgid "Choose Font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Ҳуруфро интихоб намоед..."
 
 #: kfontrequester.cpp:190
@@ -2055,7 +2055,7 @@ msgstr "Пӯшидани паём"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2091,11 +2091,10 @@ msgstr "Шаклвораҳо"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Таҳрир кардан…"
+msgid "&Edit…"
+msgstr "&Таҳрир"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2221,10 +2220,10 @@ msgstr "&Санҷиши қувваи ниҳонвожа:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Поиск"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Ҷустуҷӯ:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2441,9 +2440,11 @@ msgid "Do not save data"
 msgstr "Нигоҳ надоштани иттилоот"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "&Нигоҳ доштан ҳамчун..."
+msgid "Save &As…"
+msgstr "Нигоҳ доштан ҳамчун"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2472,8 +2473,11 @@ msgstr ""
 "Ҳамин тавр шумо метавонед танзимоти гуногунро санҷед."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Реҷаи маъмурӣ..."
 
 #: kstandardguiitem.cpp:205
@@ -2578,9 +2582,11 @@ msgid "Go forward one step"
 msgstr "Як қадам ба пеш"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Чоп кардан…"
+msgid "&Print…"
+msgstr "Чоп кардан"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2608,9 +2614,12 @@ msgid "Delete item(s)"
 msgstr "Нест кардани мавод"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Кушодан..."
+msgid "&Open…"
+msgstr "&Кушодан"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2643,9 +2652,11 @@ msgid "&Insert"
 msgstr "&Дарҷ кардан"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Танзимкунӣ..."
+msgid "Confi&gure…"
+msgstr "Танзимот"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2713,6 +2724,49 @@ msgstr "Экрани пурра"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Намоиш додани равзана дар экрани пурра"
+
+#, fuzzy
+#~| msgctxt "KCharSelect|"
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Ёфтан..."
+
+#, fuzzy
+#~| msgctxt "KColorCombo|Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Фармоишӣ..."
+
+#, fuzzy
+#~| msgctxt "KMimeTypeChooser|"
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Таҳрир кардан…"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Поиск"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "&Нигоҳ доштан ҳамчун..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Чоп кардан…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Кушодан..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Танзимкунӣ..."
 
 #, fuzzy
 #~| msgctxt "KFontChooser|"
@@ -3817,10 +3871,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Дигар"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5975,9 +6025,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 #~ "Паёми воридшударо\n"
 #~ "хуруҷ ва рад мекунед?"
 
-#~ msgid "Configure"
-#~ msgstr "Танзимот"
-
 #~ msgid "Job"
 #~ msgstr "Кор"
 
@@ -6338,9 +6385,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Танзими тугмачаҳои якҷояшуда"
-
-#~ msgid "Print"
-#~ msgstr "Чоп кардан"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Бозсозии аслӣ"
@@ -7844,9 +7888,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 #~ msgid "&Game"
 #~ msgstr "&Бозӣ"
 
-#~ msgid "&Edit"
-#~ msgstr "&Таҳрир"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Таҳвил"
@@ -8547,9 +8588,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 
 #~ msgid " - BCC: "
 #~ msgstr " - Нусхаи пинҳонӣ:' "
-
-#~ msgid "Save As"
-#~ msgstr "Нигоҳ доштан ҳамчун"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9750,9 +9788,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 #~ msgid "Order by:"
 #~ msgstr "Тартибдиҳӣ бо:"
 
-#~ msgid "Search:"
-#~ msgstr "Ҷустуҷӯ:"
-
 #, fuzzy
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Саҳифаи асосиро кушоед</a>"
@@ -9997,10 +10032,6 @@ msgstr "Намоиш додани равзана дар экрани пурра"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Кушодан бо..."
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Кушодан"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

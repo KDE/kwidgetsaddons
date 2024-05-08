@@ -1056,8 +1056,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "레거시 컴퓨팅 기호"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "검색할 항목이나 글자를 입력하십시오..."
 
 #: kcharselect.cpp:393
@@ -1066,9 +1069,12 @@ msgid "Enter a search term or character here"
 msgstr "여기에 검색할 항목이나 글자를 입력하십시오"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "찾기(&F)..."
+msgid "&Find…"
+msgstr "찾기(&F)"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1451,8 +1457,11 @@ msgid "Unknown"
 msgstr "알 수 없음"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "사용자 정의..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1722,8 +1731,11 @@ msgid "Show only monospaced fonts"
 msgstr "고정폭 글꼴만 표시"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "글꼴 선택..."
 
 #: kfontrequester.cpp:190
@@ -1838,8 +1850,11 @@ msgid "Close message"
 msgstr "메시지 닫기"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "파일 형식이나 파일 이름 패턴 찾기..."
 
 #: kmimetypechooser.cpp:89
@@ -1863,8 +1878,11 @@ msgid "Patterns"
 msgstr "패턴"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "편집(&E)..."
 
 #: kmimetypechooser.cpp:141
@@ -1960,8 +1978,11 @@ msgid "Password strength &meter:"
 msgstr "암호 보안 등급(&M):"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "검색..."
 
 #: kpassworddialog.cpp:52
@@ -2121,8 +2142,11 @@ msgid "Do not save data"
 msgstr "데이터를 저장하지 않습니다"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "다른 이름으로 저장(&A)..."
 
 #: kstandardguiitem.cpp:186
@@ -2152,8 +2176,11 @@ msgstr ""
 "다른 설정을 시도하시려면 이것을 사용하십시오."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "관리자 모드(&M)..."
 
 #: kstandardguiitem.cpp:205
@@ -2257,8 +2284,11 @@ msgid "Go forward one step"
 msgstr "한 단계 앞으로 가기"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "인쇄(&P)..."
 
 #: kstandardguiitem.cpp:278
@@ -2287,8 +2317,11 @@ msgid "Delete item(s)"
 msgstr "항목 지우기"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "열기(&O)..."
 
 #: kstandardguiitem.cpp:301
@@ -2322,8 +2355,11 @@ msgid "&Insert"
 msgstr "삽입(&I)"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "설정(&G)..."
 
 #: kstandardguiitem.cpp:330
@@ -2392,6 +2428,10 @@ msgstr "전체 화면"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "창을 전체 화면으로 표시"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "찾기(&F)..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"

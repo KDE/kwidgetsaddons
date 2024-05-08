@@ -1603,7 +1603,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter search phrase here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Vendosni frazën e kërkimit këtu"
 
 #: kcharselect.cpp:393
@@ -1615,10 +1615,10 @@ msgstr "Vendosni frazën e kërkimit këtu"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Gjej..."
+msgid "&Find…"
+msgstr "&Gjej"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2143,11 +2143,11 @@ msgstr "E Panjohur"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "I Vetëzgjedhur..."
+msgid "Custom…"
+msgstr "Personalizuar"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2509,7 +2509,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Zgjidhni..."
 
 #: kfontrequester.cpp:190
@@ -2663,7 +2663,7 @@ msgstr "Mbylle Mesazhin"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2696,10 +2696,10 @@ msgstr "Kampione braille"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Modifiko..."
+msgid "&Edit…"
+msgstr "&Modifiko"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2835,9 +2835,10 @@ msgstr "Matësi i forcës së fjalëkalimit:"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "&Kërko"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Kërko:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3051,10 +3052,10 @@ msgstr "Mos i ruaj të dhënat"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Ruaji &Si..."
+msgid "Save &As…"
+msgstr "Ruaje Si"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3089,7 +3090,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Mënyra e &Administratorit..."
 
 #: kstandardguiitem.cpp:205
@@ -3225,10 +3226,10 @@ msgstr "Shko përpara një hap"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Printo..."
+msgid "&Print…"
+msgstr "Printo"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3267,10 +3268,9 @@ msgstr "Fshije temën(at)"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Hape..."
+msgid "&Open…"
+msgstr "Hape"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3317,10 +3317,10 @@ msgstr "&Fut"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Konfi&guro..."
+msgid "Confi&gure…"
+msgstr "Konfiguro"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3408,6 +3408,54 @@ msgstr "Tërë Ekrani"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Gjej..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "I Vetëzgjedhur..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Modifiko..."
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "&Kërko"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Ruaji &Si..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Printo..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Hape..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Konfi&guro..."
 
 #, fuzzy
 #~| msgid ""
@@ -4456,10 +4504,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Liçensa Më Pak e Përgjithshme Publike GNU Versioni 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Personalizuar"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6153,9 +6197,6 @@ msgstr ""
 #~ "Ta mbyllim dhe zhdukim\n"
 #~ "mesazhin e modifikuar?"
 
-#~ msgid "Configure"
-#~ msgstr "Konfiguro"
-
 #~ msgid "Job"
 #~ msgstr "Puna"
 
@@ -6457,9 +6498,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Konfiguro Shkurtoret"
-
-#~ msgid "Print"
-#~ msgstr "Printo"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -7803,9 +7841,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Lojë"
 
-#~ msgid "&Edit"
-#~ msgstr "&Modifiko"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Zhvendos"
@@ -8429,9 +8464,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Ruaje Si"
 
 #, fuzzy
 #~ msgid ""
@@ -9379,9 +9411,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "Rradhit sipas:"
 
-#~ msgid "Search:"
-#~ msgstr "Kërko:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Homepage</a>"
 
@@ -9590,11 +9619,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Hap Skriptin"
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "Hape"
 
 #, fuzzy
 #~ msgctxt "@label File name"

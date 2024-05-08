@@ -1449,7 +1449,7 @@ msgstr ""
 #: kcharselect.cpp:391
 #, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Chwiliad Rhyngrwyd"
 
 #: kcharselect.cpp:393
@@ -1459,9 +1459,9 @@ msgstr ""
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
+msgid "&Find…"
 msgstr "&Canfod"
 
 #: kcharselect.cpp:424
@@ -1938,10 +1938,9 @@ msgstr "Anhysbys"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Addasu ..."
+msgid "Custom…"
+msgstr "A&ddasu"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2297,7 +2296,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Dewis..."
 
 #: kfontrequester.cpp:190
@@ -2451,7 +2450,7 @@ msgstr "Cau Neges"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2483,10 +2482,10 @@ msgstr " Braille"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Golygu..."
+msgid "&Edit…"
+msgstr "&Golygu"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2619,9 +2618,9 @@ msgstr "Faint mor gryf yw'r cyfrinair:"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Chwilio"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "C&hwilio"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2826,10 +2825,10 @@ msgstr "Peidio a chadw'r data"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Cadw &Fel..."
+msgid "Save &As…"
+msgstr "Cadw Fel"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -2868,7 +2867,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Modd G&weinyddwr..."
 
 #: kstandardguiitem.cpp:205
@@ -3007,10 +3006,10 @@ msgstr "Ewch cam ymlaen"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Argraffu"
+msgid "&Print…"
+msgstr "Argraffu"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3049,10 +3048,9 @@ msgstr " Dileu eitem(au)"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Agor..."
+msgid "&Open…"
+msgstr "&Agor"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3098,10 +3096,10 @@ msgstr "&Mewnosod"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Ffurf&weddu..."
+msgid "Confi&gure…"
+msgstr "Ffurfweddu"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3187,6 +3185,53 @@ msgstr "Modd Sgrîn Llawn"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Canfod"
+
+#, fuzzy
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Addasu ..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Golygu..."
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Chwilio"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Cadw &Fel..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Argraffu"
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Agor..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Ffurf&weddu..."
 
 #, fuzzy
 #~| msgid "Font size<br><i>fixed</i> or <i>relative</i><br>to environment"
@@ -4155,11 +4200,6 @@ msgstr ""
 #~ msgctxt "@item license (short name)"
 #~ msgid "LGPL v3"
 #~ msgstr "LGPL"
-
-#, fuzzy
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "A&ddasu"
 
 #, fuzzy
 #~ msgctxt "@item license"
@@ -6121,9 +6161,6 @@ msgstr ""
 #~ "Cau a taflu'r neges\n"
 #~ " a olygwyd?"
 
-#~ msgid "Configure"
-#~ msgstr "Ffurfweddu"
-
 #, fuzzy
 #~ msgid "Job"
 #~ msgstr "Jom"
@@ -6427,9 +6464,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Ffurfweddu Byrlwybrau"
-
-#~ msgid "Print"
-#~ msgstr "Argraffu"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -7946,9 +7980,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Gêm"
 
-#~ msgid "&Edit"
-#~ msgstr "&Golygu"
-
 #, fuzzy
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
@@ -8637,9 +8668,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC:"
-
-#~ msgid "Save As"
-#~ msgstr "Cadw Fel"
 
 #, fuzzy
 #~ msgid ""
@@ -9493,10 +9521,6 @@ msgstr ""
 #~ msgstr "Arsefydlu"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "C&hwilio"
-
-#, fuzzy
 #~ msgid "Become a Fan"
 #~ msgstr "Facs Cartref"
 
@@ -9723,11 +9747,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Agor Gyda..."
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Agor"
 
 #, fuzzy
 #~ msgctxt "@label File name"

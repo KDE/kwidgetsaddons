@@ -1061,8 +1061,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "परम्परागत कंप्यूटिंग के लिए चिह्न"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "खोजने के लिए शब्द या वर्ण दर्ज करें..."
 
 #: kcharselect.cpp:393
@@ -1071,9 +1074,12 @@ msgid "Enter a search term or character here"
 msgstr "खोजने के लिए शब्द या वर्ण यहाँ दर्ज करें"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "ढूंढें...(&F)"
+msgid "&Find…"
+msgstr "ढूंढें (&F)"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1456,9 +1462,12 @@ msgid "Unknown"
 msgstr "अज्ञात"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "तदनुकूल..."
+msgid "Custom…"
+msgstr "मनपसंद"
 
 #: kcontextualhelpbutton.cpp:80
 #, fuzzy
@@ -1757,8 +1766,11 @@ msgid "Show only monospaced fonts"
 msgstr "सिर्फ समानांतरीय फ़ॉन्ट दिखाएँ"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "फ़ॉन्ट चुनें..."
 
 #: kfontrequester.cpp:190
@@ -1871,8 +1883,11 @@ msgid "Close message"
 msgstr "संदेश बंद करें"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "फ़ाइल प्रकार या फ़ाइल नाम पैटर्न के लिए खोजें ..."
 
 #: kmimetypechooser.cpp:89
@@ -1896,9 +1911,11 @@ msgid "Patterns"
 msgstr "पैटर्न्स"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "संपादन... (&E)"
+msgid "&Edit…"
+msgstr "संपादन (&E)"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2007,10 +2024,10 @@ msgstr "पासवर्ड बल मीटर: (&m)"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "ढूंढें"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "ढूंढें:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2175,9 +2192,11 @@ msgid "Do not save data"
 msgstr "डाटा सहेजें नहीं"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "ऐसे सहेजें... (&A)"
+msgid "Save &As…"
+msgstr "ऐसे सहेजें"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2206,8 +2225,11 @@ msgstr ""
 "इसका उपयोग भिन्न विन्यास को आज़माने के लिए कर सकते हैं."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "प्रशासक मोड... (&M)"
 
 #: kstandardguiitem.cpp:205
@@ -2311,9 +2333,11 @@ msgid "Go forward one step"
 msgstr "एक कदम आगे जाएं"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "छापें...(&P)"
+msgid "&Print…"
+msgstr "छापें"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2341,9 +2365,12 @@ msgid "Delete item(s)"
 msgstr "वस्तु(एँ) मिटाएँ"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "खोलें... (&O)"
+msgid "&Open…"
+msgstr "खोलें (&O)"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2376,9 +2403,11 @@ msgid "&Insert"
 msgstr "प्रविष्ट (&I)"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "विन्यस्त करें... (&g)"
+msgid "Confi&gure…"
+msgstr "कॉन्फ़िगर"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2446,6 +2475,40 @@ msgstr "पूरा स्क्रीन"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "विंडो को संपूर्ण स्क्रीन में दिखायें"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "ढूंढें...(&F)"
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "तदनुकूल..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "संपादन... (&E)"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "ढूंढें"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "ऐसे सहेजें... (&A)"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "छापें...(&P)"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "खोलें... (&O)"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "विन्यस्त करें... (&g)"
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3402,10 +3465,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "जीएनयू जनरल पब्लिक लाइसेंस संस्करण ३"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "मनपसंद"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5321,9 +5380,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 #~ "बन्द कर रद्द करें\n"
 #~ " संपादित संदेश?"
 
-#~ msgid "Configure"
-#~ msgstr "कॉन्फ़िगर"
-
 #~ msgid "Job"
 #~ msgstr "कार्य"
 
@@ -5661,9 +5717,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "शॉर्ट कट कॉन्फ़िगर कीजिए"
-
-#~ msgid "Print"
-#~ msgstr "छापें"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "डिफ़ॉल्ट्स पर लाएँ"
@@ -7107,9 +7160,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 #~ msgid "&Game"
 #~ msgstr "खेल (&G)"
 
-#~ msgid "&Edit"
-#~ msgstr "संपादन (&E)"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "खिसकाएँ (&M) "
@@ -7771,9 +7821,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 
 #~ msgid " - BCC: "
 #~ msgstr " - बेनामी प्रतिलिपि: "
-
-#~ msgid "Save As"
-#~ msgstr "ऐसे सहेजें"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -8853,9 +8900,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 #~ msgid "Order by:"
 #~ msgstr "ऐसे जमाएँ"
 
-#~ msgid "Search:"
-#~ msgstr "ढूंढें:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">मुखपृष्ठ</a>"
 
@@ -9103,10 +9147,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "के साथ खोलें...(&O)"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "खोलें (&O)"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

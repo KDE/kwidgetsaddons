@@ -1055,8 +1055,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Symbols for Legacy Computing"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Enter a search term or character..."
 
 #: kcharselect.cpp:393
@@ -1065,9 +1068,12 @@ msgid "Enter a search term or character here"
 msgstr "Enter a search term or character here"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Find..."
+msgid "&Find…"
+msgstr "&Find"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1450,9 +1456,12 @@ msgid "Unknown"
 msgstr "Unknown"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Custom..."
+msgid "Custom…"
+msgstr "Custom"
 
 #: kcontextualhelpbutton.cpp:80
 #, fuzzy
@@ -1721,8 +1730,11 @@ msgid "Show only monospaced fonts"
 msgstr "Show only mono-spaced fonts"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Choose font..."
 
 #: kfontrequester.cpp:190
@@ -1837,8 +1849,11 @@ msgid "Close message"
 msgstr "Close message"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Search for file type or filename pattern..."
 
 #: kmimetypechooser.cpp:89
@@ -1862,9 +1877,11 @@ msgid "Patterns"
 msgstr "Patterns"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Edit..."
+msgid "&Edit…"
+msgstr "&Edit"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1964,10 +1981,10 @@ msgstr "Password strength &meter:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Search"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Search:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2133,9 +2150,11 @@ msgid "Do not save data"
 msgstr "Do not save data"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Save &As..."
+msgid "Save &As…"
+msgstr "Save As"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2164,8 +2183,11 @@ msgstr ""
 "Use this to try different settings."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Administrator &Mode..."
 
 #: kstandardguiitem.cpp:205
@@ -2270,9 +2292,11 @@ msgid "Go forward one step"
 msgstr "Go forward one step"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Print..."
+msgid "&Print…"
+msgstr "Print"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2300,9 +2324,12 @@ msgid "Delete item(s)"
 msgstr "Delete item(s)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Open..."
+msgid "&Open…"
+msgstr "&Open"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2335,9 +2362,11 @@ msgid "&Insert"
 msgstr "&Insert"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Confi&gure..."
+msgid "Confi&gure…"
+msgstr "Configure"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2405,6 +2434,40 @@ msgstr "Full Screen"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Display the window in full screen"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Find..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Custom..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Edit..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Search"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Save &As..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Print..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Open..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Confi&gure..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3480,10 +3543,6 @@ msgstr "Display the window in full screen"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public Licence Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Custom"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5673,9 +5732,6 @@ msgstr "Display the window in full screen"
 #~ "Close and discard\n"
 #~ "edited message?"
 
-#~ msgid "Configure"
-#~ msgstr "Configure"
-
 #~ msgid "Job"
 #~ msgstr "Job"
 
@@ -6035,9 +6091,6 @@ msgstr "Display the window in full screen"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Configure Shortcuts"
-
-#~ msgid "Print"
-#~ msgstr "Print"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Reset to Defaults"
@@ -7582,9 +7635,6 @@ msgstr "Display the window in full screen"
 #~ msgid "&Game"
 #~ msgstr "&Game"
 
-#~ msgid "&Edit"
-#~ msgstr "&Edit"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Move"
@@ -8306,9 +8356,6 @@ msgstr "Display the window in full screen"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Save As"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9570,9 +9617,6 @@ msgstr "Display the window in full screen"
 #~ msgid "Order by:"
 #~ msgstr "Order by:"
 
-#~ msgid "Search:"
-#~ msgstr "Search:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Homepage</a>"
 
@@ -9859,10 +9903,6 @@ msgstr "Display the window in full screen"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Open with"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Open"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

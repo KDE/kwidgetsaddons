@@ -1102,7 +1102,7 @@ msgstr ""
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "ここに検索語または文字を入力します"
 
 #: kcharselect.cpp:393
@@ -1115,11 +1115,11 @@ msgstr "ここに検索語または文字を入力します"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "検索(&F)..."
+msgid "&Find…"
+msgstr "検索(&F)"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1537,7 +1537,7 @@ msgstr "未知"
 #| msgctxt "KColorCombo|Custom color"
 #| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "カスタム..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1915,7 +1915,7 @@ msgstr ""
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "選択..."
 
 #: kfontrequester.cpp:190
@@ -2065,7 +2065,7 @@ msgstr "メッセージを閉じる"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2102,7 +2102,7 @@ msgstr "パターン"
 #| msgctxt "KMimeTypeChooser|"
 #| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "編集(&E)..."
 
 #: kmimetypechooser.cpp:141
@@ -2221,8 +2221,8 @@ msgid "Password strength &meter:"
 msgstr "パスワード強度計:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr ""
 
 #: kpassworddialog.cpp:52
@@ -2436,8 +2436,11 @@ msgid "Do not save data"
 msgstr "データを保存しません"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "名前を付けて保存(&A)..."
 
 #: kstandardguiitem.cpp:186
@@ -2467,8 +2470,11 @@ msgstr ""
 "他の設定も試すときは、これを利用してください。"
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "管理者モード(&M)..."
 
 #: kstandardguiitem.cpp:205
@@ -2572,8 +2578,11 @@ msgid "Go forward one step"
 msgstr "1 ステップ進みます"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "印刷(&P)..."
 
 #: kstandardguiitem.cpp:278
@@ -2602,8 +2611,11 @@ msgid "Delete item(s)"
 msgstr "アイテムを削除します"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "開く(&O)..."
 
 #: kstandardguiitem.cpp:301
@@ -2637,8 +2649,11 @@ msgid "&Insert"
 msgstr "挿入(&I)"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "設定(&G)..."
 
 #: kstandardguiitem.cpp:330
@@ -2707,3 +2722,10 @@ msgstr "フルスクリーン"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "ウインドウをフルスクリーンで表示します"
+
+#, fuzzy
+#~| msgctxt "KCharSelect|"
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "検索(&F)..."

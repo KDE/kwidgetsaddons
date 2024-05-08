@@ -1436,7 +1436,7 @@ msgstr ""
 #: kcharselect.cpp:391
 #, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "inkonzo ye telnet"
 
 #: kcharselect.cpp:393
@@ -1446,10 +1446,10 @@ msgstr ""
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Fumana..."
+msgid "&Find…"
+msgstr "&Fumana"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1919,10 +1919,9 @@ msgstr "Engaziwayo"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Isiko..."
+msgid "Custom…"
+msgstr "I&siko"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2272,7 +2271,7 @@ msgstr ""
 #: kfontrequester.cpp:184
 #, fuzzy
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Tshintsha..."
 
 #: kfontrequester.cpp:190
@@ -2409,7 +2408,7 @@ msgstr "Vala umyalezo"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2441,10 +2440,10 @@ msgstr "Braille"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Hlela..."
+msgid "&Edit…"
+msgstr "&Hlela"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2542,9 +2541,9 @@ msgstr "Igama eligqithisiweyo"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Phendla"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "(phendla)"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2738,10 +2737,10 @@ msgstr "Sukugcina i data"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Gcina &Njenge..."
+msgid "Save &As…"
+msgstr "Gcina Njenge"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -2778,7 +2777,7 @@ msgstr ""
 
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr ""
 
 #: kstandardguiitem.cpp:205
@@ -2912,10 +2911,10 @@ msgstr "Yiya phambili inyathelo elinye"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Shicilela..."
+msgid "&Print…"
+msgstr "Shicilela"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -2953,10 +2952,9 @@ msgstr "Cima Umba"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Vula..."
+msgid "&Open…"
+msgstr "&Vula"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -2998,9 +2996,10 @@ msgstr "F&aka"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Qwalasela..."
+msgid "Confi&gure…"
+msgstr "Qwalasela"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3083,6 +3082,52 @@ msgstr "Indlela &Yekhusi elipheleleyo"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Fumana..."
+
+#, fuzzy
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Isiko..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Hlela..."
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Phendla"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Gcina &Njenge..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Shicilela..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Vula..."
+
+#, fuzzy
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Qwalasela..."
 
 #, fuzzy
 #~| msgid "Font size<br><i>fixed</i> or <i>relative</i><br>to environment"
@@ -3854,11 +3899,6 @@ msgstr ""
 #~ msgctxt "@item license (short name)"
 #~ msgid "LGPL v3"
 #~ msgstr "PGP"
-
-#, fuzzy
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "I&siko"
 
 #, fuzzy
 #~ msgctxt "@item license"
@@ -5741,9 +5781,6 @@ msgstr ""
 #~ "Vala kwaye ulahle ngaphandle\n"
 #~ "umyalezo ohleliweyo?"
 
-#~ msgid "Configure"
-#~ msgstr "Qwalasela"
-
 #, fuzzy
 #~ msgid "Job Control"
 #~ msgstr "Ctrl"
@@ -6045,9 +6082,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Qwalasela Ezimfutshane"
-
-#~ msgid "Print"
-#~ msgstr "Shicilela"
 
 #, fuzzy
 #~ msgid "Reset to Defaults"
@@ -7504,9 +7538,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Umdlalo"
 
-#~ msgid "&Edit"
-#~ msgstr "&Hlela"
-
 #, fuzzy
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
@@ -8102,9 +8133,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Gcina Njenge"
 
 #, fuzzy
 #~ msgid ""
@@ -8890,10 +8918,6 @@ msgstr ""
 #~ msgstr "Imizekelo"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "(phendla)"
-
-#, fuzzy
 #~ msgid "Become a Fan"
 #~ msgstr "Ifax Yasekhaya"
 
@@ -9120,11 +9144,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Vula nge:"
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Vula"
 
 #, fuzzy
 #~ msgctxt "@label File name"

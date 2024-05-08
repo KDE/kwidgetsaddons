@@ -1071,8 +1071,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "צורות למחשוב מיושן"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "נא למלא כאן ביטוי או תו לחיפוש…"
 
 #: kcharselect.cpp:393
@@ -1081,9 +1084,12 @@ msgid "Enter a search term or character here"
 msgstr "נא למלא כאן ביטוי או תו לחיפוש"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&איתור…"
+msgid "&Find…"
+msgstr "&איתור"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1466,8 +1472,11 @@ msgid "Unknown"
 msgstr "לא ידוע"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "התאמה אישית…"
 
 #: kcontextualhelpbutton.cpp:80
@@ -1734,8 +1743,11 @@ msgid "Show only monospaced fonts"
 msgstr "הצגת גופנים ברוחב אחיד בלבד"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "בחירה…"
 
 #: kfontrequester.cpp:190
@@ -1846,8 +1858,11 @@ msgid "Close message"
 msgstr "סגירת הודעה"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "חיפוש אחר סוג קובץ או תבנית שם קובץ…"
 
 #: kmimetypechooser.cpp:89
@@ -1871,8 +1886,11 @@ msgid "Patterns"
 msgstr "תבניות"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "ע&ריכה…"
 
 #: kmimetypechooser.cpp:141
@@ -1970,8 +1988,11 @@ msgid "Password strength &meter:"
 msgstr "מ&ד סיבוכיות הסיסמה:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "חיפוש…"
 
 #: kpassworddialog.cpp:52
@@ -2131,8 +2152,11 @@ msgid "Do not save data"
 msgstr "לא לשמור את הנתונים"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "לשמור &בשם…"
 
 #: kstandardguiitem.cpp:186
@@ -2161,8 +2185,11 @@ msgstr ""
 "האפשרות יכולה לשמש להתנסות במגוון הגדרות."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "מצב &ניהול…"
 
 #: kstandardguiitem.cpp:205
@@ -2266,8 +2293,11 @@ msgid "Go forward one step"
 msgstr "התקדמות צעד אחד קדימה"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "ה&דפסה…"
 
 #: kstandardguiitem.cpp:278
@@ -2296,8 +2326,11 @@ msgid "Delete item(s)"
 msgstr "מחיקת פריט/ים"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&פתיחה…"
 
 #: kstandardguiitem.cpp:301
@@ -2331,8 +2364,11 @@ msgid "&Insert"
 msgstr "הוס&פה"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "הגד&רות…"
 
 #: kstandardguiitem.cpp:330
@@ -2401,6 +2437,10 @@ msgstr "מסך מלא"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "הצגת החלון במסך מלא"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&איתור…"
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"

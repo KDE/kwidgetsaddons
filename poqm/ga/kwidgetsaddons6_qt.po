@@ -1648,7 +1648,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Iontráil téarma cuardaigh nó carachtar anseo"
 
 #: kcharselect.cpp:393
@@ -1660,10 +1660,10 @@ msgstr "Iontráil téarma cuardaigh nó carachtar anseo"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Aimsigh..."
+msgid "&Find…"
+msgstr "&Aimsigh"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2202,11 +2202,11 @@ msgstr "Anaithnid"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Saincheap..."
+msgid "Custom…"
+msgstr "Ceadúnas Saincheaptha"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2604,7 +2604,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Roghnaigh..."
 
 #: kfontrequester.cpp:190
@@ -2758,7 +2758,7 @@ msgstr "Dún an Teachtaireacht"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2792,10 +2792,10 @@ msgstr "Patrúin Braille"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Eagar..."
+msgid "&Edit…"
+msgstr "&Eagar"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2935,10 +2935,10 @@ msgstr "Méadar cáilíochta focail faire:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Cuardaigh"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Cuardaigh:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3157,10 +3157,10 @@ msgstr "Ná sábháil sonraí"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Sábháil M&ar..."
+msgid "Save &As…"
+msgstr "Sábháil Mar"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3203,7 +3203,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Mód an Riarthóra..."
 
 #: kstandardguiitem.cpp:205
@@ -3350,10 +3350,10 @@ msgstr "Téigh ar aghaidh céim amháin"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Priontáil..."
+msgid "&Print…"
+msgstr "Priontáil"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3392,10 +3392,11 @@ msgstr "Scrios mír(eanna)"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Oscail..."
+msgid "&Open…"
+msgstr "&Oscail"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3441,10 +3442,10 @@ msgstr "&Ionsáigh"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Cumrai&gh..."
+msgid "Confi&gure…"
+msgstr "Cumraigh"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3541,6 +3542,55 @@ msgstr "Lánscáileán"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Aimsigh..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Saincheap..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Eagar..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Cuardaigh"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Sábháil M&ar..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Priontáil..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Oscail..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Cumrai&gh..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4741,10 +4791,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Ceadúnas Saincheaptha"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -7032,9 +7078,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 #~ "Dún an teachtaireacht eagraithe\n"
 #~ "gan sábháil?"
 
-#~ msgid "Configure"
-#~ msgstr "Cumraigh"
-
 #~ msgid "Job"
 #~ msgstr "Jab"
 
@@ -7403,9 +7446,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Cumraigh Aicearraí"
-
-#~ msgid "Print"
-#~ msgstr "Priontáil"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Fill ar Réamhshocruithe"
@@ -9023,9 +9063,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 #~ msgid "&Game"
 #~ msgstr "&Cluiche"
 
-#~ msgid "&Edit"
-#~ msgstr "&Eagar"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Bog"
@@ -9764,9 +9801,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Sábháil Mar"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -11048,9 +11082,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 #~ msgid "Order by:"
 #~ msgstr "Ord de réir:"
 
-#~ msgid "Search:"
-#~ msgstr "Cuardaigh:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Leathanach Baile</a>"
 
@@ -11362,10 +11393,6 @@ msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Oscail le"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Oscail"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

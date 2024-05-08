@@ -1057,8 +1057,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Kí hiệu điện toán đời cũ"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Nhập một chuỗi hoặc kí tự tìm kiếm..."
 
 #: kcharselect.cpp:393
@@ -1067,9 +1070,12 @@ msgid "Enter a search term or character here"
 msgstr "Nhập vào đây một chuỗi hoặc kí tự tìm kiếm"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Tìm..."
+msgid "&Find…"
+msgstr "&Tìm"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1452,8 +1458,11 @@ msgid "Unknown"
 msgstr "Không rõ"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Tự chọn..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1723,8 +1732,11 @@ msgid "Show only monospaced fonts"
 msgstr "Chỉ hiện phông chữ đơn cách"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Chọn phông chữ..."
 
 #: kfontrequester.cpp:190
@@ -1839,8 +1851,11 @@ msgid "Close message"
 msgstr "Đóng thông điệp"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Tìm kiểu tệp hoặc dạng mẫu tên tệp..."
 
 #: kmimetypechooser.cpp:89
@@ -1864,8 +1879,11 @@ msgid "Patterns"
 msgstr "Dạng mẫu"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Sửa..."
 
 #: kmimetypechooser.cpp:141
@@ -1962,8 +1980,11 @@ msgid "Password strength &meter:"
 msgstr "Thước đo độ &mạnh mật khẩu:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "Tìm kiếm..."
 
 #: kpassworddialog.cpp:52
@@ -2131,8 +2152,11 @@ msgid "Do not save data"
 msgstr "Đừng lưu dữ liệu"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Lưu thà&nh..."
 
 #: kstandardguiitem.cpp:186
@@ -2162,8 +2186,11 @@ msgstr ""
 "Dùng cách này để thử các thiết lập khác nhau."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Chế độ &Quản trị viên..."
 
 #: kstandardguiitem.cpp:205
@@ -2267,8 +2294,11 @@ msgid "Go forward one step"
 msgstr "Đi tiến một bước"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "&In..."
 
 #: kstandardguiitem.cpp:278
@@ -2297,8 +2327,11 @@ msgid "Delete item(s)"
 msgstr "Xoá (các) mục"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Mở..."
 
 #: kstandardguiitem.cpp:301
@@ -2332,8 +2365,11 @@ msgid "&Insert"
 msgstr "Chè&n"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "&Cấu hình..."
 
 #: kstandardguiitem.cpp:330
@@ -2402,6 +2438,10 @@ msgstr "Toàn màn hình"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Hiển thị cửa sổ toàn màn hình"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Tìm..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"

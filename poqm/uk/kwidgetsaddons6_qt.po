@@ -1061,8 +1061,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Застарілі символи комп'ютерних наук"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Введіть критерій або символ пошуку…"
 
 #: kcharselect.cpp:393
@@ -1071,9 +1074,12 @@ msgid "Enter a search term or character here"
 msgstr "Введіть сюди критерій або символ пошуку"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Пошук…"
+msgid "&Find…"
+msgstr "&Пошук"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1456,8 +1462,11 @@ msgid "Unknown"
 msgstr "невідомий"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Нетиповий"
 
 #: kcontextualhelpbutton.cpp:80
@@ -1724,8 +1733,11 @@ msgid "Show only monospaced fonts"
 msgstr "Показувати лише моноширинні шрифти"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Вибрати шрифт…"
 
 #: kfontrequester.cpp:190
@@ -1840,8 +1852,11 @@ msgid "Close message"
 msgstr "Закрити повідомлення"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Шукати тип файлів або назву файла за взірцем…"
 
 #: kmimetypechooser.cpp:89
@@ -1865,8 +1880,11 @@ msgid "Patterns"
 msgstr "Взірці"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Редагувати…"
 
 #: kmimetypechooser.cpp:141
@@ -1968,8 +1986,11 @@ msgid "Password strength &meter:"
 msgstr "Вимірювання с&кладності паролю:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "Шукати…"
 
 #: kpassworddialog.cpp:52
@@ -2131,8 +2152,11 @@ msgid "Do not save data"
 msgstr "Не зберігати дані"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Зберегти &як…"
 
 #: kstandardguiitem.cpp:186
@@ -2162,8 +2186,11 @@ msgstr ""
 "Ви зможете спробувати інші параметри."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Режим &адміністратора…"
 
 #: kstandardguiitem.cpp:205
@@ -2268,8 +2295,11 @@ msgid "Go forward one step"
 msgstr "Один крок вперед"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "&Друкувати…"
 
 #: kstandardguiitem.cpp:278
@@ -2300,8 +2330,11 @@ msgid "Delete item(s)"
 msgstr "Вилучити елемент(и)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Відкрити…"
 
 #: kstandardguiitem.cpp:301
@@ -2335,8 +2368,11 @@ msgid "&Insert"
 msgstr "&Вставити"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "Нала&штувати…"
 
 #: kstandardguiitem.cpp:330
@@ -2405,6 +2441,10 @@ msgstr "На весь екран"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Розгорнути вікно на весь екран"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Пошук…"
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"

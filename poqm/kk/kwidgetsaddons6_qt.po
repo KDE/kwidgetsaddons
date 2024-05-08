@@ -1646,7 +1646,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Мұнда іздеу шартын не таңбасын келтіріңіз"
 
 #: kcharselect.cpp:393
@@ -1658,10 +1658,10 @@ msgstr "Мұнда іздеу шартын не таңбасын келтірі�
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Табу..."
+msgid "&Find…"
+msgstr "&Табу"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2201,11 +2201,11 @@ msgstr "Беймәлім"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Қалаған..."
+msgid "Custom…"
+msgstr "Басқа"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2596,7 +2596,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Таңдау..."
 
 #: kfontrequester.cpp:190
@@ -2750,7 +2750,7 @@ msgstr "Хабарды жабу"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2784,10 +2784,10 @@ msgstr "Брайль әліппесі"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Өңдеу..."
+msgid "&Edit…"
+msgstr "&Өңдеу"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2919,10 +2919,10 @@ msgstr "Паролінің мықтылығы:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Іздеу"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Іздейтіні:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3142,10 +3142,10 @@ msgstr "Деректерді сақтамау"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "&Былай сақтау..."
+msgid "Save &As…"
+msgstr "Былай сақтау"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3188,7 +3188,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Әкімші &болу..."
 
 #: kstandardguiitem.cpp:205
@@ -3334,10 +3334,10 @@ msgstr "Бір қадам алға басу"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "Ба&сып шығару..."
+msgid "&Print…"
+msgstr "Басып шығару"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3376,10 +3376,11 @@ msgstr "Нысанд(ард)ы өшіру"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Ашу..."
+msgid "&Open…"
+msgstr "&Ашу"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3426,10 +3427,10 @@ msgstr "&Ендіру"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Ба&птау..."
+msgid "Confi&gure…"
+msgstr "Баптау"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3526,6 +3527,55 @@ msgstr "Толық экран"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Терезені толық экранды қылу"
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Табу..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Қалаған..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Өңдеу..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Іздеу"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "&Былай сақтау..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "Ба&сып шығару..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Ашу..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Ба&птау..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4688,10 +4738,6 @@ msgstr "Терезені толық экранды қылу"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser GPL лицензиясының 3-нұсқасы"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Басқа"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6889,9 +6935,6 @@ msgstr "Терезені толық экранды қылу"
 #~ "Келтірген хабардан\n"
 #~ "бас тартып жабу керек пе?"
 
-#~ msgid "Configure"
-#~ msgstr "Баптау"
-
 #~ msgid "Job"
 #~ msgstr "Тапсырма"
 
@@ -7251,9 +7294,6 @@ msgstr "Терезені толық экранды қылу"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Перне тіркесімдерін таңдау"
-
-#~ msgid "Print"
-#~ msgstr "Басып шығару"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Әдеттіге ысыру"
@@ -8781,9 +8821,6 @@ msgstr "Терезені толық экранды қылу"
 #~ msgid "&Game"
 #~ msgstr "&Ойын"
 
-#~ msgid "&Edit"
-#~ msgstr "&Өңдеу"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Жылжыту"
@@ -9497,9 +9534,6 @@ msgstr "Терезені толық экранды қылу"
 
 #~ msgid " - BCC: "
 #~ msgstr " - Жасырын кімге: "
-
-#~ msgid "Save As"
-#~ msgstr "Былай сақтау"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10749,9 +10783,6 @@ msgstr "Терезені толық экранды қылу"
 #~ msgid "Order by:"
 #~ msgstr "Келесі бойынша реттеу:"
 
-#~ msgid "Search:"
-#~ msgstr "Іздейтіні:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Мекен парағы</a>"
 
@@ -11034,10 +11065,6 @@ msgstr "Терезені толық экранды қылу"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Мынамен &ашу"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Ашу"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

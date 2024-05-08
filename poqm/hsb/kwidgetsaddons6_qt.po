@@ -1619,7 +1619,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Zapodaj pytany wuraz abo pismik tu"
 
 #: kcharselect.cpp:393
@@ -1631,10 +1631,10 @@ msgstr "Zapodaj pytany wuraz abo pismik tu"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "Na&makać"
+msgid "&Find…"
+msgstr "&Namakaj"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2172,11 +2172,11 @@ msgstr "njeznate"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Definowane..."
+msgid "Custom…"
+msgstr "Konfigurowane"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2534,7 +2534,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Wubrać..."
 
 #: kfontrequester.cpp:190
@@ -2688,7 +2688,7 @@ msgstr "Powěsć začinić"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2721,9 +2721,9 @@ msgstr "Braille-mustry"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Wobdźěłać"
 
 #: kmimetypechooser.cpp:141
@@ -2861,9 +2861,9 @@ msgstr "Posudźowar hesła:"
 
 #: kpageview.cpp:449
 #, fuzzy
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "&Pytać"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "P&ytać:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3078,10 +3078,10 @@ msgstr "Daty njezawěsćić"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Z&awěsćić jako..."
+msgid "Save &As…"
+msgstr "Zawěsćić jako"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3120,7 +3120,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Zarjadowanski &modus ..."
 
 #: kstandardguiitem.cpp:205
@@ -3259,10 +3259,10 @@ msgstr "Dźi jednu kročel doprědka"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "Ć&išćeć ..."
+msgid "&Print…"
+msgstr "Ćišćeć"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3301,10 +3301,9 @@ msgstr "Elementy zničić"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "W&očiń ..."
+msgid "&Open…"
+msgstr "W&očinić"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3351,10 +3350,10 @@ msgstr "&Insert"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Konfigura&cija..."
+msgid "Confi&gure…"
+msgstr "Konfiguracija"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3440,6 +3439,54 @@ msgstr "Cyła wobrazowka"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "Na&makać"
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Definowane..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Wobdźěłać"
+
+#, fuzzy
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "&Pytać"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Z&awěsćić jako..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "Ć&išćeć ..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "W&očiń ..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Konfigura&cija..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4566,10 +4613,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Konfigurowane"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6708,9 +6751,6 @@ msgstr ""
 #~ "Začinić a editowanu powěsć\n"
 #~ "zničić?"
 
-#~ msgid "Configure"
-#~ msgstr "Konfiguracija"
-
 #~ msgid "Job"
 #~ msgstr "Nadawk"
 
@@ -7071,9 +7111,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Konfiguracija skrótšenkow"
-
-#~ msgid "Print"
-#~ msgstr "Ćišćeć"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Standardne hódnoty nastajić"
@@ -8624,9 +8661,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Hra"
 
-#~ msgid "&Edit"
-#~ msgstr "&Wobdźěłać"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Sunyć"
@@ -9346,9 +9380,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - Dalša kopija na: "
-
-#~ msgid "Save As"
-#~ msgstr "Zawěsćić jako"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10563,10 +10594,6 @@ msgstr ""
 #~ msgstr "&Rjadować po:"
 
 #, fuzzy
-#~ msgid "Search:"
-#~ msgstr "P&ytać:"
-
-#, fuzzy
 #~ msgid "Details for %1"
 #~ msgstr "Namjety"
 
@@ -10812,11 +10839,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Wočinić z ..."
-
-#, fuzzy
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "W&očinić"
 
 #, fuzzy
 #~ msgctxt "@label File name"

@@ -1063,8 +1063,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Símbols de computació antiga"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Introduïu un terme que calga buscar o un caràcter..."
 
 #: kcharselect.cpp:393
@@ -1073,9 +1076,12 @@ msgid "Enter a search term or character here"
 msgstr "Introduïu ací un terme que calga buscar o un caràcter"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "Bu&sca..."
+msgid "&Find…"
+msgstr "Bu&sca"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1458,8 +1464,11 @@ msgid "Unknown"
 msgstr "Desconegut"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Personalitzat..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1729,8 +1738,11 @@ msgid "Show only monospaced fonts"
 msgstr "Mostra només les lletres monoespai"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Selecciona la lletra..."
 
 #: kfontrequester.cpp:190
@@ -1845,8 +1857,11 @@ msgid "Close message"
 msgstr "Tanca el missatge"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Busca pel tipus de fitxer o pel patró del nom de fitxer..."
 
 #: kmimetypechooser.cpp:89
@@ -1870,8 +1885,11 @@ msgid "Patterns"
 msgstr "Patrons"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Edita..."
 
 #: kmimetypechooser.cpp:141
@@ -1971,8 +1989,11 @@ msgid "Password strength &meter:"
 msgstr "Mesura de fer&mesa de la contrasenya:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "Busca..."
 
 #: kpassworddialog.cpp:52
@@ -2136,8 +2157,11 @@ msgid "Do not save data"
 msgstr "No guardes les dades"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Anomena i gu&arda..."
 
 #: kstandardguiitem.cpp:186
@@ -2167,8 +2191,11 @@ msgstr ""
 "Utilitzeu-ho per a provar configuracions diferents."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "&Mode administrador..."
 
 #: kstandardguiitem.cpp:205
@@ -2273,8 +2300,11 @@ msgid "Go forward one step"
 msgstr "Va un pas avant"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "Im&primix..."
 
 #: kstandardguiitem.cpp:278
@@ -2303,8 +2333,11 @@ msgid "Delete item(s)"
 msgstr "Suprimix els elements"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "O&bri..."
 
 #: kstandardguiitem.cpp:301
@@ -2338,8 +2371,11 @@ msgid "&Insert"
 msgstr "&Inserix"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "Confi&gura..."
 
 #: kstandardguiitem.cpp:330
@@ -2408,3 +2444,7 @@ msgstr "Pantalla completa"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Mostra la finestra en pantalla completa"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "Bu&sca..."

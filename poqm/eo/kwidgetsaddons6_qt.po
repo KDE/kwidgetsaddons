@@ -1063,8 +1063,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Simboloj por Prakomputado"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Enigu serĉterminon aŭ signon..."
 
 #: kcharselect.cpp:393
@@ -1073,9 +1076,12 @@ msgid "Enter a search term or character here"
 msgstr "Enigu serĉendan terminon aŭ signon ĉi tie"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Trovi..."
+msgid "&Find…"
+msgstr "&Trovi"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1458,8 +1464,11 @@ msgid "Unknown"
 msgstr "Nekonata"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Propra..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1728,8 +1737,11 @@ msgid "Show only monospaced fonts"
 msgstr "Montri nur unuspacigitajn tiparojn"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Elekti tiparon..."
 
 #: kfontrequester.cpp:190
@@ -1844,8 +1856,11 @@ msgid "Close message"
 msgstr "Fermi mesaĝon"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Serĉi laŭ dosiertipa aŭ dosiernoma ŝablono..."
 
 #: kmimetypechooser.cpp:89
@@ -1869,8 +1884,11 @@ msgid "Patterns"
 msgstr "Ŝablonoj"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Redakti..."
 
 #: kmimetypechooser.cpp:141
@@ -1969,8 +1987,11 @@ msgid "Password strength &meter:"
 msgstr "Pasvortforta &mezurilo:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+#, fuzzy
+#| msgctxt "KPageView|"
+#| msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr "Serĉi..."
 
 #: kpassworddialog.cpp:52
@@ -2133,8 +2154,11 @@ msgid "Do not save data"
 msgstr "Ne konservi datumojn"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Konservi &Kiel..."
 
 #: kstandardguiitem.cpp:186
@@ -2164,8 +2188,11 @@ msgstr ""
 "Uzu ĉi tion por provi diversajn agordojn."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Ad&ministra Reĝimo..."
 
 #: kstandardguiitem.cpp:205
@@ -2269,8 +2296,11 @@ msgid "Go forward one step"
 msgstr "Iri antaŭen je unu paŝo"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "&Presi..."
 
 #: kstandardguiitem.cpp:278
@@ -2299,8 +2329,11 @@ msgid "Delete item(s)"
 msgstr "Forigi elemento(j)n"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Malfermi..."
 
 #: kstandardguiitem.cpp:301
@@ -2334,8 +2367,11 @@ msgid "&Insert"
 msgstr "&Enmeti"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "A&gordi..."
 
 #: kstandardguiitem.cpp:330
@@ -2404,3 +2440,7 @@ msgstr "Plenekrane"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Montri la fenestron en plena ekrano"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Trovi..."

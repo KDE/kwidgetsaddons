@@ -1049,8 +1049,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Köhnə kompyuter simvolları"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Axtarış termini və ya simvol daxil edin..."
 
 #: kcharselect.cpp:393
@@ -1059,9 +1062,12 @@ msgid "Enter a search term or character here"
 msgstr "Buraya axtarış termini və ya simvol daxil edin"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Tapmaq..."
+msgid "&Find…"
+msgstr "&Tapmaq"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1444,8 +1450,11 @@ msgid "Unknown"
 msgstr "Naməlum"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "KColorCombo|@item:inlistbox Custom color"
+#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
+msgid "Custom…"
 msgstr "Fərdi..."
 
 #: kcontextualhelpbutton.cpp:80
@@ -1717,8 +1726,11 @@ msgid "Show only monospaced fonts"
 msgstr "Yalnız bərabərenli şriftləri göstərmək"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Şrifti seçin..."
 
 #: kfontrequester.cpp:190
@@ -1833,8 +1845,11 @@ msgid "Close message"
 msgstr "İsmarıcı bağlamaq"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Faylın növünə və adına gorə axtarış..."
 
 #: kmimetypechooser.cpp:89
@@ -1858,8 +1873,11 @@ msgid "Patterns"
 msgstr "Nümunələr"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@action:button"
+#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
+msgid "&Edit…"
 msgstr "&Düzəliş..."
 
 #: kmimetypechooser.cpp:141
@@ -1966,8 +1984,8 @@ msgid "Password strength &meter:"
 msgstr "Şifrənin təhlükəsizlik &səviyyəsi:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
 msgstr ""
 
 #: kpassworddialog.cpp:52
@@ -2133,8 +2151,11 @@ msgid "Do not save data"
 msgstr "Verilənləri saxlamamaq"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
+msgid "Save &As…"
 msgstr "Belə s&axla..."
 
 #: kstandardguiitem.cpp:186
@@ -2164,8 +2185,11 @@ msgstr ""
 "Bunu müxtəlif ayarlar üçün istifadə edin."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "İnzibatşı Reji&mi..."
 
 #: kstandardguiitem.cpp:205
@@ -2270,8 +2294,11 @@ msgid "Go forward one step"
 msgstr "Bir addım irəli"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
+msgid "&Print…"
 msgstr "&Çap et"
 
 #: kstandardguiitem.cpp:278
@@ -2300,8 +2327,11 @@ msgid "Delete item(s)"
 msgstr "Element(lər)i silin"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
+msgid "&Open…"
 msgstr "&Açın..."
 
 #: kstandardguiitem.cpp:301
@@ -2335,8 +2365,11 @@ msgid "&Insert"
 msgstr "Dax&il et"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
+msgid "Confi&gure…"
 msgstr "&Tənzimləmək..."
 
 #: kstandardguiitem.cpp:330
@@ -2405,6 +2438,10 @@ msgstr "Tam ekran"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Pəncərə rejimindən tam ekran rejiminə keçid"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Tapmaq..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"

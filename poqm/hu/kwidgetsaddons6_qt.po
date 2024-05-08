@@ -1054,8 +1054,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Szimbólumok elavult számításokhoz"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Itt lehet megadni a keresendő szöveget…"
 
 #: kcharselect.cpp:393
@@ -1064,9 +1067,12 @@ msgid "Enter a search term or character here"
 msgstr "Itt lehet megadni a keresendő szöveget"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Keresés…"
+msgid "&Find…"
+msgstr "&Keresés"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1449,9 +1455,12 @@ msgid "Unknown"
 msgstr "Ismeretlen"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Egyéni…"
+msgid "Custom…"
+msgstr "Egyedi"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1719,8 +1728,11 @@ msgid "Show only monospaced fonts"
 msgstr "Csak az állandó szélességű betűkészleteket mutassa"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Betűkészlet választása…"
 
 #: kfontrequester.cpp:190
@@ -1835,8 +1847,11 @@ msgid "Close message"
 msgstr "Üzenet bezárása"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Fájltípus vagy fájlnévminta keresése…"
 
 #: kmimetypechooser.cpp:89
@@ -1860,9 +1875,11 @@ msgid "Patterns"
 msgstr "Minták"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "Sz&erkesztés…"
+msgid "&Edit…"
+msgstr "S&zerkesztés"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1961,9 +1978,11 @@ msgid "Password strength &meter:"
 msgstr "Jelszóerősség-&jelző:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Keresés…"
+#, fuzzy
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Keresés:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2124,9 +2143,11 @@ msgid "Do not save data"
 msgstr "Az adatmentés kihagyása"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Mentés más&ként…"
+msgid "Save &As…"
+msgstr "Mentés másként"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2155,8 +2176,11 @@ msgstr ""
 "Így többféle beállítást is ki lehet próbálni."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Rendszerga&zdai mód…"
 
 #: kstandardguiitem.cpp:205
@@ -2261,9 +2285,11 @@ msgid "Go forward one step"
 msgstr "Előrelépés eggyel"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Nyomtatás…"
+msgid "&Print…"
+msgstr "Nyomtatás"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2293,9 +2319,12 @@ msgid "Delete item(s)"
 msgstr "Elemek törlése"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Megnyitás…"
+msgid "&Open…"
+msgstr "Me&gnyitás"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2328,9 +2357,11 @@ msgid "&Insert"
 msgstr "&Beszúrás"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "B&eállítás…"
+msgid "Confi&gure…"
+msgstr "Beállítás"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2398,6 +2429,38 @@ msgstr "Teljes képernyős mód"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Ablak megjelenítése teljes képernyős módban"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Keresés…"
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Egyéni…"
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "Sz&erkesztés…"
+
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Keresés…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Mentés más&ként…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Nyomtatás…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Megnyitás…"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "B&eállítás…"
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3486,10 +3549,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU LGPL Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Egyedi"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5717,9 +5776,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 #~ "Bezárja és eldobja\n"
 #~ "a szerkesztett üzenetet?"
 
-#~ msgid "Configure"
-#~ msgstr "Beállítás"
-
 #~ msgid "Job"
 #~ msgstr "Feladat"
 
@@ -6077,9 +6133,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Billentyűkombinációk beállítása"
-
-#~ msgid "Print"
-#~ msgstr "Nyomtatás"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Alapértelmezés"
@@ -7630,9 +7683,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 #~ msgid "&Game"
 #~ msgstr "Já&ték"
 
-#~ msgid "&Edit"
-#~ msgstr "S&zerkesztés"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Lépés"
@@ -8356,9 +8406,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 
 #~ msgid " - BCC: "
 #~ msgstr " - titkos másolat: "
-
-#~ msgid "Save As"
-#~ msgstr "Mentés másként"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9631,9 +9678,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 #~ msgid "Order by:"
 #~ msgstr "Rendezés:"
 
-#~ msgid "Search:"
-#~ msgstr "Keresés:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Honlap</a>"
 
@@ -9923,10 +9967,6 @@ msgstr "Ablak megjelenítése teljes képernyős módban"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "Megnyitás e&zzel…"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "Me&gnyitás"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

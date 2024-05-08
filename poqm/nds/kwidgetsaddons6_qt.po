@@ -1163,7 +1163,7 @@ msgstr ""
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Hier en Söökutdruck oder Bookstaav ingeven"
 
 #: kcharselect.cpp:393
@@ -1176,11 +1176,11 @@ msgstr "Hier en Söökutdruck oder Bookstaav ingeven"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "&Find..."
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Söken na..."
+msgid "&Find…"
+msgstr "&Söken"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -1601,11 +1601,11 @@ msgstr "Nich begäng"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Egen..."
+msgid "Custom…"
+msgstr "Anner"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1981,7 +1981,7 @@ msgstr ""
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Utsöken..."
 
 #: kfontrequester.cpp:190
@@ -2141,7 +2141,7 @@ msgstr "Naricht tomaken"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2175,10 +2175,10 @@ msgstr "Braille-Mustern"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Bewerken..."
+msgid "&Edit…"
+msgstr "&Bewerken"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2313,10 +2313,10 @@ msgstr "Wieser för de Passwoortgööd:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Söken"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Söken:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -2533,9 +2533,11 @@ msgid "Do not save data"
 msgstr "Daten nich sekern"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Sekern &as..."
+msgid "Save &As…"
+msgstr "Sekern as"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2564,8 +2566,11 @@ msgstr ""
 "Bruuk dat, wenn Du verscheden Instellen utproberen wullt."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Systeempleeg&bedrief..."
 
 #: kstandardguiitem.cpp:205
@@ -2670,9 +2675,11 @@ msgid "Go forward one step"
 msgstr "Geiht een Schritt vörut"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Drucken..."
+msgid "&Print…"
+msgstr "Drucken"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2700,9 +2707,12 @@ msgid "Delete item(s)"
 msgstr "Indrääg wegdoon"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Opmaken..."
+msgid "&Open…"
+msgstr "&Opmaken"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2735,9 +2745,11 @@ msgid "&Insert"
 msgstr "In&fögen"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "&Instellen..."
+msgid "Confi&gure…"
+msgstr "Instellen"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2805,6 +2817,48 @@ msgstr "Heelschirm"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Dat Finster över den helen Schirm wiesen"
+
+#, fuzzy
+#~| msgctxt "KCharSelect|"
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Söken na..."
+
+#, fuzzy
+#~| msgctxt "KColorCombo|Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Egen..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Bewerken..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Söken"
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Sekern &as..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Drucken..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Opmaken..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "&Instellen..."
 
 #, fuzzy
 #~| msgctxt "KFontChooser|"
@@ -3906,10 +3960,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Lütter allmeen apen Lizenz, Verschoon 3, vun GNU"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Anner"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6138,9 +6188,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 #~ "Wullt Du de bewerkte Naricht\n"
 #~ "tomaken un wegsmieten?"
 
-#~ msgid "Configure"
-#~ msgstr "Instellen"
-
 #~ msgid "Job"
 #~ msgstr "Opgaav"
 
@@ -6502,9 +6549,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Tastkombinatschonen instellen"
-
-#~ msgid "Print"
-#~ msgstr "Drucken"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Op Standardweerten torüchsetten"
@@ -8063,9 +8107,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 #~ msgid "&Game"
 #~ msgstr "&Speel"
 
-#~ msgid "&Edit"
-#~ msgstr "&Bewerken"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Törn"
@@ -8789,9 +8830,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 
 #~ msgid " - BCC: "
 #~ msgstr " - Blindkopie: "
-
-#~ msgid "Save As"
-#~ msgstr "Sekern as"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10050,9 +10088,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 #~ msgid "Order by:"
 #~ msgstr "Sorteren na:"
 
-#~ msgid "Search:"
-#~ msgstr "Söken:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Tohuussiet</a>"
 
@@ -10344,10 +10379,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Opmaken mit"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Opmaken"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

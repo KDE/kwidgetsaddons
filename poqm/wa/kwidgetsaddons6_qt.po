@@ -1643,7 +1643,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Dinez chal on tecse ou on caractère a cweri"
 
 #: kcharselect.cpp:393
@@ -1655,10 +1655,10 @@ msgstr "Dinez chal on tecse ou on caractère a cweri"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Trover..."
+msgid "&Find…"
+msgstr "&Trover"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2199,11 +2199,11 @@ msgstr "Nén cnoxhou"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Da vosse..."
+msgid "Custom…"
+msgstr "Licince prôpe"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2581,7 +2581,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Tchoezi..."
 
 #: kfontrequester.cpp:190
@@ -2735,7 +2735,7 @@ msgstr "Clôre li messaedje"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2769,10 +2769,10 @@ msgstr "Modeles braye"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Candjî..."
+msgid "&Edit…"
+msgstr "&Candjî"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2906,10 +2906,10 @@ msgstr "Mezuraedje del foice do scret:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Cweri"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Cweri:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3130,10 +3130,10 @@ msgstr "Ni nén schaper les dnêyes"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Sch&aper et rlomer..."
+msgid "Save &As…"
+msgstr "Schaper et rlomer"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3176,7 +3176,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Môde &Manaedjeu..."
 
 #: kstandardguiitem.cpp:205
@@ -3323,10 +3323,10 @@ msgstr "Aler ene hope en avant"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Imprimer..."
+msgid "&Print…"
+msgstr "Imprimer"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3365,10 +3365,11 @@ msgstr "Disfacer cayet(s)"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Drovi..."
+msgid "&Open…"
+msgstr "Dr&ovi"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3415,10 +3416,10 @@ msgstr "&Sititchî"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "A&pontyî..."
+msgid "Confi&gure…"
+msgstr "Apontyî"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3507,6 +3508,55 @@ msgstr "Môde tote li waitroûle"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Trover..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Da vosse..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Candjî..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Cweri"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Sch&aper et rlomer..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Imprimer..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Drovi..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "A&pontyî..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4689,10 +4739,6 @@ msgstr ""
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "Schate licince publike djeneråle GNU (GPL) modêye 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Licince prôpe"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6853,9 +6899,6 @@ msgstr ""
 #~ "Clôre eyet abandner\n"
 #~ "li messaedje kimincî?"
 
-#~ msgid "Configure"
-#~ msgstr "Apontyî"
-
 #~ msgid "Job"
 #~ msgstr "Bouye"
 
@@ -7210,9 +7253,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Apontyî les Tapes Rascourtis"
-
-#~ msgid "Print"
-#~ msgstr "Imprimer"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Rimete come prémetou"
@@ -8581,9 +8621,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Djeu"
 
-#~ msgid "&Edit"
-#~ msgstr "&Candjî"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Bodjî"
@@ -9231,9 +9268,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Schaper et rlomer"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10320,9 +10354,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "Relére sol:"
 
-#~ msgid "Search:"
-#~ msgstr "Cweri:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Pådje måjhon</a>"
 
@@ -10609,10 +10640,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Drovi avou"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "Dr&ovi"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

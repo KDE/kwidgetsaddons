@@ -1639,7 +1639,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Внесете тука термин за пребарување"
 
 #: kcharselect.cpp:393
@@ -1651,10 +1651,10 @@ msgstr "Внесете тука термин за пребарување"
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgid "&Find..."
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Најди..."
+msgid "&Find…"
+msgstr "&Пронајди"
 
 #: kcharselect.cpp:424
 #, fuzzy
@@ -2185,11 +2185,11 @@ msgstr "Непознато"
 
 #: kcolorcombo.cpp:333
 #, fuzzy
-#| msgctxt "Custom color"
-#| msgid "Custom..."
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Сопствена..."
+msgid "Custom…"
+msgstr "Сопствено"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -2549,7 +2549,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Избери..."
 
 #: kfontrequester.cpp:190
@@ -2703,7 +2703,7 @@ msgstr "Затвори порака"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
@@ -2737,10 +2737,10 @@ msgstr "Брајови шеми"
 
 #: kmimetypechooser.cpp:126
 #, fuzzy
-#| msgid "&Edit..."
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Уреди..."
+msgid "&Edit…"
+msgstr "&Уредување"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2875,10 +2875,10 @@ msgstr "Мерач за јачината на лозинката:"
 
 #: kpageview.cpp:449
 #, fuzzy
-#| msgid "Search"
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Барај"
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Барање:"
 
 #: kpassworddialog.cpp:52
 #, fuzzy
@@ -3096,10 +3096,10 @@ msgstr "Не ги зачувува податоците"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgid "Save &As..."
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Зачувај &како..."
+msgid "Save &As…"
+msgstr "Зачувај како"
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3138,7 +3138,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Администраторски &режим..."
 
 #: kstandardguiitem.cpp:205
@@ -3282,10 +3282,10 @@ msgstr "Оди еден чекор напред"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgid "&Print..."
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "&Печати..."
+msgid "&Print…"
+msgstr "Печати"
 
 #: kstandardguiitem.cpp:278
 #, fuzzy
@@ -3324,10 +3324,11 @@ msgstr "Избриши елемент(и)"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgid "&Open..."
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "&Отвори..."
+msgid "&Open…"
+msgstr "&Отвори"
 
 #: kstandardguiitem.cpp:301
 #, fuzzy
@@ -3374,10 +3375,10 @@ msgstr "Вметн&и"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgid "Confi&gure..."
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Конфи&гурирај..."
+msgid "Confi&gure…"
+msgstr "Конфигурација"
 
 #: kstandardguiitem.cpp:330
 #, fuzzy
@@ -3466,6 +3467,55 @@ msgstr "Преку целиот екран"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Find..."
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Најди..."
+
+#, fuzzy
+#~| msgctxt "Custom color"
+#~| msgid "Custom..."
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Сопствена..."
+
+#, fuzzy
+#~| msgid "&Edit..."
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Уреди..."
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Барај"
+
+#, fuzzy
+#~| msgid "Save &As..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Зачувај &како..."
+
+#, fuzzy
+#~| msgid "&Print..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "&Печати..."
+
+#, fuzzy
+#~| msgid "&Open..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "&Отвори..."
+
+#, fuzzy
+#~| msgid "Confi&gure..."
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Конфи&гурирај..."
 
 #, fuzzy
 #~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
@@ -4620,10 +4670,6 @@ msgstr ""
 #~ msgctxt "@item license (short name)"
 #~ msgid "LGPL v3"
 #~ msgstr "LGPL v3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Сопствено"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -6795,9 +6841,6 @@ msgstr ""
 #~ "Затворање и отфрлање\n"
 #~ "на впишаната порака?"
 
-#~ msgid "Configure"
-#~ msgstr "Конфигурација"
-
 #~ msgid "Job"
 #~ msgstr "Задача"
 
@@ -7141,9 +7184,6 @@ msgstr ""
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Конфигурирање кратенки"
-
-#~ msgid "Print"
-#~ msgstr "Печати"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Врати на почетни"
@@ -8635,9 +8675,6 @@ msgstr ""
 #~ msgid "&Game"
 #~ msgstr "&Игра"
 
-#~ msgid "&Edit"
-#~ msgstr "&Уредување"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Премести"
@@ -9343,9 +9380,6 @@ msgstr ""
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Зачувај како"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -10545,9 +10579,6 @@ msgstr ""
 #~ msgid "Order by:"
 #~ msgstr "Подредување според:"
 
-#~ msgid "Search:"
-#~ msgstr "Барање:"
-
 #, fuzzy
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr ""
@@ -10798,10 +10829,6 @@ msgstr ""
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Отвори со"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Отвори"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"

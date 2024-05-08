@@ -1135,8 +1135,11 @@ msgid "Symbols for Legacy Computing"
 msgstr "Informatika zaharreko ikurrak"
 
 #: kcharselect.cpp:391
+#, fuzzy
+#| msgctxt "KCharSelect|@info:placeholder"
+#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
-msgid "Enter a search term or character..."
+msgid "Enter a search term or character…"
 msgstr "Sartu bilatu beharreko termino bat edo karaktere bat..."
 
 #: kcharselect.cpp:393
@@ -1145,9 +1148,12 @@ msgid "Enter a search term or character here"
 msgstr "Sartu hemen bilatu beharreko termino bat edo karaktere bat"
 
 #: kcharselect.cpp:400
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "&Find"
 msgctxt "KCharSelect|@action"
-msgid "&Find..."
-msgstr "&Aurkitu..."
+msgid "&Find…"
+msgstr "&Bilatu"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1530,9 +1536,12 @@ msgid "Unknown"
 msgstr "Ezezaguna"
 
 #: kcolorcombo.cpp:333
+#, fuzzy
+#| msgctxt "@item license"
+#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
-msgid "Custom..."
-msgstr "Norberak finkatua..."
+msgid "Custom…"
+msgstr "Pertsonalizatua"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1802,8 +1811,11 @@ msgid "Show only monospaced fonts"
 msgstr "Erakutsi soilik zabalera-finkoko letra-tipoak"
 
 #: kfontrequester.cpp:184
+#, fuzzy
+#| msgctxt "KFontRequester|@info:tooltip"
+#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
-msgid "Choose font..."
+msgid "Choose font…"
 msgstr "Hautatu letra-tipoa..."
 
 #: kfontrequester.cpp:190
@@ -1918,8 +1930,11 @@ msgid "Close message"
 msgstr "Itxi mezua"
 
 #: kmimetypechooser.cpp:88
+#, fuzzy
+#| msgctxt "KMimeTypeChooser|@info:placeholder"
+#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
-msgid "Search for file type or filename pattern..."
+msgid "Search for file type or filename pattern…"
 msgstr "Bilatu fitxategi mota edo fitxategi-izen eredua..."
 
 #: kmimetypechooser.cpp:89
@@ -1943,9 +1958,11 @@ msgid "Patterns"
 msgstr "Ereduak"
 
 #: kmimetypechooser.cpp:126
+#, fuzzy
+#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
-msgid "&Edit..."
-msgstr "&Editatu..."
+msgid "&Edit…"
+msgstr "&Editatu"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2044,9 +2061,11 @@ msgid "Password strength &meter:"
 msgstr "Pasahitzaren sendotasun &neurgailua:"
 
 #: kpageview.cpp:449
-msgctxt "KPageView|"
-msgid "Search..."
-msgstr "Bilatu..."
+#, fuzzy
+#| msgid "Search:"
+msgctxt "KPageView|@info:placeholder"
+msgid "Search…"
+msgstr "Bilatu:"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2207,9 +2226,11 @@ msgid "Do not save data"
 msgstr "Ez gorde daturik"
 
 #: kstandardguiitem.cpp:184
+#, fuzzy
+#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
-msgid "Save &As..."
-msgstr "Gorde &honela..."
+msgid "Save &As…"
+msgstr "Gorde honela"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2238,8 +2259,11 @@ msgstr ""
 "Erabili hau ezarpen desberdinak probatzeko."
 
 #: kstandardguiitem.cpp:203
+#, fuzzy
+#| msgctxt "KStandardGuiItem|"
+#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
-msgid "Administrator &Mode..."
+msgid "Administrator &Mode…"
 msgstr "Administratzaile &modua..."
 
 #: kstandardguiitem.cpp:205
@@ -2343,9 +2367,11 @@ msgid "Go forward one step"
 msgstr "Joan urrats bat aurrera"
 
 #: kstandardguiitem.cpp:276
+#, fuzzy
+#| msgid "Print"
 msgctxt "KStandardGuiItem|"
-msgid "&Print..."
-msgstr "In&primatu..."
+msgid "&Print…"
+msgstr "Inprimatu"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2374,9 +2400,12 @@ msgid "Delete item(s)"
 msgstr "Ezabatu elementua(k)"
 
 #: kstandardguiitem.cpp:299
+#, fuzzy
+#| msgctxt "@label:button"
+#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
-msgid "&Open..."
-msgstr "I&reki..."
+msgid "&Open…"
+msgstr "&Ireki"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2409,9 +2438,11 @@ msgid "&Insert"
 msgstr "&Txertatu"
 
 #: kstandardguiitem.cpp:325
+#, fuzzy
+#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
-msgid "Confi&gure..."
-msgstr "Konfi&guratu..."
+msgid "Confi&gure…"
+msgstr "Konfiguratu"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2479,6 +2510,38 @@ msgstr "Pantaila-betea"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Bistaratu leihoa pantaila-betean"
+
+#~ msgctxt "KCharSelect|@action"
+#~ msgid "&Find..."
+#~ msgstr "&Aurkitu..."
+
+#~ msgctxt "KColorCombo|@item:inlistbox Custom color"
+#~ msgid "Custom..."
+#~ msgstr "Norberak finkatua..."
+
+#~ msgctxt "KMimeTypeChooser|@action:button"
+#~ msgid "&Edit..."
+#~ msgstr "&Editatu..."
+
+#~ msgctxt "KPageView|"
+#~ msgid "Search..."
+#~ msgstr "Bilatu..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Save &As..."
+#~ msgstr "Gorde &honela..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Print..."
+#~ msgstr "In&primatu..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "&Open..."
+#~ msgstr "I&reki..."
+
+#~ msgctxt "KStandardGuiItem|"
+#~ msgid "Confi&gure..."
+#~ msgstr "Konfi&guratu..."
 
 #~ msgctxt "KFontChooserWidget|"
 #~ msgid "KFontChooserWidget"
@@ -3600,10 +3663,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 #~ msgctxt "@item license"
 #~ msgid "GNU Lesser General Public License Version 3"
 #~ msgstr "GNU Lesser General Public License Version 3"
-
-#~ msgctxt "@item license"
-#~ msgid "Custom"
-#~ msgstr "Pertsonalizatua"
 
 #~ msgctxt "@item license"
 #~ msgid "Not specified"
@@ -5837,9 +5896,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 #~ "Itxi eta baztertu\n"
 #~ "editatutako mezua?"
 
-#~ msgid "Configure"
-#~ msgstr "Konfiguratu"
-
 #~ msgid "Job"
 #~ msgstr "Lana"
 
@@ -6200,9 +6256,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 
 #~ msgid "Configure Shortcuts"
 #~ msgstr "Konfiguratu lasterbideak"
-
-#~ msgid "Print"
-#~ msgstr "Inprimatu"
 
 #~ msgid "Reset to Defaults"
 #~ msgstr "Lehenetsi"
@@ -7746,9 +7799,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 #~ msgid "&Game"
 #~ msgstr "&Jokua"
 
-#~ msgid "&Edit"
-#~ msgstr "&Editatu"
-
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
 #~ msgstr "&Mugitu"
@@ -8474,9 +8524,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 
 #~ msgid " - BCC: "
 #~ msgstr " - BCC: "
-
-#~ msgid "Save As"
-#~ msgstr "Gorde honela"
 
 #~ msgid ""
 #~ "<qt>This untrusted page links to<br /><b>%1</b>.<br />Do you want to "
@@ -9745,9 +9792,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 #~ msgid "Order by:"
 #~ msgstr "Ordenatu honela:"
 
-#~ msgid "Search:"
-#~ msgstr "Bilatu:"
-
 #~ msgid "<a href=\"http://opendesktop.org\">Homepage</a>"
 #~ msgstr "<a href=\"http://opendesktop.org\">Atariko orrialdea</a>"
 
@@ -10038,10 +10082,6 @@ msgstr "Bistaratu leihoa pantaila-betean"
 #~ msgctxt "@label:button"
 #~ msgid "&Open with"
 #~ msgstr "&Ireki honekin"
-
-#~ msgctxt "@label:button"
-#~ msgid "&Open"
-#~ msgstr "&Ireki"
 
 #~ msgctxt "@label File name"
 #~ msgid "Name: %1"
