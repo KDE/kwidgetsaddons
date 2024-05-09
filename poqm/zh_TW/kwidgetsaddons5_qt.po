@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-07 17:45+0900\n"
+"PO-Revision-Date: 2024-05-09 06:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -278,7 +278,7 @@ msgstr "阿拉伯延伸 A"
 #: kcharselect-translation.cpp:48
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "天城文字"
 
 #: kcharselect-translation.cpp:49
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -833,7 +833,7 @@ msgstr "Saurashtra"
 #: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
-msgstr "Devanagari Extended"
+msgstr "天城文字延伸"
 
 #: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -2100,12 +2100,12 @@ msgstr "否(&N)"
 #: kstandardguiitem.cpp:188
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
-msgstr "丟棄(&D)"
+msgstr "捨棄(&D)"
 
 #: kstandardguiitem.cpp:190
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
-msgstr "丟棄變更"
+msgstr "捨棄變更"
 
 #: kstandardguiitem.cpp:191
 msgctxt "KStandardGuiItem|"
