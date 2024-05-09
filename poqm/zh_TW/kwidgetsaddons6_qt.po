@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-07 17:45+0900\n"
+"PO-Revision-Date: 2024-05-09 07:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -279,7 +279,7 @@ msgstr "阿拉伯延伸 A"
 #: kcharselect-translation.cpp:48
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "天城文字"
 
 #: kcharselect-translation.cpp:49
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -834,7 +834,7 @@ msgstr "Saurashtra"
 #: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
-msgstr "Devanagari Extended"
+msgstr "天城文字延伸"
 
 #: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1067,9 +1067,6 @@ msgid "Symbols for Legacy Computing"
 msgstr "舊式電腦符號"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "輸入搜尋字串或字元…"
@@ -1080,12 +1077,9 @@ msgid "Enter a search term or character here"
 msgstr "在此輸入搜尋字串或字元"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "尋找(&F)"
+msgstr "尋找(&F)…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1468,12 +1462,9 @@ msgid "Unknown"
 msgstr "未知"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "自訂..."
+msgstr "自訂…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1737,9 +1728,6 @@ msgid "Show only monospaced fonts"
 msgstr "僅顯示等寬字型"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "選擇字型…"
@@ -1852,9 +1840,6 @@ msgid "Close message"
 msgstr "關閉訊息"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
 msgstr "搜尋檔案類型或檔名模式…"
@@ -1880,12 +1865,9 @@ msgid "Patterns"
 msgstr "樣式"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "編輯(&E)..."
+msgstr "編輯(&E)…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1977,9 +1959,6 @@ msgid "Password strength &meter:"
 msgstr "密碼安全測量器：(&M)"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "搜尋…"
@@ -2107,12 +2086,12 @@ msgstr "取消(&C)"
 #: kstandardguiitem.cpp:162
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
-msgstr "丟棄(&D)"
+msgstr "捨棄(&D)"
 
 #: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
 msgid "Discard changes"
-msgstr "丟棄變更"
+msgstr "捨棄變更"
 
 #: kstandardguiitem.cpp:165
 msgctxt "KStandardGuiItem|"
@@ -2141,12 +2120,9 @@ msgid "Do not save data"
 msgstr "不儲存資料"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "另存新檔(&A)..."
+msgstr "另存新檔(&A)…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2174,12 +2150,9 @@ msgstr ""
 "可以用這個方法來嘗試不同的設定。"
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "管理員模式(&M)..."
+msgstr "管理員模式(&M)…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2282,12 +2255,9 @@ msgid "Go forward one step"
 msgstr "前進到下一個步驟"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "列印(&P)..."
+msgstr "列印(&P)…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2315,12 +2285,9 @@ msgid "Delete item(s)"
 msgstr "刪除項目"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "開啟(&O)..."
+msgstr "開啟(&O)…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2353,12 +2320,9 @@ msgid "&Insert"
 msgstr "插入(&I)"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "設定(&G)..."
+msgstr "設定(&G)…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"

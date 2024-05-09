@@ -1049,12 +1049,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "მოძველებული კომპიუტერული სმბოლოები"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "შეიყვანეთ საძიებო ტერმინი ან სიმბოლო..."
+msgstr "შეიყვანეთ საძიებო ტერმინი ან სიმბოლო…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1062,12 +1059,9 @@ msgid "Enter a search term or character here"
 msgstr "შეიყვანეთ საძიებო ტერმინი ან სიმბოლო"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&ძებნა"
+msgstr "&ძებნა…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1450,12 +1444,9 @@ msgid "Unknown"
 msgstr "Unknown"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "ხელით..."
+msgstr "ხელით…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1721,12 +1712,9 @@ msgid "Show only monospaced fonts"
 msgstr "მხოლოდ მონოსიგანური ფონტების ჩვენება"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "აირჩიეთ ფონტი..."
+msgstr "აირჩიეთ ფონტი…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1840,12 +1828,9 @@ msgid "Close message"
 msgstr "შეტყობინების დახურვა"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "ფაილის ტიპის ან ნიმუშის მოძებნა..."
+msgstr "ფაილის ტიპის ან ნიმუშის მოძებნა…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1868,9 +1853,6 @@ msgid "Patterns"
 msgstr "შაბლონები"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
 msgstr "&ჩასწორება…"
@@ -1971,12 +1953,9 @@ msgid "Password strength &meter:"
 msgstr "პაროლის &სირთულის მზომი:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "ძებნა..."
+msgstr "ძებნა…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2137,12 +2116,9 @@ msgid "Do not save data"
 msgstr "მონაცემები შენახული არ იქნება"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "შენახვა &როგორც..."
+msgstr "შენახვა &როგორც…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2171,12 +2147,9 @@ msgstr ""
 "გამოიყენეთ, რათა სხვადასხვა პარამეტრები გამოსცადოთ."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "ადმინისტრატორის &რეჟიმი..."
+msgstr "ადმინისტრატორის &რეჟიმი…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2280,12 +2253,9 @@ msgid "Go forward one step"
 msgstr "ერთი ნაბიჯით წინ გადასვლა"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "&ამობეჭდვა..."
+msgstr "&ამობეჭდვა…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2313,12 +2283,9 @@ msgid "Delete item(s)"
 msgstr "ჩანაწერის წაშლა"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&გახსნა..."
+msgstr "&გახსნა…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2351,12 +2318,9 @@ msgid "&Insert"
 msgstr "&ჩასმა"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "&მორგება..."
+msgstr "&მორგება…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"

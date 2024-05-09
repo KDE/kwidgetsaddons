@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-24 07:21+0200\n"
+"PO-Revision-Date: 2024-05-08 09:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1067,12 +1067,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Simboli za starejše računalnike"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Sem vnesite iskani pojem ali znak..."
+msgstr "Sem vnesite iskani pojem ali znak…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1080,12 +1077,9 @@ msgid "Enter a search term or character here"
 msgstr "Sem vnesite iskani pojem ali znak"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Najdi"
+msgstr "Najdi…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1468,12 +1462,9 @@ msgid "Unknown"
 msgstr "Neznan"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "@item license"
-#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Po meri"
+msgstr "Po meri…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1741,12 +1732,9 @@ msgid "Show only monospaced fonts"
 msgstr "Prikaži samo pisave stalne širine"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Izberi pisavo..."
+msgstr "Izberi pisavo…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1860,12 +1848,9 @@ msgid "Close message"
 msgstr "Zapri sporočilo"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Poišči datoteko ali vzorec imena datoteke..."
+msgstr "Poišči datoteko ali vzorec imena datoteke…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1888,11 +1873,9 @@ msgid "Patterns"
 msgstr "Vzorci"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Uredi"
+msgstr "Ur&edi…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1991,11 +1974,9 @@ msgid "Password strength &meter:"
 msgstr "Kazalnik &moči gesla:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Išči:"
+msgstr "Išči…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2020,7 +2001,7 @@ msgstr "Spodaj vnesite uporabniško ime in geslo."
 #: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr "Brez gesla, uporabi anonimno prijavo (&gost)"
+msgstr "Brez gesla, uporabi anonimno prijavo (ali kot &gost)"
 
 #: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
@@ -2105,22 +2086,22 @@ msgstr "Zadnje datoteke"
 #: ksqueezedtextlabel.cpp:207
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
-msgstr "&Kopiraj celotno besedilo"
+msgstr "Kopiraj celotno besedilo"
 
 #: kstandardguiitem.cpp:152
 msgctxt "KStandardGuiItem|"
 msgid "&OK"
-msgstr "&V redu"
+msgstr "V redu"
 
 #: kstandardguiitem.cpp:157
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
-msgstr "&Prekliči"
+msgstr "Prekliči"
 
 #: kstandardguiitem.cpp:162
 msgctxt "KStandardGuiItem|"
 msgid "&Discard"
-msgstr "&Zavrzi"
+msgstr "Zavrzi"
 
 #: kstandardguiitem.cpp:164
 msgctxt "KStandardGuiItem|"
@@ -2147,7 +2128,7 @@ msgstr "Shrani podatke"
 #: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
-msgstr "&Ne shrani"
+msgstr "Ne shrani"
 
 #: kstandardguiitem.cpp:179
 msgctxt "KStandardGuiItem|"
@@ -2155,11 +2136,9 @@ msgid "Do not save data"
 msgstr "Ne shrani podatkov"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Shrani kot"
+msgstr "Shr&ani kot…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2188,12 +2167,9 @@ msgstr ""
 "Tako lahko preizkušate različne nastavitve."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "Skr&bniški način ..."
+msgstr "Skrbniški način…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2214,7 +2190,7 @@ msgstr ""
 #: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
-msgstr "Po&čisti"
+msgstr "Počisti"
 
 #: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
@@ -2229,7 +2205,7 @@ msgstr "Počisti vnos v polju za urejanje"
 #: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
-msgstr "&Pomoč"
+msgstr "Pomoč"
 
 #: kstandardguiitem.cpp:224
 msgctxt "KStandardGuiItem|"
@@ -2239,7 +2215,7 @@ msgstr "Prikaži pomoč"
 #: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "&Close"
-msgstr "&Zapri"
+msgstr "Zapri"
 
 #: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
@@ -2249,7 +2225,7 @@ msgstr "Zapri trenutno okno ali dokument"
 #: kstandardguiitem.cpp:236
 msgctxt "KStandardGuiItem|"
 msgid "&Close Window"
-msgstr "&Zapri okno"
+msgstr "Zapri okno"
 
 #: kstandardguiitem.cpp:238
 msgctxt "KStandardGuiItem|"
@@ -2259,7 +2235,7 @@ msgstr "Zapre trenutno okno."
 #: kstandardguiitem.cpp:243
 msgctxt "KStandardGuiItem|"
 msgid "&Close Document"
-msgstr "&Zapri dokument"
+msgstr "Zapri dokument"
 
 #: kstandardguiitem.cpp:245
 msgctxt "KStandardGuiItem|"
@@ -2279,7 +2255,7 @@ msgstr "Povrni vse predmete na njihove privzete vrednosti"
 #: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
-msgstr "Na&zaj"
+msgstr "Nazaj"
 
 #: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|"
@@ -2289,7 +2265,7 @@ msgstr "Vrni se en korak"
 #: kstandardguiitem.cpp:264
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
-msgstr "&Naprej"
+msgstr "Naprej"
 
 #: kstandardguiitem.cpp:266
 msgctxt "KStandardGuiItem|"
@@ -2297,11 +2273,9 @@ msgid "Go forward one step"
 msgstr "Pojdi naprej za en korak"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "Print"
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Natisni"
+msgstr "Natisni…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2311,7 +2285,7 @@ msgstr "Odpre pogovorno okno za tiskanje trenutnega dokumenta"
 #: kstandardguiitem.cpp:285
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
-msgstr "&Nadaljuj"
+msgstr "Nadaljuj"
 
 #: kstandardguiitem.cpp:287
 msgctxt "KStandardGuiItem|"
@@ -2321,7 +2295,7 @@ msgstr "Nadaljuj opravilo"
 #: kstandardguiitem.cpp:292
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
-msgstr "I&zbriši"
+msgstr "Izbriši"
 
 #: kstandardguiitem.cpp:294
 msgctxt "KStandardGuiItem|"
@@ -2329,12 +2303,9 @@ msgid "Delete item(s)"
 msgstr "Izbriši predmet(e)"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "@label:button"
-#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Odpri"
+msgstr "&Odpri…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2344,17 +2315,17 @@ msgstr "Odpri datoteko"
 #: kstandardguiitem.cpp:306
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
-msgstr "Konča&j"
+msgstr "Zapusti"
 
 #: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
 msgid "Quit application"
-msgstr "Končaj program"
+msgstr "Zapusti program"
 
 #: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
-msgstr "&Ponastavi"
+msgstr "Ponastavi"
 
 #: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
@@ -2367,16 +2338,14 @@ msgid "&Insert"
 msgstr "Vstav&i"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Nastavi"
+msgstr "Konfi&guriraj…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
 msgid "&Find"
-msgstr "&Najdi"
+msgstr "Najdi"
 
 #: kstandardguiitem.cpp:335
 msgctxt "KStandardGuiItem|"
@@ -2406,7 +2375,7 @@ msgstr "Lastnosti"
 #: kstandardguiitem.cpp:360
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
-msgstr "Prep&iši"
+msgstr "Prepiši"
 
 #: ktimecombobox.cpp:254
 msgctxt "KTimeComboBox|@info"
@@ -2428,7 +2397,7 @@ msgstr "Čas ne more biti kasnejši kot %1"
 #: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
-msgstr "&Celozaslonski način"
+msgstr "Celozaslonski način"
 
 #: ktogglefullscreenaction.cpp:39
 msgctxt "KToggleFullScreenAction|@action:intoolbar"

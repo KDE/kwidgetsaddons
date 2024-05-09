@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-04-24 07:48+0300\n"
+"PO-Revision-Date: 2024-05-08 09:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -1071,9 +1071,6 @@ msgid "Symbols for Legacy Computing"
 msgstr "צורות למחשוב מיושן"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "נא למלא כאן ביטוי או תו לחיפוש…"
@@ -1084,12 +1081,9 @@ msgid "Enter a search term or character here"
 msgstr "נא למלא כאן ביטוי או תו לחיפוש"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&איתור"
+msgstr "&איתור…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1472,9 +1466,6 @@ msgid "Unknown"
 msgstr "לא ידוע"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "התאמה אישית…"
@@ -1743,12 +1734,9 @@ msgid "Show only monospaced fonts"
 msgstr "הצגת גופנים ברוחב אחיד בלבד"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "בחירה…"
+msgstr "בחירת גופן…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1858,9 +1846,6 @@ msgid "Close message"
 msgstr "סגירת הודעה"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
 msgstr "חיפוש אחר סוג קובץ או תבנית שם קובץ…"
@@ -1886,9 +1871,6 @@ msgid "Patterns"
 msgstr "תבניות"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
 msgstr "ע&ריכה…"
@@ -1988,9 +1970,6 @@ msgid "Password strength &meter:"
 msgstr "מ&ד סיבוכיות הסיסמה:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "חיפוש…"
@@ -2152,12 +2131,9 @@ msgid "Do not save data"
 msgstr "לא לשמור את הנתונים"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "לשמור &בשם…"
+msgstr "שמירה &בשם…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2185,9 +2161,6 @@ msgstr ""
 "האפשרות יכולה לשמש להתנסות במגוון הגדרות."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "מצב &ניהול…"
@@ -2293,9 +2266,6 @@ msgid "Go forward one step"
 msgstr "התקדמות צעד אחד קדימה"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
 msgstr "ה&דפסה…"
@@ -2326,9 +2296,6 @@ msgid "Delete item(s)"
 msgstr "מחיקת פריט/ים"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
 msgstr "&פתיחה…"
@@ -2364,9 +2331,6 @@ msgid "&Insert"
 msgstr "הוס&פה"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
 msgstr "הגד&רות…"

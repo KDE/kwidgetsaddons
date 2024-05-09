@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons5_qt\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-24 10:51+0300\n"
+"PO-Revision-Date: 2024-05-08 09:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -1061,9 +1061,6 @@ msgid "Symbols for Legacy Computing"
 msgstr "Застарілі символи комп'ютерних наук"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Введіть критерій або символ пошуку…"
@@ -1074,12 +1071,9 @@ msgid "Enter a search term or character here"
 msgstr "Введіть сюди критерій або символ пошуку"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Пошук"
+msgstr "З&найти…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1462,12 +1456,9 @@ msgid "Unknown"
 msgstr "невідомий"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Нетиповий"
+msgstr "Нетиповий…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1733,9 +1724,6 @@ msgid "Show only monospaced fonts"
 msgstr "Показувати лише моноширинні шрифти"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Вибрати шрифт…"
@@ -1852,9 +1840,6 @@ msgid "Close message"
 msgstr "Закрити повідомлення"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
 msgstr "Шукати тип файлів або назву файла за взірцем…"
@@ -1880,9 +1865,6 @@ msgid "Patterns"
 msgstr "Взірці"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
 msgstr "&Редагувати…"
@@ -1986,9 +1968,6 @@ msgid "Password strength &meter:"
 msgstr "Вимірювання с&кладності паролю:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Шукати…"
@@ -2152,9 +2131,6 @@ msgid "Do not save data"
 msgstr "Не зберігати дані"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
 msgstr "Зберегти &як…"
@@ -2186,9 +2162,6 @@ msgstr ""
 "Ви зможете спробувати інші параметри."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "Режим &адміністратора…"
@@ -2295,9 +2268,6 @@ msgid "Go forward one step"
 msgstr "Один крок вперед"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
 msgstr "&Друкувати…"
@@ -2330,9 +2300,6 @@ msgid "Delete item(s)"
 msgstr "Вилучити елемент(и)"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
 msgstr "&Відкрити…"
@@ -2368,9 +2335,6 @@ msgid "&Insert"
 msgstr "&Вставити"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
 msgstr "Нала&штувати…"

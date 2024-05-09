@@ -1073,8 +1073,6 @@ msgstr ""
 
 #: kcharselect.cpp:400
 #, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "&Finn"
@@ -2123,8 +2121,6 @@ msgstr "Ikke lagre informasjon"
 
 #: kstandardguiitem.cpp:184
 #, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
 msgstr "Lagre &som …"
@@ -2157,8 +2153,6 @@ msgstr ""
 
 #: kstandardguiitem.cpp:203
 #, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "Administrator&modus …"
@@ -2265,8 +2259,6 @@ msgstr "Gå ett skritt fram"
 
 #: kstandardguiitem.cpp:276
 #, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
 msgstr "Sk&riv ut …"
@@ -2298,8 +2290,6 @@ msgstr "Slett element(er)"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
 msgstr "&Åpne …"
@@ -2336,8 +2326,6 @@ msgstr "&Sett inn"
 
 #: kstandardguiitem.cpp:325
 #, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
 msgstr "Sett &opp …"
