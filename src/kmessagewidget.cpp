@@ -180,15 +180,6 @@ void KMessageWidgetPrivate::setPalette()
     palette.setColor(QPalette::Window, bgBaseColor);
     const QColor parentTextColor = (q->parentWidget() ? q->parentWidget()->palette() : qApp->palette()).color(QPalette::WindowText);
     palette.setColor(QPalette::WindowText, parentTextColor);
-
-    // Explicitly set the palette of this widget, because it is used later in
-    // paintEvent() to interpolate the fill colour.  This is not necessary for
-    // KStyle-derived styles, because KStyle::polish() sets the palette from
-    // the actual Plasma colour settings anyway.  Styles which are not derived
-    // from KStyle will use the hardwired colours calculated above, but need the
-    // palette set here to at least show a background.
-    q->setPalette(palette);
-
     // Explicitly set the palettes of the labels because some apps use stylesheets which break the
     // palette propagation
     iconLabel->setPalette(palette);
