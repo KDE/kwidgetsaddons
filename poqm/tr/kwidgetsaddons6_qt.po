@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-24 14:39+0300\n"
+"PO-Revision-Date: 2024-05-09 19:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1065,9 +1065,6 @@ msgid "Symbols for Legacy Computing"
 msgstr "Eski Tür Bilişim Sembolleri"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Aranacak terimi veya karakteri gir…"
@@ -1078,12 +1075,9 @@ msgid "Enter a search term or character here"
 msgstr "Buraya aranacak terimi veya karakteri girin"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Bul"
+msgstr "&Bul…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1466,9 +1460,6 @@ msgid "Unknown"
 msgstr "Bilinmeyen"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "Özel…"
@@ -1739,9 +1730,6 @@ msgid "Show only monospaced fonts"
 msgstr "Yalnızca eş aralıklı yazıtiplerini göster"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Yazıtipi seç…"
@@ -1858,9 +1846,6 @@ msgid "Close message"
 msgstr "İletiyi kapat"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
 msgstr "Dosya türü veya dosya adı dizgisi ara…"
@@ -1886,9 +1871,6 @@ msgid "Patterns"
 msgstr "Desenler"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
 msgstr "Dü&zenle…"
@@ -1951,10 +1933,10 @@ msgid ""
 "Would you like to use this password anyway?"
 msgstr ""
 "Girdiğiniz parola düşük bir güvenilirliğe sahip. Parolanın güvenilirliğini "
-"artırmak için, aşağıdaki yöntemlerden birisini deneyebilirsiniz:\n"
-" - daha uzun bir parola kullanmak;\n"
-" - hem küçük, hem büyük harf kullanmak;\n"
-" - harflerin yanında numara ve sembol de kullanmak. \n"
+"artırmak için aşağıdaki yöntemlerden birisini deneyebilirsiniz:\n"
+" — daha uzun bir parola kullanmak;\n"
+" — hem küçük, hem büyük harf kullanmak;\n"
+" — harflerin yanında numara ve sembol de kullanmak.\n"
 "\n"
 "Yine de bu parolayı kullanmak istiyor musunuz?"
 
@@ -1989,9 +1971,6 @@ msgid "Password strength &meter:"
 msgstr "Parola güvenilirlik &göstergesi:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Ara…"
@@ -2155,9 +2134,6 @@ msgid "Do not save data"
 msgstr "Veriyi kaydetme"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
 msgstr "&Farklı Kaydet…"
@@ -2189,9 +2165,6 @@ msgstr ""
 "Bunu, değişik ayarları denemek için kullanabilirsiniz."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "&Yönetici Kipi…"
@@ -2298,9 +2271,6 @@ msgid "Go forward one step"
 msgstr "Bir adım ileri git"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
 msgstr "Ya&zdır…"
@@ -2331,9 +2301,6 @@ msgid "Delete item(s)"
 msgstr "Öge(ler)i sil"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
 msgstr "&Aç…"
@@ -2369,9 +2336,6 @@ msgid "&Insert"
 msgstr "&Ekle"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
 msgstr "&Yapılandır…"

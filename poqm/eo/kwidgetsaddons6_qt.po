@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-24 19:18+0100\n"
+"PO-Revision-Date: 2024-05-09 22:01+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1063,12 +1063,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Simboloj por Prakomputado"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Enigu serĉterminon aŭ signon..."
+msgstr "Enigu serĉterminon aŭ signon…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1076,12 +1073,9 @@ msgid "Enter a search term or character here"
 msgstr "Enigu serĉendan terminon aŭ signon ĉi tie"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Trovi"
+msgstr "&Trovi…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1464,12 +1458,9 @@ msgid "Unknown"
 msgstr "Nekonata"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Propra..."
+msgstr "Tajlorita…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1737,12 +1728,9 @@ msgid "Show only monospaced fonts"
 msgstr "Montri nur unuspacigitajn tiparojn"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Elekti tiparon..."
+msgstr "Elekti tiparon…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1856,12 +1844,9 @@ msgid "Close message"
 msgstr "Fermi mesaĝon"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Serĉi laŭ dosiertipa aŭ dosiernoma ŝablono..."
+msgstr "Serĉi laŭ dosiertipa aŭ dosiernoma ŝablono…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1884,12 +1869,9 @@ msgid "Patterns"
 msgstr "Ŝablonoj"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Redakti..."
+msgstr "R&edakti…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1987,12 +1969,9 @@ msgid "Password strength &meter:"
 msgstr "Pasvortforta &mezurilo:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Serĉi..."
+msgstr "Serĉi…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2154,12 +2133,9 @@ msgid "Do not save data"
 msgstr "Ne konservi datumojn"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Konservi &Kiel..."
+msgstr "Konservi &Kiel…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2188,12 +2164,9 @@ msgstr ""
 "Uzu ĉi tion por provi diversajn agordojn."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "Ad&ministra Reĝimo..."
+msgstr "Ad&ministra Reĝimo…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2296,12 +2269,9 @@ msgid "Go forward one step"
 msgstr "Iri antaŭen je unu paŝo"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "&Presi..."
+msgstr "&Presi…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2329,12 +2299,9 @@ msgid "Delete item(s)"
 msgstr "Forigi elemento(j)n"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Malfermi..."
+msgstr "&Malfermi…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2367,12 +2334,9 @@ msgid "&Insert"
 msgstr "&Enmeti"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "A&gordi..."
+msgstr "A&gordi…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2440,7 +2404,3 @@ msgstr "Plenekrane"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Montri la fenestron en plena ekrano"
-
-#~ msgctxt "KCharSelect|@action"
-#~ msgid "&Find..."
-#~ msgstr "&Trovi..."

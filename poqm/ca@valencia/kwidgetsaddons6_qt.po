@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-24 11:22+0200\n"
+"PO-Revision-Date: 2024-05-08 19:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -1063,12 +1063,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Símbols de computació antiga"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Introduïu un terme que calga buscar o un caràcter..."
+msgstr "Introduïu un terme que calga buscar o un caràcter…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1076,12 +1073,9 @@ msgid "Enter a search term or character here"
 msgstr "Introduïu ací un terme que calga buscar o un caràcter"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "Bu&sca"
+msgstr "Bu&sca…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1464,12 +1458,9 @@ msgid "Unknown"
 msgstr "Desconegut"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Personalitzat..."
+msgstr "Personalitzat…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1738,12 +1729,9 @@ msgid "Show only monospaced fonts"
 msgstr "Mostra només les lletres monoespai"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Selecciona la lletra..."
+msgstr "Selecciona la lletra…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1757,7 +1745,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia de la lletra seleccionada. La podeu canviar clicant "
-"en el botó «Selecciona la lletra...»."
+"en el botó «Selecciona la lletra…»."
 
 #: kfontrequester.cpp:196
 #, qt-format
@@ -1773,7 +1761,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia de la lletra «%1». La podeu canviar clicant en el "
-"botó «Selecciona la lletra...»."
+"botó «Selecciona la lletra…»."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -1857,12 +1845,9 @@ msgid "Close message"
 msgstr "Tanca el missatge"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Busca pel tipus de fitxer o pel patró del nom de fitxer..."
+msgstr "Busca pel tipus de fitxer o pel patró del nom de fitxer…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1885,12 +1870,9 @@ msgid "Patterns"
 msgstr "Patrons"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Edita..."
+msgstr "&Edita…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1989,12 +1971,9 @@ msgid "Password strength &meter:"
 msgstr "Mesura de fer&mesa de la contrasenya:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2157,12 +2136,9 @@ msgid "Do not save data"
 msgstr "No guardes les dades"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Anomena i gu&arda..."
+msgstr "Anomena i gu&arda…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2191,12 +2167,9 @@ msgstr ""
 "Utilitzeu-ho per a provar configuracions diferents."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "&Mode administrador..."
+msgstr "&Mode administrador…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2300,12 +2273,9 @@ msgid "Go forward one step"
 msgstr "Va un pas avant"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Im&primix..."
+msgstr "Im&primix…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2333,12 +2303,9 @@ msgid "Delete item(s)"
 msgstr "Suprimix els elements"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "O&bri..."
+msgstr "O&bri…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2371,12 +2338,9 @@ msgid "&Insert"
 msgstr "&Inserix"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Confi&gura..."
+msgstr "Confi&gura…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2444,7 +2408,3 @@ msgstr "Pantalla completa"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Mostra la finestra en pantalla completa"
-
-#~ msgctxt "KCharSelect|@action"
-#~ msgid "&Find..."
-#~ msgstr "Bu&sca..."

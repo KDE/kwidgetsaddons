@@ -2,25 +2,25 @@
 # íslensk þýðing á kdelibs4.po
 # Copyright (C) 1998,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012 Free Software Foundation, Inc.
 #
+# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
 # Logi Ragnarsson <logi@logi.org>, 1998-2003.
 # Richard Allen <ra@ra.is>, 1998-2004.
 # Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
 # Arnar Leósson <leosson@frisurf.no>, 2003, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2023, 2024.
-# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-06 12:25+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-05-09 11:02+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Qt-Contexts: true\n"
 
@@ -28,13 +28,13 @@ msgstr ""
 #: fonthelpers_p.h:22
 msgctxt "FontHelpers|@item Font name"
 msgid "Sans Serif"
-msgstr "Sans Serif"
+msgstr "Steinskrift (sans)"
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
-msgstr "Serif"
+msgstr "Broddletur (serif)"
 
 #. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:28
@@ -1060,12 +1060,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Tákn fyrir eldri tölvuvinnslu"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Sláðu inn leitarorð eða staf..."
+msgstr "Sláðu inn leitarorð eða staf…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1073,12 +1070,9 @@ msgid "Enter a search term or character here"
 msgstr "Sláðu inn leitarorð eða staf hér"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Finna"
+msgstr "&Finna…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1461,12 +1455,9 @@ msgid "Unknown"
 msgstr "Óþekkt"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "@item license"
-#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Sérsniðið"
+msgstr "Sérsniðið…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1734,12 +1725,9 @@ msgid "Show only monospaced fonts"
 msgstr "Sýna aðeins jafnbreitt letur (monospaced)"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Velja leturgerð..."
+msgstr "Veldu leturgerð…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1853,12 +1841,9 @@ msgid "Close message"
 msgstr "Loka skeytinu"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Leita að skrárgerð eða skráarheitismynstri..."
+msgstr "Leita að skrárgerð eða skráarheitismynstri…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1881,11 +1866,9 @@ msgid "Patterns"
 msgstr "Mynstur"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "Sýs&l"
+msgstr "Br&eyta…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1984,11 +1967,9 @@ msgid "Password strength &meter:"
 msgstr "Styrkleika&mælir lykilorðs:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Leita:"
+msgstr "Leita…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2149,11 +2130,9 @@ msgid "Do not save data"
 msgstr "Ekki vista gögn"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Vista sem"
+msgstr "Vist&a sem…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2182,12 +2161,9 @@ msgstr ""
 "Notaðu þetta til að prófa mismunandi stillingar."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "&Kerfisstjórasnið..."
+msgstr "&Kerfisstjórahamur…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2291,11 +2267,9 @@ msgid "Go forward one step"
 msgstr "Fara áfram um eitt skref"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "Print"
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Prenta"
+msgstr "&Prenta…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2323,12 +2297,9 @@ msgid "Delete item(s)"
 msgstr "Eyða hlut(um)"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "@label:button"
-#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Opna"
+msgstr "&Opna…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2361,11 +2332,9 @@ msgid "&Insert"
 msgstr "Setja &inn"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Stilla"
+msgstr "&Grunnstilla…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
