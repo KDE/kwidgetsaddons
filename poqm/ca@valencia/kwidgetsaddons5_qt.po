@@ -1065,7 +1065,7 @@ msgstr "Símbols de computació antiga"
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character..."
-msgstr "Introduïu un terme que calga buscar o un caràcter..."
+msgstr "Introduïu un terme que calga buscar o un caràcter…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1075,7 +1075,7 @@ msgstr "Introduïu ací un terme que calga buscar o un caràcter"
 #: kcharselect.cpp:400
 msgctxt "KCharSelect|@action"
 msgid "&Find..."
-msgstr "Bu&sca..."
+msgstr "Bu&sca…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1460,7 +1460,7 @@ msgstr "Desconegut"
 #: kcolorcombo.cpp:333
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom..."
-msgstr "Personalitzat..."
+msgstr "Personalitzat…"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1743,7 +1743,7 @@ msgstr "Mostra només els tipus de lletra monoespai"
 #: kfontrequester.cpp:155
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
-msgstr "Selecciona el tipus de lletra..."
+msgstr "Selecciona el tipus de lletra…"
 
 #: kfontrequester.cpp:161
 msgctxt "KFontRequester|@info:tooltip"
@@ -1757,7 +1757,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia del tipus de lletra seleccionat. El podeu canviar "
-"clicant en el botó «Selecciona el tipus de lletra...»."
+"clicant en el botó «Selecciona el tipus de lletra…»."
 
 #: kfontrequester.cpp:167
 #, qt-format
@@ -1773,7 +1773,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia del tipus de lletra «%1». El podeu canviar clicant "
-"en el botó «Selecciona el tipus de lletra...»."
+"en el botó «Selecciona el tipus de lletra…»."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -1869,7 +1869,7 @@ msgstr "Tanca el missatge"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern..."
-msgstr "Busca pel tipus de fitxer o pel patró del nom de fitxer..."
+msgstr "Busca pel tipus de fitxer o pel patró del nom de fitxer…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1894,7 +1894,7 @@ msgstr "Patrons"
 #: kmimetypechooser.cpp:126
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit..."
-msgstr "&Edita..."
+msgstr "&Edita…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2155,7 +2155,7 @@ msgstr "No guardes les dades"
 #: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
-msgstr "Anomena i gu&arda..."
+msgstr "Anomena i gu&arda…"
 
 #: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
@@ -2186,7 +2186,7 @@ msgstr ""
 #: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode..."
-msgstr "&Mode administrador..."
+msgstr "&Mode administrador…"
 
 #: kstandardguiitem.cpp:231
 msgctxt "KStandardGuiItem|"
@@ -2292,7 +2292,7 @@ msgstr "Va un pas avant"
 #: kstandardguiitem.cpp:302
 msgctxt "KStandardGuiItem|"
 msgid "&Print..."
-msgstr "Im&primix..."
+msgstr "Im&primix…"
 
 #: kstandardguiitem.cpp:304
 msgctxt "KStandardGuiItem|"
@@ -2322,7 +2322,7 @@ msgstr "Suprimix els elements"
 #: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "&Open..."
-msgstr "O&bri..."
+msgstr "O&bri…"
 
 #: kstandardguiitem.cpp:327
 msgctxt "KStandardGuiItem|"
@@ -2357,7 +2357,7 @@ msgstr "&Inserix"
 #: kstandardguiitem.cpp:351
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure..."
-msgstr "Confi&gura..."
+msgstr "Confi&gura…"
 
 #: kstandardguiitem.cpp:356
 msgctxt "KStandardGuiItem|"
