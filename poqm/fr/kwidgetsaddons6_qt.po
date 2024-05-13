@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-03 11:54+0200\n"
+"PO-Revision-Date: 2024-05-08 19:26+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1075,12 +1075,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Symboles pour l'informatique héritée"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Saisissez un terme ou un caractère à chercher..."
+msgstr "Saisissez un terme ou un caractère à rechercher..."
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1088,12 +1085,9 @@ msgid "Enter a search term or character here"
 msgstr "Saisissez ici un terme ou un caractère à chercher"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Chercher"
+msgstr "&Rechercher..."
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1476,12 +1470,9 @@ msgid "Unknown"
 msgstr "Inconnue"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "@item license"
-#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Personnalisé"
+msgstr "Personnalisé..."
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1751,9 +1742,6 @@ msgid "Show only monospaced fonts"
 msgstr "Afficher uniquement les polices à largeur fixe"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Sélectionner une police..."
@@ -1870,12 +1858,9 @@ msgid "Close message"
 msgstr "Fermer le message"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Chercher un type de fichier ou un motif de nom de fichier..."
+msgstr "Rechercher un type de fichier ou un motif de nom de fichier..."
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1898,11 +1883,9 @@ msgid "Patterns"
 msgstr "Motifs"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Édition"
+msgstr "&Modifier..."
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2005,11 +1988,9 @@ msgid "Password strength &meter:"
 msgstr "&Mesure de la robustesse du mot de passe :"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Chercher :"
+msgstr "Rechercher…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2172,11 +2153,9 @@ msgid "Do not save data"
 msgstr "Ne pas enregistrer les données"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Enregistrer sous"
+msgstr "Enregistrer &sous..."
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2205,9 +2184,6 @@ msgstr ""
 "À utiliser pour essayer différents paramètres."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "&Mode administrateur..."
@@ -2314,11 +2290,9 @@ msgid "Go forward one step"
 msgstr "Avancer d'une étape"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "Print"
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Imprimer"
+msgstr "Im&primer..."
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2347,12 +2321,9 @@ msgid "Delete item(s)"
 msgstr "Supprimer l'élément ou les éléments"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "@label:button"
-#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "Ou&vrir"
+msgstr "&Ouvrir..."
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2385,11 +2356,9 @@ msgid "&Insert"
 msgstr "&Insérer"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Configuration"
+msgstr "Confi&gurer..."
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
