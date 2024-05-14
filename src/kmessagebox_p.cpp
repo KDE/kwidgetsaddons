@@ -98,10 +98,15 @@ static void loadKMessageBoxPlugin()
     if (!triedLoadingPlugin) {
         triedLoadingPlugin = true;
 
+        QPluginLoader storagePlugin(QStringLiteral("kf6/MessageBoxStorageIntegrationPlugin"));
+        QObject *rootStorageObj = storagePlugin.instance();
+        if (rootStorageObj) {
+            s_dontAskAgainInterface = rootStorageObj->property(KMESSAGEBOXDONTASKAGAIN_PROPERTY).value<KMessageBoxDontAskAgainInterface *>();
+        }
+
         QPluginLoader lib(QStringLiteral("kf6/FrameworkIntegrationPlugin"));
         QObject *rootObj = lib.instance();
         if (rootObj) {
-            s_dontAskAgainInterface = rootObj->property(KMESSAGEBOXDONTASKAGAIN_PROPERTY).value<KMessageBoxDontAskAgainInterface *>();
             s_notifyInterface = rootObj->property(KMESSAGEBOXNOTIFY_PROPERTY).value<KMessageBoxNotifyInterface *>();
         }
     }
