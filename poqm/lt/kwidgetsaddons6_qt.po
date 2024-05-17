@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-10 16:31+0300\n"
+"PO-Revision-Date: 2024-05-16 20:57+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -1061,12 +1061,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Pasenusios kompiuterijos simboliai"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Įveskite ieškomą žodį ar simbolį..."
+msgstr "Įveskite ieškomą žodį ar simbolį…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1074,12 +1071,9 @@ msgid "Enter a search term or character here"
 msgstr "Čia įveskite ieškomą žodį ar simbolį"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Ieškoti"
+msgstr "&Ieškoti…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1462,20 +1456,14 @@ msgid "Unknown"
 msgstr "Nežinoma"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Tinkinta..."
+msgstr "Tinkinta…"
 
 #: kcontextualhelpbutton.cpp:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Show Contextual Help"
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "Rodyti kontekstinę pagalbą"
+msgstr "Kontekstinė pagalba"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1738,12 +1726,9 @@ msgid "Show only monospaced fonts"
 msgstr "Rodyti tik lygiapločius šriftus"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Pasirinkti šriftą..."
+msgstr "Pasirinkti šriftą…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1857,12 +1842,9 @@ msgid "Close message"
 msgstr "Užverti pranešimą"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Ieškoti failo tipo arba failo pavadinimo šablono..."
+msgstr "Ieškoti failo tipo arba failo pavadinimo šablono…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1885,12 +1867,9 @@ msgid "Patterns"
 msgstr "Šablonai"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Taisyti..."
+msgstr "&Taisyti…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1990,12 +1969,9 @@ msgid "Password strength &meter:"
 msgstr "Slaptažodžio stiprumo &matuoklis:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgctxt "KPageView|"
-#| msgid "Search..."
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Ieškoti..."
+msgstr "Ieškoti…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2157,12 +2133,9 @@ msgid "Do not save data"
 msgstr "Neįrašyti duomenų"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Įrašyti &kaip..."
+msgstr "Įrašyti &kaip…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2191,12 +2164,9 @@ msgstr ""
 "Naudokite tai norėdami išbandyti įvairias nuostatas."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "Administratoriaus &veiksena..."
+msgstr "Administratoriaus &veiksena…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2300,12 +2270,9 @@ msgid "Go forward one step"
 msgstr "Pereiti vienu žingsniu pirmyn"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "S&pausdinti..."
+msgstr "S&pausdinti…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2333,12 +2300,9 @@ msgid "Delete item(s)"
 msgstr "Ištrinti elementą(-us)"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "At&verti..."
+msgstr "At&verti…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2371,12 +2335,9 @@ msgid "&Insert"
 msgstr "Į&terpti"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Konfi&gūruoti..."
+msgstr "Konfi&gūruoti…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
