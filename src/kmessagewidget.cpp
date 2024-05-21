@@ -184,7 +184,7 @@ void KMessageWidgetPrivate::setPalette()
     // palette propagation
     iconLabel->setPalette(palette);
     textLabel->setPalette(palette);
-    q->style()->polish(q);
+
     // update the Icon in case it is recolorable
     q->setIcon(icon);
     q->update();
