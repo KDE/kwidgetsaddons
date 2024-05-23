@@ -43,6 +43,7 @@ public:
     KMessageWidget::Position position = KMessageWidget::Inline;
     bool wordWrap;
     QList<QToolButton *> buttons;
+    bool ignorePaletteChange = false;
 
     void createLayout();
     void setPalette();
@@ -182,6 +183,9 @@ void KMessageWidgetPrivate::setPalette()
     palette.setColor(QPalette::WindowText, parentTextColor);
     // Explicitly set the palettes of the labels because some apps use stylesheets which break the
     // palette propagation
+    ignorePaletteChange = true;
+    q->setPalette(palette);
+    ignorePaletteChange = false;
     iconLabel->setPalette(palette);
     textLabel->setPalette(palette);
 
@@ -311,7 +315,9 @@ bool KMessageWidget::event(QEvent *event)
     } else if (event->type() == QEvent::ParentChange) {
         d->setPalette();
     } else if (event->type() == QEvent::PaletteChange) {
-        d->setPalette();
+        if (!d->ignorePaletteChange) {
+            d->setPalette();
+        }
     }
     return QFrame::event(event);
 }
