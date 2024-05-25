@@ -2123,7 +2123,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Fehler"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2131,7 +2131,7 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Tomaken"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:82
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"

@@ -1815,12 +1815,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "错误"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "关闭(&C)"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:82
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "关闭消息"

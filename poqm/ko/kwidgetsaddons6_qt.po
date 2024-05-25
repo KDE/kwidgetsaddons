@@ -1839,12 +1839,12 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "오류"
 
-#: kmessagewidget.cpp:80
+#: kmessagewidget.cpp:81
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "닫기(&C)"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:82
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "메시지 닫기"
