@@ -257,7 +257,7 @@ void KUrlLabel::enterEvent(QEnterEvent *event)
     QLabel::enterEvent(event);
 
     if (!d->alternatePixmap.isNull()) {
-        const auto currentPixmap = pixmap(Qt::ReturnByValue);
+        const auto currentPixmap = pixmap();
         if (!currentPixmap.isNull()) {
             d->realPixmap = currentPixmap;
             setPixmap(d->alternatePixmap);
@@ -282,7 +282,7 @@ void KUrlLabel::leaveEvent(QEvent *event)
 {
     QLabel::leaveEvent(event);
 
-    if (!d->alternatePixmap.isNull() && !pixmap(Qt::ReturnByValue).isNull()) {
+    if (!d->alternatePixmap.isNull() && !pixmap().isNull()) {
         setPixmap(d->realPixmap);
     }
 
