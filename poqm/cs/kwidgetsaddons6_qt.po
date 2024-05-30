@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-04-30 15:18+0200\n"
+"PO-Revision-Date: 2024-05-29 11:46+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -1061,7 +1061,7 @@ msgstr ""
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr ""
+msgstr "Zde zadejte hledaný výraz nebo znak…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1071,7 +1071,7 @@ msgstr "Zde zadejte hledaný výraz nebo znak"
 #: kcharselect.cpp:400
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr ""
+msgstr "&Najít…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1456,7 +1456,7 @@ msgstr "Neznámý"
 #: kcolorcombo.cpp:333
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr ""
+msgstr "Vlastní…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1725,7 +1725,7 @@ msgstr "Zobrazit pouze písma s pevnou šířkou"
 #: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr ""
+msgstr "Zvolit písmo…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1841,7 +1841,7 @@ msgstr "Zavřít zprávu"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr ""
+msgstr "Hledat typ nebo vzor názvu souboru…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1866,7 +1866,7 @@ msgstr "Vzorky"
 #: kmimetypechooser.cpp:126
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr ""
+msgstr "&Upravit…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1963,7 +1963,7 @@ msgstr "&Měřič síly hesla:"
 #: kpageview.cpp:449
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Hledat…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2125,7 +2125,7 @@ msgstr "Neukládat data"
 #: kstandardguiitem.cpp:184
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr ""
+msgstr "Uložit j&ako…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2156,7 +2156,7 @@ msgstr ""
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr ""
+msgstr "Administrátorský reži&m…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2261,7 +2261,7 @@ msgstr "Přejít vpřed o jeden krok"
 #: kstandardguiitem.cpp:276
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr ""
+msgstr "&Tisknout…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2291,7 +2291,7 @@ msgstr "Smazat položku(y)"
 #: kstandardguiitem.cpp:299
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr ""
+msgstr "&Otevřít…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2326,7 +2326,7 @@ msgstr "Vlož&it"
 #: kstandardguiitem.cpp:325
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr ""
+msgstr "Nastavi&t…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
