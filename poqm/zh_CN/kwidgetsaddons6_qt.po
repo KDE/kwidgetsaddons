@@ -1674,12 +1674,12 @@ msgstr "字体："
 #: kfontchooserwidget.ui:50
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
-msgstr "字体风格"
+msgstr "字体样式"
 
 #: kfontchooserwidget.ui:57
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
-msgstr "字体风格："
+msgstr "字体样式："
 
 #: kfontchooserwidget.ui:75
 msgctxt "KFontChooserWidget|"
