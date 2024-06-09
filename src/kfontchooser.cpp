@@ -53,15 +53,19 @@ static int minimumListWidth(const QListWidget *list)
 
 static int minimumListHeight(const QListWidget *list, int numVisibleEntry)
 {
-    int w = list->count() > 0 ? list->visualItemRect(list->item(0)).height() : list->fontMetrics().lineSpacing();
-
+    int w = list->fontMetrics().lineSpacing();
     if (w < 0) {
         w = 10;
     }
+
     if (numVisibleEntry <= 0) {
         numVisibleEntry = 4;
     }
-    return (w * numVisibleEntry + 2 * list->frameWidth());
+
+    w = w * numVisibleEntry;
+    w += list->frameWidth() * 2;
+    w += list->horizontalScrollBar()->sizeHint().height();
+    return w;
 }
 
 static QString formatFontSize(qreal size)
