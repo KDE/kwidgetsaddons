@@ -154,7 +154,7 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     , d(new KTitleWidgetPrivate(this))
 {
     // default image / text part start
-    d->headerLayout = new QGridLayout(this);
+    d->headerLayout = new QGridLayout();
     d->headerLayout->setContentsMargins(0, 0, 0, 0);
     d->headerLayout->setSizeConstraint(QLayout::SetFixedSize);
 
@@ -173,6 +173,16 @@ KTitleWidget::KTitleWidget(QWidget *parent)
 
     d->updateIconAlignment(ImageRight); // make sure d->iconAlignment is left, to trigger initial layout
     // default image / text part end
+
+    // vertical centering of the complete header
+    auto *mainLayout = new QVBoxLayout(this);
+    mainLayout->addLayout(d->headerLayout);
+    // headerLayout's sizeConstraint being QLayout::SetFixedSize is ignored when added to a layout
+    // with default Qt::Alignment(). instead is stretched to match the whole size.
+    // Sadly QVBoxLayout::addLayout does not have a alignment argument, other than QVBoxLayout::addWidget,
+    // so set it afterwards onto the layout item generated.
+    mainLayout->itemAt(0)->setAlignment(Qt::AlignVCenter);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 }
 
 KTitleWidget::~KTitleWidget() = default;
