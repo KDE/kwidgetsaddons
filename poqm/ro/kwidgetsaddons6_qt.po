@@ -3200,7 +3200,7 @@ msgstr "Afișează fereastra pe tot ecranul"
 
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
-#~ msgstr ",sergiu@ase.md,lbuz@rolix.org,onet.cristian@gmail.com"
+#~ msgstr ",sergiu@cip.md,lbuz@rolix.org,onet.cristian@gmail.com"
 
 #~ msgid "Name"
 #~ msgstr "Denumire"
