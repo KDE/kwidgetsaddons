@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-06 13:21+0200\n"
+"PO-Revision-Date: 2024-06-20 22:09+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.05.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1054,9 +1054,6 @@ msgid "Symbols for Legacy Computing"
 msgstr "Szimbólumok elavult számításokhoz"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Itt lehet megadni a keresendő szöveget…"
@@ -1067,12 +1064,9 @@ msgid "Enter a search term or character here"
 msgstr "Itt lehet megadni a keresendő szöveget"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Keresés"
+msgstr "&Keresés…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1455,12 +1449,9 @@ msgid "Unknown"
 msgstr "Ismeretlen"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "@item license"
-#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Egyedi"
+msgstr "Egyéni…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1728,9 +1719,6 @@ msgid "Show only monospaced fonts"
 msgstr "Csak az állandó szélességű betűkészleteket mutassa"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Betűkészlet választása…"
@@ -1847,9 +1835,6 @@ msgid "Close message"
 msgstr "Üzenet bezárása"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
 msgstr "Fájltípus vagy fájlnévminta keresése…"
@@ -1875,11 +1860,9 @@ msgid "Patterns"
 msgstr "Minták"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "S&zerkesztés"
+msgstr "Sz&erkesztés…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1978,11 +1961,9 @@ msgid "Password strength &meter:"
 msgstr "Jelszóerősség-&jelző:"
 
 #: kpageview.cpp:449
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Keresés:"
+msgstr "Keresés…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2143,11 +2124,9 @@ msgid "Do not save data"
 msgstr "Az adatmentés kihagyása"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Mentés másként"
+msgstr "Mentés &másként…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2176,9 +2155,6 @@ msgstr ""
 "Így többféle beállítást is ki lehet próbálni."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "Rendszerga&zdai mód…"
@@ -2285,11 +2261,9 @@ msgid "Go forward one step"
 msgstr "Előrelépés eggyel"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "Print"
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Nyomtatás"
+msgstr "&Nyomtatás…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2319,12 +2293,9 @@ msgid "Delete item(s)"
 msgstr "Elemek törlése"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "@label:button"
-#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "Me&gnyitás"
+msgstr "&Megnyitás…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2357,11 +2328,9 @@ msgid "&Insert"
 msgstr "&Beszúrás"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Beállítás"
+msgstr "B&eállítás…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
