@@ -1,8 +1,8 @@
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2022-05-31 16:56+0200\n"
+"PO-Revision-Date: 2024-06-21 12:17+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
@@ -1049,12 +1049,9 @@ msgid "Symbols for Legacy Computing"
 msgstr "Symboler för äldre datasystem"
 
 #: kcharselect.cpp:391
-#, fuzzy
-#| msgctxt "KCharSelect|@info:placeholder"
-#| msgid "Enter a search term or character..."
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Ange ett sökbegrepp eller tecken..."
+msgstr "Ange ett sökbegrepp eller tecken…"
 
 #: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:tooltip"
@@ -1062,12 +1059,9 @@ msgid "Enter a search term or character here"
 msgstr "Ange ett sökbegrepp eller tecken här"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Sök"
+msgstr "&Sök…"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1450,20 +1444,14 @@ msgid "Unknown"
 msgstr "Okänd"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "KColorCombo|@item:inlistbox Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Egen..."
+msgstr "Egen…"
 
 #: kcontextualhelpbutton.cpp:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Show Contextual Help"
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "Visa sammanhangsberoende hjälp"
+msgstr "Sammanhangsberoende hjälp"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1707,7 +1695,7 @@ msgstr "Relativ"
 #: kfontchooserwidget.ui:117
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Exempel:"
 
 #: kfontchooserwidget.ui:127
 msgctxt "KFontChooserWidget|"
@@ -1724,12 +1712,9 @@ msgid "Show only monospaced fonts"
 msgstr "Visa bara teckensnitt med fast bredd"
 
 #: kfontrequester.cpp:184
-#, fuzzy
-#| msgctxt "KFontRequester|@info:tooltip"
-#| msgid "Choose font..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Välj teckensnitt..."
+msgstr "Välj teckensnitt…"
 
 #: kfontrequester.cpp:190
 msgctxt "KFontRequester|@info:tooltip"
@@ -1843,12 +1828,9 @@ msgid "Close message"
 msgstr "Stäng meddelandet"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@info:placeholder"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Sök efter filtyp eller filnamnsmönster..."
+msgstr "Sök efter filtyp eller filnamnsmönster…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1871,12 +1853,9 @@ msgid "Patterns"
 msgstr "Mönster"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|@action:button"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Redigera..."
+msgstr "&Redigera…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -1884,25 +1863,17 @@ msgid "Launch the MIME type editor"
 msgstr "Starta Mime-typeditorn"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "Kunde inte hitta det körbara programmet \"keditfiletype5\" i PATH."
+msgstr "Kunde inte hitta det körbara programmet \"keditfiletype\" i PATH."
 
 #: kmimetypeeditor.cpp:37
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid ""
-#| "Could not start the \"keditfiletype5\" executable, please check your "
-#| "installation."
 msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"Kunde inte starta det körbara programmet \"keditfiletype5\". Kontrollera "
+"Kunde inte starta det körbara programmet \"keditfiletype\". Kontrollera "
 "installationen."
 
 #: knewpassworddialog.cpp:63
@@ -1985,7 +1956,7 @@ msgstr "Lösenordets säkerhets&mått:"
 #: kpageview.cpp:449
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Sök…"
 
 #: kpassworddialog.cpp:52
 msgctxt "KPasswordDialog|@title:window"
@@ -2043,20 +2014,14 @@ msgid "Change the visibility of the password"
 msgstr "Ändra lösenordets synlighet"
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Lösenord"
+msgstr "Visa lösenord"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgctxt "KPasswordDialog|@title:window"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Lösenord"
+msgstr "Dölj lösenord"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
@@ -2152,12 +2117,9 @@ msgid "Do not save data"
 msgstr "Spara inte data"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Spara s&om..."
+msgstr "Spara s&om…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2186,12 +2148,9 @@ msgstr ""
 "Använd det för att prova olika inställningar."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "Ad&ministratörsläge..."
+msgstr "Ad&ministratörsläge…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2295,12 +2254,9 @@ msgid "Go forward one step"
 msgstr "Gå framåt ett steg"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Skriv &ut..."
+msgstr "Skriv &ut…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2328,12 +2284,9 @@ msgid "Delete item(s)"
 msgstr "Ta bort objekt"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "Ö&ppna..."
+msgstr "Ö&ppna…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2366,12 +2319,9 @@ msgid "&Insert"
 msgstr "&Infoga"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "A&npassa..."
+msgstr "A&npassa…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
