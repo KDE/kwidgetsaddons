@@ -10,8 +10,9 @@
 
 #include <kwidgetsaddons_export.h>
 
-class QWidget;
 class QObject;
+class QWidget;
+class QWindow;
 
 /**
  * KJobWidgets namespace
@@ -36,6 +37,17 @@ namespace KJobWidgets
 KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
 
 /**
+ * Associate this job with a window given by @p window.
+ *
+ * Note that setWindow() will set the window handle too.
+ *
+ * @param job should be a KJob subclass
+ *
+ * @since 6.6
+ */
+KWIDGETSADDONS_EXPORT void setWindowHandle(QObject *job, QWindow *window);
+
+/**
  * Return the window associated with this job.
  *
  * @param job should be a KJob subclass
@@ -43,6 +55,15 @@ KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
  * @since 6.0
  */
 KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
+
+/**
+ * Returns the window handle associated with this job.
+ *
+ * @param job should be a KJob subclass
+ *
+ * @since 6.6
+ */
+KWIDGETSADDONS_EXPORT QWindow *windowHandle(QObject *job);
 
 /**
  * Updates the last user action timestamp to the given time.
