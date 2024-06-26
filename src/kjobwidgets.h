@@ -43,7 +43,7 @@ KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
  *
  * @param job should be a KJob subclass
  *
- * @since 6.6
+ * @since 6.4
  */
 KWIDGETSADDONS_EXPORT void setWindowHandle(QObject *job, QWindow *window);
 
@@ -61,7 +61,7 @@ KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
  *
  * @param job should be a KJob subclass
  *
- * @since 6.6
+ * @since 6.4
  */
 KWIDGETSADDONS_EXPORT QWindow *windowHandle(QObject *job);
 
