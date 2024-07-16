@@ -14,14 +14,7 @@ void KJobWidgets::setWindow(QObject *job, QWidget *widget)
 {
     job->setProperty("widget", QVariant::fromValue(widget));
 
-    QWindow *windowHandle = nullptr;
-    if (widget) {
-        QWidget *window = widget->window();
-        if (window->winId()) {
-            windowHandle = window->windowHandle();
-        }
-    }
-
+    QWindow *windowHandle = widget ? widget->windowHandle() : nullptr;
     job->setProperty("window", QVariant::fromValue(windowHandle));
     if (windowHandle) {
         job->setProperty("window-id", QVariant::fromValue(windowHandle->winId()));
