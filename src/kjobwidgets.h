@@ -36,6 +36,7 @@ namespace KJobWidgets
  */
 KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 5)
 /**
  * Associate this job with a window given by @p window.
  *
@@ -44,8 +45,10 @@ KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
  * @param job should be a KJob subclass
  *
  * @since 6.4
+ * @deprecated since 6.5, use KJobWindows::setWindow() instead.
  */
-KWIDGETSADDONS_EXPORT void setWindowHandle(QObject *job, QWindow *window);
+KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::setWindow() instead") void setWindowHandle(QObject *job, QWindow *window);
+#endif
 
 /**
  * Return the window associated with this job.
@@ -56,14 +59,17 @@ KWIDGETSADDONS_EXPORT void setWindowHandle(QObject *job, QWindow *window);
  */
 KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 5)
 /**
  * Returns the window handle associated with this job.
  *
  * @param job should be a KJob subclass
  *
  * @since 6.4
+ * @deprecated since 6.5, use KJobWindows::window() instead.
  */
-KWIDGETSADDONS_EXPORT QWindow *windowHandle(QObject *job);
+KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::window() instead") QWindow *windowHandle(QObject *job);
+#endif
 
 /**
  * Updates the last user action timestamp to the given time.

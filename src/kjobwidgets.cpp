@@ -22,9 +22,13 @@ void KJobWidgets::setWindow(QObject *job, QWidget *widget)
         }
     }
 
-    setWindowHandle(job, windowHandle);
+    job->setProperty("window", QVariant::fromValue(windowHandle));
+    if (windowHandle) {
+        job->setProperty("window-id", QVariant::fromValue(windowHandle->winId()));
+    }
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(6, 5)
 void KJobWidgets::setWindowHandle(QObject *job, QWindow *window)
 {
     job->setProperty("window", QVariant::fromValue(window));
@@ -32,16 +36,19 @@ void KJobWidgets::setWindowHandle(QObject *job, QWindow *window)
         job->setProperty("window-id", QVariant::fromValue(window->winId()));
     }
 }
+#endif
 
 QWidget *KJobWidgets::window(QObject *job)
 {
     return job->property("widget").value<QWidget *>();
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(6, 5)
 QWindow *KJobWidgets::windowHandle(QObject *job)
 {
     return job->property("window").value<QWindow *>();
 }
+#endif
 
 // duplicated from kwindowsystem
 static int timestampCompare(unsigned long time1_, unsigned long time2_) // like strcmp()
