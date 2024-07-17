@@ -44,6 +44,11 @@ public:
         raise();
     }
 
+    int tabIndex() const
+    {
+        return m_tabIdx;
+    }
+
 private:
     void doResize()
     {
@@ -636,7 +641,14 @@ void KPageViewPrivate::onSearchTextChanged()
                     // qDebug() << page << tabWidget << "not found" << w;
                     continue;
                 }
-                m_searchMatchOverlays << new SearchMatchOverlay(tabWidget->tabBar(), idx);
+
+                const bool alreadyOverlayed =
+                    std::any_of(m_searchMatchOverlays.cbegin(), m_searchMatchOverlays.cend(), [tabbar = tabWidget->tabBar(), idx](SearchMatchOverlay *overlay) {
+                        return idx == overlay->tabIndex() && tabbar == overlay->parentWidget();
+                    });
+                if (!alreadyOverlayed) {
+                    m_searchMatchOverlays << new SearchMatchOverlay(tabWidget->tabBar(), idx);
+                }
             }
         }
     }
