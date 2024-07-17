@@ -605,22 +605,18 @@ void KPageViewPrivate::onSearchTextChanged()
         // @p w lives
         auto parent = w->parentWidget();
         TabWidgetAndPage p = {nullptr, nullptr};
-        if (auto tw = qobject_cast<QTabWidget *>(parent)) {
-            p.first = tw;
-        }
         QVarLengthArray<QWidget *, 8> parentChain;
+        parentChain << parent;
         while (parent) {
-            if (!p.first) {
-                if (auto tw = qobject_cast<QTabWidget *>(parent)) {
-                    if (parentChain.size() >= 3) {
-                        // last == QTabWidget
-                        // second last == QStackedWidget of QTabWidget
-                        // third last => the widget we want
-                        p.second = parentChain.value((parentChain.size() - 1) - 2);
-                    }
-                    p.first = tw;
-                    break;
+            if (auto tw = qobject_cast<QTabWidget *>(parent)) {
+                if (parentChain.size() >= 3) {
+                    // last == QTabWidget
+                    // second last == QStackedWidget of QTabWidget
+                    // third last => the widget we want
+                    p.second = parentChain.value((parentChain.size() - 1) - 2);
                 }
+                p.first = tw;
+                break;
             }
             parent = parent->parentWidget();
             parentChain << parent;
