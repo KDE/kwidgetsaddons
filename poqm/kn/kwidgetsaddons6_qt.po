@@ -2895,7 +2895,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "ಗುಪ್ತಪದ ಸುರಕ್ಷತಾ ಮಾಪಕ:"
 
-#: kpageview.cpp:449
+#: kpageview.cpp:454
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
