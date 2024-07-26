@@ -1,355 +1,237 @@
-# Agron Selimaj <as9902613@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2012, 2024 Agron Selimaj <as9902613@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kde4libs\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2012-01-19 00:20-0500\n"
+"PO-Revision-Date: 2024-07-24 23:00-0400\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
-"Language-Team: Albanian <sq@li.org>\n"
+"Language-Team: sq\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2010-11-24 03:19+0000\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Sans Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Sans Serif"
 msgstr "Sans Serif"
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
 msgstr "Serif"
 
 #. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:28
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Monospace"
 msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
 msgstr "Monospace"
 
 #: fonthelpers_p.h:90
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
 #: fonthelpers_p.h:94
-#, fuzzy, qt-format
-#| msgctxt "dictionary name. %1-language and %2-variant name"
-#| msgid "%1 [%2]"
+#, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
-msgstr "&E Disponueshme:"
+msgstr "E &Disponueshme:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
-msgstr "&E Përzgjedhur:"
+msgstr "E &Përzgjedhur:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
-msgstr "&Mbrapsht"
+msgstr "&Mbrapa"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
-msgstr "Shko një hap prapa"
+msgstr "Shko një hap mbrapa"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
-msgstr "Tjetër"
+msgstr "Tjetra"
 
 #: kassistantdialog.cpp:114
-#, fuzzy
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
-msgstr "Përfundim"
+msgstr "Përfundo"
 
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr "&Të Gjitha"
+msgstr "Të Gjitha"
 
 #: kcharselect-translation.cpp:12
-#, fuzzy
-#| msgid "Open Script"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
-msgstr "Hap Skriptën"
+msgstr "Dorëshkrimet Europiane"
 
 #: kcharselect-translation.cpp:13
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "African Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
-msgstr "Skriptet Afrikane"
+msgstr "Dorëshkrimet Afrikane"
 
 #: kcharselect-translation.cpp:14
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Middle Eastern Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
-msgstr "Skriptet e Lindjes së Mesme"
+msgstr "Dorëshkrimet e Lindjes së Mesme"
 
 #: kcharselect-translation.cpp:15
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Central Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
-msgstr "Skriptet e Azisë Qendrore"
+msgstr "Dorëshkrimet e Azisë Qendrore"
 
 #: kcharselect-translation.cpp:16
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "South East Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
-msgstr "Skriptet e Azisë Jug-Lindore"
+msgstr "Dorëshkrimet e Azisë Jug-Lindore"
 
 #: kcharselect-translation.cpp:17
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "South East Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
-msgstr "Skriptet e Azisë Jug-Lindore"
+msgstr "Dorëshkrimet e Azisë Jug-Lindore"
 
 #: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
-msgstr ""
+msgstr "Dorëshkrimet e Indonezisë dhe Oqeanisë"
 
 #: kcharselect-translation.cpp:19
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "East Asian Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
-msgstr "Skriptet e Azisë Lindore"
+msgstr "Dorëshkrimet e Azisë Lindore"
 
 #: kcharselect-translation.cpp:20
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "African Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
-msgstr "Skriptet Afrikane"
+msgstr "Dorëshkrimet Amerikane"
 
 #: kcharselect-translation.cpp:21
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Symbols"
 msgstr "Simbole"
 
 #: kcharselect-translation.cpp:22
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Mathematical Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Mathematical Symbols"
 msgstr "Simbolet Matematike"
 
 #: kcharselect-translation.cpp:23
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Phonetic Symbols"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Simbolet Fonetike"
 
 #: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
-msgstr "Shenja diakritike të kombinuara"
+msgstr "Shenjat diakritike të kombinuara"
 
 #: kcharselect-translation.cpp:25
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Other"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "Tjetër"
 
 #: kcharselect-translation.cpp:26
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Basic Latin"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
-msgstr "Latinishte Bazë"
+msgstr "Latinishte Bazike"
 
 #: kcharselect-translation.cpp:27
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin-1 Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin-1 Supplement"
 msgstr "Shtesë Latinishte-1"
 
 #: kcharselect-translation.cpp:28
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
 msgstr "Latinishte e zgjeruar-A"
 
 #: kcharselect-translation.cpp:29
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
 msgstr "Latinishte e zgjeruar-B"
 
 #: kcharselect-translation.cpp:30
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "IPA Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "IPA Extensions"
-msgstr "Prapashtesa IPA"
+msgstr "Zgjerimet IPA"
 
 #: kcharselect-translation.cpp:31
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Spacing Modifier Letters"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
-msgstr "Ndryshues të hapësirës së shkronjës"
+msgstr "Shkronjat që ndryshojnë hapësirën"
 
 #: kcharselect-translation.cpp:32
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
 msgstr "Shenja diakritike të kombinuara"
 
 #: kcharselect-translation.cpp:33
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Greek and Coptic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek and Coptic"
-msgstr "Greqishte dhe Koptike"
+msgstr "Greke dhe Koptike"
 
 #: kcharselect-translation.cpp:34
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Cyrillic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic"
 msgstr "Cirilike"
 
 #: kcharselect-translation.cpp:35
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Supplement"
 msgstr "Cirilike Shtesë"
 
 #: kcharselect-translation.cpp:36
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Armenian"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Armenian"
 msgstr "Armene"
 
 #: kcharselect-translation.cpp:37
-#, fuzzy
-#| msgctxt "@item Spelling dictionary"
-#| msgid "Hebrew"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hebrew"
 msgstr "Hebraik"
 
 #: kcharselect-translation.cpp:38
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Arabic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
 msgstr "Arabe"
 
 #: kcharselect-translation.cpp:39
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Syriac"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac"
 msgstr "Siriane"
 
 #: kcharselect-translation.cpp:40
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arabic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
 msgstr "Arabe Shtesë"
 
 #: kcharselect-translation.cpp:41
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Thaana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
 msgstr "Thaana"
 
 #: kcharselect-translation.cpp:42
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "NKo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "NKo"
@@ -365,60 +247,39 @@ msgid "Mandaic"
 msgstr ""
 
 #: kcharselect-translation.cpp:45
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cyrillic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac Supplement"
-msgstr "Cirilike Shtesë"
+msgstr "Siriane Shtesë"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "Latinishte e zgjeruar-A"
+msgstr "Arabe e zgjeruar-B"
 
 #: kcharselect-translation.cpp:47
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
-msgstr "Latinishte e zgjeruar-A"
+msgstr "Arabe e zgjeruar-A"
 
 #: kcharselect-translation.cpp:48
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Devanagari"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
 msgstr "Devanagari"
 
 #: kcharselect-translation.cpp:49
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bengali"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bengali"
 msgstr "Bengali"
 
 #: kcharselect-translation.cpp:50
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Gurmukhi"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
 msgstr "Gurmuki"
 
 #: kcharselect-translation.cpp:51
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Gujarati"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
-msgstr "Gujarati"
+msgstr "Guxharati"
 
 #: kcharselect-translation.cpp:52
 #, fuzzy
@@ -469,9 +330,6 @@ msgid "Sinhala"
 msgstr "Sinhala"
 
 #: kcharselect-translation.cpp:58
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Thai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
 msgstr "Tailandeze"
@@ -485,28 +343,19 @@ msgid "Lao"
 msgstr "Lao"
 
 #: kcharselect-translation.cpp:60
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tibetan"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tibetan"
 msgstr "Tibetiane"
 
 #: kcharselect-translation.cpp:61
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Myanmar"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar"
 msgstr "Mjanmar (Birmania)"
 
 #: kcharselect-translation.cpp:62
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Georgian"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian"
-msgstr "Gjeorgjiane"
+msgstr "Gjorgjiane"
 
 #: kcharselect-translation.cpp:63
 #, fuzzy
@@ -517,28 +366,19 @@ msgid "Hangul Jamo"
 msgstr "Hangul Jamo"
 
 #: kcharselect-translation.cpp:64
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic"
 msgstr "Etiope"
 
 #: kcharselect-translation.cpp:65
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ethiopic Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
 msgstr "Etiope Shtesë"
 
 #: kcharselect-translation.cpp:66
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cherokee"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee"
-msgstr "Sheroke"
+msgstr "Shiroke"
 
 #: kcharselect-translation.cpp:67
 #, fuzzy
@@ -666,12 +506,9 @@ msgid "Tai Tham"
 msgstr ""
 
 #: kcharselect-translation.cpp:83
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "Shenja diakritike të kombinuara"
+msgstr "Shenja e zgjeruara diakritike të kombinuara"
 
 #: kcharselect-translation.cpp:84
 #, fuzzy
@@ -684,15 +521,12 @@ msgstr "Balineze"
 #: kcharselect-translation.cpp:85
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
-msgstr ""
+msgstr "Sundaneze"
 
 #: kcharselect-translation.cpp:86
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Katakana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
-msgstr "Katakana"
+msgstr "Batake"
 
 #: kcharselect-translation.cpp:87
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -705,49 +539,31 @@ msgid "Ol Chiki"
 msgstr ""
 
 #: kcharselect-translation.cpp:89
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
-msgstr "Latinishte e zgjeruar-A"
+msgstr "Cirilike e zgjeruar-C"
 
 #: kcharselect-translation.cpp:90
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Geometric Shapes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "Forma gjeometrike"
+msgstr "Gjorgjiane e zgjeruar"
 
 #: kcharselect-translation.cpp:91
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Latin-1 Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
-msgstr "Shtesë Latinishte-1"
+msgstr "Sundaneze e zgjeruar"
 
 #: kcharselect-translation.cpp:92
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phonetic Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
-msgstr "Zgjerime Fonetike"
+msgstr ""
 
 #: kcharselect-translation.cpp:93
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phonetic Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions"
 msgstr "Zgjerime Fonetike"
 
 #: kcharselect-translation.cpp:94
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phonetic Extensions Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
 msgstr "Zgjerime fonetike shtesë"
@@ -769,36 +585,24 @@ msgid "Latin Extended Additional"
 msgstr "Latinishte e shtuar e zgjeruar"
 
 #: kcharselect-translation.cpp:97
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Greek Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
 msgstr "Greqishte e zgjeruar"
 
 #: kcharselect-translation.cpp:98
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "General Punctuation"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "General Punctuation"
 msgstr "Pikshënimi i përgjithshëm"
 
 #: kcharselect-translation.cpp:99
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Superscripts and Subscripts"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Superscripts and Subscripts"
-msgstr "Supershkrime dhe nënshkrime"
+msgstr "Mbishkrime dhe nënshkrime"
 
 #: kcharselect-translation.cpp:100
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Currency Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Currency Symbols"
-msgstr "Simbolet e Monedhave"
+msgstr "Simbolet e Valutave"
 
 #: kcharselect-translation.cpp:101
 #, fuzzy
@@ -809,140 +613,89 @@ msgid "Combining Diacritical Marks for Symbols"
 msgstr "Shenja diakritike të kombinueshme sipas simboleve"
 
 #: kcharselect-translation.cpp:102
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Phonetic Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
-msgstr "Simbolet Fonetike"
+msgstr "Simbolet si shkronja"
 
 #: kcharselect-translation.cpp:103
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Number Forms"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Number Forms"
 msgstr "Format e Numrave"
 
 #: kcharselect-translation.cpp:104
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Arrows"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
 msgstr "Shigjetat"
 
 #: kcharselect-translation.cpp:105
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Mathematical Operators"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
 msgstr "Vepruesit Matematikë"
 
 #: kcharselect-translation.cpp:106
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Technical"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
 msgstr "Simbole teknike të ndryshme"
 
 #: kcharselect-translation.cpp:107
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Control Pictures"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
 msgstr "Figura kontrolli"
 
 #: kcharselect-translation.cpp:108
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Optical Character Recognition"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Optical Character Recognition"
 msgstr "Njohja optike e simboleve"
 
 #: kcharselect-translation.cpp:109
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Enclosed Alphanumerics"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
 msgstr "Alfanumerikë të mbyllur"
 
 #: kcharselect-translation.cpp:110
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Box Drawing"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Box Drawing"
 msgstr "Vizatues drejtkëndëshi"
 
 #: kcharselect-translation.cpp:111
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Block Elements"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
 msgstr "Elementë blloku"
 
 #: kcharselect-translation.cpp:112
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Geometric Shapes"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes"
 msgstr "Forma gjeometrike"
 
 #: kcharselect-translation.cpp:113
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols"
-msgstr "Simbole të Përziera"
+msgstr "Simbole të Ndryshme"
 
 #: kcharselect-translation.cpp:114
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Dingbats"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Dingbats"
 msgstr "Dingbats"
 
 #: kcharselect-translation.cpp:115
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Miscellaneous Mathematical Symbols-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Simbole matematikë të ndryshëm-A"
 
 #: kcharselect-translation.cpp:116
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Arrows-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
-msgstr "Shigjeta suplementare-A"
+msgstr "Shigjeta shtesë-A"
 
 #: kcharselect-translation.cpp:117
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Braille Patterns"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
-msgstr "Kampione braille"
+msgstr "Mostra braille"
 
 #: kcharselect-translation.cpp:118
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Supplemental Arrows-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
-msgstr "Shigjeta suplementare-B"
+msgstr "Shigjeta shtesë-B"
 
 #: kcharselect-translation.cpp:119
 #, fuzzy
@@ -1870,46 +1623,34 @@ msgid "In decimal"
 msgstr "Entiteti dhjetor XML:"
 
 #: kcharselectdata.cpp:303
-#, fuzzy
-#| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
-msgstr "Çdo Gërmë"
+msgstr "<noncharacter>"
 
 #: kcharselectdata.cpp:324
-#, fuzzy
-#| msgid "<Non Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
-msgstr "<Surrogato i lartë për përdorim jo privat>"
+msgstr "<Non Private Use High Surrogate>"
 
 #: kcharselectdata.cpp:326
-#, fuzzy
-#| msgid "<Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
-msgstr "<Surrogato i lartë për përdorim privat>"
+msgstr "<Private Use High Surrogate>"
 
 #: kcharselectdata.cpp:328
-#, fuzzy
-#| msgid "<Low Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
-msgstr "<Surrogatë të ulët>"
+msgstr "<Low Surrogate>"
 
 #: kcharselectdata.cpp:330
-#, fuzzy
-#| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
-msgstr "<Përdorim privat>"
+msgstr "<Private Use>"
 
 #: kcharselectdata.cpp:362
-#, fuzzy
-#| msgid "<not assigned>"
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
-msgstr "<i pa dhënë>"
+msgstr "<not assigned>"
 
 #: kcharselectdata.cpp:440
 #, fuzzy
@@ -1922,221 +1663,159 @@ msgstr "&Të Gjitha"
 #: kcharselectdata.cpp:752
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
-msgstr ""
+msgstr "Non-printable"
 
 #: kcharselectdata.cpp:785
-#, fuzzy
-#| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Tjetër, Kontrolli"
 
 #: kcharselectdata.cpp:787
-#, fuzzy
-#| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Tjetër, Formati"
 
 #: kcharselectdata.cpp:789
-#, fuzzy
-#| msgid "Other, Not Assigned"
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Tjetër, i Pa Caktuar"
 
 #: kcharselectdata.cpp:791
-#, fuzzy
-#| msgid "Other, Private Use"
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Tjetër, përdorim privat"
 
 #: kcharselectdata.cpp:793
-#, fuzzy
-#| msgid "Other, Surrogate"
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Tjetër, Surrogat"
 
 #: kcharselectdata.cpp:795
-#, fuzzy
-#| msgid "Letter, Lowercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Shkronja, e Vogël"
 
 #: kcharselectdata.cpp:797
-#, fuzzy
-#| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Shkronja, Ndryshuesi"
 
 #: kcharselectdata.cpp:799
-#, fuzzy
-#| msgid "Letter, Other"
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Shkronja, Tjetër"
 
 #: kcharselectdata.cpp:801
-#, fuzzy
-#| msgid "Letter, Titlecase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Shkronja, Titulli"
 
 #: kcharselectdata.cpp:803
-#, fuzzy
-#| msgid "Letter, Uppercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Shkronja, e Madhe"
 
 #: kcharselectdata.cpp:805
-#, fuzzy
-#| msgid "Mark, Spacing Combining"
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "Shenjë, hapësirë e kombinuar"
 
 #: kcharselectdata.cpp:807
-#, fuzzy
-#| msgid "Mark, Enclosing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "Shenjë, e mbyllur"
 
 #: kcharselectdata.cpp:809
-#, fuzzy
-#| msgid "Mark, Non-Spacing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "Shenjë, pa hapësira"
 
 #: kcharselectdata.cpp:811
-#, fuzzy
-#| msgid "Number, Decimal Digit"
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Numër, shifra dhjetore"
 
 #: kcharselectdata.cpp:813
-#, fuzzy
-#| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "Numër, shkronja"
 
 #: kcharselectdata.cpp:815
-#, fuzzy
-#| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Numër, tjetër"
 
 #: kcharselectdata.cpp:817
-#, fuzzy
-#| msgid "Punctuation, Connector"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "Pikësimi, Lidhësi"
 
 #: kcharselectdata.cpp:819
-#, fuzzy
-#| msgid "Punctuation, Dash"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
-msgstr "Pikësimi, kërcim"
+msgstr "Pikësimi, vizë"
 
 #: kcharselectdata.cpp:821
-#, fuzzy
-#| msgid "Punctuation, Close"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "Pikësimi, e mbyllur"
 
 #: kcharselectdata.cpp:823
-#, fuzzy
-#| msgid "Punctuation, Final Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
-msgstr "Pikësimi, kuota e fundit"
+msgstr "Pikësimi, thonjëza e fundit"
 
 #: kcharselectdata.cpp:825
-#, fuzzy
-#| msgid "Punctuation, Initial Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
-msgstr "Pikësimi, kuota e parë"
+msgstr "Pikësimi, thonjëza e parë"
 
 #: kcharselectdata.cpp:827
-#, fuzzy
-#| msgid "Punctuation, Other"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "Pikësimi, tjetër"
 
 #: kcharselectdata.cpp:829
-#, fuzzy
-#| msgid "Punctuation, Open"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "Pikësimi, e hapur"
 
 #: kcharselectdata.cpp:831
-#, fuzzy
-#| msgid "Symbol, Currency"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Simboli, valutë"
 
 #: kcharselectdata.cpp:833
-#, fuzzy
-#| msgid "Symbol, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "Simboli, ndryshues"
 
 #: kcharselectdata.cpp:835
-#, fuzzy
-#| msgid "Symbol, Math"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "Simboli, Matematikë"
 
 #: kcharselectdata.cpp:837
-#, fuzzy
-#| msgid "Symbol, Other"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Simboli, tjetër"
 
 #: kcharselectdata.cpp:839
-#, fuzzy
-#| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
-msgstr "Ndarës, rresht"
+msgstr "Ndarës, vijë"
 
 #: kcharselectdata.cpp:841
-#, fuzzy
-#| msgid "Separator, Paragraph"
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "Ndarës, paragraf"
 
 #: kcharselectdata.cpp:843
-#, fuzzy
-#| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Ndarës, hapësirë"
 
 #: kcharselectdata.cpp:845
-#, fuzzy
-#| msgid "Unknown"
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "E Panjohur"
@@ -2174,135 +1853,100 @@ msgid "Date cannot be later than %1"
 msgstr ""
 
 #: kdatepicker.cpp:197
-#, fuzzy, qt-format
-#| msgid "Week %1"
+#, qt-format
 msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Java %1"
 
 #: kdatepicker.cpp:305
-#, fuzzy
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
-msgstr "Viti tjetër"
+msgstr "Viti i ardhshëm"
 
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
-msgstr "Viti i mëparshëm"
+msgstr "Viti i kaluar"
 
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Muaji i ardhshëm"
 
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Muaji i kaluar"
 
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Zgjidh një javë"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Zgjidh një muaj"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Zgjidh një vit"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Zgjidh ditën e sotme"
 
 #: kdatepicker.cpp:647
-#, fuzzy
-#| msgid "Close"
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Mbylle"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgid "Next year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
-msgstr "Viti tjetër"
+msgstr "Viti i ardhshëm"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgid "Next month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "Muaji i ardhshëm"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgid "Next year"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
-msgstr "Viti tjetër"
+msgstr "Java e ardhshme"
 
 #: kdatepickerpopup.cpp:99
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
-msgstr ""
+msgstr "Nesër"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Sot"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "Dje"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgid "&Last Page"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
-msgstr "&Faqja e Fundit"
+msgstr "Java e kaluar"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgid "Next month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
-msgstr "Muaji i ardhshëm"
+msgstr "Muaji i kaluar"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgid "&Last Page"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
-msgstr "&Faqja e Fundit"
+msgstr "Viti i kaluar"
 
 #: kdatepickerpopup.cpp:123
 #, fuzzy
@@ -2317,11 +1961,9 @@ msgid "UTC"
 msgstr ""
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgid "Rating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
-msgstr "Vlerësimi"
+msgstr "Lundron"
 
 #: kdatetimeedit.cpp:211
 msgctxt "KDateTimeEdit|@info"
@@ -2334,29 +1976,21 @@ msgid "The entered date and time is after the maximum allowed date and time."
 msgstr ""
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "&Shto"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
 msgstr "&Hiq"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
-#| msgid "Move &Up"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
 msgstr "Lëviz &Sipër"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
-#| msgid "Move &Down"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Lëviz &Poshtë"
@@ -2369,41 +2003,29 @@ msgid "Requested Font"
 msgstr "Kërko Fontin"
 
 #: kfontchooser.cpp:199
-#, fuzzy
-#| msgctxt "normal severity"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normal"
 
 #: kfontchooser.cpp:200 kfontchooser.cpp:450
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Italic"
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "të Pjerrëta"
 
 #: kfontchooser.cpp:201 kfontchooser.cpp:451
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Oblique"
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Vezor"
 
 #: kfontchooser.cpp:202
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Bold"
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
-msgstr "I Zi"
+msgstr "Të Trasha"
 
 #: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "Të trasha Të ndrydhura Vezore"
 
 #: kfontchooser.cpp:247
 #, fuzzy
@@ -2413,71 +2035,47 @@ msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
 #: kfontchooser.cpp:435
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgid "Select Font"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Zgjidh Gërmën"
 
 #: kfontchooserwidget.ui:25
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Gërma"
 
 #: kfontchooserwidget.ui:32
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Gërma:"
 
 #: kfontchooserwidget.ui:50
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Stili i gërmave"
 
 #: kfontchooserwidget.ui:57
-#, fuzzy
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Stili i gërmës:"
 
 #: kfontchooserwidget.ui:75
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
-msgstr "Përmasa"
+msgstr "Madhësia"
 
 #: kfontchooserwidget.ui:82
-#, fuzzy
-#| msgctxt "@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
-msgstr "Përmasa:"
+msgstr "Madhësia:"
 
 #: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relative"
@@ -2485,13 +2083,9 @@ msgstr "Relative"
 #: kfontchooserwidget.ui:117
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Shembull:"
 
 #: kfontchooserwidget.ui:127
-#, fuzzy
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -2813,18 +2407,14 @@ msgstr ""
 " - të përdorni numra ose simbole, siç është #, si dhe gërma."
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "Fjalëkalimi:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
-msgstr "&Verifiko"
+msgstr "&Verifiko:"
 
 #: knewpasswordwidget.ui:54
 #, fuzzy
@@ -2834,15 +2424,11 @@ msgid "Password strength &meter:"
 msgstr "Matësi i forcës së fjalëkalimit:"
 
 #: kpageview.cpp:454
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Kërko:"
+msgstr "Kërko..."
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Fjalëkalimi"
@@ -2853,23 +2439,19 @@ msgid "Show Contextual Help"
 msgstr ""
 
 #: kpassworddialog.cpp:100
-#, fuzzy
-#| msgid "Supply a username and password below."
 msgctxt "KPasswordDialog|"
 msgid "Supply a password below."
-msgstr "Jep një emër përdoruesi dhe një fjalëkalim këtu poshtë."
+msgstr "Jep një fjalëkalim këtu poshtë."
 
 #: kpassworddialog.ui:33
-#, fuzzy
-#| msgid "Supply a username and password below."
 msgctxt "KPasswordDialog|"
 msgid "Supply a username and password below."
-msgstr "Jep një emër përdoruesi dhe një fjalëkalim këtu poshtë."
+msgstr "Jep një emër përdoruesi këtu poshtë."
 
 #: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr ""
+msgstr "Nuk ka fjalëkalim. Futunu si anonim (ose si &mysafir)"
 
 #: kpassworddialog.ui:80
 #, fuzzy
@@ -2879,32 +2461,24 @@ msgid "Use this password:"
 msgstr "&Zgjidh fjalëkalimin:"
 
 #: kpassworddialog.ui:105
-#, fuzzy
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Emri i Përdoruesit:"
 
 #: kpassworddialog.ui:130
-#, fuzzy
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domain:"
 
 #: kpassworddialog.ui:144
-#, fuzzy
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Fjalëkalimi:"
 
 #: kpassworddialog.ui:158
-#, fuzzy
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
-msgstr "Kujto fjalëkalimin"
+msgstr "Mbaje mend fjalëkalimin"
 
 #: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
@@ -2912,18 +2486,14 @@ msgid "Change the visibility of the password"
 msgstr ""
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Fjalëkalimi"
+msgstr "Shfaqe Fjalëkalimin"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Fjalëkalimi"
+msgstr "Fshahe Fjalëkalimin"
 
 #: kpixmapregionselectordialog.cpp:56
 #, fuzzy
@@ -3130,8 +2700,6 @@ msgid "Clear the input in the edit field"
 msgstr "Pastroni hyrjen në fushën e modifikimit"
 
 #: kstandardguiitem.cpp:222
-#, fuzzy
-#| msgid "&Help"
 msgctxt "KStandardGuiItem|show help"
 msgid "&Help"
 msgstr "&Ndihmë"
@@ -3196,11 +2764,9 @@ msgid "Reset all items to their default values"
 msgstr "Riktheji të gjitha temat në vlerat e tyre të parazgjedhura"
 
 #: kstandardguiitem.cpp:258
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KStandardGuiItem|go back"
 msgid "&Back"
-msgstr "&Mbrapsht"
+msgstr "&Mbrapa"
 
 #: kstandardguiitem.cpp:258
 #, fuzzy
@@ -3210,9 +2776,6 @@ msgid "Go back one step"
 msgstr "Shko një hap prapa"
 
 #: kstandardguiitem.cpp:264
-#, fuzzy
-#| msgctxt "go forward"
-#| msgid "&Forward"
 msgctxt "KStandardGuiItem|go forward"
 msgid "&Forward"
 msgstr "&Përpara"
@@ -3225,63 +2788,47 @@ msgid "Go forward one step"
 msgstr "Shko përpara një hap"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "Print"
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Printo"
+msgstr "&Shtyp..."
 
 #: kstandardguiitem.cpp:278
-#, fuzzy
-#| msgid "Opens the print dialog to print the current document"
 msgctxt "KStandardGuiItem|"
 msgid "Opens the print dialog to print the current document"
-msgstr "Hap dialogun e printimit për të printuar dokumentin e tanishëm"
+msgstr "Hap dialogun e shtypit për të shtypur dokumentin e tanishëm"
 
 #: kstandardguiitem.cpp:285
-#, fuzzy
-#| msgid "C&ontinue"
 msgctxt "KStandardGuiItem|"
 msgid "C&ontinue"
 msgstr "V&azhdo"
 
 #: kstandardguiitem.cpp:287
-#, fuzzy
-#| msgid "Continue operation"
 msgctxt "KStandardGuiItem|"
 msgid "Continue operation"
 msgstr "Vazhdo veprimin"
 
 #: kstandardguiitem.cpp:292
-#, fuzzy
-#| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Fshije"
 
 #: kstandardguiitem.cpp:294
-#, fuzzy
-#| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
-msgstr "Fshije temën(at)"
+msgstr "Fshijë gjërat"
 
 #: kstandardguiitem.cpp:299
 #, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "Hape"
+msgstr "&Hape…"
 
 #: kstandardguiitem.cpp:301
-#, fuzzy
-#| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
-msgstr "Hape skedarin"
+msgstr "Hape skedën"
 
 #: kstandardguiitem.cpp:306
-#, fuzzy
-#| msgid "&Quit"
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
 msgstr "&Dil"
@@ -3308,9 +2855,6 @@ msgid "Reset configuration"
 msgstr "Rivendos konfigurmin"
 
 #: kstandardguiitem.cpp:320
-#, fuzzy
-#| msgctxt "Verb"
-#| msgid "&Insert"
 msgctxt "KStandardGuiItem|Verb"
 msgid "&Insert"
 msgstr "&Fut"
@@ -3337,46 +2881,34 @@ msgid "Stop"
 msgstr "Ndalo"
 
 #: kstandardguiitem.cpp:340
-#, fuzzy
-#| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Shto"
 
 #: kstandardguiitem.cpp:345
-#, fuzzy
-#| msgid "Remove"
 msgctxt "KStandardGuiItem|"
 msgid "Remove"
 msgstr "Hiqe"
 
 #: kstandardguiitem.cpp:350
-#, fuzzy
-#| msgid "Test"
 msgctxt "KStandardGuiItem|"
 msgid "Test"
 msgstr "Testo"
 
 #: kstandardguiitem.cpp:355
-#, fuzzy
-#| msgid "Properties"
 msgctxt "KStandardGuiItem|"
 msgid "Properties"
-msgstr "Parametrat"
+msgstr "Vetitë"
 
 #: kstandardguiitem.cpp:360
-#, fuzzy
-#| msgid "&Overwrite"
 msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "&Mbishkruaje"
 
 #: ktimecombobox.cpp:254
-#, fuzzy
-#| msgid "Specified socket path is invalid"
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
-msgstr "Shtegu i specifikuar i socket është i pavlefshëm"
+msgstr "Ora e shkruar është gabim"
 
 #: ktimecombobox.cpp:257
 #, qt-format
