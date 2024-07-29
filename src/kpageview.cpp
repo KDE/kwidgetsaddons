@@ -412,8 +412,8 @@ KPageViewPrivate::KPageViewPrivate(KPageView *_parent)
     , layout(nullptr)
     , stack(nullptr)
     , titleWidget(nullptr)
-    , searchLineEditContainer(new QWidget())
-    , searchLineEdit(new QLineEdit())
+    , searchLineEditContainer(nullptr)
+    , searchLineEdit(nullptr)
     , view(nullptr)
 {
 }
@@ -445,6 +445,7 @@ void KPageViewPrivate::init()
     layout->setColumnStretch(1, 1);
     layout->setRowStretch(3, 1);
 
+    searchLineEdit = new QLineEdit(defaultWidget);
     searchTimer.setInterval(400);
     searchTimer.setSingleShot(true);
     searchTimer.callOnTimeout(q, [this] {
@@ -453,11 +454,12 @@ void KPageViewPrivate::init()
     q->setFocusProxy(searchLineEdit);
     searchLineEdit->setPlaceholderText(KPageView::tr("Search…", "@info:placeholder"));
     searchLineEdit->setClearButtonEnabled(true);
-    searchLineEdit->setParent(defaultWidget);
     auto a = new QAction(q);
     a->setIcon(QIcon::fromTheme(QStringLiteral("search")));
     searchLineEdit->addAction(a, QLineEdit::LeadingPosition);
     q->connect(searchLineEdit, &QLineEdit::textChanged, &searchTimer, QOverload<>::of(&QTimer::start));
+
+    searchLineEditContainer = new QWidget(q);
     auto containerLayout = new QVBoxLayout(searchLineEditContainer);
     containerLayout->setContentsMargins({});
     containerLayout->setSpacing(0);
