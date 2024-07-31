@@ -1953,7 +1953,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Lösenordets säkerhets&mått:"
 
-#: kpageview.cpp:454
+#: kpageview.cpp:455
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Sök…"

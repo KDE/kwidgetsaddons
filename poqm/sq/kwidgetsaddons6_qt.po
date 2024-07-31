@@ -2423,7 +2423,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Matësi i forcës së fjalëkalimit:"
 
-#: kpageview.cpp:454
+#: kpageview.cpp:455
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Kërko..."

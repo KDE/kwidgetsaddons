@@ -1979,7 +1979,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Thước đo độ &mạnh mật khẩu:"
 
-#: kpageview.cpp:454
+#: kpageview.cpp:455
 #, fuzzy
 #| msgctxt "KPageView|"
 #| msgid "Search..."

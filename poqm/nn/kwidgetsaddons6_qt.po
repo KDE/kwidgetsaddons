@@ -1971,7 +1971,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Styrke&målar for passord:"
 
-#: kpageview.cpp:454
+#: kpageview.cpp:455
 #, fuzzy
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
