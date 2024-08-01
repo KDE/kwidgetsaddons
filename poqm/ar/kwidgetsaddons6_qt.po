@@ -1614,42 +1614,42 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "انقل لأ&سفل"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "الخط المطلوب"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "عادي"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "مائل"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "مائل قليلا"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ثخين"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "مائل جريء مكثف"
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "نص حكيم له سر قاطع وذو شأن عظيم مكتوب على ثوب أخضر ومغلف بجلد أزرق"
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

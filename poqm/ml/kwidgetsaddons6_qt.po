@@ -1920,50 +1920,50 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "&താഴേയ്ക്കു് നീക്കുക"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 #, fuzzy
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ആവശ്യപ്പെട്ട ലിപി"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "സാധാരണ"
 
 #
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ചരിഞ്ഞ"
 
 #
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "ചരിഞ്ഞത്"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "തടിച്ച"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 #, fuzzy
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, fuzzy, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

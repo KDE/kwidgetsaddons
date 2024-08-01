@@ -1655,42 +1655,42 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Siirrä &alemmas"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Pyydetty fontti"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Tavallinen"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursiivi"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Kallistettu"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Lihavoitu"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Lihavoitu tiivistetty vino"
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "On sangen hauskaa, että polkupyörä on maanteiden jokapäiväinen ilmiö."
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

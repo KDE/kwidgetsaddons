@@ -1721,43 +1721,43 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "&Descer"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Tipo de Letra Pedido"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normal"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Itálico"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Oblíquo"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Negrito"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Negrito Condensado Oblíquo"
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 "Vejam a Bruxa da Raposa Salta-Pocinhas e o Cão Feliz Que Dorme Regalado"
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

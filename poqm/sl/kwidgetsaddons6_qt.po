@@ -1631,42 +1631,42 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Premakni navz&dol"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Zahtevana pisava"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Običajno"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Ležeče"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Nagnjeno"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Krepko"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Krepko strnjeno nagnjeno"
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Šerif bo za vajo spet skuhal domače žgance"
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

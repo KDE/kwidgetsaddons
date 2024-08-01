@@ -2176,14 +2176,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "ਹੇਠਾਂ ਭੇਜੋ(&D)"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ਲੋੜੀਦੇ ਫੋਂਟ"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2191,32 +2191,32 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "ਸਧਾਰਨ"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ਤਿਰਛੇ"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ਗੂੜ੍ਹੇ"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

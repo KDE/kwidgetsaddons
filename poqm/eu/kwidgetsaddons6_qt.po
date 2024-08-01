@@ -1700,43 +1700,43 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Eraman &behera"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Eskatutako letra-tipoa"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Arrunta"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Etzana"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Zeiharra"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Lodia"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Lodi kondentsatu zeiharra"
 
 # Hizkuntza bakoitzak mezu hau egokitu egiten du.
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Urruneko eltzea urrez, harat orduko lurrez."
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

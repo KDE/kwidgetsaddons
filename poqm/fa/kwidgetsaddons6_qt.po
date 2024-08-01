@@ -2450,14 +2450,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "حرکت &به پایین‌"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "قلم درخواست‌شده"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2465,7 +2465,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "عادی"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2474,7 +2474,7 @@ msgid "Italic"
 msgstr "کج"
 
 # Oblique
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2482,7 +2482,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "مایل"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2490,12 +2490,12 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "توپر"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
@@ -2505,7 +2505,7 @@ msgstr ""
 "ژاله‌هایش خرمن گلهای صنوبر و ثعلب را می‌لرزاند، و چشمم را ضیایی، دوست دارم."
 
 # %1
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"

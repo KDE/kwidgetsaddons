@@ -2131,14 +2131,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Yehlela &Ezantsi"
 
-#: kfontchooser.cpp:152
+#: kfontchooser.cpp:156
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Uhlobo lwegama Olukhethiweyo"
 
-#: kfontchooser.cpp:199
+#: kfontchooser.cpp:203
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2146,14 +2146,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Isiqhelo"
 
-#: kfontchooser.cpp:200 kfontchooser.cpp:450
+#: kfontchooser.cpp:204 kfontchooser.cpp:454
 #, fuzzy
 #| msgid "Italic"
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Amagama akekeleyo"
 
-#: kfontchooser.cpp:201 kfontchooser.cpp:451
+#: kfontchooser.cpp:205 kfontchooser.cpp:455
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Oblique"
@@ -2161,14 +2161,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Oblique"
 
-#: kfontchooser.cpp:202
+#: kfontchooser.cpp:206
 #, fuzzy
 #| msgid "Bold"
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Amagama amakhulu"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:207
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Book Oblique"
@@ -2176,14 +2176,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Book Oblique"
 
-#: kfontchooser.cpp:247
+#: kfontchooser.cpp:251
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Impungutye Ekhawulezayo Emdaka Ixhuma Phezu Kwenja Eyonqenayo"
 
-#: kfontchooser.cpp:435
+#: kfontchooser.cpp:439
 #, fuzzy, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
