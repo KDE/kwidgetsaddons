@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-02-28 03:44+0000\n"
-"PO-Revision-Date: 2024-04-12 16:47+0200\n"
+"PO-Revision-Date: 2024-08-02 21:18+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -1058,7 +1058,6 @@ msgid "Symbols for Legacy Computing"
 msgstr "Symbol for eldre datamaskiner"
 
 #: kcharselect.cpp:391
-#, fuzzy
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Skriv inn ein søkjetekst eller eit teikn …"
@@ -1069,10 +1068,9 @@ msgid "Enter a search term or character here"
 msgstr "Skriv inn ein søkjetekst eller eit teikn her"
 
 #: kcharselect.cpp:400
-#, fuzzy
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Finn"
+msgstr "&Finn …"
 
 #: kcharselect.cpp:424
 msgctxt "KCharSelect|@action:button Goes to previous character"
@@ -1455,16 +1453,14 @@ msgid "Unknown"
 msgstr "Ukjend"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "Tilpassa …"
 
 #: kcontextualhelpbutton.cpp:80
-#, fuzzy
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "Vis emnehjelp"
+msgstr "Emnehjelp"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1726,7 +1722,6 @@ msgid "Show only monospaced fonts"
 msgstr "Vis berre fastbreiddeskrifter"
 
 #: kfontrequester.cpp:184
-#, fuzzy
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Vel skrift …"
@@ -1843,7 +1838,6 @@ msgid "Close message"
 msgstr "Lukk melding"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
 msgstr "Søk etter filtype eller filnamnmønster …"
@@ -1869,7 +1863,6 @@ msgid "Patterns"
 msgstr "Mønster"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
 msgstr "&Rediger …"
@@ -1972,7 +1965,6 @@ msgid "Password strength &meter:"
 msgstr "Styrke&målar for passord:"
 
 #: kpageview.cpp:455
-#, fuzzy
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Søk …"
@@ -2136,7 +2128,6 @@ msgid "Do not save data"
 msgstr "Ikkje lagra data"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
 msgstr "Lagra &som …"
@@ -2168,7 +2159,6 @@ msgstr ""
 "Bruk dette for å prøva ulike innstillingar."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
 msgstr "Administrator&modus …"
@@ -2274,10 +2264,9 @@ msgid "Go forward one step"
 msgstr "Gå eitt steg fram"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Skriv &ut …"
+msgstr "Skriv ut …"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2305,10 +2294,9 @@ msgid "Delete item(s)"
 msgstr "Slett element"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Opna …"
+msgstr "Opna …"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2341,7 +2329,6 @@ msgid "&Insert"
 msgstr "Set &inn"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
 msgstr "&Set opp …"
