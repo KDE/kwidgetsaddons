@@ -12,6 +12,7 @@
 #include <memory>
 
 class QWidget;
+class QAction;
 
 /**
  * @class KPageWidgetItem kpagewidgetmodel.h KPageWidgetItem
@@ -52,6 +53,14 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      * @since 5.52
      */
     Q_PROPERTY(bool headerVisible READ isHeaderVisible WRITE setHeaderVisible)
+    /**
+     * This property holds the actions associated to the page.
+     *
+     * @warning This is not supported when using a KPageView/KPageWidget/KPageDialog with
+     * the Tabbed face type.
+     * @since 6.6
+     */
+    Q_PROPERTY(QList<QAction *> actions READ actions WRITE setActions NOTIFY actionsChanged)
 public:
     /**
      * Creates a new page widget item.
@@ -151,6 +160,18 @@ public:
      */
     void setHeaderVisible(bool visible);
 
+    /**
+     * Returns the actions associated to the page.
+     * @since 6.6
+     */
+    QList<QAction *> actions() const;
+
+    /**
+     * Set the actions associated to the page.
+     * @since 6.6
+     */
+    void setActions(QList<QAction *> actions);
+
 public Q_SLOTS:
     /**
      * Sets whether the page widget item is enabled.
@@ -174,6 +195,13 @@ Q_SIGNALS:
      * unchecks the item of setChecked() is called.
      */
     void toggled(bool checked);
+
+    /**
+     * This signal is emitted whenever the actions associated to the
+     * page are changed.
+     * @since 6.6
+     */
+    void actionsChanged();
 
 private:
     std::unique_ptr<class KPageWidgetItemPrivate> const d;

@@ -73,6 +73,11 @@ public:
          * @since 5.52
          */
         HeaderVisibleRole,
+        /**
+         * The list of actions associated to the page
+         * @since 6.6
+         */
+        ActionsRole,
     };
 
     /**

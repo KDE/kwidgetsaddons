@@ -2,6 +2,8 @@
     This file is part of the KDE Libraries
     SPDX-FileCopyrightText: 2006 Tobias Koenig <tokoe@kde.org>
     SPDX-FileCopyrightText: 2007 Rafael Fernández López <ereslibre@kde.org>
+    SPDX-FileCopyrightText: 2024 g10 Code GmbH
+    SPDX-FileContributor: Carl Schwan <carl.schwan@gnupg.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -25,8 +27,24 @@
 #include <QLabel>
 #include <QPaintEvent>
 #include <QPainter>
+#include <QProxyStyle>
 #include <QSize>
 #include <QTimer>
+#include <QToolButton>
+#include <QWidgetAction>
+
+// Remove the additional margin of the toolbar
+class NoPaddingToolBarProxyStyle : public QProxyStyle
+{
+public:
+    int pixelMetric(PixelMetric metric, const QStyleOption *option, const QWidget *widget) const override
+    {
+        if (metric == QStyle::PM_ToolBarItemMargin) {
+            return 0;
+        }
+        return QProxyStyle::pixelMetric(metric, option, widget);
+    }
+};
 
 // Helper class that draws a rect over a matched widget
 class SearchMatchOverlay : public QWidget
@@ -138,7 +156,7 @@ void KPageViewPrivate::rebuildGui()
         stack->setVisible(false);
         layout->removeWidget(stack);
     } else {
-        layout->addWidget(stack, 3, 1);
+        layout->addWidget(stack, 3, 1, 1, 2);
         stack->setVisible(true);
     }
 
@@ -171,6 +189,7 @@ void KPageViewPrivate::rebuildGui()
     }
 
     layout->removeWidget(titleWidget);
+    layout->removeWidget(actionsToolBar);
 
     if (pageHeader) {
         layout->removeWidget(pageHeader);
@@ -180,14 +199,16 @@ void KPageViewPrivate::rebuildGui()
         if (faceType == KPageView::Tabbed) {
             layout->addWidget(pageHeader, 1, 1);
         } else {
-            layout->addWidget(pageHeader, 1, 1, 1, 2);
+            layout->addWidget(pageHeader, 1, 1);
+            layout->addWidget(actionsToolBar, 1, 2);
         }
     } else {
         titleWidget->setVisible(q->showPageHeader());
         if (faceType == KPageView::Tabbed) {
             layout->addWidget(titleWidget, 1, 1);
         } else {
-            layout->addWidget(titleWidget, 1, 1, 1, 2);
+            layout->addWidget(titleWidget, 1, 1);
+            layout->addWidget(actionsToolBar, 1, 2);
         }
     }
 
@@ -364,6 +385,7 @@ void KPageViewPrivate::pageSelected(const QItemSelection &index, const QItemSele
         }
 
         updateTitleWidget(currentIndex);
+        updateActionsLayout(currentIndex, previousIndex);
     }
 
     Q_Q(KPageView);
@@ -387,6 +409,28 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
     titleWidget->setText(header);
 
     titleWidget->setVisible(q->showPageHeader());
+}
+
+void KPageViewPrivate::updateActionsLayout(const QModelIndex &index, const QModelIndex &previous)
+{
+    Q_Q(KPageView);
+
+    if (previous.isValid()) {
+        const auto previousActions = qvariant_cast<QList<QAction *>>(model->data(index, KPageModel::ActionsRole));
+        for (const auto action : previousActions) {
+            actionsToolBar->removeAction(action);
+        }
+    }
+
+    const auto actions = qvariant_cast<QList<QAction *>>(model->data(index, KPageModel::ActionsRole));
+    if (actions.isEmpty()) {
+        actionsToolBar->hide();
+    } else {
+        actionsToolBar->show();
+        for (const auto action : actions) {
+            actionsToolBar->addAction(action);
+        }
+    }
 }
 
 void KPageViewPrivate::dataChanged(const QModelIndex &, const QModelIndex &)
@@ -423,20 +467,30 @@ void KPageViewPrivate::init()
     Q_Q(KPageView);
     layout = new QGridLayout(q);
     stack = new KPageStackedWidget(q);
+
     titleWidget = new KTitleWidget(q);
     titleWidget->setObjectName("KPageView::TitleWidget");
+    titleWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     separatorLine = new QFrame(q);
     separatorLine->setFrameShape(QFrame::HLine);
     separatorLine->setFixedHeight(1);
     separatorLine->setFrameShadow(QFrame::Sunken);
 
+    actionsToolBar = new QToolBar(q);
+    actionsToolBar->setObjectName(QLatin1String("KPageView::TitleWidget"));
+    actionsToolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+    actionsToolBar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    actionsToolBar->setStyle(new NoPaddingToolBarProxyStyle);
+    actionsToolBar->show();
+
     // list view under it to the left
-    layout->addWidget(titleWidget, 1, 1, 1, 2);
+    layout->addWidget(titleWidget, 1, 1);
+    layout->addWidget(actionsToolBar, 1, 1);
     // separator
     layout->addWidget(separatorLine, 2, 0, 1, 3);
     // and then the actual page on the right
-    layout->addWidget(stack, 3, 1);
+    layout->addWidget(stack, 3, 1, 1, 2);
 
     defaultWidget = new QWidget(q);
     stack->addWidget(defaultWidget);
@@ -785,15 +839,18 @@ void KPageView::setPageHeader(QWidget *header)
         d->layout->removeWidget(d->pageHeader);
     }
     d->layout->removeWidget(d->titleWidget);
+    d->layout->removeWidget(d->actionsToolBar);
 
     d->pageHeader = header;
 
     // Give it a colSpan of 2 to add a margin to the right
     if (d->pageHeader) {
-        d->layout->addWidget(d->pageHeader, 1, 1, 1, 2);
+        d->layout->addWidget(d->pageHeader, 1, 1, 1, 1);
+        d->layout->addWidget(d->actionsToolBar, 1, 2);
         d->pageHeader->setVisible(showPageHeader());
     } else {
-        d->layout->addWidget(d->titleWidget, 1, 1, 1, 2);
+        d->layout->addWidget(d->titleWidget, 1, 1, 1, 1);
+        d->layout->addWidget(d->actionsToolBar, 1, 2);
         d->titleWidget->setVisible(showPageHeader());
     }
 }
@@ -822,7 +879,7 @@ void KPageView::setPageFooter(QWidget *footer)
 
     if (footer) {
         d->pageFooter->setContentsMargins(4, 4, 4, 4);
-        d->layout->addWidget(d->pageFooter, 4, 1);
+        d->layout->addWidget(d->pageFooter, 4, 1, 1, 2);
     }
 }
 

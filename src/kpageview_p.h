@@ -19,6 +19,7 @@
 #include <QPointer>
 #include <QStackedWidget>
 #include <QTimer>
+#include <QToolBar>
 #include <QTreeView>
 #include <ktitlewidget.h>
 
@@ -63,6 +64,7 @@ protected:
 
     // gui
     QGridLayout *layout;
+    QToolBar *actionsToolBar;
     KPageStackedWidget *stack;
     KTitleWidget *titleWidget;
     QWidget *defaultWidget;
@@ -77,6 +79,7 @@ protected:
     QPointer<QWidget> pageFooter;
 
     void updateTitleWidget(const QModelIndex &index);
+    void updateActionsLayout(const QModelIndex &index, const QModelIndex &previous);
 
     void updateSelection();
     void cleanupPages();

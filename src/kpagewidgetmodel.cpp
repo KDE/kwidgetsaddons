@@ -40,6 +40,7 @@ public:
     bool checked : 1;
     bool enabled : 1;
     bool headerVisible : 1;
+    QList<QAction *> actions;
 };
 
 KPageWidgetItem::KPageWidgetItem(QWidget *widget)
@@ -165,6 +166,20 @@ bool KPageWidgetItem::isChecked() const
     return d->checked;
 }
 
+QList<QAction *> KPageWidgetItem::actions() const
+{
+    return d->actions;
+}
+
+void KPageWidgetItem::setActions(QList<QAction *> actions)
+{
+    if (d->actions == actions) {
+        return;
+    }
+    d->actions = actions;
+    Q_EMIT actionsChanged();
+}
+
 PageItem::PageItem(KPageWidgetItem *pageWidgetItem, PageItem *parent)
     : mPageWidgetItem(pageWidgetItem)
     , mParentItem(parent)
@@ -287,6 +302,8 @@ QVariant KPageWidgetModel::data(const QModelIndex &index, int role) const
         return item->pageWidgetItem()->isHeaderVisible();
     } else if (role == WidgetRole) {
         return QVariant::fromValue(item->pageWidgetItem()->widget());
+    } else if (role == ActionsRole) {
+        return QVariant::fromValue(item->pageWidgetItem()->actions());
     } else if (role == Qt::CheckStateRole) {
         if (item->pageWidgetItem()->isCheckable()) {
             return (item->pageWidgetItem()->isChecked() ? Qt::Checked : Qt::Unchecked);
