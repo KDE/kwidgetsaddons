@@ -6,15 +6,17 @@
 */
 
 #include "kjobwidgets.h"
+#include <QPointer>
 #include <QVariant>
 #include <QWidget>
 #include <QWindow>
 
 void KJobWidgets::setWindow(QObject *job, QWidget *widget)
 {
-    job->setProperty("widget", QVariant::fromValue(widget));
+    QPointer<QWidget> p = widget;
+    job->setProperty("widget", QVariant::fromValue(p));
 
-    QWindow *windowHandle = widget ? widget->windowHandle() : nullptr;
+    QPointer<QWindow> windowHandle = widget ? widget->windowHandle() : nullptr;
     job->setProperty("window", QVariant::fromValue(windowHandle));
     if (windowHandle) {
         job->setProperty("window-id", QVariant::fromValue(windowHandle->winId()));
@@ -33,13 +35,13 @@ void KJobWidgets::setWindowHandle(QObject *job, QWindow *window)
 
 QWidget *KJobWidgets::window(QObject *job)
 {
-    return job->property("widget").value<QWidget *>();
+    return job->property("widget").value<QPointer<QWidget>>();
 }
 
 #if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(6, 5)
 QWindow *KJobWidgets::windowHandle(QObject *job)
 {
-    return job->property("window").value<QWindow *>();
+    return job->property("window").value<QPointer<QWindow>>();
 }
 #endif
 
