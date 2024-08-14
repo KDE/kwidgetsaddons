@@ -2423,7 +2423,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Maxfiy soʻz ishonchligi:"
 
-#: kpageview.cpp:455
+#: kpageview.cpp:509
 #, fuzzy
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"

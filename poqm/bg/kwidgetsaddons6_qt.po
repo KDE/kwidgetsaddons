@@ -1959,7 +1959,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Скала за сила на паролата:"
 
-#: kpageview.cpp:455
+#: kpageview.cpp:509
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Търсене…"

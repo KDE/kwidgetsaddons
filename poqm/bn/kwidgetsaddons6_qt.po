@@ -2870,7 +2870,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "পাসওয়ার্ড-এর শক্তি মরিমাপ:"
 
-#: kpageview.cpp:455
+#: kpageview.cpp:509
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"

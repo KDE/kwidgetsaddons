@@ -2869,7 +2869,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Paroles stipruma mērītājs:"
 
-#: kpageview.cpp:455
+#: kpageview.cpp:509
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
