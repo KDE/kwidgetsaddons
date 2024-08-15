@@ -191,6 +191,7 @@ void KPageViewPrivate::rebuildGui()
     layout->removeWidget(titleWidget);
     layout->removeWidget(actionsToolBar);
 
+    actionsToolBar->setVisible(q->showPageHeader());
     if (pageHeader) {
         layout->removeWidget(pageHeader);
         pageHeader->setVisible(q->showPageHeader());
