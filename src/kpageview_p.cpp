@@ -206,6 +206,7 @@ KPageTabbedView::KPageTabbedView(QWidget *parent)
 
     mTabWidget = new QTabWidget(this);
     mTabWidget->setDocumentMode(true);
+    mTabWidget->tabBar()->setExpanding(true);
     connect(mTabWidget, &QTabWidget::currentChanged, this, &KPageTabbedView::currentPageChanged);
 
     layout->addWidget(mTabWidget);
