@@ -24,6 +24,7 @@
 #include <QScrollBar>
 #include <QSplitter>
 #include <QTextEdit>
+#include <QTimer>
 
 #include <algorithm>
 #include <cmath>
@@ -100,6 +101,7 @@ public:
     void slotStyleSelected(const QString &);
     void displaySample(const QFont &font);
     void slotSizeValue(double);
+    void slotFeaturesChanged(const QString &features);
 
     KFontChooser *q;
 
@@ -125,6 +127,8 @@ public:
     std::map<QString, QString> m_qtStyles;
     // Mapping of translated style strings to internal style identifiers.
     std::map<QString, QString> m_styleIDs;
+
+    QTimer m_fontFeatureChangedTimer;
 };
 
 KFontChooser::KFontChooser(QWidget *parent)
@@ -145,6 +149,10 @@ KFontChooser::~KFontChooser() = default;
 
 void KFontChooserPrivate::init()
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
+    m_ui->fontFeaturesLabel->setVisible(false);
+    m_ui->fontFeaturesLineEdit->setVisible(false);
+#endif
     m_usingFixed = m_flags & KFontChooser::FixedFontsOnly;
 
     // The main layout is divided horizontally into a top part with
@@ -229,6 +237,16 @@ void KFontChooserPrivate::init()
 
     QObject::connect(m_ui->sizeListWidget, &QListWidget::currentTextChanged, [this](const QString &size) {
         slotSizeSelected(size);
+    });
+
+    m_fontFeatureChangedTimer.setInterval(200);
+    m_fontFeatureChangedTimer.setSingleShot(true);
+    m_fontFeatureChangedTimer.callOnTimeout([this]() {
+        slotFeaturesChanged(m_ui->fontFeaturesLineEdit->text());
+    });
+
+    QObject::connect(m_ui->fontFeaturesLineEdit, &QLineEdit::textChanged, [this](const QString &) {
+        m_fontFeatureChangedTimer.start();
     });
 
     if (isDiffMode) {
@@ -601,6 +619,41 @@ void KFontChooserPrivate::slotSizeValue(double dval)
     m_signalsAllowed = true;
 }
 
+void KFontChooserPrivate::slotFeaturesChanged(const QString &features)
+{
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    m_selectedFont.clearFeatures();
+
+    if (features.isEmpty()) {
+        return;
+    }
+
+    const QStringList rawFeaturesList = features.split(QLatin1Char(','), Qt::SkipEmptyParts);
+    for (const QString &feature : rawFeaturesList) {
+        auto f = QStringView(feature).trimmed();
+        if (f.isEmpty()) {
+            continue;
+        }
+        QList<QStringView> parts = f.split(QStringLiteral("="), Qt::SkipEmptyParts);
+        if (parts.length() == 2) {
+            const auto tag = QFont::Tag::fromString(parts[0]);
+            bool ok = false;
+            const int number = parts[1].toInt(&ok);
+            if (tag.has_value() && ok) {
+                m_selectedFont.setFeature(tag.value(), number);
+            }
+        } else if (f.size() <= 4) {
+            const auto tag = QFont::Tag::fromString(feature);
+            if (tag.has_value()) {
+                m_selectedFont.setFeature(tag.value(), 1);
+            }
+        }
+    }
+
+    Q_EMIT q->fontSelected(m_selectedFont);
+#endif
+}
+
 void KFontChooserPrivate::displaySample(const QFont &font)
 {
     m_ui->sampleTextEdit->setFont(font);
@@ -692,6 +745,22 @@ void KFontChooserPrivate::setupDisplay()
     if (size == -1) {
         size = QFontInfo(m_selectedFont).pointSizeF();
     }
+
+    // Set font features
+#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
+    const auto tags = m_selectedFont.featureTags();
+    QStringList features;
+    for (const auto &tag : tags) {
+        const QString name = QString::fromUtf8(tag.toString());
+        const quint32 value = m_selectedFont.featureValue(tag);
+        if (value == 1) {
+            features.push_back(name);
+        } else {
+            features.push_back(QStringLiteral("%1=%2").arg(name, QString::number(value)));
+        }
+    }
+    m_ui->fontFeaturesLineEdit->setText(features.join(QStringLiteral(",")));
+#endif
 
     int numEntries;
     int i;
