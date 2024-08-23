@@ -2373,14 +2373,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Bikşîne &Jêr"
 
-#: kfontchooser.cpp:156
+#: kfontchooser.cpp:164
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Curenivîsa ku tê Xwestin"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:211
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2388,7 +2388,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Asayî"
 
-#: kfontchooser.cpp:204 kfontchooser.cpp:454
+#: kfontchooser.cpp:212 kfontchooser.cpp:472
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2396,7 +2396,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Îtalîk"
 
-#: kfontchooser.cpp:205 kfontchooser.cpp:455
+#: kfontchooser.cpp:213 kfontchooser.cpp:473
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2404,7 +2404,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Xwar"
 
-#: kfontchooser.cpp:206
+#: kfontchooser.cpp:214
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2412,19 +2412,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Stûr"
 
-#: kfontchooser.cpp:207
+#: kfontchooser.cpp:215
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:251
+#: kfontchooser.cpp:269
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Aa Bb Cc Çç Dd Ee Ff Gg"
 
-#: kfontchooser.cpp:439
+#: kfontchooser.cpp:457
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -2439,7 +2439,29 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Curetîpê Hilbijêre"
 
-#: kfontchooserwidget.ui:25
+#: kfontchooserwidget.ui:21
+msgctxt "KFontChooserWidget|"
+msgid "Comma separated list of font features (e.g., liga, calt):"
+msgstr ""
+
+#: kfontchooserwidget.ui:31
+msgctxt "KFontChooserWidget|"
+msgid "Sample:"
+msgstr ""
+
+#: kfontchooserwidget.ui:41
+msgctxt "KFontChooserWidget|"
+msgid ""
+"This sample text illustrates the current settings. You may edit it to test "
+"special characters."
+msgstr ""
+
+#: kfontchooserwidget.ui:51
+msgctxt "KFontChooserWidget|"
+msgid "Show only monospaced fonts"
+msgstr ""
+
+#: kfontchooserwidget.ui:66
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font"
@@ -2447,7 +2469,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Curenivîs"
 
-#: kfontchooserwidget.ui:32
+#: kfontchooserwidget.ui:73
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Font:"
@@ -2455,7 +2477,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Curenivîs:"
 
-#: kfontchooserwidget.ui:50
+#: kfontchooserwidget.ui:91
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Font style"
@@ -2463,14 +2485,14 @@ msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Şêwaza curetîpan"
 
-#: kfontchooserwidget.ui:57
+#: kfontchooserwidget.ui:98
 #, fuzzy
 #| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Şêwaza curetîpan:"
 
-#: kfontchooserwidget.ui:75
+#: kfontchooserwidget.ui:116
 #, fuzzy
 #| msgctxt "@option:check"
 #| msgid "Size"
@@ -2478,7 +2500,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Mezinahî"
 
-#: kfontchooserwidget.ui:82
+#: kfontchooserwidget.ui:123
 #, fuzzy
 #| msgctxt "@label:listbox Font size"
 #| msgid "Size:"
@@ -2486,30 +2508,13 @@ msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Mezinahî:"
 
-#: kfontchooserwidget.ui:91
+#: kfontchooserwidget.ui:132
 #, fuzzy
 #| msgctxt "@item font size"
 #| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Rêjeyî"
-
-#: kfontchooserwidget.ui:117
-msgctxt "KFontChooserWidget|"
-msgid "Sample:"
-msgstr ""
-
-#: kfontchooserwidget.ui:127
-msgctxt "KFontChooserWidget|"
-msgid ""
-"This sample text illustrates the current settings. You may edit it to test "
-"special characters."
-msgstr ""
-
-#: kfontchooserwidget.ui:137
-msgctxt "KFontChooserWidget|"
-msgid "Show only monospaced fonts"
-msgstr ""
 
 #: kfontrequester.cpp:184
 #, fuzzy
@@ -2807,7 +2812,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Pîvana hêza şîfreyê:"
 
-#: kpageview.cpp:509
+#: kpageview.cpp:510
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"

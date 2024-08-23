@@ -1665,42 +1665,42 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "नीचे जाएं (&D)"
 
-#: kfontchooser.cpp:156
+#: kfontchooser.cpp:164
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "निवेदित फ़ॉन्ट "
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:211
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "सामान्य"
 
-#: kfontchooser.cpp:204 kfontchooser.cpp:454
+#: kfontchooser.cpp:212 kfontchooser.cpp:472
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ईटैलिक"
 
-#: kfontchooser.cpp:205 kfontchooser.cpp:455
+#: kfontchooser.cpp:213 kfontchooser.cpp:473
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "तिर्यक"
 
-#: kfontchooser.cpp:206
+#: kfontchooser.cpp:214
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "गाढ़ा"
 
-#: kfontchooser.cpp:207
+#: kfontchooser.cpp:215
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "बोल्ड कंडेंस्ड ओब्लिक"
 
-#: kfontchooser.cpp:251
+#: kfontchooser.cpp:269
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "सारे जहाँ से अच्छा हिंदोस्ताँ हमारा।"
 
-#: kfontchooser.cpp:439
+#: kfontchooser.cpp:457
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1711,47 +1711,17 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "फ़ॉन्ट चुनें"
 
-#: kfontchooserwidget.ui:25
+#: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
-msgid "Font"
-msgstr "फ़ॉन्ट"
+msgid "Comma separated list of font features (e.g., liga, calt):"
+msgstr ""
 
-#: kfontchooserwidget.ui:32
-msgctxt "KFontChooserWidget|"
-msgid "Font:"
-msgstr "फ़ॉन्ट :"
-
-#: kfontchooserwidget.ui:50
-msgctxt "KFontChooserWidget|"
-msgid "Font style"
-msgstr "फ़ॉन्ट शैली"
-
-#: kfontchooserwidget.ui:57
-msgctxt "KFontChooserWidget|"
-msgid "Font style:"
-msgstr "फ़ॉन्ट शैली :"
-
-#: kfontchooserwidget.ui:75
-msgctxt "KFontChooserWidget|"
-msgid "Size"
-msgstr "आकार"
-
-#: kfontchooserwidget.ui:82
-msgctxt "KFontChooserWidget|"
-msgid "Size:"
-msgstr "आकार :"
-
-#: kfontchooserwidget.ui:91
-msgctxt "KFontChooserWidget|"
-msgid "Relative"
-msgstr "सापेक्ष"
-
-#: kfontchooserwidget.ui:117
+#: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
 msgstr ""
 
-#: kfontchooserwidget.ui:127
+#: kfontchooserwidget.ui:41
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1760,10 +1730,45 @@ msgstr ""
 "यह नमूना पाठ वर्तमान सेटिंग्स दिखाता है। विशेष वर्णों का परीक्षण करने के लिए आप इसे "
 "संपादित कर सकते हैं।"
 
-#: kfontchooserwidget.ui:137
+#: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "सिर्फ समानांतरीय फ़ॉन्ट दिखाएँ"
+
+#: kfontchooserwidget.ui:66
+msgctxt "KFontChooserWidget|"
+msgid "Font"
+msgstr "फ़ॉन्ट"
+
+#: kfontchooserwidget.ui:73
+msgctxt "KFontChooserWidget|"
+msgid "Font:"
+msgstr "फ़ॉन्ट :"
+
+#: kfontchooserwidget.ui:91
+msgctxt "KFontChooserWidget|"
+msgid "Font style"
+msgstr "फ़ॉन्ट शैली"
+
+#: kfontchooserwidget.ui:98
+msgctxt "KFontChooserWidget|"
+msgid "Font style:"
+msgstr "फ़ॉन्ट शैली :"
+
+#: kfontchooserwidget.ui:116
+msgctxt "KFontChooserWidget|"
+msgid "Size"
+msgstr "आकार"
+
+#: kfontchooserwidget.ui:123
+msgctxt "KFontChooserWidget|"
+msgid "Size:"
+msgstr "आकार :"
+
+#: kfontchooserwidget.ui:132
+msgctxt "KFontChooserWidget|"
+msgid "Relative"
+msgstr "सापेक्ष"
 
 #: kfontrequester.cpp:184
 #, fuzzy
@@ -2022,7 +2027,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "पासवर्ड बल मीटर: (&m)"
 
-#: kpageview.cpp:509
+#: kpageview.cpp:510
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"

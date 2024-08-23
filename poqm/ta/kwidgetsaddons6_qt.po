@@ -1897,22 +1897,22 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "&கீழே நகர்த்து"
 
-#: kfontchooser.cpp:156
+#: kfontchooser.cpp:164
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "கோரப்பட்ட எழுத்துரு"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:211
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "சாதாரணம்"
 
-#: kfontchooser.cpp:204 kfontchooser.cpp:454
+#: kfontchooser.cpp:212 kfontchooser.cpp:472
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "சாய்வெழுத்து"
 
-#: kfontchooser.cpp:205 kfontchooser.cpp:455
+#: kfontchooser.cpp:213 kfontchooser.cpp:473
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -1920,24 +1920,24 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "வளைந்த"
 
-#: kfontchooser.cpp:206
+#: kfontchooser.cpp:214
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "தடித்தது"
 
-#: kfontchooser.cpp:207
+#: kfontchooser.cpp:215
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:251
+#: kfontchooser.cpp:269
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr ""
 "The Quick Brown Fox Jumps Over The Lazy Dog. யாதும் ஊரே யாவரும் கேளிர்; தீதும் "
 "நன்றும் பிறர் தர வாரா. சையெனத் திரியேல், சொற் சோர்வு படேல்"
 
-#: kfontchooser.cpp:439
+#: kfontchooser.cpp:457
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1948,50 +1948,17 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "எழுத்துருவை தேர்வு செய்தல்"
 
-#: kfontchooserwidget.ui:25
+#: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
-msgid "Font"
-msgstr "எழுத்துரு"
+msgid "Comma separated list of font features (e.g., liga, calt):"
+msgstr ""
 
-#: kfontchooserwidget.ui:32
-msgctxt "KFontChooserWidget|"
-msgid "Font:"
-msgstr "எழுத்துரு:"
-
-#: kfontchooserwidget.ui:50
-msgctxt "KFontChooserWidget|"
-msgid "Font style"
-msgstr "எழுத்துரு வகை"
-
-#: kfontchooserwidget.ui:57
-msgctxt "KFontChooserWidget|"
-msgid "Font style:"
-msgstr "எழுத்துரு வகை:"
-
-#: kfontchooserwidget.ui:75
-msgctxt "KFontChooserWidget|"
-msgid "Size"
-msgstr "அளவு"
-
-#: kfontchooserwidget.ui:82
-msgctxt "KFontChooserWidget|"
-msgid "Size:"
-msgstr "அளவு:"
-
-#: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "@item font size"
-#| msgid "Relative"
-msgctxt "KFontChooserWidget|"
-msgid "Relative"
-msgstr "தொடர்புடைய"
-
-#: kfontchooserwidget.ui:117
+#: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
 msgstr "மாதிரி"
 
-#: kfontchooserwidget.ui:127
+#: kfontchooserwidget.ui:41
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -2000,10 +1967,48 @@ msgstr ""
 "இவ்வுதாரண உரை, தற்போதைய அமைப்புகளை எடுத்துக்காட்டுகிறது. பிற எழுத்துகளைப் பார்க்க, "
 "இவ்வுரையை திருத்தலாம்."
 
-#: kfontchooserwidget.ui:137
+#: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "சம‍அகல எழுத்துருக்களை மட்டும் காட்டு"
+
+#: kfontchooserwidget.ui:66
+msgctxt "KFontChooserWidget|"
+msgid "Font"
+msgstr "எழுத்துரு"
+
+#: kfontchooserwidget.ui:73
+msgctxt "KFontChooserWidget|"
+msgid "Font:"
+msgstr "எழுத்துரு:"
+
+#: kfontchooserwidget.ui:91
+msgctxt "KFontChooserWidget|"
+msgid "Font style"
+msgstr "எழுத்துரு வகை"
+
+#: kfontchooserwidget.ui:98
+msgctxt "KFontChooserWidget|"
+msgid "Font style:"
+msgstr "எழுத்துரு வகை:"
+
+#: kfontchooserwidget.ui:116
+msgctxt "KFontChooserWidget|"
+msgid "Size"
+msgstr "அளவு"
+
+#: kfontchooserwidget.ui:123
+msgctxt "KFontChooserWidget|"
+msgid "Size:"
+msgstr "அளவு:"
+
+#: kfontchooserwidget.ui:132
+#, fuzzy
+#| msgctxt "@item font size"
+#| msgid "Relative"
+msgctxt "KFontChooserWidget|"
+msgid "Relative"
+msgstr "தொடர்புடைய"
 
 #: kfontrequester.cpp:184
 msgctxt "KFontRequester|@info:tooltip"
@@ -2244,7 +2249,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "கடவுச்சொல் பாதுகாப்பு அளவுகோல்:"
 
-#: kpageview.cpp:509
+#: kpageview.cpp:510
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "தேடு…"

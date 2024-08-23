@@ -1920,50 +1920,50 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "&താഴേയ്ക്കു് നീക്കുക"
 
-#: kfontchooser.cpp:156
+#: kfontchooser.cpp:164
 #, fuzzy
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ആവശ്യപ്പെട്ട ലിപി"
 
-#: kfontchooser.cpp:203
+#: kfontchooser.cpp:211
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "സാധാരണ"
 
 #
-#: kfontchooser.cpp:204 kfontchooser.cpp:454
+#: kfontchooser.cpp:212 kfontchooser.cpp:472
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ചരിഞ്ഞ"
 
 #
-#: kfontchooser.cpp:205 kfontchooser.cpp:455
+#: kfontchooser.cpp:213 kfontchooser.cpp:473
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "ചരിഞ്ഞത്"
 
-#: kfontchooser.cpp:206
+#: kfontchooser.cpp:214
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "തടിച്ച"
 
-#: kfontchooser.cpp:207
+#: kfontchooser.cpp:215
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:251
+#: kfontchooser.cpp:269
 #, fuzzy
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
-#: kfontchooser.cpp:439
+#: kfontchooser.cpp:457
 #, fuzzy, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
@@ -1976,64 +1976,69 @@ msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "ലിപി തെരഞ്ഞെടുക്കുക"
 
-#: kfontchooserwidget.ui:25
-#, fuzzy
+#: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
-msgid "Font"
-msgstr "ലിപി"
+msgid "Comma separated list of font features (e.g., liga, calt):"
+msgstr ""
 
-#: kfontchooserwidget.ui:32
-#, fuzzy
-msgctxt "KFontChooserWidget|"
-msgid "Font:"
-msgstr "ലിപി:"
-
-#: kfontchooserwidget.ui:50
-#, fuzzy
-msgctxt "KFontChooserWidget|"
-msgid "Font style"
-msgstr "അക്ഷരസഞ്ചയത്തിന്റെ രീതി"
-
-#: kfontchooserwidget.ui:57
-#, fuzzy
-msgctxt "KFontChooserWidget|"
-msgid "Font style:"
-msgstr "അക്ഷരസഞ്ചയത്തിന്റെ രീതി:"
-
-#: kfontchooserwidget.ui:75
-#, fuzzy
-msgctxt "KFontChooserWidget|"
-msgid "Size"
-msgstr "വലിപ്പം"
-
-#: kfontchooserwidget.ui:82
-#, fuzzy
-msgctxt "KFontChooserWidget|"
-msgid "Size:"
-msgstr "വ്യാപ്തി:"
-
-#: kfontchooserwidget.ui:91
-#, fuzzy
-msgctxt "KFontChooserWidget|"
-msgid "Relative"
-msgstr "താരതമ്യേനയുള്ള"
-
-#: kfontchooserwidget.ui:117
+#: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
 msgstr ""
 
-#: kfontchooserwidget.ui:127
+#: kfontchooserwidget.ui:41
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
 "special characters."
 msgstr ""
 
-#: kfontchooserwidget.ui:137
+#: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr ""
+
+#: kfontchooserwidget.ui:66
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Font"
+msgstr "ലിപി"
+
+#: kfontchooserwidget.ui:73
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Font:"
+msgstr "ലിപി:"
+
+#: kfontchooserwidget.ui:91
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Font style"
+msgstr "അക്ഷരസഞ്ചയത്തിന്റെ രീതി"
+
+#: kfontchooserwidget.ui:98
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Font style:"
+msgstr "അക്ഷരസഞ്ചയത്തിന്റെ രീതി:"
+
+#: kfontchooserwidget.ui:116
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Size"
+msgstr "വലിപ്പം"
+
+#: kfontchooserwidget.ui:123
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Size:"
+msgstr "വ്യാപ്തി:"
+
+#: kfontchooserwidget.ui:132
+#, fuzzy
+msgctxt "KFontChooserWidget|"
+msgid "Relative"
+msgstr "താരതമ്യേനയുള്ള"
 
 #: kfontrequester.cpp:184
 #, fuzzy
@@ -2293,7 +2298,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "അടയാളവാക്കുകളുടെ ശക്തി കാണിയ്ക്കുന്ന മീറ്റര്‍:"
 
-#: kpageview.cpp:509
+#: kpageview.cpp:510
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
