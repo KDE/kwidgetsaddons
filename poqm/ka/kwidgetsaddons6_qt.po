@@ -1660,7 +1660,7 @@ msgstr "აირჩიეთ ფონტი"
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "ფონტი თვისებების მძიმით გამოყოფილ სია (მაგ: liga, calt):"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
