@@ -290,6 +290,17 @@ public:
      */
     static void beep(KMessageDialog::Type type, const QString &text = QString(), QWidget *dialog = nullptr);
 
+    /**
+     * Add a custom widget to the dialog.
+     *
+     * The custom widget will be shown above the buttons of the dialog.
+     * The dialog will be assigned as parent of widget.
+     *
+     * @param widget The custom widget to add
+     * @since 6.6
+     */
+    void addCustomWidget(QWidget *widget);
+
 protected:
     void showEvent(QShowEvent *event) override;
 

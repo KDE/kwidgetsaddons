@@ -497,5 +497,11 @@ void KMessageDialog::beep(Type type, const QString &text, QWidget *widget)
 #endif
 }
 
+void KMessageDialog::addCustomWidget(QWidget *widget)
+{
+    widget->setParent(this);
+    d->m_topLayout->insertWidget(d->m_topLayout->count() - 2, widget);
+}
+
 #include "kmessagedialog.moc"
 #include "moc_kmessagedialog.cpp"
