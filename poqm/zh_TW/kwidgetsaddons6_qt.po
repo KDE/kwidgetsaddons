@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-09 07:10+0900\n"
+"PO-Revision-Date: 2024-08-25 01:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1678,7 +1678,7 @@ msgstr "選擇字型"
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "字型功能（如 liga, calt 等等）的清單，以逗號分隔："
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
