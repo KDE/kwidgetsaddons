@@ -1664,7 +1664,7 @@ msgstr "选择字体"
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "用逗号分隔的字体特性列表 (例如 liga, cal)："
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
