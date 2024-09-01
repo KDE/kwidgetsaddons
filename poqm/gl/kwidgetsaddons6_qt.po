@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-08-25 15:44+0200\n"
+"PO-Revision-Date: 2024-08-31 15:07+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -285,12 +285,12 @@ msgstr "Gurmukhi"
 #: kcharselect-translation.cpp:51
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
-msgstr "Guxaratí"
+msgstr "Guxarati"
 
 #: kcharselect-translation.cpp:52
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
-msgstr "Orixa"
+msgstr "Oriya"
 
 #: kcharselect-translation.cpp:53
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -436,7 +436,7 @@ msgstr "Símbolos Khmer"
 #: kcharselect-translation.cpp:81
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
-msgstr "Buxinés"
+msgstr "Bugi"
 
 #: kcharselect-translation.cpp:82
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1171,7 +1171,7 @@ msgstr "Descomposición:"
 #: kcharselect.cpp:874
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
-msgstr "Información do ideógrafo CJK"
+msgstr "Información de ideogramas de CJK"
 
 #: kcharselect.cpp:877
 msgctxt "KCharSelect|"
