@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-12 14:06+0530\n"
+"PO-Revision-Date: 2024-09-07 20:50+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1913,12 +1913,9 @@ msgid "Italic"
 msgstr "சாய்வெழுத்து"
 
 #: kfontchooser.cpp:213 kfontchooser.cpp:473
-#, fuzzy
-#| msgctxt "@item font"
-#| msgid "Oblique"
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
-msgstr "வளைந்த"
+msgstr "போலி சாய்வெழுத்து"
 
 #: kfontchooser.cpp:214
 msgctxt "KFontChooser|@item font"
@@ -1928,7 +1925,7 @@ msgstr "தடித்தது"
 #: kfontchooser.cpp:215
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "தடித்த போலி சாய்வெழுத்து"
 
 #: kfontchooser.cpp:269
 msgctxt "KFontChooser|"
@@ -1951,7 +1948,7 @@ msgstr "எழுத்துருவை தேர்வு செய்தல�
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "காற்புள்ளிகளால் பிரிக்கப்பட்ட எழுத்துரு அம்சங்கள் (எ.கா., liga, calt):"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
