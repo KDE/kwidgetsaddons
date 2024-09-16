@@ -28,8 +28,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -63,60 +63,39 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
 msgstr "&Διαθέσιμο:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&Επιλεγμένο:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "&Πίσω"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
 msgstr "Ένα βήμα πίσω"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "KAssistantDialog|Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Επόμενο"
 
 #: kassistantdialog.cpp:114
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Τέλος"
 
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr "Ό&λα"
+msgstr "Όλα"
 
 #: kcharselect-translation.cpp:12
 #, fuzzy
@@ -198,9 +177,6 @@ msgid "Combining Diacritics"
 msgstr "Διακριτές σημάνσεις συνδυασμών"
 
 #: kcharselect-translation.cpp:25
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Other"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "Άλλο"
@@ -281,33 +257,21 @@ msgid "Arabic Supplement"
 msgstr "Πρόσθετο Αραβικής"
 
 #: kcharselect-translation.cpp:41
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Thaana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
 msgstr "Θάανα"
 
 #: kcharselect-translation.cpp:42
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "NKo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "ΝΚο"
 
 #: kcharselect-translation.cpp:43
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Samaritan"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
 msgstr "Samaritan"
 
 #: kcharselect-translation.cpp:44
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Mandaic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mandaic"
 msgstr "Mandaic"
@@ -337,9 +301,6 @@ msgid "Arabic Extended-A"
 msgstr "Εκτεταμένο Λατινικό-Α"
 
 #: kcharselect-translation.cpp:48
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Devanagari"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
 msgstr "Ντεβαναγκάρι"
@@ -350,33 +311,21 @@ msgid "Bengali"
 msgstr "Μπενγκάλι"
 
 #: kcharselect-translation.cpp:50
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Gurmukhi"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
 msgstr "Γκουρμούχι"
 
 #: kcharselect-translation.cpp:51
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Gujarati"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
 msgstr "Γκουαράτι"
 
 #: kcharselect-translation.cpp:52
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Oriya"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
 msgstr "Ορίγια"
 
 #: kcharselect-translation.cpp:53
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Tamil"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tamil"
 msgstr "Ταμίλ"
@@ -387,25 +336,16 @@ msgid "Telugu"
 msgstr "Τελούγκου"
 
 #: kcharselect-translation.cpp:55
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Kannada"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
 msgstr "Κανάντα"
 
 #: kcharselect-translation.cpp:56
-#, fuzzy
-#| msgctxt "digit set"
-#| msgid "Malayalam"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
 msgstr "Μαλεϊγιαλάμ"
 
 #: kcharselect-translation.cpp:57
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Sinhala"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
 msgstr "Σινχάλα"
@@ -436,9 +376,6 @@ msgid "Georgian"
 msgstr "Γεωργιανά"
 
 #: kcharselect-translation.cpp:63
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Jamo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
 msgstr "Χανγκουλ Γιαμο"
@@ -464,9 +401,6 @@ msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "Ενοποιημένη Καναδική ιθαγενών"
 
 #: kcharselect-translation.cpp:68
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ogham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ogham"
 msgstr "Ογχαμ"
@@ -477,33 +411,21 @@ msgid "Runic"
 msgstr "Ρουνικά"
 
 #: kcharselect-translation.cpp:70
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tagalog"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagalog"
 msgstr "Ταγκαλόγκ"
 
 #: kcharselect-translation.cpp:71
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hanunoo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hanunoo"
 msgstr "Χανουνου"
 
 #: kcharselect-translation.cpp:72
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Buhid"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
 msgstr "Μπουχιντ"
 
 #: kcharselect-translation.cpp:73
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tagbanwa"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
 msgstr "Ταγκμπανβα"
@@ -524,25 +446,16 @@ msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgstr "Ενοποιημένη Καναδική ιθαγενών εκτεταμένη"
 
 #: kcharselect-translation.cpp:77
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Limbu"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
 msgstr "Λιμπου"
 
 #: kcharselect-translation.cpp:78
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Le"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
 msgstr "Τάι Λε"
 
 #: kcharselect-translation.cpp:79
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "New Tai Lue"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "Νέα Τάι Λου"
@@ -553,17 +466,11 @@ msgid "Khmer Symbols"
 msgstr "Σύμβολα Χμερ"
 
 #: kcharselect-translation.cpp:81
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Buginese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
 msgstr "Μπουγκινιζ"
 
 #: kcharselect-translation.cpp:82
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Tham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
 msgstr "Τάι Ταμ"
@@ -574,41 +481,26 @@ msgid "Combining Diacritical Marks Extended"
 msgstr "Εκτεταμένες διακριτές σημάνσεις συνδυασμών"
 
 #: kcharselect-translation.cpp:84
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Balinese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
 msgstr "Μπαλινιζ"
 
 #: kcharselect-translation.cpp:85
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Sundanese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
 msgstr "Sundanese"
 
 #: kcharselect-translation.cpp:86
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Batak"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
 msgstr "Batak"
 
 #: kcharselect-translation.cpp:87
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lepcha"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
 msgstr "Lepcha"
 
 #: kcharselect-translation.cpp:88
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ol Chiki"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
 msgstr "Ol Chiki"
@@ -638,9 +530,6 @@ msgid "Sundanese Supplement"
 msgstr "Πρόσθετο Λατινικό-1"
 
 #: kcharselect-translation.cpp:92
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Vedic Extensions"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
 msgstr "Vedic επεκτάσεις"
@@ -791,9 +680,6 @@ msgid "Miscellaneous Symbols and Arrows"
 msgstr "Διάφορα σύμβολα και βέλη"
 
 #: kcharselect-translation.cpp:122
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Glagolitic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Glagolitic"
 msgstr "Γκλαγκολιτική"
@@ -814,9 +700,6 @@ msgid "Georgian Supplement"
 msgstr "Πρόσθετο Γεωργιανής"
 
 #: kcharselect-translation.cpp:126
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tifinagh"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
 msgstr "Τιφιναγ"
@@ -837,17 +720,11 @@ msgid "Supplemental Punctuation"
 msgstr "Πρόσθετη στίξη"
 
 #: kcharselect-translation.cpp:130
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "CJK Radicals Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
 msgstr "Πρόσθετο θεματικών CJK"
 
 #: kcharselect-translation.cpp:131
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kangxi Radicals"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
 msgstr "Θεματικά Καντζι"
@@ -863,49 +740,31 @@ msgid "CJK Symbols and Punctuation"
 msgstr "Σύμβολα και στίξη CJK"
 
 #: kcharselect-translation.cpp:134
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hiragana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hiragana"
 msgstr "Χιραγκάνα"
 
 #: kcharselect-translation.cpp:135
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Katakana"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana"
 msgstr "Κατακάνα"
 
 #: kcharselect-translation.cpp:136
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bopomofo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "Μποπομόφο"
 
 #: kcharselect-translation.cpp:137
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Compatibility Jamo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
 msgstr "Τζαμο συμβατότητας Χανγκουλ"
 
 #: kcharselect-translation.cpp:138
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kanbun"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "Κανμπαν"
 
 #: kcharselect-translation.cpp:139
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bopomofo Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
 msgstr "Εκτεταμένη Μποπομοφο"
@@ -936,9 +795,6 @@ msgid "CJK Unified Ideographs Extension A"
 msgstr "Επέκταση Α ενοποιημένων ιδεογραμμάτων CJK"
 
 #: kcharselect-translation.cpp:145
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Yijing Hexagram Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
 msgstr "Σύμβολα εξαγραμμάτων Γιτζιν"
@@ -954,25 +810,16 @@ msgid "Yi Syllables"
 msgstr "Συλλαβές Γι"
 
 #: kcharselect-translation.cpp:148
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Yi Radicals"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Radicals"
 msgstr "Θεματικά Γι"
 
 #: kcharselect-translation.cpp:149
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lisu"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
 msgstr "Lisu"
 
 #: kcharselect-translation.cpp:150
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Vai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "Vai"
@@ -983,9 +830,6 @@ msgid "Cyrillic Extended-B"
 msgstr "Εκτεταμένο Κυριλλικό-Β"
 
 #: kcharselect-translation.cpp:152
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bamum"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
 msgstr "Bamum"
@@ -1001,9 +845,6 @@ msgid "Latin Extended-D"
 msgstr "Εκτεταμένη Λατινική Δ"
 
 #: kcharselect-translation.cpp:155
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Syloti Nagri"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr "Συλοτι Ναγκρι"
@@ -1014,57 +855,36 @@ msgid "Common Indic Number Forms"
 msgstr "Κοινές μορφές αριθμών Indic"
 
 #: kcharselect-translation.cpp:157
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phags-pa"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
 msgstr "Φαγκς-πα"
 
 #: kcharselect-translation.cpp:158
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Saurashtra"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
 msgstr "Saurashtra"
 
 #: kcharselect-translation.cpp:159
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Devanagari Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
 msgstr "Ντεβαναγκάρι εκτεταμένη"
 
 #: kcharselect-translation.cpp:160
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kayah Li"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
 msgstr "Καγιάχ Λι"
 
 #: kcharselect-translation.cpp:161
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Rejang"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
 msgstr "Rejang"
 
 #: kcharselect-translation.cpp:162
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Jamo Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
 msgstr "Χανγκουλ Γιαμο Εκτεταμένο-Α"
 
 #: kcharselect-translation.cpp:163
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Javanese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
 msgstr "Javanese"
@@ -1088,9 +908,6 @@ msgid "Myanmar Extended-A"
 msgstr "Μιανμάρ Εκτεταμένο-Α"
 
 #: kcharselect-translation.cpp:167
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Viet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
 msgstr "Tai Viet"
@@ -1125,25 +942,16 @@ msgid "Cherokee Supplement"
 msgstr "Πρόσθετο κυριλλικών"
 
 #: kcharselect-translation.cpp:172
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Meetei Mayek"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek"
 msgstr "Meetei Mayek"
 
 #: kcharselect-translation.cpp:173
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Syllables"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Syllables"
 msgstr "Συλλαβές Χανγκουλ"
 
 #: kcharselect-translation.cpp:174
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Hangul Jamo Extended-B"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
 msgstr "Χανγκουλ Γιαμο Εκτεταμένο-Β"
@@ -1194,9 +1002,6 @@ msgid "Vertical Forms"
 msgstr "Κατακόρυφες φόρμες"
 
 #: kcharselect-translation.cpp:184
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Combining Half Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
 msgstr "Σημάνσεις μισών συνδυασμών"
@@ -1336,25 +1141,16 @@ msgid "Enter a search term or character…"
 msgstr "Εισάγετε εδώ έναν όρο αναζήτησης ή χαρακτήρα"
 
 #: kcharselect.cpp:393
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Εισάγετε εδώ έναν όρο αναζήτησης ή χαρακτήρα"
 
 #: kcharselect.cpp:400
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Αναζήτηση"
+msgstr "&Αναζήτηση…"
 
 #: kcharselect.cpp:424
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Προηγούμενο στο ιστορικό"
@@ -1368,9 +1164,6 @@ msgid "Go to previous character in history"
 msgstr "Προηγούμενος χαρακτήρας στο ιστορικό"
 
 #: kcharselect.cpp:431
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Επόμενο στο ιστορικό"
@@ -1384,49 +1177,31 @@ msgid "Go to next character in history"
 msgstr "Επόμενος χαρακτήρας στο ιστορικό"
 
 #: kcharselect.cpp:438
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&Πίσω"
 
 #: kcharselect.cpp:445
-#, fuzzy
-#| msgctxt "KCharSelect|go forward"
-#| msgid "&Forward"
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&Μπροστά"
 
 #: kcharselect.cpp:464
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Επιλέξτε μια κατηγορία"
 
 #: kcharselect.cpp:468
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Επιλέξτε ένα τμήμα για εμφάνιση"
 
 #: kcharselect.cpp:487
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Ορισμός γραμματοσειράς"
 
 #: kcharselect.cpp:494
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Ορισμός μεγέθους γραμματοσειράς"
@@ -1489,29 +1264,21 @@ msgid "Definition in English: "
 msgstr "Ορισμός στα Αγγλικά: "
 
 #: kcharselect.cpp:884
-#, fuzzy
-#| msgid "Mandarin Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Προφορά Μάνταριν: "
 
 #: kcharselect.cpp:891
-#, fuzzy
-#| msgid "Cantonese Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Προφορά Καντονίζ: "
 
 #: kcharselect.cpp:898
-#, fuzzy
-#| msgid "Japanese On Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Προφορά Ον Ιαπωνική: "
 
 #: kcharselect.cpp:905
-#, fuzzy
-#| msgid "Japanese Kun Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Προφορά Καν Ιαπωνική: "
@@ -1609,12 +1376,9 @@ msgid "<not assigned>"
 msgstr "<μη ορισμένο>"
 
 #: kcharselectdata.cpp:440
-#, fuzzy
-#| msgctxt "@action:button Replace all occurrences"
-#| msgid "&All"
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr "Ό&λα"
+msgstr "Όλα"
 
 #: kcharselectdata.cpp:752
 msgctxt "KCharSelectData|"
@@ -1777,12 +1541,9 @@ msgid "Unknown"
 msgstr "Άγνωστο"
 
 #: kcolorcombo.cpp:333
-#, fuzzy
-#| msgctxt "@item license"
-#| msgid "Custom"
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Προσαρμοσμένο"
+msgstr "Προσαρμοσμένο…"
 
 #: kcontextualhelpbutton.cpp:80
 msgctxt "QObject|@action:button accessible name"
@@ -1813,65 +1574,41 @@ msgid "Week %1"
 msgstr "Εβδομάδα %1"
 
 #: kdatepicker.cpp:305
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Επόμενο έτος"
 
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Προηγούμενο έτος"
 
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Επόμενος μήνας"
 
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Προηγούμενος μήνας"
 
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Επιλέξτε μια εβδομάδα"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Επιλέξτε έναν μήνα"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Επιλέξτε ένα έτος"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Επιλέξτε την τρέχουσα ημέρα"
@@ -1882,97 +1619,61 @@ msgid "Close"
 msgstr "Κλείσιμο"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "Επόμενο έτος"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "Επόμενος μήνας"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "Επόμενη εβδομάδα"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "Αύριο"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Σήμερα"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "Χθες"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "Τελευταία εβδομάδα"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "Τελευταίος μήνας"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "Τελευταίο έτος"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Χωρίς ημερομηνία"
 
 #: kdatetimeedit.cpp:171
-#, fuzzy
-#| msgctxt "KDateTimeEdit|UTC time zone"
-#| msgid "UTC"
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgctxt "KDateTimeEdit|No specific time zone"
-#| msgid "Floating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Μεταβαλλόμενη"
@@ -1992,49 +1693,31 @@ msgstr ""
 "ημερομηνία και ώρα."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "Πρ&οσθήκη"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
 msgstr "Α&φαίρεση"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Up"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
 msgstr "Μετακίνηση &πάνω"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Down"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Μετακίνηση &κάτω"
 
 #: kfontchooser.cpp:164
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Ζητούμενη γραμματοσειρά"
 
 #: kfontchooser.cpp:211
-#, fuzzy
-#| msgctxt "KFontChooser|QFontDatabase"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Κανονική"
@@ -2071,8 +1754,6 @@ msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgid "Select Font"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Επιλογή γραμματοσειράς"
@@ -2088,11 +1769,6 @@ msgid "Sample:"
 msgstr ""
 
 #: kfontchooserwidget.ui:41
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -2107,57 +1783,36 @@ msgid "Show only monospaced fonts"
 msgstr ""
 
 #: kfontchooserwidget.ui:66
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Γραμματοσειρά"
 
 #: kfontchooserwidget.ui:73
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Γραμματοσειρά:"
 
 #: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Στιλ γραμματοσειράς"
 
 #: kfontchooserwidget.ui:98
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Στιλ γραμματοσειράς:"
 
 #: kfontchooserwidget.ui:116
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Μέγεθος"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Μέγεθος:"
 
 #: kfontchooserwidget.ui:132
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Σχετικό"
@@ -2171,9 +1826,6 @@ msgid "Choose font…"
 msgstr "Επιλογή..."
 
 #: kfontrequester.cpp:190
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Προεπισκόπηση της επιλεγμένης γραμματοσειράς"
@@ -2193,9 +1845,7 @@ msgstr ""
 "αλλάξετε κάνοντας κλικ στο κουμπί \"Επιλογή...\"."
 
 #: kfontrequester.cpp:196
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the \"%1\" font"
+#, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Προεπισκόπηση της γραμματοσειράς \"%1\""
@@ -2261,57 +1911,36 @@ msgid "Do not show this message again"
 msgstr "Να μην εμφανιστεί ξανά αυτό το μήνυμα"
 
 #: kmessagedialog.cpp:139
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Λεπτομέρειες"
 
 #: kmessagedialog.cpp:225
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Ερώτηση"
 
 #: kmessagedialog.cpp:230
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Προειδοποίηση"
 
 #: kmessagedialog.cpp:233
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Πληροφορίες"
 
 #: kmessagedialog.cpp:236
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Σφάλμα"
 
 #: kmessagewidget.cpp:81
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Κλείσιμο"
 
 #: kmessagewidget.cpp:82
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Κλείσιμο μηνύματος"
@@ -2322,11 +1951,9 @@ msgid "Search for file type or filename pattern…"
 msgstr ""
 
 #: kmimetypechooser.cpp:89
-#, fuzzy
-#| msgid "Filter"
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr "Φίλτρο"
+msgstr "&Φίλτρο:"
 
 #: kmimetypechooser.cpp:103
 #, fuzzy
@@ -2337,27 +1964,19 @@ msgid "MIME Type"
 msgstr "Τύπος Mime"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
 msgstr "Σχόλιο"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
 msgstr "Μοτίβα"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgid "&Edit"
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Επεξεργασία"
+msgstr "&Επεξεργασία…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
@@ -2381,46 +2000,31 @@ msgid ""
 msgstr "Αδυναμία εύρεσης του εκτελέσιμου '%1'."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password must be at least %n character(s) long"
-#| msgid_plural "Password must be at least %n character(s) long"
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
 msgstr[0] ""
-"Ο κωδικός πρόσβασης θα πρέπει να έχει μήκος τουλάχιστον %n χαρακτήρα"
+"Ο κωδικός πρόσβασης θα πρέπει να έχει μήκος τουλάχιστον %n χαρακτήρα."
 msgstr[1] ""
-"Ο κωδικός πρόσβασης θα πρέπει να έχει μήκος τουλάχιστον %n χαρακτήρες"
+"Ο κωδικός πρόσβασης θα πρέπει να έχει μήκος τουλάχιστον %n χαρακτήρες."
 
 #: knewpassworddialog.cpp:67
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password is empty"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password is empty."
-msgstr "Ο κωδικός πρόσβασης είναι κενός"
+msgstr "Ο κωδικός πρόσβασης είναι κενός."
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords do not match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
-msgstr "Οι κωδικοί πρόσβασης δεν ταιριάζουν"
+msgstr "Οι κωδικοί πρόσβασης δεν ταιριάζουν."
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
-msgstr "Οι κωδικοί πρόσβασης ταιριάζουν"
+msgstr "Οι κωδικοί πρόσβασης ταιριάζουν."
 
 #: knewpassworddialog.cpp:133
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Χαμηλή ισχύς κωδικού πρόσβασης"
@@ -2461,40 +2065,26 @@ msgstr ""
 "li></ul>"
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "Κωδικός πρόσβασης:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
 msgstr "&Επαλήθευση:"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password strength &meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Μέτρο ισ&χύος κωδικού πρόσβασης:"
 
 #: kpageview.cpp:510
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Αναζήτηση:"
+msgstr "Αναζήτηση…"
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
@@ -2518,57 +2108,36 @@ msgid "Supply a username and password below."
 msgstr "Εισάγετε παρακάτω ένα όνομα χρήστη και κωδικό."
 
 #: kpassworddialog.ui:73
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "No password, use anonymous (or guest) login"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr "Χωρίς κωδικό πρόσβασης, χρήση σύνδεσης ως ανώνυμος ή επισκέπτης"
+msgstr "Χωρίς κωδικό &πρόσβασης, χρήση σύνδεσης ως ανώνυμος ή επισκέπτης"
 
 #: kpassworddialog.ui:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Use this password:"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Χρήση του κωδικού πρόσβασης:"
 
 #: kpassworddialog.ui:105
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
 
 #: kpassworddialog.ui:130
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Τομέας:"
 
 #: kpassworddialog.ui:144
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Κωδικός πρόσβασης:"
 
 #: kpassworddialog.ui:158
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Διατήρηση κωδικού πρόσβασης"
 
 #: kpasswordlineedit.cpp:44
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Τροποποίηση της ορατότητας του κωδικού πρόσβασης"
@@ -2590,17 +2159,11 @@ msgid "Hide Password"
 msgstr "Κωδικός πρόσβασης"
 
 #: kpixmapregionselectordialog.cpp:56
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Select Region of Image"
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
 msgstr "Επιλέξτε περιοχή της εικόνας"
 
 #: kpixmapregionselectordialog.cpp:60
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Please click and drag on the image to select the region of interest:"
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr ""
@@ -2608,39 +2171,26 @@ msgstr ""
 "σας ενδιαφέρει:"
 
 #: kpixmapregionselectorwidget.cpp:173
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Λειτουργίες εικόνας"
 
 #: kpixmapregionselectorwidget.cpp:176
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "&Περιστροφή με τη φορά του ρολογιού"
 
 #: kpixmapregionselectorwidget.cpp:180
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Περιστροφή &αντίστροφα από τη φορά του ρολογιού"
 
 #: krecentfilesmenu.cpp:114
-#, fuzzy
-#| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Καμία καταχώρηση"
 
 #: krecentfilesmenu.cpp:117
-#, fuzzy
-#| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Καθαρισμός λίστας"
@@ -2653,9 +2203,6 @@ msgid "Recent Files"
 msgstr "Διαγραφή αρχείων"
 
 #: ksqueezedtextlabel.cpp:207
-#, fuzzy
-#| msgctxt "KSqueezedTextLabel|"
-#| msgid "&Copy Full Text"
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Αντιγραφή πλήρους κειμένου"
@@ -2709,11 +2256,9 @@ msgid "Do not save data"
 msgstr "Να μην πραγματοποιηθεί αποθήκευση δεδομένων"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Αποθήκευση ως"
+msgstr "Αποθήκευση &ως…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2742,12 +2287,9 @@ msgstr ""
 "Μπορείτε έτσι να δοκιμάσετε διάφορες ρυθμίσεις."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "&Λειτουργία διαχειριστή..."
+msgstr "&Λειτουργία διαχειριστή…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2851,11 +2393,9 @@ msgid "Go forward one step"
 msgstr "Ένα βήμα μπροστά"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgid "Print"
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "Εκτύπωση"
+msgstr "Εκτύ&πωση…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2883,12 +2423,9 @@ msgid "Delete item(s)"
 msgstr "Διαγραφή αντικειμένου(ων)"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "@label:button"
-#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "Άν&οιγμα"
+msgstr "Άν&οιγμα…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2921,11 +2458,9 @@ msgid "&Insert"
 msgstr "Ε&ισαγωγή"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgid "Configure"
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "Διαμόρφωση"
+msgstr "Διαμό&ρφωση…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
