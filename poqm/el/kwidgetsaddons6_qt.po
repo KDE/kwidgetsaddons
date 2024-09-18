@@ -1956,12 +1956,9 @@ msgid "&Filter:"
 msgstr "&Φίλτρο:"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Mime Type"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
-msgstr "Τύπος Mime"
+msgstr "Τύπος MIME"
 
 #: kmimetypechooser.cpp:106
 msgctxt "KMimeTypeChooser|@title:column"
