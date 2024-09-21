@@ -389,6 +389,7 @@ void KDateComboBox::focusOutEvent(QFocusEvent *event)
     d->warnDate();
     if (d->m_edited) {
         d->m_edited = false;
+        Q_EMIT dateEntered(d->m_date);
         Q_EMIT dateChanged(d->m_date);
     }
     QComboBox::focusOutEvent(event);

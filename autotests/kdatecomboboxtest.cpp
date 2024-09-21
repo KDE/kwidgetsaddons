@@ -200,7 +200,7 @@ void KDateComboBoxTest::testSignals()
 
     // THEN
     QCOMPARE(spyDateEdited.count(), 2);
-    QCOMPARE(spyDateEntered.count(), 0);
+    QCOMPARE(spyDateEntered.count(), 1);
     QCOMPARE(spyDateChanged.count(), 1);
     clearSpies();
 
