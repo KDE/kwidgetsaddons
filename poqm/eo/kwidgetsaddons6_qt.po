@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-05-09 22:01+0100\n"
+"PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -1676,7 +1676,7 @@ msgstr "Elekti Tiparon"
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "Kome apartigita listo de tipartrajtoj (ekz. liga, calt):"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
