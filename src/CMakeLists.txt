@@ -324,10 +324,12 @@ install(FILES
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons COMPONENT Devel
 )
 
-qt_add_resources(KF6WidgetsAddons "kcharselect-data"
+qt6_add_resources(KF6WidgetsAddons "kcharselect-data"
     PREFIX "/kf6/kcharselect/"
     FILES kcharselect-data
+    OUTPUT_TARGETS _rcc_target
 )
+install(TARGETS ${_rcc_target} EXPORT KF6WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if (BUILD_QCH)
     ecm_add_qch(
