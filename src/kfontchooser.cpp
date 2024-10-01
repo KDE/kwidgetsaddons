@@ -149,10 +149,6 @@ KFontChooser::~KFontChooser() = default;
 
 void KFontChooserPrivate::init()
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
-    m_ui->fontFeaturesLabel->setVisible(false);
-    m_ui->fontFeaturesLineEdit->setVisible(false);
-#endif
     m_usingFixed = m_flags & KFontChooser::FixedFontsOnly;
 
     // The main layout is divided horizontally into a top part with
@@ -166,6 +162,12 @@ void KFontChooserPrivate::init()
 
     m_ui.reset(new Ui_KFontChooserWidget);
     m_ui->setupUi(page);
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
+    m_ui->fontFeaturesLabel->setVisible(false);
+    m_ui->fontFeaturesLineEdit->setVisible(false);
+#endif
+
     // Increase spacing on top of the preview field and then reset the other layouts
     // back to a standard value.
     m_ui->sampleTextEditLayout->setSpacing(q->style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing));
