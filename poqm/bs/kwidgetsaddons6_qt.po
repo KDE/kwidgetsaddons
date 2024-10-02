@@ -1820,7 +1820,7 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Pomjeri &dolje"
 
-#: kfontchooser.cpp:164
+#: kfontchooser.cpp:160
 #, fuzzy
 #| msgctxt "KFontChooser|"
 #| msgid "Requested Font"
@@ -1828,7 +1828,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Traženi font"
 
-#: kfontchooser.cpp:211
+#: kfontchooser.cpp:213
 #, fuzzy
 #| msgctxt "KFontChooser|QFontDatabase"
 #| msgid "Normal"
@@ -1836,32 +1836,32 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normalno"
 
-#: kfontchooser.cpp:212 kfontchooser.cpp:472
+#: kfontchooser.cpp:214 kfontchooser.cpp:474
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kurziv"
 
-#: kfontchooser.cpp:213 kfontchooser.cpp:473
+#: kfontchooser.cpp:215 kfontchooser.cpp:475
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "iskošeni"
 
-#: kfontchooser.cpp:214
+#: kfontchooser.cpp:216
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Podebljano"
 
-#: kfontchooser.cpp:215
+#: kfontchooser.cpp:217
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:269
+#: kfontchooser.cpp:271
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Ljubazni fenjerdžija čađavog lica hoće da mi pokaže štos"
 
-#: kfontchooser.cpp:457
+#: kfontchooser.cpp:459
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

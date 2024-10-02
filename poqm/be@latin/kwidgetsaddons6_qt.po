@@ -2319,14 +2319,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Pasuń &nižej"
 
-#: kfontchooser.cpp:164
+#: kfontchooser.cpp:160
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Zapatrabavany šryft"
 
-#: kfontchooser.cpp:211
+#: kfontchooser.cpp:213
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2334,7 +2334,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Zvyčajna"
 
-#: kfontchooser.cpp:212 kfontchooser.cpp:472
+#: kfontchooser.cpp:214 kfontchooser.cpp:474
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2342,7 +2342,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursiŭny"
 
-#: kfontchooser.cpp:213 kfontchooser.cpp:473
+#: kfontchooser.cpp:215 kfontchooser.cpp:475
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2350,7 +2350,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Nachileny"
 
-#: kfontchooser.cpp:214
+#: kfontchooser.cpp:216
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2358,19 +2358,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Tłusty"
 
-#: kfontchooser.cpp:215
+#: kfontchooser.cpp:217
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:269
+#: kfontchooser.cpp:271
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Kiń źluku ŭściaž łaščyć."
 
-#: kfontchooser.cpp:457
+#: kfontchooser.cpp:459
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"

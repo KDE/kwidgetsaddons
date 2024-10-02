@@ -2164,14 +2164,14 @@ msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Beweeg Ondertoe"
 
-#: kfontchooser.cpp:164
+#: kfontchooser.cpp:160
 #, fuzzy
 #| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Versoekte Skrif tipe"
 
-#: kfontchooser.cpp:211
+#: kfontchooser.cpp:213
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2179,14 +2179,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Normale"
 
-#: kfontchooser.cpp:212 kfontchooser.cpp:472
+#: kfontchooser.cpp:214 kfontchooser.cpp:474
 #, fuzzy
 #| msgid "Italic"
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Kursief"
 
-#: kfontchooser.cpp:213 kfontchooser.cpp:473
+#: kfontchooser.cpp:215 kfontchooser.cpp:475
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Oblique"
@@ -2194,14 +2194,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Oblique"
 
-#: kfontchooser.cpp:214
+#: kfontchooser.cpp:216
 #, fuzzy
 #| msgid "Bold"
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Vetdruk"
 
-#: kfontchooser.cpp:215
+#: kfontchooser.cpp:217
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Book Oblique"
@@ -2209,14 +2209,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Boek Oblique"
 
-#: kfontchooser.cpp:269
+#: kfontchooser.cpp:271
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Die Vinnige  brown   fox   jumps  Bo Die Lazy Hond"
 
-#: kfontchooser.cpp:457
+#: kfontchooser.cpp:459
 #, fuzzy, qt-format
 #| msgid "%1%"
 msgctxt "KFontChooser|@item Font style"
