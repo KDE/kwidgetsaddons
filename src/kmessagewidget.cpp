@@ -73,9 +73,12 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
 
     textLabel = new QLabel(q);
     textLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-    textLabel->setTextInteractionFlags(Qt::TextBrowserInteraction);
+    textLabel->setTextInteractionFlags(Qt::TextBrowserInteraction | Qt::TextSelectableByKeyboard);
     QObject::connect(textLabel, &QLabel::linkActivated, q, &KMessageWidget::linkActivated);
     QObject::connect(textLabel, &QLabel::linkHovered, q, &KMessageWidget::linkHovered);
+    q->setFocusProxy(textLabel); // Make sure calling q->setFocus() moves focus to a sensible item. This is useful for accessibility, because when the focus
+                                 // is moved to the textLabel, screen readers will first announce the accessible name of the messageWidget e.g. "Error" and
+                                 // then the textLabel's text.
 
     QAction *closeAction = new QAction(q);
     closeAction->setText(KMessageWidget::tr("&Close", "@action:button"));
@@ -278,6 +281,21 @@ void KMessageWidget::setMessageType(KMessageWidget::MessageType type)
 {
     d->messageType = type;
     d->setPalette();
+
+    // The accessible names are announced like a title before the actual message of the box is read out.
+    switch (type) {
+    case KMessageWidget::Positive:
+        setAccessibleName(KMessageWidget::tr("Success", "accessible name of positively-colored (e.g. green) message box"));
+        break;
+    case KMessageWidget::Information:
+        setAccessibleName(KMessageWidget::tr("Note", "accessible name of info-colored (e.g. blue) message box"));
+        break;
+    case KMessageWidget::Warning:
+        setAccessibleName(KMessageWidget::tr("Warning", "accessible name of warning-colored (e.g. orange) message box"));
+        break;
+    case KMessageWidget::Error:
+        setAccessibleName(KMessageWidget::tr("Error", "accessible name of error-colored (e.g. red) message box"));
+    }
 }
 
 QSize KMessageWidget::sizeHint() const
