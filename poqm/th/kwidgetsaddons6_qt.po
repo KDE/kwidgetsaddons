@@ -2716,19 +2716,51 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "ผิดพลาด"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&ปิด"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "ปิดข้อความ"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "สำเร็จ"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "หมายเหตุ:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "คำเตือน"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "ผิดพลาด"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -11352,9 +11384,6 @@ msgstr ""
 
 #~ msgid "Enable component"
 #~ msgstr "เปิดใช้งานส่วนประกอบ"
-
-#~ msgid "Success"
-#~ msgstr "สำเร็จ"
 
 #~ msgid "Communication error"
 #~ msgstr "การสื่อสารผิดพลาด"

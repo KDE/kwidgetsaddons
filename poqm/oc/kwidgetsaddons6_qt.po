@@ -2272,19 +2272,51 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Error"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Tampar"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Tampar lo messatge"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "Succès"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "Nòtas :"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "Alèrta"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "Error"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -8050,9 +8082,6 @@ msgstr ""
 
 #~ msgid "Select Components"
 #~ msgstr "Seleccionatz de compausants"
-
-#~ msgid "Success"
-#~ msgstr "Succès"
 
 #, fuzzy
 #~ msgctxt ""

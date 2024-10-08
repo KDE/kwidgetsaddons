@@ -2448,7 +2448,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "ਗਲਤੀ"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2456,13 +2456,47 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "ਬੰਦ ਕਰੋ(&C)"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "ਸੁਨੇਹਾ ਬੰਦ ਕਰੋ"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "ਸਫ਼ਲ"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "ਨੋਟਿਸ:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "ਚੇਤਾਵਨੀ"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "ਗਲਤੀ"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -10945,9 +10979,6 @@ msgstr "ਵਿੰਡੋ ਨੂੰ ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ ਵ�
 
 #~ msgid "Enable component"
 #~ msgstr "ਭਾਗ ਯੋਗ"
-
-#~ msgid "Success"
-#~ msgstr "ਸਫ਼ਲ"
 
 #~ msgid "Communication error"
 #~ msgstr "ਕਮਿਊਨੀਕੇਸ਼ਨ ਗਲਤੀ"

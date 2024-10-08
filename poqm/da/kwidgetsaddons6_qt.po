@@ -1884,15 +1884,50 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Fejl"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Luk"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Luk besked"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "Gennemført"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgctxt "KCharSelect|"
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "Noter:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "Advarsel"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "Fejl"
 
 #: kmimetypechooser.cpp:88
 #, fuzzy
@@ -10452,9 +10487,6 @@ msgstr "Vis vinduet i fuld skærm"
 
 #~ msgid "Enable component"
 #~ msgstr "Aktivér komponent"
-
-#~ msgid "Success"
-#~ msgstr "Gennemført"
 
 #~ msgid "Communication error"
 #~ msgstr "Kommunikationsfejl"

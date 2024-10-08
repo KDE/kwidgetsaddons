@@ -1877,15 +1877,50 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "त्रुटि"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "बंद करें (&C)"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "संदेश बंद करें"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "सफलता"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgctxt "KCharSelect|"
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "टिप्पणियाँ:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "चेतावनी"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "त्रुटि"
 
 #: kmimetypechooser.cpp:88
 #, fuzzy
@@ -9560,9 +9595,6 @@ msgstr "विंडो को संपूर्ण स्क्रीन म�
 
 #~ msgid "Enable component"
 #~ msgstr "अवयव सक्षम करें"
-
-#~ msgid "Success"
-#~ msgstr "सफलता"
 
 #~ msgid "Communication error"
 #~ msgstr "संचारण त्रुटि"

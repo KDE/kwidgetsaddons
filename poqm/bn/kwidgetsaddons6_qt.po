@@ -2705,19 +2705,51 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "সমস্যা"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&বন্ধ করো"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "বার্তা বন্ধ করো"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "সফল"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "নোট:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "সতর্কবার্তা"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "সমস্যা"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -11433,9 +11465,6 @@ msgstr "উইণ্ডো পুরো পর্দা জুড়ে প্র�
 
 #~ msgid "Enable component"
 #~ msgstr "কম্পোনেন্ট সক্রিয় করো"
-
-#~ msgid "Success"
-#~ msgstr "সফল"
 
 #~ msgid "Communication error"
 #~ msgstr "যোগাযোগ সমস্যা"

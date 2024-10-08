@@ -2738,19 +2738,51 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "దోషం"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "(&C) మూసివెయుము"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "సందేశము మూసివేయుము"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "సఫలం"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "వ్యాఖ్యలు:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "హెచ్చరిక"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "దోషం"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -11077,9 +11109,6 @@ msgstr "గవాక్షమును పూర్తి తెర లొ చ�
 
 #~ msgid "Enable component"
 #~ msgstr "కాంపోనెంట్ చేతనంచేయి"
-
-#~ msgid "Success"
-#~ msgstr "సఫలం"
 
 #~ msgid "Communication error"
 #~ msgstr "సంప్రదింపు దోషము"

@@ -2041,14 +2041,39 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr ""
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr ""
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
+msgstr ""
+
+#: kmessagewidget.cpp:288
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr ""
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "Notáhtat:"
+
+#: kmessagewidget.cpp:294
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr ""
+
+#: kmessagewidget.cpp:297
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
 msgstr ""
 
 #: kmimetypechooser.cpp:88

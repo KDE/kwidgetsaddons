@@ -1840,15 +1840,50 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Fehler"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Schließen"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Nachricht schließen"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "Erfolgreich"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgctxt "KCharSelect|"
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "Notizen:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "Warnung"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "Fehler"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -10529,9 +10564,6 @@ msgstr "Fenster im Vollbildmodus anzeigen"
 
 #~ msgid "Enable component"
 #~ msgstr "Komponente aktivieren"
-
-#~ msgid "Success"
-#~ msgstr "Erfolgreich"
 
 #~ msgid "Communication error"
 #~ msgstr "Kommunikationsfehler"

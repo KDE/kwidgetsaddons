@@ -2291,15 +2291,50 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Eroare"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "În&chide"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Închide mesajul"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "Succes"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgctxt "KCharSelect|"
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "Note:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "Avertisment"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "Eroare"
 
 #: kmimetypechooser.cpp:88
 #, fuzzy
@@ -11063,9 +11098,6 @@ msgstr "Afișează fereastra pe tot ecranul"
 
 #~ msgid "Enable component"
 #~ msgstr "Activare componentă"
-
-#~ msgid "Success"
-#~ msgstr "Succes"
 
 #~ msgid "Communication error"
 #~ msgstr "Eroare de comunicație"

@@ -2156,17 +2156,46 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "തെറ്റ്"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "അടയ്ക്കുക &c"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "സന്ദേശം അടയ്ക്കുക"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "വിജയിച്ചു"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "കുറിപ്പുകള്‍:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "മുന്നറിയിപ്പു്"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "തെറ്റ്"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -9588,9 +9617,6 @@ msgstr ""
 
 #~ msgid "Enable component"
 #~ msgstr "ഘടകം സജ്ജമാക്കുക"
-
-#~ msgid "Success"
-#~ msgstr "വിജയിച്ചു"
 
 #~ msgid "Communication error"
 #~ msgstr "വിനിമയപിശകു്"

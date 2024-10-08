@@ -2128,7 +2128,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Fehler"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2136,13 +2136,46 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Tomaken"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Naricht tomaken"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "Hett funkscheneert"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgctxt "KCharSelect|"
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "Anmarken:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "Wohrschoen"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "Fehler"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -10839,9 +10872,6 @@ msgstr "Dat Finster över den helen Schirm wiesen"
 
 #~ msgid "Enable component"
 #~ msgstr "Komponent bruken"
-
-#~ msgid "Success"
-#~ msgstr "Hett funkscheneert"
 
 #~ msgid "Communication error"
 #~ msgstr "Kommunikatschoonfehler"

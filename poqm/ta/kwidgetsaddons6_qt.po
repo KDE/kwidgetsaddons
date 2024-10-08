@@ -2113,15 +2113,50 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "சிக்கல்"
 
-#: kmessagewidget.cpp:81
+#: kmessagewidget.cpp:84
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&மூடு"
 
-#: kmessagewidget.cpp:82
+#: kmessagewidget.cpp:85
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "தகவலை மூடு"
+
+#: kmessagewidget.cpp:288
+#, fuzzy
+#| msgid "Success"
+msgctxt ""
+"KMessageWidget|accessible name of positively-colored (e.g. green) message box"
+msgid "Success"
+msgstr "வெற்றி"
+
+#: kmessagewidget.cpp:291
+#, fuzzy
+#| msgctxt "KCharSelect|"
+#| msgid "Notes:"
+msgctxt ""
+"KMessageWidget|accessible name of info-colored (e.g. blue) message box"
+msgid "Note"
+msgstr "குறிப்புகள்:"
+
+#: kmessagewidget.cpp:294
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Warning"
+msgctxt ""
+"KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
+msgid "Warning"
+msgstr "எச்சரிக்கை"
+
+#: kmessagewidget.cpp:297
+#, fuzzy
+#| msgctxt "KMessageBox|"
+#| msgid "Error"
+msgctxt ""
+"KMessageWidget|accessible name of error-colored (e.g. red) message box"
+msgid "Error"
+msgstr "சிக்கல்"
 
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
@@ -10612,9 +10647,6 @@ msgstr "சாளரத்தை முழுத்திரை பயன்ம�
 
 #~ msgid "Enable component"
 #~ msgstr "பாகத்தினை செயற்படுத்துக"
-
-#~ msgid "Success"
-#~ msgstr "வெற்றி"
 
 #~ msgid "Communication error"
 #~ msgstr "தகவல் பரிமாற்றப் பிழை"
