@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-09-07 20:50+0200\n"
+"PO-Revision-Date: 2024-10-09 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -149,7 +149,7 @@ msgstr "ஓசைக் குறியீடுகள்"
 #: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
-msgstr ""
+msgstr "துணைக்குறிகள்"
 
 #: kcharselect-translation.cpp:25
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -187,12 +187,9 @@ msgid "Spacing Modifier Letters"
 msgstr "இடைவெளியை மாற்றும் எழுத்துகள்"
 
 #: kcharselect-translation.cpp:32
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
-msgstr "பிரித்தற் குறிகளை இணைக்கிறது"
+msgstr "துணைக்குறிகள்"
 
 #: kcharselect-translation.cpp:33
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -445,12 +442,9 @@ msgid "Tai Tham"
 msgstr "டய் தம்"
 
 #: kcharselect-translation.cpp:83
-#, fuzzy
-#| msgctxt "KCharSelect section name"
-#| msgid "Combining Diacritical Marks"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "பிரித்தற் குறிகளை இணைக்கிறது"
+msgstr "விரிவான துணைக்குறிகள்"
 
 #: kcharselect-translation.cpp:84
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -508,12 +502,9 @@ msgid "Phonetic Extensions Supplement"
 msgstr "ஒலிப்பியல் விரிவாக்கத் துணை"
 
 #: kcharselect-translation.cpp:95
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Combining Diacritical Marks Supplement"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
-msgstr "பிரித்தற் குறிகள் இணைக்கப்படுதற்கான துணை"
+msgstr "விரிவான மேம்பட்ட துணைக்குறிகள்"
 
 #: kcharselect-translation.cpp:96
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -2124,35 +2115,24 @@ msgid "Close message"
 msgstr "தகவலை மூடு"
 
 #: kmessagewidget.cpp:288
-#, fuzzy
-#| msgid "Success"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
 msgstr "வெற்றி"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "குறிப்புகள்:"
+msgstr "குறிப்பு"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "எச்சரிக்கை"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
