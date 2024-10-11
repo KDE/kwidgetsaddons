@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-08-25 11:43+0200\n"
+"PO-Revision-Date: 2024-10-09 11:17+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -1865,35 +1865,24 @@ msgid "Close message"
 msgstr "Fermer le message"
 
 #: kmessagewidget.cpp:288
-#, fuzzy
-#| msgid "Success"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
-msgstr "Succès"
+msgstr "Réussi"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "Remarques :"
+msgstr "Remarque"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "Avertissement"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"

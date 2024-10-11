@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-28 15:38+0300\n"
-"PO-Revision-Date: 2024-09-05 09:33+0400\n"
+"PO-Revision-Date: 2024-10-10 08:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1836,30 +1836,21 @@ msgstr "أغلق الرّسالة"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
-msgstr ""
+msgstr "اكتمل"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "ملاحظات:"
+msgstr "ملاحظة"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "تحذير"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
