@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-08-23 10:55+0200\n"
+"PO-Revision-Date: 2024-10-12 09:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
 
@@ -1923,35 +1923,24 @@ msgid "Close message"
 msgstr "Itxi mezua"
 
 #: kmessagewidget.cpp:288
-#, fuzzy
-#| msgid "Success"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
-msgstr "Ondo egin da"
+msgstr "Arrakasta"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "Oharrak:"
+msgstr "Oharra"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "Abisua"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
