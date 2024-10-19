@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-08-24 12:05+0100\n"
+"PO-Revision-Date: 2024-10-18 17:10+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1839,35 +1839,24 @@ msgid "Close message"
 msgstr "Close message"
 
 #: kmessagewidget.cpp:288
-#, fuzzy
-#| msgid "Success"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
 msgstr "Success"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "Notes:"
+msgstr "Note"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "Warning"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
