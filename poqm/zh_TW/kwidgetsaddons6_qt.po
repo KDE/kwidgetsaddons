@@ -20,14 +20,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-08-25 01:56+0900\n"
+"PO-Revision-Date: 2024-10-20 00:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -1848,30 +1848,21 @@ msgstr "關閉訊息"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "備忘："
+msgstr "備註"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "警告"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
