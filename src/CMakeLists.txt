@@ -22,6 +22,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kactionmenu.h
     kactionselector.cpp
     kactionselector.h
+    kadjustingscrollarea.cpp
+    kadjustingscrollarea.h
     kanimatedbutton.cpp
     kanimatedbutton.h
     kassistantdialog.cpp
@@ -235,6 +237,7 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   HEADER_NAMES
   KAcceleratorManager
   KAnimatedButton
+  KAdjustingScrollArea
   KBusyIndicatorWidget
   KCharSelect
   KCollapsibleGroupBox
