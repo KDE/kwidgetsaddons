@@ -16,7 +16,7 @@
 class KRatingPainterPrivate
 {
 public:
-    QPixmap getPixmap(int size, QIcon::State state = QIcon::On);
+    QPixmap getPixmap(int size, qreal dpr, QIcon::State state = QIcon::On);
 
     int maxRating = 10;
     int spacing = 0;
@@ -31,7 +31,7 @@ public:
 static void imageToGrayScale(QImage &img, float value);
 static void imageToSemiTransparent(QImage &img);
 
-QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
+QPixmap KRatingPainterPrivate::getPixmap(int size, qreal dpr, QIcon::State state)
 {
     bool transformToOffState = (state == QIcon::Off);
     QPixmap p;
@@ -50,7 +50,7 @@ QPixmap KRatingPainterPrivate::getPixmap(int size, QIcon::State state)
                 _icon = QIcon::fromTheme(QStringLiteral("rating")); // will be transformed to the "off" state
             }
         }
-        p = _icon.pixmap(size);
+        p = _icon.pixmap(QSize(size, size), dpr);
     }
 
     if (transformToOffState) {
@@ -180,6 +180,7 @@ static void imageToSemiTransparent(QImage &img)
 
 void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int hoverRating) const
 {
+    const qreal dpr = painter->device()->devicePixelRatio();
     rating = qMin(rating, d->maxRating);
     hoverRating = qMin(hoverRating, d->maxRating);
 
@@ -195,10 +196,11 @@ void KRatingPainter::paint(QPainter *painter, const QRect &rect, int rating, int
 
     // get the rating pixmaps
     int maxHSizeOnePix = (rect.width() - (numUsedStars - 1) * usedSpacing) / numUsedStars;
-    QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), QIcon::On);
+    QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), dpr, QIcon::On);
+
     QSize ratingPixSize = ratingPix.size() / ratingPix.devicePixelRatio();
 
-    QPixmap disabledRatingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), QIcon::Off);
+    QPixmap disabledRatingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), dpr, QIcon::Off);
     QImage disabledRatingImage = disabledRatingPix.toImage().convertToFormat(QImage::Format_ARGB32);
     QPixmap hoverPix;
 
@@ -316,8 +318,8 @@ int KRatingPainter::ratingFromPosition(const QRect &rect, const QPoint &pos) con
     int usedSpacing = d->spacing;
     int numUsedStars = d->bHalfSteps ? d->maxRating / 2 : d->maxRating;
     int maxHSizeOnePix = (rect.width() - (numUsedStars - 1) * usedSpacing) / numUsedStars;
-    QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix));
-    QSize ratingPixSize = ratingPix.size() / ratingPix.devicePixelRatio();
+    QPixmap ratingPix = d->getPixmap(qMin(rect.height(), maxHSizeOnePix), 1.0);
+    QSize ratingPixSize = ratingPix.deviceIndependentSize().toSize();
 
     int ratingAreaWidth = ratingPixSize.width() * numUsedStars + usedSpacing * (numUsedStars - 1);
 
