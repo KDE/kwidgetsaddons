@@ -2735,18 +2735,18 @@ msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "&Prebriši"
 
-#: ktimecombobox.cpp:254
+#: ktimecombobox.cpp:243
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "Uneli ste loše vreme"
 
-#: ktimecombobox.cpp:257
+#: ktimecombobox.cpp:246
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr "Vreme ne može biti ranije od %1"
 
-#: ktimecombobox.cpp:264
+#: ktimecombobox.cpp:253
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"

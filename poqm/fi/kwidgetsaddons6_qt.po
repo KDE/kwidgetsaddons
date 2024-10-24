@@ -2459,18 +2459,18 @@ msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "&Korvaa"
 
-#: ktimecombobox.cpp:254
+#: ktimecombobox.cpp:243
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "Antamasi aika on virheellinen"
 
-#: ktimecombobox.cpp:257
+#: ktimecombobox.cpp:246
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr "Aika ei voi olla aiempi kuin %1"
 
-#: ktimecombobox.cpp:264
+#: ktimecombobox.cpp:253
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"

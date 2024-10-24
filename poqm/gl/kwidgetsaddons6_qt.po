@@ -2407,18 +2407,18 @@ msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "S&ubstituír"
 
-#: ktimecombobox.cpp:254
+#: ktimecombobox.cpp:243
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "A hora que inseriu é incorrecta"
 
-#: ktimecombobox.cpp:257
+#: ktimecombobox.cpp:246
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr "A hora non pode ser anterior a %1"
 
-#: ktimecombobox.cpp:264
+#: ktimecombobox.cpp:253
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"

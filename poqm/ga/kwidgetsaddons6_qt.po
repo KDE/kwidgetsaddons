@@ -3533,7 +3533,7 @@ msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "F&orscríobh"
 
-#: ktimecombobox.cpp:254
+#: ktimecombobox.cpp:243
 #, fuzzy
 #| msgctxt "@info"
 #| msgid "The time you entered is invalid"
@@ -3541,7 +3541,7 @@ msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "Chuir tú am neamhbhailí isteach"
 
-#: ktimecombobox.cpp:257
+#: ktimecombobox.cpp:246
 #, fuzzy, qt-format
 #| msgctxt "@info"
 #| msgid "Time cannot be earlier than %1"
@@ -3549,7 +3549,7 @@ msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr "Ní cheadaítear am níos luaithe ná %1"
 
-#: ktimecombobox.cpp:264
+#: ktimecombobox.cpp:253
 #, fuzzy, qt-format
 #| msgctxt "@info"
 #| msgid "Time cannot be later than %1"

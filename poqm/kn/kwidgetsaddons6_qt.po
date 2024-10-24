@@ -3488,7 +3488,7 @@ msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "ತಿದ್ದಿಬರೆ(&O)"
 
-#: ktimecombobox.cpp:254
+#: ktimecombobox.cpp:243
 #, fuzzy
 #| msgctxt "SSL error"
 #| msgid "The certificate is invalid"
@@ -3496,13 +3496,13 @@ msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "ಪ್ರಮಾಣಪತ್ರ ಆಮಾನ್ಯವಾದುದಾಗಿದೆ"
 
-#: ktimecombobox.cpp:257
+#: ktimecombobox.cpp:246
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr ""
 
-#: ktimecombobox.cpp:264
+#: ktimecombobox.cpp:253
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"

@@ -2931,18 +2931,18 @@ msgctxt "KStandardGuiItem|"
 msgid "&Overwrite"
 msgstr "&Suprascrie"
 
-#: ktimecombobox.cpp:254
+#: ktimecombobox.cpp:243
 msgctxt "KTimeComboBox|@info"
 msgid "The time you entered is invalid"
 msgstr "Ora pe care ați introdus-o e greșită"
 
-#: ktimecombobox.cpp:257
+#: ktimecombobox.cpp:246
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be earlier than %1"
 msgstr "Ora nu poate fi mai devreme de %1"
 
-#: ktimecombobox.cpp:264
+#: ktimecombobox.cpp:253
 #, qt-format
 msgctxt "KTimeComboBox|@info"
 msgid "Time cannot be later than %1"
