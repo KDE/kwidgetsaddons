@@ -231,8 +231,14 @@ void KTimeComboBoxTest::testEdit()
     QLocale::setDefault(QLocale(locale));
     m_combo = new KTimeComboBox(nullptr);
 
+    QLocale l;
+    auto timeString = l.toString(MIDNIGHT, QLocale::ShortFormat);
+    auto midnightFromString = l.toTime(timeString, QLocale::ShortFormat);
+    QCOMPARE(MIDNIGHT, midnightFromString);
+
     m_combo->setTime(MIDNIGHT);
     QCOMPARE(m_combo->time(), MIDNIGHT);
+
     m_combo->setTime(END_AM);
     QCOMPARE(m_combo->time(), END_AM);
     m_combo->setTime(NOON);

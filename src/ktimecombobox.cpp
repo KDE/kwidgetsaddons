@@ -96,6 +96,7 @@ std::pair<QString, QString> KTimeComboBoxPrivate::timeFormatToInputMask(const QS
         QString am = locale.amText();
         QString pm = locale.pmText();
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 8, 0)
         // Convert the am/pm strings to the same case
         // as the input format. This is necessary to
         // provide a correct mask to the line edit.
@@ -106,6 +107,7 @@ std::pair<QString, QString> KTimeComboBoxPrivate::timeFormatToInputMask(const QS
             am = am.toLower();
             pm = pm.toLower();
         }
+#endif
 
         int ampmLen = qMax(am.length(), pm.length());
         const QString ampmMask(ampmLen, QLatin1Char('x'));
