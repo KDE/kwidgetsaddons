@@ -11,6 +11,7 @@
 #include "kpageview.h"
 #include "kpageview_p.h"
 
+#include "common_helpers_p.h"
 #include "kpagemodel.h"
 #include "kpagewidgetmodel.h"
 #include "loggingcategory.h"
@@ -543,7 +544,7 @@ static QList<QWidget *> hasMatchingText(const QString &text, QWidget *page)
     QList<QWidget *> ret;
     const auto widgets = page->findChildren<WidgetType *>();
     for (auto label : widgets) {
-        if (label->text().contains(text, Qt::CaseInsensitive)) {
+        if (removeAcceleratorMarker(label->text()).contains(text, Qt::CaseInsensitive)) {
             ret << label;
         }
     }
