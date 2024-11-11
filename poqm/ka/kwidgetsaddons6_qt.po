@@ -1981,7 +1981,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "პაროლის &სირთულის მზომი:"
 
-#: kpageview.cpp:510
+#: kpageview.cpp:511
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "ძებნა…"

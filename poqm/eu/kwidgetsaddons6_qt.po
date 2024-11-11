@@ -2072,7 +2072,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Pasahitzaren sendotasun &neurgailua:"
 
-#: kpageview.cpp:510
+#: kpageview.cpp:511
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Bilatu..."

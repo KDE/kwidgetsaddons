@@ -2261,7 +2261,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "கடவுச்சொல் பாதுகாப்பு அளவுகோல்:"
 
-#: kpageview.cpp:510
+#: kpageview.cpp:511
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "தேடு…"
