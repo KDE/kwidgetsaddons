@@ -21,6 +21,10 @@ include(ECMDeprecationSettings)
 set(REQUIRED_QT_VERSION 6.6.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
+# For the Python bindings
+find_package(Python3 3.10 COMPONENTS Interpreter Development)
+find_package(Shiboken6)
+find_package(PySide6)
 
 include(ECMGenerateExportHeader)
 include(CMakePackageConfigHelpers)
@@ -45,6 +49,13 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 cmake_dependent_option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON "NOT CMAKE_CROSSCOMPILING" OFF)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
+cmake_dependent_option(BUILD_PYTHON_BINDINGS "Generate Python Bindings" ON "TARGET Shiboken6::libshiboken AND TARGET PySide6::pyside6" OFF)
+add_feature_info(PYTHON_BINDINGS ${BUILD_PYTHON_BINDINGS} "Python bindings")
+
+# FreeBSD CI is missing required packages
+if (CMAKE_SYSTEM_NAME MATCHES FreeBSD)
+    set(BUILD_PYTHON_BINDINGS OFF)
+endif()
 
 ecm_install_po_files_as_qm(poqm)
 
@@ -95,3 +106,8 @@ include(ECMFeatureSummary)
 ecm_feature_summary(WHAT ALL   FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+
+if (BUILD_PYTHON_BINDINGS)
+    include(ECMGeneratePythonBindings)
+    add_subdirectory(python)
+endif()
