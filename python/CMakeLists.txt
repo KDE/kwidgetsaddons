@@ -109,4 +109,10 @@ ecm_generate_python_bindings(
 )
 
 target_link_libraries(${bindings_library} PRIVATE KF6WidgetsAddons)
-install(TARGETS ${bindings_library} LIBRARY DESTINATION "${KDE_INSTALL_LIBDIR}/python-kf6")
+
+execute_process(COMMAND ${Python_EXECUTABLE} -Esc "import sysconfig; print(sysconfig.get_path('platlib', vars={'platbase': '${CMAKE_INSTALL_PREFIX}', 'base': '${CMAKE_INSTALL_PREFIX}'}))" OUTPUT_VARIABLE sysconfig_output)
+
+string(STRIP ${sysconfig_output} PYTHON_INSTALL_DIR)
+
+
+install(TARGETS ${bindings_library} LIBRARY DESTINATION "${PYTHON_INSTALL_DIR}")
