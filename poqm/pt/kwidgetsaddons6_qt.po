@@ -1875,38 +1875,38 @@ msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
 msgstr "LED desligado"
 
-#: kmessagebox.cpp:304
+#: kmessagebox.cpp:307
 msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Detalhes"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:461 kmessagebox.cpp:516
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Pergunta"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:477 kmessagebox.cpp:533 kmessagebox.cpp:606
+#: kmessagebox.cpp:672 kmessagebox.cpp:756
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Não perguntar de novo"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:590 kmessagebox.cpp:656 kmessagebox.cpp:739
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Atenção"
 
-#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
+#: kmessagebox.cpp:798 kmessagebox.cpp:823 kmessagebox.cpp:842
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Erro"
 
-#: kmessagebox.cpp:880
+#: kmessagebox.cpp:883
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Informação"
 
-#: kmessagebox.cpp:895
+#: kmessagebox.cpp:898
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Não mostrar esta mensagem de novo"

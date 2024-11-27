@@ -2528,50 +2528,50 @@ msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
 msgstr ""
 
-#: kmessagebox.cpp:304
+#: kmessagebox.cpp:307
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Terperinci"
 
-#: kmessagebox.cpp:458 kmessagebox.cpp:513
+#: kmessagebox.cpp:461 kmessagebox.cpp:516
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Soalan"
 
-#: kmessagebox.cpp:474 kmessagebox.cpp:530 kmessagebox.cpp:603
-#: kmessagebox.cpp:669 kmessagebox.cpp:753
+#: kmessagebox.cpp:477 kmessagebox.cpp:533 kmessagebox.cpp:606
+#: kmessagebox.cpp:672 kmessagebox.cpp:756
 #, fuzzy
 #| msgid "Do not ask again"
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Jangan tanya lagi"
 
-#: kmessagebox.cpp:587 kmessagebox.cpp:653 kmessagebox.cpp:736
+#: kmessagebox.cpp:590 kmessagebox.cpp:656 kmessagebox.cpp:739
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Amaran"
 
-#: kmessagebox.cpp:795 kmessagebox.cpp:820 kmessagebox.cpp:839
+#: kmessagebox.cpp:798 kmessagebox.cpp:823 kmessagebox.cpp:842
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Ralat"
 
-#: kmessagebox.cpp:880
+#: kmessagebox.cpp:883
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Maklumat"
 
-#: kmessagebox.cpp:895
+#: kmessagebox.cpp:898
 #, fuzzy
 #| msgid "Do not show this message again"
 msgctxt "KMessageBox|"
