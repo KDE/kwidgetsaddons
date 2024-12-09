@@ -116,3 +116,4 @@ string(STRIP ${sysconfig_output} PYTHON_INSTALL_DIR)
 
 
 install(TARGETS ${bindings_library} LIBRARY DESTINATION "${PYTHON_INSTALL_DIR}")
+install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/${bindings_library}/${bindings_library}.egg-info" DESTINATION "${PYTHON_INSTALL_DIR}")
