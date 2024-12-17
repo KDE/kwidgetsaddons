@@ -100,13 +100,13 @@ int main(int argc, char *argv[])
 
     mainWindow->resize(400, 300);
     mainWindow->show();
+    mainWindow->setAttribute(Qt::WA_DeleteOnClose);
 
     // demonstrate linkActivated
     Receiver *info = new Receiver(mw);
     QObject::connect(mw, &KMessageWidget::linkActivated, info, &Receiver::showWhatsThis);
 
     return app.exec();
-    delete mainWindow;
 }
 
 #include "kmessagewidgettest.moc"
