@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-19 21:41+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -1166,7 +1166,7 @@ msgstr "सी जे के आइडियाग्राफ सूचना"
 #: kcharselect.cpp:877
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
-msgstr "आङ्ग्लभाषायां परिभाषा: १. "
+msgstr "आङ्ग्लभाषायां परिभाषा: "
 
 #: kcharselect.cpp:884
 msgctxt "KCharSelect|"
@@ -1191,7 +1191,7 @@ msgstr "जापानी Kun उच्चारण: "
 #: kcharselect.cpp:912
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
-msgstr "ताङ उच्चारण: १. "
+msgstr "ताङ उच्चारण: "
 
 #: kcharselect.cpp:919
 msgctxt "KCharSelect|"
@@ -1211,7 +1211,7 @@ msgstr "मृदुवस्तु: "
 #: kcharselect.cpp:927
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
-msgstr "यूनिकोड श्रेणी : १. "
+msgstr "यूनिकोड श्रेणी : "
 
 #: kcharselect.cpp:931
 msgctxt "KCharSelect|"
@@ -1226,7 +1226,7 @@ msgstr "यूटीएफ-८: १."
 #: kcharselect.cpp:936
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
-msgstr "यूटीएफ-१६: १. "
+msgstr "यूटीएफ-१६: "
 
 #: kcharselect.cpp:943
 msgctxt "KCharSelect|"
