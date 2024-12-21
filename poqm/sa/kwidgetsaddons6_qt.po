@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-12-19 21:41+0530\n"
+"PO-Revision-Date: 2024-12-20 21:52+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -41,7 +41,7 @@ msgstr "%1"
 #, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
-msgstr "%1 [%2] २."
+msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
@@ -51,7 +51,7 @@ msgstr "&उपलब्धः:"
 #: kactionselector.cpp:115
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
-msgstr "&चयनित : १."
+msgstr "&चयनित :"
 
 #: kassistantdialog.cpp:100
 msgctxt "KAssistantDialog|@action:button go back"
@@ -1131,32 +1131,32 @@ msgstr "एनोटेशन्स् तथा क्रॉस रेफरे
 #: kcharselect.cpp:815
 msgctxt "KCharSelect|"
 msgid "Alias names:"
-msgstr "उपनाम : १."
+msgstr "उपनाम :"
 
 #: kcharselect.cpp:823
 msgctxt "KCharSelect|"
 msgid "Notes:"
-msgstr "टिप्पणियाँ : १."
+msgstr "टिप्पणियाँ :"
 
 #: kcharselect.cpp:831
 msgctxt "KCharSelect|"
 msgid "See also:"
-msgstr "इदमपि पश्यन्तु : १."
+msgstr "इदमपि पश्यन्तु :"
 
 #: kcharselect.cpp:846
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
-msgstr "समतुल्यम् : १."
+msgstr "समतुल्यम् :"
 
 #: kcharselect.cpp:854
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
-msgstr "अनुमानतः समतुल्यम् : १."
+msgstr "अनुमानतः समतुल्यम् :"
 
 #: kcharselect.cpp:862
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
-msgstr "अपघटनम् : १."
+msgstr "अपघटनम् :"
 
 #: kcharselect.cpp:874
 msgctxt "KCharSelect|"
@@ -1221,7 +1221,7 @@ msgstr "विभिन्न उपयोगी प्रतिनिधित�
 #: kcharselect.cpp:932
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
-msgstr "यूटीएफ-८: १."
+msgstr "यूटीएफ-८:"
 
 #: kcharselect.cpp:936
 msgctxt "KCharSelect|"
@@ -1236,12 +1236,12 @@ msgstr "C octal पलायितः UTF-8: "
 #: kcharselect.cpp:947
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
-msgstr "XML दशमलव सत्ता : १."
+msgstr "XML दशमलव सत्ता :"
 
 #: kcharselect.cpp:1099
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
-msgstr "यूनिकोड कोड बिन्दुः : १."
+msgstr "यूनिकोड कोड बिन्दुः :"
 
 #: kcharselect.cpp:1099
 msgctxt "KCharSelectItemModel|Character"
@@ -1688,7 +1688,7 @@ msgstr "फॉन्ट्"
 #: kfontchooserwidget.ui:73
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
-msgstr "फन्ट् : १."
+msgstr "फन्ट् :"
 
 #: kfontchooserwidget.ui:91
 msgctxt "KFontChooserWidget|"
@@ -1698,7 +1698,7 @@ msgstr "फॉन्टशैली"
 #: kfontchooserwidget.ui:98
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
-msgstr "फ़ॉन्टशैली : १."
+msgstr "फ़ॉन्टशैली :"
 
 #: kfontchooserwidget.ui:116
 msgctxt "KFontChooserWidget|"
@@ -1863,7 +1863,7 @@ msgstr "सञ्चिकाप्रकारं वा सञ्चिका�
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr "&छिद्रक : १."
+msgstr "&छिद्रक :"
 
 #: kmimetypechooser.cpp:103
 msgctxt "KMimeTypeChooser|@title:column"
@@ -2014,7 +2014,7 @@ msgstr "एतत् गुप्तशब्दं उपयुज्यता�
 #: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोक्तृनाम :"
 
 #: kpassworddialog.ui:130
 msgctxt "KPasswordDialog|@label:textbox"
