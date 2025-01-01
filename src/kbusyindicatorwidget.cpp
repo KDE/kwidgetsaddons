@@ -50,17 +50,27 @@ QSize KBusyIndicatorWidget::minimumSizeHint() const
     return QSize(extent, extent);
 }
 
+void KBusyIndicatorWidget::start()
+{
+    d->animation.start();
+}
+
+void KBusyIndicatorWidget::stop()
+{
+    if (d->animation.state() == QAbstractAnimation::Running) // avoid warning if never started yet
+        d->animation.pause();
+}
+
 void KBusyIndicatorWidget::showEvent(QShowEvent *event)
 {
     QWidget::showEvent(event);
-    d->animation.start();
+    start();
 }
 
 void KBusyIndicatorWidget::hideEvent(QHideEvent *event)
 {
     QWidget::hideEvent(event);
-    if (d->animation.state() == QAbstractAnimation::Running) // avoid warning if never started yet
-        d->animation.pause();
+    stop();
 }
 
 void KBusyIndicatorWidget::resizeEvent(QResizeEvent *event)

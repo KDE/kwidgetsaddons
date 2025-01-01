@@ -43,10 +43,33 @@ class KWIDGETSADDONS_EXPORT KBusyIndicatorWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /**
+     * Create a new KBusyIndicatorWidget widget
+     */
     explicit KBusyIndicatorWidget(QWidget *parent = nullptr);
+
+    /**
+     * Destroy the widget
+     */
     ~KBusyIndicatorWidget() override;
 
+    /**
+     * Return the smallest reasonable size for the widget
+     *
+     * @return Minimum size as a QSize object
+     */
     QSize minimumSizeHint() const override;
+
+public Q_SLOTS:
+    /**
+     * Start the spinning animation
+     */
+    void start();
+
+    /**
+     * Stop the spinning animation
+     */
+    void stop();
 
 protected:
     void showEvent(QShowEvent *event) override;
