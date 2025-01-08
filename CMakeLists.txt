@@ -22,7 +22,7 @@ set(REQUIRED_QT_VERSION 6.6.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
 # For the Python bindings
-find_package(Python3 3.10 COMPONENTS Interpreter Development)
+find_package(Python3 3.9 COMPONENTS Interpreter Development)
 find_package(Shiboken6)
 find_package(PySide6)
 
