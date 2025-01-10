@@ -12,13 +12,13 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-10-08 20:51+0300\n"
+"PO-Revision-Date: 2025-01-09 16:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1751,8 +1751,8 @@ msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, seçili yazıtipinin bir önizlemesidir. ‘Yazıtipi seç…’ düğmesine basarak "
-"onu değiştirebilirsiniz."
+"Bu, seçili yazıtipinin bir önizlemesidir. “Yazıtipi Seç…’ düğmesine "
+"tıklayarak onu değiştirebilirsiniz."
 
 #: kfontrequester.cpp:196
 #, qt-format
@@ -1767,7 +1767,7 @@ msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, %1 yazıtipinin önizlemesidir. ‘Yazıtipi seç…’ düğmesine tıklayarak "
+"Bu, %1 yazıtipinin önizlemesidir. “Yazıtipi Seç…” düğmesine tıklayarak onu "
 "değiştirebilirsiniz."
 
 #: kled.cpp:172
@@ -1898,7 +1898,7 @@ msgstr "Yorum"
 #: kmimetypechooser.cpp:110
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
-msgstr "Desenler"
+msgstr "Dizgiler"
 
 #: kmimetypechooser.cpp:126
 msgctxt "KMimeTypeChooser|@action:button"
@@ -1913,7 +1913,7 @@ msgstr "MIME türü düzenleyicisini çalıştırın"
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr "PATH üzerinde ‘keditfiletype’ yürütülebiliri bulunamadı."
+msgstr "PATH üzerinde “keditfiletype” yürütülebiliri bulunamadı."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -1921,7 +1921,7 @@ msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
-"‘keditfiletype’ yürütülebiliri başlatılamadı, lütfen kurulumunuzu denetleyin."
+"“keditfiletype” yürütülebiliri başlatılamadı, lütfen kurulumunuzu denetleyin."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
