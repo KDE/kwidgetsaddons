@@ -27,12 +27,17 @@ int main(int argc, char **argv)
     busyLayout->addWidget(busyLabel);
 
     auto toggle = new QPushButton(QStringLiteral("Toggle Visible"), &window);
+    auto toggleAnimation = new QPushButton(QStringLiteral("Toggle Animation"), &window);
 
     QObject::connect(toggle, &QPushButton::clicked, busyWidget, [=] {
         busyWidget->setVisible(!busyWidget->isVisible());
     });
+    QObject::connect(toggleAnimation, &QPushButton::clicked, busyIndicator, [=] {
+        busyIndicator->setRunning(!busyIndicator->isRunning());
+    });
 
     layout->addWidget(toggle);
+    layout->addWidget(toggleAnimation);
     layout->addWidget(busyWidget);
     layout->setAlignment(Qt::AlignTop);
 
