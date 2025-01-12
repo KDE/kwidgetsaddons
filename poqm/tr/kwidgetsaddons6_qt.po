@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2025-01-09 16:12+0300\n"
+"PO-Revision-Date: 2025-01-11 17:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -997,7 +997,7 @@ msgstr "Domino Döşemeleri"
 #: kcharselect-translation.cpp:193
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Playing Cards"
-msgstr "İskambil Kağıtları"
+msgstr "İskambil Kâğıtları"
 
 #: kcharselect-translation.cpp:194
 msgctxt "KCharSelectData|KCharselect unicode block name"
