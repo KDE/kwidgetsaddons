@@ -41,6 +41,9 @@
 class KWIDGETSADDONS_EXPORT KBusyIndicatorWidget : public QWidget
 {
     Q_OBJECT
+
+    Q_PROPERTY(bool isRunning READ isRunning WRITE setRunning)
+
 public:
     /**
      * Create a new KBusyIndicatorWidget widget
