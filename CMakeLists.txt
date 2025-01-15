@@ -52,11 +52,6 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 cmake_dependent_option(BUILD_PYTHON_BINDINGS "Generate Python Bindings" ON "TARGET Shiboken6::libshiboken AND TARGET PySide6::pyside6" OFF)
 add_feature_info(PYTHON_BINDINGS ${BUILD_PYTHON_BINDINGS} "Python bindings")
 
-# FreeBSD CI is missing required packages
-if (CMAKE_SYSTEM_NAME MATCHES FreeBSD)
-    set(BUILD_PYTHON_BINDINGS OFF)
-endif()
-
 ecm_install_po_files_as_qm(poqm)
 
 configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
