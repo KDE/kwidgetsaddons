@@ -558,6 +558,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
         comboBox->setToolTip(toolTip());
         comboBox->setWhatsThis(whatsThis());
         comboBox->setStatusTip(statusTip());
+        comboBox->setPlaceholderText(text());
 
         const auto selectableActions = selectableActionGroup()->actions();
         for (QAction *action : selectableActions) {
