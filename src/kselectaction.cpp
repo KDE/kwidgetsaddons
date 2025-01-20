@@ -209,6 +209,19 @@ void KSelectAction::setComboWidth(int width)
     Q_EMIT changed();
 }
 
+void KSelectAction::setComboFrame(bool frameEnabled)
+{
+    Q_D(KSelectAction);
+
+    d->m_comboFrame = frameEnabled;
+
+    for (QComboBox *box : std::as_const(d->m_comboBoxes)) {
+        box->setFrame(d->m_comboFrame);
+    }
+
+    Q_EMIT changed();
+}
+
 void KSelectAction::setMaxComboViewCount(int n)
 {
     Q_D(KSelectAction);
@@ -375,6 +388,12 @@ int KSelectAction::comboWidth() const
 {
     Q_D(const KSelectAction);
     return d->m_comboWidth;
+}
+
+bool KSelectAction::comboFrame() const
+{
+    Q_D(const KSelectAction);
+    return d->m_comboFrame;
 }
 
 void KSelectAction::clear()
@@ -558,6 +577,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
         comboBox->setToolTip(toolTip());
         comboBox->setWhatsThis(whatsThis());
         comboBox->setStatusTip(statusTip());
+        comboBox->setFrame(comboFrame());
 
         const auto selectableActions = selectableActionGroup()->actions();
         for (QAction *action : selectableActions) {

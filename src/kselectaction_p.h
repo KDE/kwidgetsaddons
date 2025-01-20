@@ -35,6 +35,7 @@ public:
         m_edit = false;
         m_menuAccelsEnabled = true;
         m_comboWidth = -1;
+        m_comboFrame = true;
         m_maxComboViewCount = -1;
 
         m_toolBarMode = KSelectAction::ComboBoxMode;
@@ -69,6 +70,7 @@ public:
     bool m_menuAccelsEnabled : 1;
     int m_comboWidth;
     int m_maxComboViewCount;
+    bool m_comboFrame;
 
     KSelectAction::ToolBarMode m_toolBarMode;
     QToolButton::ToolButtonPopupMode m_toolButtonPopupMode;

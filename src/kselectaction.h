@@ -282,6 +282,16 @@ public:
     void setComboWidth(int width);
 
     /**
+     * Returns is combobox frame enabled or disabled
+     */
+    bool comboFrame() const;
+
+    /**
+     * Used to toggle combobox frames on and off
+     */
+    void setComboFrame(bool frameEnabled);
+
+    /**
      * Sets the maximum items that are visible at once if the action
      * is a combobox, that is the number of items in the combobox's viewport
      */
