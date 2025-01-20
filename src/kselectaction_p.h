@@ -35,8 +35,8 @@ public:
         m_edit = false;
         m_menuAccelsEnabled = true;
         m_comboWidth = -1;
-        m_comboFrame = true;
         m_maxComboViewCount = -1;
+        m_comboFrame = true;
 
         m_toolBarMode = KSelectAction::ComboBoxMode;
         m_toolButtonPopupMode = QToolButton::InstantPopup; // InstantPopup by default because there is no default action
