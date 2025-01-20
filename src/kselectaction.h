@@ -283,11 +283,15 @@ public:
 
     /**
      * Returns is combobox frame enabled or disabled
+     *
+     * @since 6.11
      */
     bool comboFrame() const;
 
     /**
      * Used to toggle combobox frames on and off
+     *
+     * @since 6.11
      */
     void setComboFrame(bool frameEnabled);
 
