@@ -282,8 +282,8 @@ public:
     void setComboWidth(int width);
 
     /**
-     * Returns whether or not the combobox will paint itself within a frame
-     * See `QComboBox::setFrame`
+     * Returns whether or not the combobox will paint itself within a frame.
+     * See `QComboBox::frame`
      *
      * Defaults to true
      *
@@ -292,7 +292,8 @@ public:
     bool comboFrame() const;
 
     /**
-     * Used to toggle combobox frames on and off
+     * Used to toggle combobox frames on and off.
+     * See `QComboBox::setFrame`
      *
      * @since 6.11
      */
