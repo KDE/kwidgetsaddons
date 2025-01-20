@@ -213,6 +213,10 @@ void KSelectAction::setComboFrame(bool frameEnabled)
 {
     Q_D(KSelectAction);
 
+    if (d->m_comboFrame == frameEnabled) {
+        return;
+    }
+
     d->m_comboFrame = frameEnabled;
 
     for (QComboBox *box : std::as_const(d->m_comboBoxes)) {
