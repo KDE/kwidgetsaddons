@@ -53,7 +53,7 @@ kwidgetsaddons_executable_tests(
   ktwofingerswipe_test
 )
 
-add_executable(kdatetabletest kdatetabletest.cpp ../src/kdatetable.cpp)
+add_executable(kdatetabletest kdatetabletest.cpp ../src/kdatetable.cpp ../src/kdaterangecontrol.cpp)
 target_include_directories(kdatetabletest PRIVATE ../src)
 target_link_libraries(kdatetabletest Qt6::Widgets)
 ecm_mark_as_test(kdatetabletest)

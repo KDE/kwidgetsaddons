@@ -100,6 +100,26 @@ private Q_SLOTS:
             spyDateEntered.clear();
         }
     }
+
+    void testPickerRejectsDateOutOfRange()
+    {
+        KDatePicker p;
+        p.setDate({2026, 4, 12});
+        p.setDateRange({2026, 1, 1}, {2026, 12, 31});
+        p.setDate({2025, 6, 1});
+        QDate expectedDate{2026, 4, 12};
+        QCOMPARE(p.date(), expectedDate);
+    }
+
+    void testPickerRejectsKeysDateOutOfRange()
+    {
+        KDatePicker p;
+        p.setDate({2026, 4, 12});
+        p.setDateRange({2026, 4, 12}, {2026, 4, 12});
+        QTest::keyClick(p.findChild<QWidget *>(QLatin1String("table")), Qt::Key_Down);
+        QDate expectedDate{2026, 4, 12};
+        QCOMPARE(p.date(), expectedDate);
+    }
 };
 
 QTEST_MAIN(KDatePickerTest)

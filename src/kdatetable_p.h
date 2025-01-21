@@ -105,6 +105,11 @@ public:
      */
     void unsetCustomDatePainting(const QDate &date);
 
+    /**
+     * Sets the valid date range. Dates outside this range will be styled differently and cannot be selected.
+     */
+    void setDateRange(const QDate &minDate, const QDate &maxDate);
+
 protected:
     /**
      * calculate the position of the cell in the matrix for the given date.

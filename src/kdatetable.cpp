@@ -21,7 +21,9 @@
 
 #include <cmath>
 
-class KDateTable::KDateTablePrivate
+#include "kdaterangecontrol_p.h"
+
+class KDateTable::KDateTablePrivate : public KDateRangeControlPrivate
 {
 public:
     KDateTablePrivate(KDateTable *qq)
@@ -368,6 +370,11 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
                 cellTextColor = Qt::darkRed;
             }
         }
+
+        // If the cell day is out of the allowed range, paint it as disabled
+        if (!d->isInDateRange(cellDate)) {
+            cellBackgroundColor = palette().color(QPalette::Disabled, backgroundRole());
+        }
     }
 
     // Draw the background
@@ -593,6 +600,10 @@ void KDateTable::mousePressEvent(QMouseEvent *e)
     pos = (d->m_numDayColumns * (row - 1)) + col;
     QDate clickedDate = dateFromPos(pos);
 
+    if (!d->isInDateRange(clickedDate)) {
+        return;
+    }
+
     // set the new date. If it is in the previous or next month, the month will
     // automatically be changed, no need to do that manually...
     // validity checking done inside setDate
@@ -630,6 +641,10 @@ bool KDateTable::setDate(const QDate &toDate)
 
     if (toDate == date()) {
         return true;
+    }
+
+    if (!d->isInDateRange(toDate)) {
+        return false;
     }
 
     d->setDate(toDate);
@@ -698,6 +713,11 @@ void KDateTable::unsetCustomDatePainting(const QDate &date)
         d->m_useCustomColors = false;
     }
     update();
+}
+
+void KDateTable::setDateRange(const QDate &minDate, const QDate &maxDate)
+{
+    d->setDateRange(minDate, maxDate);
 }
 
 #include "moc_kdatetable_p.cpp"

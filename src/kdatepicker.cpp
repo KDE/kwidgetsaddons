@@ -288,6 +288,7 @@ void KDatePicker::initWidget(const QDate &date_)
     d->line = new QLineEdit(this);
     d->val = new DatePickerValidator(this);
     d->table = new KDateTable(this);
+    d->table->setObjectName(QStringLiteral("table"));
     setFocusProxy(d->table);
 
     d->fontsize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
@@ -658,6 +659,11 @@ void KDatePicker::setCloseButton(bool enable)
 bool KDatePicker::hasCloseButton() const
 {
     return (d->closeButton);
+}
+
+void KDatePicker::setDateRange(const QDate &minDate, const QDate &maxDate)
+{
+    d->table->setDateRange(minDate, maxDate);
 }
 
 #include "kdatepicker.moc"
