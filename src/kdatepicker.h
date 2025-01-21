@@ -106,6 +106,21 @@ public:
      */
     bool hasCloseButton() const;
 
+    /**
+     * Sets the range of dates that can be accepted.
+     *
+     * Invalid dates can be used to define open-ended ranges.
+     * If both values are valid, the minimum date must be less than
+     * or equal to the maximum date, otherwise the date range will
+     * not be set.
+     *
+     * @param minDate the minimum date
+     * @param maxDate the maximum date
+     *
+     * @since 6.11
+     */
+    void setDateRange(const QDate &minDate, const QDate &maxDate);
+
 protected:
     /// to catch move keyEvents when QLineEdit has keyFocus
     bool eventFilter(QObject *o, QEvent *e) override;

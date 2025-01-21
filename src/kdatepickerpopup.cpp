@@ -178,6 +178,7 @@ void KDatePickerPopup::setModes(KDatePickerPopup::Modes modes)
 void KDatePickerPopup::setDateRange(const QDate &minDate, const QDate &maxDate)
 {
     d->setDateRange(minDate, maxDate);
+    d->mDatePicker->setDateRange(minDate, maxDate);
 }
 
 QMap<QDate, QString> KDatePickerPopup::dateMap() const

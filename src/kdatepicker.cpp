@@ -660,4 +660,9 @@ bool KDatePicker::hasCloseButton() const
     return (d->closeButton);
 }
 
+void KDatePicker::setDateRange(const QDate &minDate, const QDate &maxDate)
+{
+    d->table->setDateRange(minDate, maxDate);
+}
+
 #include "kdatepicker.moc"
