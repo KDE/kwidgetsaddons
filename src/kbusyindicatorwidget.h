@@ -17,8 +17,8 @@
  * @brief Rotating spinning icon to indicate busyness
  *
  * When you need to communicate to the user that your application is busy with
- * something you'll want to use a KBusyIndicatorWidget to display an infinitely
- * spinnning indicator icon.
+ * something you'll want to use a KBusyIndicatorWidget to display an spinnning
+ * indicator icon. The spinning animation can be stopped and started.
  *
  * A way of using this widget is to combine it with a QLabel to construct a
  * status line:
@@ -31,17 +31,19 @@
  *
  * @image html kbusyindicatorwidget.png "KBusyIndicatorWidget with label"
  *
- * KBusyIndicatorWidget is set apart from KPixmapSequenceWidget in that it
- * does not render a pixmap sequence but rather animates a scaled Icon.
- * It can support multiple semi-arbitrary sizes and quality is only limited
- * by the resolution of available icons. It is also easier to use as its use
- * is more specific.
+ * The KBusyIndicatorWidget differs from the KPixmapSequenceWidget by animating
+ * a scaled icon instead of rendering a pixmap sequence. It supports multiple,
+ * semi-arbitrary sizes, with quality constrained only by the resolution of the
+ * available icons.
  *
  * @since 5.61.0
  */
 class KWIDGETSADDONS_EXPORT KBusyIndicatorWidget : public QWidget
 {
     Q_OBJECT
+
+    Q_PROPERTY(bool isRunning READ isRunning WRITE setRunning)
+
 public:
     /**
      * Create a new KBusyIndicatorWidget widget
@@ -60,16 +62,46 @@ public:
      */
     QSize minimumSizeHint() const override;
 
+    /**
+     * Return whether the spinning animation is running
+     *
+     * @return if the spinning animation is running
+     *
+     * @see setRunning()
+     *
+     * @since 6.11.0
+     */
+    bool isRunning() const;
+
 public Q_SLOTS:
     /**
      * Start the spinning animation
+     *
+     * @see setRunning()
+     *
+     * @since 6.10.0
      */
     void start();
 
     /**
      * Stop the spinning animation
+     *
+     * @see setRunning()
+     *
+     * @since 6.10.0
      */
     void stop();
+
+    /**
+     * By calling this method with @p enable = true the spinning
+     * abnimation will be started. Stopped if false.
+     *
+     * @see start()
+     * @see stop()
+     *
+     * @since 6.11.0
+     */
+    void setRunning(const bool enable = true);
 
 protected:
     void showEvent(QShowEvent *event) override;

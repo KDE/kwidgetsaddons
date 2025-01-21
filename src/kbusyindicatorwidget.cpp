@@ -50,6 +50,11 @@ QSize KBusyIndicatorWidget::minimumSizeHint() const
     return QSize(extent, extent);
 }
 
+bool KBusyIndicatorWidget::isRunning() const
+{
+    return d->animation.state() == QAbstractAnimation::Running;
+}
+
 void KBusyIndicatorWidget::start()
 {
     d->animation.start();
@@ -59,6 +64,14 @@ void KBusyIndicatorWidget::stop()
 {
     if (d->animation.state() == QAbstractAnimation::Running) // avoid warning if never started yet
         d->animation.pause();
+}
+
+void KBusyIndicatorWidget::setRunning(const bool enable)
+{
+    if (enable)
+        start();
+    else
+        stop();
 }
 
 void KBusyIndicatorWidget::showEvent(QShowEvent *event)
