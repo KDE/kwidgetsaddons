@@ -319,6 +319,8 @@ ecm_generate_headers(KWidgetsAddons_HEADERS
   REQUIRED_HEADERS KWidgetsAddons_HEADERS
 )
 
+ecm_generate_qdoc(KF6WidgetsAddons kwidgetsaddons.qdocconf)
+
 install(TARGETS KF6WidgetsAddons EXPORT KF6WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
@@ -333,37 +335,6 @@ qt6_add_resources(KF6WidgetsAddons "kcharselect-data"
     OUTPUT_TARGETS _rcc_target
 )
 install(TARGETS ${_rcc_target} EXPORT KF6WidgetsAddonsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
-
-if (BUILD_QCH)
-    ecm_add_qch(
-        KF6WidgetsAddons_QCH
-        NAME KWidgetsAddons
-        BASE_NAME KF6WidgetsAddons
-        VERSION ${KF_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${KWidgetsAddons_HEADERS}
-        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-        LINK_QCHS
-            Qt6Core_QCH
-            Qt6Gui_QCH
-            Qt6Widgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            KWIDGETSADDONS_EXPORT
-            KWIDGETSADDONS_DEPRECATED_EXPORT
-            KWIDGETSADDONS_DEPRECATED
-            "KWIDGETSADDONS_DEPRECATED_VERSION(x, y, t)"
-            "KWIDGETSADDONS_DEPRECATED_VERSION_BELATED(x, y, tx, ty, t)"
-            "KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION(x, y, t)"
-            "KWIDGETSADDONS_ENUMERATOR_DEPRECATED_VERSION_BELATED(x, y, tx, ty, t)"
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
 
 if(BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
