@@ -81,7 +81,7 @@ public:
      */
     explicit KContextualHelpButton(const QString &contextualHelpText, const QWidget *heightHintWidget, QWidget *parent);
 
-    /*! @see KContextualHelpButton::ContextualHelpButton() */
+    /*! \sa KContextualHelpButton::ContextualHelpButton() */
     explicit KContextualHelpButton(QWidget *parent = nullptr);
 
     ~KContextualHelpButton() override;
@@ -102,7 +102,7 @@ public:
      */
     void setHeightHintWidget(const QWidget *heightHintWidget);
 
-    /*! @see setHeightHintWidget() */
+    /*! \sa setHeightHintWidget() */
     const QWidget *heightHintWidget() const;
 
     /*! This override is an implementation detail of setHeightHintWidget() */

@@ -72,7 +72,7 @@ public:
     /*!
      * Enumeration of the buttons, the listbox offers. Specify them in the
      * constructor in the buttons parameter, or in setButtons.
-     * @see Buttons
+     * \sa Buttons
      */
     enum Button {
         Add = 0x0001,
@@ -101,7 +101,7 @@ public:
      * QLineEdit as child-widget for example, so the QComboBox is used as
      * the representation widget.
      *
-     * @see KUrlRequester::customEditor(), setCustomEditor
+     * \sa KUrlRequester::customEditor(), setCustomEditor
      */
     KEditListWidget(const CustomEditor &customEditor, QWidget *parent = nullptr, bool checkAtEntering = false, Buttons buttons = All);
 

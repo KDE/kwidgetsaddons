@@ -57,7 +57,7 @@ class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
 
 public:
     /*!
-     * @see KPasswordDialogFlags
+     * \sa KPasswordDialogFlags
      */
     enum KPasswordDialogFlag {
         NoFlags = 0x00,

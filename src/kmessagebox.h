@@ -65,7 +65,7 @@ enum DialogType {
 };
 
 /*!
- * @see Options
+ * \sa Options
  */
 enum Option {
     Notify = 1, ///< Emit a KNotify event
@@ -628,8 +628,8 @@ KWIDGETSADDONS_EXPORT void enableAllMessages();
 /*!
  * Re-enable a specific @p dontShowAgainName messages that had
  * previously been turned off.
- * @see saveDontShowAgainTwoActions()
- * @see saveDontShowAgainContinue()
+ * \sa saveDontShowAgainTwoActions()
+ * \sa saveDontShowAgainContinue()
  */
 KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
 
@@ -809,7 +809,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see questionTwoActions()
+ * \sa questionTwoActions()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
@@ -825,7 +825,7 @@ ButtonCode questionTwoActionsWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see questionTwoActionsCancel()
+ * \sa questionTwoActionsCancel()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
@@ -842,7 +842,7 @@ ButtonCode questionTwoActionsCancelWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see questionTwoActionsList()
+ * \sa questionTwoActionsList()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
@@ -859,7 +859,7 @@ ButtonCode questionTwoActionsListWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see warningTwoActions()
+ * \sa warningTwoActions()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
@@ -875,7 +875,7 @@ ButtonCode warningTwoActionsWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see warningTwoActionsList()
+ * \sa warningTwoActionsList()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
@@ -917,7 +917,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelListWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see warningTwoActionsCancel()
+ * \sa warningTwoActionsCancel()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
@@ -934,7 +934,7 @@ ButtonCode warningTwoActionsCancelWId(WId parent_id,
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
  *
- * @see warningTwoActionsCancelList()
+ * \sa warningTwoActionsCancelList()
  * \since 5.100
  */
 KWIDGETSADDONS_EXPORT

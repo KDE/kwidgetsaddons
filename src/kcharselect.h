@@ -70,7 +70,7 @@ class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
 public:
     /*!
      * Flags to set the shown widgets
-     * @see Controls
+     * \sa Controls
      */
     enum Control {
         /*!

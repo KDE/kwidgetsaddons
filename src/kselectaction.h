@@ -142,7 +142,7 @@ public:
 
     /*!
      * Returns the current QAction.
-     * @see setCurrentAction
+     * \sa setCurrentAction
      */
     QAction *currentAction() const;
 
@@ -290,7 +290,7 @@ public:
     /*!
      * Remove and delete all the items in this action.
      *
-     * @see removeAllActions()
+     * \sa removeAllActions()
      */
     void clear();
 
@@ -299,7 +299,7 @@ public:
      *
      * Unlike clear(), this will not delete the actions.
      *
-     * @see clear()
+     * \sa clear()
      */
     void removeAllActions();
 

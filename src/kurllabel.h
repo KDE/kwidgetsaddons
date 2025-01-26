@@ -108,14 +108,14 @@ public:
     /*!
      * @return true if a tooltip will be displayed.
      *
-     * @see setTipText()
+     * \sa setTipText()
      */
     bool useTips() const;
 
     /*!
      * @return true if the cursor will change while over the URL.
      *
-     * @see setUseCursor ()
+     * \sa setUseCursor ()
      */
     bool useCursor() const;
 
@@ -152,7 +152,7 @@ public Q_SLOTS:
     /*!
      * Sets the URL for this label to @p url.
      *
-     * @see url
+     * \sa url
      */
     void setUrl(const QString &url);
 
@@ -175,7 +175,7 @@ public Q_SLOTS:
      *
      * If this is not used, the tip will default to the URL.
      *
-     * @see setUseTips()
+     * \sa setUseTips()
      */
     void setTipText(const QString &tip);
 
@@ -190,7 +190,7 @@ public Q_SLOTS:
     /*!
      * This is an overloaded version for convenience.
      *
-     * @see setHighlightedColor()
+     * \sa setHighlightedColor()
      */
     void setHighlightedColor(const QString &highcolor);
 
@@ -206,7 +206,7 @@ public Q_SLOTS:
     /*!
      * This is an overloaded version for convenience.
      *
-     * @see setSelectedColor()
+     * \sa setSelectedColor()
      */
     void setSelectedColor(const QString &color);
 
@@ -251,7 +251,7 @@ public Q_SLOTS:
      * cursor passes over the label.  The effect is similar to the
      * trick done with 'onMouseOver' in javascript.
      *
-     * @see alternatePixmap()
+     * \sa alternatePixmap()
      */
     void setAlternatePixmap(const QPixmap &pixmap);
 

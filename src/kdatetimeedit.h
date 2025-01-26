@@ -31,9 +31,9 @@ class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
 public:
     /*!
      * Options provided by the widget
-     * @see options
-     * @see setOptions
-     * @see Options
+     * \sa options
+     * \sa setOptions
+     * \sa Options
      */
     enum Option {
         ShowCalendar = 0x00001, /*!< If the Calendar System edit is displayed */
@@ -140,7 +140,7 @@ public:
      *
      * @return the select date map
      *
-     * @see setDateMap()
+     * \sa setDateMap()
      */
     QMap<QDate, QString> dateMap() const;
 
@@ -165,9 +165,9 @@ public:
      *
      * @return the select time list
      *
-     * @see setTimeList()
-     * @see timeListInterval()
-     * @see setTimeListInterval()
+     * \sa setTimeList()
+     * \sa timeListInterval()
+     * \sa setTimeListInterval()
      */
     QList<QTime> timeList() const;
 
@@ -185,7 +185,7 @@ public:
      *
      * @return if the current user input is valid
      *
-     * @see isNull()
+     * \sa isNull()
      */
     bool isValid() const;
 
@@ -194,7 +194,7 @@ public:
      *
      * @return if the current user input is null
      *
-     * @see isValid()
+     * \sa isValid()
      */
     bool isNull() const;
 
@@ -205,7 +205,7 @@ public:
      *
      * @return if the current user input date is valid
      *
-     * @see isNullDate()
+     * \sa isNullDate()
      */
     bool isValidDate() const;
 
@@ -214,7 +214,7 @@ public:
      *
      * @return if the current user input date is null
      *
-     * @see isValidDate()
+     * \sa isValidDate()
      */
     bool isNullDate() const;
     /*!
@@ -224,7 +224,7 @@ public:
      *
      * @return if the current user input time is valid
      *
-     * @see isNullTime()
+     * \sa isNullTime()
      */
     bool isValidTime() const;
 
@@ -233,7 +233,7 @@ public:
      *
      * @return if the current user input time is null
      *
-     * @see isValidTime()
+     * \sa isValidTime()
      */
     bool isNullTime() const;
 
@@ -419,8 +419,8 @@ public Q_SLOTS:
      * \a minDateTime the minimum date
      * \a minWarnMsg the minimum warning message
      *
-     * @see setMaximumDateTime()
-     * @see setDateRange()
+     * \sa setMaximumDateTime()
+     * \sa setDateRange()
      */
     void setMinimumDateTime(const QDateTime &minDateTime, const QString &minWarnMsg = QString());
 
@@ -438,8 +438,8 @@ public Q_SLOTS:
      * \a maxDateTime the maximum date
      * \a maxWarnMsg the maximum warning message
      *
-     * @see setMinimumDateTime()
-     * @see setDateRange()
+     * \sa setMinimumDateTime()
+     * \sa setDateRange()
      */
     void setMaximumDateTime(const QDateTime &maxDateTime, const QString &maxWarnMsg = QString());
 
@@ -478,7 +478,7 @@ public Q_SLOTS:
      *
      * \a dateMap the map of dates able to be selected
      *
-     * @see dateMap()
+     * \sa dateMap()
      */
     void setDateMap(QMap<QDate, QString> dateMap);
 
@@ -509,7 +509,7 @@ public Q_SLOTS:
      *
      * \a minutes the time list interval to display
      *
-     * @see timeListInterval()
+     * \sa timeListInterval()
      */
     void setTimeListInterval(int minutes);
 
@@ -529,7 +529,7 @@ public Q_SLOTS:
      * \a minWarnMsg the minimum warning message
      * \a maxWarnMsg the maximum warning message
      *
-     * @see timeList()
+     * \sa timeList()
      */
     void setTimeList(QList<QTime> timeList, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 

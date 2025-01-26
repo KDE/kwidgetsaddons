@@ -34,7 +34,7 @@ class KWIDGETSADDONS_EXPORT KPixmapRegionSelectorWidget : public QWidget
 public:
     /*!
      * This enum provides a rotation direction.
-     * @see KPixmapRegionSelectorWidget::rotate()
+     * \sa KPixmapRegionSelectorWidget::rotate()
      */
     enum RotateDirection {
         Rotate90, //!< Rotate 90 degrees to the right.
@@ -94,14 +94,14 @@ public:
     /*!
      * Sets the aspect ration that the selected subimage should have. The way to
      * select it, is specifying an example valid @p width and @p height.
-     * @see setFreeSelectionAspectRatio()
+     * \sa setFreeSelectionAspectRatio()
      */
     void setSelectionAspectRatio(int width, int height);
 
     /*!
      * Allows the user to do a selection which has any aspect ratio. This is
      * the default.
-     * @see setSelectionAspectRatio()
+     * \sa setSelectionAspectRatio()
      */
     void setFreeSelectionAspectRatio();
 

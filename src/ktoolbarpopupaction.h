@@ -100,7 +100,7 @@ public:
     /*!
      * The popup mode of the toolbar button.
      *
-     * @see setPopupMode()
+     * \sa setPopupMode()
      *
      * \since 6.0
      */
@@ -108,7 +108,7 @@ public:
 
     /*!
      * Determines the popup mode of the toolbar button.
-     * @see PopupMode
+     * \sa PopupMode
      *
      * \since 6.0
      */

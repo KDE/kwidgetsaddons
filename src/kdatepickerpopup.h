@@ -96,7 +96,7 @@ public:
      *
      * @return the select date map
      *
-     * @see setDateMap()
+     * \sa setDateMap()
      */
     QMap<QDate, QString> dateMap() const;
 
@@ -115,7 +115,7 @@ public:
      *
      * \a dateMap the map of dates the user can select from
      *
-     * @see dateMap()
+     * \sa dateMap()
      */
     void setDateMap(const QMap<QDate, QString> &dateMap);
 

@@ -139,27 +139,27 @@ public:
 
     /*!
      * Get the position of this message. By default this is KMessageWidget::Inline.
-     * @see setPosition()
+     * \sa setPosition()
      * \since 6.0
      */
     Position position() const;
 
     /*!
      * Get the text of this message widget.
-     * @see setText()
+     * \sa setText()
      */
     QString text() const;
 
     /*!
      * Get the text format of the message widget's label.
-     * @see QLabel::textFormat()
+     * \sa QLabel::textFormat()
      * \since 6.0
      */
     Qt::TextFormat textFormat() const;
 
     /*!
      * Set the text format of the message widget's label.
-     * @see QLabel::setTextFormat()
+     * \sa QLabel::setTextFormat()
      * \since 6.0
      */
     void setTextFormat(Qt::TextFormat textFormat);
@@ -171,14 +171,14 @@ public:
      * as required to the available width of the widget. This is useful to
      * avoid breaking widget layouts.
      *
-     * @see setWordWrap()
+     * \sa setWordWrap()
      */
     bool wordWrap() const;
 
     /*!
      * Check whether the close button is visible.
      *
-     * @see setCloseButtonVisible()
+     * \sa setCloseButtonVisible()
      */
     bool isCloseButtonVisible() const;
 
@@ -186,7 +186,7 @@ public:
      * Get the type of this message.
      * By default, the type is set to KMessageWidget::Information.
      *
-     * @see KMessageWidget::MessageType, setMessageType()
+     * \sa KMessageWidget::MessageType, setMessageType()
      */
     MessageType messageType() const;
 
@@ -196,7 +196,7 @@ public:
      * order the actions were added.
      *
      * \a action the action to add
-     * @see removeAction(), QWidget::actions()
+     * \sa removeAction(), QWidget::actions()
      */
     void addAction(QAction *action);
 
@@ -204,13 +204,13 @@ public:
      * Remove @p action from the message widget.
      *
      * \a action the action to remove
-     * @see KMessageWidget::MessageType, addAction(), setMessageType()
+     * \sa KMessageWidget::MessageType, addAction(), setMessageType()
      */
     void removeAction(QAction *action);
 
     /*!
      * Clears all actions from the message widget.
-     * @see KMessageWidget::MessageType, addAction() and removeAction()
+     * \sa KMessageWidget::MessageType, addAction() and removeAction()
      * \since 5.100
      */
     void clearActions();
@@ -242,7 +242,7 @@ public:
      * is still running. If animations are disabled, this function always
      * returns @e false.
      *
-     * @see animatedHide(), hideAnimationFinished()
+     * \sa animatedHide(), hideAnimationFinished()
      * \since 5.0
      */
     bool isHideAnimationRunning() const;
@@ -252,7 +252,7 @@ public:
      * is still running. If animations are disabled, this function always
      * returns @e false.
      *
-     * @see animatedShow(), showAnimationFinished()
+     * \sa animatedShow(), showAnimationFinished()
      * \since 5.0
      */
     bool isShowAnimationRunning() const;
@@ -263,13 +263,13 @@ public Q_SLOTS:
      * If the message widget is already visible, the text changes on the fly.
      *
      * \a text the text to display, rich text is allowed
-     * @see text()
+     * \sa text()
      */
     void setText(const QString &text);
 
     /*!
      * Set the position of this message
-     * @see position()
+     * \sa position()
      * \since 6.0
      */
     void setPosition(Position position);
@@ -283,7 +283,7 @@ public Q_SLOTS:
      * By default word wrap is disabled.
      *
      * \a wordWrap disable/enable word wrap
-     * @see wordWrap()
+     * \sa wordWrap()
      */
     void setWordWrap(bool wordWrap);
 
@@ -293,7 +293,7 @@ public Q_SLOTS:
      *
      * By default the close button is set to be visible.
      *
-     * @see closeButtonVisible(), animatedHide()
+     * \sa closeButtonVisible(), animatedHide()
      */
     void setCloseButtonVisible(bool visible);
 
@@ -303,7 +303,7 @@ public Q_SLOTS:
      * Appropriate colors are chosen to mimic the appearance of Kirigami's
      * InlineMessage.
      *
-     * @see messageType(), KMessageWidget::MessageType
+     * \sa messageType(), KMessageWidget::MessageType
      */
     void setMessageType(KMessageWidget::MessageType type);
 
@@ -328,7 +328,7 @@ Q_SIGNALS:
      * This signal is emitted when the user clicks a link in the text label.
      * The URL referred to by the href anchor is passed in contents.
      * \a contents text of the href anchor
-     * @see QLabel::linkActivated()
+     * \sa QLabel::linkActivated()
      * \since 4.10
      */
     void linkActivated(const QString &contents);
@@ -337,7 +337,7 @@ Q_SIGNALS:
      * This signal is emitted when the user hovers over a link in the text label.
      * The URL referred to by the href anchor is passed in contents.
      * \a contents text of the href anchor
-     * @see QLabel::linkHovered()
+     * \sa QLabel::linkHovered()
      * \since 4.11
      */
     void linkHovered(const QString &contents);
@@ -351,7 +351,7 @@ Q_SIGNALS:
      *       calling hide(), so this signal is only useful in conjunction
      *       with animatedHide().
      *
-     * @see animatedHide()
+     * \sa animatedHide()
      * \since 5.0
      */
     void hideAnimationFinished();
@@ -365,7 +365,7 @@ Q_SIGNALS:
      *       calling show(), so this signal is only useful in conjunction
      *       with animatedShow().
      *
-     * @see animatedShow()
+     * \sa animatedShow()
      * \since 5.0
      */
     void showAnimationFinished();

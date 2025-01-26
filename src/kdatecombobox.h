@@ -30,9 +30,9 @@ class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
 public:
     /*!
      * Options provided by the widget
-     * @see options()
-     * @see setOptions()
-     * @see Options
+     * \sa options()
+     * \sa setOptions()
+     * \sa Options
      */
     enum Option {
         EditDate = 0x0001, /*!< Allow the user to manually edit the date in the combo line edit */
@@ -75,7 +75,7 @@ public:
      *
      * @return if the current user input is valid
      *
-     * @see isNull()
+     * \sa isNull()
      */
     bool isValid() const;
 
@@ -84,7 +84,7 @@ public:
      *
      * @return if the current user input is null
      *
-     * @see isValid()
+     * \sa isValid()
      */
     bool isNull() const;
 
@@ -124,7 +124,7 @@ public:
      *
      * @return the select date map
      *
-     * @see setDateMap()
+     * \sa setDateMap()
      */
     QMap<QDate, QString> dateMap() const;
 
@@ -202,7 +202,7 @@ public Q_SLOTS:
 
     /*!
      * Reset the minimum and maximum date to the default values.
-     * @see setDateRange()
+     * \sa setDateRange()
      */
     void resetDateRange();
 
@@ -215,10 +215,10 @@ public Q_SLOTS:
      * \a minDate the minimum date
      * \a minWarnMsg the minimum warning message
      *
-     * @see minimumDate()
-     * @see maximumDate()
-     * @see setMaximumDate()
-     * @see setDateRange()
+     * \sa minimumDate()
+     * \sa maximumDate()
+     * \sa setMaximumDate()
+     * \sa setDateRange()
      */
     void setMinimumDate(const QDate &minDate, const QString &minWarnMsg = QString());
 
@@ -238,10 +238,10 @@ public Q_SLOTS:
      * \a maxDate the maximum date
      * \a maxWarnMsg the maximum warning message
      *
-     * @see minimumDate()
-     * @see maximumDate()
-     * @see setMaximumDate()
-     * @see setDateRange()
+     * \sa minimumDate()
+     * \sa maximumDate()
+     * \sa setMaximumDate()
+     * \sa setDateRange()
      */
     void setMaximumDate(const QDate &maxDate, const QString &maxWarnMsg = QString());
 
@@ -266,7 +266,7 @@ public Q_SLOTS:
      *
      * \a dateMap the map of dates able to be selected
      *
-     * @see dateMap()
+     * \sa dateMap()
      */
     void setDateMap(QMap<QDate, QString> dateMap);
 

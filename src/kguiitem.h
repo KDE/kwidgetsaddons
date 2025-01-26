@@ -27,7 +27,7 @@ class QPushButton;
  * on a GUI item (e.g.\ a QPushButton).
  *
  * @author Holger Freyther <freyher@yahoo.com>
- * @see KStandardGuiItem
+ * \sa KStandardGuiItem
  */
 
 class KWIDGETSADDONS_EXPORT KGuiItem
@@ -102,7 +102,7 @@ public:
      * Returns the text used by this GUI item after stripping all existing '&'
      * characters which denote keyboard accelerators.
      *
-     * @see text()
+     * \sa text()
      */
     QString plainText() const;
 
@@ -164,14 +164,14 @@ public:
     /*!
      * Toggles the enabled property of this GUI item.
      *
-     * @see QWidget::setEnabled()
+     * \sa QWidget::setEnabled()
      */
     void setEnabled(bool enable);
 
     /*!
      * Returns @c true if this GUI item is enabled and @c false otherwise.
      *
-     * @see QWidget::isEnabled()
+     * \sa QWidget::isEnabled()
      */
     bool isEnabled() const;
 

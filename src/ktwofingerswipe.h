@@ -106,8 +106,8 @@ private:
  *
  * Provides the recognizer for a two finger swipe gesture. To adjust the maximum swipe time
  * and the minimum swipe distance, for a valid swipe gesture:
- * @see setMaxSwipeTime
- * @see setSwipeDistance
+ * \sa setMaxSwipeTime
+ * \sa setSwipeDistance
  *
  * \since 5.83
  * @author Steffen Hartleib <steffenhartleib@t-online.de>

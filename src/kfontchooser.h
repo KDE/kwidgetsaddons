@@ -27,7 +27,7 @@ class QFont;
  *
  * \image html kfontchooser.png "KFontChooser Widget"
  *
- * @see KFontRequester
+ * \sa KFontRequester
  *
  * @author Preston Brown <pbrown@kde.org>, Bernd Wuebben <wuebben@kde.org>
  */
@@ -51,7 +51,7 @@ public:
 
     /*!
      * Flags for selecting which font attributes to change
-     * @see FontDiffFlags
+     * \sa FontDiffFlags
      */
     enum FontDiff {
         NoFontDiffFlags = 0, ///< No flags set
@@ -67,7 +67,7 @@ public:
 
     /*!
      * Flags for selecting what is displayed in the widget.
-     * @see DisplayFlags
+     * \sa DisplayFlags
      */
     enum DisplayFlag {
         NoDisplayFlags = 0, ///< No flags set
@@ -217,7 +217,7 @@ public:
      * criteria) to only include fonts that meet certain criteria (e.g. only
      * smooth-scalable fonts).
      *
-     * @see KFontChooser::createFontList(uint), KFontChooser::FontListCriteria
+     * \sa KFontChooser::createFontList(uint), KFontChooser::FontListCriteria
      *
      * Note that if @p fontList is empty, the font list in the chooser will show
      * all the available fonts on the system.

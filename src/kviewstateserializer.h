@@ -160,7 +160,7 @@ class KViewStateSerializerPrivate;
   model has been reset, and to save the state on application close and before
   the model has been reset.
 
-  @see QAbstractItemModel::modelAboutToBeReset QAbstractItemModel::modelReset
+  \sa QAbstractItemModel::modelAboutToBeReset QAbstractItemModel::modelReset
 
   @author Stephen Kelly <stephen@kdab.com>
   \since 4.5

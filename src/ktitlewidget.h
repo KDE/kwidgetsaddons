@@ -49,7 +49,7 @@ titleLayout->addWidget(checkBox);
 checkboxTitleWidget->setWidget(checkBoxTitleMainWidget);
  * @endcode
  *
- * @see KPageView
+ * \sa KPageView
  * @author Urs Wolfer \<uwolfer @ kde.org\>
  */
 class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
@@ -100,19 +100,19 @@ public:
 
     /*!
      * @return the text displayed in the title
-     * @see setText()
+     * \sa setText()
      */
     QString text() const;
 
     /*!
      * @return the text displayed in the comment below the title, if any
-     * @see setComment()
+     * \sa setComment()
      */
     QString comment() const;
 
     /*!
      * @return the icon displayed in the title
-     * @see setIcon()
+     * \sa setIcon()
      *
      * \since 5.72
      */
@@ -120,7 +120,7 @@ public:
 
     /*!
      * @return the size of the icon displayed in the title
-     * @see setIconSize()
+     * \sa setIconSize()
      *
      * \since 5.72
      */
@@ -154,14 +154,14 @@ public Q_SLOTS:
      * \a text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
      * \a alignment Alignment of the text. Default is left and vertical centered.
-     * @see text()
+     * \sa text()
      */
     void setText(const QString &text, Qt::Alignment alignment = Qt::AlignLeft | Qt::AlignVCenter);
     /*!
      * \a text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
      * \a type The sort of message it is; will also set the icon accordingly
-     * @see text()
+     * \sa text()
      */
     void setText(const QString &text, MessageType type);
 
@@ -169,7 +169,7 @@ public Q_SLOTS:
      * \a comment Text displayed beneath the main title as a comment.
      *                It can either be plain text or rich text.
      * \a type The sort of message it is.
-     * @see comment()
+     * \sa comment()
      */
     void setComment(const QString &comment, MessageType type = PlainMessage);
 
@@ -184,7 +184,7 @@ public Q_SLOTS:
     /*!
      * \a type the type of message icon to display in the header
      * \a alignment alignment of the icon (default is right aligned).
-     * @see icon()
+     * \sa icon()
      * \since 5.72
      */
     void setIcon(MessageType type, ImageAlignment alignment = ImageRight);

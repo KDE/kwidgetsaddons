@@ -72,7 +72,7 @@ public:
 
     /*!
      * @return Delay (in ms) after which hideLater() will hide the tooltip. Default is 500.
-     * @see hideLater(), setHideDelay()
+     * \sa hideLater(), setHideDelay()
      */
     int hideDelay() const;
 
@@ -81,13 +81,13 @@ public Q_SLOTS:
     /*!
      * Hide the tooltip after a delay of hideDelay() ms (to allow interaction with the tooltip's widget).
      * If hideDelay() is 0, this is equivalent to hide().
-     * @see hideDelay()
+     * \sa hideDelay()
      */
     void hideLater();
 
     /*!
      * Set after how many ms hideLater() will hide the tooltip.
-     * @see hideLater(), hideDelay()
+     * \sa hideLater(), hideDelay()
      */
     void setHideDelay(int delay);
 

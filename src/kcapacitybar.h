@@ -108,7 +108,7 @@ public:
      *
      * @note Its value is true by default.
      *
-     * @see setContinuous, continuous
+     * \sa setContinuous, continuous
      */
     void setFillFullBlocks(bool fillFullBlocks);
 

@@ -31,9 +31,9 @@ class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
 public:
     /*!
      * Options provided by the widget
-     * @see options
-     * @see setOptions
-     * @see Options
+     * \sa options
+     * \sa setOptions
+     * \sa Options
      */
     enum Option {
         EditTime = 0x0001, /*!< Allow the user to manually edit the time in the combo line edit */
@@ -71,7 +71,7 @@ public:
      *
      * @return if the current user input is valid
      *
-     * @see isNull()
+     * \sa isNull()
      */
     bool isValid() const;
 
@@ -80,7 +80,7 @@ public:
      *
      * @return if the current user input is null
      *
-     * @see isValid()
+     * \sa isValid()
      */
     bool isNull() const;
 
@@ -148,7 +148,7 @@ public:
      *
      * @return the select time list interval in minutes
      *
-     * @see setTimeListInterval()
+     * \sa setTimeListInterval()
      */
     int timeListInterval() const;
 
@@ -157,9 +157,9 @@ public:
      *
      * @return the select time list
      *
-     * @see setTimeList()
-     * @see timeListInterval()
-     * @see setTimeListInterval()
+     * \sa setTimeList()
+     * \sa timeListInterval()
+     * \sa setTimeListInterval()
      */
     QList<QTime> timeList() const;
 
@@ -230,10 +230,10 @@ public Q_SLOTS:
      * \a minTime the minimum time
      * \a minWarnMsg the minimum warning message
      *
-     * @see minimumTime()
-     * @see maximumTime()
-     * @see setMaximumTime()
-     * @see setTimeRange()
+     * \sa minimumTime()
+     * \sa maximumTime()
+     * \sa setMaximumTime()
+     * \sa setTimeRange()
      */
     void setMinimumTime(const QTime &minTime, const QString &minWarnMsg = QString());
 
@@ -246,10 +246,10 @@ public Q_SLOTS:
      * \a maxTime the maximum time
      * \a maxWarnMsg the maximum warning message
      *
-     * @see minimumTime()
-     * @see maximumTime()
-     * @see setMaximumTime()
-     * @see setTimeRange()
+     * \sa minimumTime()
+     * \sa maximumTime()
+     * \sa setMaximumTime()
+     * \sa setTimeRange()
      */
     void setMaximumTime(const QTime &maxTime, const QString &maxWarnMsg = QString());
 
@@ -271,7 +271,7 @@ public Q_SLOTS:
      *
      * \a minutes the time list interval to display
      *
-     * @see timeListInterval()
+     * \sa timeListInterval()
      */
     void setTimeListInterval(int minutes);
 
@@ -291,7 +291,7 @@ public Q_SLOTS:
      * \a minWarnMsg the minimum warning message
      * \a maxWarnMsg the maximum warning message
      *
-     * @see timeList()
+     * \sa timeList()
      */
     void setTimeList(QList<QTime> timeList, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 

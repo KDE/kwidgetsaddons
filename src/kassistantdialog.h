@@ -62,7 +62,7 @@ public:
     /*!
      * return if a page is valid
      * \a page the page to check the validity of
-     * @see setValid()
+     * \sa setValid()
      */
     bool isValid(KPageWidgetItem *page) const;
 

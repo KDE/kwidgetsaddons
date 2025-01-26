@@ -23,7 +23,7 @@ class KColorButtonPrivate;
  *
  * \image html kcolorbutton.png "KColorButton Widget"
  *
- * @see QColorDialog
+ * \sa QColorDialog
  */
 class KWIDGETSADDONS_EXPORT KColorButton : public QPushButton
 {

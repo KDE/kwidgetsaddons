@@ -110,7 +110,7 @@ public:
      * Returns the current color of the widget.
      *
      * @returns LED color
-     * @see setColor()
+     * \sa setColor()
      */
     QColor color() const;
 
@@ -118,7 +118,7 @@ public:
      * Returns the current state of the widget (on/off).
      * @returns LED state
      *
-     * @see State
+     * \sa State
      */
     State state() const;
 
@@ -126,7 +126,7 @@ public:
      * Returns the current look of the widget.
      * @returns LED look
      *
-     * @see Look
+     * \sa Look
      */
     Look look() const;
 
@@ -134,7 +134,7 @@ public:
      * Returns the current shape of the widget.
      * @returns LED shape
      *
-     * @see Shape
+     * \sa Shape
      */
     Shape shape() const;
 
@@ -142,7 +142,7 @@ public:
      * Returns the factor to darken the LED.
      * @returns dark factor
      *
-     * @see setDarkFactor()
+     * \sa setDarkFactor()
      */
     int darkFactor() const;
 
@@ -157,7 +157,7 @@ public:
      *
      * \a color New color of the LED.
      *
-     * @see color() darkFactor()
+     * \sa color() darkFactor()
      */
     void setColor(const QColor &color);
 
@@ -166,7 +166,7 @@ public:
      *
      * \a state The LED state: on or off.
      *
-     * @see on() off() toggle()
+     * \sa on() off() toggle()
      */
     void setState(State state);
 
@@ -180,7 +180,7 @@ public:
      *
      * \a look New look of the LED.
      *
-     * @see Look
+     * \sa Look
      */
     void setLook(Look look);
 
@@ -202,7 +202,7 @@ public:
      *
      * \a darkFactor Sets the factor to darken the LED.
      *
-     * @see setColor
+     * \sa setColor
      */
     void setDarkFactor(int darkFactor);
 
@@ -219,14 +219,14 @@ public Q_SLOTS:
     /*!
      * Sets the state of the widget to On.
      *
-     * @see off() toggle()  setState()
+     * \sa off() toggle()  setState()
      */
     void on();
 
     /*!
      * Sets the state of the widget to Off.
      *
-     * @see on() toggle()  setState()
+     * \sa on() toggle()  setState()
      */
     void off();
 

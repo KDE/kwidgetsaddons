@@ -67,7 +67,7 @@ public:
      *
      * @return if the spinning animation is running
      *
-     * @see setRunning()
+     * \sa setRunning()
      *
      * \since 6.11.0
      */
@@ -77,7 +77,7 @@ public Q_SLOTS:
     /*!
      * Start the spinning animation
      *
-     * @see setRunning()
+     * \sa setRunning()
      *
      * \since 6.10.0
      */
@@ -86,7 +86,7 @@ public Q_SLOTS:
     /*!
      * Stop the spinning animation
      *
-     * @see setRunning()
+     * \sa setRunning()
      *
      * \since 6.10.0
      */
@@ -96,8 +96,8 @@ public Q_SLOTS:
      * By calling this method with @p enable = true the spinning
      * abnimation will be started. Stopped if false.
      *
-     * @see start()
-     * @see stop()
+     * \sa start()
+     * \sa stop()
      *
      * \since 6.11.0
      */

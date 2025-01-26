@@ -40,7 +40,7 @@ class KPageModelPrivate;
  *    view->setModel( model );
  *  \endcode
  *
- *  @see KPageView
+ *  \sa KPageView
  *  @author Tobias Koenig <tokoe@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KPageModel : public QAbstractItemModel

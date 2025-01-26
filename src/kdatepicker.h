@@ -96,13 +96,13 @@ public:
      * close-button will cause the KDatePicker's topLevelWidget()'s close()
      * method being called. This is mostly useful for toplevel datepickers
      * without a window manager decoration.
-     * @see hasCloseButton
+     * \sa hasCloseButton
      */
     void setCloseButton(bool enable);
 
     /*!
      * @returns true if a KDatePicker shows a close-button.
-     * @see setCloseButton
+     * \sa setCloseButton
      */
     bool hasCloseButton() const;
 
@@ -133,7 +133,7 @@ Q_SIGNALS:
      * Usually, this does not mean that the date has been entered,
      * since the date also changes, for example, when another month is
      * selected.
-     * @see dateSelected
+     * \sa dateSelected
      */
     void dateChanged(const QDate &date);
 
