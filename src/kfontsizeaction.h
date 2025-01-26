@@ -20,7 +20,7 @@
 
 class KFontSizeActionPrivate;
 
-/**
+/*!
  * @class KFontSizeAction kfontsizeaction.h KFontSizeAction
  *
  * An action to allow changing of the font size.
@@ -46,7 +46,7 @@ Q_SIGNALS:
     void fontSizeChanged(int);
 
 protected Q_SLOTS:
-    /**
+    /*!
      * This function is called whenever an action from the selections is triggered.
      */
     void slotActionTriggered(QAction *action) override;

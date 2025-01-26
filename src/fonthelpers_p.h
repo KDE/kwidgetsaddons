@@ -29,7 +29,7 @@ QT_TRANSLATE_NOOP3("FontHelpers", "Monospace", "@item Font name");
 
 #endif
 
-/**
+/*!
  * @internal
  *
  * Split the compound raw font name into family and foundry.
@@ -60,7 +60,7 @@ inline void splitFontString(QStringView name, QString *family, QString *foundry 
     }
 }
 
-/**
+/*!
  * @internal
  *
  * Translate the font name for the user.
@@ -103,7 +103,7 @@ static bool fontFamilyCompare(const QString &a, const QString &b)
 
 using FontFamiliesMap = std::map<QString, QString, decltype(fontFamilyCompare) *>;
 
-/**
+/*!
  * @internal
  *
  * Compose locale-aware sorted list of translated font names,

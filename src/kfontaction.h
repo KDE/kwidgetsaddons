@@ -20,7 +20,7 @@
 
 class KFontActionPrivate;
 
-/**
+/*!
  * @class KFontAction kfontaction.h KFontAction
  *
  * An action to select a font family.

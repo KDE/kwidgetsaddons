@@ -10,14 +10,14 @@
 
 class QObject;
 
-/**
+/*!
  * Event-handling utilities for QLineEdit instances.
  *
  * @since 6.0
  */
 namespace KLineEditEventHandler
 {
-/** Do not propagate Return or Enter key presses in line edits.
+/*! Do not propagate Return or Enter key presses in line edits.
  *
  *  QLineEdit::returnPressed() will still be emitted as normal, but the
  *  key event isn't propagated further up the widget hierarchy. This is
@@ -25,7 +25,7 @@ namespace KLineEditEventHandler
  */
 KWIDGETSADDONS_EXPORT void catchReturnKey(QObject *lineEdit);
 
-/**
+/*!
  * Handle drop events with URLs and replace the current line edit with the
  * dropped URL.
  */

@@ -17,7 +17,7 @@ class KPixmapRegionSelectorWidget;
 
 class QImage;
 
-/**
+/*!
  * @class KPixmapRegionSelectorDialog kpixmapregionselectordialog.h KPixmapRegionSelectorDialog
  *
  * A dialog that uses a KPixmapRegionSelectorWidget to allow the user
@@ -39,25 +39,25 @@ class KWIDGETSADDONS_EXPORT KPixmapRegionSelectorDialog : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * The constructor of an empty KPixmapRegionSelectorDialog, you have to call
      * later the setPixmap method of the KPixmapRegionSelectorWidget widget of
      * the new object.
      */
     explicit KPixmapRegionSelectorDialog(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * The destructor of the dialog
      */
     ~KPixmapRegionSelectorDialog() override;
 
-    /**
+    /*!
      * @returns the KPixmapRegionSelectorWidget widget so that additional
      * parameters can be set by using it.
      */
     KPixmapRegionSelectorWidget *pixmapRegionSelectorWidget() const;
 
-    /**
+    /*!
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
      * and returns when the dialog is closed.
      *
@@ -66,7 +66,7 @@ public:
      */
     static QRect getSelectedRegion(const QPixmap &pixmap, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
      * with the same aspect ratio than @p aspectRatioWidth x @p aspectRatioHeight
      * and returns when the dialog is closed.
@@ -76,7 +76,7 @@ public:
      */
     static QRect getSelectedRegion(const QPixmap &pixmap, int aspectRatioWidth, int aspectRatioHeight, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
      * and returns when the dialog is closed.
      *
@@ -85,7 +85,7 @@ public:
      */
     static QImage getSelectedImage(const QPixmap &pixmap, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a modal dialog, lets the user to select a region of the @p pixmap
      * with the same aspect ratio than @p aspectRatioWidth x @p aspectRatioHeight
      * and returns when the dialog is closed.
@@ -95,7 +95,7 @@ public:
      */
     static QImage getSelectedImage(const QPixmap &pixmap, int aspectRatioWidth, int aspectRatioHeight, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * @since 4.4.3
      * Adjusts the size of the KPixmapRegionSelectorWidget to not overflow the screen size
      */

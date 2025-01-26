@@ -14,7 +14,7 @@
 #include <QWidget>
 #include <memory>
 
-/**
+/*!
  * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
  *
  * @short A widget for editing date and time.
@@ -29,103 +29,103 @@ class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
-    /**
+    /*!
      * Options provided by the widget
      * @see options
      * @see setOptions
      * @see Options
      */
     enum Option {
-        ShowCalendar = 0x00001, /**< If the Calendar System edit is displayed */
-        ShowDate = 0x00002, /**< If the Date is displayed */
-        ShowTime = 0x00004, /**< If the Time is displayed */
-        ShowTimeZone = 0x00008, /**< If the Time Zone is displayed */
-        // EditCalendar     = 0x00010,  /**< Allow the user to manually edit the calendar */
-        EditDate = 0x00020, /**< Allow the user to manually edit the date */
-        EditTime = 0x00040, /**< Allow the user to manually edit the time */
-        // EditTimeZone     = 0x00080,  /**< Allow the user to manually edit the time zone */
-        SelectCalendar = 0x00100, /**< Allow the user to select a calendar */
-        SelectDate = 0x00200, /**< Allow the user to select a date */
-        SelectTime = 0x00400, /**< Allow the user to select a time */
-        SelectTimeZone = 0x00800, /**< Allow the user to select a time zone */
-        DatePicker = 0x01000, /**< Show a date picker */
-        DateKeywords = 0x02000, /**< Show date keywords */
-        ForceTime = 0x04000, /**< The entered time can only be a selected time */
-        WarnOnInvalid = 0x08000, /**< Show a warning on focus out if the date or time is invalid */
+        ShowCalendar = 0x00001, /*!< If the Calendar System edit is displayed */
+        ShowDate = 0x00002, /*!< If the Date is displayed */
+        ShowTime = 0x00004, /*!< If the Time is displayed */
+        ShowTimeZone = 0x00008, /*!< If the Time Zone is displayed */
+        // EditCalendar     = 0x00010,  /*!< Allow the user to manually edit the calendar */
+        EditDate = 0x00020, /*!< Allow the user to manually edit the date */
+        EditTime = 0x00040, /*!< Allow the user to manually edit the time */
+        // EditTimeZone     = 0x00080,  /*!< Allow the user to manually edit the time zone */
+        SelectCalendar = 0x00100, /*!< Allow the user to select a calendar */
+        SelectDate = 0x00200, /*!< Allow the user to select a date */
+        SelectTime = 0x00400, /*!< Allow the user to select a time */
+        SelectTimeZone = 0x00800, /*!< Allow the user to select a time zone */
+        DatePicker = 0x01000, /*!< Show a date picker */
+        DateKeywords = 0x02000, /*!< Show date keywords */
+        ForceTime = 0x04000, /*!< The entered time can only be a selected time */
+        WarnOnInvalid = 0x08000, /*!< Show a warning on focus out if the date or time is invalid */
     };
-    /**
+    /*!
      * Stores a combination of #Option values.
      */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
-    /**
+    /*!
      * Create a new KDateTimeEdit widget
      */
     explicit KDateTimeEdit(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroy the widget
      */
     ~KDateTimeEdit() override;
 
-    /**
+    /*!
      * Return the currently set widget options
      *
      * @return the currently set widget options
      */
     Options options() const;
 
-    /**
+    /*!
      * Return the currently selected date, time and time zone
      *
      * @return the currently selected date, time and time zone
      */
     QDateTime dateTime() const;
 
-    /**
+    /*!
      * Return the currently selected date
      *
      * @return the currently selected date
      */
     QDate date() const;
 
-    /**
+    /*!
      * Return the currently selected time
      *
      * @return the currently selected time
      */
     QTime time() const;
 
-    /**
+    /*!
      * Return the currently selected time zone
      *
      * @return the currently selected time zone
      */
     QTimeZone timeZone() const;
 
-    /**
+    /*!
      * Returns the list of Calendar Locales displayed.
      *
      * @return the list of calendar locales displayed
      */
     QList<QLocale> calendarLocalesList() const;
 
-    /**
+    /*!
      * Return the current minimum date and time
      *
      * @return the current minimum date and time
      */
     QDateTime minimumDateTime() const;
 
-    /**
+    /*!
      * Return the current maximum date and time
      *
      * @return the current maximum date and time
      */
     QDateTime maximumDateTime() const;
 
-    /**
+    /*!
      * Return the currently set date display format
      *
      * By default this is the Short Format
@@ -134,7 +134,7 @@ public:
      */
     QLocale::FormatType dateDisplayFormat() const;
 
-    /**
+    /*!
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
      *
@@ -144,7 +144,7 @@ public:
      */
     QMap<QDate, QString> dateMap() const;
 
-    /**
+    /*!
      * Return the currently set time format
      *
      * By default this is the Short Format
@@ -153,14 +153,14 @@ public:
      */
     QLocale::FormatType timeDisplayFormat() const;
 
-    /**
+    /*!
      * Return the time list interval able to be selected
      *
      * @return the select time intervals in minutes
      */
     int timeListInterval() const;
 
-    /**
+    /*!
      * Return the list of times able to be selected in the drop-down.
      *
      * @return the select time list
@@ -171,14 +171,14 @@ public:
      */
     QList<QTime> timeList() const;
 
-    /**
+    /*!
      * Return the list of time zones able to be selected
      *
      * @return the list of time zones displayed
      */
     QList<QTimeZone> timeZones() const;
 
-    /**
+    /*!
      * Return if the current user input is valid
      *
      * If the user input is null then it is not valid
@@ -189,7 +189,7 @@ public:
      */
     bool isValid() const;
 
-    /**
+    /*!
      * Return if the current user input is null
      *
      * @return if the current user input is null
@@ -198,7 +198,7 @@ public:
      */
     bool isNull() const;
 
-    /**
+    /*!
      * Return if the current user input date is valid
      *
      * If the user input date is null then it is not valid
@@ -209,7 +209,7 @@ public:
      */
     bool isValidDate() const;
 
-    /**
+    /*!
      * Return if the current user input date is null
      *
      * @return if the current user input date is null
@@ -217,7 +217,7 @@ public:
      * @see isValidDate()
      */
     bool isNullDate() const;
-    /**
+    /*!
      * Return if the current user input time is valid
      *
      * If the user input time is null then it is not valid
@@ -228,7 +228,7 @@ public:
      */
     bool isValidTime() const;
 
-    /**
+    /*!
      * Return if the current user input time is null
      *
      * @return if the current user input time is null
@@ -239,7 +239,7 @@ public:
 
 Q_SIGNALS:
 
-    /**
+    /*!
      * Signal if the date or time has been manually entered by the user.
      *
      * The returned date and time may be invalid.
@@ -248,7 +248,7 @@ Q_SIGNALS:
      */
     void dateTimeEntered(const QDateTime &dateTime);
 
-    /**
+    /*!
      * Signal if the date or time has been changed either manually by the user
      * or programmatically.
      *
@@ -258,7 +258,7 @@ Q_SIGNALS:
      */
     void dateTimeChanged(const QDateTime &dateTime);
 
-    /**
+    /*!
      * Signal if the date or time is being manually edited by the user.
      *
      * The returned date and time may be invalid.
@@ -267,14 +267,14 @@ Q_SIGNALS:
      */
     void dateTimeEdited(const QDateTime &dateTime);
 
-    /**
+    /*!
      * Signal if the Calendar Locale has been manually entered by the user.
      *
      * @param calendarLocale the new calendar locale
      */
     void calendarEntered(const QLocale &calendarLocale);
 
-    /**
+    /*!
      * Signal if the Calendar Locale has been changed either manually by the user
      * or programmatically.
      *
@@ -282,7 +282,7 @@ Q_SIGNALS:
      */
     void calendarChanged(const QLocale &calendarLocale);
 
-    /**
+    /*!
      * Signal if the date has been manually entered by the user.
      *
      * The returned date may be invalid.
@@ -291,7 +291,7 @@ Q_SIGNALS:
      */
     void dateEntered(const QDate &date);
 
-    /**
+    /*!
      * Signal if the date has been changed either manually by the user
      * or programmatically.
      *
@@ -301,7 +301,7 @@ Q_SIGNALS:
      */
     void dateChanged(const QDate &date);
 
-    /**
+    /*!
      * Signal if the date is being manually edited by the user.
      *
      * The returned date may be invalid.
@@ -310,7 +310,7 @@ Q_SIGNALS:
      */
     void dateEdited(const QDate &date);
 
-    /**
+    /*!
      * Signal if the time has been manually entered by the user.
      *
      * The returned time may be invalid.
@@ -319,7 +319,7 @@ Q_SIGNALS:
      */
     void timeEntered(const QTime &time);
 
-    /**
+    /*!
      * Signal if the time has been changed either manually by the user
      * or programmatically.
      *
@@ -329,7 +329,7 @@ Q_SIGNALS:
      */
     void timeChanged(const QTime &time);
 
-    /**
+    /*!
      * Signal if the time is being manually edited by the user.
      *
      * The returned time may be invalid.
@@ -338,14 +338,14 @@ Q_SIGNALS:
      */
     void timeEdited(const QTime &time);
 
-    /**
+    /*!
      * Signal if the time zone has been changed manually by the user.
      *
      * @param zone the new time zone
      */
     void timeZoneEntered(const QTimeZone &zone);
 
-    /**
+    /*!
      * Signal if the time zone has been changed either manually by the user
      * or programmatically.
      *
@@ -355,42 +355,42 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Set the new widget options
      *
      * @param options the new widget options
      */
     void setOptions(Options options);
 
-    /**
+    /*!
      * Set the currently selected date, time and time zone
      *
      * @param dateTime the new date, time and time zone
      */
     void setDateTime(const QDateTime &dateTime);
 
-    /**
+    /*!
      * Set the currently selected date
      *
      * @param date the new date
      */
     void setDate(const QDate &date);
 
-    /**
+    /*!
      * Set the currently selected time
      *
      * @param time the new time
      */
     void setTime(const QTime &time);
 
-    /**
+    /*!
      * Set the current time zone
      *
      * @param zone the new zone
      */
     void setTimeZone(const QTimeZone &zone);
 
-    /**
+    /*!
      * Set the minimum and maximum date and time range
      *
      * To enable range checking provide two valid dates.
@@ -405,12 +405,12 @@ public Q_SLOTS:
     void
     setDateTimeRange(const QDateTime &minDateTime, const QDateTime &maxDateTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the minimum and maximum date and time to the default
      */
     void resetDateTimeRange();
 
-    /**
+    /*!
      * Set the minimum allowed date.
      *
      * If the date is invalid, or more than current maximum,
@@ -424,12 +424,12 @@ public Q_SLOTS:
      */
     void setMinimumDateTime(const QDateTime &minDateTime, const QString &minWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the minimum date and time to the default
      */
     void resetMinimumDateTime();
 
-    /**
+    /*!
      * Set the maximum allowed date.
      *
      * If the date is invalid, or less than current minimum,
@@ -443,12 +443,12 @@ public Q_SLOTS:
      */
     void setMaximumDateTime(const QDateTime &maxDateTime, const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the minimum date and time to the default
      */
     void resetMaximumDateTime();
 
-    /**
+    /*!
      * Sets the date format to display.
      *
      * By default is the Short Format.
@@ -457,14 +457,14 @@ public Q_SLOTS:
      */
     void setDateDisplayFormat(QLocale::FormatType format);
 
-    /**
+    /*!
      * Set the list of Calendar Locales to display.
      *
      * @param calendarLocales the list of calendar locales to display
      */
     void setCalendarLocalesList(const QList<QLocale> &calendarLocales);
 
-    /**
+    /*!
      * Set the list of dates able to be selected from the drop-down and the
      * string form to display for those dates, e.g. "2010-01-01" and "Yesterday".
      *
@@ -482,7 +482,7 @@ public Q_SLOTS:
      */
     void setDateMap(QMap<QDate, QString> dateMap);
 
-    /**
+    /*!
      * Sets the time format to display.
      *
      * By default is the Short Format.
@@ -491,7 +491,7 @@ public Q_SLOTS:
      */
     void setTimeDisplayFormat(QLocale::FormatType format);
 
-    /**
+    /*!
      * Set the interval between times able to be selected from the drop-down.
      *
      * The combo drop-down will be populated with times every @p minutes
@@ -513,7 +513,7 @@ public Q_SLOTS:
      */
     void setTimeListInterval(int minutes);
 
-    /**
+    /*!
      * Set the list of times able to be selected from the drop-down.
      *
      * Setting the time list will override any time interval previously set via
@@ -533,7 +533,7 @@ public Q_SLOTS:
      */
     void setTimeList(QList<QTime> timeList, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Set the time zones able to be selected
      *
      * @param zones the time zones to display
@@ -546,7 +546,7 @@ protected:
     void focusOutEvent(QFocusEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
 
-    /**
+    /*!
      * Assign the date, time and time zone for the widget.
      *
      * Virtual to allow sub-classes to apply extra validation rules,
@@ -556,7 +556,7 @@ protected:
      */
     virtual void assignDateTime(const QDateTime &dateTime);
 
-    /**
+    /*!
      * Assign the date for the widget.
      *
      * Virtual to allow sub-classes to apply extra validation rules,
@@ -566,7 +566,7 @@ protected:
      */
     virtual void assignDate(const QDate &date);
 
-    /**
+    /*!
      * Assign the time for the widget.
      *
      * Virtual to allow sub-classes to apply extra validation rules,
@@ -576,7 +576,7 @@ protected:
      */
     virtual void assignTime(const QTime &time);
 
-    /**
+    /*!
      * Assign the time zone for the widget.
      *
      * Virtual to allow sub-classes to apply extra validation rules,

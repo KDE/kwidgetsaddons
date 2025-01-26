@@ -11,7 +11,7 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
+/*!
  * @class KBusyIndicatorWidget kbusyindicatorwidget.h KBusyIndicatorWidget
  *
  * @brief Rotating spinning icon to indicate busyness
@@ -45,24 +45,24 @@ class KWIDGETSADDONS_EXPORT KBusyIndicatorWidget : public QWidget
     Q_PROPERTY(bool isRunning READ isRunning WRITE setRunning)
 
 public:
-    /**
+    /*!
      * Create a new KBusyIndicatorWidget widget
      */
     explicit KBusyIndicatorWidget(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroy the widget
      */
     ~KBusyIndicatorWidget() override;
 
-    /**
+    /*!
      * Return the smallest reasonable size for the widget
      *
      * @return Minimum size as a QSize object
      */
     QSize minimumSizeHint() const override;
 
-    /**
+    /*!
      * Return whether the spinning animation is running
      *
      * @return if the spinning animation is running
@@ -74,7 +74,7 @@ public:
     bool isRunning() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Start the spinning animation
      *
      * @see setRunning()
@@ -83,7 +83,7 @@ public Q_SLOTS:
      */
     void start();
 
-    /**
+    /*!
      * Stop the spinning animation
      *
      * @see setRunning()
@@ -92,7 +92,7 @@ public Q_SLOTS:
      */
     void stop();
 
-    /**
+    /*!
      * By calling this method with @p enable = true the spinning
      * abnimation will be started. Stopped if false.
      *

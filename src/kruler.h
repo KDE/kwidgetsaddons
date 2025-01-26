@@ -14,7 +14,7 @@
 #include <QAbstractSlider>
 #include <memory>
 
-/**
+/*!
  * @class KRuler kruler.h KRuler
  *
  * A ruler widget.
@@ -71,17 +71,17 @@ class KWIDGETSADDONS_EXPORT KRuler : public QAbstractSlider
     Q_PROPERTY(int endOffset READ endOffset)
 
 public:
-    /**
+    /*!
      * The types of units used.
      */
     enum MetricStyle { Custom = 0, Pixel, Inch, Millimetres, Centimetres, Metres };
     Q_ENUM(MetricStyle)
 
-    /**
+    /*!
      * Constructs a horizontal ruler.
      */
     explicit KRuler(QWidget *parent = nullptr);
-    /**
+    /*!
      * Constructs a ruler with orientation @p orient.
      *
      * @p parent and @p f are passed to QFrame.
@@ -95,7 +95,7 @@ public:
      */
     explicit KRuler(Qt::Orientation orient, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
-    /**
+    /*!
      * Constructs a ruler with orientation @p orient and initial width @p widgetWidth.
      *
      * The width sets the fixed width of the widget. This is useful if you
@@ -111,35 +111,35 @@ public:
      */
     KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
-    /**
+    /*!
      * Destructor.
      */
     ~KRuler() override;
 
-    /**
+    /*!
      * Sets the distance between tiny marks.
      *
      * This is mostly used in the English system (inches) with distance of 1.
      */
     void setTinyMarkDistance(int);
-    /**
+    /*!
      * Returns the distance between tiny marks.
      */
     int tinyMarkDistance() const;
 
-    /**
+    /*!
      * Sets the distance between little marks.
      *
      * The default value is 1 in the metric system and 2 in the English (inches) system.
      */
     void setLittleMarkDistance(int);
 
-    /**
+    /*!
      * Returns the distance between little marks.
      */
     int littleMarkDistance() const;
 
-    /**
+    /*!
      * Sets the distance between medium marks.
      *
      * For English (inches) styles it defaults to twice the little mark distance.
@@ -148,49 +148,49 @@ public:
     void setMediumMarkDistance(int);
     int mediumMarkDistance() const;
 
-    /**
+    /*!
      * Sets distance between big marks.
      *
      * For English (inches) or metric styles it is twice the medium mark distance.
      */
     void setBigMarkDistance(int);
-    /**
+    /*!
      * Returns the distance between big marks.
      */
     int bigMarkDistance() const;
 
-    /**
+    /*!
      * Shows/hides tiny marks.
      */
     void setShowTinyMarks(bool);
     bool showTinyMarks() const;
-    /**
+    /*!
      * Shows/hides little marks.
      */
     void setShowLittleMarks(bool);
     bool showLittleMarks() const;
-    /**
+    /*!
      * Shows/hides medium marks.
      */
     void setShowMediumMarks(bool);
     bool showMediumMarks() const;
-    /**
+    /*!
      * Shows/hides big marks.
      */
     void setShowBigMarks(bool);
     bool showBigMarks() const;
-    /**
+    /*!
      * Shows/hides end marks.
      */
     void setShowEndMarks(bool);
     bool showEndMarks() const;
-    /**
+    /*!
      * Shows/hides the pointer.
      */
     void setShowPointer(bool);
     bool showPointer() const;
 
-    /**
+    /*!
      * Show/hide number values of the end marks.
      *
      * Default is @p false.
@@ -198,21 +198,21 @@ public:
     void setShowEndLabel(bool);
     bool showEndLabel() const;
 
-    /**
+    /*!
      * Sets the label this is drawn at the beginning of the visible part
      * of the ruler to @p label
      */
     void setEndLabel(const QString &);
     QString endLabel() const;
 
-    /**
+    /*!
      * Sets up the necessary tasks for the provided styles.
      *
      * A convenience method.
      */
     void setRulerMetricStyle(KRuler::MetricStyle);
 
-    /**
+    /*!
      * Sets the number of pixels between two base marks.
      *
      * Calling this method stretches or shrinks your ruler.
@@ -232,12 +232,12 @@ public:
      */
     void setPixelPerMark(double rate);
 
-    /**
+    /*!
      * Returns the number of pixels between two base marks.
      */
     double pixelPerMark() const;
 
-    /**
+    /*!
      * Sets the length of the ruler, i.e. the difference between
      * the begin mark and the end mark of the ruler.
      *
@@ -249,7 +249,7 @@ public:
     void setLength(int);
     int length() const;
 
-    /**
+    /*!
      * Locks the length of the ruler, i.e. the difference between
      * the two end marks doesn't change when the widget is resized.
      *
@@ -258,7 +258,7 @@ public:
     void setLengthFixed(bool fix);
     bool lengthFixed() const;
 
-    /**
+    /*!
      * Sets the number of pixels by which the ruler may slide up or left.
      * The number of pixels moved is realive to the previous position.
      * The Method makes sense for updating a ruler, which is working with
@@ -271,7 +271,7 @@ public:
      */
     void slideUp(int count = 1);
 
-    /**
+    /*!
      * Sets the number of pixels by which the ruler may slide down or right.
      * The number of pixels moved is realive to the previous position.
      * The Method makes sense for updating a ruler, which is working with
@@ -284,7 +284,7 @@ public:
      */
     void slideDown(int count = 1);
 
-    /**
+    /*!
      * Sets the ruler slide offset.
      *
      * This is like slideup() or slidedown() with an absolute offset
@@ -294,7 +294,7 @@ public:
      */
     void setOffset(int offset);
 
-    /**
+    /*!
      * Returns the current ruler offset.
      */
     int offset() const;
@@ -303,7 +303,7 @@ public:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Sets the pointer to a new position.
      *
      * The offset is NOT updated.
@@ -311,7 +311,7 @@ public Q_SLOTS:
      */
     void slotNewValue(int);
 
-    /**
+    /*!
      * Sets the ruler marks to a new position.
      *
      * The pointer is NOT updated.

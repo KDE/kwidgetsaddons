@@ -14,7 +14,7 @@
 
 class KAssistantDialogPrivate;
 
-/**
+/*!
  * @class KAssistantDialog kassistantdialog.h KAssistantDialog
  *
  * This class provides a framework for assistant dialogs.
@@ -39,7 +39,7 @@ class KWIDGETSADDONS_EXPORT KAssistantDialog : public KPageDialog
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Construct a new assistant dialog with @p parent as parent.
      * @param parent is the parent of the widget.
      * @flags the window flags to give to the assistant dialog. The
@@ -48,7 +48,7 @@ public:
     explicit KAssistantDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
     ~KAssistantDialog() override;
 
-    /**
+    /*!
      * Specify if the content of the page is valid, and if the next button may be enabled on this page.
      * By default all pages are valid.
      *
@@ -59,14 +59,14 @@ public:
      */
     void setValid(KPageWidgetItem *page, bool enable);
 
-    /**
+    /*!
      * return if a page is valid
      * @param page the page to check the validity of
      * @see setValid()
      */
     bool isValid(KPageWidgetItem *page) const;
 
-    /**
+    /*!
      * Specify whether a page is appropriate.
      *
      * A page is considered inappropriate if it should not be shown due to
@@ -82,30 +82,30 @@ public:
      */
     void setAppropriate(KPageWidgetItem *page, bool appropriate);
 
-    /**
+    /*!
      * Check if a page is appropriate for use in the assistant dialog.
      * @param page is the page to check the appropriateness of.
      * @return true if @p page is appropriate, false if it is not
      */
     bool isAppropriate(KPageWidgetItem *page) const;
 
-    /**
+    /*!
      * @returns the next button
      */
     QPushButton *nextButton() const;
 
-    /**
+    /*!
      * @returns the finish button
      */
     QPushButton *backButton() const;
 
-    /**
+    /*!
      * @returns the finish button
      */
     QPushButton *finishButton() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Called when the user clicks the Back button.
      *
      * This function will show the preceding relevant page in the sequence.
@@ -113,7 +113,7 @@ public Q_SLOTS:
      */
     virtual void back();
 
-    /**
+    /*!
      * Called when the user clicks the Next/Finish button.
      *
      * This function will show the next relevant page in the sequence.
@@ -122,7 +122,7 @@ public Q_SLOTS:
     virtual void next();
 
 protected:
-    /**
+    /*!
      * Construct an assistant dialog from a single widget.
      * @param widget the widget to construct the dialog with
      * @param parent the parent of the assistant dialog

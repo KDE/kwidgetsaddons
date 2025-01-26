@@ -36,7 +36,7 @@ private:
     enum KMultiTabBar::KMultiTabBarStyle m_style;
 
 protected:
-    /**
+    /*!
      * [contentsM|m]ousePressEvent are reimplemented from QScrollView
      * in order to ignore all mouseEvents on the viewport, so that the
      * parent can handle them.

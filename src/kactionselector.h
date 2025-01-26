@@ -18,7 +18,7 @@ class QKeyEvent;
 class QEvent;
 class QIcon;
 
-/**
+/*!
     @class KActionSelector kactionselector.h KActionSelector
 
     @short A widget for selecting and arranging actions/objects
@@ -81,17 +81,17 @@ public:
     explicit KActionSelector(QWidget *parent = nullptr);
     ~KActionSelector() override;
 
-    /**
+    /*!
      * @return The QListWidget holding the available actions
      */
     QListWidget *availableListWidget() const;
 
-    /**
+    /*!
      * @return The QListWidget holding the selected actions
      */
     QListWidget *selectedListWidget() const;
 
-    /**
+    /*!
      * This enum identifies the moving buttons
      */
     enum MoveButton {
@@ -102,7 +102,7 @@ public:
     };
     Q_ENUM(MoveButton)
 
-    /**
+    /*!
      * This enum defines policies for where to insert moved items in a listbox.
      *
      * @sa availableInsertionPolicy(), setAvailableInsertionPolicy(),
@@ -116,7 +116,7 @@ public:
     };
     Q_ENUM(InsertionPolicy)
 
-    /**
+    /*!
      * @return Whether moveOnDoubleClcik is enabled.
      *
      * If enabled, an item in any listbox will be moved to the other one whenever
@@ -126,13 +126,13 @@ public:
      */
     bool moveOnDoubleClick() const;
 
-    /**
+    /*!
      * Sets moveOnDoubleClick to @p enable
      * @sa moveOnDoubleClick()
      */
     void setMoveOnDoubleClick(bool enable);
 
-    /**
+    /*!
      * @return Whether keyboard control is enabled.
      *
      * When Keyboard control is enabled, the widget will react to
@@ -152,18 +152,18 @@ public:
      */
     bool keyboardEnabled() const;
 
-    /**
+    /*!
      * Sets the keyboard enabled depending on @p enable.
      * @sa keyboardEnabled()
      */
     void setKeyboardEnabled(bool enable);
 
-    /**
+    /*!
      * @return The text of the label for the available items listbox.
      */
     QString availableLabel() const;
 
-    /**
+    /*!
      * Sets the label for the available items listbox to @p text.
      * Note that this label has the listbox as its @e buddy, so that
      * if you have a single ampersand in the text, the following character
@@ -171,12 +171,12 @@ public:
      */
     void setAvailableLabel(const QString &text);
 
-    /**
+    /*!
      * @return the label of the selected items listbox.
      */
     QString selectedLabel() const;
 
-    /**
+    /*!
      * Sets the label for the selected items listbox to @p text.
      * Note that this label has the listbox as its @e buddy, so that
      * if you have a single ampersand in the text, the following character
@@ -184,50 +184,50 @@ public:
      */
     void setSelectedLabel(const QString &text);
 
-    /**
+    /*!
      * @return The current insertion policy for the available listbox.
      * The default policy for the available listbox is Sorted.
      * @sa InsertionPolicy, setAvailableInsertionPolicy()
      */
     InsertionPolicy availableInsertionPolicy() const;
 
-    /**
+    /*!
      * Sets the insertion policy for the available listbox.
      * @sa InsertionPolicy, availableInsertionPolicy()
      */
     void setAvailableInsertionPolicy(InsertionPolicy policy);
 
-    /**
+    /*!
      * @return The current insertion policy for the selected listbox.
      * The default policy for the selected listbox is BelowCurrent.
      * @sa InsertionPolicy, setSelectedInsertionPolicy()
      */
     InsertionPolicy selectedInsertionPolicy() const;
 
-    /**
+    /*!
      * Sets the insertion policy for the selected listbox.
      * @sa InsertionPolicy, selectedInsertionPolicy()
      */
     void setSelectedInsertionPolicy(InsertionPolicy policy);
 
-    /**
+    /*!
      * @return whether the Up and Down buttons should be displayed.
      */
     bool showUpDownButtons() const;
 
-    /**
+    /*!
      * Sets whether the Up and Down buttons should be displayed
      * according to @p show
      */
     void setShowUpDownButtons(bool show);
 
-    /**
+    /*!
      * Sets the pixmap of the button @p button to @p icon.
      * It calls SmallIconSet(pm) to generate the icon set.
      */
     void setButtonIcon(const QString &icon, MoveButton button);
 
-    /**
+    /*!
      * Sets the iconset for button @p button to @p iconset.
      * You can use this method to set a custom icon set. Either
      * created by QIconSet, or use the application instance of
@@ -235,44 +235,44 @@ public:
      */
     void setButtonIconSet(const QIcon &iconset, MoveButton button);
 
-    /**
+    /*!
      * Sets the tooltip for the button @p button to @p tip.
      */
     void setButtonTooltip(const QString &tip, MoveButton button);
 
-    /**
+    /*!
      * Sets the whatsthis help for button @p button to @p text.
      */
     void setButtonWhatsThis(const QString &text, MoveButton button);
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when an item is moved to the "selected" listbox.
      */
     void added(QListWidgetItem *item);
 
-    /**
+    /*!
      * Emitted when an item is moved out of the "selected" listbox.
      */
     void removed(QListWidgetItem *item);
 
-    /**
+    /*!
      * Emitted when an item is moved upwards in the "selected" listbox.
      */
     void movedUp(QListWidgetItem *item);
 
-    /**
+    /*!
      * Emitted when an item is moved downwards in the "selected" listbox.
      */
     void movedDown(QListWidgetItem *item);
 
-    /**
+    /*!
      * Emitted when an item is moved to the "selected" listbox.
      */
     //  void addedToSelection( QListWidgetItem *item );
 
 public Q_SLOTS:
-    /**
+    /*!
      * Sets the enabled state of all moving buttons to reflect the current
      * options.
      *
@@ -282,18 +282,18 @@ public Q_SLOTS:
     void setButtonsEnabled();
 
 protected:
-    /**
+    /*!
      * Reimplemented for internal reasons.
      */
     void keyPressEvent(QKeyEvent *) override;
 
-    /**
+    /*!
      * Reimplemented for internal reasons.
      */
     bool eventFilter(QObject *, QEvent *) override;
 
 private:
-    /**
+    /*!
      * @private
      * Private data storage
      */

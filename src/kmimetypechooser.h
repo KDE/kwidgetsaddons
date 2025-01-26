@@ -13,7 +13,7 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
+/*!
  * @class KMimeTypeChooser kmimetypechooser.h KMimeTypeChooser
  *
  * This widget provides a checkable list of all available MIME types, presented
@@ -32,7 +32,7 @@ class KWIDGETSADDONS_EXPORT KMimeTypeChooser : public QWidget
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Buttons and data for display.
      */
     enum Visuals {
@@ -40,7 +40,7 @@ public:
         Patterns = 2, ///< Show the MIME types glob patterns (e.g. "*.html;*.htm") in a column
         EditButton = 4 ///< Show the "Edit" button, allowing to edit the selected type
     };
-    /**
+    /*!
      * Create a new KMimeTypeChooser.
      *
      * @param text A plain text line to display above the list
@@ -64,11 +64,11 @@ public:
                               QWidget *parent = nullptr);
     ~KMimeTypeChooser() override;
 
-    /**
+    /*!
      * @return a list of all selected MIME type names
      */
     QStringList mimeTypes() const;
-    /**
+    /*!
      * @return a list of the filename glob patterns associated with all selected MIME types
      */
     QStringList patterns() const;
@@ -77,7 +77,7 @@ private:
     std::unique_ptr<class KMimeTypeChooserPrivate> const d;
 };
 
-/**
+/*!
  * @class KMimeTypeChooserDialog kmimetypechooser.h KMimeTypeChooserDialog
  *
  * @short A dialog to select MIME types from the list of available ones on the system
@@ -112,7 +112,7 @@ class KWIDGETSADDONS_EXPORT KMimeTypeChooserDialog : public QDialog
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Create a KMimeTypeChooser dialog.
      *
      * @param title The title of the dialog
@@ -137,7 +137,7 @@ public:
                                     int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
                                     QWidget *parent = nullptr);
 
-    /**
+    /*!
      * @overload
      */
     KMimeTypeChooserDialog(const QString &title,
@@ -148,7 +148,7 @@ public:
 
     ~KMimeTypeChooserDialog() override;
 
-    /**
+    /*!
      * @return a pointer to the KMimeTypeChooser widget
      */
     KMimeTypeChooser *chooser();

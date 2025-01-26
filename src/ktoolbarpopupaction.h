@@ -25,7 +25,7 @@
 
 class QMenu;
 
-/**
+/*!
  * @class KToolBarPopupAction ktoolbarpopupaction.h KToolBarPopupAction
  *
  * This action is a normal action everywhere, except in a toolbar
@@ -49,7 +49,7 @@ class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
     Q_PROPERTY(PopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
-    /**
+    /*!
      * The menu popup mode.
      *
      * Default is MenuButtonPopup.
@@ -70,7 +70,7 @@ public:
 
     // Not all constructors - because we need an icon, since this action only makes
     // sense when being plugged at least in a toolbar.
-    /**
+    /*!
      * Create a KToolBarPopupAction, with a text, an icon, a
      * parent and a name.
      *
@@ -80,12 +80,12 @@ public:
      */
     KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Destroys the toolbar popup action.
      */
     ~KToolBarPopupAction() override;
 
-    /**
+    /*!
      * The popup menu that is shown when clicking (some time) on the toolbar
      * button. You may want to plug items into it on creation, or connect to
      * aboutToShow for a more dynamic menu.
@@ -97,7 +97,7 @@ public:
      */
     QMenu *popupMenu() const;
 
-    /**
+    /*!
      * The popup mode of the toolbar button.
      *
      * @see setPopupMode()
@@ -106,7 +106,7 @@ public:
      */
     PopupMode popupMode() const;
 
-    /**
+    /*!
      * Determines the popup mode of the toolbar button.
      * @see PopupMode
      *
@@ -114,7 +114,7 @@ public:
      */
     void setPopupMode(PopupMode popupMode);
 
-    /**
+    /*!
      * Reimplemented from QWidgetAction.
      */
     QWidget *createWidget(QWidget *parent) override;

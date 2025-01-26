@@ -13,7 +13,7 @@
 #include <QWidget>
 #include <memory>
 
-/**
+/*!
  * @class KTitleWidget ktitlewidget.h KTitleWidget
  *
  * @short Standard title widget.
@@ -64,53 +64,53 @@ class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
     Q_PROPERTY(int autoHideTimeout READ autoHideTimeout WRITE setAutoHideTimeout)
 
 public:
-    /**
+    /*!
      * Possible title pixmap alignments.
      *
      * @li ImageLeft: Display the pixmap left
      * @li ImageRight: Display the pixmap right (default)
      */
     enum ImageAlignment {
-        ImageLeft, /**< Display the pixmap on the left */
-        ImageRight, /**< Display the pixmap on the right */
+        ImageLeft, /*!< Display the pixmap on the left */
+        ImageRight, /*!< Display the pixmap on the right */
     };
     Q_ENUM(ImageAlignment)
 
-    /**
+    /*!
      * Comment message types
      */
     enum MessageType {
-        PlainMessage, /**< Normal comment */
-        InfoMessage, /**< Information the user should be alerted to */
-        WarningMessage, /**< A warning the user should be alerted to */
-        ErrorMessage, /**< An error message */
+        PlainMessage, /*!< Normal comment */
+        InfoMessage, /*!< Information the user should be alerted to */
+        WarningMessage, /*!< A warning the user should be alerted to */
+        ErrorMessage, /*!< An error message */
     };
 
-    /**
+    /*!
      * Constructs a title widget.
      */
     explicit KTitleWidget(QWidget *parent = nullptr);
 
     ~KTitleWidget() override;
 
-    /**
+    /*!
      * @param widget Widget displayed on the title widget.
      */
     void setWidget(QWidget *widget);
 
-    /**
+    /*!
      * @return the text displayed in the title
      * @see setText()
      */
     QString text() const;
 
-    /**
+    /*!
      * @return the text displayed in the comment below the title, if any
      * @see setComment()
      */
     QString comment() const;
 
-    /**
+    /*!
      * @return the icon displayed in the title
      * @see setIcon()
      *
@@ -118,7 +118,7 @@ public:
      */
     QIcon icon() const;
 
-    /**
+    /*!
      * @return the size of the icon displayed in the title
      * @see setIconSize()
      *
@@ -126,7 +126,7 @@ public:
      */
     QSize iconSize() const;
 
-    /**
+    /*!
      * Sets this label's buddy to buddy.
      * When the user presses the shortcut key indicated by the label in this
      * title widget, the keyboard focus is transferred to the label's buddy
@@ -135,13 +135,13 @@ public:
      */
     void setBuddy(QWidget *buddy);
 
-    /**
+    /*!
      * Get the current timeout value in milliseconds
      * @return timeout value in msecs
      */
     int autoHideTimeout() const;
 
-    /**
+    /*!
      * @return The level of this title: it influences the font size following the guidelines in
      *         the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
      *         It also corresponds to the level api of Kirigami Heading for QML applications
@@ -150,14 +150,14 @@ public:
     int level();
 
 public Q_SLOTS:
-    /**
+    /*!
      * @param text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
      * @param alignment Alignment of the text. Default is left and vertical centered.
      * @see text()
      */
     void setText(const QString &text, Qt::Alignment alignment = Qt::AlignLeft | Qt::AlignVCenter);
-    /**
+    /*!
      * @param text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
      * @param type The sort of message it is; will also set the icon accordingly
@@ -165,7 +165,7 @@ public Q_SLOTS:
      */
     void setText(const QString &text, MessageType type);
 
-    /**
+    /*!
      * @param comment Text displayed beneath the main title as a comment.
      *                It can either be plain text or rich text.
      * @param type The sort of message it is.
@@ -173,7 +173,7 @@ public Q_SLOTS:
      */
     void setComment(const QString &comment, MessageType type = PlainMessage);
 
-    /**
+    /*!
      * Set the icon to display in the header.
      * @param icon the icon to display in the header.
      * @param alignment alignment of the icon (default is right aligned).
@@ -181,7 +181,7 @@ public Q_SLOTS:
      */
     void setIcon(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
-    /**
+    /*!
      * @param type the type of message icon to display in the header
      * @param alignment alignment of the icon (default is right aligned).
      * @see icon()
@@ -189,7 +189,7 @@ public Q_SLOTS:
      */
     void setIcon(MessageType type, ImageAlignment alignment = ImageRight);
 
-    /**
+    /*!
      * Set the size of the icon to display in the header.
      * @param iconSize the size of the icon, or an invalid QSize to reset to the default
      *
@@ -199,14 +199,14 @@ public Q_SLOTS:
      */
     void setIconSize(const QSize &iconSize);
 
-    /**
+    /*!
      * Set the autohide timeout of the label
      * Set value to 0 to disable autohide, which is the default.
      * @param msecs timeout value in milliseconds
      */
     void setAutoHideTimeout(int msecs);
 
-    /**
+    /*!
      * Sets the level of this title, similar to HTML's h1 h2 h3...
      * Follows the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
      * @param level the level of the title, 1 is the biggest font and most important, descending

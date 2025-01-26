@@ -11,7 +11,7 @@
 #include <QStyle>
 #include <kwidgetsaddons_export.h>
 
-/**
+/*!
  * Runtime style extensions
  * You can use this to have a supporting QStyle implementation paint your widget
  * This is just convenience and does /not/ require the using widgets style to inherit KStyle (i.e.
@@ -33,7 +33,7 @@
  */
 namespace KStyleExtensions
 {
-/**
+/*!
  * Resolve a dynamic QStyle::ControlElement for eg. QStyle::drawControl()
  *
  * @returns a unique QStyle::ControlElement or 0 in case the style doesn't support this element
@@ -42,7 +42,7 @@ namespace KStyleExtensions
  * @since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString &element, const QWidget *widget);
-/**
+/*!
  * Resolve a dynamic QStyle::StyleHint to query QStyle::styleHint()
  *
  * @returns a unique QStyle::StyleHint or 0 in case the style doesn't support this element
@@ -51,7 +51,7 @@ KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString 
  * @since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::StyleHint customStyleHint(const QString &element, const QWidget *widget);
-/**
+/*!
  * Resolve a dynamic QStyle::SubElement for eg. QStyle::subElementRect()
  *
  * @returns a unique QStyle::SubElement or 0 in case the style doesn't support this element

@@ -15,7 +15,7 @@
 
 class QWidget;
 
-/**
+/*!
  * @class KToolBarSpacerAction ktoolbarspaceraction.h KToolBarSpacerAction
  *
  * An extension to QAction which allows for adding a spacer item into a
@@ -31,7 +31,7 @@ class KWIDGETSADDONS_EXPORT KToolBarSpacerAction : public QWidgetAction
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a new toolbar spacer action.
      *
      * @param parent The action's parent object.
@@ -40,7 +40,7 @@ public:
 
     ~KToolBarSpacerAction() override;
 
-    /**
+    /*!
      * Reimplemented from QWidgetAction.
      */
     QWidget *createWidget(QWidget *parent) override;

@@ -12,29 +12,29 @@
 #include <QTextDocumentFragment>
 #include <QWidgetAction>
 
-/**
+/*!
  * The private class of KContextualHelpButton used for the PIMPL idiom.
  * \internal
  */
 class KContextualHelpButtonPrivate
 {
 public:
-    /** @see KContextualHelpButton::KContextualHelpButton() */
+    /*! @see KContextualHelpButton::KContextualHelpButton() */
     explicit KContextualHelpButtonPrivate(KContextualHelpButton *q, const QString &contextualHelpText, const QWidget *heightHintWidget);
 
-    /** @see KContextualHelButton::setContextualHelpText() */
+    /*! @see KContextualHelButton::setContextualHelpText() */
     void setContextualHelpText(const QString &contextualHelpText);
 
-    /** @see KContextualHelButton::contextualHelpText() */
+    /*! @see KContextualHelButton::contextualHelpText() */
     QString contextualHelpText() const;
 
-    /** @see KContextualHelpButton::setHeightHintWidget() */
+    /*! @see KContextualHelpButton::setHeightHintWidget() */
     void setHeightHintWidget(const QWidget *heightHintWidget);
 
-    /** @see KContextualHelpButton::setHeightHintWidget() */
+    /*! @see KContextualHelpButton::setHeightHintWidget() */
     const QWidget *heightHintWidget() const;
 
-    /**
+    /*!
      * A helper method called from KContextualHelpButton::sizeHint().
      *
      * @returns the preferredSize based on m_heightHintWidget and fallbackSize.
@@ -48,10 +48,10 @@ public:
 private:
     KContextualHelpButton *const q_ptr;
 
-    /** The popup showing the contextualHelpText. */
+    /*! The popup showing the contextualHelpText. */
     QLabel *m_popupLabel = nullptr;
 
-    /** @see KContextualHelpButton::setHeightHintWidget() */
+    /*! @see KContextualHelpButton::setHeightHintWidget() */
     QPointer<const QWidget> m_heightHintWidget;
 };
 

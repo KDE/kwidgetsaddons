@@ -15,7 +15,7 @@
 
 class QColor;
 
-/**
+/*!
  * @class KLed kled.h KLed
  *
  * @short An LED widget.
@@ -42,21 +42,21 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
     Q_PROPERTY(int darkFactor READ darkFactor WRITE setDarkFactor)
 
 public:
-    /**
+    /*!
      * Status of the light is on/off.
      * @short LED on/off.
      */
     enum State { Off, On };
     Q_ENUM(State)
 
-    /**
+    /*!
      * Shades of the lamp.
      * @short LED shape
      */
     enum Shape { Rectangular, Circular };
     Q_ENUM(Shape)
 
-    /**
+    /*!
      * Displays a flat, round or sunken LED.
      *
      * @short LED look.
@@ -68,7 +68,7 @@ public:
     };
     Q_ENUM(Look)
 
-    /**
+    /*!
      * Constructs a green, round LED widget which will initially
      * be turned on.
      *
@@ -76,7 +76,7 @@ public:
      */
     explicit KLed(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Constructs a round LED widget with the supplied color which will
      * initially be turned on.
      *
@@ -86,7 +86,7 @@ public:
      */
     explicit KLed(const QColor &color, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Constructor with the color, state and look.
      *
      * Differs from above only in the parameters, which configure all settings.
@@ -100,13 +100,13 @@ public:
      */
     KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the LED widget.
      * @short Destructor
      */
     ~KLed() override;
 
-    /**
+    /*!
      * Returns the current color of the widget.
      *
      * @returns LED color
@@ -114,7 +114,7 @@ public:
      */
     QColor color() const;
 
-    /**
+    /*!
      * Returns the current state of the widget (on/off).
      * @returns LED state
      *
@@ -122,7 +122,7 @@ public:
      */
     State state() const;
 
-    /**
+    /*!
      * Returns the current look of the widget.
      * @returns LED look
      *
@@ -130,7 +130,7 @@ public:
      */
     Look look() const;
 
-    /**
+    /*!
      * Returns the current shape of the widget.
      * @returns LED shape
      *
@@ -138,7 +138,7 @@ public:
      */
     Shape shape() const;
 
-    /**
+    /*!
      * Returns the factor to darken the LED.
      * @returns dark factor
      *
@@ -146,7 +146,7 @@ public:
      */
     int darkFactor() const;
 
-    /**
+    /*!
      * Set the color of the widget.
      *
      * The LED is shown with @p color when in the KLed::On state
@@ -161,7 +161,7 @@ public:
      */
     void setColor(const QColor &color);
 
-    /**
+    /*!
      * Sets the state of the widget to On or Off.
      *
      * @param state The LED state: on or off.
@@ -170,7 +170,7 @@ public:
      */
     void setState(State state);
 
-    /**
+    /*!
      * Sets the look of the widget.
      *
      * The look may be Flat, Raised or Sunken.
@@ -184,7 +184,7 @@ public:
      */
     void setLook(Look look);
 
-    /**
+    /*!
      * Set the shape of the LED.
      *
      * @param shape The LED shape.
@@ -192,7 +192,7 @@ public:
      */
     void setShape(Shape shape);
 
-    /**
+    /*!
      * Sets the factor to darken the LED in KLed::Off state.
      *
      * The @p darkFactor should be greater than 100, otherwise the LED
@@ -211,19 +211,19 @@ public:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Toggles the state of the led from Off to On or vice versa.
      */
     void toggle();
 
-    /**
+    /*!
      * Sets the state of the widget to On.
      *
      * @see off() toggle()  setState()
      */
     void on();
 
-    /**
+    /*!
      * Sets the state of the widget to Off.
      *
      * @see on() toggle()  setState()
@@ -235,7 +235,7 @@ protected:
     void resizeEvent(QResizeEvent *) override;
 
 private:
-    /**
+    /*!
      * @internal
      * invalidates caches after property changes and calls update()
      */

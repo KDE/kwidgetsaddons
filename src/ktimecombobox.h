@@ -13,7 +13,7 @@
 #include <QLocale>
 #include <memory>
 
-/**
+/*!
  * @class KTimeComboBox ktimecombobox.h KTimeComboBox
  *
  * @short A combobox for times.
@@ -29,42 +29,42 @@ class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
-    /**
+    /*!
      * Options provided by the widget
      * @see options
      * @see setOptions
      * @see Options
      */
     enum Option {
-        EditTime = 0x0001, /**< Allow the user to manually edit the time in the combo line edit */
-        SelectTime = 0x0002, /**< Allow the user to select the time from a drop-down menu */
-        ForceTime = 0x0004, /**< Any set or entered time will be forced to one of the drop-down times */
-        WarnOnInvalid = 0x0008, /**< Show a warning box on focus out if the user enters an invalid time */
+        EditTime = 0x0001, /*!< Allow the user to manually edit the time in the combo line edit */
+        SelectTime = 0x0002, /*!< Allow the user to select the time from a drop-down menu */
+        ForceTime = 0x0004, /*!< Any set or entered time will be forced to one of the drop-down times */
+        WarnOnInvalid = 0x0008, /*!< Show a warning box on focus out if the user enters an invalid time */
     };
-    /**
+    /*!
      * Stores a combination of #Option values.
      */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
-    /**
+    /*!
      * Create a new KTimeComboBox widget
      */
     explicit KTimeComboBox(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroy the widget
      */
     ~KTimeComboBox() override;
 
-    /**
+    /*!
      * Return the currently selected time
      *
      * @return the currently selected time
      */
     QTime time() const;
 
-    /**
+    /*!
      * Return if the current user input is valid
      *
      * If the user input is null then it is not valid
@@ -75,7 +75,7 @@ public:
      */
     bool isValid() const;
 
-    /**
+    /*!
      * Return if the current user input is null
      *
      * @return if the current user input is null
@@ -84,14 +84,14 @@ public:
      */
     bool isNull() const;
 
-    /**
+    /*!
      * Return the currently set widget options
      *
      * @return the currently set widget options
      */
     Options options() const;
 
-    /**
+    /*!
      * Return the currently set time format
      *
      * By default this is the Short Format
@@ -100,31 +100,31 @@ public:
      */
     QLocale::FormatType displayFormat() const;
 
-    /**
+    /*!
      * Return the current minimum time
      *
      * @return the current minimum time
      */
     QTime minimumTime() const;
 
-    /**
+    /*!
      * Reset the minimum time to the default of 00:00:00.000
      */
     void resetMinimumTime();
 
-    /**
+    /*!
      * Return the current maximum time
      *
      * @return the current maximum time
      */
     QTime maximumTime() const;
 
-    /**
+    /*!
      * Reset the maximum time to the default of 23:59:59.999
      */
     void resetMaximumTime();
 
-    /**
+    /*!
      * Set the minimum and maximum time range.
      *
      * If either time is invalid, or min > max then the range will not be set.
@@ -136,12 +136,12 @@ public:
      */
     void setTimeRange(const QTime &minTime, const QTime &maxTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the minimum and maximum time to the default values.
      */
     void resetTimeRange();
 
-    /**
+    /*!
      * Return the interval between select time list entries if set by setTimeListInterval().
      *
      * Returns -1 if not set.
@@ -152,7 +152,7 @@ public:
      */
     int timeListInterval() const;
 
-    /**
+    /*!
      * Return the list of times able to be selected in the drop-down.
      *
      * @return the select time list
@@ -165,7 +165,7 @@ public:
 
 Q_SIGNALS:
 
-    /**
+    /*!
      * Signal if the time has been manually entered or selected by the user.
      *
      * The returned time may be invalid.
@@ -174,7 +174,7 @@ Q_SIGNALS:
      */
     void timeEntered(const QTime &time);
 
-    /**
+    /*!
      * Signal if the time has been changed either manually by the user
      * or programmatically.
      *
@@ -184,7 +184,7 @@ Q_SIGNALS:
      */
     void timeChanged(const QTime &time);
 
-    /**
+    /*!
      * Signal if the time is being manually edited by the user.
      *
      * The returned time may be invalid.
@@ -195,7 +195,7 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Set the currently selected time
      *
      * You can set an invalid time or a time outside the valid range, validity
@@ -205,14 +205,14 @@ public Q_SLOTS:
      */
     void setTime(const QTime &time);
 
-    /**
+    /*!
      * Set the new widget options
      *
      * @param options the new widget options
      */
     void setOptions(Options options);
 
-    /**
+    /*!
      * Sets the time format to display.
      *
      * By default is the Short Format.
@@ -221,7 +221,7 @@ public Q_SLOTS:
      */
     void setDisplayFormat(QLocale::FormatType format);
 
-    /**
+    /*!
      * Set the minimum allowed time.
      *
      * If the time is invalid, or greater than current maximum,
@@ -237,7 +237,7 @@ public Q_SLOTS:
      */
     void setMinimumTime(const QTime &minTime, const QString &minWarnMsg = QString());
 
-    /**
+    /*!
      * Set the maximum allowed time.
      *
      * If the time is invalid, or less than current minimum,
@@ -253,7 +253,7 @@ public Q_SLOTS:
      */
     void setMaximumTime(const QTime &maxTime, const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Set the interval between times able to be selected from the drop-down.
      *
      * The combo drop-down will be populated with times every @p minutes
@@ -275,7 +275,7 @@ public Q_SLOTS:
      */
     void setTimeListInterval(int minutes);
 
-    /**
+    /*!
      * Set the list of times able to be selected from the drop-down.
      *
      * Setting the time list will override any time interval previously set via
@@ -306,7 +306,7 @@ protected:
     void focusOutEvent(QFocusEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
 
-    /**
+    /*!
      * Assign the time for the widget.
      *
      * Virtual to allow sub-classes to apply extra validation rules.

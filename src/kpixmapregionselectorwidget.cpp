@@ -29,7 +29,7 @@ public:
 
     KPixmapRegionSelectorWidget *const q;
 
-    /**
+    /*!
      * Recalculates the pixmap that is shown based on the current selected area,
      * the original image, etc.
      */

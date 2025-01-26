@@ -15,7 +15,7 @@
 
 class KPageModelPrivate;
 
-/**
+/*!
  *  @class KPageModel kpagemodel.h KPageModel
  *
  *  @short A base class for a model used by KPageView.
@@ -49,15 +49,15 @@ class KWIDGETSADDONS_EXPORT KPageModel : public QAbstractItemModel
     Q_DECLARE_PRIVATE(KPageModel)
 
 public:
-    /**
+    /*!
      * Additional roles that KPageView uses.
      */
     enum Role {
-        /**
+        /*!
          * A string to be rendered as page header.
          */
         HeaderRole = Qt::UserRole + 1,
-        /**
+        /*!
          * A pointer to the page widget. This is the widget that is shown when the item is
          * selected.
          *
@@ -68,24 +68,24 @@ public:
          * \endcode
          */
         WidgetRole,
-        /**
+        /*!
          * when true, show the page header, if false don't
          * @since 5.52
          */
         HeaderVisibleRole,
-        /**
+        /*!
          * The list of actions associated to the page
          * @since 6.6
          */
         ActionsRole,
     };
 
-    /**
+    /*!
      * Constructs a page model with the given parent.
      */
     explicit KPageModel(QObject *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the page model.
      */
     ~KPageModel() override;

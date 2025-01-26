@@ -13,7 +13,7 @@
 #include <QWidget>
 #include <memory>
 
-/**
+/*!
  * @class KToolTipWidget ktooltipwidget.h KToolTipWidget
  *
  * @brief A tooltip that contains a QWidget.
@@ -45,7 +45,7 @@ public:
     explicit KToolTipWidget(QWidget *parent = nullptr);
     ~KToolTipWidget() override;
 
-    /**
+    /*!
      * Show a tooltip containing @p content. The pos() of the tooltip will be @p pos.
      * You can call this method multiple times over the same KToolTipWidget instance
      * (previously shown widgets will be removed from the tooltip's layout).
@@ -55,7 +55,7 @@ public:
      */
     void showAt(const QPoint &pos, QWidget *content, QWindow *transientParent);
 
-    /**
+    /*!
      * Show a tooltip containing @p content centered below @p rect. If there is not
      * enough space in the screen below @p rect, the tooltip will be shown above
      * @p rect, if possible, or at the bottom of the screen otherwise.
@@ -70,7 +70,7 @@ public:
      */
     void showBelow(const QRect &rect, QWidget *content, QWindow *transientParent);
 
-    /**
+    /*!
      * @return Delay (in ms) after which hideLater() will hide the tooltip. Default is 500.
      * @see hideLater(), setHideDelay()
      */
@@ -78,21 +78,21 @@ public:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Hide the tooltip after a delay of hideDelay() ms (to allow interaction with the tooltip's widget).
      * If hideDelay() is 0, this is equivalent to hide().
      * @see hideDelay()
      */
     void hideLater();
 
-    /**
+    /*!
      * Set after how many ms hideLater() will hide the tooltip.
      * @see hideLater(), hideDelay()
      */
     void setHideDelay(int delay);
 
 Q_SIGNALS:
-    /**
+    /*!
      * The tooltip has been hidden and the tooltip's widget is no longer visible.
      * This signal can be used to delete the tooltip's widget.
      */

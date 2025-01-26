@@ -18,7 +18,7 @@ class QMenuBar;
 class QTabBar;
 class QDockWidget;
 
-/**
+/*!
  * A string class handling accelerators.
  *
  * This class contains a string and knowledge about accelerators.
@@ -90,7 +90,7 @@ Q_DECLARE_TYPEINFO(KAccelString, Q_RELOCATABLE_TYPE);
 
 typedef QList<KAccelString> KAccelStringList;
 
-/**
+/*!
  * This class encapsulates the algorithm finding the 'best'
  * distribution of accelerators in a hierarchy of widgets.
  *
@@ -126,7 +126,7 @@ public:
     static void findAccelerators(KAccelStringList &result, QString &used);
 };
 
-/**
+/*!
  * This class manages a popup menu. It will notice if entries have been
  * added or changed, and will recalculate the accelerators accordingly.
  *

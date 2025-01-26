@@ -120,7 +120,7 @@ public:
     int autoHideTimeout;
     KTitleWidget::MessageType messageType;
 
-    /**
+    /*!
      * @brief Get the icon name from the icon type
      * @param type icon type from the enum
      * @return named icon as QString

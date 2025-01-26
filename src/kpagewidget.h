@@ -13,7 +13,7 @@
 #include "kpageview.h"
 
 class KPageWidgetPrivate;
-/**
+/*!
  * @class KPageWidget kpagewidget.h KPageWidget
  *
  * @short Page widget with many layouts (faces).
@@ -27,19 +27,19 @@ class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
     Q_DECLARE_PRIVATE(KPageWidget)
 
 public:
-    /**
+    /*!
      * Creates a new page widget.
      *
      * @param parent The parent widget.
      */
     explicit KPageWidget(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the page widget.
      */
     ~KPageWidget() override;
 
-    /**
+    /*!
      * Adds a new top level page to the widget.
      *
      * @param widget The widget of the page.
@@ -49,14 +49,14 @@ public:
      */
     KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
-    /**
+    /*!
      * Adds a new top level page to the widget.
      *
      * @param item The KPageWidgetItem which describes the page.
      */
     void addPage(KPageWidgetItem *item);
 
-    /**
+    /*!
      * Inserts a new page in the widget.
      *
      * @param before The new page will be insert before this KPageWidgetItem
@@ -68,7 +68,7 @@ public:
      */
     KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
-    /**
+    /*!
      * Inserts a new page in the widget.
      *
      * @param before The new page will be insert before this KPageWidgetItem
@@ -78,7 +78,7 @@ public:
      */
     void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
-    /**
+    /*!
      * Inserts a new sub page in the widget.
      *
      * @param parent The new page will be insert as child of this KPageWidgetItem.
@@ -89,7 +89,7 @@ public:
      */
     KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
-    /**
+    /*!
      * Inserts a new sub page in the widget.
      *
      * @param parent The new page will be insert as child of this KPageWidgetItem.
@@ -98,25 +98,25 @@ public:
      */
     void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
-    /**
+    /*!
      * Removes the page associated with the given KPageWidgetItem.
      */
     void removePage(KPageWidgetItem *item);
 
-    /**
+    /*!
      * Sets the page which is associated with the given KPageWidgetItem to
      * be the current page and emits the currentPageChanged() signal.
      */
     void setCurrentPage(KPageWidgetItem *item);
 
-    /**
+    /*!
      * Returns the KPageWidgetItem for the current page or a null pointer if there is no
      * current page.
      */
     KPageWidgetItem *currentPage() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever the current page has changed.
      *
      * @param current The new current page or a null pointer if no current page is available.
@@ -124,13 +124,13 @@ Q_SIGNALS:
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
-    /**
+    /*!
      * This signal is emitted whenever a checkable page changes its state. @param checked is true
      * when the @p page is checked, or false if the @p page is unchecked.
      */
     void pageToggled(KPageWidgetItem *page, bool checked);
 
-    /**
+    /*!
      * This signal is emitted when a page is removed.
      * @param page The page which is removed
      * */

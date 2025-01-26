@@ -15,7 +15,7 @@
 
 class QFont;
 
-/**
+/*!
  * @class KCharSelect kcharselect.h KCharSelect
  *
  * @short Character selection widget
@@ -68,50 +68,50 @@ class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
     Q_PROPERTY(bool allPlanesEnabled READ allPlanesEnabled WRITE setAllPlanesEnabled DESIGNABLE true)
 
 public:
-    /**
+    /*!
      * Flags to set the shown widgets
      * @see Controls
      */
     enum Control {
-        /**
+        /*!
          * Shows the search widgets
          */
         SearchLine = 0x01,
-        /**
+        /*!
          * Shows the font combo box
          */
         FontCombo = 0x02,
-        /**
+        /*!
          * Shows the font size spin box
          */
         FontSize = 0x04,
-        /**
+        /*!
          * Shows the category/block selection combo boxes
          */
         BlockCombos = 0x08,
-        /**
+        /*!
          * Shows the actual table
          */
         CharacterTable = 0x10,
-        /**
+        /*!
          * Shows the detail browser
          */
         DetailBrowser = 0x20,
-        /**
+        /*!
          * Shows the Back/Forward buttons
          */
         HistoryButtons = 0x40,
-        /**
+        /*!
          * Shows everything
          */
         AllGuiElements = 65535,
     };
-    /**
+    /*!
      * Stores a combination of #Control values.
      */
     Q_DECLARE_FLAGS(Controls, Control)
 
-    /**
+    /*!
      * Constructor. @p controls can be used to show a custom set of widgets.
      *
      * @param parent     the parent widget for this KCharSelect (see QWidget documentation)
@@ -121,7 +121,7 @@ public:
      */
     explicit KCharSelect(QWidget *parent, const Controls controls = AllGuiElements);
 
-    /**
+    /*!
      * Constructor. @p controls can be used to show a custom set of widgets.
      *
      * The widget uses the following actions:
@@ -143,12 +143,12 @@ public:
 
     ~KCharSelect() override;
 
-    /**
+    /*!
      * Reimplemented.
      */
     QSize sizeHint() const override;
 
-    /**
+    /*!
      * Sets the allowed Unicode code planes. If @p all is @c false, then
      * only characters from the Basic Multilingual Plane (BMP) can be
      * selected, otherwise characters from all planes are allowed.
@@ -161,14 +161,14 @@ public:
      */
     void setAllPlanesEnabled(bool all);
 
-    /**
+    /*!
      * @returns @c true, if characters from all Unicode code planes
      * can be selected.
      * @since 5.25
      */
     bool allPlanesEnabled() const;
 
-    /**
+    /*!
      * Returns the currently selected character. If characters outside the
      * Basic Multilingual Plane (BMP) can be selected, use currentCodePoint
      * instead.
@@ -176,7 +176,7 @@ public:
      */
     QChar currentChar() const;
 
-    /**
+    /*!
      * Returns the Unicode code point of the currently selected character.
      * @warning If you enabled support for all Unicode planes, you must use
      * QChar::requiresSurrogates() to check if the code point requires
@@ -186,12 +186,12 @@ public:
      */
     uint currentCodePoint() const;
 
-    /**
+    /*!
      * Returns the currently displayed font.
      */
     QFont currentFont() const;
 
-    /**
+    /*!
      * Returns a list of currently displayed characters. If characters outside the
      * Basic Multilingual Plane (BMP) can be selected, use displayedCodePoints
      * instead.
@@ -200,21 +200,21 @@ public:
      */
     QList<QChar> displayedChars() const;
 
-    /**
+    /*!
      * Returns a list of Unicode code points of the currently displayed characters.
      * @since 5.25
      */
     QList<uint> displayedCodePoints() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Highlights the character @p c. If the character is not displayed, the block is changed.
      *
      * @param c the character to highlight
      */
     void setCurrentChar(const QChar &c);
 
-    /**
+    /*!
      * Highlights the character with the specified @p codePoint. If the character is
      * outside the Basic Multilingual Plane (BMP), then you must enable support
      * for all planes for this to work.
@@ -226,7 +226,7 @@ public Q_SLOTS:
      */
     void setCurrentCodePoint(uint codePoint);
 
-    /**
+    /*!
      * Sets the font which is displayed to @p font
      *
      * @param font the display font for the widget
@@ -234,36 +234,36 @@ public Q_SLOTS:
     void setCurrentFont(const QFont &font);
 
 Q_SIGNALS:
-    /**
+    /*!
      * A new font is selected or the font size changed.
      *
      * @param font the new font
      */
     void currentFontChanged(const QFont &font);
-    /**
+    /*!
      * The current character is changed.
      *
      * @param c the new character
      */
     void currentCharChanged(const QChar &c);
-    /**
+    /*!
      * The current character is changed.
      *
      * @param codePoint the Unicode code point of the new character
      * @since 5.25
      */
     void currentCodePointChanged(uint codePoint);
-    /**
+    /*!
      * The currently displayed characters are changed (search results or block).
      */
     void displayedCharsChanged();
-    /**
+    /*!
      * A character is selected to be inserted somewhere.
      *
      * @param c the selected character
      */
     void charSelected(const QChar &c);
-    /**
+    /*!
      * A character is selected to be inserted somewhere.
      *
      * @param codePoint the Unicode code point of the selected character

@@ -14,7 +14,7 @@
 
 class KPixmapSequence;
 
-/**
+/*!
  * \class KPixmapSequenceWidget kpixmapsequencewidget.h KPixmapSequenceWidget
  *
  * \brief A simple widget showing a fixed size pixmap sequence.
@@ -34,43 +34,43 @@ class KWIDGETSADDONS_EXPORT KPixmapSequenceWidget : public QWidget
     Q_PROPERTY(int interval READ interval WRITE setInterval)
 
 public:
-    /**
+    /*!
      * Constructor
      */
     explicit KPixmapSequenceWidget(QWidget *parent = nullptr);
     KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructor
      */
     ~KPixmapSequenceWidget() override;
 
-    /**
+    /*!
      * The sequence used to draw the overlay.
      *
      * \sa setSequence
      */
     KPixmapSequence sequence() const;
 
-    /**
+    /*!
      * The interval between frames.
      *
      * \sa setInterval, KPixmapSequenceOverlayPainter::interval
      */
     int interval() const;
 
-    /**
+    /*!
      * \reimpl
      */
     QSize sizeHint() const override;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Set the sequence to be used. By default the KDE busy sequence is used.
      */
     void setSequence(const KPixmapSequence &seq);
 
-    /**
+    /*!
      * Set the interval between frames. The default is 200.
      * \sa interval, KPixmapSequenceOverlayPainter::setInterval
      */

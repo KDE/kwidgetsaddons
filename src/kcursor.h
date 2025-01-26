@@ -15,7 +15,7 @@ class QEvent;
 class QObject;
 class QWidget;
 
-/**
+/*!
  * @class KCursor kcursor.h KCursor
  *
  * The KCursor class provides a set of static
@@ -24,7 +24,7 @@ class QWidget;
 class KWIDGETSADDONS_EXPORT KCursor
 {
 public:
-    /**
+    /*!
      * Sets auto-hiding the cursor for widget @p w. Enabling it will result in
      * the cursor being hidden when
      * @li a key-event happens
@@ -48,7 +48,7 @@ public:
      */
     static void setAutoHideCursor(QWidget *w, bool enable, bool customEventFilter = false);
 
-    /**
+    /*!
      * Sets the delay time in milliseconds for auto-hiding. When no keyboard
      * events arrive for that time-frame, the cursor will be hidden.
      *
@@ -56,14 +56,14 @@ public:
      */
     static void setHideCursorDelay(int ms);
 
-    /**
+    /*!
      * @returns the current auto-hide delay time.
      *
      * Default is 5000, i.e. 5 seconds.
      */
     static int hideCursorDelay();
 
-    /**
+    /*!
      * KCursor has to install an eventFilter over the widget you want to
      * auto-hide. If you have an own eventFilter() on that widget and stop
      * some events by returning true, you might break auto-hiding, because

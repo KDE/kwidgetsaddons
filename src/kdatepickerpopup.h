@@ -16,7 +16,7 @@
 class KDatePicker;
 class KDatePickerPopupPrivate;
 
-/**
+/*!
  * @short This menu helps the user to select a date quickly.
  *
  * This menu helps the user to select a date quickly. It offers various
@@ -39,7 +39,7 @@ class KWIDGETSADDONS_EXPORT KDatePickerPopup : public QMenu
     Q_PROPERTY(Modes modes READ modes WRITE setModes)
 
 public:
-    /**
+    /*!
      * Describes the available selection modes.
      */
     enum Mode {
@@ -48,12 +48,12 @@ public:
         Words = 4 ///< A menu-item with list of words that describe a date.
     };
 
-    /**
+    /*!
      * Describes a set of combined modes.
      */
     Q_DECLARE_FLAGS(Modes, Mode)
 
-    /**
+    /*!
      * Creates a new date picker popup.
      *
      * @param modes The selection modes that shall be offered
@@ -62,22 +62,22 @@ public:
      */
     explicit KDatePickerPopup(Modes modes = DatePicker, QDate date = QDate::currentDate(), QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the date picker popup.
      */
     ~KDatePickerPopup() override;
 
-    /**
+    /*!
      * Returns the currently used selection modes.
      */
     Modes modes() const;
 
-    /**
+    /*!
      * Set the selection modes to use.
      */
     void setModes(Modes modes);
 
-    /**
+    /*!
      * Sets the range of dates that can be accepted.
      *
      * Invalid dates can be used to define open-ended ranges.
@@ -90,7 +90,7 @@ public:
      */
     void setDateRange(const QDate &minDate, const QDate &maxDate);
 
-    /**
+    /*!
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
      *
@@ -100,7 +100,7 @@ public:
      */
     QMap<QDate, QString> dateMap() const;
 
-    /**
+    /*!
      * Sets the list of dates in the drop-down menu that the user can select from
      * and the text string to display for each date, e.g. "2010-01-01" and "Yesterday".
      *
@@ -119,19 +119,19 @@ public:
      */
     void setDateMap(const QMap<QDate, QString> &dateMap);
 
-    /**
+    /*!
      * Returns the used KDatePicker object.
      */
     Q_REQUIRED_RESULT KDatePicker *datePicker() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Sets the current @p date.
      */
     void setDate(QDate date);
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever the user has selected a new date.
      *
      * @param date The new date.

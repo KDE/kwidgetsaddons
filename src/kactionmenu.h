@@ -24,7 +24,7 @@
 
 class QMenu;
 
-/**
+/*!
  * @class KActionMenu kactionmenu.h KActionMenu
  *
  * A KActionMenu is an action that provides a sub-menu of other actions.
@@ -46,7 +46,7 @@ public:
     KActionMenu(const QIcon &icon, const QString &text, QObject *parent);
     ~KActionMenu() override;
 
-    /**
+    /*!
      * Adds @p action to this KActionMenu.
      * The KActionMenu does not take ownership of @p action.
      */
@@ -56,7 +56,7 @@ public:
     QAction *insertSeparator(QAction *before);
     void removeAction(QAction *action);
 
-    /**
+    /*!
      * The currently used popup mode when plugged in a KToolBar.
      *
      * @see setPopupMode()
@@ -65,7 +65,7 @@ public:
      */
     QToolButton::ToolButtonPopupMode popupMode() const;
 
-    /**
+    /*!
      * Determines the popup mode when plugged in a KToolBar.
      *
      * Options are:

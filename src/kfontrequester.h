@@ -17,7 +17,7 @@
 class QLabel;
 class QPushButton;
 
-/**
+/*!
  * @class KFontRequester kfontrequester.h KFontRequester
  *
  * This class provides a widget with a lineedit and a button, which invokes
@@ -39,7 +39,7 @@ class KWIDGETSADDONS_EXPORT KFontRequester : public QWidget
     Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontSelected USER true)
 
 public:
-    /**
+    /*!
      * Constructs a font requester widget.
      *
      * @param parent The parent widget.
@@ -50,37 +50,37 @@ public:
 
     ~KFontRequester() override;
 
-    /**
+    /*!
      * @return The currently selected font in the requester.
      */
     QFont font() const;
 
-    /**
+    /*!
      * @return Returns true if only fixed fonts are displayed.
      */
     bool isFixedOnly() const;
 
-    /**
+    /*!
      * @return The current text in the sample text input area.
      */
     QString sampleText() const;
 
-    /**
+    /*!
      * @return The current title of the widget.
      */
     QString title() const;
 
-    /**
+    /*!
      * @return Pointer to the label used for preview.
      */
     QLabel *label() const;
 
-    /**
+    /*!
      * @return Pointer to the pushbutton in the widget.
      */
     QPushButton *button() const;
 
-    /**
+    /*!
      * Sets the currently selected font in the requester.
      *
      * @param font The font to select.
@@ -89,7 +89,7 @@ public:
      */
     virtual void setFont(const QFont &font, bool onlyFixed = false);
 
-    /**
+    /*!
      * Sets the sample text.
      *
      * Normally you should not change this
@@ -102,7 +102,7 @@ public:
      */
     virtual void setSampleText(const QString &text);
 
-    /**
+    /*!
      * Set the title for the widget that will be used in the tooltip and
      * what's this text.
      *
@@ -111,7 +111,7 @@ public:
     virtual void setTitle(const QString &title);
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when a new @p font has been selected in the underlying dialog
      */
     void fontSelected(const QFont &font);

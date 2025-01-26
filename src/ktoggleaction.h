@@ -24,7 +24,7 @@
 class KGuiItem;
 class KToggleActionPrivate;
 
-/**
+/*!
  *  @class KToggleAction ktoggleaction.h KToggleAction
  *
  *  @short Checkbox like action.
@@ -37,14 +37,14 @@ class KWIDGETSADDONS_EXPORT KToggleAction : public QAction
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructs an action with the specified parent.
      *
      * @param parent The action's parent object.
      */
     explicit KToggleAction(QObject *parent);
 
-    /**
+    /*!
      * Constructs an action with text; a shortcut may be specified by
      * the ampersand character (e.g.\ "&Option" creates a shortcut with key \e O )
      *
@@ -58,7 +58,7 @@ public:
      */
     KToggleAction(const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Constructs an action with text and an icon; a shortcut may be specified by
      * the ampersand character (e.g.\ "&Option" creates a shortcut with key \e O )
      *
@@ -71,12 +71,12 @@ public:
      */
     KToggleAction(const QIcon &icon, const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Destructor
      */
     ~KToggleAction() override;
 
-    /**
+    /*!
      * Defines the text (and icon, tooltip, whatsthis) that should be displayed
      * instead of the normal text, when the action is checked.
      * Note that this does <em>not</em> replace the check box in front of the

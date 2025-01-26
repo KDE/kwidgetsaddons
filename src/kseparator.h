@@ -11,7 +11,7 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
+/*!
  * @class KSeparator kseparator.h KSeparator
  *
  * Standard horizontal or vertical separator.
@@ -27,14 +27,14 @@ class KWIDGETSADDONS_EXPORT KSeparator : public QFrame
     Q_PROPERTY(Qt::Orientation orientation READ orientation WRITE setOrientation)
 
 public:
-    /**
+    /*!
      * Constructor.
      * @param parent parent object.
      * @param f extra QWidget flags.
      */
     explicit KSeparator(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
-    /**
+    /*!
      * Constructor.
      * @param orientation Set the orientation of the separator.
      * Possible values are Horizontal or Vertical.
@@ -45,13 +45,13 @@ public:
 
     ~KSeparator() override;
 
-    /**
+    /*!
      * Returns the orientation of the separator.
      * @return int Possible values Horizontal or Vertical.
      */
     Qt::Orientation orientation() const;
 
-    /**
+    /*!
      * Set the orientation of the separator to @p orientation
      *
      * @param orientation Possible values are Vertical and Horizontal.

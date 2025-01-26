@@ -21,7 +21,7 @@ class KMessageDialogPrivate;
 class KGuiItem;
 class QWidget;
 
-/**
+/*!
  * @class KMessageDialog kmessagedialog.h <KMessageDialog>
  *
  *
@@ -108,7 +108,7 @@ class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Button types
      * @since 5.100
      */
@@ -129,7 +129,7 @@ public:
         Error = 8, ///< Error dialog
     };
 
-    /**
+    /*!
      * Constructs a KMessageDialog.
      *
      * Buttons based on the dialog type are set by default in some cases,
@@ -145,7 +145,7 @@ public:
      */
     explicit KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * This constructor takes the window Id of the parent window, instead of a QWidget*.
      *
      * @param type the dialog Type, one of KMessageDialog::Type enum
@@ -153,19 +153,19 @@ public:
      * @param parent_id the native parent's window system identifier
      */
     explicit KMessageDialog(KMessageDialog::Type type, const QString &text, WId parent_id);
-    /**
+    /*!
      * Destructor
      */
     ~KMessageDialog() override;
 
-    /**
+    /*!
      * This can be used to set the title of the dialog window. If you pass an
      * empty QString(), a generic title will be used depending on the dialog
      * Type. E.g. for KMessageDialog::WarningTwoActions, "Warning" will be used.
      */
     void setCaption(const QString &caption);
 
-    /**
+    /*!
      * This can be used to set an icon that will be shown next to the main
      * text message. If you pass a null QIcon() a generic icon based on the dialog
      * Type will be used. E.g. for KMessageDialog::QuestionTwoActions, QMessageBox::Question
@@ -173,13 +173,13 @@ public:
      */
     void setIcon(const QIcon &icon);
 
-    /**
+    /*!
      * This will add a QListWidget to the dialog and populate it with @p strlist.
      * If @p strlist is empty, the list widget will not be shown.
      */
     void setListWidgetItems(const QStringList &strlist);
 
-    /**
+    /*!
      * This will add a KCollapsibleGroupBox with a title "Details", as the class name
      * implies it is collapsible (and collapsed by default); you can use it to add a
      * more detailed explanation of what the dialog is trying to tell the user.
@@ -188,7 +188,7 @@ public:
      */
     void setDetails(const QString &details);
 
-    /**
+    /*!
      * This will add a "Do not ask again" checkbox to the dialog with the text
      * from @p dontAskAgainText. You can set the initial status of the checkbox
      * by using setDontAskAgainChecked().
@@ -203,7 +203,7 @@ public:
      */
     void setDontAskAgainText(const QString &dontAskAgainText);
 
-    /**
+    /*!
      * This can be used to set the initial status of the "Do not ask again" checkbox,
      * checked or unchecked, by setting @p isChecked to @c true or @c false
      * respectively.
@@ -213,7 +213,7 @@ public:
      */
     void setDontAskAgainChecked(bool isChecked);
 
-    /**
+    /*!
      * This can be used to query the status of the "Do not ask again" checkbox;
      * returns @c true if the box is checked and @c false otherwise.
      *
@@ -223,12 +223,12 @@ public:
      */
     bool isDontAskAgainChecked() const;
 
-    /**
+    /*!
      * Sets the text labels in the dialog to either allow opening external links or not.
      */
     void setOpenExternalLinks(bool isAllowed);
 
-    /**
+    /*!
      * Whether a KNotification is emitted when the dialog is shown.
      *
      * This typically plays a notification sound. Default is true.
@@ -238,7 +238,7 @@ public:
      */
     bool isNotifyEnabled() const;
 
-    /**
+    /*!
      * Whether to emit a KNotification when the dialog is shown.
      *
      * This typically plays a notification sound.
@@ -248,7 +248,7 @@ public:
      */
     void setNotifyEnabled(bool enable);
 
-    /**
+    /*!
      * Sets the buttons in the buttom box.
      *
      * Using this method, you can customize the behavior based on your use-case, by
@@ -274,7 +274,7 @@ public:
      */
     void setButtons(const KGuiItem &primaryAction = KGuiItem(), const KGuiItem &secondaryAction = KGuiItem(), const KGuiItem &cancelAction = KGuiItem());
 
-    /**
+    /*!
      * Manually play the notification sound
      *
      * When implementing your entirely own message box, not using KMessageDialog,

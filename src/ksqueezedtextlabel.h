@@ -12,7 +12,7 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
+/*!
  * @class KSqueezedTextLabel ksqueezedtextlabel.h KSqueezedTextLabel
  *
  * @short A replacement for QLabel that squeezes its text into the label
@@ -58,13 +58,13 @@ class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel
     Q_PROPERTY(int margin READ margin WRITE setMargin)
 
 public:
-    /**
+    /*!
      * Default constructor.
      * @param parent the label's parent object
      */
     explicit KSqueezedTextLabel(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * @param text the text that will be displayed
      * @param parent the label's parent object
      */
@@ -72,20 +72,20 @@ public:
 
     ~KSqueezedTextLabel() override;
 
-    /**
+    /*!
      * @return the label's minimum size, where the horizontal component
      * will be -1 to indicate the label's ability to shrink its width
      * by squeezing the text
      */
     QSize minimumSizeHint() const override;
 
-    /**
+    /*!
      * @return the label's preferred size, which is wide enough
      * to display the text without squeezing it
      */
     QSize sizeHint() const override;
 
-    /**
+    /*!
      * Sets the indentation of the label.
      *
      * @param indent the amount of indentation in pixels
@@ -100,7 +100,7 @@ public:
      */
     void setIndent(int indent);
 
-    /**
+    /*!
      * Sets the margin of the label.
      *
      * @param margin the margin size in pixels
@@ -115,30 +115,30 @@ public:
      */
     void setMargin(int margin);
 
-    /**
+    /*!
      * Overridden for internal reasons; the API remains unaffected.
      */
     virtual void setAlignment(Qt::Alignment);
 
-    /**
+    /*!
      *  @return the text elide mode
      */
     Qt::TextElideMode textElideMode() const;
 
-    /**
+    /*!
      * Sets the text elide mode.
      * @param mode The text elide mode.
      */
     void setTextElideMode(Qt::TextElideMode mode);
 
-    /**
+    /*!
      * @return the full text set via setText()
      *
      * @since 4.4
      */
     QString fullText() const;
 
-    /**
+    /*!
      * @returns true if the text displayed is currently squeezed,
      * i.e. the original text does not fit inside the space available
      * and elide mode is set to a value other than Qt::ElideNone.
@@ -147,7 +147,7 @@ public:
      */
     bool isSqueezed() const;
 
-    /**
+    /*!
      * @return the rectangle to squeeze the text into
      *
      * Reimplementation of QLabel::contentsRect().
@@ -161,7 +161,7 @@ public:
     QRect contentsRect() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Sets the text.
      * @param text The new text.
      *
@@ -173,7 +173,7 @@ public Q_SLOTS:
      */
     void setText(const QString &text);
 
-    /**
+    /*!
      * Clears the text.
      *
      * Reimplementation of QLabel::clear().
@@ -185,22 +185,22 @@ public Q_SLOTS:
     void clear();
 
 protected:
-    /**
+    /*!
      * \reimp
      */
     void mouseReleaseEvent(QMouseEvent *) override;
 
-    /**
+    /*!
      * Called when widget is resized
      */
     void resizeEvent(QResizeEvent *) override;
 
-    /**
+    /*!
      * \reimp
      */
     void contextMenuEvent(QContextMenuEvent *) override;
 
-    /**
+    /*!
      * does the dirty work
      */
     void squeezeTextToLabel();

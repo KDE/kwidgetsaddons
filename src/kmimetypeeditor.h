@@ -11,13 +11,13 @@
 #include <QWidget>
 #include <kwidgetsaddons_export.h>
 
-/**
+/*!
  * This namespace provides a method for starting the file types editor.
  * @since 5.4
  */
 namespace KMimeTypeEditor
 {
-/**
+/*!
  * Starts the file types editor for a given MIME type.
  *
  * Displays an error message if the mimetype editing tool (keditfiletype)

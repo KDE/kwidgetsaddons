@@ -14,7 +14,7 @@
 #include <memory>
 
 class KColorButtonPrivate;
-/**
+/*!
  * @class KColorButton kcolorbutton.h KColorButton
  *
  * @short A pushbutton to display or allow user selection of a color.
@@ -33,53 +33,53 @@ class KWIDGETSADDONS_EXPORT KColorButton : public QPushButton
     Q_PROPERTY(bool alphaChannelEnabled READ isAlphaChannelEnabled WRITE setAlphaChannelEnabled)
 
 public:
-    /**
+    /*!
      * Creates a color button.
      */
     explicit KColorButton(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a color button with an initial color @p c.
      */
     explicit KColorButton(const QColor &c, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a color button with an initial color @p c and default color @p defaultColor.
      */
     KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent = nullptr);
 
     ~KColorButton() override;
 
-    /**
+    /*!
      * Returns the currently chosen color.
      */
     QColor color() const;
 
-    /**
+    /*!
      * Sets the current color to @p c.
      */
     void setColor(const QColor &c);
 
-    /**
+    /*!
      * When set to true, allow the user to change the alpha component
      * of the color. The default value is false.
      * @since 4.5
      */
     void setAlphaChannelEnabled(bool alpha);
 
-    /**
+    /*!
      * Returns true if the user is allowed to change the alpha component.
      * @since 4.5
      */
     bool isAlphaChannelEnabled() const;
 
-    /**
+    /*!
      * Returns the default color or an invalid color
      * if no default color is set.
      */
     QColor defaultColor() const;
 
-    /**
+    /*!
      * Sets the default color to @p c.
      */
     void setDefaultColor(const QColor &c);
@@ -88,7 +88,7 @@ public:
     QSize minimumSizeHint() const override;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when the color of the widget
      * is changed, either with setColor() or via user selection.
      */

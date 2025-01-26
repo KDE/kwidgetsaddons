@@ -19,7 +19,7 @@
 
 class QCursor;
 
-/**
+/*!
  * @class KUrlLabel kurllabel.h KUrlLabel
  *
  * @short A drop-in replacement for QLabel that displays hyperlinks.
@@ -69,7 +69,7 @@ class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
     Q_PROPERTY(bool useCursor READ useCursor WRITE setUseCursor)
 
 public:
-    /**
+    /*!
      * Default constructor.
      *
      * Use setUrl() and setText() or QListView::setPixmap()
@@ -77,7 +77,7 @@ public:
      */
     explicit KUrlLabel(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Convenience constructor.
      *
      * @param url is the URL emitted when the label is clicked.
@@ -90,42 +90,42 @@ public:
      */
     explicit KUrlLabel(const QString &url, const QString &text = QString(), QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructs the label.
      */
     ~KUrlLabel() override;
 
-    /**
+    /*!
      * Returns the URL.
      */
     QString url() const;
 
-    /**
+    /*!
      * Returns the current tooltip text.
      */
     QString tipText() const;
 
-    /**
+    /*!
      * @return true if a tooltip will be displayed.
      *
      * @see setTipText()
      */
     bool useTips() const;
 
-    /**
+    /*!
      * @return true if the cursor will change while over the URL.
      *
      * @see setUseCursor ()
      */
     bool useCursor() const;
 
-    /**
+    /*!
      * When this is on, the text will switch to the selected
      * color whenever the mouse passes over it.
      */
     bool isGlowEnabled() const;
 
-    /**
+    /*!
      * This feature is very similar to the "glow" feature in that the color of the
      * label switches to the selected color when the cursor passes
      * over it. In addition, underlining is turned on for as
@@ -135,13 +135,13 @@ public:
      */
     bool isFloatEnabled() const;
 
-    /**
+    /*!
      * @return the alternate pixmap (may be a null pointer if none was set)
      */
     const QPixmap *alternatePixmap() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Turns on or off the underlining.
      *
      *  When this is on, the
@@ -149,19 +149,19 @@ public Q_SLOTS:
      */
     void setUnderline(bool on = true);
 
-    /**
+    /*!
      * Sets the URL for this label to @p url.
      *
      * @see url
      */
     void setUrl(const QString &url);
 
-    /**
+    /*!
      * Overridden for internal reasons; the API remains unaffected.
      */
     virtual void setFont(const QFont &font);
 
-    /**
+    /*!
      * Turns on or off the tool tip feature.
      *
      * When this is on, the URL will be displayed as a
@@ -170,7 +170,7 @@ public Q_SLOTS:
      */
     void setUseTips(bool on = true);
 
-    /**
+    /*!
      * Specifies what text to display when tooltips are turned on.
      *
      * If this is not used, the tip will default to the URL.
@@ -179,7 +179,7 @@ public Q_SLOTS:
      */
     void setTipText(const QString &tip);
 
-    /**
+    /*!
      * Sets the highlight color.
      *
      * This is the default foreground
@@ -187,14 +187,14 @@ public Q_SLOTS:
      */
     void setHighlightedColor(const QColor &highcolor);
 
-    /**
+    /*!
      * This is an overloaded version for convenience.
      *
      * @see setHighlightedColor()
      */
     void setHighlightedColor(const QString &highcolor);
 
-    /**
+    /*!
      * Sets the selected color.
      *
      * This is the color the text will change
@@ -203,14 +203,14 @@ public Q_SLOTS:
      */
     void setSelectedColor(const QColor &color);
 
-    /**
+    /*!
      * This is an overloaded version for convenience.
      *
      * @see setSelectedColor()
      */
     void setSelectedColor(const QString &color);
 
-    /**
+    /*!
      * Turns the custom cursor feature on or off.
      *
      * When this is on, the cursor will change to a custom cursor
@@ -222,7 +222,7 @@ public Q_SLOTS:
      */
     void setUseCursor(bool on, QCursor *cursor = nullptr);
 
-    /**
+    /*!
      * Turns on or off the "glow" feature.
      *
      * When this is on, the text will switch to the
@@ -231,7 +231,7 @@ public Q_SLOTS:
      */
     void setGlowEnabled(bool glow = true);
 
-    /**
+    /*!
      * Turns on or off the "float" feature.
      *
      * This feature is very similar to the "glow" feature in
@@ -244,7 +244,7 @@ public Q_SLOTS:
      */
     void setFloatEnabled(bool do_float = true);
 
-    /**
+    /*!
      * Sets the "alt" pixmap.
      *
      * This pixmap will be displayed when the
@@ -257,48 +257,48 @@ public Q_SLOTS:
 
 Q_SIGNALS:
 
-    /**
+    /*!
      * Emitted when the mouse has passed over the label.
      */
     void enteredUrl();
 
-    /**
+    /*!
      * Emitted when the mouse is no longer over the label.
      */
     void leftUrl();
 
-    /**
+    /*!
      * Emitted when the user clicked the left mouse button on this label.
      */
     void leftClickedUrl();
 
-    /**
+    /*!
      * Emitted when the user clicked the right mouse button on this label.
      */
     void rightClickedUrl();
 
-    /**
+    /*!
      * Emitted when the user clicked the left mouse button on this label.
      */
     void middleClickedUrl();
 
 protected:
-    /**
+    /*!
      * Overridden for internal reasons; the API remains unaffected.
      */
     void mouseReleaseEvent(QMouseEvent *) override;
 
-    /**
+    /*!
      * Overridden for internal reasons; the API remains unaffected.
      */
     void enterEvent(QEnterEvent *event) override;
 
-    /**
+    /*!
      * Overridden for internal reasons; the API remains unaffected.
      */
     void leaveEvent(QEvent *) override;
 
-    /**
+    /*!
      * Catch parent palette changes
      */
     bool event(QEvent *) override;

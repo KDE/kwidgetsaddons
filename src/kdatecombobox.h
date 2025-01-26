@@ -13,7 +13,7 @@
 #include <QLocale>
 #include <memory>
 
-/**
+/*!
  * @class KDateComboBox kdatecombobox.h KDateComboBox
  *
  * @short A combobox for dates.
@@ -28,26 +28,26 @@ class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
-    /**
+    /*!
      * Options provided by the widget
      * @see options()
      * @see setOptions()
      * @see Options
      */
     enum Option {
-        EditDate = 0x0001, /**< Allow the user to manually edit the date in the combo line edit */
-        SelectDate = 0x0002, /**< Allow the user to select the date from a drop-down menu */
-        DatePicker = 0x0004, /**< Show a date picker in the drop-down */
-        DateKeywords = 0x0008, /**< Show date keywords in the drop-down */
-        WarnOnInvalid = 0x0010, /**< Show a warning on focus out if the date is invalid */
+        EditDate = 0x0001, /*!< Allow the user to manually edit the date in the combo line edit */
+        SelectDate = 0x0002, /*!< Allow the user to select the date from a drop-down menu */
+        DatePicker = 0x0004, /*!< Show a date picker in the drop-down */
+        DateKeywords = 0x0008, /*!< Show date keywords in the drop-down */
+        WarnOnInvalid = 0x0010, /*!< Show a warning on focus out if the date is invalid */
     };
-    /**
+    /*!
      * Stores a combination of #Option values.
      */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
-    /**
+    /*!
      * Create a new KDateComboBox widget
      *
      * By default the EditDate, SelectDate, DatePicker and DateKeywords options
@@ -56,19 +56,19 @@ public:
      */
     explicit KDateComboBox(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroy the widget
      */
     ~KDateComboBox() override;
 
-    /**
+    /*!
      * Return the currently selected date
      *
      * @return the currently selected date
      */
     QDate date() const;
 
-    /**
+    /*!
      * Return if the current user input is valid
      *
      * If the user input is null then it is not valid
@@ -79,7 +79,7 @@ public:
      */
     bool isValid() const;
 
-    /**
+    /*!
      * Return if the current user input is null
      *
      * @return if the current user input is null
@@ -88,14 +88,14 @@ public:
      */
     bool isNull() const;
 
-    /**
+    /*!
      * Return the currently set widget options
      *
      * @return the currently set widget options
      */
     Options options() const;
 
-    /**
+    /*!
      * Return the currently set date display format
      *
      * By default this is the Short Format
@@ -104,21 +104,21 @@ public:
      */
     QLocale::FormatType displayFormat() const;
 
-    /**
+    /*!
      * Return the current minimum date
      *
      * @return the current minimum date
      */
     QDate minimumDate() const;
 
-    /**
+    /*!
      * Return the current maximum date
      *
      * @return the current maximum date
      */
     QDate maximumDate() const;
 
-    /**
+    /*!
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
      *
@@ -130,7 +130,7 @@ public:
 
 Q_SIGNALS:
 
-    /**
+    /*!
      * Signal if the date has been manually entered (by typing a date and losing focus, or pressing Enter)
      * or selected by the user (using the popup selector, or up, down, page up, page down keys, or the mouse wheel).
      *
@@ -140,7 +140,7 @@ Q_SIGNALS:
      */
     void dateEntered(const QDate &date);
 
-    /**
+    /*!
      * Signal if the date has been changed either manually by the user
      * or programmatically.
      *
@@ -150,7 +150,7 @@ Q_SIGNALS:
      */
     void dateChanged(const QDate &date);
 
-    /**
+    /*!
      * Signal if the date is being manually edited by the user.
      *
      * The emitted date may be invalid, or may not yet be what the user intends as the final date.
@@ -161,7 +161,7 @@ Q_SIGNALS:
 
 public Q_SLOTS:
 
-    /**
+    /*!
      * Set the currently selected date
      *
      * You can set an invalid date or a date outside the valid range, validity
@@ -171,14 +171,14 @@ public Q_SLOTS:
      */
     void setDate(const QDate &date);
 
-    /**
+    /*!
      * Set the new widget options
      *
      * @param options the new widget options
      */
     void setOptions(Options options);
 
-    /**
+    /*!
      * Sets the date format to display.
      *
      * By default is the Short Format.
@@ -187,7 +187,7 @@ public Q_SLOTS:
      */
     void setDisplayFormat(QLocale::FormatType format);
 
-    /**
+    /*!
      * Set the valid date range to be applied by isValid().
      *
      * Both dates must be valid and the minimum date must be less than or equal
@@ -200,13 +200,13 @@ public Q_SLOTS:
      */
     void setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the minimum and maximum date to the default values.
      * @see setDateRange()
      */
     void resetDateRange();
 
-    /**
+    /*!
      * Set the minimum allowed date.
      *
      * If the date is invalid, or greater than current maximum,
@@ -222,14 +222,14 @@ public Q_SLOTS:
      */
     void setMinimumDate(const QDate &minDate, const QString &minWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the minimum date to the default.
      *
      * The default is to have no minimum date.
      */
     void resetMinimumDate();
 
-    /**
+    /*!
      * Set the maximum allowed date.
      *
      * If the date is invalid, or less than current minimum,
@@ -245,14 +245,14 @@ public Q_SLOTS:
      */
     void setMaximumDate(const QDate &maxDate, const QString &maxWarnMsg = QString());
 
-    /**
+    /*!
      * Reset the maximum date to the default
      *
      * The default is to have no maximum date.
      */
     void resetMaximumDate();
 
-    /**
+    /*!
      * Set the list of dates able to be selected from the drop-down and the
      * string form to display for those dates, e.g. "2010-01-01" and "Yesterday".
      *
@@ -281,7 +281,7 @@ protected:
     void focusOutEvent(QFocusEvent *event) override;
     void resizeEvent(QResizeEvent *event) override;
 
-    /**
+    /*!
      * Assign the date for the widget.
      *
      * Virtual to allow sub-classes to apply extra validation rules.

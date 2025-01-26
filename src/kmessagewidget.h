@@ -14,7 +14,7 @@
 #include <QFrame>
 #include <memory>
 
-/**
+/*!
  * @class KMessageWidget kmessagewidget.h KMessageWidget
  *
  * @short A widget to provide feedback or propose opportunistic interactions.
@@ -96,7 +96,7 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
     Q_PROPERTY(Position position READ position WRITE setPosition)
 public:
-    /**
+    /*!
      * Available message types.
      * The background colors are chosen depending on the message type.
      */
@@ -108,7 +108,7 @@ public:
     };
     Q_ENUM(MessageType)
 
-    /**
+    /*!
      * Position of the KMessageWidget
      *
      * This will update the look of the KMessageWidget to be appropriate to the position.
@@ -121,50 +121,50 @@ public:
     };
     Q_ENUM(Position);
 
-    /**
+    /*!
      * Constructs a KMessageWidget with the specified @p parent.
      */
     explicit KMessageWidget(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Constructs a KMessageWidget with the specified @p parent and
      * contents @p text.
      */
     explicit KMessageWidget(const QString &text, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructor.
      */
     ~KMessageWidget() override;
 
-    /**
+    /*!
      * Get the position of this message. By default this is KMessageWidget::Inline.
      * @see setPosition()
      * @since 6.0
      */
     Position position() const;
 
-    /**
+    /*!
      * Get the text of this message widget.
      * @see setText()
      */
     QString text() const;
 
-    /**
+    /*!
      * Get the text format of the message widget's label.
      * @see QLabel::textFormat()
      * @since 6.0
      */
     Qt::TextFormat textFormat() const;
 
-    /**
+    /*!
      * Set the text format of the message widget's label.
      * @see QLabel::setTextFormat()
      * @since 6.0
      */
     void setTextFormat(Qt::TextFormat textFormat);
 
-    /**
+    /*!
      * Check whether word wrap is enabled.
      *
      * If word wrap is enabled, the message widget wraps the displayed text
@@ -175,14 +175,14 @@ public:
      */
     bool wordWrap() const;
 
-    /**
+    /*!
      * Check whether the close button is visible.
      *
      * @see setCloseButtonVisible()
      */
     bool isCloseButtonVisible() const;
 
-    /**
+    /*!
      * Get the type of this message.
      * By default, the type is set to KMessageWidget::Information.
      *
@@ -190,7 +190,7 @@ public:
      */
     MessageType messageType() const;
 
-    /**
+    /*!
      * Add @p action to the message widget.
      * For each action a button is added to the message widget in the
      * order the actions were added.
@@ -200,7 +200,7 @@ public:
      */
     void addAction(QAction *action);
 
-    /**
+    /*!
      * Remove @p action from the message widget.
      *
      * @param action the action to remove
@@ -208,36 +208,36 @@ public:
      */
     void removeAction(QAction *action);
 
-    /**
+    /*!
      * Clears all actions from the message widget.
      * @see KMessageWidget::MessageType, addAction() and removeAction()
      * @since 5.100
      */
     void clearActions();
 
-    /**
+    /*!
      * Returns the preferred size of the message widget.
      */
     QSize sizeHint() const override;
 
-    /**
+    /*!
      * Returns the minimum size of the message widget.
      */
     QSize minimumSizeHint() const override;
 
-    /**
+    /*!
      * Returns the required height for @p width.
      * @param width the width in pixels
      */
     int heightForWidth(int width) const override;
 
-    /**
+    /*!
      * The icon shown on the left of the text. By default, no icon is shown.
      * @since 4.11
      */
     QIcon icon() const;
 
-    /**
+    /*!
      * Check whether the hide animation started by calling animatedHide()
      * is still running. If animations are disabled, this function always
      * returns @e false.
@@ -247,7 +247,7 @@ public:
      */
     bool isHideAnimationRunning() const;
 
-    /**
+    /*!
      * Check whether the show animation started by calling animatedShow()
      * is still running. If animations are disabled, this function always
      * returns @e false.
@@ -258,7 +258,7 @@ public:
     bool isShowAnimationRunning() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Set the text of the message widget to @p text.
      * If the message widget is already visible, the text changes on the fly.
      *
@@ -267,14 +267,14 @@ public Q_SLOTS:
      */
     void setText(const QString &text);
 
-    /**
+    /*!
      * Set the position of this message
      * @see position()
      * @since 6.0
      */
     void setPosition(Position position);
 
-    /**
+    /*!
      * Set word wrap to @p wordWrap. If word wrap is enabled, the text()
      * of the message widget is wrapped to fit the available width.
      * If word wrap is disabled, the message widget's minimum size is
@@ -287,7 +287,7 @@ public Q_SLOTS:
      */
     void setWordWrap(bool wordWrap);
 
-    /**
+    /*!
      * Set the visibility of the close button. If @p visible is @e true,
      * a close button is shown that calls animatedHide() if clicked.
      *
@@ -297,7 +297,7 @@ public Q_SLOTS:
      */
     void setCloseButtonVisible(bool visible);
 
-    /**
+    /*!
      * Set the message type to @p type.
      * By default, the message type is set to KMessageWidget::Information.
      * Appropriate colors are chosen to mimic the appearance of Kirigami's
@@ -307,24 +307,24 @@ public Q_SLOTS:
      */
     void setMessageType(KMessageWidget::MessageType type);
 
-    /**
+    /*!
      * Show the widget using an animation.
      */
     void animatedShow();
 
-    /**
+    /*!
      * Hide the widget using an animation.
      */
     void animatedHide();
 
-    /**
+    /*!
      * Define an icon to be shown on the left of the text
      * @since 4.11
      */
     void setIcon(const QIcon &icon);
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted when the user clicks a link in the text label.
      * The URL referred to by the href anchor is passed in contents.
      * @param contents text of the href anchor
@@ -333,7 +333,7 @@ Q_SIGNALS:
      */
     void linkActivated(const QString &contents);
 
-    /**
+    /*!
      * This signal is emitted when the user hovers over a link in the text label.
      * The URL referred to by the href anchor is passed in contents.
      * @param contents text of the href anchor
@@ -342,7 +342,7 @@ Q_SIGNALS:
      */
     void linkHovered(const QString &contents);
 
-    /**
+    /*!
      * This signal is emitted when the hide animation is finished, started by
      * calling animatedHide(). If animations are disabled, this signal is
      * emitted immediately after the message widget got hidden.
@@ -356,7 +356,7 @@ Q_SIGNALS:
      */
     void hideAnimationFinished();
 
-    /**
+    /*!
      * This signal is emitted when the show animation is finished, started by
      * calling animatedShow(). If animations are disabled, this signal is
      * emitted immediately after the message widget got shown.

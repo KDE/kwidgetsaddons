@@ -14,7 +14,7 @@
 // Standalone (pure Qt) functionality needed internally in more than
 // one source file on localization.
 
-/**
+/*!
  * @internal
  *
  * Removes accelerator marker from a UI text label.
@@ -32,7 +32,7 @@
  */
 QString removeAcceleratorMarker(const QString &label);
 
-/**
+/*!
  * @internal
  *
  * Returns the date format used for the locale with the year as a four digit

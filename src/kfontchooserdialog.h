@@ -19,7 +19,7 @@ class QFont;
 
 class KFontChooserDialogPrivate;
 
-/**
+/*!
  * @class KFontChooserDialog kfontchooserdialog.h KFontChooserDialog
  *
  * @short A font selection dialog.
@@ -80,7 +80,7 @@ class KWIDGETSADDONS_EXPORT KFontChooserDialog : public QDialog
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructs a font selection dialog.
      *
      * @param flags flags to define how the font chooser is displayed
@@ -90,7 +90,7 @@ public:
 
     ~KFontChooserDialog() override;
 
-    /**
+    /*!
      * Sets the currently selected font in the dialog.
      *
      * @param font the font to select
@@ -99,12 +99,12 @@ public:
      */
     void setFont(const QFont &font, bool onlyFixed = false);
 
-    /**
+    /*!
      * @return the currently selected font in the dialog
      */
     QFont font() const;
 
-    /**
+    /*!
      * Creates a modal font dialog, lets the user choose a font, and returns when
      * the dialog is closed.
      *
@@ -115,7 +115,7 @@ public:
      */
     static int getFont(QFont &theFont, const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a modal font difference dialog, lets the user choose a selection
      * of changes that should be made to a set of fonts, and returns when the
      * dialog is closed. Useful for choosing slight adjustments to the font set
@@ -147,7 +147,7 @@ public:
                            QWidget *parent = nullptr);
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted whenever the currently selected font changes.
      * Connect to this to monitor the font as it is selected if you are
      * not running modal.

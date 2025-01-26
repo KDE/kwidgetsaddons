@@ -38,17 +38,17 @@ public:
     QString addIcon, removeIcon, upIcon, downIcon;
     KActionSelector::InsertionPolicy availableInsertionPolicy, selectedInsertionPolicy;
 
-    /**
+    /*!
       Move item @p item to the other listbox
      */
     void moveItem(QListWidgetItem *item);
 
-    /**
+    /*!
       loads the icons for the move buttons.
      */
     void loadIcons();
 
-    /**
+    /*!
       @return the index to insert an item into listbox @p lb,
      given InsertionPolicy @p policy.
 
@@ -57,7 +57,7 @@ public:
      */
     int insertionIndex(QListWidget *lb, KActionSelector::InsertionPolicy policy);
 
-    /**
+    /*!
      @return the index of the first selected item in listbox @p lb.
      If no item is selected, it will return -1.
      */

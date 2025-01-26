@@ -12,7 +12,7 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
+/*!
  * @class KCollapsibleGroupBox kcollapsiblegroupbox.h KCollapsibleGroupBox
  *
  * A groupbox featuring a clickable header and arrow indicator that can be
@@ -32,25 +32,25 @@ public:
     explicit KCollapsibleGroupBox(QWidget *parent = nullptr);
     ~KCollapsibleGroupBox() override;
 
-    /**
+    /*!
      * Set the title that will be permanently shown at the top of the collapsing box
      * Mnemonics are supported
      */
     void setTitle(const QString &title);
 
-    /**
+    /*!
      * The title
      */
     QString title() const;
 
-    /**
+    /*!
      * Set whether contents are shown
      *
      * The default is false until the user clicks
      */
     void setExpanded(bool expanded);
 
-    /**
+    /*!
      * Whether contents are shown
      * During animations, this will reflect the target state at the end of the animation
      */
@@ -60,28 +60,28 @@ public:
     QSize minimumSizeHint() const override;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Expands if collapsed and vice versa
      */
     void toggle();
 
-    /**
+    /*!
      * Equivalent to setExpanded(true)
      */
     void expand();
 
-    /**
+    /*!
      * Equivalent to setExpanded(false)
      */
     void collapse();
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when the title is changed
      */
     void titleChanged();
 
-    /**
+    /*!
      * Emitted when the widget expands or collapsed
      */
     void expandedChanged();

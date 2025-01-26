@@ -11,7 +11,7 @@
 
 #include <QObject>
 
-/**
+/*!
  * @class KLineEditUrlDropEventFilter klineediturldropeventfilter.h KLineEditUrlDropEventFilter
  *
  * This class provides an event filter that can be installed on a QLineEdit

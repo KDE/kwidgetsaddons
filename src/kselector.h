@@ -18,7 +18,7 @@
 #include <QWidget>
 #include <memory>
 
-/**
+/*!
  * @class KSelector kselector.h KSelector
  *
  * KSelector is the base class for other widgets which
@@ -38,11 +38,11 @@ class KWIDGETSADDONS_EXPORT KSelector : public QAbstractSlider
     Q_PROPERTY(bool indent READ indent WRITE setIndent)
     Q_PROPERTY(Qt::ArrowType arrowDirection READ arrowDirection WRITE setArrowDirection)
 public:
-    /**
+    /*!
      * Constructs a horizontal one-dimensional selection widget.
      */
     explicit KSelector(QWidget *parent = nullptr);
-    /**
+    /*!
      * Constructs a one-dimensional selection widget with
      * a given orientation.
      */
@@ -52,41 +52,41 @@ public:
      */
     ~KSelector() override;
 
-    /**
+    /*!
      * @return the rectangle on which subclasses should draw.
      */
     QRect contentsRect() const;
 
-    /**
+    /*!
      * Sets the indent option of the widget to i.
      * This determines whether a shaded frame is drawn.
      */
     void setIndent(bool i);
 
-    /**
+    /*!
      * @return whether the indent option is set.
      */
     bool indent() const;
 
-    /**
+    /*!
      * Sets the arrow direction.
      */
     void setArrowDirection(Qt::ArrowType direction);
 
-    /**
+    /*!
      * @return the current arrow direction
      */
     Qt::ArrowType arrowDirection() const;
 
 protected:
-    /**
+    /*!
      * Override this function to draw the contents of the control.
      * The default implementation does nothing.
      *
      * Draw only within contentsRect().
      */
     virtual void drawContents(QPainter *);
-    /**
+    /*!
      * Override this function to draw the cursor which
      * indicates the current value.
      */
@@ -109,7 +109,7 @@ private:
     Q_DISABLE_COPY(KSelector)
 };
 
-/**
+/*!
  * @class KGradientSelector kselector.h KGradientSelector
  *
  * The KGradientSelector widget allows the user to choose
@@ -128,47 +128,47 @@ class KWIDGETSADDONS_EXPORT KGradientSelector : public KSelector
     Q_PROPERTY(QString secondText READ secondText WRITE setSecondText)
 
 public:
-    /**
+    /*!
      * Constructs a horizontal color selector which
      * contains a gradient between white and black.
      */
     explicit KGradientSelector(QWidget *parent = nullptr);
-    /**
+    /*!
      * Constructs a colors selector with orientation o which
      * contains a gradient between white and black.
      */
     explicit KGradientSelector(Qt::Orientation o, QWidget *parent = nullptr);
-    /**
+    /*!
      * Destructs the widget.
      */
     ~KGradientSelector() override;
 
-    /**
+    /*!
      * Sets the colors that make up the gradient. Any previously set colors
      * are removed.
      * @since 4.5
      */
     void setStops(const QGradientStops &stops);
 
-    /**
+    /*!
      * Get the colors that make up the gradient.
      * @since 4.5
      */
     QGradientStops stops() const;
 
-    /**
+    /*!
      * Sets the two colors which span the gradient.
      */
     void setColors(const QColor &col1, const QColor &col2);
     void setText(const QString &t1, const QString &t2);
 
-    /**
+    /*!
      * Set each color on its own.
      */
     void setFirstColor(const QColor &col);
     void setSecondColor(const QColor &col);
 
-    /**
+    /*!
      * Set each description on its own
      */
     void setFirstText(const QString &t);

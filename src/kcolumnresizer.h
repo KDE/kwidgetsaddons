@@ -19,7 +19,7 @@ class QGridLayout;
 class QLayout;
 class QWidget;
 
-/**
+/*!
  * @class KColumnResizer kcolumnresizer.h KColumnResizer
  *
  * @short Maintains consistent column sizes across layouts
@@ -66,14 +66,14 @@ class KWIDGETSADDONS_EXPORT KColumnResizer : public QObject
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Constructs a KColumnResizer.
      */
     explicit KColumnResizer(QObject *parent = nullptr);
 
     ~KColumnResizer() override;
 
-    /**
+    /*!
      * Add all widgets from @p layout which are in column @p column to the list
      * of widgets to manage.
      *
@@ -84,7 +84,7 @@ public:
      */
     void addWidgetsFromLayout(QLayout *layout, int column = 0);
 
-    /**
+    /*!
      * Add a single widget to the list of widgets whose width is monitored.
      *
      * It is more common to use addWidgetsFromLayout(), but adding single
@@ -95,7 +95,7 @@ public:
      */
     void addWidget(QWidget *widget);
 
-    /**
+    /*!
      * Remove a widget previously added by addWidget or addWidgetsFromLayout.
      *
      * @param widget The widget to remove

@@ -14,7 +14,7 @@
 
 #include <memory>
 
-/**
+/*!
  * @class KContextualHelpButton kcontextualhelpbutton.h KContextualHelpButton
  *
  * @brief An icon-only button for showing contextually relevant help or explanations.
@@ -73,7 +73,7 @@ class KWIDGETSADDONS_EXPORT KContextualHelpButton : public QToolButton
     Q_PROPERTY(QString contextualHelpText READ contextualHelpText WRITE setContextualHelpText NOTIFY contextualHelpTextChanged)
 
 public:
-    /**
+    /*!
      * @param contextualHelpText    The text to show when hovering or clicking this button. Consider formatting this nicely using xi18nc().
      * @param heightHintWidget      The KContextualHelpButton will report the \p heightHintWidget 's sizeHint().height() as its own sizeHint().height().
      *                              This is useful to make sure that adding this KContextualHelpButton to a layout will not increase the layout's total height.
@@ -81,31 +81,31 @@ public:
      */
     explicit KContextualHelpButton(const QString &contextualHelpText, const QWidget *heightHintWidget, QWidget *parent);
 
-    /** @see KContextualHelpButton::ContextualHelpButton() */
+    /*! @see KContextualHelpButton::ContextualHelpButton() */
     explicit KContextualHelpButton(QWidget *parent = nullptr);
 
     ~KContextualHelpButton() override;
 
-    /**
+    /*!
      * Sets the text to show when hovering or pressing this button. Consider formatting the text nicely using xi18nc().
      */
     void setContextualHelpText(const QString &contextualHelpText);
 
-    /**
+    /*!
      * @returns the help text which is shown when hovering or pressing this button.
      */
     QString contextualHelpText() const;
 
-    /**
+    /*!
      * The KContextualHelpButton will report the \p heightHintWidget 's sizeHint().height() as its own sizeHint().height().
      * This is useful to make sure that adding this KContextualHelpButton to a layout will not increase the layout's total height.
      */
     void setHeightHintWidget(const QWidget *heightHintWidget);
 
-    /** @see setHeightHintWidget() */
+    /*! @see setHeightHintWidget() */
     const QWidget *heightHintWidget() const;
 
-    /** This override is an implementation detail of setHeightHintWidget() */
+    /*! This override is an implementation detail of setHeightHintWidget() */
     QSize sizeHint() const override;
 
 Q_SIGNALS:

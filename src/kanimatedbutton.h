@@ -12,7 +12,7 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
+/*!
  * @class KAnimatedButton kanimatedbutton.h KAnimatedButton
  *
  * @short An extended version of QToolButton which can display an animation.
@@ -31,24 +31,24 @@ class KWIDGETSADDONS_EXPORT KAnimatedButton : public QToolButton
     Q_PROPERTY(QString animationPath READ animationPath WRITE setAnimationPath)
 
 public:
-    /**
+    /*!
      * Construct an animated tool button.
      *
      * @param parent The parent widget
      */
     explicit KAnimatedButton(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destructor
      */
     ~KAnimatedButton() override;
 
-    /**
+    /*!
      * Returns the path used to load the animation
      */
     QString animationPath() const;
 
-    /**
+    /*!
      * Sets the path to the file which contains the animation to load.
      *
      * @param path The path of the file containing the animation
@@ -56,12 +56,12 @@ public:
     void setAnimationPath(const QString &path);
 
 public Q_SLOTS:
-    /**
+    /*!
      * Starts the animation from frame 1
      */
     void start();
 
-    /**
+    /*!
      * Stops the animation.  This will also reset the widget to frame 1.
      */
     void stop();

@@ -11,7 +11,7 @@
 #include "kmessagebox.h"
 #include <qmetatype.h>
 
-/**
+/*!
  * @internal
  * Used internally by KMessageBox, implemented by plugin, for dynamic dependency on KNotification.
  */

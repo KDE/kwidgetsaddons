@@ -18,7 +18,7 @@
 class QLineEdit;
 class KDateTable;
 
-/**
+/*!
  * @class KDatePicker kdatepicker.h KDatePicker
  *
  * @short A date selection widget.
@@ -44,22 +44,22 @@ class KWIDGETSADDONS_EXPORT KDatePicker : public QFrame
     Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize)
 
 public:
-    /**
+    /*!
      * The constructor. The current date will be displayed initially.
      */
     explicit KDatePicker(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * The constructor. The given date will be displayed initially.
      */
     explicit KDatePicker(const QDate &dt, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * The destructor.
      */
     ~KDatePicker() override;
 
-    /**
+    /*!
      * The size hint for date pickers. The size hint recommends the
      * minimum size of the widget so that all elements may be placed
      * without clipping. This sometimes looks ugly, so when using the
@@ -68,29 +68,29 @@ public:
      */
     QSize sizeHint() const override;
 
-    /**
+    /*!
      * Sets the date.
      *
      * @returns @p false and does not change anything if the date given is invalid.
      */
     bool setDate(const QDate &date);
 
-    /**
+    /*!
      * @returns the selected date.
      */
     const QDate &date() const;
 
-    /**
+    /*!
      * Sets the font size of the widgets elements.
      */
     void setFontSize(int);
 
-    /**
+    /*!
      * Returns the font size of the widget elements.
      */
     int fontSize() const;
 
-    /**
+    /*!
      * By calling this method with @p enable = true, KDatePicker will show
      * a little close-button in the upper button-row. Clicking the
      * close-button will cause the KDatePicker's topLevelWidget()'s close()
@@ -100,7 +100,7 @@ public:
      */
     void setCloseButton(bool enable);
 
-    /**
+    /*!
      * @returns true if a KDatePicker shows a close-button.
      * @see setCloseButton
      */
@@ -128,7 +128,7 @@ protected Q_SLOTS:
     void weekSelected(int);
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted each time the selected date is changed.
      * Usually, this does not mean that the date has been entered,
      * since the date also changes, for example, when another month is
@@ -137,7 +137,7 @@ Q_SIGNALS:
      */
     void dateChanged(const QDate &date);
 
-    /**
+    /*!
      * This signal is emitted each time a day has been selected by
      * clicking on the table (hitting a day in the current month). It
      * has the same meaning as dateSelected() in older versions of
@@ -145,7 +145,7 @@ Q_SIGNALS:
      */
     void dateSelected(const QDate &date);
 
-    /**
+    /*!
      * This signal is emitted when enter is pressed and a VALID date
      * has been entered before into the line edit. Connect to both
      * dateEntered() and dateSelected() to receive all events where the
@@ -153,7 +153,7 @@ Q_SIGNALS:
      */
     void dateEntered(const QDate &date);
 
-    /**
+    /*!
      * This signal is emitted when the day has been selected by
      * clicking on it in the table.
      */

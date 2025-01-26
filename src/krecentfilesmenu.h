@@ -14,7 +14,7 @@
 
 class KRecentFilesMenuPrivate;
 
-/**
+/*!
  * A menu that offers a set of recent files.
  *
  * @since 5.74
@@ -27,13 +27,13 @@ public:
     explicit KRecentFilesMenu(QWidget *parent = nullptr);
     ~KRecentFilesMenu() override;
 
-    /**
+    /*!
      * The group the URLs are saved to/read from.
      * Unless a group is specified by setGroup "RecentFiles" is used.
      */
     QString group() const;
 
-    /**
+    /*!
      * Specify a group for storing the URLs. This allows e.g. storing multiple
      * types of recent files.
      *
@@ -43,7 +43,7 @@ public:
      */
     void setGroup(const QString &group);
 
-    /**
+    /*!
      *  Add URL to recent files list. This will enable this action.
      *
      *  @param url The URL of the file
@@ -51,14 +51,14 @@ public:
      */
     void addUrl(const QUrl &url, const QString &name = QString());
 
-    /**
+    /*!
      *  Remove a URL from the recent files list.
      *
      *  @param url The URL of the file
      */
     void removeUrl(const QUrl &url);
 
-    /**
+    /*!
      * The maximum number of files this menu can hold.
      *
      * When the maximum url count is reached and a new URL is added the
@@ -68,14 +68,14 @@ public:
      */
     int maximumItems() const;
 
-    /**
+    /*!
      * Set the maximum URL count.
      *
      * See \ref maximumItems
      */
     void setMaximumItems(size_t maximumItems);
 
-    /**
+    /*!
      * List of URLs of recent files.
      *
      * See \ref clearRecentFiles
@@ -86,7 +86,7 @@ public:
     QList<QUrl> recentFiles() const;
 
 public Q_SLOTS:
-    /**
+    /*!
      * Clear recent files list.
      *
      * See \ref recentFiles
@@ -97,7 +97,7 @@ public Q_SLOTS:
     void clearRecentFiles();
 
 Q_SIGNALS:
-    /**
+    /*!
      * emitted when the user clicks on a file action.
      * Usually this should result in the specified URL being opened.
      *
@@ -105,7 +105,7 @@ Q_SIGNALS:
      */
     void urlTriggered(const QUrl &url);
 
-    /**
+    /*!
      * Emitted when the recent files list has been changed.
      *
      * See \ref recentFiles

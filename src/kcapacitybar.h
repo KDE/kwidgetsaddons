@@ -15,7 +15,7 @@
 
 class QPaintEvent;
 
-/**
+/*!
  * @class KCapacityBar kcapacitybar.h KCapacityBar
  *
  * @brief This widget shows a bar which is filled to show the level of usage of
@@ -50,14 +50,14 @@ public:
     };
     Q_ENUM(DrawTextMode)
 
-    /**
+    /*!
      * Constructs a capacity bar with DrawTextOutline as draw text mode.
      * @param parent The parent of the widget.
      * @since 5.24
      */
     explicit KCapacityBar(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Capacity bar constructor.
      *
      * @param drawTextMode If any text set, whether to draw it into the capacity bar
@@ -67,7 +67,7 @@ public:
     explicit KCapacityBar(DrawTextMode drawTextMode, QWidget *parent = nullptr);
     ~KCapacityBar() override;
 
-    /**
+    /*!
      * Capacity bar fill value.
      *
      * @param value    This parameter can take values from 0 to 100.
@@ -76,12 +76,12 @@ public:
      */
     void setValue(int value);
 
-    /**
+    /*!
      * @return The fill value of the capacity bar.
      */
     int value() const;
 
-    /**
+    /*!
      * Sets the text for the capacity bar.
      *
      * @param text The text that the capacity bar will show.
@@ -90,12 +90,12 @@ public:
      */
     void setText(const QString &text);
 
-    /**
+    /*!
      * @return The text that the capacity bar will show.
      */
     QString text() const;
 
-    /**
+    /*!
      * When the capacity bar is non-continuous, sets whether the last block
      * shown should be drawn full or can be cut off (depending on the capacity
      * bar width, and the value set on it).
@@ -112,12 +112,12 @@ public:
      */
     void setFillFullBlocks(bool fillFullBlocks);
 
-    /**
+    /*!
      * @return Whether the last block shown can be cut off when necessary.
      */
     bool fillFullBlocks() const;
 
-    /**
+    /*!
      * Sets whether the fill of the capacity bar should be continuous or in
      * block mode.
      *
@@ -129,13 +129,13 @@ public:
      */
     void setContinuous(bool continuous);
 
-    /**
+    /*!
      * @return Whether the fill of the capacity bar should be continuous or
      *         block-based.
      */
     bool continuous() const;
 
-    /**
+    /*!
      * Sets the height (in pixels) of the bar.
      *
      * @param barHeight The preferred height (in pixels) of the capacity bar.
@@ -154,12 +154,12 @@ public:
      */
     void setBarHeight(int barHeight);
 
-    /**
+    /*!
      * @return The preferred height of the capacity bar.
      */
     int barHeight() const;
 
-    /**
+    /*!
      * If the capacity bar is in outline text mode, draw the text with
      * @p textAlignment alignment.
      *
@@ -177,12 +177,12 @@ public:
      */
     void setHorizontalTextAlignment(Qt::Alignment textAlignment);
 
-    /**
+    /*!
      * @return The horizontal alignment for the text that will be drawn.
      */
     Qt::Alignment horizontalTextAlignment() const;
 
-    /**
+    /*!
      * Set the way text is drawn if any is set
      *
      * @param mode If any text set, whether to draw it into the capacity bar
@@ -190,12 +190,12 @@ public:
      */
     void setDrawTextMode(DrawTextMode mode);
 
-    /**
+    /*!
      * The way text is drawn, inside the capacity bar or outside of it
      */
     DrawTextMode drawTextMode() const;
 
-    /**
+    /*!
      * This method allows you to draw the widget, directly, for example on
      * item delegates. You only need the painter object and the rect where
      * this widget should be drawn.
@@ -213,7 +213,7 @@ protected:
     void changeEvent(QEvent *event) override;
 
 private:
-    /**
+    /*!
      * @internal
      */
     std::unique_ptr<class KCapacityBarPrivate> const d;

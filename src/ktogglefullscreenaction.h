@@ -22,7 +22,7 @@ class QWidget;
 
 class KToggleFullScreenActionPrivate;
 
-/**
+/*!
  * @class KToggleFullScreenAction ktogglefullscreenaction.h KToggleFullScreenAction
  *
  * An action for switching between to/from full screen mode. Note that
@@ -46,7 +46,7 @@ class KWIDGETSADDONS_EXPORT KToggleFullScreenAction : public KToggleAction
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Create a KToggleFullScreenAction. Call setWindow() to associate this
      * action with a window.
      *
@@ -54,24 +54,24 @@ public:
      */
     explicit KToggleFullScreenAction(QObject *parent);
 
-    /**
+    /*!
      * Create a KToggleFullScreenAction
      *  @param window the window that will switch to/from full screen mode
      *  @param parent This action's parent object.
      */
     KToggleFullScreenAction(QWidget *window, QObject *parent);
 
-    /**
+    /*!
      * Destroys the toggle fullscreen action.
      */
     ~KToggleFullScreenAction() override;
 
-    /**
+    /*!
      * Sets the window that will be related to this action.
      */
     void setWindow(QWidget *window);
 
-    /**
+    /*!
      * Helper function to set or reset the fullscreen state of a window.
      * Use this function rather than showFullScreen()/showNormal() QWidget functions.
      * @since 4.0.3

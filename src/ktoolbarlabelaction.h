@@ -13,7 +13,7 @@
 
 #include <kwidgetsaddons_export.h>
 
-/**
+/*!
  * @class KToolBarLabelAction ktoolbarlabelaction.h KToolBarLabelAction
  *
  * @short Class to display a label in a toolbar.
@@ -45,7 +45,7 @@ class KWIDGETSADDONS_EXPORT KToolBarLabelAction : public QWidgetAction
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a toolbar label.
      *
      * @param text The label's and the action's text.
@@ -53,7 +53,7 @@ public:
      */
     KToolBarLabelAction(const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Creates a toolbar label setting a buddy for the label.
      *
      * @param buddy The action whose widget which is focused when the label's accelerator is
@@ -63,32 +63,32 @@ public:
      */
     KToolBarLabelAction(QAction *buddy, const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Destroys the toolbar label.
      */
     ~KToolBarLabelAction() override;
 
-    /**
+    /*!
      * Sets the label's buddy to buddy.
      *
      * See QLabel#setBuddy() for details.
      */
     void setBuddy(QAction *buddy);
 
-    /**
+    /*!
      * Returns the label's buddy or a null pointer if no buddy is currently set.
      *
      * See QLabel#buddy() and QLabel#setBuddy() for more information.
      */
     QAction *buddy() const;
 
-    /**
+    /*!
      * Reimplemented from QWidgetAction.
      */
     QWidget *createWidget(QWidget *parent) override;
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever the text of this action
      * is changed.
      */
