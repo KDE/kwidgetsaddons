@@ -16,20 +16,23 @@ class QObject;
 class QWidget;
 
 /*!
- * @class KCursor kcursor.h KCursor
+ * \class KCursor
+ * \inmodule KWidgetsAddons
  *
- * The KCursor class provides a set of static
+ * \brief The KCursor class provides a set of static
  * convenience methods for auto-hiding cursors on widgets.
  */
 class KWIDGETSADDONS_EXPORT KCursor
 {
 public:
     /*!
-     * Sets auto-hiding the cursor for widget @p w. Enabling it will result in
+     * Sets auto-hiding the cursor for widget \a w. Enabling it will result in
      * the cursor being hidden when
-     * @li a key-event happens
-     * @li there are no key-events for a configured time-frame (see
+     * \list
+     * \li a key-event happens
+     * \li there are no key-events for a configured time-frame (see
      * setHideCursorDelay())
+     * \endlist
      *
      * The cursor will be shown again when the focus is lost or a mouse-event
      * happens.
@@ -57,7 +60,7 @@ public:
     static void setHideCursorDelay(int ms);
 
     /*!
-     * @returns the current auto-hide delay time.
+     * Returns the current auto-hide delay time.
      *
      * Default is 5000, i.e. 5 seconds.
      */

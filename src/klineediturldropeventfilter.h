@@ -12,9 +12,10 @@
 #include <QObject>
 
 /*!
- * @class KLineEditUrlDropEventFilter klineediturldropeventfilter.h KLineEditUrlDropEventFilter
+ * \class KLineEditUrlDropEventFilter
+ * \inmodule KWidgetsAddons
  *
- * This class provides an event filter that can be installed on a QLineEdit
+ * \brief This class provides an event filter that can be installed on a QLineEdit
  * or a subclass of it (KLineEdit) to make it handle URL drop events so
  * when a URL is dropped it replaces the existing content.
  *
@@ -29,6 +30,9 @@ class KWIDGETSADDONS_EXPORT KLineEditUrlDropEventFilter : public QObject
     Q_OBJECT
 
 public:
+    /*!
+     *
+     */
     explicit KLineEditUrlDropEventFilter(QObject *parent = nullptr);
     ~KLineEditUrlDropEventFilter() override;
 

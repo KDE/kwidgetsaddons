@@ -18,18 +18,25 @@
 class QDrag;
 
 /*!
- * @brief A decorator which adds drag-support to widgets
+ * \class KDragWidgetDecorator
+ * \inmodule KWidgetsAddons
+ * \inheaderfile KDragWidgetDecorator
+ *
+ * \brief A decorator which adds drag-support to widgets.
  *
  * This is a decorator using an event filter to implement drag-support
  * in widgets.
+ *
  * You must override the virtual method dragObject() to specify the
  * QDrag to be used.
- *
- * @author Carsten Pfeiffer <pfeiffer@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KDragWidgetDecoratorBase : public QObject
 {
     Q_OBJECT
+
+    /*!
+     * \property KDragWidgetDecoratorBase::isDragEnabled
+     */
     Q_PROPERTY(bool isDragEnabled READ isDragEnabled WRITE setDragEnabled)
 
 public:
@@ -38,9 +45,6 @@ public:
      */
     explicit KDragWidgetDecoratorBase(QWidget *parent = nullptr);
 
-    /*!
-     * Destructs the decorator.
-     */
     ~KDragWidgetDecoratorBase() override;
 
     /*!
@@ -49,13 +53,13 @@ public:
     void setDragEnabled(bool enable);
 
     /*!
-     * @returns if drag support is enabled or not.
+     * Returns if drag support is enabled or not.
      */
     bool isDragEnabled() const;
 
 protected:
     /*!
-     * @return the widget this decorator is attached to
+     * Returns the widget this decorator is attached to
      */
     QWidget *decoratedWidget() const;
 
@@ -67,9 +71,6 @@ protected:
      */
     virtual QDrag *dragObject();
 
-    /*!
-     * Reimplemented to add drag-support
-     */
     bool eventFilter(QObject *watched, QEvent *event) override;
 
     /*!
@@ -82,20 +83,23 @@ private:
 };
 
 /*!
- * @class KDragWidgetDecorator kdragwidgetdecorator.h KDragWidgetDecorator
+ * \class KDragWidgetDecorator
+ * \inmodule KWidgetsAddons
  *
- * @brief A decorator which adds drag-support to widgets
+ * \brief A decorator which adds drag-support to widgets.
  *
  * This is a decorator using an event filter to implement drag-support
  * in widgets.
- * You must set the dragObjectFactory to specify the QDrag to be used.
  *
- * @author Kevin Ottens <ervin@kde.org>
+ * You must set the dragObjectFactory to specify the QDrag to be used.
  */
 template<class Widget>
 class KDragWidgetDecorator : public KDragWidgetDecoratorBase
 {
 public:
+    /*!
+     * \typedef KDragWidgetDecorator::DragObjectFactory
+     */
     typedef QDrag *(*DragObjectFactory)(Widget *);
 
     KDragWidgetDecorator(Widget *parent = nullptr)
@@ -105,7 +109,7 @@ public:
     }
 
     /*!
-     * @return the QDrag factory used by this decorator
+     * Returns the QDrag factory used by this decorator
      */
     DragObjectFactory dragObjectFactory() const
     {
@@ -123,9 +127,6 @@ public:
     }
 
 private:
-    /*!
-     * Reimplemented to use the QDrag factory
-     */
     QDrag *dragObject() override
     {
         if (m_factory) {

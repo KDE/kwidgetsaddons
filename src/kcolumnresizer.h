@@ -23,18 +23,18 @@ class QWidget;
  * \class KColumnResizer
  * \inmodule KWidgetsAddons
  *
- * \brief Maintains consistent column sizes across layouts
+ * \brief Maintains consistent column sizes across layouts.
  *
  * KColumnResizer is a helper class which can force columns of different layouts
  * to keep the same width. It is useful to keep label columns consistent.
  *
  * It works with QGridLayout and QFormLayout.
  *
- * @image html kcolumnresizer.png "left: without KColumnResizer - right: with KColumnResizer"
+ * \image html kcolumnresizer.png "left: without KColumnResizer - right: with KColumnResizer"
  *
  * Here is a typical example:
  *
- * @code
+ * \code
  *  void Window::createWidgets()
  *  {
  *      QVBoxLayout *layout = new QVBoxLayout(this);
@@ -53,13 +53,11 @@ class QWidget;
  *      resizer->addWidgetsFromLayout(box1->layout(), 0);
  *      resizer->addWidgetsFromLayout(box2->layout(), 0);
  *  }
- * @endcode
+ * \endcode
  *
  * In this example box1 and box2 children can be organized using QGridLayout or
  * QFormLayout, resizer will ensure the first columns of the two QGroupBox stay
  * the same width.
- *
- * @author Aurélien Gâteau <agateau@kde.org>
  *
  * \since 5.1
  */
@@ -75,11 +73,12 @@ public:
     ~KColumnResizer() override;
 
     /*!
-     * Add all widgets from @p layout which are in column @p column to the list
+     * Add all widgets from \a layout which are in column \a column to the list
      * of widgets to manage.
      *
      * \a layout The layout containing the widgets to add. KColumnResizer
      * supports QGridLayout and QFormLayout.
+     *
      * \a column The column number which contains the widgets. If layout is
      * a QFormLayout, column should not be higher than QFormLayout::SpanningRole
      */

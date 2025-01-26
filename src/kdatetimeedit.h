@@ -15,7 +15,8 @@
 #include <memory>
 
 /*!
- * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
+ * \class KDateTimeEdit
+ * \inmodule KWidgetsAddons
  *
  * \brief A widget for editing date and time.
  */
@@ -23,9 +24,24 @@ class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
 {
     Q_OBJECT
 
+    /*!
+     * \property KDateTimeEdit::date
+     */
     Q_PROPERTY(QDate date READ date WRITE setDate NOTIFY dateChanged USER true)
+
+    /*!
+     * \property KDateTimeEdit::time
+     */
     Q_PROPERTY(QTime time READ time WRITE setTime NOTIFY timeChanged USER true)
+
+    /*!
+     * \property KDateTimeEdit::timeListInterval
+     */
     Q_PROPERTY(int timeListInterval READ timeListInterval WRITE setTimeListInterval)
+
+    /*!
+     * \property KDateTimeEdit::options
+     */
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
@@ -34,28 +50,40 @@ public:
      * \sa options
      * \sa setOptions
      * \sa Options
+     *
+     * \value ShowCalendar If the Calendar System edit is displayed
+     * \value ShowDate If the Date is displayed
+     * \value ShowTime If the Time is displayed
+     * \value ShowTimeZone If the Time Zone is displayed
+     * \value EditDate Allow the user to manually edit the date
+     * \value EditTime Allow the user to manually edit the time
+     * \value SelectCalendar Allow the user to select a calendar
+     * \value SelectDate Allow the user to select a date
+     * \value SelectTime Allow the user to select a time
+     * \value SelectTimeZone Allow the user to select a time zone
+     * \value DatePicker Show a date picker
+     * \value DateKeywords Show date keywords
+     * \value ForceTime The entered time can only be a selected time
+     * \value WarnOnInvalid Show a warning on focus out if the date or time is invalid
      */
     enum Option {
-        ShowCalendar = 0x00001, /*!< If the Calendar System edit is displayed */
-        ShowDate = 0x00002, /*!< If the Date is displayed */
-        ShowTime = 0x00004, /*!< If the Time is displayed */
-        ShowTimeZone = 0x00008, /*!< If the Time Zone is displayed */
-        // EditCalendar     = 0x00010,  /*!< Allow the user to manually edit the calendar */
-        EditDate = 0x00020, /*!< Allow the user to manually edit the date */
-        EditTime = 0x00040, /*!< Allow the user to manually edit the time */
-        // EditTimeZone     = 0x00080,  /*!< Allow the user to manually edit the time zone */
-        SelectCalendar = 0x00100, /*!< Allow the user to select a calendar */
-        SelectDate = 0x00200, /*!< Allow the user to select a date */
-        SelectTime = 0x00400, /*!< Allow the user to select a time */
-        SelectTimeZone = 0x00800, /*!< Allow the user to select a time zone */
-        DatePicker = 0x01000, /*!< Show a date picker */
-        DateKeywords = 0x02000, /*!< Show date keywords */
-        ForceTime = 0x04000, /*!< The entered time can only be a selected time */
-        WarnOnInvalid = 0x08000, /*!< Show a warning on focus out if the date or time is invalid */
+        ShowCalendar = 0x00001,
+        ShowDate = 0x00002,
+        ShowTime = 0x00004,
+        ShowTimeZone = 0x00008,
+        // EditCalendar     = 0x00010
+        EditDate = 0x00020,
+        EditTime = 0x00040,
+        // EditTimeZone     = 0x00080
+        SelectCalendar = 0x00100,
+        SelectDate = 0x00200,
+        SelectTime = 0x00400,
+        SelectTimeZone = 0x00800,
+        DatePicker = 0x01000,
+        DateKeywords = 0x02000,
+        ForceTime = 0x04000,
+        WarnOnInvalid = 0x08000,
     };
-    /*!
-     * Stores a combination of #Option values.
-     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
@@ -64,64 +92,45 @@ public:
      */
     explicit KDateTimeEdit(QWidget *parent = nullptr);
 
-    /*!
-     * Destroy the widget
-     */
     ~KDateTimeEdit() override;
 
     /*!
      * Return the currently set widget options
-     *
-     * @return the currently set widget options
      */
     Options options() const;
 
     /*!
      * Return the currently selected date, time and time zone
-     *
-     * @return the currently selected date, time and time zone
      */
     QDateTime dateTime() const;
 
     /*!
      * Return the currently selected date
-     *
-     * @return the currently selected date
      */
     QDate date() const;
 
     /*!
      * Return the currently selected time
-     *
-     * @return the currently selected time
      */
     QTime time() const;
 
     /*!
      * Return the currently selected time zone
-     *
-     * @return the currently selected time zone
      */
     QTimeZone timeZone() const;
 
     /*!
      * Returns the list of Calendar Locales displayed.
-     *
-     * @return the list of calendar locales displayed
      */
     QList<QLocale> calendarLocalesList() const;
 
     /*!
      * Return the current minimum date and time
-     *
-     * @return the current minimum date and time
      */
     QDateTime minimumDateTime() const;
 
     /*!
      * Return the current maximum date and time
-     *
-     * @return the current maximum date and time
      */
     QDateTime maximumDateTime() const;
 
@@ -129,16 +138,12 @@ public:
      * Return the currently set date display format
      *
      * By default this is the Short Format
-     *
-     * @return the currently set date format
      */
     QLocale::FormatType dateDisplayFormat() const;
 
     /*!
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
-     *
-     * @return the select date map
      *
      * \sa setDateMap()
      */
@@ -148,22 +153,16 @@ public:
      * Return the currently set time format
      *
      * By default this is the Short Format
-     *
-     * @return the currently set time format
      */
     QLocale::FormatType timeDisplayFormat() const;
 
     /*!
      * Return the time list interval able to be selected
-     *
-     * @return the select time intervals in minutes
      */
     int timeListInterval() const;
 
     /*!
      * Return the list of times able to be selected in the drop-down.
-     *
-     * @return the select time list
      *
      * \sa setTimeList()
      * \sa timeListInterval()
@@ -173,8 +172,6 @@ public:
 
     /*!
      * Return the list of time zones able to be selected
-     *
-     * @return the list of time zones displayed
      */
     QList<QTimeZone> timeZones() const;
 
@@ -183,16 +180,12 @@ public:
      *
      * If the user input is null then it is not valid
      *
-     * @return if the current user input is valid
-     *
      * \sa isNull()
      */
     bool isValid() const;
 
     /*!
      * Return if the current user input is null
-     *
-     * @return if the current user input is null
      *
      * \sa isValid()
      */
@@ -203,16 +196,12 @@ public:
      *
      * If the user input date is null then it is not valid
      *
-     * @return if the current user input date is valid
-     *
      * \sa isNullDate()
      */
     bool isValidDate() const;
 
     /*!
      * Return if the current user input date is null
-     *
-     * @return if the current user input date is null
      *
      * \sa isValidDate()
      */
@@ -222,16 +211,12 @@ public:
      *
      * If the user input time is null then it is not valid
      *
-     * @return if the current user input time is valid
-     *
      * \sa isNullTime()
      */
     bool isValidTime() const;
 
     /*!
      * Return if the current user input time is null
-     *
-     * @return if the current user input time is null
      *
      * \sa isValidTime()
      */
@@ -398,8 +383,11 @@ public Q_SLOTS:
      * clearDateRange;
      *
      * \a minDateTime the minimum date and time
+     *
      * \a maxDateTime the maximum date and time
+     *
      * \a minWarnMsg the minimum warning message
+     *
      * \a maxWarnMsg the maximum warning message
      */
     void
@@ -417,6 +405,7 @@ public Q_SLOTS:
      * then the minimum will not be set.
      *
      * \a minDateTime the minimum date
+     *
      * \a minWarnMsg the minimum warning message
      *
      * \sa setMaximumDateTime()
@@ -436,6 +425,7 @@ public Q_SLOTS:
      * then the maximum will not be set.
      *
      * \a maxDateTime the maximum date
+     *
      * \a maxWarnMsg the maximum warning message
      *
      * \sa setMinimumDateTime()
@@ -471,7 +461,7 @@ public Q_SLOTS:
      * Any invalid or duplicate dates will be used, the list will NOT be
      * sorted, and the minimum and maximum date will not be affected.
      *
-     * The @p dateMap is keyed by the date to be listed and the value is the
+     * The \a dateMap is keyed by the date to be listed and the value is the
      * string to be displayed.  If you want the date to be displayed in the
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
@@ -494,14 +484,14 @@ public Q_SLOTS:
     /*!
      * Set the interval between times able to be selected from the drop-down.
      *
-     * The combo drop-down will be populated with times every @p minutes
+     * The combo drop-down will be populated with times every \a minutes
      * apart, starting from the minimumTime() and ending at maximumTime().
      *
      * If the ForceInterval option is set then any time manually typed into the
      * combo line edit will be forced to the nearest interval.
      *
      * This interval must be an exact divisor of the valid time range hours.
-     * For example with the default 24 hour range @p interval must divide 1440
+     * For example with the default 24 hour range \a interval must divide 1440
      * minutes exactly, meaning 1, 6 and 90 are valid but 7, 31 and 91 are not.
      *
      * Setting the time list interval will override any time list previously set
@@ -526,7 +516,9 @@ public Q_SLOTS:
      * and latest value in the list.
      *
      * \a timeList the list of times able to be selected
+     *
      * \a minWarnMsg the minimum warning message
+     *
      * \a maxWarnMsg the maximum warning message
      *
      * \sa timeList()

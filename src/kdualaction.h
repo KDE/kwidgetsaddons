@@ -16,7 +16,8 @@
 class KGuiItem;
 
 /*!
- * @class KDualAction kdualaction.h KDualAction
+ * \class KDualAction
+ * \inmodule KWidgetsAddons
  *
  * \brief An action which can alternate between two texts/icons when triggered.
  *
@@ -44,7 +45,6 @@ class KGuiItem;
  * 4. Replace calls to setCheckedState(guiItem) with
  * setActiveGuiItem(guiItem)
  *
- * @author Aurélien Gâteau <agateau@kde.org>
  * \since 4.6
  */
 class KWIDGETSADDONS_EXPORT KDualAction : public QAction

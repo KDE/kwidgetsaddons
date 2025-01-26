@@ -19,7 +19,8 @@ class QLineEdit;
 class KDateTable;
 
 /*!
- * @class KDatePicker kdatepicker.h KDatePicker
+ * \class KDatePicker
+ * \inmodule KWidgetsAddons
  *
  * \brief A date selection widget.
  *
@@ -33,14 +34,23 @@ class KDateTable;
  * or 990101.
  *
  * \image html kdatepicker.png "KDatePicker Widget"
- *
- * @author Tim Gilman, Mirko Boehm
  */
 class KWIDGETSADDONS_EXPORT KDatePicker : public QFrame
 {
     Q_OBJECT
+    /*!
+     * \property KDatePicker::date
+     */
     Q_PROPERTY(QDate date READ date WRITE setDate NOTIFY dateChanged USER true)
+
+    /*!
+     * \property KDatePicker::closeButton
+     */
     Q_PROPERTY(bool closeButton READ hasCloseButton WRITE setCloseButton)
+
+    /*!
+     * \property KDatePicker::fontSize
+     */
     Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize)
 
 public:
@@ -54,9 +64,6 @@ public:
      */
     explicit KDatePicker(const QDate &dt, QWidget *parent = nullptr);
 
-    /*!
-     * The destructor.
-     */
     ~KDatePicker() override;
 
     /*!
@@ -71,12 +78,12 @@ public:
     /*!
      * Sets the date.
      *
-     * @returns @p false and does not change anything if the date given is invalid.
+     * Returns \c false and does not change anything if the date given is invalid.
      */
     bool setDate(const QDate &date);
 
     /*!
-     * @returns the selected date.
+     * Returns the selected date.
      */
     const QDate &date() const;
 
@@ -91,7 +98,7 @@ public:
     int fontSize() const;
 
     /*!
-     * By calling this method with @p enable = true, KDatePicker will show
+     * By calling this method with \a enable = true, KDatePicker will show
      * a little close-button in the upper button-row. Clicking the
      * close-button will cause the KDatePicker's topLevelWidget()'s close()
      * method being called. This is mostly useful for toplevel datepickers
@@ -101,15 +108,14 @@ public:
     void setCloseButton(bool enable);
 
     /*!
-     * @returns true if a KDatePicker shows a close-button.
+     * Returns true if a KDatePicker shows a close-button.
      * \sa setCloseButton
      */
     bool hasCloseButton() const;
 
 protected:
-    /// to catch move keyEvents when QLineEdit has keyFocus
+    // to catch move keyEvents when QLineEdit has keyFocus
     bool eventFilter(QObject *o, QEvent *e) override;
-    /// the resize event
     void resizeEvent(QResizeEvent *) override;
     void changeEvent(QEvent *event) override;
 

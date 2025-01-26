@@ -17,54 +17,59 @@ class KDatePicker;
 class KDatePickerPopupPrivate;
 
 /*!
+ * \class KDatePickerPopup
+ * \inmodule KWidgetsAddons
+ *
  * \brief This menu helps the user to select a date quickly.
  *
  * This menu helps the user to select a date quickly. It offers various
  * modes of selecting, e.g. with a KDatePicker or with words like "Tomorrow".
  *
  * The available modes are:
- *
- * @li NoDate: A menu-item with "No Date". If chosen, the datepicker will emit
+ * \list
+ * \li NoDate: A menu-item with "No Date". If chosen, the datepicker will emit
  *     a null QDate.
- * @li DatePicker: Shows a KDatePicker-widget.
- * @li Words: Shows items like "Today", "Tomorrow" or "Next Week".
- *
- * @author Bram Schoenmakers <bram_s@softhome.net>
+ * \li DatePicker: Shows a KDatePicker-widget.
+ * \li Words: Shows items like "Today", "Tomorrow" or "Next Week".
+ * \endlist
  *
  * \since 5.94
  */
 class KWIDGETSADDONS_EXPORT KDatePickerPopup : public QMenu
 {
     Q_OBJECT
+
+    /*!
+     * \property KDatePickerPopup::modes
+     */
     Q_PROPERTY(Modes modes READ modes WRITE setModes)
 
 public:
     /*!
      * Describes the available selection modes.
+     *
+     * \value NoDate A menu-item with "No Date". Will always return an invalid date.
+     * \value DatePicker A menu-item with a KDatePicker.
+     * \value Words A menu-item with list of words that describe a date.
      */
     enum Mode {
-        NoDate = 1, ///< A menu-item with "No Date". Will always return an invalid date.
-        DatePicker = 2, ///< A menu-item with a KDatePicker.
-        Words = 4 ///< A menu-item with list of words that describe a date.
+        NoDate = 1,
+        DatePicker = 2,
+        Words = 4
     };
-
-    /*!
-     * Describes a set of combined modes.
-     */
     Q_DECLARE_FLAGS(Modes, Mode)
 
     /*!
      * Creates a new date picker popup.
      *
      * \a modes The selection modes that shall be offered
+     *
      * \a date The initial date of date picker widget.
+     *
      * \a parent The parent object.
      */
     explicit KDatePickerPopup(Modes modes = DatePicker, QDate date = QDate::currentDate(), QWidget *parent = nullptr);
 
-    /*!
-     * Destroys the date picker popup.
-     */
     ~KDatePickerPopup() override;
 
     /*!
@@ -86,6 +91,7 @@ public:
      * not be set.
      *
      * \a minDate the minimum date
+     *
      * \a maxDate the maximum date
      */
     void setDateRange(const QDate &minDate, const QDate &maxDate);
@@ -93,8 +99,6 @@ public:
     /*!
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
-     *
-     * @return the select date map
      *
      * \sa setDateMap()
      */
@@ -108,7 +112,7 @@ public:
      * and the order will not be changed (the map is sorted by key); also and the minimum and
      * maximum dates will not be affected.
      *
-     * The @p dateMap is keyed by the date to be listed and the value is the
+     * The \a dateMap is keyed by the date to be listed and the value is the
      * string to be displayed.  If you want the date to be displayed in the
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
@@ -126,7 +130,7 @@ public:
 
 public Q_SLOTS:
     /*!
-     * Sets the current @p date.
+     * Sets the current \a date.
      */
     void setDate(QDate date);
 
@@ -139,9 +143,7 @@ Q_SIGNALS:
     void dateChanged(const QDate &date);
 
 private:
-    //@cond PRIVATE
     std::unique_ptr<KDatePickerPopupPrivate> const d;
-    //@endcond
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KDatePickerPopup::Modes)

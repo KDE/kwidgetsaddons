@@ -15,12 +15,12 @@
 // one source file on localization.
 
 /*!
- * @internal
+ * \internal
  *
  * Removes accelerator marker from a UI text label.
  *
  * Accelerator marker is not always a plain ampersand (&),
- * so it is not enough to just remove it by @c QString::remove().
+ * so it is not enough to just remove it by QString::remove().
  * The label may contain escaped markers ("&&") which must be resolved
  * and skipped, as well as CJK-style markers ("Foo (&F)") where
  * the whole parenthesis construct should be removed.
@@ -28,12 +28,13 @@
  * from UI labels.
  *
  * \a label UI label which may contain an accelerator marker
- * @return label without the accelerator marker
+ *
+ * Returns label without the accelerator marker
  */
 QString removeAcceleratorMarker(const QString &label);
 
 /*!
- * @internal
+ * \internal
  *
  * Returns the date format used for the locale with the year as a four digit
  * number.
@@ -46,8 +47,10 @@ QString removeAcceleratorMarker(const QString &label);
  * values like 22 as 1922.
  *
  * \a locale The locale that you want the date format for.
+ *
  * \a format The date format that you want.
- * @return the date format string with 4-digit year
+ *
+ * Returns the date format string with 4-digit year
  */
 QString dateFormatWith4DigitYear(const QLocale &locale, QLocale::FormatType format);
 

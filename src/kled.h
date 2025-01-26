@@ -16,7 +16,8 @@
 class QColor;
 
 /*!
- * @class KLed kled.h KLed
+ * \class KLed
+ * \inmodule KWidgetsAddons
  *
  * \brief An LED widget.
  *
@@ -29,22 +30,43 @@ class QColor;
  * light spot or a round view sunken in the screen.
  *
  * \image html kled.png "KLed Widget"
- *
- * @author Joerg Habenicht, Richard J. Moore (rich@kde.org) 1998, 1999
  */
 class KWIDGETSADDONS_EXPORT KLed : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KLed::state
+     */
     Q_PROPERTY(State state READ state WRITE setState)
+
+    /*!
+     * \property KLed::shape
+     */
     Q_PROPERTY(Shape shape READ shape WRITE setShape)
+
+    /*!
+     * \property KLed::look
+     */
     Q_PROPERTY(Look look READ look WRITE setLook)
+
+    /*!
+     * \property KLed::color
+     */
     Q_PROPERTY(QColor color READ color WRITE setColor)
+
+    /*!
+     * \property KLed::darkFactor
+     */
     Q_PROPERTY(int darkFactor READ darkFactor WRITE setDarkFactor)
 
 public:
     /*!
      * Status of the light is on/off.
      * \brief LED on/off.
+     *
+     * \value Off
+     * \value On
      */
     enum State { Off, On };
     Q_ENUM(State)
@@ -52,6 +74,9 @@ public:
     /*!
      * Shades of the lamp.
      * \brief LED shape
+     *
+     * \value Rectangular
+     * \value Circular
      */
     enum Shape { Rectangular, Circular };
     Q_ENUM(Shape)
@@ -60,6 +85,10 @@ public:
      * Displays a flat, round or sunken LED.
      *
      * \brief LED look.
+     *
+     * \value Flat
+     * \value Raised
+     * \value Sunken
      */
     enum Look {
         Flat,
@@ -81,8 +110,8 @@ public:
      * initially be turned on.
      *
      * \a color Initial color of the LED.
+     *
      * \a parent The parent widget.
-     * \brief Constructor
      */
     explicit KLed(const QColor &color, QWidget *parent = nullptr);
 
@@ -92,31 +121,27 @@ public:
      * Differs from above only in the parameters, which configure all settings.
      *
      * \a color  Initial color of the LED.
+     *
      * \a state  Sets the State.
+     *
      * \a look   Sets the Look.
+     *
      * \a shape  Sets the Shape (rectangular or circular).
+     *
      * \a parent The parent widget.
-     * \brief Constructor
      */
     KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape, QWidget *parent = nullptr);
 
-    /*!
-     * Destroys the LED widget.
-     * \brief Destructor
-     */
     ~KLed() override;
 
     /*!
      * Returns the current color of the widget.
-     *
-     * @returns LED color
      * \sa setColor()
      */
     QColor color() const;
 
     /*!
      * Returns the current state of the widget (on/off).
-     * @returns LED state
      *
      * \sa State
      */
@@ -124,7 +149,6 @@ public:
 
     /*!
      * Returns the current look of the widget.
-     * @returns LED look
      *
      * \sa Look
      */
@@ -132,7 +156,6 @@ public:
 
     /*!
      * Returns the current shape of the widget.
-     * @returns LED shape
      *
      * \sa Shape
      */
@@ -140,7 +163,6 @@ public:
 
     /*!
      * Returns the factor to darken the LED.
-     * @returns dark factor
      *
      * \sa setDarkFactor()
      */
@@ -149,7 +171,7 @@ public:
     /*!
      * Set the color of the widget.
      *
-     * The LED is shown with @p color when in the KLed::On state
+     * The LED is shown with \a color when in the KLed::On state
      * or with the darken color in KLed::Off state.
      *
      * The widget calls the update() method, so it will
@@ -195,7 +217,7 @@ public:
     /*!
      * Sets the factor to darken the LED in KLed::Off state.
      *
-     * The @p darkFactor should be greater than 100, otherwise the LED
+     * The \a darkFactor should be greater than 100, otherwise the LED
      * becomes lighter in KLed::Off state.
      *
      * Defaults to 300.
@@ -219,14 +241,14 @@ public Q_SLOTS:
     /*!
      * Sets the state of the widget to On.
      *
-     * \sa off() toggle()  setState()
+     * \sa off(), toggle(), setState()
      */
     void on();
 
     /*!
      * Sets the state of the widget to Off.
      *
-     * \sa on() toggle()  setState()
+     * \sa on(), toggle(), setState()
      */
     void off();
 
@@ -235,8 +257,7 @@ protected:
     void resizeEvent(QResizeEvent *) override;
 
 private:
-    /*!
-     * @internal
+    /*
      * invalidates caches after property changes and calls update()
      */
     KWIDGETSADDONS_NO_EXPORT void updateCachedPixmap();

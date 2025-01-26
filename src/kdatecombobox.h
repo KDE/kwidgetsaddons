@@ -14,7 +14,8 @@
 #include <memory>
 
 /*!
- * @class KDateComboBox kdatecombobox.h KDateComboBox
+ * \class KDateComboBox
+ * \inmodule KWidgetsAddons
  *
  * \brief A combobox for dates.
  */
@@ -22,9 +23,24 @@ class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
 {
     Q_OBJECT
 
+    /*!
+     * \property KDateComboBox::date
+     */
     Q_PROPERTY(QDate date READ date WRITE setDate NOTIFY dateChanged USER true)
+
+    /*!
+     * \property KDateComboBox::minimumDate
+     */
     Q_PROPERTY(QDate minimumDate READ minimumDate WRITE setMinimumDate RESET resetMinimumDate)
+
+    /*!
+     * \property KDateComboBox::maximumDate
+     */
     Q_PROPERTY(QDate maximumDate READ maximumDate WRITE setMaximumDate RESET resetMaximumDate)
+
+    /*!
+     * \property KDateComboBox::options
+     */
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
@@ -32,18 +48,20 @@ public:
      * Options provided by the widget
      * \sa options()
      * \sa setOptions()
-     * \sa Options
+     *
+     * \value EditDate Allow the user to manually edit the date in the combo line edit
+     * \value SelectDate Allow the user to select the date from a drop-down menu
+     * \value DatePicker Show a date picker in the drop-down
+     * \value DateKeywords Show date keywords in the drop-down
+     * \value WarnOnInvalid Show a warning on focus out if the date is invalid
      */
     enum Option {
-        EditDate = 0x0001, /*!< Allow the user to manually edit the date in the combo line edit */
-        SelectDate = 0x0002, /*!< Allow the user to select the date from a drop-down menu */
-        DatePicker = 0x0004, /*!< Show a date picker in the drop-down */
-        DateKeywords = 0x0008, /*!< Show date keywords in the drop-down */
-        WarnOnInvalid = 0x0010, /*!< Show a warning on focus out if the date is invalid */
+        EditDate = 0x0001,
+        SelectDate = 0x0002,
+        DatePicker = 0x0004,
+        DateKeywords = 0x0008,
+        WarnOnInvalid = 0x0010,
     };
-    /*!
-     * Stores a combination of #Option values.
-     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
@@ -56,15 +74,10 @@ public:
      */
     explicit KDateComboBox(QWidget *parent = nullptr);
 
-    /*!
-     * Destroy the widget
-     */
     ~KDateComboBox() override;
 
     /*!
      * Return the currently selected date
-     *
-     * @return the currently selected date
      */
     QDate date() const;
 
@@ -73,8 +86,6 @@ public:
      *
      * If the user input is null then it is not valid
      *
-     * @return if the current user input is valid
-     *
      * \sa isNull()
      */
     bool isValid() const;
@@ -82,16 +93,12 @@ public:
     /*!
      * Return if the current user input is null
      *
-     * @return if the current user input is null
-     *
      * \sa isValid()
      */
     bool isNull() const;
 
     /*!
      * Return the currently set widget options
-     *
-     * @return the currently set widget options
      */
     Options options() const;
 
@@ -99,30 +106,22 @@ public:
      * Return the currently set date display format
      *
      * By default this is the Short Format
-     *
-     * @return the currently set date format
      */
     QLocale::FormatType displayFormat() const;
 
     /*!
      * Return the current minimum date
-     *
-     * @return the current minimum date
      */
     QDate minimumDate() const;
 
     /*!
      * Return the current maximum date
-     *
-     * @return the current maximum date
      */
     QDate maximumDate() const;
 
     /*!
      * Return the map of dates listed in the drop-down and their displayed
      * string forms.
-     *
-     * @return the select date map
      *
      * \sa setDateMap()
      */
@@ -194,8 +193,11 @@ public Q_SLOTS:
      * to the maximum date, otherwise the date range will not be set.
      *
      * \a minDate the minimum date
+     *
      * \a maxDate the maximum date
+     *
      * \a minWarnMsg the minimum warning message
+     *
      * \a maxWarnMsg the maximum warning message
      */
     void setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
@@ -213,6 +215,7 @@ public Q_SLOTS:
      * then the minimum will not be set.
      *
      * \a minDate the minimum date
+     *
      * \a minWarnMsg the minimum warning message
      *
      * \sa minimumDate()
@@ -236,6 +239,7 @@ public Q_SLOTS:
      * then the maximum will not be set.
      *
      * \a maxDate the maximum date
+     *
      * \a maxWarnMsg the maximum warning message
      *
      * \sa minimumDate()
@@ -259,7 +263,7 @@ public Q_SLOTS:
      * Any invalid or duplicate dates will be used, the list will NOT be
      * sorted, and the minimum and maximum date will not be affected.
      *
-     * The @p dateMap is keyed by the date to be listed and the value is the
+     * The \a dateMap is keyed by the date to be listed and the value is the
      * string to be displayed.  If you want the date to be displayed in the
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
