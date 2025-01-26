@@ -33,7 +33,7 @@ class QItemSelection;
  *
  * \image html keditlistbox.png "KEditListWidget"
  *
- * @since 4.6
+ * \since 4.6
  */
 class KWIDGETSADDONS_EXPORT KEditListWidget : public QWidget
 {

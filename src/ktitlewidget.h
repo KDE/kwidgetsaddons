@@ -57,9 +57,9 @@ class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
     Q_OBJECT
     Q_PROPERTY(QString text READ text WRITE setText)
     Q_PROPERTY(QString comment READ comment WRITE setComment)
-    /// @since 5.72
+    /// \since 5.72
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
-    /// @since 5.72
+    /// \since 5.72
     Q_PROPERTY(QSize iconSize READ iconSize WRITE setIconSize)
     Q_PROPERTY(int autoHideTimeout READ autoHideTimeout WRITE setAutoHideTimeout)
 
@@ -114,7 +114,7 @@ public:
      * @return the icon displayed in the title
      * @see setIcon()
      *
-     * @since 5.72
+     * \since 5.72
      */
     QIcon icon() const;
 
@@ -122,7 +122,7 @@ public:
      * @return the size of the icon displayed in the title
      * @see setIconSize()
      *
-     * @since 5.72
+     * \since 5.72
      */
     QSize iconSize() const;
 
@@ -145,7 +145,7 @@ public:
      * @return The level of this title: it influences the font size following the guidelines in
      *         the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
      *         It also corresponds to the level api of Kirigami Heading for QML applications
-     * @since 5.53
+     * \since 5.53
      */
     int level();
 
@@ -177,7 +177,7 @@ public Q_SLOTS:
      * Set the icon to display in the header.
      * \a icon the icon to display in the header.
      * \a alignment alignment of the icon (default is right aligned).
-     * @since 5.63
+     * \since 5.63
      */
     void setIcon(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
@@ -185,7 +185,7 @@ public Q_SLOTS:
      * \a type the type of message icon to display in the header
      * \a alignment alignment of the icon (default is right aligned).
      * @see icon()
-     * @since 5.72
+     * \since 5.72
      */
     void setIcon(MessageType type, ImageAlignment alignment = ImageRight);
 
@@ -195,7 +195,7 @@ public Q_SLOTS:
      *
      * The default size is defined by the GUI style and its value for QStyle::PM_MessageBoxIconSize.
      *
-     * @since 5.72
+     * \since 5.72
      */
     void setIconSize(const QSize &iconSize);
 
@@ -210,7 +210,7 @@ public Q_SLOTS:
      * Sets the level of this title, similar to HTML's h1 h2 h3...
      * Follows the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
      * \a level the level of the title, 1 is the biggest font and most important, descending
-     * @since 5.53
+     * \since 5.53
      */
     void setLevel(int level);
 

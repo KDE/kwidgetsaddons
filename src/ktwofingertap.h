@@ -23,7 +23,7 @@
  *
  * Note: The QGestureManager need a QMainwindow, to delivery the gesture.
  *
- * @since 5.83
+ * \since 5.83
  * @author Steffen Hartleib <steffenhartleib@t-online.de>
  */
 class KWIDGETSADDONS_EXPORT KTwoFingerTap : public QGesture
@@ -93,7 +93,7 @@ private:
  *
  * Provides the recognizer for a two finger tap gesture.
  *
- * @since 5.83
+ * \since 5.83
  * @author Steffen Hartleib <steffenhartleib@t-online.de>
  */
 class KWIDGETSADDONS_EXPORT KTwoFingerTapRecognizer : public QGestureRecognizer

@@ -33,7 +33,7 @@
  * the old parent is restored when the widget is replaced by another widget
  * and also when the tooltip is deleted.
  *
- * @since 5.30
+ * \since 5.30
  * @author Elvis Angelaccio <elvis.angelaccio@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KToolTipWidget : public QWidget

@@ -96,7 +96,7 @@ public:
      * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
      * as shown in the @ref non-virtual-warning "example in the class description".
      *
-     * @since 5.39
+     * \since 5.39
      */
     void setIndent(int indent);
 
@@ -111,7 +111,7 @@ public:
      * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
      * as shown in the @ref non-virtual-warning "example in the class description".
      *
-     * @since 5.39
+     * \since 5.39
      */
     void setMargin(int margin);
 
@@ -134,7 +134,7 @@ public:
     /*!
      * @return the full text set via setText()
      *
-     * @since 4.4
+     * \since 4.4
      */
     QString fullText() const;
 
@@ -143,7 +143,7 @@ public:
      * i.e. the original text does not fit inside the space available
      * and elide mode is set to a value other than Qt::ElideNone.
      *
-     * @since 5.38
+     * \since 5.38
      */
     bool isSqueezed() const;
 
@@ -156,7 +156,7 @@ public:
      * Therefore make sure to call this function on objects of type KSqueezedTextLabel,
      * as shown in the @ref non-virtual-warning "example in the class description".
      *
-     * @since 5.39
+     * \since 5.39
      */
     QRect contentsRect() const;
 

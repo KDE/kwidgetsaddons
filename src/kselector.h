@@ -146,13 +146,13 @@ public:
     /*!
      * Sets the colors that make up the gradient. Any previously set colors
      * are removed.
-     * @since 4.5
+     * \since 4.5
      */
     void setStops(const QGradientStops &stops);
 
     /*!
      * Get the colors that make up the gradient.
-     * @since 4.5
+     * \since 4.5
      */
     QGradientStops stops() const;
 

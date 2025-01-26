@@ -73,7 +73,7 @@ class KFontChooserDialogPrivate;
  *
  * @author Preston Brown <pbrown@kde.org>, Bernd Wuebben <wuebben@kde.org>
  *
- * @since 5.69
+ * \since 5.69
  */
 class KWIDGETSADDONS_EXPORT KFontChooserDialog : public QDialog
 {

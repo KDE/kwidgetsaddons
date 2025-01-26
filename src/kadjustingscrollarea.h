@@ -42,7 +42,7 @@
  * auto scrollAreaLayout = new QVBoxLayout(scrollArea->widget());
  * @endcode
  *
- * @since 6.9
+ * \since 6.9
  */
 class KWIDGETSADDONS_EXPORT KAdjustingScrollArea : public QScrollArea
 {

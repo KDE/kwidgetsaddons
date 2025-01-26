@@ -22,7 +22,7 @@
  *
  * The class LineEditUrlDropEventFilter was renamed to KLineEditUrlDropEventFilter.
  *
- * @Since 6.0
+ * \since 6.0
  */
 class KWIDGETSADDONS_EXPORT KLineEditUrlDropEventFilter : public QObject
 {

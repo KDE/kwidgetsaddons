@@ -144,13 +144,13 @@ KWIDGETSADDONS_EXPORT KGuiItem close();
 
 /*!
  * Returns the 'CloseWindow' gui item.
- * @since 4.3
+ * \since 4.3
  */
 KWIDGETSADDONS_EXPORT KGuiItem closeWindow();
 
 /*!
  * Returns the 'CloseDocument' gui item.
- * @since 4.3
+ * \since 4.3
  */
 KWIDGETSADDONS_EXPORT KGuiItem closeDocument();
 

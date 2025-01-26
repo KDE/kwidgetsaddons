@@ -65,7 +65,7 @@
  *
  * This class is meant to be kept somewhat consistent with the QML equivalent which is also called ContextualHelpButton.
  *
- * @since 6.2
+ * \since 6.2
  */
 class KWIDGETSADDONS_EXPORT KContextualHelpButton : public QToolButton
 {

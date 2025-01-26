@@ -25,7 +25,7 @@ class QPaintEvent;
  * device. Its look is similar to a progress bar, but different, because this
  * widget does not want to give a notion of progress.
  *
- * @since 4.2
+ * \since 4.2
  *
  * \image html kcapacitybar.png "KCapacityBar Widget"
  *
@@ -53,7 +53,7 @@ public:
     /*!
      * Constructs a capacity bar with DrawTextOutline as draw text mode.
      * \a parent The parent of the widget.
-     * @since 5.24
+     * \since 5.24
      */
     explicit KCapacityBar(QWidget *parent = nullptr);
 

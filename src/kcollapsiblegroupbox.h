@@ -20,7 +20,7 @@
  *
  * When expanded, the widget will resize to fit the sizeHint of child items.
  *
- * @since 5.16
+ * \since 5.16
  */
 class KWIDGETSADDONS_EXPORT KCollapsibleGroupBox : public QWidget
 {

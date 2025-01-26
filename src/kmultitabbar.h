@@ -55,7 +55,7 @@ public:
     /*!
      * Create a KMultiTabBar with Left as KMultiTabBar position.
      * \a parent The parent of the widget.
-     * @since 5.24
+     * \since 5.24
      */
     explicit KMultiTabBar(QWidget *parent = nullptr);
 
@@ -70,7 +70,7 @@ public:
      *  if more than one button is connected to a signals.
      * \a popup A popup menu which should be displayed if the button is clicked
      * \a not_used_yet will be used for a popup text in the future
-     * @since 5.13
+     * \since 5.13
      */
     int appendButton(const QIcon &icon, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
 
@@ -84,7 +84,7 @@ public:
      * \a icon a icon for the tab
      * \a id an arbitrary ID which can be used later on to identify the tab
      * \a text if a mode with text is used it will be the tab text, otherwise a mouse over hint
-     * @since 5.13
+     * \since 5.13
      */
     int appendTab(const QIcon &icon, int id = -1, const QString &text = QString());
 

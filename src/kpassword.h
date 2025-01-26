@@ -15,7 +15,7 @@ Q_NAMESPACE_EXPORT(KWIDGETSADDONS_EXPORT)
 
 /*!
  * This enum describe when the reveal password button is visible.
- * @since 6.0
+ * \since 6.0
  */
 enum class RevealMode {
     /*!

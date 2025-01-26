@@ -74,7 +74,7 @@ public:
     /*!
      * Helper function to set or reset the fullscreen state of a window.
      * Use this function rather than showFullScreen()/showNormal() QWidget functions.
-     * @since 4.0.3
+     * \since 4.0.3
      */
     static void setFullScreen(QWidget *window, bool set);
 

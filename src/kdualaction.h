@@ -45,7 +45,7 @@ class KGuiItem;
  * setActiveGuiItem(guiItem)
  *
  * @author Aurélien Gâteau <agateau@kde.org>
- * @since 4.6
+ * \since 4.6
  */
 class KWIDGETSADDONS_EXPORT KDualAction : public QAction
 {

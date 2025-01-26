@@ -70,12 +70,12 @@ public:
         WidgetRole,
         /*!
          * when true, show the page header, if false don't
-         * @since 5.52
+         * \since 5.52
          */
         HeaderVisibleRole,
         /*!
          * The list of actions associated to the page
-         * @since 6.6
+         * \since 6.6
          */
         ActionsRole,
     };

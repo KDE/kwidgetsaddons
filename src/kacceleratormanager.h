@@ -45,6 +45,7 @@ public:
      * accelerators.
      *
      * \a widget The toplevel widget you want to manage.
+     *
      * \a programmers_mode if true, KAcceleratorManager adds (&) for removed
      *             accels and & before added accels
      */
@@ -61,8 +62,10 @@ public:
 
     /*!
      * Append names to a list of standard action names.
+     *
      * These strings will be given higher priority when assigning keyboard accelerators.
-     * @since 5.0
+     *
+     * \since 5.0
      */
     static void addStandardActionNames(const QStringList &names);
 };

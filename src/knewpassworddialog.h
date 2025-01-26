@@ -61,7 +61,7 @@ class KWIDGETSADDONS_EXPORT KNewPasswordDialog : public QDialog
     Q_OBJECT
 
     /*!
-     * @since 6.0
+     * \since 6.0
      */
     Q_PROPERTY(KPassword::RevealMode revealPasswordMode READ revealPasswordMode WRITE setRevealPasswordMode)
 
@@ -90,13 +90,13 @@ public:
 
     /*!
      * Sets the icon that appears next to the prompt in the dialog. The default icon represents a simple key.
-     * @since 5.63
+     * \since 5.63
      */
     void setIcon(const QIcon &icon);
 
     /*!
      * Returns the icon that appears next to the prompt in the dialog. The default icon represents a simple key.
-     * @since 5.63
+     * \since 5.63
      */
     QIcon icon() const;
 
@@ -178,13 +178,13 @@ public:
      * the original color of the verification field is restored.
      *
      * Default: the background color from the current theme.
-     * @since 5.17
+     * \since 5.17
      */
     void setBackgroundWarningColor(const QColor &color);
 
     /*!
      * The color used as warning for the verification password field's background.
-     * @since 5.17
+     * \since 5.17
      */
     QColor backgroundWarningColor() const;
 
@@ -204,20 +204,20 @@ public:
      * \code
      * passwordDialog.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
-     * @since 5.31
+     * \since 5.31
      */
     [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
 
     /*!
      * Whether the visibility trailing action in the line edit is visible.
-     * @since 5.31
+     * \since 5.31
      */
     [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
 #endif
 
     /*!
      * Whether the visibility trailing action in the line edit is visible.
-     * @since 6.0
+     * \since 6.0
      */
     KPassword::RevealMode revealPasswordMode() const;
 
@@ -236,7 +236,7 @@ public:
      *     newPasswordDialog.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
      * @endcode
-     * @since 6.0
+     * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 
@@ -258,7 +258,7 @@ protected:
      * If the password is right, returns true
      * and fills pwd with the password.
      * Otherwise returns false and pwd will be null.
-     * @since 4.2
+     * \since 4.2
      */
     bool checkAndGetPassword(QString *pwd);
 

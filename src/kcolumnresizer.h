@@ -60,7 +60,7 @@ class QWidget;
  *
  * @author Aurélien Gâteau <agateau@kde.org>
  *
- * @since 5.1
+ * \since 5.1
  */
 class KWIDGETSADDONS_EXPORT KColumnResizer : public QObject
 {

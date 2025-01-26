@@ -63,13 +63,13 @@ public:
     /*!
      * When set to true, allow the user to change the alpha component
      * of the color. The default value is false.
-     * @since 4.5
+     * \since 4.5
      */
     void setAlphaChannelEnabled(bool alpha);
 
     /*!
      * Returns true if the user is allowed to change the alpha component.
-     * @since 4.5
+     * \since 4.5
      */
     bool isAlphaChannelEnabled() const;
 

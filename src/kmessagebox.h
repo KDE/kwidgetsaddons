@@ -48,20 +48,20 @@ namespace KMessageBox
 enum ButtonCode {
     Ok = 1, ///< Ok button
     Cancel = 2, ///< Cancel button
-    PrimaryAction = 3, ///< Primary action button; @since 5.100
-    SecondaryAction = 4, ///< Secondary action button; @since 5.100
+    PrimaryAction = 3, ///< Primary action button; \since 5.100
+    SecondaryAction = 4, ///< Secondary action button; \since 5.100
     Continue = 5, ///< Continue button
 };
 
 enum DialogType {
-    QuestionTwoActions = 1, ///< Question dialog with two buttons; @since 5.100
-    WarningTwoActions = 2, ///< Warning dialog with two buttons; @since 5.100
+    QuestionTwoActions = 1, ///< Question dialog with two buttons; \since 5.100
+    WarningTwoActions = 2, ///< Warning dialog with two buttons; \since 5.100
     WarningContinueCancel = 3, ///< Warning dialog with Continue and Cancel
-    WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; @since 5.100
+    WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; \since 5.100
     Information = 5, ///< Information dialog
     // Reserved for: SSLMessageBox = 6
     Error = 8, ///< Error dialog
-    QuestionTwoActionsCancel = 9, ///< Question dialog with two buttons and Cancel; @since 5.100
+    QuestionTwoActionsCancel = 9, ///< Question dialog with two buttons and Cancel; \since 5.100
 };
 
 /*!
@@ -74,7 +74,7 @@ enum Option {
                    ///< depending on which is available.
     NoExec = 16, ///< Do not call exec() in createKMessageBox()
     WindowModal = 32, ///< The window is to be modal relative to its parent. By default, it is application modal.
-    PlainText = 64, ///< @since 6.9 The label content should be considered as plain text. This should be used when the text comes from untrusted user input.
+    PlainText = 64, ///< \since 6.9 The label content should be considered as plain text. This should be used when the text comes from untrusted user input.
 };
 
 /*!
@@ -109,7 +109,7 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode questionTwoActions(QWidget *parent,
@@ -145,7 +145,7 @@ ButtonCode questionTwoActions(QWidget *parent,
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode questionTwoActionsCancel(QWidget *parent,
@@ -185,7 +185,7 @@ ButtonCode questionTwoActionsCancel(QWidget *parent,
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode questionTwoActionsList(QWidget *parent,
@@ -222,7 +222,7 @@ ButtonCode questionTwoActionsList(QWidget *parent,
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActions(QWidget *parent,
@@ -261,7 +261,7 @@ ButtonCode warningTwoActions(QWidget *parent,
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsList(QWidget *parent,
@@ -312,7 +312,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancel(QWidget *parent,
 /*!
  * Display a "warning" dialog with a collapsible "Details" section.
  *
- * @since 5.61
+ * \since 5.61
  */
 KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
                                                                const QString &text,
@@ -390,7 +390,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsCancel(QWidget *parent,
@@ -432,7 +432,7 @@ ButtonCode warningTwoActionsCancel(QWidget *parent,
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsCancelList(QWidget *parent,
@@ -476,7 +476,7 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QSt
  *
  * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
  *
- * @since 5.97
+ * \since 5.97
  */
 KWIDGETSADDONS_EXPORT
 void error(QWidget *parent,
@@ -550,7 +550,7 @@ detailedError(QWidget *parent, const QString &text, const QString &details, cons
  *
  * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
  *
- * @since 5.97
+ * \since 5.97
  */
 KWIDGETSADDONS_EXPORT
 void detailedError(QWidget *parent,
@@ -675,7 +675,7 @@ ButtonCode messageBox(QWidget *parent,
  *               Only meaningful if the message box should not be shown.
  * @returns @c true if the corresponding two actions message box should be shown, @c false otherwise.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 bool shouldBeShownTwoActions(const QString &dontShowAgainName, ButtonCode &result);
@@ -696,7 +696,7 @@ KWIDGETSADDONS_EXPORT bool shouldBeShownContinue(const QString &dontShowAgainNam
  * \a result the value (@c PrimaryAction or @c SecondaryAction) that should be used
  *               as the result for the message box.
  *
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 void saveDontShowAgainTwoActions(const QString &dontShowAgainName, ButtonCode result);
@@ -719,7 +719,7 @@ KWIDGETSADDONS_EXPORT void setDontShowAgainConfig(KConfig *cfg);
  * Use @p dontAskAgainInterface for all settings related to the dontShowAgain feature.
  * This method does not take ownership of @p dontAskAgainInterface.
  *
- * @since 5.0
+ * \since 5.0
  */
 KWIDGETSADDONS_EXPORT void setDontShowAgainInterface(KMessageBoxDontAskAgainInterface *dontAskAgainInterface);
 
@@ -727,7 +727,7 @@ KWIDGETSADDONS_EXPORT void setDontShowAgainInterface(KMessageBoxDontAskAgainInte
  * Use @p notifyInterface to send notifications.
  * This method does not take ownership of @p notifyInterface.
  *
- * @since 5.0
+ * \since 5.0
  */
 KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notifyInterface);
 
@@ -810,7 +810,7 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
  * of QWidget*. It should be used only when necessary.
  *
  * @see questionTwoActions()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode questionTwoActionsWId(WId parent_id,
@@ -826,7 +826,7 @@ ButtonCode questionTwoActionsWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  *
  * @see questionTwoActionsCancel()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode questionTwoActionsCancelWId(WId parent_id,
@@ -843,7 +843,7 @@ ButtonCode questionTwoActionsCancelWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  *
  * @see questionTwoActionsList()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode questionTwoActionsListWId(WId parent_id,
@@ -860,7 +860,7 @@ ButtonCode questionTwoActionsListWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  *
  * @see warningTwoActions()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsWId(WId parent_id,
@@ -876,7 +876,7 @@ ButtonCode warningTwoActionsWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  *
  * @see warningTwoActionsList()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsListWId(WId parent_id,
@@ -918,7 +918,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelListWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  *
  * @see warningTwoActionsCancel()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsCancelWId(WId parent_id,
@@ -935,7 +935,7 @@ ButtonCode warningTwoActionsCancelWId(WId parent_id,
  * of QWidget*. It should be used only when necessary.
  *
  * @see warningTwoActionsCancelList()
- * @since 5.100
+ * \since 5.100
  */
 KWIDGETSADDONS_EXPORT
 ButtonCode warningTwoActionsCancelListWId(WId parent_id,
@@ -971,7 +971,7 @@ detailedErrorWId(WId parent_id, const QString &text, const QString &details, con
 /*!
  * This function accepts the window id of the parent window, instead
  * of QWidget*. It should be used only when necessary.
- * @since 5.97
+ * \since 5.97
  */
 KWIDGETSADDONS_EXPORT
 void detailedErrorWId(WId parent_id,

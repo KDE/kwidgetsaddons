@@ -13,7 +13,7 @@ class QObject;
 /*!
  * Event-handling utilities for QLineEdit instances.
  *
- * @since 6.0
+ * \since 6.0
  */
 namespace KLineEditEventHandler
 {

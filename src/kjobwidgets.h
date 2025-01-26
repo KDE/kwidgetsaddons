@@ -32,7 +32,7 @@ namespace KJobWidgets
  * @li by KIO::DropJob as parent widget of popup menus.
  * This is required on Wayland to properly position the menu.
  *
- * @since 6.0
+ * \since 6.0
  */
 KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
 
@@ -44,7 +44,7 @@ KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
  *
  * \a job should be a KJob subclass
  *
- * @since 6.4
+ * \since 6.4
  * @deprecated since 6.5, use KJobWindows::setWindow() instead.
  */
 KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::setWindow() instead") void setWindowHandle(QObject *job, QWindow *window);
@@ -55,7 +55,7 @@ KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::
  *
  * \a job should be a KJob subclass
  *
- * @since 6.0
+ * \since 6.0
  */
 KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
 
@@ -65,7 +65,7 @@ KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
  *
  * \a job should be a KJob subclass
  *
- * @since 6.4
+ * \since 6.4
  * @deprecated since 6.5, use KJobWindows::window() instead.
  */
 KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::window() instead") QWindow *windowHandle(QObject *job);
@@ -76,7 +76,7 @@ KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::
  *
  * \a job should be a KJob subclass
  *
- * @since 6.0
+ * \since 6.0
  */
 KWIDGETSADDONS_EXPORT void updateUserTimestamp(QObject *job, unsigned long time);
 /*!
@@ -84,7 +84,7 @@ KWIDGETSADDONS_EXPORT void updateUserTimestamp(QObject *job, unsigned long time)
  *
  * \a job should be a KJob subclass
  *
- * @since 6.0
+ * \since 6.0
  */
 KWIDGETSADDONS_EXPORT unsigned long userTimestamp(QObject *job);
 }

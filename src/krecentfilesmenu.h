@@ -17,7 +17,7 @@ class KRecentFilesMenuPrivate;
 /*!
  * A menu that offers a set of recent files.
  *
- * @since 5.74
+ * \since 5.74
  */
 class KWIDGETSADDONS_EXPORT KRecentFilesMenu : public QMenu
 {
@@ -81,7 +81,7 @@ public:
      * See \ref clearRecentFiles
      * See \ref recentFilesChanged
      *
-     * @since 5.101
+     * \since 5.101
      */
     QList<QUrl> recentFiles() const;
 
@@ -92,7 +92,7 @@ public Q_SLOTS:
      * See \ref recentFiles
      * See \ref recentFilesChanged
      *
-     * @since 5.101
+     * \since 5.101
      */
     void clearRecentFiles();
 
@@ -111,7 +111,7 @@ Q_SIGNALS:
      * See \ref recentFiles
      * See \ref clearRecentFiles
      *
-     * @since 5.101
+     * \since 5.101
      */
     void recentFilesChanged();
 

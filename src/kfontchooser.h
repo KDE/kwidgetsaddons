@@ -86,7 +86,7 @@ public:
      *
      * \a parent the parent widget
      *
-     * @since 5.86
+     * \since 5.86
      */
     explicit KFontChooser(QWidget *parent = nullptr);
 
@@ -98,7 +98,7 @@ public:
      * \a parent the parent widget, if not nullptr the windowing system will use it to position
      * the chooser widget relative to it
      *
-     * @since 5.86
+     * \since 5.86
      */
     explicit KFontChooser(DisplayFlags flags, QWidget *parent = nullptr);
 
@@ -206,7 +206,7 @@ public:
      * \a fontListCriteria specifies the criteria used to select fonts to add to
      * the list, a combination of OR-ed values from @ref KFontChooser::FontListCriteria
      *
-     * @since 5.86
+     * \since 5.86
      */
     static QStringList createFontList(uint fontListCriteria);
 
@@ -221,7 +221,7 @@ public:
      *
      * Note that if @p fontList is empty, the font list in the chooser will show
      * all the available fonts on the system.
-     * @since 5.86
+     * \since 5.86
      */
     void setFontListItems(const QStringList &fontList);
 
@@ -230,7 +230,7 @@ public:
      * child list widgets; this number will be used to compute and set
      * the minimum heights for those widgets.
      *
-     * @since 5.86
+     * \since 5.86
      */
     void setMinVisibleItems(int visibleItems);
 

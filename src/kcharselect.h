@@ -117,7 +117,7 @@ public:
      * \a parent     the parent widget for this KCharSelect (see QWidget documentation)
      * \a controls   selects the visible controls on the KCharSelect widget
      *
-     * @since 4.2
+     * \since 4.2
      */
     explicit KCharSelect(QWidget *parent, const Controls controls = AllGuiElements);
 
@@ -137,7 +137,7 @@ public:
      *                     collection
      * \a controls   selects the visible controls on the KCharSelect widget
      *
-     * @since 4.2
+     * \since 4.2
      */
     explicit KCharSelect(QWidget *parent, QObject *actionParent, const Controls controls = AllGuiElements);
 
@@ -157,14 +157,14 @@ public:
      *
      * If you enable support for all planes, you must use the functions
      * handling @c uint code points instead of @c QChar characters.
-     * @since 5.25
+     * \since 5.25
      */
     void setAllPlanesEnabled(bool all);
 
     /*!
      * @returns @c true, if characters from all Unicode code planes
      * can be selected.
-     * @since 5.25
+     * \since 5.25
      */
     bool allPlanesEnabled() const;
 
@@ -182,7 +182,7 @@ public:
      * QChar::requiresSurrogates() to check if the code point requires
      * conversion to a UTF-16 surrogate pair before converting it to QString.
      * You cannot convert a code point to a QChar.
-     * @since 5.25
+     * \since 5.25
      */
     uint currentCodePoint() const;
 
@@ -202,7 +202,7 @@ public:
 
     /*!
      * Returns a list of Unicode code points of the currently displayed characters.
-     * @since 5.25
+     * \since 5.25
      */
     QList<uint> displayedCodePoints() const;
 
@@ -222,7 +222,7 @@ public Q_SLOTS:
      * \a codePoint the Unicode code point of the character to highlight
      *
      * @sa allPlanesEnabled
-     * @since 5.25
+     * \since 5.25
      */
     void setCurrentCodePoint(uint codePoint);
 
@@ -250,7 +250,7 @@ Q_SIGNALS:
      * The current character is changed.
      *
      * \a codePoint the Unicode code point of the new character
-     * @since 5.25
+     * \since 5.25
      */
     void currentCodePointChanged(uint codePoint);
     /*!
@@ -267,7 +267,7 @@ Q_SIGNALS:
      * A character is selected to be inserted somewhere.
      *
      * \a codePoint the Unicode code point of the selected character
-     * @since 5.25
+     * \since 5.25
      */
     void codePointSelected(uint codePoint);
 

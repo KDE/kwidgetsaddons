@@ -50,7 +50,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      */
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
     /*!
-     * @since 5.52
+     * \since 5.52
      */
     Q_PROPERTY(bool headerVisible READ isHeaderVisible WRITE setHeaderVisible)
     /*!
@@ -58,7 +58,7 @@ class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
      *
      * @warning This is not supported when using a KPageView/KPageWidget/KPageDialog with
      * the Tabbed face type.
-     * @since 6.6
+     * \since 6.6
      */
     Q_PROPERTY(QList<QAction *> actions READ actions WRITE setActions NOTIFY actionsChanged)
 public:
@@ -150,25 +150,25 @@ public:
 
     /*!
      * Returns whether the page will show the header title
-     * @since 5.52
+     * \since 5.52
      */
     bool isHeaderVisible() const;
 
     /*!
      * Set whether the page should show the header title
-     * @since 5.52
+     * \since 5.52
      */
     void setHeaderVisible(bool visible);
 
     /*!
      * Returns the actions associated to the page.
-     * @since 6.6
+     * \since 6.6
      */
     QList<QAction *> actions() const;
 
     /*!
      * Set the actions associated to the page.
-     * @since 6.6
+     * \since 6.6
      */
     void setActions(QList<QAction *> actions);
 
@@ -199,7 +199,7 @@ Q_SIGNALS:
     /*!
      * This signal is emitted whenever the actions associated to the
      * page are changed.
-     * @since 6.6
+     * \since 6.6
      */
     void actionsChanged();
 

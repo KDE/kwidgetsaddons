@@ -36,7 +36,7 @@
  * semi-arbitrary sizes, with quality constrained only by the resolution of the
  * available icons.
  *
- * @since 5.61.0
+ * \since 5.61.0
  */
 class KWIDGETSADDONS_EXPORT KBusyIndicatorWidget : public QWidget
 {
@@ -69,7 +69,7 @@ public:
      *
      * @see setRunning()
      *
-     * @since 6.11.0
+     * \since 6.11.0
      */
     bool isRunning() const;
 
@@ -79,7 +79,7 @@ public Q_SLOTS:
      *
      * @see setRunning()
      *
-     * @since 6.10.0
+     * \since 6.10.0
      */
     void start();
 
@@ -88,7 +88,7 @@ public Q_SLOTS:
      *
      * @see setRunning()
      *
-     * @since 6.10.0
+     * \since 6.10.0
      */
     void stop();
 
@@ -99,7 +99,7 @@ public Q_SLOTS:
      * @see start()
      * @see stop()
      *
-     * @since 6.11.0
+     * \since 6.11.0
      */
     void setRunning(const bool enable = true);
 

@@ -61,7 +61,7 @@ public:
      *
      * @see setPopupMode()
      *
-     * @since 5.77
+     * \since 5.77
      */
     QToolButton::ToolButtonPopupMode popupMode() const;
 
@@ -80,7 +80,7 @@ public:
      *
      * @see QToolButton
      *
-     * @since 5.77
+     * \since 5.77
      */
     void setPopupMode(QToolButton::ToolButtonPopupMode popupMode);
 

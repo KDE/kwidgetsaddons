@@ -163,7 +163,7 @@ class KViewStateSerializerPrivate;
   @see QAbstractItemModel::modelAboutToBeReset QAbstractItemModel::modelReset
 
   @author Stephen Kelly <stephen@kdab.com>
-  @since 4.5
+  \since 4.5
 */
 class KWIDGETSADDONS_EXPORT KViewStateSerializer : public QObject
 {

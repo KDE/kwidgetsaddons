@@ -23,7 +23,7 @@
  *
  * Note: The QGestureManager need a QMainwindow, to delivery the gesture.
  *
- * @since 5.83
+ * \since 5.83
  * @author Steffen Hartleib <steffenhartleib@t-online.de>
  */
 class KWIDGETSADDONS_EXPORT KTwoFingerSwipe : public QGesture
@@ -109,7 +109,7 @@ private:
  * @see setMaxSwipeTime
  * @see setSwipeDistance
  *
- * @since 5.83
+ * \since 5.83
  * @author Steffen Hartleib <steffenhartleib@t-online.de>
  */
 class KWIDGETSADDONS_EXPORT KTwoFingerSwipeRecognizer : public QGestureRecognizer

@@ -20,7 +20,7 @@ class QSplitter;
  *
  * A button which appears on the side of a splitter handle and allows easy
  * collapsing of the widget on the opposite side
- * @since 5.5
+ * \since 5.5
  */
 class KWIDGETSADDONS_EXPORT KSplitterCollapserButton : public QToolButton
 {

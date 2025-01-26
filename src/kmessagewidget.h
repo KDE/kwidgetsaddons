@@ -82,7 +82,7 @@
  * @li A chat application may notify the user a "special friend" just connected
  *
  * @author Aurélien Gâteau <agateau@kde.org>
- * @since 4.7
+ * \since 4.7
  */
 class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
 {
@@ -112,7 +112,7 @@ public:
      * Position of the KMessageWidget
      *
      * This will update the look of the KMessageWidget to be appropriate to the position.
-     * @since 6.0
+     * \since 6.0
      */
     enum Position {
         Inline, ///< The message widget is display inside the content.
@@ -140,7 +140,7 @@ public:
     /*!
      * Get the position of this message. By default this is KMessageWidget::Inline.
      * @see setPosition()
-     * @since 6.0
+     * \since 6.0
      */
     Position position() const;
 
@@ -153,14 +153,14 @@ public:
     /*!
      * Get the text format of the message widget's label.
      * @see QLabel::textFormat()
-     * @since 6.0
+     * \since 6.0
      */
     Qt::TextFormat textFormat() const;
 
     /*!
      * Set the text format of the message widget's label.
      * @see QLabel::setTextFormat()
-     * @since 6.0
+     * \since 6.0
      */
     void setTextFormat(Qt::TextFormat textFormat);
 
@@ -211,7 +211,7 @@ public:
     /*!
      * Clears all actions from the message widget.
      * @see KMessageWidget::MessageType, addAction() and removeAction()
-     * @since 5.100
+     * \since 5.100
      */
     void clearActions();
 
@@ -233,7 +233,7 @@ public:
 
     /*!
      * The icon shown on the left of the text. By default, no icon is shown.
-     * @since 4.11
+     * \since 4.11
      */
     QIcon icon() const;
 
@@ -243,7 +243,7 @@ public:
      * returns @e false.
      *
      * @see animatedHide(), hideAnimationFinished()
-     * @since 5.0
+     * \since 5.0
      */
     bool isHideAnimationRunning() const;
 
@@ -253,7 +253,7 @@ public:
      * returns @e false.
      *
      * @see animatedShow(), showAnimationFinished()
-     * @since 5.0
+     * \since 5.0
      */
     bool isShowAnimationRunning() const;
 
@@ -270,7 +270,7 @@ public Q_SLOTS:
     /*!
      * Set the position of this message
      * @see position()
-     * @since 6.0
+     * \since 6.0
      */
     void setPosition(Position position);
 
@@ -319,7 +319,7 @@ public Q_SLOTS:
 
     /*!
      * Define an icon to be shown on the left of the text
-     * @since 4.11
+     * \since 4.11
      */
     void setIcon(const QIcon &icon);
 
@@ -329,7 +329,7 @@ Q_SIGNALS:
      * The URL referred to by the href anchor is passed in contents.
      * \a contents text of the href anchor
      * @see QLabel::linkActivated()
-     * @since 4.10
+     * \since 4.10
      */
     void linkActivated(const QString &contents);
 
@@ -338,7 +338,7 @@ Q_SIGNALS:
      * The URL referred to by the href anchor is passed in contents.
      * \a contents text of the href anchor
      * @see QLabel::linkHovered()
-     * @since 4.11
+     * \since 4.11
      */
     void linkHovered(const QString &contents);
 
@@ -352,7 +352,7 @@ Q_SIGNALS:
      *       with animatedHide().
      *
      * @see animatedHide()
-     * @since 5.0
+     * \since 5.0
      */
     void hideAnimationFinished();
 
@@ -366,7 +366,7 @@ Q_SIGNALS:
      *       with animatedShow().
      *
      * @see animatedShow()
-     * @since 5.0
+     * \since 5.0
      */
     void showAnimationFinished();
 

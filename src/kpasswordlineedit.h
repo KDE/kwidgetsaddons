@@ -30,7 +30,7 @@ class QAction;
  * \endcode
  *
  * @author Laurent Montel <montel@kde.org>
- * @since 5.37
+ * \since 5.37
  */
 class KWIDGETSADDONS_EXPORT KPasswordLineEdit : public QWidget
 {
@@ -41,7 +41,7 @@ class KWIDGETSADDONS_EXPORT KPasswordLineEdit : public QWidget
 public:
     /*!
      * Constructs a lineedit password widget.
-     * @since 5.37
+     * \since 5.37
      *
      * \a parent Passed to lower level constructor.
      */
@@ -88,19 +88,19 @@ public:
 
     /*!
      * Set whether the line edit is read only.
-     * @since 6.0
+     * \since 6.0
      */
     void setReadOnly(bool readOnly);
 
     /*!
      * Return whether the line edit is read only.
-     * @since 6.0
+     * \since 6.0
      */
     bool isReadOnly() const;
 
     /*!
      * Return when the reveal password button is visible.
-     * @since 6.0
+     * \since 6.0
      */
     KPassword::RevealMode revealPasswordMode() const;
 
@@ -119,7 +119,7 @@ public:
      *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Never);
      * }
      * @endcode
-     * @since 6.0
+     * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 

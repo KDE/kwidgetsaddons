@@ -39,7 +39,7 @@ namespace KStyleExtensions
  * @returns a unique QStyle::ControlElement or 0 in case the style doesn't support this element
  * \a element a valid element string appname.CE_element, eg. "amarok.CE_Analyzer"
  * \a widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
- * @since 5.3
+ * \since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString &element, const QWidget *widget);
 /*!
@@ -48,7 +48,7 @@ KWIDGETSADDONS_EXPORT QStyle::ControlElement customControlElement(const QString 
  * @returns a unique QStyle::StyleHint or 0 in case the style doesn't support this element
  * \a element a valid element string appname.SH_element, eg. "amarok.SH_Analyzer"
  * \a widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
- * @since 5.3
+ * \since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::StyleHint customStyleHint(const QString &element, const QWidget *widget);
 /*!
@@ -57,7 +57,7 @@ KWIDGETSADDONS_EXPORT QStyle::StyleHint customStyleHint(const QString &element, 
  * @returns a unique QStyle::SubElement or 0 in case the style doesn't support this element
  * \a element a valid element string appname.SE_element, eg. "amarok.SE_AnalyzerCanvas"
  * \a widget the widget to paint this element for. This parameter is mandatory, nullptr will return 0!
- * @since 5.3
+ * \since 5.3
  */
 KWIDGETSADDONS_EXPORT QStyle::SubElement customSubElement(const QString &element, const QWidget *widget);
 }

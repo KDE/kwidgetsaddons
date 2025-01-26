@@ -13,7 +13,7 @@
 
 /*!
  * This namespace provides a method for starting the file types editor.
- * @since 5.4
+ * \since 5.4
  */
 namespace KMimeTypeEditor
 {
@@ -25,7 +25,7 @@ namespace KMimeTypeEditor
  *
  * \a mimeType the MIME type to edit, e.g. "text/plain"
  * \a widget the parent widget
- * @since 5.4
+ * \since 5.4
  */
 KWIDGETSADDONS_EXPORT void editMimeType(const QString &mimeType, QWidget *widget);
 }

@@ -100,7 +100,7 @@ class QWidget;
  *  dlg->show();
  * @endcode
  *
- * @since 5.77
+ * \since 5.77
  */
 
 class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
@@ -110,7 +110,7 @@ class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
 public:
     /*!
      * Button types
-     * @since 5.100
+     * \since 5.100
      */
     enum ButtonType {
         Ok = 1, ///< Ok button
@@ -120,10 +120,10 @@ public:
     };
 
     enum Type {
-        QuestionTwoActions = 1, ///< Question dialog with two buttons; @since 5.100
-        QuestionTwoActionsCancel = 2, ///< Question dialog with two buttons and Cancel; @since 5.100
-        WarningTwoActions = 3, ///< Warning dialog with two buttons; @since 5.100
-        WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; @since 5.100
+        QuestionTwoActions = 1, ///< Question dialog with two buttons; \since 5.100
+        QuestionTwoActionsCancel = 2, ///< Question dialog with two buttons and Cancel; \since 5.100
+        WarningTwoActions = 3, ///< Warning dialog with two buttons; \since 5.100
+        WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; \since 5.100
         WarningContinueCancel = 5, ///< Warning dialog with Continue and Cancel
         Information = 6, ///< Information dialog
         Error = 8, ///< Error dialog
@@ -233,7 +233,7 @@ public:
      *
      * This typically plays a notification sound. Default is true.
      *
-     * @since 5.97
+     * \since 5.97
      * @sa KMessageBox::Notify
      */
     bool isNotifyEnabled() const;
@@ -243,7 +243,7 @@ public:
      *
      * This typically plays a notification sound.
      *
-     * @since 5.97
+     * \since 5.97
      * @sa KMessageBox::Notify
      */
     void setNotifyEnabled(bool enable);
@@ -285,7 +285,7 @@ public:
      * \a type The message box type
      * \a text The message box contents, for accessibility purposes.
      * \a dialog The dialog that was displayed
-     * @since 6.0
+     * \since 6.0
      * @sa setNotifyEnabled
      */
     static void beep(KMessageDialog::Type type, const QString &text = QString(), QWidget *dialog = nullptr);

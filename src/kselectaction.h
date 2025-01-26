@@ -239,7 +239,7 @@ public:
      * Inserts the action action to this widget's list of actions, before the action before.
      * It appends the action if before is a null pointer or before is not a valid action for this widget.
      *
-     * @since 5.0
+     * \since 5.0
      */
     virtual void insertAction(QAction *before, QAction *action);
 
@@ -338,7 +338,7 @@ Q_SIGNALS:
      * This signal is emitted when an item is selected.
      * \a action indicates the item selected
      *
-     * @since 6.0
+     * \since 6.0
      */
     void actionTriggered(QAction *action);
 
@@ -346,7 +346,7 @@ Q_SIGNALS:
      * This signal is emitted when an item is selected.
      * \a index indicates the item selected
      *
-     * @since 5.78
+     * \since 5.78
      */
     void indexTriggered(int index);
 
@@ -354,7 +354,7 @@ Q_SIGNALS:
      * This signal is emitted when an item is selected.
      * \a text indicates the item selected
      *
-     * @since 5.78
+     * \since 5.78
      */
     void textTriggered(const QString &text);
 
@@ -364,7 +364,7 @@ protected Q_SLOTS:
      * The default implementation calls trigger() if isCheckable() is @c true, then emits
      * the signals actionTriggered(QAction *), indexTriggered(int) and textTriggered(const QString &).
      *
-     * @since 6.0
+     * \since 6.0
      */
     virtual void slotActionTriggered(QAction *action);
 

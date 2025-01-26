@@ -56,7 +56,7 @@ public:
      *
      * @sa QToolButton::ToolButtonPopupMode
      *
-     * @since 6.0
+     * \since 6.0
      */
     enum PopupMode {
         NoPopup = -1, ///< Behave as if the button had no menu.
@@ -93,7 +93,7 @@ public:
      * @note menu() is null on this action by default and using setMenu()
      * will effectively turn this action into a regular action with a submenu.
      *
-     * @since 6.0
+     * \since 6.0
      */
     QMenu *popupMenu() const;
 
@@ -102,7 +102,7 @@ public:
      *
      * @see setPopupMode()
      *
-     * @since 6.0
+     * \since 6.0
      */
     PopupMode popupMode() const;
 
@@ -110,7 +110,7 @@ public:
      * Determines the popup mode of the toolbar button.
      * @see PopupMode
      *
-     * @since 6.0
+     * \since 6.0
      */
     void setPopupMode(PopupMode popupMode);
 

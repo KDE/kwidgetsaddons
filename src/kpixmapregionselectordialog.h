@@ -96,7 +96,7 @@ public:
     static QImage getSelectedImage(const QPixmap &pixmap, int aspectRatioWidth, int aspectRatioHeight, QWidget *parent = nullptr);
 
     /*!
-     * @since 4.4.3
+     * \since 4.4.3
      * Adjusts the size of the KPixmapRegionSelectorWidget to not overflow the screen size
      */
     void adjustRegionSelectorWidgetSizeToFitScreen();

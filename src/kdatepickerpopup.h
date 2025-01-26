@@ -31,7 +31,7 @@ class KDatePickerPopupPrivate;
  *
  * @author Bram Schoenmakers <bram_s@softhome.net>
  *
- * @since 5.94
+ * \since 5.94
  */
 class KWIDGETSADDONS_EXPORT KDatePickerPopup : public QMenu
 {

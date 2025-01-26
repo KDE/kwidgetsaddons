@@ -77,17 +77,17 @@ public:
         UsernameReadOnly = 0x04,
         /*!
          * If this flag is set, the Anonymous Login checkbox will be displayed
-         * @since 4.1
+         * \since 4.1
          */
         ShowAnonymousLoginCheckBox = 0x08,
         /*!
          * If this flag is set, there will be an additional line to let the user enter the domain.
-         * @since 4.1
+         * \since 4.1
          */
         ShowDomainLine = 0x10,
         /*!
          * If this flag is set, the domain lineedit will be in read only mode.
-         * @since 4.1
+         * \since 4.1
          */
         DomainReadOnly = 0x20,
     };
@@ -116,7 +116,7 @@ public:
 
         /*!
          * A problem with the domain as entered
-         * @since 4.1
+         * \since 4.1
          */
         DomainError,
     };
@@ -147,7 +147,7 @@ public:
 
     /*!
      * Set the icon that appears next to the prompt.
-     * @since 5.63
+     * \since 5.63
      */
     void setIcon(const QIcon &icon);
 
@@ -194,26 +194,26 @@ public:
 
     /*!
      * set the default domain.
-     * @since 4.1
+     * \since 4.1
      */
     void setDomain(const QString &);
 
     /*!
      * Returns the domain entered by the user.
      * @return the domain name
-     * @since 4.1
+     * \since 4.1
      */
     QString domain() const;
 
     /*!
      * set anonymous mode (all other fields will be grayed out)
-     * @since 4.1
+     * \since 4.1
      */
     void setAnonymousMode(bool anonymous);
 
     /*!
      * @return anonymous mode has been selected.
-     * @since 4.1
+     * \since 4.1
      */
     bool anonymousMode() const;
 
@@ -275,7 +275,7 @@ public:
      *
      * @return the button box
      *
-     * @since 5.0
+     * \since 5.0
      */
     QDialogButtonBox *buttonBox() const;
 
@@ -286,7 +286,7 @@ public:
      * when the user name may require or support special input syntax.
      * For example windows-like auth dialogs supports multiple different logon
      * name syntax.
-     * @since 5.76
+     * \since 5.76
      */
     void setUsernameContextHelp(const QString &help);
 
@@ -298,20 +298,20 @@ public:
      * \code
      * dlg->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
-     * @since 5.84
+     * \since 5.84
      */
     [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
 
     /*!
      * Whether the visibility trailing action in the line edit is visible.
-     * @since 5.84
+     * \since 5.84
      */
     [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
 #endif
 
     /*!
      * Return when the reveal password button is visible.
-     * @since 6.0
+     * \since 6.0
      */
     KPassword::RevealMode revealPasswordMode() const;
 
@@ -330,7 +330,7 @@ public:
      *     passwordDialog.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
      * @endcode
-     * @since 6.0
+     * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 
