@@ -13,48 +13,59 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
- * @class KMimeTypeChooser kmimetypechooser.h KMimeTypeChooser
+/*!
+ * \class KMimeTypeChooser
+ * \inmodule KWidgetsAddons
  *
- * This widget provides a checkable list of all available MIME types, presented
+ * \brief This widget provides a checkable list of all available MIME types.
+ *
+ * Presented
  * as a treeview, with the MIME type comment and glob patterns as individual columns.
+ *
  * It allows users to edit a MIME type by launching a MIME type editor (if it's
  * available on the system).
  *
  * When the user clicks the OK button, a list of the selected MIME type names
  * and associated glob patterns can be retrieved respectively; those lists can
  * be used to populate a text line edit, or set a configuration entry... etc.
- *
- * @author Anders Lund (anders at alweb dk), jan 23, 2002
  */
 class KWIDGETSADDONS_EXPORT KMimeTypeChooser : public QWidget
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Buttons and data for display.
+     *
+     * \value Comments Show the MIME type comment (e.g. "HTML Document") in a column
+     * \value Patterns Show the MIME types glob patterns (e.g. "*.html;*.htm") in a column
+     * \value EditButton Show the "Edit" button, allowing to edit the selected type
      */
     enum Visuals {
-        Comments = 1, ///< Show the MIME type comment (e.g. "HTML Document") in a column
-        Patterns = 2, ///< Show the MIME types glob patterns (e.g. "*.html;*.htm") in a column
-        EditButton = 4 ///< Show the "Edit" button, allowing to edit the selected type
+        Comments = 1,
+        Patterns = 2,
+        EditButton = 4
     };
-    /**
+    /*!
      * Create a new KMimeTypeChooser.
      *
-     * @param text A plain text line to display above the list
-     * @param selectedMimeTypes A list of MIME type names, these will be initially selected
+     * \a text A plain text line to display above the list
+     *
+     * \a selectedMimeTypes A list of MIME type names, these will be initially selected
      *        in the list (provided they exist)
-     * @param visuals OR'd KMimetypeChooser::Visuals enum values to to set whether to
+     *
+     * \a visuals OR'd KMimetypeChooser::Visuals enum values to to set whether to
      *        show the MIME type comment and glob patterns columns and an Edit button,
      *        respectively, or not
-     * @param defaultGroup The group (e.g. "text") to expand in the treeview when no groups
+     *
+     * \a defaultGroup The group (e.g. "text") to expand in the treeview when no groups
      *        are selected. If not provided, no group is expanded by default.
-     *        If @p groupsToShow is provided and it doesn't include @p defaultGroup, this
+     *        If \a groupsToShow is provided and it doesn't include \a defaultGroup, this
      *        parameter is ignored
-     * @param groupsToShow a list of MIME type groups to show. If empty, all groups are shown
-     * @param parent The parent widget to use
+     *
+     * \a groupsToShow a list of MIME type groups to show. If empty, all groups are shown
+     *
+     * \a parent The parent widget to use
      */
     explicit KMimeTypeChooser(const QString &text = QString(),
                               const QStringList &selectedMimeTypes = QStringList(),
@@ -64,12 +75,12 @@ public:
                               QWidget *parent = nullptr);
     ~KMimeTypeChooser() override;
 
-    /**
-     * @return a list of all selected MIME type names
+    /*!
+     * Returns a list of all selected MIME type names
      */
     QStringList mimeTypes() const;
-    /**
-     * @return a list of the filename glob patterns associated with all selected MIME types
+    /*!
+     * Returns a list of the filename glob patterns associated with all selected MIME types
      */
     QStringList patterns() const;
 
@@ -77,10 +88,12 @@ private:
     std::unique_ptr<class KMimeTypeChooserPrivate> const d;
 };
 
-/**
- * @class KMimeTypeChooserDialog kmimetypechooser.h KMimeTypeChooserDialog
+/*!
+ * \class KMimeTypeChooserDialog
+ * \inmodule KWidgetsAddons
+ * \inheaderfile KMimeTypeChooser
  *
- * @short A dialog to select MIME types from the list of available ones on the system
+ * \brief A dialog to select MIME types from the list of available ones on the system.
  *
  * This dialog embeds KMimeTypeChooser widget, presenting a checkable tree list of
  * MIME types, each with its associated icon, and optionally associated glob patterns
@@ -91,7 +104,7 @@ private:
  * list of MIME type names and glob patterns, respectively, of the MIME types that
  * the user has selected:
  *
- * @code
+ * \code
  *    QLineEdit *leMimetypes = new QLineEdit();
  *    QLineEdit *leGlobPatterns = new QLineEdit();
  *    [...]
@@ -102,32 +115,36 @@ private:
  *        leMimetypes->setText(dlg.chooser()->mimeTypes().join(";"));
  *        leGlobPatterns->setText(dlg.chooser()->patterns().join(";"));
  *    }
- * @endcode
+ * \endcode
  *
- * \image html kmimetypechooserdialog.png "KMimeTypeChooserDialog in action"
- *
- * @author Anders Lund (anders at alweb dk) dec 19, 2001
+ * \image kmimetypechooserdialog.png "KMimeTypeChooserDialog in action"
  */
 class KWIDGETSADDONS_EXPORT KMimeTypeChooserDialog : public QDialog
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Create a KMimeTypeChooser dialog.
      *
-     * @param title The title of the dialog
-     * @param text A plain text line to display above the list
-     * @param selectedMimeTypes A list of MIME type names, these will be initially selected
+     * \a title The title of the dialog
+     *
+     * \a text A plain text line to display above the list
+     *
+     * \a selectedMimeTypes A list of MIME type names, these will be initially selected
      *        in the list, provided they exist
-     * @param visuals OR'd KMimetypeChooser::Visuals enum values to to set whether to
+     *
+     * \a visuals OR'd KMimetypeChooser::Visuals enum values to to set whether to
      *        show the MIME type comment and glob patterns columns and an Edit button,
      *        respectively, or not
-     * @param defaultGroup The group (e.g. "text") to expand in the treeview when no
+     *
+     * \a defaultGroup The group (e.g. "text") to expand in the treeview when no
      *        groups are selected. If not provided, no group is expanded by default
-     *        If @p groupsToShow is provided and it doesn't include @p defaultGroup,
+     *        If \a groupsToShow is provided and it doesn't include \a defaultGroup,
      *        this parameter is ignored
-     * @param groupsToShow A list of MIME type groups to show. If empty, all groups are shown
-     * @param parent The parent widget to use
+     *
+     * \a groupsToShow A list of MIME type groups to show. If empty, all groups are shown
+     *
+     * \a parent The parent widget to use
      */
     explicit KMimeTypeChooserDialog(const QString &title = QString(),
                                     const QString &text = QString(),
@@ -137,8 +154,8 @@ public:
                                     int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
                                     QWidget *parent = nullptr);
 
-    /**
-     * @overload
+    /*!
+     * \overload
      */
     KMimeTypeChooserDialog(const QString &title,
                            const QString &text,
@@ -148,8 +165,8 @@ public:
 
     ~KMimeTypeChooserDialog() override;
 
-    /**
-     * @return a pointer to the KMimeTypeChooser widget
+    /*!
+     * Returns a pointer to the KMimeTypeChooser widget
      */
     KMimeTypeChooser *chooser();
 

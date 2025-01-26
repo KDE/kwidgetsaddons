@@ -20,33 +20,59 @@
 
 class KFontSizeActionPrivate;
 
-/**
- * @class KFontSizeAction kfontsizeaction.h KFontSizeAction
+/*!
+ * \class KFontSizeAction
+ * \inmodule KWidgetsAddons
  *
- * An action to allow changing of the font size.
+ * \brief An action to allow changing of the font size.
+ *
  * This action will be shown as a combobox on a toolbar with a proper set of font sizes.
  */
 class KWIDGETSADDONS_EXPORT KFontSizeAction : public KSelectAction
 {
     Q_OBJECT
+
+    /*!
+     * \property KFontSizeAction::fontSize
+     */
     Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize)
 
 public:
+    /*!
+     *
+     */
     explicit KFontSizeAction(QObject *parent);
+
+    /*!
+     *
+     */
     KFontSizeAction(const QString &text, QObject *parent);
+
+    /*!
+     *
+     */
     KFontSizeAction(const QIcon &icon, const QString &text, QObject *parent);
 
     ~KFontSizeAction() override;
 
+    /*!
+     *
+     */
     int fontSize() const;
 
+    /*!
+     *
+     */
     void setFontSize(int size);
 
 Q_SIGNALS:
+    /*!
+     *
+     */
     void fontSizeChanged(int);
 
 protected Q_SLOTS:
-    /**
+    /*!
      * This function is called whenever an action from the selections is triggered.
      */
     void slotActionTriggered(QAction *action) override;

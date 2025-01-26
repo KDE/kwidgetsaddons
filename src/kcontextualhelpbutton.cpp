@@ -12,46 +12,46 @@
 #include <QTextDocumentFragment>
 #include <QWidgetAction>
 
-/**
+/*!
  * The private class of KContextualHelpButton used for the PIMPL idiom.
  * \internal
  */
 class KContextualHelpButtonPrivate
 {
 public:
-    /** @see KContextualHelpButton::KContextualHelpButton() */
+    /*! \sa KContextualHelpButton::KContextualHelpButton() */
     explicit KContextualHelpButtonPrivate(KContextualHelpButton *q, const QString &contextualHelpText, const QWidget *heightHintWidget);
 
-    /** @see KContextualHelButton::setContextualHelpText() */
+    /*! \sa KContextualHelButton::setContextualHelpText() */
     void setContextualHelpText(const QString &contextualHelpText);
 
-    /** @see KContextualHelButton::contextualHelpText() */
+    /*! \sa KContextualHelButton::contextualHelpText() */
     QString contextualHelpText() const;
 
-    /** @see KContextualHelpButton::setHeightHintWidget() */
+    /*! \sa KContextualHelpButton::setHeightHintWidget() */
     void setHeightHintWidget(const QWidget *heightHintWidget);
 
-    /** @see KContextualHelpButton::setHeightHintWidget() */
+    /*! \sa KContextualHelpButton::setHeightHintWidget() */
     const QWidget *heightHintWidget() const;
 
-    /**
+    /*!
      * A helper method called from KContextualHelpButton::sizeHint().
      *
      * @returns the preferredSize based on m_heightHintWidget and fallbackSize.
-     * @param fallbackSize  Used as the width. Also used as the height if there is no m_heightHintWidget.
+     * \a fallbackSize  Used as the width. Also used as the height if there is no m_heightHintWidget.
      *
-     * @see QWidget::sizeHint()
-     * @see KContextualHelpButton::setHeightHintWidget()
+     * \sa QWidget::sizeHint()
+     * \sa KContextualHelpButton::setHeightHintWidget()
      */
     QSize preferredSize(const QSize &fallbackSize) const;
 
 private:
     KContextualHelpButton *const q_ptr;
 
-    /** The popup showing the contextualHelpText. */
+    /*! The popup showing the contextualHelpText. */
     QLabel *m_popupLabel = nullptr;
 
-    /** @see KContextualHelpButton::setHeightHintWidget() */
+    /*! \sa KContextualHelpButton::setHeightHintWidget() */
     QPointer<const QWidget> m_heightHintWidget;
 };
 

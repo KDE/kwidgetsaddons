@@ -18,25 +18,20 @@
 
 class KCharSelectTablePrivate;
 
-/**
- * @short Character selection table
- *
+/*!
+ * \internal
  * A table widget which displays the characters of a font. Internally
  * used by KCharSelect. See the KCharSelect documentation for further
  * details.
- *
- * @author Reginald Stadlbauer <reggie@kde.org>
- * @author Daniel Laidig <d.laidig@gmx.de>
  */
-
 class KCharSelectTable : public QTableView
 {
     Q_OBJECT
 
 public:
-    /**
-     * Constructor. Using @p _font, draw a table of chars.
-     * @sa setContents
+    /*!
+     * Constructor. Using \a _font, draw a table of chars.
+     * \sa setContents
      */
     KCharSelectTable(QWidget *parent, const QFont &_font);
 
@@ -44,40 +39,40 @@ public:
 
     void resizeEvent(QResizeEvent *) override;
 
-    /** Set the font to be displayed to @p _font . */
+    /*! Set the font to be displayed to \a _font . */
     void setFont(const QFont &_font);
 
-    /** Set the highlighted character to @p c . */
+    /*! Set the highlighted character to \a c . */
     void setChar(uint c);
-    /** Set the contents of the table to @p chars . */
+    /*! Set the contents of the table to \a chars . */
     void setContents(const QList<uint> &chars);
 
-    /** @return Currently highlighted character. */
+    /*! Returns Currently highlighted character. */
     uint chr();
 
-    /**
+    /*!
      * Returns the currently displayed font.
      */
     QFont font() const;
 
-    /**
+    /*!
      * Returns a list of currently displayed characters.
      */
     QList<uint> displayedChars() const;
 
-    /**
+    /*!
      * Reimplemented.
      */
     void scrollTo(const QModelIndex &index, ScrollHint hint = EnsureVisible) override;
 
 protected:
-    /**
+    /*!
      * Reimplemented.
      */
     void keyPressEvent(QKeyEvent *e) override;
 
 Q_SIGNALS:
-    /** Emitted to indicate that character @p c is activated (such as by double-clicking it). */
+    /*! Emitted to indicate that character \a c is activated (such as by double-clicking it). */
     void activated(uint c);
     void focusItemChanged(uint c);
     void showCharRequested(uint c);

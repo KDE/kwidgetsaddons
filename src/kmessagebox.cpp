@@ -33,7 +33,7 @@
 
 namespace KMessageBox
 {
-/**
+/*!
  * @private Prevent kapidox's doxygen config to pick up this namespace variable
  * this static is used by the createKMessageBox function to enqueue dialogs
  * FIXME what should we do about this static?
@@ -74,7 +74,7 @@ static void setMainWindow(QWidget *subWidget, WId mainWindowId)
     subWindow->setTransientParent(mainWindow);
 }
 
-/**
+/*!
  * @private Prevent kapidox's doxygen config pick up this namespace method
  * Create a QDialog whose parent is a foreign window
  */

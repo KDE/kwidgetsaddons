@@ -14,11 +14,6 @@
 #include <QIntValidator>
 #include <QLineEdit>
 
-/**
- * @internal
- * Year selection widget.
- * @author Tim Gilman, Mirko Boehm, John Layt
- */
 class KDatePickerPrivateYearSelector : public QLineEdit
 {
     Q_OBJECT

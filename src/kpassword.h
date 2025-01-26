@@ -9,27 +9,25 @@
 #include <QObject>
 #include <kwidgetsaddons_export.h>
 
+/*!
+ * \namespace KPassword
+ */
 namespace KPassword
 {
 Q_NAMESPACE_EXPORT(KWIDGETSADDONS_EXPORT)
 
-/**
+/*!
  * This enum describe when the reveal password button is visible.
- * @since 6.0
+ * \since 6.0
+ *
+ * \value OnlyNew Display the button when entering a new password, but doesn't let you see a previously entered password. This is the default.
+ * \value Never Never display the reveal button.
+ * \value Always Always display the reveal button. Usefull in a password manager for example.
+ *
  */
 enum class RevealMode {
-    /**
-     * Display the button when entering a new password, but doesn't let you see a
-     * previously entered password. This is the default.
-     */
     OnlyNew,
-    /**
-     * Never display the reveal button.
-     */
     Never,
-    /**
-     * Always display the reveal button. Usefull in a password manager for example.
-     */
     Always,
 };
 Q_ENUM_NS(RevealMode)

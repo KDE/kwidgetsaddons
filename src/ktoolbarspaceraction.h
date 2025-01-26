@@ -15,34 +15,30 @@
 
 class QWidget;
 
-/**
- * @class KToolBarSpacerAction ktoolbarspaceraction.h KToolBarSpacerAction
+/*!
+ * \class KToolBarSpacerAction
+ * \inmodule KWidgetsAddons
  *
- * An extension to QAction which allows for adding a spacer item into a
+ * \brief An extension to QAction which allows for adding a spacer item into a
  * QToolBar / KToolBar.
  *
  * This is useful if you want to align at the right (or left if RTL) and
  * need something that pushes the element to the end of the tool bar.
- *
- * @author Hamish Rodda <rodda@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KToolBarSpacerAction : public QWidgetAction
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a new toolbar spacer action.
      *
-     * @param parent The action's parent object.
+     * \a parent The action's parent object.
      */
     explicit KToolBarSpacerAction(QObject *parent);
 
     ~KToolBarSpacerAction() override;
 
-    /**
-     * Reimplemented from QWidgetAction.
-     */
     QWidget *createWidget(QWidget *parent) override;
 
 private:

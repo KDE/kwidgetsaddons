@@ -24,27 +24,27 @@
 class KGuiItem;
 class KToggleActionPrivate;
 
-/**
- *  @class KToggleAction ktoggleaction.h KToggleAction
+/*!
+ * \class KToggleAction
+ * \inmodule KWidgetsAddons
  *
- *  @short Checkbox like action.
+ * \brief Checkbox like action.
  *
- *  This action provides two states: checked or not.
- *
+ * This action provides two states: checked or not.
  */
 class KWIDGETSADDONS_EXPORT KToggleAction : public QAction
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructs an action with the specified parent.
      *
-     * @param parent The action's parent object.
+     * \a parent The action's parent object.
      */
     explicit KToggleAction(QObject *parent);
 
-    /**
+    /*!
      * Constructs an action with text; a shortcut may be specified by
      * the ampersand character (e.g.\ "&Option" creates a shortcut with key \e O )
      *
@@ -53,42 +53,45 @@ public:
      * of the "Edit ToolBar" dialog, because an action needs an icon to be
      * plugged in a toolbar...).
      *
-     * @param text The text that will be displayed.
-     * @param parent The action's parent object.
+     * \a text The text that will be displayed.
+     *
+     * \a parent The action's parent object.
      */
     KToggleAction(const QString &text, QObject *parent);
 
-    /**
+    /*!
      * Constructs an action with text and an icon; a shortcut may be specified by
      * the ampersand character (e.g.\ "&Option" creates a shortcut with key \e O )
      *
      * This is the other common QAction used.  Use it when you
-     * \e do have a corresponding icon.
+     * do have a corresponding icon.
      *
-     * @param icon The icon to display.
-     * @param text The text that will be displayed.
-     * @param parent The action's parent object.
+     * \a icon The icon to display.
+     *
+     * \a text The text that will be displayed.
+     *
+     * \a parent The action's parent object.
      */
     KToggleAction(const QIcon &icon, const QString &text, QObject *parent);
 
-    /**
-     * Destructor
-     */
     ~KToggleAction() override;
 
-    /**
+    /*!
      * Defines the text (and icon, tooltip, whatsthis) that should be displayed
      * instead of the normal text, when the action is checked.
-     * Note that this does <em>not</em> replace the check box in front of the
+     * Note that this does not replace the check box in front of the
      * menu.  So you should not use it to replace the text "Show <foo>" with
      * "Hide <foo>", for example.
      *
      * If hasIcon(), the icon is kept for the 'checked state', unless
-     * @p checkedItem defines an icon explicitly. Same thing for tooltip and whatsthis.
+     * \a checkedItem defines an icon explicitly. Same thing for tooltip and whatsthis.
      */
     void setCheckedState(const KGuiItem &checkedItem);
 
 protected Q_SLOTS:
+    /*!
+     *
+     */
     virtual void slotToggled(bool checked);
 
 protected:

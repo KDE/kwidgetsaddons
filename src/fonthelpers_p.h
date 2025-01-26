@@ -29,14 +29,12 @@ QT_TRANSLATE_NOOP3("FontHelpers", "Monospace", "@item Font name");
 
 #endif
 
-/**
- * @internal
- *
+/*
  * Split the compound raw font name into family and foundry.
  *
- * @param name the raw font name reported by Qt
- * @param family the storage for family name
- * @param foundry the storage for foundry name
+ * name the raw font name reported by Qt
+ * family the storage for family name
+ * foundry the storage for foundry name
  */
 inline void splitFontString(QStringView name, QString *family, QString *foundry = nullptr)
 {
@@ -60,13 +58,13 @@ inline void splitFontString(QStringView name, QString *family, QString *foundry 
     }
 }
 
-/**
+/*!
  * @internal
  *
  * Translate the font name for the user.
  * Primarily for generic fonts like Serif, Sans-Serif, etc.
  *
- * @param name the raw font name reported by Qt
+ * \a name the raw font name reported by Qt
  * @return translated font name
  */
 inline QString translateFontName(QStringView name)
@@ -103,15 +101,15 @@ static bool fontFamilyCompare(const QString &a, const QString &b)
 
 using FontFamiliesMap = std::map<QString, QString, decltype(fontFamilyCompare) *>;
 
-/**
+/*!
  * @internal
  *
  * Compose locale-aware sorted list of translated font names,
  * with generic fonts handled in a special way.
  * The mapping of translated to raw names can be reported too if required.
  *
- * @param names raw font names as reported by Qt
- * @param trToRawNames storage for mapping of translated to raw names
+ * \a names raw font names as reported by Qt
+ * \a trToRawNames storage for mapping of translated to raw names
  * @return sorted list of translated font names
  */
 inline FontFamiliesMap translateFontNameList(const QStringList &names)

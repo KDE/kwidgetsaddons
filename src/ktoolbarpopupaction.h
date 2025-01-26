@@ -25,11 +25,14 @@
 
 class QMenu;
 
-/**
- * @class KToolBarPopupAction ktoolbarpopupaction.h KToolBarPopupAction
+/*!
+ * \class KToolBarPopupAction
+ * \inmodule KWidgetsAddons
  *
- * This action is a normal action everywhere, except in a toolbar
- * where it also has a popupmenu (optionally delayed). This action is designed
+ * \brief This action is a normal action everywhere, except in a toolbar
+ * where it also has a popupmenu (optionally delayed).
+ *
+ * This action is designed
  * for history actions (back/forward, undo/redo) and for any other action
  * that has more detail in a toolbar than in a menu (e.g. tool chooser
  * with "Other" leading to a dialog...).
@@ -41,82 +44,88 @@ class QMenu;
  * used, and enough for menus, but in toolbars there is \e also an optional popup
  * to go back N steps or undo N steps.
  *
- * @note Add actions to the popupMenu(), don't use setMenu().
+ * \note Add actions to the popupMenu(), don't use setMenu().
  */
 class KWIDGETSADDONS_EXPORT KToolBarPopupAction : public QWidgetAction
 {
     Q_OBJECT
+
+    /*!
+     * \property KToolBarPopupAction::popupMode
+     */
     Q_PROPERTY(PopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
-    /**
+    /*!
      * The menu popup mode.
      *
      * Default is MenuButtonPopup.
      *
-     * @sa QToolButton::ToolButtonPopupMode
+     * \sa QToolButton::ToolButtonPopupMode
      *
-     * @since 6.0
+     * \value NoPopup Behave as if the button had no menu.
+     * \value DelayedPopup Clicking anywhere on the toolbar button triggers the default action. Clicking and holding the toolbar button opens the popup menu
+     * instead.
+     * \value MenuButtonPopup The toolbar button is split in a main button (triggers default action) and an arrow button (opens the popup menu).
+     * \value InstantPopup Clicking anywhere on the toolbar button opens the popup menu.
+     *
+     * \since 6.0
      */
     enum PopupMode {
-        NoPopup = -1, ///< Behave as if the button had no menu.
-        DelayedPopup = QToolButton::DelayedPopup, ///< Clicking anywhere on the toolbar button triggers the default action.
-                                                  ///< Clicking and holding the toolbar button opens the popup menu instead.
-        MenuButtonPopup = QToolButton::MenuButtonPopup, ///< The toolbar button is split in a main button (triggers default action)
-                                                        ///< and an arrow button (opens the popup menu).
-        InstantPopup = QToolButton::InstantPopup, ///< Clicking anywhere on the toolbar button opens the popup menu.
+        NoPopup = -1,
+        DelayedPopup = QToolButton::DelayedPopup,
+
+        MenuButtonPopup = QToolButton::MenuButtonPopup,
+
+        InstantPopup = QToolButton::InstantPopup,
     };
     Q_ENUM(PopupMode)
 
     // Not all constructors - because we need an icon, since this action only makes
     // sense when being plugged at least in a toolbar.
-    /**
+    /*!
      * Create a KToolBarPopupAction, with a text, an icon, a
      * parent and a name.
      *
-     * @param icon The icon to display.
-     * @param text The text that will be displayed.
-     * @param parent This action's parent.
+     * \a icon The icon to display.
+     *
+     * \a text The text that will be displayed.
+     *
+     * \a parent This action's parent.
      */
     KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent);
 
-    /**
-     * Destroys the toolbar popup action.
-     */
     ~KToolBarPopupAction() override;
 
-    /**
+    /*!
      * The popup menu that is shown when clicking (some time) on the toolbar
      * button. You may want to plug items into it on creation, or connect to
      * aboutToShow for a more dynamic menu.
      *
-     * @note menu() is null on this action by default and using setMenu()
+     * \note menu() is null on this action by default and using setMenu()
      * will effectively turn this action into a regular action with a submenu.
      *
-     * @since 6.0
+     * \since 6.0
      */
     QMenu *popupMenu() const;
 
-    /**
+    /*!
      * The popup mode of the toolbar button.
      *
-     * @see setPopupMode()
+     * \sa setPopupMode()
      *
-     * @since 6.0
+     * \since 6.0
      */
     PopupMode popupMode() const;
 
-    /**
+    /*!
      * Determines the popup mode of the toolbar button.
-     * @see PopupMode
+     * \sa PopupMode
      *
-     * @since 6.0
+     * \since 6.0
      */
     void setPopupMode(PopupMode popupMode);
 
-    /**
-     * Reimplemented from QWidgetAction.
-     */
     QWidget *createWidget(QWidget *parent) override;
 
 private:

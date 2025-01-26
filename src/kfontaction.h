@@ -20,28 +20,50 @@
 
 class KFontActionPrivate;
 
-/**
- * @class KFontAction kfontaction.h KFontAction
+/*!
+ * \class KFontAction
+ * \inmodule KWidgetsAddons
  *
- * An action to select a font family.
+ * \brief An action to select a font family.
+ *
  * On a toolbar this will show a combobox with all the fonts on the system.
  */
 class KWIDGETSADDONS_EXPORT KFontAction : public KSelectAction
 {
     Q_OBJECT
+
+    /*!
+     * \property KFontAction::font
+     */
     Q_PROPERTY(QString font READ font WRITE setFont)
 
 public:
+    /*!
+     *
+     */
     KFontAction(uint fontListCriteria, QObject *parent);
+
+    /*!
+     *
+     */
     explicit KFontAction(QObject *parent);
     KFontAction(const QString &text, QObject *parent);
     KFontAction(const QIcon &icon, const QString &text, QObject *parent);
     ~KFontAction() override;
 
+    /*!
+     *
+     */
     QString font() const;
 
+    /*!
+     *
+     */
     void setFont(const QString &family);
 
+    /*!
+     *
+     */
     QWidget *createWidget(QWidget *parent) override;
 
 private:

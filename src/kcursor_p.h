@@ -15,13 +15,6 @@
 
 class QWidget;
 
-/**
- * @internal
- * I don't want the eventFilter to be in KCursor, so we have another class
- * for that stuff
- * @author John Firebaugh <jfirebaugh@kde.org>
- * @author Carsten Pfeiffer <pfeiffer@kde.org>
- */
 class KCursorPrivateAutoHideEventFilter : public QObject
 {
     Q_OBJECT
@@ -49,11 +42,6 @@ private:
     QCursor m_oldCursor;
 };
 
-/**
- * @internal
- * @author Carsten Pfeiffer <pfeiffer@kde.org>
- * @author John Firebaugh <jfirebaugh@kde.org>
- */
 class KCursorPrivate : public QObject
 {
     friend class KCursor; // to shut up the compiler

@@ -22,12 +22,12 @@ public:
 
     KPopupFrame *q;
 
-    /**
+    /*
      * The result. It is returned from exec() when the popup window closes.
      */
     int result;
 
-    /**
+    /*
      * The only subwidget that uses the whole dialog window.
      */
     QWidget *main;

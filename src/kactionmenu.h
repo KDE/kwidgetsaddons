@@ -24,63 +24,100 @@
 
 class QMenu;
 
-/**
- * @class KActionMenu kactionmenu.h KActionMenu
+/*!
+ * \class KActionMenu
+ * \inmodule KWidgetsAddons
  *
- * A KActionMenu is an action that provides a sub-menu of other actions.
+ * \brief A KActionMenu is an action that provides a sub-menu of other actions.
  *
  * Plugged in a popupmenu, it will create a submenu.
+ *
  * Plugged in a toolbar, it will create a button with a popup menu.
  *
  * This is the action used by the XMLGUI since it holds other actions.
+ *
  * If you want a submenu for selecting one tool among many (without icons), see KSelectAction.
  */
 class KWIDGETSADDONS_EXPORT KActionMenu : public QWidgetAction
 {
     Q_OBJECT
+
+    /*!
+     * \property KActionMenu::popupMode
+     */
     Q_PROPERTY(QToolButton::ToolButtonPopupMode popupMode READ popupMode WRITE setPopupMode)
 
 public:
+    /*!
+     *
+     */
     explicit KActionMenu(QObject *parent);
+
+    /*!
+     *
+     */
     KActionMenu(const QString &text, QObject *parent);
+
+    /*!
+     *
+     */
     KActionMenu(const QIcon &icon, const QString &text, QObject *parent);
+
     ~KActionMenu() override;
 
-    /**
-     * Adds @p action to this KActionMenu.
-     * The KActionMenu does not take ownership of @p action.
+    /*!
+     * Adds \a action to this KActionMenu.
+     * The KActionMenu does not take ownership of \a action.
      */
     void addAction(QAction *action);
+
+    /*!
+     *
+     */
     QAction *addSeparator();
+
+    /*!
+     *
+     */
     void insertAction(QAction *before, QAction *action);
+
+    /*!
+     *
+     */
     QAction *insertSeparator(QAction *before);
+
+    /*!
+     *
+     */
     void removeAction(QAction *action);
 
-    /**
+    /*!
      * The currently used popup mode when plugged in a KToolBar.
      *
-     * @see setPopupMode()
+     * \sa setPopupMode()
      *
-     * @since 5.77
+     * \since 5.77
      */
     QToolButton::ToolButtonPopupMode popupMode() const;
 
-    /**
+    /*!
      * Determines the popup mode when plugged in a KToolBar.
      *
      * Options are:
-     *  - QToolButton::InstantPopup
+     * \list
+     * \li QToolButton::InstantPopup
      *    Clicking anywhere on the toolbar button opens the popup menu.
-     *  - QToolButton::DelayedPopup (Default)
+     * \li QToolButton::DelayedPopup (Default)
      *    Clicking anywhere on the toolbar button triggers the default action.
      *    Clicking and holding the toolbar button opens the popup menu instead.
-     *  - QToolButton::MenuButtonPopup
+     * \li QToolButton::MenuButtonPopup
      *    The toolbar button is split in a main button (triggers default action)
      *    and an arrow button (opens the popup menu).
+     * \endlist
      *
-     * @see QToolButton
+     * \sa QToolButton
      *
-     * @since 5.77
+     * \since 5.77
      */
     void setPopupMode(QToolButton::ToolButtonPopupMode popupMode);
 

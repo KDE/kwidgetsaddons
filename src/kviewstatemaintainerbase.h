@@ -19,20 +19,48 @@ class QAbstractItemView;
 
 class KViewStateMaintainerBasePrivate;
 
+/*!
+ * \class KViewStateMaintainerBase
+ * \inmodule KWidgetsAddons
+ */
 class KWIDGETSADDONS_EXPORT KViewStateMaintainerBase : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     *
+     */
     KViewStateMaintainerBase(QObject *parent = nullptr);
     ~KViewStateMaintainerBase() override;
 
+    /*!
+     *
+     */
     void setSelectionModel(QItemSelectionModel *selectionModel);
+
+    /*!
+     *
+     */
     QItemSelectionModel *selectionModel() const;
 
+    /*!
+     *
+     */
     void setView(QAbstractItemView *view);
+
+    /*!
+     *
+     */
     QAbstractItemView *view() const;
 
+    /*!
+     *
+     */
     virtual void saveState() = 0;
+
+    /*!
+     *
+     */
     virtual void restoreState() = 0;
 
 private:

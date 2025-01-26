@@ -19,21 +19,22 @@ class QGridLayout;
 class QLayout;
 class QWidget;
 
-/**
- * @class KColumnResizer kcolumnresizer.h KColumnResizer
+/*!
+ * \class KColumnResizer
+ * \inmodule KWidgetsAddons
  *
- * @short Maintains consistent column sizes across layouts
+ * \brief Maintains consistent column sizes across layouts.
  *
  * KColumnResizer is a helper class which can force columns of different layouts
  * to keep the same width. It is useful to keep label columns consistent.
  *
  * It works with QGridLayout and QFormLayout.
  *
- * @image html kcolumnresizer.png "left: without KColumnResizer - right: with KColumnResizer"
+ * \image kcolumnresizer.png "left: without KColumnResizer - right: with KColumnResizer"
  *
  * Here is a typical example:
  *
- * @code
+ * \code
  *  void Window::createWidgets()
  *  {
  *      QVBoxLayout *layout = new QVBoxLayout(this);
@@ -52,53 +53,52 @@ class QWidget;
  *      resizer->addWidgetsFromLayout(box1->layout(), 0);
  *      resizer->addWidgetsFromLayout(box2->layout(), 0);
  *  }
- * @endcode
+ * \endcode
  *
  * In this example box1 and box2 children can be organized using QGridLayout or
  * QFormLayout, resizer will ensure the first columns of the two QGroupBox stay
  * the same width.
  *
- * @author Aurélien Gâteau <agateau@kde.org>
- *
- * @since 5.1
+ * \since 5.1
  */
 class KWIDGETSADDONS_EXPORT KColumnResizer : public QObject
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Constructs a KColumnResizer.
      */
     explicit KColumnResizer(QObject *parent = nullptr);
 
     ~KColumnResizer() override;
 
-    /**
-     * Add all widgets from @p layout which are in column @p column to the list
+    /*!
+     * Add all widgets from \a layout which are in column \a column to the list
      * of widgets to manage.
      *
-     * @param layout The layout containing the widgets to add. KColumnResizer
+     * \a layout The layout containing the widgets to add. KColumnResizer
      * supports QGridLayout and QFormLayout.
-     * @param column The column number which contains the widgets. If layout is
+     *
+     * \a column The column number which contains the widgets. If layout is
      * a QFormLayout, column should not be higher than QFormLayout::SpanningRole
      */
     void addWidgetsFromLayout(QLayout *layout, int column = 0);
 
-    /**
+    /*!
      * Add a single widget to the list of widgets whose width is monitored.
      *
      * It is more common to use addWidgetsFromLayout(), but adding single
      * widgets can be useful if you want to keep a single button the same width
      * as a column in a layout.
      *
-     * @param widget The widget to add
+     * \a widget The widget to add
      */
     void addWidget(QWidget *widget);
 
-    /**
+    /*!
      * Remove a widget previously added by addWidget or addWidgetsFromLayout.
      *
-     * @param widget The widget to remove
+     * \a widget The widget to remove
      */
     void removeWidget(QWidget *widget);
 

@@ -14,28 +14,29 @@
 
 #include <memory>
 
-/**
- * @class KContextualHelpButton kcontextualhelpbutton.h KContextualHelpButton
+/*!
+ * \class KContextualHelpButton
+ * \inmodule KWidgetsAddons
  *
- * @brief An icon-only button for showing contextually relevant help or explanations.
+ * \brief An icon-only button for showing contextually relevant help or explanations.
  *
  * KContextualHelpButton allows hiding text of any length behind a small icon-only button. Hovering over the button with a mouse cursor or pressing the button
  * will show the text. It can contain images and links. It is accessible by keyboard and to screen readers.
  *
- * **When to Use**
+ * When to Use
  *
  * Sometimes users require help or an explanation, even experts. This help should be readily available exactly where and when a user needs it.
  * A KContextualHelpButton makes clear that inline help is available without really cluttering up the user interface. In that sense it is superior to setting
  * tooltips which are completely invisible until invoked and therefore easy to miss. Especially for touch users the KContextualHelpButton is preferable.
  *
- * **When Not to Use**
+ * When Not to Use
  *
  * If the text is important for the user to understand and can be kept very short, place it inline below the control it affects.
  * If there is no room to put this KContextualHelpButton, use QWidget::setToolTip() for shorter texts and QWidget::SetWhatsThis() for longer text or text that
  * should contain hyperlinks. If your software is not already using the KXmlGui framework, consider using KToolTipHelper from KXmlGui to make the whatsThis()
  * help more discoverable.
  *
- * **How to Use**
+ * How to Use
  *
  * The most simple way is creating it like any other button and then setting the help text:
  *
@@ -65,47 +66,51 @@
  *
  * This class is meant to be kept somewhat consistent with the QML equivalent which is also called ContextualHelpButton.
  *
- * @since 6.2
+ * \since 6.2
  */
 class KWIDGETSADDONS_EXPORT KContextualHelpButton : public QToolButton
 {
     Q_OBJECT
+    /*!
+     * \value KContextualHelpButton::contextualHelpText
+     */
     Q_PROPERTY(QString contextualHelpText READ contextualHelpText WRITE setContextualHelpText NOTIFY contextualHelpTextChanged)
 
 public:
-    /**
-     * @param contextualHelpText    The text to show when hovering or clicking this button. Consider formatting this nicely using xi18nc().
-     * @param heightHintWidget      The KContextualHelpButton will report the \p heightHintWidget 's sizeHint().height() as its own sizeHint().height().
+    /*!
+     * \a contextualHelpText    The text to show when hovering or clicking this button. Consider formatting this nicely using xi18nc().
+     *
+     * \a heightHintWidget      The KContextualHelpButton will report the \a heightHintWidget 's sizeHint().height() as its own sizeHint().height().
      *                              This is useful to make sure that adding this KContextualHelpButton to a layout will not increase the layout's total height.
-     * @param parent                The parent widget that gets ownership over the lifetime of this KContextualHelpButton.
+     *
+     * \a parent                The parent widget that gets ownership over the lifetime of this KContextualHelpButton.
      */
     explicit KContextualHelpButton(const QString &contextualHelpText, const QWidget *heightHintWidget, QWidget *parent);
 
-    /** @see KContextualHelpButton::ContextualHelpButton() */
+    /*! \sa KContextualHelpButton::ContextualHelpButton() */
     explicit KContextualHelpButton(QWidget *parent = nullptr);
 
     ~KContextualHelpButton() override;
 
-    /**
+    /*!
      * Sets the text to show when hovering or pressing this button. Consider formatting the text nicely using xi18nc().
      */
     void setContextualHelpText(const QString &contextualHelpText);
 
-    /**
-     * @returns the help text which is shown when hovering or pressing this button.
+    /*!
+     * Returns the help text which is shown when hovering or pressing this button.
      */
     QString contextualHelpText() const;
 
-    /**
-     * The KContextualHelpButton will report the \p heightHintWidget 's sizeHint().height() as its own sizeHint().height().
+    /*!
+     * The KContextualHelpButton will report the \a heightHintWidget 's sizeHint().height() as its own sizeHint().height().
      * This is useful to make sure that adding this KContextualHelpButton to a layout will not increase the layout's total height.
      */
     void setHeightHintWidget(const QWidget *heightHintWidget);
 
-    /** @see setHeightHintWidget() */
+    /*! \sa setHeightHintWidget() */
     const QWidget *heightHintWidget() const;
 
-    /** This override is an implementation detail of setHeightHintWidget() */
     QSize sizeHint() const override;
 
 Q_SIGNALS:

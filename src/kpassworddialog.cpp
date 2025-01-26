@@ -21,7 +21,7 @@
 
 #include "ui_kpassworddialog.h"
 
-/** @internal */
+/*! @internal */
 class KPasswordDialogPrivate
 {
 public:

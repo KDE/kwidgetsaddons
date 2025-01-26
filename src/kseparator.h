@@ -11,50 +11,57 @@
 #include <kwidgetsaddons_export.h>
 #include <memory>
 
-/**
- * @class KSeparator kseparator.h KSeparator
+/*!
+ * \class KSeparator
+ * \inmodule KWidgetsAddons
  *
- * Standard horizontal or vertical separator.
+ * \brief Standard horizontal or vertical separator.
  *
- * \image html kseparator-horizontal.png "KSeparator Widget with horizontal orientation"
- * \image html kseparator-vertical.png "KSeparator Widget with vertical orientation"
- *
- * @author Michael Roth <mroth@wirlweb.de>
+ * \image kseparator-horizontal.png "KSeparator Widget with horizontal orientation"
+ * \image kseparator-vertical.png "KSeparator Widget with vertical orientation"
  */
 class KWIDGETSADDONS_EXPORT KSeparator : public QFrame
 {
     Q_OBJECT
+
+    /*!
+     * \property KSeparator::orientation
+     */
     Q_PROPERTY(Qt::Orientation orientation READ orientation WRITE setOrientation)
 
 public:
-    /**
+    /*!
      * Constructor.
-     * @param parent parent object.
-     * @param f extra QWidget flags.
+     *
+     * \a parent parent object.
+     *
+     * \a f extra QWidget flags.
      */
     explicit KSeparator(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
-    /**
+    /*!
      * Constructor.
-     * @param orientation Set the orientation of the separator.
+     *
+     * \a orientation Set the orientation of the separator.
      * Possible values are Horizontal or Vertical.
-     * @param parent parent object.
-     * @param f extra QWidget flags.
+     *
+     * \a parent parent object.
+     *
+     * \a f extra QWidget flags.
      */
     explicit KSeparator(Qt::Orientation orientation, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     ~KSeparator() override;
 
-    /**
+    /*!
      * Returns the orientation of the separator.
-     * @return int Possible values Horizontal or Vertical.
      */
     Qt::Orientation orientation() const;
 
-    /**
-     * Set the orientation of the separator to @p orientation
+    /*!
+     * Set the orientation of the separator to \a orientation
      *
-     * @param orientation Possible values are Vertical and Horizontal.
+     * \a orientation Possible values are Vertical and Horizontal.
      */
     void setOrientation(Qt::Orientation orientation);
 
