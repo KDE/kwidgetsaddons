@@ -88,9 +88,9 @@ public:
      * The default look is a raised widget
      * but may be changed with the inherited QFrame methods.
      *
-     * @param orient     Orientation of the ruler.
-     * @param parent     Will be handed over to QFrame.
-     * @param f          Will be handed over to QFrame.
+     * \a orient     Orientation of the ruler.
+     * \a parent     Will be handed over to QFrame.
+     * \a f          Will be handed over to QFrame.
      *
      */
     explicit KRuler(Qt::Orientation orient, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
@@ -103,10 +103,10 @@ public:
      * @note The size of the marks doesn't change.
      * @p parent and @p f are passed to QFrame.
      *
-     * @param orient      Orientation of the ruler.
-     * @param widgetWidth Fixed width of the widget.
-     * @param parent      Will be handed over to QFrame.
-     * @param f           Will be handed over to QFrame.
+     * \a orient      Orientation of the ruler.
+     * \a widgetWidth Fixed width of the widget.
+     * \a parent      Will be handed over to QFrame.
+     * \a f           Will be handed over to QFrame.
      *
      */
     KRuler(Qt::Orientation orient, int widgetWidth, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
@@ -253,7 +253,7 @@ public:
      * Locks the length of the ruler, i.e. the difference between
      * the two end marks doesn't change when the widget is resized.
      *
-     * @param fix fixes the length, if true
+     * \a fix fixes the length, if true
      */
     void setLengthFixed(bool fix);
     bool lengthFixed() const;
@@ -267,7 +267,7 @@ public:
      * This doesn't affect the position of the ruler pointer.
      * Only the visible part of the ruler is moved.
      *
-     * @param count Number of pixel moving up or left relative to the previous position
+     * \a count Number of pixel moving up or left relative to the previous position
      */
     void slideUp(int count = 1);
 
@@ -280,7 +280,7 @@ public:
      * This doesn't affect the position of the ruler pointer.
      * Only the visible part of the ruler is moved.
      *
-     * @param count Number of pixel moving up or left relative to the previous position
+     * \a count Number of pixel moving up or left relative to the previous position
      */
     void slideDown(int count = 1);
 
@@ -290,7 +290,7 @@ public:
      * This is like slideup() or slidedown() with an absolute offset
      * from the start of the ruler.
      *
-     * @param offset Number of pixel to move the ruler up or left from the beginning
+     * \a offset Number of pixel to move the ruler up or left from the beginning
      */
     void setOffset(int offset);
 

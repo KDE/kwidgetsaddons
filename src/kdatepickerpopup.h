@@ -56,9 +56,9 @@ public:
     /*!
      * Creates a new date picker popup.
      *
-     * @param modes The selection modes that shall be offered
-     * @param date The initial date of date picker widget.
-     * @param parent The parent object.
+     * \a modes The selection modes that shall be offered
+     * \a date The initial date of date picker widget.
+     * \a parent The parent object.
      */
     explicit KDatePickerPopup(Modes modes = DatePicker, QDate date = QDate::currentDate(), QWidget *parent = nullptr);
 
@@ -85,8 +85,8 @@ public:
      * or equal to the maximum date, otherwise the date range will
      * not be set.
      *
-     * @param minDate the minimum date
-     * @param maxDate the maximum date
+     * \a minDate the minimum date
+     * \a maxDate the maximum date
      */
     void setDateRange(const QDate &minDate, const QDate &maxDate);
 
@@ -113,7 +113,7 @@ public:
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
      *
-     * @param dateMap the map of dates the user can select from
+     * \a dateMap the map of dates the user can select from
      *
      * @see dateMap()
      */
@@ -134,7 +134,7 @@ Q_SIGNALS:
     /*!
      * This signal is emitted whenever the user has selected a new date.
      *
-     * @param date The new date.
+     * \a date The new date.
      */
     void dateChanged(const QDate &date);
 

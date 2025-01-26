@@ -50,7 +50,7 @@ public:
      * You can call this method multiple times over the same KToolTipWidget instance
      * (previously shown widgets will be removed from the tooltip's layout).
      *
-     * @param transientParent will be set as the transient parent of the tooltip.
+     * \a transientParent will be set as the transient parent of the tooltip.
      * @note The transient parent is required to show the tooltip on Wayland platforms.
      */
     void showAt(const QPoint &pos, QWidget *content, QWindow *transientParent);
@@ -65,7 +65,7 @@ public:
      * Typically @p rect is the visualRect() of a QAbstractItemView:
      * @snippet ktooltipwidget_test.cpp show_tooltip_widget
      *
-     * @param transientParent will be set as the transient parent of the tooltip.
+     * \a transientParent will be set as the transient parent of the tooltip.
      * @note The transient parent is required to show the tooltip on Wayland platforms.
      */
     void showBelow(const QRect &rect, QWidget *content, QWindow *transientParent);

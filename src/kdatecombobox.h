@@ -136,7 +136,7 @@ Q_SIGNALS:
      *
      * The emitted date may be invalid.
      *
-     * @param date the new date
+     * \a date the new date
      */
     void dateEntered(const QDate &date);
 
@@ -146,7 +146,7 @@ Q_SIGNALS:
      *
      * The emitted date may be invalid.
      *
-     * @param date the new date
+     * \a date the new date
      */
     void dateChanged(const QDate &date);
 
@@ -155,7 +155,7 @@ Q_SIGNALS:
      *
      * The emitted date may be invalid, or may not yet be what the user intends as the final date.
      *
-     * @param date the new date
+     * \a date the new date
      */
     void dateEdited(const QDate &date);
 
@@ -167,14 +167,14 @@ public Q_SLOTS:
      * You can set an invalid date or a date outside the valid range, validity
      * checking is only done via isValid().
      *
-     * @param date the new date
+     * \a date the new date
      */
     void setDate(const QDate &date);
 
     /*!
      * Set the new widget options
      *
-     * @param options the new widget options
+     * \a options the new widget options
      */
     void setOptions(Options options);
 
@@ -183,7 +183,7 @@ public Q_SLOTS:
      *
      * By default is the Short Format.
      *
-     * @param format the date format to use
+     * \a format the date format to use
      */
     void setDisplayFormat(QLocale::FormatType format);
 
@@ -193,10 +193,10 @@ public Q_SLOTS:
      * Both dates must be valid and the minimum date must be less than or equal
      * to the maximum date, otherwise the date range will not be set.
      *
-     * @param minDate the minimum date
-     * @param maxDate the maximum date
-     * @param minWarnMsg the minimum warning message
-     * @param maxWarnMsg the maximum warning message
+     * \a minDate the minimum date
+     * \a maxDate the maximum date
+     * \a minWarnMsg the minimum warning message
+     * \a maxWarnMsg the maximum warning message
      */
     void setDateRange(const QDate &minDate, const QDate &maxDate, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
@@ -212,8 +212,8 @@ public Q_SLOTS:
      * If the date is invalid, or greater than current maximum,
      * then the minimum will not be set.
      *
-     * @param minDate the minimum date
-     * @param minWarnMsg the minimum warning message
+     * \a minDate the minimum date
+     * \a minWarnMsg the minimum warning message
      *
      * @see minimumDate()
      * @see maximumDate()
@@ -235,8 +235,8 @@ public Q_SLOTS:
      * If the date is invalid, or less than current minimum,
      * then the maximum will not be set.
      *
-     * @param maxDate the maximum date
-     * @param maxWarnMsg the maximum warning message
+     * \a maxDate the maximum date
+     * \a maxWarnMsg the maximum warning message
      *
      * @see minimumDate()
      * @see maximumDate()
@@ -264,7 +264,7 @@ public Q_SLOTS:
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
      *
-     * @param dateMap the map of dates able to be selected
+     * \a dateMap the map of dates able to be selected
      *
      * @see dateMap()
      */
@@ -286,7 +286,7 @@ protected:
      *
      * Virtual to allow sub-classes to apply extra validation rules.
      *
-     * @param date the new date
+     * \a date the new date
      */
     virtual void assignDate(const QDate &date);
 

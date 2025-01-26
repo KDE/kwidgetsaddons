@@ -74,9 +74,9 @@ public:
      * Create a KToolBarPopupAction, with a text, an icon, a
      * parent and a name.
      *
-     * @param icon The icon to display.
-     * @param text The text that will be displayed.
-     * @param parent This action's parent.
+     * \a icon The icon to display.
+     * \a text The text that will be displayed.
+     * \a parent This action's parent.
      */
     KToolBarPopupAction(const QIcon &icon, const QString &text, QObject *parent);
 

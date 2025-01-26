@@ -34,7 +34,7 @@ public:
     /*!
      * Construct an animated tool button.
      *
-     * @param parent The parent widget
+     * \a parent The parent widget
      */
     explicit KAnimatedButton(QWidget *parent = nullptr);
 
@@ -51,7 +51,7 @@ public:
     /*!
      * Sets the path to the file which contains the animation to load.
      *
-     * @param path The path of the file containing the animation
+     * \a path The path of the file containing the animation
      */
     void setAnimationPath(const QString &path);
 

@@ -63,7 +63,7 @@ public:
     /*!
      * Set a custom list of colors to choose from, in place of the standard
      * list.
-     * @param colors list of colors. If empty, the selection list reverts to
+     * \a colors list of colors. If empty, the selection list reverts to
      *             the standard list.
      */
     void setColors(const QList<QColor> &colors);

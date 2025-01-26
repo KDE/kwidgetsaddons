@@ -92,19 +92,19 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(Options)
  *
  * The default button is the primary button. Pressing "Esc" triggers the secondary button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param title   the message box title. If an empty string, defaults to i18n("Question").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a title   the message box title. If an empty string, defaults to i18n("Question").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options see Option
+ * \a options see Option
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
@@ -127,20 +127,20 @@ ButtonCode questionTwoActions(QWidget *parent,
  *
  * The default button is the primary button. Pressing "Esc" triggers the cancel button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param title   the message box title. If an empty string, defaults to i18n("Question").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param cancelAction the action for the cancel button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a title   the message box title. If an empty string, defaults to i18n("Question").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a cancelAction the action for the cancel button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options  see Option
+ * \a options  see Option
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
@@ -166,21 +166,21 @@ ButtonCode questionTwoActionsCancel(QWidget *parent,
  *
  * The default button is the primary button. Pressing "Esc" triggers the secondary button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param strlist List of strings to be written in the listbox. If the list is
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a strlist List of strings to be written in the listbox. If the list is
  *                empty, it doesn't show any listbox, working as questionTwoActions().
- * @param title   the message box title. If an empty string, defaults to i18n("Question").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a title   the message box title. If an empty string, defaults to i18n("Question").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options  see Option
+ * \a options  see Option
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
@@ -205,19 +205,19 @@ ButtonCode questionTwoActionsList(QWidget *parent,
  *
  * The default button is the secondary button. Pressing "Esc" triggers the secondary button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param title   the message box title. If an empty string, defaults to i18n("Warning").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a title   the message box title. If an empty string, defaults to i18n("Warning").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options see Options
+ * \a options see Options
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
@@ -242,21 +242,21 @@ ButtonCode warningTwoActions(QWidget *parent,
  *
  * The default button is the secondary button. Pressing "Esc" triggers the secondary button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param strlist List of strings to be written in the listbox. If the list is
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a strlist List of strings to be written in the listbox. If the list is
  *                empty, it doesn't show any listbox, working as warningTwoActions.
- * @param title   the message box title. If an empty string, defaults to i18n("Warning").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a title   the message box title. If an empty string, defaults to i18n("Warning").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options see Options
+ * \a options see Options
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered.
@@ -276,22 +276,22 @@ ButtonCode warningTwoActionsList(QWidget *parent,
 /*!
  * Display a "warning" dialog.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
- * @param buttonContinue The text for the first button.
+ * \a buttonContinue The text for the first button.
  *                       The default is KStandardGuiItem::cont().
- * @param buttonCancel The text for the second button.
+ * \a buttonCancel The text for the second button.
  *                     The default is KStandardGuiItem::cancel().
- * @param dontAskAgainName If provided, a checkbox is added with which
+ * \a dontAskAgainName If provided, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options  see Options
+ * \a options  see Options
  *
  * @return  @p Continue is returned if the Continue-button is pressed.
  *          @p Cancel is returned if the Cancel-button is pressed.
@@ -326,18 +326,18 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
 /*!
  * Display a "warning" dialog with a listbox to show information to the user.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param strlist List of strings to be written in the listbox. If the
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as warningContinueCancel.
- * @param title   Message box title. The application name is added to
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Warning").
- * @param buttonContinue The text for the first button.
+ * \a buttonContinue The text for the first button.
  *                       The default is KStandardGuiItem::cont().
- * @param buttonCancel The text for the second button.
+ * \a buttonCancel The text for the second button.
  *                     The default is KStandardGuiItem::cancel().
- * @param dontAskAgainName If provided, a checkbox is added with which
+ * \a dontAskAgainName If provided, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
@@ -345,7 +345,7 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelDetailed(QWidget *parent,
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
  *
- * @param options  see Options
+ * \a options  see Options
  *
  * @return  @p Continue is returned if the Continue-button is pressed.
  *          @p Cancel is returned if the Cancel-button is pressed.
@@ -372,20 +372,20 @@ KWIDGETSADDONS_EXPORT ButtonCode warningContinueCancelList(QWidget *parent,
  *
  * The default button is the cancel button. Pressing "Esc" triggers the cancel button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param title   the message box title. If an empty string, defaults to i18n("Warning").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param cancelAction the action for the cancel button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a title   the message box title. If an empty string, defaults to i18n("Warning").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a cancelAction the action for the cancel button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options see Options
+ * \a options see Options
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
@@ -411,23 +411,23 @@ ButtonCode warningTwoActionsCancel(QWidget *parent,
  *
  * The default button is the cancel button. Pressing "Esc" triggers the cancel button.
  *
- * @param parent  the parent widget
- * @param text    the message string
- * @param strlist a List of strings to be written in the listbox. If the
+ * \a parent  the parent widget
+ * \a text    the message string
+ * \a strlist a List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as warningTwoActionsCancel().
- * @param title   the message box title. If an empty string, defaults to i18n("Warning").
- * @param primaryAction the action for the primary button
- * @param secondaryAction the action for the secondary button
- * @param cancelAction the action for the cancel button
- * @param dontAskAgainName If not an empty string, a checkbox is added with which
+ * \a title   the message box title. If an empty string, defaults to i18n("Warning").
+ * \a primaryAction the action for the primary button
+ * \a secondaryAction the action for the secondary button
+ * \a cancelAction the action for the cancel button
+ * \a dontAskAgainName If not an empty string, a checkbox is added with which
  *                further confirmation can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
  *                If @p dontAskAgainName starts with a ':' then the setting
  *                is stored in the global config file.
- * @param options see Options
+ * \a options see Options
  *
  * @returns @c PrimaryAction if the primary button is triggered, @c SecondaryAction
  *          if the secondary button is triggered. @c Cancel if the cancel button is triggered.
@@ -448,11 +448,11 @@ ButtonCode warningTwoActionsCancelList(QWidget *parent,
 /*!
  * Display an "Error" dialog.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
- * @param options  see Options
+ * \a options  see Options
  *
  * Your program messed up and now it's time to inform the user.
  * To be used for important things like "Sorry, I deleted your hard disk."
@@ -466,13 +466,13 @@ KWIDGETSADDONS_EXPORT void error(QWidget *parent, const QString &text, const QSt
 /*!
  * Display an "Error" dialog.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
- * @param buttonOk The text for the only button.
+ * \a buttonOk The text for the only button.
  *                 The default is KStandardGuiItem::ok().
- * @param options  see Options
+ * \a options  see Options
  *
  * There is only one button, therefore it's the default button, and pressing "Esc" selects it as well.
  *
@@ -488,14 +488,14 @@ void error(QWidget *parent,
 /*!
  * Display an "Error" dialog with a listbox.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param strlist List of strings to be written in the listbox. If the
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as error().
- * @param title   Message box title. The application name is added to
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
- * @param options  see Options
+ * \a options  see Options
  *
  * Your program messed up and now it's time to inform the user.
  * To be used for important things like "Sorry, I deleted your hard disk."
@@ -510,12 +510,12 @@ errorList(QWidget *parent, const QString &text, const QStringList &strlist, cons
 /*!
  * Displays an "Error" dialog with a "Details >>" button.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param details Detailed message string.
- * @param title   Message box title. The application name is added to
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a details Detailed message string.
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
- * @param options  see Options
+ * \a options  see Options
  *
  * Your program messed up and now it's time to inform the user.
  * To be used for important things like "Sorry, I deleted your hard disk."
@@ -533,14 +533,14 @@ detailedError(QWidget *parent, const QString &text, const QString &details, cons
 /*!
  * Displays an "Error" dialog with a "Details >>" button.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param details Detailed message string.
- * @param title   Message box title. The application name is added to
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a details Detailed message string.
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Error").
- * @param buttonOk The text for the only button.
+ * \a buttonOk The text for the only button.
  *                 The default is KStandardGuiItem::ok().
- * @param options  see Options
+ * \a options  see Options
  *
  * Your program messed up and now it's time to inform the user.
  * To be used for important things like "Sorry, I deleted your hard disk."
@@ -563,16 +563,16 @@ void detailedError(QWidget *parent,
 /*!
  * Display an "Information" dialog.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param title   Message box title. The application name is added to
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Information").
- * @param dontShowAgainName If provided, a checkbox is added with which
+ * \a dontShowAgainName If provided, a checkbox is added with which
  *                further notifications can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
- * @param options  see Options
+ * \a options  see Options
  *
  *
  * Your program wants to tell the user something.
@@ -589,19 +589,19 @@ information(QWidget *parent, const QString &text, const QString &title = QString
 /*!
  * Display an "Information" dialog with a listbox.
  *
- * @param parent  Parent widget.
- * @param text    Message string.
- * @param strlist List of strings to be written in the listbox. If the
+ * \a parent  Parent widget.
+ * \a text    Message string.
+ * \a strlist List of strings to be written in the listbox. If the
  *                list is empty, it doesn't show any listbox, working
  *                as information.
- * @param title   Message box title. The application name is added to
+ * \a title   Message box title. The application name is added to
  *                the title. The default title is i18n("Information").
- * @param dontShowAgainName If provided, a checkbox is added with which
+ * \a dontShowAgainName If provided, a checkbox is added with which
  *                further notifications can be turned off.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
  *                The setting is stored in the "Notification Messages" group.
- * @param options  see Options
+ * \a options  see Options
  *
  *
  * Your program wants to tell the user something.
@@ -636,22 +636,22 @@ KWIDGETSADDONS_EXPORT void enableMessage(const QString &dontShowAgainName);
 /*!
  * Alternate method to show a messagebox:
  *
- * @param parent Parent widget.
- * @param type type of message box: QuestionTwoActions, WarningTwoActions, WarningContinueCancel...
- * @param text Message string.
- * @param title Message box title.
- * @param primaryAction The KGuiItem for the first button.
- * @param secondaryAction The KGuiItem for the second button.
- * @param cancelAction The text for the third button.
+ * \a parent Parent widget.
+ * \a type type of message box: QuestionTwoActions, WarningTwoActions, WarningContinueCancel...
+ * \a text Message string.
+ * \a title Message box title.
+ * \a primaryAction The KGuiItem for the first button.
+ * \a secondaryAction The KGuiItem for the second button.
+ * \a cancelAction The text for the third button.
  *                     The default is KStandardGuiItem::cancel().
- * @param dontShowAskAgainName If provided, a checkbox is added with which
+ * \a dontShowAskAgainName If provided, a checkbox is added with which
  *                further questions/information can be turned off. If turned off
  *                all questions will be automatically answered with the
  *                last answer (either PrimaryAction or SecondaryAction),
  *                if the message box needs an answer.
  *                The string is used to lookup and store the setting
  *                in the applications config file.
- * @param options  see Options
+ * \a options  see Options
  * Note: for ContinueCancel, primaryAction is the continue button and secondaryAction is unused.
  *       and for Information, none is used.
  * @return a button code, as defined in KMessageBox.
@@ -668,9 +668,9 @@ ButtonCode messageBox(QWidget *parent,
                       Options options = Notify);
 
 /*!
- * @param dontShowAgainName the name that identifies the message box.
+ * \a dontShowAgainName the name that identifies the message box.
  *                          If empty, @c true is always returned.
- * @param result reference to a variable to be set to the choice (@c PrimaryAction or @c SecondaryAction)
+ * \a result reference to a variable to be set to the choice (@c PrimaryAction or @c SecondaryAction)
  *               that was chosen the last time the message box was shown.
  *               Only meaningful if the message box should not be shown.
  * @returns @c true if the corresponding two actions message box should be shown, @c false otherwise.
@@ -683,7 +683,7 @@ bool shouldBeShownTwoActions(const QString &dontShowAgainName, ButtonCode &resul
 /*!
  * @return true if the corresponding continue/cancel message box should be
  * shown.
- * @param dontShowAgainName the name that identify the message box. If
+ * \a dontShowAgainName the name that identify the message box. If
  * empty, true is always returned.
  */
 KWIDGETSADDONS_EXPORT bool shouldBeShownContinue(const QString &dontShowAgainName);
@@ -691,9 +691,9 @@ KWIDGETSADDONS_EXPORT bool shouldBeShownContinue(const QString &dontShowAgainNam
 /*!
  * Save the fact that a two actions message box should not be shown again.
  *
- * @param dontShowAgainName the name that identifies the message box.
+ * \a dontShowAgainName the name that identifies the message box.
  *                          If empty, this method does nothing.
- * @param result the value (@c PrimaryAction or @c SecondaryAction) that should be used
+ * \a result the value (@c PrimaryAction or @c SecondaryAction) that should be used
  *               as the result for the message box.
  *
  * @since 5.100
@@ -704,7 +704,7 @@ void saveDontShowAgainTwoActions(const QString &dontShowAgainName, ButtonCode re
 /*!
  * Save the fact that the continue/cancel message box should not be shown
  * again.
- * @param dontShowAgainName the name that identify the message box. If
+ * \a dontShowAgainName the name that identify the message box. If
  * empty, this method does nothing.
  */
 KWIDGETSADDONS_EXPORT void saveDontShowAgainContinue(const QString &dontShowAgainName);
@@ -734,18 +734,18 @@ KWIDGETSADDONS_EXPORT void setNotifyInterface(KMessageBoxNotifyInterface *notify
 /*!
  * Create content and layout of a standard dialog
  *
- * @param dialog  The parent dialog base
- * @param buttons a QDialogButtonBox instance. This function will take care of connecting to it.
- * @param icon    Which predefined icon the message box shall show.
- * @param text    Message string.
- * @param strlist List of strings to be written in the listbox.
+ * \a dialog  The parent dialog base
+ * \a buttons a QDialogButtonBox instance. This function will take care of connecting to it.
+ * \a icon    Which predefined icon the message box shall show.
+ * \a text    Message string.
+ * \a strlist List of strings to be written in the listbox.
  *                If the list is empty, it doesn't show any listbox
- * @param ask     The text of the checkbox. If empty none will be shown.
- * @param checkboxReturn The result of the checkbox. If it's initially
+ * \a ask     The text of the checkbox. If empty none will be shown.
+ * \a checkboxReturn The result of the checkbox. If it's initially
  *                true then the checkbox will be checked by default.
  *                May be a null pointer. Incompatible with NoExec.
- * @param options  see Options
- * @param details Detailed message string.
+ * \a options  see Options
+ * \a details Detailed message string.
  * @return A QDialogButtonBox::StandardButton button code, not a KMessageBox
  *         button code, based on the buttonmask given to the constructor of
  *         the @p dialog (ie. will return QDialogButtonBox::Yes instead of
@@ -769,20 +769,20 @@ KWIDGETSADDONS_EXPORT QDialogButtonBox::StandardButton createKMessageBox(QDialog
 /*!
  * Create content and layout of a standard dialog
  *
- * @param dialog  The parent dialog base
- * @param buttons a QDialogButtonBox instance. This function will take care of connecting to it.
- * @param icon    A QPixmap containing the icon to be displayed in the
+ * \a dialog  The parent dialog base
+ * \a buttons a QDialogButtonBox instance. This function will take care of connecting to it.
+ * \a icon    A QPixmap containing the icon to be displayed in the
  *                dialog next to the text.
- * @param text    Message string.
- * @param strlist List of strings to be written in the listbox.
+ * \a text    Message string.
+ * \a strlist List of strings to be written in the listbox.
  *                If the list is empty, it doesn't show any listbox
- * @param ask     The text of the checkbox. If empty none will be shown.
- * @param checkboxReturn The result of the checkbox. If it's initially
+ * \a ask     The text of the checkbox. If empty none will be shown.
+ * \a checkboxReturn The result of the checkbox. If it's initially
  *                true then the checkbox will be checked by default.
  *                May be a null pointer. Incompatible with NoExec.
- * @param options  see Options
- * @param details Detailed message string.
- * @param notifyType The type of notification to send when this message
+ * \a options  see Options
+ * \a details Detailed message string.
+ * \a notifyType The type of notification to send when this message
  *                is presentend.
  * @return A QDialogButtonBox::StandardButton button code, not a KMessageBox
  *         button code, based on the buttonmask given to the constructor of

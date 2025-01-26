@@ -23,8 +23,8 @@ namespace KMimeTypeEditor
  * Displays an error message if the mimetype editing tool (keditfiletype)
  * couldn't be launched.
  *
- * @param mimeType the MIME type to edit, e.g. "text/plain"
- * @param widget the parent widget
+ * \a mimeType the MIME type to edit, e.g. "text/plain"
+ * \a widget the parent widget
  * @since 5.4
  */
 KWIDGETSADDONS_EXPORT void editMimeType(const QString &mimeType, QWidget *widget);

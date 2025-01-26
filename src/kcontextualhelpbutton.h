@@ -74,10 +74,10 @@ class KWIDGETSADDONS_EXPORT KContextualHelpButton : public QToolButton
 
 public:
     /*!
-     * @param contextualHelpText    The text to show when hovering or clicking this button. Consider formatting this nicely using xi18nc().
-     * @param heightHintWidget      The KContextualHelpButton will report the \p heightHintWidget 's sizeHint().height() as its own sizeHint().height().
+     * \a contextualHelpText    The text to show when hovering or clicking this button. Consider formatting this nicely using xi18nc().
+     * \a heightHintWidget      The KContextualHelpButton will report the \p heightHintWidget 's sizeHint().height() as its own sizeHint().height().
      *                              This is useful to make sure that adding this KContextualHelpButton to a layout will not increase the layout's total height.
-     * @param parent                The parent widget that gets ownership over the lifetime of this KContextualHelpButton.
+     * \a parent                The parent widget that gets ownership over the lifetime of this KContextualHelpButton.
      */
     explicit KContextualHelpButton(const QString &contextualHelpText, const QWidget *heightHintWidget, QWidget *parent);
 

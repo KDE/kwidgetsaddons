@@ -34,7 +34,7 @@ public:
     /*!
      * Creates a new toolbar spacer action.
      *
-     * @param parent The action's parent object.
+     * \a parent The action's parent object.
      */
     explicit KToolBarSpacerAction(QObject *parent);
 

@@ -139,18 +139,18 @@ public:
      *
      * For the other Quesion* and Warning* types the buttons are to be set explicitly.
      *
-     * @param type the dialog Type, one of KMessageDialog::Type enum
-     * @param text the text message that is going to be displayed in the dialog
-     * @param parent a QWidget* that will be set as the dialog parent
+     * \a type the dialog Type, one of KMessageDialog::Type enum
+     * \a text the text message that is going to be displayed in the dialog
+     * \a parent a QWidget* that will be set as the dialog parent
      */
     explicit KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent = nullptr);
 
     /*!
      * This constructor takes the window Id of the parent window, instead of a QWidget*.
      *
-     * @param type the dialog Type, one of KMessageDialog::Type enum
-     * @param text the text message that is going to be displayed in the dialog
-     * @param parent_id the native parent's window system identifier
+     * \a type the dialog Type, one of KMessageDialog::Type enum
+     * \a text the text message that is going to be displayed in the dialog
+     * \a parent_id the native parent's window system identifier
      */
     explicit KMessageDialog(KMessageDialog::Type type, const QString &text, WId parent_id);
     /*!
@@ -262,13 +262,13 @@ public:
      * - For dialog types Information and Error only one button
      *   (KStandardGuiItem::ok()) is added to the dialog.
      *
-     * @param primaryAction the action for the primary button.
+     * \a primaryAction the action for the primary button.
      *                      Reported in the result for dialog types Information and Error
      *                      as KMessageDialog::Ok enum value, otherwise as KMessageDialog::PrimaryAction.
-     * @param secondaryAction the action for the secondary button.
+     * \a secondaryAction the action for the secondary button.
      *                        Reported in the result as KMessageDialog::SecondaryAction enum value.
      *                        Ignored with all dialog types without a "secondary" action.
-     * @param cancelAction the action for the cancel button.
+     * \a cancelAction the action for the cancel button.
      *                     Reported in the result as KMessageDialog::Cancel enum value.
      *                     Ignored with all dialog types without a Cancel button.
      */
@@ -282,9 +282,9 @@ public:
      *
      * @note You don't need to call this when using KMessageDialog, it plays the sound automatically.
      *
-     * @param type The message box type
-     * @param text The message box contents, for accessibility purposes.
-     * @param dialog The dialog that was displayed
+     * \a type The message box type
+     * \a text The message box contents, for accessibility purposes.
+     * \a dialog The dialog that was displayed
      * @since 6.0
      * @sa setNotifyEnabled
      */

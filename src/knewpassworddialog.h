@@ -69,7 +69,7 @@ public:
     /*!
      * Constructs a password dialog.
      *
-     * @param parent Passed to lower level constructor.
+     * \a parent Passed to lower level constructor.
      */
     explicit KNewPasswordDialog(QWidget *parent = nullptr);
 
@@ -119,7 +119,7 @@ public:
      *
      * Default: 0
      *
-     * @param minLength The new minimum password length
+     * \a minLength The new minimum password length
      */
     void setMinimumPasswordLength(int minLength);
 
@@ -131,7 +131,7 @@ public:
     /*!
      * Maximum acceptable password length.
      *
-     * @param maxLength The new maximum password length.
+     * \a maxLength The new maximum password length.
      */
     void setMaximumPasswordLength(int maxLength);
 
@@ -147,7 +147,7 @@ public:
      *
      * Default: 8 - the standard UNIX password length
      *
-     * @param reasonableLength The new reasonable password length.
+     * \a reasonableLength The new reasonable password length.
      */
     void setReasonablePasswordLength(int reasonableLength);
 
@@ -163,7 +163,7 @@ public:
      * contain numbers, mixed case letters and punctuation.
      *
      * Default: 1 - warn if the password has no discernible strength whatsoever
-     * @param warningLevel The level below which a warning should be given.
+     * \a warningLevel The level below which a warning should be given.
      */
     void setPasswordStrengthWarningLevel(int warningLevel);
 

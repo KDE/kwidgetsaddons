@@ -43,7 +43,7 @@ public:
      * Constructs a lineedit password widget.
      * @since 5.37
      *
-     * @param parent Passed to lower level constructor.
+     * \a parent Passed to lower level constructor.
      */
     explicit KPasswordLineEdit(QWidget *parent = nullptr);
     /*!

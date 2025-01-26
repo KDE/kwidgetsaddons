@@ -244,7 +244,7 @@ Q_SIGNALS:
      *
      * The returned date and time may be invalid.
      *
-     * @param dateTime the new date, time and time zone
+     * \a dateTime the new date, time and time zone
      */
     void dateTimeEntered(const QDateTime &dateTime);
 
@@ -254,7 +254,7 @@ Q_SIGNALS:
      *
      * The returned date and time may be invalid.
      *
-     * @param dateTime the new date, time and time zone
+     * \a dateTime the new date, time and time zone
      */
     void dateTimeChanged(const QDateTime &dateTime);
 
@@ -263,14 +263,14 @@ Q_SIGNALS:
      *
      * The returned date and time may be invalid.
      *
-     * @param dateTime the new date, time and time zone
+     * \a dateTime the new date, time and time zone
      */
     void dateTimeEdited(const QDateTime &dateTime);
 
     /*!
      * Signal if the Calendar Locale has been manually entered by the user.
      *
-     * @param calendarLocale the new calendar locale
+     * \a calendarLocale the new calendar locale
      */
     void calendarEntered(const QLocale &calendarLocale);
 
@@ -278,7 +278,7 @@ Q_SIGNALS:
      * Signal if the Calendar Locale has been changed either manually by the user
      * or programmatically.
      *
-     * @param calendarLocale the new calendar locale
+     * \a calendarLocale the new calendar locale
      */
     void calendarChanged(const QLocale &calendarLocale);
 
@@ -287,7 +287,7 @@ Q_SIGNALS:
      *
      * The returned date may be invalid.
      *
-     * @param date the new date
+     * \a date the new date
      */
     void dateEntered(const QDate &date);
 
@@ -297,7 +297,7 @@ Q_SIGNALS:
      *
      * The returned date may be invalid.
      *
-     * @param date the new date
+     * \a date the new date
      */
     void dateChanged(const QDate &date);
 
@@ -306,7 +306,7 @@ Q_SIGNALS:
      *
      * The returned date may be invalid.
      *
-     * @param date the new date
+     * \a date the new date
      */
     void dateEdited(const QDate &date);
 
@@ -315,7 +315,7 @@ Q_SIGNALS:
      *
      * The returned time may be invalid.
      *
-     * @param time the new time
+     * \a time the new time
      */
     void timeEntered(const QTime &time);
 
@@ -325,7 +325,7 @@ Q_SIGNALS:
      *
      * The returned time may be invalid.
      *
-     * @param time the new time
+     * \a time the new time
      */
     void timeChanged(const QTime &time);
 
@@ -334,14 +334,14 @@ Q_SIGNALS:
      *
      * The returned time may be invalid.
      *
-     * @param time the new time
+     * \a time the new time
      */
     void timeEdited(const QTime &time);
 
     /*!
      * Signal if the time zone has been changed manually by the user.
      *
-     * @param zone the new time zone
+     * \a zone the new time zone
      */
     void timeZoneEntered(const QTimeZone &zone);
 
@@ -349,7 +349,7 @@ Q_SIGNALS:
      * Signal if the time zone has been changed either manually by the user
      * or programmatically.
      *
-     * @param zone the new time zone
+     * \a zone the new time zone
      */
     void timeZoneChanged(const QTimeZone &zone);
 
@@ -358,35 +358,35 @@ public Q_SLOTS:
     /*!
      * Set the new widget options
      *
-     * @param options the new widget options
+     * \a options the new widget options
      */
     void setOptions(Options options);
 
     /*!
      * Set the currently selected date, time and time zone
      *
-     * @param dateTime the new date, time and time zone
+     * \a dateTime the new date, time and time zone
      */
     void setDateTime(const QDateTime &dateTime);
 
     /*!
      * Set the currently selected date
      *
-     * @param date the new date
+     * \a date the new date
      */
     void setDate(const QDate &date);
 
     /*!
      * Set the currently selected time
      *
-     * @param time the new time
+     * \a time the new time
      */
     void setTime(const QTime &time);
 
     /*!
      * Set the current time zone
      *
-     * @param zone the new zone
+     * \a zone the new zone
      */
     void setTimeZone(const QTimeZone &zone);
 
@@ -397,10 +397,10 @@ public Q_SLOTS:
      * To disable range checking provide two invalid dates, or call
      * clearDateRange;
      *
-     * @param minDateTime the minimum date and time
-     * @param maxDateTime the maximum date and time
-     * @param minWarnMsg the minimum warning message
-     * @param maxWarnMsg the maximum warning message
+     * \a minDateTime the minimum date and time
+     * \a maxDateTime the maximum date and time
+     * \a minWarnMsg the minimum warning message
+     * \a maxWarnMsg the maximum warning message
      */
     void
     setDateTimeRange(const QDateTime &minDateTime, const QDateTime &maxDateTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
@@ -416,8 +416,8 @@ public Q_SLOTS:
      * If the date is invalid, or more than current maximum,
      * then the minimum will not be set.
      *
-     * @param minDateTime the minimum date
-     * @param minWarnMsg the minimum warning message
+     * \a minDateTime the minimum date
+     * \a minWarnMsg the minimum warning message
      *
      * @see setMaximumDateTime()
      * @see setDateRange()
@@ -435,8 +435,8 @@ public Q_SLOTS:
      * If the date is invalid, or less than current minimum,
      * then the maximum will not be set.
      *
-     * @param maxDateTime the maximum date
-     * @param maxWarnMsg the maximum warning message
+     * \a maxDateTime the maximum date
+     * \a maxWarnMsg the maximum warning message
      *
      * @see setMinimumDateTime()
      * @see setDateRange()
@@ -453,14 +453,14 @@ public Q_SLOTS:
      *
      * By default is the Short Format.
      *
-     * @param format the date format to use
+     * \a format the date format to use
      */
     void setDateDisplayFormat(QLocale::FormatType format);
 
     /*!
      * Set the list of Calendar Locales to display.
      *
-     * @param calendarLocales the list of calendar locales to display
+     * \a calendarLocales the list of calendar locales to display
      */
     void setCalendarLocalesList(const QList<QLocale> &calendarLocales);
 
@@ -476,7 +476,7 @@ public Q_SLOTS:
      * default date format then the string should be null.  If you want a
      * separator to be displayed then set the string to "separator".
      *
-     * @param dateMap the map of dates able to be selected
+     * \a dateMap the map of dates able to be selected
      *
      * @see dateMap()
      */
@@ -487,7 +487,7 @@ public Q_SLOTS:
      *
      * By default is the Short Format.
      *
-     * @param format the time format to use
+     * \a format the time format to use
      */
     void setTimeDisplayFormat(QLocale::FormatType format);
 
@@ -507,7 +507,7 @@ public Q_SLOTS:
      * Setting the time list interval will override any time list previously set
      * via setTimeList().
      *
-     * @param minutes the time list interval to display
+     * \a minutes the time list interval to display
      *
      * @see timeListInterval()
      */
@@ -525,9 +525,9 @@ public Q_SLOTS:
      * The minimum and maximum time will automatically be set to the earliest
      * and latest value in the list.
      *
-     * @param timeList the list of times able to be selected
-     * @param minWarnMsg the minimum warning message
-     * @param maxWarnMsg the maximum warning message
+     * \a timeList the list of times able to be selected
+     * \a minWarnMsg the minimum warning message
+     * \a maxWarnMsg the maximum warning message
      *
      * @see timeList()
      */
@@ -536,7 +536,7 @@ public Q_SLOTS:
     /*!
      * Set the time zones able to be selected
      *
-     * @param zones the time zones to display
+     * \a zones the time zones to display
      */
     void setTimeZones(const QList<QTimeZone> &zones);
 
@@ -552,7 +552,7 @@ protected:
      * Virtual to allow sub-classes to apply extra validation rules,
      * but reimplementations must call the parent method at the end.
      *
-     * @param dateTime the new date and time
+     * \a dateTime the new date and time
      */
     virtual void assignDateTime(const QDateTime &dateTime);
 
@@ -562,7 +562,7 @@ protected:
      * Virtual to allow sub-classes to apply extra validation rules,
      * but reimplementations must call the parent method at the end.
      *
-     * @param date the new date
+     * \a date the new date
      */
     virtual void assignDate(const QDate &date);
 
@@ -572,7 +572,7 @@ protected:
      * Virtual to allow sub-classes to apply extra validation rules,
      * but reimplementations must call the parent method at the end.
      *
-     * @param time the new time
+     * \a time the new time
      */
     virtual void assignTime(const QTime &time);
 
@@ -582,7 +582,7 @@ protected:
      * Virtual to allow sub-classes to apply extra validation rules,
      * but reimplementations must call the parent method at the end.
      *
-     * @param zone the new time zone
+     * \a zone the new time zone
      */
     void assignTimeZone(const QTimeZone &zone);
 

@@ -94,7 +94,7 @@ public:
     ~KTitleWidget() override;
 
     /*!
-     * @param widget Widget displayed on the title widget.
+     * \a widget Widget displayed on the title widget.
      */
     void setWidget(QWidget *widget);
 
@@ -131,7 +131,7 @@ public:
      * When the user presses the shortcut key indicated by the label in this
      * title widget, the keyboard focus is transferred to the label's buddy
      * widget.
-     * @param buddy the widget to activate when the shortcut key is activated
+     * \a buddy the widget to activate when the shortcut key is activated
      */
     void setBuddy(QWidget *buddy);
 
@@ -151,39 +151,39 @@ public:
 
 public Q_SLOTS:
     /*!
-     * @param text Text displayed on the label. It can either be plain text or rich text. If it
+     * \a text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
-     * @param alignment Alignment of the text. Default is left and vertical centered.
+     * \a alignment Alignment of the text. Default is left and vertical centered.
      * @see text()
      */
     void setText(const QString &text, Qt::Alignment alignment = Qt::AlignLeft | Qt::AlignVCenter);
     /*!
-     * @param text Text displayed on the label. It can either be plain text or rich text. If it
+     * \a text Text displayed on the label. It can either be plain text or rich text. If it
      * is plain text, the text is displayed as a bold title text.
-     * @param type The sort of message it is; will also set the icon accordingly
+     * \a type The sort of message it is; will also set the icon accordingly
      * @see text()
      */
     void setText(const QString &text, MessageType type);
 
     /*!
-     * @param comment Text displayed beneath the main title as a comment.
+     * \a comment Text displayed beneath the main title as a comment.
      *                It can either be plain text or rich text.
-     * @param type The sort of message it is.
+     * \a type The sort of message it is.
      * @see comment()
      */
     void setComment(const QString &comment, MessageType type = PlainMessage);
 
     /*!
      * Set the icon to display in the header.
-     * @param icon the icon to display in the header.
-     * @param alignment alignment of the icon (default is right aligned).
+     * \a icon the icon to display in the header.
+     * \a alignment alignment of the icon (default is right aligned).
      * @since 5.63
      */
     void setIcon(const QIcon &icon, ImageAlignment alignment = ImageRight);
 
     /*!
-     * @param type the type of message icon to display in the header
-     * @param alignment alignment of the icon (default is right aligned).
+     * \a type the type of message icon to display in the header
+     * \a alignment alignment of the icon (default is right aligned).
      * @see icon()
      * @since 5.72
      */
@@ -191,7 +191,7 @@ public Q_SLOTS:
 
     /*!
      * Set the size of the icon to display in the header.
-     * @param iconSize the size of the icon, or an invalid QSize to reset to the default
+     * \a iconSize the size of the icon, or an invalid QSize to reset to the default
      *
      * The default size is defined by the GUI style and its value for QStyle::PM_MessageBoxIconSize.
      *
@@ -202,14 +202,14 @@ public Q_SLOTS:
     /*!
      * Set the autohide timeout of the label
      * Set value to 0 to disable autohide, which is the default.
-     * @param msecs timeout value in milliseconds
+     * \a msecs timeout value in milliseconds
      */
     void setAutoHideTimeout(int msecs);
 
     /*!
      * Sets the level of this title, similar to HTML's h1 h2 h3...
      * Follows the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
-     * @param level the level of the title, 1 is the biggest font and most important, descending
+     * \a level the level of the title, 1 is the biggest font and most important, descending
      * @since 5.53
      */
     void setLevel(int level);

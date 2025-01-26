@@ -114,8 +114,8 @@ public:
     /*!
      * Constructor. @p controls can be used to show a custom set of widgets.
      *
-     * @param parent     the parent widget for this KCharSelect (see QWidget documentation)
-     * @param controls   selects the visible controls on the KCharSelect widget
+     * \a parent     the parent widget for this KCharSelect (see QWidget documentation)
+     * \a controls   selects the visible controls on the KCharSelect widget
      *
      * @since 4.2
      */
@@ -132,10 +132,10 @@ public:
      * If you provide a KActionCollection, this will be populated with the above actions,
      * which you can then manually trigger or place in menus and toolbars.
      *
-     * @param parent     the parent widget for this KCharSelect (see QWidget documentation)
-     * @param actionParent if this is not @c null, KCharSelect will place its actions into this
+     * \a parent     the parent widget for this KCharSelect (see QWidget documentation)
+     * \a actionParent if this is not @c null, KCharSelect will place its actions into this
      *                     collection
-     * @param controls   selects the visible controls on the KCharSelect widget
+     * \a controls   selects the visible controls on the KCharSelect widget
      *
      * @since 4.2
      */
@@ -210,7 +210,7 @@ public Q_SLOTS:
     /*!
      * Highlights the character @p c. If the character is not displayed, the block is changed.
      *
-     * @param c the character to highlight
+     * \a c the character to highlight
      */
     void setCurrentChar(const QChar &c);
 
@@ -219,7 +219,7 @@ public Q_SLOTS:
      * outside the Basic Multilingual Plane (BMP), then you must enable support
      * for all planes for this to work.
      *
-     * @param codePoint the Unicode code point of the character to highlight
+     * \a codePoint the Unicode code point of the character to highlight
      *
      * @sa allPlanesEnabled
      * @since 5.25
@@ -229,7 +229,7 @@ public Q_SLOTS:
     /*!
      * Sets the font which is displayed to @p font
      *
-     * @param font the display font for the widget
+     * \a font the display font for the widget
      */
     void setCurrentFont(const QFont &font);
 
@@ -237,19 +237,19 @@ Q_SIGNALS:
     /*!
      * A new font is selected or the font size changed.
      *
-     * @param font the new font
+     * \a font the new font
      */
     void currentFontChanged(const QFont &font);
     /*!
      * The current character is changed.
      *
-     * @param c the new character
+     * \a c the new character
      */
     void currentCharChanged(const QChar &c);
     /*!
      * The current character is changed.
      *
-     * @param codePoint the Unicode code point of the new character
+     * \a codePoint the Unicode code point of the new character
      * @since 5.25
      */
     void currentCodePointChanged(uint codePoint);
@@ -260,13 +260,13 @@ Q_SIGNALS:
     /*!
      * A character is selected to be inserted somewhere.
      *
-     * @param c the selected character
+     * \a c the selected character
      */
     void charSelected(const QChar &c);
     /*!
      * A character is selected to be inserted somewhere.
      *
-     * @param codePoint the Unicode code point of the selected character
+     * \a codePoint the Unicode code point of the selected character
      * @since 5.25
      */
     void codePointSelected(uint codePoint);

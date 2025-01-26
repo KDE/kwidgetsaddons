@@ -136,8 +136,8 @@ public:
     /*!
      * Adds a new top level page to the dialog.
      *
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -146,17 +146,17 @@ public:
     /*!
      * Adds a new top level page to the dialog.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void addPage(KPageWidgetItem *item);
 
     /*!
      * Inserts a new page in the dialog.
      *
-     * @param before The new page will be insert before this KPageWidgetItem
+     * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -165,19 +165,19 @@ public:
     /*!
      * Inserts a new page in the dialog.
      *
-     * @param before The new page will be insert before this KPageWidgetItem
+     * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /*!
      * Inserts a new sub page in the dialog.
      *
-     * @param parent The new page will be insert as child of this KPageWidgetItem.
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a parent The new page will be insert as child of this KPageWidgetItem.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -186,9 +186,9 @@ public:
     /*!
      * Inserts a new sub page in the dialog.
      *
-     * @param parent The new page will be insert as child of this KPageWidgetItem.
+     * \a parent The new page will be insert as child of this KPageWidgetItem.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
@@ -229,15 +229,15 @@ Q_SIGNALS:
     /*!
      * This signal is emitted whenever the current page has changed.
      *
-     * @param current The new current page or a null pointer if no current page is available.
-     * @param before The page that was current before the new current page has changed.
+     * \a current The new current page or a null pointer if no current page is available.
+     * \a before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
     /*!
      * This signal is emitted whenever a page has been removed.
      *
-     * @param page The page which has been removed
+     * \a page The page which has been removed
      */
     void pageRemoved(KPageWidgetItem *page);
 
@@ -266,7 +266,7 @@ protected:
      *
      * @note the previous pageWidget will be deleted.
      *
-     * @param widget The KPageWidget object will be reparented to this object, so you can create
+     * \a widget The KPageWidget object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
      */
     void setPageWidget(KPageWidget *widget);
@@ -286,7 +286,7 @@ protected:
      *
      * @note the previous buttonBox will be deleted.
      *
-     * @param box The QDialogButtonBox object will be reparented to this object, so you can create
+     * \a box The QDialogButtonBox object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
      */
     void setButtonBox(QDialogButtonBox *box);

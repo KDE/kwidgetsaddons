@@ -54,7 +54,7 @@ public:
 
     /*!
      * Create a KMultiTabBar with Left as KMultiTabBar position.
-     * @param parent The parent of the widget.
+     * \a parent The parent of the widget.
      * @since 5.24
      */
     explicit KMultiTabBar(QWidget *parent = nullptr);
@@ -65,11 +65,11 @@ public:
     /*!
      * append  a new button to the button area. The button can later on be accessed with button(ID)
      * eg for connecting signals to it
-     * @param icon a icon for the button
-     * @param id an arbitrary ID value. It will be emitted in the clicked signal for identifying the button
+     * \a icon a icon for the button
+     * \a id an arbitrary ID value. It will be emitted in the clicked signal for identifying the button
      *  if more than one button is connected to a signals.
-     * @param popup A popup menu which should be displayed if the button is clicked
-     * @param not_used_yet will be used for a popup text in the future
+     * \a popup A popup menu which should be displayed if the button is clicked
+     * \a not_used_yet will be used for a popup text in the future
      * @since 5.13
      */
     int appendButton(const QIcon &icon, int id = -1, QMenu *popup = nullptr, const QString &not_used_yet = QString());
@@ -81,9 +81,9 @@ public:
 
     /*!
      * append a new tab to the tab area. It can be accessed lateron with tabb(id);
-     * @param icon a icon for the tab
-     * @param id an arbitrary ID which can be used later on to identify the tab
-     * @param text if a mode with text is used it will be the tab text, otherwise a mouse over hint
+     * \a icon a icon for the tab
+     * \a id an arbitrary ID which can be used later on to identify the tab
+     * \a text if a mode with text is used it will be the tab text, otherwise a mouse over hint
      * @since 5.13
      */
     int appendTab(const QIcon &icon, int id = -1, const QString &text = QString());
@@ -94,8 +94,8 @@ public:
     void removeTab(int id);
     /*!
      * set a tab to "raised"
-     * @param id The ID of the tab to manipulate
-     * @param state true == activated/raised, false == not active
+     * \a id The ID of the tab to manipulate
+     * \a state true == activated/raised, false == not active
      */
     void setTab(int id, bool state);
     /*!
@@ -114,7 +114,7 @@ public:
 
     /*!
      * set the real position of the widget.
-     * @param pos if the mode is horizontal, only use top, bottom, if it is vertical use left or right
+     * \a pos if the mode is horizontal, only use top, bottom, if it is vertical use left or right
      */
     void setPosition(KMultiTabBarPosition pos);
 
@@ -163,7 +163,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     /*!
      * this is emitted if  the button is clicked
-     * @param id    the ID identifying the button
+     * \a id    the ID identifying the button
      */
     void clicked(int id);
 protected Q_SLOTS:
@@ -214,7 +214,7 @@ public Q_SLOTS:
 
     /*!
      * set the active state of the tab
-     * @param  state true==active false==not active
+     * \a  state true==active false==not active
      */
     void setState(bool state);
 

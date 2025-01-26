@@ -195,7 +195,7 @@ public:
      * For each action a button is added to the message widget in the
      * order the actions were added.
      *
-     * @param action the action to add
+     * \a action the action to add
      * @see removeAction(), QWidget::actions()
      */
     void addAction(QAction *action);
@@ -203,7 +203,7 @@ public:
     /*!
      * Remove @p action from the message widget.
      *
-     * @param action the action to remove
+     * \a action the action to remove
      * @see KMessageWidget::MessageType, addAction(), setMessageType()
      */
     void removeAction(QAction *action);
@@ -227,7 +227,7 @@ public:
 
     /*!
      * Returns the required height for @p width.
-     * @param width the width in pixels
+     * \a width the width in pixels
      */
     int heightForWidth(int width) const override;
 
@@ -262,7 +262,7 @@ public Q_SLOTS:
      * Set the text of the message widget to @p text.
      * If the message widget is already visible, the text changes on the fly.
      *
-     * @param text the text to display, rich text is allowed
+     * \a text the text to display, rich text is allowed
      * @see text()
      */
     void setText(const QString &text);
@@ -282,7 +282,7 @@ public Q_SLOTS:
      *
      * By default word wrap is disabled.
      *
-     * @param wordWrap disable/enable word wrap
+     * \a wordWrap disable/enable word wrap
      * @see wordWrap()
      */
     void setWordWrap(bool wordWrap);
@@ -327,7 +327,7 @@ Q_SIGNALS:
     /*!
      * This signal is emitted when the user clicks a link in the text label.
      * The URL referred to by the href anchor is passed in contents.
-     * @param contents text of the href anchor
+     * \a contents text of the href anchor
      * @see QLabel::linkActivated()
      * @since 4.10
      */
@@ -336,7 +336,7 @@ Q_SIGNALS:
     /*!
      * This signal is emitted when the user hovers over a link in the text label.
      * The URL referred to by the href anchor is passed in contents.
-     * @param contents text of the href anchor
+     * \a contents text of the href anchor
      * @see QLabel::linkHovered()
      * @since 4.11
      */

@@ -39,22 +39,22 @@ public:
      *
      * By default the group "RecentFiles" is used.
      *
-     * @param group the name of the group.
+     * \a group the name of the group.
      */
     void setGroup(const QString &group);
 
     /*!
      *  Add URL to recent files list. This will enable this action.
      *
-     *  @param url The URL of the file
-     *  @param name The user visible pretty name that appears before the URL
+     *  \a url The URL of the file
+     *  \a name The user visible pretty name that appears before the URL
      */
     void addUrl(const QUrl &url, const QString &name = QString());
 
     /*!
      *  Remove a URL from the recent files list.
      *
-     *  @param url The URL of the file
+     *  \a url The URL of the file
      */
     void removeUrl(const QUrl &url);
 
@@ -101,7 +101,7 @@ Q_SIGNALS:
      * emitted when the user clicks on a file action.
      * Usually this should result in the specified URL being opened.
      *
-     * @param url The url associated with the triggered action.
+     * \a url The url associated with the triggered action.
      */
     void urlTriggered(const QUrl &url);
 

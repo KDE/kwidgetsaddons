@@ -28,8 +28,8 @@ class KWIDGETSADDONS_EXPORT KSplitterCollapserButton : public QToolButton
 public:
     /*!
      * @brief KSplitterCollapserButton create a splitter collapser
-     * @param childWidget the widget, child of the splitter, whose size is controlled by this collapser
-     * @param splitter the splitter which this collapser should be associated with.
+     * \a childWidget the widget, child of the splitter, whose size is controlled by this collapser
+     * \a splitter the splitter which this collapser should be associated with.
      */
     explicit KSplitterCollapserButton(QWidget *childWidget, QSplitter *splitter);
 
@@ -57,7 +57,7 @@ public Q_SLOTS:
     void restore();
     /*!
      * @brief setCollapsed, this function allows to collapse or not the splitter.
-     * @param collapsed if the splitter should be collapsed
+     * \a collapsed if the splitter should be collapsed
      */
     void setCollapsed(bool collapsed);
 

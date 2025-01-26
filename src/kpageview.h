@@ -124,7 +124,7 @@ public:
     FaceType faceType() const;
 
     /*!
-     * Sets the page with @param index to be the current page and emits
+     * Sets the page with \a index to be the current page and emits
      * the signal currentPageChanged.
      */
     void setCurrentPage(const QModelIndex &index);
@@ -136,7 +136,7 @@ public:
     QModelIndex currentPage() const;
 
     /*!
-     * Sets the item @param delegate which can be used customize
+     * Sets the item \a delegate which can be used customize
      * the page view.
      */
     void setItemDelegate(QAbstractItemDelegate *delegate);

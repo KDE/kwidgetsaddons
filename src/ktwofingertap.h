@@ -55,14 +55,14 @@ public:
     /*!
      * Sets the position, relative to the widget.
      *
-     * @param pos The position.
+     * \a pos The position.
      */
     void setPos(QPointF pos);
 
     /*!
      * Sets the screen position.
      *
-     * @param screenPos The screen position.
+     * \a screenPos The screen position.
      */
     Q_REQUIRED_RESULT QPointF screenPos() const;
 
@@ -79,7 +79,7 @@ public:
     /*!
      * Sets the scene position.
      *
-     * @param scenePos The scene position, identical to the screen position for widgets.
+     * \a scenePos The scene position, identical to the screen position for widgets.
      */
     void setScenePos(QPointF scenePos);
 private:
@@ -112,7 +112,7 @@ public:
     /*!
      * Qt called this member to create a new QGesture object.
      *
-     * @param target The target for the gesture.
+     * \a target The target for the gesture.
      *
      * @return The new QGesture object.
      */
@@ -121,9 +121,9 @@ public:
     /*!
      * Handles the given event for the watched object and update the gesture object.
      *
-     * @param gesture The gesture object.
-     * @param watched The watched object.
-     * @param event The event.
+     * \a gesture The gesture object.
+     * \a watched The watched object.
+     * \a event The event.
      *
      * @return The result reflects how much of the gesture has been recognized.
      */
@@ -135,9 +135,9 @@ public:
     Q_REQUIRED_RESULT int tapRadius() const;
 
     /*!
-     * Set the maximum wiggle room for a touch point. If @param i is negative, it will be set to null.
+     * Set the maximum wiggle room for a touch point. If \a i is negative, it will be set to null.
      *
-     * @param i The maximum wiggle room.
+     * \a i The maximum wiggle room.
      */
     void setTapRadius(int i);
 

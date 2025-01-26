@@ -27,7 +27,7 @@
  * Therefore always use this function to remove accelerator marker
  * from UI labels.
  *
- * @param label UI label which may contain an accelerator marker
+ * \a label UI label which may contain an accelerator marker
  * @return label without the accelerator marker
  */
 QString removeAcceleratorMarker(const QString &label);
@@ -45,8 +45,8 @@ QString removeAcceleratorMarker(const QString &label);
  * use the short format with 4-digit year because Qt parses current 2-digit year
  * values like 22 as 1922.
  *
- * @param locale The locale that you want the date format for.
- * @param format The date format that you want.
+ * \a locale The locale that you want the date format for.
+ * \a format The date format that you want.
  * @return the date format string with 4-digit year
  */
 QString dateFormatWith4DigitYear(const QLocale &locale, QLocale::FormatType format);

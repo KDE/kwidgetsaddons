@@ -124,8 +124,8 @@ public:
     /*!
      * create a password dialog
      *
-     * @param parent the parent widget
-     * @param flags a set of KPasswordDialogFlag flags
+     * \a parent the parent widget
+     * \a flags a set of KPasswordDialogFlag flags
      */
     explicit KPasswordDialog(QWidget *parent = nullptr, const KPasswordDialogFlags &flags = KPasswordDialog::NoFlags);
 
@@ -136,7 +136,7 @@ public:
 
     /*!
      * Sets the prompt to show to the user.
-     * @param prompt        instructional text to be shown.
+     * \a prompt        instructional text to be shown.
      */
     void setPrompt(const QString &prompt);
 
@@ -163,15 +163,15 @@ public:
      * line to this widget.  Calling this function after a
      * comment has already been added will not have any effect.
      *
-     * @param label       label for comment (ex:"Command:")
-     * @param comment     the actual comment text.
+     * \a label       label for comment (ex:"Command:")
+     * \a comment     the actual comment text.
      */
     void addCommentLine(const QString &label, const QString &comment);
 
     /*!
      * Shows an error message in the dialog box. Prevents having to show a dialog-on-a-dialog.
      *
-     * @param message the error message to show
+     * \a message the error message to show
      */
     void showErrorMessage(const QString &message, const ErrorType type = PasswordError);
 
@@ -244,14 +244,14 @@ public:
      *
      * this can also be set by passing UsernameReadOnly as flag in the constructor
      *
-     * @param readOnly true to set the user field to read-only
+     * \a readOnly true to set the user field to read-only
      */
     void setUsernameReadOnly(bool readOnly);
 
     /*!
      * Presets the password.
      * If the password is not empty, the ability to show the password will not be available.
-     * @param password the password to set
+     * \a password the password to set
      */
     void setPassword(const QString &password);
 
@@ -260,7 +260,7 @@ public:
      * The passwords can be empty if you simply want to offer usernames to choose from.
      *
      * This require the flag ShowUsernameLine to be set in the constructoe, and not the flag UsernameReadOnly
-     * @param knownLogins map of known logins: the keys are usernames, the values are passwords.
+     * \a knownLogins map of known logins: the keys are usernames, the values are passwords.
      */
     void setKnownLogins(const QMap<QString, QString> &knownLogins);
 
@@ -337,16 +337,16 @@ public:
 Q_SIGNALS:
     /*!
      * emitted when the dialog has been accepted
-     * @param password  the entered password
-     * @param keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
+     * \a password  the entered password
+     * \a keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
      */
     void gotPassword(const QString &password, bool keep);
 
     /*!
      * emitted when the dialog has been accepted, and ShowUsernameLine was set on the constructor
-     * @param username the entered username
-     * @param password  the entered password
-     * @param keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
+     * \a username the entered username
+     * \a password  the entered password
+     * \a keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
      */
     void gotUsernameAndPassword(const QString &username, const QString &password, bool keep);
 

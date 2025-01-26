@@ -80,10 +80,10 @@ public:
     /*!
      * Convenience constructor.
      *
-     * @param url is the URL emitted when the label is clicked.
-     * @param text is the displayed string. If it's equal to QString()
+     * \a url is the URL emitted when the label is clicked.
+     * \a text is the displayed string. If it's equal to QString()
      * the @p url will be used instead.
-     * @param parent Passed to lower level constructor
+     * \a parent Passed to lower level constructor
      *
      * @p parent and @p name are passed to QLabel, which in turn passes
      * them further down
@@ -217,8 +217,8 @@ public Q_SLOTS:
      * (default is a "pointing hand") whenever the cursor passes
      * over the label. By default, it is on.
      *
-     * @param on whether a custom cursor should be displayed.
-     * @param cursor the custom cursor. A null pointer indicates the default "hand cursor".
+     * \a on whether a custom cursor should be displayed.
+     * \a cursor the custom cursor. A null pointer indicates the default "hand cursor".
      */
     void setUseCursor(bool on, QCursor *cursor = nullptr);
 

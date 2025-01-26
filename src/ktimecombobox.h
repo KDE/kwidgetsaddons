@@ -129,10 +129,10 @@ public:
      *
      * If either time is invalid, or min > max then the range will not be set.
      *
-     * @param minTime the minimum time
-     * @param maxTime the maximum time
-     * @param minWarnMsg the minimum warning message
-     * @param maxWarnMsg the maximum warning message
+     * \a minTime the minimum time
+     * \a maxTime the maximum time
+     * \a minWarnMsg the minimum warning message
+     * \a maxWarnMsg the maximum warning message
      */
     void setTimeRange(const QTime &minTime, const QTime &maxTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
 
@@ -170,7 +170,7 @@ Q_SIGNALS:
      *
      * The returned time may be invalid.
      *
-     * @param time the new time
+     * \a time the new time
      */
     void timeEntered(const QTime &time);
 
@@ -180,7 +180,7 @@ Q_SIGNALS:
      *
      * The returned time may be invalid.
      *
-     * @param time the new time
+     * \a time the new time
      */
     void timeChanged(const QTime &time);
 
@@ -189,7 +189,7 @@ Q_SIGNALS:
      *
      * The returned time may be invalid.
      *
-     * @param time the new time
+     * \a time the new time
      */
     void timeEdited(const QTime &time);
 
@@ -201,14 +201,14 @@ public Q_SLOTS:
      * You can set an invalid time or a time outside the valid range, validity
      * checking is only done via isValid().
      *
-     * @param time the new time
+     * \a time the new time
      */
     void setTime(const QTime &time);
 
     /*!
      * Set the new widget options
      *
-     * @param options the new widget options
+     * \a options the new widget options
      */
     void setOptions(Options options);
 
@@ -217,7 +217,7 @@ public Q_SLOTS:
      *
      * By default is the Short Format.
      *
-     * @param format the time format to use
+     * \a format the time format to use
      */
     void setDisplayFormat(QLocale::FormatType format);
 
@@ -227,8 +227,8 @@ public Q_SLOTS:
      * If the time is invalid, or greater than current maximum,
      * then the minimum will not be set.
      *
-     * @param minTime the minimum time
-     * @param minWarnMsg the minimum warning message
+     * \a minTime the minimum time
+     * \a minWarnMsg the minimum warning message
      *
      * @see minimumTime()
      * @see maximumTime()
@@ -243,8 +243,8 @@ public Q_SLOTS:
      * If the time is invalid, or less than current minimum,
      * then the maximum will not be set.
      *
-     * @param maxTime the maximum time
-     * @param maxWarnMsg the maximum warning message
+     * \a maxTime the maximum time
+     * \a maxWarnMsg the maximum warning message
      *
      * @see minimumTime()
      * @see maximumTime()
@@ -269,7 +269,7 @@ public Q_SLOTS:
      * Setting the time list interval will override any time list previously set
      * via setTimeList().
      *
-     * @param minutes the time list interval to display
+     * \a minutes the time list interval to display
      *
      * @see timeListInterval()
      */
@@ -287,9 +287,9 @@ public Q_SLOTS:
      * The minimum and maximum time will automatically be set to the earliest
      * and latest value in the list.
      *
-     * @param timeList the list of times able to be selected
-     * @param minWarnMsg the minimum warning message
-     * @param maxWarnMsg the maximum warning message
+     * \a timeList the list of times able to be selected
+     * \a minWarnMsg the minimum warning message
+     * \a maxWarnMsg the maximum warning message
      *
      * @see timeList()
      */
@@ -311,7 +311,7 @@ protected:
      *
      * Virtual to allow sub-classes to apply extra validation rules.
      *
-     * @param time the new time
+     * \a time the new time
      */
     virtual void assignTime(const QTime &time);
 

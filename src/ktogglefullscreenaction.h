@@ -50,14 +50,14 @@ public:
      * Create a KToggleFullScreenAction. Call setWindow() to associate this
      * action with a window.
      *
-     *  @param parent This action's parent object.
+     *  \a parent This action's parent object.
      */
     explicit KToggleFullScreenAction(QObject *parent);
 
     /*!
      * Create a KToggleFullScreenAction
-     *  @param window the window that will switch to/from full screen mode
-     *  @param parent This action's parent object.
+     *  \a window the window that will switch to/from full screen mode
+     *  \a parent This action's parent object.
      */
     KToggleFullScreenAction(QWidget *window, QObject *parent);
 

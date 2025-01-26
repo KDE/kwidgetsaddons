@@ -65,15 +65,15 @@ public:
     /*!
      * Creates a new page widget item.
      *
-     * @param widget The widget that is shown as page in the KPageWidget.
+     * \a widget The widget that is shown as page in the KPageWidget.
      */
     KPageWidgetItem(QWidget *widget);
 
     /*!
      * Creates a new page widget item.
      *
-     * @param widget The widget that is shown as page in the KPageWidget.
-     * @param name The localized string that is show in the navigation view
+     * \a widget The widget that is shown as page in the KPageWidget.
+     * \a name The localized string that is show in the navigation view
      *             of the KPageWidget.
      */
     KPageWidgetItem(QWidget *widget, const QString &name);
@@ -106,7 +106,7 @@ public:
      * does not got set explicit, then the defined name() will also be used
      * for the header.
      *
-     * @param header Header of the page widget item.
+     * \a header Header of the page widget item.
      */
     void setHeader(const QString &header);
 
@@ -117,7 +117,7 @@ public:
 
     /*!
      * Sets the icon of the page widget item.
-     * @param icon Icon of the page widget item.
+     * \a icon Icon of the page widget item.
      */
     void setIcon(const QIcon &icon);
 
@@ -128,7 +128,7 @@ public:
 
     /*!
      * Sets whether the page widget item is checkable in the view.
-     * @param checkable True if the page widget is checkable,
+     * \a checkable True if the page widget is checkable,
      *                  otherwise false.
      */
     void setCheckable(bool checkable);
@@ -224,7 +224,7 @@ public:
     /*!
      * Creates a new page widget model.
      *
-     * @param parent The parent object.
+     * \a parent The parent object.
      */
     explicit KPageWidgetModel(QObject *parent = nullptr);
 
@@ -236,8 +236,8 @@ public:
     /*!
      * Adds a new top level page to the model.
      *
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -246,17 +246,17 @@ public:
     /*!
      * Adds a new top level page to the model.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void addPage(KPageWidgetItem *item);
 
     /*!
      * Inserts a new page in the model.
      *
-     * @param before The new page will be insert before this KPageWidgetItem
+     * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -265,19 +265,19 @@ public:
     /*!
      * Inserts a new page in the model.
      *
-     * @param before The new page will be insert before this KPageWidgetItem
+     * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /*!
      * Inserts a new sub page in the model.
      *
-     * @param parent The new page will be insert as child of this KPageWidgetItem.
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a parent The new page will be insert as child of this KPageWidgetItem.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -286,9 +286,9 @@ public:
     /*!
      * Inserts a new sub page in the model.
      *
-     * @param parent The new page will be insert as child of this KPageWidgetItem.
+     * \a parent The new page will be insert as child of this KPageWidgetItem.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
@@ -321,7 +321,7 @@ public:
 
 Q_SIGNALS:
     /*!
-     * This signal is emitted whenever a checkable page changes its state. @param checked is true
+     * This signal is emitted whenever a checkable page changes its state. \a checked is true
      * when the @p page is checked, or false if the @p page is unchecked.
      */
     void toggled(KPageWidgetItem *page, bool checked);

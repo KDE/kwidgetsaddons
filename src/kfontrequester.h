@@ -42,8 +42,8 @@ public:
     /*!
      * Constructs a font requester widget.
      *
-     * @param parent The parent widget.
-     * @param onlyFixed Only display fonts which have fixed-width character
+     * \a parent The parent widget.
+     * \a onlyFixed Only display fonts which have fixed-width character
      *        sizes.
      */
     explicit KFontRequester(QWidget *parent = nullptr, bool onlyFixed = false);
@@ -83,8 +83,8 @@ public:
     /*!
      * Sets the currently selected font in the requester.
      *
-     * @param font The font to select.
-     * @param onlyFixed Display only fixed-width fonts in the font dialog
+     * \a font The font to select.
+     * \a onlyFixed Display only fixed-width fonts in the font dialog
      * if @p true, or vice-versa.
      */
     virtual void setFont(const QFont &font, bool onlyFixed = false);
@@ -98,7 +98,7 @@ public:
      * application. Default text is current font name and size. Setting
      * the text to QString() will restore the default.
      *
-     * @param text The new sample text. The current will be removed.
+     * \a text The new sample text. The current will be removed.
      */
     virtual void setSampleText(const QString &text);
 
@@ -106,7 +106,7 @@ public:
      * Set the title for the widget that will be used in the tooltip and
      * what's this text.
      *
-     * @param title The title to be set.
+     * \a title The title to be set.
      */
     virtual void setTitle(const QString &title);
 

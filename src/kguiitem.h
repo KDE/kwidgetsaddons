@@ -46,22 +46,22 @@ public:
     /*!
      * Constructs a KGuiItem with the provided arguments.
      *
-     * @param text the text to use with the GUI item
-     * @param iconName the name of the icon to display next to the text on the item;
+     * \a text the text to use with the GUI item
+     * \a iconName the name of the icon to display next to the text on the item;
      *             QIcon::fromTheme() is used to get a icon with that name from
      *             the icon themes available on the system
-     * @param tooltip the tooltip to use for this item
-     * @param whatsThis the text to use for the WhatThis help message
+     * \a tooltip the tooltip to use for this item
+     * \a whatsThis the text to use for the WhatThis help message
      */
     explicit KGuiItem(const QString &text, const QString &iconName = QString(), const QString &toolTip = QString(), const QString &whatsThis = QString());
     /*!
      * Constructs a KGuiItem with the provided arguments.
      *
-     * @param text the text to use with the GUI item
-     * @param icon the QIcon object used to get an icon to display next to the text
+     * \a text the text to use with the GUI item
+     * \a icon the QIcon object used to get an icon to display next to the text
      *         on this item
-     * @param tooltip the tooltip to use for this item
-     * @param whatsThis the text to use for the WhatThis help message
+     * \a tooltip the tooltip to use for this item
+     * \a whatsThis the text to use for the WhatThis help message
      */
     KGuiItem(const QString &text, const QIcon &icon, const QString &toolTip = QString(), const QString &whatsThis = QString());
 

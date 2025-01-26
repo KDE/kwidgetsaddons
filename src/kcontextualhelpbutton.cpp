@@ -38,7 +38,7 @@ public:
      * A helper method called from KContextualHelpButton::sizeHint().
      *
      * @returns the preferredSize based on m_heightHintWidget and fallbackSize.
-     * @param fallbackSize  Used as the width. Also used as the height if there is no m_heightHintWidget.
+     * \a fallbackSize  Used as the width. Also used as the height if there is no m_heightHintWidget.
      *
      * @see QWidget::sizeHint()
      * @see KContextualHelpButton::setHeightHintWidget()

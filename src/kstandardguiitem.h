@@ -71,14 +71,14 @@ enum StandardItem {
 /*!
  * Returns the gui item for the given identifier @p id.
  *
- * @param id the identifier to search for
+ * \a id the identifier to search for
  */
 KWIDGETSADDONS_EXPORT KGuiItem guiItem(StandardItem id);
 
 /*!
  * Returns the name of the gui item for the given identifier @p id.
  *
- * @param id the identifier to search for
+ * \a id the identifier to search for
  */
 KWIDGETSADDONS_EXPORT QString standardItem(StandardItem id);
 

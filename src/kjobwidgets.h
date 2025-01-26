@@ -22,7 +22,7 @@ namespace KJobWidgets
 /*!
  * Associate this job with a window given by @p window.
  *
- * @param job should be a KJob subclass
+ * \a job should be a KJob subclass
  *
  * This is used:
  * @li by KDialogJobUiDelegate as parent widget for error messages
@@ -42,7 +42,7 @@ KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
  *
  * Note that setWindow() will set the window handle too.
  *
- * @param job should be a KJob subclass
+ * \a job should be a KJob subclass
  *
  * @since 6.4
  * @deprecated since 6.5, use KJobWindows::setWindow() instead.
@@ -53,7 +53,7 @@ KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::
 /*!
  * Return the window associated with this job.
  *
- * @param job should be a KJob subclass
+ * \a job should be a KJob subclass
  *
  * @since 6.0
  */
@@ -63,7 +63,7 @@ KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
 /*!
  * Returns the window handle associated with this job.
  *
- * @param job should be a KJob subclass
+ * \a job should be a KJob subclass
  *
  * @since 6.4
  * @deprecated since 6.5, use KJobWindows::window() instead.
@@ -74,7 +74,7 @@ KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::
 /*!
  * Updates the last user action timestamp to the given time.
  *
- * @param job should be a KJob subclass
+ * \a job should be a KJob subclass
  *
  * @since 6.0
  */
@@ -82,7 +82,7 @@ KWIDGETSADDONS_EXPORT void updateUserTimestamp(QObject *job, unsigned long time)
 /*!
  * Returns the last user action timestamp
  *
- * @param job should be a KJob subclass
+ * \a job should be a KJob subclass
  *
  * @since 6.0
  */

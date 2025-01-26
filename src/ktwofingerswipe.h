@@ -56,7 +56,7 @@ public:
     /*!
      * Sets the position, relative to the widget.
      *
-     * @param pos The position.
+     * \a pos The position.
      */
     void setPos(QPointF pos);
 
@@ -68,7 +68,7 @@ public:
     /*!
      * Sets the screen position.
      *
-     * @param screenPos The screen position.
+     * \a screenPos The screen position.
      */
     void setScreenPos(QPointF screenPos);
 
@@ -80,7 +80,7 @@ public:
     /*!
      * Sets the scene position.
      *
-     * @param scenePos The scene position, identical to the screen position for widgets.
+     * \a scenePos The scene position, identical to the screen position for widgets.
      */
     void setScenePos(QPointF scenePos);
 
@@ -92,7 +92,7 @@ public:
     /*!
      * Sets the angle of the swipe gesture
      *
-     * @param swipeAngle The angle.
+     * \a swipeAngle The angle.
      */
     void setSwipeAngle(qreal swipeAngle);
 private:
@@ -128,7 +128,7 @@ public:
     /*!
      * Qt called this member to create a new QGesture object.
      *
-     * @param target The target for the gesture.
+     * \a target The target for the gesture.
      *
      * @return The new QGesture object.
      */
@@ -137,9 +137,9 @@ public:
     /*!
      * Handles the given event for the watched object and update the gesture object.
      *
-     * @param gesture The gesture object.
-     * @param watched The watched object.
-     * @param event The event.
+     * \a gesture The gesture object.
+     * \a watched The watched object.
+     * \a event The event.
      *
      * @return The result reflects how much of the gesture has been recognized.
      */
@@ -151,9 +151,9 @@ public:
     Q_REQUIRED_RESULT int maxSwipeTime() const;
 
     /*!
-     * Set the maximum duration of the swipe gesture. If @param i is negative, it will be set to null.
+     * Set the maximum duration of the swipe gesture. If \a i is negative, it will be set to null.
      *
-     * @param i The maximum duration in milliseconds.
+     * \a i The maximum duration in milliseconds.
      */
     void setMaxSwipeTime(int i);
 
@@ -163,9 +163,9 @@ public:
     Q_REQUIRED_RESULT int minSswipeDistance() const;
 
     /*!
-     * Set the minimum distance of the swipe gesture. If @param i is negative, it will be set to null.
+     * Set the minimum distance of the swipe gesture. If \a i is negative, it will be set to null.
      *
-     * @param i The minimum distance.
+     * \a i The minimum distance.
      */
     void setSwipeDistance(int i);
 

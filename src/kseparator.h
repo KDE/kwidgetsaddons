@@ -29,17 +29,17 @@ class KWIDGETSADDONS_EXPORT KSeparator : public QFrame
 public:
     /*!
      * Constructor.
-     * @param parent parent object.
-     * @param f extra QWidget flags.
+     * \a parent parent object.
+     * \a f extra QWidget flags.
      */
     explicit KSeparator(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /*!
      * Constructor.
-     * @param orientation Set the orientation of the separator.
+     * \a orientation Set the orientation of the separator.
      * Possible values are Horizontal or Vertical.
-     * @param parent parent object.
-     * @param f extra QWidget flags.
+     * \a parent parent object.
+     * \a f extra QWidget flags.
      */
     explicit KSeparator(Qt::Orientation orientation, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
@@ -54,7 +54,7 @@ public:
     /*!
      * Set the orientation of the separator to @p orientation
      *
-     * @param orientation Possible values are Vertical and Horizontal.
+     * \a orientation Possible values are Vertical and Horizontal.
      */
     void setOrientation(Qt::Orientation orientation);
 

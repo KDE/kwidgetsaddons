@@ -122,7 +122,7 @@ public:
 
     /*!
      * @brief Get the icon name from the icon type
-     * @param type icon type from the enum
+     * \a type icon type from the enum
      * @return named icon as QString
      */
     QString iconTypeToIconName(KTitleWidget::MessageType type);

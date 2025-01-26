@@ -115,7 +115,7 @@ public:
     /*!
      * Set a factory to be used by this decorator
      *
-     * @param factory the new QDrag factory to use
+     * \a factory the new QDrag factory to use
      */
     void setDragObjectFactory(DragObjectFactory factory)
     {

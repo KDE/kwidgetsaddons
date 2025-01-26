@@ -40,7 +40,7 @@ public:
     /*!
      * Constructs an action with the specified parent.
      *
-     * @param parent The action's parent object.
+     * \a parent The action's parent object.
      */
     explicit KToggleAction(QObject *parent);
 
@@ -53,8 +53,8 @@ public:
      * of the "Edit ToolBar" dialog, because an action needs an icon to be
      * plugged in a toolbar...).
      *
-     * @param text The text that will be displayed.
-     * @param parent The action's parent object.
+     * \a text The text that will be displayed.
+     * \a parent The action's parent object.
      */
     KToggleAction(const QString &text, QObject *parent);
 
@@ -65,9 +65,9 @@ public:
      * This is the other common QAction used.  Use it when you
      * \e do have a corresponding icon.
      *
-     * @param icon The icon to display.
-     * @param text The text that will be displayed.
-     * @param parent The action's parent object.
+     * \a icon The icon to display.
+     * \a text The text that will be displayed.
+     * \a parent The action's parent object.
      */
     KToggleAction(const QIcon &icon, const QString &text, QObject *parent);
 

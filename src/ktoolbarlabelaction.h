@@ -48,18 +48,18 @@ public:
     /*!
      * Creates a toolbar label.
      *
-     * @param text The label's and the action's text.
-     * @param parent This action's parent.
+     * \a text The label's and the action's text.
+     * \a parent This action's parent.
      */
     KToolBarLabelAction(const QString &text, QObject *parent);
 
     /*!
      * Creates a toolbar label setting a buddy for the label.
      *
-     * @param buddy The action whose widget which is focused when the label's accelerator is
+     * \a buddy The action whose widget which is focused when the label's accelerator is
      * typed.
-     * @param text The label's and the action's text.
-     * @param parent This action's parent.
+     * \a text The label's and the action's text.
+     * \a parent This action's parent.
      */
     KToolBarLabelAction(QAction *buddy, const QString &text, QObject *parent);
 

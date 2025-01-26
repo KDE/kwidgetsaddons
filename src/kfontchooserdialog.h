@@ -83,8 +83,8 @@ public:
     /*!
      * Constructs a font selection dialog.
      *
-     * @param flags flags to define how the font chooser is displayed
-     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * \a flags flags to define how the font chooser is displayed
+     * \a parent parent widget of the dialog, if any, the dialog will be centered relative to it
      */
     explicit KFontChooserDialog(const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
@@ -93,8 +93,8 @@ public:
     /*!
      * Sets the currently selected font in the dialog.
      *
-     * @param font the font to select
-     * @param onlyFixed if @c true, the font list will show only fixed width (monospace)
+     * \a font the font to select
+     * \a onlyFixed if @c true, the font list will show only fixed width (monospace)
      *        fonts, otherwise all available fonts are shown
      */
     void setFont(const QFont &font, bool onlyFixed = false);
@@ -108,9 +108,9 @@ public:
      * Creates a modal font dialog, lets the user choose a font, and returns when
      * the dialog is closed.
      *
-     * @param theFont a reference to the font to write the chosen font into
-     * @param flags flags to define how the font chooser is displayed
-     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * \a theFont a reference to the font to write the chosen font into
+     * \a flags flags to define how the font chooser is displayed
+     * \a parent parent widget of the dialog, if any, the dialog will be centered relative to it
      * @return QDialog::result()
      */
     static int getFont(QFont &theFont, const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
@@ -121,9 +121,9 @@ public:
      * dialog is closed. Useful for choosing slight adjustments to the font set
      * when the user would otherwise have to manually edit a number of fonts.
      *
-     * @param theFont a reference to the font to write the chosen font into
-     * @param flags flags to define how the font chooser is displayed
-     * @param diffFlags a reference to the integer bitmask into which the chosen
+     * \a theFont a reference to the font to write the chosen font into
+     * \a flags flags to define how the font chooser is displayed
+     * \a diffFlags a reference to the integer bitmask into which the chosen
      *        difference selection bitmask should be written.
      *        Check the bitmask afterwards like:
      *        \code
@@ -137,7 +137,7 @@ public:
      *            [...]
      *        }
      *        \endcode
-     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * \a parent parent widget of the dialog, if any, the dialog will be centered relative to it
      *
      * @returns QDialog::result()
      */

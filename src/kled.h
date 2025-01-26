@@ -72,7 +72,7 @@ public:
      * Constructs a green, round LED widget which will initially
      * be turned on.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit KLed(QWidget *parent = nullptr);
 
@@ -80,8 +80,8 @@ public:
      * Constructs a round LED widget with the supplied color which will
      * initially be turned on.
      *
-     * @param color Initial color of the LED.
-     * @param parent The parent widget.
+     * \a color Initial color of the LED.
+     * \a parent The parent widget.
      * @short Constructor
      */
     explicit KLed(const QColor &color, QWidget *parent = nullptr);
@@ -91,11 +91,11 @@ public:
      *
      * Differs from above only in the parameters, which configure all settings.
      *
-     * @param color  Initial color of the LED.
-     * @param state  Sets the State.
-     * @param look   Sets the Look.
-     * @param shape  Sets the Shape (rectangular or circular).
-     * @param parent The parent widget.
+     * \a color  Initial color of the LED.
+     * \a state  Sets the State.
+     * \a look   Sets the Look.
+     * \a shape  Sets the Shape (rectangular or circular).
+     * \a parent The parent widget.
      * @short Constructor
      */
     KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape, QWidget *parent = nullptr);
@@ -155,7 +155,7 @@ public:
      * The widget calls the update() method, so it will
      * be updated when entering the main event loop.
      *
-     * @param color New color of the LED.
+     * \a color New color of the LED.
      *
      * @see color() darkFactor()
      */
@@ -164,7 +164,7 @@ public:
     /*!
      * Sets the state of the widget to On or Off.
      *
-     * @param state The LED state: on or off.
+     * \a state The LED state: on or off.
      *
      * @see on() off() toggle()
      */
@@ -178,7 +178,7 @@ public:
      * The widget calls the update() method, so it will
      * be updated when entering the main event loop.
      *
-     * @param look New look of the LED.
+     * \a look New look of the LED.
      *
      * @see Look
      */
@@ -187,7 +187,7 @@ public:
     /*!
      * Set the shape of the LED.
      *
-     * @param shape The LED shape.
+     * \a shape The LED shape.
      * @short Set LED shape.
      */
     void setShape(Shape shape);
@@ -200,7 +200,7 @@ public:
      *
      * Defaults to 300.
      *
-     * @param darkFactor Sets the factor to darken the LED.
+     * \a darkFactor Sets the factor to darken the LED.
      *
      * @see setColor
      */

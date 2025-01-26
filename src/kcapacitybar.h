@@ -52,7 +52,7 @@ public:
 
     /*!
      * Constructs a capacity bar with DrawTextOutline as draw text mode.
-     * @param parent The parent of the widget.
+     * \a parent The parent of the widget.
      * @since 5.24
      */
     explicit KCapacityBar(QWidget *parent = nullptr);
@@ -60,9 +60,9 @@ public:
     /*!
      * Capacity bar constructor.
      *
-     * @param drawTextMode If any text set, whether to draw it into the capacity bar
+     * \a drawTextMode If any text set, whether to draw it into the capacity bar
      *                     or not.
-     * @param parent       The parent of the widget.
+     * \a parent       The parent of the widget.
      */
     explicit KCapacityBar(DrawTextMode drawTextMode, QWidget *parent = nullptr);
     ~KCapacityBar() override;
@@ -70,7 +70,7 @@ public:
     /*!
      * Capacity bar fill value.
      *
-     * @param value    This parameter can take values from 0 to 100.
+     * \a value    This parameter can take values from 0 to 100.
      *
      * @note Its value is 0 by default.
      */
@@ -84,7 +84,7 @@ public:
     /*!
      * Sets the text for the capacity bar.
      *
-     * @param text The text that the capacity bar will show.
+     * \a text The text that the capacity bar will show.
      *
      * @note This is an empty string by default.
      */
@@ -100,7 +100,7 @@ public:
      * shown should be drawn full or can be cut off (depending on the capacity
      * bar width, and the value set on it).
      *
-     * @param fillFullBlocks If true, the last block drawn will be fully filled,
+     * \a fillFullBlocks If true, the last block drawn will be fully filled,
      *                       on other case, the last block drawn could be cut off.
      *
      * @note This method is only relevant if the capacity bar is in
@@ -121,7 +121,7 @@ public:
      * Sets whether the fill of the capacity bar should be continuous or in
      * block mode.
      *
-     * @param continuous If true, the fill of the capacity bar is done in a
+     * \a continuous If true, the fill of the capacity bar is done in a
      *                   continuous way. In other case, the fill is done with
      *                   separated blocks.
      *
@@ -138,7 +138,7 @@ public:
     /*!
      * Sets the height (in pixels) of the bar.
      *
-     * @param barHeight The preferred height (in pixels) of the capacity bar.
+     * \a barHeight The preferred height (in pixels) of the capacity bar.
      *
      * @note If you set a certain text and the capacity bar is in inline mode,
      *       the height of the bar will be the maximum of the font height and
@@ -163,7 +163,7 @@ public:
      * If the capacity bar is in outline text mode, draw the text with
      * @p textAlignment alignment.
      *
-     * @param textAlignment    Sets the horizontal alignment for the text if
+     * \a textAlignment    Sets the horizontal alignment for the text if
      *                         the capacity bar is in outline text mode.
      *
      * @note If @p textAlignemt contains vertical alignment flags, they will be
@@ -185,7 +185,7 @@ public:
     /*!
      * Set the way text is drawn if any is set
      *
-     * @param mode If any text set, whether to draw it into the capacity bar
+     * \a mode If any text set, whether to draw it into the capacity bar
      *                     or not.
      */
     void setDrawTextMode(DrawTextMode mode);

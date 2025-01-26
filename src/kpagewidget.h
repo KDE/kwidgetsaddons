@@ -30,7 +30,7 @@ public:
     /*!
      * Creates a new page widget.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit KPageWidget(QWidget *parent = nullptr);
 
@@ -42,8 +42,8 @@ public:
     /*!
      * Adds a new top level page to the widget.
      *
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -52,17 +52,17 @@ public:
     /*!
      * Adds a new top level page to the widget.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void addPage(KPageWidgetItem *item);
 
     /*!
      * Inserts a new page in the widget.
      *
-     * @param before The new page will be insert before this KPageWidgetItem
+     * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -71,19 +71,19 @@ public:
     /*!
      * Inserts a new page in the widget.
      *
-     * @param before The new page will be insert before this KPageWidgetItem
+     * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void insertPage(KPageWidgetItem *before, KPageWidgetItem *item);
 
     /*!
      * Inserts a new sub page in the widget.
      *
-     * @param parent The new page will be insert as child of this KPageWidgetItem.
-     * @param widget The widget of the page.
-     * @param name The name which is displayed in the navigation view.
+     * \a parent The new page will be insert as child of this KPageWidgetItem.
+     * \a widget The widget of the page.
+     * \a name The name which is displayed in the navigation view.
      *
      * @returns The associated KPageWidgetItem.
      */
@@ -92,9 +92,9 @@ public:
     /*!
      * Inserts a new sub page in the widget.
      *
-     * @param parent The new page will be insert as child of this KPageWidgetItem.
+     * \a parent The new page will be insert as child of this KPageWidgetItem.
      *
-     * @param item The KPageWidgetItem which describes the page.
+     * \a item The KPageWidgetItem which describes the page.
      */
     void addSubPage(KPageWidgetItem *parent, KPageWidgetItem *item);
 
@@ -119,20 +119,20 @@ Q_SIGNALS:
     /*!
      * This signal is emitted whenever the current page has changed.
      *
-     * @param current The new current page or a null pointer if no current page is available.
-     * @param before The page that was current before the new current page has changed.
+     * \a current The new current page or a null pointer if no current page is available.
+     * \a before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
     /*!
-     * This signal is emitted whenever a checkable page changes its state. @param checked is true
+     * This signal is emitted whenever a checkable page changes its state. \a checked is true
      * when the @p page is checked, or false if the @p page is unchecked.
      */
     void pageToggled(KPageWidgetItem *page, bool checked);
 
     /*!
      * This signal is emitted when a page is removed.
-     * @param page The page which is removed
+     * \a page The page which is removed
      * */
     void pageRemoved(KPageWidgetItem *page);
 

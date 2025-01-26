@@ -77,9 +77,9 @@ public:
      * Add all widgets from @p layout which are in column @p column to the list
      * of widgets to manage.
      *
-     * @param layout The layout containing the widgets to add. KColumnResizer
+     * \a layout The layout containing the widgets to add. KColumnResizer
      * supports QGridLayout and QFormLayout.
-     * @param column The column number which contains the widgets. If layout is
+     * \a column The column number which contains the widgets. If layout is
      * a QFormLayout, column should not be higher than QFormLayout::SpanningRole
      */
     void addWidgetsFromLayout(QLayout *layout, int column = 0);
@@ -91,14 +91,14 @@ public:
      * widgets can be useful if you want to keep a single button the same width
      * as a column in a layout.
      *
-     * @param widget The widget to add
+     * \a widget The widget to add
      */
     void addWidget(QWidget *widget);
 
     /*!
      * Remove a widget previously added by addWidget or addWidgetsFromLayout.
      *
-     * @param widget The widget to remove
+     * \a widget The widget to remove
      */
     void removeWidget(QWidget *widget);
 

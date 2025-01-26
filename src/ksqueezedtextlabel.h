@@ -60,13 +60,13 @@ class KWIDGETSADDONS_EXPORT KSqueezedTextLabel : public QLabel
 public:
     /*!
      * Default constructor.
-     * @param parent the label's parent object
+     * \a parent the label's parent object
      */
     explicit KSqueezedTextLabel(QWidget *parent = nullptr);
 
     /*!
-     * @param text the text that will be displayed
-     * @param parent the label's parent object
+     * \a text the text that will be displayed
+     * \a parent the label's parent object
      */
     explicit KSqueezedTextLabel(const QString &text, QWidget *parent = nullptr);
 
@@ -88,7 +88,7 @@ public:
     /*!
      * Sets the indentation of the label.
      *
-     * @param indent the amount of indentation in pixels
+     * \a indent the amount of indentation in pixels
      *
      * Reimplementation of QLabel::setIndent().
      *
@@ -103,7 +103,7 @@ public:
     /*!
      * Sets the margin of the label.
      *
-     * @param margin the margin size in pixels
+     * \a margin the margin size in pixels
      *
      * Reimplementation of QLabel::setMargin().
      *
@@ -127,7 +127,7 @@ public:
 
     /*!
      * Sets the text elide mode.
-     * @param mode The text elide mode.
+     * \a mode The text elide mode.
      */
     void setTextElideMode(Qt::TextElideMode mode);
 
@@ -163,7 +163,7 @@ public:
 public Q_SLOTS:
     /*!
      * Sets the text.
-     * @param text The new text.
+     * \a text The new text.
      *
      * Reimplementation of QLabel::setText().
      *

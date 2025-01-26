@@ -84,7 +84,7 @@ public:
     /*!
      * Constructs a font picker widget.
      *
-     * @param parent the parent widget
+     * \a parent the parent widget
      *
      * @since 5.86
      */
@@ -93,9 +93,9 @@ public:
     /*!
      * Create a font picker widget.
      *
-     * @param flags a combination of OR-ed values from the @c KFontChooser::DisplayFlags enum,
+     * \a flags a combination of OR-ed values from the @c KFontChooser::DisplayFlags enum,
      * the default is @c DisplayFonts::NoDisplayFlags
-     * @param parent the parent widget, if not nullptr the windowing system will use it to position
+     * \a parent the parent widget, if not nullptr the windowing system will use it to position
      * the chooser widget relative to it
      *
      * @since 5.86
@@ -112,17 +112,17 @@ public:
      *
      * Use this function if your application does not need or support all font properties.
      *
-     * @param column specify the column(s) to enable/disable, an OR-ed combination of
+     * \a column specify the column(s) to enable/disable, an OR-ed combination of
      * @c KFontChooser::FontColumn enum values
-     * @param state if @p false the columns are disabled, and vice-versa
+     * \a state if @p false the columns are disabled, and vice-versa
      */
     void enableColumn(int column, bool state);
 
     /*!
      * Sets the currently selected font in the widget.
      *
-     * @param font the font to select
-     * @param onlyFixed if @c true, the font list will only display fixed-width fonts,
+     * \a font the font to select
+     * \a onlyFixed if @c true, the font list will only display fixed-width fonts,
      * otherwise all fonts are displayed. The default is @c false.
      */
     void setFont(const QFont &font, bool onlyFixed = false);
@@ -168,7 +168,7 @@ public:
      * Sets the sample text in the preview area; this is useful if you
      * want to use text in your native language.
      *
-     * @param text the new sample text (it will replace the current text)
+     * \a text the new sample text (it will replace the current text)
      */
     void setSampleText(const QString &text);
 
@@ -203,7 +203,7 @@ public:
     /*!
      * Returns a list of font faimly name strings filtered based on @p fontListCriteria.
      *
-     * @param fontListCriteria specifies the criteria used to select fonts to add to
+     * \a fontListCriteria specifies the criteria used to select fonts to add to
      * the list, a combination of OR-ed values from @ref KFontChooser::FontListCriteria
      *
      * @since 5.86

@@ -46,20 +46,20 @@ public:
     /*!
      * Sets the current values in horizontal and
      * vertical direction.
-     * @param xPos the horizontal value
-     * @param yPos the vertical value
+     * \a xPos the horizontal value
+     * \a yPos the vertical value
      */
     void setValues(int xPos, int yPos);
 
     /*!
      * Sets the current horizontal value
-     * @param xPos the horizontal value
+     * \a xPos the horizontal value
      */
     void setXValue(int xPos);
 
     /*!
      * Sets the current vertical value
-     * @param yPos the vertical value
+     * \a yPos the vertical value
      */
     void setYValue(int yPos);
 
@@ -70,7 +70,7 @@ public:
 
     /*!
      * Sets the color used to draw the marker
-     * @param col the color
+     * \a col the color
      */
     void setMarkerColor(const QColor &col);
 

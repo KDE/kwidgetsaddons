@@ -66,7 +66,7 @@ public:
     /*!
      * Constructs a selection action with the specified parent.
      *
-     * @param parent The action's parent object.
+     * \a parent The action's parent object.
      */
     explicit KSelectAction(QObject *parent);
 
@@ -79,8 +79,8 @@ public:
      * of the "Edit ToolBar" dialog, because an action needs an icon to be
      * plugged in a toolbar...).
      *
-     * @param text The text that will be displayed.
-     * @param parent The action's parent object.
+     * \a text The text that will be displayed.
+     * \a parent The action's parent object.
      */
     KSelectAction(const QString &text, QObject *parent);
 
@@ -91,9 +91,9 @@ public:
      * This is the other common KSelectAction used.  Use it when you
      * \e do have a corresponding icon.
      *
-     * @param icon The icon to display.
-     * @param text The text that will be displayed.
-     * @param parent The action's parent object.
+     * \a icon The icon to display.
+     * \a text The text that will be displayed.
+     * \a parent The action's parent object.
      */
     KSelectAction(const QIcon &icon, const QString &text, QObject *parent);
 
@@ -179,7 +179,7 @@ public:
     /*!
      * Sets the currently checked item.
      *
-     * @param action the QAction to become the currently checked item.
+     * \a action the QAction to become the currently checked item.
      *
      * \return \e true if a corresponding action was found and successfully checked.
      */
@@ -323,20 +323,20 @@ public:
 
     /*!
      * You should delete KSelectAction::menu() before calling setMenu(). KSelectAction
-     * will take the @param menu ownership and it will be deleted when KSelectAction is
+     * will take the \a menu ownership and it will be deleted when KSelectAction is
      * destroyed.
      */
     using QWidgetAction::setMenu;
 
     /*!
-     * Changes the text of item @param index to @param text .
+     * Changes the text of item \a index to \a text .
      */
     void changeItem(int index, const QString &text);
 
 Q_SIGNALS:
     /*!
      * This signal is emitted when an item is selected.
-     * @param action indicates the item selected
+     * \a action indicates the item selected
      *
      * @since 6.0
      */
@@ -344,7 +344,7 @@ Q_SIGNALS:
 
     /*!
      * This signal is emitted when an item is selected.
-     * @param index indicates the item selected
+     * \a index indicates the item selected
      *
      * @since 5.78
      */
@@ -352,7 +352,7 @@ Q_SIGNALS:
 
     /*!
      * This signal is emitted when an item is selected.
-     * @param text indicates the item selected
+     * \a text indicates the item selected
      *
      * @since 5.78
      */
@@ -392,8 +392,8 @@ protected:
      * @internal
      * Creates a new KSelectAction object.
      *
-     * @param dd the private d member
-     * @param parent The action's parent object.
+     * \a dd the private d member
+     * \a parent The action's parent object.
      */
     KWIDGETSADDONS_NO_EXPORT KSelectAction(KSelectActionPrivate &dd, QObject *parent);
 
