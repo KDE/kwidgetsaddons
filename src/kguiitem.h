@@ -23,7 +23,7 @@ class QPushButton;
 /*!
  * @class KGuiItem kguiitem.h KGuiItem
  *
- * @short An abstract class for setting the text, icon, tooltip and WhatsThis data
+ * \brief An abstract class for setting the text, icon, tooltip and WhatsThis data
  * on a GUI item (e.g.\ a QPushButton).
  *
  * @author Holger Freyther <freyher@yahoo.com>

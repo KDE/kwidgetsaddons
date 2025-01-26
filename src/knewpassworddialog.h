@@ -22,7 +22,7 @@ class QWidget;
 /*!
  * @class KNewPasswordDialog knewpassworddialog.h KNewPasswordDialog
  *
- * @short A password input dialog.
+ * \brief A password input dialog.
  *
  * This dialog asks the user to enter a new password.
  *

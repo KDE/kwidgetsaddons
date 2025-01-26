@@ -18,7 +18,7 @@ class QColor;
 /*!
  * @class KLed kled.h KLed
  *
- * @short An LED widget.
+ * \brief An LED widget.
  *
  * Displays a round or rectangular light emitting diode.
  *
@@ -44,14 +44,14 @@ class KWIDGETSADDONS_EXPORT KLed : public QWidget
 public:
     /*!
      * Status of the light is on/off.
-     * @short LED on/off.
+     * \brief LED on/off.
      */
     enum State { Off, On };
     Q_ENUM(State)
 
     /*!
      * Shades of the lamp.
-     * @short LED shape
+     * \brief LED shape
      */
     enum Shape { Rectangular, Circular };
     Q_ENUM(Shape)
@@ -59,7 +59,7 @@ public:
     /*!
      * Displays a flat, round or sunken LED.
      *
-     * @short LED look.
+     * \brief LED look.
      */
     enum Look {
         Flat,
@@ -82,7 +82,7 @@ public:
      *
      * \a color Initial color of the LED.
      * \a parent The parent widget.
-     * @short Constructor
+     * \brief Constructor
      */
     explicit KLed(const QColor &color, QWidget *parent = nullptr);
 
@@ -96,13 +96,13 @@ public:
      * \a look   Sets the Look.
      * \a shape  Sets the Shape (rectangular or circular).
      * \a parent The parent widget.
-     * @short Constructor
+     * \brief Constructor
      */
     KLed(const QColor &color, KLed::State state, KLed::Look look, KLed::Shape shape, QWidget *parent = nullptr);
 
     /*!
      * Destroys the LED widget.
-     * @short Destructor
+     * \brief Destructor
      */
     ~KLed() override;
 
@@ -188,7 +188,7 @@ public:
      * Set the shape of the LED.
      *
      * \a shape The LED shape.
-     * @short Set LED shape.
+     * \brief Set LED shape.
      */
     void setShape(Shape shape);
 

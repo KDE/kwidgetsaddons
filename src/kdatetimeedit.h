@@ -17,7 +17,7 @@
 /*!
  * @class KDateTimeEdit kdatetimeedit.h KDateTimeEdit
  *
- * @short A widget for editing date and time.
+ * \brief A widget for editing date and time.
  */
 class KWIDGETSADDONS_EXPORT KDateTimeEdit : public QWidget
 {

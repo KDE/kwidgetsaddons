@@ -16,7 +16,7 @@
 /*!
  * @class KDateComboBox kdatecombobox.h KDateComboBox
  *
- * @short A combobox for dates.
+ * \brief A combobox for dates.
  */
 class KWIDGETSADDONS_EXPORT KDateComboBox : public QComboBox
 {

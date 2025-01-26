@@ -24,7 +24,7 @@ class QAbstractItemModel;
 /*!
  * @class KPageView kpageview.h KPageView
  *
- * @short A base class which can handle multiple pages.
+ * \brief A base class which can handle multiple pages.
  *
  * This class provides a widget base class which handles multiple
  * pages and allows the user to switch between these pages in

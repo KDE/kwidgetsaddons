@@ -22,7 +22,7 @@ class QCursor;
 /*!
  * @class KUrlLabel kurllabel.h KUrlLabel
  *
- * @short A drop-in replacement for QLabel that displays hyperlinks.
+ * \brief A drop-in replacement for QLabel that displays hyperlinks.
  *
  * KUrlLabel is a drop-in replacement for QLabel that handles text
  * in a fashion similar to how an HTML widget handles hyperlinks.  The

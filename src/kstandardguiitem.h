@@ -17,7 +17,7 @@
 class QString;
 
 /*!
- * @short Provides a set of standardized KGuiItems.
+ * \brief Provides a set of standardized KGuiItems.
  *
  * The various methods return standardized KGuiItem's
  * conforming to the KDE UI Standards. Use them instead of creating

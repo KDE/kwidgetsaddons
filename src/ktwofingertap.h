@@ -17,7 +17,7 @@
 /*!
  * @class KTwoFingerTap ktwofingertap.h KTwoFingerTap
  *
- * @short A two finger tap gesture.
+ * \brief A two finger tap gesture.
  *
  * Provides a class for a two finger tap gesture.
  *
@@ -89,7 +89,7 @@ private:
 /*!
  * @class KTwoFingerTapRecognizer ktwofingertaprecognizer.h KTwoFingerTapRecognizer
  *
- * @short The recognizer for a two finger tap gesture.
+ * \brief The recognizer for a two finger tap gesture.
  *
  * Provides the recognizer for a two finger tap gesture.
  *

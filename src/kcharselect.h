@@ -16,9 +16,10 @@
 class QFont;
 
 /*!
- * @class KCharSelect kcharselect.h KCharSelect
+ * \class KCharSelect
+ * \inmodule KWidgetsAddons
  *
- * @short Character selection widget
+ * \brief Character selection widget.
  *
  * This widget allows the user to select a character of a
  * specified font and to browse Unicode information
@@ -46,96 +47,103 @@ class QFont;
  *
  * If you want the user to select and search characters from all planes,
  * i.e. characters U+0000..U+10FFFF, use setAllPlanesEnabled(true)
- * and use the @c uint based methods currentCodePoint() and
+ * and use the \c uint based methods currentCodePoint() and
  * setCurrentCodePoint() instead.
  *
- * Since QString does not allow @c uint code points, you either must
+ * Since QString does not allow \c uint code points, you either must
  * use QString::fromUcs4() and QString::ToUcs4() to convert between
  * strings and code points, or manually do the surrogate pair handling
  * using QChar::requiresSurrogates() and friends.
- *
- * @author Reginald Stadlbauer <reggie@kde.org>
- * @author Daniel Laidig <d.laidig@gmx.de>
  */
 class KWIDGETSADDONS_EXPORT KCharSelect : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KCharSelect::currentFont
+     */
     Q_PROPERTY(QFont currentFont READ currentFont WRITE setCurrentFont)
+
+    /*!
+     * \property KCharSelect::currentChar
+     */
     Q_PROPERTY(QChar currentChar READ currentChar WRITE setCurrentChar)
+
+    /*!
+     * \property KCharSelect::currentCodePoint
+     */
     Q_PROPERTY(uint currentCodePoint READ currentCodePoint WRITE setCurrentCodePoint NOTIFY currentCodePointChanged)
+
+    /*!
+     * \property KCharSelect::displayedChars
+     */
     Q_PROPERTY(QList<QChar> displayedChars READ displayedChars)
+
+    /*!
+     * \property KCharSelect::displayedCodePoints
+     */
     Q_PROPERTY(QList<uint> displayedCodePoints READ displayedCodePoints)
+
+    /*!
+     * \property KCharSelect::allPlanesEnabled
+     */
     Q_PROPERTY(bool allPlanesEnabled READ allPlanesEnabled WRITE setAllPlanesEnabled DESIGNABLE true)
 
 public:
     /*!
      * Flags to set the shown widgets
-     * \sa Controls
+     *
+     * \value SearchLine Shows the search widgets
+     * \value FontCombo Shows the font combo box
+     * \value FontSize Shows the font size spin box
+     * \value BlockCombos Shows the category/block selection combo boxes
+     * \value CharacterTable Shows the actual table
+     * \value DetailBrowser Shows the detail browser
+     * \value HistoryButtons Shows the Back/Forward buttons
+     * \value AllGuiElements Shows everything
      */
     enum Control {
-        /*!
-         * Shows the search widgets
-         */
         SearchLine = 0x01,
-        /*!
-         * Shows the font combo box
-         */
         FontCombo = 0x02,
-        /*!
-         * Shows the font size spin box
-         */
         FontSize = 0x04,
-        /*!
-         * Shows the category/block selection combo boxes
-         */
         BlockCombos = 0x08,
-        /*!
-         * Shows the actual table
-         */
         CharacterTable = 0x10,
-        /*!
-         * Shows the detail browser
-         */
         DetailBrowser = 0x20,
-        /*!
-         * Shows the Back/Forward buttons
-         */
         HistoryButtons = 0x40,
-        /*!
-         * Shows everything
-         */
         AllGuiElements = 65535,
     };
-    /*!
-     * Stores a combination of #Control values.
-     */
     Q_DECLARE_FLAGS(Controls, Control)
 
     /*!
-     * Constructor. @p controls can be used to show a custom set of widgets.
+     * Constructor. \a controls can be used to show a custom set of widgets.
      *
-     * \a parent     the parent widget for this KCharSelect (see QWidget documentation)
-     * \a controls   selects the visible controls on the KCharSelect widget
+     * \a parent the parent widget for this KCharSelect (see QWidget documentation)
+     *
+     * \a controls selects the visible controls on the KCharSelect widget
      *
      * \since 4.2
      */
     explicit KCharSelect(QWidget *parent, const Controls controls = AllGuiElements);
 
     /*!
-     * Constructor. @p controls can be used to show a custom set of widgets.
+     * Constructor. \a controls can be used to show a custom set of widgets.
      *
      * The widget uses the following actions:
-     *   - KStandardActions::find() (edit_find)
-     *   - KStandardActions::back() (go_back)
-     *   - KStandardActions::forward() (go_forward)
+     * \list
+     * \li KStandardActions::find() (edit_find)
+     * \li KStandardActions::back() (go_back)
+     * \li KStandardActions::forward() (go_forward)
+     * \endlist
      *
      * If you provide a KActionCollection, this will be populated with the above actions,
      * which you can then manually trigger or place in menus and toolbars.
      *
      * \a parent     the parent widget for this KCharSelect (see QWidget documentation)
-     * \a actionParent if this is not @c null, KCharSelect will place its actions into this
+     *
+     * \a actionParent if this is not \c null, KCharSelect will place its actions into this
      *                     collection
-     * \a controls   selects the visible controls on the KCharSelect widget
+     *
+     * \a controls selects the visible controls on the KCharSelect widget
      *
      * \since 4.2
      */
@@ -143,27 +151,26 @@ public:
 
     ~KCharSelect() override;
 
-    /*!
-     * Reimplemented.
-     */
     QSize sizeHint() const override;
 
     /*!
-     * Sets the allowed Unicode code planes. If @p all is @c false, then
+     * Sets the allowed Unicode code planes. If \a all is \c false, then
      * only characters from the Basic Multilingual Plane (BMP) can be
      * selected, otherwise characters from all planes are allowed.
      *
-     * For compatibility reasons, the default is @c false.
+     * For compatibility reasons, the default is \c false.
      *
      * If you enable support for all planes, you must use the functions
-     * handling @c uint code points instead of @c QChar characters.
+     * handling \c uint code points instead of QChar characters.
+     *
      * \since 5.25
      */
     void setAllPlanesEnabled(bool all);
 
     /*!
-     * @returns @c true, if characters from all Unicode code planes
+     * Returns \c true, if characters from all Unicode code planes
      * can be selected.
+     *
      * \since 5.25
      */
     bool allPlanesEnabled() const;
@@ -172,13 +179,14 @@ public:
      * Returns the currently selected character. If characters outside the
      * Basic Multilingual Plane (BMP) can be selected, use currentCodePoint
      * instead.
-     * @sa currentCodePoint
+     * \sa currentCodePoint
      */
     QChar currentChar() const;
 
     /*!
      * Returns the Unicode code point of the currently selected character.
-     * @warning If you enabled support for all Unicode planes, you must use
+     *
+     * \warning If you enabled support for all Unicode planes, you must use
      * QChar::requiresSurrogates() to check if the code point requires
      * conversion to a UTF-16 surrogate pair before converting it to QString.
      * You cannot convert a code point to a QChar.
@@ -195,8 +203,9 @@ public:
      * Returns a list of currently displayed characters. If characters outside the
      * Basic Multilingual Plane (BMP) can be selected, use displayedCodePoints
      * instead.
+     *
      * Warning: this method can be a bit slow
-     * @sa displayedCodePoints
+     * \sa displayedCodePoints
      */
     QList<QChar> displayedChars() const;
 
@@ -208,26 +217,26 @@ public:
 
 public Q_SLOTS:
     /*!
-     * Highlights the character @p c. If the character is not displayed, the block is changed.
+     * Highlights the character \a c. If the character is not displayed, the block is changed.
      *
      * \a c the character to highlight
      */
     void setCurrentChar(const QChar &c);
 
     /*!
-     * Highlights the character with the specified @p codePoint. If the character is
+     * Highlights the character with the specified \a codePoint. If the character is
      * outside the Basic Multilingual Plane (BMP), then you must enable support
      * for all planes for this to work.
      *
      * \a codePoint the Unicode code point of the character to highlight
      *
-     * @sa allPlanesEnabled
+     * \sa allPlanesEnabled
      * \since 5.25
      */
     void setCurrentCodePoint(uint codePoint);
 
     /*!
-     * Sets the font which is displayed to @p font
+     * Sets the font which is displayed to \a font
      *
      * \a font the display font for the widget
      */

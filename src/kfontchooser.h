@@ -18,7 +18,7 @@ class QFont;
 /*!
  * @class KFontChooser kfontchooser.h KFontChooser
  *
- * @short A font selection widget.
+ * \brief A font selection widget.
  *
  * While KFontChooser as an ordinary widget can be embedded in
  * custom dialogs and therefore is very flexible, in most cases

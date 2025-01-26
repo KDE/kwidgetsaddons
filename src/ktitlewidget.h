@@ -16,7 +16,7 @@
 /*!
  * @class KTitleWidget ktitlewidget.h KTitleWidget
  *
- * @short Standard title widget.
+ * \brief Standard title widget.
  *
  * This class provides a widget often used for dialog titles.
  * \image html ktitlewidget.png "KTitleWidget with title and icon"

@@ -21,7 +21,7 @@ class KDateTable;
 /*!
  * @class KDatePicker kdatepicker.h KDatePicker
  *
- * @short A date selection widget.
+ * \brief A date selection widget.
  *
  * Provides a widget for calendar date input.
  *

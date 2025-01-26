@@ -15,7 +15,7 @@
 /*!
  * @class KSqueezedTextLabel ksqueezedtextlabel.h KSqueezedTextLabel
  *
- * @short A replacement for QLabel that squeezes its text into the label
+ * \brief A replacement for QLabel that squeezes its text into the label
  *
  * If the text is too long to fit into the label it is divided into
  * remaining left and right parts which are separated by three dots.

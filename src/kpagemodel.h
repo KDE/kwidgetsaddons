@@ -18,7 +18,7 @@ class KPageModelPrivate;
 /*!
  *  @class KPageModel kpagemodel.h KPageModel
  *
- *  @short A base class for a model used by KPageView.
+ *  \brief A base class for a model used by KPageView.
  *
  *  This class is an abstract base class which must be used to
  *  implement custom models for KPageView. Additional to the standard

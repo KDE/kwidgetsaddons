@@ -22,7 +22,7 @@ class KFontChooserDialogPrivate;
 /*!
  * @class KFontChooserDialog kfontchooserdialog.h KFontChooserDialog
  *
- * @short A font selection dialog.
+ * \brief A font selection dialog.
  *
  * The KFontChooserDialog provides a dialog for interactive font selection.
  * It is basically a thin wrapper around the KFontChooser widget (the latter

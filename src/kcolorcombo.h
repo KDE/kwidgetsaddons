@@ -22,9 +22,10 @@
 #include <memory>
 
 /*!
- * @class KColorCombo kcolorcombo.h KColorCombo
+ * \class KColorCombo
+ * \inmodule KWidgetsAddons
  *
- * Combobox for colors.
+ * \brief Combobox for colors.
  *
  * The combobox provides some preset colors to be selected, and an entry to
  * select a custom color using a color dialog.
@@ -34,7 +35,15 @@
 class KWIDGETSADDONS_EXPORT KColorCombo : public QComboBox
 {
     Q_OBJECT
+
+    /*!
+     * \property KColorCombo::color
+     */
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY activated USER true)
+
+    /*!
+     * \property KColorCombo::colors
+     */
     Q_PROPERTY(QList<QColor> colors READ colors WRITE setColors)
 
 public:
@@ -45,7 +54,7 @@ public:
     ~KColorCombo() override;
 
     /*!
-     * Selects the color @p col.
+     * Selects the color \a col.
      */
     void setColor(const QColor &col);
 
@@ -63,6 +72,7 @@ public:
     /*!
      * Set a custom list of colors to choose from, in place of the standard
      * list.
+     *
      * \a colors list of colors. If empty, the selection list reverts to
      *             the standard list.
      */
@@ -70,7 +80,6 @@ public:
 
     /*!
      * Return the list of colors available for selection.
-     * @return list of colors
      */
     QList<QColor> colors() const;
 

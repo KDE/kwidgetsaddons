@@ -17,7 +17,7 @@
 /*!
  * @class KMessageWidget kmessagewidget.h KMessageWidget
  *
- * @short A widget to provide feedback or propose opportunistic interactions.
+ * \brief A widget to provide feedback or propose opportunistic interactions.
  *
  * KMessageWidget can be used to provide inline positive or negative
  * feedback, or to implement opportunistic interactions.

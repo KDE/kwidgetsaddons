@@ -80,7 +80,7 @@ private:
 /*!
  * @class KMimeTypeChooserDialog kmimetypechooser.h KMimeTypeChooserDialog
  *
- * @short A dialog to select MIME types from the list of available ones on the system
+ * \brief A dialog to select MIME types from the list of available ones on the system
  *
  * This dialog embeds KMimeTypeChooser widget, presenting a checkable tree list of
  * MIME types, each with its associated icon, and optionally associated glob patterns

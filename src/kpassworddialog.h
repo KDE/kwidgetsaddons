@@ -49,7 +49,7 @@
  *
  * \image html kpassworddialog.png "KPasswordDialog"
  *
- * @short dialog for requesting login and password from the end user
+ * \brief dialog for requesting login and password from the end user
  */
 class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
 {

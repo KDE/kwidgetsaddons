@@ -47,7 +47,7 @@
  *
  * \image html kruler.png "KRuler Widget"
  *
- * @short A ruler widget.
+ * \brief A ruler widget.
  * @author Jörg Habenicht
  */
 class KWIDGETSADDONS_EXPORT KRuler : public QAbstractSlider

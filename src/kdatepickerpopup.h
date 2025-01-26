@@ -17,7 +17,7 @@ class KDatePicker;
 class KDatePickerPopupPrivate;
 
 /*!
- * @short This menu helps the user to select a date quickly.
+ * \brief This menu helps the user to select a date quickly.
  *
  * This menu helps the user to select a date quickly. It offers various
  * modes of selecting, e.g. with a KDatePicker or with words like "Tomorrow".

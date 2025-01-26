@@ -16,7 +16,7 @@ class KPageWidgetPrivate;
 /*!
  * @class KPageWidget kpagewidget.h KPageWidget
  *
- * @short Page widget with many layouts (faces).
+ * \brief Page widget with many layouts (faces).
  * A KPageView with hierarchical page model.
  *
  * @author Tobias Koenig (tokoe@kde.org)

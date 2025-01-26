@@ -20,9 +20,10 @@ class QLayout;
 class QWidget;
 
 /*!
- * @class KColumnResizer kcolumnresizer.h KColumnResizer
+ * \class KColumnResizer
+ * \inmodule KWidgetsAddons
  *
- * @short Maintains consistent column sizes across layouts
+ * \brief Maintains consistent column sizes across layouts
  *
  * KColumnResizer is a helper class which can force columns of different layouts
  * to keep the same width. It is useful to keep label columns consistent.

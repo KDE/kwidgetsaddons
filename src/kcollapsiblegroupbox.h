@@ -13,9 +13,10 @@
 #include <memory>
 
 /*!
- * @class KCollapsibleGroupBox kcollapsiblegroupbox.h KCollapsibleGroupBox
+ * \class KCollapsibleGroupBox
+ * \inmodule KWidgetsAddons
  *
- * A groupbox featuring a clickable header and arrow indicator that can be
+ * \brief A groupbox featuring a clickable header and arrow indicator that can be
  * expanded and collapsed to reveal the contents.
  *
  * When expanded, the widget will resize to fit the sizeHint of child items.
@@ -25,10 +26,21 @@
 class KWIDGETSADDONS_EXPORT KCollapsibleGroupBox : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KCollapsibleGroupBox::title
+     */
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
+
+    /*!
+     * \property KCollapsibleGroupBox::isExpanded
+     */
     Q_PROPERTY(bool expanded READ isExpanded WRITE setExpanded NOTIFY expandedChanged)
 
 public:
+    /*!
+     *
+     */
     explicit KCollapsibleGroupBox(QWidget *parent = nullptr);
     ~KCollapsibleGroupBox() override;
 

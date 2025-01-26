@@ -15,9 +15,10 @@
 
 class KColorButtonPrivate;
 /*!
- * @class KColorButton kcolorbutton.h KColorButton
+ * \class KColorButton
+ * \inmodule KWidgetsAddons
  *
- * @short A pushbutton to display or allow user selection of a color.
+ * \brief A pushbutton to display or allow user selection of a color.
  *
  * This widget can be used to display or allow user selection of a color.
  *
@@ -28,8 +29,20 @@ class KColorButtonPrivate;
 class KWIDGETSADDONS_EXPORT KColorButton : public QPushButton
 {
     Q_OBJECT
+
+    /*!
+     * \property KColorButton::color
+     */
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY changed USER true)
+
+    /*!
+     * \property KColorButton::defaultColor
+     */
     Q_PROPERTY(QColor defaultColor READ defaultColor WRITE setDefaultColor)
+
+    /*!
+     * \property KColorButton::alphaChannelEnabled
+     */
     Q_PROPERTY(bool alphaChannelEnabled READ isAlphaChannelEnabled WRITE setAlphaChannelEnabled)
 
 public:
@@ -39,12 +52,12 @@ public:
     explicit KColorButton(QWidget *parent = nullptr);
 
     /*!
-     * Creates a color button with an initial color @p c.
+     * Creates a color button with an initial color \a c.
      */
     explicit KColorButton(const QColor &c, QWidget *parent = nullptr);
 
     /*!
-     * Creates a color button with an initial color @p c and default color @p defaultColor.
+     * Creates a color button with an initial color \a c and default color \a defaultColor.
      */
     KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent = nullptr);
 
@@ -56,7 +69,7 @@ public:
     QColor color() const;
 
     /*!
-     * Sets the current color to @p c.
+     * Sets the current color to \a c.
      */
     void setColor(const QColor &c);
 
@@ -80,7 +93,7 @@ public:
     QColor defaultColor() const;
 
     /*!
-     * Sets the default color to @p c.
+     * Sets the default color to \a c.
      */
     void setDefaultColor(const QColor &c);
 

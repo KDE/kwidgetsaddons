@@ -17,7 +17,7 @@
 /*!
  * @class KTwoFingerSwipe ktwofingerswipe.h KTwoFingerSwipe
  *
- * @short A two finger swipe gesture.
+ * \brief A two finger swipe gesture.
  *
  * Provides a class for a two finger swipe gesture.
  *
@@ -102,7 +102,7 @@ private:
 /*!
  * @class KTwoFingerSwipeRecognizer ktwofingerswiperecognizer.h KTwoFingerSwipeRecognizer
  *
- * @short The recognizer for a two finger swipe gesture.
+ * \brief The recognizer for a two finger swipe gesture.
  *
  * Provides the recognizer for a two finger swipe gesture. To adjust the maximum swipe time
  * and the minimum swipe distance, for a valid swipe gesture:
