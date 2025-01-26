@@ -22,46 +22,48 @@ class KGuiItem;
 class QWidget;
 
 /*!
- * @class KMessageDialog kmessagedialog.h <KMessageDialog>
+ * \class KMessageDialog
+ * \inmodule KWidgetsAddons
  *
- *
- * @brief KMessageDialog creates a message box similar to the ones you get from KMessageBox,
- * but that can be used asynchronously, i.e. you can show the dialog by using @c show()
- * or @c open().
+ * \brief KMessageDialog creates a message box similar to the ones you get from KMessageBox,
+ * but that can be used asynchronously, i.e. you can show the dialog by using show()
+ * or open().
  *
  * This class contructs a dialog similar to the dialogs the KMessageBox convenience functions
- * create. The main difference is that the KMessageBox methods typically use @c exec() to show
- * the dialogs; one of the main disadvantages of using @c exec(), is that it starts a nested
+ * create. The main difference is that the KMessageBox methods typically use exec() to show
+ * the dialogs; one of the main disadvantages of using exec(), is that it starts a nested
  * eventloop, which could lead to nasty crashes.
  *
  * Another difference is that the API is supposed to be slightly easier to use as it has
- * various methods to set up the dialog, e.g. @ref setCaption(), @ref setDetails() ...etc.
+ * various methods to set up the dialog, e.g. setCaption(), setDetails() ...etc.
  *
  * By default, appropriate buttons based on the dialog type are added (since 5.85) (e.g. an
  * "OK" button is added to an Information dialog), you can set custom buttons by using the
- * @ref setButtons() method.
+ * setButtons() method.
  *
- * The @ref QDialog::done() slot is called to set the result of the dialog, which will emit the
- * @ref QDialog::finished() signal with that result. The result is one of the
+ * The QDialog::done() slot is called to set the result of the dialog, which will emit the
+ * QDialog::finished() signal with that result. The result is one of the
  * KMessageDialog::ButtonType enum. This is useful as you can tell exactly which button
  * was clicked by the user. E.g.:
- * - the secondary action button having been clicked, in which case you may still want to save the status
+ * \list
+ * \li the secondary action button having been clicked, in which case you may still want to save the status
  *   of the "Do not ask again" CheckBox
- * - the "Cancel" button having been clicked, in which case you ideally will ignore the status
+ * \li the "Cancel" button having been clicked, in which case you ideally will ignore the status
  *   of the "Do not ask again" CheckBox
+ * \endlist
  *
  * For "warning" dialogs, i.e. dialogs with a potentially destructive action, the default
  * button is set to a button with the QDialogButtonBox::RejectRole. If the "Cancel" button
-+ * is used, it will be the default, otherwise the secondary action button.
+ * is used, it will be the default, otherwise the secondary action button.
  *
  * This class intends to be very flexible with the buttons that can be used, since you can
- * call the @ref setButtons() method with a KGuiItem that has custom text/icon.
+ * call the setButtons() method with a KGuiItem that has custom text/icon.
  *
  * Since Frameworks 5.97 a notification sound is played when the dialog opens like KMessageBox
- * does, this can be controlled using the @ref setNotifyEnabled() method.
+ * does, this can be controlled using the setNotifyEnabled() method.
  *
  * Example:
- * @code
+ * \code
  * auto *dlg = new KMessageDialog(KMessageDialog::QuestionTwoActionsCancel,
  *                                QStringLiteral("Back or forward?"),
  *                                nullptr);
@@ -98,11 +100,10 @@ class QWidget;
  *  });
  *
  *  dlg->show();
- * @endcode
+ * \endcode
  *
  * \since 5.77
  */
-
 class KWIDGETSADDONS_EXPORT KMessageDialog : public QDialog
 {
     Q_OBJECT
@@ -111,22 +112,35 @@ public:
     /*!
      * Button types
      * \since 5.100
+     * \value Ok Ok button
+     * \value Cancel Cancel button
+     * \value PrimaryAction Primary action button
+     * \value SecondaryAction Secondary action button
      */
     enum ButtonType {
-        Ok = 1, ///< Ok button
-        Cancel = 2, ///< Cancel button
-        PrimaryAction = 3, ///< Primary action button
-        SecondaryAction = 4, ///< Secondary action button
+        Ok = 1,
+        Cancel = 2,
+        PrimaryAction = 3,
+        SecondaryAction = 4,
     };
 
+    /*!
+     * \value[since 5.100] QuestionTwoActions Question dialog with two buttons
+     * \value[since 5.100] QuestionTwoActionsCancel Question dialog with two buttons and Cancel
+     * \value[since 5.100] WarningTwoActions Warning dialog with two buttons
+     * \value[since 5.100] WarningTwoActionsCancel Warning dialog with two buttons and Cancel
+     * \value WarningContinueCancel Warning dialog with Continue and Cancel
+     * \value Information Information dialog
+     * \value Error Error dialog
+     */
     enum Type {
-        QuestionTwoActions = 1, ///< Question dialog with two buttons; \since 5.100
-        QuestionTwoActionsCancel = 2, ///< Question dialog with two buttons and Cancel; \since 5.100
-        WarningTwoActions = 3, ///< Warning dialog with two buttons; \since 5.100
-        WarningTwoActionsCancel = 4, ///< Warning dialog with two buttons and Cancel; \since 5.100
-        WarningContinueCancel = 5, ///< Warning dialog with Continue and Cancel
-        Information = 6, ///< Information dialog
-        Error = 8, ///< Error dialog
+        QuestionTwoActions = 1,
+        QuestionTwoActionsCancel = 2,
+        WarningTwoActions = 3,
+        WarningTwoActionsCancel = 4,
+        WarningContinueCancel = 5,
+        Information = 6,
+        Error = 8,
     };
 
     /*!
@@ -140,7 +154,9 @@ public:
      * For the other Quesion* and Warning* types the buttons are to be set explicitly.
      *
      * \a type the dialog Type, one of KMessageDialog::Type enum
+     *
      * \a text the text message that is going to be displayed in the dialog
+     *
      * \a parent a QWidget* that will be set as the dialog parent
      */
     explicit KMessageDialog(KMessageDialog::Type type, const QString &text, QWidget *parent = nullptr);
@@ -149,7 +165,9 @@ public:
      * This constructor takes the window Id of the parent window, instead of a QWidget*.
      *
      * \a type the dialog Type, one of KMessageDialog::Type enum
+     *
      * \a text the text message that is going to be displayed in the dialog
+     *
      * \a parent_id the native parent's window system identifier
      */
     explicit KMessageDialog(KMessageDialog::Type type, const QString &text, WId parent_id);
@@ -174,8 +192,8 @@ public:
     void setIcon(const QIcon &icon);
 
     /*!
-     * This will add a QListWidget to the dialog and populate it with @p strlist.
-     * If @p strlist is empty, the list widget will not be shown.
+     * This will add a QListWidget to the dialog and populate it with \a strlist.
+     * If \a strlist is empty, the list widget will not be shown.
      */
     void setListWidgetItems(const QStringList &strlist);
 
@@ -184,16 +202,16 @@ public:
      * implies it is collapsible (and collapsed by default); you can use it to add a
      * more detailed explanation of what the dialog is trying to tell the user.
      *
-     * If @p details is empty, the details widget will not be shown.
+     * If \a details is empty, the details widget will not be shown.
      */
     void setDetails(const QString &details);
 
     /*!
      * This will add a "Do not ask again" checkbox to the dialog with the text
-     * from @p dontAskAgainText. You can set the initial status of the checkbox
+     * from \a dontAskAgainText. You can set the initial status of the checkbox
      * by using setDontAskAgainChecked().
      *
-     * If @p dontAskAgainText is empty, no checkbox will be shown.
+     * If \a dontAskAgainText is empty, no checkbox will be shown.
      *
      * Typical usage of this checkbox is for recurring questions, e.g. showing
      * a dialog to confirm moving files/directories to trash, the user can then
@@ -205,7 +223,7 @@ public:
 
     /*!
      * This can be used to set the initial status of the "Do not ask again" checkbox,
-     * checked or unchecked, by setting @p isChecked to @c true or @c false
+     * checked or unchecked, by setting \a isChecked to \c true or \c false
      * respectively.
      *
      * You need to call setDontAskAgainText() first to actually show a checkbox in
@@ -215,9 +233,9 @@ public:
 
     /*!
      * This can be used to query the status of the "Do not ask again" checkbox;
-     * returns @c true if the box is checked and @c false otherwise.
+     * returns \c true if the box is checked and \c false otherwise.
      *
-     * @note This method will return @c false if a checkbox widget isn't shown in
+     * \note This method will return \c false if a checkbox widget isn't shown in
      * the dialog. The dialog will not show a checkbox if setDontAskAgainText() was
      * not used previously to add a checkbox to begin with.
      */
@@ -234,7 +252,7 @@ public:
      * This typically plays a notification sound. Default is true.
      *
      * \since 5.97
-     * @sa KMessageBox::Notify
+     * \sa KMessageBox::Notify
      */
     bool isNotifyEnabled() const;
 
@@ -244,7 +262,7 @@ public:
      * This typically plays a notification sound.
      *
      * \since 5.97
-     * @sa KMessageBox::Notify
+     * \sa KMessageBox::Notify
      */
     void setNotifyEnabled(bool enable);
 
@@ -258,16 +276,17 @@ public:
      * KMessageDialog(KMessageDialog::Type, const QString &, QWidget *) for details).
      * Before, this method had to be called explicitly to have any buttons added to the dialog.
      *
-     * @note
-     * - For dialog types Information and Error only one button
+     * \note For dialog types Information and Error only one button
      *   (KStandardGuiItem::ok()) is added to the dialog.
      *
      * \a primaryAction the action for the primary button.
      *                      Reported in the result for dialog types Information and Error
      *                      as KMessageDialog::Ok enum value, otherwise as KMessageDialog::PrimaryAction.
+     *
      * \a secondaryAction the action for the secondary button.
      *                        Reported in the result as KMessageDialog::SecondaryAction enum value.
      *                        Ignored with all dialog types without a "secondary" action.
+     *
      * \a cancelAction the action for the cancel button.
      *                     Reported in the result as KMessageDialog::Cancel enum value.
      *                     Ignored with all dialog types without a Cancel button.
@@ -280,13 +299,16 @@ public:
      * When implementing your entirely own message box, not using KMessageDialog,
      * you can call this function to play the relevant notification sound (if enabled).
      *
-     * @note You don't need to call this when using KMessageDialog, it plays the sound automatically.
+     * \note You don't need to call this when using KMessageDialog, it plays the sound automatically.
      *
      * \a type The message box type
+     *
      * \a text The message box contents, for accessibility purposes.
+     *
      * \a dialog The dialog that was displayed
+     *
      * \since 6.0
-     * @sa setNotifyEnabled
+     * \sa setNotifyEnabled
      */
     static void beep(KMessageDialog::Type type, const QString &text = QString(), QWidget *dialog = nullptr);
 
