@@ -12,9 +12,10 @@
 #include <QScrollArea>
 
 /*!
- * @class KAdjustingScrollArea kadjustingscrollarea.h KAdjustingScrollArea
+ * \class KAdjustingScrollArea
+ * \inmodule KWidgetsAddons
  *
- * @short Special scroll area widget which adjust its size to avoid scroll bars
+ * \brief Special scroll area widget which adjust its size to avoid scroll bars
  * as much as possible
  *
  * This widget improves a few aspects of QScrollArea in particular, for
@@ -32,7 +33,7 @@
  * Instead of setting the scrollarea's content via QScrollArea::setWidget,
  * add the child widgets to the QVBoxLayout of the scrollarea's widget.
  *
- * @code{.cpp}
+ * \code
  * auto scrollArea = new KAdjustingScrollArea(this);
  * scrollArea->setSizeAdjustPolicy(QScrollArea::AdjustToContents);
  * scrollArea->setFocusPolicy(Qt::NoFocus);
@@ -40,7 +41,7 @@
  * scrollArea->setWidget(new QWidget);
  *
  * auto scrollAreaLayout = new QVBoxLayout(scrollArea->widget());
- * @endcode
+ * \endcode
  *
  * \since 6.9
  */
@@ -56,12 +57,9 @@ public:
     explicit KAdjustingScrollArea(QWidget *parent = nullptr);
     ~KAdjustingScrollArea() override;
 
-    /*!
-     * Reimplemented to add the minimum size hint of the widget.
-     */
     QSize minimumSizeHint() const override;
 
-    /*!
+    /*
      * Reimplemented to remove the caching of the size/size hint of the
      * widget and to add the horizontal size hint of the vertical scroll bar
      * unless it is explicitly turned off.

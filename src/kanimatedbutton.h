@@ -13,21 +13,23 @@
 #include <memory>
 
 /*!
- * @class KAnimatedButton kanimatedbutton.h KAnimatedButton
+ * \class KAnimatedButton
+ * \inmodule KWidgetsAddons
  *
- * @short An extended version of QToolButton which can display an animation.
+ * \brief An extended version of QToolButton which can display an animation.
  *
  * This widget extends QToolButton with the ability to display an animation.
  * All you need to do is pass along a path to a file containing an animation,
  * it can be anything supported by QMovie, or a picture containing all the
  * frames of the animation next to each other (each frame being assumed of
  * having the same size).
- *
- * @author Kurt Granroth <granroth@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KAnimatedButton : public QToolButton
 {
     Q_OBJECT
+    /*!
+     * \property KAnimatedButton::animationPath
+     */
     Q_PROPERTY(QString animationPath READ animationPath WRITE setAnimationPath)
 
 public:
@@ -38,9 +40,6 @@ public:
      */
     explicit KAnimatedButton(QWidget *parent = nullptr);
 
-    /*!
-     * Destructor
-     */
     ~KAnimatedButton() override;
 
     /*!

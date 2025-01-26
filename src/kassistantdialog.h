@@ -15,9 +15,10 @@
 class KAssistantDialogPrivate;
 
 /*!
- * @class KAssistantDialog kassistantdialog.h KAssistantDialog
+ * \class KAssistantDialog
+ * \inmodule KWidgetsAddons
  *
- * This class provides a framework for assistant dialogs.
+ * \brief This class provides a framework for assistant dialogs.
  *
  * An assistant dialog consists of a sequence of pages.
  * Its purpose is to guide the user (assist) through a process step by step.
@@ -32,17 +33,17 @@ class KAssistantDialogPrivate;
  * override the default actions of the next and back buttons.
  *
  * \image html kassistantdialog.png "KAssistantDialog"
- *
- * @author Olivier Goffart <ogoffart at kde.org>
  */
 class KWIDGETSADDONS_EXPORT KAssistantDialog : public KPageDialog
 {
     Q_OBJECT
 public:
     /*!
-     * Construct a new assistant dialog with @p parent as parent.
+     * Construct a new assistant dialog with \a parent as parent.
+     *
      * \a parent is the parent of the widget.
-     * @flags the window flags to give to the assistant dialog. The
+     *
+     * \a flags the window flags to give to the assistant dialog. The
      * default of zero is usually what you want.
      */
     explicit KAssistantDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
@@ -55,12 +56,14 @@ public:
      * This will disable or enable the next button on the specified page
      *
      * \a page the page on which the next button will be enabled/disable
+     *
      * \a enable if true the next button will be enabled, if false it will be disabled
      */
     void setValid(KPageWidgetItem *page, bool enable);
 
     /*!
      * return if a page is valid
+     *
      * \a page the page to check the validity of
      * \sa setValid()
      */
@@ -75,32 +78,37 @@ public:
      * A page which is inappropriate will not be shown.
      *
      * The last page in an assistant dialog should always be appropriate
+     *
      * \a page the page to set as appropriate
+     *
      * \a appropriate flag indicating the appropriateness of the page.
-     * If @p appropriate is true, then @p page is appropriate and will be
-     * shown in the assistant dialog. If false, @p page will not be shown.
+     *
+     * If \a appropriate is true, then \a page is appropriate and will be
+     * shown in the assistant dialog. If false, \a page will not be shown.
      */
     void setAppropriate(KPageWidgetItem *page, bool appropriate);
 
     /*!
      * Check if a page is appropriate for use in the assistant dialog.
+     *
      * \a page is the page to check the appropriateness of.
-     * @return true if @p page is appropriate, false if it is not
+     *
+     * Returns \c true if \a page is appropriate, false if it is not
      */
     bool isAppropriate(KPageWidgetItem *page) const;
 
     /*!
-     * @returns the next button
+     * Returns the next button
      */
     QPushButton *nextButton() const;
 
     /*!
-     * @returns the finish button
+     * Returns the finish button
      */
     QPushButton *backButton() const;
 
     /*!
-     * @returns the finish button
+     * Returns the finish button
      */
     QPushButton *finishButton() const;
 
@@ -124,9 +132,12 @@ public Q_SLOTS:
 protected:
     /*!
      * Construct an assistant dialog from a single widget.
+     *
      * \a widget the widget to construct the dialog with
+     *
      * \a parent the parent of the assistant dialog
-     * @flags the window flags to use when creating the widget. The default
+     *
+     * \a flags the window flags to use when creating the widget. The default
      * of zero is usually fine.
      *
      * Calls the KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags) constructor
