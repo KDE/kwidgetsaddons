@@ -15,20 +15,19 @@
 class QWidget;
 class QString;
 
-/**
- * @class KAcceleratorManager kacceleratormanager.h KAcceleratorManager
+/*!
+ * \class KAcceleratorManager
+ * \inmodule KWidgetsAddons
  *
- * KDE Accelerator manager.
+ * \brief KDE Accelerator manager.
  *
  * This class can be used to find a valid and working set of
  * accelerators for any widget.
- *
- * @author Matthias Hölzer-Klüpfel <mhk@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KAcceleratorManager
 {
 public:
-    /**
+    /*!
      * Manages the accelerators of a widget.
      *
      * Call this function on the top widget of the hierarchy you
@@ -45,25 +44,28 @@ public:
      * toplevel widget, you will have to call manage again to fix the
      * accelerators.
      *
-     * @param widget The toplevel widget you want to manage.
-     * @param programmers_mode if true, KAcceleratorManager adds (&) for removed
+     * \a widget The toplevel widget you want to manage.
+     *
+     * \a programmers_mode if true, KAcceleratorManager adds (&) for removed
      *             accels and & before added accels
      */
 
     static void manage(QWidget *widget, bool programmers_mode = false);
 
-    /** \internal returns the result of the last manage operation. */
+    /*! \internal returns the result of the last manage operation. */
     static void last_manage(QString &added, QString &changed, QString &removed);
 
-    /**
+    /*!
      * Use this method for a widget (and its children) you want no accels to be set on.
      */
     static void setNoAccel(QWidget *widget);
 
-    /**
+    /*!
      * Append names to a list of standard action names.
+     *
      * These strings will be given higher priority when assigning keyboard accelerators.
-     * @since 5.0
+     *
+     * \since 5.0
      */
     static void addStandardActionNames(const QStringList &names);
 };

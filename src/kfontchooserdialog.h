@@ -19,10 +19,11 @@ class QFont;
 
 class KFontChooserDialogPrivate;
 
-/**
- * @class KFontChooserDialog kfontchooserdialog.h KFontChooserDialog
+/*!
+ * \class KFontChooserDialog
+ * \inmodule KWidgetsAddons
  *
- * @short A font selection dialog.
+ * \brief A font selection dialog.
  *
  * The KFontChooserDialog provides a dialog for interactive font selection.
  * It is basically a thin wrapper around the KFontChooser widget (the latter
@@ -32,18 +33,20 @@ class KFontChooserDialogPrivate;
  * dialog is closed.
  *
  * Features offered by KFontChooserDialog/KFontChooser:
- * - The ability to set decimal font sizes (e.g. "12.1")
- * - When selecting an initial font, if the styleName property of that font
+ * \list
+ * \li The ability to set decimal font sizes (e.g. "12.1")
+ * \li When selecting an initial font, if the styleName property of that font
  *   isn't set, the dialog will try and select the correct font style from the
  *   styles list
- * - The ability to set multiple fonts at once, for an example of this functionality
+ * \li The ability to set multiple fonts at once, for an example of this functionality
  *   see "Adjust All Fonts" in the Fonts KCM in Systemsettings; and you can change
  *   the font family, style or size separately
- * - Discarding the styleName property when closing the dialog for "Regular" font
+ * \li Discarding the styleName property when closing the dialog for "Regular" font
  *   styles, since it doesn't make sense to set that property for such fonts and
  *   this allows setBold(true) to work correctly for more details see:
  *   https://bugreports.qt.io/browse/QTBUG-63792
  *   https://bugs.kde.org/show_bug.cgi?id=378523
+ * \endlist
  *
  * Example, using the static getFont() method:
  *
@@ -69,61 +72,66 @@ class KFontChooserDialogPrivate;
  *      fontDlg->show();
  * \endcode
  *
- * \image html kfontchooserdialog.png "KFontChooserDialog"
+ * \image kfontchooserdialog.png "KFontChooserDialog"
  *
- * @author Preston Brown <pbrown@kde.org>, Bernd Wuebben <wuebben@kde.org>
- *
- * @since 5.69
+ * \since 5.69
  */
 class KWIDGETSADDONS_EXPORT KFontChooserDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Constructs a font selection dialog.
      *
-     * @param flags flags to define how the font chooser is displayed
-     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     * \a flags flags to define how the font chooser is displayed
+     *
+     * \a parent parent widget of the dialog, if any, the dialog will be centered relative to it
      */
     explicit KFontChooserDialog(const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
     ~KFontChooserDialog() override;
 
-    /**
+    /*!
      * Sets the currently selected font in the dialog.
      *
-     * @param font the font to select
-     * @param onlyFixed if @c true, the font list will show only fixed width (monospace)
+     * \a font the font to select
+     *
+     * \a onlyFixed if \c true, the font list will show only fixed width (monospace)
      *        fonts, otherwise all available fonts are shown
      */
     void setFont(const QFont &font, bool onlyFixed = false);
 
-    /**
-     * @return the currently selected font in the dialog
+    /*!
+     * Returns the currently selected font in the dialog
      */
     QFont font() const;
 
-    /**
+    /*!
      * Creates a modal font dialog, lets the user choose a font, and returns when
      * the dialog is closed.
      *
-     * @param theFont a reference to the font to write the chosen font into
-     * @param flags flags to define how the font chooser is displayed
-     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
-     * @return QDialog::result()
+     * \a theFont a reference to the font to write the chosen font into
+     *
+     * \a flags flags to define how the font chooser is displayed
+     *
+     * \a parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     *
+     * Returns QDialog::result()
      */
     static int getFont(QFont &theFont, const KFontChooser::DisplayFlags &flags = KFontChooser::NoDisplayFlags, QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Creates a modal font difference dialog, lets the user choose a selection
      * of changes that should be made to a set of fonts, and returns when the
      * dialog is closed. Useful for choosing slight adjustments to the font set
      * when the user would otherwise have to manually edit a number of fonts.
      *
-     * @param theFont a reference to the font to write the chosen font into
-     * @param flags flags to define how the font chooser is displayed
-     * @param diffFlags a reference to the integer bitmask into which the chosen
+     * \a theFont a reference to the font to write the chosen font into
+     *
+     * \a flags flags to define how the font chooser is displayed
+     *
+     * \a diffFlags a reference to the integer bitmask into which the chosen
      *        difference selection bitmask should be written.
      *        Check the bitmask afterwards like:
      *        \code
@@ -137,9 +145,10 @@ public:
      *            [...]
      *        }
      *        \endcode
-     * @param parent parent widget of the dialog, if any, the dialog will be centered relative to it
      *
-     * @returns QDialog::result()
+     * \a parent parent widget of the dialog, if any, the dialog will be centered relative to it
+     *
+     * Returns QDialog::result()
      */
     static int getFontDiff(QFont &theFont,
                            KFontChooser::FontDiffFlags &diffFlags,
@@ -147,7 +156,7 @@ public:
                            QWidget *parent = nullptr);
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted whenever the currently selected font changes.
      * Connect to this to monitor the font as it is selected if you are
      * not running modal.

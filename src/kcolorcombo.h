@@ -21,70 +21,79 @@
 
 #include <memory>
 
-/**
- * @class KColorCombo kcolorcombo.h KColorCombo
+/*!
+ * \class KColorCombo
+ * \inmodule KWidgetsAddons
  *
- * Combobox for colors.
+ * \brief Combobox for colors.
  *
  * The combobox provides some preset colors to be selected, and an entry to
  * select a custom color using a color dialog.
  *
- * \image html kcolorcombo.png "KColorCombo Widget"
+ * \image kcolorcombo.png "KColorCombo Widget"
  */
 class KWIDGETSADDONS_EXPORT KColorCombo : public QComboBox
 {
     Q_OBJECT
+
+    /*!
+     * \property KColorCombo::color
+     */
     Q_PROPERTY(QColor color READ color WRITE setColor NOTIFY activated USER true)
+
+    /*!
+     * \property KColorCombo::colors
+     */
     Q_PROPERTY(QList<QColor> colors READ colors WRITE setColors)
 
 public:
-    /**
+    /*!
      * Constructs a color combo box.
      */
     explicit KColorCombo(QWidget *parent = nullptr);
     ~KColorCombo() override;
 
-    /**
-     * Selects the color @p col.
+    /*!
+     * Selects the color \a col.
      */
     void setColor(const QColor &col);
 
-    /**
+    /*!
      * Returns the currently selected color.
      */
     QColor color() const;
 
-    /**
+    /*!
      * Find whether the currently selected color is a custom color selected
      * using a color dialog.
      */
     bool isCustomColor() const;
 
-    /**
+    /*!
      * Set a custom list of colors to choose from, in place of the standard
      * list.
-     * @param colors list of colors. If empty, the selection list reverts to
+     *
+     * \a colors list of colors. If empty, the selection list reverts to
      *             the standard list.
      */
     void setColors(const QList<QColor> &colors);
 
-    /**
+    /*!
      * Return the list of colors available for selection.
-     * @return list of colors
      */
     QList<QColor> colors() const;
 
-    /**
+    /*!
      * Clear the color list and don't show it, till the next setColor() call
      */
     void showEmptyList();
 
 Q_SIGNALS:
-    /**
+    /*!
      * Emitted when a new color box has been selected.
      */
     void activated(const QColor &col);
-    /**
+    /*!
      * Emitted when a new item has been highlighted.
      */
     void highlighted(const QColor &col);

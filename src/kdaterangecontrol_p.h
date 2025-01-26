@@ -9,7 +9,7 @@
 
 #include <QDate>
 
-/** Common code for widgets supporting input of dates within a specified min/max range. */
+/* Common code for widgets supporting input of dates within a specified min/max range. */
 class KDateRangeControlPrivate
 {
 public:

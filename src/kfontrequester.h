@@ -17,79 +17,91 @@
 class QLabel;
 class QPushButton;
 
-/**
- * @class KFontRequester kfontrequester.h KFontRequester
+/*!
+ * \class KFontRequester
+ * \inmodule KWidgetsAddons
  *
- * This class provides a widget with a lineedit and a button, which invokes
+ * \brief This class provides a widget with a lineedit and a button, which invokes
  * a font dialog (KFontChooserDialog).
  *
  * The lineedit provides a preview of the selected font. The preview text can
  * be customized. You can also have the font dialog show only the fixed fonts.
  *
- * \image html kfontrequester.png "KFontRequester"
- *
- * @author Nadeem Hasan <nhasan@kde.org>
+ * \image kfontrequester.png "KFontRequester"
  */
 class KWIDGETSADDONS_EXPORT KFontRequester : public QWidget
 {
     Q_OBJECT
 
+    /*!
+     * \property KFontRequester::title
+     */
     Q_PROPERTY(QString title READ title WRITE setTitle)
+
+    /*!
+     * \property KFontRequester::sampleText
+     */
     Q_PROPERTY(QString sampleText READ sampleText WRITE setSampleText)
+
+    /*!
+     * \property KFontRequester::font
+     */
     Q_PROPERTY(QFont font READ font WRITE setFont NOTIFY fontSelected USER true)
 
 public:
-    /**
+    /*!
      * Constructs a font requester widget.
      *
-     * @param parent The parent widget.
-     * @param onlyFixed Only display fonts which have fixed-width character
+     * \a parent The parent widget.
+     *
+     * \a onlyFixed Only display fonts which have fixed-width character
      *        sizes.
      */
     explicit KFontRequester(QWidget *parent = nullptr, bool onlyFixed = false);
 
     ~KFontRequester() override;
 
-    /**
-     * @return The currently selected font in the requester.
+    /*!
+     * Returns the currently selected font in the requester.
      */
     QFont font() const;
 
-    /**
-     * @return Returns true if only fixed fonts are displayed.
+    /*!
+     * Returns \c true if only fixed fonts are displayed.
      */
     bool isFixedOnly() const;
 
-    /**
-     * @return The current text in the sample text input area.
+    /*!
+     * Returns the current text in the sample text input area.
      */
     QString sampleText() const;
 
-    /**
-     * @return The current title of the widget.
+    /*!
+     * Returns the current title of the widget.
      */
     QString title() const;
 
-    /**
-     * @return Pointer to the label used for preview.
+    /*!
+     * Returns pointer to the label used for preview.
      */
     QLabel *label() const;
 
-    /**
-     * @return Pointer to the pushbutton in the widget.
+    /*!
+     * Returns pointer to the pushbutton in the widget.
      */
     QPushButton *button() const;
 
-    /**
+    /*!
      * Sets the currently selected font in the requester.
      *
-     * @param font The font to select.
-     * @param onlyFixed Display only fixed-width fonts in the font dialog
-     * if @p true, or vice-versa.
+     * \a font The font to select.
+     *
+     * \a onlyFixed Display only fixed-width fonts in the font dialog
+     * if \c true, or vice-versa.
      */
     virtual void setFont(const QFont &font, bool onlyFixed = false);
 
-    /**
+    /*!
      * Sets the sample text.
      *
      * Normally you should not change this
@@ -98,21 +110,21 @@ public:
      * application. Default text is current font name and size. Setting
      * the text to QString() will restore the default.
      *
-     * @param text The new sample text. The current will be removed.
+     * \a text The new sample text. The current will be removed.
      */
     virtual void setSampleText(const QString &text);
 
-    /**
+    /*!
      * Set the title for the widget that will be used in the tooltip and
      * what's this text.
      *
-     * @param title The title to be set.
+     * \a title The title to be set.
      */
     virtual void setTitle(const QString &title);
 
 Q_SIGNALS:
-    /**
-     * Emitted when a new @p font has been selected in the underlying dialog
+    /*!
+     * Emitted when a new \a font has been selected in the underlying dialog
      */
     void fontSelected(const QFont &font);
 

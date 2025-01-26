@@ -212,7 +212,7 @@ private:
     void drawFocus(QPainter *, const QStyleOptionViewItem &, const QRect &) const;
 };
 
-/**
+/*
  * We need this proxy model to map the leaves of a tree-like model
  * to a one-level list model.
  */

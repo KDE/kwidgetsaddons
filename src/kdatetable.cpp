@@ -49,37 +49,37 @@ public:
 
     KDateTable *q;
 
-    /**
+    /*!
      * The currently selected date.
      */
     QDate m_date;
 
-    /**
+    /*!
      * The weekday number of the first day in the month [1..daysInWeek()].
      */
     int m_weekDayFirstOfMonth;
 
-    /**
+    /*!
      * The number of days in the current month.
      */
     int m_numDaysThisMonth;
 
-    /**
+    /*!
      * Save the size of the largest used cell content.
      */
     QRectF m_maxCell;
 
-    /**
+    /*!
      * How many week rows we are to draw.
      */
     int m_numWeekRows;
 
-    /**
+    /*!
      * How many day columns we are to draw, i.e. days in a week.
      */
     int m_numDayColumns;
 
-    /**
+    /*!
      * The font size of the displayed text.
      */
     int fontsize;
