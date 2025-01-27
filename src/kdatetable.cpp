@@ -643,6 +643,10 @@ bool KDateTable::setDate(const QDate &toDate)
         return true;
     }
 
+    if (!d->isInDateRange(toDate)) {
+        return false;
+    }
+
     d->setDate(toDate);
     Q_EMIT dateChanged(date());
     update();
