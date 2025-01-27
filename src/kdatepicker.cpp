@@ -288,6 +288,7 @@ void KDatePicker::initWidget(const QDate &date_)
     d->line = new QLineEdit(this);
     d->val = new DatePickerValidator(this);
     d->table = new KDateTable(this);
+    d->table->setObjectName(QStringLiteral("table"));
     setFocusProxy(d->table);
 
     d->fontsize = QFontDatabase::systemFont(QFontDatabase::GeneralFont).pointSize();
