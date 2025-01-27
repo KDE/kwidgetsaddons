@@ -14,12 +14,12 @@
 
 class KPageWidgetPrivate;
 /*!
- * @class KPageWidget kpagewidget.h KPageWidget
+ * \class KPageWidget
+ * \inmodule KWidgetsAddons
  *
  * \brief Page widget with many layouts (faces).
- * A KPageView with hierarchical page model.
  *
- * @author Tobias Koenig (tokoe@kde.org)
+ * A KPageView with hierarchical page model.
  */
 class KWIDGETSADDONS_EXPORT KPageWidget : public KPageView
 {
@@ -34,18 +34,16 @@ public:
      */
     explicit KPageWidget(QWidget *parent = nullptr);
 
-    /*!
-     * Destroys the page widget.
-     */
     ~KPageWidget() override;
 
     /*!
      * Adds a new top level page to the widget.
      *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns The associated KPageWidgetItem.
      */
     KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
@@ -61,10 +59,12 @@ public:
      *
      * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
+     *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
@@ -82,10 +82,12 @@ public:
      * Inserts a new sub page in the widget.
      *
      * \a parent The new page will be insert as child of this KPageWidgetItem.
+     *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
@@ -120,20 +122,22 @@ Q_SIGNALS:
      * This signal is emitted whenever the current page has changed.
      *
      * \a current The new current page or a null pointer if no current page is available.
+     *
      * \a before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
 
     /*!
      * This signal is emitted whenever a checkable page changes its state. \a checked is true
-     * when the @p page is checked, or false if the @p page is unchecked.
+     * when the \a page is checked, or false if the \a page is unchecked.
      */
     void pageToggled(KPageWidgetItem *page, bool checked);
 
     /*!
      * This signal is emitted when a page is removed.
+     *
      * \a page The page which is removed
-     * */
+     **/
     void pageRemoved(KPageWidgetItem *page);
 
 protected:

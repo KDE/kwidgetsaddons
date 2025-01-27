@@ -22,7 +22,8 @@ class KPageViewPrivate;
 class QAbstractItemModel;
 
 /*!
- * @class KPageView kpageview.h KPageView
+ * \class KPageView
+ * \inmodule KWidgetsAddons
  *
  * \brief A base class which can handle multiple pages.
  *
@@ -30,10 +31,10 @@ class QAbstractItemModel;
  * pages and allows the user to switch between these pages in
  * different ways.
  *
- * Currently, @p Auto, @p Plain, @p List, @p Tree, @p FlatList and
- * @p Tabbed face types are available (cmp. KPageWidget).
+ * Currently, Auto, Plain, List, Tree, FlatList and
+ * Tabbed face types are available (cmp. KPageWidget).
  *
- * <b>Example:</b>\n
+ * Example:
  *
  * \code
  *  KPageModel *model = new MyPageModel();
@@ -43,14 +44,24 @@ class QAbstractItemModel;
  *
  *  view->setFaceType(KPageView::List);
  * \endcode
- *
- * @author Tobias Koenig (tokoe@kde.org)
  */
 class KWIDGETSADDONS_EXPORT KPageView : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KPageView::pageHeader
+     */
     Q_PROPERTY(QWidget *pageHeader READ pageHeader WRITE setPageHeader)
+
+    /*!
+     * \property KPageView::pageFooter
+     */
     Q_PROPERTY(QWidget *pageFooter READ pageFooter WRITE setPageFooter)
+
+    /*!
+     * \property KPageView::faceType
+     */
     Q_PROPERTY(FaceType faceType READ faceType WRITE setFaceType)
     Q_DECLARE_PRIVATE(KPageView)
 
@@ -58,35 +69,21 @@ public:
     /*!
      * This enum is used to decide which type of navigation view
      * shall be used in the page view.
+     *
+     * \value Auto Depending on the number of pages in the model, the Plain (one page), the List (several pages) the Tree face (nested pages) will be used. This
+     * is the default face type.
+     * \value Plain No navigation view will be visible and only the first page of the model will be shown.
+     * \value List An icon list is used as navigation view
+     * \value Tree A tree list is used as navigation view
+     * \value Tabbed A tab widget is used as navigation view
+     * \value FlatList A flat list with small icons is used as navigation view
      */
     enum FaceType {
-        /*!
-         * Depending on the number of pages in the model,
-         * the @c Plain (one page), the @c List (several pages)
-         * or the @c Tree face (nested pages) will be used.
-         * This is the default face type.
-         */
         Auto,
-        /*!
-         * No navigation view will be visible and only the
-         * first page of the model will be shown.
-         */
         Plain,
-        /*!
-         * An icon list is used as navigation view
-         */
         List,
-        /*!
-         * A tree list is used as navigation view
-         */
         Tree,
-        /*!
-         * A tab widget is used as navigation view
-         */
         Tabbed,
-        /*!
-         * A flat list with small icons is used as navigation view
-         */
         FlatList,
     };
     Q_ENUM(FaceType)
@@ -96,13 +93,10 @@ public:
      */
     explicit KPageView(QWidget *parent = nullptr);
 
-    /*!
-     * Destroys the page view.
-     */
     ~KPageView() override;
 
     /*!
-     * Sets the @p model of the page view.
+     * Sets the \a model of the page view.
      *
      * The model has to provide data for the roles defined in KPageModel::Role.
      */
@@ -147,7 +141,7 @@ public:
     QAbstractItemDelegate *itemDelegate() const;
 
     /*!
-     * Sets the @p widget which will be shown when a page is selected
+     * Sets the \a widget which will be shown when a page is selected
      * that has no own widget set.
      */
     void setDefaultWidget(QWidget *widget);

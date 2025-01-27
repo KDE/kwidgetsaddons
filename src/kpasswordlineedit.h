@@ -16,11 +16,12 @@
 class QAction;
 
 /*!
- * @class KPasswordLineEdit kpasswordlineedit.h KPasswordLineEdit
+ * \class KPasswordLineEdit
+ * \inmodule KWidgetsAddons
  *
- * A lineedit which allows to display password
+ * \brief A lineedit which allows to display password
  *
- * \section usage Usage Example
+ * Usage Example:
  *
  * Get password
  *
@@ -29,14 +30,25 @@ class QAction;
  * QString password = passwordLineEdit->password();
  * \endcode
  *
- * @author Laurent Montel <montel@kde.org>
  * \since 5.37
  */
 class KWIDGETSADDONS_EXPORT KPasswordLineEdit : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KPasswordLineEdit::password
+     */
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
+
+    /*!
+     * \property KPasswordLineEdit::clearButtonEnabled
+     */
     Q_PROPERTY(bool clearButtonEnabled READ isClearButtonEnabled WRITE setClearButtonEnabled)
+
+    /*!
+     * \property KPasswordLineEdit::echoMode
+     */
     Q_PROPERTY(QLineEdit::EchoMode echoMode READ echoMode WRITE setEchoMode NOTIFY echoModeChanged)
 public:
     /*!
@@ -46,9 +58,7 @@ public:
      * \a parent Passed to lower level constructor.
      */
     explicit KPasswordLineEdit(QWidget *parent = nullptr);
-    /*!
-     * Destructs the lineedit password widget.
-     */
+
     ~KPasswordLineEdit() override;
 
     /*!
@@ -112,13 +122,13 @@ public:
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
-     * @code{.cpp}
+     * \code
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
      *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::OnlyNew);
      * } else {
      *     passwordLineEdit.setRevealPasswordMode(KPasswordLineEdit::RevealPasswordMode::Never);
      * }
-     * @endcode
+     * \endcode
      * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
@@ -131,17 +141,19 @@ public:
      * \code
      * passwordLineEdit.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
+     * \deprecated[6.0]
      */
     [[deprecated("Use setRevealPasswordMode")]] void setRevealPasswordAvailable(bool reveal);
 
     /*!
      * Whether the visibility trailing action in the line edit is visible.
+     * \deprecated[6.0]
      */
     [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
 #endif
 
     /*!
-     * @internal
+     * \internal
      * Returns the QAction
      */
     QAction *toggleEchoModeAction() const;
@@ -156,6 +168,10 @@ Q_SIGNALS:
      * When we click on visibility icon echo mode is switched between Normal echo mode and Password echo mode
      */
     void echoModeChanged(QLineEdit::EchoMode echoMode);
+
+    /*!
+     *
+     */
     void passwordChanged(const QString &password);
 
 private:

@@ -14,7 +14,8 @@
 #include <memory>
 
 /*!
- * @class KTimeComboBox ktimecombobox.h KTimeComboBox
+ * \class KTimeComboBox
+ * \inmodule KWidgetsAddons
  *
  * \brief A combobox for times.
  */
@@ -22,10 +23,29 @@ class KWIDGETSADDONS_EXPORT KTimeComboBox : public QComboBox
 {
     Q_OBJECT
 
+    /*!
+     * \property KTimeComboBox::time
+     */
     Q_PROPERTY(QTime time READ time WRITE setTime NOTIFY timeChanged USER true)
+
+    /*!
+     * \property KTimeComboBox::minimumTime
+     */
     Q_PROPERTY(QTime minimumTime READ minimumTime WRITE setMinimumTime RESET resetMinimumTime)
+
+    /*!
+     * \property KTimeComboBox::maximumTime
+     */
     Q_PROPERTY(QTime maximumTime READ maximumTime WRITE setMaximumTime RESET resetMaximumTime)
+
+    /*!
+     * \property KTimeComboBox::timeListInterval
+     */
     Q_PROPERTY(int timeListInterval READ timeListInterval WRITE setTimeListInterval)
+
+    /*!
+     * \property KTimeComboBox::options
+     */
     Q_PROPERTY(Options options READ options WRITE setOptions)
 
 public:
@@ -33,17 +53,18 @@ public:
      * Options provided by the widget
      * \sa options
      * \sa setOptions
-     * \sa Options
+     *
+     * \value EditTime Allow the user to manually edit the time in the combo line edit
+     * \value SelectTime Allow the user to select the time from a drop-down menu
+     * \value ForceTime Any set or entered time will be forced to one of the drop-down times
+     * \value WarnOnInvalid Show a warning box on focus out if the user enters an invalid time
      */
     enum Option {
-        EditTime = 0x0001, /*!< Allow the user to manually edit the time in the combo line edit */
-        SelectTime = 0x0002, /*!< Allow the user to select the time from a drop-down menu */
-        ForceTime = 0x0004, /*!< Any set or entered time will be forced to one of the drop-down times */
-        WarnOnInvalid = 0x0008, /*!< Show a warning box on focus out if the user enters an invalid time */
+        EditTime = 0x0001,
+        SelectTime = 0x0002,
+        ForceTime = 0x0004,
+        WarnOnInvalid = 0x0008,
     };
-    /*!
-     * Stores a combination of #Option values.
-     */
     Q_DECLARE_FLAGS(Options, Option)
     Q_FLAG(Options)
 
@@ -52,15 +73,10 @@ public:
      */
     explicit KTimeComboBox(QWidget *parent = nullptr);
 
-    /*!
-     * Destroy the widget
-     */
     ~KTimeComboBox() override;
 
     /*!
      * Return the currently selected time
-     *
-     * @return the currently selected time
      */
     QTime time() const;
 
@@ -69,8 +85,6 @@ public:
      *
      * If the user input is null then it is not valid
      *
-     * @return if the current user input is valid
-     *
      * \sa isNull()
      */
     bool isValid() const;
@@ -78,16 +92,12 @@ public:
     /*!
      * Return if the current user input is null
      *
-     * @return if the current user input is null
-     *
      * \sa isValid()
      */
     bool isNull() const;
 
     /*!
      * Return the currently set widget options
-     *
-     * @return the currently set widget options
      */
     Options options() const;
 
@@ -95,15 +105,11 @@ public:
      * Return the currently set time format
      *
      * By default this is the Short Format
-     *
-     * @return the currently set time format
      */
     QLocale::FormatType displayFormat() const;
 
     /*!
      * Return the current minimum time
-     *
-     * @return the current minimum time
      */
     QTime minimumTime() const;
 
@@ -114,8 +120,6 @@ public:
 
     /*!
      * Return the current maximum time
-     *
-     * @return the current maximum time
      */
     QTime maximumTime() const;
 
@@ -130,8 +134,11 @@ public:
      * If either time is invalid, or min > max then the range will not be set.
      *
      * \a minTime the minimum time
+     *
      * \a maxTime the maximum time
+     *
      * \a minWarnMsg the minimum warning message
+     *
      * \a maxWarnMsg the maximum warning message
      */
     void setTimeRange(const QTime &minTime, const QTime &maxTime, const QString &minWarnMsg = QString(), const QString &maxWarnMsg = QString());
@@ -142,11 +149,9 @@ public:
     void resetTimeRange();
 
     /*!
-     * Return the interval between select time list entries if set by setTimeListInterval().
+     * Return the interval in minutes between select time list entries if set by setTimeListInterval().
      *
      * Returns -1 if not set.
-     *
-     * @return the select time list interval in minutes
      *
      * \sa setTimeListInterval()
      */
@@ -154,8 +159,6 @@ public:
 
     /*!
      * Return the list of times able to be selected in the drop-down.
-     *
-     * @return the select time list
      *
      * \sa setTimeList()
      * \sa timeListInterval()
@@ -228,6 +231,7 @@ public Q_SLOTS:
      * then the minimum will not be set.
      *
      * \a minTime the minimum time
+     *
      * \a minWarnMsg the minimum warning message
      *
      * \sa minimumTime()
@@ -244,6 +248,7 @@ public Q_SLOTS:
      * then the maximum will not be set.
      *
      * \a maxTime the maximum time
+     *
      * \a maxWarnMsg the maximum warning message
      *
      * \sa minimumTime()
@@ -256,14 +261,14 @@ public Q_SLOTS:
     /*!
      * Set the interval between times able to be selected from the drop-down.
      *
-     * The combo drop-down will be populated with times every @p minutes
+     * The combo drop-down will be populated with times every \a minutes
      * apart, starting from the minimumTime() and ending at maximumTime().
      *
      * If the ForceInterval option is set then any time manually typed into the
      * combo line edit will be forced to the nearest interval.
      *
      * This interval must be an exact divisor of the valid time range hours.
-     * For example with the default 24 hour range @p interval must divide 1440
+     * For example with the default 24 hour range \a interval must divide 1440
      * minutes exactly, meaning 1, 6 and 90 are valid but 7, 31 and 91 are not.
      *
      * Setting the time list interval will override any time list previously set
@@ -288,7 +293,9 @@ public Q_SLOTS:
      * and latest value in the list.
      *
      * \a timeList the list of times able to be selected
+     *
      * \a minWarnMsg the minimum warning message
+     *
      * \a maxWarnMsg the maximum warning message
      *
      * \sa timeList()

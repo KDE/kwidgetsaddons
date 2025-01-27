@@ -19,7 +19,8 @@
 class KPageDialogPrivate;
 
 /*!
- * @class KPageDialog kpagedialog.h KPageDialog
+ * \class KPageDialog
+ * \inmodule KWidgetsAddons
  *
  * \brief A dialog base class which can handle multiple pages.
  *
@@ -27,24 +28,26 @@ class KPageDialogPrivate;
  * pages and allows the user to switch between these pages in
  * different ways.
  *
- * Currently, @p Auto, @p Plain, @p List, @p Tree and @p Tabbed face
+ * Currently, Auto, Plain, List, Tree and Tabbed face
  * types are available (cmp. KPageView).
  *
  * By default a QDialogButtonBox is added to the dialog with two buttons,
- * OK (@c QDialogButtonBox::Ok) and Cancel (@c QDialogButtonBox::Cancel).
+ * OK (QDialogButtonBox::Ok) and Cancel (QDialogButtonBox::Cancel).
  * You can customize which buttons are added to the dialog by using any of the
  * available buttons-related methods.
  *
  * Note that if there is a QDialogButtonBox (either the one added by default, or
  * one you added manually) some logical connections are created:
- * - @c QDialogButtonBox::accepted() is connected to @c QDialog::accept()
- * - @c QDialogButtonBox::rejected() is connected to @c QDialog::reject()
+ * \list
+ * \li QDialogButtonBox::accepted() is connected to QDialog::accept()
+ * \li QDialogButtonBox::rejected() is connected to QDialog::reject()
+ * \endlist
  * this means that you shouldn't create these connections again (otherwise you
  * would end up receiving two duplicate accepted() signals for example).
  *
- * <b>Example:</b>\n
+ * Example:
  *
- * @code
+ * \code
  * UrlDialog::UrlDialog( QWidget *parent )
  *   : KPageDialog( parent )
  * {
@@ -70,9 +73,7 @@ class KPageDialogPrivate;
  *                                                   this);
  *   setButtonBox(btnBox);
  * }
- * @endcode
- *
- * @author Tobias Koenig (tokoe@kde.org)
+ * \endcode
  */
 class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
 {
@@ -82,38 +83,21 @@ class KWIDGETSADDONS_EXPORT KPageDialog : public QDialog
 public:
     /*!
      * The face types supported.
+     *
+     * \value Auto A dialog with a face based on the structure of the available pages. If only a single page is added, the dialog behaves like in Plain mode,
+     * with multiple pages without sub pages it behaves like in List mode and like in Tree mode otherwise.
+     * \value Plain A normal dialog
+     * \value List A dialog with an icon list on the left side and a representation of the contents on the right side
+     * \value Tree A dialog with a tree on the left side and a representation of the contents on the right side
+     * \value Tabbed A dialog with a tab bar above the representation of the contents
+     * \value FlatList A dialog with an flat list with small icons on the left side and a representation of the contents on the right side
      */
     enum FaceType {
-        /*!
-         * A dialog with a face based on the structure of the available pages.
-         * If only a single page is added, the dialog behaves like
-         * in @c Plain mode, with multiple pages without sub pages
-         * it behaves like in @c List mode and like in @c Tree mode otherwise.
-         */
         Auto = KPageView::Auto,
-        /*!
-         * A normal dialog
-         */
         Plain = KPageView::Plain,
-        /*!
-         * A dialog with an icon list on the left side and a
-         * representation of the contents on the right side
-         */
         List = KPageView::List,
-        /*!
-         * A dialog with a tree on the left side and a
-         * representation of the contents on the right side
-         */
         Tree = KPageView::Tree,
-        /*!
-         * A dialog with a tab bar above the representation
-         * of the contents
-         */
         Tabbed = KPageView::Tabbed,
-        /*!
-         * A dialog with an flat list with small icons on the left side
-         * and a representation of the contents on the right side
-         */
         FlatList = KPageView::FlatList,
     };
 
@@ -123,9 +107,6 @@ public:
      */
     explicit KPageDialog(QWidget *parent = nullptr, Qt::WindowFlags flags = Qt::WindowFlags());
 
-    /*!
-     * Destroys the page dialog.
-     */
     ~KPageDialog() override;
 
     /*!
@@ -137,9 +118,10 @@ public:
      * Adds a new top level page to the dialog.
      *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
@@ -153,12 +135,14 @@ public:
     /*!
      * Inserts a new page in the dialog.
      *
-     * \a before The new page will be insert before this KPageWidgetItem
+     * \a before the new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
-     * \a widget The widget of the page.
-     * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * \a widget the widget of the page.
+     *
+     * \a name the name which is displayed in the navigation view.
+     *
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
@@ -176,10 +160,12 @@ public:
      * Inserts a new sub page in the dialog.
      *
      * \a parent The new page will be insert as child of this KPageWidgetItem.
+     *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
@@ -230,6 +216,7 @@ Q_SIGNALS:
      * This signal is emitted whenever the current page has changed.
      *
      * \a current The new current page or a null pointer if no current page is available.
+     *
      * \a before The page that was current before the new current page has changed.
      */
     void currentPageChanged(KPageWidgetItem *current, KPageWidgetItem *before);
@@ -245,7 +232,7 @@ protected:
     /*!
      * This constructor can be used by subclasses to provide a custom page widget.
      *
-     * \param widget The KPageWidget object will be reparented to this object, so you can create
+     * \a widget The KPageWidget object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
      */
     KPageDialog(KPageWidget *widget, QWidget *parent, Qt::WindowFlags flags = Qt::WindowFlags());
@@ -264,7 +251,7 @@ protected:
     /*!
      * Set the page widget of the dialog.
      *
-     * @note the previous pageWidget will be deleted.
+     * \note the previous pageWidget will be deleted.
      *
      * \a widget The KPageWidget object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.
@@ -284,7 +271,7 @@ protected:
     /*!
      * Set the button box of the dialog
      *
-     * @note the previous buttonBox will be deleted.
+     * \note the previous buttonBox will be deleted.
      *
      * \a box The QDialogButtonBox object will be reparented to this object, so you can create
      * it without parent and you are not allowed to delete it.

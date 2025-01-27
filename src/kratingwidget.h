@@ -14,7 +14,8 @@
 #include <kwidgetsaddons_export.h>
 
 /*!
- * \class KRatingWidget kratingwidget.h KRatingWidget
+ * \class KRatingWidget
+ * \inmodule KWidgetsAddons
  *
  * \brief Displays a rating value as a row of pixmaps.
  *
@@ -22,17 +23,39 @@
  * pixmaps and allows the user to select a certain number by mouse.
  *
  * \sa KRatingPainter
- *
- * \author Sebastian Trueg <trueg@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KRatingWidget : public QFrame
 {
     Q_OBJECT
+
+    /*!
+     * \property KRatingWidget::rating
+     */
     Q_PROPERTY(int rating READ rating WRITE setRating)
+
+    /*!
+     * \property KRatingWidget::maxRating
+     */
     Q_PROPERTY(int maxRating READ maxRating WRITE setMaxRating)
+
+    /*!
+     * \property KRatingWidget::alignment
+     */
     Q_PROPERTY(Qt::Alignment alignment READ alignment WRITE setAlignment)
+
+    /*!
+     * \property KRatingWidget::halfStepsEnabled
+     */
     Q_PROPERTY(bool halfStepsEnabled READ halfStepsEnabled WRITE setHalfStepsEnabled)
+
+    /*!
+     * \property KRatingWidget::spacing
+     */
     Q_PROPERTY(int spacing READ spacing WRITE setSpacing)
+
+    /*!
+     * \property KRatingWidget::icon
+     */
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
 
 public:
@@ -41,18 +64,15 @@ public:
      */
     explicit KRatingWidget(QWidget *parent = nullptr);
 
-    /*!
-     * Destructor
-     */
     ~KRatingWidget() override;
 
     /*!
-     * \return The current rating.
+     * Returns the current rating.
      */
     int rating() const;
 
     /*!
-     * \return the maximum possible rating.
+     * Returns the maximum possible rating.
      */
     int maxRating() const;
 
@@ -64,7 +84,9 @@ public:
     Qt::Alignment alignment() const;
 
     /*!
-     * The layout direction. If RTL the stars
+     * The layout direction.
+     *
+     * If RTL the stars
      * representing the rating value will be drawn from the
      * right.
      *
@@ -107,7 +129,7 @@ Q_SIGNALS:
 public Q_SLOTS:
     /*!
      * Set the current rating. Calling this method will trigger the
-     * ratingChanged signal if @p rating is different from the previous rating.
+     * ratingChanged signal if \a rating is different from the previous rating.
      */
     void setRating(int rating);
 

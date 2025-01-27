@@ -16,15 +16,13 @@
 class QPixmap;
 
 /*!
- * \class KPixmapSequence kpixmapsequence.h KPixmapSequence
+ * \class KPixmapSequence
+ * \inmodule KWidgetsAddons
  *
  * \brief Loads and gives access to the frames of a typical multi-row pixmap
  * as often used for spinners.
  *
  * KPixmapSequence is implicitly shared. Copying is fast.
- *
- * \author Aurélien Gâteau <agateau@kde.org>
- * \author Sebastian Trueg <trueg@kde.org>
  *
  * \since 4.4
  */
@@ -36,16 +34,14 @@ public:
      */
     KPixmapSequence();
 
-    /*!
-     * Copy constructor
-     */
     KPixmapSequence(const KPixmapSequence &other);
 
     /*!
      * Create a sequence from a pixmap.
      *
-     * \param pixmap Pixmap to load
-     * \param frameSize The size of the frames to load. The width of the file has to be
+     * \a pixmap Pixmap to load
+     *
+     * \a frameSize The size of the frames to load. The width of the file has to be
      * a multiple of the frame width; the same is true for the height. If an invalid
      * size is specified the file is considered to be one column of square frames.
      */
@@ -54,14 +50,12 @@ public:
     /*!
      * Create a sequence from an icon name.
      *
-     * \param fullPath The full path of the icon
-     * \param size The icon/frame size
+     * \a fullPath The full path of the icon
+     *
+     * \a size The icon/frame size
      */
     KPixmapSequence(const QString &fullPath, int size);
 
-    /*!
-     * Destructor
-     */
     ~KPixmapSequence();
 
     /*!
@@ -70,16 +64,16 @@ public:
     KPixmapSequence &operator=(const KPixmapSequence &other);
 
     /*!
-     * \return \p true if a sequence was loaded successfully.
+     * Returns \c true if a sequence was loaded successfully.
      *
-     * \sa isEmpty
+     * \sa isEmpty()
      */
     bool isValid() const;
 
     /*!
      * \return \p true if no sequence was loaded successfully.
      *
-     * \sa isValid
+     * \sa isValid()
      */
     bool isEmpty() const;
 
@@ -96,7 +90,7 @@ public:
     /*!
      * Retrieve the frame at \p index.
      *
-     * \param index The index of the frame in question starting at 0.
+     * \a index The index of the frame in question starting at 0.
      */
     QPixmap frameAt(int index) const;
 

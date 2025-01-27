@@ -12,33 +12,41 @@
 #include <memory>
 
 /*!
- * @class KSeparator kseparator.h KSeparator
+ * \class KSeparator
+ * \inmodule KWidgetsAddons
  *
- * Standard horizontal or vertical separator.
+ * \brief Standard horizontal or vertical separator.
  *
  * \image html kseparator-horizontal.png "KSeparator Widget with horizontal orientation"
  * \image html kseparator-vertical.png "KSeparator Widget with vertical orientation"
- *
- * @author Michael Roth <mroth@wirlweb.de>
  */
 class KWIDGETSADDONS_EXPORT KSeparator : public QFrame
 {
     Q_OBJECT
+
+    /*!
+     * \property KSeparator::orientation
+     */
     Q_PROPERTY(Qt::Orientation orientation READ orientation WRITE setOrientation)
 
 public:
     /*!
      * Constructor.
+     *
      * \a parent parent object.
+     *
      * \a f extra QWidget flags.
      */
     explicit KSeparator(QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
 
     /*!
      * Constructor.
+     *
      * \a orientation Set the orientation of the separator.
      * Possible values are Horizontal or Vertical.
+     *
      * \a parent parent object.
+     *
      * \a f extra QWidget flags.
      */
     explicit KSeparator(Qt::Orientation orientation, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
@@ -47,12 +55,11 @@ public:
 
     /*!
      * Returns the orientation of the separator.
-     * @return int Possible values Horizontal or Vertical.
      */
     Qt::Orientation orientation() const;
 
     /*!
-     * Set the orientation of the separator to @p orientation
+     * Set the orientation of the separator to \a orientation
      *
      * \a orientation Possible values are Vertical and Horizontal.
      */

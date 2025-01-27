@@ -29,37 +29,69 @@
 class KSelectActionPrivate;
 
 /*!
- *  @class KSelectAction kselectaction.h KSelectAction
+ * \class KSelectAction
+ * \inmodule KWidgetsAddons
  *
- *  \brief Action for selecting one of several items
+ * \brief Action for selecting one of several items.
  *
- *  Action for selecting one of several items.
+ * Action for selecting one of several items.
  *
- *  This action shows up a submenu with a list of items.
- *  One of them can be checked. If the user clicks on an item
- *  this item will automatically be checked,
- *  the formerly checked item becomes unchecked.
- *  There can be only one item checked at a time.
+ * This action shows up a submenu with a list of items.
+ * One of them can be checked. If the user clicks on an item
+ * this item will automatically be checked,
+ * the formerly checked item becomes unchecked.
+ * There can be only one item checked at a time.
  *
- *  Porting from KF5 to KF6:
+ * Porting from KF5 to KF6:
  *
- *  <!-- Using '%' before the old symbol to prevent auto linking here and below -->
- *  The overloaded signal %KSelectAction::triggered(QAction *action) was renamed
- *  to KSelectAction::actionTriggered(QAction *action).
+ * The overloaded signal KSelectAction::triggered(QAction *action) was renamed
+ * to KSelectAction::actionTriggered(QAction *action).
  *
- *  The protected virtual method %KSelectAction::actionTriggered(QAction *action) was renamed
- *  to KSelectAction::slotActionTriggered(QAction *action).
+ * The protected virtual method KSelectAction::actionTriggered(QAction *action) was renamed
+ * to KSelectAction::slotActionTriggered(QAction *action).
  */
 class KWIDGETSADDONS_EXPORT KSelectAction : public QWidgetAction
 {
     Q_OBJECT
+
+    /*!
+     * \property KSelectAction::currentAction
+     */
     Q_PROPERTY(QAction *currentAction READ currentAction WRITE setCurrentAction)
+
+    /*!
+     * \property KSelectAction::editable
+     */
     Q_PROPERTY(bool editable READ isEditable WRITE setEditable)
+
+    /*!
+     * \property KSelectAction::comboWidth
+     */
     Q_PROPERTY(int comboWidth READ comboWidth WRITE setComboWidth)
+
+    /*!
+     * \property KSelectAction::currentText
+     */
     Q_PROPERTY(QString currentText READ currentText)
+
+    /*!
+     * \property KSelectAction::toolBarMode
+     */
     Q_PROPERTY(ToolBarMode toolBarMode READ toolBarMode WRITE setToolBarMode)
+
+    /*!
+     * \property KSelectAction::toolButtonPopupMode
+     */
     Q_PROPERTY(QToolButton::ToolButtonPopupMode toolButtonPopupMode READ toolButtonPopupMode WRITE setToolButtonPopupMode)
+
+    /*!
+     * \property KSelectAction::currentItem
+     */
     Q_PROPERTY(int currentItem READ currentItem WRITE setCurrentItem)
+
+    /*!
+     * \property KSelectAction::items
+     */
     Q_PROPERTY(QStringList items READ items WRITE setItems)
 
 public:
@@ -72,7 +104,7 @@ public:
 
     /*!
      * Constructs a selection action with text; a shortcut may be specified by
-     * the ampersand character (e.g.\ "&Option" creates a shortcut with key \e O )
+     * the ampersand character (e.g.\ "&Option" creates a shortcut with key \c O )
      *
      * This is the most common KSelectAction used when you do not have a
      * corresponding icon (note that it won't appear in the current version
@@ -80,33 +112,34 @@ public:
      * plugged in a toolbar...).
      *
      * \a text The text that will be displayed.
+     *
      * \a parent The action's parent object.
      */
     KSelectAction(const QString &text, QObject *parent);
 
     /*!
      * Constructs a selection action with text and an icon; a shortcut may be specified by
-     * the ampersand character (e.g.\ "&Option" creates a shortcut with key \e O )
+     * the ampersand character (e.g.\ "&Option" creates a shortcut with key \c O )
      *
      * This is the other common KSelectAction used.  Use it when you
-     * \e do have a corresponding icon.
+     * do have a corresponding icon.
      *
      * \a icon The icon to display.
+     *
      * \a text The text that will be displayed.
+     *
      * \a parent The action's parent object.
      */
     KSelectAction(const QIcon &icon, const QString &text, QObject *parent);
 
-    /*!
-     * Destructor
-     */
     ~KSelectAction() override;
 
+    /*!
+     * \value MenuMode Creates a button which pops up a menu when interacted with, as defined by toolButtonPopupMode().
+     * \value Creates a combo box which contains the actions. This is the default.
+     */
     enum ToolBarMode {
-        /// Creates a button which pops up a menu when interacted with, as defined by toolButtonPopupMode().
         MenuMode,
-        /// Creates a combo box which contains the actions.
-        /// This is the default.
         ComboBoxMode,
     };
     Q_ENUM(ToolBarMode)
@@ -149,14 +182,14 @@ public:
     /*!
      * Returns the index of the current item.
      *
-     * @sa currentText(), currentAction()
+     * \sa currentText(), currentAction()
      */
     int currentItem() const;
 
     /*!
      * Returns the text of the currently selected item.
      *
-     * @sa currentItem(), currentAction()
+     * \sa currentItem(), currentAction()
      */
     QString currentText() const;
 
@@ -181,29 +214,29 @@ public:
      *
      * \a action the QAction to become the currently checked item.
      *
-     * \return \e true if a corresponding action was found and successfully checked.
+     * Returns \c true if a corresponding action was found and successfully checked.
      */
     bool setCurrentAction(QAction *action);
 
     /*!
      * Convenience function to set the currently checked action to be the action
-     * at index \p index.
+     * at index \a index.
      *
      * If there is no action at that index, the currently checked action (if any) will
      * be deselected.
      *
-     * \return \e true if a corresponding action was found and thus set to the current action, otherwise \e false
+     * Returns \c true if a corresponding action was found and thus set to the current action, otherwise \e false
      */
     bool setCurrentItem(int index);
 
     /*!
      * Overloaded member function, provided for convenience, to set the currently
-     * checked action to be the action which has \p text as its text().
+     * checked action to be the action which has \a text as its text().
      *
      * If there is no action at that index, the currently checked action (if any) will
      * be deselected.
      *
-     * \return \e true if a corresponding action was found, otherwise \e false
+     * Returns \c true if a corresponding action was found, otherwise \c false
      */
     bool setCurrentAction(const QString &text, Qt::CaseSensitivity cs = Qt::CaseSensitive);
 
@@ -214,7 +247,7 @@ public:
 
     /*!
      * Overloaded member function, provided for convenience, which creates an action
-     * from \p text and inserts it into the list of selectable actions.
+     * from \a text and inserts it into the list of selectable actions.
      *
      * The newly created action is checkable and not user configurable.
      */
@@ -222,7 +255,7 @@ public:
 
     /*!
      * Overloaded member function, provided for convenience, which creates an action
-     * from \p text and \p icon and inserts it into the list of selectable actions.
+     * from \a text and \a icon and inserts it into the list of selectable actions.
      *
      * The newly created action is checkable and not user configurable.
      */
@@ -245,12 +278,14 @@ public:
 
     /*!
      * Convenience function to create the list of selectable items.
+     *
      * Any previously existing items will be cleared.
      */
     void setItems(const QStringList &lst);
 
     /*!
      * Convenience function which returns the items that can be selected with this action.
+     *
      * It is the same as iterating selectableActionGroup()->actions() and looking at each
      * action's text().
      */
@@ -258,25 +293,30 @@ public:
 
     /*!
      * When this action is plugged into a toolbar, it creates a combobox.
-     * @return true if the combo editable.
+     *
+     * Returns \c true if the combo editable.
      */
     bool isEditable() const;
 
     /*!
      * When this action is plugged into a toolbar, it creates a combobox.
+     *
      * This makes the combo editable or read-only.
      */
     void setEditable(bool);
 
     /*!
      * When this action is plugged into a toolbar, it creates a combobox.
+     *
      * This returns the maximum width set by setComboWidth
      */
     int comboWidth() const;
 
     /*!
      * When this action is plugged into a toolbar, it creates a combobox.
+     *
      * This gives a _maximum_ size to the combobox.
+     *
      * The minimum size is automatically given by the contents (the items).
      */
     void setComboWidth(int width);
@@ -311,7 +351,7 @@ public:
      *
      * Defaults to true.
      *
-     * \param b true if ampersands indicate a keyboard accelerator, otherwise false.
+     * \a b true if ampersands indicate a keyboard accelerator, otherwise false.
      */
     void setMenuAccelsEnabled(bool b);
 
@@ -336,6 +376,7 @@ public:
 Q_SIGNALS:
     /*!
      * This signal is emitted when an item is selected.
+     *
      * \a action indicates the item selected
      *
      * \since 6.0
@@ -344,6 +385,7 @@ Q_SIGNALS:
 
     /*!
      * This signal is emitted when an item is selected.
+     *
      * \a index indicates the item selected
      *
      * \since 5.78
@@ -352,6 +394,7 @@ Q_SIGNALS:
 
     /*!
      * This signal is emitted when an item is selected.
+     *
      * \a text indicates the item selected
      *
      * \since 5.78
@@ -361,7 +404,7 @@ Q_SIGNALS:
 protected Q_SLOTS:
     /*!
      * This function is called whenever an action from the selections is triggered.
-     * The default implementation calls trigger() if isCheckable() is @c true, then emits
+     * The default implementation calls trigger() if isCheckable() is \c true, then emits
      * the signals actionTriggered(QAction *), indexTriggered(int) and textTriggered(const QString &).
      *
      * \since 6.0
@@ -374,27 +417,14 @@ protected Q_SLOTS:
     void slotToggled(bool);
 
 protected:
-    /*!
-     * Reimplemented from QWidgetAction.
-     */
     QWidget *createWidget(QWidget *parent) override;
 
-    /*!
-     * Reimplemented from QWidgetAction.
-     */
     void deleteWidget(QWidget *widget) override;
 
     bool event(QEvent *event) override;
 
     bool eventFilter(QObject *watched, QEvent *event) override;
 
-    /*!
-     * @internal
-     * Creates a new KSelectAction object.
-     *
-     * \a dd the private d member
-     * \a parent The action's parent object.
-     */
     KWIDGETSADDONS_NO_EXPORT KSelectAction(KSelectActionPrivate &dd, QObject *parent);
 
     std::unique_ptr<class KSelectActionPrivate> const d_ptr;

@@ -15,12 +15,14 @@ class QWidget;
 class QAction;
 
 /*!
- * @class KPageWidgetItem kpagewidgetmodel.h KPageWidgetItem
+ * \class KPageWidgetItem
+ * \inmodule KWidgetsAddons
+ * \inheaderfile KPageWidgetModel
  *
- * KPageWidgetItem is used by @ref KPageWidget and represents
+ * \brief KPageWidgetItem is used by KPageWidget and represents
  * a page.
  *
- * <b>Example:</b>\n
+ * Example:
  *
  * \code
  *  ColorPage *page = new ColorPage;
@@ -32,31 +34,57 @@ class QAction;
  *  KPageWidget *pageWidget = new KPageWidget( this );
  *  pageWidget->addPage( item );
  * \endcode
- *
- * @author Tobias Koenig (tokoe@kde.org)
  */
 class KWIDGETSADDONS_EXPORT KPageWidgetItem : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString name READ name WRITE setName)
-    Q_PROPERTY(QString header READ header WRITE setHeader)
-    Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
-    Q_PROPERTY(bool checkable READ isCheckable WRITE setCheckable)
-    Q_PROPERTY(bool checked READ isChecked WRITE setChecked)
+
     /*!
+     * \property KPageWidgetItem::name
+     */
+    Q_PROPERTY(QString name READ name WRITE setName)
+
+    /*!
+     * \property KPageWidgetItem::header
+     */
+    Q_PROPERTY(QString header READ header WRITE setHeader)
+
+    /*!
+     * \property KPageWidgetItem::icon
+     */
+    Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
+
+    /*!
+     * \property KPageWidgetItem::checkable
+     */
+    Q_PROPERTY(bool checkable READ isCheckable WRITE setCheckable)
+
+    /*!
+     * \property KPageWidgetItem::checked
+     */
+    Q_PROPERTY(bool checked READ isChecked WRITE setChecked)
+
+    /*!
+     * \property KPageWidgetItem::enabled
+     *
      * This property holds whether the item is enabled.
      *
      * It dis-/enables both the widget and the item in the list-/treeview.
      */
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
+
     /*!
+     * \property KPageWidgetItem::headerVisible
      * \since 5.52
      */
     Q_PROPERTY(bool headerVisible READ isHeaderVisible WRITE setHeaderVisible)
+
     /*!
+     * \property KPageWidgetItem::actions
+     *
      * This property holds the actions associated to the page.
      *
-     * @warning This is not supported when using a KPageView/KPageWidget/KPageDialog with
+     * \warning This is not supported when using a KPageView/KPageWidget/KPageDialog with
      * the Tabbed face type.
      * \since 6.6
      */
@@ -73,14 +101,12 @@ public:
      * Creates a new page widget item.
      *
      * \a widget The widget that is shown as page in the KPageWidget.
+     *
      * \a name The localized string that is show in the navigation view
      *             of the KPageWidget.
      */
     KPageWidgetItem(QWidget *widget, const QString &name);
 
-    /*!
-     * Destroys the page widget item.
-     */
     ~KPageWidgetItem() override;
 
     /*!
@@ -210,9 +236,10 @@ private:
 class KPageWidgetModelPrivate;
 
 /*!
- * @class KPageWidgetModel kpagewidgetmodel.h KPageWidgetModel
+ * \class KPageWidgetModel
+ * \inmodule KWidgetsAddons
  *
- * This page model is used by KPageWidget to provide
+ * \brief This page model is used by KPageWidget to provide
  * a hierarchical layout of pages.
  */
 class KWIDGETSADDONS_EXPORT KPageWidgetModel : public KPageModel
@@ -237,9 +264,10 @@ public:
      * Adds a new top level page to the model.
      *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *addPage(QWidget *widget, const QString &name);
 
@@ -256,9 +284,10 @@ public:
      * \a before The new page will be insert before this KPageWidgetItem
      *               on the same level in hierarchy.
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *insertPage(KPageWidgetItem *before, QWidget *widget, const QString &name);
 
@@ -276,10 +305,12 @@ public:
      * Inserts a new sub page in the model.
      *
      * \a parent The new page will be insert as child of this KPageWidgetItem.
+     *
      * \a widget The widget of the page.
+     *
      * \a name The name which is displayed in the navigation view.
      *
-     * @returns The associated KPageWidgetItem.
+     * Returns the associated KPageWidgetItem.
      */
     KPageWidgetItem *addSubPage(KPageWidgetItem *parent, QWidget *widget, const QString &name);
 
@@ -297,9 +328,6 @@ public:
      */
     void removePage(KPageWidgetItem *item);
 
-    /*!
-     * These methods are reimplemented from QAbstractItemModel.
-     */
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
@@ -322,7 +350,7 @@ public:
 Q_SIGNALS:
     /*!
      * This signal is emitted whenever a checkable page changes its state. \a checked is true
-     * when the @p page is checked, or false if the @p page is unchecked.
+     * when the \a page is checked, or false if the \a page is unchecked.
      */
     void toggled(KPageWidgetItem *page, bool checked);
 

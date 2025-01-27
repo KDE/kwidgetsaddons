@@ -20,7 +20,8 @@ class QPoint;
 class QRect;
 
 /*!
- * \class KRatingPainter kratingpainter.h KRatingPainter
+ * \class KRatingPainter
+ * \inmodule KWidgetsAddons
  *
  * \brief Utility class that draws a row of stars for a rating value.
  *
@@ -29,8 +30,6 @@ class QRect;
  * and custom icons.
  *
  * For showing a rating in a widget see KRatingWidget.
- *
- * \author Sebastian Trueg <trueg@kde.org>
  *
  * \since 4.1
  */
@@ -44,9 +43,6 @@ public:
      */
     KRatingPainter();
 
-    /*!
-     * Destructor
-     */
     ~KRatingPainter();
 
     KRatingPainter(const KRatingPainter &) = delete;
@@ -163,11 +159,14 @@ public:
     /*!
      * Draw the rating.
      *
-     * \param painter The painter to draw the rating to.
-     * \param rect The geometry of the rating. The alignment of the rating is used relative
+     * \a painter The painter to draw the rating to.
+     *
+     * \a rect The geometry of the rating. The alignment of the rating is used relative
      *             to this value.
-     * \param rating The actual rating value to draw.
-     * \param hoverRating The hover rating indicates the position the user hovers the mouse
+     *
+     * \a rating The actual rating value to draw.
+     *
+     * \a hoverRating The hover rating indicates the position the user hovers the mouse
      *                    pointer at. This will provide visual feedback about the new rating
      *                    if the user would actually click as well as the difference to the
      *                    current rating.
@@ -177,7 +176,7 @@ public:
     /*!
      * Calculate the rating value from mouse position pos.
      *
-     * \return The rating corresponding to pos or -1 if pos is
+     * Returns the rating corresponding to pos or -1 if pos is
      * outside of the configured rect.
      */
     int ratingFromPosition(const QRect &rect, const QPoint &pos) const;
@@ -187,7 +186,7 @@ public:
      *
      * LayoutDirection is read from QPainter.
      *
-     * \param align can be aligned vertically and horizontally. Using Qt::AlignJustify will insert spacing
+     * \a align can be aligned vertically and horizontally. Using Qt::AlignJustify will insert spacing
      * between the stars.
      */
     static void paintRating(QPainter *p, const QRect &rect, Qt::Alignment align, int rating, int hoverRating = -1);

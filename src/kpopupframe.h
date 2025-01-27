@@ -16,23 +16,17 @@
 #include <memory>
 
 /*!
- * @class KPopupFrame kpopupframe.h KPopupFrame
+ * \class KPopupFrame
+ * \inmodule KWidgetsAddons
  *
- * Frame with popup menu behavior.
- * @author Tim Gilman, Mirko Boehm
+ * \brief Frame with popup menu behavior.
  */
 class KWIDGETSADDONS_EXPORT KPopupFrame : public QFrame
 {
     Q_OBJECT
 protected:
-    /*!
-     * Catch key press events.
-     */
     void keyPressEvent(QKeyEvent *e) override;
 
-    /*!
-     * Catch hide events.
-     */
     void hideEvent(QHideEvent *e) override;
 
 public Q_SLOTS:
@@ -49,9 +43,6 @@ public:
      */
     KPopupFrame(QWidget *parent = nullptr);
 
-    /*!
-     * The destructor
-     */
     ~KPopupFrame() override;
 
     /*!
@@ -85,6 +76,9 @@ public:
     int exec(int x, int y);
 
 Q_SIGNALS:
+    /*!
+     *
+     */
     void leaveModality();
 
 private:

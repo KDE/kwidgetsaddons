@@ -19,15 +19,14 @@ class QEvent;
 class QRect;
 
 /*!
- * \class KPixmapSequenceOverlayPainter kpixmapsequenceoverlaypainter.h KPixmapSequenceOverlayPainter
+ * \class KPixmapSequenceOverlayPainter
+ * \inmodule KWidgetsAddons
  *
  * \brief Paints a KPixmapSequence on top of any widget at any position.
  *
  * The KPixmapSequenceOverlayPainter paints an overlay on top of an arbitrary QWidget
  * using a KPixmapSequence. This is typically used for spinners indicating that a process
  * is not finished yet.
- *
- * \author Sebastian Trueg <trueg@kde.org>
  *
  * \since 4.4
  */
@@ -40,11 +39,12 @@ public:
      * Constructor
      */
     explicit KPixmapSequenceOverlayPainter(QObject *parent = nullptr);
-    KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent = nullptr);
 
     /*!
-     * Destructor
+     *
      */
+    KPixmapSequenceOverlayPainter(const KPixmapSequence &seq, QObject *parent = nullptr);
+
     ~KPixmapSequenceOverlayPainter() override;
 
     /*!
@@ -100,7 +100,7 @@ public Q_SLOTS:
      * this optional property does not scale the pixmaps (except if
      * it is smaller) but allows to change the placement.
      *
-     * \param rect The rect in which to draw the pixmap using alignment
+     * \a rect The rect in which to draw the pixmap using alignment
      * and offset. Be aware that setting a rect bigger than the widget
      * can lead to weird painting errors.
      *
@@ -111,7 +111,8 @@ public Q_SLOTS:
     /*!
      * Set the alignment of the sequence in rect.
      *
-     * \param align alignment of the overlay. Qt::AlignJustify does not make sense here.
+     * \a align alignment of the overlay. Qt::AlignJustify does not make sense here.
+     *
      * Defaults to Qt::Center.
      */
     void setAlignment(Qt::Alignment align);
@@ -120,7 +121,7 @@ public Q_SLOTS:
      * Set the offset relative to the placement determined by alignment
      * and rect.
      *
-     * \param offset An optional offset which allows an absolute placement.
+     * \a offset An optional offset which allows an absolute placement.
      *
      * Defaults to an empty point.
      */

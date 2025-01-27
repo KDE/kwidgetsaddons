@@ -12,7 +12,7 @@
 #include <qmetatype.h>
 
 /*!
- * @internal
+ * \internal
  * Used internally by KMessageBox, implemented by plugin, for dynamic dependency on KConfig.
  */
 class KMessageBoxDontAskAgainInterface

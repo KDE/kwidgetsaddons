@@ -15,7 +15,8 @@
 class KPixmapSequence;
 
 /*!
- * \class KPixmapSequenceWidget kpixmapsequencewidget.h KPixmapSequenceWidget
+ * \class KPixmapSequenceWidget
+ * \inmodule KWidgetsAddons
  *
  * \brief A simple widget showing a fixed size pixmap sequence.
  *
@@ -23,8 +24,6 @@ class KPixmapSequence;
  * sequence of pixmaps. It is intended as a simple wrapper around the
  * KPixmapSequenceOverlayPainter in case a widget is more appropriate than
  * an event filter.
- *
- * \author Sebastian Trueg <trueg@kde.org>
  *
  * \since 4.4
  */
@@ -38,11 +37,12 @@ public:
      * Constructor
      */
     explicit KPixmapSequenceWidget(QWidget *parent = nullptr);
-    KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent = nullptr);
 
     /*!
-     * Destructor
+     *
      */
+    KPixmapSequenceWidget(const KPixmapSequence &seq, QWidget *parent = nullptr);
+
     ~KPixmapSequenceWidget() override;
 
     /*!
@@ -59,9 +59,6 @@ public:
      */
     int interval() const;
 
-    /*!
-     * \reimpl
-     */
     QSize sizeHint() const override;
 
 public Q_SLOTS:

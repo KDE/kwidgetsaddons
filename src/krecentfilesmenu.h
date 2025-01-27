@@ -15,7 +15,10 @@
 class KRecentFilesMenuPrivate;
 
 /*!
- * A menu that offers a set of recent files.
+ * \class KRecentFilesMenu
+ * \inmodule KWidgetsAddons
+ *
+ * \brief A menu that offers a set of recent files.
  *
  * \since 5.74
  */
@@ -23,7 +26,14 @@ class KWIDGETSADDONS_EXPORT KRecentFilesMenu : public QMenu
 {
     Q_OBJECT
 public:
+    /*!
+     *
+     */
     explicit KRecentFilesMenu(const QString &title, QWidget *parent = nullptr);
+
+    /*!
+     *
+     */
     explicit KRecentFilesMenu(QWidget *parent = nullptr);
     ~KRecentFilesMenu() override;
 
@@ -44,17 +54,18 @@ public:
     void setGroup(const QString &group);
 
     /*!
-     *  Add URL to recent files list. This will enable this action.
+     * Add URL to recent files list. This will enable this action.
      *
-     *  \a url The URL of the file
-     *  \a name The user visible pretty name that appears before the URL
+     * \a url The URL of the file
+     *
+     * \a name The user visible pretty name that appears before the URL
      */
     void addUrl(const QUrl &url, const QString &name = QString());
 
     /*!
-     *  Remove a URL from the recent files list.
+     * Remove a URL from the recent files list.
      *
-     *  \a url The URL of the file
+     * \a url The URL of the file
      */
     void removeUrl(const QUrl &url);
 
@@ -71,15 +82,15 @@ public:
     /*!
      * Set the maximum URL count.
      *
-     * See \ref maximumItems
+     * \sa maximumItems()
      */
     void setMaximumItems(size_t maximumItems);
 
     /*!
      * List of URLs of recent files.
      *
-     * See \ref clearRecentFiles
-     * See \ref recentFilesChanged
+     * \sa clearRecentFiles()
+     * \sa recentFilesChanged()
      *
      * \since 5.101
      */
@@ -89,8 +100,8 @@ public Q_SLOTS:
     /*!
      * Clear recent files list.
      *
-     * See \ref recentFiles
-     * See \ref recentFilesChanged
+     * \sa recentFiles()
+     * \sa recentFilesChanged()
      *
      * \since 5.101
      */
@@ -98,7 +109,8 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     /*!
-     * emitted when the user clicks on a file action.
+     * Emitted when the user clicks on a file action.
+     *
      * Usually this should result in the specified URL being opened.
      *
      * \a url The url associated with the triggered action.
@@ -108,8 +120,8 @@ Q_SIGNALS:
     /*!
      * Emitted when the recent files list has been changed.
      *
-     * See \ref recentFiles
-     * See \ref clearRecentFiles
+     * \sa recentFiles()
+     * \sa clearRecentFiles()
      *
      * \since 5.101
      */

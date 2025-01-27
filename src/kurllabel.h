@@ -20,7 +20,7 @@
 class QCursor;
 
 /*!
- * @class KUrlLabel kurllabel.h KUrlLabel
+ * \class KUrlLabel
  *
  * \brief A drop-in replacement for QLabel that displays hyperlinks.
  *
@@ -53,19 +53,44 @@ class QCursor;
  * as its argument.
  *
  * \image html kurllabel.png "KUrlLabel Widget"
- *
- * @author Kurt Granroth <granroth@kde.org> (Interface)
- * @author Peter Putzer <putzer@kde.org> (Rewrite)
  */
 class KWIDGETSADDONS_EXPORT KUrlLabel : public QLabel
 {
     Q_OBJECT
+
+    /*!
+     * \property KUrlLabel::url
+     */
     Q_PROPERTY(QString url READ url WRITE setUrl)
+
+    /*!
+     * \property KUrlLabel::tipText
+     */
     Q_PROPERTY(QString tipText READ tipText WRITE setTipText)
+
+    /*!
+     * \property KUrlLabel::alternatePixmap
+     */
     Q_PROPERTY(QPixmap alternatePixmap READ alternatePixmap WRITE setAlternatePixmap)
+
+    /*!
+     * \property KUrlLabel::glowEnabled
+     */
     Q_PROPERTY(bool glowEnabled READ isGlowEnabled WRITE setGlowEnabled)
+
+    /*!
+     * \property KUrlLabel::floatEnabled
+     */
     Q_PROPERTY(bool floatEnabled READ isFloatEnabled WRITE setFloatEnabled)
+
+    /*!
+     * \property KUrlLabel::useTips
+     */
     Q_PROPERTY(bool useTips READ useTips WRITE setUseTips)
+
+    /*!
+     * \property KUrlLabel::useCursor
+     */
     Q_PROPERTY(bool useCursor READ useCursor WRITE setUseCursor)
 
 public:
@@ -81,8 +106,10 @@ public:
      * Convenience constructor.
      *
      * \a url is the URL emitted when the label is clicked.
+     *
      * \a text is the displayed string. If it's equal to QString()
-     * the @p url will be used instead.
+     * the \a url will be used instead.
+     *
      * \a parent Passed to lower level constructor
      *
      * @p parent and @p name are passed to QLabel, which in turn passes
@@ -90,9 +117,6 @@ public:
      */
     explicit KUrlLabel(const QString &url, const QString &text = QString(), QWidget *parent = nullptr);
 
-    /*!
-     * Destructs the label.
-     */
     ~KUrlLabel() override;
 
     /*!
@@ -106,14 +130,14 @@ public:
     QString tipText() const;
 
     /*!
-     * @return true if a tooltip will be displayed.
+     * Returns \c true if a tooltip will be displayed.
      *
      * \sa setTipText()
      */
     bool useTips() const;
 
     /*!
-     * @return true if the cursor will change while over the URL.
+     * Returns \c true if the cursor will change while over the URL.
      *
      * \sa setUseCursor ()
      */
@@ -136,7 +160,7 @@ public:
     bool isFloatEnabled() const;
 
     /*!
-     * @return the alternate pixmap (may be a null pointer if none was set)
+     * Returns the alternate pixmap (may be a null pointer if none was set)
      */
     const QPixmap *alternatePixmap() const;
 
@@ -145,20 +169,17 @@ public Q_SLOTS:
      * Turns on or off the underlining.
      *
      *  When this is on, the
-     * text will be underlined.  By default, it is @p true.
+     * text will be underlined.  By default, it is \a true.
      */
     void setUnderline(bool on = true);
 
     /*!
-     * Sets the URL for this label to @p url.
+     * Sets the URL for this label to \a url.
      *
      * \sa url
      */
     void setUrl(const QString &url);
 
-    /*!
-     * Overridden for internal reasons; the API remains unaffected.
-     */
     virtual void setFont(const QFont &font);
 
     /*!
@@ -166,7 +187,7 @@ public Q_SLOTS:
      *
      * When this is on, the URL will be displayed as a
      * tooltip whenever the mouse passes passes over it.
-     * By default, it is @p false.
+     * By default, it is \a false.
      */
     void setUseTips(bool on = true);
 
@@ -183,7 +204,7 @@ public Q_SLOTS:
      * Sets the highlight color.
      *
      * This is the default foreground
-     * color (non-selected).  By default, it is @p blue.
+     * color (non-selected).  By default, it is \a blue.
      */
     void setHighlightedColor(const QColor &highcolor);
 
@@ -199,7 +220,7 @@ public Q_SLOTS:
      *
      * This is the color the text will change
      * to when either a mouse passes over it and "glow" mode is on or
-     * when it is selected (clicked).  By default, it is @p red.
+     * when it is selected (clicked).  By default, it is \a red.
      */
     void setSelectedColor(const QColor &color);
 
@@ -218,6 +239,7 @@ public Q_SLOTS:
      * over the label. By default, it is on.
      *
      * \a on whether a custom cursor should be displayed.
+     *
      * \a cursor the custom cursor. A null pointer indicates the default "hand cursor".
      */
     void setUseCursor(bool on, QCursor *cursor = nullptr);
@@ -227,7 +249,7 @@ public Q_SLOTS:
      *
      * When this is on, the text will switch to the
      * selected color whenever the mouse
-     * passes over it. By default, it is @p true.
+     * passes over it. By default, it is \a true.
      */
     void setGlowEnabled(bool glow = true);
 
@@ -240,7 +262,7 @@ public Q_SLOTS:
      * underlining is turned on for as long as the mouse is overhead.
      * Note that if "glow" and underlining are both already turned
      * on, this feature will have no visible effect.
-     * By default, it is @p false.
+     * By default, it is \a false.
      */
     void setFloatEnabled(bool do_float = true);
 
@@ -283,24 +305,12 @@ Q_SIGNALS:
     void middleClickedUrl();
 
 protected:
-    /*!
-     * Overridden for internal reasons; the API remains unaffected.
-     */
     void mouseReleaseEvent(QMouseEvent *) override;
 
-    /*!
-     * Overridden for internal reasons; the API remains unaffected.
-     */
     void enterEvent(QEnterEvent *event) override;
 
-    /*!
-     * Overridden for internal reasons; the API remains unaffected.
-     */
     void leaveEvent(QEvent *) override;
 
-    /*!
-     * Catch parent palette changes
-     */
     bool event(QEvent *) override;
 
 private:

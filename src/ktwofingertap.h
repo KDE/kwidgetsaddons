@@ -15,22 +15,34 @@
 #include <memory>
 
 /*!
- * @class KTwoFingerTap ktwofingertap.h KTwoFingerTap
+ * \class KTwoFingerTap
+ * \inmodule KWidgetsAddons
  *
  * \brief A two finger tap gesture.
  *
  * Provides a class for a two finger tap gesture.
  *
- * Note: The QGestureManager need a QMainwindow, to delivery the gesture.
+ * \note The QGestureManager need a QMainwindow, to delivery the gesture.
  *
  * \since 5.83
- * @author Steffen Hartleib <steffenhartleib@t-online.de>
  */
 class KWIDGETSADDONS_EXPORT KTwoFingerTap : public QGesture
 {
     Q_OBJECT
+
+    /*!
+     * \property KTwoFingerTap::pos
+     */
     Q_PROPERTY(QPointF pos READ pos WRITE setPos)
+
+    /*!
+     * \property KTwoFingerTap::screenPos
+     */
     Q_PROPERTY(QPointF screenPos READ screenPos WRITE setScreenPos)
+
+    /*!
+     * \property KTwoFingerTap::scenePos
+     */
     Q_PROPERTY(QPointF scenePos READ scenePos WRITE setScenePos)
 public:
     /*!
@@ -38,17 +50,12 @@ public:
      */
     explicit KTwoFingerTap(QObject *parent = nullptr);
 
-    /*!
-     * Destructor
-     */
     ~KTwoFingerTap() override;
 
     /*!
      * The position of the gesture, relative to the widget that received the gesture.
      *
      * Note: This is not necessarily the same position as in the widget that grabGesture() uses.
-     *
-     * @return The position of the gesture.
      */
     Q_REQUIRED_RESULT QPointF pos() const;
 
@@ -67,12 +74,12 @@ public:
     Q_REQUIRED_RESULT QPointF screenPos() const;
 
     /*!
-     * @return The start scene position of the gesture.
+     * Return the start scene position of the gesture.
      */
     void setScreenPos(QPointF screenPos);
 
     /*!
-     * @return The start scene position of the gesture.
+     * Return the start scene position of the gesture.
      */
     Q_REQUIRED_RESULT QPointF scenePos() const;
 
@@ -87,14 +94,15 @@ private:
 };
 
 /*!
- * @class KTwoFingerTapRecognizer ktwofingertaprecognizer.h KTwoFingerTapRecognizer
+ * \class KTwoFingerTapRecognizer
+ * \inmodule KWidgetsAddons
+ * \inheaderfile KTwoFingerTap
  *
  * \brief The recognizer for a two finger tap gesture.
  *
  * Provides the recognizer for a two finger tap gesture.
  *
  * \since 5.83
- * @author Steffen Hartleib <steffenhartleib@t-online.de>
  */
 class KWIDGETSADDONS_EXPORT KTwoFingerTapRecognizer : public QGestureRecognizer
 {
@@ -104,9 +112,6 @@ public:
      */
     KTwoFingerTapRecognizer();
 
-    /*!
-     * Destructor
-     */
     ~KTwoFingerTapRecognizer() override;
 
     /*!
@@ -114,7 +119,7 @@ public:
      *
      * \a target The target for the gesture.
      *
-     * @return The new QGesture object.
+     * Returns the new QGesture object.
      */
     QGesture* create(QObject *target) override;
 
@@ -122,15 +127,17 @@ public:
      * Handles the given event for the watched object and update the gesture object.
      *
      * \a gesture The gesture object.
+     *
      * \a watched The watched object.
+     *
      * \a event The event.
      *
-     * @return The result reflects how much of the gesture has been recognized.
+     * Returns the result reflects how much of the gesture has been recognized.
      */
     Result recognize(QGesture *gesture, QObject *watched, QEvent *event) override;
 
     /*!
-     * @return The maximum wiggle room for a touch point.
+     * Returns the maximum wiggle room for a touch point.
      */
     Q_REQUIRED_RESULT int tapRadius() const;
 

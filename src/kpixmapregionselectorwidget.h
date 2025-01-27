@@ -17,29 +17,35 @@
 class QMenu;
 
 /*!
- * @class KPixmapRegionSelectorWidget kpixmapregionselectorwidget.h KPixmapRegionSelectorWidget
+ * \class KPixmapRegionSelectorWidget
+ * \inmodule KWidgetsAddons
  *
- * KPixmapRegionSelectorWidget is a widget that shows a picture and provides the
+ * \brief KPixmapRegionSelectorWidget is a widget that shows a picture and provides the
  * user with a friendly way to select a rectangular subregion of the pixmap.
  *
  * \image html kpixmapregionselectorwidget.png "KPixmapRegionSelectorWidget"
- *
- * @author Antonio Larrosa <larrosa@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KPixmapRegionSelectorWidget : public QWidget
 {
     Q_OBJECT
+    /*!
+     * \property KPixmapRegionSelectorWidget::pixmap
+     */
     Q_PROPERTY(QPixmap pixmap READ pixmap WRITE setPixmap)
 
 public:
     /*!
      * This enum provides a rotation direction.
      * \sa KPixmapRegionSelectorWidget::rotate()
+     *
+     * \value Rotate90 Rotate 90 degrees to the right.
+     * \value Rotate180 Rotate 180 degrees.
+     * \value Rotate270 Rotate 90 degrees to the left.
      */
     enum RotateDirection {
-        Rotate90, //!< Rotate 90 degrees to the right.
-        Rotate180, //!< Rotate 180 degrees.
-        Rotate270 //!< Rotate 90 degrees to the left.
+        Rotate90,
+        Rotate180,
+        Rotate270
     };
 
     /*!
@@ -47,26 +53,23 @@ public:
      */
     explicit KPixmapRegionSelectorWidget(QWidget *parent = nullptr);
 
-    /*!
-     * Destructor for a KPixmapRegionSelectorWidget
-     */
     ~KPixmapRegionSelectorWidget() override;
 
     /*!
      * Sets the pixmap which will be shown for the user to select a region from.
-     * \a pixmap The pixmap.  Must be non-null.
      *
+     * \a pixmap The pixmap.  Must be non-null.
      */
     void setPixmap(const QPixmap &pixmap);
 
     /*!
-     * @return the original whole pixmap that we're using in this widget as the
+     * Returns the original whole pixmap that we're using in this widget as the
      * pixmap the user is selecting a region from.
      */
     QPixmap pixmap() const;
 
     /*!
-     * Sets the selected region to be @p rect (in zoomed pixmap coordinates)
+     * Sets the selected region to be \a rect (in zoomed pixmap coordinates)
      */
     void setSelectedRegion(const QRect &rect);
 
@@ -86,14 +89,14 @@ public:
     void resetSelection();
 
     /*!
-     * @returns a QImage object with just the region the user selected from the
+     * Returns a QImage object with just the region the user selected from the
      * image
      */
     QImage selectedImage() const;
 
     /*!
      * Sets the aspect ration that the selected subimage should have. The way to
-     * select it, is specifying an example valid @p width and @p height.
+     * select it, is specifying an example valid \a width and \a height.
      * \sa setFreeSelectionAspectRatio()
      */
     void setSelectionAspectRatio(int width, int height);
@@ -113,7 +116,7 @@ public:
     void setMaximumWidgetSize(int width, int height);
 
     /*!
-     * Rotates the image as specified by the @p direction parameter, also tries
+     * Rotates the image as specified by the \a direction parameter, also tries
      * to rotate the selected region so that it doesn't change, as long as the
      * forced aspect ratio setting is respected, in other case, the selected region
      * is reset.
@@ -131,6 +134,9 @@ public Q_SLOTS:
     void rotateCounterclockwise();
 
 Q_SIGNALS:
+    /*!
+     *
+     */
     void pixmapRotated();
 
 protected:

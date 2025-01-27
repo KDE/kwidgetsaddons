@@ -20,7 +20,8 @@
 class QWidget;
 
 /*!
- * @class KNewPasswordDialog knewpassworddialog.h KNewPasswordDialog
+ * \class KNewPasswordDialog
+ * \inmodule KWidgetsAddons
  *
  * \brief A password input dialog.
  *
@@ -30,8 +31,8 @@ class QWidget;
  * match. A hint about the strength of the entered password is also
  * shown.
  *
- * \section usage Usage Example
- * \subsection asynchronous Asynchronous
+ * \section1 Usage Example
+ * \section2 Asynchronous
  *
  * \code
  *  KNewPasswordDialog *dlg = new KNewPasswordDialog( parent );
@@ -41,7 +42,7 @@ class QWidget;
  *  dlg->show();
  * \endcode
  *
- * \subsection synchronous Synchronous
+ * \section2 Synchronous
  *
  * \code
  *  KNewPasswordDialog dlg(parent);
@@ -52,15 +53,13 @@ class QWidget;
  * \endcode
  *
  * \image html knewpassworddialog.png "KNewPasswordDialog"
- *
- * @author Geert Jansen <jansen@kde.org>
- * @author Olivier Goffart <ogoffart@kde.org>
  */
 class KWIDGETSADDONS_EXPORT KNewPasswordDialog : public QDialog
 {
     Q_OBJECT
 
     /*!
+     * \property KNewPasswordDialog::revealPasswordMode
      * \since 6.0
      */
     Q_PROPERTY(KPassword::RevealMode revealPasswordMode READ revealPasswordMode WRITE setRevealPasswordMode)
@@ -73,9 +72,6 @@ public:
      */
     explicit KNewPasswordDialog(QWidget *parent = nullptr);
 
-    /*!
-     * Destructs the password dialog.
-     */
     ~KNewPasswordDialog() override;
 
     /*!
@@ -110,7 +106,7 @@ public:
     /*!
      * Allow empty passwords?
      *
-     * @return true if minimumPasswordLength() == 0
+     * Returns \c true if minimumPasswordLength() == 0
      */
     bool allowEmptyPasswords() const;
 
@@ -163,6 +159,7 @@ public:
      * contain numbers, mixed case letters and punctuation.
      *
      * Default: 1 - warn if the password has no discernible strength whatsoever
+     *
      * \a warningLevel The level below which a warning should be given.
      */
     void setPasswordStrengthWarningLevel(int warningLevel);
@@ -174,7 +171,7 @@ public:
 
     /*!
      * When the verification password does not match, the background color
-     * of the verification field is set to @p color. As soon as the passwords match,
+     * of the verification field is set to \a color. As soon as the passwords match,
      * the original color of the verification field is restored.
      *
      * Default: the background color from the current theme.
@@ -190,7 +187,8 @@ public:
 
     /*!
      * Returns the password entered.
-     * @note Only has meaningful data after accept has been called
+     *
+     * \note Only has meaningful data after accept has been called
      *       if you want to access the password from a subclass use
      *       checkAndGetPassword()
      */
@@ -204,12 +202,14 @@ public:
      * \code
      * passwordDialog.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
+     * \deprecated[6.0]
      * \since 5.31
      */
     [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
 
     /*!
      * Whether the visibility trailing action in the line edit is visible.
+     * \deprecated[6.0]
      * \since 5.31
      */
     [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
@@ -229,27 +229,24 @@ public:
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
-     * @code{.cpp}
+     * \code
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
      *     newPasswordDialog.setRevealPasswordMode(KPassword::RevealMode::OnlyNew);
      * } else {
      *     newPasswordDialog.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
-     * @endcode
+     * \endcode
      * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
 
-    /*!
-     * @internal
-     */
     void accept() override;
 
 protected:
     /*!
      * Virtual function that can be overridden to provide password
-     * checking in derived classes. It should return @p true if the
-     * password is valid, @p false otherwise.
+     * checking in derived classes. It should return \a true if the
+     * password is valid, \a false otherwise.
      */
     virtual bool checkPassword(const QString &);
 
@@ -265,7 +262,7 @@ protected:
 Q_SIGNALS:
 
     /*!
-     * The dialog has been accepted, and the new password is @p password
+     * The dialog has been accepted, and the new password is \a password
      */
     void newPassword(const QString &password);
 

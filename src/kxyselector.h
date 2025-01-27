@@ -14,11 +14,14 @@
 #include <memory>
 
 /*!
- * @class KXYSelector kxyselector.h KXYSelector
+ * \class KXYSelector
+ * \inmodule KWidgetsAddons
  *
- * KXYSelector is the base class for other widgets which
+ * \brief Base class for other widgets which
  * provides the ability to choose from a two-dimensional
- * range of values. The currently chosen value is indicated
+ * range of values.
+ *
+ * The currently chosen value is indicated
  * by a cross. An example is the KHSSelector which
  * allows to choose from a range of colors, and which is
  * used in KColorDialog.
@@ -29,7 +32,15 @@
 class KWIDGETSADDONS_EXPORT KXYSelector : public QWidget
 {
     Q_OBJECT
+
+    /*!
+     * \property KXYSelector::xValue
+     */
     Q_PROPERTY(int xValue READ xValue WRITE setXValue)
+
+    /*!
+     * \property KXYSelector::yValue
+     */
     Q_PROPERTY(int yValue READ yValue WRITE setYValue)
 
 public:
@@ -38,27 +49,29 @@ public:
      * has a value range of [0..100] in both directions.
      */
     explicit KXYSelector(QWidget *parent = nullptr);
-    /*!
-     * Destructs the widget.
-     */
+
     ~KXYSelector() override;
 
     /*!
      * Sets the current values in horizontal and
      * vertical direction.
+     *
      * \a xPos the horizontal value
+     *
      * \a yPos the vertical value
      */
     void setValues(int xPos, int yPos);
 
     /*!
      * Sets the current horizontal value
+     *
      * \a xPos the horizontal value
      */
     void setXValue(int xPos);
 
     /*!
      * Sets the current vertical value
+     *
      * \a yPos the vertical value
      */
     void setYValue(int yPos);
@@ -70,27 +83,25 @@ public:
 
     /*!
      * Sets the color used to draw the marker
+     *
      * \a col the color
      */
     void setMarkerColor(const QColor &col);
 
     /*!
-     * @return the current value in horizontal direction.
+     * Returns the current value in horizontal direction.
      */
     int xValue() const;
     /*!
-     * @return the current value in vertical direction.
+     * Returns the current value in vertical direction.
      */
     int yValue() const;
 
     /*!
-     * @return the rectangle on which subclasses should draw.
+     * Returns the rectangle on which subclasses should draw.
      */
     QRect contentsRect() const;
 
-    /*!
-     * Reimplemented to give the widget a minimum size
-     */
     QSize minimumSizeHint() const override;
 
 Q_SIGNALS:

@@ -19,11 +19,12 @@
 #include <kwidgetsaddons_export.h>
 
 /*!
- * @class KPasswordDialog kpassworddialog.h KPasswordDialog
+ * \class KPasswordDialog
+ * \inmodule KWidgetsAddons
  *
- * A dialog for requesting a password and optionally a login from the end user.
+ * \brief A dialog for requesting a password and optionally a login from the end user.
  *
- * \section usage Usage Example
+ * \section1 Usage Example
  *
  * Requesting a simple password, asynchronous
  *
@@ -48,8 +49,6 @@
  * \endcode
  *
  * \image html kpassworddialog.png "KPasswordDialog"
- *
- * \brief dialog for requesting login and password from the end user
  */
 class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
 {
@@ -58,66 +57,39 @@ class KWIDGETSADDONS_EXPORT KPasswordDialog : public QDialog
 public:
     /*!
      * \sa KPasswordDialogFlags
+     * \value NoFlags
+     * \value ShowKeepPassword If this flag is set, the "keep this password" checkbox will been shown, otherwise, it will not be shown and keepPassword will
+     * have no effect.
+     * \value ShowUsernameLine If this flag is set, there will be an additional line to let the user enter his login, otherwise, only the password line will be
+     * shown.
+     * \value UsernameReadOnly If this flag is set, the login lineedit will be in read only mode.
+     * \value[since 4.1] ShowAnonymousLoginCheckBox If this flag is set, the Anonymous Login checkbox will be displayed
+     * \value[since 4.1] ShowDomainLine If this flag is set, there will be an additional line to let the user enter the domain.
+     * \value[since 4.1] DomainReadOnly If this flag is set, the domain lineedit will be in read only mode.
      */
     enum KPasswordDialogFlag {
         NoFlags = 0x00,
-        /*!
-         * If this flag is set, the "keep this password" checkbox will been shown,
-         * otherwise, it will not be shown and keepPassword will have no effect
-         */
         ShowKeepPassword = 0x01,
-        /*!
-         * If this flag is set, there will be an additional line to let the user enter his login.
-         * otherwise, only the password line will be shown.
-         */
         ShowUsernameLine = 0x02,
-        /*!
-         * If this flag is set, the login lineedit will be in read only mode.
-         */
         UsernameReadOnly = 0x04,
-        /*!
-         * If this flag is set, the Anonymous Login checkbox will be displayed
-         * \since 4.1
-         */
         ShowAnonymousLoginCheckBox = 0x08,
-        /*!
-         * If this flag is set, there will be an additional line to let the user enter the domain.
-         * \since 4.1
-         */
         ShowDomainLine = 0x10,
-        /*!
-         * If this flag is set, the domain lineedit will be in read only mode.
-         * \since 4.1
-         */
         DomainReadOnly = 0x20,
     };
-    /*!
-     * Stores a combination of #KPasswordDialogFlag values.
-     */
     Q_DECLARE_FLAGS(KPasswordDialogFlags, KPasswordDialogFlag)
 
+    /*!
+     * \value UnknownError
+     * \value UsernameError A problem with the user name as entered
+     * \value PasswordError Incorrect password
+     * \value FatalError Error preventing further attempts, will result in disabling most of the interface
+     * \value[since 4.1] DomainError A problem with the domain as entered
+     */
     enum ErrorType {
         UnknownError = 0,
-
-        /*!
-         * A problem with the user name as entered
-         */
         UsernameError,
-
-        /*!
-         * Incorrect password
-         */
         PasswordError,
-
-        /*!
-         * Error preventing further attempts, will result in disabling most of the interface
-         */
         FatalError,
-
-        /*!
-         * A problem with the domain as entered
-         * \since 4.1
-         */
         DomainError,
     };
 
@@ -125,18 +97,17 @@ public:
      * create a password dialog
      *
      * \a parent the parent widget
+     *
      * \a flags a set of KPasswordDialogFlag flags
      */
     explicit KPasswordDialog(QWidget *parent = nullptr, const KPasswordDialogFlags &flags = KPasswordDialog::NoFlags);
 
-    /*!
-     * Destructor
-     */
     ~KPasswordDialog() override;
 
     /*!
      * Sets the prompt to show to the user.
-     * \a prompt        instructional text to be shown.
+     *
+     * \a prompt instructional text to be shown.
      */
     void setPrompt(const QString &prompt);
 
@@ -163,8 +134,9 @@ public:
      * line to this widget.  Calling this function after a
      * comment has already been added will not have any effect.
      *
-     * \a label       label for comment (ex:"Command:")
-     * \a comment     the actual comment text.
+     * \a label label for comment (ex:"Command:")
+     *
+     * \a comment the actual comment text.
      */
     void addCommentLine(const QString &label, const QString &comment);
 
@@ -177,7 +149,6 @@ public:
 
     /*!
      * Returns the password entered by the user.
-     * @return the password
      */
     QString password() const;
 
@@ -188,7 +159,6 @@ public:
 
     /*!
      * Returns the username entered by the user.
-     * @return the user name
      */
     QString username() const;
 
@@ -200,7 +170,6 @@ public:
 
     /*!
      * Returns the domain entered by the user.
-     * @return the domain name
      * \since 4.1
      */
     QString domain() const;
@@ -212,7 +181,7 @@ public:
     void setAnonymousMode(bool anonymous);
 
     /*!
-     * @return anonymous mode has been selected.
+     * Returns whether anonymous mode has been selected.
      * \since 4.1
      */
     bool anonymousMode() const;
@@ -224,7 +193,7 @@ public:
      * this is set with the check password checkbox is the ShowKeepCheckBox flag
      * is set in the constructor, if it is not set, this function return false
      *
-     * @return true to keep the password
+     * Returns whether to keep the password
      */
     bool keepPassword() const;
 
@@ -250,30 +219,29 @@ public:
 
     /*!
      * Presets the password.
+     *
      * If the password is not empty, the ability to show the password will not be available.
+     *
      * \a password the password to set
      */
     void setPassword(const QString &password);
 
     /*!
      * Presets a number of login+password pairs that the user can choose from.
+     *
      * The passwords can be empty if you simply want to offer usernames to choose from.
      *
      * This require the flag ShowUsernameLine to be set in the constructoe, and not the flag UsernameReadOnly
+     *
      * \a knownLogins map of known logins: the keys are usernames, the values are passwords.
      */
     void setKnownLogins(const QMap<QString, QString> &knownLogins);
 
-    /*!
-     * @internal
-     */
     void accept() override;
 
     /*!
      * Returns the button box used in the dialog.
      * This can be used to add new buttons.
-     *
-     * @return the button box
      *
      * \since 5.0
      */
@@ -298,6 +266,7 @@ public:
      * \code
      * dlg->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
+     * \deprecated[6.0]
      * \since 5.84
      */
     [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
@@ -305,6 +274,7 @@ public:
     /*!
      * Whether the visibility trailing action in the line edit is visible.
      * \since 5.84
+     * \deprecated[6.0]
      */
     [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
 #endif
@@ -323,13 +293,13 @@ public:
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
-     * @code{.cpp}
+     * \code
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
      *     passwordDialog.setRevealPasswordMode(KPassword::RevealMode::OnlyNew);
      * } else {
      *     passwordDialog.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
-     * @endcode
+     * \endcode
      * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);
@@ -337,15 +307,20 @@ public:
 Q_SIGNALS:
     /*!
      * emitted when the dialog has been accepted
+     *
      * \a password  the entered password
+     *
      * \a keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
      */
     void gotPassword(const QString &password, bool keep);
 
     /*!
      * emitted when the dialog has been accepted, and ShowUsernameLine was set on the constructor
+     *
      * \a username the entered username
+     *
      * \a password  the entered password
+     *
      * \a keep true if the "remember password" checkbox was checked, false otherwise.  false if ShowKeepPassword was not set in the constructor
      */
     void gotUsernameAndPassword(const QString &username, const QString &password, bool keep);
@@ -353,8 +328,8 @@ Q_SIGNALS:
 protected:
     /*!
      * Virtual function that can be overridden to provide password
-     * checking in derived classes. It should return @p true if the
-     * password is valid, @p false otherwise.
+     * checking in derived classes. It should return \c true if the
+     * password is valid, \c false otherwise.
      */
     virtual bool checkPassword();
 

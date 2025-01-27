@@ -20,7 +20,8 @@
 #include <kwidgetsaddons_export.h>
 
 /*!
- * @class KNewPasswordWidget knewpasswordwidget.h KNewPasswordWidget
+ * \class KNewPasswordWidget
+ * \inmodule KWidgetsAddons
  *
  * \brief A password input widget.
  *
@@ -35,8 +36,8 @@
  * This way you can e.g. disable the OK button if the passwords
  * don't match, warn the user if the password is too weak, and so on.
  *
- * \section usage Usage Example
- * \subsection Setup
+ * \section1 Usage Example
+ * \section2 Setup
  *
  * \code
  *  KNewPasswordWidget *m_passwordWidget = new KNewPasswordWidget(this);
@@ -48,68 +49,103 @@
  *  ...
  * \endcode
  *
- * \subsection update Update your custom dialog
+ * \section2 Update your custom dialog
  *
+ * TODO qdoc
  * @snippet knewpasswordwidget_test.cpp update_custom_dialog
  *
- * \subsection accept Accept your custom dialog
+ * \section2 Accept your custom dialog
  *
+ * TODO qdoc
  * @snippet knewpasswordwidget_test.cpp accept_custom_dialog
  *
- * @author Geert Jansen <jansen@kde.org>
- * @author Olivier Goffart <ogoffart@kde.org>
- * @author Elvis Angelaccio <elvis.angelaccio@kde.org>
  * \since 5.16
  */
 class KWIDGETSADDONS_EXPORT KNewPasswordWidget : public QWidget
 {
     Q_OBJECT
-    Q_PROPERTY(PasswordStatus passwordStatus READ passwordStatus)
-    Q_PROPERTY(bool allowEmptyPasswords READ allowEmptyPasswords WRITE setAllowEmptyPasswords)
-    Q_PROPERTY(int minimumPasswordLength READ minimumPasswordLength WRITE setMinimumPasswordLength)
-    Q_PROPERTY(int maximumPasswordLength READ maximumPasswordLength WRITE setMaximumPasswordLength)
-    Q_PROPERTY(int reasonablePasswordLength READ reasonablePasswordLength WRITE setReasonablePasswordLength)
-    Q_PROPERTY(int passwordStrengthWarningLevel READ passwordStrengthWarningLevel WRITE setPasswordStrengthWarningLevel)
-    Q_PROPERTY(QColor backgroundWarningColor READ backgroundWarningColor WRITE setBackgroundWarningColor)
-    Q_PROPERTY(bool passwordStrengthMeterVisible READ isPasswordStrengthMeterVisible WRITE setPasswordStrengthMeterVisible)
+
     /*!
-     * \since 5.31
+     * \property KNewPasswordWidget::passwordStatus
      */
+    Q_PROPERTY(PasswordStatus passwordStatus READ passwordStatus)
+
+    /*!
+     * \property KNewPasswordWidget::allowEmptyPasswords
+     */
+    Q_PROPERTY(bool allowEmptyPasswords READ allowEmptyPasswords WRITE setAllowEmptyPasswords)
+
+    /*!
+     * \property KNewPasswordWidget::minimumPasswordLength
+     */
+    Q_PROPERTY(int minimumPasswordLength READ minimumPasswordLength WRITE setMinimumPasswordLength)
+
+    /*!
+     * \property KNewPasswordWidget::maximumPasswordLength
+     */
+    Q_PROPERTY(int maximumPasswordLength READ maximumPasswordLength WRITE setMaximumPasswordLength)
+
+    /*!
+     * \property KNewPasswordWidget::reasonablePasswordLength
+     */
+    Q_PROPERTY(int reasonablePasswordLength READ reasonablePasswordLength WRITE setReasonablePasswordLength)
+
+    /*!
+     * \property KNewPasswordWidget::passwordStrengthWarningLevel
+     */
+    Q_PROPERTY(int passwordStrengthWarningLevel READ passwordStrengthWarningLevel WRITE setPasswordStrengthWarningLevel)
+
+    /*!
+     * \property KNewPasswordWidget::backgroundWarningColor
+     */
+    Q_PROPERTY(QColor backgroundWarningColor READ backgroundWarningColor WRITE setBackgroundWarningColor)
+
+    /*!
+     * \property KNewPasswordWidget::passwordStrengthMeterVisible
+     */
+    Q_PROPERTY(bool passwordStrengthMeterVisible READ isPasswordStrengthMeterVisible WRITE setPasswordStrengthMeterVisible)
 #if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 0)
+    /*!
+     * \property KNewPasswordWidget::revealPasswordAvailable
+     * \since 5.31
+     * \deprecated[6.0]
+     */
     Q_PROPERTY(bool revealPasswordAvailable READ isRevealPasswordAvailable WRITE setRevealPasswordAvailable)
 #endif
+    /*!
+     * \property KNewPasswordWidget::revealPasswordMode
+     */
     Q_PROPERTY(KPassword::RevealMode revealPasswordMode READ revealPasswordMode WRITE setRevealPasswordMode)
 
 public:
     /*!
      * Status of the password being typed in the widget.
+     * \value EmptyPasswordNotAllowed Both passwords fields empty, but minimum length > 0.
+     * \value PasswordTooShort Password length is too low.
+     * \value PasswordNotVerified Password and verification password don't match.
+     * \value WeakPassword Passwords match but the strength level is not enough.
+     * \value StrongPassword Passwords match and the strength level is good.
      */
     enum PasswordStatus {
-        EmptyPasswordNotAllowed, /*!< Both passwords fields empty, but minimum length > 0. */
-        PasswordTooShort, /*!< Password length is too low. */
-        PasswordNotVerified, /*!< Password and verification password don't match. */
-        WeakPassword, /*!< Passwords match but the strength level is not enough. */
-        StrongPassword, /*!< Passwords match and the strength level is good. */
+        EmptyPasswordNotAllowed,
+        PasswordTooShort,
+        PasswordNotVerified,
+        WeakPassword,
+        StrongPassword,
     };
     Q_ENUM(PasswordStatus)
 
     /*!
      * This enum describe when the reveal password button is visible.
      * \since 6.0
+     *
+     * \value OnlyNew Display the button when entering a new password, but doesn't let you see a previously entered password. This is the default.
+     * \value Never Never display the reveal button.
+     * \value Always Always display the reveal button. Usefull in a password manager for example.
      */
     enum class RevealPasswordMode {
-        /*!
-         * Display the button when entering a new password, but doesn't let you see a
-         * previously entered password. This is the default.
-         */
         OnlyNew,
-        /*!
-         * Never display the reveal button.
-         */
         Never,
-        /*!
-         * Always display the reveal button. Usefull in a password manager for example.
-         */
         Always,
     };
     Q_ENUM(RevealPasswordMode)
@@ -121,9 +157,6 @@ public:
      */
     explicit KNewPasswordWidget(QWidget *parent = nullptr);
 
-    /*!
-     * Destructs the password widget.
-     */
     ~KNewPasswordWidget() override;
 
     /*!
@@ -134,7 +167,7 @@ public:
     /*!
      * Allow empty passwords?
      *
-     * @return true if minimumPasswordLength() == 0
+     * Returns \c true if minimumPasswordLength() == 0
      */
     bool allowEmptyPasswords() const;
 
@@ -172,6 +205,7 @@ public:
     /*!
      * Whether the visibility trailing action in the line edit is visible.
      * \since 5.31
+     * \deprecated[6.0]
      */
     [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
 #endif
@@ -184,7 +218,8 @@ public:
 
     /*!
      * Returns the password entered.
-     * @note Only returns meaningful data when passwordStatus
+     *
+     * \note Only returns meaningful data when passwordStatus
      *       is either WeakPassword or StrongPassword.
      */
     QString password() const;
@@ -233,6 +268,7 @@ public Q_SLOTS:
      * contain numbers, mixed case letters and punctuation.
      *
      * Default: 1 - warn if the password has no discernible strength whatsoever
+     *
      * \a warningLevel The level below which a warning should be given.
      */
     void setPasswordStrengthWarningLevel(int warningLevel);
@@ -259,6 +295,7 @@ public Q_SLOTS:
      * passwordWidget.setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
      * \endcode
      * \since 5.31
+     * \deprecated[6.0]
      */
     [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
 #endif
@@ -271,13 +308,13 @@ public Q_SLOTS:
      *
      * This can be used to honor the lineedit_reveal_password kiosk key, for example:
      *
-     * @code{.cpp}
+     * \code
      * if (KAuthorized::authorize(QStringLiteral("lineedit_reveal_password"))) {
      *     newPasswordWidget.setRevealPasswordMode(KPassword::RevealMode::OnlyNew);
      * } else {
      *     newPasswordWidget.setRevealPasswordMode(KPassword::RevealMode::Never);
      * }
-     * @endcode
+     * \endcode
      * \since 6.0
      */
     void setRevealPasswordMode(KPassword::RevealMode revealPasswordMode);

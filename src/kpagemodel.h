@@ -16,32 +16,33 @@
 class KPageModelPrivate;
 
 /*!
- *  @class KPageModel kpagemodel.h KPageModel
+ * \class KPageModel
+ * \inmodule KWidgetsAddons
  *
- *  \brief A base class for a model used by KPageView.
+ * \brief A base class for a model used by KPageView.
  *
- *  This class is an abstract base class which must be used to
- *  implement custom models for KPageView. Additional to the standard
- *  Qt::ItemDataRoles it provides the two roles
+ * This class is an abstract base class which must be used to
+ * implement custom models for KPageView. Additional to the standard
+ * Qt::ItemDataRoles it provides the two roles
+ * \list
+ * \li HeaderRole
+ * \li HeaderVisibleRole
+ * \li WidgetRole
+ * \endlist
  *
- *    @li HeaderRole
- *    @li HeaderVisibleRole
- *    @li WidgetRole
+ * which are used to return a header string for a page and a QWidget
+ * pointer to the page itself.
  *
- *  which are used to return a header string for a page and a QWidget
- *  pointer to the page itself.
+ * Example:
  *
- *  <b>Example:</b>\n
+ * \code
+ *   KPageView *view = new KPageView( this );
+ *   KPageModel *model = new MyPageModel( this );
  *
- *  \code
- *    KPageView *view = new KPageView( this );
- *    KPageModel *model = new MyPageModel( this );
+ *   view->setModel( model );
+ * \endcode
  *
- *    view->setModel( model );
- *  \endcode
- *
- *  \sa KPageView
- *  @author Tobias Koenig <tokoe@kde.org>
+ * \sa KPageView
  */
 class KWIDGETSADDONS_EXPORT KPageModel : public QAbstractItemModel
 {
@@ -51,32 +52,21 @@ class KWIDGETSADDONS_EXPORT KPageModel : public QAbstractItemModel
 public:
     /*!
      * Additional roles that KPageView uses.
+     *
+     * \value HeaderRole A string to be rendered as page header.
+     * \value WidgetRole A pointer to the page widget. This is the widget that is shown when the item is selected.
+     * You can make QVariant take a QWidget using
+     * \code
+     * QWidget *myWidget = new QWidget;
+     * QVariant v = QVariant::fromValue(myWidget);
+     * \endcode
+     * \value[since 5.52] When true, show the page header, if false don't
+     * \value[since 6.6] The list of actions associated to the page
      */
     enum Role {
-        /*!
-         * A string to be rendered as page header.
-         */
         HeaderRole = Qt::UserRole + 1,
-        /*!
-         * A pointer to the page widget. This is the widget that is shown when the item is
-         * selected.
-         *
-         * You can make QVariant take a QWidget using
-         * \code
-         * QWidget *myWidget = new QWidget;
-         * QVariant v = QVariant::fromValue(myWidget);
-         * \endcode
-         */
         WidgetRole,
-        /*!
-         * when true, show the page header, if false don't
-         * \since 5.52
-         */
         HeaderVisibleRole,
-        /*!
-         * The list of actions associated to the page
-         * \since 6.6
-         */
         ActionsRole,
     };
 
@@ -85,9 +75,6 @@ public:
      */
     explicit KPageModel(QObject *parent = nullptr);
 
-    /*!
-     * Destroys the page model.
-     */
     ~KPageModel() override;
 
 protected:

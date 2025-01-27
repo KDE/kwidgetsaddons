@@ -12,7 +12,9 @@
 #include <kwidgetsaddons_export.h>
 
 /*!
- * This namespace provides a method for starting the file types editor.
+ * \namespace KMimeTypeEditor
+ * \inmodule KWidgetsAddons
+ * \brief This namespace provides a method for starting the file types editor.
  * \since 5.4
  */
 namespace KMimeTypeEditor
@@ -24,6 +26,7 @@ namespace KMimeTypeEditor
  * couldn't be launched.
  *
  * \a mimeType the MIME type to edit, e.g. "text/plain"
+ *
  * \a widget the parent widget
  * \since 5.4
  */

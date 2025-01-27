@@ -17,13 +17,13 @@
 class QString;
 
 /*!
+ * \namespace KStandardGuiItem
+ *
  * \brief Provides a set of standardized KGuiItems.
  *
  * The various methods return standardized KGuiItem's
  * conforming to the KDE UI Standards. Use them instead of creating
  * your own.
- *
- * @author Holger Freyther <freyther@kde.org>
  */
 namespace KStandardGuiItem
 {
@@ -31,9 +31,45 @@ namespace KStandardGuiItem
  * The back and forward items by default use the RTL settings for Hebrew
  * and Arab countries. If you want those actions to ignore the RTL value
  * and force 'Western' behavior instead, use the IgnoreRTL value instead.
+ *
+ * \value UseRTL
+ * \value IgnoreRTL
  */
 enum BidiMode { UseRTL = 0, IgnoreRTL };
 
+/*!
+ * \value Ok
+ * \value Cancel
+ * \value Discard
+ * \value Save
+ * \value DontSave
+ * \value SaveAs
+ * \value Apply
+ * \value Clear
+ * \value Help
+ * \value Defaults
+ * \value Close
+ * \value Back
+ * \value Forward
+ * \value Print
+ * \value Continue
+ * \value Open
+ * \value Quit
+ * \value AdminMode
+ * \value Reset
+ * \value Delete
+ * \value Insert
+ * \value Configure
+ * \value Find
+ * \value Stop
+ * \value Add
+ * \value Remove
+ * \value Test
+ * \value Properties
+ * \value Overwrite
+ * \value CloseWindow
+ * \value CloseDocument
+ */
 enum StandardItem {
     Ok = 1,
     Cancel,
@@ -69,14 +105,14 @@ enum StandardItem {
 };
 
 /*!
- * Returns the gui item for the given identifier @p id.
+ * Returns the gui item for the given identifier \a id.
  *
  * \a id the identifier to search for
  */
 KWIDGETSADDONS_EXPORT KGuiItem guiItem(StandardItem id);
 
 /*!
- * Returns the name of the gui item for the given identifier @p id.
+ * Returns the name of the gui item for the given identifier \a id.
  *
  * \a id the identifier to search for
  */
@@ -264,6 +300,9 @@ KWIDGETSADDONS_EXPORT KGuiItem remove();
  */
 KWIDGETSADDONS_EXPORT KGuiItem test();
 
+/*!
+ *
+ */
 KWIDGETSADDONS_EXPORT void assign(QPushButton *button, StandardItem item);
 }
 
