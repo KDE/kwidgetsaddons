@@ -12,7 +12,7 @@ portingAid: false
 deprecated: false
 release: true
 libraries:
- - cmake: "KF6::WidgetsAddons"
+    - cmake: "KF6::WidgetsAddons"
 cmakename: KF6WidgetsAddons
 
 public_lib: true
