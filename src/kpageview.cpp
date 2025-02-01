@@ -166,6 +166,7 @@ void KPageViewPrivate::rebuildGui()
     if (!hasSearchableView()) {
         layout->removeWidget(searchLineEditContainer);
         searchLineEditContainer->setVisible(false);
+        searchLineEdit->setEnabled(false);
         titleWidget->setAutoFillBackground(false);
         layout->setSpacing(0);
         separatorLine->setVisible(false);
@@ -176,6 +177,7 @@ void KPageViewPrivate::rebuildGui()
                                         q_ptr->style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
     } else {
         titleWidget->setObjectName("KPageView::TitleWidget");
+        searchLineEdit->setEnabled(true);
         searchLineEditContainer->setVisible(true);
         searchLineEditContainer->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Fixed);
         separatorLine->setVisible(true);
