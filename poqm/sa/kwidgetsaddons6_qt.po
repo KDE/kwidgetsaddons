@@ -1976,7 +1976,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "गुप्तशब्दस्य शक्तिः &मीटरः:"
 
-#: kpageview.cpp:511
+#: kpageview.cpp:513
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "अन्वेषण…"

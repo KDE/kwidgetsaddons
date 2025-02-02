@@ -2029,7 +2029,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Medidor de força da senha:"
 
-#: kpageview.cpp:511
+#: kpageview.cpp:513
 #, fuzzy
 #| msgctxt "KPageView|"
 #| msgid "Search..."
