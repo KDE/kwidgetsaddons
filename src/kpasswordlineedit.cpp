@@ -104,7 +104,7 @@ KPasswordLineEdit::KPasswordLineEdit(QWidget *parent)
     d->passwordLineEdit->setEchoMode(QLineEdit::Password);
     d->passwordLineEdit->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(d->passwordLineEdit, &QWidget::customContextMenuRequested, this, [this](const QPoint &pos) {
-        d->slotCustomContextMenuRequested(pos);
+        d->slotCustomContextMenuRequested(mapToGlobal(pos));
     });
     connect(d->passwordLineEdit, &QLineEdit::textChanged, this, &KPasswordLineEdit::passwordChanged);
     setFocusProxy(d->passwordLineEdit);
