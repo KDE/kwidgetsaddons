@@ -56,6 +56,7 @@ KFontRequester::KFontRequester(QWidget *parent, bool onlyFixed)
     d->m_button = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), QString(), this);
 
     d->m_sampleLabel->setFrameStyle(QFrame::StyledPanel | QFrame::Sunken);
+    d->m_sampleLabel->setProperty("_breeze_force_frame", true);
     setFocusProxy(d->m_button);
     setFocusPolicy(d->m_button->focusPolicy());
 
