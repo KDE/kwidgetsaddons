@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2025-01-11 17:15+0300\n"
+"PO-Revision-Date: 2025-02-21 14:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -167,7 +167,7 @@ msgstr "Diğer"
 #: kcharselect-translation.cpp:26
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
-msgstr "Basit Latince"
+msgstr "Temel Latin"
 
 #: kcharselect-translation.cpp:27
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -177,12 +177,12 @@ msgstr "Latin-1 Ek"
 #: kcharselect-translation.cpp:28
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
-msgstr "Genişletilmiş Latin-A"
+msgstr "Latin Genişletilmiş A"
 
 #: kcharselect-translation.cpp:29
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
-msgstr "Genişletilmiş Latin-B"
+msgstr "Latin Genişletilmiş B"
 
 #: kcharselect-translation.cpp:30
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -192,7 +192,7 @@ msgstr "IPA Uzantıları"
 #: kcharselect-translation.cpp:31
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
-msgstr "Aralık Niteleyici Harfler"
+msgstr "Boşluklandırma Niteleyici Harfler"
 
 #: kcharselect-translation.cpp:32
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -237,7 +237,7 @@ msgstr "Süryanice"
 #: kcharselect-translation.cpp:40
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
-msgstr "Arapça Ekler"
+msgstr "Arapça Ek"
 
 #: kcharselect-translation.cpp:41
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -252,7 +252,7 @@ msgstr "NKo"
 #: kcharselect-translation.cpp:43
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
-msgstr "Samiriyeli"
+msgstr "Samirice"
 
 #: kcharselect-translation.cpp:44
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -267,17 +267,17 @@ msgstr "Süryanice Ek"
 #: kcharselect-translation.cpp:46
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "Genişletilmiş Arapça-B"
+msgstr "Arapça Genişletilmiş B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
-msgstr "Genişletilmiş Arapça-A"
+msgstr "Arapça Genişletilmiş A"
 
 #: kcharselect-translation.cpp:48
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
-msgstr "Devanagari Dili"
+msgstr "Devanagari"
 
 #: kcharselect-translation.cpp:49
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -287,7 +287,7 @@ msgstr "Bengalce"
 #: kcharselect-translation.cpp:50
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
-msgstr "Gurmukhi Dili"
+msgstr "Gurmuhi"
 
 #: kcharselect-translation.cpp:51
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -362,7 +362,7 @@ msgstr "Etiyopyaca"
 #: kcharselect-translation.cpp:65
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
-msgstr "Etiyopyaca Ekleri"
+msgstr "Etiyopyaca Ek"
 
 #: kcharselect-translation.cpp:66
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -372,7 +372,7 @@ msgstr "Çeroki Dili"
 #: kcharselect-translation.cpp:67
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "Birleşik Kanada Aboriginal Heceleri"
+msgstr "Birleşik Kanada Aborijin Heceleri"
 
 #: kcharselect-translation.cpp:68
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -402,7 +402,7 @@ msgstr "Buhid"
 #: kcharselect-translation.cpp:73
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
-msgstr "Tagbanwa"
+msgstr "Tagbanva"
 
 #: kcharselect-translation.cpp:74
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -417,12 +417,12 @@ msgstr "Moğolca"
 #: kcharselect-translation.cpp:76
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
-msgstr "Birleşik Kanada Aborijinal Genişletilmiş Heceleri"
+msgstr "Birleşik Kanada Aborijin Heceleri Genişletilmiş"
 
 #: kcharselect-translation.cpp:77
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
-msgstr "Limbu dili"
+msgstr "Limbu Dili"
 
 #: kcharselect-translation.cpp:78
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -432,7 +432,7 @@ msgstr "Tai Le"
 #: kcharselect-translation.cpp:79
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
-msgstr "New Tai Lue"
+msgstr "Yeni Tai Lue"
 
 #: kcharselect-translation.cpp:80
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -452,7 +452,7 @@ msgstr "Tai Tham Dili"
 #: kcharselect-translation.cpp:83
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "Genişletilmiş Birleştirici Aksan İmleri"
+msgstr "Birleştirici Aksan İmleri Genişletilmiş"
 
 #: kcharselect-translation.cpp:84
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -477,27 +477,27 @@ msgstr "Lepcha Dili"
 #: kcharselect-translation.cpp:88
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
-msgstr "Ol Chiki Dili"
+msgstr "Ol Çiki Dili"
 
 #: kcharselect-translation.cpp:89
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
-msgstr "Genişletilmiş Kiril-C"
+msgstr "Kiril Genişletilmiş C"
 
 #: kcharselect-translation.cpp:90
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "Genişletilmiş Gürcüce"
+msgstr "Gürcüce Genişletilmiş"
 
 #: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
-msgstr "Sundanezce Eki"
+msgstr "Sundaca Ek"
 
 #: kcharselect-translation.cpp:92
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
-msgstr "Vedik Dili Eklentileri"
+msgstr "Vedik Uzantıları"
 
 #: kcharselect-translation.cpp:93
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -507,22 +507,22 @@ msgstr "Fonetik Uzantılar"
 #: kcharselect-translation.cpp:94
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
-msgstr "Fonetik Uzantılar Tamamlayıcısı"
+msgstr "Fonetik Uzantılar Ek"
 
 #: kcharselect-translation.cpp:95
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
-msgstr "Ek Birleştirici Aksan İmleri"
+msgstr "Birleştirici Aksan İmleri Ek"
 
 #: kcharselect-translation.cpp:96
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended Additional"
-msgstr "Genişletilmiş Latin Ekleri"
+msgstr "Latin Genişletilmiş Ek"
 
 #: kcharselect-translation.cpp:97
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
-msgstr "Genişletilmiş Yunanca"
+msgstr "Yunanca Genişletilmiş"
 
 #: kcharselect-translation.cpp:98
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -547,7 +547,7 @@ msgstr "Semboller için Birleştirici Aksan İmleri"
 #: kcharselect-translation.cpp:102
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
-msgstr "Harfe Benzeyen Semboller"
+msgstr "Harf Benzeri Semboller"
 
 #: kcharselect-translation.cpp:103
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -562,17 +562,17 @@ msgstr "Oklar"
 #: kcharselect-translation.cpp:105
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
-msgstr "Matematiksel Operatörler"
+msgstr "Matematiksel İşleçler"
 
 #: kcharselect-translation.cpp:106
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
-msgstr "Çeşitli Teknikler"
+msgstr "Teknik Çeşitli"
 
 #: kcharselect-translation.cpp:107
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
-msgstr "Kontrol Resimleri"
+msgstr "Denetim Resimleri"
 
 #: kcharselect-translation.cpp:108
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -582,7 +582,7 @@ msgstr "Optik Karakter Tanıma"
 #: kcharselect-translation.cpp:109
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
-msgstr "Kapalı Alfanümerikler"
+msgstr "Kapalı Alfanümerik"
 
 #: kcharselect-translation.cpp:110
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -592,7 +592,7 @@ msgstr "Kutu Çizimi"
 #: kcharselect-translation.cpp:111
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
-msgstr "Blok Ögeleri"
+msgstr "Blok Ögeler"
 
 #: kcharselect-translation.cpp:112
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -612,32 +612,32 @@ msgstr "Dingbats"
 #: kcharselect-translation.cpp:115
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
-msgstr "Çeşitli Matematiksel Semboller-A"
+msgstr "Çeşitli Matematiksel Semboller A"
 
 #: kcharselect-translation.cpp:116
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
-msgstr "Tamamlayıcı Oklar-A"
+msgstr "Tamamlayıcı Oklar A"
 
 #: kcharselect-translation.cpp:117
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
-msgstr "Kabartma Yazı Desenleri"
+msgstr "Braille Desenleri"
 
 #: kcharselect-translation.cpp:118
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
-msgstr "Tamamlayıcı Oklar-B"
+msgstr "Tamamlayıcı Oklar B"
 
 #: kcharselect-translation.cpp:119
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-B"
-msgstr "Çeşitli Matematiksel Semboller-B"
+msgstr "Çeşitli Matematiksel Semboller B"
 
 #: kcharselect-translation.cpp:120
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Mathematical Operators"
-msgstr "Tamamlayıcı Matematiksel Operatörler"
+msgstr "Tamamlayıcı Matematiksel İşleçler"
 
 #: kcharselect-translation.cpp:121
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -652,12 +652,12 @@ msgstr "Glagolit"
 #: kcharselect-translation.cpp:123
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-C"
-msgstr "Genişletilmiş Latin-C"
+msgstr "Latin Genişletilmiş C"
 
 #: kcharselect-translation.cpp:124
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Coptic"
-msgstr "Kıpti Dili"
+msgstr "Kıpti"
 
 #: kcharselect-translation.cpp:125
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -672,12 +672,12 @@ msgstr "Tifinagh"
 #: kcharselect-translation.cpp:127
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended"
-msgstr "Genişletilmiş Etiyopyaca"
+msgstr "Etiyopyaca Genişletilmiş"
 
 #: kcharselect-translation.cpp:128
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-A"
-msgstr "Genişletilmiş Kiril-A"
+msgstr "Kiril Genişletilmiş A"
 
 #: kcharselect-translation.cpp:129
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -687,22 +687,22 @@ msgstr "Tamamlayıcı Noktalama"
 #: kcharselect-translation.cpp:130
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
-msgstr "ÇJK Kök Ekleri"
+msgstr "ÇJK Kökleri Ek"
 
 #: kcharselect-translation.cpp:131
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
-msgstr "Kangxi Kökleri"
+msgstr "Kangşi Kökleri"
 
 #: kcharselect-translation.cpp:132
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ideographic Description Characters"
-msgstr "Kavramsal Tanımlama Karakterleri"
+msgstr "İdeogramsal Tanımlama Karakterleri"
 
 #: kcharselect-translation.cpp:133
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Symbols and Punctuation"
-msgstr "ÇJK Sembolleri ve Noktalama İşaretleri"
+msgstr "ÇJK Sembolleri ve Noktalama"
 
 #: kcharselect-translation.cpp:134
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -722,7 +722,7 @@ msgstr "Bopomofo"
 #: kcharselect-translation.cpp:137
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
-msgstr "Hangul Uyumlu Jamo"
+msgstr "Hangul Uyumluluğu Jamo"
 
 #: kcharselect-translation.cpp:138
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -732,7 +732,7 @@ msgstr "Kanbun"
 #: kcharselect-translation.cpp:139
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
-msgstr "Genişletilmiş Bopomofo"
+msgstr "Bopomofo Genişletilmiş "
 
 #: kcharselect-translation.cpp:140
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -757,7 +757,7 @@ msgstr "ÇJK Uyumluluğu"
 #: kcharselect-translation.cpp:144
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
-msgstr "ÇJK Birleşik Ideograf Uzantısı A"
+msgstr "ÇJK Birleşik İdeogramları Uzantısı A"
 
 #: kcharselect-translation.cpp:145
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -767,7 +767,7 @@ msgstr "Yijing Altıgen Sembolleri"
 #: kcharselect-translation.cpp:146
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
-msgstr "ÇJK Birleşik İdeogramlar"
+msgstr "ÇJK Birleşik İdeogramları"
 
 #: kcharselect-translation.cpp:147
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -792,7 +792,7 @@ msgstr "Vai"
 #: kcharselect-translation.cpp:151
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-B"
-msgstr "Genişletilmiş Kiril-B"
+msgstr "Kiril Genişletilmiş B"
 
 #: kcharselect-translation.cpp:152
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -802,12 +802,12 @@ msgstr "Bamum"
 #: kcharselect-translation.cpp:153
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
-msgstr "Niteleyici Ses Harfleri"
+msgstr "Niteleyici Ton Harfleri"
 
 #: kcharselect-translation.cpp:154
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-D"
-msgstr "Genişletilmiş Latin-D"
+msgstr "Latin Genişletilmiş D"
 
 #: kcharselect-translation.cpp:155
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -817,7 +817,7 @@ msgstr "Syloti Nagri"
 #: kcharselect-translation.cpp:156
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
-msgstr "Hintçe Genel Rakam Biçimleri"
+msgstr "Temel Hintçe Rakam Biçimleri"
 
 #: kcharselect-translation.cpp:157
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -827,12 +827,12 @@ msgstr "Phags-pa"
 #: kcharselect-translation.cpp:158
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
-msgstr "Saurashtra"
+msgstr "Sauraştra"
 
 #: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
-msgstr "Genişletilmiş Devanagari"
+msgstr "Devanagari Genişletilmiş"
 
 #: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -847,27 +847,27 @@ msgstr "Rejang"
 #: kcharselect-translation.cpp:162
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
-msgstr "Hangul Jamo Genişletilmiş-A"
+msgstr "Hangul Jamo Genişletilmiş A"
 
 #: kcharselect-translation.cpp:163
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
-msgstr "Cava Dili"
+msgstr "Cavaca"
 
 #: kcharselect-translation.cpp:164
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
-msgstr "Genişletilmiş Myanmar-B"
+msgstr "Burmaca Genişletilmiş B"
 
 #: kcharselect-translation.cpp:165
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
-msgstr "Cham Dili"
+msgstr "Çam Dili"
 
 #: kcharselect-translation.cpp:166
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
-msgstr "Myanmar Genişletilmiş-A"
+msgstr "Burmaca Genişletilmiş A"
 
 #: kcharselect-translation.cpp:167
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -882,17 +882,17 @@ msgstr "Meetei Mayek Uzantıları"
 #: kcharselect-translation.cpp:169
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
-msgstr "Genişletilmiş Ethiopic-A"
+msgstr "Etiyopyaca Genişletilmiş A"
 
 #: kcharselect-translation.cpp:170
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-E"
-msgstr "Genişletilmiş Latince-E"
+msgstr "Latin Genişletilmiş E"
 
 #: kcharselect-translation.cpp:171
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee Supplement"
-msgstr "Çeroki Eki"
+msgstr "Çeroki Ek"
 
 #: kcharselect-translation.cpp:172
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -907,7 +907,7 @@ msgstr "Hangul Heceleri"
 #: kcharselect-translation.cpp:174
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
-msgstr "Genişletilmiş Hangul Jamo-B"
+msgstr "Hangul Jamo Genişletilmiş B"
 
 #: kcharselect-translation.cpp:175
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -937,17 +937,17 @@ msgstr "ÇJK Uyumluluk İdeogramları"
 #: kcharselect-translation.cpp:180
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
-msgstr "Alfabetik Sunum Biçimleri"
+msgstr "Abecesel Sunum Biçimleri"
 
 #: kcharselect-translation.cpp:181
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-A"
-msgstr "Arapça Sunum Biçimleri-A"
+msgstr "Arapça Sunum Biçimleri A"
 
 #: kcharselect-translation.cpp:182
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
-msgstr "Varyasyon Seçiciler"
+msgstr "Varyasyon Seçicileri"
 
 #: kcharselect-translation.cpp:183
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -972,12 +972,12 @@ msgstr "Küçük Biçimli Varyantlar"
 #: kcharselect-translation.cpp:187
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-B"
-msgstr "Arapça Sunum Biçimleri-B"
+msgstr "Arapça Sunum Biçimleri B"
 
 #: kcharselect-translation.cpp:188
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Halfwidth and Fullwidth Forms"
-msgstr "Yarım genişlik ve Tam genişlik Biçimleri"
+msgstr "Yarım Genişlik ve Tam Genişlik Biçimleri"
 
 #: kcharselect-translation.cpp:189
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -987,12 +987,12 @@ msgstr "Özeller"
 #: kcharselect-translation.cpp:191
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mahjong Tiles"
-msgstr "Mahjong Döşemeleri"
+msgstr "Mahjong Taşları"
 
 #: kcharselect-translation.cpp:192
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Domino Tiles"
-msgstr "Domino Döşemeleri"
+msgstr "Domino Taşları"
 
 #: kcharselect-translation.cpp:193
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1002,12 +1002,12 @@ msgstr "İskambil Kâğıtları"
 #: kcharselect-translation.cpp:194
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
-msgstr "Kapalı Alfanümerik Ekler"
+msgstr "Kapalı Alfanümerik Ek"
 
 #: kcharselect-translation.cpp:195
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
-msgstr "Kapalı Kavramsal Ekler"
+msgstr "Kapalı İdeogramsal Ek"
 
 #: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1027,7 +1027,7 @@ msgstr "Süs Simgeleri"
 #: kcharselect-translation.cpp:199
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Transport and Map Symbols"
-msgstr "Taşıma ve Harita Sembolleri"
+msgstr "Ulaşım ve Harita Sembolleri"
 
 #: kcharselect-translation.cpp:200
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1037,12 +1037,12 @@ msgstr "Simya Sembolleri"
 #: kcharselect-translation.cpp:201
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
-msgstr "Genişletilmiş Geometrik Şekiller"
+msgstr "Geometrik Şekiller Genişletilmiş"
 
 #: kcharselect-translation.cpp:202
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
-msgstr "Ek Oklar-C"
+msgstr "Tamamlayıcı Oklar C"
 
 #: kcharselect-translation.cpp:203
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1057,7 +1057,7 @@ msgstr "Satranç Sembolleri"
 #: kcharselect-translation.cpp:205
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "Semboller ve Piktograflar Ek-A"
+msgstr "Semboller ve Piktograflar Ek A"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1117,7 +1117,7 @@ msgstr "Bir kategori seç"
 #: kcharselect.cpp:468
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "Görüntülenecek bir blok seçin"
+msgstr "Görüntülenecek bir blok seç"
 
 #: kcharselect.cpp:487
 msgctxt "KCharSelect|@info:tooltip"
@@ -1142,7 +1142,7 @@ msgstr "Ad: "
 #: kcharselect.cpp:811
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
-msgstr "Ek Açıklamalar ve Çapraz Referanslar"
+msgstr "Ek Açıklamalar ve Çapraz Başvurular"
 
 #: kcharselect.cpp:815
 msgctxt "KCharSelect|"
@@ -1177,7 +1177,7 @@ msgstr "Ayrışma:"
 #: kcharselect.cpp:874
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
-msgstr "ÇJK Ideograph Bilgisi"
+msgstr "ÇJK İdeogram Bilgisi"
 
 #: kcharselect.cpp:877
 msgctxt "KCharSelect|"
@@ -1267,7 +1267,7 @@ msgstr "Ondalık olarak"
 #: kcharselectdata.cpp:303
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
-msgstr "<karakterolmayan>"
+msgstr "<karakter olmayan>"
 
 #: kcharselectdata.cpp:324
 msgctxt "KCharSelectData|"
@@ -1307,7 +1307,7 @@ msgstr "Yazdırılamaz"
 #: kcharselectdata.cpp:785
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
-msgstr "Diğer, Kontrol"
+msgstr "Diğer, Denetim"
 
 #: kcharselectdata.cpp:787
 msgctxt "KCharSelectData|"
@@ -1332,7 +1332,7 @@ msgstr "Diğer, Vekil"
 #: kcharselectdata.cpp:795
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
-msgstr "Harf, Küçük harf"
+msgstr "Harf, Küçük Harf"
 
 #: kcharselectdata.cpp:797
 msgctxt "KCharSelectData|"
@@ -1357,12 +1357,12 @@ msgstr "Harf, Büyük Harf"
 #: kcharselectdata.cpp:805
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
-msgstr "İm, Boşluk Birleştirici"
+msgstr "İm, Boşluklandıran Birleştirici"
 
 #: kcharselectdata.cpp:807
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
-msgstr "İm, Kapsama"
+msgstr "İm, Kapalı"
 
 #: kcharselectdata.cpp:809
 msgctxt "KCharSelectData|"
@@ -1372,7 +1372,7 @@ msgstr "İm, Boşluklandırmayan"
 #: kcharselectdata.cpp:811
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
-msgstr "Sayı, Ondalık Ayırıcı"
+msgstr "Sayı, Ondalık Ayırıcısı"
 
 #: kcharselectdata.cpp:813
 msgctxt "KCharSelectData|"
@@ -1540,17 +1540,17 @@ msgstr "Kapat"
 #: kdatepickerpopup.cpp:96
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
-msgstr "Gelecek Yıl"
+msgstr "Gelecek yıl"
 
 #: kdatepickerpopup.cpp:97
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
-msgstr "Gelecek Ay"
+msgstr "Gelecek ay"
 
 #: kdatepickerpopup.cpp:98
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
-msgstr "Gelecek Hafta"
+msgstr "Gelecek hafta"
 
 #: kdatepickerpopup.cpp:99
 msgctxt "KDatePickerPopup|@option tomorrow"
@@ -1570,22 +1570,22 @@ msgstr "Dün"
 #: kdatepickerpopup.cpp:102
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
-msgstr "Geçen Hafta"
+msgstr "Geçen hafta"
 
 #: kdatepickerpopup.cpp:103
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
-msgstr "Geçen Ay"
+msgstr "Geçen ay"
 
 #: kdatepickerpopup.cpp:104
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
-msgstr "Geçen Yıl"
+msgstr "Geçen yıl"
 
 #: kdatepickerpopup.cpp:123
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
-msgstr "Tarih Yok"
+msgstr "Tarih yok"
 
 #: kdatetimeedit.cpp:171
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
@@ -1751,7 +1751,7 @@ msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, seçili yazıtipinin bir önizlemesidir. “Yazıtipi Seç…’ düğmesine "
+"Bu, seçili yazıtipinin bir önizlemesidir. “Yazıtipi Seç…” düğmesine "
 "tıklayarak onu değiştirebilirsiniz."
 
 #: kfontrequester.cpp:196
@@ -1908,7 +1908,7 @@ msgstr "Dü&zenle…"
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
 msgid "Launch the MIME type editor"
-msgstr "MIME türü düzenleyicisini çalıştırın"
+msgstr "MIME türü düzenleyicisini çalıştır"
 
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
