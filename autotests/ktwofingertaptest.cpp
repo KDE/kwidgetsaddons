@@ -7,10 +7,10 @@
 
 #include <ktwofingertap.h>
 
-#include <QTest>
-#include <QSignalSpy>
-#include <QWidget>
 #include <QMainWindow>
+#include <QSignalSpy>
+#include <QTest>
+#include <QWidget>
 
 class KTwoFingerSwipeTest : public QObject
 {
@@ -59,22 +59,23 @@ protected:
     }
 
 protected Q_SLOTS:
-    void slotTapFinished (KTwoFingerTap *tap)
+    void slotTapFinished(KTwoFingerTap *tap)
     {
         compareGesturePositions(tap);
     }
-    void slotTapStarted (KTwoFingerTap *tap)
+    void slotTapStarted(KTwoFingerTap *tap)
     {
         compareGesturePositions(tap);
     }
-    void slotTapUpdated (KTwoFingerTap *tap)
+    void slotTapUpdated(KTwoFingerTap *tap)
     {
         compareGesturePositions(tap);
     }
-    void slotTapCanceled (KTwoFingerTap *tap)
+    void slotTapCanceled(KTwoFingerTap *tap)
     {
         compareGesturePositions(tap);
     }
+
 private:
     void compareGesturePositions(KTwoFingerTap *tap)
     {
@@ -165,25 +166,17 @@ private Q_SLOTS:
         clearSignalSpys();
 
         int tapRadius = mTwoFingerRec->tapRadius();
-        QPoint wiggleRoom = QPoint (tapRadius / 2, tapRadius / 2);
+        QPoint wiggleRoom = QPoint(tapRadius / 2, tapRadius / 2);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + wiggleRoom, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos + wiggleRoom, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + wiggleRoom, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).move(1, mTouchPointPos + wiggleRoom, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos, (QWidget *)nullptr);
 
         if (mSpyTapStarted->count() == 0) {
             QVERIFY(mSpyTapStarted->wait(1000));
@@ -205,25 +198,17 @@ private Q_SLOTS:
         clearSignalSpys();
 
         int tapRadius = mTwoFingerRec->tapRadius();
-        QPoint wiggleRoom = QPoint (tapRadius, tapRadius);
+        QPoint wiggleRoom = QPoint(tapRadius, tapRadius);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + wiggleRoom, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos + wiggleRoom, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + wiggleRoom, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).move(1, mTouchPointPos + wiggleRoom, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos, (QWidget *)nullptr);
 
         QCOMPARE(mSpyTapStarted->count(), 0);
         QCOMPARE(mSpyTapFinished->count(), 0);
@@ -236,25 +221,17 @@ private Q_SLOTS:
         // Test a failing gesture with two fingers, where the touch points wiggle too much in the middle.
         clearSignalSpys();
         int tapRadius = mTwoFingerRec->tapRadius();
-        QPoint wiggleRoom = QPoint (tapRadius, tapRadius);
+        QPoint wiggleRoom = QPoint(tapRadius, tapRadius);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + wiggleRoom, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).move(1, mTouchPointPos + wiggleRoom, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos, (QWidget *)nullptr);
 
         if (mSpyTapStarted->count() == 0) {
             QVERIFY(mSpyTapStarted->wait(1000));
@@ -272,33 +249,21 @@ private Q_SLOTS:
 
         clearSignalSpys();
         int tapRadius = mTwoFingerRec->tapRadius();
-        QPoint wiggleRoom = QPoint (tapRadius, tapRadius);
+        QPoint wiggleRoom = QPoint(tapRadius, tapRadius);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + wiggleRoom, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).move(1, mTouchPointPos + wiggleRoom, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos, (QWidget *)nullptr);
 
         if (mSpyTapStarted->count() == 0) {
             QVERIFY(mSpyTapStarted->wait(1000));
@@ -314,26 +279,20 @@ private Q_SLOTS:
         // the test a gesture with three fingers should be end with gesture canceled.
         clearSignalSpys();
         int tapRadius = mTwoFingerRec->tapRadius();
-        QPoint wiggleRoom = QPoint (tapRadius / 2, tapRadius / 2);
+        QPoint wiggleRoom = QPoint(tapRadius / 2, tapRadius / 2);
+
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+            .move(0, mTouchPointPos, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + wiggleRoom, (QWidget *)nullptr)
+            .press(2, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + wiggleRoom, (QWidget *) nullptr)
-            .press(2, mTouchPointPos, (QWidget *) nullptr);
-
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
-
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos, (QWidget *)nullptr);
 
         if (mSpyTapStarted->count() == 0) {
             QVERIFY(mSpyTapStarted->wait(1000));
@@ -346,40 +305,29 @@ private Q_SLOTS:
 
     void testFailingGesture_threeFingers2()
     {
-
         clearSignalSpys();
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+            .move(0, mTouchPointPos, (QWidget *)nullptr)
+            .move(1, mTouchPointPos, (QWidget *)nullptr)
+            .press(2, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos, (QWidget *) nullptr)
-            .press(2, mTouchPointPos, (QWidget *) nullptr);
+            .move(0, mTouchPointPos, (QWidget *)nullptr)
+            .move(1, mTouchPointPos, (QWidget *)nullptr)
+            .release(3, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .move(1, mTouchPointPos, (QWidget *) nullptr)
-            .release(3, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr).release(1, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
-
-        QTest::touchEvent(&mWidget, mDev)
-            .release(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(1, mTouchPointPos, (QWidget *)nullptr);
 
         if (mSpyTapStarted->count() == 0) {
             QVERIFY(mSpyTapStarted->wait(1000));
@@ -395,19 +343,15 @@ private Q_SLOTS:
         // Test a failing gesture where we use only one finger.
         clearSignalSpys();
         int tapRadius = mTwoFingerRec->tapRadius();
-        QPoint wiggleRoom = QPoint (tapRadius / 2, tapRadius / 2);
+        QPoint wiggleRoom = QPoint(tapRadius / 2, tapRadius / 2);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + wiggleRoom, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos + wiggleRoom, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos, (QWidget *)nullptr);
 
         QCOMPARE(mSpyTapStarted->count(), 0);
         QCOMPARE(mSpyTapFinished->count(), 0);

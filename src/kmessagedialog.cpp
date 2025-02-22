@@ -158,7 +158,7 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
     if ((d->m_type == KMessageDialog::Information) || (d->m_type != KMessageDialog::Error)) {
         // set Ok button
         setButtons();
-    } else if ((d->m_type == KMessageDialog::WarningContinueCancel)) {
+    } else if (d->m_type == KMessageDialog::WarningContinueCancel) {
         // set Continue & Cancel buttons
         setButtons(KStandardGuiItem::cont(), KGuiItem(), KStandardGuiItem::cancel());
     }

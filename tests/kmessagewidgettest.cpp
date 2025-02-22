@@ -51,7 +51,8 @@ int main(int argc, char *argv[])
     KMessageWidget *mw1 = new KMessageWidget(mainWindow);
     mw1->setMessageType(KMessageWidget::Positive);
     mw1->setWordWrap(true);
-    mw1->setText(QStringLiteral("Test KMessageWidget icon alignemnt<br />with pre-wrapped<br />content<br />like<br />this.<br />Please test with word wrap enabled and disabled."));
+    mw1->setText(QStringLiteral(
+        "Test KMessageWidget icon alignemnt<br />with pre-wrapped<br />content<br />like<br />this.<br />Please test with word wrap enabled and disabled."));
     mw1->setIcon(QIcon::fromTheme(QStringLiteral("kde")));
     KMessageWidget *mw2 = new KMessageWidget(mainWindow);
     mw2->setWordWrap(true);

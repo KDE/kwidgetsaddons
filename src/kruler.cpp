@@ -392,7 +392,7 @@ void KRuler::setRulerMetricStyle(KRuler::MetricStyle style)
     case Metres:
         setEndLabel(QStringLiteral("m"));
     default: /* never reached, see above switch */
-             /* empty command */;
+        /* empty command */;
     }
     // if the style changes one of the values,
     // update would have been called inside the methods

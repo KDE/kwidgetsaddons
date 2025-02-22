@@ -95,6 +95,7 @@ public:
      * @param swipeAngle The angle.
      */
     void setSwipeAngle(qreal swipeAngle);
+
 private:
     std::unique_ptr<class KTwoFingerSwipePrivate> const d;
 };
@@ -132,7 +133,7 @@ public:
      *
      * @return The new QGesture object.
      */
-    QGesture* create(QObject *target) override;
+    QGesture *create(QObject *target) override;
 
     /**
      * Handles the given event for the watched object and update the gesture object.

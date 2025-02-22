@@ -107,7 +107,9 @@ public:
         }
     }
 
-    enum internalRoles { CharacterRole = Qt::UserRole };
+    enum internalRoles {
+        CharacterRole = Qt::UserRole
+    };
     int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (parent.isValid()) {

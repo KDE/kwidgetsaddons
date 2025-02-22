@@ -37,7 +37,11 @@ public:
 
     QRect calcSelectionRectangle(const QPoint &startPoint, const QPoint &endPoint);
 
-    enum CursorState { None = 0, Resizing, Moving };
+    enum CursorState {
+        None = 0,
+        Resizing,
+        Moving
+    };
     CursorState m_state;
 
     QPixmap m_unzoomedPixmap;

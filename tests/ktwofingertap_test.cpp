@@ -8,16 +8,15 @@
 #include "ktwofingertap_test.h"
 
 #include <QApplication>
-#include <QVBoxLayout>
 #include <QCheckBox>
-#include <QLineEdit>
-#include <QLabel>
 #include <QDebug>
-#include <QTouchEvent>
+#include <QLabel>
+#include <QLineEdit>
 #include <QSpinBox>
+#include <QTouchEvent>
+#include <QVBoxLayout>
 
 #include <ktwofingertap.h>
-
 
 MainWindow::MainWindow()
     : QMainWindow()
@@ -25,7 +24,7 @@ MainWindow::MainWindow()
     mWidget = new QWidget(this);
     setCentralWidget(mWidget);
 
-    QVBoxLayout *vLayout = new QVBoxLayout (mWidget);
+    QVBoxLayout *vLayout = new QVBoxLayout(mWidget);
 
     QLabel *msgLabel = new QLabel(QStringLiteral("Make a two finger tap gesture in this window."), mWidget);
     msgLabel->setAlignment(Qt::AlignHCenter);
@@ -68,7 +67,7 @@ MainWindow::MainWindow()
     mWidget->setAttribute(Qt::WA_AcceptTouchEvents);
     mWidget->installEventFilter(this);
 
-    connect (mGTapRadius, &QSpinBox::valueChanged, this, &MainWindow::slotSwipeTimeChanged);
+    connect(mGTapRadius, &QSpinBox::valueChanged, this, &MainWindow::slotSwipeTimeChanged);
 }
 
 MainWindow::~MainWindow()
@@ -103,7 +102,7 @@ bool MainWindow::eventFilter(QObject *watched, QEvent *e)
             } else if (state == Qt::GestureCanceled) {
                 mGCanceled->setCheckState(Qt::Checked);
             } else if (mGCanceled->isChecked() && mGFinished->isChecked()) {
-                qWarning()<<"ERROR: The gesture state is canceled and finished at the same time";
+                qWarning() << "ERROR: The gesture state is canceled and finished at the same time";
             }
         }
         e->accept();
@@ -126,7 +125,6 @@ void MainWindow::slotSwipeTimeChanged(int value)
 {
     mTwoFingerRec->setTapRadius(value);
 }
-
 
 int main(int argc, char **argv)
 {

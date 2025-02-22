@@ -74,7 +74,14 @@ public:
     /**
      * The types of units used.
      */
-    enum MetricStyle { Custom = 0, Pixel, Inch, Millimetres, Centimetres, Metres };
+    enum MetricStyle {
+        Custom = 0,
+        Pixel,
+        Inch,
+        Millimetres,
+        Centimetres,
+        Metres
+    };
     Q_ENUM(MetricStyle)
 
     /**

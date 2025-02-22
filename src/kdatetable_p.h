@@ -88,7 +88,11 @@ public:
      */
     bool popupMenuEnabled() const;
 
-    enum BackgroundMode { NoBgMode = 0, RectangleMode, CircleMode };
+    enum BackgroundMode {
+        NoBgMode = 0,
+        RectangleMode,
+        CircleMode
+    };
 
     /**
      * Makes a given date be painted with a given foregroundColor, and background

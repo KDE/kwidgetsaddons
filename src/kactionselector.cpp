@@ -143,8 +143,12 @@ KActionSelector::KActionSelector(QWidget *parent)
     connect(d->btnDown, &QToolButton::clicked, this, [this]() {
         d->buttonDownClicked();
     });
-    connect(d->availableListWidget, &QListWidget::itemDoubleClicked, this, [this] (QListWidgetItem *item) { d->itemDoubleClicked(item); });
-    connect(d->selectedListWidget, &QListWidget::itemDoubleClicked, this, [this] (QListWidgetItem *item) { d->itemDoubleClicked(item); });
+    connect(d->availableListWidget, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem *item) {
+        d->itemDoubleClicked(item);
+    });
+    connect(d->selectedListWidget, &QListWidget::itemDoubleClicked, this, [this](QListWidgetItem *item) {
+        d->itemDoubleClicked(item);
+    });
     connect(d->availableListWidget, &QListWidget::itemSelectionChanged, this, &KActionSelector::setButtonsEnabled);
     connect(d->selectedListWidget, &QListWidget::itemSelectionChanged, this, &KActionSelector::setButtonsEnabled);
 

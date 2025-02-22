@@ -22,7 +22,7 @@ public:
     }
     KTwoFingerTapRecognizer *const q;
     bool mGestureTriggered = false;
-    int mTapRadius = 40;  // same as Qt::TapGesture
+    int mTapRadius = 40; // same as Qt::TapGesture
     Qt::GestureState mLastState = Qt::NoGesture;
 };
 
@@ -36,7 +36,7 @@ KTwoFingerTapRecognizer::~KTwoFingerTapRecognizer()
 {
 }
 
-QGesture* KTwoFingerTapRecognizer::create(QObject *target)
+QGesture *KTwoFingerTapRecognizer::create(QObject *target)
 {
     Q_UNUSED(target)
     return static_cast<QGesture *>(new KTwoFingerTap());

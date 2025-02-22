@@ -9,10 +9,10 @@
 #include "ktwofingerswipe.h"
 
 // Qt
+#include <QDebug>
 #include <QGraphicsWidget>
 #include <QLineF>
 #include <QTouchEvent>
-#include <QDebug>
 class KTwoFingerSwipeRecognizerPrivate
 {
 public:
@@ -37,7 +37,7 @@ KTwoFingerSwipeRecognizer::~KTwoFingerSwipeRecognizer()
 {
 }
 
-QGesture* KTwoFingerSwipeRecognizer::create(QObject *target)
+QGesture *KTwoFingerSwipeRecognizer::create(QObject *target)
 {
     Q_UNUSED(target);
     return static_cast<QGesture *>(new KTwoFingerSwipe());
@@ -78,8 +78,8 @@ QGestureRecognizer::Result KTwoFingerSwipeRecognizer::recognize(QGesture *gestur
         kTwoFingerSwipe->setSwipeAngle(ql.angle());
 
         if (touchPointSize > 2) {
-                d->mGestureAlreadyFinished = true;
-                return CancelGesture;
+            d->mGestureAlreadyFinished = true;
+            return CancelGesture;
         }
 
         if (touchPointSize == 2) {
@@ -140,8 +140,6 @@ void KTwoFingerSwipeRecognizer::setSwipeDistance(int i)
     d->mMinSwipeDistance = i;
 }
 
-
-
 class KTwoFingerSwipePrivate
 {
 public:
@@ -200,7 +198,7 @@ qreal KTwoFingerSwipe::swipeAngle() const
 {
     return d->mSwipeAngle;
 }
- void KTwoFingerSwipe::setSwipeAngle(qreal _swipeAngle)
+void KTwoFingerSwipe::setSwipeAngle(qreal _swipeAngle)
 {
     d->mSwipeAngle = _swipeAngle;
 }

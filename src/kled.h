@@ -46,14 +46,20 @@ public:
      * Status of the light is on/off.
      * @short LED on/off.
      */
-    enum State { Off, On };
+    enum State {
+        Off,
+        On
+    };
     Q_ENUM(State)
 
     /**
      * Shades of the lamp.
      * @short LED shape
      */
-    enum Shape { Rectangular, Circular };
+    enum Shape {
+        Rectangular,
+        Circular
+    };
     Q_ENUM(Shape)
 
     /**

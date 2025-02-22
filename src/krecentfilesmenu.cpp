@@ -87,7 +87,8 @@ public:
 
 KRecentFilesMenuPrivate::KRecentFilesMenuPrivate(KRecentFilesMenu *q_ptr)
     : q(q_ptr)
-{}
+{
+}
 
 std::vector<RecentFilesEntry *>::iterator KRecentFilesMenuPrivate::findEntry(const QUrl &url)
 {

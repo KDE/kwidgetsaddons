@@ -60,7 +60,9 @@ public:
         QString searchString;
     };
 
-    enum { MaxHistoryItems = 100 };
+    enum {
+        MaxHistoryItems = 100
+    };
 
     KCharSelectPrivate(KCharSelect *qq)
         : q(qq)

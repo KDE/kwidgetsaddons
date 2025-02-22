@@ -7,10 +7,10 @@
 
 #include <ktwofingerswipe.h>
 
-#include <QTest>
-#include <QSignalSpy>
-#include <QWidget>
 #include <QMainWindow>
+#include <QSignalSpy>
+#include <QTest>
+#include <QWidget>
 
 #include "windowscheck.h"
 
@@ -62,22 +62,23 @@ protected:
     }
 
 protected Q_SLOTS:
-    void slotSwipeFinished (KTwoFingerSwipe *swipe)
+    void slotSwipeFinished(KTwoFingerSwipe *swipe)
     {
         compareGesturePositions(swipe);
     }
-    void slotSwipeStarted (KTwoFingerSwipe *swipe)
+    void slotSwipeStarted(KTwoFingerSwipe *swipe)
     {
         compareGesturePositions(swipe);
     }
-    void slotSwipeUpdated (KTwoFingerSwipe *swipe)
+    void slotSwipeUpdated(KTwoFingerSwipe *swipe)
     {
         compareGesturePositions(swipe);
     }
-    void slotSwipeCanceled (KTwoFingerSwipe *swipe)
+    void slotSwipeCanceled(KTwoFingerSwipe *swipe)
     {
         compareGesturePositions(swipe);
     }
+
 private:
     void compareGesturePositions(KTwoFingerSwipe *swipe)
     {
@@ -177,26 +178,23 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance();
         const QPoint swipeDistance = QPoint(length, 0);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
-
-
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev)
+            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         if (mSpySwipeStarted->count() == 0) {
             QVERIFY(mSpySwipeStarted->wait(1000));
@@ -216,26 +214,23 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance();
         const QPoint swipeDistance = QPoint(-length, 0);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
-
-
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev)
+            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         if (mSpySwipeStarted->count() == 0) {
             QVERIFY(mSpySwipeStarted->wait(1000));
@@ -255,26 +250,23 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance();
         const QPoint swipeDistance = QPoint(0, -length);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
-
-
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev)
+            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         if (mSpySwipeStarted->count() == 0) {
             QVERIFY(mSpySwipeStarted->wait(1000));
@@ -294,26 +286,23 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance();
         const QPoint swipeDistance = QPoint(0, length);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
-
-
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev)
+            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         if (mSpySwipeStarted->count() == 0) {
             QVERIFY(mSpySwipeStarted->wait(1000));
@@ -333,26 +322,23 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance() / 3;
         const QPoint swipeDistance = QPoint(length, 0);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
-
-
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
+
+        QTest::touchEvent(&mWidget, mDev)
+            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         if (mSpySwipeStarted->count() == 0) {
             QVERIFY(mSpySwipeStarted->wait(1000));
@@ -365,7 +351,6 @@ private Q_SLOTS:
         QCOMPARE(mAngel, 0);
     }
 
-
     void testFailingGesture_threeFingers()
     {
         clearSignalSpys();
@@ -373,28 +358,26 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance();
         const QPoint swipeDistance = QPoint(length, 0);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr)
-            .press(1, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr).press(1, mTouchPointPos, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr)
-            .press(2, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr)
+            .press(2, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(1, mTouchPointPos + swipeDistance, (QWidget *) nullptr)
-            .move(2, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+            .move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(1, mTouchPointPos + swipeDistance, (QWidget *)nullptr)
+            .move(2, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
 
         QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr)
-            .release(2, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(1, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr)
+            .release(2, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         if (mSpySwipeCanceled->count() == 0) {
             QVERIFY(mSpySwipeCanceled->wait(1000));
@@ -414,20 +397,15 @@ private Q_SLOTS:
         const int length = mTwoFingerRec->minSswipeDistance();
         const QPoint swipeDistance = QPoint(length, 0);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .press(0, mTouchPointPos, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).press(0, mTouchPointPos, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 3, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos + swipeDistance / 3, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance / 2, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos + swipeDistance / 2, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .move(0, mTouchPointPos + swipeDistance, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).move(0, mTouchPointPos + swipeDistance, (QWidget *)nullptr);
 
-        QTest::touchEvent(&mWidget, mDev)
-            .release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *) nullptr);
+        QTest::touchEvent(&mWidget, mDev).release(0, mTouchPointPos + swipeDistance * 1.5, (QWidget *)nullptr);
 
         QCOMPARE(mSpySwipeStarted->count(), 0);
         QCOMPARE(mSpySwipeFinished->count(), 0);

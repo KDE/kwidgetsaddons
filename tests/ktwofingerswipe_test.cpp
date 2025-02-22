@@ -8,16 +8,15 @@
 #include "ktwofingerswipe_test.h"
 
 #include <QApplication>
-#include <QVBoxLayout>
 #include <QCheckBox>
-#include <QLineEdit>
-#include <QLabel>
 #include <QDebug>
-#include <QTouchEvent>
+#include <QLabel>
+#include <QLineEdit>
 #include <QSpinBox>
+#include <QTouchEvent>
+#include <QVBoxLayout>
 
 #include <ktwofingerswipe.h>
-
 
 MainWindow::MainWindow()
     : QMainWindow()
@@ -25,7 +24,7 @@ MainWindow::MainWindow()
     mWidget = new QWidget(this);
     setCentralWidget(mWidget);
 
-    QVBoxLayout *vLayout = new QVBoxLayout (mWidget);
+    QVBoxLayout *vLayout = new QVBoxLayout(mWidget);
 
     QLabel *msgLabel = new QLabel(QStringLiteral("Make a two finger swipe gesture in this window."), mWidget);
     msgLabel->setAlignment(Qt::AlignHCenter);
@@ -78,8 +77,8 @@ MainWindow::MainWindow()
     mWidget->setAttribute(Qt::WA_AcceptTouchEvents);
     mWidget->installEventFilter(this);
 
-    connect (mGSwipeTime, &QSpinBox::valueChanged, this, &MainWindow::slotSwipeTimeChanged);
-    connect (mGSwipeDistance, &QSpinBox::valueChanged, this, &MainWindow::slotSwipeDistanceChanged);
+    connect(mGSwipeTime, &QSpinBox::valueChanged, this, &MainWindow::slotSwipeTimeChanged);
+    connect(mGSwipeDistance, &QSpinBox::valueChanged, this, &MainWindow::slotSwipeDistanceChanged);
 }
 
 MainWindow::~MainWindow()

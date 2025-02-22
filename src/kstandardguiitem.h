@@ -32,7 +32,10 @@ namespace KStandardGuiItem
  * and Arab countries. If you want those actions to ignore the RTL value
  * and force 'Western' behavior instead, use the IgnoreRTL value instead.
  */
-enum BidiMode { UseRTL = 0, IgnoreRTL };
+enum BidiMode {
+    UseRTL = 0,
+    IgnoreRTL
+};
 
 enum StandardItem {
     Ok = 1,

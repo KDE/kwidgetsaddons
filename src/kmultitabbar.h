@@ -39,7 +39,12 @@ class KWIDGETSADDONS_EXPORT KMultiTabBar : public QWidget
     Q_PROPERTY(KMultiTabBarPosition position READ position WRITE setPosition)
     Q_PROPERTY(KMultiTabBarStyle tabStyle READ tabStyle WRITE setStyle)
 public:
-    enum KMultiTabBarPosition { Left, Right, Top, Bottom };
+    enum KMultiTabBarPosition {
+        Left,
+        Right,
+        Top,
+        Bottom
+    };
     Q_ENUM(KMultiTabBarPosition)
 
     /**

@@ -29,8 +29,8 @@ public:
 
     void init()
     {
-        //When the image is rotated we need to enforce the maximum width&height into the
-        //KPixmapRegionSelectorWidget; in order to avoid the dialog to get out of the screen
+        // When the image is rotated we need to enforce the maximum width&height into the
+        // KPixmapRegionSelectorWidget; in order to avoid the dialog to get out of the screen
         q->connect(pixmapSelectorWidget, &KPixmapRegionSelectorWidget::pixmapRotated, q, [this]() {
             adjustPixmapSize();
         });

@@ -82,6 +82,7 @@ public:
      * @param scenePos The scene position, identical to the screen position for widgets.
      */
     void setScenePos(QPointF scenePos);
+
 private:
     std::unique_ptr<class KTwoFingerTapPrivate> const d;
 };
@@ -116,7 +117,7 @@ public:
      *
      * @return The new QGesture object.
      */
-    QGesture* create(QObject *target) override;
+    QGesture *create(QObject *target) override;
 
     /**
      * Handles the given event for the watched object and update the gesture object.
