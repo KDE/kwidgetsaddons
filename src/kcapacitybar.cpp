@@ -154,6 +154,11 @@ KCapacityBar::DrawTextMode KCapacityBar::drawTextMode() const
 
 void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
 {
+    drawCapacityBar(p, rect, {});
+}
+
+void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect, QStyle::State state) const
+{
     if (d->ce_capacityBar) {
         QStyleOptionProgressBar opt;
         opt.initFrom(this);
@@ -161,7 +166,7 @@ void KCapacityBar::drawCapacityBar(QPainter *p, const QRect &rect) const
         opt.minimum = 0;
         opt.maximum = 100;
         opt.progress = d->value;
-        opt.state |= QStyle::State_Horizontal;
+        opt.state |= (state | QStyle::State_Horizontal);
         opt.text = d->text;
         opt.textAlignment = Qt::AlignCenter;
         opt.textVisible = !d->text.isEmpty();

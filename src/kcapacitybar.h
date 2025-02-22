@@ -8,6 +8,7 @@
 #ifndef KCAPACITYBAR_H
 #define KCAPACITYBAR_H
 
+#include <QStyle>
 #include <QWidget>
 #include <memory>
 
@@ -201,6 +202,18 @@ public:
      * this widget should be drawn.
      */
     void drawCapacityBar(QPainter *p, const QRect &rect) const;
+
+    /**
+     * This method allows you to draw the widget, directly, for example on
+     * item delegates. You need the painter object and the rect where
+     * this widget should be drawn, and the state that it should be painted in.
+     *
+     * For example, when in a selected delegate, setting the correct state
+     * ensures that the bar keeps sufficient contrast to the selection color.
+     *
+     * @since 6.12
+     */
+    void drawCapacityBar(QPainter *p, const QRect &rect, QStyle::State state) const;
 
     // Reimplemented from QWidget
     QSize minimumSizeHint() const override;
