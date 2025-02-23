@@ -1066,202 +1066,202 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr "舊式電腦符號"
 
-#: kcharselect.cpp:391
+#: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "輸入搜尋字串或字元…"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:395
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "在此輸入搜尋字串或字元"
 
-#: kcharselect.cpp:400
+#: kcharselect.cpp:402
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "尋找(&F)…"
 
-#: kcharselect.cpp:424
+#: kcharselect.cpp:426
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "歷史清單中上一個項目"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:428
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "歷史清單中前一個字元"
 
-#: kcharselect.cpp:431
+#: kcharselect.cpp:433
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "歷史清單中下一個項目"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:435
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "歷史清單中下一個字元"
 
-#: kcharselect.cpp:438
+#: kcharselect.cpp:440
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "返回(&B)"
 
-#: kcharselect.cpp:445
+#: kcharselect.cpp:447
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "往前(&F)"
 
-#: kcharselect.cpp:464
+#: kcharselect.cpp:466
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "選擇類別"
 
-#: kcharselect.cpp:468
+#: kcharselect.cpp:470
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "選擇要顯示的區塊"
 
-#: kcharselect.cpp:487
+#: kcharselect.cpp:489
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "設定字型"
 
-#: kcharselect.cpp:494
+#: kcharselect.cpp:496
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "設定字型大小"
 
-#: kcharselect.cpp:796
+#: kcharselect.cpp:798
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "字元："
 
-#: kcharselect.cpp:802
+#: kcharselect.cpp:804
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "名稱："
 
-#: kcharselect.cpp:811
+#: kcharselect.cpp:813
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "最後狀態註記和交互參考"
 
-#: kcharselect.cpp:815
+#: kcharselect.cpp:817
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "別名："
 
-#: kcharselect.cpp:823
+#: kcharselect.cpp:825
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "備忘："
 
-#: kcharselect.cpp:831
+#: kcharselect.cpp:833
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "請參考："
 
-#: kcharselect.cpp:846
+#: kcharselect.cpp:848
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "等同於："
 
-#: kcharselect.cpp:854
+#: kcharselect.cpp:856
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "約等同於："
 
-#: kcharselect.cpp:862
+#: kcharselect.cpp:864
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "分解："
 
-#: kcharselect.cpp:874
+#: kcharselect.cpp:876
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "中日韓表意文字資訊"
 
-#: kcharselect.cpp:877
+#: kcharselect.cpp:879
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "英語中的定義："
 
-#: kcharselect.cpp:884
+#: kcharselect.cpp:886
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "中文發音："
 
-#: kcharselect.cpp:891
+#: kcharselect.cpp:893
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "廣東話發音："
 
-#: kcharselect.cpp:898
+#: kcharselect.cpp:900
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "日語「音讀」發音："
 
-#: kcharselect.cpp:905
+#: kcharselect.cpp:907
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "日語「訓讀」發音："
 
-#: kcharselect.cpp:912
+#: kcharselect.cpp:914
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "唐語發音："
 
-#: kcharselect.cpp:919
+#: kcharselect.cpp:921
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "韓語發音："
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:927
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "一般字元屬性"
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "區塊："
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "萬國碼類別："
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:933
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "各種有用的編碼"
 
-#: kcharselect.cpp:932
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8："
 
-#: kcharselect.cpp:936
+#: kcharselect.cpp:938
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16："
 
-#: kcharselect.cpp:943
+#: kcharselect.cpp:945
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C 八進位跳脫 UTF-8："
 
-#: kcharselect.cpp:947
+#: kcharselect.cpp:949
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML 十進位項目："
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "萬國碼點："
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "十進位"
@@ -2067,32 +2067,32 @@ msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "請按下並拖曳圖片來選擇一份區域："
 
-#: kpixmapregionselectorwidget.cpp:173
+#: kpixmapregionselectorwidget.cpp:177
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "影像操作"
 
-#: kpixmapregionselectorwidget.cpp:176
+#: kpixmapregionselectorwidget.cpp:180
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "順時針方向旋轉(&R)"
 
-#: kpixmapregionselectorwidget.cpp:180
+#: kpixmapregionselectorwidget.cpp:184
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "逆時針方向旋轉(&C)"
 
-#: krecentfilesmenu.cpp:114
+#: krecentfilesmenu.cpp:115
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "沒有項目"
 
-#: krecentfilesmenu.cpp:117
+#: krecentfilesmenu.cpp:118
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "清除清單"
 
-#: krecentfilesmenu.cpp:123
+#: krecentfilesmenu.cpp:124
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "最近使用的檔案"

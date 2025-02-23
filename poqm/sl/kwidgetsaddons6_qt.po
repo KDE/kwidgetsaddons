@@ -1066,202 +1066,202 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr "Simboli za starejše računalnike"
 
-#: kcharselect.cpp:391
+#: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Sem vnesite iskani pojem ali znak…"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:395
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Sem vnesite iskani pojem ali znak"
 
-#: kcharselect.cpp:400
+#: kcharselect.cpp:402
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "Najdi…"
 
-#: kcharselect.cpp:424
+#: kcharselect.cpp:426
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Predhodni v zgodovini"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:428
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "Predhodni znak v zgodovini"
 
-#: kcharselect.cpp:431
+#: kcharselect.cpp:433
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Naslednji v zgodovini"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:435
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "Naslednji znak v zgodovini"
 
-#: kcharselect.cpp:438
+#: kcharselect.cpp:440
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "Nazaj"
 
-#: kcharselect.cpp:445
+#: kcharselect.cpp:447
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "Naprej"
 
-#: kcharselect.cpp:464
+#: kcharselect.cpp:466
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Izberite kategorijo"
 
-#: kcharselect.cpp:468
+#: kcharselect.cpp:470
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Izberite blok, ki naj se prikaže"
 
-#: kcharselect.cpp:487
+#: kcharselect.cpp:489
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Nastavi pisavo"
 
-#: kcharselect.cpp:494
+#: kcharselect.cpp:496
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Nastavi velikost pisave"
 
-#: kcharselect.cpp:796
+#: kcharselect.cpp:798
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Znak:"
 
-#: kcharselect.cpp:802
+#: kcharselect.cpp:804
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Ime: "
 
-#: kcharselect.cpp:811
+#: kcharselect.cpp:813
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Zabeležke in navzkrižne povezave"
 
-#: kcharselect.cpp:815
+#: kcharselect.cpp:817
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Vzdevki:"
 
-#: kcharselect.cpp:823
+#: kcharselect.cpp:825
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Opombe:"
 
-#: kcharselect.cpp:831
+#: kcharselect.cpp:833
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Glejte tudi:"
 
-#: kcharselect.cpp:846
+#: kcharselect.cpp:848
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Enakovredno:"
 
-#: kcharselect.cpp:854
+#: kcharselect.cpp:856
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Približno enakovredno:"
 
-#: kcharselect.cpp:862
+#: kcharselect.cpp:864
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Razstavitev:"
 
-#: kcharselect.cpp:874
+#: kcharselect.cpp:876
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK Ideogram podrobnosti"
 
-#: kcharselect.cpp:877
+#: kcharselect.cpp:879
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Angleška opredelitev: "
 
-#: kcharselect.cpp:884
+#: kcharselect.cpp:886
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Mandarinska izgovarjava: "
 
-#: kcharselect.cpp:891
+#: kcharselect.cpp:893
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Kantonska izgovorjava: "
 
-#: kcharselect.cpp:898
+#: kcharselect.cpp:900
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Japonska On izgovarjava: "
 
-#: kcharselect.cpp:905
+#: kcharselect.cpp:907
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Japonska Kun izgovarjava: "
 
-#: kcharselect.cpp:912
+#: kcharselect.cpp:914
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Izgovarjava Tang: "
 
-#: kcharselect.cpp:919
+#: kcharselect.cpp:921
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Korejska izgovarjava: "
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:927
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Splošne lastnosti znaka"
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Blok: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Kategorija Unicode: "
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:933
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Razne uporabne predstavitve"
 
-#: kcharselect.cpp:932
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:936
+#: kcharselect.cpp:938
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:943
+#: kcharselect.cpp:945
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "Osmiški ubežni UTF-8 jezika C: "
 
-#: kcharselect.cpp:947
+#: kcharselect.cpp:949
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "Desetiški predmet XML:"
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Kodna točka Unicode:"
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Desetiško"
@@ -2082,32 +2082,32 @@ msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "Kliknite in povlecite po sliki, da izberete območje zanimanja:"
 
-#: kpixmapregionselectorwidget.cpp:173
+#: kpixmapregionselectorwidget.cpp:177
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Dejanja slike"
 
-#: kpixmapregionselectorwidget.cpp:176
+#: kpixmapregionselectorwidget.cpp:180
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "Zavrti v smeri u&rinega kazalca"
 
-#: kpixmapregionselectorwidget.cpp:180
+#: kpixmapregionselectorwidget.cpp:184
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Zavrti v nasprotni smeri urinega kazal&ca"
 
-#: krecentfilesmenu.cpp:114
+#: krecentfilesmenu.cpp:115
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Ni vnosov"
 
-#: krecentfilesmenu.cpp:117
+#: krecentfilesmenu.cpp:118
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Počisti seznam"
 
-#: krecentfilesmenu.cpp:123
+#: krecentfilesmenu.cpp:124
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Zadnje datoteke"

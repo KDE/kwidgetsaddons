@@ -1385,21 +1385,21 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
 
-#: kcharselect.cpp:391
+#: kcharselect.cpp:393
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "ਇੱਕ ਖੋਜ ਸ਼ਬਦ ਜਾਂ ਅੱਖਰ ਇੱਥੇ ਦਿਓ"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:395
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "ਇੱਕ ਖੋਜ ਸ਼ਬਦ ਜਾਂ ਅੱਖਰ ਇੱਥੇ ਦਿਓ"
 
-#: kcharselect.cpp:400
+#: kcharselect.cpp:402
 #, fuzzy
 #| msgctxt "KStandardGuiItem|"
 #| msgid "&Find"
@@ -1407,7 +1407,7 @@ msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "ਖੋਜ(&F)"
 
-#: kcharselect.cpp:424
+#: kcharselect.cpp:426
 #, fuzzy
 #| msgctxt "Goes to previous character"
 #| msgid "Previous in History"
@@ -1415,14 +1415,14 @@ msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਪਿੱਛੇ"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:428
 #, fuzzy
 #| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਪਿਛਲਾ ਅੱਖਰ"
 
-#: kcharselect.cpp:431
+#: kcharselect.cpp:433
 #, fuzzy
 #| msgctxt "Goes to next character"
 #| msgid "Next in History"
@@ -1430,14 +1430,14 @@ msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਅੱਗੇ"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:435
 #, fuzzy
 #| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਅੱਖਰ ਅੱਗੇ"
 
-#: kcharselect.cpp:438
+#: kcharselect.cpp:440
 #, fuzzy
 #| msgctxt "KAssistantDialog|go back"
 #| msgid "&Back"
@@ -1445,7 +1445,7 @@ msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "ਪਿੱਛੇ(&B)"
 
-#: kcharselect.cpp:445
+#: kcharselect.cpp:447
 #, fuzzy
 #| msgctxt "KCharSelect|go forward"
 #| msgid "&Forward"
@@ -1453,21 +1453,21 @@ msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "ਅੱਗੇ(&F)"
 
-#: kcharselect.cpp:464
+#: kcharselect.cpp:466
 #, fuzzy
 #| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "ਇੱਕ ਕੈਟਾਗਰੀ ਚੁਣੋ"
 
-#: kcharselect.cpp:468
+#: kcharselect.cpp:470
 #, fuzzy
 #| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "ਵੇਖਾਉਣ ਲਈ ਇੱਕ ਬਲਾਕ ਚੁਣੋ"
 
-#: kcharselect.cpp:487
+#: kcharselect.cpp:489
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Set font"
@@ -1475,184 +1475,184 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "ਫੋਂਟ ਸੈੱਟ ਕਰੋ"
 
-#: kcharselect.cpp:494
+#: kcharselect.cpp:496
 #, fuzzy
 #| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "ਫੋਂਟ ਸਾਈਜ਼ ਸੈੱਟ ਕਰੋ"
 
-#: kcharselect.cpp:796
+#: kcharselect.cpp:798
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "ਅੱਖਰ:"
 
-#: kcharselect.cpp:802
+#: kcharselect.cpp:804
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "ਨਾਂ: "
 
-#: kcharselect.cpp:811
+#: kcharselect.cpp:813
 #, fuzzy
 #| msgid "Annotations and Cross References"
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "ਟਿੱਪਣੀ ਅਤੇ ਕਰਾਂਸ ਰੈਫਰੈਂਸ"
 
-#: kcharselect.cpp:815
+#: kcharselect.cpp:817
 #, fuzzy
 #| msgid "Alias names:"
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "ਏਲੀਆਸ ਨਾਂ:"
 
-#: kcharselect.cpp:823
+#: kcharselect.cpp:825
 #, fuzzy
 #| msgid "Notes:"
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "ਨੋਟਿਸ:"
 
-#: kcharselect.cpp:831
+#: kcharselect.cpp:833
 #, fuzzy
 #| msgid "See also:"
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "ਇਹ ਵੀ ਵੇਖੋ:"
 
-#: kcharselect.cpp:846
+#: kcharselect.cpp:848
 #, fuzzy
 #| msgid "Equivalents:"
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "ਬਰਾਬਰ:"
 
-#: kcharselect.cpp:854
+#: kcharselect.cpp:856
 #, fuzzy
 #| msgid "Approximate equivalents:"
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "ਅਨੁਮਾਨਿਤ ਬਰਾਬਰ:"
 
-#: kcharselect.cpp:862
+#: kcharselect.cpp:864
 #, fuzzy
 #| msgid "Description:"
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "ਵੇਰਵਾ:"
 
-#: kcharselect.cpp:874
+#: kcharselect.cpp:876
 #, fuzzy
 #| msgid "CJK Ideograph Information"
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK Ideograph ਜਾਣਕਾਰੀ"
 
-#: kcharselect.cpp:877
+#: kcharselect.cpp:879
 #, fuzzy
 #| msgid "Definition in English: "
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਪ੍ਰੀਭਾਸ਼ਾ:"
 
-#: kcharselect.cpp:884
+#: kcharselect.cpp:886
 #, fuzzy
 #| msgid "Mandarin Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "ਮਾਨਡਾਰਿਨ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:891
+#: kcharselect.cpp:893
 #, fuzzy
 #| msgid "Cantonese Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "ਕਾਨਟੋਨਸੀ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:898
+#: kcharselect.cpp:900
 #, fuzzy
 #| msgid "Japanese On Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "ਜਾਪਾਨੀ ਓਨ ਉਚਾਰਨ:"
 
-#: kcharselect.cpp:905
+#: kcharselect.cpp:907
 #, fuzzy
 #| msgid "Japanese Kun Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "ਜਾਪਾਨੀ ਕੁਨ ਉਚਾਰਨ:"
 
-#: kcharselect.cpp:912
+#: kcharselect.cpp:914
 #, fuzzy
 #| msgid "Tang Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "ਤਾਂਗ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:919
+#: kcharselect.cpp:921
 #, fuzzy
 #| msgid "Korean Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "ਕੋਰੀਆਈ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:927
 #, fuzzy
 #| msgid "General Character Properties"
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "ਆਮ ਅੱਖਰ ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "ਬਲਾਕ: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:929
 #, fuzzy
 #| msgid "Unicode category: "
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "ਯੂਨੀਕੋਡ ਕੈਟਾਗਰੀ: "
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:933
 #, fuzzy
 #| msgid "Various Useful Representations"
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "ਕੋਈ ਫਾਇਦੇਮੰਦ ਪੇਸ਼ਕਾਰੀਆਂ"
 
-#: kcharselect.cpp:932
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:936
+#: kcharselect.cpp:938
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:943
+#: kcharselect.cpp:945
 #, fuzzy
 #| msgid "C octal escaped UTF-8: "
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C ਓਕਟਲ ਸਮੇਤ UTF-8: "
 
-#: kcharselect.cpp:947
+#: kcharselect.cpp:949
 #, fuzzy
 #| msgid "XML decimal entity:"
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML ਦਸ਼ਮਲਵ ਐਂਟਟੀ:"
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "ਯੂਨੀਕੋਡ ਕੋਡ ਪੁਆਇੰਟ:"
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "ਦਸ਼ਮਲਵ ਵਿੱਚ"
@@ -2797,7 +2797,7 @@ msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "ਪਸੰਦੀਦਾ ਖੇਤਰ ਦੀ ਚੋਣ ਕਰਨ ਲਈ ਚਿੱਤਰ ਚੁੱਕੋ ਅਤੇ ਸੁੱਟੋ ਜੀ:"
 
-#: kpixmapregionselectorwidget.cpp:173
+#: kpixmapregionselectorwidget.cpp:177
 #, fuzzy
 #| msgctxt "KPixmapRegionSelectorWidget|"
 #| msgid "Image Operations"
@@ -2805,7 +2805,7 @@ msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "ਚਿੱਤਰ ਕਾਰਵਾਈਆ"
 
-#: kpixmapregionselectorwidget.cpp:176
+#: kpixmapregionselectorwidget.cpp:180
 #, fuzzy
 #| msgctxt "KPixmapRegionSelectorWidget|"
 #| msgid "&Rotate Clockwise"
@@ -2813,7 +2813,7 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "ਸੱਜੇ ਦਾਅ ਗੇੜਾ ਦਿਓ(&R)"
 
-#: kpixmapregionselectorwidget.cpp:180
+#: kpixmapregionselectorwidget.cpp:184
 #, fuzzy
 #| msgctxt "KPixmapRegionSelectorWidget|"
 #| msgid "Rotate &Counterclockwise"
@@ -2821,21 +2821,21 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "ਖੱਬੇ ਦਾਅ ਗੇੜਾ ਦਿਓ(&C)"
 
-#: krecentfilesmenu.cpp:114
+#: krecentfilesmenu.cpp:115
 #, fuzzy
 #| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "ਕੋਈ ਐਂਟਰੀ ਨਹੀਂ"
 
-#: krecentfilesmenu.cpp:117
+#: krecentfilesmenu.cpp:118
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "ਲਿਸਟ ਸਾਫ਼ ਕਰੋ"
 
-#: krecentfilesmenu.cpp:123
+#: krecentfilesmenu.cpp:124
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

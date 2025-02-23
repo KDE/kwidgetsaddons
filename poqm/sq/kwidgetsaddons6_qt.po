@@ -1352,28 +1352,28 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
 
-#: kcharselect.cpp:391
+#: kcharselect.cpp:393
 #, fuzzy
 #| msgid "Enter search phrase here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Vendosni frazën e kërkimit këtu"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:395
 #, fuzzy
 #| msgid "Enter search phrase here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Vendosni frazën e kërkimit këtu"
 
-#: kcharselect.cpp:400
+#: kcharselect.cpp:402
 #, fuzzy
 #| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "&Gjej"
 
-#: kcharselect.cpp:424
+#: kcharselect.cpp:426
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Previous Item in List"
@@ -1381,7 +1381,7 @@ msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Tema e Mëparshme Në Listë"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:428
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Previous Item in List"
@@ -1389,7 +1389,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "Tema e Mëparshme Në Listë"
 
-#: kcharselect.cpp:431
+#: kcharselect.cpp:433
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Next Item in List"
@@ -1397,7 +1397,7 @@ msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Tema Tjetër Në Listë"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:435
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Next Item in List"
@@ -1405,14 +1405,14 @@ msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "Tema Tjetër Në Listë"
 
-#: kcharselect.cpp:438
+#: kcharselect.cpp:440
 #, fuzzy
 #| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&Mbrapsht"
 
-#: kcharselect.cpp:445
+#: kcharselect.cpp:447
 #, fuzzy
 #| msgctxt "go forward"
 #| msgid "&Forward"
@@ -1420,28 +1420,28 @@ msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&Përpara"
 
-#: kcharselect.cpp:464
+#: kcharselect.cpp:466
 #, fuzzy
 #| msgid "Select a year"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Zgjidh një vit"
 
-#: kcharselect.cpp:468
+#: kcharselect.cpp:470
 #, fuzzy
 #| msgid "Select the sound to play"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Zgjidh zërin që do të luash"
 
-#: kcharselect.cpp:487
+#: kcharselect.cpp:489
 #, fuzzy
 #| msgid "Select Font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Zgjidh Gërmën"
 
-#: kcharselect.cpp:494
+#: kcharselect.cpp:496
 #, fuzzy
 #| msgctxt "@info:tooltip"
 #| msgid "Change font size?"
@@ -1449,173 +1449,173 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Ta ndryshoj përmasën e gërmës?"
 
-#: kcharselect.cpp:796
+#: kcharselect.cpp:798
 #, fuzzy
 #| msgid "Any Character"
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Çdo Gërmë"
 
-#: kcharselect.cpp:802
+#: kcharselect.cpp:804
 #, fuzzy
 #| msgid "Name: "
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Emri: "
 
-#: kcharselect.cpp:811
+#: kcharselect.cpp:813
 #, fuzzy
 #| msgid "Annotations and Cross References"
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Shënime dhe riferime të kryqëzuara"
 
-#: kcharselect.cpp:815
+#: kcharselect.cpp:817
 #, fuzzy
 #| msgid "Alias names:"
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Pseudonime:"
 
-#: kcharselect.cpp:823
+#: kcharselect.cpp:825
 #, fuzzy
 #| msgid "Notes:"
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Shënime:"
 
-#: kcharselect.cpp:831
+#: kcharselect.cpp:833
 #, fuzzy
 #| msgid "See also:"
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Shiko gjithashtu:"
 
-#: kcharselect.cpp:846
+#: kcharselect.cpp:848
 #, fuzzy
 #| msgid "Equivalents:"
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Ekuivalentë:"
 
-#: kcharselect.cpp:854
+#: kcharselect.cpp:856
 #, fuzzy
 #| msgid "Approximate equivalents:"
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Ekuivalentë të afërt:"
 
-#: kcharselect.cpp:862
+#: kcharselect.cpp:864
 #, fuzzy
 #| msgid "Description:"
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Përshkrimi:"
 
-#: kcharselect.cpp:874
+#: kcharselect.cpp:876
 #, fuzzy
 #| msgid "CJK Ideograph Information"
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "Përcaktimi i ideogramave CJK"
 
-#: kcharselect.cpp:877
+#: kcharselect.cpp:879
 #, fuzzy
 #| msgid "Definition in English: "
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Përkufizime në anglisht: "
 
-#: kcharselect.cpp:884
+#: kcharselect.cpp:886
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr ""
 
-#: kcharselect.cpp:891
+#: kcharselect.cpp:893
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr ""
 
-#: kcharselect.cpp:898
+#: kcharselect.cpp:900
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr ""
 
-#: kcharselect.cpp:905
+#: kcharselect.cpp:907
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr ""
 
-#: kcharselect.cpp:912
+#: kcharselect.cpp:914
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr ""
 
-#: kcharselect.cpp:919
+#: kcharselect.cpp:921
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr ""
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:927
 #, fuzzy
 #| msgid "General Character Properties"
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Pronësitë e përgjithshme të simbolit"
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:928
 #, fuzzy
 #| msgid "Block: "
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Blloku: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr ""
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:933
 #, fuzzy
 #| msgid "Various Useful Representations"
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Përfaqësime të ndryshme të nevojshme"
 
-#: kcharselect.cpp:932
+#: kcharselect.cpp:934
 #, fuzzy
 #| msgid "UTF-8:"
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:936
+#: kcharselect.cpp:938
 #, fuzzy
 #| msgid "UTF-16: "
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:943
+#: kcharselect.cpp:945
 #, fuzzy
 #| msgid "C octal escaped UTF-8: "
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C octal escaped UTF-8: "
 
-#: kcharselect.cpp:947
+#: kcharselect.cpp:949
 #, fuzzy
 #| msgid "XML decimal entity:"
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "Entiteti dhjetor XML:"
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr ""
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 #, fuzzy
 #| msgid "XML decimal entity:"
 msgctxt "KCharSelectItemModel|Character"
@@ -2548,40 +2548,40 @@ msgstr ""
 "Ju lutemi klikoni dhe zvarrisni imazhin për të përzgjedhur zonën e "
 "interesuar:"
 
-#: kpixmapregionselectorwidget.cpp:173
+#: kpixmapregionselectorwidget.cpp:177
 #, fuzzy
 #| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Veprimet e Imazhit"
 
-#: kpixmapregionselectorwidget.cpp:176
+#: kpixmapregionselectorwidget.cpp:180
 #, fuzzy
 #| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "&Rrotullo në Drejtim të Akrepave të Orës"
 
-#: kpixmapregionselectorwidget.cpp:180
+#: kpixmapregionselectorwidget.cpp:184
 #, fuzzy
 #| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Rrotullo në &Drejtim të Kundërt të Akrepave të Orës"
 
-#: krecentfilesmenu.cpp:114
+#: krecentfilesmenu.cpp:115
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Shënime:"
 
-#: krecentfilesmenu.cpp:117
+#: krecentfilesmenu.cpp:118
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Pastroni hyrjen"
 
-#: krecentfilesmenu.cpp:123
+#: krecentfilesmenu.cpp:124
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

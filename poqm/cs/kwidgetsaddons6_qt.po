@@ -1058,202 +1058,202 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
 
-#: kcharselect.cpp:391
+#: kcharselect.cpp:393
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Zde zadejte hledaný výraz nebo znak…"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:395
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Zde zadejte hledaný výraz nebo znak"
 
-#: kcharselect.cpp:400
+#: kcharselect.cpp:402
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "&Najít…"
 
-#: kcharselect.cpp:424
+#: kcharselect.cpp:426
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Předchozí v historii"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:428
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "Přejít na předchozí znak v historii"
 
-#: kcharselect.cpp:431
+#: kcharselect.cpp:433
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Následující v historii"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:435
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "Přejít na následující znak v historii"
 
-#: kcharselect.cpp:438
+#: kcharselect.cpp:440
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&Zpět"
 
-#: kcharselect.cpp:445
+#: kcharselect.cpp:447
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&Vpřed"
 
-#: kcharselect.cpp:464
+#: kcharselect.cpp:466
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Zvolte kategorii"
 
-#: kcharselect.cpp:468
+#: kcharselect.cpp:470
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Zvolte blok k zobrazení"
 
-#: kcharselect.cpp:487
+#: kcharselect.cpp:489
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Nastavit písmo"
 
-#: kcharselect.cpp:494
+#: kcharselect.cpp:496
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Nastavit velikost písma"
 
-#: kcharselect.cpp:796
+#: kcharselect.cpp:798
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Znak:"
 
-#: kcharselect.cpp:802
+#: kcharselect.cpp:804
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Název: "
 
-#: kcharselect.cpp:811
+#: kcharselect.cpp:813
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Poznámky a křížové odkazy"
 
-#: kcharselect.cpp:815
+#: kcharselect.cpp:817
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Názvy přezdívek:"
 
-#: kcharselect.cpp:823
+#: kcharselect.cpp:825
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Poznámky:"
 
-#: kcharselect.cpp:831
+#: kcharselect.cpp:833
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Viz také:"
 
-#: kcharselect.cpp:846
+#: kcharselect.cpp:848
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Ekvivalenty:"
 
-#: kcharselect.cpp:854
+#: kcharselect.cpp:856
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Přibližné ekvivalenty:"
 
-#: kcharselect.cpp:862
+#: kcharselect.cpp:864
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Dekompozice:"
 
-#: kcharselect.cpp:874
+#: kcharselect.cpp:876
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "Informace o ideogramu CJK"
 
-#: kcharselect.cpp:877
+#: kcharselect.cpp:879
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Definice v angličtině: "
 
-#: kcharselect.cpp:884
+#: kcharselect.cpp:886
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Mandarínská výslovnost: "
 
-#: kcharselect.cpp:891
+#: kcharselect.cpp:893
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Kantonská výslovnost: "
 
-#: kcharselect.cpp:898
+#: kcharselect.cpp:900
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Japonská výslovnost On: "
 
-#: kcharselect.cpp:905
+#: kcharselect.cpp:907
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Japonská výslovnost Kun: "
 
-#: kcharselect.cpp:912
+#: kcharselect.cpp:914
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Výslovnost tang: "
 
-#: kcharselect.cpp:919
+#: kcharselect.cpp:921
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Korejská výslovnost: "
 
-#: kcharselect.cpp:925
+#: kcharselect.cpp:927
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Obecné vlastnosti znaku"
 
-#: kcharselect.cpp:926
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Blok: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Kategorie Unicode: "
 
-#: kcharselect.cpp:931
+#: kcharselect.cpp:933
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Jiné užitečné reprezentace"
 
-#: kcharselect.cpp:932
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:936
+#: kcharselect.cpp:938
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:943
+#: kcharselect.cpp:945
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr ""
 
-#: kcharselect.cpp:947
+#: kcharselect.cpp:949
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "Desítková XML entita:"
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr ""
 
-#: kcharselect.cpp:1099
+#: kcharselect.cpp:1101
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Dekadicky"
@@ -2069,32 +2069,32 @@ msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "Prosím označte požadovanou oblast kliknutím a tažením myší:"
 
-#: kpixmapregionselectorwidget.cpp:173
+#: kpixmapregionselectorwidget.cpp:177
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Operace s obrázky"
 
-#: kpixmapregionselectorwidget.cpp:176
+#: kpixmapregionselectorwidget.cpp:180
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "Otočit ve smě&ru hodinových ručiček"
 
-#: kpixmapregionselectorwidget.cpp:180
+#: kpixmapregionselectorwidget.cpp:184
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Otočit proti s&měru hodinových ručiček"
 
-#: krecentfilesmenu.cpp:114
+#: krecentfilesmenu.cpp:115
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Žádné záznamy"
 
-#: krecentfilesmenu.cpp:117
+#: krecentfilesmenu.cpp:118
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Smazat seznam"
 
-#: krecentfilesmenu.cpp:123
+#: krecentfilesmenu.cpp:124
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Nedávné soubory"
