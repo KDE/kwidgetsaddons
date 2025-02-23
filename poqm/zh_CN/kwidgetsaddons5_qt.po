@@ -383,7 +383,7 @@ msgstr "哈努诺文"
 #: kcharselect-translation.cpp:72
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
-msgstr "布希德文"
+msgstr "布希德字母"
 
 #: kcharselect-translation.cpp:73
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -788,7 +788,7 @@ msgstr "巴姆穆文字"
 #: kcharselect-translation.cpp:153
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
-msgstr "修饰用声调符号"
+msgstr "声调修饰符号"
 
 #: kcharselect-translation.cpp:154
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -808,7 +808,7 @@ msgstr "通用印度数字格式"
 #: kcharselect-translation.cpp:157
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
-msgstr "八思巴字"
+msgstr "八思巴文"
 
 #: kcharselect-translation.cpp:158
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -823,7 +823,7 @@ msgstr "天城文扩展"
 #: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
-msgstr "克耶里字母"
+msgstr "克耶字母"
 
 #: kcharselect-translation.cpp:161
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -848,7 +848,7 @@ msgstr "缅甸文扩展-B"
 #: kcharselect-translation.cpp:165
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
-msgstr "占语字母"
+msgstr "占文"
 
 #: kcharselect-translation.cpp:166
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1038,7 +1038,7 @@ msgstr "补充符号和象形文字"
 #: kcharselect-translation.cpp:204
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
-msgstr "国际象棋符号"
+msgstr "棋类符号"
 
 #: kcharselect-translation.cpp:205
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1048,7 +1048,7 @@ msgstr "符号和象形文字扩展-A"
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
-msgstr "保留计算符号"
+msgstr "遗留计算符号"
 
 #: kcharselect.cpp:391
 msgctxt "KCharSelect|@info:placeholder"
