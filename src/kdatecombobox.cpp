@@ -105,7 +105,7 @@ void KDateComboBoxPrivate::initDateWidget()
     // If SelectDate then make list items visible
     if ((m_options & KDateComboBox::SelectDate) == KDateComboBox::SelectDate //
         || (m_options & KDateComboBox::DatePicker) == KDateComboBox::DatePicker //
-        || (m_options & KDateComboBox::DatePicker) == KDateComboBox::DateKeywords) {
+        || (m_options & KDateComboBox::DateKeywords) == KDateComboBox::DateKeywords) {
         q->setMaxVisibleItems(1);
     } else {
         q->setMaxVisibleItems(0);
