@@ -1734,17 +1734,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Адносны"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Абраць шрыфт…"
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Папярэдні прагляд абранага шрыфту"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1753,13 +1753,13 @@ msgstr ""
 "Папярэдні прагляд абранага шрыфту. Вы можаце змяніць яго, калі націснеце "
 "кнопку \"Абраць шрыфт...\"."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Папярэдні прагляд шрыфту \"%1\""
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

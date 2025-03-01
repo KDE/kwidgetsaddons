@@ -1817,7 +1817,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Σχετικό"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
@@ -1825,12 +1825,12 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Επιλογή..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Προεπισκόπηση της επιλεγμένης γραμματοσειράς"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -1844,13 +1844,13 @@ msgstr ""
 "Αυτή είναι μια προεπισκόπηση της επιλεγμένης γραμματοσειράς. Μπορείτε να την "
 "αλλάξετε κάνοντας κλικ στο κουμπί \"Επιλογή...\"."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Προεπισκόπηση της γραμματοσειράς \"%1\""
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""

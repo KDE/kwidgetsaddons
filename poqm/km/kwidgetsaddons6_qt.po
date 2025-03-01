@@ -2590,21 +2590,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "ប្រែប្រួល"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "ជ្រើស..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "ការមើល​ពុម្ពអក្សរ​ដែល​បាន​ជ្រើស​ជា​មុន"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2616,14 +2616,14 @@ msgid ""
 msgstr ""
 "នេះ​គឺ​ជា​ការ​មើល​ពុម្ពអក្សរ​ដែល​បាន​ជ្រើស​ជាមុន ។ អ្នក​អាច​ផ្លាស់ប្ដូរ​វា​បាន​ដោយ​ចុច​ប៊ូតុង \"ជ្រើស...\" ។"
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgid "Preview of the \"%1\" font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "ការមើល​ពុម្ពអក្សរ \"%1\" ជាមុន"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "

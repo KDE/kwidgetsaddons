@@ -2559,21 +2559,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "සාපේක්‍ෂ"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "තෝරන්න..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "තෝරාගත් අකුරු වල පෙරදසුන"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2585,14 +2585,14 @@ msgid ""
 msgstr ""
 "මෙය තේරූ අක්ෂරාංගයේ පෙර දැක්මකි. ඔබට \"තෝරන්න...\" බොත්තම ක්ලික් කිරීමෙන් එය වෙනස්කළ හැක."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgid "Preview of the \"%1\" font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "\"%1\" අක්ෂරාංගයේ පෙරදැක්ම"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "

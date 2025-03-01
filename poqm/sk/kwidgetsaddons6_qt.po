@@ -1782,7 +1782,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatívne"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|@info:tooltip"
 #| msgid "Choose font..."
@@ -1790,12 +1790,12 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Vybrať Písmo..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Náhľad vybraného písma"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -1809,13 +1809,13 @@ msgstr ""
 "Toto je náhľad vybraného písma. Môžete ho zmeniť stlačením \"Vybrať Písmo..."
 "\"."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Náhľad písma \"%1\""
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""

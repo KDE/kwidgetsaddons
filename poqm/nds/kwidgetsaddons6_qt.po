@@ -1981,7 +1981,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatiev"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
@@ -1989,7 +1989,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Utsöken..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the selected font"
@@ -1997,7 +1997,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Vöransicht vun de utsöchte Schriftoort"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -2011,7 +2011,7 @@ msgstr ""
 "Dit is en Vöransicht vun de utsöchte Schriftoort. De kannst Du ännern, wenn "
 "Du op „Utsöken“ klickst."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the \"%1\" font"
@@ -2019,7 +2019,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Vöransicht vun de Schriftoort „%1“"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""

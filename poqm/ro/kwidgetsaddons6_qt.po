@@ -2160,7 +2160,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativă"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|@info:tooltip"
 #| msgid "Choose font..."
@@ -2168,12 +2168,12 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Alege fontul..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Previzualizarea fontului ales"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2186,13 +2186,13 @@ msgstr ""
 "Aceasta este o previzualizare a fontului selectat. Îl puteți schimba dacă "
 "dați clic pe butonul \"Alege...\"."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Previzualizarea fontului „%1”"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "

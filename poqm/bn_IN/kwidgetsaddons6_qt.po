@@ -2557,21 +2557,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "আপেক্ষিক"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "নির্বাচন করুন..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "নির্বাচিত ফন্টের পূর্বরূপ প্রদর্শন"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2584,14 +2584,14 @@ msgstr ""
 "নির্বাচিত ফন্টের পূর্বরূপ এইখানে প্রদর্শন করা হয়েছে। \"নির্বাচন করুন...\" বাটন ক্লিক "
 "করে এটি পরিবর্তন করা যাবে।"
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgid "Preview of the \"%1\" font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "\"%1\" ফন্টের প্রদর্শিত পূর্বরূপ"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "

@@ -1747,17 +1747,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Suhteellinen"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Valitse fontti…"
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Valitun fontin esikatselu"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1766,13 +1766,13 @@ msgstr ""
 "Tämä on valitun fontin esikatselu. Fonttia voi vaihtaa ”Valitse fontti…” -"
 "painikkeella."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Fontin ”%1” esikatselu"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

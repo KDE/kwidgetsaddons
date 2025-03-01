@@ -1904,7 +1904,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Нисбӣ"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose Font..."
@@ -1912,7 +1912,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Ҳуруфро интихоб намоед..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the selected font"
@@ -1920,7 +1920,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Пешнамоиши ҳуруфи интихобшуда"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -1934,7 +1934,7 @@ msgstr ""
 "Ин пешнамоиши ҳуруфи интихобшуда мебошад. Шумо метавонед бо зеркунии тугмаи "
 "\"Ҳуруфро интихоб намоед...\" ҳуруфро иваз кунед."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the \"%1\" font"
@@ -1942,7 +1942,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Пешнамоиши ҳуруфи \"%1\""
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""

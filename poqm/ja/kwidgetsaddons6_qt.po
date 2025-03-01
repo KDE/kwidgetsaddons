@@ -1915,7 +1915,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相対的"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
@@ -1923,7 +1923,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "選択..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the selected font"
@@ -1931,7 +1931,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "選択されたフォントのプレビュー"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -1945,7 +1945,7 @@ msgstr ""
 "これは選択されたフォントのプレビューです。「選択」ボタンをクリックして変更で"
 "きます。"
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the \"%1\" font"
@@ -1953,7 +1953,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "“%1” フォントのプレビュー"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""

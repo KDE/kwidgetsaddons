@@ -1724,17 +1724,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatív"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Betűkészlet választása…"
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "A kiválasztott betűtípus előnézeti képe"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1743,13 +1743,13 @@ msgstr ""
 "Ez a kiválasztott betűtípus előnézeti képe. A betűtípus megváltoztatásához "
 "kattintson a Betűkészlet választása…” gombra."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "A(z) „%1” betűtípus előnézeti képe"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

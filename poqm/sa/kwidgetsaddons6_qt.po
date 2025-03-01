@@ -1715,17 +1715,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "संबंधी"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "फॉन्ट् चिनोतु..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "चयनितस्य फ़ॉन्ट् इत्यस्य पूर्वावलोकनम्"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1734,13 +1734,13 @@ msgstr ""
 "एतत् चयनितस्य फन्ट् इत्यस्य पूर्वावलोकनम् अस्ति । \"Choose Font...\" इति बटन् नुत्वा "
 "परिवर्तयितुं शक्नुवन्ति ।"
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "\"%1\" फ़ॉन्ट् इत्यस्य पूर्वावलोकनम्"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

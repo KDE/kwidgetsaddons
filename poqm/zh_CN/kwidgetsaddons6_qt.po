@@ -1718,30 +1718,30 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "相对"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "选择字体…"
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "选中字体预览"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr "此为所选字体的预览。您可以点击“选择字体...”按钮来更改它。"
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "字体“%1”预览"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

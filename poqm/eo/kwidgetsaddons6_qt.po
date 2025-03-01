@@ -1732,17 +1732,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativa"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Elekti tiparon…"
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Antaŭrigardo de la elektita tiparo"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1751,13 +1751,13 @@ msgstr ""
 "Ĉi tio estas antaŭrigardo de la elektita tiparo. Vi povas ŝanĝi ĝin "
 "alklakante la butonon \"Elekti tiparon...\"."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Antaŭrigardo de la tiparo \"%1\""
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

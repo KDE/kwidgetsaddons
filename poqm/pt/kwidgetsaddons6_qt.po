@@ -1827,7 +1827,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativo"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|@info:tooltip"
 #| msgid "Choose font..."
@@ -1835,12 +1835,12 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Escolher o tipo de letra..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Antevisão do tipo de letra seleccionado"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1849,13 +1849,13 @@ msgstr ""
 "Esta é uma antevisão do tipo de letra seleccionado. Você pode alterá-lo ao "
 "carregar no botão \"Escolher o Tipo de Letra...\"."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Antevisão do tipo de letra \"%1\""
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""

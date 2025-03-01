@@ -1981,7 +1981,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "संबंधित"
 
-#: kfontrequester.cpp:184
+#: kfontrequester.cpp:185
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
@@ -1989,7 +1989,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "निवडा..."
 
-#: kfontrequester.cpp:190
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the selected font"
@@ -1997,7 +1997,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "निवडलेला फॉन्टचा पूर्वावलोकन"
 
-#: kfontrequester.cpp:192
+#: kfontrequester.cpp:193
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -2009,7 +2009,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr "निवडलेल्या फॉन्टचा पूर्वावलोकन. \"निवडा...\" बटन क्लिक करून तुम्ही ते बदलू शकता."
 
-#: kfontrequester.cpp:196
+#: kfontrequester.cpp:197
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the \"%1\" font"
@@ -2017,7 +2017,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "\"%1\" फॉन्टचा पूर्वावलोकन"
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:198
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""
