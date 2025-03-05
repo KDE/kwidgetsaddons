@@ -1494,47 +1494,47 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "第 %1 週"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "明年"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "去年"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "下個月"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "上個月"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "選擇一個星期"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "選擇一個月份"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "選擇一個年份"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "選取目前的日期"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "關閉"

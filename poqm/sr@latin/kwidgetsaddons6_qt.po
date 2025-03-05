@@ -1561,7 +1561,7 @@ msgid "Week %1"
 msgstr "sedmica %1"
 
 # >> @info:tooltip
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Next year"
@@ -1570,7 +1570,7 @@ msgid "Next year"
 msgstr "Sledeća godina"
 
 # >> @info:tooltip
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Previous year"
@@ -1579,7 +1579,7 @@ msgid "Previous year"
 msgstr "Prethodna godina"
 
 # >> @info:tooltip
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Next month"
@@ -1588,7 +1588,7 @@ msgid "Next month"
 msgstr "Sledeći mesec"
 
 # >> @info:tooltip
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Previous month"
@@ -1597,7 +1597,7 @@ msgid "Previous month"
 msgstr "Prethodni mesec."
 
 # >> @info:tooltip
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select a week"
@@ -1606,7 +1606,7 @@ msgid "Select a week"
 msgstr "Izaberite sedmicu."
 
 # >> @info:tooltip
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select a month"
@@ -1615,7 +1615,7 @@ msgid "Select a month"
 msgstr "Izaberite mesec."
 
 # >> @info:tooltip
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select a year"
@@ -1624,7 +1624,7 @@ msgid "Select a year"
 msgstr "Izaberite godinu."
 
 # >> @info:tooltip
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select the current day"
@@ -1632,7 +1632,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Izaberite današnji dan."
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Zatvori"

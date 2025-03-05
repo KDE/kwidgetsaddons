@@ -1762,55 +1762,55 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "ആഴ്ച %1"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "അടുത്ത വര്‍ഷം"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "മുമ്പത്തെ വര്‍ഷം"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "അടുത്ത മാസം"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "മുമ്പത്തെ മാസം"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "ഒരു ആഴ്ച തെരഞ്ഞെടുക്കുക"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "ഒരു മാസം തെരഞ്ഞെടുക്കുക"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "ഒരു വര്‍ഷം തെരഞ്ഞെടുക്കുക"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 #, fuzzy
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "ഇന്നത്തെ ദിവസം തെരഞ്ഞെടുക്കുക"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 #, fuzzy
 msgctxt "KDatePicker|@action:button"
 msgid "Close"

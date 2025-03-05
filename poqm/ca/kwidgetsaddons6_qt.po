@@ -1490,47 +1490,47 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Setmana %1"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Any següent"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Any anterior"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Mes següent"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Mes anterior"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Selecciona una setmana"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Selecciona un mes"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Selecciona un any"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Selecciona el dia d'avui"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Tanca"

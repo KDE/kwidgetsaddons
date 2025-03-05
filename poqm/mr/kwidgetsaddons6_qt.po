@@ -1635,7 +1635,7 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "आठवडा %1"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Next year"
@@ -1643,7 +1643,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "पुढील वर्ष"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Previous year"
@@ -1651,7 +1651,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "मागील वर्ष"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Next month"
@@ -1659,7 +1659,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "पुढील महिना"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Previous month"
@@ -1667,7 +1667,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "मागील महिना"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select a week"
@@ -1675,7 +1675,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "आठवडा निवडा"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select a month"
@@ -1683,7 +1683,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "महिना निवडा"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select a year"
@@ -1691,7 +1691,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "वर्ष निवडा"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 #, fuzzy
 #| msgctxt "KDatePicker|"
 #| msgid "Select the current day"
@@ -1699,7 +1699,7 @@ msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "सद्याचा दिवस निवडा"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "बंद करा"

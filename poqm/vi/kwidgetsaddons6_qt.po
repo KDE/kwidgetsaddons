@@ -1496,47 +1496,47 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Tuần %1"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Năm sau"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Năm trước"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Tháng sau"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Tháng trước"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Chọn tuần"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Chọn tháng"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Chọn năm"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Chọn ngày hiện tại"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Đóng"

@@ -1486,47 +1486,47 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Týden %1"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Příští rok"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Předchozí rok"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Příští měsíc"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Předchozí měsíc"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Vyberte týden"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Vyberte měsíc"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Vyberte rok"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Vybrat dnešek"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Zavřít"

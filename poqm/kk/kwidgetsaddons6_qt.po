@@ -2243,63 +2243,63 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "%1-апта"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 #, fuzzy
 #| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Келесі жыл"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 #, fuzzy
 #| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Алдыңғы жыл"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 #, fuzzy
 #| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Келесі ай"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 #, fuzzy
 #| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Алдыңғы ай"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 #, fuzzy
 #| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Аптаны таңдау"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 #, fuzzy
 #| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Айды таңдау"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 #, fuzzy
 #| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Жылды таңдау"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 #, fuzzy
 #| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Бүгінгі күнді таңдау"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 #, fuzzy
 #| msgid "Close"
 msgctxt "KDatePicker|@action:button"

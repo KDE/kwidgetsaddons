@@ -1804,63 +1804,63 @@ msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Hafta %1"
 
-#: kdatepicker.cpp:305
+#: kdatepicker.cpp:306
 #, fuzzy
 #| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Kelasi yil"
 
-#: kdatepicker.cpp:306
+#: kdatepicker.cpp:307
 #, fuzzy
 #| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Oʻtgan yil"
 
-#: kdatepicker.cpp:307
+#: kdatepicker.cpp:308
 #, fuzzy
 #| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Kelasi oy"
 
-#: kdatepicker.cpp:308
+#: kdatepicker.cpp:309
 #, fuzzy
 #| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "Oʻtgan oy"
 
-#: kdatepicker.cpp:309
+#: kdatepicker.cpp:310
 #, fuzzy
 #| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Haftani tanlash"
 
-#: kdatepicker.cpp:310
+#: kdatepicker.cpp:311
 #, fuzzy
 #| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Oyni tanlash"
 
-#: kdatepicker.cpp:311
+#: kdatepicker.cpp:312
 #, fuzzy
 #| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Yilni tanlash"
 
-#: kdatepicker.cpp:312
+#: kdatepicker.cpp:313
 #, fuzzy
 #| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Joriy kunni tanlash"
 
-#: kdatepicker.cpp:647
+#: kdatepicker.cpp:648
 #, fuzzy
 #| msgid "Close"
 msgctxt "KDatePicker|@action:button"
