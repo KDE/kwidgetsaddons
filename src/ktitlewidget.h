@@ -143,7 +143,7 @@ public:
 
     /**
      * @return The level of this title: it influences the font size following the guidelines in
-     *         the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
+     *         the <a href="https://develop.kde.org/hig/text_and_labels/">KDE HIG</a>.
      *         It also corresponds to the level api of Kirigami Heading for QML applications
      * @since 5.53
      */
@@ -208,7 +208,7 @@ public Q_SLOTS:
 
     /**
      * Sets the level of this title, similar to HTML's h1 h2 h3...
-     * Follows the <a href="https://develop.kde.org/hig/style/typography/">KDE HIG</a>.
+     * Follows the <a href="https://develop.kde.org/hig/text_and_labels/">KDE HIG</a>.
      * @param level the level of the title, 1 is the biggest font and most important, descending
      * @since 5.53
      */
