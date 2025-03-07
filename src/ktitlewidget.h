@@ -152,15 +152,13 @@ public:
 
 public Q_SLOTS:
     /**
-     * @param text Text displayed on the label. It can either be plain text or rich text. If it
-     * is plain text, the text is displayed as a bold title text.
+     * @param text Text displayed on the label. It can either be plain text or rich text.
      * @param alignment Alignment of the text. Default is left and vertical centered.
      * @see text()
      */
     void setText(const QString &text, Qt::Alignment alignment = Qt::AlignLeft | Qt::AlignVCenter);
     /**
-     * @param text Text displayed on the label. It can either be plain text or rich text. If it
-     * is plain text, the text is displayed as a bold title text.
+     * @param text Text displayed on the label. It can either be plain text or rich text.
      * @param type The sort of message it is; will also set the icon accordingly
      * @see text()
      */
