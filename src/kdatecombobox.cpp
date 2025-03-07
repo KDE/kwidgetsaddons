@@ -45,7 +45,7 @@ public:
     void editDate(const QString &text);
     void enterDate(const QDate &date);
     void parseDate();
-    void warnDate();
+    bool warnDate();
 
     KDateComboBox *const q;
     KDatePickerPopup *m_dateMenu;
@@ -179,7 +179,7 @@ void KDateComboBoxPrivate::enterDate(const QDate &date)
     Q_EMIT q->dateEntered(m_date);
 }
 
-void KDateComboBoxPrivate::warnDate()
+bool KDateComboBoxPrivate::warnDate()
 {
     if (!m_warningShown && !q->isValid() && (m_options & KDateComboBox::WarnOnInvalid) == KDateComboBox::WarnOnInvalid) {
         QString warnMsg;
@@ -202,7 +202,9 @@ void KDateComboBoxPrivate::warnDate()
         }
         m_warningShown = true;
         KMessageBox::error(q, warnMsg);
+        return true;
     }
+    return false;
 }
 
 KDateComboBox::KDateComboBox(QWidget *parent)
@@ -397,6 +399,9 @@ void KDateComboBox::focusOutEvent(QFocusEvent *event)
 
 void KDateComboBox::showPopup()
 {
+    if (d->warnDate()) {
+        return;
+    }
     if (!isEditable() || !d->m_dateMenu //
         || (d->m_options & KDateComboBox::SelectDate) != KDateComboBox::SelectDate) {
         return;
