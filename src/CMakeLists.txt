@@ -138,6 +138,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kpixmapsequenceoverlaypainter.h
     kpixmapsequencewidget.cpp
     kpixmapsequencewidget.h
+    kplaceholderwidget.cpp
+    kplaceholderwidget.h
     kpopupframe.cpp
     kpopupframe.h
     kratingpainter.cpp
