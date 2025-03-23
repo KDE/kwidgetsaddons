@@ -57,7 +57,7 @@ ecm_install_po_files_as_qm(poqm)
 configure_file(test-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/test-config.h)
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.8
+    QT 6.9
 )
 
 add_subdirectory(src)
