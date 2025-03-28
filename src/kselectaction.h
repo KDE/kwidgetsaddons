@@ -333,6 +333,16 @@ public:
      */
     void changeItem(int index, const QString &text);
 
+    /**
+     * Set the @param ToolButtonStyle to all buttons associated with this KSelectAction.
+     **/
+    void setToolButtonStyle(Qt::ToolButtonStyle style);
+
+    /**
+     * @returns the style toolbuttons are using with this KSelectAction.
+     */
+    Qt::ToolButtonStyle toolButtonStyle();
+
 Q_SIGNALS:
     /**
      * This signal is emitted when an item is selected.

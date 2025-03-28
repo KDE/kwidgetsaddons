@@ -350,6 +350,18 @@ void KSelectAction::changeItem(int index, const QString &text)
     actions()[index]->setText(d->makeMenuText(text));
 }
 
+void KSelectAction::setToolButtonStyle(Qt::ToolButtonStyle style)
+{
+    Q_D(KSelectAction);
+    d->m_toolButtonStyle = style;
+}
+
+Qt::ToolButtonStyle KSelectAction::toolButtonStyle()
+{
+    Q_D(const KSelectAction);
+    return d->m_toolButtonStyle;
+}
+
 void KSelectAction::setItems(const QStringList &lst)
 {
     Q_D(KSelectAction);
@@ -528,7 +540,7 @@ QWidget *KSelectAction::createWidget(QWidget *parent)
         button->setAutoRaise(true);
         button->setFocusPolicy(Qt::NoFocus);
         button->setIconSize(toolBar->iconSize());
-        button->setToolButtonStyle(toolBar->toolButtonStyle());
+        button->setToolButtonStyle(toolButtonStyle());
         QObject::connect(toolBar, &QToolBar::iconSizeChanged, button, &QAbstractButton::setIconSize);
         QObject::connect(toolBar, &QToolBar::toolButtonStyleChanged, button, &QToolButton::setToolButtonStyle);
         button->setDefaultAction(this);

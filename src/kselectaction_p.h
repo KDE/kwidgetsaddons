@@ -39,6 +39,7 @@ public:
 
         m_toolBarMode = KSelectAction::ComboBoxMode;
         m_toolButtonPopupMode = QToolButton::InstantPopup; // InstantPopup by default because there is no default action
+        m_toolButtonStyle = Qt::ToolButtonFollowStyle;
 
         m_actionGroup = new QActionGroup(nullptr);
     }
@@ -72,6 +73,7 @@ public:
 
     KSelectAction::ToolBarMode m_toolBarMode;
     QToolButton::ToolButtonPopupMode m_toolButtonPopupMode;
+    Qt::ToolButtonStyle m_toolButtonStyle;
 
     QActionGroup *m_actionGroup;
 
