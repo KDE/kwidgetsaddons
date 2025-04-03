@@ -150,3 +150,5 @@ QSize KContextualHelpButtonPrivate::preferredSize(const QSize &fallbackSize) con
 {
     return {fallbackSize.width(), m_heightHintWidget ? m_heightHintWidget->sizeHint().height() : fallbackSize.height()};
 }
+
+#include "moc_kcontextualhelpbutton.cpp"
