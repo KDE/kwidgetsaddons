@@ -163,11 +163,6 @@ void KFontChooserPrivate::init()
     m_ui.reset(new Ui_KFontChooserWidget);
     m_ui->setupUi(page);
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 7, 0)
-    m_ui->fontFeaturesLabel->setVisible(false);
-    m_ui->fontFeaturesLineEdit->setVisible(false);
-#endif
-
     // Increase spacing on top of the preview field and then reset the other layouts
     // back to a standard value.
     m_ui->sampleTextEditLayout->setSpacing(q->style()->pixelMetric(QStyle::PM_LayoutVerticalSpacing));
@@ -623,7 +618,6 @@ void KFontChooserPrivate::slotSizeValue(double dval)
 
 void KFontChooserPrivate::slotFeaturesChanged(const QString &features)
 {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     m_selectedFont.clearFeatures();
 
     if (features.isEmpty()) {
@@ -653,7 +647,6 @@ void KFontChooserPrivate::slotFeaturesChanged(const QString &features)
     }
 
     Q_EMIT q->fontSelected(m_selectedFont);
-#endif
 }
 
 void KFontChooserPrivate::displaySample(const QFont &font)
@@ -749,7 +742,6 @@ void KFontChooserPrivate::setupDisplay()
     }
 
     // Set font features
-#if QT_VERSION >= QT_VERSION_CHECK(6, 7, 0)
     const auto tags = m_selectedFont.featureTags();
     QStringList features;
     for (const auto &tag : tags) {
@@ -762,7 +754,6 @@ void KFontChooserPrivate::setupDisplay()
         }
     }
     m_ui->fontFeaturesLineEdit->setText(features.join(QStringLiteral(",")));
-#endif
 
     int numEntries;
     int i;
