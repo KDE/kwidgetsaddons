@@ -1638,37 +1638,37 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "הגופן המבוקש"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:208
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "רגיל"
 
-#: kfontchooser.cpp:214 kfontchooser.cpp:474
+#: kfontchooser.cpp:209 kfontchooser.cpp:469
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "נטוי"
 
-#: kfontchooser.cpp:215 kfontchooser.cpp:475
+#: kfontchooser.cpp:210 kfontchooser.cpp:470
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "כתב נטוי"
 
-#: kfontchooser.cpp:216
+#: kfontchooser.cpp:211
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "מודגש"
 
-#: kfontchooser.cpp:217
+#: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "מודגש דחוס משופע"
 
-#: kfontchooser.cpp:271
+#: kfontchooser.cpp:266
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "דג סקרן שט לו בים זך ולפתע מצא חבורה נחמדה"
 
-#: kfontchooser.cpp:459
+#: kfontchooser.cpp:454
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

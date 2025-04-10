@@ -1783,7 +1783,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "使用するフォント"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:208
 #, fuzzy
 #| msgctxt "KFontChooser|QFontDatabase"
 #| msgid "Normal"
@@ -1791,32 +1791,32 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "普通"
 
-#: kfontchooser.cpp:214 kfontchooser.cpp:474
+#: kfontchooser.cpp:209 kfontchooser.cpp:469
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "イタリック"
 
-#: kfontchooser.cpp:215 kfontchooser.cpp:475
+#: kfontchooser.cpp:210 kfontchooser.cpp:470
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "オブリック"
 
-#: kfontchooser.cpp:216
+#: kfontchooser.cpp:211
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "ボールド"
 
-#: kfontchooser.cpp:217
+#: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:271
+#: kfontchooser.cpp:266
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "漢字 ひらがな カタカナ Alphabet 123"
 
-#: kfontchooser.cpp:459
+#: kfontchooser.cpp:454
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

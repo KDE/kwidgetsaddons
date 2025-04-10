@@ -1616,37 +1616,37 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "अनुरोधित फ़ॉन्ट"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:208
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "सामान्य"
 
-#: kfontchooser.cpp:214 kfontchooser.cpp:474
+#: kfontchooser.cpp:209 kfontchooser.cpp:469
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "इटालिक"
 
-#: kfontchooser.cpp:215 kfontchooser.cpp:475
+#: kfontchooser.cpp:210 kfontchooser.cpp:470
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "तिर्यक्"
 
-#: kfontchooser.cpp:216
+#: kfontchooser.cpp:211
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "विक्रान्तः"
 
-#: kfontchooser.cpp:217
+#: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "बोल्ड सघन तिरछा"
 
-#: kfontchooser.cpp:271
+#: kfontchooser.cpp:266
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "द्रुतभूरेण शृगालः आलस्यकुक्कुरस्य उपरि कूर्दति"
 
-#: kfontchooser.cpp:459
+#: kfontchooser.cpp:454
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

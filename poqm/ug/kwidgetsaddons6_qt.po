@@ -2454,7 +2454,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ئىشلىتىدىغان خەت نۇسخىلىرى"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:208
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -2462,7 +2462,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "نورمال"
 
-#: kfontchooser.cpp:214 kfontchooser.cpp:474
+#: kfontchooser.cpp:209 kfontchooser.cpp:469
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2470,7 +2470,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "يانتۇ"
 
-#: kfontchooser.cpp:215 kfontchooser.cpp:475
+#: kfontchooser.cpp:210 kfontchooser.cpp:470
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2478,7 +2478,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "قىيپاش"
 
-#: kfontchooser.cpp:216
+#: kfontchooser.cpp:211
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2486,19 +2486,19 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "توم"
 
-#: kfontchooser.cpp:217
+#: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:271
+#: kfontchooser.cpp:266
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
-#: kfontchooser.cpp:459
+#: kfontchooser.cpp:454
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"

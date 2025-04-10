@@ -1991,7 +1991,7 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Talab qilingan shrift"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:208
 #, fuzzy
 #| msgctxt "normal severity"
 #| msgid "Normal"
@@ -1999,7 +1999,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "Oddiy"
 
-#: kfontchooser.cpp:214 kfontchooser.cpp:474
+#: kfontchooser.cpp:209 kfontchooser.cpp:469
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Italic"
@@ -2007,7 +2007,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "Qiya"
 
-#: kfontchooser.cpp:215 kfontchooser.cpp:475
+#: kfontchooser.cpp:210 kfontchooser.cpp:470
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Oblique"
@@ -2015,7 +2015,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "Yarim qiya"
 
-#: kfontchooser.cpp:216
+#: kfontchooser.cpp:211
 #, fuzzy
 #| msgctxt "@item font"
 #| msgid "Bold"
@@ -2023,7 +2023,7 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "Qalin"
 
-#: kfontchooser.cpp:217
+#: kfontchooser.cpp:212
 #, fuzzy
 #| msgctxt "font style"
 #| msgid "Book Oblique"
@@ -2031,14 +2031,14 @@ msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr "Yarim qiya kitob"
 
-#: kfontchooser.cpp:271
+#: kfontchooser.cpp:266
 #, fuzzy
 #| msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "Oq choynakga oq qapqoq koʻk choynakga koʻk qapqoq"
 
-#: kfontchooser.cpp:459
+#: kfontchooser.cpp:454
 #, fuzzy, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"

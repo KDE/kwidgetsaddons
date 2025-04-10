@@ -1926,44 +1926,44 @@ msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "ആവശ്യപ്പെട്ട ലിപി"
 
-#: kfontchooser.cpp:213
+#: kfontchooser.cpp:208
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "സാധാരണ"
 
 #
-#: kfontchooser.cpp:214 kfontchooser.cpp:474
+#: kfontchooser.cpp:209 kfontchooser.cpp:469
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Italic"
 msgstr "ചരിഞ്ഞ"
 
 #
-#: kfontchooser.cpp:215 kfontchooser.cpp:475
+#: kfontchooser.cpp:210 kfontchooser.cpp:470
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Oblique"
 msgstr "ചരിഞ്ഞത്"
 
-#: kfontchooser.cpp:216
+#: kfontchooser.cpp:211
 #, fuzzy
 msgctxt "KFontChooser|@item font"
 msgid "Bold"
 msgstr "തടിച്ച"
 
-#: kfontchooser.cpp:217
+#: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
 msgstr ""
 
-#: kfontchooser.cpp:271
+#: kfontchooser.cpp:266
 #, fuzzy
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
 msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
-#: kfontchooser.cpp:459
+#: kfontchooser.cpp:454
 #, fuzzy, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
