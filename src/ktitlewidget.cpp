@@ -182,7 +182,8 @@ KTitleWidget::KTitleWidget(QWidget *parent)
     // Sadly QVBoxLayout::addLayout does not have a alignment argument, other than QVBoxLayout::addWidget,
     // so set it afterwards onto the layout item generated.
     mainLayout->itemAt(0)->setAlignment(Qt::AlignVCenter);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    // Add 1px on top to compensate extra bottom pixel between layouts
+    mainLayout->setContentsMargins(0, 1, 0, 0);
 }
 
 KTitleWidget::~KTitleWidget() = default;
