@@ -18,6 +18,8 @@ private Q_SLOTS:
     void testDestructorCrash();
     void testOverrideFocus();
     void childShouldGetFocus();
+    void testExpandAnimation();
+    void testNoAnimationWhenHidden();
 };
 
 #endif /* KCOLLAPSIBLEGROUPBOXTEST_H */

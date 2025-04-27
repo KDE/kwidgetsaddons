@@ -1,6 +1,7 @@
 /*
     This file is part of the KDE frameworks
     SPDX-FileCopyrightText: 2016 Ragnar Thomsen <rthomsen6@gmail.com>
+    SPDX-FileCopyrightText: 2025 Kai Uwe Broulik <kde@broulik.de>
 
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
@@ -13,6 +14,7 @@
 #include <QDialog>
 #include <QLabel>
 #include <QLineEdit>
+#include <QStyle>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -92,6 +94,54 @@ void KCollapsibleGroupBoxTest::childShouldGetFocus()
     qApp->processEvents();
     collapsible.expand();
     QCOMPARE(spinBox->focusPolicy(), Qt::StrongFocus);
+}
+
+void KCollapsibleGroupBoxTest::testExpandAnimation()
+{
+    KCollapsibleGroupBox collapsible;
+    QVBoxLayout layout(&collapsible);
+
+    QLabel label;
+    label.setMinimumSize(QSize(500, 500));
+    layout.addWidget(&label);
+    // The ChildAdded event is processed asynchronously.
+    qApp->processEvents();
+
+    collapsible.show();
+
+    const int collapsedHeight = collapsible.sizeHint().height();
+    QCOMPARE(collapsible.height(), collapsedHeight);
+
+    collapsible.setExpanded(true);
+    QVERIFY(collapsible.isExpanded());
+    QCOMPARE(collapsible.height(), collapsedHeight);
+
+    const int animationDuration = qMax(1, collapsible.style()->styleHint(QStyle::SH_Widget_Animation_Duration));
+    // QTimeLine default update interval is 40ms plus some slack.
+    QTRY_COMPARE_WITH_TIMEOUT(collapsible.height(), collapsible.sizeHint().height(), animationDuration + 40 + 10);
+
+    collapsible.setExpanded(false);
+    QVERIFY(!collapsible.isExpanded());
+
+    QTRY_COMPARE_WITH_TIMEOUT(collapsible.height(), collapsedHeight, animationDuration + 40 + 10);
+}
+
+void KCollapsibleGroupBoxTest::testNoAnimationWhenHidden()
+{
+    KCollapsibleGroupBox collapsible;
+    QVBoxLayout layout(&collapsible);
+
+    QLabel label;
+    label.setMinimumSize(QSize(500, 500));
+    layout.addWidget(&label);
+    // The ChildAdded event is processed asynchronously.
+    qApp->processEvents();
+
+    collapsible.setExpanded(true);
+    collapsible.show();
+
+    // Size should be correct immediately with no animation.
+    QCOMPARE(collapsible.height(), collapsible.sizeHint().height());
 }
 
 #include "moc_kcollapsiblegroupbox_test.cpp"

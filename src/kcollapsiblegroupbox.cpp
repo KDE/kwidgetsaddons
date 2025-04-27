@@ -104,18 +104,23 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
 
     d->updateChildrenFocus(expanded);
 
-    d->animation->setDirection(expanded ? QTimeLine::Forward : QTimeLine::Backward);
-    // QTimeLine::duration() must be > 0
-    const int duration = qMax(1, style()->styleHint(QStyle::SH_Widget_Animation_Duration));
-    d->animation->stop();
-    d->animation->setDuration(duration);
-    d->animation->start();
+    // Only animate when expanding/collapsing while visible.
+    if (isVisible()) {
+        d->animation->setDirection(expanded ? QTimeLine::Forward : QTimeLine::Backward);
+        // QTimeLine::duration() must be > 0
+        const int duration = qMax(1, style()->styleHint(QStyle::SH_Widget_Animation_Duration));
+        d->animation->stop();
+        d->animation->setDuration(duration);
+        d->animation->start();
 
-    // when going from collapsed to expanded changing the child visibility calls an updateGeometry
-    // which calls sizeHint with expanded true before the first frame of the animation kicks in
-    // trigger an effective frame 0
-    if (expanded) {
-        setFixedHeight(d->headerSize.height());
+        // when going from collapsed to expanded changing the child visibility calls an updateGeometry
+        // which calls sizeHint with expanded true before the first frame of the animation kicks in
+        // trigger an effective frame 0
+        if (expanded) {
+            setFixedHeight(d->headerSize.height());
+        }
+    } else {
+        setFixedHeight(sizeHint().height());
     }
 }
 
