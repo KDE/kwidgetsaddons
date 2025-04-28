@@ -13,6 +13,7 @@ ecm_add_tests(
   kdatepickerpopupautotest.cpp
   kdatetimeedittest.cpp
   kdualactiontest.cpp
+  kiconwidgettest.cpp
   kpixmapsequencewidgettest.cpp
   knewpasswordwidgettest.cpp
   kselectaction_unittest.cpp
