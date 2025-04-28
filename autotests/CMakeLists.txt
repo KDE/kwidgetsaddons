@@ -31,6 +31,17 @@ ecm_add_tests(
   LINK_LIBRARIES Qt6::Test KF6::WidgetsAddons
 )
 
+ecm_add_test(
+  kiconwidgettest.cpp
+  TEST_NAME kiconwidgettest
+  LINK_LIBRARIES Qt6::Test KF6::WidgetsAddons
+)
+qt6_add_resources(kiconwidgettest "icons"
+  PREFIX "/"
+  BASE "../src"
+  FILES ../src/icons/hint.svg
+)
+
 set (CMAKE_AUTOUIC TRUE)
 ecm_add_test(
   kcolumnresizertest.cpp

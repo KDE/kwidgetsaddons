@@ -74,6 +74,11 @@ ecm_qtdesignerplugin_widget(KGradientSelector
     TOOLTIP "Gradient Color Selector (KF6)"
     GROUP "Input (KF6)"
 )
+ecm_qtdesignerplugin_widget(KIconWidget
+    TOOLTIP "Icon widget (KF6)"
+    WHATSTHIS "A widget that displays a QIcon"
+    GROUP "Display (KF6)"
+)
 ecm_qtdesignerplugin_widget(KLed
     TOOLTIP "LED Widget (KF6)"
     WHATSTHIS "A widget showing a light emitter diode"
@@ -183,6 +188,7 @@ ecm_add_qtdesignerplugin(kwidgetsaddonswidgets
         KFontChooser
         KFontRequester
         KGradientSelector
+        KIconWidget
         KLed
         KMessageWidget
         KMimeTypeChooser
