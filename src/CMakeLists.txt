@@ -88,6 +88,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kfontsizeaction.h
     kguiitem.cpp
     kguiitem.h
+    kiconwidget.cpp
+    kiconwidget.h
     kled.cpp
     kled.h
     klineediteventhandler.h
@@ -265,6 +267,7 @@ ecm_generate_headers(KWidgetsAddons_CamelCase_HEADERS
   KFontChooserDialog
   KFontSizeAction
   KGuiItem
+  KIconWidget
   KLed
   KMessageBox
   KMessageBoxDontAskAgainInterface
