@@ -49,13 +49,13 @@ msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
 msgstr "Монашырынны"
 
-#: fonthelpers_p.h:90
+#: fonthelpers_p.h:88
 #, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
-#: fonthelpers_p.h:94
+#: fonthelpers_p.h:92
 #, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"

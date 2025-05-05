@@ -52,7 +52,7 @@ msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
 msgstr "మోనోస్పేస్"
 
-#: fonthelpers_p.h:90
+#: fonthelpers_p.h:88
 #, fuzzy, qt-format
 #| msgctxt "@application/plain"
 #| msgid "%1"
@@ -60,7 +60,7 @@ msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
-#: fonthelpers_p.h:94
+#: fonthelpers_p.h:92
 #, fuzzy, qt-format
 #| msgctxt "dictionary name. %1-language and %2-variant name"
 #| msgid "%1 [%2]"
