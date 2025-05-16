@@ -12,46 +12,34 @@
 #include <QTextDocumentFragment>
 #include <QWidgetAction>
 
-/*!
- * The private class of KContextualHelpButton used for the PIMPL idiom.
- * \internal
- */
 class KContextualHelpButtonPrivate
 {
 public:
-    /*! \sa KContextualHelpButton::KContextualHelpButton() */
     explicit KContextualHelpButtonPrivate(KContextualHelpButton *q, const QString &contextualHelpText, const QWidget *heightHintWidget);
 
-    /*! \sa KContextualHelButton::setContextualHelpText() */
     void setContextualHelpText(const QString &contextualHelpText);
 
-    /*! \sa KContextualHelButton::contextualHelpText() */
     QString contextualHelpText() const;
 
-    /*! \sa KContextualHelpButton::setHeightHintWidget() */
     void setHeightHintWidget(const QWidget *heightHintWidget);
 
-    /*! \sa KContextualHelpButton::setHeightHintWidget() */
     const QWidget *heightHintWidget() const;
 
-    /*!
+    /*
      * A helper method called from KContextualHelpButton::sizeHint().
      *
-     * @returns the preferredSize based on m_heightHintWidget and fallbackSize.
-     * \a fallbackSize  Used as the width. Also used as the height if there is no m_heightHintWidget.
+     * Returns the preferredSize based on m_heightHintWidget and fallbackSize.
      *
-     * \sa QWidget::sizeHint()
-     * \sa KContextualHelpButton::setHeightHintWidget()
+     * fallbackSize is used as the width. Also used as the height if there is no m_heightHintWidget.
      */
     QSize preferredSize(const QSize &fallbackSize) const;
 
 private:
     KContextualHelpButton *const q_ptr;
 
-    /*! The popup showing the contextualHelpText. */
+    /* The popup showing the contextualHelpText. */
     QLabel *m_popupLabel = nullptr;
 
-    /*! \sa KContextualHelpButton::setHeightHintWidget() */
     QPointer<const QWidget> m_heightHintWidget;
 };
 
