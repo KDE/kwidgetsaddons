@@ -93,37 +93,37 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
     Q_OBJECT
 
     /*!
-     * \property KMessageBox::text
+     * \property KMessageWidget::text
      */
     Q_PROPERTY(QString text READ text WRITE setText)
 
     /*!
-     * \property KMessageBox::textFormat
+     * \property KMessageWidget::textFormat
      */
     Q_PROPERTY(Qt::TextFormat textFormat READ textFormat WRITE setTextFormat)
 
     /*!
-     * \property KMessageBox::wordWrap
+     * \property KMessageWidget::wordWrap
      */
     Q_PROPERTY(bool wordWrap READ wordWrap WRITE setWordWrap)
 
     /*!
-     * \property KMessageBox::closeButtonVisible
+     * \property KMessageWidget::closeButtonVisible
      */
     Q_PROPERTY(bool closeButtonVisible READ isCloseButtonVisible WRITE setCloseButtonVisible)
 
     /*!
-     * \property KMessageBox::messageType
+     * \property KMessageWidget::messageType
      */
     Q_PROPERTY(MessageType messageType READ messageType WRITE setMessageType)
 
     /*!
-     * \property KMessageBox::icon
+     * \property KMessageWidget::icon
      */
     Q_PROPERTY(QIcon icon READ icon WRITE setIcon)
 
     /*!
-     * \property KMessageBox::position
+     * \property KMessageWidget::position
      */
     Q_PROPERTY(Position position READ position WRITE setPosition)
 public:
