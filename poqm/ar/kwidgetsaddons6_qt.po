@@ -1452,7 +1452,7 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "مخصّص…"
 
-#: kcontextualhelpbutton.cpp:80
+#: kcontextualhelpbutton.cpp:68
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
 msgstr "المساعدة السياقية"

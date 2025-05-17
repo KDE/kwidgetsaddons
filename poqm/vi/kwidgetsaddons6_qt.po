@@ -1465,7 +1465,7 @@ msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "Tự chọn..."
 
-#: kcontextualhelpbutton.cpp:80
+#: kcontextualhelpbutton.cpp:68
 #, fuzzy
 #| msgctxt "KPasswordDialog|"
 #| msgid "Show Contextual Help"
