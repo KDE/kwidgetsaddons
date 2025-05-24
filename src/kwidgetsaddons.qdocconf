@@ -33,3 +33,5 @@ qhp.KWidgetsAddons.subprojects.classes.title = C++ Classes
 qhp.KWidgetsAddons.subprojects.classes.indexTitle = KWidgetsAddons C++ Classes
 qhp.KWidgetsAddons.subprojects.classes.selectors = class fake:headerfile
 qhp.KWidgetsAddons.subprojects.classes.sortPages = true
+
+tagfile = kwidgetsaddons.tags
