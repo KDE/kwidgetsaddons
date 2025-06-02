@@ -21,6 +21,7 @@
 #include <QScreen>
 #include <QScrollArea>
 #include <QScrollBar>
+#include <QShowEvent>
 #include <QStyle>
 #include <QStyleOption>
 #include <QTextBrowser>
@@ -464,7 +465,7 @@ void KMessageDialog::setNotifyEnabled(bool enable)
 
 void KMessageDialog::showEvent(QShowEvent *event)
 {
-    if (d->m_notifyEnabled) {
+    if (d->m_notifyEnabled && !event->spontaneous()) {
         // TODO include m_listWidget items
         beep(d->m_type, d->m_messageLabel->text(), topLevelWidget());
     }
