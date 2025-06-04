@@ -1811,27 +1811,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Vairs nerādīt šo ziņojumu"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Sīkāka informācija"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Jautājums"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Brīdinājums"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informācija"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Kļūda"

@@ -2623,35 +2623,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Vê peyamê careke din nîşan nede"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Kitekit"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pirs"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Hişyarî"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Agahî"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

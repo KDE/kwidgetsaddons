@@ -1807,27 +1807,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ikkje vis denne meldinga igjen"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detaljar"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Spørsmål"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Åtvaring"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informasjon"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Feilmelding"

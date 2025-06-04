@@ -2017,7 +2017,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Ne prikazuj više ovu poruku"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -2025,7 +2025,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detalji"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2033,7 +2033,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pitanje"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2041,7 +2041,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Upozorenje"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2049,7 +2049,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informacija"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"

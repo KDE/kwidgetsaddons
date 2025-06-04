@@ -1809,27 +1809,27 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "不要再顯示此訊息"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "詳細資料"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "問題"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "警告"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "資訊"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "錯誤"

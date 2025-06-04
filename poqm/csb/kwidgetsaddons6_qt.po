@@ -2650,35 +2650,35 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Nie pòkazëjë tegò wiadła wicy"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 #, fuzzy
 #| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Drobnotë"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 #, fuzzy
 #| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pëtanié"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 #, fuzzy
 #| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Òstrzega"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 #, fuzzy
 #| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Wëdowiédzô"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 #, fuzzy
 #| msgid "Error"
 msgctxt "KMessageDialog|"

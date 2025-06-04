@@ -2408,7 +2408,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "ਮੁੜ ਇਹ ਸੁਨੇਹਾ ਨਾ ਵੇਖੋ"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -2416,7 +2416,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "ਵੇਰਵੇ"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2424,7 +2424,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "ਸਵਾਲ"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2432,7 +2432,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "ਚੇਤਾਵਨੀ"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2440,7 +2440,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "ਜਾਣਕਾਰੀ"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"

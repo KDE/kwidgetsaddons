@@ -2251,7 +2251,7 @@ msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Nu mai arăta acest mesaj"
 
-#: kmessagedialog.cpp:139
+#: kmessagedialog.cpp:140
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Details"
@@ -2259,7 +2259,7 @@ msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detalii"
 
-#: kmessagedialog.cpp:225
+#: kmessagedialog.cpp:226
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Question"
@@ -2267,7 +2267,7 @@ msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Întrebare"
 
-#: kmessagedialog.cpp:230
+#: kmessagedialog.cpp:231
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2275,7 +2275,7 @@ msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Avertisment"
 
-#: kmessagedialog.cpp:233
+#: kmessagedialog.cpp:234
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Information"
@@ -2283,7 +2283,7 @@ msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informații"
 
-#: kmessagedialog.cpp:236
+#: kmessagedialog.cpp:237
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"
