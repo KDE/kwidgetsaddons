@@ -15,6 +15,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     common_helpers.cpp
     common_helpers_p.h
     fonthelpers_p.h
+    highcontrasthelper.cpp
+    highcontrasthelper_p.h
     kacceleratormanager.cpp
     kacceleratormanager.h
     kacceleratormanager_p.h
