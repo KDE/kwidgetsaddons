@@ -55,6 +55,9 @@ KCollapsibleGroupBox::KCollapsibleGroupBox(QWidget *parent)
         }
     });
 
+    // Start out in collapsed height lest we blow up our window size unnecessarily.
+    // https://bugs.kde.org/show_bug.cgi?id=505820
+    setFixedHeight(d->headerSize.height());
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
     setFocusPolicy(Qt::TabFocus);
     setMouseTracking(true);
