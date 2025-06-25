@@ -48,16 +48,13 @@ KToggleFullScreenAction::KToggleFullScreenAction(QObject *parent)
     : KToggleAction(*new KToggleFullScreenActionPrivate(this), parent)
 {
     Q_D(KToggleFullScreenAction);
-
+    setAutoRepeat(false);
     d->updateTextsAndIcon();
 }
 
 KToggleFullScreenAction::KToggleFullScreenAction(QWidget *window, QObject *parent)
-    : KToggleAction(*new KToggleFullScreenActionPrivate(this), parent)
+    : KToggleFullScreenAction(parent)
 {
-    Q_D(KToggleFullScreenAction);
-
-    d->updateTextsAndIcon();
     setWindow(window);
 }
 
