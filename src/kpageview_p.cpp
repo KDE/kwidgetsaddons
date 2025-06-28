@@ -205,6 +205,7 @@ KPageTabbedView::KPageTabbedView(QWidget *parent)
     layout->setContentsMargins(0, 0, 0, 0);
 
     mTabWidget = new QTabWidget(this);
+    setFocusProxy(mTabWidget);
     mTabWidget->setDocumentMode(true);
     mTabWidget->tabBar()->setExpanding(true);
     connect(mTabWidget, &QTabWidget::currentChanged, this, &KPageTabbedView::currentPageChanged);
