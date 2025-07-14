@@ -2254,12 +2254,12 @@ msgstr "მიმდინარე დოკუმენტის დახუ�
 #: kstandardguiitem.cpp:250
 msgctxt "KStandardGuiItem|"
 msgid "&Defaults"
-msgstr "&ნაგულისხმები პარამეტრები"
+msgstr "&ნაგულისხმევი პარამეტრები"
 
 #: kstandardguiitem.cpp:252
 msgctxt "KStandardGuiItem|"
 msgid "Reset all items to their default values"
-msgstr "ყველა ჩანაწერის ნაგულისხმებ მნიშვნელობებზე დაბრუნება"
+msgstr "ყველა ჩანაწერის ნაგულისხმევ მნიშვნელობებზე დაბრუნება"
 
 #: kstandardguiitem.cpp:258
 msgctxt "KStandardGuiItem|go back"
@@ -2334,7 +2334,7 @@ msgstr "აპლიკაციიდან გასვლა"
 #: kstandardguiitem.cpp:313
 msgctxt "KStandardGuiItem|"
 msgid "&Reset"
-msgstr "&საწყისი მნიშვნელობებზე დაბრუნება"
+msgstr "ჩამოყ&რა"
 
 #: kstandardguiitem.cpp:315
 msgctxt "KStandardGuiItem|"
