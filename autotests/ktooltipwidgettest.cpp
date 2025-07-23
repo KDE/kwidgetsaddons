@@ -17,8 +17,6 @@
 #include <QStyle>
 #include <QTest>
 
-#include "windowscheck.h"
-
 void KToolTipWidgetTest::initTestCase()
 {
     m_screenGeometry = QGuiApplication::primaryScreen()->geometry();
@@ -162,10 +160,6 @@ void KToolTipWidgetTest::shouldNotObscureTarget()
 {
     QFETCH(QPoint, position);
     QFETCH(QString, content);
-
-    if (isWindowsCI()) {
-        QSKIP("GUI Tests on Windows CI are not supported");
-    }
 
     QWidget *containerWidget = new QWidget();
     const int margin = containerWidget->style()->pixelMetric(QStyle::PM_ToolTipLabelFrameWidth);

@@ -12,8 +12,6 @@
 #include <QSignalSpy>
 #include <QTest>
 
-#include "windowscheck.h"
-
 PasswordLineEditTest::PasswordLineEditTest(QObject *parent)
     : QObject(parent)
 {
@@ -39,10 +37,6 @@ void PasswordLineEditTest::shouldHaveDefaultValue()
 
 void PasswordLineEditTest::shouldShowTogglePassword()
 {
-    if (isWindowsCI()) {
-        QSKIP("GUI Tests on Windows CI are not supported");
-    }
-
     KPasswordLineEdit lineEdit;
     lineEdit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));
@@ -57,10 +51,6 @@ void PasswordLineEditTest::shouldShowTogglePassword()
 
 void PasswordLineEditTest::shouldNotShowToggleWhenSetPassword()
 {
-    if (isWindowsCI()) {
-        QSKIP("GUI Tests on Windows CI are not supported");
-    }
-
     KPasswordLineEdit lineEdit;
     lineEdit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));
@@ -70,10 +60,6 @@ void PasswordLineEditTest::shouldNotShowToggleWhenSetPassword()
 
 void PasswordLineEditTest::shouldShowRevealPassword()
 {
-    if (isWindowsCI()) {
-        QSKIP("GUI Tests on Windows CI are not supported");
-    }
-
     KPasswordLineEdit lineEdit;
     lineEdit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineEdit));

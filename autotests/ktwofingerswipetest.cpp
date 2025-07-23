@@ -12,8 +12,6 @@
 #include <QTest>
 #include <QWidget>
 
-#include "windowscheck.h"
-
 class KTwoFingerSwipeTest : public QObject
 {
     Q_OBJECT
@@ -108,10 +106,6 @@ private Q_SLOTS:
     }
     void initTestCase()
     {
-        if (isWindowsCI()) {
-            QSKIP("GUI Tests on Windows CI are not supported");
-        }
-
         mDev = QTest::createTouchDevice();
 
         mMainWindow.setGeometry(0, 0, 500, 500);
