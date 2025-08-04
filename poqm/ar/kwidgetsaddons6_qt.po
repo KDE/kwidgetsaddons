@@ -1,11 +1,11 @@
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-28 15:38+0300\n"
-"PO-Revision-Date: 2024-10-10 08:59+0400\n"
+"PO-Revision-Date: 2025-08-03 14:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2009,7 +2009,7 @@ msgstr "أدخل اسم مستخدم وكلمة السر أدناه."
 #: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr "بدون كلمة سر، استخدم ولوج &مجهول (أو زائر)"
+msgstr "بلا كلمة سر، استخدم ولوج &مجهول (أو زائر)"
 
 #: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
@@ -2084,7 +2084,7 @@ msgstr "لا مدخلات"
 #: krecentfilesmenu.cpp:118
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
-msgstr "امسح القائمة"
+msgstr "امحُ القائمة"
 
 #: krecentfilesmenu.cpp:124
 msgctxt "KRecentFilesMenu|"
@@ -2197,17 +2197,17 @@ msgstr ""
 #: kstandardguiitem.cpp:214
 msgctxt "KStandardGuiItem|"
 msgid "C&lear"
-msgstr "ام&ح"
+msgstr "ام&حُ"
 
 #: kstandardguiitem.cpp:216
 msgctxt "KStandardGuiItem|"
 msgid "Clear input"
-msgstr "امح الدّخل"
+msgstr "امحُ الدّخل"
 
 #: kstandardguiitem.cpp:217
 msgctxt "KStandardGuiItem|"
 msgid "Clear the input in the edit field"
-msgstr "امح الدخل من حقل التحرير"
+msgstr "امحُ الدخل من حقل التحرير"
 
 #: kstandardguiitem.cpp:222
 msgctxt "KStandardGuiItem|show help"
