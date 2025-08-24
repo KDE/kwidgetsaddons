@@ -29,6 +29,7 @@
 #include <QWindow>
 
 #include <KCollapsibleGroupBox>
+#include <KIconWidget>
 #include <KSqueezedTextLabel>
 
 static const Qt::TextInteractionFlags s_textFlags = Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse | Qt::LinksAccessibleByKeyboard;
@@ -50,7 +51,7 @@ public:
 
     QVBoxLayout *m_topLayout = nullptr;
     QWidget *m_mainWidget = nullptr;
-    QLabel *m_iconLabel = nullptr;
+    KIconWidget *m_iconWidget = nullptr;
     QLabel *m_messageLabel = nullptr;
     QListWidget *m_listWidget = nullptr;
     QLabel *m_detailsLabel = nullptr;
@@ -88,9 +89,9 @@ KMessageDialog::KMessageDialog(KMessageDialog::Type type, const QString &text, Q
     auto *iconLayout = new QVBoxLayout{};
     hLayout->addLayout(iconLayout, 0);
 
-    d->m_iconLabel = new QLabel(d->m_mainWidget);
-    d->m_iconLabel->setVisible(false);
-    iconLayout->addWidget(d->m_iconLabel);
+    d->m_iconWidget = new KIconWidget(d->m_mainWidget);
+    d->m_iconWidget->setVisible(false);
+    iconLayout->addWidget(d->m_iconWidget);
     hLayout->addSpacing(widgetStyle->pixelMetric(QStyle::PM_LayoutHorizontalSpacing));
 
     const QRect desktop = screen()->geometry();
@@ -276,13 +277,14 @@ void KMessageDialog::setIcon(const QIcon &icon)
         return;
     }
 
-    d->m_iconLabel->setVisible(true);
+    d->m_iconWidget->setVisible(true);
 
     QStyleOption option;
     option.initFrom(d->m_mainWidget);
     QStyle *widgetStyle = d->m_mainWidget->style();
     const int size = widgetStyle->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, d->m_mainWidget);
-    d->m_iconLabel->setPixmap(effectiveIcon.pixmap(size));
+    d->m_iconWidget->setIconSize(QSize(size, size));
+    d->m_iconWidget->setIcon(effectiveIcon);
 }
 
 void KMessageDialog::setListWidgetItems(const QStringList &strlist)

@@ -30,6 +30,7 @@
 #include <ksqueezedtextlabel.h>
 
 #include <KCollapsibleGroupBox>
+#include <KIconWidget>
 
 namespace KMessageBox
 {
@@ -200,17 +201,18 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
     hLayout->setSpacing(-1); // use default spacing
     mainLayout->addLayout(hLayout, 5);
 
-    QLabel *iconLabel = new QLabel(mainWidget);
+    auto *iconWidget = new KIconWidget(mainWidget);
 
     if (!icon.isNull()) {
         QStyleOption option;
         option.initFrom(mainWidget);
-        iconLabel->setPixmap(icon.pixmap(mainWidget->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, mainWidget)));
+        iconWidget->setIconSize(mainWidget->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, mainWidget));
+        iconWidget->setIcon(icon);
     }
 
     QVBoxLayout *iconLayout = new QVBoxLayout();
     iconLayout->addStretch(1);
-    iconLayout->addWidget(iconLabel);
+    iconLayout->addWidget(iconWidget);
     iconLayout->addStretch(5);
 
     hLayout->addLayout(iconLayout, 0);

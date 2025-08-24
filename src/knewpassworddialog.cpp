@@ -115,8 +115,8 @@ void KNewPasswordDialog::setIcon(const QIcon &icon)
     QStyleOption option;
     option.initFrom(this);
     const int iconSize = style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this);
-    d->ui.labelIcon->setPixmap(icon.pixmap(iconSize, iconSize));
-    d->ui.labelIcon->setFixedSize(d->ui.labelIcon->sizeHint());
+    d->ui.iconWidget->setIconSize(iconSize);
+    d->ui.iconWidget->setIcon(icon);
 }
 
 QIcon KNewPasswordDialog::icon() const

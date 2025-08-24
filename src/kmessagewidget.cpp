@@ -21,6 +21,8 @@
 #include <QStyleOption>
 #include <QTimeLine>
 #include <QToolButton>
+
+#include <KIconWidget>
 //---------------------------------------------------------------------
 // KMessageWidgetPrivate
 //---------------------------------------------------------------------
@@ -33,7 +35,7 @@ public:
     void init(KMessageWidget *);
 
     KMessageWidget *q;
-    QLabel *iconLabel = nullptr;
+    KIconWidget *iconWidget = nullptr;
     QLabel *textLabel = nullptr;
     QToolButton *closeButton = nullptr;
     QTimeLine *timeLine = nullptr;
@@ -67,9 +69,9 @@ void KMessageWidgetPrivate::init(KMessageWidget *q_ptr)
 
     wordWrap = false;
 
-    iconLabel = new QLabel(q);
-    iconLabel->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-    iconLabel->hide();
+    iconWidget = new KIconWidget(q);
+    iconWidget->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+    iconWidget->hide();
 
     textLabel = new QLabel(q);
     textLabel->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
@@ -121,7 +123,7 @@ void KMessageWidgetPrivate::createLayout()
     if (wordWrap) {
         QGridLayout *layout = new QGridLayout(q);
         // Set alignment to make sure icon does not move down if text wraps
-        layout->addWidget(iconLabel, 0, 0, 1, 1, Qt::AlignCenter);
+        layout->addWidget(iconWidget, 0, 0, 1, 1, Qt::AlignCenter);
         layout->addWidget(textLabel, 0, 1);
 
         if (buttons.isEmpty()) {
@@ -143,7 +145,7 @@ void KMessageWidgetPrivate::createLayout()
         }
     } else {
         QHBoxLayout *layout = new QHBoxLayout(q);
-        layout->addWidget(iconLabel, 0, Qt::AlignVCenter);
+        layout->addWidget(iconWidget, 0, Qt::AlignVCenter);
         layout->addWidget(textLabel);
 
         for (QToolButton *button : std::as_const(buttons)) {
@@ -189,7 +191,7 @@ void KMessageWidgetPrivate::setPalette()
     ignorePaletteChange = true;
     q->setPalette(palette);
     ignorePaletteChange = false;
-    iconLabel->setPalette(palette);
+    iconWidget->setPalette(palette);
     textLabel->setPalette(palette);
 
     // update the Icon in case it is recolorable
@@ -532,11 +534,11 @@ void KMessageWidget::setIcon(const QIcon &icon)
 {
     d->icon = icon;
     if (d->icon.isNull()) {
-        d->iconLabel->hide();
+        d->iconWidget->hide();
     } else {
-        const int size = style()->pixelMetric(QStyle::PM_ToolBarIconSize);
-        d->iconLabel->setPixmap(d->icon.pixmap(size));
-        d->iconLabel->show();
+        d->iconWidget->setIconSize(style()->pixelMetric(QStyle::PM_ToolBarIconSize, nullptr, this));
+        d->iconWidget->setIcon(d->icon);
+        d->iconWidget->show();
     }
 }
 
