@@ -65,7 +65,7 @@ msgstr "&Disponible:"
 #: kactionselector.cpp:115
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
-msgstr "&Seleccionat:"
+msgstr "&Triat:"
 
 #: kassistantdialog.cpp:100
 msgctxt "KAssistantDialog|@action:button go back"
@@ -1110,12 +1110,12 @@ msgstr "A&vant"
 #: kcharselect.cpp:464
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
-msgstr "Seleccioneu una categoria"
+msgstr "Trieu una categoria"
 
 #: kcharselect.cpp:468
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
-msgstr "Seleccioneu un bloc que s'haja de mostrar"
+msgstr "Trieu un bloc que s'haja de mostrar"
 
 #: kcharselect.cpp:487
 msgctxt "KCharSelect|@info:tooltip"
@@ -1508,22 +1508,22 @@ msgstr "Mes anterior"
 #: kdatepicker.cpp:309
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
-msgstr "Selecciona una setmana"
+msgstr "Tria una setmana"
 
 #: kdatepicker.cpp:310
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
-msgstr "Selecciona un mes"
+msgstr "Tria un mes"
 
 #: kdatepicker.cpp:311
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
-msgstr "Selecciona un any"
+msgstr "Tria un any"
 
 #: kdatepicker.cpp:312
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
-msgstr "Selecciona el dia d'hui"
+msgstr "Tria el dia d'hui"
 
 #: kdatepicker.cpp:647
 msgctxt "KDatePicker|@action:button"
@@ -1684,7 +1684,7 @@ msgstr "%1"
 #: kfontchooserdialog.cpp:25
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
-msgstr "Seleccioneu el tipus de lletra"
+msgstr "Trieu el tipus de lletra"
 
 #: kfontchooserwidget.ui:14
 msgctxt "KFontChooserWidget|"
@@ -1743,7 +1743,7 @@ msgstr "Mostra només els tipus de lletra monoespai"
 #: kfontrequester.cpp:155
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font..."
-msgstr "Selecciona el tipus de lletra…"
+msgstr "Tria el tipus de lletra…"
 
 #: kfontrequester.cpp:161
 msgctxt "KFontRequester|@info:tooltip"
@@ -1757,7 +1757,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia del tipus de lletra seleccionat. El podeu canviar "
-"clicant damunt del botó «Selecciona el tipus de lletra…»."
+"clicant damunt del botó «Tria el tipus de lletra…»."
 
 #: kfontrequester.cpp:167
 #, qt-format
@@ -1773,7 +1773,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Açò és una vista prèvia del tipus de lletra «%1». El podeu canviar clicant "
-"damunt del botó «Selecciona el tipus de lletra…»."
+"damunt del botó «Tria el tipus de lletra…»."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -2050,7 +2050,7 @@ msgstr "Canvia la visibilitat de la contrasenya"
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
-msgstr "Seleccioneu una regió de la imatge"
+msgstr "Trieu una regió de la imatge"
 
 #: kpixmapregionselectordialog.cpp:60
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
