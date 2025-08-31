@@ -8,13 +8,13 @@
 # Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008, 2010.
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Einars Sprugis <einars8@gmail.com>, 2009.
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-11-07 16:16+0200\n"
+"PO-Revision-Date: 2025-08-29 11:58+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Launchpad-Export-Date: 2007-11-22 17:44+0000\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1934,12 +1934,12 @@ msgstr "Parole ir tukša."
 #: knewpassworddialog.cpp:71
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
-msgstr "Paroles neatbilst."
+msgstr "Paroles nesakrīt."
 
 #: knewpassworddialog.cpp:76
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
-msgstr "Paroles atbilst."
+msgstr "Paroles sakrīt."
 
 #: knewpassworddialog.cpp:133
 msgctxt "KNewPasswordDialog|@title:window"
