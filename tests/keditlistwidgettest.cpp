@@ -1,7 +1,7 @@
+#include <QApplication>
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
-#include <qapplication.h>
 
 #include <QDebug>
 #include <keditlistwidget.h>

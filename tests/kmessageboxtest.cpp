@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <qapplication.h>
+#include <QApplication>
 
 class ExampleWidget : public QLabel
 {

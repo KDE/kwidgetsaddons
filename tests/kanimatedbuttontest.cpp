@@ -9,10 +9,10 @@
 #include "kanimatedbutton.h"
 
 #include <QApplication>
+#include <QLayout>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QSpinBox>
-#include <qlayout.h>
 
 AnimationGroup::AnimationGroup(const QString &path, int size, QWidget *parent)
     : QGroupBox(parent)

@@ -56,7 +56,7 @@
 #undef PROFILING
 
 #ifdef PROFILING
-#include <qdatetime.h>
+#include <QDateTime>
 #endif
 
 class KRulerPrivate

@@ -9,7 +9,7 @@
 #define KMESSAGEBOXDONTASKAGAININTERFACE_H
 
 #include "kmessagebox.h"
-#include <qmetatype.h>
+#include <QMetaType>
 
 /*!
  * \internal

@@ -8,8 +8,8 @@
 #include "ksplittercollapserbutton.h"
 #include <QHBoxLayout>
 #include <QSplitter>
+#include <QTest>
 #include <QTextEdit>
-#include <qtest.h>
 #include <qtestmouse.h>
 
 #include "windowscheck.h"

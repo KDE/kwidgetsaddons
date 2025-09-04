@@ -17,7 +17,7 @@
 #include <qendian.h>
 
 #include <../test-config.h>
-#include <qstandardpaths.h>
+#include <QStandardPaths>
 #include <string.h>
 
 /* constants for hangul (de)composition, see UAX #15 */

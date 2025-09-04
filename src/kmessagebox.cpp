@@ -22,7 +22,7 @@
 #include <QTextBrowser>
 #include <QWindow>
 
-#include <qapplication.h>
+#include <QApplication>
 #if 0
 // NOTE waiting for the notification framework plan
 #include <knotification.h>

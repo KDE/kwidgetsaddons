@@ -6,8 +6,8 @@
 
 #include "ksplittercollapserbuttongui_test.h"
 #include "ksplittercollapserbutton.h"
+#include <QApplication>
 #include <QSplitter>
-#include <qapplication.h>
 
 #include <QApplication>
 #include <QCommandLineParser>

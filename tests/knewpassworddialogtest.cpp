@@ -5,9 +5,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <QApplication>
 #include <iostream>
 #include <knewpassworddialog.h>
-#include <qapplication.h>
 
 int main(int argc, char *argv[])
 {

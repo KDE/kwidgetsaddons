@@ -10,8 +10,8 @@
 #include <QMainWindow>
 #include <QStandardItemModel>
 #include <QTest>
+#include <QToolBar>
 #include <kselectaction.h>
-#include <qtoolbar.h>
 
 QTEST_MAIN(KSelectAction_UnitTest)
 

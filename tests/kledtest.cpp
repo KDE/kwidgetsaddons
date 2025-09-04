@@ -2,7 +2,7 @@
 #include "kledtest.h"
 
 #include "kled.h"
-#include <qapplication.h>
+#include <QApplication>
 
 KLedTest::KLedTest(QWidget *parent)
     : QWidget(parent)

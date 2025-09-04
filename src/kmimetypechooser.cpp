@@ -8,7 +8,7 @@
 #include "kmimetypechooser.h"
 
 #include "kmimetypeeditor.h"
-#include <qmimedatabase.h>
+#include <QMimeDatabase>
 
 #include <QDialogButtonBox>
 #include <QLabel>
