@@ -5,7 +5,7 @@
 # Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002, 2003, 2004.
 # Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2003, 2004, 2005.
 # Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
-# Marcus Gama <marcus.gama@gmail.com>, 2006.
+# SPDX-FileCopyrightText: 2006, 2025 Marcus Gama <marcus.gama@gmail.com>
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2008, 2009, 2010, 2012, 2017, 2018, 2019, 2020, 2021, 2022.
@@ -18,15 +18,15 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons5_qt\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2022-06-22 16:14-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-09-13 14:37-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -2410,17 +2410,17 @@ msgstr "A hora não pode ser posterior a %1"
 #: ktogglefullscreenaction.cpp:38
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
-msgstr "&Modo de tela inteira"
+msgstr "&Modo de tela cheia"
 
 #: ktogglefullscreenaction.cpp:39
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
-msgstr "Tela inteira"
+msgstr "Tela cheia"
 
 #: ktogglefullscreenaction.cpp:40
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
-msgstr "Mostrar a janela em tela inteira"
+msgstr "Mostrar a janela em tela cheia"
 
 #~ msgctxt "KToggleFullScreenAction|@action:inmenu"
 #~ msgid "Exit F&ull Screen Mode"
