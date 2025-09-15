@@ -27,7 +27,15 @@ public:
         int maxWidthForTitles = INT_MAX;
         const auto screens = QGuiApplication::screens();
         for (QScreen *screen : screens) {
-            maxWidthForTitles = qMin(maxWidthForTitles, screen->availableGeometry().width() * 3 / 4);
+            const int width = screen->availableGeometry().width();
+            if (width <= 0) {
+                // Ignore screens with zero width
+                // QGuiApplication::screens() sometimes returns these,
+                // such as on X11 when an xorg.conf ServerLayout refers
+                // to a Screen that is not currently connected.
+                continue;
+            }
+            maxWidthForTitles = qMin(maxWidthForTitles, width * 3 / 4);
         }
 
         const QFontMetrics fontMetrics = widget->fontMetrics();
