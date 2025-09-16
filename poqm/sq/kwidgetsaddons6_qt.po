@@ -2569,19 +2569,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Rrotullo në &Drejtim të Kundërt të Akrepave të Orës"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Shënime:"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Pastroni hyrjen"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

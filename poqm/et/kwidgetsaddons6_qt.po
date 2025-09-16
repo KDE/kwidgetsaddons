@@ -2211,17 +2211,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Pööra &vastupäeva"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Kirjeid pole"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Puhasta loend"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Viimati kasutatud failid"

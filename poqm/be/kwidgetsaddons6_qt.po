@@ -2096,17 +2096,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Павярнуць &супраць стрэлкі гадзінніка"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Няма запісаў"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Ачысціць спіс"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Нядаўнія файлы"

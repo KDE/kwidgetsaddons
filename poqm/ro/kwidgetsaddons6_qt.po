@@ -2595,17 +2595,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Rotește la &stânga"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Nicio înregistrare"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Curăță lista"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Fișiere recente"

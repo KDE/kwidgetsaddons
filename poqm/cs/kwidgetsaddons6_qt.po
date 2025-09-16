@@ -2084,17 +2084,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Otočit proti s&měru hodinových ručiček"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Žádné záznamy"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Smazat seznam"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "Nedávné soubory"

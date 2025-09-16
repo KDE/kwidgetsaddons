@@ -2071,17 +2071,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "घुमाव &घटिका के विपरीत दिशा"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "प्रविष्टयः नास्ति"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "स्पष्ट सूची"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
 msgstr "अद्यतनसञ्चिकाः"

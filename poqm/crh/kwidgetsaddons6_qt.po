@@ -3002,19 +3002,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Saat Yönüniñ &Tersine Döndür"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Kirdi yoq"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Kirdini temizle"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"

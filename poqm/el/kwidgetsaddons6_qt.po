@@ -2209,17 +2209,17 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Περιστροφή &αντίστροφα από τη φορά του ρολογιού"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Καμία καταχώρηση"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Καθαρισμός λίστας"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 #, fuzzy
 #| msgid "Delete Files"
 msgctxt "KRecentFilesMenu|"

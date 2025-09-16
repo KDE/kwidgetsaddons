@@ -2683,19 +2683,19 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr ""
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "Iimpahla"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "Cima igalelo"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 #, fuzzy
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"

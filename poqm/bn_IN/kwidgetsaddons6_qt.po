@@ -3013,21 +3013,21 @@ msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "বাঁদিকে ঘোরানো হবে (&C)"
 
-#: krecentfilesmenu.cpp:115
+#: krecentfilesmenu.cpp:123
 #, fuzzy
 #| msgid "No Entries"
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
 msgstr "কোনো এনট্রি উপস্থিত নেই"
 
-#: krecentfilesmenu.cpp:118
+#: krecentfilesmenu.cpp:126
 #, fuzzy
 #| msgid "Clear List"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
 msgstr "তালিকার তথ্য মুছে ফেলা হবে"
 
-#: krecentfilesmenu.cpp:124
+#: krecentfilesmenu.cpp:132
 #, fuzzy
 #| msgid "Select Files..."
 msgctxt "KRecentFilesMenu|"
