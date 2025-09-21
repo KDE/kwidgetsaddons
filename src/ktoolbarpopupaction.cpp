@@ -20,8 +20,6 @@
 #include <QMenu>
 #include <QToolBar>
 
-#include <memory>
-
 class KToolBarPopupActionPrivate
 {
 public:

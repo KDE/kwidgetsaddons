@@ -14,7 +14,6 @@
 #include <QPaintEvent>
 #include <QPainter>
 #include <QPainterPath>
-#include <QStyle>
 #include <QStyleOptionProgressBar>
 
 #define ROUND_MARGIN 6
