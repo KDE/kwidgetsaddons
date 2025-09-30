@@ -417,8 +417,6 @@ void KPageViewPrivate::updateTitleWidget(const QModelIndex &index)
 
 void KPageViewPrivate::updateActionsLayout(const QModelIndex &index, const QModelIndex &previous)
 {
-    Q_Q(KPageView);
-
     if (previous.isValid()) {
         const auto previousActions = qvariant_cast<QList<QAction *>>(model->data(index, KPageModel::ActionsRole));
         for (const auto action : previousActions) {
