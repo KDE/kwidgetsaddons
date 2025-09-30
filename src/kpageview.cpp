@@ -18,6 +18,7 @@
 
 #include <ktitlewidget.h>
 
+#include <KLineEditEventHandler>
 #include <QAbstractButton>
 #include <QAbstractItemView>
 #include <QApplication>
@@ -502,6 +503,7 @@ void KPageViewPrivate::init()
     layout->setRowStretch(3, 1);
 
     searchLineEdit = new QLineEdit(defaultWidget);
+    KLineEditEventHandler::catchReturnKey(searchLineEdit);
     searchTimer.setInterval(400);
     searchTimer.setSingleShot(true);
     searchTimer.callOnTimeout(q, [this] {
