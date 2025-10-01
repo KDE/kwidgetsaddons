@@ -2005,7 +2005,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Misuratore di robustezza della password:"
 
-#: kpageview.cpp:513
+#: kpageview.cpp:511
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Cerca…"

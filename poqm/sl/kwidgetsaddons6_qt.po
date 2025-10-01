@@ -2002,7 +2002,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Kazalnik &moči gesla:"
 
-#: kpageview.cpp:513
+#: kpageview.cpp:511
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Išči…"
