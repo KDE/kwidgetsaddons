@@ -60,7 +60,6 @@ KActionMenu::KActionMenu(const QIcon &icon, const QString &text, QObject *parent
 
 KActionMenu::~KActionMenu()
 {
-    delete menu();
 }
 
 QWidget *KActionMenu::createWidget(QWidget *_parent)
@@ -79,6 +78,8 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     button->setDefaultAction(this);
     button->setPopupMode(popupMode());
     QObject::connect(button, &QToolButton::triggered, parent, &QToolBar::actionTriggered);
+
+    menu()->setParent(parent);
 
     return button;
 }
