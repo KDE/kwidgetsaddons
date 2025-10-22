@@ -73,6 +73,8 @@ QWidget *KActionMenu::createWidget(QWidget *_parent)
     button->setPopupMode(popupMode());
     QObject::connect(button, &QToolButton::triggered, parent, &QToolBar::actionTriggered);
 
+    menu()->setParent(button);
+
     return button;
 }
 
