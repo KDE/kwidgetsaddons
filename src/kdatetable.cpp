@@ -9,6 +9,8 @@
 
 #include "kdatetable_p.h"
 
+#include "highcontrasthelper_p.h"
+
 #include <QAction>
 #include <QActionEvent>
 #include <QApplication>
@@ -278,10 +280,10 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
         // We are drawing a header cell
 
         // If not a normal working day, then use "do not work today" color
-        if (workingDay) {
-            cellTextColor = palette().color(QPalette::WindowText);
-        } else {
+        if (!workingDay && !isHighContrastColorSchemeInUse()) {
             cellTextColor = Qt::darkRed;
+        } else {
+            cellTextColor = palette().color(QPalette::WindowText);
         }
         cellBackgroundColor = palette().color(QPalette::Window);
 
@@ -366,7 +368,7 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
             }
 
             // If the cell day is the day of religious observance, then always color text red unless Custom overrides
-            if (!customDay && dayOfPray) {
+            if (!customDay && dayOfPray && !isHighContrastColorSchemeInUse()) {
                 cellTextColor = Qt::darkRed;
             }
         }
