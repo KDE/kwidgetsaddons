@@ -219,7 +219,7 @@ void KPageViewPrivate::rebuildGui()
 
     Qt::Alignment alignment = q->viewPosition();
     if (alignment & Qt::AlignTop) {
-        layout->addWidget(view, 2, 1);
+        layout->addWidget(view, 3, 1);
     } else if (alignment & Qt::AlignRight) {
         // search line
         layout->addWidget(searchLineEditContainer, 1, 2, Qt::AlignVCenter);
