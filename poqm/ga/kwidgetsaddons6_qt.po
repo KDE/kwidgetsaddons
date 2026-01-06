@@ -2,22 +2,24 @@
 # Translation of kdelibs4.po to Irish
 # Copyright (C) 1999,2003,2004 Free Software Foundation, Inc.
 # Sean V. Kelley <s_oceallaigh@yahoo.com>, 1999
-# Séamus Ó Ciardhuáin <seoc at iolfree.ie>, 2003,2004
 # Kevin Scannell <kscanne@gmail.com>, 2004-2009
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
+# Séamus Ó Ciardhuáin <seoc at iolfree.ie>, 2003,2004
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2004-12-14 09:11-0600\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-04 03:10+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -48,17 +50,13 @@ msgid "Monospace"
 msgstr "Cló aon-leithid"
 
 #: fonthelpers_p.h:88
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
 #: fonthelpers_p.h:92
-#, fuzzy, qt-format
-#| msgctxt "dictionary name. %1-language and %2-variant name"
-#| msgid "%1 [%2]"
+#, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
@@ -71,15 +69,11 @@ msgid "&Available:"
 msgstr "&Ar Fáil:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&Roghnaithe:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "&Siar"
@@ -107,8 +101,6 @@ msgid "Finish"
 msgstr "Críochnaigh"
 
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:277
-#, fuzzy
-#| msgid "All"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "Uile"
@@ -217,9 +209,6 @@ msgid "Combining Diacritics"
 msgstr "Comharthaí Snaidhmthe Diaicritice"
 
 #: kcharselect-translation.cpp:25
-#, fuzzy
-#| msgctxt "@item Text character set"
-#| msgid "Other"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "Eile"
@@ -353,9 +342,6 @@ msgid "Thaana"
 msgstr "Tánach"
 
 #: kcharselect-translation.cpp:42
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "NKo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "NKo"
@@ -641,17 +627,11 @@ msgid "Limbu"
 msgstr "Limbúis"
 
 #: kcharselect-translation.cpp:78
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Le"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
 msgstr "Tai Le"
 
 #: kcharselect-translation.cpp:79
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "New Tai Lue"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "Tai Lue Nua"
@@ -673,9 +653,6 @@ msgid "Buginese"
 msgstr "Búiginis"
 
 #: kcharselect-translation.cpp:82
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Tham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
 msgstr "Tai Tham"
@@ -713,17 +690,11 @@ msgid "Batak"
 msgstr "Batacach"
 
 #: kcharselect-translation.cpp:87
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lepcha"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
 msgstr "Lepcha"
 
 #: kcharselect-translation.cpp:88
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Ol Chiki"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
 msgstr "Ol Chiki"
@@ -1026,9 +997,6 @@ msgstr "Forlíonadh Seoirsise"
 
 # Berber alphabet
 #: kcharselect-translation.cpp:126
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tifinagh"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
 msgstr "Tifinagh"
@@ -1106,9 +1074,6 @@ msgid "Katakana"
 msgstr "Catacánach"
 
 #: kcharselect-translation.cpp:136
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bopomofo"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "Bopomofo"
@@ -1122,9 +1087,6 @@ msgid "Hangul Compatibility Jamo"
 msgstr "Comhoiriúnacht Seamó Hangalach"
 
 #: kcharselect-translation.cpp:138
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kanbun"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "Kanbun"
@@ -1210,17 +1172,11 @@ msgid "Yi Radicals"
 msgstr "Fréamhacha Yi"
 
 #: kcharselect-translation.cpp:149
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Lisu"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
 msgstr "Lisu"
 
 #: kcharselect-translation.cpp:150
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Vai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "Vai"
@@ -1234,9 +1190,6 @@ msgid "Cyrillic Extended-B"
 msgstr "Coireallach Breisithe B"
 
 #: kcharselect-translation.cpp:152
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Bamum"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
 msgstr "Bamum"
@@ -1258,9 +1211,6 @@ msgid "Latin Extended-D"
 msgstr "Laidineach Breisithe D"
 
 #: kcharselect-translation.cpp:155
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Syloti Nagri"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr "Syloti Nagri"
@@ -1274,17 +1224,11 @@ msgid "Common Indic Number Forms"
 msgstr "Uimhreacha Coitianta Indiacha"
 
 #: kcharselect-translation.cpp:157
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Phags-pa"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
 msgstr "Phags-pa"
 
 #: kcharselect-translation.cpp:158
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Saurashtra"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
 msgstr "Saurashtra"
@@ -1298,17 +1242,11 @@ msgid "Devanagari Extended"
 msgstr "Déiveanágraí Breisithe"
 
 #: kcharselect-translation.cpp:160
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Kayah Li"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
 msgstr "Kayah Li"
 
 #: kcharselect-translation.cpp:161
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Rejang"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
 msgstr "Rejang"
@@ -1338,9 +1276,6 @@ msgid "Myanmar Extended-B"
 msgstr "Maenmar Breisithe-A"
 
 #: kcharselect-translation.cpp:165
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Cham"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
 msgstr "Cham"
@@ -1354,9 +1289,6 @@ msgid "Myanmar Extended-A"
 msgstr "Maenmar Breisithe-A"
 
 #: kcharselect-translation.cpp:167
-#, fuzzy
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Tai Viet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
 msgstr "Tai Viet"
@@ -1658,11 +1590,9 @@ msgid "Enter a search term or character here"
 msgstr "Iontráil téarma cuardaigh nó carachtar anseo"
 
 #: kcharselect.cpp:402
-#, fuzzy
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Aimsigh"
+msgstr "&Aimsigh..."
 
 #: kcharselect.cpp:426
 #, fuzzy
@@ -1863,8 +1793,6 @@ msgid "General Character Properties"
 msgstr "Airíonna Ginearálta Carachtair"
 
 #: kcharselect.cpp:928
-#, fuzzy
-#| msgid "Block: "
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Bloc: "
@@ -1884,22 +1812,16 @@ msgid "Various Useful Representations"
 msgstr "Léirithe Éagsúla Úsáideacha"
 
 #: kcharselect.cpp:934
-#, fuzzy
-#| msgid "UTF-8:"
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
 #: kcharselect.cpp:938
-#, fuzzy
-#| msgid "UTF-16: "
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
 #: kcharselect.cpp:945
-#, fuzzy
-#| msgid "C octal escaped UTF-8: "
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "UTF-8 mar charachtair ochtnártha C: "
@@ -1969,8 +1891,6 @@ msgid "<not assigned>"
 msgstr "<gan sannadh>"
 
 #: kcharselectdata.cpp:440
-#, fuzzy
-#| msgid "All"
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "Uile"
@@ -2186,8 +2106,6 @@ msgid "Separator, Paragraph"
 msgstr "Deighilteoir, Alt"
 
 #: kcharselectdata.cpp:843
-#, fuzzy
-#| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Deighilteoir, Spás"
@@ -2237,8 +2155,7 @@ msgid "Date cannot be later than %1"
 msgstr "Ní cheadaítear dáta tar éis %1"
 
 #: kdatepicker.cpp:197
-#, fuzzy, qt-format
-#| msgid "Week %1"
+#, qt-format
 msgctxt "KDatePicker|"
 msgid "Week %1"
 msgstr "Seachtain %1"
@@ -2272,36 +2189,26 @@ msgid "Previous month"
 msgstr "An mhí roimhe seo"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Roghnaigh seachtain"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Roghnaigh mí"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Roghnaigh bliain"
 
 #: kdatepicker.cpp:313
-#, fuzzy
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Roghnaigh an lá reatha"
 
 #: kdatepicker.cpp:648
-#, fuzzy
-#| msgid "Close"
 msgctxt "KDatePicker|@action:button"
 msgid "Close"
 msgstr "Dún"
@@ -2339,8 +2246,6 @@ msgid "Tomorrow"
 msgstr "Amárach"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Inniu"
@@ -2423,8 +2328,6 @@ msgstr ""
 "cheadaítear."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "C&uir Leis"
@@ -2506,16 +2409,12 @@ msgstr ""
 "Léim an sionnach tapa thar an madra leisciúil ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 #: kfontchooser.cpp:454
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgid "Select Font"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
 msgstr "Roghnaigh Cló"
@@ -2551,32 +2450,21 @@ msgid "Show only monospaced fonts"
 msgstr ""
 
 #: kfontchooserwidget.ui:66
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Cló"
 
 #: kfontchooserwidget.ui:73
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Cló:"
 
 #: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Stíl an chló"
 
 #: kfontchooserwidget.ui:98
-#, fuzzy
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Stíl an chló:"
@@ -2605,11 +2493,9 @@ msgid "Relative"
 msgstr "Coibhneasta"
 
 #: kfontrequester.cpp:185
-#, fuzzy
-#| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Roghnaigh..."
+msgstr "Roghnaigh Cló..."
 
 #: kfontrequester.cpp:191
 #, fuzzy
@@ -2639,27 +2525,24 @@ msgid "Preview of the \"%1\" font"
 msgstr "Réamhamharc ar chló \"%1\""
 
 #: kfontrequester.cpp:198
-#, fuzzy, qt-format
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
 "Seo réamhamharc ar chló \"%1\". Tig leat é a athrú trí chliceáil ar an "
-"chnaipe \"Roghnaigh...\"."
+"chnaipe \"Roghnaigh Cló...\"."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
 msgid "LED on"
-msgstr ""
+msgstr "LED ar"
 
 #: kled.cpp:173
 msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
-msgstr ""
+msgstr "LED múchta"
 
 #: kmessagebox.cpp:307
 #, fuzzy
@@ -2691,8 +2574,6 @@ msgid "Warning"
 msgstr "Rabhadh"
 
 #: kmessagebox.cpp:798 kmessagebox.cpp:823 kmessagebox.cpp:842
-#, fuzzy
-#| msgid "Error"
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Earráid"
@@ -2740,15 +2621,11 @@ msgid "Information"
 msgstr "Eolas"
 
 #: kmessagedialog.cpp:237
-#, fuzzy
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Earráid"
 
 #: kmessagewidget.cpp:84
-#, fuzzy
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Dún"
@@ -2785,8 +2662,6 @@ msgid "Warning"
 msgstr "Rabhadh"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
@@ -2970,15 +2845,11 @@ msgid "Password strength &meter:"
 msgstr "Méadar cáilíochta focail faire:"
 
 #: kpageview.cpp:513
-#, fuzzy
-#| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr "Cuardaigh:"
+msgstr "Cuardaigh..."
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Focal Faire"
@@ -3005,7 +2876,7 @@ msgstr "Tabhair ainm úsáideora agus focal faire thíos."
 #: kpassworddialog.ui:73
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
-msgstr ""
+msgstr "Gan focal faire, úsáid an anaithnid (nó &aoi) logáil isteach"
 
 #: kpassworddialog.ui:80
 #, fuzzy
@@ -3015,8 +2886,6 @@ msgid "Use this password:"
 msgstr "&Coimeád an focal faire"
 
 #: kpassworddialog.ui:105
-#, fuzzy
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Ainm úsáideora:"
@@ -3029,8 +2898,6 @@ msgid "Domain:"
 msgstr "Fearann:"
 
 #: kpassworddialog.ui:144
-#, fuzzy
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Focal Faire:"
@@ -3132,8 +2999,6 @@ msgid "&OK"
 msgstr "&OK"
 
 #: kstandardguiitem.cpp:157
-#, fuzzy
-#| msgid "&Cancel"
 msgctxt "KStandardGuiItem|"
 msgid "&Cancel"
 msgstr "&Cealaigh"
@@ -3164,8 +3029,6 @@ msgstr ""
 "ar ceal."
 
 #: kstandardguiitem.cpp:172
-#, fuzzy
-#| msgid "&Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Save"
 msgstr "&Sábháil"
@@ -3178,8 +3041,6 @@ msgid "Save data"
 msgstr "Sábháil na sonraí"
 
 #: kstandardguiitem.cpp:179
-#, fuzzy
-#| msgid "&Do Not Save"
 msgctxt "KStandardGuiItem|"
 msgid "&Do Not Save"
 msgstr "&Ná Sábháil"
@@ -3192,11 +3053,9 @@ msgid "Do not save data"
 msgstr "Ná sábháil sonraí"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgid "Save As"
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Sábháil Mar"
+msgstr "Sábháil M&ar..."
 
 #: kstandardguiitem.cpp:186
 #, fuzzy
@@ -3413,30 +3272,21 @@ msgid "Continue operation"
 msgstr "Lean leis an oibríocht"
 
 #: kstandardguiitem.cpp:292
-#, fuzzy
-#| msgid "&Delete"
 msgctxt "KStandardGuiItem|"
 msgid "&Delete"
 msgstr "&Scrios"
 
 #: kstandardguiitem.cpp:294
-#, fuzzy
-#| msgid "Delete item(s)"
 msgctxt "KStandardGuiItem|"
 msgid "Delete item(s)"
 msgstr "Scrios mír(eanna)"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "@label:button"
-#| msgid "&Open"
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Oscail"
+msgstr "&Oscail..."
 
 #: kstandardguiitem.cpp:301
-#, fuzzy
-#| msgid "Open file"
 msgctxt "KStandardGuiItem|"
 msgid "Open file"
 msgstr "Oscail comhad"
@@ -3491,15 +3341,11 @@ msgid "&Find"
 msgstr "&Aimsigh"
 
 #: kstandardguiitem.cpp:335
-#, fuzzy
-#| msgid "Stop"
 msgctxt "KStandardGuiItem|"
 msgid "Stop"
 msgstr "Stad"
 
 #: kstandardguiitem.cpp:340
-#, fuzzy
-#| msgid "Add"
 msgctxt "KStandardGuiItem|"
 msgid "Add"
 msgstr "Cuir Leis"
@@ -3557,24 +3403,16 @@ msgid "Time cannot be later than %1"
 msgstr "Ní cheadaítear am tar éis %1"
 
 #: ktogglefullscreenaction.cpp:38
-#, fuzzy
-#| msgid "F&ull Screen Mode"
 msgctxt "KToggleFullScreenAction|@action:inmenu"
 msgid "F&ull Screen Mode"
 msgstr "Mód Lán&scáileáin"
 
 #: ktogglefullscreenaction.cpp:39
-#, fuzzy
-#| msgctxt "@action:intoolbar"
-#| msgid "Full Screen"
 msgctxt "KToggleFullScreenAction|@action:intoolbar"
 msgid "Full Screen"
 msgstr "Lánscáileán"
 
 #: ktogglefullscreenaction.cpp:40
-#, fuzzy
-#| msgctxt "@info:tooltip"
-#| msgid "Display the window in full screen"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Taispeáin an fhuinneog sa mhód lánscáileáin"
