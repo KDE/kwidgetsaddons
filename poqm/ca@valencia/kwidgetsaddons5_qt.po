@@ -2155,7 +2155,7 @@ msgstr "No guardes les dades"
 #: kstandardguiitem.cpp:210
 msgctxt "KStandardGuiItem|"
 msgid "Save &As..."
-msgstr "Anomena i gu&arda…"
+msgstr "Anomena i guar&da…"
 
 #: kstandardguiitem.cpp:212
 msgctxt "KStandardGuiItem|"
