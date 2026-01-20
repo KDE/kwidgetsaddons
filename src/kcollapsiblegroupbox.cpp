@@ -125,6 +125,9 @@ void KCollapsibleGroupBox::setExpanded(bool expanded)
     } else {
         setFixedHeight(sizeHint().height());
     }
+
+    // Force update to show rotated arrow indicator immediately
+    update();
 }
 
 bool KCollapsibleGroupBox::isExpanded() const
