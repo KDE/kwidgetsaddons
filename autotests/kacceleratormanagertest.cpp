@@ -88,7 +88,7 @@ private Q_SLOTS:
         delete pb;
         pb = new QPushButton(QSL("Open"), w.get());
 
-        QAction *a = new QAction();
+        QAction *a = new QAction(w.get());
         a->setShortcut(QSL("Alt+O"));
         w->addAction(a);
 
