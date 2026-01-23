@@ -101,6 +101,7 @@ private Q_SLOTS:
         delete mSpyTapCanceled;
         delete mSpyTapUpdated;
         delete mSpyTapStarted;
+        delete mDev;
     }
 
     void initTestCase()

@@ -105,6 +105,7 @@ private Q_SLOTS:
         delete mSpySwipeCanceled;
         delete mSpySwipeUpdated;
         delete mSpySwipeStarted;
+        delete mDev;
     }
     void initTestCase()
     {
