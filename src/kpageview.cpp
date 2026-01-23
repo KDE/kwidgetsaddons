@@ -34,6 +34,7 @@
 #include <QTimer>
 #include <QToolButton>
 #include <QWidgetAction>
+#include <memory>
 
 // Remove the additional margin of the toolbar
 class NoPaddingToolBarProxyStyle : public QProxyStyle
@@ -484,7 +485,8 @@ void KPageViewPrivate::init()
     actionsToolBar->setObjectName(QLatin1String("KPageView::TitleWidget"));
     actionsToolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     actionsToolBar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    actionsToolBar->setStyle(new NoPaddingToolBarProxyStyle);
+    m_noPaddingStyle = std::make_unique<NoPaddingToolBarProxyStyle>();
+    actionsToolBar->setStyle(m_noPaddingStyle.get());
     actionsToolBar->show();
 
     // list view under it to the left

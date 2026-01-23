@@ -102,6 +102,7 @@ private:
     QMetaObject::Connection m_layoutChangedConnection;
     QMetaObject::Connection m_selectionChangedConnection;
     QList<class SearchMatchOverlay *> m_searchMatchOverlays;
+    std::unique_ptr<QStyle> m_noPaddingStyle;
 };
 
 namespace KDEPrivate
