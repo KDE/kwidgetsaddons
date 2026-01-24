@@ -40,22 +40,15 @@ KActionMenu::KActionMenu(QObject *parent)
 }
 
 KActionMenu::KActionMenu(const QString &text, QObject *parent)
-    : QWidgetAction(parent)
-    , d(new KActionMenuPrivate)
+    : KActionMenu(parent)
 {
-    setMenu(new QMenu);
-    setProperty("isShortcutConfigurable", false);
     setText(text);
 }
 
 KActionMenu::KActionMenu(const QIcon &icon, const QString &text, QObject *parent)
-    : QWidgetAction(parent)
-    , d(new KActionMenuPrivate)
+    : KActionMenu(text, parent)
 {
-    setMenu(new QMenu);
-    setProperty("isShortcutConfigurable", false);
     setIcon(icon);
-    setText(text);
 }
 
 KActionMenu::~KActionMenu()
