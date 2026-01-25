@@ -1972,7 +1972,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "密码强度指示器(&M)："
 
-#: kpageview.cpp:513
+#: kpageview.cpp:515
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "搜索…"

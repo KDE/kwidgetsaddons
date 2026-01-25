@@ -2843,7 +2843,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Méadar cáilíochta focail faire:"
 
-#: kpageview.cpp:513
+#: kpageview.cpp:515
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Cuardaigh..."

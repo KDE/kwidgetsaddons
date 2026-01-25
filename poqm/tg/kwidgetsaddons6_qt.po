@@ -2258,7 +2258,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Санҷиши қувваи ниҳонвожа:"
 
-#: kpageview.cpp:513
+#: kpageview.cpp:515
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"
