@@ -76,6 +76,17 @@ private Q_SLOTS:
         delete w;
         delete toolbar;
     }
+
+    void testSetMenu()
+    {
+        auto actionMenu = new KActionMenu(nullptr);
+
+        auto menu = std::make_unique<QMenu>();
+        // setMenu doesn't take ownership, make sure nothing crashes or leaks
+        actionMenu->setMenu(menu.get());
+
+        delete actionMenu;
+    }
 };
 
 QTEST_MAIN(KActionMenuTest)
