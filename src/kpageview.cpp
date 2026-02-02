@@ -633,12 +633,18 @@ void KPageViewPrivate::onSearchTextChanged()
     if (model) {
         QModelIndex current;
         if (auto list = qobject_cast<QListView *>(view)) {
+            QModelIndexList validIndices;
+            current = view->currentIndex();
             for (int i = 0; i < model->rowCount(); ++i) {
-                const auto itemName = model->index(i, 0).data().toString();
+                const auto index = model->index(i, 0);
+                const auto itemName = index.data().toString();
                 list->setRowHidden(i, pagesToHide.contains(itemName) && !itemName.contains(text, Qt::CaseInsensitive));
-                if (!text.isEmpty() && !list->isRowHidden(i) && !current.isValid()) {
-                    current = model->index(i, 0);
+                if (!text.isEmpty() && !list->isRowHidden(i) && index.isValid()) {
+                    validIndices.append(index);
                 }
+            }
+            if (!validIndices.empty() && !validIndices.contains(current)) {
+                current = validIndices.first();
             }
         } else if (auto tree = qobject_cast<QTreeView *>(view)) {
             current = walkTreeAndHideItems(tree, text, pagesToHide, {});
