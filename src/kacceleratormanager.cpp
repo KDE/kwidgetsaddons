@@ -199,11 +199,10 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item, QString &u
     for (QAction *action : widgetActions) {
         const QList<QKeySequence> actionShortcuts = action->shortcuts();
         for (const QKeySequence &sequence : actionShortcuts) {
-            const QString sequenceAsText = sequence.toString(QKeySequence::PortableText);
-            const QStringList splitSequence = sequenceAsText.split(QStringLiteral(", "));
-            for (const QString &shortcut : splitSequence) {
-                if (shortcut.length() == 5 && shortcut.startsWith(QStringLiteral("Alt+"))) {
-                    used.append(shortcut.right(1));
+            for (int i = 0; i < sequence.count(); i++) {
+                const QKeyCombination keyCombination = sequence[i];
+                if (keyCombination.keyboardModifiers() == Qt::AltModifier && QChar::isPrint(keyCombination.key())) {
+                    used.append(QChar::fromUcs4(keyCombination.key()));
                 }
             }
         }
