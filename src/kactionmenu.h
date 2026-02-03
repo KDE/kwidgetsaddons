@@ -123,6 +123,13 @@ public:
 
     QWidget *createWidget(QWidget *parent) override;
 
+    /*!
+     * Replace the action menu with \a newMenu
+     *
+     * \since 6.24
+     */
+    void replaceMenu(QMenu *newMenu);
+
 private:
     std::unique_ptr<class KActionMenuPrivate> const d;
 };

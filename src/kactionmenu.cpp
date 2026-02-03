@@ -126,4 +126,10 @@ void KActionMenu::setPopupMode(QToolButton::ToolButtonPopupMode popupMode)
     }
 }
 
+void KActionMenu::replaceMenu(QMenu *newMenu)
+{
+    delete menu();
+    setMenu(newMenu);
+}
+
 #include "moc_kactionmenu.cpp"
