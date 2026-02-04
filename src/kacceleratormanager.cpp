@@ -92,12 +92,11 @@ void KAcceleratorManagerPrivate::manage(QWidget *widget)
         return;
     }
 
-    Item *root = new Item;
+    Item root;
 
     QString used;
-    manageWidget(widget, root, used);
-    calculateAccelerators(root, used);
-    delete root;
+    manageWidget(widget, &root, used);
+    calculateAccelerators(&root, used);
 }
 
 void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used)
