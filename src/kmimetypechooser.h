@@ -154,14 +154,19 @@ public:
                                     int visuals = KMimeTypeChooser::Comments | KMimeTypeChooser::Patterns | KMimeTypeChooser::EditButton,
                                     QWidget *parent = nullptr);
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 24)
     /*!
      * \overload
+     * \deprecated[6.24]
+     * use the other KMimeTypeChooserDialog constructor instead.
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(6, 24, "Use the other KMimeTypeChooserDialog constructor instead")
     KMimeTypeChooserDialog(const QString &title,
                            const QString &text,
                            const QStringList &selectedMimeTypes,
                            const QString &defaultGroup,
-                           QWidget *parent = nullptr);
+                           QWidget *parent);
+#endif
 
     ~KMimeTypeChooserDialog() override;
 

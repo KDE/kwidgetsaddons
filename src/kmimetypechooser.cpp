@@ -362,6 +362,7 @@ KMimeTypeChooserDialog::KMimeTypeChooserDialog(const QString &title,
     d->init();
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(6, 24)
 KMimeTypeChooserDialog::KMimeTypeChooserDialog(const QString &title,
                                                const QString &text,
                                                const QStringList &selMimeTypes,
@@ -380,6 +381,7 @@ KMimeTypeChooserDialog::KMimeTypeChooserDialog(const QString &title,
                                         this);
     d->init();
 }
+#endif
 
 KMimeTypeChooser *KMimeTypeChooserDialog::chooser()
 {
