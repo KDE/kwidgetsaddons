@@ -244,6 +244,7 @@ void KDateTimeEditTest::testDateMenu()
     QCOMPARE(nextMonthAction->text(), KDateComboBox::tr("Next Month", "@option next month"));
     nextMonthAction->trigger();
     QCOMPARE(m_edit->date(), QDate::currentDate().addMonths(1));
+    delete m_edit;
 }
 
 #include "moc_kdatetimeedittest.cpp"
