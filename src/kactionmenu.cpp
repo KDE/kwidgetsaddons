@@ -17,6 +17,7 @@
 #include "kactionmenu.h"
 
 #include <QMenu>
+#include <QPointer>
 #include <QToolBar>
 
 class KActionMenuPrivate
@@ -29,14 +30,18 @@ public:
     {
     }
     QToolButton::ToolButtonPopupMode m_popupMode = QToolButton::DelayedPopup;
-    std::unique_ptr<QMenu> m_defaultMenu;
+
+    // The QPointer is a workaround for unclear ownership of the default menu
+    // Some applications delete it before replacing the menu, others don't
+    // TODO KF7: Change to unique_ptr and enforce that only we delete the menu
+    QPointer<QMenu> m_defaultMenu;
 };
 
 KActionMenu::KActionMenu(QObject *parent)
     : QWidgetAction(parent)
     , d(new KActionMenuPrivate)
 {
-    d->m_defaultMenu = std::make_unique<QMenu>();
+    d->m_defaultMenu = new QMenu;
     setMenu(d->m_defaultMenu.get());
     setProperty("isShortcutConfigurable", false);
 }
@@ -53,7 +58,10 @@ KActionMenu::KActionMenu(const QIcon &icon, const QString &text, QObject *parent
     setIcon(icon);
 }
 
-KActionMenu::~KActionMenu() = default;
+KActionMenu::~KActionMenu()
+{
+    delete d->m_defaultMenu;
+}
 
 QWidget *KActionMenu::createWidget(QWidget *_parent)
 {
