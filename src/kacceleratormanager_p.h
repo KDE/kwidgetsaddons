@@ -220,7 +220,7 @@ private:
     class Item;
 
 public:
-    typedef QList<Item *> ItemList;
+    typedef std::vector<Item> ItemList;
 
 private:
     static void traverseChildren(QWidget *widget, Item *item, QString &used);
@@ -235,10 +235,10 @@ private:
     class Item
     {
     public:
-        Item()
-            : m_widget(nullptr)
-            , m_children(nullptr)
-            , m_index(-1)
+        Item(QWidget *widget, KAccelString content, int index)
+            : m_widget(widget)
+            , m_content(std::move(content))
+            , m_index(index)
         {
         }
         ~Item();
@@ -246,11 +246,14 @@ private:
         Item(const Item &) = delete;
         Item &operator=(const Item &) = delete;
 
-        void addChild(Item *item);
+        Item(Item &&) noexcept = default;
+        Item &operator=(Item &&) noexcept = default;
+
+        void addChild(Item item);
 
         QWidget *m_widget;
         KAccelString m_content;
-        ItemList *m_children;
+        ItemList m_children;
         int m_index;
     };
 };

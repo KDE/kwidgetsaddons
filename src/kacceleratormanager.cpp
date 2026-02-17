@@ -58,21 +58,11 @@ bool KAcceleratorManagerPrivate::standardName(const QString &str)
 
 KAcceleratorManagerPrivate::Item::~Item()
 {
-    if (m_children) {
-        while (!m_children->isEmpty()) {
-            delete m_children->takeFirst();
-        }
-        delete m_children;
-    }
 }
 
-void KAcceleratorManagerPrivate::Item::addChild(Item *item)
+void KAcceleratorManagerPrivate::Item::addChild(Item item)
 {
-    if (!m_children) {
-        m_children = new ItemList;
-    }
-
-    m_children->append(item);
+    m_children.push_back(std::move(item));
 }
 
 void KAcceleratorManagerPrivate::manage(QWidget *widget)
@@ -92,7 +82,7 @@ void KAcceleratorManagerPrivate::manage(QWidget *widget)
         return;
     }
 
-    Item root;
+    Item root(nullptr, KAccelString(), -1);
 
     QString used;
     manageWidget(widget, &root, used);
@@ -101,15 +91,15 @@ void KAcceleratorManagerPrivate::manage(QWidget *widget)
 
 void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used)
 {
-    if (!item->m_children) {
+    if (item->m_children.empty()) {
         return;
     }
 
     // collect the contents
     KAccelStringList contents;
-    contents.reserve(item->m_children->size());
-    for (Item *it : std::as_const(*item->m_children)) {
-        contents << it->m_content;
+    contents.reserve(item->m_children.size());
+    for (const Item &it : item->m_children) {
+        contents << it.m_content;
     }
 
     // find the right accelerators
@@ -117,27 +107,27 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
 
     // write them back into the widgets
     int cnt = -1;
-    for (Item *it : std::as_const(*item->m_children)) {
+    for (const Item &it : item->m_children) {
         cnt++;
 
-        QDockWidget *dock = qobject_cast<QDockWidget *>(it->m_widget);
+        QDockWidget *dock = qobject_cast<QDockWidget *>(it.m_widget);
         if (dock) {
             if (checkChange(contents[cnt])) {
                 dock->setWindowTitle(contents[cnt].accelerated());
             }
             continue;
         }
-        QTabBar *tabBar = qobject_cast<QTabBar *>(it->m_widget);
+        QTabBar *tabBar = qobject_cast<QTabBar *>(it.m_widget);
         if (tabBar) {
             if (checkChange(contents[cnt])) {
-                tabBar->setTabText(it->m_index, contents[cnt].accelerated());
+                tabBar->setTabText(it.m_index, contents[cnt].accelerated());
             }
             continue;
         }
-        QMenuBar *menuBar = qobject_cast<QMenuBar *>(it->m_widget);
+        QMenuBar *menuBar = qobject_cast<QMenuBar *>(it.m_widget);
         if (menuBar) {
-            if (it->m_index >= 0) {
-                QAction *maction = menuBar->actions()[it->m_index];
+            if (it.m_index >= 0) {
+                QAction *maction = menuBar->actions()[it.m_index];
                 if (maction) {
                     checkChange(contents[cnt]);
                     maction->setText(contents[cnt].accelerated());
@@ -147,28 +137,28 @@ void KAcceleratorManagerPrivate::calculateAccelerators(Item *item, QString &used
         }
 
         // we possibly reserved an accel, but we won't set it as it looks silly
-        QGroupBox *groupBox = qobject_cast<QGroupBox *>(it->m_widget);
+        QGroupBox *groupBox = qobject_cast<QGroupBox *>(it.m_widget);
         if (groupBox && !groupBox->isCheckable()) {
             continue;
         }
 
-        int tprop = it->m_widget->metaObject()->indexOfProperty("text");
+        int tprop = it.m_widget->metaObject()->indexOfProperty("text");
         if (tprop != -1) {
             if (checkChange(contents[cnt])) {
-                it->m_widget->setProperty("text", contents[cnt].accelerated());
+                it.m_widget->setProperty("text", contents[cnt].accelerated());
             }
         } else {
-            tprop = it->m_widget->metaObject()->indexOfProperty("title");
+            tprop = it.m_widget->metaObject()->indexOfProperty("title");
             if (tprop != -1 && checkChange(contents[cnt])) {
-                it->m_widget->setProperty("title", contents[cnt].accelerated());
+                it.m_widget->setProperty("title", contents[cnt].accelerated());
             }
         }
     }
 
     // calculate the accelerators for the children
-    for (Item *it : std::as_const(*item->m_children)) {
-        if (it->m_widget && it->m_widget->isVisibleTo(item->m_widget)) {
-            calculateAccelerators(it, used);
+    for (Item &it : item->m_children) {
+        if (it.m_widget && it.m_widget->isVisibleTo(item->m_widget)) {
+            calculateAccelerators(&it, used);
         }
     }
 }
@@ -302,9 +292,6 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item, QString &u
         }
 
         if (!content.isEmpty()) {
-            Item *i = new Item;
-            i->m_widget = w;
-
             // put some more weight on the usual action elements
             int weight = KAccelManagerAlgorithm::DEFAULT_WEIGHT;
             if (qobject_cast<QPushButton *>(w) || qobject_cast<QCheckBox *>(w) || qobject_cast<QRadioButton *>(w) || qobject_cast<QLabel *>(w)) {
@@ -322,8 +309,8 @@ void KAcceleratorManagerPrivate::manageWidget(QWidget *w, Item *item, QString &u
                 }
             }
 
-            i->m_content = KAccelString(content, weight);
-            item->addChild(i);
+            Item i(w, KAccelString(content, weight), -1);
+            item->addChild(std::move(i));
         }
     }
     traverseChildren(w, item, used);
@@ -349,11 +336,8 @@ void KAcceleratorManagerPrivate::manageTabBar(QTabBar *bar, Item *item)
             continue;
         }
 
-        Item *it = new Item;
-        item->addChild(it);
-        it->m_widget = bar;
-        it->m_index = i;
-        it->m_content = KAccelString(content);
+        Item it(bar, KAccelString(content), i);
+        item->addChild(std::move(it));
     }
 }
 
@@ -374,10 +358,8 @@ void KAcceleratorManagerPrivate::manageDockWidget(QDockWidget *dock, Item *item)
         return;
     }
 
-    Item *it = new Item;
-    item->addChild(it);
-    it->m_widget = dock;
-    it->m_content = KAccelString(content, KAccelManagerAlgorithm::STANDARD_ACCEL);
+    Item it(dock, KAccelString(content, KAccelManagerAlgorithm::STANDARD_ACCEL), -1);
+    item->addChild(std::move(it));
 }
 
 void KAcceleratorManagerPrivate::manageMenuBar(QMenuBar *mbar, Item *item)
@@ -398,13 +380,10 @@ void KAcceleratorManagerPrivate::manageMenuBar(QMenuBar *mbar, Item *item)
 
         s = maction->text();
         if (!s.isEmpty()) {
-            Item *it = new Item;
-            item->addChild(it);
-            it->m_content = KAccelString(s,
-                                         KAccelManagerAlgorithm::MENU_TITLE_WEIGHT); // menu titles are important, so raise the weight
-
-            it->m_widget = mbar;
-            it->m_index = i;
+            auto content = KAccelString(s,
+                                        KAccelManagerAlgorithm::MENU_TITLE_WEIGHT); // menu titles are important, so raise the weight
+            Item it(mbar, std::move(content), i);
+            item->addChild(std::move(it));
         }
 
         // have a look at the popup as well, if present
