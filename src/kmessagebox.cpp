@@ -333,10 +333,9 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
     }
 
     topLayout->addWidget(buttons);
-    topLayout->setSizeConstraint(QLayout::SetFixedSize);
 
-    if (!usingListWidget && !usingScrollArea && !usingSqueezedTextLabel && details.isEmpty()) {
-        dialog->setFixedSize(dialog->sizeHint() + QSize(10, 10));
+    if (!usingListWidget && !usingScrollArea && !usingSqueezedTextLabel) {
+        topLayout->setSizeConstraint(QLayout::SetFixedSize);
     }
 
     if ((options & KMessageBox::Dangerous)) {
