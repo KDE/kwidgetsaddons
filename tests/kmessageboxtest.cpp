@@ -238,6 +238,17 @@ bool testMessageBox(int test)
         KMessageBox::informationList(nullptr, QStringLiteral("The following words have been found:"), list, QString(), QStringLiteral("Search_Words"));
         break;
 
+    case 19:
+        i = KMessageBox::questionTwoActionsList(nullptr,
+                                                QStringLiteral("The super important string below should be rendered squeezed.\n")
+                                                    + QStringLiteral("This_is_a_very_long_and_important_message_all_without_spaces_I_repeat_").repeated(10)
+                                                    + QStringLiteral("\nIs this dialog resizable?"),
+                                                QStringList(),
+                                                QStringLiteral("Is this dialog with a squeezed label resizable?"),
+                                                KGuiItem(QStringLiteral("Yes, resizable")),
+                                                KGuiItem(QStringLiteral("No, I cannot read a thing")));
+        break;
+
     default:
         return false; // done
     } // Switch
