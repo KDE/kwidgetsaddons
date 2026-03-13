@@ -1784,33 +1784,33 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Details"
 
-#: kmessagebox.cpp:461 kmessagebox.cpp:516
+#: kmessagebox.cpp:460 kmessagebox.cpp:515
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Frage"
 
-#: kmessagebox.cpp:477 kmessagebox.cpp:533 kmessagebox.cpp:606
-#: kmessagebox.cpp:672 kmessagebox.cpp:756
+#: kmessagebox.cpp:476 kmessagebox.cpp:532 kmessagebox.cpp:605
+#: kmessagebox.cpp:671 kmessagebox.cpp:755
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Diese Nachfrage nicht mehr anzeigen"
 
-#: kmessagebox.cpp:590 kmessagebox.cpp:656 kmessagebox.cpp:739
+#: kmessagebox.cpp:589 kmessagebox.cpp:655 kmessagebox.cpp:738
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Warnung"
 
-#: kmessagebox.cpp:798 kmessagebox.cpp:823 kmessagebox.cpp:842
+#: kmessagebox.cpp:797 kmessagebox.cpp:822 kmessagebox.cpp:841
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Fehler"
 
-#: kmessagebox.cpp:883
+#: kmessagebox.cpp:882
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Informationen"
 
-#: kmessagebox.cpp:898
+#: kmessagebox.cpp:897
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Diese Meldung nicht mehr anzeigen"

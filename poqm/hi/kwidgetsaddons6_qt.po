@@ -1822,33 +1822,33 @@ msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "विवरण"
 
-#: kmessagebox.cpp:461 kmessagebox.cpp:516
+#: kmessagebox.cpp:460 kmessagebox.cpp:515
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "प्रश्न"
 
-#: kmessagebox.cpp:477 kmessagebox.cpp:533 kmessagebox.cpp:606
-#: kmessagebox.cpp:672 kmessagebox.cpp:756
+#: kmessagebox.cpp:476 kmessagebox.cpp:532 kmessagebox.cpp:605
+#: kmessagebox.cpp:671 kmessagebox.cpp:755
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "दोबारा मत पूछें"
 
-#: kmessagebox.cpp:590 kmessagebox.cpp:656 kmessagebox.cpp:739
+#: kmessagebox.cpp:589 kmessagebox.cpp:655 kmessagebox.cpp:738
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "चेतावनी"
 
-#: kmessagebox.cpp:798 kmessagebox.cpp:823 kmessagebox.cpp:842
+#: kmessagebox.cpp:797 kmessagebox.cpp:822 kmessagebox.cpp:841
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "त्रुटि"
 
-#: kmessagebox.cpp:883
+#: kmessagebox.cpp:882
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "जानकारी"
 
-#: kmessagebox.cpp:898
+#: kmessagebox.cpp:897
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "यह संदेश फिर से न दिखाएँ"
