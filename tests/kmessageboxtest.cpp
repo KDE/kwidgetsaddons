@@ -249,6 +249,13 @@ bool testMessageBox(int test)
                                                 KGuiItem(QStringLiteral("No, I cannot read a thing")));
         break;
 
+    case 20:
+        i = KMessageBox::Ok;
+        KMessageBox::information(
+            nullptr,
+            QStringLiteral("This line of text exceeds 120 chars. It should wrap even on very wide sceens, capable of showing more than twice its width."));
+        break;
+
     default:
         return false; // done
     } // Switch

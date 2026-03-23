@@ -229,8 +229,13 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
 
     QRect desktop = dialog->screen()->geometry();
     bool usingSqueezedTextLabel = false;
-    if (messageLabel->sizeHint().width() > desktop.width() * 0.5) {
-        // enable automatic wrapping of messages which are longer than 50% of screen width
+    const auto preWidth = messageLabel->sizeHint().width();
+    if ((preWidth > desktop.width() * 0.5)
+        || (preWidth > messageLabel->fontMetrics().horizontalAdvance(
+                QObject::tr("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna alia",
+                            "This text is not actually shown. Please 'translate' it to some arbitrary text that is just short enough to show in a single "
+                            "line, while longer text should be wrapped for readability. In a latin charset, suggested length is around 120 chars.")))) {
+        // enable automatic wrapping of messages which are longer than 50% of screen width or ~120 characters (limit may differ across locales)
         messageLabel->setWordWrap(true);
         // use a squeezed label if text is still too wide
         usingSqueezedTextLabel = messageLabel->sizeHint().width() > desktop.width() * 0.85;
@@ -240,6 +245,13 @@ QDialogButtonBox::StandardButton createKMessageBox(QDialog *dialog,
             messageLabel->setOpenExternalLinks(options & KMessageBox::AllowLink);
             messageLabel->setTextInteractionFlags(flags);
         }
+        // when wrapping, boxes sometimes get unreasonably small, so we also want a lower limit, now
+        messageLabel->setMinimumWidth(
+            qMin(static_cast<int>(desktop.width() * 0.75),
+                 messageLabel->fontMetrics().horizontalAdvance(
+                     QObject::tr("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi",
+                                 "This text is not actually shown. Please 'translate' it to some arbitrary text that is just short enough that it should never "
+                                 "be wrapped. In a latin charset, suggested length is around 70 chars."))));
     }
 
     QPalette messagePal(messageLabel->palette());
