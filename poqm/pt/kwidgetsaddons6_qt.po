@@ -1875,38 +1875,57 @@ msgctxt "KLed|Accessible name of a Led whose state is off"
 msgid "LED off"
 msgstr "LED desligado"
 
-#: kmessagebox.cpp:307
+#: kmessagebox.cpp:235
+msgctxt ""
+"QObject|This text is not actually shown. Please 'translate' it to some "
+"arbitrary text that is just short enough to show in a single line, while "
+"longer text should be wrapped for readability. In a latin charset, suggested "
+"length is around 120 chars."
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna alia"
+msgstr ""
+
+#: kmessagebox.cpp:252
+msgctxt ""
+"QObject|This text is not actually shown. Please 'translate' it to some "
+"arbitrary text that is just short enough that it should never be wrapped. In "
+"a latin charset, suggested length is around 70 chars."
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
+msgstr ""
+
+#: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
 msgid "Details"
 msgstr "Detalhes"
 
-#: kmessagebox.cpp:460 kmessagebox.cpp:515
+#: kmessagebox.cpp:472 kmessagebox.cpp:527
 msgctxt "KMessageBox|"
 msgid "Question"
 msgstr "Pergunta"
 
-#: kmessagebox.cpp:476 kmessagebox.cpp:532 kmessagebox.cpp:605
-#: kmessagebox.cpp:671 kmessagebox.cpp:755
+#: kmessagebox.cpp:488 kmessagebox.cpp:544 kmessagebox.cpp:617
+#: kmessagebox.cpp:683 kmessagebox.cpp:767
 msgctxt "KMessageBox|"
 msgid "Do not ask again"
 msgstr "Não perguntar de novo"
 
-#: kmessagebox.cpp:589 kmessagebox.cpp:655 kmessagebox.cpp:738
+#: kmessagebox.cpp:601 kmessagebox.cpp:667 kmessagebox.cpp:750
 msgctxt "KMessageBox|"
 msgid "Warning"
 msgstr "Atenção"
 
-#: kmessagebox.cpp:797 kmessagebox.cpp:822 kmessagebox.cpp:841
+#: kmessagebox.cpp:809 kmessagebox.cpp:834 kmessagebox.cpp:853
 msgctxt "KMessageBox|"
 msgid "Error"
 msgstr "Erro"
 
-#: kmessagebox.cpp:882
+#: kmessagebox.cpp:894
 msgctxt "KMessageBox|"
 msgid "Information"
 msgstr "Informação"
 
-#: kmessagebox.cpp:897
+#: kmessagebox.cpp:909
 msgctxt "KMessageBox|"
 msgid "Do not show this message again"
 msgstr "Não mostrar esta mensagem de novo"
