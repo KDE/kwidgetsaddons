@@ -18,12 +18,12 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-10-09 22:59+0300\n"
+"PO-Revision-Date: 2026-03-24 21:01+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -32,7 +32,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1789,6 +1789,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית, סד דו אויסמוד טמפור "
+"אינסידידונט אוט לבורה אט דולור מגנה עליה"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -1796,7 +1798,7 @@ msgctxt ""
 "arbitrary text that is just short enough that it should never be wrapped. In "
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
-msgstr ""
+msgstr "לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג, סד דו איוסמי"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"

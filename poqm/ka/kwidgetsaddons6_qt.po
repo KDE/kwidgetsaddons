@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Qt-Contexts: true\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
@@ -1771,6 +1771,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"თეთრი თრითინა თეთრ თოვლზე თრთოდა. თეთრი თრითინა თეთრ თოვლზე თრთოდა. თეთრი "
+"თრითინა თეთრ თოვლზე თრთოდა. თეთრი თრითინა თეთრ თოვლზე თრთოდა"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -1778,7 +1780,7 @@ msgctxt ""
 "arbitrary text that is just short enough that it should never be wrapped. In "
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
-msgstr ""
+msgstr "ბაყაყი წყალში ყიყინებს. ბაყაყი წყალში ყიყინებს. ბაყაყი წყალში ყიყინებს"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
