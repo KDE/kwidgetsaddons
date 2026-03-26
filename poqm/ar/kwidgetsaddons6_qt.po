@@ -1,11 +1,11 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-06-28 15:38+0300\n"
-"PO-Revision-Date: 2025-08-13 18:48+0400\n"
+"PO-Revision-Date: 2026-03-25 09:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -1771,6 +1771,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"نصّ عشوائي لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. نولام "
+"إيد ريسوس إيد أوغ إيوسمود أكيومسان"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -1779,6 +1781,8 @@ msgctxt ""
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
 msgstr ""
+"نص عشوائي لوريم إيبسوم دولار سيت أميت، كونسيكتيتور أديبيسيسينغ إيليت. نولام "
+"إيد ريسوس"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
