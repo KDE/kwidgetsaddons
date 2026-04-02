@@ -85,6 +85,12 @@ class KWIDGETSADDONS_EXPORT KTitleWidget : public QWidget
      */
     Q_PROPERTY(int autoHideTimeout READ autoHideTimeout WRITE setAutoHideTimeout)
 
+    /*!
+     * \property KTitleWidget::textSelectable
+     * \since 6.26
+     */
+    Q_PROPERTY(int textSelectable READ textSelectable WRITE setTextSelectable)
+
 public:
     /*!
      * Possible title pixmap alignments.
@@ -170,6 +176,14 @@ public:
      * Returns timeout value in msecs
      */
     int autoHideTimeout() const;
+
+    /*!
+     * Returns if the text is selectable
+     * \sa setTextSelectable()
+     *
+     * \since 6.26
+     */
+    bool textSelectable() const;
 
     /*!
      * Returns the level of this title: it influences the font size following the guidelines in
@@ -259,6 +273,14 @@ public Q_SLOTS:
      * \since 5.53
      */
     void setLevel(int level);
+
+    /*!
+     * Sets whether the text is selectable or not.
+     *
+     * \a selectable whether the text is selectable, defaults to true.
+     * \since 6.26
+     */
+    void setTextSelectable(bool selectable);
 
 protected:
     void changeEvent(QEvent *e) override;

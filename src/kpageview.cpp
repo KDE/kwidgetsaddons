@@ -473,6 +473,7 @@ void KPageViewPrivate::init()
     stack = new KPageStackedWidget(q);
 
     titleWidget = new KTitleWidget(q);
+    titleWidget->setTextSelectable(false);
     titleWidget->setObjectName("KPageView::TitleWidget");
     titleWidget->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 

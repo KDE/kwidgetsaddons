@@ -27,6 +27,7 @@ public:
         , iconAlignment(KTitleWidget::ImageLeft)
         , autoHideTimeout(0)
         , messageType(KTitleWidget::InfoMessage)
+        , textSelectable(true)
     {
     }
 
@@ -119,6 +120,7 @@ public:
     KTitleWidget::ImageAlignment iconAlignment;
     int autoHideTimeout;
     KTitleWidget::MessageType messageType;
+    bool textSelectable;
 
     /*!
      * @brief Get the icon name from the icon type
@@ -326,6 +328,22 @@ void KTitleWidget::setIconSize(const QSize &iconSize)
 void KTitleWidget::setIcon(MessageType type, ImageAlignment alignment)
 {
     setIcon(QIcon::fromTheme(d->iconTypeToIconName(type)), alignment);
+}
+
+bool KTitleWidget::textSelectable() const
+{
+    return d->textSelectable;
+}
+
+void KTitleWidget::setTextSelectable(bool selectable)
+{
+    d->textSelectable = selectable;
+
+    Qt::TextInteractionFlags flags = Qt::LinksAccessibleByMouse;
+    flags.setFlag(Qt::TextSelectableByMouse, selectable);
+
+    d->textLabel->setTextInteractionFlags(flags);
+    d->commentLabel->setTextInteractionFlags(flags);
 }
 
 int KTitleWidget::autoHideTimeout() const
