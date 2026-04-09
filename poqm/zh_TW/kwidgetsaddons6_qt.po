@@ -2,7 +2,7 @@
 # Copyright (C) 2001, 2002, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
 # Eric Cheng <ericc@shinewave.com.tw>, unknown.
 # This file referenced zh_CN translations at 2002.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2024, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 # Chih-Wei Huang <cwhuang@linux.org.tw>, 2001.
 # Kenduest Lee <kenduest@i18n.linux.org.tw>, 2001, 2002.
 # Jouston Huang (Huang, Jiun-Jeng) <jouston@housediy.com>, 2002.
@@ -20,14 +20,14 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-10-20 00:15+0900\n"
+"PO-Revision-Date: 2026-04-08 23:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Qt-Contexts: true\n"
 
@@ -1783,6 +1783,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"測量用的一段文字，如同註解說的這不會顯示，只是用來測量可以顯示在同一行的文字"
+"長度，剩下的長度我不知道要寫什麼了。"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -1790,7 +1792,7 @@ msgctxt ""
 "arbitrary text that is just short enough that it should never be wrapped. In "
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
-msgstr ""
+msgstr "測量用的一段文字，如同註解說的這不會顯示，只是來標不該換行的長度"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
