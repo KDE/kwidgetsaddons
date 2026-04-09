@@ -20,8 +20,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -260,9 +260,6 @@ msgid "Syriac Supplement"
 msgstr "Sýrsky doplnok"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
 msgstr "Arabské rozšírené-A"
@@ -1531,81 +1528,51 @@ msgid "Close"
 msgstr "Zavrieť"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
 msgstr "Nasledujúci rok"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
 msgstr "Nasledujúci mesiac"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
 msgstr "Nasledujúci týždeň"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
 msgstr "Zajtra"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
 msgstr "Dnes"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
 msgstr "Včera"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
 msgstr "Minulý týždeň"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
 msgstr "Minulý mesiac"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
 msgstr "Minulý rok"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Žiadny dátum"
@@ -1688,9 +1655,6 @@ msgstr ""
 "kôru a žrať čerstvé mäso"
 
 #: kfontchooser.cpp:313
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgstr ""
@@ -1698,21 +1662,14 @@ msgstr ""
 "prostrediu"
 
 #: kfontchooser.cpp:314
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "Here you can switch between fixed font size and font size to be "
-#| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#| "dimensions, paper size)."
 msgctxt "KFontChooser|@info:whatsthis"
 msgid ""
 "Here you can switch between fixed font size and font size to be calculated "
 "dynamically and adjusted to changing environment (e.g. widget dimensions, "
 "paper size)."
 msgstr ""
-"Tu môžete prepnúť medzi pevnou veľkosťou písma alebo či sa má jeho veľkosť "
-"počítať dynamicky a upraviť podľa zmeny prostredia (napríklad rozmerov "
-"prvku, veľkosti papiera)."
+"Tu môžete prepnúť medzi pevnou veľkosťou písma a veľkosťou dynamicky sa "
+"meniacou podľa prostredia (napríklad rozmerov prvku, veľkosti papiera)."
 
 #: kfontchooser.cpp:474
 #, qt-format
@@ -1766,11 +1723,6 @@ msgid "Relative"
 msgstr "Relatívne"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1780,9 +1732,6 @@ msgstr ""
 "chcete vyskúšať špeciálne znaky."
 
 #: kfontchooserwidget.ui:135
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Show only monospaced fonts"
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
 msgstr "Zobraziť iba neproporcionálne písma"
@@ -1798,11 +1747,6 @@ msgid "Preview of the selected font"
 msgstr "Náhľad vybraného písma"
 
 #: kfontrequester.cpp:163
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the selected font. You can change it by clicking the "
-#| "\"Choose Font...\" button."
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1818,11 +1762,7 @@ msgid "Preview of the \"%1\" font"
 msgstr "Náhľad písma \"%1\""
 
 #: kfontrequester.cpp:168
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose Font...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
@@ -1922,12 +1862,9 @@ msgid "Close message"
 msgstr "Zatvoriť správu"
 
 #: kmimetypechooser.cpp:88
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Search for file type or filename pattern..."
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern..."
-msgstr "Hľadať vzor typu alebo názvu súboru..."
+msgstr "Nájsť typ súboru alebo názvov súboru podľa vzoru"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -1960,8 +1897,6 @@ msgid "Launch the MIME type editor"
 msgstr "Spustiť MIME type editor"
 
 #: kmimetypeeditor.cpp:27
-#, fuzzy
-#| msgid "Could not find '%1' executable."
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype5\" executable in PATH."
 msgstr "Nepodarilo sa nájsť program '%1'."
