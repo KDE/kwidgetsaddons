@@ -99,6 +99,7 @@ ecm_generate_python_bindings(
     VERSION ${KF_VERSION}
     WRAPPED_HEADER ${wrapped_header}
     TYPESYSTEM ${typesystem_file}
+    EXPORT_TYPESYSTEM
     GENERATED_SOURCES ${generated_sources}
     DEPENDENCIES KF6::WidgetsAddons
     QT_VERSION ${REQUIRED_QT_VERSION}
