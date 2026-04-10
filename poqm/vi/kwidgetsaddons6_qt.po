@@ -2036,7 +2036,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Thước đo độ &mạnh mật khẩu:"
 
-#: kpageview.cpp:515
+#: kpageview.cpp:516
 #, fuzzy
 #| msgctxt "KPageView|"
 #| msgid "Search..."

@@ -2976,7 +2976,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Գաղտնաբառի հուսալիության ցուցիչ:"
 
-#: kpageview.cpp:515
+#: kpageview.cpp:516
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"

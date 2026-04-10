@@ -2810,7 +2810,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr ":د تېرنويې د کلکوالي ميټر"
 
-#: kpageview.cpp:515
+#: kpageview.cpp:516
 #, fuzzy
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"

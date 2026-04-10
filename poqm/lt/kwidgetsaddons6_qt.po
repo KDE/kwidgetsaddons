@@ -2018,7 +2018,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Slaptažodžio stiprumo &matuoklis:"
 
-#: kpageview.cpp:515
+#: kpageview.cpp:516
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Ieškoti…"
