@@ -1684,7 +1684,7 @@ msgstr "მხოლოდ მონოსიგანური ფონტე�
 #: kfontchooserwidget.ui:66
 msgctxt "KFontChooserWidget|"
 msgid "Font"
-msgstr "შრიფტი"
+msgstr "ფონტი"
 
 #: kfontchooserwidget.ui:73
 msgctxt "KFontChooserWidget|"

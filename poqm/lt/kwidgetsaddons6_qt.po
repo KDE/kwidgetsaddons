@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-03-27 19:45+0200\n"
+"PO-Revision-Date: 2026-04-18 18:37+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -2362,7 +2362,7 @@ msgstr "Atverti failą"
 #: kstandardguiitem.cpp:306
 msgctxt "KStandardGuiItem|"
 msgid "&Quit"
-msgstr "&Baigti"
+msgstr "&Išjungti"
 
 #: kstandardguiitem.cpp:308
 msgctxt "KStandardGuiItem|"
