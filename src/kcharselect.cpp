@@ -268,6 +268,7 @@ void KCharSelectTablePrivate::resizeCells()
         }
     }
     // Avoid too narrow cells
+    maxCharWidth = qMin(maxCharWidth, 8 * fontMetrics.xHeight());
     maxCharWidth = qMax(maxCharWidth, 2 * fontMetrics.xHeight());
     maxCharWidth = qMax(maxCharWidth, fontMetrics.height());
     // Add the necessary padding, trying to match the delegate
