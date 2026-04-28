@@ -1097,7 +1097,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:394
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
@@ -1105,7 +1105,7 @@ msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "ここに検索語または文字を入力します"
 
-#: kcharselect.cpp:395
+#: kcharselect.cpp:396
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Enter a search term or character here"
@@ -1113,7 +1113,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "ここに検索語または文字を入力します"
 
-#: kcharselect.cpp:402
+#: kcharselect.cpp:403
 #, fuzzy
 #| msgctxt "KStandardGuiItem|"
 #| msgid "&Find"
@@ -1121,7 +1121,7 @@ msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "検索(&F)"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:427
 #, fuzzy
 #| msgctxt "KCharSelect|Goes to previous character"
 #| msgid "Previous in History"
@@ -1129,7 +1129,7 @@ msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "履歴の前へ"
 
-#: kcharselect.cpp:428
+#: kcharselect.cpp:429
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Previous Character in History"
@@ -1137,7 +1137,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "履歴の前の文字"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:434
 #, fuzzy
 #| msgctxt "KCharSelect|Goes to next character"
 #| msgid "Next in History"
@@ -1145,7 +1145,7 @@ msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "履歴の次へ"
 
-#: kcharselect.cpp:435
+#: kcharselect.cpp:436
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Next Character in History"
@@ -1153,7 +1153,7 @@ msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "履歴の次の文字"
 
-#: kcharselect.cpp:440
+#: kcharselect.cpp:441
 #, fuzzy
 #| msgctxt "KAssistantDialog|go back"
 #| msgid "&Back"
@@ -1161,7 +1161,7 @@ msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "戻る(&B)"
 
-#: kcharselect.cpp:447
+#: kcharselect.cpp:448
 #, fuzzy
 #| msgctxt "KCharSelect|go forward"
 #| msgid "&Forward"
@@ -1169,7 +1169,7 @@ msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "進む(&F)"
 
-#: kcharselect.cpp:466
+#: kcharselect.cpp:467
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Select a category"
@@ -1177,7 +1177,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "カテゴリを選択"
 
-#: kcharselect.cpp:470
+#: kcharselect.cpp:471
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Select a block to be displayed"
@@ -1185,7 +1185,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "表示するブロックを選択"
 
-#: kcharselect.cpp:489
+#: kcharselect.cpp:490
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Set font"
@@ -1193,7 +1193,7 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "フォントを設定"
 
-#: kcharselect.cpp:496
+#: kcharselect.cpp:497
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Set font size"
@@ -1201,138 +1201,138 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "フォントサイズを設定"
 
-#: kcharselect.cpp:798
+#: kcharselect.cpp:799
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "文字:"
 
-#: kcharselect.cpp:804
+#: kcharselect.cpp:805
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "名前: "
 
-#: kcharselect.cpp:813
+#: kcharselect.cpp:814
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "注釈と相互参照"
 
-#: kcharselect.cpp:817
+#: kcharselect.cpp:818
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "別名:"
 
-#: kcharselect.cpp:825
+#: kcharselect.cpp:826
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "備考:"
 
-#: kcharselect.cpp:833
+#: kcharselect.cpp:834
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "関連項目:"
 
-#: kcharselect.cpp:848
+#: kcharselect.cpp:849
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "等価:"
 
-#: kcharselect.cpp:856
+#: kcharselect.cpp:857
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "ほぼ等価:"
 
-#: kcharselect.cpp:864
+#: kcharselect.cpp:865
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr ""
 
-#: kcharselect.cpp:876
+#: kcharselect.cpp:877
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK 表意文字の情報"
 
-#: kcharselect.cpp:879
+#: kcharselect.cpp:880
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "英語による定義: "
 
-#: kcharselect.cpp:886
+#: kcharselect.cpp:887
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "中国語 (普通話) の発音:"
 
-#: kcharselect.cpp:893
+#: kcharselect.cpp:894
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "広東語の発音:"
 
-#: kcharselect.cpp:900
+#: kcharselect.cpp:901
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "日本語の音読み: "
 
-#: kcharselect.cpp:907
+#: kcharselect.cpp:908
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "日本語の訓読み: "
 
-#: kcharselect.cpp:914
+#: kcharselect.cpp:915
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "唐音の発音:"
 
-#: kcharselect.cpp:921
+#: kcharselect.cpp:922
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "韓国語・朝鮮語の発音:"
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "文字の一般的なプロパティ"
 
-#: kcharselect.cpp:928
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "ブロック: "
 
-#: kcharselect.cpp:929
+#: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Unicode カテゴリ: "
 
-#: kcharselect.cpp:933
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "よく使われる表現"
 
-#: kcharselect.cpp:934
+#: kcharselect.cpp:935
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:938
+#: kcharselect.cpp:939
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:945
+#: kcharselect.cpp:946
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C 言語の八進コード (UTF-8): "
 
 # skip-rule: entity
-#: kcharselect.cpp:949
+#: kcharselect.cpp:950
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML の文字参照 (十進コード):"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Unicode コードポイント:"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "十進コード"

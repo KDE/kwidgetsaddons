@@ -1060,202 +1060,202 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr "Pasenusios kompiuterijos simboliai"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:394
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "Įveskite ieškomą žodį ar simbolį…"
 
-#: kcharselect.cpp:395
+#: kcharselect.cpp:396
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Čia įveskite ieškomą žodį ar simbolį"
 
-#: kcharselect.cpp:402
+#: kcharselect.cpp:403
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "&Ieškoti…"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:427
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Ankstesnis istorijoje"
 
-#: kcharselect.cpp:428
+#: kcharselect.cpp:429
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "Pereiti prie ankstesnio simbolio istorijoje"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:434
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Kitas istorijoje"
 
-#: kcharselect.cpp:435
+#: kcharselect.cpp:436
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "Pereiti prie kito simbolio istorijoje"
 
-#: kcharselect.cpp:440
+#: kcharselect.cpp:441
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&Atgal"
 
-#: kcharselect.cpp:447
+#: kcharselect.cpp:448
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&Pirmyn"
 
-#: kcharselect.cpp:466
+#: kcharselect.cpp:467
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Pasirinkti kategoriją"
 
-#: kcharselect.cpp:470
+#: kcharselect.cpp:471
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Pasirinkti bloką, kurį rodyti"
 
-#: kcharselect.cpp:489
+#: kcharselect.cpp:490
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Nustatyti šriftą"
 
-#: kcharselect.cpp:496
+#: kcharselect.cpp:497
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Nustatyti šrifto dydį"
 
-#: kcharselect.cpp:798
+#: kcharselect.cpp:799
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "Simbolis:"
 
-#: kcharselect.cpp:804
+#: kcharselect.cpp:805
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "Pavadinimas: "
 
-#: kcharselect.cpp:813
+#: kcharselect.cpp:814
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "Anotacijos ir kryžminės nuorodos"
 
-#: kcharselect.cpp:817
+#: kcharselect.cpp:818
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "Alternatyvūs pavadinimai:"
 
-#: kcharselect.cpp:825
+#: kcharselect.cpp:826
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "Pastabos:"
 
-#: kcharselect.cpp:833
+#: kcharselect.cpp:834
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "Taip pat žiūrėkite:"
 
-#: kcharselect.cpp:848
+#: kcharselect.cpp:849
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "Atitikmenys:"
 
-#: kcharselect.cpp:856
+#: kcharselect.cpp:857
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "Apytiksliai atitikmenys:"
 
-#: kcharselect.cpp:864
+#: kcharselect.cpp:865
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "Dekomponavimas:"
 
-#: kcharselect.cpp:876
+#: kcharselect.cpp:877
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK ideografinė informacija"
 
-#: kcharselect.cpp:879
+#: kcharselect.cpp:880
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "Apibrėžimas anglų kalba: "
 
-#: kcharselect.cpp:886
+#: kcharselect.cpp:887
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "Tarimas literatūrine kinų kalba: "
 
-#: kcharselect.cpp:893
+#: kcharselect.cpp:894
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "Tarimas kinų kalbos Kantono tarme: "
 
-#: kcharselect.cpp:900
+#: kcharselect.cpp:901
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "Tarimas japonų On: "
 
-#: kcharselect.cpp:907
+#: kcharselect.cpp:908
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "Tarimas japonų Kun: "
 
-#: kcharselect.cpp:914
+#: kcharselect.cpp:915
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "Tang tarimas: "
 
-#: kcharselect.cpp:921
+#: kcharselect.cpp:922
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "Korėjietiškas tarimas: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "Bendros simbolio savybės"
 
-#: kcharselect.cpp:928
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "Blokas: "
 
-#: kcharselect.cpp:929
+#: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "Unikodo kategorija: "
 
-#: kcharselect.cpp:933
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "Įvairūs naudingi atvaizdavimai"
 
-#: kcharselect.cpp:934
+#: kcharselect.cpp:935
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:938
+#: kcharselect.cpp:939
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:945
+#: kcharselect.cpp:946
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C aštuntainis kaitos UTF-8: "
 
-#: kcharselect.cpp:949
+#: kcharselect.cpp:950
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML dešimtainė esybė:"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "Unikodo kodo taškas:"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Dešimtainiais"

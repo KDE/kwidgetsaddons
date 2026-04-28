@@ -1048,202 +1048,202 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr "विरासतगणनायाः कृते प्रतीकाः"
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:394
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "अन्वेषणपदं वा वर्णं वा प्रविशतु..."
 
-#: kcharselect.cpp:395
+#: kcharselect.cpp:396
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "अत्र अन्वेषणपदं वर्णं वा प्रविशतु"
 
-#: kcharselect.cpp:402
+#: kcharselect.cpp:403
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "&अन्वेषय…"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:427
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "इतिहासे पूर्वम्"
 
-#: kcharselect.cpp:428
+#: kcharselect.cpp:429
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "इतिहासे पूर्वचरित्रं गच्छतु"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:434
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "इतिहासे अग्रिमम्"
 
-#: kcharselect.cpp:435
+#: kcharselect.cpp:436
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "इतिहासस्य अग्रिमपात्रं गच्छन्तु"
 
-#: kcharselect.cpp:440
+#: kcharselect.cpp:441
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "&पृष्ठभागः"
 
-#: kcharselect.cpp:447
+#: kcharselect.cpp:448
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&अग्रतः"
 
-#: kcharselect.cpp:466
+#: kcharselect.cpp:467
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "एकं वर्गं चिनुत"
 
-#: kcharselect.cpp:470
+#: kcharselect.cpp:471
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "प्रदर्शयितुम् एकं खण्डं चिनोतु"
 
-#: kcharselect.cpp:489
+#: kcharselect.cpp:490
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "फन्ट् सेट् कुर्वन्तु"
 
-#: kcharselect.cpp:496
+#: kcharselect.cpp:497
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "फन्ट् आकारं सेट् कुर्वन्तु"
 
-#: kcharselect.cpp:798
+#: kcharselect.cpp:799
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "स्वभावः:"
 
-#: kcharselect.cpp:804
+#: kcharselect.cpp:805
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "नामः: "
 
-#: kcharselect.cpp:813
+#: kcharselect.cpp:814
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "एनोटेशन्स् तथा क्रॉस रेफरेंस"
 
-#: kcharselect.cpp:817
+#: kcharselect.cpp:818
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "उपनाम :"
 
-#: kcharselect.cpp:825
+#: kcharselect.cpp:826
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "टिप्पणियाँ :"
 
-#: kcharselect.cpp:833
+#: kcharselect.cpp:834
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "इदमपि पश्यन्तु :"
 
-#: kcharselect.cpp:848
+#: kcharselect.cpp:849
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "समतुल्यम् :"
 
-#: kcharselect.cpp:856
+#: kcharselect.cpp:857
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "अनुमानतः समतुल्यम् :"
 
-#: kcharselect.cpp:864
+#: kcharselect.cpp:865
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "अपघटनम् :"
 
-#: kcharselect.cpp:876
+#: kcharselect.cpp:877
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "सी जे के आइडियाग्राफ सूचना"
 
-#: kcharselect.cpp:879
+#: kcharselect.cpp:880
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "आङ्ग्लभाषायां परिभाषा: "
 
-#: kcharselect.cpp:886
+#: kcharselect.cpp:887
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "मण्डारिन उच्चारण: "
 
-#: kcharselect.cpp:893
+#: kcharselect.cpp:894
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "कैन्टोनीज़ उच्चारण: "
 
-#: kcharselect.cpp:900
+#: kcharselect.cpp:901
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "जापानी उच्चारण पर: "
 
-#: kcharselect.cpp:907
+#: kcharselect.cpp:908
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "जापानी Kun उच्चारण: "
 
-#: kcharselect.cpp:914
+#: kcharselect.cpp:915
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "ताङ उच्चारण: "
 
-#: kcharselect.cpp:921
+#: kcharselect.cpp:922
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "कोरियन उच्चारण: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:928
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "सामान्य वर्ण गुण"
 
-#: kcharselect.cpp:928
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "मृदुवस्तु: "
 
-#: kcharselect.cpp:929
+#: kcharselect.cpp:930
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "यूनिकोड श्रेणी : "
 
-#: kcharselect.cpp:933
+#: kcharselect.cpp:934
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "विभिन्न उपयोगी प्रतिनिधित्व"
 
-#: kcharselect.cpp:934
+#: kcharselect.cpp:935
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "यूटीएफ-८:"
 
-#: kcharselect.cpp:938
+#: kcharselect.cpp:939
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "यूटीएफ-१६: "
 
-#: kcharselect.cpp:945
+#: kcharselect.cpp:946
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C octal पलायितः UTF-8: "
 
-#: kcharselect.cpp:949
+#: kcharselect.cpp:950
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML दशमलव सत्ता :"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "यूनिकोड कोड बिन्दुः :"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "दशमलये"

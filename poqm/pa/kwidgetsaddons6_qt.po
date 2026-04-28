@@ -1385,21 +1385,21 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
 
-#: kcharselect.cpp:393
+#: kcharselect.cpp:394
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
 msgstr "ਇੱਕ ਖੋਜ ਸ਼ਬਦ ਜਾਂ ਅੱਖਰ ਇੱਥੇ ਦਿਓ"
 
-#: kcharselect.cpp:395
+#: kcharselect.cpp:396
 #, fuzzy
 #| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "ਇੱਕ ਖੋਜ ਸ਼ਬਦ ਜਾਂ ਅੱਖਰ ਇੱਥੇ ਦਿਓ"
 
-#: kcharselect.cpp:402
+#: kcharselect.cpp:403
 #, fuzzy
 #| msgctxt "KStandardGuiItem|"
 #| msgid "&Find"
@@ -1407,7 +1407,7 @@ msgctxt "KCharSelect|@action"
 msgid "&Find…"
 msgstr "ਖੋਜ(&F)"
 
-#: kcharselect.cpp:426
+#: kcharselect.cpp:427
 #, fuzzy
 #| msgctxt "Goes to previous character"
 #| msgid "Previous in History"
@@ -1415,14 +1415,14 @@ msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਪਿੱਛੇ"
 
-#: kcharselect.cpp:428
+#: kcharselect.cpp:429
 #, fuzzy
 #| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਪਿਛਲਾ ਅੱਖਰ"
 
-#: kcharselect.cpp:433
+#: kcharselect.cpp:434
 #, fuzzy
 #| msgctxt "Goes to next character"
 #| msgid "Next in History"
@@ -1430,14 +1430,14 @@ msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਅੱਗੇ"
 
-#: kcharselect.cpp:435
+#: kcharselect.cpp:436
 #, fuzzy
 #| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਅੱਖਰ ਅੱਗੇ"
 
-#: kcharselect.cpp:440
+#: kcharselect.cpp:441
 #, fuzzy
 #| msgctxt "KAssistantDialog|go back"
 #| msgid "&Back"
@@ -1445,7 +1445,7 @@ msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "ਪਿੱਛੇ(&B)"
 
-#: kcharselect.cpp:447
+#: kcharselect.cpp:448
 #, fuzzy
 #| msgctxt "KCharSelect|go forward"
 #| msgid "&Forward"
@@ -1453,21 +1453,21 @@ msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "ਅੱਗੇ(&F)"
 
-#: kcharselect.cpp:466
+#: kcharselect.cpp:467
 #, fuzzy
 #| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "ਇੱਕ ਕੈਟਾਗਰੀ ਚੁਣੋ"
 
-#: kcharselect.cpp:470
+#: kcharselect.cpp:471
 #, fuzzy
 #| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "ਵੇਖਾਉਣ ਲਈ ਇੱਕ ਬਲਾਕ ਚੁਣੋ"
 
-#: kcharselect.cpp:489
+#: kcharselect.cpp:490
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Set font"
@@ -1475,184 +1475,184 @@ msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "ਫੋਂਟ ਸੈੱਟ ਕਰੋ"
 
-#: kcharselect.cpp:496
+#: kcharselect.cpp:497
 #, fuzzy
 #| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "ਫੋਂਟ ਸਾਈਜ਼ ਸੈੱਟ ਕਰੋ"
 
-#: kcharselect.cpp:798
+#: kcharselect.cpp:799
 msgctxt "KCharSelect|"
 msgid "Character:"
 msgstr "ਅੱਖਰ:"
 
-#: kcharselect.cpp:804
+#: kcharselect.cpp:805
 msgctxt "KCharSelect|"
 msgid "Name: "
 msgstr "ਨਾਂ: "
 
-#: kcharselect.cpp:813
+#: kcharselect.cpp:814
 #, fuzzy
 #| msgid "Annotations and Cross References"
 msgctxt "KCharSelect|"
 msgid "Annotations and Cross References"
 msgstr "ਟਿੱਪਣੀ ਅਤੇ ਕਰਾਂਸ ਰੈਫਰੈਂਸ"
 
-#: kcharselect.cpp:817
+#: kcharselect.cpp:818
 #, fuzzy
 #| msgid "Alias names:"
 msgctxt "KCharSelect|"
 msgid "Alias names:"
 msgstr "ਏਲੀਆਸ ਨਾਂ:"
 
-#: kcharselect.cpp:825
+#: kcharselect.cpp:826
 #, fuzzy
 #| msgid "Notes:"
 msgctxt "KCharSelect|"
 msgid "Notes:"
 msgstr "ਨੋਟਿਸ:"
 
-#: kcharselect.cpp:833
+#: kcharselect.cpp:834
 #, fuzzy
 #| msgid "See also:"
 msgctxt "KCharSelect|"
 msgid "See also:"
 msgstr "ਇਹ ਵੀ ਵੇਖੋ:"
 
-#: kcharselect.cpp:848
+#: kcharselect.cpp:849
 #, fuzzy
 #| msgid "Equivalents:"
 msgctxt "KCharSelect|"
 msgid "Equivalents:"
 msgstr "ਬਰਾਬਰ:"
 
-#: kcharselect.cpp:856
+#: kcharselect.cpp:857
 #, fuzzy
 #| msgid "Approximate equivalents:"
 msgctxt "KCharSelect|"
 msgid "Approximate equivalents:"
 msgstr "ਅਨੁਮਾਨਿਤ ਬਰਾਬਰ:"
 
-#: kcharselect.cpp:864
+#: kcharselect.cpp:865
 #, fuzzy
 #| msgid "Description:"
 msgctxt "KCharSelect|"
 msgid "Decomposition:"
 msgstr "ਵੇਰਵਾ:"
 
-#: kcharselect.cpp:876
+#: kcharselect.cpp:877
 #, fuzzy
 #| msgid "CJK Ideograph Information"
 msgctxt "KCharSelect|"
 msgid "CJK Ideograph Information"
 msgstr "CJK Ideograph ਜਾਣਕਾਰੀ"
 
-#: kcharselect.cpp:879
+#: kcharselect.cpp:880
 #, fuzzy
 #| msgid "Definition in English: "
 msgctxt "KCharSelect|"
 msgid "Definition in English: "
 msgstr "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਪ੍ਰੀਭਾਸ਼ਾ:"
 
-#: kcharselect.cpp:886
+#: kcharselect.cpp:887
 #, fuzzy
 #| msgid "Mandarin Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Mandarin Pronunciation: "
 msgstr "ਮਾਨਡਾਰਿਨ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:893
+#: kcharselect.cpp:894
 #, fuzzy
 #| msgid "Cantonese Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Cantonese Pronunciation: "
 msgstr "ਕਾਨਟੋਨਸੀ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:900
+#: kcharselect.cpp:901
 #, fuzzy
 #| msgid "Japanese On Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese On Pronunciation: "
 msgstr "ਜਾਪਾਨੀ ਓਨ ਉਚਾਰਨ:"
 
-#: kcharselect.cpp:907
+#: kcharselect.cpp:908
 #, fuzzy
 #| msgid "Japanese Kun Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Japanese Kun Pronunciation: "
 msgstr "ਜਾਪਾਨੀ ਕੁਨ ਉਚਾਰਨ:"
 
-#: kcharselect.cpp:914
+#: kcharselect.cpp:915
 #, fuzzy
 #| msgid "Tang Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Tang Pronunciation: "
 msgstr "ਤਾਂਗ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:921
+#: kcharselect.cpp:922
 #, fuzzy
 #| msgid "Korean Pronunciation: "
 msgctxt "KCharSelect|"
 msgid "Korean Pronunciation: "
 msgstr "ਕੋਰੀਆਈ ਉਚਾਰਨ: "
 
-#: kcharselect.cpp:927
+#: kcharselect.cpp:928
 #, fuzzy
 #| msgid "General Character Properties"
 msgctxt "KCharSelect|"
 msgid "General Character Properties"
 msgstr "ਆਮ ਅੱਖਰ ਵਿਸ਼ੇਸ਼ਤਾ"
 
-#: kcharselect.cpp:928
+#: kcharselect.cpp:929
 msgctxt "KCharSelect|"
 msgid "Block: "
 msgstr "ਬਲਾਕ: "
 
-#: kcharselect.cpp:929
+#: kcharselect.cpp:930
 #, fuzzy
 #| msgid "Unicode category: "
 msgctxt "KCharSelect|"
 msgid "Unicode category: "
 msgstr "ਯੂਨੀਕੋਡ ਕੈਟਾਗਰੀ: "
 
-#: kcharselect.cpp:933
+#: kcharselect.cpp:934
 #, fuzzy
 #| msgid "Various Useful Representations"
 msgctxt "KCharSelect|"
 msgid "Various Useful Representations"
 msgstr "ਕੋਈ ਫਾਇਦੇਮੰਦ ਪੇਸ਼ਕਾਰੀਆਂ"
 
-#: kcharselect.cpp:934
+#: kcharselect.cpp:935
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: kcharselect.cpp:938
+#: kcharselect.cpp:939
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
 msgstr "UTF-16: "
 
-#: kcharselect.cpp:945
+#: kcharselect.cpp:946
 #, fuzzy
 #| msgid "C octal escaped UTF-8: "
 msgctxt "KCharSelect|"
 msgid "C octal escaped UTF-8: "
 msgstr "C ਓਕਟਲ ਸਮੇਤ UTF-8: "
 
-#: kcharselect.cpp:949
+#: kcharselect.cpp:950
 #, fuzzy
 #| msgid "XML decimal entity:"
 msgctxt "KCharSelect|"
 msgid "XML decimal entity:"
 msgstr "XML ਦਸ਼ਮਲਵ ਐਂਟਟੀ:"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|"
 msgid "Unicode code point:"
 msgstr "ਯੂਨੀਕੋਡ ਕੋਡ ਪੁਆਇੰਟ:"
 
-#: kcharselect.cpp:1101
+#: kcharselect.cpp:1102
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "ਦਸ਼ਮਲਵ ਵਿੱਚ"
