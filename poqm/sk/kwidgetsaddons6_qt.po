@@ -152,7 +152,7 @@ msgstr "Fonetické symboly"
 #: kcharselect-translation.cpp:24 kcharselectdata.cpp:743
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
-msgstr "Zlúčenie diakritických značiek"
+msgstr "Zlúčenie diakritiky"
 
 #: kcharselect-translation.cpp:25
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -262,7 +262,7 @@ msgstr "Sýrsky doplnok"
 #: kcharselect-translation.cpp:46
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "Arabské rozšírené-A"
+msgstr "Arabské rozšírené-B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -447,7 +447,7 @@ msgstr "Tai Tham"
 #: kcharselect-translation.cpp:83
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
-msgstr "Zlúčenie diakritických značiek"
+msgstr "Zlúčenie diakritických značiek – rozšírené"
 
 #: kcharselect-translation.cpp:84
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1007,7 +1007,7 @@ msgstr "Vložené Etiópske doplnky"
 #: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
-msgstr "Rôzne symboly a šípky"
+msgstr "Rôzne symboly a piktogramy"
 
 #: kcharselect-translation.cpp:197
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1032,7 +1032,7 @@ msgstr "Alchemické symboly"
 #: kcharselect-translation.cpp:201
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
-msgstr "Geometrické tvary"
+msgstr "Geometrické tvary – rozšírené"
 
 #: kcharselect-translation.cpp:202
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1462,7 +1462,7 @@ msgstr "Vlastná"
 #: kcontextualhelpbutton.cpp:68
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr "Zobraziť kontextovú nápovedu"
+msgstr "Kontextová nápoveda"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1875,7 +1875,7 @@ msgstr "Úspech"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "Poznámky:"
+msgstr "Poznámka"
 
 #: kmessagewidget.cpp:294
 msgctxt ""
@@ -1934,7 +1934,7 @@ msgctxt "QObject|"
 msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
-msgstr "Nepodarilo sa nájsť program '%1'."
+msgstr "Nepodarilo sa spustiť program '%1', skontrolujte svoju inštaláciu."
 
 #: knewpassworddialog.cpp:63
 #, qt-format
@@ -2076,12 +2076,12 @@ msgstr "Zmeniť viditeľnosť hesla"
 #: kpasswordlineedit.cpp:87
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Heslo"
+msgstr "Zobraziť heslo"
 
 #: kpasswordlineedit.cpp:88
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Heslo"
+msgstr "Skryť heslo"
 
 #: kpixmapregionselectordialog.cpp:56
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
