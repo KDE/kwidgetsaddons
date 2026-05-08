@@ -216,7 +216,6 @@ ecm_qt_declare_logging_category(KF6WidgetsAddons
     HEADER loggingcategory.h
     IDENTIFIER KWidgetsAddonsLog
     CATEGORY_NAME kf.kwidgetsaddons
-    DEFAULT_SEVERITY Warning
     DESCRIPTION "KWidgetsAddons"
     EXPORT KWIDGETSADDONS
 )
