@@ -268,14 +268,16 @@ public:
      * \deprecated[6.0]
      * \since 5.84
      */
-    [[deprecated("Use setRevealPasswordMode instead.")]] void setRevealPasswordAvailable(bool reveal);
+    KWIDGETSADDONS_DEPRECATED_VERSION(6, 0, "Use setRevealPasswordMode instead.")
+    void setRevealPasswordAvailable(bool reveal);
 
     /*!
      * Whether the visibility trailing action in the line edit is visible.
      * \since 5.84
      * \deprecated[6.0]
      */
-    [[deprecated("Use revealPasswordMode instead.")]] bool isRevealPasswordAvailable() const;
+    KWIDGETSADDONS_DEPRECATED_VERSION(6, 0, "Use revealPasswordMode instead.")
+    bool isRevealPasswordAvailable() const;
 #endif
 
     /*!
