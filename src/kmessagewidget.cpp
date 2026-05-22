@@ -43,6 +43,8 @@ public:
     KMessageWidget::Position position = KMessageWidget::Inline;
     bool wordWrap;
     QList<QToolButton *> buttons;
+    bool closeVisible = true;
+    bool clickclose = false;
     bool ignorePaletteChange = false;
 
     void createLayout();
@@ -424,13 +426,29 @@ void KMessageWidget::setPosition(KMessageWidget::Position position)
 
 bool KMessageWidget::isCloseButtonVisible() const
 {
-    return d->closeButton->isVisible();
+    return d->closeVisible;
 }
 
 void KMessageWidget::setCloseButtonVisible(bool show)
 {
+    d->closeVisible = show;
     d->closeButton->setVisible(show);
     updateGeometry();
+}
+
+bool KMessageWidget::isClickClose() const
+{
+    return d->clickclose;
+}
+
+void KMessageWidget::setClickClose(bool enable)
+{
+    d->clickclose = enable;
+    if (enable) {
+        d->closeButton->setVisible(false);
+    } else {
+        d->closeButton->setVisible(d->closeVisible);
+    }
 }
 
 void KMessageWidget::addAction(QAction *action)
@@ -538,6 +556,39 @@ void KMessageWidget::setIcon(const QIcon &icon)
         d->iconLabel->setPixmap(d->icon.pixmap(size));
         d->iconLabel->show();
     }
+}
+
+void KMessageWidget::showEvent([[maybe_unused]] QShowEvent *event)
+{
+    if (d->clickclose) {
+        qApp->installEventFilter(this);
+    }
+}
+
+void KMessageWidget::hideEvent([[maybe_unused]] QHideEvent *event)
+{
+    if (d->clickclose) {
+        // No need to spend cycles on an event-filter when this is going to
+        // me hidden most of the time
+        qApp->removeEventFilter(this);
+    }
+}
+
+bool KMessageWidget::eventFilter(QObject *, QEvent *event)
+{
+    if (event->type() == QEvent::MouseButtonPress) {
+        hide();
+    }
+
+    if (event->type() == QEvent::KeyPress) {
+        auto ev = static_cast<QKeyEvent *>(event);
+        hide();
+        if (ev->key() == Qt::Key_Escape) {
+            return true; // We eat this one, it's for us
+        }
+    }
+
+    return false; // we don't want it
 }
 
 #include "moc_kmessagewidget.cpp"

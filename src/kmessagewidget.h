@@ -24,8 +24,9 @@
  * feedback, or to implement opportunistic interactions.
  *
  * As a feedback widget, KMessageWidget provides a less intrusive alternative
- * to "OK Only" message boxes. If you want to avoid a modal KMessageBox,
- * consider using KMessageWidget instead.
+ * to "OK Only" message boxes. An even less intrusive option (called "click close")
+ * allows the user to close the widget if they click anywhere at all.
+ * If you want to avoid a modal KMessageBox, consider using KMessageWidget instead.
  *
  * Examples of KMessageWidget look as follows, all of them having an icon set
  * with setIcon(), and the first three show a close button:
@@ -111,6 +112,12 @@ class KWIDGETSADDONS_EXPORT KMessageWidget : public QFrame
      * \property KMessageWidget::closeButtonVisible
      */
     Q_PROPERTY(bool closeButtonVisible READ isCloseButtonVisible WRITE setCloseButtonVisible)
+
+    /*!
+     * \property KMessageWidget::clickClose
+     * \since 6.28
+     */
+    Q_PROPERTY(bool clickClose READ isClickClose WRITE setClickClose)
 
     /*!
      * \property KMessageWidget::messageType
@@ -224,6 +231,13 @@ public:
     bool isCloseButtonVisible() const;
 
     /*!
+     * Check whether the clickClose option is enabled.
+     * \sa setClickClose()
+     * \since 6.28
+     */
+    bool isClickClose() const;
+
+    /*!
      * Get the type of this message.
      * By default, the type is set to KMessageWidget::Information.
      *
@@ -291,6 +305,26 @@ public:
      */
     bool isShowAnimationRunning() const;
 
+    /*!
+     * Handles events for watched objects.
+     * \param watched The object being watched.
+     * \param event The event to handle.
+     * \return true if the event was handled, false otherwise.
+     */
+    [[nodiscard]] bool eventFilter(QObject *watched, QEvent *event) override;
+
+    /*!
+     * Handles the show event for the message widget.
+     * \param event The show event.
+     */
+    void showEvent(QShowEvent *event) override;
+
+    /*!
+     * Handles the hide event for the message widget.
+     * \param event The hide event.
+     */
+    void hideEvent(QHideEvent *event) override;
+
 public Q_SLOTS:
     /*!
      * Set the text of the message widget to \a text.
@@ -331,6 +365,16 @@ public Q_SLOTS:
      * \sa closeButtonVisible(), animatedHide()
      */
     void setCloseButtonVisible(bool visible);
+
+    /*!
+     * Enable click closing. Provides a less intrusive message dialog that goes away when
+     * the user clicks somewhere.  The close button is automatically hidden with this setting
+     * since a close button is not needed .
+     *
+     * \sa isClickClose()
+     * \since 6.28
+     */
+    void setClickClose(bool enable);
 
     /*!
      * Set the message type to \a type.
