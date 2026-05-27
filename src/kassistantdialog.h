@@ -112,6 +112,13 @@ public:
      */
     QPushButton *finishButton() const;
 
+    /*!
+     * Returns true if the dialog is currently showing the last visible
+     * page, i.e. the last page for which isAppropriate() returns true.
+     *
+     * \since 6.26
+     */
+    bool onLastPage() const;
 public Q_SLOTS:
     /*!
      * Called when the user clicks the Back button.
