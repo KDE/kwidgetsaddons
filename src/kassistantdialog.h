@@ -97,26 +97,45 @@ public:
      */
     bool isAppropriate(KPageWidgetItem *page) const;
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 29)
     /*!
      * Returns the next button
+     *
+     * \deprecated[6.29]
+     * Override next(), or use setValid(), instead
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(6, 29, "Override next or use setValid instead")
     QPushButton *nextButton() const;
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 29)
     /*!
-     * Returns the finish button
+     * Returns the back button
+     *
+     * \deprecated[6.29]
+     * Override back(), instead
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(6, 29, "Override back instead")
     QPushButton *backButton() const;
+#endif
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 29)
     /*!
      * Returns the finish button
+     *
+     * \deprecated[6.29]
+     * Override next(), or use setValid(), instead, possibly combined
+     * with onLastPage()
      */
+    KWIDGETSADDONS_DEPRECATED_VERSION(6, 29, "Override next or use setValid instead")
     QPushButton *finishButton() const;
+#endif
 
     /*!
      * Returns true if the dialog is currently showing the last visible
      * page, i.e. the last page for which isAppropriate() returns true.
      *
-     * \since 6.26
+     * \since 6.29
      */
     bool onLastPage() const;
 public Q_SLOTS:
