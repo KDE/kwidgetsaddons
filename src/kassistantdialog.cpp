@@ -36,7 +36,7 @@ public:
     void init();
     void slotUpdateButtons();
 
-    QModelIndex getNext(QModelIndex nextIndex)
+    QModelIndex getNext(QModelIndex nextIndex) const
     {
         QModelIndex currentIndex;
         do {
@@ -49,7 +49,7 @@ public:
         return nextIndex;
     }
 
-    QModelIndex getPrevious(QModelIndex nextIndex)
+    QModelIndex getPrevious(QModelIndex nextIndex) const
     {
         QModelIndex currentIndex;
         do {
@@ -142,6 +142,14 @@ void KAssistantDialog::next()
     } else if (isValid(currentPage())) {
         accept();
     }
+}
+
+bool KAssistantDialog::onLastPage() const
+{
+    Q_D(const KAssistantDialog);
+
+    QModelIndex nextIndex = d->getNext(d->pageModel->index(currentPage()));
+    return !nextIndex.isValid();
 }
 
 void KAssistantDialog::setValid(KPageWidgetItem *page, bool enable)
