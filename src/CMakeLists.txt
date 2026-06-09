@@ -100,8 +100,6 @@ target_sources(KF6WidgetsAddons PRIVATE
     kmessagewidget.h
     kmimetypechooser.cpp
     kmimetypechooser.h
-    kmimetypeeditor.cpp
-    kmimetypeeditor.h
     kmultitabbar.cpp
     kmultitabbar.h
     kmultitabbar_p.h
@@ -201,6 +199,13 @@ target_sources(KF6WidgetsAddons PRIVATE
 
     icons.qrc
 )
+
+if(NOT IOS)
+    target_sources(KF6WidgetsAddons PRIVATE
+        kmimetypeeditor.cpp
+        kmimetypeeditor.h
+    )
+endif()
 
 set(kwidgetsaddons_UI_SRCS)
 qt_wrap_ui(kwidgetsaddons_UI_SRCS
