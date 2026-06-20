@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-05-10 16:16+0900\n"
+"PO-Revision-Date: 2026-06-14 21:36+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -1570,65 +1570,41 @@ msgid "Week %1"
 msgstr "第 %1 週"
 
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "次の年"
 
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "前の年"
 
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "次の月"
 
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
 msgstr "前の月"
 
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "週を選択"
 
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "月を選択"
 
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "年を選択"
 
 #: kdatepicker.cpp:313
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "現在の日を選択"
@@ -1824,17 +1800,14 @@ msgid "%1"
 msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
-msgstr "月を選択"
+msgstr "フォントを選択"
 
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "コンマ区切りでフォント機能を指定 (例: liga, calt):"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
@@ -1858,52 +1831,34 @@ msgstr ""
 #: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr ""
+msgstr "等幅フォントのみ表示"
 
 #: kfontchooserwidget.ui:66
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "フォント"
 
 #: kfontchooserwidget.ui:73
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "フォント:"
 
 #: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "フォントスタイル"
 
 #: kfontchooserwidget.ui:98
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "フォントスタイル:"
 
 #: kfontchooserwidget.ui:116
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "サイズ"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "サイズ:"
@@ -2124,33 +2079,24 @@ msgstr "エラー"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr ""
+msgstr "ファイル形式やファイル名パターンを検索…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr ""
+msgstr "フィルター(&F) :"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Mime Type"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
 msgstr "MIME タイプ"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
 msgstr "コメント"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
 msgstr "パターン"
