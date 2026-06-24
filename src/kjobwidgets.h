@@ -52,7 +52,8 @@ KWIDGETSADDONS_EXPORT void setWindow(QObject *job, QWidget *widget);
  * \deprecated[6.5]
  * use KJobWindows::setWindow() instead.
  */
-KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::setWindow() instead") void setWindowHandle(QObject *job, QWindow *window);
+KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::setWindow() instead")
+KWIDGETSADDONS_EXPORT void setWindowHandle(QObject *job, QWindow *window);
 #endif
 
 /*!
@@ -74,7 +75,8 @@ KWIDGETSADDONS_EXPORT QWidget *window(QObject *job);
  * @deprecated[6.5]
  * use KJobWindows::window() instead.
  */
-KWIDGETSADDONS_EXPORT KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::window() instead") QWindow *windowHandle(QObject *job);
+KWIDGETSADDONS_DEPRECATED_VERSION(6, 5, "Use KJobWindows::window() instead")
+KWIDGETSADDONS_EXPORT QWindow *windowHandle(QObject *job);
 #endif
 
 /*!
