@@ -55,7 +55,7 @@ msgstr "%1"
 #, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
-msgstr "%1 - [%2]"
+msgstr "%1 – [%2]"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
@@ -95,47 +95,47 @@ msgstr "Tot"
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
-msgstr "Escriptures europees"
+msgstr "Estils cal·ligràfics europeus"
 
 #: kcharselect-translation.cpp:13
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
-msgstr "Escriptures africanes"
+msgstr "Estils cal·ligràfics africans"
 
 #: kcharselect-translation.cpp:14
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
-msgstr "Escriptures de l'Orient Mitjà"
+msgstr "Estils cal·ligràfics de l'Orient Mitjà"
 
 #: kcharselect-translation.cpp:15
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
-msgstr "Escriptures de l'Àsia central"
+msgstr "Estils cal·ligràfics de l'Àsia central"
 
 #: kcharselect-translation.cpp:16
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
-msgstr "Escriptures del sud d'Àsia"
+msgstr "Estils cal·ligràfics del sud d'Àsia"
 
 #: kcharselect-translation.cpp:17
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
-msgstr "Escriptures del sud-est asiàtic"
+msgstr "Estils cal·ligràfics del sud-est asiàtic"
 
 #: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
-msgstr "Escriptures d'Indonèsia i Oceania"
+msgstr "Estils cal·ligràfics d'Indonèsia i Oceania "
 
 #: kcharselect-translation.cpp:19
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
-msgstr "Escriptures de l'est d'Àsia"
+msgstr "Estils cal·ligràfics de l'est d'Àsia"
 
 #: kcharselect-translation.cpp:20
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
-msgstr "Escriptures americanes"
+msgstr "Estils cal·ligràfics americans"
 
 #: kcharselect-translation.cpp:21
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -1986,9 +1986,9 @@ msgid ""
 msgstr ""
 "La contrasenya que heu introduït té una fermesa baixa. Per a millorar la "
 "fermesa de la contrasenya, proveu:\n"
-" - l'ús d'una contrasenya més llarga;\n"
-" - l'ús d'una barreja de lletres majúscules i minúscules;\n"
-" - l'ús de números i símbols, com ara #, junt amb lletres.\n"
+" – l'ús d'una contrasenya més llarga;\n"
+" – l'ús d'una barreja de lletres majúscules i minúscules;\n"
+" – l'ús de números i símbols, com ara #, junt amb lletres.\n"
 "\n"
 "Voleu utilitzar esta contrasenya igualment?"
 
