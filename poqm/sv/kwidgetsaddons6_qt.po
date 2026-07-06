@@ -1,8 +1,8 @@
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014-2022, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"PO-Revision-Date: 2024-10-08 18:42+0200\n"
+"PO-Revision-Date: 2026-07-05 17:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Qt-Contexts: true\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:22
@@ -1772,6 +1772,10 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"Träutensilierna i ett tryckeri äro ingalunda en faktor där trevnadens "
+"ordningens och ekonomiens upprätthållande, och dock är det icke sällan som "
+"sorgliga erfarenheter göras ordningens och ekon och miens därmed "
+"upprätthållande"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -1780,6 +1784,8 @@ msgctxt ""
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
 msgstr ""
+"Träutensilierna i ett tryckeri äro ingalunda en faktor där trevnadens "
+"ordningens och ekonomiens upprätthållande"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
