@@ -45,6 +45,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     kcolorbutton.h
     kcolorcombo.cpp
     kcolorcombo.h
+    kcolormimedata.cpp
+    kcolormimedata_p.h
     kcolumnresizer.cpp
     kcolumnresizer.h
     kcontextualhelpbutton.cpp

@@ -8,6 +8,8 @@
 
 #include "kcolorbutton.h"
 
+#include "kcolormimedata_p.h"
+
 #include <QApplication>
 #include <QClipboard>
 #include <QColorDialog>
@@ -40,58 +42,6 @@ public:
 
     void initStyleOption(QStyleOptionButton *opt) const;
 };
-
-/////////////////////////////////////////////////////////////////////
-// Functions duplicated from KColorMimeData
-// Should be kept in sync
-void populateMimeData(QMimeData *mimeData, const QColor &color)
-{
-    mimeData->setColorData(color);
-    mimeData->setText(color.name());
-}
-
-bool canDecode(const QMimeData *mimeData)
-{
-    if (mimeData->hasColor()) {
-        return true;
-    }
-    if (mimeData->hasText()) {
-        const QString colorName = mimeData->text();
-        if ((colorName.length() >= 4) && (colorName[0] == QLatin1Char('#'))) {
-            return true;
-        }
-    }
-    return false;
-}
-
-QColor fromMimeData(const QMimeData *mimeData)
-{
-    if (mimeData->hasColor()) {
-        return mimeData->colorData().value<QColor>();
-    }
-    if (canDecode(mimeData)) {
-        return QColor(mimeData->text());
-    }
-    return QColor();
-}
-
-QDrag *createDrag(const QColor &color, QObject *dragsource)
-{
-    QDrag *drag = new QDrag(dragsource);
-    QMimeData *mime = new QMimeData;
-    populateMimeData(mime, color);
-    drag->setMimeData(mime);
-    QPixmap colorpix(25, 20);
-    colorpix.fill(color);
-    QPainter p(&colorpix);
-    p.setPen(Qt::black);
-    p.drawRect(0, 0, 24, 19);
-    p.end();
-    drag->setPixmap(colorpix);
-    drag->setHotSpot(QPoint(-5, -7));
-    return drag;
-}
-/////////////////////////////////////////////////////////////////////
 
 KColorButtonPrivate::KColorButtonPrivate(KColorButton *qq)
     : q(qq)
@@ -241,12 +191,12 @@ QSize KColorButton::minimumSizeHint() const
 
 void KColorButton::dragEnterEvent(QDragEnterEvent *event)
 {
-    event->setAccepted(canDecode(event->mimeData()) && isEnabled());
+    event->setAccepted(KColorMimeData::canDecode(event->mimeData()) && isEnabled());
 }
 
 void KColorButton::dropEvent(QDropEvent *event)
 {
-    QColor c = fromMimeData(event->mimeData());
+    QColor c = KColorMimeData::fromMimeData(event->mimeData());
     if (c.isValid()) {
         setColor(c);
     }
@@ -258,10 +208,10 @@ void KColorButton::keyPressEvent(QKeyEvent *e)
 
     if (QKeySequence::keyBindings(QKeySequence::Copy).contains(key)) {
         QMimeData *mime = new QMimeData;
-        populateMimeData(mime, color());
+        KColorMimeData::populateMimeData(mime, color());
         QApplication::clipboard()->setMimeData(mime, QClipboard::Clipboard);
     } else if (QKeySequence::keyBindings(QKeySequence::Paste).contains(key)) {
-        QColor color = fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
+        QColor color = KColorMimeData::fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
         setColor(color);
     } else {
         QPushButton::keyPressEvent(e);
@@ -277,7 +227,7 @@ void KColorButton::mousePressEvent(QMouseEvent *e)
 void KColorButton::mouseMoveEvent(QMouseEvent *e)
 {
     if ((e->buttons() & Qt::LeftButton) && (e->pos() - d->mPos).manhattanLength() > QApplication::startDragDistance()) {
-        createDrag(color(), this)->exec();
+        KColorMimeData::createDrag(color(), this)->exec();
         setDown(false);
     }
 }
