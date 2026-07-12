@@ -9,9 +9,12 @@
 
 #include "kcolorcombo.h"
 
+#include "kabstractcoloredit_p.h"
+
 #include <QAbstractItemDelegate>
 #include <QApplication>
 #include <QColorDialog>
+#include <QContextMenuEvent>
 #include <QStylePainter>
 
 class KColorComboDelegate : public QAbstractItemDelegate
@@ -159,10 +162,15 @@ static inline QColor standardColor(int i)
     return QColor(entry[0], entry[1], entry[2]);
 }
 
-class KColorComboPrivate
+class KColorComboPrivate : public KAbstractColorEditPrivate
 {
+    Q_DECLARE_PUBLIC(KColorCombo)
+
 public:
     KColorComboPrivate(KColorCombo *qq);
+
+    QColor color() const override;
+    void setColor(const QColor &color) override;
 
     void addColors();
     void setCustomColor(const QColor &color, bool lookupInPresets = true);
@@ -171,20 +179,32 @@ public:
     void slotActivated(int index);
     void slotHighlighted(int index);
 
-    KColorCombo *q;
     QList<QColor> colorList;
     QColor customColor;
     QColor internalcolor;
 };
 
 KColorComboPrivate::KColorComboPrivate(KColorCombo *qq)
-    : q(qq)
+    : KAbstractColorEditPrivate(qq)
     , customColor(Qt::white)
 {
 }
 
+QColor KColorComboPrivate::color() const
+{
+    Q_Q(const KColorCombo);
+    return q->color();
+}
+
+void KColorComboPrivate::setColor(const QColor &color)
+{
+    Q_Q(KColorCombo);
+    q->setColor(color);
+}
+
 void KColorComboPrivate::setCustomColor(const QColor &color, bool lookupInPresets)
 {
+    Q_Q(KColorCombo);
     if (lookupInPresets) {
         if (colorList.isEmpty()) {
             for (int i = 0; i < STANDARD_PALETTE_SIZE; ++i) {
@@ -294,6 +314,13 @@ void KColorCombo::paintEvent(QPaintEvent *event)
     painter.drawRoundedRect(frame.adjusted(1, 1, -1, -1), 2, 2);
 }
 
+void KColorCombo::contextMenuEvent(QContextMenuEvent *ev)
+{
+    ev->accept();
+
+    d->showContextMenu(ev->globalPos());
+}
+
 void KColorCombo::showEmptyList()
 {
     clear();
@@ -301,6 +328,7 @@ void KColorCombo::showEmptyList()
 
 void KColorComboPrivate::slotActivated(int index)
 {
+    Q_Q(KColorCombo);
     if (index == 0) {
         QColor c = QColorDialog::getColor(customColor, q);
         if (c.isValid()) {
@@ -318,6 +346,7 @@ void KColorComboPrivate::slotActivated(int index)
 
 void KColorComboPrivate::slotHighlighted(int index)
 {
+    Q_Q(KColorCombo);
     if (index == 0) {
         internalcolor = customColor;
     } else if (colorList.isEmpty()) {
@@ -331,6 +360,7 @@ void KColorComboPrivate::slotHighlighted(int index)
 
 void KColorComboPrivate::addColors()
 {
+    Q_Q(KColorCombo);
     q->addItem(KColorCombo::tr("Custom…", "@item:inlistbox Custom color"));
 
     if (colorList.isEmpty()) {

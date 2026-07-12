@@ -8,10 +8,10 @@
 
 #include "kcolorbutton.h"
 
+#include "kabstractcoloredit_p.h"
 #include "kcolormimedata_p.h"
 
 #include <QApplication>
-#include <QClipboard>
 #include <QColorDialog>
 #include <QDrag>
 #include <QMimeData>
@@ -22,15 +22,19 @@
 #include <QStyleOptionButton>
 #include <qdrawutil.h>
 
-class KColorButtonPrivate
+class KColorButtonPrivate : public KAbstractColorEditPrivate
 {
+    Q_DECLARE_PUBLIC(KColorButton)
+
 public:
     KColorButtonPrivate(KColorButton *qq);
+
+    QColor color() const override;
+    void setColor(const QColor &color) override;
 
     void chooseColor();
     void colorChosen();
 
-    KColorButton *q;
     QColor m_defaultColor;
     bool m_bdefaultColor : 1;
     bool m_alphaChannel : 1;
@@ -44,8 +48,10 @@ public:
 };
 
 KColorButtonPrivate::KColorButtonPrivate(KColorButton *qq)
-    : q(qq)
+    : KAbstractColorEditPrivate(qq)
 {
+    Q_Q(KColorButton);
+
     m_bdefaultColor = false;
     m_alphaChannel = false;
     q->setAcceptDrops(true);
@@ -53,6 +59,18 @@ KColorButtonPrivate::KColorButtonPrivate(KColorButton *qq)
     QObject::connect(q, &KColorButton::clicked, q, [this]() {
         chooseColor();
     });
+}
+
+QColor KColorButtonPrivate::color() const
+{
+    Q_Q(const KColorButton);
+    return q->color();
+}
+
+void KColorButtonPrivate::setColor(const QColor &color)
+{
+    Q_Q(KColorButton);
+    q->setColor(color);
 }
 
 KColorButton::KColorButton(QWidget *parent)
@@ -112,6 +130,8 @@ void KColorButton::setDefaultColor(const QColor &c)
 
 void KColorButtonPrivate::initStyleOption(QStyleOptionButton *opt) const
 {
+    Q_Q(const KColorButton);
+
     opt->initFrom(q);
     opt->state |= q->isDown() ? QStyle::State_Sunken : QStyle::State_Raised;
     opt->features = QStyleOptionButton::None;
@@ -202,21 +222,12 @@ void KColorButton::dropEvent(QDropEvent *event)
     }
 }
 
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(6, 29)
 void KColorButton::keyPressEvent(QKeyEvent *e)
 {
-    int key = e->key() | e->modifiers();
-
-    if (QKeySequence::keyBindings(QKeySequence::Copy).contains(key)) {
-        QMimeData *mime = new QMimeData;
-        KColorMimeData::populateMimeData(mime, color());
-        QApplication::clipboard()->setMimeData(mime, QClipboard::Clipboard);
-    } else if (QKeySequence::keyBindings(QKeySequence::Paste).contains(key)) {
-        QColor color = KColorMimeData::fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
-        setColor(color);
-    } else {
-        QPushButton::keyPressEvent(e);
-    }
+    QPushButton::keyPressEvent(e);
 }
+#endif
 
 void KColorButton::mousePressEvent(QMouseEvent *e)
 {
@@ -232,8 +243,17 @@ void KColorButton::mouseMoveEvent(QMouseEvent *e)
     }
 }
 
+void KColorButton::contextMenuEvent(QContextMenuEvent *ev)
+{
+    ev->accept();
+
+    d->showContextMenu(ev->globalPos());
+}
+
 void KColorButtonPrivate::chooseColor()
 {
+    Q_Q(KColorButton);
+
     QColorDialog *dialog = dialogPtr.data();
     if (dialog) {
         dialog->show();
@@ -255,6 +275,8 @@ void KColorButtonPrivate::chooseColor()
 
 void KColorButtonPrivate::colorChosen()
 {
+    Q_Q(KColorButton);
+
     QColorDialog *dialog = dialogPtr.data();
     if (!dialog) {
         return;
