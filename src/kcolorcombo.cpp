@@ -13,9 +13,11 @@
 
 #include <QAbstractItemDelegate>
 #include <QApplication>
+#include <QClipboard>
 #include <QColorDialog>
 #include <QDragEnterEvent>
 #include <QDropEvent>
+#include <QKeySequence>
 #include <QMimeData>
 #include <QStylePainter>
 
@@ -316,6 +318,22 @@ void KColorCombo::dropEvent(QDropEvent *event)
     const QColor c = KColorMimeData::fromMimeData(event->mimeData());
     if (c.isValid()) {
         setColor(c);
+    }
+}
+
+void KColorCombo::keyPressEvent(QKeyEvent *event)
+{
+    QComboBox::keyPressEvent(event);
+
+    if (event->isAccepted()) {
+        return;
+    }
+
+    const int key = event->key() | event->modifiers();
+
+    if (QKeySequence::keyBindings(QKeySequence::Paste).contains(key)) {
+        const QColor color = KColorMimeData::fromMimeData(QApplication::clipboard()->mimeData(QClipboard::Clipboard));
+        setColor(color);
     }
 }
 
