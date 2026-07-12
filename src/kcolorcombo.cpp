@@ -10,11 +10,15 @@
 #include "kcolorcombo.h"
 
 #include "kabstractcoloredit_p.h"
+#include "kcolormimedata_p.h"
 
 #include <QAbstractItemDelegate>
 #include <QApplication>
 #include <QColorDialog>
 #include <QContextMenuEvent>
+#include <QDragEnterEvent>
+#include <QDropEvent>
+#include <QMimeData>
 #include <QStylePainter>
 
 class KColorComboDelegate : public QAbstractItemDelegate
@@ -237,6 +241,8 @@ KColorCombo::KColorCombo(QWidget *parent)
     : QComboBox(parent)
     , d(new KColorComboPrivate(this))
 {
+    setAcceptDrops(true);
+
     setItemDelegate(new KColorComboDelegate(this));
     d->addColors();
 
@@ -327,6 +333,19 @@ void KColorCombo::contextMenuEvent(QContextMenuEvent *ev)
 void KColorCombo::showEmptyList()
 {
     clear();
+}
+
+void KColorCombo::dragEnterEvent(QDragEnterEvent *event)
+{
+    event->setAccepted(KColorMimeData::canDecode(event->mimeData()) && isEnabled());
+}
+
+void KColorCombo::dropEvent(QDropEvent *event)
+{
+    const QColor c = KColorMimeData::fromMimeData(event->mimeData());
+    if (c.isValid()) {
+        setColor(c);
+    }
 }
 
 void KColorComboPrivate::slotActivated(int index)
