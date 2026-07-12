@@ -113,7 +113,10 @@ protected:
     void dropEvent(QDropEvent *) override;
     void mousePressEvent(QMouseEvent *e) override;
     void mouseMoveEvent(QMouseEvent *e) override;
+#if KWIDGETSADDONS_BUILD_DEPRECATED_SINCE(6, 29)
     void keyPressEvent(QKeyEvent *e) override;
+#endif
+    void contextMenuEvent(QContextMenuEvent *) override;
 
 private:
     std::unique_ptr<class KColorButtonPrivate> const d;

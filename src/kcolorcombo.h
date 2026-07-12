@@ -100,6 +100,7 @@ Q_SIGNALS:
 
 protected:
     void paintEvent(QPaintEvent *event) override;
+    void contextMenuEvent(QContextMenuEvent *) override;
 
 private:
     friend class KColorComboPrivate;

@@ -17,6 +17,8 @@ target_sources(KF6WidgetsAddons PRIVATE
     fonthelpers_p.h
     highcontrasthelper.cpp
     highcontrasthelper_p.h
+    kabstractcoloredit.cpp
+    kabstractcoloredit_p.h
     kacceleratormanager.cpp
     kacceleratormanager.h
     kacceleratormanager_p.h
