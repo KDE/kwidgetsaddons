@@ -112,17 +112,14 @@ KColorButton::KColorButton(QWidget *parent)
 }
 
 KColorButton::KColorButton(const QColor &c, QWidget *parent)
-    : QPushButton(parent)
-    , d(new KColorButtonPrivate(this))
+    : KColorButton(parent)
 {
     d->col = c;
 }
 
 KColorButton::KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent)
-    : QPushButton(parent)
-    , d(new KColorButtonPrivate(this))
+    : KColorButton(c, parent)
 {
-    d->col = c;
     setDefaultColor(defaultColor);
 }
 
