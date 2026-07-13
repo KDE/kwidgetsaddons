@@ -24,7 +24,7 @@ public:
         , textUnderlined(true)
         , realUnderlined(true)
         , useTips(false)
-        , useCursor(false)
+        , useCursor(true)
         , glowEnabled(true)
         , floatEnabled(false)
         , timer(new QTimer(parent))
