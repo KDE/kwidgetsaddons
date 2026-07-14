@@ -97,7 +97,7 @@ msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Nesaf"
 
-#: kassistantdialog.cpp:114
+#: kassistantdialog.cpp:113
 #, fuzzy
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"

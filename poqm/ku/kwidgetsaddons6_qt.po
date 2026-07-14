@@ -106,7 +106,7 @@ msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Pêşve"
 
-#: kassistantdialog.cpp:114
+#: kassistantdialog.cpp:113
 #, fuzzy
 #| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"

@@ -74,7 +74,7 @@ msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Proxime"
 
-#: kassistantdialog.cpp:114
+#: kassistantdialog.cpp:113
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Termina"
