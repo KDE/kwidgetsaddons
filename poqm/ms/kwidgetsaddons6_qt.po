@@ -65,6 +65,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Warna Forty"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Warna Telah Dinamakan"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -2093,7 +2108,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Tidak Diketahui"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -6400,10 +6415,6 @@ msgstr ""
 #~ msgstr "* Warna Langganan *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "Warna Forty"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Warna Oxygen"
 
@@ -6418,9 +6429,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Warna Web"
-
-#~ msgid "Named Colors"
-#~ msgstr "Warna Telah Dinamakan"
 
 #~ msgctxt ""
 #~ "%1 is the number of paths, %2 is the list of paths (with newlines between "

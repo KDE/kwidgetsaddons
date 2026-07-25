@@ -50,6 +50,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 - [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Forty-Faarwen"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Definéiert Faarwen"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -1951,7 +1966,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Onbekannt"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
@@ -5884,10 +5899,6 @@ msgstr ""
 #~ msgid "* Custom Colors *"
 #~ msgstr "* Benotzerdefinéiert Faarwen *"
 
-#~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "Forty-Faarwen"
-
 #, fuzzy
 #~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
@@ -5904,9 +5915,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Web-Faarwen"
-
-#~ msgid "Named Colors"
-#~ msgstr "Definéiert Faarwen"
 
 #, fuzzy
 #~ msgctxt ""

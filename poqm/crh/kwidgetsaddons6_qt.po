@@ -59,6 +59,18 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr ""
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Paste"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Yapıştır"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -2176,7 +2188,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Bilinmegen"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -7472,9 +7484,6 @@ msgstr ""
 
 #~ msgid "Open"
 #~ msgstr "Aç"
-
-#~ msgid "Paste"
-#~ msgstr "Yapıştır"
 
 #~ msgid "Find"
 #~ msgstr "Tap"

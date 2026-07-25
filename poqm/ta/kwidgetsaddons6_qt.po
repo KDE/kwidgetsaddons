@@ -51,6 +51,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "நாற்பது நிறங்கள்"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "பெயர்பெற்ற நிறங்கள்"
+
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
@@ -1714,7 +1729,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "தெரியாதது"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "விருப்பமானது…"
@@ -5614,10 +5629,6 @@ msgstr "சாளரத்தை முழுத்திரை பயன்ம�
 #~ msgstr "* இருப்பு நிறங்கள் *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "நாற்பது நிறங்கள்"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "பிராணவாயு நிறங்கள்"
 
@@ -5632,9 +5643,6 @@ msgstr "சாளரத்தை முழுத்திரை பயன்ம�
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "இணைய நிறங்கள்"
-
-#~ msgid "Named Colors"
-#~ msgstr "பெயர்பெற்ற நிறங்கள்"
 
 #~ msgctxt ""
 #~ "%1 is the number of paths, %2 is the list of paths (with newlines between "

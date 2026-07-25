@@ -67,6 +67,22 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+# Forty Colors
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "رنگ‌های چهلی"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "رنگهای نام‌دار"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -2209,7 +2225,7 @@ msgid "Unknown"
 msgstr "ناشناخته"
 
 # Custom
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -6636,11 +6652,6 @@ msgstr ""
 #~ msgid "* Custom Colors *"
 #~ msgstr "* رنگهای سفارشی *"
 
-# Forty Colors
-#~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "رنگ‌های چهلی"
-
 # Oxygen Colors
 #~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
@@ -6658,9 +6669,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "رنگهای وب"
-
-#~ msgid "Named Colors"
-#~ msgstr "رنگهای نام‌دار"
 
 #, fuzzy
 #~ msgctxt ""

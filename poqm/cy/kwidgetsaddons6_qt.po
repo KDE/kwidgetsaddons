@@ -63,6 +63,19 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 - [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "&Lliw Blaendir"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Lliwiau a Enwir"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -1936,7 +1949,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Anhysbys"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
@@ -5770,11 +5783,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "&Lliw Blaendir"
-
-#, fuzzy
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Lliwiau a Enwir"
 
@@ -5791,9 +5799,6 @@ msgstr ""
 #, fuzzy
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
-#~ msgstr "Lliwiau a Enwir"
-
-#~ msgid "Named Colors"
 #~ msgstr "Lliwiau a Enwir"
 
 #, fuzzy

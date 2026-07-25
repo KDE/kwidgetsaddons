@@ -68,6 +68,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Сорок основных цветов"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Именованные цвета"
+
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
@@ -1506,7 +1521,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "неизвестный"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "Другой…"
@@ -5407,10 +5422,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ msgstr "* Собственные цвета *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "Сорок основных цветов"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Цвета Oxygen"
 
@@ -5425,9 +5436,6 @@ msgstr "Перейти из оконного режима в полноэкра�
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Цвета веб"
-
-#~ msgid "Named Colors"
-#~ msgstr "Именованные цвета"
 
 #~ msgctxt ""
 #~ "%1 is the number of paths, %2 is the list of paths (with newlines between "

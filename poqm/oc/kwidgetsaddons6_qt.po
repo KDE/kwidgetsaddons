@@ -55,6 +55,19 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Color"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Colors nomenadas"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -1768,7 +1781,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -4833,9 +4846,6 @@ msgstr ""
 #~ msgid "F&ull Screen Mode"
 #~ msgstr "&Mòde ecran complet"
 
-#~ msgid "Named Colors"
-#~ msgstr "Colors nomenadas"
-
 #, fuzzy
 #~ msgctxt ""
 #~ "%1 is the number of paths, %2 is the list of paths (with newlines between "
@@ -6346,11 +6356,6 @@ msgstr ""
 #~ msgctxt "@action"
 #~ msgid "Text &Color..."
 #~ msgstr "Seleccionar una color"
-
-#, fuzzy
-#~ msgctxt "@label stroke color"
-#~ msgid "Color"
-#~ msgstr "Color"
 
 #, fuzzy
 #~ msgctxt "@action"

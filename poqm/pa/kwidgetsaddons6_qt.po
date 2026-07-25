@@ -55,6 +55,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "ਚਾਲੀ ਰੰਗ"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "ਨਾਂ ਵਾਲੇ ਰੰਗ"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgctxt "KActionSelector|"
@@ -1923,7 +1938,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "ਅਣਪਛਾਤਾ"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -6087,10 +6102,6 @@ msgstr "ਵਿੰਡੋ ਨੂੰ ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ ਵ�
 #~ msgstr "* ਕਸਟਮ ਰੰਗ *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "ਚਾਲੀ ਰੰਗ"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "ਆਕਸੀਜਨ ਰੰਗ"
 
@@ -6105,9 +6116,6 @@ msgstr "ਵਿੰਡੋ ਨੂੰ ਪੂਰੀ ਸਕਰੀਨ ਉੱਤੇ ਵ�
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "ਵੈੱਬ ਰੰਗ"
-
-#~ msgid "Named Colors"
-#~ msgstr "ਨਾਂ ਵਾਲੇ ਰੰਗ"
 
 #~ msgctxt ""
 #~ "%1 is the number of paths, %2 is the list of paths (with newlines between "

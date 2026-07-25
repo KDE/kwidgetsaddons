@@ -46,6 +46,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Dyzet Ngjyra"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Ngjyra të Emërtuara"
+
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
@@ -1820,7 +1835,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "E Panjohur"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -5526,10 +5541,6 @@ msgstr ""
 #~ msgstr "* Ngjyra të Vetëzgjedhura *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "Dyzet Ngjyra"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Ngjyra Oksigjeni"
 
@@ -5544,9 +5555,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Ngjyra Interneti"
-
-#~ msgid "Named Colors"
-#~ msgstr "Ngjyra të Emërtuara"
 
 #~ msgid "Select Color"
 #~ msgstr "Zgjidh Ngjyrën"

@@ -69,6 +69,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 - [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "40色"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "已命名的顏色"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -1970,7 +1985,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "無法識別"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
@@ -5837,10 +5852,6 @@ msgstr ""
 #~ msgid "* Custom Colors *"
 #~ msgstr "* 自訂顏色 *"
 
-#~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "40色"
-
 #, fuzzy
 #~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
@@ -5857,9 +5868,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "網頁色彩"
-
-#~ msgid "Named Colors"
-#~ msgstr "已命名的顏色"
 
 #, fuzzy
 #~ msgctxt ""

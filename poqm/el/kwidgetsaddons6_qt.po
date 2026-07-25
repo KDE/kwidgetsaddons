@@ -62,6 +62,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Σαράντα χρώματα"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Ονομαζόμενα χρώματα"
+
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
@@ -1540,7 +1555,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
 msgstr "Προσαρμοσμένο…"
@@ -5524,10 +5539,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ msgstr "* Προσαρμοσμένα χρώματα *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "Σαράντα χρώματα"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Χρώματα Oxygen"
 
@@ -5542,9 +5553,6 @@ msgstr "Εμφάνιση παραθύρου σε πλήρη οθόνη"
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Χρώματα ιστού"
-
-#~ msgid "Named Colors"
-#~ msgstr "Ονομαζόμενα χρώματα"
 
 #~ msgctxt ""
 #~ "%1 is the number of paths, %2 is the list of paths (with newlines between "

@@ -63,6 +63,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "ଚାଳିଶ ରଙ୍ଗ"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "ନାମକରଣ ହୋଇଥିବା ରଙ୍ଗଗୁଡିକ"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -2170,7 +2185,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "ଅଜଣା"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -6070,10 +6085,6 @@ msgstr ""
 #~ msgstr "* ଇଚ୍ଛାରୂପୀ ରଙ୍ଗ *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "ଚାଳିଶ ରଙ୍ଗ"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "ପ୍ରାଣପ୍ରଦ ରଙ୍ଗଗୁଡିକ"
 
@@ -6088,9 +6099,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "ୱେବ ରଙ୍ଗଗୁଡିକ"
-
-#~ msgid "Named Colors"
-#~ msgstr "ନାମକରଣ ହୋଇଥିବା ରଙ୍ଗଗୁଡିକ"
 
 #, fuzzy
 #~ msgctxt ""

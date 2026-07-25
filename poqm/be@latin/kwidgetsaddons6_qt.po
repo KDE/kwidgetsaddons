@@ -64,6 +64,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "Sorak koleraŭ"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Nazoŭnyja kolery"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -2098,7 +2113,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Nieviadomy"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 #| msgctxt "@item license"
 #| msgid "Custom"
@@ -6325,10 +6340,6 @@ msgstr ""
 #~ msgstr "* Ułasnyja kolery *"
 
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "Sorak koleraŭ"
-
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Kisłarodnyja kolery"
 
@@ -6343,9 +6354,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Kolery Sieciva"
-
-#~ msgid "Named Colors"
-#~ msgstr "Nazoŭnyja kolery"
 
 #, fuzzy
 #~ msgctxt ""

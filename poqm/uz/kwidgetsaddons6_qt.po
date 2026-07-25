@@ -50,6 +50,21 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 - [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+#| msgctxt "palette name"
+#| msgid "Forty Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "40 rang"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Nomlangan ranglar"
+
 #: kactionselector.cpp:98
 #, fuzzy
 #| msgid "&Available:"
@@ -1769,7 +1784,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Nomaʼlum"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
@@ -5403,10 +5418,6 @@ msgstr ""
 #~ msgid "* Custom Colors *"
 #~ msgstr "* Mening ranglarim *"
 
-#~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "40 rang"
-
 #, fuzzy
 #~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
@@ -5424,9 +5435,6 @@ msgstr ""
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
 #~ msgstr "Internet"
-
-#~ msgid "Named Colors"
-#~ msgstr "Nomlangan ranglar"
 
 #, fuzzy
 #~ msgctxt ""

@@ -56,6 +56,19 @@ msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 - [%2]"
 
+#: kabstractcoloredit.cpp:70
+#, fuzzy
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Copy Color"
+msgstr "&Umbala Wemboniselo ekufutshane:"
+
+#: kabstractcoloredit.cpp:81
+#, fuzzy
+#| msgid "Named Colors"
+msgctxt "KAbstractColorEdit|@action:inmenu"
+msgid "Paste Color"
+msgstr "Imibala Ebiziweyo"
+
 #: kactionselector.cpp:98
 #, fuzzy
 msgctxt "KActionSelector|@label:listbox"
@@ -1917,7 +1930,7 @@ msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Engaziwayo"
 
-#: kcolorcombo.cpp:333
+#: kcolorcombo.cpp:389
 #, fuzzy
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
@@ -5380,11 +5393,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgctxt "palette name"
-#~ msgid "Forty Colors"
-#~ msgstr "&Umbala Wemboniselo ekufutshane:"
-
-#, fuzzy
-#~ msgctxt "palette name"
 #~ msgid "Oxygen Colors"
 #~ msgstr "Imibala Ebiziweyo"
 
@@ -5401,9 +5409,6 @@ msgstr ""
 #, fuzzy
 #~ msgctxt "palette name"
 #~ msgid "Web Colors"
-#~ msgstr "Imibala Ebiziweyo"
-
-#~ msgid "Named Colors"
 #~ msgstr "Imibala Ebiziweyo"
 
 #, fuzzy
