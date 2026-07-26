@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-03-25 06:36+0100\n"
+"PO-Revision-Date: 2026-07-25 07:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -62,19 +62,14 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kabstractcoloredit.cpp:70
-#, fuzzy
-#| msgctxt "palette name"
-#| msgid "Forty Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr "Štirideset barv"
+msgstr "Kopiraj barvo"
 
 #: kabstractcoloredit.cpp:81
-#, fuzzy
-#| msgid "Named Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr "Poimenovane barve"
+msgstr "Prilepi barvo"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
