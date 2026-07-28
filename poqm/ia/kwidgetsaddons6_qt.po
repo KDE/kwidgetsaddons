@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-03-26 10:04+0100\n"
+"PO-Revision-Date: 2026-07-27 11:49+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -50,19 +50,14 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kabstractcoloredit.cpp:70
-#, fuzzy
-#| msgctxt "palette name"
-#| msgid "Forty Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr "Colores Forty"
+msgstr "Copia Color"
 
 #: kabstractcoloredit.cpp:81
-#, fuzzy
-#| msgid "Named Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr "Colores Nominate"
+msgstr "Colla Color"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"

@@ -48,12 +48,12 @@ msgstr "%1 [%2]"
 #: kabstractcoloredit.cpp:70
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr ""
+msgstr "复制颜色"
 
 #: kabstractcoloredit.cpp:81
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr ""
+msgstr "粘贴颜色"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
