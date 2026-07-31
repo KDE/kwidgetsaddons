@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: kwidgetsaddons6_qt\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2024-08-27 21:17+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2024-12-23 19:03+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -1671,7 +1671,7 @@ msgid ""
 "paper size)."
 msgstr ""
 "Hier können Sie umschalten zwischen festen Schriftgrößen und solchen, die "
-"dynamisch der jeweiligen Umgebung angepasst werden (z. B. Größe von "
+"dynamisch der jeweiligen Umgebung angepasst werden (z. B. Größe von "
 "Bedienelementen, Papierformat)."
 
 #: kfontchooser.cpp:474
@@ -2022,7 +2022,7 @@ msgstr "Kein Passwort, nur anonyme oder &Gast-Anmeldung"
 #: kpassworddialog.ui:77
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
-msgstr "Dieses Passwort benutzen:"
+msgstr "Dieses Passwort verwenden:"
 
 #: kpassworddialog.ui:102
 msgctxt "KPasswordDialog|@label:textbox"
@@ -2181,7 +2181,8 @@ msgid ""
 msgstr ""
 "Sobald Sie auf <b>Anwenden</b> klicken, werden die Einstellungen vom "
 "Programm übernommen, aber der Dialog wird nicht geschlossen.\n"
-"Benutzen Sie diese Möglichkeit, um verschiedene Einstellungen auszuprobieren."
+"Verwenden Sie diese Möglichkeit, um verschiedene Einstellungen "
+"auszuprobieren."
 
 #: kstandardguiitem.cpp:229
 msgctxt "KStandardGuiItem|"
