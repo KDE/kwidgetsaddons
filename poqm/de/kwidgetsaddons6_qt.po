@@ -1693,7 +1693,7 @@ msgstr "Schriftart auswählen"
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
 msgstr ""
-"Durch Komma getrennte Liste der Schriftfunktionen (z. B. Liga oder Calt)"
+"Durch Komma getrennte Liste der Schriftfunktionen (z. B. Liga oder Calt)"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
@@ -2070,7 +2070,7 @@ msgstr "Kein Passwort, nur anonyme oder &Gast-Anmeldung"
 #: kpassworddialog.ui:80
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
-msgstr "Dieses Passwort benutzen:"
+msgstr "Dieses Passwort verwenden:"
 
 #: kpassworddialog.ui:105
 msgctxt "KPasswordDialog|@label:textbox"
@@ -2229,7 +2229,8 @@ msgid ""
 msgstr ""
 "Sobald Sie auf <b>Anwenden</b> klicken, werden die Einstellungen vom "
 "Programm übernommen, aber der Dialog wird nicht geschlossen.\n"
-"Benutzen Sie diese Möglichkeit, um verschiedene Einstellungen auszuprobieren."
+"Verwenden Sie diese Möglichkeit, um verschiedene Einstellungen "
+"auszuprobieren."
 
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
