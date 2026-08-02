@@ -4,13 +4,13 @@
 # Sivakumar Shanmugasundaram <sshanmu@yahoo.com>, 2000.
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000-2001.
 # ம. ஸ்ரீ ராமதாஸ் | Sri Ramadoss M <amachu@yavarkkum.org>, 2007-2012.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2026 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021-2024, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-04-12 17:16+0530\n"
+"PO-Revision-Date: 2026-08-01 17:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -52,19 +52,14 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kabstractcoloredit.cpp:70
-#, fuzzy
-#| msgctxt "palette name"
-#| msgid "Forty Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr "நாற்பது நிறங்கள்"
+msgstr "நிறத்தை நகலெடு"
 
 #: kabstractcoloredit.cpp:81
-#, fuzzy
-#| msgid "Named Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr "பெயர்பெற்ற நிறங்கள்"
+msgstr "நிறத்தை ஒட்டு"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
