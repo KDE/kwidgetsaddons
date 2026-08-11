@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2011-08-18 04:06+0200\n"
-"PO-Revision-Date: 2011-07-22 16:08+0200\n"
-"Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
+"PO-Revision-Date: 2026-08-05 23:17+0200\n"
+"Last-Translator: Igor Dobrača <igor.dobraca@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 1.2\n"
-"X-Poedit-Language: Croatian\n"
-"X-Poedit-Country: CROATIA\n"
+"X-Generator: Poedit 3.9\n"
 "X-Poedit-Bookmarks: 1601,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -41,9 +39,6 @@ msgstr "Sans Serif"
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
-#, fuzzy
-#| msgctxt "@item Font name"
-#| msgid "Serif"
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
 msgstr "Serif"
@@ -58,60 +53,43 @@ msgid "Monospace"
 msgstr "Monospace"
 
 #: fonthelpers_p.h:90
-#, fuzzy, qt-format
-#| msgctxt "@application/plain"
-#| msgid "%1"
+#, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
 msgstr "%1"
 
 #: fonthelpers_p.h:94
-#, fuzzy, qt-format
-#| msgctxt "dictionary name. %1-language and %2-variant name"
-#| msgid "%1 [%2]"
+#, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
 msgstr "&Raspoloživo:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&Odabrano:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "&Prethodno"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
 msgstr "Povratak za jedan korak"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
 msgstr "Sljedeće"
 
 #: kassistantdialog.cpp:114
-#, fuzzy
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Završi"
@@ -125,11 +103,9 @@ msgid "All"
 msgstr "&Sve"
 
 #: kcharselect-translation.cpp:12
-#, fuzzy
-#| msgid "Open Script"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
-msgstr "Otvori skriptu"
+msgstr "Europske skripte"
 
 #: kcharselect-translation.cpp:13
 #, fuzzy
