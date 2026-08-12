@@ -105,4 +105,25 @@ void KAbstractColorEditPrivate::showContextMenu(QPoint globalPos)
     menu->popup(globalPos);
 }
 
+void KAbstractColorEditPrivate::updateAccessibleName()
+{
+    Q_Q(QWidget);
+
+    QString accessibleName;
+    const QColor color = this->color();
+    if (!color.isValid()) {
+        accessibleName = QCoreApplication::translate("KAbstractColorEdit", "No color", "@option");
+    } else if (color.alpha() < 255) {
+        accessibleName = QCoreApplication::translate("KAbstractColorEdit", "Red: %1, Green: %2, Blue: %3, Alpha: %4", "@option")
+                             .arg(color.red())
+                             .arg(color.green())
+                             .arg(color.blue())
+                             .arg(color.alpha());
+    } else {
+        accessibleName =
+            QCoreApplication::translate("KAbstractColorEdit", "Red: %1, Green: %2, Blue: %3", "@option").arg(color.red()).arg(color.green()).arg(color.blue());
+    }
+    q->setAccessibleName(accessibleName);
+}
+
 #include "kabstractcoloredit.moc"

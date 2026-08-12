@@ -29,6 +29,7 @@ public: // API to implement
 
 public:
     void showContextMenu(QPoint globalPos);
+    void updateAccessibleName();
 
 public:
     QWidget *const q_ptr;

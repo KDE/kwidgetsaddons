@@ -79,12 +79,14 @@ KColorButton::KColorButton(QWidget *parent)
     : QPushButton(parent)
     , d(new KColorButtonPrivate(this))
 {
+    d->updateAccessibleName();
 }
 
 KColorButton::KColorButton(const QColor &c, QWidget *parent)
     : KColorButton(parent)
 {
     d->col = c;
+    d->updateAccessibleName();
 }
 
 KColorButton::KColorButton(const QColor &c, const QColor &defaultColor, QWidget *parent)
@@ -104,6 +106,7 @@ void KColorButton::setColor(const QColor &c)
 {
     if (d->col != c) {
         d->col = c;
+        d->updateAccessibleName();
         update();
         Q_EMIT changed(d->col);
     }

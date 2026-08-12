@@ -233,6 +233,7 @@ void KColorComboPrivate::setCustomColor(const QColor &color, bool lookupInPreset
 
     internalcolor = color;
     customColor = color;
+    updateAccessibleName();
     q->setItemData(0, customColor, KColorComboDelegate::ColorRole);
     q->update();
 }
@@ -241,6 +242,7 @@ KColorCombo::KColorCombo(QWidget *parent)
     : QComboBox(parent)
     , d(new KColorComboPrivate(this))
 {
+    d->updateAccessibleName();
     setAcceptDrops(true);
 
     setItemDelegate(new KColorComboDelegate(this));
