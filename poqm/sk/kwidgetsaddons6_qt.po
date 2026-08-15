@@ -55,19 +55,14 @@ msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
 #: kabstractcoloredit.cpp:70
-#, fuzzy
-#| msgctxt "palette name"
-#| msgid "Forty Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr "Štyridsať farieb"
+msgstr "Kopírovať farbu"
 
 #: kabstractcoloredit.cpp:81
-#, fuzzy
-#| msgid "Named Colors"
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr "Pomenované farby"
+msgstr "Vložiť farbu"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
