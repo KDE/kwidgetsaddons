@@ -15,6 +15,9 @@ class KDateComboBoxTest : public QWidget
 {
     Q_OBJECT
 
+public:
+    static void initMain();
+
 private Q_SLOTS:
     void testDefaults();
     void testValidNull();
