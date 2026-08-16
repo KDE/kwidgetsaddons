@@ -13,19 +13,19 @@
 
 using namespace Qt::Literals;
 
-void initLocale()
-{
-#ifndef Q_OS_WIN
-    qputenv("LC_ALL", "en_US.utf-8");
-#else
-    QLocale::setDefault(QLocale(u"en_US"_s));
-#endif
-}
-Q_CONSTRUCTOR_FUNCTION(initLocale)
-
 class KDatePickerTest : public QObject
 {
     Q_OBJECT
+
+public:
+    static void initMain()
+    {
+#ifndef Q_OS_WIN
+        qputenv("LC_ALL", "en_US.utf-8");
+#else
+        QLocale::setDefault(QLocale(u"en_US"_s));
+#endif
+    }
 
 private Q_SLOTS:
     void testSubmittingDateInLineEditEmitsOriginalDate()

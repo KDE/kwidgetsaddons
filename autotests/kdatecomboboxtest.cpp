@@ -21,7 +21,7 @@ QTEST_MAIN(KDateComboBoxTest)
 
 using namespace Qt::Literals;
 
-void initLocale()
+void KDateComboBoxTest::initMain()
 {
 #ifndef Q_OS_WIN
     qputenv("LC_ALL", "en_US.utf-8");
@@ -29,8 +29,6 @@ void initLocale()
     QLocale::setDefault(QLocale(u"en_US"_s));
 #endif
 }
-
-Q_CONSTRUCTOR_FUNCTION(initLocale)
 
 void KDateComboBoxTest::testDefaults()
 {
