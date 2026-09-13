@@ -86,7 +86,9 @@ bool KCharSelectData::openDataFile()
         return true;
     } else {
         QFile file(QStringLiteral(":/kf6/kcharselect/kcharselect-data"));
-        file.open(QIODevice::ReadOnly);
+        if (!file.open(QIODevice::ReadOnly)) {
+            return false;
+        }
         dataFile = file.readAll();
         file.close();
         if (dataFile.size() < 40) {
