@@ -17,6 +17,7 @@ include(KDECMakeSettings)
 
 include(KDEGitCommitHooks)
 include(ECMDeprecationSettings)
+include(ECMInstalledLibraryCheck)
 
 set(REQUIRED_QT_VERSION 6.9.0)
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)

@@ -243,7 +243,7 @@ target_link_libraries(KF6WidgetsAddons PUBLIC Qt6::Widgets)
 
 target_include_directories(KF6WidgetsAddons INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons>")
 
-ecm_generate_headers(KWidgetsAddons_HEADERS
+ecm_generate_headers(KWidgetsAddons_CamelCase_HEADERS
   HEADER_NAMES
   KAcceleratorManager
   KAnimatedButton
@@ -335,6 +335,7 @@ install(TARGETS KF6WidgetsAddons EXPORT KF6WidgetsAddonsTargets ${KF_INSTALL_TAR
 
 install(FILES
   ${KWidgetsAddons_HEADERS}
+  ${KWidgetsAddons_CamelCase_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/kwidgetsaddons_export.h
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KWidgetsAddons COMPONENT Devel
 )
@@ -354,4 +355,17 @@ ecm_qt_install_logging_categories(
     EXPORT KWIDGETSADDONS
     FILE kwidgetsaddons.categories
     DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
+
+ecm_add_installed_library_check(KF6WidgetsAddons
+    PACKAGE_NAME "KF6WidgetsAddons"
+    PACKAGE_TARGET_NAMESPACE "KF6::"
+)
+
+ecm_installed_library_check_include_strings(KF6WidgetsAddons
+    HEADERS ${KWidgetsAddons_CamelCase_HEADERS}
+)
+
+ecm_installed_library_check_version_preprocessor_macros(KF6WidgetsAddons
+    PREFIX KWIDGETSADDONS
 )
