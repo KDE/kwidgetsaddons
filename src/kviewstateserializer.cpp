@@ -94,10 +94,9 @@ public:
 };
 
 KViewStateSerializer::KViewStateSerializer(QObject *parent)
-    : QObject(nullptr)
+    : QObject(parent)
     , d_ptr(new KViewStateSerializerPrivate(this))
 {
-    Q_UNUSED(parent);
     qRegisterMetaType<QModelIndex>("QModelIndex");
 }
 
