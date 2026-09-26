@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 19:33-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,41 +23,41 @@ msgstr ""
 #: fonthelpers_p.h:22
 msgctxt "FontHelpers|@item Font name"
 msgid "Sans Serif"
-msgstr ""
+msgstr "Sans Serif"
 
 #. Generic serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:25
 msgctxt "FontHelpers|@item Font name"
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #. Generic monospace font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
 #: fonthelpers_p.h:28
 msgctxt "FontHelpers|@item Font name"
 msgid "Monospace"
-msgstr ""
+msgstr "Monospace"
 
 #: fonthelpers_p.h:88
 #, qt-format
 msgctxt "FontHelpers|@item Font name"
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: fonthelpers_p.h:92
 #, qt-format
 msgctxt "FontHelpers|@item Font name [foundry]"
 msgid "%1 [%2]"
-msgstr ""
+msgstr "%1 [%2]"
 
 #: kabstractcoloredit.cpp:70
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr ""
+msgstr "رەڭ كۆچۈر"
 
 #: kabstractcoloredit.cpp:81
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr ""
+msgstr "رەڭ چاپلا"
 
 #: kactionselector.cpp:98
 msgctxt "KActionSelector|@label:listbox"
@@ -1237,12 +1237,12 @@ msgstr "كۆپ ئىشلىتىلىدىغان ئىپادىلەش ئۇسۇلى"
 #: kcharselect.cpp:935
 msgctxt "KCharSelect|"
 msgid "UTF-8:"
-msgstr ""
+msgstr "UTF-8:"
 
 #: kcharselect.cpp:939
 msgctxt "KCharSelect|"
 msgid "UTF-16: "
-msgstr ""
+msgstr "UTF-16: "
 
 #: kcharselect.cpp:946
 msgctxt "KCharSelect|"
@@ -1664,13 +1664,13 @@ msgstr "توم زىلۋا يانتۇ"
 #: kfontchooser.cpp:266
 msgctxt "KFontChooser|"
 msgid "The Quick Brown Fox Jumps Over The Lazy Dog"
-msgstr ""
+msgstr "The Quick Brown Fox Jumps Over The Lazy Dog"
 
 #: kfontchooser.cpp:454
 #, qt-format
 msgctxt "KFontChooser|@item Font style"
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: kfontchooserdialog.cpp:25
 msgctxt "KFontChooserDialog|@title:window"
@@ -1693,6 +1693,8 @@ msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
 "special characters."
 msgstr ""
+"بۇ ھازىرقى تەڭشەكنىڭ نەتىجىسىنى كۆرسىتىدۇ. ئالاھىدە ھەرپلەرنى كۆرسىتىش "
+"ئۈچۈن، ئۇنى تەھرىرلەشكە بولىدۇ."
 
 #: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
@@ -1750,6 +1752,8 @@ msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
+"بۇ تاللانغان خەت نۇسخىسىنىڭ ئالدىن كۆزىتىشى. «خەت نۇسخا تاللا…» توپچىسىنى "
+"چېكىپ ئۆزگەرتكىلى بولىدۇ."
 
 #: kfontrequester.cpp:197
 #, qt-format
@@ -1764,6 +1768,8 @@ msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
+"بۇ «%1» خەت نۇسخىسىنىڭ ئالدىن كۆزىتىشى. «خەت نۇسخا تاللا…» توپچىسىنى چېكىپ "
+"ئۆزگەرتكىلى بولىدۇ."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -1785,6 +1791,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"بىر دەرەخنىڭ قانچىلىك مېۋە بېرەلىشى، باغۋەننىڭ ئۇنى قانچىلىك پەرۋىش قىلىشىغا "
+"باغلىق. شۇنداق ئەمەسمۇ"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -1793,6 +1801,8 @@ msgctxt ""
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
 msgstr ""
+"بىر دەرەخنىڭ قانچىلىك مېۋە بېرەلىشى، باغۋەننىڭ ئۇنى قانچىلىك پەرۋىش قىلىشىغا "
+"باغلىق"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
@@ -1975,6 +1985,11 @@ msgid ""
 "\n"
 "Would you like to use this password anyway?"
 msgstr ""
+"بۇ ئىم تازا كۈچلۈك ئەمەس. ئىمنى كۈچلۈك قىلىش ئۈچۈن:\n"
+" - ئۇزۇن ئىم ئىشلىتىڭ\n"
+" - چوڭ ۋە كىچىك ھەرپلەرنى ئارىلاشتۇرۇپ ئىشلىتىڭ\n"
+" - ھەرپلا ئەمەس رەقەم ۋە بەلگىلەرنىمۇ ئىشلىتىڭ\n"
+"مۇشۇ ئىمنى ئىشلىتىۋېرەمسىز-يە؟"
 
 #: knewpasswordwidget.cpp:52
 msgctxt "KNewPasswordWidget|@info:whatsthis"
@@ -1985,6 +2000,11 @@ msgid ""
 "case letters;</li><li>using numbers or symbols, such as #, as well as "
 "letters.</li></ul>"
 msgstr ""
+"ئىم ئۆلچىمى كىرگۈزگەن ئىمنىڭ كۈچلۈكلۈكىنى كۆرسىتىپ بېرىدۇ. ئىمنى كۈچلۈك "
+"قىلىش ئۈچۈن تۆۋەندىكىدەك قىلىڭ:\n"
+"<ul><li>ئۇزۇن ئىم ئىشلىتىش؛</li><li>چوڭ ۋە كىچىك ھەرپلەرنى ئارىلاشتۇرۇپ "
+"ئىشلىتىش؛</li><li>ھەرپلا ئەمەس رەقەم ۋە # دەك ئالاھىدە بەلگىلەرنىمۇ ئىشلىتىش."
+"</li></ul>"
 
 #: knewpasswordwidget.ui:19
 msgctxt "KNewPasswordWidget|@label:textbox"
@@ -2191,6 +2211,9 @@ msgid ""
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
+"<b>قوللان</b> نى چەكسە تەڭشەكلەر پىروگراممىغا يەتكۈزۈلىدۇ، بىراق سۆزلەشكۈ "
+"يېپىلمايدۇ\n"
+"باشقا تەڭشەكلەردىمۇ مۇشۇنى ئىشلىتىپ كۆرۈڭ."
 
 #: kstandardguiitem.cpp:203
 msgctxt "KStandardGuiItem|"
