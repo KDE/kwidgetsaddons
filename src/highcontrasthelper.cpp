@@ -8,30 +8,13 @@
 
 #include "highcontrasthelper_p.h"
 
+#include <QAccessibilityHints>
 #include <QGuiApplication>
 #include <QStyleHints>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
-#include <QAccessibilityHints>
-#else
-#ifdef Q_OS_WIN
-#include <windows.h>
-#endif
-#endif
 
 static bool isHighContrastModeActive()
 {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
     return QGuiApplication::styleHints()->accessibility()->contrastPreference() == Qt::ContrastPreference::HighContrast;
-#else
-#ifdef Q_OS_WIN
-    HIGHCONTRAST result;
-    result.cbSize = sizeof(HIGHCONTRAST);
-    if (SystemParametersInfo(SPI_GETHIGHCONTRAST, result.cbSize, &result, 0)) {
-        return (result.dwFlags & HCF_HIGHCONTRASTON);
-    }
-#endif
-    return false;
-#endif
 }
 
 static bool isDefaultColorSchemeInUse()

@@ -20,8 +20,6 @@
  * This can be used to avoid painting UI elements with colors that would
  * cause bad contrast. This function returns true if high-contrast is
  * active in the platform and if the default color scheme is in use.
- *
- * \note For Qt 6.9 and earlier high-contrast is only detected on Windows.
  */
 
 bool isHighContrastColorSchemeInUse();
