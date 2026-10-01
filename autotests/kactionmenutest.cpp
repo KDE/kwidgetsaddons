@@ -74,6 +74,7 @@ private Q_SLOTS:
         delete a1;
         delete a2;
         delete w;
+        delete parent;
         delete toolbar;
     }
 
