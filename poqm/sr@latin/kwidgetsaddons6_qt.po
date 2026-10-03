@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwidgetsaddons5_qt\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2017-12-15 12:37+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 11:27+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -55,57 +56,39 @@ msgstr "%1 [%2]"
 #: kabstractcoloredit.cpp:70
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr ""
+msgstr "Kopiraj boju"
 
 #: kabstractcoloredit.cpp:81
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr ""
+msgstr "Nalepi boju"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
 msgstr "&Dostupno:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&Izabrano:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "Na&zad"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
 msgstr "Vrati se korak nazad"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "KAssistantDialog|Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
-msgstr "Napred"
+msgstr "Sledeće"
 
 #: kassistantdialog.cpp:113
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Završi"
@@ -113,7 +96,7 @@ msgstr "Završi"
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr ""
+msgstr "sve"
 
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -286,12 +269,9 @@ msgid "Syriac Supplement"
 msgstr "sirijski dopunski"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "arapski prošireni‑A"
+msgstr "arapski prošireni‑B"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -509,12 +489,9 @@ msgid "Cyrillic Extended-C"
 msgstr "ćirilički prošireni‑C"
 
 #: kcharselect-translation.cpp:90
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Geometric Shapes Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "geometrijski oblici prošireni"
+msgstr "gruzijski prošireni"
 
 #: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1077,128 +1054,83 @@ msgid "Supplemental Symbols and Pictographs"
 msgstr "dopunski simboli i piktografi"
 
 #: kcharselect-translation.cpp:204
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Khmer Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
-msgstr "kmerski simboli"
+msgstr "šahovski simboli"
 
 #: kcharselect-translation.cpp:205
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Supplemental Symbols and Pictographs"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "dopunski simboli i piktografi"
+msgstr "simboli i piktografi prošireni‑A"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
-msgstr ""
+msgstr "simboli starih računara"
 
 #: kcharselect.cpp:394
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Unesite izraz ili znak za traženje"
+msgstr "Unesite izraz ili znak za traženje…"
 
 #: kcharselect.cpp:396
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Unesite izraz ili znak za traženje"
 
 #: kcharselect.cpp:403
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Nađi"
+msgstr "&Nađi…"
 
 #: kcharselect.cpp:427
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Prethodni u istorijatu"
 
 #: kcharselect.cpp:429
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "Prethodni znak iz istorijata"
+msgstr "Idi na prethodni znak u istorijatu"
 
 #: kcharselect.cpp:434
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Sledeći u istorijatu"
 
 #: kcharselect.cpp:436
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "Sledeći znak iz istorijata"
+msgstr "Idi na sledeći znak u istorijatu"
 
 #: kcharselect.cpp:441
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "Na&zad"
 
 #: kcharselect.cpp:448
-#, fuzzy
-#| msgctxt "KCharSelect|go forward"
-#| msgid "&Forward"
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&Napred"
 
 # >> @info:tooltip
 #: kcharselect.cpp:467
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Izaberite kategoriju."
 
 # >> @info:tooltip
 #: kcharselect.cpp:471
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Izaberite blok za prikazivanje."
 
 #: kcharselect.cpp:490
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Postavi font"
 
 #: kcharselect.cpp:497
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Postavi veličinu fonta"
@@ -1372,7 +1304,7 @@ msgstr "<nije dodeljeno>"
 #: kcharselectdata.cpp:442
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr ""
+msgstr "sve"
 
 #: kcharselectdata.cpp:754
 msgctxt "KCharSelectData|"
@@ -1535,17 +1467,14 @@ msgid "Unknown"
 msgstr "nepoznato"
 
 #: kcolorcombo.cpp:389
-#, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Posebna..."
+msgstr "Posebna…"
 
 #: kcontextualhelpbutton.cpp:68
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr ""
+msgstr "Kontekstna pomoć"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1572,72 +1501,48 @@ msgstr "sedmica %1"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Sledeća godina"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Prethodna godina"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Sledeći mesec"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
-msgstr "Prethodni mesec."
+msgstr "Prethodni mesec"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Izaberite sedmicu."
 
 # >> @info:tooltip
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Izaberite mesec."
 
 # >> @info:tooltip
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Izaberite godinu."
 
 # >> @info:tooltip
 #: kdatepicker.cpp:313
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Izaberite današnji dan."
@@ -1648,97 +1553,61 @@ msgid "Close"
 msgstr "Zatvori"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
-msgstr "sledeća godina"
+msgstr "Sledeća godina"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
-msgstr "sledeći mesec"
+msgstr "Sledeći mesec"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
-msgstr "sledeća sedmica"
+msgstr "Sledeća sedmica"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
-msgstr "sutra"
+msgstr "Sutra"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
-msgstr "danas"
+msgstr "Danas"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
-msgstr "juče"
+msgstr "Juče"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
-msgstr "prošla sedmica"
+msgstr "Prošla sedmica"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
-msgstr "prošli mesec"
+msgstr "Prošli mesec"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
-msgstr "prošla godina"
+msgstr "Prošla godina"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
-msgstr "bez datuma"
+msgstr "Bez datuma"
 
 #: kdatetimeedit.cpp:171
-#, fuzzy
-#| msgctxt "KDateTimeEdit|UTC time zone"
-#| msgid "UTC"
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgctxt "KDateTimeEdit|No specific time zone"
-#| msgid "Floating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "plivajuća"
@@ -1754,49 +1623,31 @@ msgid "The entered date and time is after the maximum allowed date and time."
 msgstr "Uneseni datum i vreme posle su maksimalno dozvoljenih."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "&Dodaj"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
 msgstr "&Ukloni"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Up"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
 msgstr "Pomeri na&gore"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Down"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Pomeri na&dole"
 
 #: kfontchooser.cpp:160
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Traženi font"
 
 #: kfontchooser.cpp:208
-#, fuzzy
-#| msgctxt "KFontChooser|QFontDatabase"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "normalni"
@@ -1819,7 +1670,7 @@ msgstr "podebljani"
 #: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "podebljani zgusnuti iskošeni"
 
 #: kfontchooser.cpp:266
 msgctxt "KFontChooser|"
@@ -1836,29 +1687,21 @@ msgstr "%1"
 
 # >> @info:tooltip
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
-msgstr "Izaberite mesec."
+msgstr "Izbor fonta"
 
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "Zapetama razdvojen spisak mogućnosti fonta (npr. liga, calt):"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Uzorak:"
 
 #: kfontchooserwidget.ui:41
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1870,116 +1713,78 @@ msgstr ""
 #: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr ""
+msgstr "Prikaži samo jednoširinske fontove"
 
 #: kfontchooserwidget.ui:66
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Font"
 
 #: kfontchooserwidget.ui:73
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Font:"
 
 #: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Stil fonta"
 
 # rewrite-msgid: /Font//
 #: kfontchooserwidget.ui:98
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Stil:"
 
 #: kfontchooserwidget.ui:116
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Veličina"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Veličina:"
 
 #: kfontchooserwidget.ui:132
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "relativna"
 
 #: kfontrequester.cpp:185
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Izaberi..."
+msgstr "Izaberi font…"
 
 #: kfontrequester.cpp:191
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Pregled izabranog fonta"
 
 #: kfontrequester.cpp:193
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the selected font. You can change it by clicking the "
-#| "\"Choose...\" button."
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"<html>Ovo je pregled izabranog fonta. Možete ga promeniti klikom na dugme "
-"Izaberi....</html>"
+"Ovo je pregled izabranog fonta. Možete ga promeniti klikom na dugme „Izaberi "
+"font...“."
 
 #: kfontrequester.cpp:197
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the \"%1\" font"
+#, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Pregled fonta „%1“"
 
 #: kfontrequester.cpp:198
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"<html>Ovo je pregled fonta „%1“. Možete ga promeniti kliknuvši na dugme "
-"Izaberi....</html>"
+"Ovo je pregled fonta „%1“. Možete ga promeniti kliknuvši na dugme „Izaberi "
+"font...“."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -2001,6 +1806,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"Ovo je primer teksta koji se nikada ne prikazuje, već samo služi da se "
+"odredi kada dugu poruku treba podeliti u više redova"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -2008,7 +1815,7 @@ msgctxt ""
 "arbitrary text that is just short enough that it should never be wrapped. In "
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
-msgstr ""
+msgstr "Ovo je kratak primer teksta koji se nikada ne deli u dva ili više reda"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
@@ -2047,57 +1854,36 @@ msgid "Do not show this message again"
 msgstr "Ne prikazuj više ovu poruku"
 
 #: kmessagedialog.cpp:137
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Detalji"
 
 #: kmessagedialog.cpp:218
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Pitanje"
 
 #: kmessagedialog.cpp:223
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Upozorenje"
 
 #: kmessagedialog.cpp:226
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Informacija"
 
 #: kmessagedialog.cpp:229
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Greška"
 
 #: kmessagewidget.cpp:84
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Zatvori"
 
 #: kmessagewidget.cpp:85
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Zatvori poruku"
@@ -2106,30 +1892,21 @@ msgstr "Zatvori poruku"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
-msgstr ""
+msgstr "Uspeh"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "Beleške:"
+msgstr "Napomena"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "Upozorenje"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
@@ -2138,54 +1915,42 @@ msgstr "Greška"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr ""
+msgstr "Traži tip fajla ili obrazac imena fajla…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr ""
+msgstr "&Filter:"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Mime Type"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
 msgstr "MIME tip"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
-msgstr "Komentar"
+msgstr "komentar"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
-msgstr "Obrasci"
+msgstr "obrasci"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Uredi..."
+msgstr "&Uredi…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
 msgid "Launch the MIME type editor"
-msgstr ""
+msgstr "Pokreni uređivač MIME tipova"
 
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr ""
+msgstr "Ne mogu da nađem izvršni fajl „keditfiletype“ u putanji (PATH)."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -2193,47 +1958,33 @@ msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
+"Ne mogu da pokrenem izvršni fajl „keditfiletype“, proverite instalaciju."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password must be at least %n character(s) long"
-#| msgid_plural "Password must be at least %n character(s) long"
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
-msgstr[0] "Lozinka mora imati bar %n znak"
-msgstr[1] "Lozinka mora imati bar %n znaka"
-msgstr[2] "Lozinka mora imati bar %n znakova"
+msgstr[0] "Lozinka mora imati bar %n znak."
+msgstr[1] "Lozinka mora imati bar %n znaka."
+msgstr[2] "Lozinka mora imati bar %n znakova."
 
 #: knewpassworddialog.cpp:67
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password is empty"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password is empty."
-msgstr "Lozinka je prazna"
+msgstr "Lozinka je prazna."
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords do not match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
-msgstr "Lozinke se ne poklapaju"
+msgstr "Lozinke se ne poklapaju."
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
-msgstr "Lozinke se poklapaju"
+msgstr "Lozinke se poklapaju."
 
 #: knewpassworddialog.cpp:133
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Slaba lozinka"
@@ -2254,6 +2005,7 @@ msgstr ""
 " - unesite dužu lozinku,\n"
 " - koristite mešavinu malih i velikih slova,\n"
 " - pored slova zadajte i neke brojeve ili simbole (#, %, itd.)\n"
+"\n"
 "Želite li ipak da nastavite sa već unetom lozinkom?"
 
 #: knewpasswordwidget.cpp:52
@@ -2271,25 +2023,16 @@ msgstr ""
 "ili simbole (#, %, itd).</li></ul>"
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "Lozinka:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
 msgstr "Pro&veri:"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password strength &meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Merač jačine lozinke:"
@@ -2297,12 +2040,9 @@ msgstr "&Merač jačine lozinke:"
 #: kpageview.cpp:516
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Traži…"
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Lozinka"
@@ -2310,7 +2050,7 @@ msgstr "Lozinka"
 #: kpassworddialog.cpp:80
 msgctxt "KPasswordDialog|"
 msgid "Show Contextual Help"
-msgstr ""
+msgstr "Prikaži kontekstnu pomoć"
 
 #: kpassworddialog.cpp:100
 msgctxt "KPasswordDialog|"
@@ -2323,114 +2063,72 @@ msgid "Supply a username and password below."
 msgstr "Navedite ispod korisničko ime i lozinku."
 
 #: kpassworddialog.ui:73
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "No password, use anonymous (or &guest) login"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Bez lozinke, anonimna (ili &gostinska) prijava"
 
 #: kpassworddialog.ui:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Use this password:"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Ova lozinka:"
 
 #: kpassworddialog.ui:105
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Korisničko ime:"
 
 #: kpassworddialog.ui:130
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Domen:"
 
 #: kpassworddialog.ui:144
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Lozinka:"
 
 #: kpassworddialog.ui:158
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Zapamti lozinku"
 
 #: kpasswordlineedit.cpp:44
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Promeni vidljivost lozinke"
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Lozinka"
+msgstr "Prikaži lozinku"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Lozinka"
+msgstr "Sakrij lozinku"
 
 # >> @title:window
 #: kpixmapregionselectordialog.cpp:56
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Select Region of Image"
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
 msgstr "Izbor oblasti slike"
 
 #: kpixmapregionselectordialog.cpp:60
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Please click and drag on the image to select the region of interest:"
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "Kliknite i prevucite preko slike da izaberete deo koji vas zanima:"
 
 #: kpixmapregionselectorwidget.cpp:177
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Postupci nad slikom"
 
 #: kpixmapregionselectorwidget.cpp:180
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "Okreni &u smeru kazaljke na satu"
 
 #: kpixmapregionselectorwidget.cpp:184
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Okreni &suprotno smeru kazaljke na satu"
@@ -2438,25 +2136,19 @@ msgstr "Okreni &suprotno smeru kazaljke na satu"
 #: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
-msgstr ""
+msgstr "Nema unosa"
 
 #: krecentfilesmenu.cpp:126
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Clear input"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
-msgstr "Očisti unos"
+msgstr "Očisti spisak"
 
 #: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
-msgstr ""
+msgstr "Nedavni fajlovi"
 
 #: ksqueezedtextlabel.cpp:207
-#, fuzzy
-#| msgctxt "KSqueezedTextLabel|"
-#| msgid "&Copy Full Text"
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Kopiraj ceo tekst"
@@ -2508,12 +2200,9 @@ msgid "Do not save data"
 msgstr "Nemoj da sačuvaš podatke"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Sačuvaj &kao..."
+msgstr "Sačuvaj &kao…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2542,12 +2231,9 @@ msgstr ""
 "Koristite ovo kada isprobavate različite vrednosti."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "Administratorski &režim..."
+msgstr "Administratorski &režim…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2651,12 +2337,9 @@ msgid "Go forward one step"
 msgstr "Idi korak napred"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "&Štampaj..."
+msgstr "&Štampaj…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2684,12 +2367,9 @@ msgid "Delete item(s)"
 msgstr "Obriši stavke"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Otvori..."
+msgstr "&Otvori…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2722,12 +2402,9 @@ msgid "&Insert"
 msgstr "&Umetni"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "&Podesi..."
+msgstr "&Podesi…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2795,75 +2472,3 @@ msgstr "Ceo ekran"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Razvuci prozor preko celog ekrana"
-
-#, fuzzy
-#~| msgctxt "KCharSelect|"
-#~| msgid "&Find..."
-#~ msgctxt "KCharSelect|@action"
-#~ msgid "&Find..."
-#~ msgstr "&Nađi..."
-
-#~ msgctxt "KFontChooser|@item font"
-#~ msgid "Bold Italic"
-#~ msgstr "podebljani kurzivni"
-
-#, fuzzy
-#~| msgctxt "KFontChooser|"
-#~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-#~ msgctxt "KFontChooser|@info:tooltip"
-#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-#~ msgstr ""
-#~ "Veličina fonta<br /><i>fiksna</i> ili <i>relativna</i><br />u odnosu na "
-#~ "okruženje"
-
-#, fuzzy
-#~| msgctxt "KFontChooser|"
-#~| msgid ""
-#~| "Here you can switch between fixed font size and font size to be "
-#~| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#~| "dimensions, paper size)."
-#~ msgctxt "KFontChooser|@info:whatsthis"
-#~ msgid ""
-#~ "Here you can switch between fixed font size and font size to be "
-#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
-#~ "dimensions, paper size)."
-#~ msgstr ""
-#~ "Odaberite želite li nepromenljivu veličinu fonta ili veličinu koja se "
-#~ "računa dinamički i prilagođava promenama okruženja (npr. dimenzijama "
-#~ "vidžeta, veličini papira)."
-
-#~ msgctxt "KMessageBox|@action:button post-filter"
-#~ msgid "."
-#~ msgstr "."
-
-#~ msgctxt "KMessageBox|"
-#~ msgid "Sorry"
-#~ msgstr "Izvinite"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&Yes"
-#~ msgstr "&Da"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "Yes"
-#~ msgstr "Da"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&No"
-#~ msgstr "&Ne"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "No"
-#~ msgstr "Ne"
-
-#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
-#~ msgid "Exit F&ull Screen Mode"
-#~ msgstr "Napusti &ceo ekran"
-
-#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
-#~ msgid "Exit Full Screen"
-#~ msgstr "Napusti ceo ekran"
-
-#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
-#~ msgid "Exit full screen mode"
-#~ msgstr "Napusti ceo ekran"

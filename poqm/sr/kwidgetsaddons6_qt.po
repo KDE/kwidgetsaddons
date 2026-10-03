@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kwidgetsaddons5_qt\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2017-12-15 12:37+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 11:27+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -56,57 +57,39 @@ msgstr "%1 [%2]"
 #: kabstractcoloredit.cpp:70
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Copy Color"
-msgstr ""
+msgstr "Копирај боју"
 
 #: kabstractcoloredit.cpp:81
 msgctxt "KAbstractColorEdit|@action:inmenu"
 msgid "Paste Color"
-msgstr ""
+msgstr "Налепи боју"
 
 #: kactionselector.cpp:98
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Available:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Available:"
 msgstr "&Доступно:"
 
 #: kactionselector.cpp:115
-#, fuzzy
-#| msgctxt "KActionSelector|"
-#| msgid "&Selected:"
 msgctxt "KActionSelector|@label:listbox"
 msgid "&Selected:"
 msgstr "&Изабрано:"
 
 #: kassistantdialog.cpp:100
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KAssistantDialog|@action:button go back"
 msgid "&Back"
 msgstr "На&зад"
 
 #: kassistantdialog.cpp:102
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Go back one step"
 msgctxt "KAssistantDialog|@info:tooltip"
 msgid "Go back one step"
 msgstr "Врати се корак назад"
 
 #: kassistantdialog.cpp:107
-#, fuzzy
-#| msgctxt "KAssistantDialog|Opposite to Back"
-#| msgid "Next"
 msgctxt "KAssistantDialog|@action:button Opposite to Back"
 msgid "Next"
-msgstr "Напред"
+msgstr "Следеће"
 
 #: kassistantdialog.cpp:113
-#, fuzzy
-#| msgctxt "KAssistantDialog|"
-#| msgid "Finish"
 msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Заврши"
@@ -114,7 +97,7 @@ msgstr "Заврши"
 #: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
-msgstr ""
+msgstr "све"
 
 #: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -287,12 +270,9 @@ msgid "Syriac Supplement"
 msgstr "сиријски допунски"
 
 #: kcharselect-translation.cpp:46
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Arabic Extended-A"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
-msgstr "арапски проширени‑А"
+msgstr "арапски проширени‑Б"
 
 #: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -510,12 +490,9 @@ msgid "Cyrillic Extended-C"
 msgstr "ћирилички проширени‑Ц"
 
 #: kcharselect-translation.cpp:90
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Geometric Shapes Extended"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
-msgstr "геометријски облици проширени"
+msgstr "грузијски проширени"
 
 #: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
@@ -1078,128 +1055,83 @@ msgid "Supplemental Symbols and Pictographs"
 msgstr "допунски симболи и пиктографи"
 
 #: kcharselect-translation.cpp:204
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Khmer Symbols"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
-msgstr "кмерски симболи"
+msgstr "шаховски симболи"
 
 #: kcharselect-translation.cpp:205
-#, fuzzy
-#| msgctxt "KCharSelectData|KCharselect unicode block name"
-#| msgid "Supplemental Symbols and Pictographs"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
-msgstr "допунски симболи и пиктографи"
+msgstr "симболи и пиктографи проширени‑А"
 
 #: kcharselect-translation.cpp:206
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
-msgstr ""
+msgstr "симболи старих рачунара"
 
 #: kcharselect.cpp:394
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Унесите израз или знак за тражење"
+msgstr "Унесите израз или знак за тражење…"
 
 #: kcharselect.cpp:396
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Enter a search term or character here"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Enter a search term or character here"
 msgstr "Унесите израз или знак за тражење"
 
 #: kcharselect.cpp:403
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Find"
 msgctxt "KCharSelect|@action"
 msgid "&Find…"
-msgstr "&Нађи"
+msgstr "&Нађи…"
 
 #: kcharselect.cpp:427
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to previous character"
-#| msgid "Previous in History"
 msgctxt "KCharSelect|@action:button Goes to previous character"
 msgid "Previous in History"
 msgstr "Претходни у историјату"
 
 #: kcharselect.cpp:429
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Previous Character in History"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Go to previous character in history"
-msgstr "Претходни знак из историјата"
+msgstr "Иди на претходни знак у историјату"
 
 #: kcharselect.cpp:434
-#, fuzzy
-#| msgctxt "KCharSelect|Goes to next character"
-#| msgid "Next in History"
 msgctxt "KCharSelect|@action:button Goes to next character"
 msgid "Next in History"
 msgstr "Следећи у историјату"
 
 #: kcharselect.cpp:436
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Next Character in History"
 msgctxt "KCharSelect|info:tooltip"
 msgid "Go to next character in history"
-msgstr "Следећи знак из историјата"
+msgstr "Иди на следећи знак у историјату"
 
 #: kcharselect.cpp:441
-#, fuzzy
-#| msgctxt "KAssistantDialog|go back"
-#| msgid "&Back"
 msgctxt "KCharSelect|@action go back"
 msgid "&Back"
 msgstr "На&зад"
 
 #: kcharselect.cpp:448
-#, fuzzy
-#| msgctxt "KCharSelect|go forward"
-#| msgid "&Forward"
 msgctxt "KCharSelect|@action go forward"
 msgid "&Forward"
 msgstr "&Напред"
 
 # >> @info:tooltip
 #: kcharselect.cpp:467
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a category"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a category"
 msgstr "Изаберите категорију."
 
 # >> @info:tooltip
 #: kcharselect.cpp:471
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Select a block to be displayed"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Select a block to be displayed"
 msgstr "Изаберите блок за приказивање."
 
 #: kcharselect.cpp:490
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font"
 msgstr "Постави фонт"
 
 #: kcharselect.cpp:497
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Set font size"
 msgctxt "KCharSelect|@info:tooltip"
 msgid "Set font size"
 msgstr "Постави величину фонта"
@@ -1373,7 +1305,7 @@ msgstr "<није додељено>"
 #: kcharselectdata.cpp:442
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
-msgstr ""
+msgstr "све"
 
 #: kcharselectdata.cpp:754
 msgctxt "KCharSelectData|"
@@ -1536,17 +1468,14 @@ msgid "Unknown"
 msgstr "непознато"
 
 #: kcolorcombo.cpp:389
-#, fuzzy
-#| msgctxt "KColorCombo|Custom color"
-#| msgid "Custom..."
 msgctxt "KColorCombo|@item:inlistbox Custom color"
 msgid "Custom…"
-msgstr "Посебна..."
+msgstr "Посебна…"
 
 #: kcontextualhelpbutton.cpp:68
 msgctxt "QObject|@action:button accessible name"
 msgid "Contextual Help"
-msgstr ""
+msgstr "Контекстна помоћ"
 
 #: kdatecombobox.cpp:187
 msgctxt "KDateComboBox|@info"
@@ -1573,72 +1502,48 @@ msgstr "седмица %1"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:306
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next year"
 msgstr "Следећа година"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:307
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous year"
 msgstr "Претходна година"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:308
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Next month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Next month"
 msgstr "Следећи месец"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:309
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Previous month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Previous month"
-msgstr "Претходни месец."
+msgstr "Претходни месец"
 
 # >> @info:tooltip
 #: kdatepicker.cpp:310
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a week"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a week"
 msgstr "Изаберите седмицу."
 
 # >> @info:tooltip
 #: kdatepicker.cpp:311
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a month"
 msgstr "Изаберите месец."
 
 # >> @info:tooltip
 #: kdatepicker.cpp:312
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a year"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select a year"
 msgstr "Изаберите годину."
 
 # >> @info:tooltip
 #: kdatepicker.cpp:313
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select the current day"
 msgctxt "KDatePicker|@info:tooltip"
 msgid "Select the current day"
 msgstr "Изаберите данашњи дан."
@@ -1649,97 +1554,61 @@ msgid "Close"
 msgstr "Затвори"
 
 #: kdatepickerpopup.cpp:96
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next year"
-#| msgid "Next Year"
 msgctxt "KDatePickerPopup|@option next year"
 msgid "Next Year"
-msgstr "следећа година"
+msgstr "Следећа година"
 
 #: kdatepickerpopup.cpp:97
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next month"
-#| msgid "Next Month"
 msgctxt "KDatePickerPopup|@option next month"
 msgid "Next Month"
-msgstr "следећи месец"
+msgstr "Следећи месец"
 
 #: kdatepickerpopup.cpp:98
-#, fuzzy
-#| msgctxt "KDateComboBox|@option next week"
-#| msgid "Next Week"
 msgctxt "KDatePickerPopup|@option next week"
 msgid "Next Week"
-msgstr "следећа седмица"
+msgstr "Следећа седмица"
 
 #: kdatepickerpopup.cpp:99
-#, fuzzy
-#| msgctxt "KDateComboBox|@option tomorrow"
-#| msgid "Tomorrow"
 msgctxt "KDatePickerPopup|@option tomorrow"
 msgid "Tomorrow"
-msgstr "сутра"
+msgstr "Сутра"
 
 #: kdatepickerpopup.cpp:100
-#, fuzzy
-#| msgctxt "KDateComboBox|@option today"
-#| msgid "Today"
 msgctxt "KDatePickerPopup|@option today"
 msgid "Today"
-msgstr "данас"
+msgstr "Данас"
 
 #: kdatepickerpopup.cpp:101
-#, fuzzy
-#| msgctxt "KDateComboBox|@option yesterday"
-#| msgid "Yesterday"
 msgctxt "KDatePickerPopup|@option yesterday"
 msgid "Yesterday"
-msgstr "јуче"
+msgstr "Јуче"
 
 #: kdatepickerpopup.cpp:102
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last week"
-#| msgid "Last Week"
 msgctxt "KDatePickerPopup|@option last week"
 msgid "Last Week"
-msgstr "прошла седмица"
+msgstr "Прошла седмица"
 
 #: kdatepickerpopup.cpp:103
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last month"
-#| msgid "Last Month"
 msgctxt "KDatePickerPopup|@option last month"
 msgid "Last Month"
-msgstr "прошли месец"
+msgstr "Прошли месец"
 
 #: kdatepickerpopup.cpp:104
-#, fuzzy
-#| msgctxt "KDateComboBox|@option last year"
-#| msgid "Last Year"
 msgctxt "KDatePickerPopup|@option last year"
 msgid "Last Year"
-msgstr "прошла година"
+msgstr "Прошла година"
 
 #: kdatepickerpopup.cpp:123
-#, fuzzy
-#| msgctxt "KDateComboBox|@option do not specify a date"
-#| msgid "No Date"
 msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
-msgstr "без датума"
+msgstr "Без датума"
 
 #: kdatetimeedit.cpp:171
-#, fuzzy
-#| msgctxt "KDateTimeEdit|UTC time zone"
-#| msgid "UTC"
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "УТЦ"
 
 #: kdatetimeedit.cpp:172
-#, fuzzy
-#| msgctxt "KDateTimeEdit|No specific time zone"
-#| msgid "Floating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "пливајућа"
@@ -1755,49 +1624,31 @@ msgid "The entered date and time is after the maximum allowed date and time."
 msgstr "Унесени датум и време после су максимално дозвољених."
 
 #: keditlistwidget.cpp:281
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Add"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Add"
 msgstr "&Додај"
 
 #: keditlistwidget.cpp:293
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "&Remove"
 msgctxt "KEditListWidget|@action:button"
 msgid "&Remove"
 msgstr "&Уклони"
 
 #: keditlistwidget.cpp:305
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Up"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Up"
 msgstr "Помери на&горе"
 
 #: keditlistwidget.cpp:310
-#, fuzzy
-#| msgctxt "KEditListWidget|"
-#| msgid "Move &Down"
 msgctxt "KEditListWidget|@action:button"
 msgid "Move &Down"
 msgstr "Помери на&доле"
 
 #: kfontchooser.cpp:160
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Requested Font"
 msgctxt "KFontChooser|@title:group"
 msgid "Requested Font"
 msgstr "Тражени фонт"
 
 #: kfontchooser.cpp:208
-#, fuzzy
-#| msgctxt "KFontChooser|QFontDatabase"
-#| msgid "Normal"
 msgctxt "KFontChooser|@item font"
 msgid "Normal"
 msgstr "нормални"
@@ -1820,7 +1671,7 @@ msgstr "подебљани"
 #: kfontchooser.cpp:212
 msgctxt "KFontChooser|@item font"
 msgid "Bold Condensed Oblique"
-msgstr ""
+msgstr "подебљани згуснути искошени"
 
 #: kfontchooser.cpp:266
 msgctxt "KFontChooser|"
@@ -1837,29 +1688,21 @@ msgstr "%1"
 
 # >> @info:tooltip
 #: kfontchooserdialog.cpp:25
-#, fuzzy
-#| msgctxt "KDatePicker|"
-#| msgid "Select a month"
 msgctxt "KFontChooserDialog|@title:window"
 msgid "Select Font"
-msgstr "Изаберите месец."
+msgstr "Избор фонта"
 
 #: kfontchooserwidget.ui:21
 msgctxt "KFontChooserWidget|"
 msgid "Comma separated list of font features (e.g., liga, calt):"
-msgstr ""
+msgstr "Запетама раздвојен списак могућности фонта (нпр. liga, calt):"
 
 #: kfontchooserwidget.ui:31
 msgctxt "KFontChooserWidget|"
 msgid "Sample:"
-msgstr ""
+msgstr "Узорак:"
 
 #: kfontchooserwidget.ui:41
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid ""
-#| "This sample text illustrates the current settings. You may edit it to "
-#| "test special characters."
 msgctxt "KFontChooserWidget|"
 msgid ""
 "This sample text illustrates the current settings. You may edit it to test "
@@ -1871,116 +1714,78 @@ msgstr ""
 #: kfontchooserwidget.ui:51
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr ""
+msgstr "Прикажи само једноширинске фонтове"
 
 #: kfontchooserwidget.ui:66
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font"
 msgctxt "KFontChooserWidget|"
 msgid "Font"
 msgstr "Фонт"
 
 #: kfontchooserwidget.ui:73
-#, fuzzy
-#| msgctxt "KFontChooser|@label"
-#| msgid "Font:"
 msgctxt "KFontChooserWidget|"
 msgid "Font:"
 msgstr "Фонт:"
 
 #: kfontchooserwidget.ui:91
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Font style"
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
 msgstr "Стил фонта"
 
 # rewrite-msgid: /Font//
 #: kfontchooserwidget.ui:98
-#, fuzzy
-#| msgctxt "KFontChooser|"
-#| msgid "Font style:"
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
 msgstr "Стил:"
 
 #: kfontchooserwidget.ui:116
-#, fuzzy
-#| msgctxt "KFontChooser|@option:check"
-#| msgid "Size"
 msgctxt "KFontChooserWidget|"
 msgid "Size"
 msgstr "Величина"
 
 #: kfontchooserwidget.ui:123
-#, fuzzy
-#| msgctxt "KFontChooser|@label:listbox Font size"
-#| msgid "Size:"
 msgctxt "KFontChooserWidget|"
 msgid "Size:"
 msgstr "Величина:"
 
 #: kfontchooserwidget.ui:132
-#, fuzzy
-#| msgctxt "KFontChooser|@item font size"
-#| msgid "Relative"
 msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "релативна"
 
 #: kfontrequester.cpp:185
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
-msgstr "Изабери..."
+msgstr "Изабери фонт…"
 
 #: kfontrequester.cpp:191
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Преглед изабраног фонта"
 
 #: kfontrequester.cpp:193
-#, fuzzy
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the selected font. You can change it by clicking the "
-#| "\"Choose...\" button."
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"<html>Ово је преглед изабраног фонта. Можете га променити кликом на дугме "
-"Изабери....</html>"
+"Ово је преглед изабраног фонта. Можете га променити кликом на дугме „Изабери "
+"фонт...“."
 
 #: kfontrequester.cpp:197
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid "Preview of the \"%1\" font"
+#, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Преглед фонта „%1“"
 
 #: kfontrequester.cpp:198
-#, fuzzy, qt-format
-#| msgctxt "KFontRequester|"
-#| msgid ""
-#| "This is a preview of the \"%1\" font. You can change it by clicking the "
-#| "\"Choose...\" button."
+#, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"<html>Ово је преглед фонта „%1“. Можете га променити кликнувши на дугме "
-"Изабери....</html>"
+"Ово је преглед фонта „%1“. Можете га променити кликнувши на дугме „Изабери "
+"фонт...“."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -2002,6 +1807,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna alia"
 msgstr ""
+"Ово је пример текста који се никада не приказује, већ само служи да се "
+"одреди када дугу поруку треба поделити у више редова"
 
 #: kmessagebox.cpp:252
 msgctxt ""
@@ -2009,7 +1816,7 @@ msgctxt ""
 "arbitrary text that is just short enough that it should never be wrapped. In "
 "a latin charset, suggested length is around 70 chars."
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmi"
-msgstr ""
+msgstr "Ово је кратак пример текста који се никада не дели у два или више реда"
 
 #: kmessagebox.cpp:319
 msgctxt "KMessageBox|"
@@ -2048,57 +1855,36 @@ msgid "Do not show this message again"
 msgstr "Не приказуј више ову поруку"
 
 #: kmessagedialog.cpp:137
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Details"
 msgctxt "KMessageDialog|"
 msgid "Details"
 msgstr "Детаљи"
 
 #: kmessagedialog.cpp:218
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Question"
 msgctxt "KMessageDialog|"
 msgid "Question"
 msgstr "Питање"
 
 #: kmessagedialog.cpp:223
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt "KMessageDialog|"
 msgid "Warning"
 msgstr "Упозорење"
 
 #: kmessagedialog.cpp:226
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Information"
 msgctxt "KMessageDialog|"
 msgid "Information"
 msgstr "Информација"
 
 #: kmessagedialog.cpp:229
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Грешка"
 
 #: kmessagewidget.cpp:84
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Затвори"
 
 #: kmessagewidget.cpp:85
-#, fuzzy
-#| msgctxt "KMessageWidget|"
-#| msgid "Close message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Затвори поруку"
@@ -2107,30 +1893,21 @@ msgstr "Затвори поруку"
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
-msgstr ""
+msgstr "Успех"
 
 #: kmessagewidget.cpp:291
-#, fuzzy
-#| msgctxt "KCharSelect|"
-#| msgid "Notes:"
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
-msgstr "Белешке:"
+msgstr "Напомена"
 
 #: kmessagewidget.cpp:294
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Warning"
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "Упозорење"
 
 #: kmessagewidget.cpp:297
-#, fuzzy
-#| msgctxt "KMessageBox|"
-#| msgid "Error"
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"
@@ -2139,54 +1916,42 @@ msgstr "Грешка"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr ""
+msgstr "Тражи тип фајла или образац имена фајла…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
 msgid "&Filter:"
-msgstr ""
+msgstr "&Филтер:"
 
 #: kmimetypechooser.cpp:103
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Mime Type"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "MIME Type"
 msgstr "МИМЕ тип"
 
 #: kmimetypechooser.cpp:106
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Comment"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Comment"
-msgstr "Коментар"
+msgstr "коментар"
 
 #: kmimetypechooser.cpp:110
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "Patterns"
 msgctxt "KMimeTypeChooser|@title:column"
 msgid "Patterns"
-msgstr "Обрасци"
+msgstr "обрасци"
 
 #: kmimetypechooser.cpp:126
-#, fuzzy
-#| msgctxt "KMimeTypeChooser|"
-#| msgid "&Edit..."
 msgctxt "KMimeTypeChooser|@action:button"
 msgid "&Edit…"
-msgstr "&Уреди..."
+msgstr "&Уреди…"
 
 #: kmimetypechooser.cpp:141
 msgctxt "KMimeTypeChooser|@info:tooltip"
 msgid "Launch the MIME type editor"
-msgstr ""
+msgstr "Покрени уређивач МИМЕ типова"
 
 #: kmimetypeeditor.cpp:27
 msgctxt "QObject|"
 msgid "Could not find the \"keditfiletype\" executable in PATH."
-msgstr ""
+msgstr "Не могу да нађем извршни фајл „keditfiletype“ у путањи (PATH)."
 
 #: kmimetypeeditor.cpp:37
 msgctxt "QObject|"
@@ -2194,47 +1959,33 @@ msgid ""
 "Could not start the \"keditfiletype\" executable, please check your "
 "installation."
 msgstr ""
+"Не могу да покренем извршни фајл „keditfiletype“, проверите инсталацију."
 
 #: knewpassworddialog.cpp:63
-#, fuzzy, qt-format
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password must be at least %n character(s) long"
-#| msgid_plural "Password must be at least %n character(s) long"
+#, qt-format
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password must be at least %n character(s) long."
 msgid_plural "Password must be at least %n character(s) long."
-msgstr[0] "Лозинка мора имати бар %n знак"
-msgstr[1] "Лозинка мора имати бар %n знака"
-msgstr[2] "Лозинка мора имати бар %n знакова"
+msgstr[0] "Лозинка мора имати бар %n знак."
+msgstr[1] "Лозинка мора имати бар %n знака."
+msgstr[2] "Лозинка мора имати бар %n знакова."
 
 #: knewpassworddialog.cpp:67
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Password is empty"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Password is empty."
-msgstr "Лозинка је празна"
+msgstr "Лозинка је празна."
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords do not match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
-msgstr "Лозинке се не поклапају"
+msgstr "Лозинке се не поклапају."
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
-msgstr "Лозинке се поклапају"
+msgstr "Лозинке се поклапају."
 
 #: knewpassworddialog.cpp:133
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Low Password Strength"
 msgctxt "KNewPasswordDialog|@title:window"
 msgid "Low Password Strength"
 msgstr "Слаба лозинка"
@@ -2255,6 +2006,7 @@ msgstr ""
 " - унесите дужу лозинку,\n"
 " - користите мешавину малих и великих слова,\n"
 " - поред слова задајте и неке бројеве или симболе (#, %, итд.)\n"
+"\n"
 "Желите ли ипак да наставите са већ унетом лозинком?"
 
 #: knewpasswordwidget.cpp:52
@@ -2272,25 +2024,16 @@ msgstr ""
 "или симболе (#, %, итд).</li></ul>"
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "Лозинка:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
 msgstr "Про&вери:"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password strength &meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "&Мерач јачине лозинке:"
@@ -2298,12 +2041,9 @@ msgstr "&Мерач јачине лозинке:"
 #: kpageview.cpp:516
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
-msgstr ""
+msgstr "Тражи…"
 
 #: kpassworddialog.cpp:52
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "KPasswordDialog|@title:window"
 msgid "Password"
 msgstr "Лозинка"
@@ -2311,7 +2051,7 @@ msgstr "Лозинка"
 #: kpassworddialog.cpp:80
 msgctxt "KPasswordDialog|"
 msgid "Show Contextual Help"
-msgstr ""
+msgstr "Прикажи контекстну помоћ"
 
 #: kpassworddialog.cpp:100
 msgctxt "KPasswordDialog|"
@@ -2324,114 +2064,72 @@ msgid "Supply a username and password below."
 msgstr "Наведите испод корисничко име и лозинку."
 
 #: kpassworddialog.ui:73
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "No password, use anonymous (or &guest) login"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "No password, use anonymous (or &guest) login"
 msgstr "Без лозинке, анонимна (или &гостинска) пријава"
 
 #: kpassworddialog.ui:80
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Use this password:"
 msgctxt "KPasswordDialog|@option:radio"
 msgid "Use this password:"
 msgstr "Ова лозинка:"
 
 #: kpassworddialog.ui:105
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Username:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Username:"
 msgstr "Корисничко име:"
 
 #: kpassworddialog.ui:130
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Domain:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Domain:"
 msgstr "Домен:"
 
 #: kpassworddialog.ui:144
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KPasswordDialog|@label:textbox"
 msgid "Password:"
 msgstr "Лозинка:"
 
 #: kpassworddialog.ui:158
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Remember password"
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
 msgstr "Запамти лозинку"
 
 #: kpasswordlineedit.cpp:44
-#, fuzzy
-#| msgctxt "QObject|"
-#| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
 msgstr "Промени видљивост лозинке"
 
 #: kpasswordlineedit.cpp:87
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Show Password"
-msgstr "Лозинка"
+msgstr "Прикажи лозинку"
 
 #: kpasswordlineedit.cpp:88
-#, fuzzy
-#| msgctxt "KPasswordDialog|"
-#| msgid "Password"
 msgctxt "QObject|@action:inmenu"
 msgid "Hide Password"
-msgstr "Лозинка"
+msgstr "Сакриј лозинку"
 
 # >> @title:window
 #: kpixmapregionselectordialog.cpp:56
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Select Region of Image"
 msgctxt "KPixmapRegionSelectorDialog|@title:window"
 msgid "Select Region of Image"
 msgstr "Избор области слике"
 
 #: kpixmapregionselectordialog.cpp:60
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorDialog|"
-#| msgid "Please click and drag on the image to select the region of interest:"
 msgctxt "KPixmapRegionSelectorDialog|@label:chooser"
 msgid "Please click and drag on the image to select the region of interest:"
 msgstr "Кликните и превуците преко слике да изаберете део који вас занима:"
 
 #: kpixmapregionselectorwidget.cpp:177
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Image Operations"
 msgctxt "KPixmapRegionSelectorWidget|@title:menu"
 msgid "Image Operations"
 msgstr "Поступци над сликом"
 
 #: kpixmapregionselectorwidget.cpp:180
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "&Rotate Clockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "&Rotate Clockwise"
 msgstr "Окрени &у смеру казаљке на сату"
 
 #: kpixmapregionselectorwidget.cpp:184
-#, fuzzy
-#| msgctxt "KPixmapRegionSelectorWidget|"
-#| msgid "Rotate &Counterclockwise"
 msgctxt "KPixmapRegionSelectorWidget|@action:inmenu"
 msgid "Rotate &Counterclockwise"
 msgstr "Окрени &супротно смеру казаљке на сату"
@@ -2439,25 +2137,19 @@ msgstr "Окрени &супротно смеру казаљке на сату"
 #: krecentfilesmenu.cpp:123
 msgctxt "KRecentFilesMenu|"
 msgid "No Entries"
-msgstr ""
+msgstr "Нема уноса"
 
 #: krecentfilesmenu.cpp:126
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Clear input"
 msgctxt "KRecentFilesMenu|"
 msgid "Clear List"
-msgstr "Очисти унос"
+msgstr "Очисти списак"
 
 #: krecentfilesmenu.cpp:132
 msgctxt "KRecentFilesMenu|"
 msgid "Recent Files"
-msgstr ""
+msgstr "Недавни фајлови"
 
 #: ksqueezedtextlabel.cpp:207
-#, fuzzy
-#| msgctxt "KSqueezedTextLabel|"
-#| msgid "&Copy Full Text"
 msgctxt "KSqueezedTextLabel|@action:inmenu"
 msgid "&Copy Full Text"
 msgstr "&Копирај цео текст"
@@ -2509,12 +2201,9 @@ msgid "Do not save data"
 msgstr "Немој да сачуваш податке"
 
 #: kstandardguiitem.cpp:184
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Save &As..."
 msgctxt "KStandardGuiItem|"
 msgid "Save &As…"
-msgstr "Сачувај &као..."
+msgstr "Сачувај &као…"
 
 #: kstandardguiitem.cpp:186
 msgctxt "KStandardGuiItem|"
@@ -2543,12 +2232,9 @@ msgstr ""
 "Користите ово када испробавате различите вредности."
 
 #: kstandardguiitem.cpp:203
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Administrator &Mode..."
 msgctxt "KStandardGuiItem|"
 msgid "Administrator &Mode…"
-msgstr "Администраторски &режим..."
+msgstr "Администраторски &режим…"
 
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
@@ -2652,12 +2338,9 @@ msgid "Go forward one step"
 msgstr "Иди корак напред"
 
 #: kstandardguiitem.cpp:276
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Print..."
 msgctxt "KStandardGuiItem|"
 msgid "&Print…"
-msgstr "&Штампај..."
+msgstr "&Штампај…"
 
 #: kstandardguiitem.cpp:278
 msgctxt "KStandardGuiItem|"
@@ -2685,12 +2368,9 @@ msgid "Delete item(s)"
 msgstr "Обриши ставке"
 
 #: kstandardguiitem.cpp:299
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "&Open..."
 msgctxt "KStandardGuiItem|"
 msgid "&Open…"
-msgstr "&Отвори..."
+msgstr "&Отвори…"
 
 #: kstandardguiitem.cpp:301
 msgctxt "KStandardGuiItem|"
@@ -2723,12 +2403,9 @@ msgid "&Insert"
 msgstr "&Уметни"
 
 #: kstandardguiitem.cpp:325
-#, fuzzy
-#| msgctxt "KStandardGuiItem|"
-#| msgid "Confi&gure..."
 msgctxt "KStandardGuiItem|"
 msgid "Confi&gure…"
-msgstr "&Подеси..."
+msgstr "&Подеси…"
 
 #: kstandardguiitem.cpp:330
 msgctxt "KStandardGuiItem|"
@@ -2796,75 +2473,3 @@ msgstr "Цео екран"
 msgctxt "KToggleFullScreenAction|@info:tooltip"
 msgid "Display the window in full screen"
 msgstr "Развуци прозор преко целог екрана"
-
-#, fuzzy
-#~| msgctxt "KCharSelect|"
-#~| msgid "&Find..."
-#~ msgctxt "KCharSelect|@action"
-#~ msgid "&Find..."
-#~ msgstr "&Нађи..."
-
-#~ msgctxt "KFontChooser|@item font"
-#~ msgid "Bold Italic"
-#~ msgstr "подебљани курзивни"
-
-#, fuzzy
-#~| msgctxt "KFontChooser|"
-#~| msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-#~ msgctxt "KFontChooser|@info:tooltip"
-#~ msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
-#~ msgstr ""
-#~ "Величина фонта<br /><i>фиксна</i> или <i>релативна</i><br />у односу на "
-#~ "окружење"
-
-#, fuzzy
-#~| msgctxt "KFontChooser|"
-#~| msgid ""
-#~| "Here you can switch between fixed font size and font size to be "
-#~| "calculated dynamically and adjusted to changing environment (e.g. widget "
-#~| "dimensions, paper size)."
-#~ msgctxt "KFontChooser|@info:whatsthis"
-#~ msgid ""
-#~ "Here you can switch between fixed font size and font size to be "
-#~ "calculated dynamically and adjusted to changing environment (e.g. widget "
-#~ "dimensions, paper size)."
-#~ msgstr ""
-#~ "Одаберите желите ли непроменљиву величину фонта или величину која се "
-#~ "рачуна динамички и прилагођава променама окружења (нпр. димензијама "
-#~ "виџета, величини папира)."
-
-#~ msgctxt "KMessageBox|@action:button post-filter"
-#~ msgid "."
-#~ msgstr "."
-
-#~ msgctxt "KMessageBox|"
-#~ msgid "Sorry"
-#~ msgstr "Извините"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&Yes"
-#~ msgstr "&Да"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "Yes"
-#~ msgstr "Да"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "&No"
-#~ msgstr "&Не"
-
-#~ msgctxt "KStandardGuiItem|"
-#~ msgid "No"
-#~ msgstr "Не"
-
-#~ msgctxt "KToggleFullScreenAction|@action:inmenu"
-#~ msgid "Exit F&ull Screen Mode"
-#~ msgstr "Напусти &цео екран"
-
-#~ msgctxt "KToggleFullScreenAction|@action:intoolbar"
-#~ msgid "Exit Full Screen"
-#~ msgstr "Напусти цео екран"
-
-#~ msgctxt "KToggleFullScreenAction|@info:tooltip"
-#~ msgid "Exit full screen mode"
-#~ msgstr "Напусти цео екран"
