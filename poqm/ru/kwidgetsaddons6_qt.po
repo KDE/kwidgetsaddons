@@ -132,7 +132,7 @@ msgstr "Ближневосточные письменности"
 #: kcharselect-translation.cpp:15
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
-msgstr "Центрально-Азиатские письменности"
+msgstr "Центральноазиатские письменности"
 
 # BUGME: change this? look in KCharSelect --aspotashev
 #: kcharselect-translation.cpp:16
@@ -155,7 +155,7 @@ msgstr "Письменности Индонезии и Океании"
 #: kcharselect-translation.cpp:19
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
-msgstr "Восточно-Азиатские письменности"
+msgstr "Восточноазиатские письменности"
 
 #: kcharselect-translation.cpp:20
 msgctxt "KCharSelectData|KCharSelect section name"
@@ -1120,7 +1120,7 @@ msgstr "Устаревшие компьютерные символы"
 #: kcharselect.cpp:394
 msgctxt "KCharSelect|@info:placeholder"
 msgid "Enter a search term or character…"
-msgstr "Введите критерий поиска или символ..."
+msgstr "Введите критерий поиска или символ…"
 
 #: kcharselect.cpp:396
 msgctxt "KCharSelect|@info:tooltip"
@@ -1329,17 +1329,17 @@ msgstr "<не символ>"
 #: kcharselectdata.cpp:326
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
-msgstr "<заменитель в верхнем регистре>"
+msgstr "<верхняя часть суррогатной пары>"
 
 #: kcharselectdata.cpp:328
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
-msgstr "<пользовательский заменитель в верхнем регистре>"
+msgstr "<верхняя часть суррогатной пары для частного использования>"
 
 #: kcharselectdata.cpp:330
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
-msgstr "<заменитель в нижнем регистре>"
+msgstr "<нижняя часть суррогатной пары>"
 
 #: kcharselectdata.cpp:332
 msgctxt "KCharSelectData|"
@@ -1384,7 +1384,7 @@ msgstr "разное, пользовательский"
 #: kcharselectdata.cpp:795
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
-msgstr "разное, заменитель"
+msgstr "разное, часть суррогатной пары"
 
 #: kcharselectdata.cpp:797
 msgctxt "KCharSelectData|"
@@ -1820,7 +1820,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Это образец выбранного шрифта. Шрифт можно сменить, нажав кнопку «Выбрать "
-"шрифт...»."
+"шрифт…»."
 
 #: kfontrequester.cpp:197
 #, qt-format
@@ -1836,7 +1836,7 @@ msgid ""
 "\"Choose Font...\" button."
 msgstr ""
 "Это образец шрифта «%1». Вы можете сменить его, нажав кнопку «Выбрать "
-"шрифт...»."
+"шрифт…»."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
@@ -1967,7 +1967,7 @@ msgstr "Ошибка"
 #: kmimetypechooser.cpp:88
 msgctxt "KMimeTypeChooser|@info:placeholder"
 msgid "Search for file type or filename pattern…"
-msgstr "Введите тип файла или расширение файла…"
+msgstr "Поиск по типу файла или шаблону имени…"
 
 #: kmimetypechooser.cpp:89
 msgctxt "KMimeTypeChooser|@label:textbox"
@@ -2084,7 +2084,7 @@ msgstr "Пароль:"
 #: knewpasswordwidget.ui:29
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
-msgstr "&Проверка:"
+msgstr "&Подтверждение:"
 
 #: knewpasswordwidget.ui:54
 msgctxt "KNewPasswordWidget|@label"
@@ -2144,7 +2144,7 @@ msgstr "Пароль:"
 #: kpassworddialog.ui:158
 msgctxt "KPasswordDialog|@option:check"
 msgid "Remember password"
-msgstr "Сохранить пароль"
+msgstr "Запомнить пароль"
 
 #: kpasswordlineedit.cpp:44
 msgctxt "QObject|@info:tooltip"
@@ -2282,8 +2282,8 @@ msgid ""
 "program, but the dialog will not be closed.\n"
 "Use this to try different settings."
 msgstr ""
-"При нажатии кнопки <b>Применить</b> параметры будут переданы в программу, но "
-"окно параметров не будет закрыто.\n"
+"При нажатии кнопки <b>Применить</b> параметры будут переданы в приложение, "
+"но окно параметров не будет закрыто.\n"
 "Благодаря этому вы можете попробовать различные варианты настройки."
 
 #: kstandardguiitem.cpp:203
@@ -2294,7 +2294,7 @@ msgstr "&Режим администратора…"
 #: kstandardguiitem.cpp:205
 msgctxt "KStandardGuiItem|"
 msgid "Enter Administrator Mode"
-msgstr "Вход с правами администратора"
+msgstr "Войти в режим администратора"
 
 # BUGME: there's no user "root" on Windows --aspotashev
 #: kstandardguiitem.cpp:206
