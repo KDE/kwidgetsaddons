@@ -316,20 +316,20 @@ void KDateTable::paintCell(QPainter *painter, int row, int col)
         } else {
             // Paint a day of the current month
 
-            // Background Colour priorities will be (high-to-low):
-            // * Selected Day Background Colour
-            // * Customized Day Background Colour
-            // * Normal Day Background Colour
+            // Background Color priorities will be (high-to-low):
+            // * Selected Day Background Color
+            // * Customized Day Background Color
+            // * Normal Day Background Color
 
             // Background Shape priorities will be (high-to-low):
             // * Customized Day Shape
             // * Normal Day Shape
 
-            // Text Colour priorities will be (high-to-low):
-            // * Customized Day Colour
-            // * Day of Pray Colour (Red letter)
-            // * Selected Day Colour
-            // * Normal Day Colour
+            // Text Color priorities will be (high-to-low):
+            // * Customized Day Color
+            // * Day of Pray Color (Red letter)
+            // * Selected Day Color
+            // * Normal Day Color
 
             // Determine various characteristics of the cell date
             bool selectedDay = (cellDate == date());
