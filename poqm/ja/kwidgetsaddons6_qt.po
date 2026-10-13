@@ -1,5 +1,4 @@
 # Translation of kdelibs4 into Japanese.
-# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 # This file is distributed under the same license as the kdelibs package.
 # Taiki Komoda <kom@kde.gr.jp>, 2002, 2004, 2006, 2010.
 # Noboru Sinohara <shinobo@leo.bekkoame.ne.jp>, 2004.
@@ -10,15 +9,16 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2007, 2008, 2009, 2010.
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2006, 2007, 2008, 2010, 2011, 2016, 2017.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-06-14 21:36+0900\n"
+"PO-Revision-Date: 2026-09-22 10:31+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
-"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: qtrich\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Qt-Contexts: true\n"
 
 #. Generic sans serif font presented in font choosers. When selected, the system will choose a real font, mandated by distro settings.
@@ -2047,11 +2047,9 @@ msgid "&Close"
 msgstr "閉じる(&C)"
 
 #: kmessagewidget.cpp:85
-#, fuzzy
-#| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
-msgstr "メッセージを閉じる"
+msgstr "メッセージを消す"
 
 #: kmessagewidget.cpp:288
 msgctxt ""
@@ -2155,20 +2153,14 @@ msgid "Password is empty."
 msgstr "パスワードが空です"
 
 #: knewpassworddialog.cpp:71
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords do not match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords do not match."
-msgstr "パスワードが一致しません"
+msgstr "パスワードが一致していません。"
 
 #: knewpassworddialog.cpp:76
-#, fuzzy
-#| msgctxt "KNewPasswordDialog|"
-#| msgid "Passwords match"
 msgctxt "KNewPasswordDialog|@info"
 msgid "Passwords match."
-msgstr "パスワードが一致しました"
+msgstr "パスワードが一致しました。"
 
 #: knewpassworddialog.cpp:133
 #, fuzzy
@@ -2213,26 +2205,19 @@ msgstr ""
 " - 文字だけではなく数字や # のような記号も使用する"
 
 #: knewpasswordwidget.ui:19
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Password:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "Password:"
 msgstr "パスワード:"
 
 #: knewpasswordwidget.ui:29
-#, fuzzy
-#| msgid "&Verify:"
 msgctxt "KNewPasswordWidget|@label:textbox"
 msgid "&Verify:"
-msgstr "再入力(&V):"
+msgstr "確認(&V):"
 
 #: knewpasswordwidget.ui:54
-#, fuzzy
-#| msgid "Password strength meter:"
 msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
-msgstr "パスワード強度計:"
+msgstr "パスワードの強度:"
 
 #: kpageview.cpp:516
 msgctxt "KPageView|@info:placeholder"
@@ -2311,12 +2296,9 @@ msgid "Remember password"
 msgstr "パスワードを保存する"
 
 #: kpasswordlineedit.cpp:44
-#, fuzzy
-#| msgctxt "KNewPasswordWidget|"
-#| msgid "Change the visibility of the password"
 msgctxt "QObject|@info:tooltip"
 msgid "Change the visibility of the password"
-msgstr "パスワードの可視性を変更"
+msgstr "パスワードを表示/非表示"
 
 #: kpasswordlineedit.cpp:87
 msgctxt "QObject|@action:inmenu"
