@@ -46,6 +46,8 @@ KPageWidget::KPageWidget(KPageWidgetPrivate &dd, QWidget *parent)
     }
 
     connect(d->model(), &KPageWidgetModel::toggled, this, &KPageWidget::pageToggled);
+
+    layout()->setContentsMargins(0, 0, 0, 0);
 }
 
 KPageWidget::KPageWidget(QWidget *parent)
