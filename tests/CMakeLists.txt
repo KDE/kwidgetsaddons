@@ -51,6 +51,7 @@ kwidgetsaddons_executable_tests(
   kpasswordlineedit_test
   ktwofingertap_test
   ktwofingerswipe_test
+  klineediturldropeventfilter_test
 )
 
 add_executable(kdatetabletest kdatetabletest.cpp ../src/kdatetable.cpp ../src/kdaterangecontrol.cpp ../src/highcontrasthelper.cpp)
