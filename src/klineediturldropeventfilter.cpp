@@ -21,10 +21,10 @@ KLineEditUrlDropEventFilter::~KLineEditUrlDropEventFilter() = default;
 
 bool KLineEditUrlDropEventFilter::eventFilter(QObject *object, QEvent *event)
 {
-    // Handle only drop events
-    if (event->type() != QEvent::Drop) {
+    if (event->type() != QEvent::DragEnter && event->type() != QEvent::DragMove) {
         return false;
     }
+
     auto *dropEvent = static_cast<QDropEvent *>(event);
 
     // Handle only url drops, we check the MIME type for the standard or kde's urllist
@@ -40,9 +40,11 @@ bool KLineEditUrlDropEventFilter::eventFilter(QObject *object, QEvent *event)
         return false;
     }
 
-    QString content = data->text();
-    line->setText(content);
-    line->setCursorPosition(content.length());
+    if (event->type() == QEvent::Drop) {
+        QString content = data->text();
+        line->setText(content);
+        line->setCursorPosition(content.length());
+    }
 
     event->accept();
     return true;
