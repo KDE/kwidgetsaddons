@@ -639,7 +639,7 @@ void KFontChooserPrivate::slotFeaturesChanged(const QString &features)
                 m_selectedFont.setFeature(tag.value(), number);
             }
         } else if (f.size() <= 4) {
-            const auto tag = QFont::Tag::fromString(feature);
+            const auto tag = QFont::Tag::fromString(f);
             if (tag.has_value()) {
                 m_selectedFont.setFeature(tag.value(), 1);
             }
