@@ -21,11 +21,13 @@
 #include <QStyleOption>
 #include <QTimeLine>
 #include <QToolButton>
+
+#include <cmath>
 //---------------------------------------------------------------------
 // KMessageWidgetPrivate
 //---------------------------------------------------------------------
 
-constexpr int borderSize = 2;
+constexpr int borderSize = 1;
 
 class KMessageWidgetPrivate
 {
@@ -354,6 +356,16 @@ int KMessageWidget::heightForWidth(int width) const
     return QFrame::heightForWidth(width);
 }
 
+// Returns a rectangle shrunk to whole device pixels to prevent blurring of borders with fractional scaling.
+// Qt has no general solution for this: https://qt-project.atlassian.net/browse/QTBUG-96223
+static QRectF deviceAlignedRect(const QWidget *widget, qreal dpr)
+{
+    const QPointF offset = widget->mapTo(widget->window(), QPointF(0, 0));
+    const QRectF rect = QRectF(offset * dpr, QSizeF(widget->size()) * dpr);
+    const QRectF aligned(QPointF(std::ceil(rect.left()), std::ceil(rect.top())), QPointF(std::floor(rect.right()), std::floor(rect.bottom())));
+    return QRectF(aligned.topLeft() / dpr - offset, aligned.size() / dpr);
+}
+
 void KMessageWidget::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event)
@@ -362,7 +374,9 @@ void KMessageWidget::paintEvent(QPaintEvent *event)
         painter.setOpacity(d->timeLine->currentValue() * d->timeLine->currentValue());
     }
     constexpr float radius = 4 * 0.6;
-    const QRect innerRect = rect().marginsRemoved(QMargins() + borderSize / 2);
+    const qreal dpr = devicePixelRatioF();
+    const QRectF borderRect = deviceAlignedRect(this, dpr);
+    const qreal borderWidth = std::round(borderSize * dpr) / dpr;
     const QColor color = palette().color(QPalette::Window);
     constexpr float alpha = 0.2;
     const QColor parentWindowColor = (parentWidget() ? parentWidget()->palette() : qApp->palette()).color(QPalette::Window);
@@ -373,8 +387,10 @@ void KMessageWidget::paintEvent(QPaintEvent *event)
     painter.setRenderHint(QPainter::Antialiasing);
     painter.setBrush(QColor(newRed, newGreen, newBlue));
     if (d->position == Position::Inline) {
-        painter.setPen(QPen(color, borderSize));
-        painter.drawRoundedRect(innerRect, radius, radius);
+        const qreal inset = borderWidth / 2;
+        // Breeze uses pen strokes that are slightly wider than 1 px because 1 px strokes look slightly skewed.
+        painter.setPen(QPen(color, borderWidth + 0.001));
+        painter.drawRoundedRect(borderRect.adjusted(inset, inset, -inset, -inset), radius, radius);
         return;
     }
 
@@ -382,11 +398,9 @@ void KMessageWidget::paintEvent(QPaintEvent *event)
     painter.drawRect(rect());
 
     if (d->position == Position::Header) {
-        painter.setPen(QPen(color, 1));
-        painter.drawLine(0, rect().height(), rect().width(), rect().height());
+        painter.fillRect(QRectF(borderRect.left(), borderRect.bottom() - borderWidth, borderRect.width(), borderWidth), color);
     } else {
-        painter.setPen(QPen(color, 1));
-        painter.drawLine(0, 0, rect().width(), 0);
+        painter.fillRect(QRectF(borderRect.left(), borderRect.top(), borderRect.width(), borderWidth), color);
     }
 }
 
