@@ -18,7 +18,6 @@
 
 #include <../test-config.h>
 #include <QStandardPaths>
-#include <string.h>
 
 /* constants for hangul (de)composition, see UAX #15 */
 #define SBase 0xAC00
