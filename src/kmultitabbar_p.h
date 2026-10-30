@@ -22,7 +22,6 @@ public:
     void removeTab(int);
     void setPosition(enum KMultiTabBar::KMultiTabBarPosition pos);
     void setStyle(enum KMultiTabBar::KMultiTabBarStyle style);
-    void showActiveTabTexts(bool show);
     QList<KMultiTabBarTab *> *tabs()
     {
         return &m_tabs;

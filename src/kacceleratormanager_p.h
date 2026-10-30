@@ -170,8 +170,6 @@ private Q_SLOTS:
     bool eventFilter(QObject *watched, QEvent *e) override;
 
 private:
-    void calculateAccelerators();
-
     QStackedWidget *m_stack;
     KAccelStringList m_entries;
 };
