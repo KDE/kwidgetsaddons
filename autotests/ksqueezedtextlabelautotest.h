@@ -9,8 +9,6 @@
 
 #include <QObject>
 
-class KSqueezedTextLabel;
-
 class KSqueezedTextLabelAutotest : public QObject
 {
     Q_OBJECT

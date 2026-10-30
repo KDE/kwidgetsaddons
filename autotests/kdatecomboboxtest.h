@@ -9,8 +9,6 @@
 
 #include <QWidget>
 
-class KDateComboBox;
-
 class KDateComboBoxTest : public QWidget
 {
     Q_OBJECT

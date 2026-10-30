@@ -7,7 +7,6 @@
 #include "kdatetimeedit.h"
 
 #include "kdatecombobox.h"
-#include "kdatepicker.h"
 #include "kmessagebox.h"
 
 #include "ui_kdatetimeedit.h"

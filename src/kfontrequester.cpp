@@ -18,8 +18,6 @@
 #include <QMouseEvent>
 #include <QPushButton>
 
-#include <cmath>
-
 class KFontRequesterPrivate
 {
     Q_DECLARE_TR_FUNCTIONS(KFontRequester)

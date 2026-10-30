@@ -8,8 +8,6 @@
 
 #include <QTest>
 
-#include "kguiitem.h"
-
 static const QString INACTIVE_TEXT = QStringLiteral("Show Foo");
 static const QString ACTIVE_TEXT = QStringLiteral("Hide Foo");
 

@@ -14,7 +14,6 @@
 #include "common_helpers_p.h"
 #include "kpagemodel.h"
 #include "kpagewidgetmodel.h"
-#include "loggingcategory.h"
 
 #include <ktitlewidget.h>
 
