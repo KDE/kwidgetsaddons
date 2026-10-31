@@ -2430,26 +2430,26 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Imposiso"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Vala"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 #, fuzzy
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Vala umyalezo"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
 msgstr ""
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgid "Note"
 msgctxt ""
@@ -2457,7 +2457,7 @@ msgctxt ""
 msgid "Note"
 msgstr "Qaphela"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgid "Warning"
 msgctxt ""
@@ -2465,7 +2465,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "Isilumkiso"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgid "Error"
 msgctxt ""

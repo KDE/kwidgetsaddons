@@ -2311,34 +2311,34 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Xato"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "Yo&pish"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Xabarni yopish"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
 msgstr ""
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
 msgstr "Izoh"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgid "Warning"
 msgctxt ""
@@ -2346,7 +2346,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "Diqqat"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgid "Error"
 msgctxt ""

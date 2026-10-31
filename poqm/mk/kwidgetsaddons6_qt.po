@@ -2726,21 +2726,21 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Грешка"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 #, fuzzy
 #| msgid "&Close"
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Затвори"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 #, fuzzy
 #| msgid "Close Message"
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Затвори порака"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 #, fuzzy
 #| msgid "Success"
 msgctxt ""
@@ -2748,7 +2748,7 @@ msgctxt ""
 msgid "Success"
 msgstr "Успех"
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgid "Notes:"
 msgctxt ""
@@ -2756,7 +2756,7 @@ msgctxt ""
 msgid "Note"
 msgstr "Забелешки:"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgid "Warning"
 msgctxt ""
@@ -2764,7 +2764,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "Предупредување"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgid "Error"
 msgctxt ""

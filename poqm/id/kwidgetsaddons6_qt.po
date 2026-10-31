@@ -1883,17 +1883,17 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Galat"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Tutup"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Tutup Pesan"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 #, fuzzy
 #| msgid "Success"
 msgctxt ""
@@ -1901,7 +1901,7 @@ msgctxt ""
 msgid "Success"
 msgstr "Sukses"
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Notes:"
@@ -1910,7 +1910,7 @@ msgctxt ""
 msgid "Note"
 msgstr "Catatan:"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -1919,7 +1919,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "Peringatan"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"

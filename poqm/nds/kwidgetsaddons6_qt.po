@@ -2162,7 +2162,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Fehler"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2170,7 +2170,7 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Tomaken"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"
@@ -2178,7 +2178,7 @@ msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Naricht tomaken"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 #, fuzzy
 #| msgid "Success"
 msgctxt ""
@@ -2186,7 +2186,7 @@ msgctxt ""
 msgid "Success"
 msgstr "Hett funkscheneert"
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Notes:"
@@ -2195,7 +2195,7 @@ msgctxt ""
 msgid "Note"
 msgstr "Anmarken:"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgid "Warning"
 msgctxt ""
@@ -2203,7 +2203,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "Wohrschoen"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgid "Error"
 msgctxt ""

@@ -1850,35 +1850,35 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "त्रुटि"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&पिधानं करोतु"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "सन्देशं बन्दं कुर्वन्तु"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
 msgstr "सफलता"
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 msgctxt ""
 "KMessageWidget|accessible name of info-colored (e.g. blue) message box"
 msgid "Note"
 msgstr "टीका"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr "चेतवानी"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"

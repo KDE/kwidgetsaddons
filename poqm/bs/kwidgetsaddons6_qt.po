@@ -2121,7 +2121,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr ""
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2129,7 +2129,7 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "&Zatvori"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"
@@ -2137,13 +2137,13 @@ msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Zatvori poruku"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 msgctxt ""
 "KMessageWidget|accessible name of positively-colored (e.g. green) message box"
 msgid "Success"
 msgstr ""
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Notes:"
@@ -2152,13 +2152,13 @@ msgctxt ""
 msgid "Note"
 msgstr "Bilješke:"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 msgctxt ""
 "KMessageWidget|accessible name of warning-colored (e.g. orange) message box"
 msgid "Warning"
 msgstr ""
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 msgctxt ""
 "KMessageWidget|accessible name of error-colored (e.g. red) message box"
 msgid "Error"

@@ -2158,7 +2158,7 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "त्रुटी"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "&Close"
@@ -2166,7 +2166,7 @@ msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "बंद करा (&C)"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 #, fuzzy
 #| msgctxt "KMessageWidget|"
 #| msgid "Close message"
@@ -2174,7 +2174,7 @@ msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "संदेश बंद करा"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 #, fuzzy
 #| msgid "Success"
 msgctxt ""
@@ -2182,7 +2182,7 @@ msgctxt ""
 msgid "Success"
 msgstr "सफलता"
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Notes:"
@@ -2191,7 +2191,7 @@ msgctxt ""
 msgid "Note"
 msgstr "टिप :"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgid "Warning"
 msgctxt ""
@@ -2199,7 +2199,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "इशारा"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgid "Error"
 msgctxt ""

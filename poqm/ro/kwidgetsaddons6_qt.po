@@ -2325,17 +2325,17 @@ msgctxt "KMessageDialog|"
 msgid "Error"
 msgstr "Eroare"
 
-#: kmessagewidget.cpp:84
+#: kmessagewidget.cpp:86
 msgctxt "KMessageWidget|@action:button"
 msgid "&Close"
 msgstr "În&chide"
 
-#: kmessagewidget.cpp:85
+#: kmessagewidget.cpp:87
 msgctxt "KMessageWidget|@info:tooltip"
 msgid "Close message"
 msgstr "Închide mesajul"
 
-#: kmessagewidget.cpp:288
+#: kmessagewidget.cpp:290
 #, fuzzy
 #| msgid "Success"
 msgctxt ""
@@ -2343,7 +2343,7 @@ msgctxt ""
 msgid "Success"
 msgstr "Succes"
 
-#: kmessagewidget.cpp:291
+#: kmessagewidget.cpp:293
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Notes:"
@@ -2352,7 +2352,7 @@ msgctxt ""
 msgid "Note"
 msgstr "Note:"
 
-#: kmessagewidget.cpp:294
+#: kmessagewidget.cpp:296
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Warning"
@@ -2361,7 +2361,7 @@ msgctxt ""
 msgid "Warning"
 msgstr "Avertisment"
 
-#: kmessagewidget.cpp:297
+#: kmessagewidget.cpp:299
 #, fuzzy
 #| msgctxt "KMessageBox|"
 #| msgid "Error"
