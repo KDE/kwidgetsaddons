@@ -340,10 +340,10 @@ QStringList KViewStateSerializer::selectionKeys() const
     return selection;
 }
 
-QPair<int, int> KViewStateSerializer::scrollState() const
+std::pair<int, int> KViewStateSerializer::scrollState() const
 {
     Q_D(const KViewStateSerializer);
-    return qMakePair(d->m_scrollArea->verticalScrollBar()->value(), d->m_scrollArea->horizontalScrollBar()->value());
+    return std::make_pair(d->m_scrollArea->verticalScrollBar()->value(), d->m_scrollArea->horizontalScrollBar()->value());
 }
 
 void KViewStateSerializer::restoreState()

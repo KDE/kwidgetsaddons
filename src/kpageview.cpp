@@ -34,6 +34,7 @@
 #include <QToolButton>
 #include <QWidgetAction>
 #include <memory>
+#include <utility>
 
 // Remove the additional margin of the toolbar
 class NoPaddingToolBarProxyStyle : public QProxyStyle
@@ -666,7 +667,7 @@ void KPageViewPrivate::onSearchTextChanged()
     qDeleteAll(m_searchMatchOverlays);
     m_searchMatchOverlays.clear();
 
-    using TabWidgetAndPage = QPair<QTabWidget *, QWidget *>;
+    using TabWidgetAndPage = std::pair<QTabWidget *, QWidget *>;
     auto tabWidgetParent = [](QWidget *w) {
         // Finds if @p w is in a QTabWidget and returns
         // The QTabWidget + the widget in the stack where

@@ -8,12 +8,16 @@
 #ifndef KVIEWSTATESERIALIZER_H
 #define KVIEWSTATESERIALIZER_H
 
-#include <QObject>
-#include <QPair>
-#include <QStringList>
-#include <memory>
-
 #include "kwidgetsaddons_export.h"
+
+#include <QObject>
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 33)
+#include <QPair>
+#endif
+#include <QStringList>
+
+#include <memory>
+#include <utility>
 
 class QAbstractItemView;
 class QItemSelectionModel;
@@ -214,7 +218,7 @@ public:
     /*!
      * Returns the vertical and horizontal scroll of the QAbstractScrollArea.
      */
-    QPair<int, int> scrollState() const;
+    std::pair<int, int> scrollState() const;
 
     /*!
      * Select the indexes described by \a indexStrings
