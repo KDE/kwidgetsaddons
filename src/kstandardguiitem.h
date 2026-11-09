@@ -10,7 +10,9 @@
 
 #include <kwidgetsaddons_export.h>
 
+#if KWIDGETSADDONS_ENABLE_DEPRECATED_SINCE(6, 33)
 #include <QPair>
+#endif
 
 #include <kguiitem.h>
 
@@ -271,7 +273,7 @@ KWIDGETSADDONS_EXPORT KGuiItem configure();
  * locales. If you have a reason for wanting the 'Western' back/forward
  * buttons, please use the back() and forward() items instead.
  */
-KWIDGETSADDONS_EXPORT QPair<KGuiItem, KGuiItem> backAndForward();
+KWIDGETSADDONS_EXPORT std::pair<KGuiItem, KGuiItem> backAndForward();
 
 /*!
  * Returns the 'Quit' gui item.

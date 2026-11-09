@@ -266,9 +266,9 @@ KGuiItem forward(BidiMode useBidi)
                     QApplication::translate("KStandardGuiItem", "Go forward one step"));
 }
 
-QPair<KGuiItem, KGuiItem> backAndForward()
+std::pair<KGuiItem, KGuiItem> backAndForward()
 {
-    return qMakePair(back(UseRTL), forward(UseRTL));
+    return std::make_pair(back(UseRTL), forward(UseRTL));
 }
 
 KGuiItem print()
