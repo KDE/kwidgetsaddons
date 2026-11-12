@@ -237,7 +237,7 @@ void KCharSelectTable::resizeEvent(QResizeEvent *e)
         // This can be removed once a fixed Qt version is the lowest requirement for Frameworks.
         auto timer = new QTimer(this);
         timer->setSingleShot(true);
-        connect(timer, &QTimer::timeout, [&, timer]() {
+        connect(timer, &QTimer::timeout, this, [&, timer]() {
             d->resizeCells();
             timer->deleteLater();
         });

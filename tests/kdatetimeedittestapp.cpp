@@ -9,13 +9,13 @@ int main(int argc, char **argv)
     KDateTimeEdit dateTimeEdit;
     dateTimeEdit.setOptions(dateTimeEdit.options() | KDateTimeEdit::ShowCalendar | KDateTimeEdit::SelectCalendar | KDateTimeEdit::ShowTimeZone
                             | KDateTimeEdit::SelectTimeZone);
-    QObject::connect(&dateTimeEdit, &KDateTimeEdit::dateTimeEntered, [](const QDateTime &dt) {
+    QObject::connect(&dateTimeEdit, &KDateTimeEdit::dateTimeEntered, &dateTimeEdit, [](const QDateTime &dt) {
         qDebug() << "dateTimeEntered" << dt;
     });
-    QObject::connect(&dateTimeEdit, &KDateTimeEdit::dateTimeChanged, [](const QDateTime &dt) {
+    QObject::connect(&dateTimeEdit, &KDateTimeEdit::dateTimeChanged, &dateTimeEdit, [](const QDateTime &dt) {
         qDebug() << "dateTimeChanged" << dt;
     });
-    QObject::connect(&dateTimeEdit, &KDateTimeEdit::dateTimeEdited, [](const QDateTime &dt) {
+    QObject::connect(&dateTimeEdit, &KDateTimeEdit::dateTimeEdited, &dateTimeEdit, [](const QDateTime &dt) {
         qDebug() << "dateTimeEdited" << dt;
     });
     dateTimeEdit.show();

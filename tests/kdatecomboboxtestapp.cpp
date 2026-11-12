@@ -30,13 +30,13 @@ int main(int argc, char **argv)
                             | KDateComboBox::WarnOnInvalid);
     dateComboBox.setMinimumDate(minDate);
     dateComboBox.setMaximumDate(maxDate);
-    QObject::connect(&dateComboBox, &KDateComboBox::dateEntered, [](const QDate &d) {
+    QObject::connect(&dateComboBox, &KDateComboBox::dateEntered, &dateComboBox, [](const QDate &d) {
         qDebug() << "dateEntered" << d;
     });
-    QObject::connect(&dateComboBox, &KDateComboBox::dateChanged, [](const QDate &d) {
+    QObject::connect(&dateComboBox, &KDateComboBox::dateChanged, &dateComboBox, [](const QDate &d) {
         qDebug() << "dateChanged" << d;
     });
-    QObject::connect(&dateComboBox, &KDateComboBox::dateEdited, [](const QDate &d) {
+    QObject::connect(&dateComboBox, &KDateComboBox::dateEdited, &dateComboBox, [](const QDate &d) {
         qDebug() << "dateEdited" << d;
     });
     dateComboBox.resize(200, dateComboBox.sizeHint().height());

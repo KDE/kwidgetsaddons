@@ -175,7 +175,7 @@ void KFontChooserPrivate::init()
 
     const bool isDiffMode = m_flags & KFontChooser::ShowDifferences;
 
-    QObject::connect(m_ui->familyListWidget, &QListWidget::currentTextChanged, [this](const QString &family) {
+    QObject::connect(m_ui->familyListWidget, &QListWidget::currentTextChanged, q, [this](const QString &family) {
         slotFamilySelected(family);
     });
 
@@ -212,7 +212,7 @@ void KFontChooserPrivate::init()
     m_ui->styleListWidget->addItem(KFontChooser::tr("Bold Condensed Oblique", "@item font"));
     m_ui->styleListWidget->setMinimumWidth(minimumListWidth(m_ui->styleListWidget));
 
-    QObject::connect(m_ui->styleListWidget, &QListWidget::currentTextChanged, [this](const QString &style) {
+    QObject::connect(m_ui->styleListWidget, &QListWidget::currentTextChanged, q, [this](const QString &style) {
         slotStyleSelected(style);
     });
 
@@ -228,21 +228,21 @@ void KFontChooserPrivate::init()
     // will be replaced later with correct sizes.
     fillSizeList();
 
-    QObject::connect(m_ui->sizeSpinBox, &QDoubleSpinBox::valueChanged, [this](const double size) {
+    QObject::connect(m_ui->sizeSpinBox, &QDoubleSpinBox::valueChanged, q, [this](const double size) {
         slotSizeValue(size);
     });
 
-    QObject::connect(m_ui->sizeListWidget, &QListWidget::currentTextChanged, [this](const QString &size) {
+    QObject::connect(m_ui->sizeListWidget, &QListWidget::currentTextChanged, q, [this](const QString &size) {
         slotSizeSelected(size);
     });
 
     m_fontFeatureChangedTimer.setInterval(200);
     m_fontFeatureChangedTimer.setSingleShot(true);
-    m_fontFeatureChangedTimer.callOnTimeout([this]() {
+    m_fontFeatureChangedTimer.callOnTimeout(q, [this]() {
         slotFeaturesChanged(m_ui->fontFeaturesLineEdit->text());
     });
 
-    QObject::connect(m_ui->fontFeaturesLineEdit, &QLineEdit::textChanged, [this](const QString &) {
+    QObject::connect(m_ui->fontFeaturesLineEdit, &QLineEdit::textChanged, q, [this](const QString &) {
         m_fontFeatureChangedTimer.start();
     });
 
