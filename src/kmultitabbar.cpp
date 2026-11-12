@@ -84,9 +84,7 @@ void KMultiTabBarInternal::mousePressEvent(QMouseEvent *ev)
 
 KMultiTabBarTab *KMultiTabBarInternal::tab(int id) const
 {
-    QListIterator<KMultiTabBarTab *> it(m_tabs);
-    while (it.hasNext()) {
-        KMultiTabBarTab *tab = it.next();
+    for (KMultiTabBarTab *tab : m_tabs) {
         if (tab->id() == id) {
             return tab;
         }
@@ -527,9 +525,8 @@ int KMultiTabBar::appendButton(const QIcon &icon, int id, QMenu *popup, const QS
 void KMultiTabBar::updateSeparator()
 {
     bool hideSep = true;
-    QListIterator<KMultiTabBarButton *> it(d->m_buttons);
-    while (it.hasNext()) {
-        if (it.next()->isVisibleTo(this)) {
+    for (KMultiTabBarButton *button : std::as_const(d->m_buttons)) {
+        if (button->isVisibleTo(this)) {
             hideSep = false;
             break;
         }
@@ -549,9 +546,7 @@ int KMultiTabBar::appendTab(const QIcon &icon, int id, const QString &text)
 
 KMultiTabBarButton *KMultiTabBar::button(int id) const
 {
-    QListIterator<KMultiTabBarButton *> it(d->m_buttons);
-    while (it.hasNext()) {
-        KMultiTabBarButton *button = it.next();
+    for (KMultiTabBarButton *button : std::as_const(d->m_buttons)) {
         if (button->id() == id) {
             return button;
         }

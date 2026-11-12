@@ -119,15 +119,13 @@ void KToolTipWidgetTest::shouldNotObscureTarget_data()
                                           {QStringLiteral("bottomleft"), QPoint(m_offset, -m_offset)},
                                           {QStringLiteral("centered"), QPoint(m_screenGeometry.width() / 2, m_screenGeometry.height() / 2)}};
 
-    QMapIterator<QString, QPoint> i(positions);
-    while (i.hasNext()) {
-        i.next();
-        QTest::newRow(qPrintable(QStringLiteral("small/%1").arg(i.key()))) << i.value() << QStringLiteral("dummy text");
+    for (const auto &[name, position] : positions.asKeyValueRange()) {
+        QTest::newRow(qPrintable(QStringLiteral("small/%1").arg(name))) << position << QStringLiteral("dummy text");
 
-        QTest::newRow(qPrintable(QStringLiteral("multiline/%1").arg(i.key()))) << i.value() << QStringLiteral("dummy text\nLine 1\nLine 2\nLine 3");
+        QTest::newRow(qPrintable(QStringLiteral("multiline/%1").arg(name))) << position << QStringLiteral("dummy text\nLine 1\nLine 2\nLine 3");
 
-        QTest::newRow(qPrintable(QStringLiteral("one long line/%1").arg(i.key())))
-            << i.value()
+        QTest::newRow(qPrintable(QStringLiteral("one long line/%1").arg(name)))
+            << position
             << QStringLiteral(
                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec felis sed elit auctor lobortis non a urna. Quisque non posuere mauris. "
                    "Suspendisse potenti. In diam leo, lobortis at placerat nec, sagittis at tortor. Pellentesque scelerisque enim vel elementum scelerisque. "
@@ -138,8 +136,8 @@ void KToolTipWidgetTest::shouldNotObscureTarget_data()
                    "tellus eleifend turpis.");
 
         if (m_screenGeometry.width() >= 1600 && m_screenGeometry.height() >= 900) {
-            QTest::newRow(qPrintable(QStringLiteral("super large/%1").arg(i.key())))
-                << i.value()
+            QTest::newRow(qPrintable(QStringLiteral("super large/%1").arg(name)))
+                << position
                 << QStringLiteral(
                        "dummy 0 text\nLine 1\nLine 2\nLine 3"
                        "dummy 1 text\nLine 1\nLine 2\nLine 3"
