@@ -94,7 +94,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Ukončiť"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "Všetky"
@@ -159,7 +159,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Fonetické symboly"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:745
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "Zlúčenie diakritiky"
@@ -1269,197 +1269,197 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Desiatkovo"
 
-#: kcharselectdata.cpp:305
+#: kcharselectdata.cpp:304
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "<noncharacter>"
 
-#: kcharselectdata.cpp:326
+#: kcharselectdata.cpp:325
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Nesúkromné použitie - vysoká náhrada>"
 
-#: kcharselectdata.cpp:328
+#: kcharselectdata.cpp:327
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<Súkromné použitie - vysoká náhrada>"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:329
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<Nízka náhrada>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:331
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Súkromné použitie>"
 
-#: kcharselectdata.cpp:364
+#: kcharselectdata.cpp:363
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<nepriradené>"
 
-#: kcharselectdata.cpp:442
+#: kcharselectdata.cpp:441
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "Všetky"
 
-#: kcharselectdata.cpp:754
+#: kcharselectdata.cpp:753
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "Netlačiteľné"
 
-#: kcharselectdata.cpp:787
+#: kcharselectdata.cpp:786
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Ostatné, riadiace"
 
-#: kcharselectdata.cpp:789
+#: kcharselectdata.cpp:788
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Ostatné, formát"
 
-#: kcharselectdata.cpp:791
+#: kcharselectdata.cpp:790
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Ostatné, nepridelené"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:792
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Ostatné, súkromné použitie"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:794
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Ostatné, náhradné"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:796
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Písmeno, malé"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:798
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Písmeno, modifikátor"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:800
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Písmeno, ostatné"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:802
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Písmeno, titulkové"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:804
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Písmeno, veľké"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:806
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "Značka, spájanie medzery"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:808
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "Značka, uzatváracia"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:810
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "Značka, nie medzery"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:812
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Číslo, desiatková číslica"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:814
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "Číslo, písmeno"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:816
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Číslo, ostatné"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:818
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "Interpunkcia, spojka"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:820
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "Interpunkcia, pomlčka"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:822
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "Interpunkcia, uzatváranie"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:824
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "Interpunkcia, koncová úvodzovka"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:826
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "Interpunkcia, začiatočná úvodzovka"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:828
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "Interpunkcia, ostatné"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:830
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "Interpunkcia, otváranie"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:832
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Symbol, mena"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:834
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "Symbol, modifikátor"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:836
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "Symbol, matematika"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:838
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Symbol, ostatné"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:840
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "Oddeľovač, riadok"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:842
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "Oddeľovač, odstavec"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:844
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Oddeľovač, medzera"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:846
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Neznáme"
@@ -1592,22 +1592,22 @@ msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Žiadny dátum"
 
-#: kdatetimeedit.cpp:171
+#: kdatetimeedit.cpp:170
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
-#: kdatetimeedit.cpp:172
+#: kdatetimeedit.cpp:171
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Plávajúce"
 
-#: kdatetimeedit.cpp:211
+#: kdatetimeedit.cpp:210
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
 msgstr "Zadaný dátum a čas je pred minimálnym povoleným dátumom a časom."
 
-#: kdatetimeedit.cpp:221
+#: kdatetimeedit.cpp:220
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
 msgstr "Zadaný dátum a čas je po minimálnom povolenom dátume a čase."
@@ -1739,17 +1739,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatívne"
 
-#: kfontrequester.cpp:185
+#: kfontrequester.cpp:183
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Vybrať Písmo..."
 
-#: kfontrequester.cpp:191
+#: kfontrequester.cpp:189
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Náhľad vybraného písma"
 
-#: kfontrequester.cpp:193
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1758,13 +1758,13 @@ msgstr ""
 "Toto je náhľad vybraného písma. Môžete ho zmeniť stlačením \"Vybrať Písmo..."
 "\"."
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:195
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Náhľad písma \"%1\""
 
-#: kfontrequester.cpp:198
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
@@ -2023,7 +2023,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Meter kvality hesla:"
 
-#: kpageview.cpp:516
+#: kpageview.cpp:515
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Hľadať:"

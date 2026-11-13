@@ -87,7 +87,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "أنهِ"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "الكلّ"
@@ -152,7 +152,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "رموز لفظية"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:745
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "تشكيل تركيبية"
@@ -1262,197 +1262,197 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "عشريًا:"
 
-#: kcharselectdata.cpp:305
+#: kcharselectdata.cpp:304
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "<ليست حرف>"
 
-#: kcharselectdata.cpp:326
+#: kcharselectdata.cpp:325
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<استخدام غير خاص لبدائل عالية>"
 
-#: kcharselectdata.cpp:328
+#: kcharselectdata.cpp:327
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<استخدام خاص لبدائل عالية>"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:329
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<بدائل منخفضة>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:331
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<استخدام خاص>"
 
-#: kcharselectdata.cpp:364
+#: kcharselectdata.cpp:363
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<غير مسندة>"
 
-#: kcharselectdata.cpp:442
+#: kcharselectdata.cpp:441
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "الكلّ"
 
-#: kcharselectdata.cpp:754
+#: kcharselectdata.cpp:753
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "غير مطبوع"
 
-#: kcharselectdata.cpp:787
+#: kcharselectdata.cpp:786
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "أخرى، تحكّم"
 
-#: kcharselectdata.cpp:789
+#: kcharselectdata.cpp:788
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "أخرى، تنسيق"
 
-#: kcharselectdata.cpp:791
+#: kcharselectdata.cpp:790
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "أخرى، غير مُسند"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:792
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "أخرى، استخدام خاص"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:794
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "أخرى، بديل"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:796
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "حرف، صغير"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:798
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "حرف، مُعدّل"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:800
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "حرف، أخرى"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:802
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "حرف، عنوان"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:804
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "حرف، كبير"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:806
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "علامة، تركيبية فاصلة"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:808
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "علامة، حاوية"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:810
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "علامة، غير فاصلة"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:812
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "عدد، رقم عشري"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:814
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "عدد، حرف"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:816
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "عدد، أخرى"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:818
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "ترقيم، رابط"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:820
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "ترقيم، شرطة"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:822
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "ترقيم، غالِق"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:824
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "ترقيم، اقتباس أخير"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:826
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "ترقيم، اقتباس أول"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:828
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "ترقيم، أخرى"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:830
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "ترقيم، فاتِح"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:832
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "رمز، عملة"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:834
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "رمز، مُعدّل"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:836
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "رمز، رياضيات"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:838
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "رمز، أخرى"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:840
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "فاصل، سطر"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:842
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "فاصل، فقرة"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:844
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "فاصل، مسافة"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:846
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "مجهولة"
@@ -1585,22 +1585,22 @@ msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "لا تاريخ"
 
-#: kdatetimeedit.cpp:171
+#: kdatetimeedit.cpp:170
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "ت ع م"
 
-#: kdatetimeedit.cpp:172
+#: kdatetimeedit.cpp:171
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "عائم"
 
-#: kdatetimeedit.cpp:211
+#: kdatetimeedit.cpp:210
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
 msgstr "التاريخ والوقت المُدخلين قبل أدنى تاريخ ووقت مسموح بهما."
 
-#: kdatetimeedit.cpp:221
+#: kdatetimeedit.cpp:220
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
 msgstr "التاريخ والوقت المُدخلين بعد أعلى تاريخ ووقت مسموح بهما."
@@ -1730,30 +1730,30 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "نسبيّ"
 
-#: kfontrequester.cpp:185
+#: kfontrequester.cpp:183
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "اختر خطًّا…"
 
-#: kfontrequester.cpp:191
+#: kfontrequester.cpp:189
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "عاين للخط المحدّد"
 
-#: kfontrequester.cpp:193
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr "هذه معاينة للخط المحدّد. يمكنك تغييرها بنقر زر \"اختر خط...\"."
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:195
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "معاينة للخط \"%1\""
 
-#: kfontrequester.cpp:198
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
@@ -2014,7 +2014,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "مق&ياس قوة كلمة السر:"
 
-#: kpageview.cpp:516
+#: kpageview.cpp:515
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "ابحث..."

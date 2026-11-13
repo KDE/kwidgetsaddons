@@ -123,7 +123,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Tamat"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -223,7 +223,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Simbol Fonetik"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:745
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
 #, fuzzy
 #| msgctxt "KCharSelect section name"
 #| msgid "Combining Diacritical Marks"
@@ -1857,14 +1857,14 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Dalam desimal:"
 
-#: kcharselectdata.cpp:305
+#: kcharselectdata.cpp:304
 #, fuzzy
 #| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "Sebarang aksara"
 
-#: kcharselectdata.cpp:326
+#: kcharselectdata.cpp:325
 #, fuzzy
 #| msgctxt "KCharselect unicode block name"
 #| msgid "High Private Use Surrogates"
@@ -1872,7 +1872,7 @@ msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "Penggunaan Sendiri Tinggi Tumpang"
 
-#: kcharselectdata.cpp:328
+#: kcharselectdata.cpp:327
 #, fuzzy
 #| msgctxt "KCharselect unicode block name"
 #| msgid "High Private Use Surrogates"
@@ -1880,26 +1880,26 @@ msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "Penggunaan Sendiri Tinggi Tumpang"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:329
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "Rendah"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:331
 #, fuzzy
 #| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Penggunaan Persendirian>"
 
-#: kcharselectdata.cpp:364
+#: kcharselectdata.cpp:363
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "Lain-lain Tidak"
 
-#: kcharselectdata.cpp:442
+#: kcharselectdata.cpp:441
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -1907,201 +1907,201 @@ msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "Semu&a"
 
-#: kcharselectdata.cpp:754
+#: kcharselectdata.cpp:753
 #, fuzzy
 #| msgid "Non-printable"
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "Tidak boleh cetak"
 
-#: kcharselectdata.cpp:787
+#: kcharselectdata.cpp:786
 #, fuzzy
 #| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Lain-lain, Kawalan"
 
-#: kcharselectdata.cpp:789
+#: kcharselectdata.cpp:788
 #, fuzzy
 #| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Lain-lain, Format"
 
-#: kcharselectdata.cpp:791
+#: kcharselectdata.cpp:790
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Lain-lain Tidak"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:792
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Lain-lain Guna"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:794
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Lain-lain"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:796
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Letter Huruf Kecil"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:798
 #, fuzzy
 #| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Huruf, Pengubahsuai"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:800
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Letter Lain-lain"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:802
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Letter"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:804
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Letter Huruf Besar"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:806
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "Tanda Jarak"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:808
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "Tanda"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:810
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "Tanda Jarak"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:812
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Nombor Digit"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:814
 #, fuzzy
 #| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "Nombor, Huruf"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:816
 #, fuzzy
 #| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Nombor, Lain-lain"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:818
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "Connector"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:820
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "Tutup"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:822
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "Tutup"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:824
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "Akhir"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:826
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "Akhir"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:828
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "Lain-lain"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:830
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "Buka"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:832
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Simbol Mata wang"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:834
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "Simbol"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:836
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "Simbol Matematik"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:838
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Simbol Lain-lain"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:840
 #, fuzzy
 #| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "Pemisah, Baris"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:842
 #, fuzzy
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "Perenggan"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:844
 #, fuzzy
 #| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Pemisah, Ruang"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:846
 #, fuzzy
 #| msgid "Unknown"
 msgctxt "KCharSelectData|"
@@ -2288,25 +2288,25 @@ msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Tidak Tarikh"
 
-#: kdatetimeedit.cpp:171
+#: kdatetimeedit.cpp:170
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr ""
 
-#: kdatetimeedit.cpp:172
+#: kdatetimeedit.cpp:171
 #, fuzzy
 #| msgid "Rating"
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Terapung"
 
-#: kdatetimeedit.cpp:211
+#: kdatetimeedit.cpp:210
 #, fuzzy
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
 msgstr "tarikh dan masa  tarikh dan masa ."
 
-#: kdatetimeedit.cpp:221
+#: kdatetimeedit.cpp:220
 #, fuzzy
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
@@ -2486,21 +2486,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relatif"
 
-#: kfontrequester.cpp:185
+#: kfontrequester.cpp:183
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Pilih..."
 
-#: kfontrequester.cpp:191
+#: kfontrequester.cpp:189
 #, fuzzy
 #| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Prebiu Jenis Huruf dipilih"
 
-#: kfontrequester.cpp:193
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2513,14 +2513,14 @@ msgstr ""
 "Ini ialah prapapar fon yang dipilih. Anda boleh ubah ia dengan mengklik "
 "butang \"Pilih...\"."
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:195
 #, fuzzy, qt-format
 #| msgid "Preview of the \"%1\" font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Prebiu font \"%1\""
 
-#: kfontrequester.cpp:198
+#: kfontrequester.cpp:196
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "
@@ -2865,7 +2865,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Meter kekuatan kata laluan:"
 
-#: kpageview.cpp:516
+#: kpageview.cpp:515
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"

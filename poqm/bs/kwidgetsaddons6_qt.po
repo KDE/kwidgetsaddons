@@ -104,7 +104,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Završi"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr ""
@@ -178,7 +178,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "fonetski simboli"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:745
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
 #, fuzzy
 #| msgctxt "KCharSelectData|KCharSelect section name"
 #| msgid "Combining Diacritical Marks"
@@ -1387,7 +1387,7 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Dekadno:"
 
-#: kcharselectdata.cpp:305
+#: kcharselectdata.cpp:304
 #, fuzzy
 #| msgctxt "KCharSelect|"
 #| msgid "Character:"
@@ -1395,192 +1395,192 @@ msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "Znak:"
 
-#: kcharselectdata.cpp:326
+#: kcharselectdata.cpp:325
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<visoki surogat za javnu upotrebu>"
 
-#: kcharselectdata.cpp:328
+#: kcharselectdata.cpp:327
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<visoki surogat za privatnu upotrebu>"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:329
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<niski surogat>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:331
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<privatna upotreba>"
 
-#: kcharselectdata.cpp:364
+#: kcharselectdata.cpp:363
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<nije dodijeljeno>"
 
-#: kcharselectdata.cpp:442
+#: kcharselectdata.cpp:441
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr ""
 
-#: kcharselectdata.cpp:754
+#: kcharselectdata.cpp:753
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "Ne-ispisiv"
 
-#: kcharselectdata.cpp:787
+#: kcharselectdata.cpp:786
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Drugi, kontrola"
 
-#: kcharselectdata.cpp:789
+#: kcharselectdata.cpp:788
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Drugi, format"
 
-#: kcharselectdata.cpp:791
+#: kcharselectdata.cpp:790
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Drugi, nije dodijeljeno"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:792
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Drugi, privatna upotreba"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:794
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Drugi, surogat"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:796
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Slovo, malo"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:798
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Slovo, modifikator"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:800
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Slovo, drugo"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:802
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Slovo, naslov"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:804
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Slovo, veliko"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:806
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "oznaka, razmičuća kombinujuća"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:808
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "oznaka, obuhvatajuća"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:810
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "oznaka, nerazmičuća"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:812
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "broj, dekadna cifra"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:814
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "broj, slovo"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:816
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "broj, drugi"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:818
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "interpunkcija, povezivač"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:820
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "interpunkcija, crta"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:822
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "interpunkcija, zatvarajuća"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:824
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "interpunkcija, završni navodnik"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:826
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "interpunkcija, početni navodnik"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:828
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "interpunkcija, druga"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:830
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "interpunkcija, otvorena"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:832
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "simbol, valuta"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:834
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "simbol, modifikator"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:836
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "simbol, matematika"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:838
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "simbol, drugi"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:840
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "razdvajač, red"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:842
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "razdvajač, pasus"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:844
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "razdvajač, razmak"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:846
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Nepoznato"
@@ -1770,7 +1770,7 @@ msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Bez datuma"
 
-#: kdatetimeedit.cpp:171
+#: kdatetimeedit.cpp:170
 #, fuzzy
 #| msgctxt "KDateTimeEdit|UTC time zone"
 #| msgid "UTC"
@@ -1778,7 +1778,7 @@ msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
-#: kdatetimeedit.cpp:172
+#: kdatetimeedit.cpp:171
 #, fuzzy
 #| msgctxt "KDateTimeEdit|No specific time zone"
 #| msgid "Floating"
@@ -1786,13 +1786,13 @@ msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Plutajuće"
 
-#: kdatetimeedit.cpp:211
+#: kdatetimeedit.cpp:210
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
 msgstr ""
 "Uneseni datum i vrijeme su prije minimalnog dopuštenog datuma i vremena"
 
-#: kdatetimeedit.cpp:221
+#: kdatetimeedit.cpp:220
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
 msgstr ""
@@ -1970,7 +1970,7 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativno"
 
-#: kfontrequester.cpp:185
+#: kfontrequester.cpp:183
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Choose..."
@@ -1978,7 +1978,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Izaberite…"
 
-#: kfontrequester.cpp:191
+#: kfontrequester.cpp:189
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the selected font"
@@ -1986,7 +1986,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Pregled izabranog fonta"
 
-#: kfontrequester.cpp:193
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -2000,7 +2000,7 @@ msgstr ""
 "Ovo je pregled izabranog fonta. Možete ga promijeniti klikom na dugme "
 "Izaberi... ."
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:195
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid "Preview of the \"%1\" font"
@@ -2008,7 +2008,7 @@ msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Pregled fonta „%1“"
 
-#: kfontrequester.cpp:198
+#: kfontrequester.cpp:196
 #, fuzzy, qt-format
 #| msgctxt "KFontRequester|"
 #| msgid ""
@@ -2328,7 +2328,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Mjerač jačine lozinke:"
 
-#: kpageview.cpp:516
+#: kpageview.cpp:515
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr ""

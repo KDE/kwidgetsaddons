@@ -109,7 +109,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Završi"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -207,7 +207,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Fonetski znakovi"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:745
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
 #, fuzzy
 #| msgctxt "KCharSelect section name"
 #| msgid "Combining Diacritical Marks"
@@ -1922,49 +1922,49 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "U decimalnom zapisu:"
 
-#: kcharselectdata.cpp:305
+#: kcharselectdata.cpp:304
 #, fuzzy
 #| msgid "Any Character"
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "Bilo koji znak"
 
-#: kcharselectdata.cpp:326
+#: kcharselectdata.cpp:325
 #, fuzzy
 #| msgid "<Non Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Non Private Use High Surrogate>"
 
-#: kcharselectdata.cpp:328
+#: kcharselectdata.cpp:327
 #, fuzzy
 #| msgid "<Private Use High Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<Private Use High Surrogate>"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:329
 #, fuzzy
 #| msgid "<Low Surrogate>"
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<Niski nadomjestak>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:331
 #, fuzzy
 #| msgid "<Private Use>"
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Private Use>"
 
-#: kcharselectdata.cpp:364
+#: kcharselectdata.cpp:363
 #, fuzzy
 #| msgid "<not assigned>"
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<nedodjelijeno>"
 
-#: kcharselectdata.cpp:442
+#: kcharselectdata.cpp:441
 #, fuzzy
 #| msgctxt "@action:button Replace all occurrences"
 #| msgid "&All"
@@ -1972,224 +1972,224 @@ msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "&Sve"
 
-#: kcharselectdata.cpp:754
+#: kcharselectdata.cpp:753
 #, fuzzy
 #| msgid "Non-printable"
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "Neispisivo"
 
-#: kcharselectdata.cpp:787
+#: kcharselectdata.cpp:786
 #, fuzzy
 #| msgid "Other, Control"
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Ostalo, kontrola"
 
-#: kcharselectdata.cpp:789
+#: kcharselectdata.cpp:788
 #, fuzzy
 #| msgid "Other, Format"
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Ostalo, oblik"
 
-#: kcharselectdata.cpp:791
+#: kcharselectdata.cpp:790
 #, fuzzy
 #| msgid "Other, Not Assigned"
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Ostalo, nedodijeljeno"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:792
 #, fuzzy
 #| msgid "Other, Private Use"
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Drugo, privatno korištenje"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:794
 #, fuzzy
 #| msgid "Other, Surrogate"
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Drugo, nadomjestak"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:796
 #, fuzzy
 #| msgid "Letter, Lowercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Slovo, malo slovo"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:798
 #, fuzzy
 #| msgid "Letter, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Slovo, izmjena"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:800
 #, fuzzy
 #| msgid "Letter, Other"
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Slovo, ostalo"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:802
 #, fuzzy
 #| msgid "Letter, Titlecase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Slovo, naslovno"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:804
 #, fuzzy
 #| msgid "Letter, Uppercase"
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Slovo, veliko slovo"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:806
 #, fuzzy
 #| msgid "Mark, Spacing Combining"
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "Oznaka, kombiniravši razmake"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:808
 #, fuzzy
 #| msgid "Mark, Enclosing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "Oznaka, ograđivanje"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:810
 #, fuzzy
 #| msgid "Mark, Non-Spacing"
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "Oznaka, bez razmaka"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:812
 #, fuzzy
 #| msgid "Number, Decimal Digit"
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Broj, decimalne znamenke"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:814
 #, fuzzy
 #| msgid "Number, Letter"
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "Broj, slovo"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:816
 #, fuzzy
 #| msgid "Number, Other"
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Broj, ostalo"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:818
 #, fuzzy
 #| msgid "Punctuation, Connector"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "Interpunkcija, spojnica"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:820
 #, fuzzy
 #| msgid "Punctuation, Dash"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "Interpunkcija, crta"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:822
 #, fuzzy
 #| msgid "Punctuation, Close"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "Interpunkcija, Kraj"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:824
 #, fuzzy
 #| msgid "Punctuation, Final Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "Interpunkcija, završni navodnik"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:826
 #, fuzzy
 #| msgid "Punctuation, Initial Quote"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "Interpunkcija, početni navodnik"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:828
 #, fuzzy
 #| msgid "Punctuation, Other"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "Interpunkcija, ostalo"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:830
 #, fuzzy
 #| msgid "Punctuation, Open"
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "Interpunkcija, Otvoren"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:832
 #, fuzzy
 #| msgid "Symbol, Currency"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Simboli, valute"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:834
 #, fuzzy
 #| msgid "Symbol, Modifier"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "Simbol, Mjenjač"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:836
 #, fuzzy
 #| msgid "Symbol, Math"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "Simbol, matematički"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:838
 #, fuzzy
 #| msgid "Symbol, Other"
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Simboli, ostali"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:840
 #, fuzzy
 #| msgid "Separator, Line"
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "Razdjelnik, linija"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:842
 #, fuzzy
 #| msgid "Separator, Paragraph"
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "Razdjelnik, paragraf"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:844
 #, fuzzy
 #| msgid "Separator, Space"
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Razdjelnik, razmaknica"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:846
 #, fuzzy
 #| msgid "Unknown"
 msgctxt "KCharSelectData|"
@@ -2381,7 +2381,7 @@ msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Bez datuma"
 
-#: kdatetimeedit.cpp:171
+#: kdatetimeedit.cpp:170
 #, fuzzy
 #| msgctxt "UTC time zone"
 #| msgid "UTC"
@@ -2389,7 +2389,7 @@ msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "UTC"
 
-#: kdatetimeedit.cpp:172
+#: kdatetimeedit.cpp:171
 #, fuzzy
 #| msgctxt "No specific time zone"
 #| msgid "Floating"
@@ -2397,7 +2397,7 @@ msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Lebdjenje"
 
-#: kdatetimeedit.cpp:211
+#: kdatetimeedit.cpp:210
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -2407,7 +2407,7 @@ msgid "The entered date and time is before the minimum allowed date and time."
 msgstr ""
 "Unešen je datum i vrijeme manje od minimalno dozvoljenog datuma i vremena."
 
-#: kdatetimeedit.cpp:221
+#: kdatetimeedit.cpp:220
 #, fuzzy
 #| msgctxt "@info"
 #| msgid ""
@@ -2594,21 +2594,21 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Relativno"
 
-#: kfontrequester.cpp:185
+#: kfontrequester.cpp:183
 #, fuzzy
 #| msgid "Choose..."
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Odaberi…"
 
-#: kfontrequester.cpp:191
+#: kfontrequester.cpp:189
 #, fuzzy
 #| msgid "Preview of the selected font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Pregled odabranog fonta"
 
-#: kfontrequester.cpp:193
+#: kfontrequester.cpp:191
 #, fuzzy
 #| msgid ""
 #| "This is a preview of the selected font. You can change it by clicking the "
@@ -2621,14 +2621,14 @@ msgstr ""
 "Ovo je pregled odabranog fonta. Font možete promijeniti klikanjem gumba "
 "\"Odaberi...\"."
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:195
 #, fuzzy, qt-format
 #| msgid "Preview of the \"%1\" font"
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "Pregled fonta \"%1\""
 
-#: kfontrequester.cpp:198
+#: kfontrequester.cpp:196
 #, fuzzy, qt-format
 #| msgid ""
 #| "This is a preview of the \"%1\" font. You can change it by clicking the "
@@ -2974,7 +2974,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Pokazivač kakvoće zaporke:"
 
-#: kpageview.cpp:516
+#: kpageview.cpp:515
 #, fuzzy
 #| msgid "Search:"
 msgctxt "KPageView|@info:placeholder"

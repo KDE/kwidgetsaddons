@@ -95,7 +95,7 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Užbaigti"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:279
+#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "All"
 msgstr "Visi"
@@ -160,7 +160,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Fonetiniai simboliai"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:745
+#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "Kombinaciniai diakritiniai ženklai"
@@ -1270,197 +1270,197 @@ msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Dešimtainiais"
 
-#: kcharselectdata.cpp:305
+#: kcharselectdata.cpp:304
 msgctxt "KCharSelectData|"
 msgid "<noncharacter>"
 msgstr "<ne simbolis>"
 
-#: kcharselectdata.cpp:326
+#: kcharselectdata.cpp:325
 msgctxt "KCharSelectData|"
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Ne asmeninio naudojimo aukštasis pakaitalas>"
 
-#: kcharselectdata.cpp:328
+#: kcharselectdata.cpp:327
 msgctxt "KCharSelectData|"
 msgid "<Private Use High Surrogate>"
 msgstr "<Asmeninio naudojimo aukštasis pakaitalas>"
 
-#: kcharselectdata.cpp:330
+#: kcharselectdata.cpp:329
 msgctxt "KCharSelectData|"
 msgid "<Low Surrogate>"
 msgstr "<Žemasis pakaitalas>"
 
-#: kcharselectdata.cpp:332
+#: kcharselectdata.cpp:331
 msgctxt "KCharSelectData|"
 msgid "<Private Use>"
 msgstr "<Asmeniniam naudojimui>"
 
-#: kcharselectdata.cpp:364
+#: kcharselectdata.cpp:363
 msgctxt "KCharSelectData|"
 msgid "<not assigned>"
 msgstr "<nepriskirta>"
 
-#: kcharselectdata.cpp:442
+#: kcharselectdata.cpp:441
 msgctxt "KCharSelectData|KCharselect unicode section name"
 msgid "All"
 msgstr "Visi"
 
-#: kcharselectdata.cpp:754
+#: kcharselectdata.cpp:753
 msgctxt "KCharSelectData|"
 msgid "Non-printable"
 msgstr "Nespausdinamas"
 
-#: kcharselectdata.cpp:787
+#: kcharselectdata.cpp:786
 msgctxt "KCharSelectData|"
 msgid "Other, Control"
 msgstr "Kita, valdymas"
 
-#: kcharselectdata.cpp:789
+#: kcharselectdata.cpp:788
 msgctxt "KCharSelectData|"
 msgid "Other, Format"
 msgstr "Kita, formatas"
 
-#: kcharselectdata.cpp:791
+#: kcharselectdata.cpp:790
 msgctxt "KCharSelectData|"
 msgid "Other, Not Assigned"
 msgstr "Kita, nepriskirta"
 
-#: kcharselectdata.cpp:793
+#: kcharselectdata.cpp:792
 msgctxt "KCharSelectData|"
 msgid "Other, Private Use"
 msgstr "Kita, asmeninio naudojimo"
 
-#: kcharselectdata.cpp:795
+#: kcharselectdata.cpp:794
 msgctxt "KCharSelectData|"
 msgid "Other, Surrogate"
 msgstr "Kita, pakaitalas"
 
-#: kcharselectdata.cpp:797
+#: kcharselectdata.cpp:796
 msgctxt "KCharSelectData|"
 msgid "Letter, Lowercase"
 msgstr "Raidė, mažoji"
 
-#: kcharselectdata.cpp:799
+#: kcharselectdata.cpp:798
 msgctxt "KCharSelectData|"
 msgid "Letter, Modifier"
 msgstr "Raidė, modifikatorius"
 
-#: kcharselectdata.cpp:801
+#: kcharselectdata.cpp:800
 msgctxt "KCharSelectData|"
 msgid "Letter, Other"
 msgstr "Raidė, kita"
 
-#: kcharselectdata.cpp:803
+#: kcharselectdata.cpp:802
 msgctxt "KCharSelectData|"
 msgid "Letter, Titlecase"
 msgstr "Raidė, iš didžųjų raidžių"
 
-#: kcharselectdata.cpp:805
+#: kcharselectdata.cpp:804
 msgctxt "KCharSelectData|"
 msgid "Letter, Uppercase"
 msgstr "Raidė, didžioji"
 
-#: kcharselectdata.cpp:807
+#: kcharselectdata.cpp:806
 msgctxt "KCharSelectData|"
 msgid "Mark, Spacing Combining"
 msgstr "Žymės, tarpų sujungimas"
 
-#: kcharselectdata.cpp:809
+#: kcharselectdata.cpp:808
 msgctxt "KCharSelectData|"
 msgid "Mark, Enclosing"
 msgstr "Žymės, apsupimo"
 
-#: kcharselectdata.cpp:811
+#: kcharselectdata.cpp:810
 msgctxt "KCharSelectData|"
 msgid "Mark, Non-Spacing"
 msgstr "Žymės, nepašalinami tarpai"
 
-#: kcharselectdata.cpp:813
+#: kcharselectdata.cpp:812
 msgctxt "KCharSelectData|"
 msgid "Number, Decimal Digit"
 msgstr "Skaičius, dešimtainis skaitmuo"
 
-#: kcharselectdata.cpp:815
+#: kcharselectdata.cpp:814
 msgctxt "KCharSelectData|"
 msgid "Number, Letter"
 msgstr "Skaičius, raidė"
 
-#: kcharselectdata.cpp:817
+#: kcharselectdata.cpp:816
 msgctxt "KCharSelectData|"
 msgid "Number, Other"
 msgstr "Skaičius, kita"
 
-#: kcharselectdata.cpp:819
+#: kcharselectdata.cpp:818
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Connector"
 msgstr "Skyrybos ženklas, jungtukas"
 
-#: kcharselectdata.cpp:821
+#: kcharselectdata.cpp:820
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Dash"
 msgstr "Skyrybos ženklas, brūkšnys"
 
-#: kcharselectdata.cpp:823
+#: kcharselectdata.cpp:822
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Close"
 msgstr "Skyrybos ženklas, užveriantis"
 
-#: kcharselectdata.cpp:825
+#: kcharselectdata.cpp:824
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Final Quote"
 msgstr "Skyrybos ženklas, uždarančios kabutės"
 
-#: kcharselectdata.cpp:827
+#: kcharselectdata.cpp:826
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Initial Quote"
 msgstr "Skyrybos ženklas, atidarančios kabutės"
 
-#: kcharselectdata.cpp:829
+#: kcharselectdata.cpp:828
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Other"
 msgstr "Skyrybos ženklas, kitas"
 
-#: kcharselectdata.cpp:831
+#: kcharselectdata.cpp:830
 msgctxt "KCharSelectData|"
 msgid "Punctuation, Open"
 msgstr "Skyrybos ženklas, atveriantis"
 
-#: kcharselectdata.cpp:833
+#: kcharselectdata.cpp:832
 msgctxt "KCharSelectData|"
 msgid "Symbol, Currency"
 msgstr "Simbolis, valiuta"
 
-#: kcharselectdata.cpp:835
+#: kcharselectdata.cpp:834
 msgctxt "KCharSelectData|"
 msgid "Symbol, Modifier"
 msgstr "Simbolis, modifikavimo"
 
-#: kcharselectdata.cpp:837
+#: kcharselectdata.cpp:836
 msgctxt "KCharSelectData|"
 msgid "Symbol, Math"
 msgstr "Simbolis, matematinis"
 
-#: kcharselectdata.cpp:839
+#: kcharselectdata.cpp:838
 msgctxt "KCharSelectData|"
 msgid "Symbol, Other"
 msgstr "Simbolis, kita"
 
-#: kcharselectdata.cpp:841
+#: kcharselectdata.cpp:840
 msgctxt "KCharSelectData|"
 msgid "Separator, Line"
 msgstr "Skirtukas, linija"
 
-#: kcharselectdata.cpp:843
+#: kcharselectdata.cpp:842
 msgctxt "KCharSelectData|"
 msgid "Separator, Paragraph"
 msgstr "Skirtukas, pastraipa"
 
-#: kcharselectdata.cpp:845
+#: kcharselectdata.cpp:844
 msgctxt "KCharSelectData|"
 msgid "Separator, Space"
 msgstr "Skirtukas, tarpas"
 
-#: kcharselectdata.cpp:847
+#: kcharselectdata.cpp:846
 msgctxt "KCharSelectData|"
 msgid "Unknown"
 msgstr "Nežinoma"
@@ -1593,23 +1593,23 @@ msgctxt "KDatePickerPopup|@option do not specify a date"
 msgid "No Date"
 msgstr "Be datos"
 
-#: kdatetimeedit.cpp:171
+#: kdatetimeedit.cpp:170
 msgctxt "KDateTimeEdit|@item:inlistbox UTC time zone"
 msgid "UTC"
 msgstr "Suderintasis pasaulinis laikas (UTC)"
 
-#: kdatetimeedit.cpp:172
+#: kdatetimeedit.cpp:171
 msgctxt "KDateTimeEdit|@item:inlistbox No specific time zone"
 msgid "Floating"
 msgstr "Slankiojanti"
 
-#: kdatetimeedit.cpp:211
+#: kdatetimeedit.cpp:210
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is before the minimum allowed date and time."
 msgstr ""
 "Įvesta data ir laikas yra anksčiau už mažiausią leidžiamą datą ir laiką."
 
-#: kdatetimeedit.cpp:221
+#: kdatetimeedit.cpp:220
 msgctxt "KDateTimeEdit|@info"
 msgid "The entered date and time is after the maximum allowed date and time."
 msgstr ""
@@ -1740,17 +1740,17 @@ msgctxt "KFontChooserWidget|"
 msgid "Relative"
 msgstr "Santykinis"
 
-#: kfontrequester.cpp:185
+#: kfontrequester.cpp:183
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Choose font…"
 msgstr "Pasirinkti šriftą…"
 
-#: kfontrequester.cpp:191
+#: kfontrequester.cpp:189
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
 msgstr "Pasirinkto šrifto peržiūra"
 
-#: kfontrequester.cpp:193
+#: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
@@ -1759,13 +1759,13 @@ msgstr ""
 "Tai yra pasirinkto šrifto peržiūra. Galite jį keisti spusteldami mygtuką "
 "„Pasirinkti šriftą...“."
 
-#: kfontrequester.cpp:197
+#: kfontrequester.cpp:195
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
 msgstr "„%1“ šrifto peržiūra"
 
-#: kfontrequester.cpp:198
+#: kfontrequester.cpp:196
 #, qt-format
 msgctxt "KFontRequester|@info:whatsthis"
 msgid ""
@@ -2028,7 +2028,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Slaptažodžio stiprumo &matuoklis:"
 
-#: kpageview.cpp:516
+#: kpageview.cpp:515
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Ieškoti…"
