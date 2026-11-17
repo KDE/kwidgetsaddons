@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-11-15 19:31+0300\n"
+"PO-Revision-Date: 2026-11-16 18:35+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1753,7 +1753,7 @@ msgstr "Yazı tipi seç…"
 #: kfontrequester.cpp:189
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
-msgstr "Seçilen yazı tipinin önizlemesi"
+msgstr "Seçilen yazı tipinin ön izlemesi"
 
 #: kfontrequester.cpp:191
 msgctxt "KFontRequester|@info:whatsthis"
@@ -1761,14 +1761,14 @@ msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, seçili yazı tipinin bir önizlemesidir. “Yazı Tipi Seç…” düğmesine "
+"Bu, seçili yazı tipinin bir ön izlemesidir. “Yazı Tipi Seç…” düğmesine "
 "tıklayarak onu değiştirebilirsiniz."
 
 #: kfontrequester.cpp:195
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
-msgstr "“%1” yazı tipinin önizlemesi"
+msgstr "“%1” yazı tipinin ön izlemesi"
 
 #: kfontrequester.cpp:196
 #, qt-format
@@ -1777,8 +1777,8 @@ msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, %1 yazı tipinin önizlemesidir. “Yazı Tipi Seç…” düğmesine tıklayarak onu "
-"değiştirebilirsiniz."
+"Bu, %1 yazı tipinin ön izlemesidir. “Yazı Tipi Seç…” düğmesine tıklayarak "
+"onu değiştirebilirsiniz."
 
 #: kled.cpp:172
 msgctxt "KLed|Accessible name of a Led whose state is on"
