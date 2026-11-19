@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2014-03-23 01:50+0000\n"
-"PO-Revision-Date: 2026-11-10 21:42+0300\n"
+"PO-Revision-Date: 2026-11-18 18:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -1663,7 +1663,7 @@ msgstr "Pijamalı hasta, yağız şoföre çabucak güvendi"
 msgctxt "KFontChooser|@info:tooltip"
 msgid "Font size<br /><i>fixed</i> or <i>relative</i><br />to environment"
 msgstr ""
-"<br /><i>sabit</i> veya çevreye bağlı olarak <i>değişken</i><br /> yazıtipi "
+"<br /><i>sabit</i> veya çevreye bağlı olarak <i>değişken</i><br /> yazı tipi "
 "boyutu"
 
 #: kfontchooser.cpp:314
@@ -1674,7 +1674,7 @@ msgid ""
 "paper size)."
 msgstr ""
 "Burada, değişen çevreye göre devingen olarak hesaplanan ve sabit boyutlu "
-"yazıtipleri arasında değişim yapabilirsiniz (örn. parçaçık boyutlar, sayfa "
+"yazı tipleri arasında değişim yapabilirsiniz (örn. parçaçık boyutlar, sayfa "
 "boyutu)."
 
 #: kfontchooser.cpp:474
@@ -1706,12 +1706,12 @@ msgstr "Yazıtipi:"
 #: kfontchooserwidget.ui:56
 msgctxt "KFontChooserWidget|"
 msgid "Font style"
-msgstr "Yazıtipi stili"
+msgstr "Yazı tipi stili"
 
 #: kfontchooserwidget.ui:63
 msgctxt "KFontChooserWidget|"
 msgid "Font style:"
-msgstr "Yazıtipi stili:"
+msgstr "Yazı tipi stili:"
 
 #: kfontchooserwidget.ui:81
 msgctxt "KFontChooserWidget|"
@@ -1740,7 +1740,7 @@ msgstr ""
 #: kfontchooserwidget.ui:135
 msgctxt "KFontChooserWidget|"
 msgid "Show only monospaced fonts"
-msgstr "Yalnızca eş aralıklı yazıtiplerini göster"
+msgstr "Yalnızca eş aralıklı yazı tiplerini göster"
 
 #: kfontrequester.cpp:155
 msgctxt "KFontRequester|@info:tooltip"
@@ -1750,7 +1750,7 @@ msgstr "Yazıtipi seç..."
 #: kfontrequester.cpp:161
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the selected font"
-msgstr "Seçilen yazıtipinin önizlemesi"
+msgstr "Seçilen yazı tipinin ön izlemesi"
 
 #: kfontrequester.cpp:163
 msgctxt "KFontRequester|@info:whatsthis"
@@ -1758,14 +1758,14 @@ msgid ""
 "This is a preview of the selected font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, seçilen yazıtipinin bir önizlemesidir. \"Yazıtipi Seç\" düğmesine "
+"Bu, seçilen yazı tipinin bir ön izlemesidir. \"Yazıtipi Seç\" düğmesine "
 "basarak onu değiştirebilirsiniz."
 
 #: kfontrequester.cpp:167
 #, qt-format
 msgctxt "KFontRequester|@info:tooltip"
 msgid "Preview of the \"%1\" font"
-msgstr "\"%1\" yazıtipinin önizlemesi"
+msgstr "\"%1\" yazı tipinin ön izlemesi"
 
 #: kfontrequester.cpp:168
 #, qt-format
@@ -1774,7 +1774,7 @@ msgid ""
 "This is a preview of the \"%1\" font. You can change it by clicking the "
 "\"Choose Font...\" button."
 msgstr ""
-"Bu, %1 yazıtipinin önizlemesidir. \"Yazıtipi Seç...\" düğmesine tıklayarak "
+"Bu, %1 yazı tipinin ön izlemesidir. \"Yazıtipi Seç...\" düğmesine tıklayarak "
 "değiştirebilirsiniz."
 
 #: kled.cpp:172
