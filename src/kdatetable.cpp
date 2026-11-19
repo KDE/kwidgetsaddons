@@ -620,7 +620,8 @@ void KDateTable::mousePressEvent(QMouseEvent *e)
     Q_EMIT tableClicked();
 
     if (e->button() == Qt::RightButton && d->m_popupMenuEnabled) {
-        QMenu *menu = new QMenu();
+        QMenu *menu = new QMenu(this);
+        menu->setAttribute(Qt::WA_DeleteOnClose);
         menu->addSection(locale().toString(d->m_date));
         Q_EMIT aboutToShowContextMenu(menu, clickedDate);
         menu->popup(e->globalPosition().toPoint());
