@@ -99,977 +99,972 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "Ljúka"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
-msgctxt "KCharSelectData|KCharSelect section name"
-msgid "All"
-msgstr "Allt"
-
-#: kcharselect-translation.cpp:12
+#: kcharselect-translation.cpp:11
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
 msgstr "Evrópsk letur"
 
-#: kcharselect-translation.cpp:13
+#: kcharselect-translation.cpp:12
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
 msgstr "Afrísk letur"
 
-#: kcharselect-translation.cpp:14
+#: kcharselect-translation.cpp:13
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
 msgstr "Miðausturlensk letur"
 
-#: kcharselect-translation.cpp:15
+#: kcharselect-translation.cpp:14
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
 msgstr "Miðasísk letur"
 
-#: kcharselect-translation.cpp:16
+#: kcharselect-translation.cpp:15
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
 msgstr "Suðurasísk letur"
 
-#: kcharselect-translation.cpp:17
+#: kcharselect-translation.cpp:16
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
 msgstr "Suðausturasísk letur"
 
-#: kcharselect-translation.cpp:18
+#: kcharselect-translation.cpp:17
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
 msgstr "Letur frá Indónesíu og Eyjaálfu"
 
-#: kcharselect-translation.cpp:19
+#: kcharselect-translation.cpp:18
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
 msgstr "Austurasísk letur"
 
-#: kcharselect-translation.cpp:20
+#: kcharselect-translation.cpp:19
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
 msgstr "Amerísk letur"
 
-#: kcharselect-translation.cpp:21
+#: kcharselect-translation.cpp:20
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Symbols"
 msgstr "Tákn"
 
-#: kcharselect-translation.cpp:22
+#: kcharselect-translation.cpp:21
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Mathematical Symbols"
 msgstr "Stærðfræðitákn"
 
-#: kcharselect-translation.cpp:23
+#: kcharselect-translation.cpp:22
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Hljóðfræðitákn"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:744
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "Yfir-og undirsett áherslumerki"
 
-#: kcharselect-translation.cpp:25
+#: kcharselect-translation.cpp:24
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "Annað"
 
-#: kcharselect-translation.cpp:26
+#: kcharselect-translation.cpp:25
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
 msgstr "Latneskt, grunnur"
 
-#: kcharselect-translation.cpp:27
+#: kcharselect-translation.cpp:26
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin-1 Supplement"
 msgstr "Latneskt-1 viðbót"
 
-#: kcharselect-translation.cpp:28
+#: kcharselect-translation.cpp:27
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
 msgstr "Latneskt aukið-A"
 
-#: kcharselect-translation.cpp:29
+#: kcharselect-translation.cpp:28
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
 msgstr "Latneskt aukið-B"
 
-#: kcharselect-translation.cpp:30
+#: kcharselect-translation.cpp:29
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "IPA Extensions"
 msgstr "IPA viðaukar"
 
-#: kcharselect-translation.cpp:31
+#: kcharselect-translation.cpp:30
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
 msgstr "Ákvæðistákn (Spacing Modifier Letters)"
 
-#: kcharselect-translation.cpp:32
+#: kcharselect-translation.cpp:31
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
 msgstr "Yfir- og undirsett stafmerki"
 
-#: kcharselect-translation.cpp:33
+#: kcharselect-translation.cpp:32
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek and Coptic"
 msgstr "Grískt og Koptískt"
 
-#: kcharselect-translation.cpp:34
+#: kcharselect-translation.cpp:33
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic"
 msgstr "Kýrilískt"
 
-#: kcharselect-translation.cpp:35
+#: kcharselect-translation.cpp:34
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Supplement"
 msgstr "Kýrilískt, viðbót"
 
-#: kcharselect-translation.cpp:36
+#: kcharselect-translation.cpp:35
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Armenian"
 msgstr "Armenskt"
 
-#: kcharselect-translation.cpp:37
+#: kcharselect-translation.cpp:36
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hebrew"
 msgstr "Hebreskt"
 
-#: kcharselect-translation.cpp:38
+#: kcharselect-translation.cpp:37
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
 msgstr "Arabískt"
 
-#: kcharselect-translation.cpp:39
+#: kcharselect-translation.cpp:38
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac"
 msgstr "Sýrlenskt"
 
-#: kcharselect-translation.cpp:40
+#: kcharselect-translation.cpp:39
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
 msgstr "Arabískt, viðbót"
 
-#: kcharselect-translation.cpp:41
+#: kcharselect-translation.cpp:40
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
 msgstr "Thaana"
 
-#: kcharselect-translation.cpp:42
+#: kcharselect-translation.cpp:41
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "NKo"
 
-#: kcharselect-translation.cpp:43
+#: kcharselect-translation.cpp:42
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
 msgstr "Samverskt"
 
-#: kcharselect-translation.cpp:44
+#: kcharselect-translation.cpp:43
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mandaic"
 msgstr "Mandaískt"
 
-#: kcharselect-translation.cpp:45
+#: kcharselect-translation.cpp:44
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac Supplement"
 msgstr "Sýrlenskt, viðbót"
 
-#: kcharselect-translation.cpp:46
+#: kcharselect-translation.cpp:45
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
 msgstr "Arabískt aukið-B"
 
-#: kcharselect-translation.cpp:47
+#: kcharselect-translation.cpp:46
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
 msgstr "Arabískt aukið-A"
 
-#: kcharselect-translation.cpp:48
+#: kcharselect-translation.cpp:47
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
 msgstr "Devanagarí"
 
-#: kcharselect-translation.cpp:49
+#: kcharselect-translation.cpp:48
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bengali"
 msgstr "Bengalskt"
 
-#: kcharselect-translation.cpp:50
+#: kcharselect-translation.cpp:49
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
 msgstr "Gurmúkískt"
 
-#: kcharselect-translation.cpp:51
+#: kcharselect-translation.cpp:50
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
 msgstr "Gujaratískt"
 
-#: kcharselect-translation.cpp:52
+#: kcharselect-translation.cpp:51
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
 msgstr "Oriya"
 
-#: kcharselect-translation.cpp:53
+#: kcharselect-translation.cpp:52
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tamil"
 msgstr "Tamílskt"
 
-#: kcharselect-translation.cpp:54
+#: kcharselect-translation.cpp:53
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
 msgstr "Telúgú"
 
-#: kcharselect-translation.cpp:55
+#: kcharselect-translation.cpp:54
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
 msgstr "Kannadískt"
 
-#: kcharselect-translation.cpp:56
+#: kcharselect-translation.cpp:55
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
 msgstr "Malajalam"
 
-#: kcharselect-translation.cpp:57
+#: kcharselect-translation.cpp:56
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
 msgstr "Singalískt"
 
-#: kcharselect-translation.cpp:58
+#: kcharselect-translation.cpp:57
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
 msgstr "Tælenskt"
 
-#: kcharselect-translation.cpp:59
+#: kcharselect-translation.cpp:58
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lao"
 msgstr "Laóskt"
 
-#: kcharselect-translation.cpp:60
+#: kcharselect-translation.cpp:59
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tibetan"
 msgstr "Tíbetskt"
 
-#: kcharselect-translation.cpp:61
+#: kcharselect-translation.cpp:60
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar"
 msgstr "Mjanmarskt"
 
-#: kcharselect-translation.cpp:62
+#: kcharselect-translation.cpp:61
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian"
 msgstr "Georgískt"
 
-#: kcharselect-translation.cpp:63
+#: kcharselect-translation.cpp:62
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
 msgstr "Hangul Jamo"
 
-#: kcharselect-translation.cpp:64
+#: kcharselect-translation.cpp:63
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic"
 msgstr "Eþíópískt"
 
-#: kcharselect-translation.cpp:65
+#: kcharselect-translation.cpp:64
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
 msgstr "Eþíópískt, viðbót"
 
-#: kcharselect-translation.cpp:66
+#: kcharselect-translation.cpp:65
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee"
 msgstr "Cherokee"
 
-#: kcharselect-translation.cpp:67
+#: kcharselect-translation.cpp:66
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "Samræmd atkvæðaskrift kanadískra frumbyggja"
 
-#: kcharselect-translation.cpp:68
+#: kcharselect-translation.cpp:67
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ogham"
 msgstr "Ogham-letur"
 
-#: kcharselect-translation.cpp:69
+#: kcharselect-translation.cpp:68
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Runic"
 msgstr "Rúnaletur"
 
-#: kcharselect-translation.cpp:70
+#: kcharselect-translation.cpp:69
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagalog"
 msgstr "Tagalog"
 
-#: kcharselect-translation.cpp:71
+#: kcharselect-translation.cpp:70
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hanunoo"
 msgstr "Hanunú"
 
-#: kcharselect-translation.cpp:72
+#: kcharselect-translation.cpp:71
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
 msgstr "Buhid"
 
-#: kcharselect-translation.cpp:73
+#: kcharselect-translation.cpp:72
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
 msgstr "Tagbanva-letur"
 
-#: kcharselect-translation.cpp:74
+#: kcharselect-translation.cpp:73
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer"
 msgstr "Khmer"
 
-#: kcharselect-translation.cpp:75
+#: kcharselect-translation.cpp:74
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mongolian"
 msgstr "Mongólskt"
 
-#: kcharselect-translation.cpp:76
+#: kcharselect-translation.cpp:75
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgstr "Samræmd atkvæðaskrift kanadískra frumbyggja, aukið"
 
-#: kcharselect-translation.cpp:77
+#: kcharselect-translation.cpp:76
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
 msgstr "Limbu-letur"
 
-#: kcharselect-translation.cpp:78
+#: kcharselect-translation.cpp:77
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
 msgstr "Tai Le-letur"
 
-#: kcharselect-translation.cpp:79
+#: kcharselect-translation.cpp:78
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "Nýja Tai Lue"
 
-#: kcharselect-translation.cpp:80
+#: kcharselect-translation.cpp:79
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer Symbols"
 msgstr "Khmer-tákn"
 
-#: kcharselect-translation.cpp:81
+#: kcharselect-translation.cpp:80
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
 msgstr "Bugínesískt"
 
-#: kcharselect-translation.cpp:82
+#: kcharselect-translation.cpp:81
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
 msgstr "Tai Tham-letur"
 
-#: kcharselect-translation.cpp:83
+#: kcharselect-translation.cpp:82
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
 msgstr "Yfir- og undirsett áherslumerki, aukið"
 
-#: kcharselect-translation.cpp:84
+#: kcharselect-translation.cpp:83
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
 msgstr "Balískt"
 
-#: kcharselect-translation.cpp:85
+#: kcharselect-translation.cpp:84
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
 msgstr "Sundískt"
 
-#: kcharselect-translation.cpp:86
+#: kcharselect-translation.cpp:85
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
 msgstr "Batak"
 
-#: kcharselect-translation.cpp:87
+#: kcharselect-translation.cpp:86
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
 msgstr "Lepcha"
 
-#: kcharselect-translation.cpp:88
+#: kcharselect-translation.cpp:87
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
 msgstr "Ol Chiki"
 
-#: kcharselect-translation.cpp:89
+#: kcharselect-translation.cpp:88
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
 msgstr "Kýrilliskt aukið-C"
 
-#: kcharselect-translation.cpp:90
+#: kcharselect-translation.cpp:89
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
 msgstr "Georgískt aukið"
 
-#: kcharselect-translation.cpp:91
+#: kcharselect-translation.cpp:90
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
 msgstr "Sundískt, viðbót"
 
-#: kcharselect-translation.cpp:92
+#: kcharselect-translation.cpp:91
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
 msgstr "Vedískt aukið"
 
-#: kcharselect-translation.cpp:93
+#: kcharselect-translation.cpp:92
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions"
 msgstr "Hljóðritunarviðaukar"
 
-#: kcharselect-translation.cpp:94
+#: kcharselect-translation.cpp:93
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
 msgstr "Hljóðritunarviðaukar, viðbót"
 
-#: kcharselect-translation.cpp:95
+#: kcharselect-translation.cpp:94
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
 msgstr "Yfir- og undirsett áherslumerki, viðbót"
 
-#: kcharselect-translation.cpp:96
+#: kcharselect-translation.cpp:95
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended Additional"
 msgstr "Latneskt aukið, viðbót"
 
-#: kcharselect-translation.cpp:97
+#: kcharselect-translation.cpp:96
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
 msgstr "Grískt aukið"
 
-#: kcharselect-translation.cpp:98
+#: kcharselect-translation.cpp:97
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "General Punctuation"
 msgstr "Almenn greinamerki"
 
-#: kcharselect-translation.cpp:99
+#: kcharselect-translation.cpp:98
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Superscripts and Subscripts"
 msgstr "Yfir- og undirskrift"
 
-#: kcharselect-translation.cpp:100
+#: kcharselect-translation.cpp:99
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Currency Symbols"
 msgstr "Gjaldmiðlatákn"
 
-#: kcharselect-translation.cpp:101
+#: kcharselect-translation.cpp:100
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks for Symbols"
 msgstr "Yfir- og undirsett áherslumerki fyrir tákn"
 
-#: kcharselect-translation.cpp:102
+#: kcharselect-translation.cpp:101
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
 msgstr "Skrifstafleg tákn"
 
-#: kcharselect-translation.cpp:103
+#: kcharselect-translation.cpp:102
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Number Forms"
 msgstr "Tölutákn"
 
-#: kcharselect-translation.cpp:104
+#: kcharselect-translation.cpp:103
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
 msgstr "Örvar"
 
-#: kcharselect-translation.cpp:105
+#: kcharselect-translation.cpp:104
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
 msgstr "Stærðfræðivirkjar"
 
-#: kcharselect-translation.cpp:106
+#: kcharselect-translation.cpp:105
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
 msgstr "Ýmis tæknileg tákn"
 
-#: kcharselect-translation.cpp:107
+#: kcharselect-translation.cpp:106
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
 msgstr "Stjórnmyndir"
 
-#: kcharselect-translation.cpp:108
+#: kcharselect-translation.cpp:107
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Optical Character Recognition"
 msgstr "Stafakennsl (OCR)"
 
-#: kcharselect-translation.cpp:109
+#: kcharselect-translation.cpp:108
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
 msgstr "Umluktir bók- og tölustafir"
 
-#: kcharselect-translation.cpp:110
+#: kcharselect-translation.cpp:109
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Box Drawing"
 msgstr "Rammateikning"
 
-#: kcharselect-translation.cpp:111
+#: kcharselect-translation.cpp:110
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
 msgstr "Kubbaeiningar"
 
-#: kcharselect-translation.cpp:112
+#: kcharselect-translation.cpp:111
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes"
 msgstr "Rúmfræðiform"
 
-#: kcharselect-translation.cpp:113
+#: kcharselect-translation.cpp:112
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols"
 msgstr "Ýmis tákn"
 
-#: kcharselect-translation.cpp:114
+#: kcharselect-translation.cpp:113
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Dingbats"
 msgstr "Dingbats-tákn"
 
-#: kcharselect-translation.cpp:115
+#: kcharselect-translation.cpp:114
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Ýmis stærðfræðitákn-A"
 
-#: kcharselect-translation.cpp:116
+#: kcharselect-translation.cpp:115
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
 msgstr "Aukaörvar-A"
 
-#: kcharselect-translation.cpp:117
+#: kcharselect-translation.cpp:116
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
 msgstr "Braille-mynstur"
 
-#: kcharselect-translation.cpp:118
+#: kcharselect-translation.cpp:117
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
 msgstr "Aukaörvar-B"
 
-#: kcharselect-translation.cpp:119
+#: kcharselect-translation.cpp:118
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "Ýmis stærðfræðitákn-B"
 
-#: kcharselect-translation.cpp:120
+#: kcharselect-translation.cpp:119
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Mathematical Operators"
 msgstr "Viðbótar stærðfræðivirkjar"
 
-#: kcharselect-translation.cpp:121
+#: kcharselect-translation.cpp:120
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "Ýmis tákn og örvar"
 
-#: kcharselect-translation.cpp:122
+#: kcharselect-translation.cpp:121
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Glagolitic"
 msgstr "Glagolitískt"
 
-#: kcharselect-translation.cpp:123
+#: kcharselect-translation.cpp:122
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-C"
 msgstr "Latneskt aukið-C"
 
-#: kcharselect-translation.cpp:124
+#: kcharselect-translation.cpp:123
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Coptic"
 msgstr "Koptískt"
 
-#: kcharselect-translation.cpp:125
+#: kcharselect-translation.cpp:124
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Supplement"
 msgstr "Georgískt, viðbót"
 
-#: kcharselect-translation.cpp:126
+#: kcharselect-translation.cpp:125
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
 msgstr "Tifinagh-letur"
 
-#: kcharselect-translation.cpp:127
+#: kcharselect-translation.cpp:126
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended"
 msgstr "Eþíópískt aukið"
 
-#: kcharselect-translation.cpp:128
+#: kcharselect-translation.cpp:127
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-A"
 msgstr "Kýrilliskt aukið-A"
 
-#: kcharselect-translation.cpp:129
+#: kcharselect-translation.cpp:128
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Punctuation"
 msgstr "Viðbótar greinamerki"
 
-#: kcharselect-translation.cpp:130
+#: kcharselect-translation.cpp:129
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
 msgstr "CJK-rótartákn, viðbót"
 
-#: kcharselect-translation.cpp:131
+#: kcharselect-translation.cpp:130
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
 msgstr "Kangxi-rótartákn"
 
-#: kcharselect-translation.cpp:132
+#: kcharselect-translation.cpp:131
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ideographic Description Characters"
 msgstr "Lýsingartákn fyrir myndletur"
 
-#: kcharselect-translation.cpp:133
+#: kcharselect-translation.cpp:132
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Symbols and Punctuation"
 msgstr "CJK-tákn og greinarmerki"
 
-#: kcharselect-translation.cpp:134
+#: kcharselect-translation.cpp:133
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hiragana"
 msgstr "Hiragana"
 
-#: kcharselect-translation.cpp:135
+#: kcharselect-translation.cpp:134
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana"
 msgstr "Katakana"
 
-#: kcharselect-translation.cpp:136
+#: kcharselect-translation.cpp:135
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
-#: kcharselect-translation.cpp:137
+#: kcharselect-translation.cpp:136
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
 msgstr "Hangúl-samhæft Jamó"
 
-#: kcharselect-translation.cpp:138
+#: kcharselect-translation.cpp:137
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "Kanbun"
 
-#: kcharselect-translation.cpp:139
+#: kcharselect-translation.cpp:138
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
 msgstr "Bopomofo-letur, aukið"
 
-#: kcharselect-translation.cpp:140
+#: kcharselect-translation.cpp:139
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Strokes"
 msgstr "CJK-strokur"
 
-#: kcharselect-translation.cpp:141
+#: kcharselect-translation.cpp:140
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana Phonetic Extensions"
 msgstr "Katakana hljóðritunarviðaukar"
 
-#: kcharselect-translation.cpp:142
+#: kcharselect-translation.cpp:141
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed CJK Letters and Months"
 msgstr "Umluktir CJK stafir og mánuðir"
 
-#: kcharselect-translation.cpp:143
+#: kcharselect-translation.cpp:142
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility"
 msgstr "CJK samhæfistákn"
 
-#: kcharselect-translation.cpp:144
+#: kcharselect-translation.cpp:143
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
 msgstr "CJK samræmt myndletur, viðauki A"
 
-#: kcharselect-translation.cpp:145
+#: kcharselect-translation.cpp:144
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
 msgstr "Yijing sexlínutákn"
 
-#: kcharselect-translation.cpp:146
+#: kcharselect-translation.cpp:145
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
 msgstr "CJK samræmt myndletur"
 
-#: kcharselect-translation.cpp:147
+#: kcharselect-translation.cpp:146
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Syllables"
 msgstr "Yi atkvæðatákn"
 
-#: kcharselect-translation.cpp:148
+#: kcharselect-translation.cpp:147
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Radicals"
 msgstr "Yi rótartákn"
 
-#: kcharselect-translation.cpp:149
+#: kcharselect-translation.cpp:148
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
 msgstr "Lisu"
 
-#: kcharselect-translation.cpp:150
+#: kcharselect-translation.cpp:149
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "Vai"
 
-#: kcharselect-translation.cpp:151
+#: kcharselect-translation.cpp:150
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-B"
 msgstr "Kýrilliskt aukið-B"
 
-#: kcharselect-translation.cpp:152
+#: kcharselect-translation.cpp:151
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
 msgstr "Bamum"
 
-#: kcharselect-translation.cpp:153
+#: kcharselect-translation.cpp:152
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
 msgstr "Tónbreytistafir"
 
-#: kcharselect-translation.cpp:154
+#: kcharselect-translation.cpp:153
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-D"
 msgstr "Latneskt aukið-D"
 
-#: kcharselect-translation.cpp:155
+#: kcharselect-translation.cpp:154
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr "Syloti Nagri"
 
-#: kcharselect-translation.cpp:156
+#: kcharselect-translation.cpp:155
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
 msgstr "Algeng indversk talnasnið"
 
-#: kcharselect-translation.cpp:157
+#: kcharselect-translation.cpp:156
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
 msgstr "Phags-pa"
 
-#: kcharselect-translation.cpp:158
+#: kcharselect-translation.cpp:157
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
 msgstr "Saurashtra"
 
-#: kcharselect-translation.cpp:159
+#: kcharselect-translation.cpp:158
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
 msgstr "Devanagari aukið"
 
-#: kcharselect-translation.cpp:160
+#: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
 msgstr "Kayah Li"
 
-#: kcharselect-translation.cpp:161
+#: kcharselect-translation.cpp:160
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
 msgstr "Rejang"
 
-#: kcharselect-translation.cpp:162
+#: kcharselect-translation.cpp:161
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
 msgstr "Hangul Jamo aukið-A"
 
-#: kcharselect-translation.cpp:163
+#: kcharselect-translation.cpp:162
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
 msgstr "Javanskt"
 
-#: kcharselect-translation.cpp:164
+#: kcharselect-translation.cpp:163
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
 msgstr "Mjanmarskt aukið-B"
 
-#: kcharselect-translation.cpp:165
+#: kcharselect-translation.cpp:164
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
 msgstr "Cham"
 
-#: kcharselect-translation.cpp:166
+#: kcharselect-translation.cpp:165
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
 msgstr "Mjanmarskt aukið-A"
 
-#: kcharselect-translation.cpp:167
+#: kcharselect-translation.cpp:166
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
 msgstr "Tai Viet"
 
-#: kcharselect-translation.cpp:168
+#: kcharselect-translation.cpp:167
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek Extensions"
 msgstr "Meetei Mayek, viðaukar"
 
-#: kcharselect-translation.cpp:169
+#: kcharselect-translation.cpp:168
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
 msgstr "Eþíópískt aukið-A"
 
-#: kcharselect-translation.cpp:170
+#: kcharselect-translation.cpp:169
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-E"
 msgstr "Latneskt aukið-E"
 
-#: kcharselect-translation.cpp:171
+#: kcharselect-translation.cpp:170
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee Supplement"
 msgstr "Cherokee, viðbót"
 
-#: kcharselect-translation.cpp:172
+#: kcharselect-translation.cpp:171
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek"
 msgstr "Meetei Mayek"
 
-#: kcharselect-translation.cpp:173
+#: kcharselect-translation.cpp:172
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Syllables"
 msgstr "Hangul-atkvæði"
 
-#: kcharselect-translation.cpp:174
+#: kcharselect-translation.cpp:173
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
 msgstr "Hangul Jamo aukið-B"
 
-#: kcharselect-translation.cpp:175
+#: kcharselect-translation.cpp:174
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
 msgstr "Háir staðgenglar"
 
-#: kcharselect-translation.cpp:176
+#: kcharselect-translation.cpp:175
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
 msgstr "Háir staðgenglar til einkanota"
 
-#: kcharselect-translation.cpp:177
+#: kcharselect-translation.cpp:176
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
 msgstr "Lágir staðgenglar"
 
-#: kcharselect-translation.cpp:178
+#: kcharselect-translation.cpp:177
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Private Use Area"
 msgstr "Svæði til einkanota"
 
-#: kcharselect-translation.cpp:179
+#: kcharselect-translation.cpp:178
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Ideographs"
 msgstr "CJK myndletur til samhæfingar"
 
-#: kcharselect-translation.cpp:180
+#: kcharselect-translation.cpp:179
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
 msgstr "Form fyrir framsetningu bókstafa"
 
-#: kcharselect-translation.cpp:181
+#: kcharselect-translation.cpp:180
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-A"
 msgstr "Arabísk framsetningarform-A"
 
-#: kcharselect-translation.cpp:182
+#: kcharselect-translation.cpp:181
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
 msgstr "Tilbrigðaveljarar"
 
-#: kcharselect-translation.cpp:183
+#: kcharselect-translation.cpp:182
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vertical Forms"
 msgstr "Lóðrétt form"
 
-#: kcharselect-translation.cpp:184
+#: kcharselect-translation.cpp:183
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
 msgstr "Yfir- og undirsett hálf merki"
 
-#: kcharselect-translation.cpp:185
+#: kcharselect-translation.cpp:184
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Forms"
 msgstr "CJK samræmingarform"
 
-#: kcharselect-translation.cpp:186
+#: kcharselect-translation.cpp:185
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Small Form Variants"
 msgstr "Smá formtilbrigði"
 
-#: kcharselect-translation.cpp:187
+#: kcharselect-translation.cpp:186
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-B"
 msgstr "Arabísk framsetningarform-B"
 
-#: kcharselect-translation.cpp:188
+#: kcharselect-translation.cpp:187
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Halfwidth and Fullwidth Forms"
 msgstr "Hálfbreið og fullbreið form"
 
-#: kcharselect-translation.cpp:189
+#: kcharselect-translation.cpp:188
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Specials"
 msgstr "Sértæk tákn"
 
-#: kcharselect-translation.cpp:191
+#: kcharselect-translation.cpp:189
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mahjong Tiles"
 msgstr "Mahjong-kubbar"
 
-#: kcharselect-translation.cpp:192
+#: kcharselect-translation.cpp:190
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Domino Tiles"
 msgstr "Dómínókubbar"
 
-#: kcharselect-translation.cpp:193
+#: kcharselect-translation.cpp:191
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Playing Cards"
 msgstr "Spil"
 
-#: kcharselect-translation.cpp:194
+#: kcharselect-translation.cpp:192
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
 msgstr "Umluktar tölur og bókstafir, viðbót"
 
-#: kcharselect-translation.cpp:195
+#: kcharselect-translation.cpp:193
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
 msgstr "Umlukt myndletur, viðbót"
 
-#: kcharselect-translation.cpp:196
+#: kcharselect-translation.cpp:194
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
 msgstr "Ýmis tákn og myndtákn"
 
-#: kcharselect-translation.cpp:197
+#: kcharselect-translation.cpp:195
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Emoticons"
 msgstr "Tjákn"
 
-#: kcharselect-translation.cpp:198
+#: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ornamental Dingbats"
 msgstr "Skrautlegt Dingbats-letur"
 
-#: kcharselect-translation.cpp:199
+#: kcharselect-translation.cpp:197
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Transport and Map Symbols"
 msgstr "Flutninga- og kortatákn"
 
-#: kcharselect-translation.cpp:200
+#: kcharselect-translation.cpp:198
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alchemical Symbols"
 msgstr "Alkemísk tákn"
 
-#: kcharselect-translation.cpp:201
+#: kcharselect-translation.cpp:199
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
 msgstr "Rúmfræðiform, aukið"
 
-#: kcharselect-translation.cpp:202
+#: kcharselect-translation.cpp:200
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
 msgstr "Aukaörvar-C"
 
-#: kcharselect-translation.cpp:203
+#: kcharselect-translation.cpp:201
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Symbols and Pictographs"
 msgstr "Aukatákn og myndtákn"
 
-#: kcharselect-translation.cpp:204
+#: kcharselect-translation.cpp:202
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
 msgstr "Skáktákn"
 
-#: kcharselect-translation.cpp:205
+#: kcharselect-translation.cpp:203
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
 msgstr "Tákn og myndtákn, aukið-A"
 
-#: kcharselect-translation.cpp:206
+#: kcharselect-translation.cpp:204
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr "Tákn fyrir eldri tölvuvinnslu"
@@ -1273,6 +1268,11 @@ msgstr "Unicode-kóðapunktur:"
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr "Í tugagildi:"
+
+#: kcharselectdata.cpp:278
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "All"
+msgstr "Allt"
 
 #: kcharselectdata.cpp:304
 msgctxt "KCharSelectData|"
@@ -2031,7 +2031,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Styrkleika&mælir lykilorðs:"
 
-#: kpageview.cpp:515
+#: kpageview.cpp:516
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
 msgstr "Leita…"

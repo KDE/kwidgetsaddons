@@ -105,72 +105,65 @@ msgctxt "KAssistantDialog|@action:button"
 msgid "Finish"
 msgstr "&Fäerdeg"
 
-#: kcharselect-translation.cpp:11 kcharselectdata.cpp:278
-#, fuzzy
-#| msgid "All"
-msgctxt "KCharSelectData|KCharSelect section name"
-msgid "All"
-msgstr "Alleguer"
-
-#: kcharselect-translation.cpp:12
+#: kcharselect-translation.cpp:11
 #, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "European Scripts"
 msgstr "&Handschrëft"
 
-#: kcharselect-translation.cpp:13
+#: kcharselect-translation.cpp:12
 #, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "African Scripts"
 msgstr "&Handschrëft"
 
-#: kcharselect-translation.cpp:14
+#: kcharselect-translation.cpp:13
 #, fuzzy
 #| msgid "KDE Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Middle Eastern Scripts"
 msgstr "KDE-Scripter"
 
-#: kcharselect-translation.cpp:15
+#: kcharselect-translation.cpp:14
 #, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Central Asian Scripts"
 msgstr "&Handschrëft"
 
-#: kcharselect-translation.cpp:16
+#: kcharselect-translation.cpp:15
 #, fuzzy
 #| msgid "KDE Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "South Asian Scripts"
 msgstr "KDE-Scripter"
 
-#: kcharselect-translation.cpp:17
+#: kcharselect-translation.cpp:16
 #, fuzzy
 #| msgid "KDE Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Southeast Asian Scripts"
 msgstr "KDE-Scripter"
 
-#: kcharselect-translation.cpp:18
+#: kcharselect-translation.cpp:17
 #, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Indonesia and Oceania Scripts"
 msgstr "&Handschrëft"
 
-#: kcharselect-translation.cpp:19
+#: kcharselect-translation.cpp:18
 #, fuzzy
 #| msgid "KDE Scripts"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "East Asian Scripts"
 msgstr "KDE-Scripter"
 
-#: kcharselect-translation.cpp:20
+#: kcharselect-translation.cpp:19
 #, fuzzy
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "American Scripts"
 msgstr "&Handschrëft"
 
-#: kcharselect-translation.cpp:21
+#: kcharselect-translation.cpp:20
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Currency Symbols"
@@ -178,7 +171,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Symbols"
 msgstr "Währungssymboler"
 
-#: kcharselect-translation.cpp:22
+#: kcharselect-translation.cpp:21
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Mathematical Operators"
@@ -186,7 +179,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Mathematical Symbols"
 msgstr "Mathematësch Operateren"
 
-#: kcharselect-translation.cpp:23
+#: kcharselect-translation.cpp:22
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -194,7 +187,7 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Phonetic Symbols"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:24 kcharselectdata.cpp:744
+#: kcharselect-translation.cpp:23 kcharselectdata.cpp:744
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "CombiningMarks"
@@ -202,14 +195,14 @@ msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Combining Diacritics"
 msgstr "CombiningMarks"
 
-#: kcharselect-translation.cpp:25
+#: kcharselect-translation.cpp:24
 #, fuzzy
 #| msgid "Other"
 msgctxt "KCharSelectData|KCharSelect section name"
 msgid "Other"
 msgstr "Aner"
 
-#: kcharselect-translation.cpp:26
+#: kcharselect-translation.cpp:25
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Latin"
@@ -217,28 +210,28 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Basic Latin"
 msgstr "Latäin"
 
-#: kcharselect-translation.cpp:27
+#: kcharselect-translation.cpp:26
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin-1 Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:28
+#: kcharselect-translation.cpp:27
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-A"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:29
+#: kcharselect-translation.cpp:28
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-B"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:30
+#: kcharselect-translation.cpp:29
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -246,7 +239,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "IPA Extensions"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:31
+#: kcharselect-translation.cpp:30
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "SpacingModifiers"
@@ -254,7 +247,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Spacing Modifier Letters"
 msgstr "SpacingModifiers"
 
-#: kcharselect-translation.cpp:32
+#: kcharselect-translation.cpp:31
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "CombiningMarks"
@@ -262,26 +255,26 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks"
 msgstr "CombiningMarks"
 
-#: kcharselect-translation.cpp:33
+#: kcharselect-translation.cpp:32
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek and Coptic"
 msgstr ""
 
-#: kcharselect-translation.cpp:34
+#: kcharselect-translation.cpp:33
 #, fuzzy
 #| msgid "Cyrillic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic"
 msgstr "Kyrillësch"
 
-#: kcharselect-translation.cpp:35
+#: kcharselect-translation.cpp:34
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:36
+#: kcharselect-translation.cpp:35
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Armenian"
@@ -289,21 +282,21 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Armenian"
 msgstr "Armenësch"
 
-#: kcharselect-translation.cpp:37
+#: kcharselect-translation.cpp:36
 #, fuzzy
 #| msgid "Hebrew"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hebrew"
 msgstr "Hebräësch"
 
-#: kcharselect-translation.cpp:38
+#: kcharselect-translation.cpp:37
 #, fuzzy
 #| msgid "Arabic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic"
 msgstr "Arabësch"
 
-#: kcharselect-translation.cpp:39
+#: kcharselect-translation.cpp:38
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Syriac"
@@ -311,14 +304,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac"
 msgstr "Syrësch"
 
-#: kcharselect-translation.cpp:40
+#: kcharselect-translation.cpp:39
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:41
+#: kcharselect-translation.cpp:40
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Thaana"
@@ -326,47 +319,47 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thaana"
 msgstr "Thaana (Maledivësch)"
 
-#: kcharselect-translation.cpp:42
+#: kcharselect-translation.cpp:41
 #, fuzzy
 #| msgid "No"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "NKo"
 msgstr "Nee"
 
-#: kcharselect-translation.cpp:43
+#: kcharselect-translation.cpp:42
 #, fuzzy
 #| msgid "Ramadan"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Samaritan"
 msgstr "Ramadan"
 
-#: kcharselect-translation.cpp:44
+#: kcharselect-translation.cpp:43
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mandaic"
 msgstr ""
 
-#: kcharselect-translation.cpp:45
+#: kcharselect-translation.cpp:44
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syriac Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:46
+#: kcharselect-translation.cpp:45
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-B"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:47
+#: kcharselect-translation.cpp:46
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Extended-A"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:48
+#: kcharselect-translation.cpp:47
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Devanagari"
@@ -374,7 +367,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: kcharselect-translation.cpp:49
+#: kcharselect-translation.cpp:48
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Bengali"
@@ -382,7 +375,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bengali"
 msgstr "Bengalësch"
 
-#: kcharselect-translation.cpp:50
+#: kcharselect-translation.cpp:49
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Gurmukhi"
@@ -390,7 +383,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gurmukhi"
 msgstr "Grumukhi"
 
-#: kcharselect-translation.cpp:51
+#: kcharselect-translation.cpp:50
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Gujarati"
@@ -398,7 +391,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Gujarati"
 msgstr "Gujarati"
 
-#: kcharselect-translation.cpp:52
+#: kcharselect-translation.cpp:51
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Oriya"
@@ -406,14 +399,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Oriya"
 msgstr "Oriya"
 
-#: kcharselect-translation.cpp:53
+#: kcharselect-translation.cpp:52
 #, fuzzy
 #| msgid "Tamil"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tamil"
 msgstr "Tamil"
 
-#: kcharselect-translation.cpp:54
+#: kcharselect-translation.cpp:53
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Telugu"
@@ -421,7 +414,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Telugu"
 msgstr "Telugu"
 
-#: kcharselect-translation.cpp:55
+#: kcharselect-translation.cpp:54
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Kannada"
@@ -429,7 +422,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kannada"
 msgstr "Kannada"
 
-#: kcharselect-translation.cpp:56
+#: kcharselect-translation.cpp:55
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Malayalam"
@@ -437,7 +430,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Malayalam"
 msgstr "Malayësch"
 
-#: kcharselect-translation.cpp:57
+#: kcharselect-translation.cpp:56
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Sinhala"
@@ -445,14 +438,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sinhala"
 msgstr "Singhalesësch"
 
-#: kcharselect-translation.cpp:58
+#: kcharselect-translation.cpp:57
 #, fuzzy
 #| msgid "Thai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Thai"
 msgstr "Thailännësch"
 
-#: kcharselect-translation.cpp:59
+#: kcharselect-translation.cpp:58
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Lao"
@@ -460,7 +453,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lao"
 msgstr "Laotësch"
 
-#: kcharselect-translation.cpp:60
+#: kcharselect-translation.cpp:59
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Tibetan"
@@ -468,7 +461,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tibetan"
 msgstr "Tibetanësch"
 
-#: kcharselect-translation.cpp:61
+#: kcharselect-translation.cpp:60
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Myanmar"
@@ -476,7 +469,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar"
 msgstr "Myanmar"
 
-#: kcharselect-translation.cpp:62
+#: kcharselect-translation.cpp:61
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Georgian"
@@ -484,7 +477,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian"
 msgstr "Georgësch"
 
-#: kcharselect-translation.cpp:63
+#: kcharselect-translation.cpp:62
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hangul"
@@ -492,7 +485,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo"
 msgstr "Hangul"
 
-#: kcharselect-translation.cpp:64
+#: kcharselect-translation.cpp:63
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Ethiopic"
@@ -500,14 +493,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic"
 msgstr "Äthiopësch"
 
-#: kcharselect-translation.cpp:65
+#: kcharselect-translation.cpp:64
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:66
+#: kcharselect-translation.cpp:65
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Cherokee"
@@ -515,7 +508,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee"
 msgstr "Cherokee"
 
-#: kcharselect-translation.cpp:67
+#: kcharselect-translation.cpp:66
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Canadian Aboriginal"
@@ -523,7 +516,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "Urawunner-Kanadësch"
 
-#: kcharselect-translation.cpp:68
+#: kcharselect-translation.cpp:67
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Ogham"
@@ -531,13 +524,13 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ogham"
 msgstr "Ogham"
 
-#: kcharselect-translation.cpp:69
+#: kcharselect-translation.cpp:68
 #, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Runic"
 msgstr "Runen"
 
-#: kcharselect-translation.cpp:70
+#: kcharselect-translation.cpp:69
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Tagalog"
@@ -545,7 +538,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagalog"
 msgstr "Tagalog"
 
-#: kcharselect-translation.cpp:71
+#: kcharselect-translation.cpp:70
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hanunoo"
@@ -553,7 +546,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hanunoo"
 msgstr "Hanunoo"
 
-#: kcharselect-translation.cpp:72
+#: kcharselect-translation.cpp:71
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Buhid"
@@ -561,7 +554,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buhid"
 msgstr "Buhid"
 
-#: kcharselect-translation.cpp:73
+#: kcharselect-translation.cpp:72
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Tagbanwa"
@@ -569,7 +562,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tagbanwa"
 msgstr "Tagbanwa"
 
-#: kcharselect-translation.cpp:74
+#: kcharselect-translation.cpp:73
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Khmer"
@@ -577,7 +570,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer"
 msgstr "Kambodschanësch"
 
-#: kcharselect-translation.cpp:75
+#: kcharselect-translation.cpp:74
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Mongolian"
@@ -585,7 +578,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mongolian"
 msgstr "Mongolësch"
 
-#: kcharselect-translation.cpp:76
+#: kcharselect-translation.cpp:75
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Canadian Aboriginal"
@@ -593,26 +586,26 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgstr "Urawunner-Kanadësch"
 
-#: kcharselect-translation.cpp:77
+#: kcharselect-translation.cpp:76
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Limbu"
 msgstr ""
 
-#: kcharselect-translation.cpp:78
+#: kcharselect-translation.cpp:77
 #, fuzzy
 #| msgid "Thai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Le"
 msgstr "Thailännësch"
 
-#: kcharselect-translation.cpp:79
+#: kcharselect-translation.cpp:78
 #, fuzzy
 #| msgid "Thai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "New Tai Lue"
 msgstr "Thailännësch"
 
-#: kcharselect-translation.cpp:80
+#: kcharselect-translation.cpp:79
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -620,19 +613,19 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Khmer Symbols"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:81
+#: kcharselect-translation.cpp:80
 #, fuzzy
 #| msgid "Business Phone"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Buginese"
 msgstr "Tëlefon (Aarbëcht)"
 
-#: kcharselect-translation.cpp:82
+#: kcharselect-translation.cpp:81
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Tham"
 msgstr ""
 
-#: kcharselect-translation.cpp:83
+#: kcharselect-translation.cpp:82
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "CombiningMarks"
@@ -640,21 +633,21 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Extended"
 msgstr "CombiningMarks"
 
-#: kcharselect-translation.cpp:84
+#: kcharselect-translation.cpp:83
 #, fuzzy
 #| msgid "Business Phone"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Balinese"
 msgstr "Tëlefon (Aarbëcht)"
 
-#: kcharselect-translation.cpp:85
+#: kcharselect-translation.cpp:84
 #, fuzzy
 #| msgid "Sunday"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese"
 msgstr "Sonnden"
 
-#: kcharselect-translation.cpp:86
+#: kcharselect-translation.cpp:85
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Katakana"
@@ -662,24 +655,24 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Batak"
 msgstr "Katakana"
 
-#: kcharselect-translation.cpp:87
+#: kcharselect-translation.cpp:86
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lepcha"
 msgstr ""
 
-#: kcharselect-translation.cpp:88
+#: kcharselect-translation.cpp:87
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ol Chiki"
 msgstr ""
 
-#: kcharselect-translation.cpp:89
+#: kcharselect-translation.cpp:88
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-C"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:90
+#: kcharselect-translation.cpp:89
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -687,14 +680,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Extended"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:91
+#: kcharselect-translation.cpp:90
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Sundanese Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:92
+#: kcharselect-translation.cpp:91
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -702,7 +695,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vedic Extensions"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:93
+#: kcharselect-translation.cpp:92
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -710,7 +703,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:94
+#: kcharselect-translation.cpp:93
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -718,7 +711,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phonetic Extensions Supplement"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:95
+#: kcharselect-translation.cpp:94
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "CombiningMarks"
@@ -726,35 +719,35 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks Supplement"
 msgstr "CombiningMarks"
 
-#: kcharselect-translation.cpp:96
+#: kcharselect-translation.cpp:95
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended Additional"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:97
+#: kcharselect-translation.cpp:96
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Greek Extended"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:98
+#: kcharselect-translation.cpp:97
 #, fuzzy
 #| msgid "General Settings"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "General Punctuation"
 msgstr "Allgemeng Astellungen"
 
-#: kcharselect-translation.cpp:99
+#: kcharselect-translation.cpp:98
 #, fuzzy
 #| msgid "KDE Scripts"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Superscripts and Subscripts"
 msgstr "KDE-Scripter"
 
-#: kcharselect-translation.cpp:100
+#: kcharselect-translation.cpp:99
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Currency Symbols"
@@ -762,7 +755,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Currency Symbols"
 msgstr "Währungssymboler"
 
-#: kcharselect-translation.cpp:101
+#: kcharselect-translation.cpp:100
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "CombiningMarks"
@@ -770,7 +763,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Diacritical Marks for Symbols"
 msgstr "CombiningMarks"
 
-#: kcharselect-translation.cpp:102
+#: kcharselect-translation.cpp:101
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Letterlike Symbols"
@@ -778,7 +771,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Letterlike Symbols"
 msgstr "Buchstawenähnlech Symboler"
 
-#: kcharselect-translation.cpp:103
+#: kcharselect-translation.cpp:102
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Number Forms"
@@ -786,12 +779,12 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Number Forms"
 msgstr "Zuelen"
 
-#: kcharselect-translation.cpp:104
+#: kcharselect-translation.cpp:103
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arrows"
 msgstr ""
 
-#: kcharselect-translation.cpp:105
+#: kcharselect-translation.cpp:104
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Mathematical Operators"
@@ -799,14 +792,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mathematical Operators"
 msgstr "Mathematësch Operateren"
 
-#: kcharselect-translation.cpp:106
+#: kcharselect-translation.cpp:105
 #, fuzzy
 #| msgid "Miscellaneous"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Technical"
 msgstr "Verschiddenes"
 
-#: kcharselect-translation.cpp:107
+#: kcharselect-translation.cpp:106
 #, fuzzy
 #| msgctxt "QAccel"
 #| msgid "Control"
@@ -814,12 +807,12 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Control Pictures"
 msgstr "Ctrl"
 
-#: kcharselect-translation.cpp:108
+#: kcharselect-translation.cpp:107
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Optical Character Recognition"
 msgstr ""
 
-#: kcharselect-translation.cpp:109
+#: kcharselect-translation.cpp:108
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Enclosed and Square"
@@ -827,19 +820,19 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumerics"
 msgstr "Ëmrësser a Rechtecker"
 
-#: kcharselect-translation.cpp:110
+#: kcharselect-translation.cpp:109
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Box Drawing"
 msgstr ""
 
-#: kcharselect-translation.cpp:111
+#: kcharselect-translation.cpp:110
 #, fuzzy
 #| msgid "Close Document"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Block Elements"
 msgstr "Dokument zoumaachen"
 
-#: kcharselect-translation.cpp:112
+#: kcharselect-translation.cpp:111
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -847,7 +840,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:113
+#: kcharselect-translation.cpp:112
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Miscellaneous Symbols"
@@ -855,14 +848,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols"
 msgstr "Verschidde Symboler"
 
-#: kcharselect-translation.cpp:114
+#: kcharselect-translation.cpp:113
 #, fuzzy
 #| msgid "Digit"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Dingbats"
 msgstr "Zuel"
 
-#: kcharselect-translation.cpp:115
+#: kcharselect-translation.cpp:114
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Miscellaneous Symbols"
@@ -870,14 +863,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Verschidde Symboler"
 
-#: kcharselect-translation.cpp:116
+#: kcharselect-translation.cpp:115
 #, fuzzy
 #| msgid "General Settings"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-A"
 msgstr "Allgemeng Astellungen"
 
-#: kcharselect-translation.cpp:117
+#: kcharselect-translation.cpp:116
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Braille"
@@ -885,14 +878,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Braille Patterns"
 msgstr "Braille"
 
-#: kcharselect-translation.cpp:118
+#: kcharselect-translation.cpp:117
 #, fuzzy
 #| msgid "General Settings"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-B"
 msgstr "Allgemeng Astellungen"
 
-#: kcharselect-translation.cpp:119
+#: kcharselect-translation.cpp:118
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Miscellaneous Symbols"
@@ -900,7 +893,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "Verschidde Symboler"
 
-#: kcharselect-translation.cpp:120
+#: kcharselect-translation.cpp:119
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Mathematical Operators"
@@ -908,7 +901,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Mathematical Operators"
 msgstr "Mathematësch Operateren"
 
-#: kcharselect-translation.cpp:121
+#: kcharselect-translation.cpp:120
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Miscellaneous Symbols"
@@ -916,40 +909,40 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "Verschidde Symboler"
 
-#: kcharselect-translation.cpp:122
+#: kcharselect-translation.cpp:121
 #, fuzzy
 #| msgid "Baltic"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Glagolitic"
 msgstr "Baltësch"
 
-#: kcharselect-translation.cpp:123
+#: kcharselect-translation.cpp:122
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-C"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:124
+#: kcharselect-translation.cpp:123
 #, fuzzy
 #| msgid "Copy"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Coptic"
 msgstr "Kopéieren"
 
-#: kcharselect-translation.cpp:125
+#: kcharselect-translation.cpp:124
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Georgian Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:126
+#: kcharselect-translation.cpp:125
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tifinagh"
 msgstr ""
 
-#: kcharselect-translation.cpp:127
+#: kcharselect-translation.cpp:126
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Ethiopic"
@@ -957,45 +950,45 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended"
 msgstr "Äthiopësch"
 
-#: kcharselect-translation.cpp:128
+#: kcharselect-translation.cpp:127
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-A"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:129
+#: kcharselect-translation.cpp:128
 #, fuzzy
 #| msgid "General Settings"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Punctuation"
 msgstr "Allgemeng Astellungen"
 
-#: kcharselect-translation.cpp:130
+#: kcharselect-translation.cpp:129
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Radicals Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:131
+#: kcharselect-translation.cpp:130
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kangxi Radicals"
 msgstr ""
 
-#: kcharselect-translation.cpp:132
+#: kcharselect-translation.cpp:131
 #, fuzzy
 #| msgid "Geographic Position"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ideographic Description Characters"
 msgstr "Geographësch Positioun"
 
-#: kcharselect-translation.cpp:133
+#: kcharselect-translation.cpp:132
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Symbols and Punctuation"
 msgstr ""
 
-#: kcharselect-translation.cpp:134
+#: kcharselect-translation.cpp:133
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hiragana"
@@ -1003,7 +996,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hiragana"
 msgstr "Hiragana"
 
-#: kcharselect-translation.cpp:135
+#: kcharselect-translation.cpp:134
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Katakana"
@@ -1011,7 +1004,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana"
 msgstr "Katakana"
 
-#: kcharselect-translation.cpp:136
+#: kcharselect-translation.cpp:135
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Bopomofo"
@@ -1019,7 +1012,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
-#: kcharselect-translation.cpp:137
+#: kcharselect-translation.cpp:136
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hangul"
@@ -1027,7 +1020,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Compatibility Jamo"
 msgstr "Hangul"
 
-#: kcharselect-translation.cpp:138
+#: kcharselect-translation.cpp:137
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Kannada"
@@ -1035,7 +1028,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kanbun"
 msgstr "Kannada"
 
-#: kcharselect-translation.cpp:139
+#: kcharselect-translation.cpp:138
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Bopomofo"
@@ -1043,12 +1036,12 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bopomofo Extended"
 msgstr "Bopomofo"
 
-#: kcharselect-translation.cpp:140
+#: kcharselect-translation.cpp:139
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Strokes"
 msgstr ""
 
-#: kcharselect-translation.cpp:141
+#: kcharselect-translation.cpp:140
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -1056,12 +1049,12 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Katakana Phonetic Extensions"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:142
+#: kcharselect-translation.cpp:141
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed CJK Letters and Months"
 msgstr ""
 
-#: kcharselect-translation.cpp:143
+#: kcharselect-translation.cpp:142
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hangul"
@@ -1069,41 +1062,41 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility"
 msgstr "Hangul"
 
-#: kcharselect-translation.cpp:144
+#: kcharselect-translation.cpp:143
 #, fuzzy
 #| msgid "Frame Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs Extension A"
 msgstr "Informatioun iwwert de Frame"
 
-#: kcharselect-translation.cpp:145
+#: kcharselect-translation.cpp:144
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yijing Hexagram Symbols"
 msgstr ""
 
-#: kcharselect-translation.cpp:146
+#: kcharselect-translation.cpp:145
 #, fuzzy
 #| msgid "Frame Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Unified Ideographs"
 msgstr "Informatioun iwwert de Frame"
 
-#: kcharselect-translation.cpp:147
+#: kcharselect-translation.cpp:146
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Syllables"
 msgstr ""
 
-#: kcharselect-translation.cpp:148
+#: kcharselect-translation.cpp:147
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Yi Radicals"
 msgstr ""
 
-#: kcharselect-translation.cpp:149
+#: kcharselect-translation.cpp:148
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Lisu"
 msgstr ""
 
-#: kcharselect-translation.cpp:150
+#: kcharselect-translation.cpp:149
 #, fuzzy
 #| msgctxt "of March"
 #| msgid "of Mar"
@@ -1111,21 +1104,21 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vai"
 msgstr "Mäe"
 
-#: kcharselect-translation.cpp:151
+#: kcharselect-translation.cpp:150
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cyrillic Extended-B"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:152
+#: kcharselect-translation.cpp:151
 #, fuzzy
 #| msgid "Tamuz"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Bamum"
 msgstr "Tamuz"
 
-#: kcharselect-translation.cpp:153
+#: kcharselect-translation.cpp:152
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "SpacingModifiers"
@@ -1133,19 +1126,19 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Modifier Tone Letters"
 msgstr "SpacingModifiers"
 
-#: kcharselect-translation.cpp:154
+#: kcharselect-translation.cpp:153
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-D"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:155
+#: kcharselect-translation.cpp:154
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Syloti Nagri"
 msgstr ""
 
-#: kcharselect-translation.cpp:156
+#: kcharselect-translation.cpp:155
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Number Forms"
@@ -1153,17 +1146,17 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Common Indic Number Forms"
 msgstr "Zuelen"
 
-#: kcharselect-translation.cpp:157
+#: kcharselect-translation.cpp:156
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Phags-pa"
 msgstr ""
 
-#: kcharselect-translation.cpp:158
+#: kcharselect-translation.cpp:157
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Saurashtra"
 msgstr ""
 
-#: kcharselect-translation.cpp:159
+#: kcharselect-translation.cpp:158
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Devanagari"
@@ -1171,61 +1164,61 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Devanagari Extended"
 msgstr "Devanagari"
 
-#: kcharselect-translation.cpp:160
+#: kcharselect-translation.cpp:159
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Kayah Li"
 msgstr ""
 
-#: kcharselect-translation.cpp:161
+#: kcharselect-translation.cpp:160
 #, fuzzy
 #| msgid "Rank"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Rejang"
 msgstr "Rang"
 
-#: kcharselect-translation.cpp:162
+#: kcharselect-translation.cpp:161
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-A"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:163
+#: kcharselect-translation.cpp:162
 #, fuzzy
 #| msgid "Japanese"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Javanese"
 msgstr "Japanësch"
 
-#: kcharselect-translation.cpp:164
+#: kcharselect-translation.cpp:163
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-B"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:165
+#: kcharselect-translation.cpp:164
 #, fuzzy
 #| msgid "Kha"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cham"
 msgstr "Kha"
 
-#: kcharselect-translation.cpp:166
+#: kcharselect-translation.cpp:165
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Myanmar Extended-A"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:167
+#: kcharselect-translation.cpp:166
 #, fuzzy
 #| msgid "Thai"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Tai Viet"
 msgstr "Thailännësch"
 
-#: kcharselect-translation.cpp:168
+#: kcharselect-translation.cpp:167
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -1233,7 +1226,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek Extensions"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:169
+#: kcharselect-translation.cpp:168
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Ethiopic"
@@ -1241,66 +1234,66 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ethiopic Extended-A"
 msgstr "Äthiopësch"
 
-#: kcharselect-translation.cpp:170
+#: kcharselect-translation.cpp:169
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Latin Extended-E"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:171
+#: kcharselect-translation.cpp:170
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Cherokee Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:172
+#: kcharselect-translation.cpp:171
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Meetei Mayek"
 msgstr ""
 
-#: kcharselect-translation.cpp:173
+#: kcharselect-translation.cpp:172
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Syllables"
 msgstr ""
 
-#: kcharselect-translation.cpp:174
+#: kcharselect-translation.cpp:173
 #, fuzzy
 #| msgid "Extended Address Information"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Hangul Jamo Extended-B"
 msgstr "Allgemeng Informatioun zur Adress"
 
-#: kcharselect-translation.cpp:175
+#: kcharselect-translation.cpp:174
 #, fuzzy
 #| msgid "Private"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Surrogates"
 msgstr "Privat"
 
-#: kcharselect-translation.cpp:176
+#: kcharselect-translation.cpp:175
 #, fuzzy
 #| msgid "Private"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "High Private Use Surrogates"
 msgstr "Privat"
 
-#: kcharselect-translation.cpp:177
+#: kcharselect-translation.cpp:176
 #, fuzzy
 #| msgid "Private"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Low Surrogates"
 msgstr "Privat"
 
-#: kcharselect-translation.cpp:178
+#: kcharselect-translation.cpp:177
 #, fuzzy
 #| msgid "Private"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Private Use Area"
 msgstr "Privat"
 
-#: kcharselect-translation.cpp:179
+#: kcharselect-translation.cpp:178
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hangul"
@@ -1308,29 +1301,29 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Ideographs"
 msgstr "Hangul"
 
-#: kcharselect-translation.cpp:180
+#: kcharselect-translation.cpp:179
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alphabetic Presentation Forms"
 msgstr ""
 
-#: kcharselect-translation.cpp:181
+#: kcharselect-translation.cpp:180
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-A"
 msgstr ""
 
-#: kcharselect-translation.cpp:182
+#: kcharselect-translation.cpp:181
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Variation Selectors"
 msgstr ""
 
-#: kcharselect-translation.cpp:183
+#: kcharselect-translation.cpp:182
 #, fuzzy
 #| msgid "Vertical"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Vertical Forms"
 msgstr "Vertikal"
 
-#: kcharselect-translation.cpp:184
+#: kcharselect-translation.cpp:183
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "CombiningMarks"
@@ -1338,7 +1331,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Combining Half Marks"
 msgstr "CombiningMarks"
 
-#: kcharselect-translation.cpp:185
+#: kcharselect-translation.cpp:184
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Hangul"
@@ -1346,19 +1339,19 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "CJK Compatibility Forms"
 msgstr "Hangul"
 
-#: kcharselect-translation.cpp:186
+#: kcharselect-translation.cpp:185
 #, fuzzy
 #| msgid "Icons"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Small Form Variants"
 msgstr "Symboler"
 
-#: kcharselect-translation.cpp:187
+#: kcharselect-translation.cpp:186
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Arabic Presentation Forms-B"
 msgstr ""
 
-#: kcharselect-translation.cpp:188
+#: kcharselect-translation.cpp:187
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Katakana Half-Width Forms"
@@ -1366,27 +1359,27 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Halfwidth and Fullwidth Forms"
 msgstr "Katakana (Hallëf sou breet)"
 
-#: kcharselect-translation.cpp:189
+#: kcharselect-translation.cpp:188
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Specials"
 msgstr ""
 
-#: kcharselect-translation.cpp:191
+#: kcharselect-translation.cpp:189
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Mahjong Tiles"
 msgstr ""
 
-#: kcharselect-translation.cpp:192
+#: kcharselect-translation.cpp:190
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Domino Tiles"
 msgstr ""
 
-#: kcharselect-translation.cpp:193
+#: kcharselect-translation.cpp:191
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Playing Cards"
 msgstr ""
 
-#: kcharselect-translation.cpp:194
+#: kcharselect-translation.cpp:192
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Enclosed and Square"
@@ -1394,14 +1387,14 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Alphanumeric Supplement"
 msgstr "Ëmrësser a Rechtecker"
 
-#: kcharselect-translation.cpp:195
+#: kcharselect-translation.cpp:193
 #, fuzzy
 #| msgid "Loading Applet"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Enclosed Ideographic Supplement"
 msgstr "Amgaang, de Miniprogramm ze lueden"
 
-#: kcharselect-translation.cpp:196
+#: kcharselect-translation.cpp:194
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Miscellaneous Symbols"
@@ -1409,23 +1402,23 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Miscellaneous Symbols and Pictographs"
 msgstr "Verschidde Symboler"
 
-#: kcharselect-translation.cpp:197
+#: kcharselect-translation.cpp:195
 #, fuzzy
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Emoticons"
 msgstr "[Optiounen]"
 
-#: kcharselect-translation.cpp:198
+#: kcharselect-translation.cpp:196
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Ornamental Dingbats"
 msgstr ""
 
-#: kcharselect-translation.cpp:199
+#: kcharselect-translation.cpp:197
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Transport and Map Symbols"
 msgstr ""
 
-#: kcharselect-translation.cpp:200
+#: kcharselect-translation.cpp:198
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Technical Symbols"
@@ -1433,7 +1426,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Alchemical Symbols"
 msgstr "Technësch Symboler"
 
-#: kcharselect-translation.cpp:201
+#: kcharselect-translation.cpp:199
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -1441,19 +1434,19 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Geometric Shapes Extended"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:202
+#: kcharselect-translation.cpp:200
 #, fuzzy
 #| msgid "General Settings"
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Arrows-C"
 msgstr "Allgemeng Astellungen"
 
-#: kcharselect-translation.cpp:203
+#: kcharselect-translation.cpp:201
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Supplemental Symbols and Pictographs"
 msgstr ""
 
-#: kcharselect-translation.cpp:204
+#: kcharselect-translation.cpp:202
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Geometric Symbols"
@@ -1461,7 +1454,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Chess Symbols"
 msgstr "Geometrësch Symboler"
 
-#: kcharselect-translation.cpp:205
+#: kcharselect-translation.cpp:203
 #, fuzzy
 #| msgctxt "QFont"
 #| msgid "Miscellaneous Symbols"
@@ -1469,7 +1462,7 @@ msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols and Pictographs Extended-A"
 msgstr "Verschidde Symboler"
 
-#: kcharselect-translation.cpp:206
+#: kcharselect-translation.cpp:204
 msgctxt "KCharSelectData|KCharselect unicode block name"
 msgid "Symbols for Legacy Computing"
 msgstr ""
@@ -1713,6 +1706,13 @@ msgstr "&Unicode Codepunkt:"
 msgctxt "KCharSelectItemModel|Character"
 msgid "In decimal"
 msgstr ""
+
+#: kcharselectdata.cpp:278
+#, fuzzy
+#| msgid "All"
+msgctxt "KCharSelectData|KCharSelect section name"
+msgid "All"
+msgstr "Alleguer"
 
 #: kcharselectdata.cpp:304
 #, fuzzy
@@ -2703,7 +2703,7 @@ msgctxt "KNewPasswordWidget|@label"
 msgid "Password strength &meter:"
 msgstr "Passwuert-Sëcherheetsmeter:"
 
-#: kpageview.cpp:515
+#: kpageview.cpp:516
 #, fuzzy
 msgctxt "KPageView|@info:placeholder"
 msgid "Search…"
