@@ -15,6 +15,7 @@
 #include <QCheckBox>
 #include <QDoubleSpinBox>
 #include <QFontDatabase>
+#include <QGraphicsOpacityEffect>
 #include <QGroupBox>
 #include <QGuiApplication>
 #include <QLabel>
@@ -102,6 +103,7 @@ public:
     void displaySample(const QFont &font);
     void slotSizeValue(double);
     void slotFeaturesChanged(const QString &features);
+    void slotFilterTextChanged(const QString &text);
 
     KFontChooser *q;
 
@@ -129,6 +131,8 @@ public:
     std::map<QString, QString> m_styleIDs;
 
     QTimer m_fontFeatureChangedTimer;
+
+    QLabel *m_placeholderLabel = nullptr;
 };
 
 KFontChooser::KFontChooser(QWidget *parent)
@@ -186,6 +190,38 @@ void KFontChooserPrivate::init()
     } else {
         m_ui->familyCheckBox->hide();
     }
+
+    auto *findAction = new QAction(KFontChooser::tr("Find", "@action filter font family"), q);
+    findAction->setShortcut(QKeySequence::Find);
+    QObject::connect(findAction, &QAction::triggered, m_ui->searchEdit, [searchEdit = m_ui->searchEdit] {
+        searchEdit->setFocus(Qt::ShortcutFocusReason);
+    });
+    q->addAction(findAction);
+
+    // You can't just stack widgets on top of each other in Qt Designer
+    auto *placeholderLayout = new QVBoxLayout(m_ui->familyListWidget);
+
+    m_placeholderLabel = new QLabel();
+    QFont placeholderLabelFont;
+    // To match the size of a level 2 Heading/KTitleWidget
+    placeholderLabelFont.setPointSize(qRound(placeholderLabelFont.pointSize() * 1.3));
+    m_placeholderLabel->setFont(placeholderLabelFont);
+    m_placeholderLabel->setTextInteractionFlags(Qt::NoTextInteraction);
+    m_placeholderLabel->setWordWrap(true);
+    m_placeholderLabel->setAlignment(Qt::AlignCenter);
+
+    // Match opacity of QML placeholder label component
+    auto *effect = new QGraphicsOpacityEffect(m_placeholderLabel);
+    effect->setOpacity(0.5);
+    m_placeholderLabel->setGraphicsEffect(effect);
+    m_placeholderLabel->setText(KFontChooser::tr("No font matching the search"));
+
+    placeholderLayout->addWidget(m_placeholderLabel);
+    placeholderLayout->setAlignment(m_placeholderLabel, Qt::AlignCenter);
+
+    QObject::connect(m_ui->searchEdit, &QLineEdit::textChanged, q, [this](const QString &text) {
+        slotFilterTextChanged(text);
+    });
 
     setFamilyBoxItems();
 
@@ -649,6 +685,21 @@ void KFontChooserPrivate::slotFeaturesChanged(const QString &features)
     Q_EMIT q->fontSelected(m_selectedFont);
 }
 
+void KFontChooserPrivate::slotFilterTextChanged(const QString &text)
+{
+    bool hasVisibleRows = false;
+    for (int row = 0; row < m_ui->familyListWidget->count(); ++row) {
+        const QString family = m_ui->familyListWidget->item(row)->text();
+        const bool hidden = !family.contains(text, Qt::CaseInsensitive);
+        m_ui->familyListWidget->setRowHidden(row, hidden);
+        if (!hidden) {
+            hasVisibleRows = true;
+        }
+    }
+
+    m_placeholderLabel->setVisible(!hasVisibleRows);
+}
+
 void KFontChooserPrivate::displaySample(const QFont &font)
 {
     m_ui->sampleTextEdit->setFont(font);
@@ -919,6 +970,7 @@ void KFontChooserPrivate::setFamilyBoxItems(const QStringList &fonts)
     }
 
     m_ui->familyListWidget->addItems(list);
+    slotFilterTextChanged(m_ui->searchEdit->text());
     m_ui->familyListWidget->setMinimumWidth(minimumListWidth(m_ui->familyListWidget));
 
     m_signalsAllowed = true;
